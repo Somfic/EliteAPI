@@ -61,6 +61,7 @@
     <Compile Include="Events\ShipTargeted.cs" />
     <Compile Include="Events\Statistics.cs" />
     <Compile Include="Events\Undocked.cs" />
+    <Compile Include="Events\FSDJump.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\StartJump.cs" />
     <Compile Include="Events\SupercruiseEntry.cs" />

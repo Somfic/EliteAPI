@@ -188,6 +188,10 @@ namespace EliteAPI
                 case "SupercruiseExit":
                     SupercruiseExitEvent?.Invoke(this, JsonConvert.DeserializeObject<SupercruiseExit>(json));
                     break;
+
+                case "FSDJump":
+                    FSDJumpEvent?.Invoke(this, JsonConvert.DeserializeObject<FSDJump>(json));
+                    break;
             }
         }
 
@@ -210,5 +214,6 @@ namespace EliteAPI
         public event EventHandler<StartJump> StartJumpEvent;
         public event EventHandler<SupercruiseEntry> SupercruiseEntryEvent;
         public event EventHandler<SupercruiseExit> SupercruiseExitEvent;
+        public event EventHandler<FSDJump> FSDJumpEvent;
     }
 }

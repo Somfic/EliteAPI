@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EliteAPI
 {
-    public class Loadout
+    public class LoadoutInfo
     {
-        public class Modifier
+        public class ModifierInfo
         {
             public string Label { get; set; }
             public double Value { get; set; }
@@ -16,7 +13,7 @@ namespace EliteAPI
             public int LessIsGood { get; set; }
         }
 
-        public class Engineering
+        public class EngineeringInfo
         {
             public string Engineer { get; set; }
             public int EngineerID { get; set; }
@@ -24,10 +21,10 @@ namespace EliteAPI
             public string BlueprintName { get; set; }
             public int Level { get; set; }
             public double Quality { get; set; }
-            public List<Modifier> Modifiers { get; set; }
+            public List<ModifierInfo> Modifiers { get; set; }
         }
 
-        public class Module
+        public class ModuleInfo
         {
             public string Slot { get; set; }
             public string Item { get; set; }
@@ -37,7 +34,7 @@ namespace EliteAPI
             public int Value { get; set; }
             public int? AmmoInClip { get; set; }
             public int? AmmoInHopper { get; set; }
-            public Engineering Engineering { get; set; }
+            public EngineeringInfo Engineering { get; set; }
         }
 
         public DateTime timestamp { get; set; }
@@ -49,6 +46,6 @@ namespace EliteAPI
         public int HullValue { get; set; }
         public int ModulesValue { get; set; }
         public int Rebuy { get; set; }
-        public List<Module> Modules { get; set; }
+        public List<ModuleInfo> Modules { get; set; }
     }
 }

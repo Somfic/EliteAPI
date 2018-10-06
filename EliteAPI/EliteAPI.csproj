@@ -84,6 +84,7 @@
     <Compile Include="Events\SupercruiseEntry.cs" />
     <Compile Include="Events\SupercruiseExit.cs" />
     <Compile Include="Events\UnderAttack.cs" />
+    <Compile Include="Events\Scanned.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

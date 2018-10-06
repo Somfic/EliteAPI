@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EliteAPI
 {
-    public class DockingGranted
+    public class DockingGrantedInfo
     {
         public DateTime timestamp { get; set; }
         public string @event { get; set; }

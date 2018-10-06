@@ -71,7 +71,7 @@ namespace EliteAPI
 
                 ProcessLog(logFile);
 
-                Thread.Sleep(1000);
+                Thread.Sleep(1);
             }
         }
 
@@ -108,91 +108,95 @@ namespace EliteAPI
             switch (eventName)
             {
                 case "ClearSavedGame":
-                    ClearSavedGameEvent?.Invoke(this, JsonConvert.DeserializeObject<ClearSavedGame>(json));
+                    ClearSavedGameEvent?.Invoke(this, JsonConvert.DeserializeObject<ClearSavedGameInfo>(json));
                     break;
 
                 case "NewCommander":
-                    NewCommanderEvent?.Invoke(this, JsonConvert.DeserializeObject<NewCommander>(json));
+                    NewCommanderEvent?.Invoke(this, JsonConvert.DeserializeObject<NewCommanderInfo>(json));
                     break;
 
                 case "LoadGame":
-                    LoadGameEvent?.Invoke(this, JsonConvert.DeserializeObject<LoadGame>(json));
+                    LoadGameEvent?.Invoke(this, JsonConvert.DeserializeObject<LoadGameInfo>(json));
                     break;
 
                 case "Commander":
-                    CommanderEvent?.Invoke(this, JsonConvert.DeserializeObject<Commander>(json));
+                    CommanderEvent?.Invoke(this, JsonConvert.DeserializeObject<CommanderInfo>(json));
                     break;
 
                 case "Rank":
-                    RankEvent?.Invoke(this, JsonConvert.DeserializeObject<Rank>(json));
+                    RankEvent?.Invoke(this, JsonConvert.DeserializeObject<RankInfo>(json));
                     break;
 
                 case "Progress":
-                    ProgressEvent?.Invoke(this, JsonConvert.DeserializeObject<Progress>(json));
+                    ProgressEvent?.Invoke(this, JsonConvert.DeserializeObject<ProgressInfo>(json));
                     break;
 
                 case "Reputation":
-                    ReputationEvent?.Invoke(this, JsonConvert.DeserializeObject<Reputation>(json));
+                    ReputationEvent?.Invoke(this, JsonConvert.DeserializeObject<ReputationInfo>(json));
                     break;
 
                 case "Loadout":
-                    LoadoutEvent?.Invoke(this, JsonConvert.DeserializeObject<Loadout>(json));
+                    LoadoutEvent?.Invoke(this, JsonConvert.DeserializeObject<LoadoutInfo>(json));
                     break;
 
                 case "Location":
-                    LocationEvent?.Invoke(this, JsonConvert.DeserializeObject<Location>(json));
+                    LocationEvent?.Invoke(this, JsonConvert.DeserializeObject<LocationInfo>(json));
                     break;
 
                 case "Statistics":
-                    StatisticsEvent?.Invoke(this, JsonConvert.DeserializeObject<Statistics>(json));
+                    StatisticsEvent?.Invoke(this, JsonConvert.DeserializeObject<StatisticsInfo>(json));
                     break;
 
                 case "Docked":
-                    DockedEvent?.Invoke(this, JsonConvert.DeserializeObject<Docked>(json));
+                    DockedEvent?.Invoke(this, JsonConvert.DeserializeObject<DockedInfo>(json));
                     break;
 
                 case "Undocked":
-                    UndockedEvent?.Invoke(this, JsonConvert.DeserializeObject<Undocked>(json));
+                    UndockedEvent?.Invoke(this, JsonConvert.DeserializeObject<UndockedInfo>(json));
                     break;
 
                 case "ShipTargeted":
-                    ShipTargetedEvent?.Invoke(this, JsonConvert.DeserializeObject<ShipTargeted>(json));
+                    ShipTargetedEvent?.Invoke(this, JsonConvert.DeserializeObject<ShipTargetedInfo>(json));
                     break;
 
                 case "DockingDenied":
-                    DockingDeniedEvent?.Invoke(this, JsonConvert.DeserializeObject<DockingDenied>(json));
+                    DockingDeniedEvent?.Invoke(this, JsonConvert.DeserializeObject<DockingDeniedInfo>(json));
                     break;
 
                 case "DockingGranted":
-                    DockingGrantedEvent?.Invoke(this, JsonConvert.DeserializeObject<DockingGranted>(json));
+                    DockingGrantedEvent?.Invoke(this, JsonConvert.DeserializeObject<DockingGrantedInfo>(json));
                     break;
 
                 case "DockingRequested":
-                    DockingRequestedEvent?.Invoke(this, JsonConvert.DeserializeObject<DockingRequested>(json));
+                    DockingRequestedEvent?.Invoke(this, JsonConvert.DeserializeObject<DockingRequestedInfo>(json));
                     break;
 
                 case "StartJump":
-                    StartJumpEvent?.Invoke(this, JsonConvert.DeserializeObject<StartJump>(json));
+                    StartJumpEvent?.Invoke(this, JsonConvert.DeserializeObject<StartJumpInfo>(json));
                     break;
 
                 case "SupercruiseEntry":
-                    SupercruiseEntryEvent?.Invoke(this, JsonConvert.DeserializeObject<SupercruiseEntry>(json));
+                    SupercruiseEntryEvent?.Invoke(this, JsonConvert.DeserializeObject<SupercruiseEntryInfo>(json));
                     break;
 
                 case "SupercruiseExit":
-                    SupercruiseExitEvent?.Invoke(this, JsonConvert.DeserializeObject<SupercruiseExit>(json));
+                    SupercruiseExitEvent?.Invoke(this, JsonConvert.DeserializeObject<SupercruiseExitInfo>(json));
                     break;
 
                 case "FSDJump":
-                    FSDJumpEvent?.Invoke(this, JsonConvert.DeserializeObject<FSDJump>(json));
+                    FSDJumpEvent?.Invoke(this, JsonConvert.DeserializeObject<FSDJumpInfo>(json));
                     break;
 
                 case "Music":
-                    MusicEvent?.Invoke(this, JsonConvert.DeserializeObject<Music>(json));
+                    MusicEvent?.Invoke(this, JsonConvert.DeserializeObject<MusicInfo>(json));
                     break;
 
                 case "UnderAttack":
-                    UnderAttackEvent?.Invoke(this, JsonConvert.DeserializeObject<UnderAttack>(json));
+                    UnderAttackEvent?.Invoke(this, JsonConvert.DeserializeObject<UnderAttackInfo>(json));
+                    break;
+
+                case "Scanned":
+                    ScannedEvent?.Invoke(this, JsonConvert.DeserializeObject<ScanInfo>(json));
                     break;
             }
         }
@@ -200,111 +204,118 @@ namespace EliteAPI
         /// <summary>
         /// Triggered whenever the save is reset/cleared.
         /// </summary>
-        public event EventHandler<ClearSavedGame> ClearSavedGameEvent;
+        public event EventHandler<ClearSavedGameInfo> ClearSavedGameEvent;
 
         /// <summary>
         /// Triggered whenever a new commander is created.
         /// </summary>
-        public event EventHandler<NewCommander> NewCommanderEvent;
+        public event EventHandler<NewCommanderInfo> NewCommanderEvent;
 
         /// <summary>
         /// Triggered whenever the game starts.
         /// </summary>
-        public event EventHandler<LoadGame> LoadGameEvent;
+        public event EventHandler<LoadGameInfo> LoadGameEvent;
 
         /// <summary>
         /// Triggered whenever the player starts, contains basic commander info.
         /// </summary>
-        public event EventHandler<Commander> CommanderEvent;
+        public event EventHandler<CommanderInfo> CommanderEvent;
 
         /// <summary>
         /// Triggered whenever the player starts, contains basic rank info.
         /// </summary>
-        public event EventHandler<Rank> RankEvent;
+        public event EventHandler<RankInfo> RankEvent;
 
         /// <summary>
         /// Triggered whenever the player starts, contains basic rank progress info.
         /// </summary>
-        public event EventHandler<Progress> ProgressEvent;
+        public event EventHandler<ProgressInfo> ProgressEvent;
 
         /// <summary>
         /// Triggered whenever the player starts, contains basic reputation info.
         /// </summary>
-        public event EventHandler<Reputation> ReputationEvent;
+        public event EventHandler<ReputationInfo> ReputationEvent;
 
         /// <summary>
         /// Triggered whenever the player starts, contains the ship's loadout.
         /// </summary>
-        public event EventHandler<Loadout> LoadoutEvent;
+        public event EventHandler<LoadoutInfo> LoadoutEvent;
 
         /// <summary>
         /// Triggered whenever the player has started, contains info about the current location.
         /// </summary>
-        public event EventHandler<Location> LocationEvent;
+        public event EventHandler<LocationInfo> LocationEvent;
 
         /// <summary>
         /// Triggered whenever the player starts, contains all the player's current statistics.
         /// </summary>
-        public event EventHandler<Statistics> StatisticsEvent;
+        public event EventHandler<StatisticsInfo> StatisticsEvent;
 
         /// <summary>
         /// Triggered whenever a player docks at a station.
         /// </summary>
-        public event EventHandler<Docked> DockedEvent;
+        public event EventHandler<DockedInfo> DockedEvent;
         
         /// <summary>
         /// Triggered whenever a player undocks from a station.
         /// </summary>
-        public event EventHandler<Undocked> UndockedEvent;
+        public event EventHandler<UndockedInfo> UndockedEvent;
 
         /// <summary>
         /// Triggered whenever a player targets another ship.
         /// </summary>
-        public event EventHandler<ShipTargeted> ShipTargetedEvent;
+        public event EventHandler<ShipTargetedInfo> ShipTargetedEvent;
 
         /// <summary>
         /// Triggered whenever a player has their docking request denied.
         /// </summary>
-        public event EventHandler<DockingDenied> DockingDeniedEvent;
+        public event EventHandler<DockingDeniedInfo> DockingDeniedEvent;
 
         /// <summary>
         /// Triggered whenever a player has their docking request granted.
         /// </summary>
-        public event EventHandler<DockingGranted> DockingGrantedEvent;
+        public event EventHandler<DockingGrantedInfo> DockingGrantedEvent;
 
         /// <summary>
         /// Triggered whenever a player requests docking permissions.
         /// </summary>
-        public event EventHandler<DockingRequested> DockingRequestedEvent;
+        public event EventHandler<DockingRequestedInfo> DockingRequestedEvent;
 
         /// <summary>
         /// Triggered whenever a player starts jumping.
         /// </summary>
-        public event EventHandler<StartJump> StartJumpEvent;
+        public event EventHandler<StartJumpInfo> StartJumpEvent;
 
         /// <summary>
         /// Triggered whenever a player jumped into supercruise.
         /// </summary>
-        public event EventHandler<SupercruiseEntry> SupercruiseEntryEvent;
+        public event EventHandler<SupercruiseEntryInfo> SupercruiseEntryEvent;
 
         /// <summary>
         /// Triggered whenever a player left supercruise.
         /// </summary>
-        public event EventHandler<SupercruiseExit> SupercruiseExitEvent;
+        public event EventHandler<SupercruiseExitInfo> SupercruiseExitEvent;
 
         /// <summary>
         /// Triggered whenever a player is jumping to another system.
         /// </summary>
-        public event EventHandler<FSDJump> FSDJumpEvent;
+        public event EventHandler<FSDJumpInfo> FSDJumpEvent;
 
         /// <summary>
         /// Triggered whenever the music track changes.
         /// </summary>
-        public event EventHandler<Music> MusicEvent;
+        public event EventHandler<MusicInfo> MusicEvent;
 
         /// <summary>
         /// Triggered whenever a player is under attack.
         /// </summary>
-        public event EventHandler<UnderAttack> UnderAttackEvent;
+        public event EventHandler<UnderAttackInfo> UnderAttackEvent;
+
+        /// <summary>
+        /// Triggered whenever a play is being scanned.
+        /// </summary>
+        public event EventHandler<ScanInfo> ScannedEvent;
+
+
     }
 }

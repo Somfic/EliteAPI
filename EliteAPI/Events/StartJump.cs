@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EliteAPI
 {
-    public class StartJump
+    public class StartJumpInfo
     {
         public DateTime timestamp { get; set; }
         public string @event { get; set; }

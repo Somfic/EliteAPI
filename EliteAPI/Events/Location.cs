@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace EliteAPI
 {
-    public class Location
+    public class LocationInfo
     {
-        public class RecoveringState
+        public class RecoveringStateInfo
         {
             public string State { get; set; }
             public int Trend { get; set; }
         }
 
-        public class Faction
+        public class FactionInfo
         {
             public string Name { get; set; }
             public string FactionState { get; set; }
             public string Government { get; set; }
             public double Influence { get; set; }
             public string Allegiance { get; set; }
-            public List<RecoveringState> RecoveringStates { get; set; }
+            public List<RecoveringStateInfo> RecoveringStates { get; set; }
         }
 
         public DateTime timestamp { get; set; }
@@ -46,7 +46,7 @@ namespace EliteAPI
         public string Body { get; set; }
         public int BodyID { get; set; }
         public string BodyType { get; set; }
-        public List<Faction> Factions { get; set; }
+        public List<FactionInfo> Factions { get; set; }
         public string SystemFaction { get; set; }
         public string FactionState { get; set; }
     }

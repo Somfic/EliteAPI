@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI", "EliteAPI\EliteAPI.csproj", "{9B2968C2-1F10-45A0-A388-9DA1FBA3922B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{D5B939F2-94C3-4B72-A31E-415050C36919}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Test\Example.csproj", "{D5B939F2-94C3-4B72-A31E-415050C36919}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

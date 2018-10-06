@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EliteAPI
 {
-    public class Statistics
+    public class StatisticsInfo
     {
-        public class cBankAccount
+        public class BankAccountInfo
         {
             public int Current_Wealth { get; set; }
             public int Spent_On_Ships { get; set; }
@@ -20,7 +20,7 @@ namespace EliteAPI
             public int Spent_On_Insurance { get; set; }
         }
 
-        public class cCombat
+        public class CombatInfo
         {
             public int Bounties_Claimed { get; set; }
             public int Bounty_Hunting_Profit { get; set; }
@@ -32,7 +32,7 @@ namespace EliteAPI
             public int Skimmers_Killed { get; set; }
         }
 
-        public class cCrime
+        public class CrimeInfo
         {
             public int Notoriety { get; set; }
             public int Fines { get; set; }
@@ -42,7 +42,7 @@ namespace EliteAPI
             public int Highest_Bounty { get; set; }
         }
 
-        public class cSmuggling
+        public class SmugglingInfo
         {
             public int Black_Markets_Traded_With { get; set; }
             public int Black_Markets_Profits { get; set; }
@@ -51,7 +51,7 @@ namespace EliteAPI
             public int Highest_Single_Transaction { get; set; }
         }
 
-        public class cTrading
+        public class TradingInfo
         {
             public int Markets_Traded_With { get; set; }
             public int Market_Profits { get; set; }
@@ -60,14 +60,14 @@ namespace EliteAPI
             public int Highest_Single_Transaction { get; set; }
         }
 
-        public class cMining
+        public class MiningInfo
         {
             public int Mining_Profits { get; set; }
             public int Quantity_Mined { get; set; }
             public int Materials_Collected { get; set; }
         }
 
-        public class cExploration
+        public class ExplorationInfo
         {
             public int Systems_Visited { get; set; }
             public int Exploration_Profits { get; set; }
@@ -80,7 +80,7 @@ namespace EliteAPI
             public int Time_Played { get; set; }
         }
 
-        public class cPassengers
+        public class PassengersInfo
         {
             public int Passengers_Missions_Accepted { get; set; }
             public int Passengers_Missions_Disgruntled { get; set; }
@@ -90,14 +90,14 @@ namespace EliteAPI
             public int Passengers_Missions_Ejected { get; set; }
         }
 
-        public class cSearchAndRescue
+        public class SearchAndRescueInfo
         {
             public int SearchRescue_Traded { get; set; }
             public int SearchRescue_Profit { get; set; }
             public int SearchRescue_Count { get; set; }
         }
 
-        public class cCrafting
+        public class CraftingInfo
         {
             public int Count_Of_Used_Engineers { get; set; }
             public int Recipes_Generated { get; set; }
@@ -108,7 +108,7 @@ namespace EliteAPI
             public int Recipes_Generated_Rank_5 { get; set; }
         }
 
-        public class cCrew
+        public class CrewInfo
         {
             public int NpcCrew_TotalWages { get; set; }
             public int NpcCrew_Hired { get; set; }
@@ -116,7 +116,7 @@ namespace EliteAPI
             public int NpcCrew_Died { get; set; }
         }
 
-        public class cMulticrew
+        public class MulticrewInfo
         {
             public int Multicrew_Time_Total { get; set; }
             public int Multicrew_Gunner_Time_Total { get; set; }
@@ -125,7 +125,7 @@ namespace EliteAPI
             public int Multicrew_Fines_Total { get; set; }
         }
 
-        public class cMaterialTraderStats
+        public class MaterialTraderStatsInfo
         {
             public int Trades_Completed { get; set; }
             public int Materials_Traded { get; set; }
@@ -135,18 +135,18 @@ namespace EliteAPI
 
         public DateTime timestamp { get; set; }
         public string @event { get; set; }
-        public cBankAccount Bank_Account { get; set; }
-        public cCombat Combat { get; set; }
-        public cCrime Crime { get; set; }
-        public cSmuggling Smuggling { get; set; }
-        public cTrading Trading { get; set; }
-        public cMining Mining { get; set; }
-        public cExploration Exploration { get; set; }
-        public cPassengers Passengers { get; set; }
-        public cSearchAndRescue Search_And_Rescue { get; set; }
-        public cCrafting Crafting { get; set; }
-        public cCrew Crew { get; set; }
-        public cMulticrew Multicrew { get; set; }
-        public cMaterialTraderStats Material_Trader_Stats { get; set; }
+        public BankAccountInfo Bank_Account { get; set; }
+        public CombatInfo Combat { get; set; }
+        public CrimeInfo Crime { get; set; }
+        public SmugglingInfo Smuggling { get; set; }
+        public TradingInfo Trading { get; set; }
+        public MiningInfo Mining { get; set; }
+        public ExplorationInfo Exploration { get; set; }
+        public PassengersInfo Passengers { get; set; }
+        public SearchAndRescueInfo Search_And_Rescue { get; set; }
+        public CraftingInfo Crafting { get; set; }
+        public CrewInfo Crew { get; set; }
+        public MulticrewInfo Multicrew { get; set; }
+        public MaterialTraderStatsInfo Material_Trader_Stats { get; set; }
     }
 }

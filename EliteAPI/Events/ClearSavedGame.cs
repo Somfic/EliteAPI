@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI
 {
-    public class ClearSavedGame
+    public class ClearSavedGameInfo
     {
         public DateTime timestamp { get; set; }
         public string @event { get; set; }

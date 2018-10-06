@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EliteAPI
 {
-    public class Docked
+    public class DockedInfo
     {
-        public class cStationEconomy
+        public class StationEconomyInfo
         {
             public string Name { get; set; }
             public string Name_Localised { get; set; }
@@ -30,7 +30,7 @@ namespace EliteAPI
         public List<string> StationServices { get; set; }
         public string StationEconomy { get; set; }
         public string StationEconomy_Localised { get; set; }
-        public List<cStationEconomy> StationEconomies { get; set; }
+        public List<StationEconomyInfo> StationEconomies { get; set; }
         public double DistFromStarLS { get; set; }
     }
 }

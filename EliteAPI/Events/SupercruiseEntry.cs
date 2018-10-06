@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EliteAPI
 {
-    public class SupercruiseEntry
+    public class SupercruiseEntryInfo
     {
         public DateTime timestamp { get; set; }
         public string @event { get; set; }

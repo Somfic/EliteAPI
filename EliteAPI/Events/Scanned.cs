@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace EliteAPI
 {
-    public class UnderAttackInfo
+    public class ScanInfo
     {
         public DateTime timestamp { get; set; }
         public string @event { get; set; }
-        public string Target { get; set; }
+        public string ScanType { get; set; }
     }
 }

@@ -14,11 +14,17 @@ namespace EliteAPI
     {
         private DirectoryInfo _playerJournalDirectory;
 
+        public System lastSystem = new System();
+        public Station lastStation = new Station();
+
         /// <summary>
         /// Whether the class is processing logs.
         /// </summary>
         public bool isRunning { get; private set; } 
 
+        /// <summary>
+        /// A list of all the processed logs so far.
+        /// </summary>
         private List<string> processedLogs;
 
         /// <summary>
@@ -38,8 +44,9 @@ namespace EliteAPI
         public void Reset()
         {
             processedLogs = new List<string>();
+            lastStation = new Station();
+            lastSystem = new System();
         }
-
         /// <summary>
         /// Starts the processing of the log file.
         /// </summary>
@@ -47,6 +54,10 @@ namespace EliteAPI
         {
             isRunning = true;
             Task.Run(() => { InitProcessLog(); });
+            this.LocationEvent += EliteDangerousAPI_LocationEvent;
+            this.DockedEvent += EliteDangerousAPI_DockedEvent;
+            this.FSDJumpEvent += EliteDangerousAPI_FSDJumpEvent;
+            this.SupercruiseEntryEvent += EliteDangerousAPI_SupercruiseEntryEvent;
         }
 
         /// <summary>
@@ -71,7 +82,7 @@ namespace EliteAPI
 
                 ProcessLog(logFile);
 
-                Thread.Sleep(1);
+                Thread.Sleep(333);
             }
         }
 
@@ -198,6 +209,14 @@ namespace EliteAPI
                 case "Scanned":
                     ScannedEvent?.Invoke(this, JsonConvert.DeserializeObject<ScanInfo>(json));
                     break;
+
+                case "Interdicted":
+                    InterdictedEvent?.Invoke(this, JsonConvert.DeserializeObject<InterdictedInfo>(json));
+                    break;
+
+                case "ReceiveText":
+                    ReceiveTextEvent?.Invoke(this, JsonConvert.DeserializeObject<ReceiveTextInfo>(json));
+                    break;
             }
         }
 
@@ -312,10 +331,82 @@ namespace EliteAPI
         public event EventHandler<UnderAttackInfo> UnderAttackEvent;
 
         /// <summary>
-        /// Triggered whenever a play is being scanned.
+        /// Triggered whenever a player is being scanned.
         /// </summary>
         public event EventHandler<ScanInfo> ScannedEvent;
 
+        /// <summary>
+        /// Triggered whenever a player recieves a message.
+        /// </summary>
+        public event EventHandler<ReceiveTextInfo> ReceiveTextEvent;
 
+        /// <summary>
+        /// Triggered whenever a player gets successfully interdicted.
+        /// </summary>
+        public event EventHandler<InterdictedInfo> InterdictedEvent;
+
+        private void EliteDangerousAPI_SupercruiseEntryEvent(object sender, SupercruiseEntryInfo e)
+        {
+            lastSystem.Address = e.SystemAddress;
+            lastSystem.Name = e.StarSystem;
+        }
+        private void EliteDangerousAPI_FSDJumpEvent(object sender, FSDJumpInfo e)
+        {
+            lastSystem.Address = e.SystemAddress;
+            lastSystem.Allegiance = e.SystemAllegiance;
+            lastSystem.Economy = e.SystemEconomy;
+            lastSystem.Economy_Localised = e.SystemEconomy_Localised;
+            lastSystem.Government = e.SystemGovernment;
+            lastSystem.Government_Localised = e.SystemGovernment_Localised;
+            lastSystem.Name = e.StarSystem;
+            lastSystem.Population = e.Population;
+            lastSystem.Position = e.StarPos;
+            lastSystem.SecondEconomy = e.SystemSecondEconomy;
+            lastSystem.SecondEconomy_Localised = e.SystemSecondEconomy_Localised;
+            lastSystem.Security = e.SystemSecurity;
+            lastSystem.Security_Localised = e.SystemSecurity_Localised;
+        }
+        private void EliteDangerousAPI_DockedEvent(object sender, DockedInfo e)
+        {
+            lastSystem.Name = e.StarSystem;
+            lastSystem.Address = e.SystemAddress;
+
+            lastStation.Allegiance = e.StationAllegiance;
+            lastStation.DistFromStarLS = e.DistFromStarLS;
+            lastStation.Economies = e.StationEconomies;
+            lastStation.Economy = e.StationEconomy;
+            lastStation.Economy_Localised = e.StationEconomy_Localised;
+            lastStation.Faction = e.StationFaction;
+            lastStation.FactionState = e.FactionState;
+            lastStation.Government = e.StationGovernment;
+            lastStation.Government_Localised = e.StationGovernment_Localised;
+            lastStation.MarketID = e.MarketID;
+            lastStation.Name = e.StationName;
+            lastStation.Services = e.StationServices;
+            lastStation.System = lastSystem;
+            lastStation.Type = e.StationType;
+        }
+        private void EliteDangerousAPI_LocationEvent(object sender, LocationInfo e)
+        {
+            lastSystem.Address = e.SystemAddress;
+            lastSystem.Allegiance = e.SystemAllegiance;
+            lastSystem.Economy = e.SystemEconomy;
+            lastSystem.Economy_Localised = e.SystemEconomy_Localised;
+            lastSystem.FactionState = e.FactionState;
+            lastSystem.Government = e.SystemGovernment;
+            lastSystem.Government_Localised = e.SystemGovernment_Localised;
+            lastSystem.Name = e.StarSystem;
+            lastSystem.Population = e.Population;
+            lastSystem.Position = e.StarPos;
+            lastSystem.SecondEconomy = e.SystemSecondEconomy;
+            lastSystem.SecondEconomy_Localised = e.SystemSecondEconomy_Localised;
+            lastSystem.Security = e.SystemSecurity;
+            lastSystem.Security_Localised = e.SystemSecurity_Localised;
+            lastSystem.SystemFaction = e.SystemFaction;
+
+            lastStation.Name = e.StationName;
+            lastStation.Type = e.StationType;
+            lastStation.System = lastSystem;
+        }
     }
 }

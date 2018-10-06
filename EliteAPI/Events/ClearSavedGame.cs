@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Newtonsoft.Json;
 
-namespace EliteAPI.Events
+namespace EliteAPI
 {
     public class ClearSavedGame
     {

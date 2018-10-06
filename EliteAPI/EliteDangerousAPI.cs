@@ -114,67 +114,66 @@ namespace EliteAPI
             switch (eventName)
             {
                 case "ClearSavedGame":
-                    ClearSavedGameEvent?.Invoke(this, JsonConvert.DeserializeObject<Events.ClearSavedGame>(json));
+                    ClearSavedGameEvent?.Invoke(this, JsonConvert.DeserializeObject<ClearSavedGame>(json));
                     break;
 
                 case "NewCommander":
-                    NewCommanderEvent?.Invoke(this, JsonConvert.DeserializeObject<Events.NewCommander>(json));
+                    NewCommanderEvent?.Invoke(this, JsonConvert.DeserializeObject<NewCommander>(json));
                     break;
 
                 case "LoadGame":
-                    LoadGameEvent?.Invoke(this, JsonConvert.DeserializeObject<Events.LoadGame>(json));
+                    LoadGameEvent?.Invoke(this, JsonConvert.DeserializeObject<LoadGame>(json));
                     break;
 
                 case "Commander":
-                    CommanderEvent?.Invoke(this, JsonConvert.DeserializeObject<Events.Commander>(json));
+                    CommanderEvent?.Invoke(this, JsonConvert.DeserializeObject<Commander>(json));
                     break;
 
                 case "Rank":
-                    RankEvent?.Invoke(this, JsonConvert.DeserializeObject<Events.Rank>(json));
+                    RankEvent?.Invoke(this, JsonConvert.DeserializeObject<Rank>(json));
                     break;
 
                 case "Progress":
-                    ProgressEvent?.Invoke(this, JsonConvert.DeserializeObject<Events.Progress>(json));
+                    ProgressEvent?.Invoke(this, JsonConvert.DeserializeObject<Progress>(json));
                     break;
 
                 case "Reputation":
-                    ReputationEvent?.Invoke(this, JsonConvert.DeserializeObject<Events.Reputation>(json));
+                    ReputationEvent?.Invoke(this, JsonConvert.DeserializeObject<Reputation>(json));
                     break;
 
                 case "Loadout":
-                    LoadoutEvent?.Invoke(this, JsonConvert.DeserializeObject<Events.Loadout>(json));
+                    LoadoutEvent?.Invoke(this, JsonConvert.DeserializeObject<Loadout>(json));
                     break;
 
                 case "Location":
-                    LocationEvent?.Invoke(this, JsonConvert.DeserializeObject<Events.Location>(json));
+                    LocationEvent?.Invoke(this, JsonConvert.DeserializeObject<Location>(json));
                     break;
 
                 case "Statistics":
-                    StatisticsEvent?.Invoke(this, JsonConvert.DeserializeObject<Events.Statistics>(json));
+                    StatisticsEvent?.Invoke(this, JsonConvert.DeserializeObject<Statistics>(json));
                     break;
 
                 case "Docked":
-                    DockedEvent?.Invoke(this, JsonConvert.DeserializeObject<Events.Docked>(json));
+                    DockedEvent?.Invoke(this, JsonConvert.DeserializeObject<Docked>(json));
                     break;
 
                 case "Undocked":
-                    UndockedEvent?.Invoke(this, JsonConvert.DeserializeObject<Events.Undocked>(json));
+                    UndockedEvent?.Invoke(this, JsonConvert.DeserializeObject<Undocked>(json));
                     break;
             }
         }
 
-        public event EventHandler<Events.ClearSavedGame> ClearSavedGameEvent;
-        public event EventHandler<Events.NewCommander> NewCommanderEvent;
-        public event EventHandler<Events.LoadGame> LoadGameEvent;
-        public event EventHandler<Events.Commander> CommanderEvent;
-        public event EventHandler<Events.Rank> RankEvent;
-        public event EventHandler<Events.Progress> ProgressEvent;
-        public event EventHandler<Events.Reputation> ReputationEvent;
-        public event EventHandler<Events.Loadout> LoadoutEvent;
-        public event EventHandler<Events.Location> LocationEvent;
-        public event EventHandler<Events.Statistics> StatisticsEvent;
-        public event EventHandler<Events.Docked> DockedEvent;
-        public event EventHandler<Events.Undocked> UndockedEvent;
-
+        public event EventHandler<ClearSavedGame> ClearSavedGameEvent;
+        public event EventHandler<NewCommander> NewCommanderEvent;
+        public event EventHandler<LoadGame> LoadGameEvent;
+        public event EventHandler<Commander> CommanderEvent;
+        public event EventHandler<Rank> RankEvent;
+        public event EventHandler<Progress> ProgressEvent;
+        public event EventHandler<Reputation> ReputationEvent;
+        public event EventHandler<Loadout> LoadoutEvent;
+        public event EventHandler<Location> LocationEvent;
+        public event EventHandler<Statistics> StatisticsEvent;
+        public event EventHandler<Docked> DockedEvent;
+        public event EventHandler<Undocked> UndockedEvent;
     }
 }

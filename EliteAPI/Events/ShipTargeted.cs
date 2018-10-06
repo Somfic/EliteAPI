@@ -21,5 +21,6 @@ namespace EliteAPI
         public double HullHealth { get; set; }
         public string Faction { get; set; }
         public string LegalStatus { get; set; }
+        public int Bounty { get; set; }
     }
 }

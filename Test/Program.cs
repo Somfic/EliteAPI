@@ -15,8 +15,6 @@ namespace Test
         {
             EliteDangerousAPI api = new EliteDangerousAPI(new System.IO.DirectoryInfo(@"C:\Users\Lucas\Saved Games\Frontier Developments\Elite Dangerous"));
             api.Start();
-
-            api.
             Thread.Sleep(-1);
         }
     }

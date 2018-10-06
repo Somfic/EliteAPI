@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums.cs" />
     <Compile Include="Events\DockingDenied.cs" />
     <Compile Include="Events\DockingGranted.cs" />
     <Compile Include="Events\DockingRequested.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Events\Statistics.cs" />
     <Compile Include="Events\Undocked.cs" />
     <Compile Include="Events\FSDJump.cs" />
+    <Compile Include="Events\Music.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\StartJump.cs" />
     <Compile Include="Events\SupercruiseEntry.cs" />

@@ -86,7 +86,7 @@ namespace EliteAPI
         /// Process the log file once.
         /// </summary>
         /// <param name="logFile">The log file to process.</param>
-        private void ProcessLog(FileInfo logFile)
+        private void ProcessLog(FileInfo logFile, bool actuallyProcess = true)
         {
             //Create a stream from the log file.
             FileStream fileStream = logFile.Open(FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite);
@@ -100,7 +100,8 @@ namespace EliteAPI
                 //If this string hasn't been processed yet, process it and mark it as processed.
                 string thisLog = streamReader.ReadLine();
                 if (!processedLogs.Contains(thisLog)) {
-                    Process(thisLog);
+
+                    if (actuallyProcess) { Process(thisLog); } //Only process it if it's marked true.
                     processedLogs.Add(thisLog);
                 }
             }
@@ -192,6 +193,10 @@ namespace EliteAPI
                 case "FSDJump":
                     FSDJumpEvent?.Invoke(this, JsonConvert.DeserializeObject<FSDJump>(json));
                     break;
+
+                case "Music":
+                    MusicEvent?.Invoke(this, JsonConvert.DeserializeObject<Music>(json));
+                    break;
             }
         }
 
@@ -215,5 +220,6 @@ namespace EliteAPI
         public event EventHandler<SupercruiseEntry> SupercruiseEntryEvent;
         public event EventHandler<SupercruiseExit> SupercruiseExitEvent;
         public event EventHandler<FSDJump> FSDJumpEvent;
+        public event EventHandler<Music> MusicEvent;
     }
 }

@@ -160,6 +160,34 @@ namespace EliteAPI
                 case "Undocked":
                     UndockedEvent?.Invoke(this, JsonConvert.DeserializeObject<Undocked>(json));
                     break;
+
+                case "ShipTargeted":
+                    ShipTargetedEvent?.Invoke(this, JsonConvert.DeserializeObject<ShipTargeted>(json));
+                    break;
+
+                case "DockingDenied":
+                    DockingDeniedEvent?.Invoke(this, JsonConvert.DeserializeObject<DockingDenied>(json));
+                    break;
+
+                case "DockingGranted":
+                    DockingGrantedEvent?.Invoke(this, JsonConvert.DeserializeObject<DockingGranted>(json));
+                    break;
+
+                case "DockingRequested":
+                    DockingRequestedEvent?.Invoke(this, JsonConvert.DeserializeObject<DockingRequested>(json));
+                    break;
+
+                case "StartJump":
+                    StartJumpEvent?.Invoke(this, JsonConvert.DeserializeObject<StartJump>(json));
+                    break;
+
+                case "SupercruiseEntry":
+                    SupercruiseEntryEvent?.Invoke(this, JsonConvert.DeserializeObject<SupercruiseEntry>(json));
+                    break;
+
+                case "SupercruiseExit":
+                    SupercruiseExitEvent?.Invoke(this, JsonConvert.DeserializeObject<SupercruiseExit>(json));
+                    break;
             }
         }
 
@@ -175,5 +203,12 @@ namespace EliteAPI
         public event EventHandler<Statistics> StatisticsEvent;
         public event EventHandler<Docked> DockedEvent;
         public event EventHandler<Undocked> UndockedEvent;
+        public event EventHandler<ShipTargeted> ShipTargetedEvent;
+        public event EventHandler<DockingDenied> DockingDeniedEvent;
+        public event EventHandler<DockingGranted> DockingGrantedEvent;
+        public event EventHandler<DockingRequested> DockingRequestedEvent;
+        public event EventHandler<StartJump> StartJumpEvent;
+        public event EventHandler<SupercruiseEntry> SupercruiseEntryEvent;
+        public event EventHandler<SupercruiseExit> SupercruiseExitEvent;
     }
 }

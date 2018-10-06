@@ -83,7 +83,7 @@
     <Compile Include="Events\StartJump.cs" />
     <Compile Include="Events\SupercruiseEntry.cs" />
     <Compile Include="Events\SupercruiseExit.cs" />
-    <Compile Include="UnderAttack.cs" />
+    <Compile Include="Events\UnderAttack.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EliteAPI.Enums
+namespace EliteAPI
 {
     public enum StationType { Outpost, Coriolis, Orbis }
 }

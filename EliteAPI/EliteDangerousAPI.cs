@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Newtonsoft.Json;
@@ -12,7 +13,6 @@ namespace EliteAPI
     public class EliteDangerousAPI
     {
         private DirectoryInfo _playerJournalDirectory;
-        private FileSystemWatcher fileSystemWatcher;
 
         /// <summary>
         /// Whether the class is processing logs.
@@ -41,9 +41,9 @@ namespace EliteAPI
         }
 
         /// <summary>
-        /// Starts the processing of the log file, async.
+        /// Starts the processing of the log file.
         /// </summary>
-        public void RunAsync()
+        public void Start()
         {
             isRunning = true;
             Task.Run(() => { InitProcessLog(); });
@@ -55,7 +55,6 @@ namespace EliteAPI
         public void Stop()
         {
             isRunning = false;
-            fileSystemWatcher.Changed -= FileSystemWatcher_Changed;
         }
 
         /// <summary>
@@ -63,23 +62,17 @@ namespace EliteAPI
         /// </summary>
         private void InitProcessLog()
         {
-            FileInfo logFile = _playerJournalDirectory
-                .GetFiles("#.log") //Get all files that end with .log.
-                .OrderByDescending(x => x.LastWriteTime) //Order them by last written.
-                .First(); //Get the first one of the ordered list.
-
-            fileSystemWatcher = new FileSystemWatcher(logFile.FullName)
+            while(isRunning)
             {
-                Filter = logFile.Name,
-                NotifyFilter = NotifyFilters.LastWrite                
-            };
+                FileInfo logFile = _playerJournalDirectory
+                                    .GetFiles("*.log") //Get all files that end with .log.
+                                    .OrderByDescending(x => x.LastWriteTime) //Order them by last written.
+                                    .First(); //Get the first one of the ordered list.
 
-            fileSystemWatcher.Changed += FileSystemWatcher_Changed;
-        }
+                ProcessLog(logFile);
 
-        private void FileSystemWatcher_Changed(object sender, FileSystemEventArgs e)
-        {
-            ProcessLog(new FileInfo(e.FullPath));
+                Thread.Sleep(1000);
+            }
         }
 
         /// <summary>
@@ -89,7 +82,7 @@ namespace EliteAPI
         private void ProcessLog(FileInfo logFile, bool actuallyProcess = true)
         {
             //Create a stream from the log file.
-            FileStream fileStream = logFile.Open(FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite);
+            FileStream fileStream = logFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 
             //Create a stream from the file stream.
             StreamReader streamReader = new StreamReader(fileStream);
@@ -197,29 +190,121 @@ namespace EliteAPI
                 case "Music":
                     MusicEvent?.Invoke(this, JsonConvert.DeserializeObject<Music>(json));
                     break;
+
+                case "UnderAttack":
+                    UnderAttackEvent?.Invoke(this, JsonConvert.DeserializeObject<UnderAttack>(json));
+                    break;
             }
         }
 
+        /// <summary>
+        /// Triggered whenever the save is reset/cleared.
+        /// </summary>
         public event EventHandler<ClearSavedGame> ClearSavedGameEvent;
+
+        /// <summary>
+        /// Triggered whenever a new commander is created.
+        /// </summary>
         public event EventHandler<NewCommander> NewCommanderEvent;
+
+        /// <summary>
+        /// Triggered whenever the game starts.
+        /// </summary>
         public event EventHandler<LoadGame> LoadGameEvent;
+
+        /// <summary>
+        /// Triggered whenever the player starts, contains basic commander info.
+        /// </summary>
         public event EventHandler<Commander> CommanderEvent;
+
+        /// <summary>
+        /// Triggered whenever the player starts, contains basic rank info.
+        /// </summary>
         public event EventHandler<Rank> RankEvent;
+
+        /// <summary>
+        /// Triggered whenever the player starts, contains basic rank progress info.
+        /// </summary>
         public event EventHandler<Progress> ProgressEvent;
+
+        /// <summary>
+        /// Triggered whenever the player starts, contains basic reputation info.
+        /// </summary>
         public event EventHandler<Reputation> ReputationEvent;
+
+        /// <summary>
+        /// Triggered whenever the player starts, contains the ship's loadout.
+        /// </summary>
         public event EventHandler<Loadout> LoadoutEvent;
+
+        /// <summary>
+        /// Triggered whenever the player has started, contains info about the current location.
+        /// </summary>
         public event EventHandler<Location> LocationEvent;
+
+        /// <summary>
+        /// Triggered whenever the player starts, contains all the player's current statistics.
+        /// </summary>
         public event EventHandler<Statistics> StatisticsEvent;
+
+        /// <summary>
+        /// Triggered whenever a player docks at a station.
+        /// </summary>
         public event EventHandler<Docked> DockedEvent;
+        
+        /// <summary>
+        /// Triggered whenever a player undocks from a station.
+        /// </summary>
         public event EventHandler<Undocked> UndockedEvent;
+
+        /// <summary>
+        /// Triggered whenever a player targets another ship.
+        /// </summary>
         public event EventHandler<ShipTargeted> ShipTargetedEvent;
+
+        /// <summary>
+        /// Triggered whenever a player has their docking request denied.
+        /// </summary>
         public event EventHandler<DockingDenied> DockingDeniedEvent;
+
+        /// <summary>
+        /// Triggered whenever a player has their docking request granted.
+        /// </summary>
         public event EventHandler<DockingGranted> DockingGrantedEvent;
+
+        /// <summary>
+        /// Triggered whenever a player requests docking permissions.
+        /// </summary>
         public event EventHandler<DockingRequested> DockingRequestedEvent;
+
+        /// <summary>
+        /// Triggered whenever a player starts jumping.
+        /// </summary>
         public event EventHandler<StartJump> StartJumpEvent;
+
+        /// <summary>
+        /// Triggered whenever a player jumped into supercruise.
+        /// </summary>
         public event EventHandler<SupercruiseEntry> SupercruiseEntryEvent;
+
+        /// <summary>
+        /// Triggered whenever a player left supercruise.
+        /// </summary>
         public event EventHandler<SupercruiseExit> SupercruiseExitEvent;
+
+        /// <summary>
+        /// Triggered whenever a player is jumping to another system.
+        /// </summary>
         public event EventHandler<FSDJump> FSDJumpEvent;
+
+        /// <summary>
+        /// Triggered whenever the music track changes.
+        /// </summary>
         public event EventHandler<Music> MusicEvent;
+
+        /// <summary>
+        /// Triggered whenever a player is under attack.
+        /// </summary>
+        public event EventHandler<UnderAttack> UnderAttackEvent;
     }
 }

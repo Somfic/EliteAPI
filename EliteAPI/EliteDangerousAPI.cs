@@ -138,7 +138,7 @@ namespace EliteAPI
             switch (eventName)
             {
                 default:
-                    File.AppendAllText(@"D:\stuff.txt", json + Environment.NewLine);
+//                  File.AppendAllText(@"D:\NotAddedEvents.txt", json + Environment.NewLine);
                     break;
 
                 case "ClearSavedGame":

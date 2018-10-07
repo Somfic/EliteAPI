@@ -137,6 +137,10 @@ namespace EliteAPI
 
             switch (eventName)
             {
+                default:
+                    File.AppendAllText(@"D:\stuff.txt", json + Environment.NewLine);
+                    break;
+
                 case "ClearSavedGame":
                     ClearSavedGameEvent?.Invoke(this, JsonConvert.DeserializeObject<ClearSavedGameInfo>(json));
                     break;
@@ -276,8 +280,179 @@ namespace EliteAPI
                 case "Missions":
                     MissionsEvent?.Invoke(this, JsonConvert.DeserializeObject<MissionsInfo>(json));
                     break;
+
+                case "Outfitting":
+                    OutfittingEvent?.Invoke(this, JsonConvert.DeserializeObject<OutfittingInfo>(json));
+                    break;
+
+                case "Friends":
+                    FriendsEvent?.Invoke(this, JsonConvert.DeserializeObject<FriendsInfo>(json));
+                    break;
+
+                case "Materials":
+                    MaterialsEvent?.Invoke(this, JsonConvert.DeserializeObject<MaterialsInfo>(json));
+                    break;
+
+                case "NpcCrewPaidWage":
+                    NpcCrewPaidWageEvent?.Invoke(this, JsonConvert.DeserializeObject<NpcCrewPaidWageInfo>(json));
+                    break;
+
+                case "RepairAll":
+                    RepairAllEvent?.Invoke(this, JsonConvert.DeserializeObject<RepairAllInfo>(json));
+                    break;
+
+                case "RefuelAll":
+                    RefuelAllEvent?.Invoke(this, JsonConvert.DeserializeObject<RefuelAllInfo>(json));
+                    break;
+
+                case "StoredModules":
+                    StoredModulesEvent?.Invoke(this, JsonConvert.DeserializeObject<StoredModulesInfo>(json));
+                    break;
+
+                case "Cargo":
+                    CargoEvent?.Invoke(this, JsonConvert.DeserializeObject<CargoInfo>(json));
+                    break;
+
+                case "MarketBuy":
+                    MarketBuyEvent?.Invoke(this, JsonConvert.DeserializeObject<MarketBuyInfo>(json));
+                    break;
+
+                case "MarketSell":
+                    MarketSellEvent?.Invoke(this, JsonConvert.DeserializeObject<MarketSellInfo>(json));
+                    break;
+
+                case "ModuleBuy":
+                    ModuleBuyEvent?.Invoke(this, JsonConvert.DeserializeObject<ModuleBuyInfo>(json));
+                    break;
+
+                case "ModuleSell":
+                    ModuleSellEvent?.Invoke(this, JsonConvert.DeserializeObject<ModuleSellInfo>(json));
+                    break;
+
+                case "EjectCargo":
+                    EjectCargoEvent?.Invoke(this, JsonConvert.DeserializeObject<EjectCargoInfo>(json));
+                    break;
+
+                case "StoredShips":
+                    StoredShipsEvent?.Invoke(this, JsonConvert.DeserializeObject<StoredShipsInfo>(json));
+                    break;
+
+                case "ShipyardBuy":
+                    ShipyardBuyEvent?.Invoke(this, JsonConvert.DeserializeObject<ShipyardBuyInfo>(json));
+                    break;
+
+                case "ShipyardSell":
+                    ShipyardSellEvent?.Invoke(this, JsonConvert.DeserializeObject<ShipyardSellInfo>(json));
+                    break;
+
+                case "ShipyardSwap":
+                    ShipyardSwapEvent?.Invoke(this, JsonConvert.DeserializeObject<ShipyardSwapInfo>(json));
+                    break;
+
+                case "Shipyard":
+                    ShipyardEvent?.Invoke(this, JsonConvert.DeserializeObject<ShipyardInfo>(json));
+                    break;
+
+                case "Market":
+                    MarketEvent?.Invoke(this, JsonConvert.DeserializeObject<MarketInfo>(json));
+                    break;
             }
         }
+
+        /// <summary>
+        /// Triggered whenever the player opens the station's market.
+        /// </summary>
+        public event EventHandler<MarketInfo> MarketEvent;
+
+        /// <summary>
+        /// Triggered whenever the player opens the station's shipyard.
+        /// </summary>
+        public event EventHandler<ShipyardInfo> ShipyardEvent;
+
+        /// <summary>
+        /// Triggered whenever the player swaps ships.
+        /// </summary>
+        public event EventHandler<ShipyardSwapInfo> ShipyardSwapEvent;
+
+        /// <summary>
+        /// Triggered whenever the player sells a ship.
+        /// </summary>
+        public event EventHandler<ShipyardSellInfo> ShipyardSellEvent;
+
+        /// <summary>
+        /// Triggered whenever the player buys a new ship.
+        /// </summary>
+        public event EventHandler<ShipyardBuyInfo> ShipyardBuyEvent;
+
+        /// <summary>
+        /// Triggered whenever the player opens the ship management window.
+        /// </summary>
+        public event EventHandler<StoredShipsInfo> StoredShipsEvent;
+
+        /// <summary>
+        /// Triggered whenever the player ejects cargo.
+        /// </summary>
+        public event EventHandler<EjectCargoInfo> EjectCargoEvent;
+
+        /// <summary>
+        /// Triggered when the player sells a module to the station.
+        /// </summary>
+        public event EventHandler<ModuleSellInfo> ModuleSellEvent;
+
+        /// <summary>
+        /// Triggered when the player buys a module from the station.
+        /// </summary>
+        public event EventHandler<ModuleBuyInfo> ModuleBuyEvent;
+
+        /// <summary>
+        /// Triggered when the player sells something to the station market.
+        /// </summary>
+        public event EventHandler<MarketSellInfo> MarketSellEvent;
+
+        /// <summary>
+        /// Triggered when the player buys something from the station market.
+        /// </summary>
+        public event EventHandler<MarketBuyInfo> MarketBuyEvent;
+
+        /// <summary>
+        /// Triggered when the player logs in, shows details about the cargo on the ship.
+        /// </summary>
+        public event EventHandler<CargoInfo> CargoEvent;
+
+        /// <summary>
+        /// Triggered whenever a player goes into outfitting and has stored modules at that station.
+        /// </summary>
+        public event EventHandler<StoredModulesInfo> StoredModulesEvent;
+
+        /// <summary>
+        /// Triggered whenever a player refuels the entire ship at once.
+        /// </summary>
+        public event EventHandler<RefuelAllInfo> RefuelAllEvent;
+
+        /// <summary>
+        /// Triggered whenever a player repairs the entire ship at once.
+        /// </summary>
+        public event EventHandler<RepairAllInfo> RepairAllEvent;
+
+        /// <summary>
+        /// Triggered whenever a crewmember gets paid or when docked.
+        /// </summary>
+        public event EventHandler<NpcCrewPaidWageInfo> NpcCrewPaidWageEvent;
+
+        /// <summary>
+        /// Triggered whenever materials are added/removed, also at startup. 
+        /// </summary>
+        public event EventHandler<MaterialsInfo> MaterialsEvent;
+
+        /// <summary>
+        /// Triggered whenever a friend comes online.
+        /// </summary>
+        public event EventHandler<FriendsInfo> FriendsEvent;
+
+        /// <summary>
+        /// Triggered whenever a player goes into outfitting.
+        /// </summary>
+        public event EventHandler<OutfittingInfo> OutfittingEvent;
 
         /// <summary>
         /// Triggered whenever a player logs in, contains mission info.

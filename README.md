@@ -10,7 +10,7 @@ A powerful event based API for Elite: Dangerous from the Player Journal.
 ### Nuget
 Use the nuget package manager console.
 
-    `Install-Package EliteAPI`
+     Install-Package EliteAPI
 
 ### Nuget package manager
 It is also available in the nuget package manager via Visual Studio.

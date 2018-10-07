@@ -1,5 +1,5 @@
 <img src="https://i.imgur.com/keDXwjY.png" align="right"
-     title="EliteAPI by Somfic" width="400" height="400">
+     title="EliteAPI by Somfic" width="300" height="300">
 
 # EliteAPI
 A powerful event based API for Elite: Dangerous from the Player Journal.

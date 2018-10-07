@@ -56,7 +56,7 @@ private static void EliteAPI_DockedEvent(object sender, DockedInfo e)
      //This method will be ran every time the player docks.
 }
 ```
-Now if you want to display the station for example, you can use the `DockedInfo` object.
+Now if you want to display the station's name for example, you can use the `DockedInfo` object.
 ```csharp
 private static void EliteAPI_DockedEvent(object sender, DockedInfo e)
 {

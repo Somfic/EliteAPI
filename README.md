@@ -70,3 +70,5 @@ private static void EliteAPI_DockedEvent(object sender, DockedInfo e)
      Console.WriteLine($"Docked at {e.StationName}.");
 }
 ```
+
+<iframe src="https://discordapp.com/widget?id=498422961297031168&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>

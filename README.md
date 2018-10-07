@@ -37,14 +37,14 @@ EliteDangerousAPI EliteAPI = new EliteDangerousAPI();
 Since `EliteDangerousAPI` needs a reference to the directory that contains the PlayerJournals, we have to pass it a `DirectoryInfo` object.
 ```csharp
 DirectoryInfo playerJournalFolder = new DirectoryInfo(
-$@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"));
+$@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous");
 
 EliteDangerousAPI EliteAPI = new EliteDangerousAPI( playerJournalFolder );
 ```
 Now that we are hooked to the API, we can setup the events that we want to get information about. Let's say we want to know when the player docks at a station. Simply hook into its event and create a method for it.
 ```csharp
 DirectoryInfo playerJournalFolder = new DirectoryInfo(
-$@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"));
+$@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous");
 
 EliteDangerousAPI EliteAPI = new EliteDangerousAPI( playerJournalFolder );
 

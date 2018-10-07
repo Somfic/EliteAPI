@@ -10,7 +10,7 @@ A powerful event based API for Elite: Dangerous from the Player Journal.
 
 [![GitHub license](https://img.shields.io/github/license/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/blob/master/LICENSE) ![Github Releases](https://img.shields.io/github/downloads/Somfic/EliteAPI/latest/total.svg) 
 
-[![https://www.nuget.org/packages/EliteAPI/](https://www.nuget.org/packages/EliteAPI/)](https://img.shields.io/nuget/v/EliteAPI.svg)
+[![Nuget](https://img.shields.io/nuget/v/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/)
 
 
 # Usage

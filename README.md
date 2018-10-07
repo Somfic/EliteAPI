@@ -2,7 +2,7 @@
      title="EliteAPI by Somfic" width="300" height="300">
 
 # EliteAPI
-A powerful event based API for Elite: Dangerous from the Player Journal.
+A powerful event based API for [Elite: Dangerous](https://www.elitedangerous.com/) from the [Player Journal](http://edcodex.info/?m=doc).
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/480f394b3d044412afb33351120253f9)](https://app.codacy.com/app/Somfic/EliteAPI?utm_source=github.com&utm_medium=referral&utm_content=Somfic/EliteAPI&utm_campaign=Badge_Grade_Dashboard) [![Discord](https://img.shields.io/discord/498422961297031168.svg)](https://discord.gg/jwpFUPZ)
 

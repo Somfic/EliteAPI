@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -14,7 +13,19 @@ namespace EliteAPI
     {
         private DirectoryInfo _playerJournalDirectory;
 
+        /// <summary>
+        /// Contains information on the most recent body visited.
+        /// </summary>
+        public Body lastBody = new Body();
+
+        /// <summary>
+        /// Contains information on the most recent system visited.
+        /// </summary>
         public System lastSystem = new System();
+
+        /// <summary>
+        /// Contains information on the most recent station visited.
+        /// </summary>
         public Station lastStation = new Station();
 
         /// <summary>
@@ -58,6 +69,7 @@ namespace EliteAPI
             this.DockedEvent += EliteDangerousAPI_DockedEvent;
             this.FSDJumpEvent += EliteDangerousAPI_FSDJumpEvent;
             this.SupercruiseEntryEvent += EliteDangerousAPI_SupercruiseEntryEvent;
+            this.SupercruiseExitEvent += EliteDangerousAPI_SupercruiseExitEvent;
         }
 
         /// <summary>
@@ -66,6 +78,11 @@ namespace EliteAPI
         public void Stop()
         {
             isRunning = false;
+            this.LocationEvent -= EliteDangerousAPI_LocationEvent;
+            this.DockedEvent -= EliteDangerousAPI_DockedEvent;
+            this.FSDJumpEvent -= EliteDangerousAPI_FSDJumpEvent;
+            this.SupercruiseEntryEvent -= EliteDangerousAPI_SupercruiseEntryEvent;
+            this.SupercruiseExitEvent -= EliteDangerousAPI_SupercruiseExitEvent;
         }
 
         /// <summary>
@@ -350,6 +367,15 @@ namespace EliteAPI
             lastSystem.Address = e.SystemAddress;
             lastSystem.Name = e.StarSystem;
         }
+        private void EliteDangerousAPI_SupercruiseExitEvent(object sender, SupercruiseExitInfo e)
+        {
+            lastBody.Name = e.Body;
+            lastBody.ID = e.BodyID;
+            lastBody.Type = e.BodyType;
+
+            lastSystem.Name = e.StarSystem;
+            lastSystem.Address = e.SystemAddress;
+        }
         private void EliteDangerousAPI_FSDJumpEvent(object sender, FSDJumpInfo e)
         {
             lastSystem.Address = e.SystemAddress;
@@ -407,6 +433,11 @@ namespace EliteAPI
             lastStation.Name = e.StationName;
             lastStation.Type = e.StationType;
             lastStation.System = lastSystem;
+
+            lastBody.Name = e.Body;
+            lastBody.Type = e.BodyType;
+            lastBody.ID = e.BodyID;
+
         }
     }
 }

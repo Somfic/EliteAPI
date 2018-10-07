@@ -6,7 +6,6 @@ A powerful event based API for [Elite: Dangerous](https://www.elitedangerous.com
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/480f394b3d044412afb33351120253f9)](https://app.codacy.com/app/Somfic/EliteAPI?utm_source=github.com&utm_medium=referral&utm_content=Somfic/EliteAPI&utm_campaign=Badge_Grade_Dashboard) [![Discord](https://img.shields.io/discord/498422961297031168.svg)](https://discord.gg/jwpFUPZ)
 
-
 [![GitHub issues](https://img.shields.io/github/issues/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/issues) [![GitHub forks](https://img.shields.io/github/forks/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/network) [![GitHub stars](https://img.shields.io/github/stars/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/stargazers) [![GitHub license](https://img.shields.io/github/license/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/blob/master/LICENSE)
 
 [![Nuget](https://img.shields.io/nuget/v/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/) [![GitHub tag](https://img.shields.io/github/tag/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/releases) [![GitHub last commit](https://img.shields.io/github/last-commit/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/commits/master) [![GitHub Release Date](https://img.shields.io/github/release-date/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/releases) [![NuGet](https://img.shields.io/nuget/dt/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/)

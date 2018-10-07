@@ -80,14 +80,14 @@
     <Compile Include="Events\Undocked.cs" />
     <Compile Include="Events\FSDJump.cs" />
     <Compile Include="Events\Music.cs" />
-    <Compile Include="Classes\Interdicted.cs" />
+    <Compile Include="Events\Interdicted.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\StartJump.cs" />
     <Compile Include="Events\SupercruiseEntry.cs" />
     <Compile Include="Events\SupercruiseExit.cs" />
     <Compile Include="Events\UnderAttack.cs" />
     <Compile Include="Events\Scanned.cs" />
-    <Compile Include="Classes\ReceiveText.cs" />
+    <Compile Include="Events\ReceiveText.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

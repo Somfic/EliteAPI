@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading;
 
+using System.IO;
+
 using EliteAPI;
 
 namespace Example
@@ -9,16 +11,15 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            EliteDangerousAPI api = new EliteDangerousAPI(new System.IO.DirectoryInfo(@"C:\Users\Lucas\Saved Games\Frontier Developments\Elite Dangerous"));
+            EliteDangerousAPI EliteAPI = new EliteDangerousAPI(new DirectoryInfo($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"));
 
-            api.Start();
+            EliteAPI.DockedEvent += EliteAPI_DockedEvent;
+        }
 
-            while (true)
-            {
-                Console.Clear();
-                Console.WriteLine(api.lastSystem.Name);
-                Console.Read();
-            }
+        private static void EliteAPI_DockedEvent(object sender, DockedInfo e)
+        {
+            //This method will be ran every time the player docks.
+            Console.WriteLine($"Docked at {e.StationName}.");
         }
     }
 } 

@@ -20,7 +20,7 @@ First we will have to install EliteAPI. We can do this a number of ways.
 ##### Nuget
 Use the nuget package manager console.
 
-     Install-Package EliteAPI
+```Install-Package EliteAPI```
 
 After that it will be ready to go.
 

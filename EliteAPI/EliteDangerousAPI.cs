@@ -70,6 +70,7 @@ namespace EliteAPI
             this.FSDJumpEvent += EliteDangerousAPI_FSDJumpEvent;
             this.SupercruiseEntryEvent += EliteDangerousAPI_SupercruiseEntryEvent;
             this.SupercruiseExitEvent += EliteDangerousAPI_SupercruiseExitEvent;
+            this.DockingRequestedEvent += EliteDangerousAPI_DockingRequestedEvent;
         }
 
         /// <summary>
@@ -83,6 +84,7 @@ namespace EliteAPI
             this.FSDJumpEvent -= EliteDangerousAPI_FSDJumpEvent;
             this.SupercruiseEntryEvent -= EliteDangerousAPI_SupercruiseEntryEvent;
             this.SupercruiseExitEvent -= EliteDangerousAPI_SupercruiseExitEvent;
+            this.DockingRequestedEvent -= EliteDangerousAPI_DockingRequestedEvent;
         }
 
         /// <summary>
@@ -438,6 +440,12 @@ namespace EliteAPI
             lastBody.Type = e.BodyType;
             lastBody.ID = e.BodyID;
 
+        }
+        private void EliteDangerousAPI_DockingRequestedEvent(object sender, DockingRequestedInfo e)
+        {
+            lastStation.Name = e.StationName;
+            lastStation.Type = e.StationType;
+            lastStation.MarketID = e.MarketID;
         }
     }
 }

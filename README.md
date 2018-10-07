@@ -46,7 +46,7 @@ $@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dange
 
 EliteDangerousAPI EliteAPI = new EliteDangerousAPI( playerJournalFolder );
 ```
-Now that we are hooked to the API, we can setup the events that we want to get information about. Let's say we want to know when the player docks at a station. Simply hook into its event and create a method for it.
+Now that we are hooked to the API, we can setup the events that we want to get information about. Let's say we want to know when the player docks at a station. Simply hook into its event and create a method for it. After that start the API.
 ```csharp
 DirectoryInfo playerJournalFolder = new DirectoryInfo(
 $@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous");
@@ -54,6 +54,8 @@ $@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dange
 EliteDangerousAPI EliteAPI = new EliteDangerousAPI( playerJournalFolder );
 
 EliteAPI.DockedEvent += EliteAPI_DockedEvent;
+
+EliteAPI.Start();
 ```
 ```csharp
 private static void EliteAPI_DockedEvent(object sender, DockedInfo e)

@@ -1,10 +1,16 @@
 <img src="https://i.imgur.com/keDXwjY.png" align="right"
-     title="EliteAPI by Somfic" width="200" height="200">
+     title="EliteAPI by Somfic" width="300" height="300">
 
 # EliteAPI
 A powerful event based API for Elite: Dangerous from the Player Journal.
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/480f394b3d044412afb33351120253f9)](https://app.codacy.com/app/Somfic/EliteAPI?utm_source=github.com&utm_medium=referral&utm_content=Somfic/EliteAPI&utm_campaign=Badge_Grade_Dashboard) [![GitHub issues](https://img.shields.io/github/issues/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/issues) [![GitHub forks](https://img.shields.io/github/forks/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/network) [![GitHub stars](https://img.shields.io/github/stars/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/stargazers) [![GitHub license](https://img.shields.io/github/license/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/blob/master/LICENSE) ![Github Releases](https://img.shields.io/github/downloads/Somfic/EliteAPI/latest/total.svg)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/480f394b3d044412afb33351120253f9)](https://app.codacy.com/app/Somfic/EliteAPI?utm_source=github.com&utm_medium=referral&utm_content=Somfic/EliteAPI&utm_campaign=Badge_Grade_Dashboard) [![Discord](https://img.shields.io/discord/498422961297031168.svg)](https://discord.gg/jwpFUPZ)
+
+
+[![GitHub issues](https://img.shields.io/github/issues/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/issues) [![GitHub forks](https://img.shields.io/github/forks/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/network) [![GitHub stars](https://img.shields.io/github/stars/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/stargazers) [![GitHub license](https://img.shields.io/github/license/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/blob/master/LICENSE)
+
+[![Nuget](https://img.shields.io/nuget/v/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/) [![GitHub tag](https://img.shields.io/github/tag/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/releases) [![GitHub last commit](https://img.shields.io/github/last-commit/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/commits/master) [![GitHub Release Date](https://img.shields.io/github/release-date/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/releases) [![NuGet](https://img.shields.io/nuget/dt/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/)
+
 
 # Usage
 Let's get this party rolling.
@@ -56,7 +62,7 @@ private static void EliteAPI_DockedEvent(object sender, DockedInfo e)
      //This method will be ran every time the player docks.
 }
 ```
-Now if you want to display the station for example, you can use the `DockedInfo` object.
+Now if you want to display the station's name for example, you can use the `DockedInfo` object.
 ```csharp
 private static void EliteAPI_DockedEvent(object sender, DockedInfo e)
 {

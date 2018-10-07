@@ -260,8 +260,44 @@ namespace EliteAPI
                 case "LeaveBody":
                     LeaveBodyEvent?.Invoke(this, JsonConvert.DeserializeObject<LeaveBodyInfo>(json));
                     break;
+
+                case "MissionAccepted":
+                    MissionAcceptedEvent?.Invoke(this, JsonConvert.DeserializeObject<MissionAcceptedInfo>(json));
+                    break;
+
+                case "MissionAbandoned":
+                    MissionAbandonedEvent?.Invoke(this, JsonConvert.DeserializeObject<MissionAbandonedInfo>(json));
+                    break;
+
+                case "MissionCompleted":
+                    MissionCompletedEvent?.Invoke(this, JsonConvert.DeserializeObject<MissionCompletedInfo>(json));
+                    break;
+
+                case "Missions":
+                    MissionsEvent?.Invoke(this, JsonConvert.DeserializeObject<MissionsInfo>(json));
+                    break;
             }
         }
+
+        /// <summary>
+        /// Triggered whenever a player logs in, contains mission info.
+        /// </summary>
+        public event EventHandler<MissionsInfo> MissionsEvent;
+
+        /// <summary>
+        /// Triggered whenever a player abandons a mission.
+        /// </summary>
+        public event EventHandler<MissionCompletedInfo> MissionCompletedEvent;
+
+        /// <summary>
+        /// Triggered whenever a player abandons a mission.
+        /// </summary>
+        public event EventHandler<MissionAbandonedInfo> MissionAbandonedEvent;
+
+        /// <summary>
+        /// Triggered whenever a player accepts a new mission.
+        /// </summary>
+        public event EventHandler<MissionAcceptedInfo> MissionAcceptedEvent;
 
         /// <summary>
         /// Triggered whenever a player leaves orbital flight / gets away from a planet.
@@ -294,7 +330,7 @@ namespace EliteAPI
         public event EventHandler<NewCommanderInfo> NewCommanderEvent;
 
         /// <summary>
-        /// Triggered whenever the game starts.
+        /// Triggered whenever a player gets into a ship, contains advanced ship details.
         /// </summary>
         public event EventHandler<LoadGameInfo> LoadGameEvent;
 

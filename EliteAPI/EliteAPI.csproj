@@ -77,6 +77,10 @@
     <Compile Include="Events\LoadGame.cs" />
     <Compile Include="Events\Loadout.cs" />
     <Compile Include="Events\Location.cs" />
+    <Compile Include="Events\MissionAbandoned.cs" />
+    <Compile Include="Events\MissionAccepted.cs" />
+    <Compile Include="Events\MissionCompleted.cs" />
+    <Compile Include="Events\Missions.cs" />
     <Compile Include="Events\NewCommander.cs" />
     <Compile Include="Events\Progress.cs" />
     <Compile Include="Events\Rank.cs" />

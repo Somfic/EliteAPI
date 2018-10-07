@@ -134,7 +134,7 @@ namespace EliteAPI
         }
 
         public DateTime timestamp { get; set; }
-        public string @event { get; set; }
+
         public BankAccountInfo Bank_Account { get; set; }
         public CombatInfo Combat { get; set; }
         public CrimeInfo Crime { get; set; }

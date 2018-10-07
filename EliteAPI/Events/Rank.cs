@@ -9,7 +9,7 @@ namespace EliteAPI
     public class RankInfo
     {
         public DateTime timestamp { get; set; }
-        public string @event { get; set; }
+
         public int Combat { get; set; }
         public int Trade { get; set; }
         public int Explore { get; set; }

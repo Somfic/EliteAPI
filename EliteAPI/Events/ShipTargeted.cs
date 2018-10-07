@@ -9,7 +9,7 @@ namespace EliteAPI
     public class ShipTargetedInfo
     {
         public DateTime timestamp { get; set; }
-        public string @event { get; set; }
+
         public bool TargetLocked { get; set; }
         public string Ship { get; set; }
         public string Ship_Localised { get; set; }

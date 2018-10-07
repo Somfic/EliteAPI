@@ -25,7 +25,7 @@ namespace EliteAPI
         }
 
         public DateTime timestamp { get; set; }
-        public string @event { get; set; }
+
         public bool Docked { get; set; }
         public long MarketID { get; set; }
         public string StationName { get; set; }

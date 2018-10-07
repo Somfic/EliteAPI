@@ -38,7 +38,6 @@ namespace EliteAPI
         }
 
         public DateTime timestamp { get; set; }
-
         public string Ship { get; set; }
         public int ShipID { get; set; }
         public string ShipName { get; set; }

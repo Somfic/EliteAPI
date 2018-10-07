@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EliteAPI
 {
     public class LoadGameInfo
     {
         public DateTime timestamp { get; set; }
-
         public string Commander { get; set; }
         public bool Horizons { get; set; }
         public string Ship { get; set; }

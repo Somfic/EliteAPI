@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Body.cs" />
     <Compile Include="Classes\Station.cs" />
     <Compile Include="Classes\System.cs" />
     <Compile Include="Events\DockingDenied.cs" />

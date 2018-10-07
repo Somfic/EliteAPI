@@ -236,8 +236,52 @@ namespace EliteAPI
                 case "ReceiveText":
                     ReceiveTextEvent?.Invoke(this, JsonConvert.DeserializeObject<ReceiveTextInfo>(json));
                     break;
+
+                case "DockingTimeout":
+                    DockingTimeoutEvent?.Invoke(this, JsonConvert.DeserializeObject<DockingTimeoutInfo>(json));
+                    break;
+
+                case "ApproachSettlement":
+                    ApproachSettlementEvent?.Invoke(this, JsonConvert.DeserializeObject<ApproachSettlementInfo>(json));
+                    break;
+
+                case "ApproachBody":
+                    ApproachBodyEvent?.Invoke(this, JsonConvert.DeserializeObject<ApproachBodyInfo>(json));
+                    break;
+
+                case "Touchdown":
+                    TouchdownEvent?.Invoke(this, JsonConvert.DeserializeObject<TouchdownInfo>(json));
+                    break;
+
+                case "Liftoff":
+                    LiftoffEvent?.Invoke(this, JsonConvert.DeserializeObject<LiftoffInfo>(json));
+                    break;
+
+                case "LeaveBody":
+                    LeaveBodyEvent?.Invoke(this, JsonConvert.DeserializeObject<LeaveBodyInfo>(json));
+                    break;
             }
         }
+
+        /// <summary>
+        /// Triggered whenever a player leaves orbital flight / gets away from a planet.
+        /// </summary>
+        public event EventHandler<LeaveBodyInfo> LeaveBodyEvent;
+
+        /// <summary>
+        /// Triggered whenever a player lifts off from a planet.
+        /// </summary>
+        public event EventHandler<LiftoffInfo> LiftoffEvent;
+
+        /// <summary>
+        /// Triggered whenever a player lands on a planet.
+        /// </summary>
+        public event EventHandler<TouchdownInfo> TouchdownEvent;
+
+        /// <summary>
+        /// Triggered whenever a player goes into orbital flight / gets close to a body.
+        /// </summary>
+        public event EventHandler<ApproachBodyInfo> ApproachBodyEvent;
 
         /// <summary>
         /// Triggered whenever the save is reset/cleared.
@@ -363,6 +407,16 @@ namespace EliteAPI
         /// Triggered whenever a player gets successfully interdicted.
         /// </summary>
         public event EventHandler<InterdictedInfo> InterdictedEvent;
+
+        /// <summary>
+        /// Triggered whenever docking privileges expire.
+        /// </summary>
+        public event EventHandler<DockingTimeoutInfo> DockingTimeoutEvent;
+
+        /// <summary>
+        /// Triggered whenever a player approaches a settlement.
+        /// </summary>
+        public event EventHandler<ApproachSettlementInfo> ApproachSettlementEvent;
 
         private void EliteDangerousAPI_SupercruiseEntryEvent(object sender, SupercruiseEntryInfo e)
         {

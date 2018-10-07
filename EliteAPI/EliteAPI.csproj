@@ -62,6 +62,8 @@
     <Compile Include="Classes\Body.cs" />
     <Compile Include="Classes\Station.cs" />
     <Compile Include="Classes\System.cs" />
+    <Compile Include="Events\ApproachBody.cs" />
+    <Compile Include="Events\ApproachSettlement.cs" />
     <Compile Include="Events\DockingDenied.cs" />
     <Compile Include="Events\DockingGranted.cs" />
     <Compile Include="Events\DockingRequested.cs" />
@@ -69,6 +71,9 @@
     <Compile Include="Events\ClearSavedGame.cs" />
     <Compile Include="Events\Commander.cs" />
     <Compile Include="Events\Docked.cs" />
+    <Compile Include="Events\DockingTimeout.cs" />
+    <Compile Include="Events\LeaveBody.cs" />
+    <Compile Include="Events\Liftoff.cs" />
     <Compile Include="Events\LoadGame.cs" />
     <Compile Include="Events\Loadout.cs" />
     <Compile Include="Events\Location.cs" />
@@ -78,6 +83,7 @@
     <Compile Include="Events\Reputation.cs" />
     <Compile Include="Events\ShipTargeted.cs" />
     <Compile Include="Events\Statistics.cs" />
+    <Compile Include="Events\Touchdown.cs" />
     <Compile Include="Events\Undocked.cs" />
     <Compile Include="Events\FSDJump.cs" />
     <Compile Include="Events\Music.cs" />

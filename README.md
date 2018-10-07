@@ -6,23 +6,9 @@ A powerful event based API for Elite: Dangerous from the Player Journal.
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/480f394b3d044412afb33351120253f9)](https://app.codacy.com/app/Somfic/EliteAPI?utm_source=github.com&utm_medium=referral&utm_content=Somfic/EliteAPI&utm_campaign=Badge_Grade_Dashboard) 
 
-[![GitHub issues](https://img.shields.io/github/issues/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/issues) 
+[![GitHub issues](https://img.shields.io/github/issues/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/issues) [![GitHub forks](https://img.shields.io/github/forks/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/network) [![GitHub stars](https://img.shields.io/github/stars/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/stargazers) [![GitHub license](https://img.shields.io/github/license/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/blob/master/LICENSE)
 
-[![GitHub forks](https://img.shields.io/github/forks/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/network)
-
-[![GitHub stars](https://img.shields.io/github/stars/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/stargazers) 
-
-[![GitHub license](https://img.shields.io/github/license/Somfic/EliteAPI.svg)](https://github.com/Somfic/EliteAPI/blob/master/LICENSE)
-
-[![NuGet](https://img.shields.io/nuget/dt/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/)
-
-[![Nuget](https://img.shields.io/nuget/v/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/)
-
-![GitHub tag](https://img.shields.io/github/tag/Somfic/EliteAPI.svg)
-
-![GitHub last commit](https://img.shields.io/github/last-commit/Somfic/EliteAPI.svg)
-
-![GitHub Release Date](https://img.shields.io/github/release-date/Somfic/EliteAPI.svg)
+[![Nuget](https://img.shields.io/nuget/v/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/) ![GitHub tag](https://img.shields.io/github/tag/Somfic/EliteAPI.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/Somfic/EliteAPI.svg) ![GitHub Release Date](https://img.shields.io/github/release-date/Somfic/EliteAPI.svg) [![NuGet](https://img.shields.io/nuget/dt/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/)
 
 
 # Usage

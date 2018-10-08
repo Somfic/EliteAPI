@@ -96,6 +96,8 @@
     <Compile Include="Events\Progress.cs" />
     <Compile Include="Events\Rank.cs" />
     <Compile Include="Events\RefuelAll.cs" />
+    <Compile Include="Events\RefuelPartial.cs" />
+    <Compile Include="Events\Repair.cs" />
     <Compile Include="Events\RepairAll.cs" />
     <Compile Include="Events\Reputation.cs" />
     <Compile Include="Events\ShipTargeted.cs" />

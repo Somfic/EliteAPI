@@ -138,7 +138,7 @@ namespace EliteAPI
             switch (eventName)
             {
                 default:
-//                  File.AppendAllText(@"D:\NotAddedEvents.txt", json + Environment.NewLine);
+                    File.AppendAllText(@"D:\NotAddedEvents.txt", json + Environment.NewLine);
                     break;
 
                 case "ClearSavedGame":
@@ -356,8 +356,26 @@ namespace EliteAPI
                 case "Market":
                     MarketEvent?.Invoke(this, JsonConvert.DeserializeObject<MarketInfo>(json));
                     break;
+
+                case "Repair":
+                    RepairEvent?.Invoke(this, JsonConvert.DeserializeObject<RepairInfo>(json));
+                    break;
+
+                case "RefuelPartial":
+                    RefuelPartialEvent?.Invoke(this, JsonConvert.DeserializeObject<RefuelPartialInfo>(json));
+                    break;
             }
         }
+
+        /// <summary>
+        /// Triggered whenever a player refuels 10%.
+        /// </summary>
+        public event EventHandler<RefuelPartialInfo> RefuelPartialEvent;
+
+        /// <summary>
+        /// Triggered whenever a player repairs a single module.
+        /// </summary>
+        public event EventHandler<RepairInfo> RepairEvent;
 
         /// <summary>
         /// Triggered whenever the player opens the station's market.

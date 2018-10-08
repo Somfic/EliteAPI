@@ -64,7 +64,9 @@
     <Compile Include="Classes\System.cs" />
     <Compile Include="Events\ApproachBody.cs" />
     <Compile Include="Events\ApproachSettlement.cs" />
+    <Compile Include="Events\Bounty.cs" />
     <Compile Include="Events\Cargo.cs" />
+    <Compile Include="Events\DiscoveryScan.cs" />
     <Compile Include="Events\DockingDenied.cs" />
     <Compile Include="Events\DockingGranted.cs" />
     <Compile Include="Events\DockingRequested.cs" />
@@ -74,7 +76,10 @@
     <Compile Include="Events\Docked.cs" />
     <Compile Include="Events\DockingTimeout.cs" />
     <Compile Include="Events\EjectCargo.cs" />
+    <Compile Include="Events\Fileheader.cs" />
     <Compile Include="Events\Friends.cs" />
+    <Compile Include="Events\FuelScoop.cs" />
+    <Compile Include="Events\LaunchFighter.cs" />
     <Compile Include="Events\LeaveBody.cs" />
     <Compile Include="Events\Liftoff.cs" />
     <Compile Include="Events\LoadGame.cs" />
@@ -100,11 +105,14 @@
     <Compile Include="Events\Repair.cs" />
     <Compile Include="Events\RepairAll.cs" />
     <Compile Include="Events\Reputation.cs" />
+    <Compile Include="Events\Scan.cs" />
     <Compile Include="Events\ShipTargeted.cs" />
     <Compile Include="Events\Shipyard.cs" />
     <Compile Include="Events\ShipyardBuy.cs" />
     <Compile Include="Events\ShipyardSell.cs" />
     <Compile Include="Events\ShipyardSwap.cs" />
+    <Compile Include="Events\ShipyardTransfer.cs" />
+    <Compile Include="Events\Shutdown.cs" />
     <Compile Include="Events\Statistics.cs" />
     <Compile Include="Events\StoredModules.cs" />
     <Compile Include="Events\StoredShips.cs" />

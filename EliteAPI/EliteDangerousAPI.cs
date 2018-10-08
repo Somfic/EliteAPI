@@ -230,7 +230,7 @@ namespace EliteAPI
                     break;
 
                 case "Scanned":
-                    ScannedEvent?.Invoke(this, JsonConvert.DeserializeObject<ScanInfo>(json));
+                    ScannedEvent?.Invoke(this, JsonConvert.DeserializeObject<ScannedInfo>(json));
                     break;
 
                 case "Interdicted":
@@ -364,8 +364,80 @@ namespace EliteAPI
                 case "RefuelPartial":
                     RefuelPartialEvent?.Invoke(this, JsonConvert.DeserializeObject<RefuelPartialInfo>(json));
                     break;
+
+                case "Fileheader":
+                    FileheaderEvent?.Invoke(this, JsonConvert.DeserializeObject<FileheaderInfo>(json));
+                    break;
+
+                case "ShipyardTransfer":
+                    ShipyardTransferEvent?.Invoke(this, JsonConvert.DeserializeObject<ShipyardTransferInfo>(json));
+                    break;
+
+                case "DiscoveryScan":
+                    DiscoveryScanEvent?.Invoke(this, JsonConvert.DeserializeObject<DiscoveryScanInfo>(json));
+                    break;
+
+                case "Bounty":
+                    BountyEvent?.Invoke(this, JsonConvert.DeserializeObject<BountyInfo>(json));
+                    break;
+
+                case "Scan":
+                    ScanEvent?.Invoke(this, JsonConvert.DeserializeObject<ScanInfo>(json));
+                    break;
+
+                case "Shutdown":
+                    ShutdownEvent?.Invoke(this, JsonConvert.DeserializeObject<ShutdownInfo>(json));
+                    break;
+
+                case "FuelScoop":
+                    FuelScoopEvent?.Invoke(this, JsonConvert.DeserializeObject<FuelScoopInfo>(json));
+                    break;
+
+                case "LaunchFighter":
+                    LaunchFighterEvent?.Invoke(this, JsonConvert.DeserializeObject<LaunchFighterInfo>(json));
+                    break;
             }
         }
+
+        /// <summary>
+        /// Triggered whenever a player scoops fuel from a star.
+        /// </summary>
+        public event EventHandler<LaunchFighterInfo> LaunchFighterEvent;
+
+        /// <summary>
+        /// Triggered whenever a player scoops fuel from a star.
+        /// </summary>
+        public event EventHandler<FuelScoopInfo> FuelScoopEvent;
+
+        /// <summary>
+        /// Triggered whenever a player logs off.
+        /// </summary>
+        public event EventHandler<ShutdownInfo> ShutdownEvent;
+
+        /// <summary>
+        /// Triggered whenever a player scans a planet or star with the special scanner.
+        /// </summary>
+        public event EventHandler<ScanInfo> ScanEvent;
+
+        /// <summary>
+        /// Triggered whenever a player receives a bounty from killing a player or NPC.
+        /// </summary>
+        public event EventHandler<BountyInfo> BountyEvent;
+
+        /// <summary>
+        /// Triggered whenever a player scans a starsystem, often happens partially automatically when a player enters a starsystem.
+        /// </summary>
+        public event EventHandler<DiscoveryScanInfo> DiscoveryScanEvent;
+
+        /// <summary>
+        /// Triggered whenever a player requests a ship to be transferred.
+        /// </summary>
+        public event EventHandler<ShipyardTransferInfo> ShipyardTransferEvent;
+
+        /// <summary>
+        /// Triggered whenever the game launches, contains basic version info.
+        /// </summary>
+        public event EventHandler<FileheaderInfo> FileheaderEvent;
 
         /// <summary>
         /// Triggered whenever a player refuels 10%.
@@ -625,7 +697,7 @@ namespace EliteAPI
         /// <summary>
         /// Triggered whenever a player is being scanned.
         /// </summary>
-        public event EventHandler<ScanInfo> ScannedEvent;
+        public event EventHandler<ScannedInfo> ScannedEvent;
 
         /// <summary>
         /// Triggered whenever a player recieves a message.

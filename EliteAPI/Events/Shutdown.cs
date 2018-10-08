@@ -2,9 +2,8 @@
 
 namespace EliteAPI
 {
-    public class ScannedInfo
+    public class ShutdownInfo
     {
         public DateTime timestamp { get; set; }
-        public string ScanType { get; set; }
     }
 }

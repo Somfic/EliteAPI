@@ -7,11 +7,17 @@ using System.Threading.Tasks;
 
 using Newtonsoft.Json;
 
+using EliteAPI.EDDB;
+
 namespace EliteAPI
 {
     public class EliteDangerousAPI
     {
+        public EDDBApi EDDB;
+
         private DirectoryInfo _playerJournalDirectory;
+
+        private bool SkipFirstLog;
 
         /// <summary>
         /// Contains information on the most recent body visited.
@@ -42,9 +48,12 @@ namespace EliteAPI
         /// Creates a new API class.
         /// </summary>
         /// <param name="playerJournalDirectory">The folder where the Player Journal is located in.</param>
-        public EliteDangerousAPI(DirectoryInfo playerJournalDirectory)
+        /// <param name="skipLogInit">Whether to go back in time in the log to catch all the events.</param>
+        public EliteDangerousAPI(DirectoryInfo playerJournalDirectory, bool skipLogInit = true)
         {
             _playerJournalDirectory = playerJournalDirectory;
+
+            SkipFirstLog = skipLogInit;
 
             Reset();
         }
@@ -57,9 +66,12 @@ namespace EliteAPI
             processedLogs = new List<string>();
             lastStation = new Station();
             lastSystem = new System();
+
+            EDDB = new EDDBApi();
         }
+
         /// <summary>
-        /// Starts the processing of the log file.
+        /// Starts the processing of the log file and other API services.
         /// </summary>
         public void Start()
         {
@@ -92,14 +104,21 @@ namespace EliteAPI
         /// </summary>
         private void InitProcessLog()
         {
-            while(isRunning)
+            FileInfo logFile = _playerJournalDirectory
+                    .GetFiles("*.log") //Get all files that end with .log.
+                    .OrderByDescending(x => x.LastWriteTime) //Order them by last written.
+                    .First(); //Get the first one of the ordered list.
+
+            ProcessLog(logFile, !SkipFirstLog);
+
+            while (isRunning)
             {
-                FileInfo logFile = _playerJournalDirectory
+                logFile = _playerJournalDirectory
                                     .GetFiles("*.log") //Get all files that end with .log.
                                     .OrderByDescending(x => x.LastWriteTime) //Order them by last written.
                                     .First(); //Get the first one of the ordered list.
 
-                ProcessLog(logFile);
+                ProcessLog(logFile, true);
 
                 Thread.Sleep(333);
             }
@@ -109,7 +128,7 @@ namespace EliteAPI
         /// Process the log file once.
         /// </summary>
         /// <param name="logFile">The log file to process.</param>
-        private void ProcessLog(FileInfo logFile, bool actuallyProcess = true)
+        private void ProcessLog(FileInfo logFile, bool actuallyProcess)
         {
             //Create a stream from the log file.
             FileStream fileStream = logFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -135,9 +154,13 @@ namespace EliteAPI
             dynamic dynamicLog = JsonConvert.DeserializeObject(json);
             string eventName = dynamicLog.@event;
 
+
+            AllEvent?.Invoke(this, JsonConvert.DeserializeObject<dynamic>(json));
+
             switch (eventName)
             {
                 default:
+                    OtherEvent?.Invoke(this, JsonConvert.DeserializeObject<dynamic>(json));
                     //File.AppendAllText(@"D:\NotAddedEvents.txt", json + Environment.NewLine);
                     break;
 
@@ -398,6 +421,16 @@ namespace EliteAPI
                     break;
             }
         }
+
+        /// <summary>
+        /// Triggered for every event that hasn't been included yet.
+        /// </summary>
+        public event EventHandler<dynamic> OtherEvent;
+
+        /// <summary>
+        /// Triggered on all events.
+        /// </summary>
+        public event EventHandler<dynamic> AllEvent;
 
         /// <summary>
         /// Triggered whenever a player scoops fuel from a star.

@@ -32,14 +32,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ChoETL, Version=1.0.8.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ChoETL.1.0.8.5\lib\ChoETL.dll</HintPath>
+    </Reference>
+    <Reference Include="ChoETL.JSON, Version=1.0.5.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ChoETL.JSON.1.0.5.8\lib\ChoETL.JSON.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security.AccessControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.AccessControl.4.5.0\lib\net461\System.Security.AccessControl.dll</HintPath>
     </Reference>
@@ -62,6 +72,9 @@
     <Compile Include="Classes\Body.cs" />
     <Compile Include="Classes\Station.cs" />
     <Compile Include="Classes\System.cs" />
+    <Compile Include="EDDB\EDDBApi.cs" />
+    <Compile Include="EDDB\Station.cs" />
+    <Compile Include="EDDB\System.cs" />
     <Compile Include="Events\ApproachBody.cs" />
     <Compile Include="Events\ApproachSettlement.cs" />
     <Compile Include="Events\Bounty.cs" />
@@ -116,6 +129,7 @@
     <Compile Include="Events\Statistics.cs" />
     <Compile Include="Events\StoredModules.cs" />
     <Compile Include="Events\StoredShips.cs" />
+    <Compile Include="Events\test.cs" />
     <Compile Include="Events\Touchdown.cs" />
     <Compile Include="Events\Undocked.cs" />
     <Compile Include="Events\FSDJump.cs" />
@@ -131,6 +145,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

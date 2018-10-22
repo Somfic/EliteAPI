@@ -38,6 +38,7 @@
     <Reference Include="ChoETL.JSON, Version=1.0.5.8, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ChoETL.JSON.1.0.5.8\lib\ChoETL.JSON.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -73,6 +74,7 @@
     <Compile Include="Classes\Station.cs" />
     <Compile Include="Classes\System.cs" />
     <Compile Include="EDDB\EDDBApi.cs" />
+    <Compile Include="EDDB\Price.cs" />
     <Compile Include="EDDB\Station.cs" />
     <Compile Include="EDDB\System.cs" />
     <Compile Include="Events\ApproachBody.cs" />
@@ -129,7 +131,6 @@
     <Compile Include="Events\Statistics.cs" />
     <Compile Include="Events\StoredModules.cs" />
     <Compile Include="Events\StoredShips.cs" />
-    <Compile Include="Events\test.cs" />
     <Compile Include="Events\Touchdown.cs" />
     <Compile Include="Events\Undocked.cs" />
     <Compile Include="Events\FSDJump.cs" />

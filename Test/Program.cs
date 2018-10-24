@@ -16,10 +16,10 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            EliteDangerousAPI EliteAPI = new EliteDangerousAPI(new DirectoryInfo($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"));
+            EliteDangerousAPI EliteAPI = new EliteDangerousAPI(new DirectoryInfo($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"), false);
             EliteAPI.Start();
 
             Thread.Sleep(-1);
         }
-    }
+    }   
 }

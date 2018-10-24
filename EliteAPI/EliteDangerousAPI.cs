@@ -161,7 +161,7 @@ namespace EliteAPI
             {
                 default:
                     OtherEvent?.Invoke(this, JsonConvert.DeserializeObject<dynamic>(json));
-                    //File.AppendAllText(@"D:\NotAddedEvents.txt", json + Environment.NewLine);
+                    File.AppendAllText(@"D:\NotAddedEvents.txt", json + Environment.NewLine);
                     break;
 
                 case "ClearSavedGame":
@@ -419,8 +419,143 @@ namespace EliteAPI
                 case "LaunchFighter":
                     LaunchFighterEvent?.Invoke(this, JsonConvert.DeserializeObject<LaunchFighterInfo>(json));
                     break;
+
+                case "BuyAmmo":
+                    BuyAmmoEvent?.Invoke(this, JsonConvert.DeserializeObject<BuyAmmoInfo>(json));
+                    break;
+
+                case "CommitCrime":
+                    CommitCrimeEvent?.Invoke(this, JsonConvert.DeserializeObject<CommitCrimeInfo>(json));
+                    break;
+
+                case "PayFine":
+                    PayFineEvent?.Invoke(this, JsonConvert.DeserializeObject<PayFineInfo>(json));
+                    break;
+
+                case "HeatWarning":
+                    HeatWarningEvent?.Invoke(this, JsonConvert.DeserializeObject<HeatWarningInfo>(json));
+                    break;
+
+                case "WingInvite":
+                    WingInviteEvent?.Invoke(this, JsonConvert.DeserializeObject<WingInviteInfo>(json));
+                    break;
+
+                case "WingJoin":
+                    WingJoinEvent?.Invoke(this, JsonConvert.DeserializeObject<WingJoinInfo>(json));
+                    break;
+
+                case "WingAdd":
+                    WingAddEvent?.Invoke(this, JsonConvert.DeserializeObject<WingAddInfo>(json));
+                    break;
+
+                case "WingLeave":
+                    WingLeaveEvent?.Invoke(this, JsonConvert.DeserializeObject<WingLeaveInfo>(json));
+                    break;
+
+                case "NavBeaconScan":
+                    NavBeaconScanEvent?.Invoke(this, JsonConvert.DeserializeObject<NavBeaconScanInfo>(json));
+                    break;
+
+                case "CargoDepot":
+                    CargoDepotEvent?.Invoke(this, JsonConvert.DeserializeObject<CargoDepotInfo>(json));
+                    break;
+
+                case "PayFines":
+                    PayFinesEvent?.Invoke(this, JsonConvert.DeserializeObject<PayFinesInfo>(json));
+                    break;
+
+                case "SellExplorationData":
+                    SellExplorationDataEvent?.Invoke(this, JsonConvert.DeserializeObject<SellExplorationDataInfo>(json));
+                    break;
+
+                case "FetchRemoteModule":
+                    FetchRemoteModuleEvent?.Invoke(this, JsonConvert.DeserializeObject<FetchRemoteModuleInfo>(json));
+                    break;
+
+                case "ModuleSellRemote":
+                    ModuleSellRemoteEvent?.Invoke(this, JsonConvert.DeserializeObject<ModuleSellRemoteInfo>(json));
+                    break;
+
+                case "EscapeInterdiction":
+                    EscapeInterdictionEvent?.Invoke(this, JsonConvert.DeserializeObject<EscapeInterdictionInfo>(json));
+                    break;
             }
         }
+
+        /// <summary>
+        /// Triggered whenever a player sells a module remotely.
+        /// </summary>
+        public event EventHandler<EscapeInterdictionInfo> EscapeInterdictionEvent;
+
+        /// <summary>
+        /// Triggered whenever a player sells a module remotely.
+        /// </summary>
+        public event EventHandler<ModuleSellRemoteInfo> ModuleSellRemoteEvent;
+
+        /// <summary>
+        /// Triggered whenever a player requests a remote module.
+        /// </summary>
+        public event EventHandler<FetchRemoteModuleInfo> FetchRemoteModuleEvent;
+
+        /// <summary>
+        /// Triggered whenever a player mass-pays their fines.
+        /// </summary>
+        public event EventHandler<SellExplorationDataInfo> SellExplorationDataEvent;
+
+        /// <summary>
+        /// Triggered whenever a player mass-pays their fines.
+        /// </summary>
+        public event EventHandler<PayFinesInfo> PayFinesEvent;
+
+        /// <summary>
+        /// Triggered whenever a cargo delivery mission gets updated.
+        /// </summary>
+        public event EventHandler<CargoDepotInfo> CargoDepotEvent;
+
+        /// <summary>
+        /// Triggered whenever a player leaves the wing.
+        /// </summary>
+        public event EventHandler<NavBeaconScanInfo> NavBeaconScanEvent;
+
+        /// <summary>
+        /// Triggered whenever a player leaves the wing.
+        /// </summary>
+        public event EventHandler<WingLeaveInfo> WingLeaveEvent;
+
+        /// <summary>
+        /// Triggered whenever another commander gets added to the wing.
+        /// </summary>
+        public event EventHandler<WingAddInfo> WingAddEvent;
+
+        /// <summary>
+        /// Triggered whenever a player joins a wing.
+        /// </summary>
+        public event EventHandler<WingJoinInfo> WingJoinEvent;
+
+        /// <summary>
+        /// Triggered whenever a player gets invited for a wing.
+        /// </summary>
+        public event EventHandler<WingInviteInfo> WingInviteEvent;
+
+        /// <summary>
+        /// Triggered whenever the ships becomes too hot.
+        /// </summary>
+        public event EventHandler<HeatWarningInfo> HeatWarningEvent;
+
+        /// <summary>
+        /// Triggered whenever a player pays their fines.
+        /// </summary>
+        public event EventHandler<PayFineInfo> PayFineEvent;
+
+        /// <summary>
+        /// Triggered whenever a player commits a crime.
+        /// </summary>
+        public event EventHandler<CommitCrimeInfo> CommitCrimeEvent;
+
+        /// <summary>
+        /// Triggered when a player buys ammunition from a station.
+        /// </summary>
+        public event EventHandler<BuyAmmoInfo> BuyAmmoEvent;
 
         /// <summary>
         /// Triggered for every event that hasn't been included yet.

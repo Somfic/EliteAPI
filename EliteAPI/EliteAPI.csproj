@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Body.cs" />
+    <Compile Include="Classes\Cargo.cs" />
     <Compile Include="Classes\ModulesInfo.cs" />
     <Compile Include="Classes\Outfitting.cs" />
     <Compile Include="Classes\Shipyard.cs" />

@@ -48,6 +48,11 @@ namespace EliteAPI
         public Outfitting Outfitting { get { return JsonConvert.DeserializeObject<Outfitting>(File.ReadAllText(_playerJournalDirectory.GetFiles().Where(x => x.Name == "Outfitting.json").First().FullName)); } }
 
         /// <summary>
+        /// Contains the Cargo.json data, updated upon request.
+        /// </summary>
+        public Cargo Cargo { get { return JsonConvert.DeserializeObject<Cargo>(File.ReadAllText(_playerJournalDirectory.GetFiles().Where(x => x.Name == "Cargo.json").First().FullName)); } }
+
+        /// <summary>
         /// Contains the Shipyard.json data, updated upon request.
         /// </summary>
         public Shipyard Shipyard { get { return JsonConvert.DeserializeObject<Shipyard>(File.ReadAllText(_playerJournalDirectory.GetFiles().Where(x => x.Name == "Shipyard.json").First().FullName)); } }

@@ -15,6 +15,9 @@ namespace Example
             EliteAPI.Start();
 
             Console.WriteLine(EliteAPI.Status.FireGroup);
+            Console.WriteLine(EliteAPI.Shipyard.PriceList[0].ShipPrice);
+            Console.WriteLine(EliteAPI.ModulesInfo.Modules[0].Item);
+            Console.WriteLine(EliteAPI.Outfitting.Horizons);
 
             Thread.Sleep(-1);
         }

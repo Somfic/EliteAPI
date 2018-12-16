@@ -159,7 +159,7 @@ namespace EliteAPI
             {
                 default:
                     OtherEvent?.Invoke(this, JsonConvert.DeserializeObject<dynamic>(json));
-                    File.AppendAllText(@"D:\NotAddedEvents.txt", json + Environment.NewLine);
+                    File.AppendAllText(@"C:\ICT\EliteAPI\NotAddedEvents.txt", json + Environment.NewLine);
                     break;
 
                 case "ClearSavedGame":
@@ -477,8 +477,71 @@ namespace EliteAPI
                 case "EscapeInterdiction":
                     EscapeInterdictionEvent?.Invoke(this, JsonConvert.DeserializeObject<EscapeInterdictionInfo>(json));
                     break;
+
+                case "EngineerProgress":
+                    EngineerProgressEvent?.Invoke(this, JsonConvert.DeserializeObject<EngineerProgressInfo>(json));
+                    break;
+
+                case "FSSSignalDiscovered":
+                    FSSSignalDiscoveredEvent?.Invoke(this, JsonConvert.DeserializeObject<FSSSignalDiscoveredInfo>(json));
+                    break;
+
+                case "ShipyardNew":
+                    ShipyardNewEvent?.Invoke(this, JsonConvert.DeserializeObject<ShipyardNewInfo>(json));
+                    break;
+
+                case "BuyDrones":
+                    BuyDronesEvent?.Invoke(this, JsonConvert.DeserializeObject<BuyDronesInfo>(json));
+                    break;
+
+                case "LaunchDrone":
+                    LaunchDroneEvent?.Invoke(this, JsonConvert.DeserializeObject<LaunchDroneInfo>(json));
+                    break;
+
+                case "AsteroidCracked":
+                    AsteroidCrackedEvent?.Invoke(this, JsonConvert.DeserializeObject<AsteroidCrackedInfo>(json));
+                    break;
+
+                case "FSSDiscoveryScan":
+                    FSSDiscoveryScanEvent?.Invoke(this, JsonConvert.DeserializeObject<FSSDiscoveryScanInfo>(json));
+                    break;
             }
         }
+
+        /// <summary>
+        /// Triggered whenever a discovery scan has been completed.
+        /// </summary>
+        public EventHandler<FSSDiscoveryScanInfo> FSSDiscoveryScanEvent;
+
+        /// <summary>
+        /// Triggered whenever a player cracks open an asteroid while mining.
+        /// </summary>
+        public EventHandler<AsteroidCrackedInfo> AsteroidCrackedEvent;
+
+        /// <summary>
+        /// Triggered when a player fires a limpet for any usage.
+        /// </summary>
+        public EventHandler<LaunchDroneInfo> LaunchDroneEvent;
+
+        /// <summary>
+        /// Triggerd when a player buys limpets.
+        /// </summary>
+        public event EventHandler<BuyDronesInfo> BuyDronesEvent;
+
+        /// <summary>
+        /// Triggered whenever a new ship becomes available in the shipyard.
+        /// </summary>
+        public event EventHandler<ShipyardNewInfo> ShipyardNewEvent;
+
+        /// <summary>
+        /// Triggered whenever a player discovers a new signal in FSS.
+        /// </summary>
+        public event EventHandler<FSSSignalDiscoveredInfo> FSSSignalDiscoveredEvent;
+
+        /// <summary>
+        /// Triggered whenever a play updates their process with engineers.
+        /// </summary>
+        public event EventHandler<EngineerProgressInfo> EngineerProgressEvent;
 
         /// <summary>
         /// Triggered whenever a player sells a module remotely.

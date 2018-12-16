@@ -59,13 +59,13 @@ namespace EliteAPI.EDDB
 
         public void ParsePrices()
         {
-            List<string> MidArray = new List<string>();
+           List<string> MidArray = new List<string>();
 
             TextFieldParser parser = new TextFieldParser("prices.csv");
             parser.TextFieldType = FieldType.Delimited;
             parser.SetDelimiters(",");
 
-            List<Price> allPrices = new List<Price>();
+           List<Price> allPrices = new List<Price>();
 
             parser.ReadFields();
 
@@ -92,7 +92,7 @@ namespace EliteAPI.EDDB
         /// </summary>
         /// <param name="station">The specific station</param>
         /// <returns></returns>
-        public IReadOnlyList<Price> GetPriceInfoByStation(EddbStation station)
+        public List<Price> GetPriceInfoByStation(EddbStation station)
         {
             return JsonConvert.DeserializeObject<List<Price>>(File.ReadAllText("prices.json")).Where(x => x.station == station.id).ToList();
         }
@@ -135,7 +135,7 @@ namespace EliteAPI.EDDB
         /// <returns></returns>
         public bool StationHasCommodity(EddbStation station, CommodityType commodity)
         {
-            IReadOnlyList<Price> StationPrices = GetPriceInfoByStation(station);
+            List<Price> StationPrices = GetPriceInfoByStation(station);
             foreach (var item in StationPrices)
             {
                 if((CommodityType)item.type.Value == commodity && item.supply > 0) { return true; }
@@ -148,7 +148,7 @@ namespace EliteAPI.EDDB
         /// </summary>
         /// <param name="stationName">The stationname</param>
         /// <returns></returns>
-        public IReadOnlyList<EddbStation> GetStationByName(string stationName)
+        public List<EddbStation> GetStationByName(string stationName)
         {
             return JsonConvert.DeserializeObject<List<EddbStation>>(File.ReadAllText("stations.json")).Where(x => x.name == stationName).ToList();
         }
@@ -168,7 +168,7 @@ namespace EliteAPI.EDDB
         /// </summary>
         /// <param name="system">The specific system</param>
         /// <returns></returns>
-        public IReadOnlyList<EddbStation> GetStationsBySystem(EddbSystem system)
+        public List<EddbStation> GetStationsBySystem(EddbSystem system)
         {
             return GetStationsBySystem(system.id);
         }
@@ -178,7 +178,7 @@ namespace EliteAPI.EDDB
         /// </summary>
         /// <param name="id">The system's id</param>
         /// <returns></returns>
-        public IReadOnlyList<EddbStation> GetStationsBySystem(int id)
+        public List<EddbStation> GetStationsBySystem(int id)
         {
             return JsonConvert.DeserializeObject<List<EddbStation>>(File.ReadAllText("stations.json")).Where(x => x.system_id == id).ToList();
         }

@@ -65,7 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Body.cs" />
+    <Compile Include="Classes\ModulesInfo.cs" />
+    <Compile Include="Classes\Outfitting.cs" />
+    <Compile Include="Classes\Shipyard.cs" />
     <Compile Include="Classes\Station.cs" />
+    <Compile Include="Classes\Status.cs" />
     <Compile Include="Classes\System.cs" />
     <Compile Include="EDDB\EDDBApi.cs" />
     <Compile Include="EDDB\Price.cs" />
@@ -90,7 +94,7 @@
     <Compile Include="Events\Docked.cs" />
     <Compile Include="Events\DockingTimeout.cs" />
     <Compile Include="Events\EjectCargo.cs" />
-    <Compile Include="Events\EngineerProcess.cs" />
+    <Compile Include="Events\EngineerProgress.cs" />
     <Compile Include="Events\EscapeInterdiction.cs" />
     <Compile Include="Events\FetchRemoteModule.cs" />
     <Compile Include="Events\Fileheader.cs" />

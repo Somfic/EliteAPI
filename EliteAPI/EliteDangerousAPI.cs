@@ -33,6 +33,26 @@ namespace EliteAPI
         public Station lastStation = new Station();
 
         /// <summary>
+        /// Contains the Status.json data, updated upon request.
+        /// </summary>
+        public Status Status { get { return JsonConvert.DeserializeObject<Status>(File.ReadAllText(_playerJournalDirectory.GetFiles().Where(x => x.Name == "Status.json").First().FullName)); } }
+
+        /// <summary>
+        /// Contains the ModulesInfo.json data, updated upon request.
+        /// </summary>
+        public ModulesInfo ModulesInfo { get { return JsonConvert.DeserializeObject<ModulesInfo>(File.ReadAllText(_playerJournalDirectory.GetFiles().Where(x => x.Name == "ModulesInfo.json").First().FullName)); } }
+
+        /// <summary>
+        /// Contains the Outfitting.json data, updated upon request.
+        /// </summary>
+        public Outfitting Outfitting { get { return JsonConvert.DeserializeObject<Outfitting>(File.ReadAllText(_playerJournalDirectory.GetFiles().Where(x => x.Name == "Outfitting.json").First().FullName)); } }
+
+        /// <summary>
+        /// Contains the Shipyard.json data, updated upon request.
+        /// </summary>
+        public Shipyard Shipyard { get { return JsonConvert.DeserializeObject<Shipyard>(File.ReadAllText(_playerJournalDirectory.GetFiles().Where(x => x.Name == "Shipyard.json").First().FullName)); } }
+
+        /// <summary>
         /// Whether the class is processing logs.
         /// </summary>
         public bool isRunning { get; private set; } 
@@ -496,7 +516,7 @@ namespace EliteAPI
 
                 case "LaunchDrone":
                     LaunchDroneEvent?.Invoke(this, JsonConvert.DeserializeObject<LaunchDroneInfo>(json));
-                    break;
+                    break;  
 
                 case "AsteroidCracked":
                     AsteroidCrackedEvent?.Invoke(this, JsonConvert.DeserializeObject<AsteroidCrackedInfo>(json));

@@ -1,14 +1,7 @@
-﻿using System;
-using System.Threading;
-using System.Collections.Generic;
-
+﻿using EliteAPI;
+using System;
 using System.IO;
-
-using EliteAPI;
-using EliteAPI.EDDB;
-
-using Newtonsoft.Json;
-using System.Linq;
+using System.Threading;
 
 namespace Example
 {

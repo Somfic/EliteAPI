@@ -89,7 +89,7 @@ EliteDangerousAPI EliteAPI = new EliteDangerousAPI( playerJournalFolder );
 EliteAPI.Start();
 ```
 Then, you can access the `EliteAPI.Status.LandingGear` option.
-```
+```csharp
 switch (EliteAPI.Status.LandingGear) {
      case true:
           Console.WriteLine("The landing gear is down!");

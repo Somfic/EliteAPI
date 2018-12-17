@@ -673,90 +673,90 @@ namespace EliteAPI
             }
         }
 
-        public EventHandler<PowerplayInfo> PowerplayEvent;
+        public event EventHandler<PowerplayInfo> PowerplayEvent;
 
-        public EventHandler<CommunityGoalInfo> CommunityGoalEvent;
+        public event EventHandler<CommunityGoalInfo> CommunityGoalEvent;
 
-        public EventHandler<FSDTargetInfo> FSDTargetEvent;
+        public event EventHandler<FSDTargetInfo> FSDTargetEvent;
 
-        public EventHandler<CodexEntryInfo> CodexEntryEvent;
+        public event EventHandler<CodexEntryInfo> CodexEntryEvent;
 
-        public EventHandler<ModuleInfoInfo> ModuleInfoEvent;
+        public event EventHandler<ModuleInfoInfo> ModuleInfoEvent;
 
-        public EventHandler<RedeemVoucherInfo> RedeemVoucherEvent;
+        public event EventHandler<RedeemVoucherInfo> RedeemVoucherEvent;
 
-        public EventHandler<PowerplaySalaryInfo> PowerplaySalaryEvent;
+        public event EventHandler<PowerplaySalaryInfo> PowerplaySalaryEvent;
 
-        public EventHandler<SetUserShipNameInfo> SetUserShipNameEvent;
+        public event EventHandler<SetUserShipNameInfo> SetUserShipNameEvent;
 
-        public EventHandler<EngineerCraftInfo> EngineerCraftEvent;
+        public event EventHandler<EngineerCraftInfo> EngineerCraftEvent;
 
-        public EventHandler<ModuleRetrieveInfo> ModuleRetrieveEvent;
+        public event EventHandler<ModuleRetrieveInfo> ModuleRetrieveEvent;
 
-        public EventHandler<SellDronesInfo> SellDronesEvent;
+        public event EventHandler<SellDronesInfo> SellDronesEvent;
 
-        public EventHandler<MultiSellExplorationDataInfo> MultiSellExplorationDataEvent;
+        public event EventHandler<MultiSellExplorationDataInfo> MultiSellExplorationDataEvent;
 
-        public EventHandler<ModuleSwapInfo> ModuleSwapEvent;
+        public event EventHandler<ModuleSwapInfo> ModuleSwapEvent;
 
-        public EventHandler<SAAScanCompleteInfo> SAAScanCompleteEvent;
+        public event EventHandler<SAAScanCompleteInfo> SAAScanCompleteEvent;
 
-        public EventHandler<LaunchSRVInfo> LaunchSRVEvent;
+        public event EventHandler<LaunchSRVInfo> LaunchSRVEvent;
 
-        public EventHandler<MaterialCollectedInfo> MaterialCollectedEvent;
+        public event EventHandler<MaterialCollectedInfo> MaterialCollectedEvent;
 
-        public EventHandler<DockSRVInfo> DockSRVEvent;
+        public event EventHandler<DockSRVInfo> DockSRVEvent;
 
-        public EventHandler<MiningRefinedInfo> MiningRefinedEvent;
+        public event EventHandler<MiningRefinedInfo> MiningRefinedEvent;
 
-        public EventHandler<FSSAllBodiesFoundInfo> FSSAllBodiesFoundEvent;
+        public event EventHandler<FSSAllBodiesFoundInfo> FSSAllBodiesFoundEvent;
 
-        public EventHandler<MaterialDiscoveredInfo> MaterialDiscoveredEvent;
+        public event EventHandler<MaterialDiscoveredInfo> MaterialDiscoveredEvent;
 
-        public EventHandler<USSDropInfo> USSDropEvent;
+        public event EventHandler<USSDropInfo> USSDropEvent;
 
-        public EventHandler<MissionRedirectedInfo> MissionRedirectedEvent;
+        public event EventHandler<MissionRedirectedInfo> MissionRedirectedEvent;
 
-        public EventHandler<SendTextInfo> SendTextEvent;
+        public event EventHandler<SendTextInfo> SendTextEvent;
 
-        public EventHandler<SelfDestructInfo> SelfDestructEvent;
+        public event EventHandler<SelfDestructInfo> SelfDestructEvent;
 
-        public EventHandler<HeatDamageInfo> HeatDamageEvent;
+        public event EventHandler<HeatDamageInfo> HeatDamageEvent;
 
-        public EventHandler<DiedInfo> DiedEvent;
+        public event EventHandler<DiedInfo> DiedEvent;
 
-        public EventHandler<ResurrectInfo> ResurrectEvent;
+        public event EventHandler<ResurrectInfo> ResurrectEvent;
 
-        public EventHandler<HullDamageInfo> HullDamageEvent;
+        public event EventHandler<HullDamageInfo> HullDamageEvent;
 
-        public EventHandler<CrewMemberJoinsInfo> CrewMemberJoinsEvent;
+        public event EventHandler<CrewMemberJoinsInfo> CrewMemberJoinsEvent;
 
-        public EventHandler<CrewMemberRoleChangeInfo> CrewMemberRoleChangeEvent;
+        public event EventHandler<CrewMemberRoleChangeInfo> CrewMemberRoleChangeEvent;
 
-        public EventHandler<CrewLaunchFighterInfo> CrewLaunchFighterEvent;
+        public event EventHandler<CrewLaunchFighterInfo> CrewLaunchFighterEvent;
 
-        public EventHandler<CrimeVictimInfo> CrimeVictimEvent;
+        public event EventHandler<CrimeVictimInfo> CrimeVictimEvent;
 
-        public EventHandler<EndCrewSessionInfo> EndCrewSessionEvent;
+        public event EventHandler<EndCrewSessionInfo> EndCrewSessionEvent;
 
-        public EventHandler<RestockVehicleInfo> RestockVehicleEvent;
+        public event EventHandler<RestockVehicleInfo> RestockVehicleEvent;
 
-        public EventHandler<CollectCargoInfo> CollectCargoEvent;
+        public event EventHandler<CollectCargoInfo> CollectCargoEvent;
 
         /// <summary>
         /// Triggered whenever a discovery scan has been completed.
         /// </summary>
-        public EventHandler<FSSDiscoveryScanInfo> FSSDiscoveryScanEvent;
+        public event EventHandler<FSSDiscoveryScanInfo> FSSDiscoveryScanEvent;
 
         /// <summary>
         /// Triggered whenever a player cracks open an asteroid while mining.
         /// </summary>
-        public EventHandler<AsteroidCrackedInfo> AsteroidCrackedEvent;
+        public event EventHandler<AsteroidCrackedInfo> AsteroidCrackedEvent;
 
         /// <summary>
         /// Triggered when a player fires a limpet for any usage.
         /// </summary>
-        public EventHandler<LaunchDroneInfo> LaunchDroneEvent;
+        public event EventHandler<LaunchDroneInfo> LaunchDroneEvent;
 
         /// <summary>
         /// Triggerd when a player buys limpets.

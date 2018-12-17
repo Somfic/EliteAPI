@@ -79,5 +79,6 @@ private static void EliteAPI_DockedEvent(object sender, DockedInfo e)
 ```
 
 ## FAQ
-**Can it be used on PS4 / XBOX**
+**Can it be used on PS4 / XBOX?**
+
 No. There are currently no plans to add support for these platforms either.

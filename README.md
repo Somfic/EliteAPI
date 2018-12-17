@@ -34,7 +34,8 @@ Simply search for ***EliteAPI***.
 You can find the latest release [here](https://github.com/EliteAPI/EliteAPI/releases). 
 Download the .dll file and reference it to your Visual Studio project.
 
-## Running the API
+## API examples
+### Message on docking
 Now to the fun part. Make sure you've ran Elite: Dangerous at least once before continuing.
 
 First, add the namespace to your class.
@@ -77,6 +78,30 @@ private static void EliteAPI_DockedEvent(object sender, DockedInfo e)
      Console.WriteLine($"Docked at {e.StationName}.");
 }
 ```
+### Check whether the landing gear is down
+Again, we start with hooking into the API.
+```csharp
+DirectoryInfo playerJournalFolder = new DirectoryInfo(
+$@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous");
+
+EliteDangerousAPI EliteAPI = new EliteDangerousAPI( playerJournalFolder );
+
+EliteAPI.Start();
+```
+Then, you can access the `EliteAPI.Status.LandingGear` field.
+```csharp
+switch (EliteAPI.Status.LandingGear) {
+     case true:
+          Console.WriteLine("The landing gear is down!");
+          break;
+          
+     case false:
+          Console.WriteLine("That gear ain't down, chief.");
+          break;
+}
+```
+Simple as that.
+
 
 # FAQ
 ### **Can it be used on PS4 / XBOX?**

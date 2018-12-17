@@ -88,7 +88,7 @@ EliteDangerousAPI EliteAPI = new EliteDangerousAPI( playerJournalFolder );
 
 EliteAPI.Start();
 ```
-Then, you can access the `EliteAPI.Status.LandingGear` option.
+Then, you can access the `EliteAPI.Status.LandingGear` field.
 ```csharp
 switch (EliteAPI.Status.LandingGear) {
      case true:

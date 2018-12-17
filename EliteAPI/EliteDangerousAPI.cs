@@ -683,20 +683,44 @@ namespace EliteAPI
 
         public event EventHandler<ModuleInfoInfo> ModuleInfoEvent;
 
+        /// <summary>
+        /// Triggered whenever a player redeems a voucher.
+        /// </summary>
         public event EventHandler<RedeemVoucherInfo> RedeemVoucherEvent;
 
+        /// <summary>
+        /// Triggered when a player gets their powerplay salary.
+        /// </summary>
         public event EventHandler<PowerplaySalaryInfo> PowerplaySalaryEvent;
 
+        /// <summary>
+        /// Triggered whenever a player changes their ship's name.
+        /// </summary>
         public event EventHandler<SetUserShipNameInfo> SetUserShipNameEvent;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public event EventHandler<EngineerCraftInfo> EngineerCraftEvent;
 
+        /// <summary>
+        /// Triggered when a player retrieves a module from a station.
+        /// </summary>
         public event EventHandler<ModuleRetrieveInfo> ModuleRetrieveEvent;
 
+        /// <summary>
+        /// Triggered when a player sells back limpets.
+        /// </summary>
         public event EventHandler<SellDronesInfo> SellDronesEvent;
 
+        /// <summary>
+        /// Triggered when mass selling exploration data.
+        /// </summary>
         public event EventHandler<MultiSellExplorationDataInfo> MultiSellExplorationDataEvent;
 
+        /// <summary>
+        /// Triggered when a player swaps modules.
+        /// </summary>
         public event EventHandler<ModuleSwapInfo> ModuleSwapEvent;
 
         public event EventHandler<SAAScanCompleteInfo> SAAScanCompleteEvent;

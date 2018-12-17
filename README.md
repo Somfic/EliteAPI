@@ -80,5 +80,7 @@ private static void EliteAPI_DockedEvent(object sender, DockedInfo e)
 
 ## FAQ
 **Can it be used on PS4 / XBOX?**
-
 No. There are currently no plans to add support for these platforms either.
+
+**What can this be used for?**
+You can link this to a number of things, like Discord's rich presence feature or a jump tracker.

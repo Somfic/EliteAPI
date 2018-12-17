@@ -45,7 +45,7 @@ Then create a new `EliteDangerousAPI` object.
 ```csharp
 EliteDangerousAPI EliteAPI = new EliteDangerousAPI();
 ```
-Since `EliteDangerousAPI` needs a reference to the directory that contains the PlayerJournals, we have to pass it a `DirectoryInfo` object.
+Since `EliteDangerousAPI` needs a reference to the directory that contains the PlayerJournals, we have to pass it a `DirectoryInfo` object. Usually, the Player Journal folder is located in `C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous`.
 ```csharp
 DirectoryInfo playerJournalFolder = new DirectoryInfo(
 $@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous");

@@ -10,26 +10,33 @@ A powerful event based API for [Elite: Dangerous](https://www.elitedangerous.com
 
 [![Nuget](https://img.shields.io/nuget/v/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/) [![GitHub tag](https://img.shields.io/github/tag/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/releases) [![GitHub last commit](https://img.shields.io/github/last-commit/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/commits/master) [![GitHub Release Date](https://img.shields.io/github/release-date/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/releases) [![NuGet](https://img.shields.io/nuget/dt/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/)
 
-# Usage
-Let's get this party rolling.
+# Getting started
 
-## Installation
-First we will have to install EliteAPI. We can do this a number of ways.
+## Prerequisites
+```
+Visual studio
+Elite: Dangerous (PC)
+```
+
+## Installing
+You can install this library in a number of different ways.
 
 ##### Nuget
 Use the nuget package manager console.
 
 ```Install-Package EliteAPI```
 
-After that it will be ready to go.
-
 ##### Nuget package manager
-It is also available in the nuget package manager via Visual Studio. Simply search for ***EliteAPI***. After that it will be ready to go.
+Available in the nuget package manager via Visual Studio. 
+Simply search for ***EliteAPI***.
 
 ##### Github
-You can find the latest release [here](https://github.com/EliteAPI/EliteAPI/releases). Download the .dll file and reference it to your Visual Studio project.
+You can find the latest release [here](https://github.com/EliteAPI/EliteAPI/releases). 
+Download the .dll file and reference it to your Visual Studio project.
 
-## Code example
+## Running the API
+Now to the fun part. Make sure you've ran Elite: Dangerous at least once before continuing.
+
 First, add the namespace to your class.
 ```csharp
 using EliteAPI;
@@ -38,7 +45,7 @@ Then create a new `EliteDangerousAPI` object.
 ```csharp
 EliteDangerousAPI EliteAPI = new EliteDangerousAPI();
 ```
-Since `EliteDangerousAPI` needs a reference to the directory that contains the PlayerJournals, we have to pass it a `DirectoryInfo` object.
+Since `EliteDangerousAPI` needs a reference to the directory that contains the PlayerJournals, we have to pass it a `DirectoryInfo` object. Usually, the Player Journal folder is located in `C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous`.
 ```csharp
 DirectoryInfo playerJournalFolder = new DirectoryInfo(
 $@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous");
@@ -70,3 +77,10 @@ private static void EliteAPI_DockedEvent(object sender, DockedInfo e)
      Console.WriteLine($"Docked at {e.StationName}.");
 }
 ```
+
+# FAQ
+### **Can it be used on PS4 / XBOX?**
+No. There are currently no plans to add support for these platforms either.
+
+### **What can this be used for?**
+You can link this to a number of things, like Discord's rich presence feature or a jump tracker.

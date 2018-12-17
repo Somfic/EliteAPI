@@ -7,7 +7,7 @@ namespace EliteAPI
     public class MultiSellExplorationDataInfo
     {
         public DateTime timestamp { get; set; }
-        public string _event { get; set; }
+
         public List<DiscoveredInfo> Discovered { get; set; }
         public int BaseValue { get; set; }
         public int Bonus { get; set; }

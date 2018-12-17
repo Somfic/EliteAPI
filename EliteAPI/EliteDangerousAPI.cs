@@ -184,7 +184,7 @@ namespace EliteAPI
             {
                 default:
                     OtherEvent?.Invoke(this, JsonConvert.DeserializeObject<dynamic>(json));
-                    File.AppendAllText(@"C:\ICT\EliteAPI\NotAddedEvents.txt", json + Environment.NewLine);
+                    //File.AppendAllText(@"C:\ICT\EliteAPI\NotAddedEvents.txt", json + Environment.NewLine);
                     break;
 
                 case "ClearSavedGame":

@@ -7,7 +7,7 @@ namespace EliteAPI
     public class CommunityGoalInfo
     {
         public DateTime timestamp { get; set; }
-        public string _event { get; set; }
+
         public List<CurrentgoalInfo> CurrentGoals { get; set; }
     }
 

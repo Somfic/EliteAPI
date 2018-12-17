@@ -7,7 +7,7 @@ namespace EliteAPI
     public class EngineerCraftInfo
     {
         public DateTime timestamp { get; set; }
-        public string _event { get; set; }
+
         public string Slot { get; set; }
         public string Module { get; set; }
         public IngredientInfo[] Ingredients { get; set; }

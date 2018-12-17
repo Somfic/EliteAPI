@@ -19,7 +19,7 @@ namespace EliteAPI.EDDB
         public double x { get; set; }
         public double y { get; set; }
         public double z { get; set; }
-        public UInt64 population { get; set; }
+        public ulong population { get; set; }
         public bool is_populated { get; set; }
         public int? government_id { get; set; }
         public string government { get; set; }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace EliteAPI
 {
@@ -16,7 +17,7 @@ namespace EliteAPI
         public string Government_Localised { get; set; }
         public string Security { get; set; }
         public string Security_Localised { get; set; }
-        public int Population { get; set; }
+        public ulong Population { get; set; }
         public string SystemFaction { get; set; }
         public string FactionState { get; set; }
     }

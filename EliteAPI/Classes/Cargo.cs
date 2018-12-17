@@ -5,7 +5,7 @@ namespace EliteAPI
     public class Cargo
     {
         public DateTime timestamp { get; set; }
-        public string _event { get; set; }
+
         public string Vessel { get; set; }
         public int Count { get; set; }
         public Inventory[] Inventory { get; set; }

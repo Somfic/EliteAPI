@@ -151,7 +151,7 @@ namespace EliteAPI
         /// Process the log file once.
         /// </summary>
         /// <param name="logFile">The log file to process.</param>
-        private void ProcessLog(FileInfo logFile, bool actuallyProcess)
+        public void ProcessLog(FileInfo logFile, bool actuallyProcess)
         {
             //Create a stream from the log file.
             FileStream fileStream = logFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -184,7 +184,7 @@ namespace EliteAPI
             {
                 default:
                     OtherEvent?.Invoke(this, JsonConvert.DeserializeObject<dynamic>(json));
-                    //File.AppendAllText(@"C:\ICT\EliteAPI\NotAddedEvents.txt", json + Environment.NewLine);
+                    File.AppendAllText(@"C:\ICT\EliteAPI\NotAddedEvents.txt", json + Environment.NewLine);
                     break;
 
                 case "ClearSavedGame":
@@ -530,8 +530,218 @@ namespace EliteAPI
                 case "FSSDiscoveryScan":
                     FSSDiscoveryScanEvent?.Invoke(this, JsonConvert.DeserializeObject<FSSDiscoveryScanInfo>(json));
                     break;
+
+                case "Powerplay":
+                    PowerplayEvent?.Invoke(this, JsonConvert.DeserializeObject<PowerplayInfo>(json));
+                    break;
+
+                case "CommunityGoal":
+                    CommunityGoalEvent?.Invoke(this, JsonConvert.DeserializeObject<CommunityGoalInfo>(json));
+                    break;
+
+                case "FSDTarget":
+                    FSDTargetEvent?.Invoke(this, JsonConvert.DeserializeObject<FSDTargetInfo>(json));
+                    break;
+
+                case "CodexEntry":
+                    CodexEntryEvent?.Invoke(this, JsonConvert.DeserializeObject<CodexEntryInfo>(json));
+                    break;
+
+                case "ModuleInfo":
+                    ModuleInfoEvent?.Invoke(this, JsonConvert.DeserializeObject<ModuleInfoInfo>(json));
+                    break;
+
+                case "RedeemVoucher":
+                    RedeemVoucherEvent?.Invoke(this, JsonConvert.DeserializeObject<RedeemVoucherInfo>(json));
+                    break;
+
+                case "PowerplaySalary":
+                    PowerplaySalaryEvent?.Invoke(this, JsonConvert.DeserializeObject<PowerplaySalaryInfo>(json));
+                    break;
+
+                case "SetUserShipName":
+                    SetUserShipNameEvent?.Invoke(this, JsonConvert.DeserializeObject<SetUserShipNameInfo>(json));
+                    break;
+
+                case "EngineerCraft":
+                    EngineerCraftEvent?.Invoke(this, JsonConvert.DeserializeObject<EngineerCraftInfo>(json));
+                    break;
+
+                case "ModuleRetrieve":
+                    ModuleRetrieveEvent?.Invoke(this, JsonConvert.DeserializeObject<ModuleRetrieveInfo>(json));
+                    break;
+
+                case "SellDrones":
+                    SellDronesEvent?.Invoke(this, JsonConvert.DeserializeObject<SellDronesInfo>(json));
+                    break;
+
+                case "MultiSellExplorationData":
+                    MultiSellExplorationDataEvent?.Invoke(this, JsonConvert.DeserializeObject<MultiSellExplorationDataInfo>(json));
+                    break;
+
+                case "ModuleSwap":
+                    ModuleSwapEvent?.Invoke(this, JsonConvert.DeserializeObject<ModuleSwapInfo>(json));
+                    break;
+
+                case "SAAScanComplete":
+                    SAAScanCompleteEvent?.Invoke(this, JsonConvert.DeserializeObject<SAAScanCompleteInfo>(json));
+                    break;
+
+                case "LaunchSRV":
+                    LaunchSRVEvent?.Invoke(this, JsonConvert.DeserializeObject<LaunchSRVInfo>(json));
+                    break;
+
+                case "MaterialCollected":
+                    MaterialCollectedEvent?.Invoke(this, JsonConvert.DeserializeObject<MaterialCollectedInfo>(json));
+                    break;
+
+                case "DockSRV":
+                    DockSRVEvent?.Invoke(this, JsonConvert.DeserializeObject<DockSRVInfo>(json));
+                    break;
+
+                case "MiningRefined":
+                    MiningRefinedEvent?.Invoke(this, JsonConvert.DeserializeObject<MiningRefinedInfo>(json));
+                    break;
+
+                case "FSSAllBodiesFound":
+                    FSSAllBodiesFoundEvent?.Invoke(this, JsonConvert.DeserializeObject<FSSAllBodiesFoundInfo>(json));
+                    break;
+
+                case "MaterialDiscovered":
+                    MaterialDiscoveredEvent?.Invoke(this, JsonConvert.DeserializeObject<MaterialDiscoveredInfo>(json));
+                    break;
+
+                case "USSDrop":
+                    USSDropEvent?.Invoke(this, JsonConvert.DeserializeObject<USSDropInfo>(json));
+                    break;
+
+                case "MissionRedirected":
+                    MissionRedirectedEvent?.Invoke(this, JsonConvert.DeserializeObject<MissionRedirectedInfo>(json));
+                    break;
+
+                case "SendText":
+                    SendTextEvent?.Invoke(this, JsonConvert.DeserializeObject<SendTextInfo>(json));
+                    break;
+
+                case "SelfDestruct":
+                    SelfDestructEvent?.Invoke(this, JsonConvert.DeserializeObject<SelfDestructInfo>(json));
+                    break;
+
+                case "HeatDamage":
+                    HeatDamageEvent?.Invoke(this, JsonConvert.DeserializeObject<HeatDamageInfo>(json));
+                    break;
+
+                case "Died":
+                    DiedEvent?.Invoke(this, JsonConvert.DeserializeObject<DiedInfo>(json));
+                    break;
+
+                case "Resurrect":
+                    ResurrectEvent?.Invoke(this, JsonConvert.DeserializeObject<ResurrectInfo>(json));
+                    break;
+
+                case "HullDamage":
+                    HullDamageEvent?.Invoke(this, JsonConvert.DeserializeObject<HullDamageInfo>(json));
+                    break;
+
+                case "CrewMemberJoins":
+                    CrewMemberJoinsEvent?.Invoke(this, JsonConvert.DeserializeObject<CrewMemberJoinsInfo>(json));
+                    break;
+
+                case "CrewMemberRoleChange":
+                    CrewMemberRoleChangeEvent?.Invoke(this, JsonConvert.DeserializeObject<CrewMemberRoleChangeInfo>(json));
+                    break;
+
+                case "CrewLaunchFighter":
+                    CrewLaunchFighterEvent?.Invoke(this, JsonConvert.DeserializeObject<CrewLaunchFighterInfo>(json));
+                    break;
+
+                case "CrimeVictim":
+                    CrimeVictimEvent?.Invoke(this, JsonConvert.DeserializeObject<CrimeVictimInfo>(json));
+                    break;
+
+                case "EndCrewSession":
+                    EndCrewSessionEvent?.Invoke(this, JsonConvert.DeserializeObject<EndCrewSessionInfo>(json));
+                    break;
+
+                case "RestockVehicle":
+                    RestockVehicleEvent?.Invoke(this, JsonConvert.DeserializeObject<RestockVehicleInfo>(json));
+                    break;
+
+                case "CollectCargo":
+                    CollectCargoEvent?.Invoke(this, JsonConvert.DeserializeObject<CollectCargoInfo>(json));
+                    break;
             }
         }
+
+        public EventHandler<PowerplayInfo> PowerplayEvent;
+
+        public EventHandler<CommunityGoalInfo> CommunityGoalEvent;
+
+        public EventHandler<FSDTargetInfo> FSDTargetEvent;
+
+        public EventHandler<CodexEntryInfo> CodexEntryEvent;
+
+        public EventHandler<ModuleInfoInfo> ModuleInfoEvent;
+
+        public EventHandler<RedeemVoucherInfo> RedeemVoucherEvent;
+
+        public EventHandler<PowerplaySalaryInfo> PowerplaySalaryEvent;
+
+        public EventHandler<SetUserShipNameInfo> SetUserShipNameEvent;
+
+        public EventHandler<EngineerCraftInfo> EngineerCraftEvent;
+
+        public EventHandler<ModuleRetrieveInfo> ModuleRetrieveEvent;
+
+        public EventHandler<SellDronesInfo> SellDronesEvent;
+
+        public EventHandler<MultiSellExplorationDataInfo> MultiSellExplorationDataEvent;
+
+        public EventHandler<ModuleSwapInfo> ModuleSwapEvent;
+
+        public EventHandler<SAAScanCompleteInfo> SAAScanCompleteEvent;
+
+        public EventHandler<LaunchSRVInfo> LaunchSRVEvent;
+
+        public EventHandler<MaterialCollectedInfo> MaterialCollectedEvent;
+
+        public EventHandler<DockSRVInfo> DockSRVEvent;
+
+        public EventHandler<MiningRefinedInfo> MiningRefinedEvent;
+
+        public EventHandler<FSSAllBodiesFoundInfo> FSSAllBodiesFoundEvent;
+
+        public EventHandler<MaterialDiscoveredInfo> MaterialDiscoveredEvent;
+
+        public EventHandler<USSDropInfo> USSDropEvent;
+
+        public EventHandler<MissionRedirectedInfo> MissionRedirectedEvent;
+
+        public EventHandler<SendTextInfo> SendTextEvent;
+
+        public EventHandler<SelfDestructInfo> SelfDestructEvent;
+
+        public EventHandler<HeatDamageInfo> HeatDamageEvent;
+
+        public EventHandler<DiedInfo> DiedEvent;
+
+        public EventHandler<ResurrectInfo> ResurrectEvent;
+
+        public EventHandler<HullDamageInfo> HullDamageEvent;
+
+        public EventHandler<CrewMemberJoinsInfo> CrewMemberJoinsEvent;
+
+        public EventHandler<CrewMemberRoleChangeInfo> CrewMemberRoleChangeEvent;
+
+        public EventHandler<CrewLaunchFighterInfo> CrewLaunchFighterEvent;
+
+        public EventHandler<CrimeVictimInfo> CrimeVictimEvent;
+
+        public EventHandler<EndCrewSessionInfo> EndCrewSessionEvent;
+
+        public EventHandler<RestockVehicleInfo> RestockVehicleEvent;
+
+        public EventHandler<CollectCargoInfo> CollectCargoEvent;
 
         /// <summary>
         /// Triggered whenever a discovery scan has been completed.

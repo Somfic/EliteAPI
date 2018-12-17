@@ -18,7 +18,7 @@ namespace EliteAPI
         public string SystemGovernment_Localised { get; set; }
         public string SystemSecurity { get; set; }
         public string SystemSecurity_Localised { get; set; }
-        public int Population { get; set; }
+        public ulong Population { get; set; }
         public double JumpDist { get; set; }
         public double FuelUsed { get; set; }
         public double FuelLevel { get; set; }

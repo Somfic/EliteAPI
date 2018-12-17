@@ -670,8 +670,14 @@ namespace EliteAPI
                 case "CollectCargo":
                     CollectCargoEvent?.Invoke(this, JsonConvert.DeserializeObject<CollectCargoInfo>(json));
                     break;
+
+                case "DockingCancelled":
+                    DockingCancelledEvent?.Invoke(this, JsonConvert.DeserializeObject<DockingCancelledInfo>(json));
+                    break;
             }
         }
+
+        public event EventHandler<DockingCancelledInfo> DockingCancelledEvent;
 
         public event EventHandler<PowerplayInfo> PowerplayEvent;
 

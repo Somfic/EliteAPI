@@ -94,6 +94,7 @@
     <Compile Include="Events\CrimeVictim.cs" />
     <Compile Include="Events\Died.cs" />
     <Compile Include="Events\DiscoveryScan.cs" />
+    <Compile Include="Events\DockingCancelled.cs" />
     <Compile Include="Events\DockingDenied.cs" />
     <Compile Include="Events\DockingGranted.cs" />
     <Compile Include="Events\DockingRequested.cs" />

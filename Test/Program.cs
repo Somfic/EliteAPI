@@ -13,23 +13,18 @@ namespace Example
 
         static void Main(string[] args)
         {
-            DirectoryInfo d = new DirectoryInfo($@"C:\Users\Lucas\Downloads\Elite Dangerous Journals");
+            DirectoryInfo d = new DirectoryInfo($@"C:\Users\Lucas\Saved Games\Frontier Developments\Elite Dangerous");
 
             EliteDangerousAPI EliteAPI = new EliteDangerousAPI(d, false);
             EliteAPI.OtherEvent += EliteAPI_OtherEvent;
+            EliteAPI.Start();
 
-            foreach (var item in d.GetFiles())
-            {
-                EliteAPI.ProcessLog(item, true);
-            }
-
-            Thread.Sleep(-1);
+            Console.WriteLine(EliteAPI.Status.Lights);
         }
 
         private static void EliteAPI_OtherEvent(object sender, dynamic e)
         {
-            string @event = e.@event;
-            if (!unaddedEvents.Contains(@event)) { unaddedEvents.Add(@event); Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(e)); }
+            Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(e));
         }
     }   
 }

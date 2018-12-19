@@ -1,7 +1,7 @@
 <img src="https://i.imgur.com/keDXwjY.png" align="right"
      title="EliteAPI by Somfic" width="280" height="280">
 
-Join the [Discord](https://discord.gg/jwpFUPZ)!
+Join the [Discord](https://discord.gg/jwpFUPZ), or contact me personally: Somfic#9987
 
 # EliteAPI
 A powerful event based API for [Elite: Dangerous](https://www.elitedangerous.com/) that hooks into the [Player Journal](http://edcodex.info/?m=doc). Created by CMDR [Somfic](https://github.com/Somfic).

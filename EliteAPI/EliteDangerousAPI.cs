@@ -184,7 +184,6 @@ namespace EliteAPI
             {
                 default:
                     OtherEvent?.Invoke(this, JsonConvert.DeserializeObject<dynamic>(json));
-                    //File.AppendAllText(@"C:\ICT\EliteAPI\NotAddedEvents.txt", json + Environment.NewLine);
                     break;
 
                 case "ClearSavedGame":
@@ -674,8 +673,57 @@ namespace EliteAPI
                 case "DockingCancelled":
                     DockingCancelledEvent?.Invoke(this, JsonConvert.DeserializeObject<DockingCancelledInfo>(json));
                     break;
+
+                case "BuyTradeData":
+                    BuyTradeDataEvent?.Invoke(this, JsonConvert.DeserializeObject<BuyTradeDataInfo>(json));
+                    break;
+
+                case "BuyExplorationData":
+                    BuyExplorationDataEvent?.Invoke(this, JsonConvert.DeserializeObject<BuyExplorationDataInfo>(json));
+                    break;
+
+                case "CrewAssign":
+                    CrewAssignEvent?.Invoke(this, JsonConvert.DeserializeObject<CrewAssignInfo>(json));
+                    break;
+
+
+                case "CrewHire":
+                    CrewHireEvent?.Invoke(this, JsonConvert.DeserializeObject<CrewHireInfo>(json));
+                    break;
+
+                case "CrewFire":
+                    CrewFireEvent?.Invoke(this, JsonConvert.DeserializeObject<CrewFireInfo>(json));
+                    break;
+
+                case "JoinACrew":
+                    JoinACrewEvent?.Invoke(this, JsonConvert.DeserializeObject<JoinACrewInfo>(json));
+                    break;
+
+                case "ChangeCrewRole":
+                    ChangeCrewRoleEvent?.Invoke(this, JsonConvert.DeserializeObject<ChangeCrewRoleInfo>(json));
+                    break;
+
+                case "QuitACrew":
+                    QuitACrewEvent?.Invoke(this, JsonConvert.DeserializeObject<QuitACrewInfo>(json));
+                    break;
             }
         }
+
+        public EventHandler<BuyTradeDataInfo> BuyTradeDataEvent;
+
+        public EventHandler<BuyExplorationDataInfo> BuyExplorationDataEvent;
+
+        public EventHandler<CrewAssignInfo> CrewAssignEvent;
+
+        public EventHandler<CrewHireInfo> CrewHireEvent;
+
+        public EventHandler<CrewFireInfo> CrewFireEvent;
+
+        public EventHandler<JoinACrewInfo> JoinACrewEvent;
+
+        public EventHandler<ChangeCrewRoleInfo> ChangeCrewRoleEvent;
+
+        public EventHandler<QuitACrewInfo> QuitACrewEvent;
 
         public event EventHandler<DockingCancelledInfo> DockingCancelledEvent;
 

@@ -19,12 +19,15 @@ namespace Example
             EliteAPI.OtherEvent += EliteAPI_OtherEvent;
             EliteAPI.Start();
 
-            Console.WriteLine(EliteAPI.Status.Lights);
+            Thread.Sleep(-1);
         }
 
         private static void EliteAPI_OtherEvent(object sender, dynamic e)
         {
-            Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(e));
+            string json = Newtonsoft.Json.JsonConvert.SerializeObject(e);
+            Console.Beep();
+            Console.WriteLine(json);
+            File.AppendAllText(@"C:\ICT\EliteAPI\NotAddedEvents.txt", json + Environment.NewLine);
         }
     }   
 }

@@ -82,12 +82,18 @@
     <Compile Include="Events\Bounty.cs" />
     <Compile Include="Events\BuyAmmo.cs" />
     <Compile Include="Events\BuyDrones.cs" />
+    <Compile Include="Events\BuyExplorationData.cs" />
+    <Compile Include="Events\BuyTradeData.cs" />
     <Compile Include="Events\Cargo.cs" />
     <Compile Include="Events\CargoDepot.cs" />
+    <Compile Include="Events\ChangeCrewRole.cs" />
     <Compile Include="Events\CodexEntry.cs" />
     <Compile Include="Events\CollectCargo.cs" />
     <Compile Include="Events\CommitCrime.cs" />
     <Compile Include="Events\CommunityGoal.cs" />
+    <Compile Include="Events\CrewAssign.cs" />
+    <Compile Include="Events\CrewFire.cs" />
+    <Compile Include="Events\CrewHire.cs" />
     <Compile Include="Events\CrewLaunchFighter.cs" />
     <Compile Include="Events\CrewMemberJoins.cs" />
     <Compile Include="Events\CrewMemberRoleChange.cs" />
@@ -120,6 +126,7 @@
     <Compile Include="Events\HeatDamage.cs" />
     <Compile Include="Events\HeatWarning.cs" />
     <Compile Include="Events\HullDamage.cs" />
+    <Compile Include="Events\JoinACrew.cs" />
     <Compile Include="Events\LaunchDrone.cs" />
     <Compile Include="Events\LaunchFighter.cs" />
     <Compile Include="Events\LaunchSRV.cs" />
@@ -156,6 +163,7 @@
     <Compile Include="Events\Powerplay.cs" />
     <Compile Include="Events\PowerplaySalary.cs" />
     <Compile Include="Events\Progress.cs" />
+    <Compile Include="Events\QuitACrew.cs" />
     <Compile Include="Events\Rank.cs" />
     <Compile Include="Events\RedeemVoucher.cs" />
     <Compile Include="Events\RefuelAll.cs" />

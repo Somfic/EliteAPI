@@ -34,6 +34,8 @@ You can find the latest release [here](https://github.com/EliteAPI/EliteAPI/rele
 Download the .dll file and reference it to your Visual Studio project.
 
 ## API examples
+The API works with the .NET language C#.
+
 ### Message on docking
 Now to the fun part. Make sure you've ran Elite: Dangerous at least once before continuing.
 
@@ -101,6 +103,43 @@ switch (EliteAPI.Status.LandingGear) {
 ```
 Simple as that.
 
+# EliteVA
+EliteAPI is also a [VoiceAttack](http://voiceattack.com) plugin, called EliteVA.
+
+##  Installation
+Copy both `EliteVA.dll` **and** `Newtonsoft.Json.dll` to your VoiceAttack Apps directory. Usually, you can find that directory at these locations: 
+
+Usual installation: `C:\Program Files (x86)\VoiceAttack\Apps`
+
+Steam installation: `C:\Program Files (x86)\Steam\steamapps\common\VoiceAttack\Apps` 
+
+**_Make sure you create a new folder in the Apps folder, you can name it anything, otherwise the plugin will not be detected by VA!_**
+
+You'll also have to Enable Plugin Support in VoiceAttack in order for plugins to be, well, supported. After having enabled this option, you have to restart VoiceAttack.
+
+After having enabled EliteVA, you should see the text `Plugin 'EliteAPI' initialized.` together with a blue dot.
+
+## Usage
+VoiceAttack uses variables in the form of [tokens](https://forum.voiceattack.com/smf/index.php?topic=31.0). EliteVA enables you to use a number of tokens. You can find a full list on the [EliteVA Wiki]().
+
+### Check whether we're mass locked before jumping.
+Let's say the Commander wants to jump to another system, after having undocked from a station. We could just have VoiceAttack press the `J` key and let the game display the error message, or, we can take matters in our own hands.
+
+To create a new command, press on the **edit profile** button, and then tap **new command**. 
+
+Then, at *when I say*, type something like `charge frameshiftdrive`. 
+
+Navigate to `Other >` > `Advanced >` > `Execute an External Plugin Function`. Select EliteAPI, and press `OK`, this part of the command updates the data and loads it in VoiceAttack.  
+
+Click on `Other >` > `Advanced >` > `Begin a Conditional (If Statement) Block > ` > `Single Condition`. Now, you should be in the *True/False (Boolean)* tab, if you're not, navigate to that tab.
+
+Enter `{EliteAPI.MASSLOCKED}` at Variable Name, and make sure you've `A Value` and `False` selected. Press `OK`.
+
+Finally, we can add the pressing `J` (or whatever your keybinding for jumping is) part. Go to `Key Press`, record your key, and press `OK`.
+
+Okay, now everything should be set up. This command updates the values, then checks whether we're massed locked by checking the value called `EliteAPI.MASSLOCKED`, and if we're not, it will press our jumping key.
+
+Now head out into the void and test it out!
 
 # FAQ
 ### **Can it be used on PS4 / XBOX?**

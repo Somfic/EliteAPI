@@ -107,7 +107,7 @@ Simple as that.
 EliteAPI is also a [VoiceAttack](http://voiceattack.com) plugin, called EliteVA.
 
 ##  Installation
-Copy both `EliteVA.dll` **and** `Newtonsoft.Json.dll` to your VoiceAttack Apps directory. Usually, you can find that directory at these locations: 
+Copy both [`EliteVA.dll` **and** `Newtonsoft.Json.dll`](https://github.com/EliteAPI/EliteAPI/releases) to your VoiceAttack Apps directory. Usually, you can find that directory at these locations: 
 
 Usual installation: `C:\Program Files (x86)\VoiceAttack\Apps`
 

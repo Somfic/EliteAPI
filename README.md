@@ -1,6 +1,5 @@
 <img src="https://i.imgur.com/keDXwjY.png" align="right"
      title="EliteAPI by Somfic" width="280" height="280">
-
 # EliteAPI
 A powerful event based API for [Elite: Dangerous](https://www.elitedangerous.com/) that hooks into the [Player Journal](http://edcodex.info/?m=doc). Created by CMDR [Somfic](https://github.com/Somfic).
 

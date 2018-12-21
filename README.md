@@ -137,7 +137,7 @@ Enter `{EliteAPI.MASSLOCKED}` at Variable Name, and make sure you've `A Value` a
 
 Finally, we can add the pressing `J` (or whatever your keybinding for jumping is) part. Go to `Key Press`, record your key, and press `OK`.
 
-Okay, now everything should be set up. This command updates the values, then checks whether we're massed locked by checking the value called `EliteAPI.MASSLOCKED`, and if we're not, it will press our jumping key.
+Okay, now everything should be set up. This command updates the values, then checks whether we're massed locked by checking the value called `EliteAPI.MASSLOCKED`, and if we're not, it will press our jumping key. If you'd like to you can of course expand this command by having VA respond back to you when we're massed lock using an `else statement`.
 
 Now head out into the void and test it out!
 

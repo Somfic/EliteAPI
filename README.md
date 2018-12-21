@@ -122,7 +122,7 @@ After having enabled EliteVA, you should see the text `Plugin 'EliteAPI' initial
 ## Usage
 VoiceAttack uses variables in the form of [tokens](https://forum.voiceattack.com/smf/index.php?topic=31.0). EliteVA enables you to use a number of tokens. You can find a full list on the [EliteVA Wiki]().
 
-### Check whether we're mass locked before jumping.
+### Example: check whether we're mass locked before jumping
 Let's say the Commander wants to jump to another system, after having undocked from a station. We could just have VoiceAttack press the `J` key and let the game display the error message, or, we can take matters in our own hands.
 
 To create a new command, press on the **edit profile** button, and then tap **new command**. 

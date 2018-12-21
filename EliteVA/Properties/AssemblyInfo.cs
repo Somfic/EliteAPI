@@ -1,17 +1,16 @@
-﻿using System.Resources;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EliteAPI")]
-[assembly: AssemblyDescription("A powerful event based API for Elite: Dangerous from the Player Journal.")]
+[assembly: AssemblyTitle("EliteVA")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Somfic")]
-[assembly: AssemblyProduct("EliteAPI")]
-[assembly: AssemblyCopyright("Copyright © Somfic 2018")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("EliteVA")]
+[assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -21,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9b2968c2-1f10-45a0-a388-9da1fba3922b")]
+[assembly: Guid("7206adc9-3eff-4055-9b34-ac4aa1e57391")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -33,7 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.7.0")]
-[assembly: AssemblyFileVersion("1.1.7.0")]
-[assembly: NeutralResourcesLanguage("en")]
-
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

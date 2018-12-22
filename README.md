@@ -103,10 +103,10 @@ switch (EliteAPI.Status.LandingGear) {
 ```
 Simple as that.
 
-# EliteVA
-EliteAPI is also a [VoiceAttack](http://voiceattack.com) plugin, called EliteVA.
+# Tools made possible with EliteAPI
+### EliteVA
+EliteVA is a [VoiceAttack](http://voiceattack.com) plugin that gives you full status reports about your ship in real-time, and can be found [here](https://github.com/EliteAPI/EliteAV).
 
-Documentation has moved to the [Wiki](https://github.com/EliteAPI/EliteAPI/wiki/EliteVA)!
 
 # FAQ
 ### **Can it be used on PS4 / XBOX?**

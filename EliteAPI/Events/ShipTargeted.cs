@@ -16,6 +16,7 @@ namespace EliteAPI
         public double HullHealth { get; set; }
         public string Faction { get; set; }
         public string LegalStatus { get; set; }
+        public bool IsWanted { get { return !Equals(LegalStatus, "Clean"); } }
         public int Bounty { get; set; }
     }
 }

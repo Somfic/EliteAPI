@@ -105,7 +105,7 @@ Simple as that.
 
 # Tools made possible with EliteAPI
 ### EliteVA
-EliteVA is a [VoiceAttack](http://voiceattack.com) plugin that gives you full status reports about your ship in real-time, and can be found [here](https://github.com/EliteAPI/EliteAV).
+[EliteVA](https://github.com/EliteAPI/EliteVA) is a [VoiceAttack](http://voiceattack.com) plugin that gives you full status reports about your ship in real-time, and can be found [here](https://github.com/EliteAPI/EliteVA).
 
 
 # FAQ

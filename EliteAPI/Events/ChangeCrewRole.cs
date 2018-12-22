@@ -5,7 +5,7 @@ namespace EliteAPI
 {
     public class ChangeCrewRoleInfo
     {
-        public DateTime timestamp { get; set; }
-        public String Role { get; set; }
+        public DateTime timestamp { get; }
+        public string Role { get; }
     }
 }

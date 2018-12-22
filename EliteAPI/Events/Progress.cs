@@ -4,12 +4,12 @@ namespace EliteAPI
 {
     public class ProgressInfo
     {
-        public DateTime timestamp { get; set; }
-        public int Combat { get; set; }
-        public int Trade { get; set; }
-        public int Explore { get; set; }
-        public int Empire { get; set; }
-        public int Federation { get; set; }
-        public int CQC { get; set; }
+        public DateTime timestamp { get; }
+        public int Combat { get; }
+        public int Trade { get; }
+        public int Explore { get; }
+        public int Empire { get; }
+        public int Federation { get; }
+        public int CQC { get; }
     }
 }

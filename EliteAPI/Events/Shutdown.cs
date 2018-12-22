@@ -4,6 +4,6 @@ namespace EliteAPI
 {
     public class ShutdownInfo
     {
-        public DateTime timestamp { get; set; }
+        public DateTime timestamp { get; }
     }
 }

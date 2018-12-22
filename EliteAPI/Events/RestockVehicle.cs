@@ -5,10 +5,10 @@ namespace EliteAPI
 {
   public class RestockVehicleInfo
   {
-      public DateTime timestamp { get; set; }
-      public string Type { get; set; }
-      public string Loadout { get; set; }
-      public int Cost { get; set; }
-      public int Count { get; set; }
+      public DateTime timestamp { get; }
+      public string Type { get; }
+      public string Loadout { get; }
+      public int Cost { get; }
+      public int Count { get; }
   }
 }

@@ -4,8 +4,8 @@ namespace EliteAPI
 {
     public class RefuelAllInfo
     {
-        public DateTime timestamp { get; set; }
-        public int Cost { get; set; }
-        public double Amount { get; set; }
+        public DateTime timestamp { get; }
+        public int Cost { get; }
+        public double Amount { get; }
     }
 }

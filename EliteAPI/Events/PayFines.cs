@@ -4,9 +4,9 @@ namespace EliteAPI
 {
     public class PayFinesInfo
     {
-        public DateTime timestamp { get; set; }
-        public int Amount { get; set; }
-        public bool AllFines { get; set; }
-        public int ShipID { get; set; }
+        public DateTime timestamp { get; }
+        public int Amount { get; }
+        public bool AllFines { get; }
+        public int ShipID { get; }
     }
 }

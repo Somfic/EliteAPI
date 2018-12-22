@@ -5,6 +5,6 @@ namespace EliteAPI
 {
   public class ModuleInfoInfo
   {
-      public DateTime timestamp { get; set; }
+      public DateTime timestamp { get; }
   }
 }

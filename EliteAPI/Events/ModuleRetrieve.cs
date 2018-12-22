@@ -5,16 +5,16 @@ namespace EliteAPI
 {
   public class ModuleRetrieveInfo
   {
-      public DateTime timestamp { get; set; }
-      public int MarketID { get; set; }
-      public string Slot { get; set; }
-      public string RetrievedItem { get; set; }
-      public string RetrievedItem_Localised { get; set; }
-      public string Ship { get; set; }
-      public int ShipID { get; set; }
-      public Boolean Hot { get; set; }
-      public string EngineerModifications { get; set; }
-      public int Level { get; set; }
-      public Double Quality { get; set; }
+      public DateTime timestamp { get; }
+      public int MarketID { get; }
+      public string Slot { get; }
+      public string RetrievedItem { get; }
+      public string RetrievedItem_Localised { get; }
+      public string Ship { get; }
+      public int ShipID { get; }
+      public Boolean Hot { get; }
+      public string EngineerModifications { get; }
+      public int Level { get; }
+      public Double Quality { get; }
   }
 }

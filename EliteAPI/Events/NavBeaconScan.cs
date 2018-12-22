@@ -4,8 +4,8 @@ namespace EliteAPI
 {
     public class NavBeaconScanInfo
     {
-        public DateTime timestamp { get; set; }
-        public long SystemAddress { get; set; }
-        public int NumBodies { get; set; }
+        public DateTime timestamp { get; }
+        public long SystemAddress { get; }
+        public int NumBodies { get; }
     }
 }

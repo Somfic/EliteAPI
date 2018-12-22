@@ -4,7 +4,7 @@ namespace EliteAPI
 {
     public class RepairAllInfo
     {
-        public DateTime timestamp { get; set; }
-        public int Cost { get; set; }
+        public DateTime timestamp { get; }
+        public int Cost { get; }
     }
 }

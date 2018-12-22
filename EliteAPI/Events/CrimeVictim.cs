@@ -5,9 +5,9 @@ namespace EliteAPI
 {
   public class CrimeVictimInfo
   {
-      public DateTime timestamp { get; set; }
-      public string Offender { get; set; }
-      public string CrimeType { get; set; }
-      public int Bounty { get; set; }
+      public DateTime timestamp { get; }
+      public string Offender { get; }
+      public string CrimeType { get; }
+      public int Bounty { get; }
   }
 }

@@ -5,7 +5,7 @@ namespace EliteAPI
 {
   public class EndCrewSessionInfo
   {
-      public DateTime timestamp { get; set; }
-      public Boolean OnCrime { get; set; }
+      public DateTime timestamp { get; }
+      public Boolean OnCrime { get; }
   }
 }

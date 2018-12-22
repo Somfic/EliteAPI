@@ -7,44 +7,44 @@ namespace EliteAPI
     {
         public class ModifierInfo
         {
-            public string Label { get; set; }
-            public double Value { get; set; }
-            public double OriginalValue { get; set; }
-            public int LessIsGood { get; set; }
+            public string Label { get; }
+            public double Value { get; }
+            public double OriginalValue { get; }
+            public int LessIsGood { get; }
         }
 
         public class EngineeringInfo
         {
-            public string Engineer { get; set; }
-            public int EngineerID { get; set; }
-            public int BlueprintID { get; set; }
-            public string BlueprintName { get; set; }
-            public int Level { get; set; }
-            public double Quality { get; set; }
-            public List<ModifierInfo> Modifiers { get; set; }
+            public string Engineer { get; }
+            public int EngineerID { get; }
+            public int BlueprintID { get; }
+            public string BlueprintName { get; }
+            public int Level { get; }
+            public double Quality { get; }
+            public List<ModifierInfo> Modifiers { get; }
         }
 
         public class ModuleInfo
         {
-            public string Slot { get; set; }
-            public string Item { get; set; }
-            public bool On { get; set; }
-            public int Priority { get; set; }
-            public double Health { get; set; }
-            public int Value { get; set; }
-            public int? AmmoInClip { get; set; }
-            public int? AmmoInHopper { get; set; }
-            public EngineeringInfo Engineering { get; set; }
+            public string Slot { get; }
+            public string Item { get; }
+            public bool On { get; }
+            public int Priority { get; }
+            public double Health { get; }
+            public int Value { get; }
+            public int? AmmoInClip { get; }
+            public int? AmmoInHopper { get; }
+            public EngineeringInfo Engineering { get; }
         }
 
-        public DateTime timestamp { get; set; }
-        public string Ship { get; set; }
-        public int ShipID { get; set; }
-        public string ShipName { get; set; }
-        public string ShipIdent { get; set; }
-        public int HullValue { get; set; }
-        public int ModulesValue { get; set; }
-        public int Rebuy { get; set; }
-        public List<ModuleInfo> Modules { get; set; }
+        public DateTime timestamp { get; }
+        public string Ship { get; }
+        public int ShipID { get; }
+        public string ShipName { get; }
+        public string ShipIdent { get; }
+        public int HullValue { get; }
+        public int ModulesValue { get; }
+        public int Rebuy { get; }
+        public List<ModuleInfo> Modules { get; }
     }
 }

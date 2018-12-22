@@ -4,9 +4,9 @@ namespace EliteAPI
 {
     public class DockingRequestedInfo
     {
-        public DateTime timestamp { get; set; }
-        public long MarketID { get; set; }
-        public string StationName { get; set; }
-        public string StationType { get; set; }
+        public DateTime timestamp { get; }
+        public long MarketID { get; }
+        public string StationName { get; }
+        public string StationType { get; }
     }
 }

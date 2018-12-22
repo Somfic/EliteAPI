@@ -5,7 +5,7 @@ namespace EliteAPI
 {
     public class JoinACrewInfo
     {
-        public DateTime timestamp { get; set; }
-        public String Captain { get; set; }
+        public DateTime timestamp { get; }
+        public String Captain { get; }
     }
 }

@@ -4,8 +4,8 @@ namespace EliteAPI
 {
     public class NewCommanderInfo
     {
-        public DateTime timestamp { get; set; }
-        public string Name { get; set; }
-        public string Package { get; set; }
+        public DateTime timestamp { get; }
+        public string Name { get; }
+        public string Package { get; }
     }
 }

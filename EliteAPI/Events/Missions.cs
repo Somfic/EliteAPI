@@ -10,15 +10,15 @@ namespace EliteAPI
     {
         public class Mission
         {
-            public int MissionID { get; set; }
-            public string Name { get; set; }
-            public bool PassengerMission { get; set; }
-            public int Expires { get; set; }
+            public int MissionID { get; }
+            public string Name { get; }
+            public bool PassengerMission { get; }
+            public int Expires { get; }
         }
 
-        public DateTime timestamp { get; set; }
-        public List<Mission> Active { get; set; }
-        public List<Mission> Failed { get; set; }
-        public List<Mission> Complete { get; set; }
+        public DateTime timestamp { get; }
+        public List<Mission> Active { get; }
+        public List<Mission> Failed { get; }
+        public List<Mission> Complete { get; }
     }
 }

@@ -5,6 +5,6 @@ namespace EliteAPI
 {
   public class SelfDestructInfo
   {
-      public DateTime timestamp { get; set; }
+      public DateTime timestamp { get; }
   }
 }

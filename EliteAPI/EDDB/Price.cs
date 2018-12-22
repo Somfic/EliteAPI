@@ -344,11 +344,11 @@ namespace EliteAPI.EDDB
 
     public class Price
     {
-        public int? station { get; set; }
-        public int? type { get; set; }
-        public int? supply { get; set; }
-        public int? buy { get; set; }
-        public int? sell { get; set; }
-        public int? demand { get; set; }
+        public int? station { get; }
+        public int? type { get; }
+        public int? supply { get; }
+        public int? buy { get; }
+        public int? sell { get; }
+        public int? demand { get; }
     }
 }

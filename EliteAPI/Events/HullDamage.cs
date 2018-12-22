@@ -5,9 +5,9 @@ namespace EliteAPI
 {
   public class HullDamageInfo
   {
-      public DateTime timestamp { get; set; }
-      public Double Health { get; set; }
-      public Boolean PlayerPilot { get; set; }
-      public Boolean Fighter { get; set; }
+      public DateTime timestamp { get; }
+      public Double Health { get; }
+      public Boolean PlayerPilot { get; }
+      public Boolean Fighter { get; }
   }
 }

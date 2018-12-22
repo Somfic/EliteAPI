@@ -8,9 +8,9 @@ namespace EliteAPI
 {
     public class TouchdownInfo
     {
-        public DateTime timestamp { get; set; }
-        public bool PlayerControlled { get; set; }
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
+        public DateTime timestamp { get; }
+        public bool PlayerControlled { get; }
+        public double Latitude { get; }
+        public double Longitude { get; }
     }
 }

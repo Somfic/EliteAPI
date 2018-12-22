@@ -5,11 +5,11 @@ namespace EliteAPI
 {
   public class PowerplayInfo
   {
-      public DateTime timestamp { get; set; }
-      public string Power { get; set; }
-      public int Rank { get; set; }
-      public int Merits { get; set; }
-      public int Votes { get; set; }
-      public int TimePledged { get; set; }
+      public DateTime timestamp { get; }
+      public string Power { get; }
+      public int Rank { get; }
+      public int Merits { get; }
+      public int Votes { get; }
+      public int TimePledged { get; }
   }
 }

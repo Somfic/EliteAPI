@@ -4,7 +4,7 @@ namespace EliteAPI
 {
     public class AsteroidCrackedInfo
     {
-        public DateTime timestamp { get; set; }
-        public string Body { get; set; }
+        public DateTime timestamp { get; }
+        public string Body { get; }
     }
 }

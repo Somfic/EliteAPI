@@ -60,7 +60,7 @@ namespace EliteAPI
         /// <summary>
         /// Whether the class is processing logs.
         /// </summary>
-        public bool isRunning { get; private set; } 
+        public bool isRunning { get; internal set; } 
 
         /// <summary>
         /// A list of all the processed logs so far.

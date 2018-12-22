@@ -5,6 +5,6 @@ namespace EliteAPI
 {
   public class HeatDamageInfo
   {
-      public DateTime timestamp { get; set; }
+      public DateTime timestamp { get; }
   }
 }

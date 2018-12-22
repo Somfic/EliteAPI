@@ -5,7 +5,7 @@ namespace EliteAPI
 {
   public class CrewLaunchFighterInfo
   {
-      public DateTime timestamp { get; set; }
-      public string Crew { get; set; }
+      public DateTime timestamp { get; }
+      public string Crew { get; }
   }
 }

@@ -4,10 +4,10 @@ namespace EliteAPI
 {
     public class InterdictedInfo
     {
-        public DateTime timestamp { get; set; }
-        public bool Submitted { get; set; }
-        public string Interdictor { get; set; }
-        public bool IsPlayer { get; set; }
-        public string Faction { get; set; }
+        public DateTime timestamp { get; }
+        public bool Submitted { get; }
+        public string Interdictor { get; }
+        public bool IsPlayer { get; }
+        public string Faction { get; }
     }
 }

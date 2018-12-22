@@ -5,8 +5,8 @@ namespace EliteAPI
 {
   public class PowerplaySalaryInfo
   {
-      public DateTime timestamp { get; set; }
-      public string Power { get; set; }
-      public int Amount { get; set; }
+      public DateTime timestamp { get; }
+      public string Power { get; }
+      public int Amount { get; }
   }
 }

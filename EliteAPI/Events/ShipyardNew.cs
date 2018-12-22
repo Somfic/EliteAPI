@@ -4,8 +4,8 @@ namespace EliteAPI
 {
     public class ShipyardNewInfo
     {
-        public DateTime timestamp { get; set; }
-        public string ShipType { get; set; }
-        public int NewShipID { get; set; }
+        public DateTime timestamp { get; }
+        public string ShipType { get; }
+        public int NewShipID { get; }
     }
 }

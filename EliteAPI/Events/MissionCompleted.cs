@@ -7,33 +7,33 @@ namespace EliteAPI
     {
         public class EffectInfo
         {
-            public string Effect { get; set; }
-            public string Effect_Localised { get; set; }
-            public string Trend { get; set; }
+            public string Effect { get; }
+            public string Effect_Localised { get; }
+            public string Trend { get; }
         }
 
         public class InfluenceInfo
         {
-            public object SystemAddress { get; set; }
-            public string Trend { get; set; }
+            public object SystemAddress { get; }
+            public string Trend { get; }
         }
 
         public class FactionEffectInfo
         {
-            public string Faction { get; set; }
-            public List<EffectInfo> Effects { get; set; }
-            public List<InfluenceInfo> Influence { get; set; }
-            public string Reputation { get; set; }
+            public string Faction { get; }
+            public List<EffectInfo> Effects { get; }
+            public List<InfluenceInfo> Influence { get; }
+            public string Reputation { get; }
         }
 
-        public DateTime timestamp { get; set; }
-        public string Faction { get; set; }
-        public string Name { get; set; }
-        public int MissionID { get; set; }
-        public string TargetFaction { get; set; }
-        public string DestinationSystem { get; set; }
-        public string DestinationStation { get; set; }
-        public int Reward { get; set; }
-        public List<FactionEffectInfo> FactionEffects { get; set; }
+        public DateTime timestamp { get; }
+        public string Faction { get; }
+        public string Name { get; }
+        public int MissionID { get; }
+        public string TargetFaction { get; }
+        public string DestinationSystem { get; }
+        public string DestinationStation { get; }
+        public int Reward { get; }
+        public List<FactionEffectInfo> FactionEffects { get; }
     }
 }

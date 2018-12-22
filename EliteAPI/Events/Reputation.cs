@@ -4,10 +4,10 @@ namespace EliteAPI
 {
     public class ReputationInfo
     {
-        public DateTime timestamp { get; set; }
+        public DateTime timestamp { get; }
 
-        public double Empire { get; set; }
-        public double Federation { get; set; }
-        public double Alliance { get; set; }
+        public double Empire { get; }
+        public double Federation { get; }
+        public double Alliance { get; }
     }
 }

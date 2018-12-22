@@ -4,7 +4,7 @@ namespace EliteAPI
 {
     public class MusicInfo
     {
-        public DateTime timestamp { get; set; }
-        public string MusicTrack { get; set; }
+        public DateTime timestamp { get; }
+        public string MusicTrack { get; }
     }
 }

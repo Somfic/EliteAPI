@@ -5,9 +5,9 @@ namespace EliteAPI
 {
   public class CollectCargoInfo
   {
-      public DateTime timestamp { get; set; }
-      public string Type { get; set; }
-      public string Type_Localised { get; set; }
-      public Boolean Stolen { get; set; }
+      public DateTime timestamp { get; }
+      public string Type { get; }
+      public string Type_Localised { get; }
+      public Boolean Stolen { get; }
   }
 }

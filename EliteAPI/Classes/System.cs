@@ -5,20 +5,20 @@ namespace EliteAPI
 {
     public class System
     {
-        public string Name { get; set; }
-        public List<double> Position { get; set; }
-        public long Address { get; set; }
-        public string Allegiance { get; set; }
-        public string Economy { get; set; }
-        public string Economy_Localised { get; set; }
-        public string SecondEconomy { get; set; }
-        public string SecondEconomy_Localised { get; set; }
-        public string Government { get; set; }
-        public string Government_Localised { get; set; }
-        public string Security { get; set; }
-        public string Security_Localised { get; set; }
-        public ulong Population { get; set; }
-        public string SystemFaction { get; set; }
-        public string FactionState { get; set; }
+        public string Name { get; internal set; }
+        public List<double> Position { get; internal set; }
+        public long Address { get; internal set; }
+        public string Allegiance { get; internal set; }
+        public string Economy { get; internal set; }
+        public string Economy_Localised { get; internal set; }
+        public string SecondEconomy { get; internal set; }
+        public string SecondEconomy_Localised { get; internal set; }
+        public string Government { get; internal set; }
+        public string Government_Localised { get; internal set; }
+        public string Security { get; internal set; }
+        public string Security_Localised { get; internal set; }
+        public ulong Population { get; internal set; }
+        public string SystemFaction { get; internal set; }
+        public string FactionState { get; internal set; }
     }
 }

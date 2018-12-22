@@ -6,18 +6,18 @@ namespace EliteAPI
 
     public class MultiSellExplorationDataInfo
     {
-        public DateTime timestamp { get; set; }
+        public DateTime timestamp { get; }
 
-        public List<DiscoveredInfo> Discovered { get; set; }
-        public int BaseValue { get; set; }
-        public int Bonus { get; set; }
-        public int TotalEarnings { get; set; }
+        public List<DiscoveredInfo> Discovered { get; }
+        public int BaseValue { get; }
+        public int Bonus { get; }
+        public int TotalEarnings { get; }
     }
 
     public class DiscoveredInfo
     {
-        public string SystemName { get; set; }
-        public int NumBodies { get; set; }
+        public string SystemName { get; }
+        public int NumBodies { get; }
     }
 
 }

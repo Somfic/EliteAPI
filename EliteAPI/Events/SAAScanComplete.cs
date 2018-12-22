@@ -5,10 +5,10 @@ namespace EliteAPI
 {
   public class SAAScanCompleteInfo
   {
-      public DateTime timestamp { get; set; }
-      public string BodyName { get; set; }
-      public int BodyID { get; set; }
-      public int ProbesUsed { get; set; }
-      public int EfficiencyTarget { get; set; }
+      public DateTime timestamp { get; }
+      public string BodyName { get; }
+      public int BodyID { get; }
+      public int ProbesUsed { get; }
+      public int EfficiencyTarget { get; }
   }
 }

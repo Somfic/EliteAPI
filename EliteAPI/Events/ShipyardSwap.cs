@@ -4,11 +4,11 @@ namespace EliteAPI
 {
     public class ShipyardSwapInfo
     {
-        public DateTime timestamp { get; set; }
-        public string ShipType { get; set; }
-        public int ShipID { get; set; }
-        public string StoreOldShip { get; set; }
-        public int StoreShipID { get; set; }
-        public long MarketID { get; set; }
+        public DateTime timestamp { get; }
+        public string ShipType { get; }
+        public int ShipID { get; }
+        public string StoreOldShip { get; }
+        public int StoreShipID { get; }
+        public long MarketID { get; }
     }
 }

@@ -5,15 +5,15 @@ namespace EliteAPI
 {
   public class ModuleSwapInfo
   {
-      public DateTime timestamp { get; set; }
-      public int MarketID { get; set; }
-      public string FromSlot { get; set; }
-      public string ToSlot { get; set; }
-      public string FromItem { get; set; }
-      public string FromItem_Localised { get; set; }
-      public string ToItem { get; set; }
-      public string ToItem_Localised { get; set; }
-      public string Ship { get; set; }
-      public int ShipID { get; set; }
+      public DateTime timestamp { get; }
+      public int MarketID { get; }
+      public string FromSlot { get; }
+      public string ToSlot { get; }
+      public string FromItem { get; }
+      public string FromItem_Localised { get; }
+      public string ToItem { get; }
+      public string ToItem_Localised { get; }
+      public string Ship { get; }
+      public int ShipID { get; }
   }
 }

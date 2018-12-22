@@ -5,15 +5,15 @@ namespace EliteAPI
 {
     public class ModulesInfo
     {
-        public DateTime timestamp { get; set; }
-        public List<Module> Modules { get; set; }
+        public DateTime timestamp { get; }
+        public List<Module> Modules { get; }
     }
 
     public class Module
     {
-        public string Slot { get; set; }
-        public string Item { get; set; }
-        public float Power { get; set; }
-        public int Priority { get; set; }
+        public string Slot { get; }
+        public string Item { get; }
+        public float Power { get; }
+        public int Priority { get; }
     }
 }

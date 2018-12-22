@@ -4,6 +4,6 @@ namespace EliteAPI
 {
     public class WingLeaveInfo
     {
-        public DateTime timestamp { get; set; }
+        public DateTime timestamp { get; }
     }
 }

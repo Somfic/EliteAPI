@@ -4,19 +4,19 @@ namespace EliteAPI
 {
     public class Outfitting
     {
-        public DateTime timestamp { get; set; }
-        public long MarketID { get; set; }
-        public string StationName { get; set; }
-        public string StarSystem { get; set; }
-        public bool Horizons { get; set; }
-        public List<Item> Items { get; set; }
+        public DateTime timestamp { get; }
+        public long MarketID { get; }
+        public string StationName { get; }
+        public string StarSystem { get; }
+        public bool Horizons { get; }
+        public List<Item> Items { get; }
     }
 
     public class Item
     {
-        public int id { get; set; }
-        public string Name { get; set; }
-        public int BuyPrice { get; set; }
+        public int id { get; }
+        public string Name { get; }
+        public int BuyPrice { get; }
     }
 
 }

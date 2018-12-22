@@ -106,7 +106,10 @@ Simple as that.
 # Tools made possible with EliteAPI
 ### EliteVA
 [EliteVA](https://github.com/EliteAPI/EliteVA) is a [VoiceAttack](http://voiceattack.com) plugin that gives you full status reports about your ship in real-time, and can be found [here](https://github.com/EliteAPI/EliteVA).
-
+### ElitePresence
+[ElitePresence](https://github.com/EliteAPI/ElitePresence) is a [Discord rich presence](https://discordapp.com/rich-presence) tool. It streams your current game status to discord for others to see. It can be found [here](https://github.com/EliteAPI/ElitePresence).
+### EliteAI
+[EliteAI](https://github.com/EliteAPI/EliteAI) is a [Jarvis](https://marvel-movies.fandom.com/wiki/J.A.R.V.I.S.) inspired tool. It is a voice controlled assistant for the game and can be found [here](https://github.com/EliteAPI/EliteAI).
 
 # FAQ
 ### **Can it be used on PS4 / XBOX?**

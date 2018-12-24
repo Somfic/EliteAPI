@@ -76,6 +76,7 @@
     <Compile Include="EDDB\Price.cs" />
     <Compile Include="EDDB\Station.cs" />
     <Compile Include="EDDB\System.cs" />
+    <Compile Include="EliteVA.cs" />
     <Compile Include="Events\ApproachBody.cs" />
     <Compile Include="Events\ApproachSettlement.cs" />
     <Compile Include="Events\AsteroidCracked.cs" />

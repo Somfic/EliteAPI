@@ -47,7 +47,7 @@ Then create a new `EliteDangerousAPI` object.
 ```csharp
 EliteDangerousAPI EliteAPI = new EliteDangerousAPI();
 ```
-Since `EliteDangerousAPI` needs a reference to the directory that contains the PlayerJournals, we have to pass it a `DirectoryInfo` object. Usually, the Player Journal folder is located in `C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous`.
+Since `EliteDangerousAPI` needs a reference to the directory that contains the [Player Journals](https://support.frontier.co.uk/kb/faq.php?id=372), we have to pass it a `DirectoryInfo` object. Usually, the Player Journal folder is located in `C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous`.
 ```csharp
 DirectoryInfo playerJournalFolder = new DirectoryInfo(
 $@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous");
@@ -103,10 +103,13 @@ switch (EliteAPI.Status.LandingGear) {
 ```
 Simple as that.
 
-# EliteVA
-EliteAPI is also a [VoiceAttack](http://voiceattack.com) plugin, called EliteVA.
-
-Documentation has moved to the [Wiki](https://github.com/EliteAPI/EliteAPI/wiki/EliteVA)!
+# Tools made possible with EliteAPI
+### EliteVA
+[EliteVA](https://github.com/EliteAPI/EliteVA) is a [VoiceAttack](http://voiceattack.com) plugin that gives you full status reports about your ship in real-time, and can be found [here](https://github.com/EliteAPI/EliteVA).
+### ElitePresence
+[ElitePresence](https://github.com/EliteAPI/ElitePresence) is a [Discord rich presence](https://discordapp.com/rich-presence) tool. It streams your current game status to discord for others to see. It can be found [here](https://github.com/EliteAPI/ElitePresence).
+### EliteAI
+[EliteAI](https://github.com/EliteAPI/EliteAI) is a [Jarvis](https://marvel-movies.fandom.com/wiki/J.A.R.V.I.S.) inspired tool. It is a voice controlled assistant for the game and can be found [here](https://github.com/EliteAPI/EliteAI).
 
 # FAQ
 ### **Can it be used on PS4 / XBOX?**

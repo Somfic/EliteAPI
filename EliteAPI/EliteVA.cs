@@ -11,9 +11,9 @@ namespace EliteAPI.EliteVA
     {
         public class VAPlugin
         {
-            public static DirectoryInfo playerJournalDirectory;
-            public static EliteDangerousAPI EliteAPI;
-            public static dynamic _vaProxy;
+            private static DirectoryInfo playerJournalDirectory;
+            private static EliteDangerousAPI EliteAPI;
+            private static dynamic _vaProxy;
 
             private static void FindJournalFolder(dynamic vaProxy)
             {
@@ -73,6 +73,9 @@ namespace EliteAPI.EliteVA
                     }
                     else
                     {
+
+                    }
+                    {
                         vaProxy.WriteToLog($"EliteVA - Could not start EliteVA (cannot find Player Journals)", "red");
                     }
                 }
@@ -82,9 +85,9 @@ namespace EliteAPI.EliteVA
                 }
             }
 
-            public static string VA_DisplayName() { return "EliteAPI"; }
+            public static string VA_DisplayName() { return "EliteVA"; }
 
-            public static string VA_DisplayInfo() { return "EliteAPI by Somfic"; }
+            public static string VA_DisplayInfo() { return "EliteVA by Somfic"; }
 
             public static Guid VA_Id() { return new Guid("{B16F6232-5AD2-4451-BBED-C7696B41AB67}"); }
 
@@ -135,6 +138,7 @@ namespace EliteAPI.EliteVA
             public static void VA_Exit1(dynamic vaProxy)
             {
                 _vaProxy = vaProxy;
+                EliteAPI.Stop();
             }
 
             public static void VA_StopCommand()

@@ -706,24 +706,30 @@ namespace EliteAPI
                 case "QuitACrew":
                     QuitACrewEvent?.Invoke(this, JsonConvert.DeserializeObject<QuitACrewInfo>(json));
                     break;
+
+                case "Interdiction":
+                    InterdictionEvent?.Invoke(this, JsonConvert.DeserializeObject<InterdictionInfo>(json));
+                    break;
             }
         }
 
-        public EventHandler<BuyTradeDataInfo> BuyTradeDataEvent;
+        public event EventHandler<InterdictionInfo> InterdictionEvent;
 
-        public EventHandler<BuyExplorationDataInfo> BuyExplorationDataEvent;
+        public event EventHandler<BuyTradeDataInfo> BuyTradeDataEvent;
 
-        public EventHandler<CrewAssignInfo> CrewAssignEvent;
+        public event EventHandler<BuyExplorationDataInfo> BuyExplorationDataEvent;
 
-        public EventHandler<CrewHireInfo> CrewHireEvent;
+        public event EventHandler<CrewAssignInfo> CrewAssignEvent;
 
-        public EventHandler<CrewFireInfo> CrewFireEvent;
+        public event EventHandler<CrewHireInfo> CrewHireEvent;
 
-        public EventHandler<JoinACrewInfo> JoinACrewEvent;
+        public event EventHandler<CrewFireInfo> CrewFireEvent;
 
-        public EventHandler<ChangeCrewRoleInfo> ChangeCrewRoleEvent;
+        public event EventHandler<JoinACrewInfo> JoinACrewEvent;
 
-        public EventHandler<QuitACrewInfo> QuitACrewEvent;
+        public event EventHandler<ChangeCrewRoleInfo> ChangeCrewRoleEvent;
+
+        public event EventHandler<QuitACrewInfo> QuitACrewEvent;
 
         public event EventHandler<DockingCancelledInfo> DockingCancelledEvent;
 

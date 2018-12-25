@@ -127,6 +127,7 @@
     <Compile Include="Events\HeatDamage.cs" />
     <Compile Include="Events\HeatWarning.cs" />
     <Compile Include="Events\HullDamage.cs" />
+    <Compile Include="Events\Interdiction.cs" />
     <Compile Include="Events\JoinACrew.cs" />
     <Compile Include="Events\LaunchDrone.cs" />
     <Compile Include="Events\LaunchFighter.cs" />

@@ -20,5 +20,6 @@ namespace EliteAPI
         public ulong Population { get; internal set; }
         public string SystemFaction { get; internal set; }
         public string FactionState { get; internal set; }
+        public string Class { get; internal set; }
     }
 }

@@ -106,6 +106,7 @@ namespace EliteAPI
             this.SupercruiseEntryEvent += EliteDangerousAPI_SupercruiseEntryEvent;
             this.SupercruiseExitEvent += EliteDangerousAPI_SupercruiseExitEvent;
             this.DockingRequestedEvent += EliteDangerousAPI_DockingRequestedEvent;
+            this.StartJumpEvent += EliteDangerousAPI_StartJumpEvent;
         }
 
         /// <summary>
@@ -120,6 +121,7 @@ namespace EliteAPI
             this.SupercruiseEntryEvent -= EliteDangerousAPI_SupercruiseEntryEvent;
             this.SupercruiseExitEvent -= EliteDangerousAPI_SupercruiseExitEvent;
             this.DockingRequestedEvent -= EliteDangerousAPI_DockingRequestedEvent;
+            this.StartJumpEvent -= EliteDangerousAPI_StartJumpEvent;
         }
 
         /// <summary>
@@ -1350,5 +1352,12 @@ namespace EliteAPI
             lastStation.Type = e.StationType;
             lastStation.MarketID = e.MarketID;
         }
+        private void EliteDangerousAPI_StartJumpEvent(object sender, StartJumpInfo e)
+        {
+            lastSystem.Address = e.SystemAddress;
+            lastSystem.Class = e.StarClass;
+            lastSystem.Name = e.StarSystem;
+        }
+
     }
 }

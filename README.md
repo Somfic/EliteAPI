@@ -10,6 +10,7 @@ A powerful event based API for [Elite: Dangerous](https://www.elitedangerous.com
 Join the [Discord](https://discord.gg/jwpFUPZ), or contact me personally: Somfic#9987
 
 # Getting started
+*Make sure to check the [Wiki](https://github.com/EliteAPI/EliteAPI/wiki) for more information!*
 
 ## Prerequisites
 ```

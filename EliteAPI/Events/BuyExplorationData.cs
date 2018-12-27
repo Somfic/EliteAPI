@@ -5,8 +5,8 @@ namespace EliteAPI
 {
     public class BuyExplorationDataInfo
     {
-        public DateTime timestamp { get; }
-        public String System { get; }
-        public Int64 Cost { get; }
+        public DateTime timestamp { get; set; }
+        public String System { get; set; }
+        public Int64 Cost { get; set; }
     }
 }

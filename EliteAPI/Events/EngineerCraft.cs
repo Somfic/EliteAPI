@@ -6,33 +6,33 @@ namespace EliteAPI
 
     public class EngineerCraftInfo
     {
-        public DateTime timestamp { get; }
+        public DateTime timestamp { get; set; }
 
-        public string Slot { get; }
-        public string Module { get; }
-        public IngredientInfo[] Ingredients { get; }
-        public string Engineer { get; }
-        public int EngineerID { get; }
-        public int BlueprintID { get; }
-        public string BlueprintName { get; }
-        public int Level { get; }
-        public float Quality { get; }
-        public ModifierInfo[] Modifiers { get; }
+        public string Slot { get; set; }
+        public string Module { get; set; }
+        public IngredientInfo[] Ingredients { get; set; }
+        public string Engineer { get; set; }
+        public int EngineerID { get; set; }
+        public int BlueprintID { get; set; }
+        public string BlueprintName { get; set; }
+        public int Level { get; set; }
+        public float Quality { get; set; }
+        public ModifierInfo[] Modifiers { get; set; }
     }
 
     public class IngredientInfo
     {
-        public string Name { get; }
-        public string Name_Localised { get; }
-        public int Count { get; }
+        public string Name { get; set; }
+        public string Name_Localised { get; set; }
+        public int Count { get; set; }
     }
 
     public class ModifierInfo
     {
-        public string Label { get; }
-        public float Value { get; }
-        public float OriginalValue { get; }
-        public int LessIsGood { get; }
+        public string Label { get; set; }
+        public float Value { get; set; }
+        public float OriginalValue { get; set; }
+        public int LessIsGood { get; set; }
     }
 
 }

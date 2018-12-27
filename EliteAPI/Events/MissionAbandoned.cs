@@ -4,8 +4,8 @@ namespace EliteAPI
 {
     public class MissionAbandonedInfo
     {
-        public DateTime timestamp { get; }
-        public string Name { get; }
-        public int MissionID { get; }
+        public DateTime timestamp { get; set; }
+        public string Name { get; set; }
+        public int MissionID { get; set; }
     }
 }

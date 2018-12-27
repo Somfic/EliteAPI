@@ -5,12 +5,12 @@ namespace EliteAPI
 {
   public class MissionRedirectedInfo
   {
-      public DateTime timestamp { get; }
-      public int MissionID { get; }
-      public string Name { get; }
-      public string NewDestinationStation { get; }
-      public string NewDestinationSystem { get; }
-      public string OldDestinationStation { get; }
-      public string OldDestinationSystem { get; }
+      public DateTime timestamp { get; set; }
+      public int MissionID { get; set; }
+      public string Name { get; set; }
+      public string NewDestinationStation { get; set; }
+      public string NewDestinationSystem { get; set; }
+      public string OldDestinationStation { get; set; }
+      public string OldDestinationSystem { get; set; }
   }
 }

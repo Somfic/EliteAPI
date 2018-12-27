@@ -5,22 +5,22 @@ namespace EliteAPI
 {
     public class FSDJumpInfo
     {
-        public DateTime timestamp { get; }
-        public string StarSystem { get; }
-        public long SystemAddress { get; }
-        public List<double> StarPos { get; }
-        public string SystemAllegiance { get; }
-        public string SystemEconomy { get; }
-        public string SystemEconomy_Localised { get; }
-        public string SystemSecondEconomy { get; }
-        public string SystemSecondEconomy_Localised { get; }
-        public string SystemGovernment { get; }
-        public string SystemGovernment_Localised { get; }
-        public string SystemSecurity { get; }
-        public string SystemSecurity_Localised { get; }
-        public ulong Population { get; }
-        public double JumpDist { get; }
-        public double FuelUsed { get; }
-        public double FuelLevel { get; }
+        public DateTime timestamp { get; set; }
+        public string StarSystem { get; set; }
+        public long SystemAddress { get; set; }
+        public List<double> StarPos { get; set; }
+        public string SystemAllegiance { get; set; }
+        public string SystemEconomy { get; set; }
+        public string SystemEconomy_Localised { get; set; }
+        public string SystemSecondEconomy { get; set; }
+        public string SystemSecondEconomy_Localised { get; set; }
+        public string SystemGovernment { get; set; }
+        public string SystemGovernment_Localised { get; set; }
+        public string SystemSecurity { get; set; }
+        public string SystemSecurity_Localised { get; set; }
+        public ulong Population { get; set; }
+        public double JumpDist { get; set; }
+        public double FuelUsed { get; set; }
+        public double FuelLevel { get; set; }
     }
 }

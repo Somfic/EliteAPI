@@ -4,15 +4,15 @@ namespace EliteAPI
 {
     public class ShipyardTransferInfo
     {
-        public DateTime timestamp { get; }
-        public string ShipType { get; }
-        public string ShipType_Localised { get; }
-        public int ShipID { get; }
-        public string System { get; }
-        public long ShipMarketID { get; }
-        public double Distance { get; }
-        public int TransferPrice { get; }
-        public int TransferTime { get; }
-        public long MarketID { get; }
+        public DateTime timestamp { get; set; }
+        public string ShipType { get; set; }
+        public string ShipType_Localised { get; set; }
+        public int ShipID { get; set; }
+        public string System { get; set; }
+        public long ShipMarketID { get; set; }
+        public double Distance { get; set; }
+        public int TransferPrice { get; set; }
+        public int TransferTime { get; set; }
+        public long MarketID { get; set; }
     }
 }

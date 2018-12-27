@@ -4,13 +4,13 @@ namespace EliteAPI
 {
     public class ModuleSellInfo
     {
-        public DateTime timestamp { get; }
-        public long MarketID { get; }
-        public string Slot { get; }
-        public string SellItem { get; }
-        public string SellItem_Localised { get; }
-        public int SellPrice { get; }
-        public string Ship { get; }
-        public int ShipID { get; }
+        public DateTime timestamp { get; set; }
+        public long MarketID { get; set; }
+        public string Slot { get; set; }
+        public string SellItem { get; set; }
+        public string SellItem_Localised { get; set; }
+        public int SellPrice { get; set; }
+        public string Ship { get; set; }
+        public int ShipID { get; set; }
     }
 }

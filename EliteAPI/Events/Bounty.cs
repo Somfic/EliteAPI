@@ -7,14 +7,14 @@ namespace EliteAPI
     {
         public class RewardInfo
         {
-            public string Faction { get; }
-            public int Reward { get; }
+            public string Faction { get; set; }
+            public int Reward { get; set; }
         }
 
-        public DateTime timestamp { get; }
-        public List<RewardInfo> Rewards { get; }
-        public string Target { get; }
-        public int TotalReward { get; }
-        public string VictimFaction { get; }
+        public DateTime timestamp { get; set; }
+        public List<RewardInfo> Rewards { get; set; }
+        public string Target { get; set; }
+        public int TotalReward { get; set; }
+        public string VictimFaction { get; set; }
     }
 }

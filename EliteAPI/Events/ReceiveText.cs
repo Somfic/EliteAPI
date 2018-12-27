@@ -4,11 +4,11 @@ namespace EliteAPI
 {
     public class ReceiveTextInfo
     {
-        public DateTime timestamp { get; }
-        public string From { get; }
-        public string From_Localised { get; }
-        public string Message { get; }
-        public string Message_Localised { get; }
-        public string Channel { get; }
+        public DateTime timestamp { get; set; }
+        public string From { get; set; }
+        public string From_Localised { get; set; }
+        public string Message { get; set; }
+        public string Message_Localised { get; set; }
+        public string Channel { get; set; }
     }
 }

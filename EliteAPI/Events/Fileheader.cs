@@ -4,10 +4,10 @@ namespace EliteAPI
 {
     public class FileheaderInfo
     {
-        public DateTime timestamp { get; }
-        public int part { get; }
-        public string language { get; }
-        public string gameversion { get; }
-        public string build { get; }
+        public DateTime timestamp { get; set; }
+        public int part { get; set; }
+        public string language { get; set; }
+        public string gameversion { get; set; }
+        public string build { get; set; }
     }
 }

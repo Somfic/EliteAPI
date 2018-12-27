@@ -5,9 +5,9 @@ namespace EliteAPI
 {
   public class MaterialDiscoveredInfo
   {
-      public DateTime timestamp { get; }
-      public string Category { get; }
-      public string Name { get; }
-      public int DiscoveryNumber { get; }
+      public DateTime timestamp { get; set; }
+      public string Category { get; set; }
+      public string Name { get; set; }
+      public int DiscoveryNumber { get; set; }
   }
 }

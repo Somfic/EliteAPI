@@ -5,8 +5,8 @@ namespace EliteAPI
 {
   public class FSDTargetInfo
   {
-      public DateTime timestamp { get; }
-      public string Name { get; }
-      public int SystemAddress { get; }
+      public DateTime timestamp { get; set; }
+      public string Name { get; set; }
+      public int SystemAddress { get; set; }
   }
 }

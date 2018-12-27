@@ -7,13 +7,13 @@ namespace EliteAPI
     {
         public class InventoryInfo
         {
-            public string Name { get; }
-            public string Name_Localised { get; }
-            public int Count { get; }
-            public int Stolen { get; }
+            public string Name { get; set; }
+            public string Name_Localised { get; set; }
+            public int Count { get; set; }
+            public int Stolen { get; set; }
         }
 
-        public DateTime timestamp { get; }
-        public List<InventoryInfo> Inventory { get; }
+        public DateTime timestamp { get; set; }
+        public List<InventoryInfo> Inventory { get; set; }
     }
 }

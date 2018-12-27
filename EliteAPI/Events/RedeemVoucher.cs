@@ -5,15 +5,15 @@ namespace EliteAPI
 {
     public class RedeemVoucherInfo
     {
-        public DateTime timestamp { get; }
-        public string Type { get; }
-        public int Amount { get; }
-        public List<FactionInfo> Factions { get; }
+        public DateTime timestamp { get; set; }
+        public string Type { get; set; }
+        public int Amount { get; set; }
+        public List<FactionInfo> Factions { get; set; }
     }
 
     public class FactionInfo
     {
-        public string Faction { get; }
-        public int Amount { get; }
+        public string Faction { get; set; }
+        public int Amount { get; set; }
     }
 }

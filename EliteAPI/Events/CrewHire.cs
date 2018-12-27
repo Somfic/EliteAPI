@@ -5,11 +5,11 @@ namespace EliteAPI
 {
     public class CrewHireInfo
     {
-        public DateTime timestamp { get; }
-        public String Name { get; }
-        public Int64 CrewID { get; }
-        public String Faction { get; }
-        public Int64 Cost { get; }
-        public Int64 CombatRank { get; }
+        public DateTime timestamp { get; set; }
+        public String Name { get; set; }
+        public Int64 CrewID { get; set; }
+        public String Faction { get; set; }
+        public Int64 Cost { get; set; }
+        public Int64 CombatRank { get; set; }
     }
 }

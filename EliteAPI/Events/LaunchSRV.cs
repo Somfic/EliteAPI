@@ -5,8 +5,8 @@ namespace EliteAPI
 {
   public class LaunchSRVInfo
   {
-      public DateTime timestamp { get; }
-      public string Loadout { get; }
-      public Boolean PlayerControlled { get; }
+      public DateTime timestamp { get; set; }
+      public string Loadout { get; set; }
+      public Boolean PlayerControlled { get; set; }
   }
 }

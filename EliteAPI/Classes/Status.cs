@@ -4,13 +4,13 @@ namespace EliteAPI
 {
     public class Status
     {
-        public DateTime timestamp { get; }
-        public int Flags { get; }
-        public int[] Pips { get; }
-        public int FireGroup { get; }
-        public int GuiFocus { get; }
-        public float Fuel { get; }
-        public float Cargo { get; }
+        public DateTime timestamp { get; set; }
+        public int Flags { get; set; }
+        public int[] Pips { get; set; }
+        public int FireGroup { get; set; }
+        public int GuiFocus { get; set; }
+        public float Fuel { get; set; }
+        public float Cargo { get; set; }
 
         public bool Docked { get { return GetFlag(0); } }
         public bool Landed { get { return GetFlag(1); } }

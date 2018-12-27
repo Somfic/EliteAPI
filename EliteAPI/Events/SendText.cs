@@ -5,8 +5,8 @@ namespace EliteAPI
 {
   public class SendTextInfo
   {
-      public DateTime timestamp { get; }
-      public string To { get; }
-      public string Message { get; }
+      public DateTime timestamp { get; set; }
+      public string To { get; set; }
+      public string Message { get; set; }
   }
 }

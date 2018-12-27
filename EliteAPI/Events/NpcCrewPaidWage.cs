@@ -4,9 +4,9 @@ namespace EliteAPI
 {
     public class NpcCrewPaidWageInfo
     {
-        public DateTime timestamp { get; }
-        public string NpcCrewName { get; }
-        public int NpcCrewId { get; }
-        public int Amount { get; }
+        public DateTime timestamp { get; set; }
+        public string NpcCrewName { get; set; }
+        public int NpcCrewId { get; set; }
+        public int Amount { get; set; }
     }
 }

@@ -4,17 +4,17 @@ namespace EliteAPI
 {
     public class LoadGameInfo
     {
-        public DateTime timestamp { get; }
-        public string Commander { get; }
-        public bool Horizons { get; }
-        public string Ship { get; }
-        public int ShipID { get; }
-        public string ShipName { get; }
-        public string ShipIdent { get; }
-        public double FuelLevel { get; }
-        public double FuelCapacity { get; }
-        public string GameMode { get; }
-        public int Credits { get; }
-        public int Loan { get; }
+        public DateTime timestamp { get; set; }
+        public string Commander { get; set; }
+        public bool Horizons { get; set; }
+        public string Ship { get; set; }
+        public int ShipID { get; set; }
+        public string ShipName { get; set; }
+        public string ShipIdent { get; set; }
+        public double FuelLevel { get; set; }
+        public double FuelCapacity { get; set; }
+        public string GameMode { get; set; }
+        public int Credits { get; set; }
+        public int Loan { get; set; }
     }
 }

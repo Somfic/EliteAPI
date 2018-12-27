@@ -4,8 +4,8 @@ namespace EliteAPI
 {
     public class EscapeInterdictionInfo
     {
-        public DateTime timestamp { get; }
-        public string Interdictor { get; }
-        public bool IsPlayer { get; }
+        public DateTime timestamp { get; set; }
+        public string Interdictor { get; set; }
+        public bool IsPlayer { get; set; }
     }
 }

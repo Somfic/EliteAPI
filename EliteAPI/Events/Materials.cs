@@ -7,27 +7,27 @@ namespace EliteAPI
     {
         public class RawInfo
         {
-            public string Name { get; }
-            public int Count { get; }
+            public string Name { get; set; }
+            public int Count { get; set; }
         }
 
         public class ManufacturedInfo
         {
-            public string Name { get; }
-            public string Name_Localised { get; }
-            public int Count { get; }
+            public string Name { get; set; }
+            public string Name_Localised { get; set; }
+            public int Count { get; set; }
         }
 
         public class EncodedInfo
         {
-            public string Name { get; }
-            public string Name_Localised { get; }
-            public int Count { get; }
+            public string Name { get; set; }
+            public string Name_Localised { get; set; }
+            public int Count { get; set; }
         }
 
-        public DateTime timestamp { get; }
-        public List<RawInfo> Raw { get; }
-        public List<ManufacturedInfo> Manufactured { get; }
-        public List<EncodedInfo> Encoded { get; }
+        public DateTime timestamp { get; set; }
+        public List<RawInfo> Raw { get; set; }
+        public List<ManufacturedInfo> Manufactured { get; set; }
+        public List<EncodedInfo> Encoded { get; set; }
     }
 }

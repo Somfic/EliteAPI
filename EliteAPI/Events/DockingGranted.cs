@@ -4,10 +4,10 @@ namespace EliteAPI
 {
     public class DockingGrantedInfo
     {
-        public DateTime timestamp { get; }
-        public int LandingPad { get; }
-        public long MarketID { get; }
-        public string StationName { get; }
-        public string StationType { get; }
+        public DateTime timestamp { get; set; }
+        public int LandingPad { get; set; }
+        public long MarketID { get; set; }
+        public string StationName { get; set; }
+        public string StationType { get; set; }
     }
 }

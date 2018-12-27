@@ -4,10 +4,10 @@ namespace EliteAPI
 {
     public class StartJumpInfo
     {
-        public DateTime timestamp { get; }
-        public string JumpType { get; }
-        public string StarSystem { get; }
-        public long SystemAddress { get; }
-        public string StarClass { get; }
+        public DateTime timestamp { get; set; }
+        public string JumpType { get; set; }
+        public string StarSystem { get; set; }
+        public long SystemAddress { get; set; }
+        public string StarClass { get; set; }
     }
 }

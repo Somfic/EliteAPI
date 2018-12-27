@@ -5,6 +5,6 @@ namespace EliteAPI
 {
   public class DockSRVInfo
   {
-      public DateTime timestamp { get; }
+      public DateTime timestamp { get; set; }
   }
 }

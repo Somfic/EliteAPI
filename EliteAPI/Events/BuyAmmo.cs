@@ -4,7 +4,7 @@ namespace EliteAPI
 {
     public class BuyAmmoInfo
     {
-        public DateTime timestamp { get; }
-        public int Cost { get; }
+        public DateTime timestamp { get; set; }
+        public int Cost { get; set; }
     }
 }

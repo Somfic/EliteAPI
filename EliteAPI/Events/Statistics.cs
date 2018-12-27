@@ -6,142 +6,142 @@ namespace EliteAPI
     {
         public class BankAccountInfo
         {
-            public int Current_Wealth { get; }
-            public int Spent_On_Ships { get; }
-            public long Spent_On_Outfitting { get; }
-            public int Spent_On_Repairs { get; }
-            public int Spent_On_Fuel { get; }
-            public int Spent_On_Ammo_Consumables { get; }
-            public int Insurance_Claims { get; }
-            public int Spent_On_Insurance { get; }
+            public int Current_Wealth { get; set; }
+            public int Spent_On_Ships { get; set; }
+            public long Spent_On_Outfitting { get; set; }
+            public int Spent_On_Repairs { get; set; }
+            public int Spent_On_Fuel { get; set; }
+            public int Spent_On_Ammo_Consumables { get; set; }
+            public int Insurance_Claims { get; set; }
+            public int Spent_On_Insurance { get; set; }
         }
 
         public class CombatInfo
         {
-            public int Bounties_Claimed { get; }
-            public int Bounty_Hunting_Profit { get; }
-            public int Combat_Bonds { get; }
-            public int Combat_Bond_Profits { get; }
-            public int Assassinations { get; }
-            public int Assassination_Profits { get; }
-            public int Highest_Single_Reward { get; }
-            public int Skimmers_Killed { get; }
+            public int Bounties_Claimed { get; set; }
+            public int Bounty_Hunting_Profit { get; set; }
+            public int Combat_Bonds { get; set; }
+            public int Combat_Bond_Profits { get; set; }
+            public int Assassinations { get; set; }
+            public int Assassination_Profits { get; set; }
+            public int Highest_Single_Reward { get; set; }
+            public int Skimmers_Killed { get; set; }
         }
 
         public class CrimeInfo
         {
-            public int Notoriety { get; }
-            public int Fines { get; }
-            public int Total_Fines { get; }
-            public int Bounties_Received { get; }
-            public int Total_Bounties { get; }
-            public int Highest_Bounty { get; }
+            public int Notoriety { get; set; }
+            public int Fines { get; set; }
+            public int Total_Fines { get; set; }
+            public int Bounties_Received { get; set; }
+            public int Total_Bounties { get; set; }
+            public int Highest_Bounty { get; set; }
         }
 
         public class SmugglingInfo
         {
-            public int Black_Markets_Traded_With { get; }
-            public int Black_Markets_Profits { get; }
-            public int Resources_Smuggled { get; }
-            public int Average_Profit { get; }
-            public int Highest_Single_Transaction { get; }
+            public int Black_Markets_Traded_With { get; set; }
+            public int Black_Markets_Profits { get; set; }
+            public int Resources_Smuggled { get; set; }
+            public int Average_Profit { get; set; }
+            public int Highest_Single_Transaction { get; set; }
         }
 
         public class TradingInfo
         {
-            public int Markets_Traded_With { get; }
-            public int Market_Profits { get; }
-            public int Resources_Traded { get; }
-            public double Average_Profit { get; }
-            public int Highest_Single_Transaction { get; }
+            public int Markets_Traded_With { get; set; }
+            public int Market_Profits { get; set; }
+            public int Resources_Traded { get; set; }
+            public double Average_Profit { get; set; }
+            public int Highest_Single_Transaction { get; set; }
         }
 
         public class MiningInfo
         {
-            public int Mining_Profits { get; }
-            public int Quantity_Mined { get; }
-            public int Materials_Collected { get; }
+            public int Mining_Profits { get; set; }
+            public int Quantity_Mined { get; set; }
+            public int Materials_Collected { get; set; }
         }
 
         public class ExplorationInfo
         {
-            public int Systems_Visited { get; }
-            public int Exploration_Profits { get; }
-            public int Planets_Scanned_To_Level_2 { get; }
-            public int Planets_Scanned_To_Level_3 { get; }
-            public int Highest_Payout { get; }
-            public int Total_Hyperspace_Distance { get; }
-            public int Total_Hyperspace_Jumps { get; }
-            public double Greatest_Distance_From_Start { get; }
-            public int Time_Played { get; }
+            public int Systems_Visited { get; set; }
+            public int Exploration_Profits { get; set; }
+            public int Planets_Scanned_To_Level_2 { get; set; }
+            public int Planets_Scanned_To_Level_3 { get; set; }
+            public int Highest_Payout { get; set; }
+            public int Total_Hyperspace_Distance { get; set; }
+            public int Total_Hyperspace_Jumps { get; set; }
+            public double Greatest_Distance_From_Start { get; set; }
+            public int Time_Played { get; set; }
         }
 
         public class PassengersInfo
         {
-            public int Passengers_Missions_Accepted { get; }
-            public int Passengers_Missions_Disgruntled { get; }
-            public int Passengers_Missions_Bulk { get; }
-            public int Passengers_Missions_VIP { get; }
-            public int Passengers_Missions_Delivered { get; }
-            public int Passengers_Missions_Ejected { get; }
+            public int Passengers_Missions_Accepted { get; set; }
+            public int Passengers_Missions_Disgruntled { get; set; }
+            public int Passengers_Missions_Bulk { get; set; }
+            public int Passengers_Missions_VIP { get; set; }
+            public int Passengers_Missions_Delivered { get; set; }
+            public int Passengers_Missions_Ejected { get; set; }
         }
 
         public class SearchAndRescueInfo
         {
-            public int SearchRescue_Traded { get; }
-            public int SearchRescue_Profit { get; }
-            public int SearchRescue_Count { get; }
+            public int SearchRescue_Traded { get; set; }
+            public int SearchRescue_Profit { get; set; }
+            public int SearchRescue_Count { get; set; }
         }
 
         public class CraftingInfo
         {
-            public int Count_Of_Used_Engineers { get; }
-            public int Recipes_Generated { get; }
-            public int Recipes_Generated_Rank_1 { get; }
-            public int Recipes_Generated_Rank_2 { get; }
-            public int Recipes_Generated_Rank_3 { get; }
-            public int Recipes_Generated_Rank_4 { get; }
-            public int Recipes_Generated_Rank_5 { get; }
+            public int Count_Of_Used_Engineers { get; set; }
+            public int Recipes_Generated { get; set; }
+            public int Recipes_Generated_Rank_1 { get; set; }
+            public int Recipes_Generated_Rank_2 { get; set; }
+            public int Recipes_Generated_Rank_3 { get; set; }
+            public int Recipes_Generated_Rank_4 { get; set; }
+            public int Recipes_Generated_Rank_5 { get; set; }
         }
 
         public class CrewInfo
         {
-            public int NpcCrew_TotalWages { get; }
-            public int NpcCrew_Hired { get; }
-            public int NpcCrew_Fired { get; }
-            public int NpcCrew_Died { get; }
+            public int NpcCrew_TotalWages { get; set; }
+            public int NpcCrew_Hired { get; set; }
+            public int NpcCrew_Fired { get; set; }
+            public int NpcCrew_Died { get; set; }
         }
 
         public class MulticrewInfo
         {
-            public int Multicrew_Time_Total { get; }
-            public int Multicrew_Gunner_Time_Total { get; }
-            public int Multicrew_Fighter_Time_Total { get; }
-            public int Multicrew_Credits_Total { get; }
-            public int Multicrew_Fines_Total { get; }
+            public int Multicrew_Time_Total { get; set; }
+            public int Multicrew_Gunner_Time_Total { get; set; }
+            public int Multicrew_Fighter_Time_Total { get; set; }
+            public int Multicrew_Credits_Total { get; set; }
+            public int Multicrew_Fines_Total { get; set; }
         }
 
         public class MaterialTraderStatsInfo
         {
-            public int Trades_Completed { get; }
-            public int Materials_Traded { get; }
-            public int Raw_Materials_Traded { get; }
-            public int Grade_2_Materials_Traded { get; }
+            public int Trades_Completed { get; set; }
+            public int Materials_Traded { get; set; }
+            public int Raw_Materials_Traded { get; set; }
+            public int Grade_2_Materials_Traded { get; set; }
         }
 
-        public DateTime timestamp { get; }
-        public BankAccountInfo Bank_Account { get; }
-        public CombatInfo Combat { get; }
-        public CrimeInfo Crime { get; }
-        public SmugglingInfo Smuggling { get; }
-        public TradingInfo Trading { get; }
-        public MiningInfo Mining { get; }
-        public ExplorationInfo Exploration { get; }
-        public PassengersInfo Passengers { get; }
-        public SearchAndRescueInfo Search_And_Rescue { get; }
-        public CraftingInfo Crafting { get; }
-        public CrewInfo Crew { get; }
-        public MulticrewInfo Multicrew { get; }
-        public MaterialTraderStatsInfo Material_Trader_Stats { get; }
+        public DateTime timestamp { get; set; }
+        public BankAccountInfo Bank_Account { get; set; }
+        public CombatInfo Combat { get; set; }
+        public CrimeInfo Crime { get; set; }
+        public SmugglingInfo Smuggling { get; set; }
+        public TradingInfo Trading { get; set; }
+        public MiningInfo Mining { get; set; }
+        public ExplorationInfo Exploration { get; set; }
+        public PassengersInfo Passengers { get; set; }
+        public SearchAndRescueInfo Search_And_Rescue { get; set; }
+        public CraftingInfo Crafting { get; set; }
+        public CrewInfo Crew { get; set; }
+        public MulticrewInfo Multicrew { get; set; }
+        public MaterialTraderStatsInfo Material_Trader_Stats { get; set; }
     }
 }

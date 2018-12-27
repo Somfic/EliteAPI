@@ -5,8 +5,8 @@ namespace EliteAPI
 {
   public class MiningRefinedInfo
   {
-      public DateTime timestamp { get; }
-      public string Type { get; }
-      public string Type_Localised { get; }
+      public DateTime timestamp { get; set; }
+      public string Type { get; set; }
+      public string Type_Localised { get; set; }
   }
 }

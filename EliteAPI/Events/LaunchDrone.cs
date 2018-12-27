@@ -4,7 +4,7 @@ namespace EliteAPI
 {
     public class LaunchDroneInfo
     {
-        public DateTime timestamp { get; }
-        public string Type { get; }
+        public DateTime timestamp { get; set; }
+        public string Type { get; set; }
     }
 }

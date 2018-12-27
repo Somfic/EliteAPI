@@ -8,7 +8,7 @@ namespace EliteAPI
 {
     public class WingAddInfo
     {
-        public DateTime timestamp { get; }
-        public string Name { get; }
+        public DateTime timestamp { get; set; }
+        public string Name { get; set; }
     }
 }

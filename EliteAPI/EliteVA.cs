@@ -105,7 +105,7 @@ namespace EliteAPI.EliteVA
             {
                 try
                 {
-                    string eventName = "EliteAPI." + e.@event + "";
+                    string eventName = "((EliteAPI." + e.@event + "))";
 
                     if (_vaProxy.CommandExists(eventName))
                     {

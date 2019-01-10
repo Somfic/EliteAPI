@@ -101,6 +101,7 @@
     <Compile Include="Events\CrimeVictim.cs" />
     <Compile Include="Events\Died.cs" />
     <Compile Include="Events\DiscoveryScan.cs" />
+    <Compile Include="Events\DockFighter.cs" />
     <Compile Include="Events\DockingCancelled.cs" />
     <Compile Include="Events\DockingDenied.cs" />
     <Compile Include="Events\DockingGranted.cs" />
@@ -117,6 +118,8 @@
     <Compile Include="Events\EngineerProgress.cs" />
     <Compile Include="Events\EscapeInterdiction.cs" />
     <Compile Include="Events\FetchRemoteModule.cs" />
+    <Compile Include="Events\FighterDestroyed.cs" />
+    <Compile Include="Events\FighterRebuilt.cs" />
     <Compile Include="Events\Fileheader.cs" />
     <Compile Include="Events\Friends.cs" />
     <Compile Include="Events\FSDTarget.cs" />
@@ -200,6 +203,7 @@
     <Compile Include="Events\Music.cs" />
     <Compile Include="Events\Interdicted.cs" />
     <Compile Include="Events\USSDrop.cs" />
+    <Compile Include="Events\VehicleSwitch.cs" />
     <Compile Include="Events\WingAdd.cs" />
     <Compile Include="Events\WingInvite.cs" />
     <Compile Include="Events\WingJoin.cs" />

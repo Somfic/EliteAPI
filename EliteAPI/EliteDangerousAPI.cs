@@ -208,6 +208,22 @@ namespace EliteAPI
                     RankEvent?.Invoke(this, JsonConvert.DeserializeObject<RankInfo>(json));
                     break;
 
+                case "DockFighter":
+                    DockFighterEvent?.Invoke(this, JsonConvert.DeserializeObject<DockFighterInfo>(json));
+                    break;
+
+                case "FighterRebuilt":
+                    FighterRebuiltEvent?.Invoke(this, JsonConvert.DeserializeObject<FighterRebuiltInfo>(json));
+                    break;
+
+                case "FighterDestroyed":
+                    FighterDestroyedEvent?.Invoke(this, JsonConvert.DeserializeObject<FighterDestroyedInfo>(json));
+                    break;
+
+                case "VehicleSwitch":
+                    VehicleSwitchEvent?.Invoke(this, JsonConvert.DeserializeObject<VehicleSwitchInfo>(json));
+                    break;
+
                 case "Progress":
                     ProgressEvent?.Invoke(this, JsonConvert.DeserializeObject<ProgressInfo>(json));
                     break;
@@ -779,6 +795,14 @@ namespace EliteAPI
         /// Triggered when mass selling exploration data.
         /// </summary>
         public event EventHandler<MultiSellExplorationDataInfo> MultiSellExplorationDataEvent;
+
+        public EventHandler<DockFighterInfo> DockFighterEvent;
+
+        public EventHandler<FighterRebuiltInfo> FighterRebuiltEvent;
+
+        public EventHandler<FighterDestroyedInfo> FighterDestroyedEvent;
+
+        public EventHandler<VehicleSwitchInfo> VehicleSwitchEvent;
 
         /// <summary>
         /// Triggered when a player swaps modules.

@@ -16,252 +16,252 @@ namespace EliteAPI.Bindings
         public long MinorVersion { get; set; }
         public string KeyboardLayout { get; set; }
         public string LockedDevice { get; set; }
-        public TartuGecko MouseXMode { get; set; }
-        public TartuGecko MouseXDecay { get; set; }
-        public TartuGecko MouseYMode { get; set; }
-        public TartuGecko MouseYDecay { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl MouseReset { get; set; }
-        public TartuGecko MouseSensitivity { get; set; }
-        public TartuGecko MouseDecayRate { get; set; }
-        public TartuGecko MouseDeadzone { get; set; }
-        public TartuGecko MouseLinearity { get; set; }
-        public TartuGecko MouseGui { get; set; }
-        public PuneHedgehog YawAxisRaw { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl YawLeftButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl YawRightButton { get; set; }
-        public TartuGecko YawToRollMode { get; set; }
-        public TartuGecko YawToRollSensitivity { get; set; }
-        public CamTranslateZHold YawToRollButton { get; set; }
-        public PuneHedgehog RollAxisRaw { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl RollLeftButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl RollRightButton { get; set; }
-        public PuneHedgehog PitchAxisRaw { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl PitchUpButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl PitchDownButton { get; set; }
-        public PuneHedgehog LateralThrustRaw { get; set; }
-        public HammerfestPonies LeftThrustButton { get; set; }
-        public HammerfestPonies RightThrustButton { get; set; }
-        public PuneHedgehog VerticalThrustRaw { get; set; }
-        public HammerfestPonies UpThrustButton { get; set; }
-        public HammerfestPonies DownThrustButton { get; set; }
-        public PuneHedgehog AheadThrust { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl ForwardThrustButton { get; set; }
-        public HammerfestPonies BackwardThrustButton { get; set; }
-        public PuneHedgehog YawAxisAlternate { get; set; }
-        public PuneHedgehog RollAxisAlternate { get; set; }
-        public PuneHedgehog PitchAxisAlternate { get; set; }
-        public PuneHedgehog LateralThrustAlternate { get; set; }
-        public PuneHedgehog VerticalThrustAlternate { get; set; }
-        public CamTranslateZHold UseAlternateFlightValuesToggle { get; set; }
-        public PuneHedgehog ThrottleAxis { get; set; }
-        public TartuGecko ThrottleRange { get; set; }
-        public CamTranslateZHold ToggleReverseThrottleInput { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl ForwardKey { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl BackwardKey { get; set; }
-        public TartuGecko ThrottleIncrement { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SetSpeedMinus100 { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SetSpeedMinus75 { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SetSpeedMinus50 { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SetSpeedMinus25 { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SetSpeedZero { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SetSpeed25 { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SetSpeed50 { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SetSpeed75 { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SetSpeed100 { get; set; }
-        public PuneHedgehog YawAxisLanding { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl YawLeftButtonLanding { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl YawRightButtonLanding { get; set; }
-        public TartuGecko YawToRollModeLanding { get; set; }
-        public PuneHedgehog PitchAxisLanding { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl PitchUpButtonLanding { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl PitchDownButtonLanding { get; set; }
-        public PuneHedgehog RollAxisLanding { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl RollLeftButtonLanding { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl RollRightButtonLanding { get; set; }
-        public PuneHedgehog LateralThrustLanding { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl LeftThrustButtonLanding { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl RightThrustButtonLanding { get; set; }
-        public PuneHedgehog VerticalThrustLanding { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl UpThrustButtonLanding { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl DownThrustButtonLanding { get; set; }
-        public PuneHedgehog AheadThrustLanding { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl ForwardThrustButtonLanding { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl BackwardThrustButtonLanding { get; set; }
-        public CamTranslateZHold ToggleFlightAssist { get; set; }
-        public TartuGecko YawToRollModeFaOff { get; set; }
-        public HammerfestPonies UseBoostJuice { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl HyperSuperCombination { get; set; }
-        public HammerfestPonies Supercruise { get; set; }
-        public HammerfestPonies Hyperspace { get; set; }
-        public CamTranslateZHold DisableRotationCorrectToggle { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl OrbitLinesToggle { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SelectTarget { get; set; }
-        public HammerfestPonies CycleNextTarget { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CyclePreviousTarget { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SelectHighestThreat { get; set; }
-        public HammerfestPonies CycleNextHostileTarget { get; set; }
-        public HammerfestPonies CyclePreviousHostileTarget { get; set; }
-        public HammerfestPonies TargetWingman0 { get; set; }
-        public HammerfestPonies TargetWingman1 { get; set; }
-        public HammerfestPonies TargetWingman2 { get; set; }
-        public HammerfestPonies SelectTargetsTarget { get; set; }
-        public HammerfestPonies WingNavLock { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CycleNextSubsystem { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CyclePreviousSubsystem { get; set; }
-        public HammerfestPonies TargetNextRouteSystem { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl PrimaryFire { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SecondaryFire { get; set; }
-        public HammerfestPonies CycleFireGroupNext { get; set; }
-        public HammerfestPonies CycleFireGroupPrevious { get; set; }
-        public HammerfestPonies DeployHardpointToggle { get; set; }
-        public TartuGecko DeployHardpointsOnFire { get; set; }
-        public BuggyToggleReverseThrottleInput ToggleButtonUpInput { get; set; }
-        public HammerfestPonies DeployHeatSink { get; set; }
-        public HammerfestPonies ShipSpotLightToggle { get; set; }
-        public PuneHedgehog RadarRangeAxis { get; set; }
-        public HammerfestPonies RadarIncreaseRange { get; set; }
-        public HammerfestPonies RadarDecreaseRange { get; set; }
-        public HammerfestPonies IncreaseEnginesPower { get; set; }
-        public HammerfestPonies IncreaseWeaponsPower { get; set; }
-        public HammerfestPonies IncreaseSystemsPower { get; set; }
-        public HammerfestPonies ResetPowerDistribution { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl HmdReset { get; set; }
-        public BuggyToggleReverseThrottleInput ToggleCargoScoop { get; set; }
-        public HammerfestPonies EjectAllCargo { get; set; }
-        public HammerfestPonies LandingGearToggle { get; set; }
-        public HammerfestPonies MicrophoneMute { get; set; }
-        public TartuGecko MuteButtonMode { get; set; }
-        public TartuGecko CqcMuteButtonMode { get; set; }
-        public HammerfestPonies UseShieldCell { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl FireChaffLauncher { get; set; }
-        public PhotoCameraToggle PhotoCameraToggle { get; set; }
-        public TartuGecko EnableMenuGroups { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl UiFocus { get; set; }
-        public TartuGecko UiFocusMode { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl FocusLeftPanel { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl FocusCommsPanel { get; set; }
-        public TartuGecko FocusOnTextEntryField { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl QuickCommsPanel { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl FocusRadarPanel { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl FocusRightPanel { get; set; }
-        public TartuGecko LeftPanelFocusOptions { get; set; }
-        public TartuGecko CommsPanelFocusOptions { get; set; }
-        public TartuGecko RolePanelFocusOptions { get; set; }
-        public TartuGecko RightPanelFocusOptions { get; set; }
-        public TartuGecko EnableCameraLockOn { get; set; }
-        public HammerfestPonies GalaxyMapOpen { get; set; }
-        public HammerfestPonies SystemMapOpen { get; set; }
-        public CamTranslateZHold ShowPgScoreSummaryInput { get; set; }
-        public CamTranslateZHold HeadLookToggle { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl Pause { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl UiUp { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl UiDown { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl UiLeft { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl UiRight { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl UiSelect { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl UiBack { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl UiToggle { get; set; }
-        public HammerfestPonies CycleNextPanel { get; set; }
-        public HammerfestPonies CyclePreviousPanel { get; set; }
-        public TartuGecko MouseHeadlook { get; set; }
-        public TartuGecko MouseHeadlookInvert { get; set; }
-        public TartuGecko MouseHeadlookSensitivity { get; set; }
-        public TartuGecko HeadlookDefault { get; set; }
-        public TartuGecko HeadlookIncrement { get; set; }
-        public TartuGecko HeadlookMode { get; set; }
-        public TartuGecko HeadlookResetOnToggle { get; set; }
-        public TartuGecko HeadlookSensitivity { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl HeadLookReset { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl HeadLookPitchUp { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl HeadLookPitchDown { get; set; }
-        public PuneHedgehog HeadLookPitchAxisRaw { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl HeadLookYawLeft { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl HeadLookYawRight { get; set; }
-        public PuneHedgehog HeadLookYawAxis { get; set; }
-        public PuneHedgehog CamPitchAxis { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CamPitchUp { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CamPitchDown { get; set; }
-        public PuneHedgehog CamYawAxis { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CamYawLeft { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CamYawRight { get; set; }
-        public PuneHedgehog CamTranslateYAxis { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CamTranslateForward { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CamTranslateBackward { get; set; }
-        public PuneHedgehog CamTranslateXAxis { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CamTranslateLeft { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CamTranslateRight { get; set; }
-        public PuneHedgehog CamTranslateZAxis { get; set; }
-        public HammerfestPonies CamTranslateUp { get; set; }
-        public HammerfestPonies CamTranslateDown { get; set; }
-        public PuneHedgehog CamZoomAxis { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CamZoomIn { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl CamZoomOut { get; set; }
-        public CamTranslateZHold CamTranslateZHold { get; set; }
-        public CamTranslateZHold ToggleDriveAssist { get; set; }
-        public TartuGecko DriveAssistDefault { get; set; }
-        public TartuGecko MouseBuggySteeringXMode { get; set; }
-        public TartuGecko MouseBuggySteeringXDecay { get; set; }
-        public TartuGecko MouseBuggyRollingXMode { get; set; }
-        public TartuGecko MouseBuggyRollingXDecay { get; set; }
-        public TartuGecko MouseBuggyYMode { get; set; }
-        public TartuGecko MouseBuggyYDecay { get; set; }
-        public PuneHedgehog SteeringAxis { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SteerLeftButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SteerRightButton { get; set; }
-        public PuneHedgehog BuggyRollAxisRaw { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl BuggyRollLeftButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl BuggyRollRightButton { get; set; }
-        public PuneHedgehog BuggyPitchAxis { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl BuggyPitchUpButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl BuggyPitchDownButton { get; set; }
-        public CamTranslateZHold VerticalThrustersButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl BuggyPrimaryFireButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl BuggySecondaryFireButton { get; set; }
-        public AutoBreakBuggyButton AutoBreakBuggyButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl HeadlightsBuggyButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl ToggleBuggyTurretButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl SelectTargetBuggy { get; set; }
-        public TartuGecko MouseTurretXMode { get; set; }
-        public TartuGecko MouseTurretXDecay { get; set; }
-        public TartuGecko MouseTurretYMode { get; set; }
-        public TartuGecko MouseTurretYDecay { get; set; }
-        public PuneHedgehog BuggyTurretYawAxisRaw { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl BuggyTurretYawLeftButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl BuggyTurretYawRightButton { get; set; }
-        public PuneHedgehog BuggyTurretPitchAxisRaw { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl BuggyTurretPitchUpButton { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl BuggyTurretPitchDownButton { get; set; }
-        public PuneHedgehog DriveSpeedAxis { get; set; }
-        public TartuGecko BuggyThrottleRange { get; set; }
-        public BuggyToggleReverseThrottleInput BuggyToggleReverseThrottleInput { get; set; }
-        public TartuGecko BuggyThrottleIncrement { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl IncreaseSpeedButtonMax { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl DecreaseSpeedButtonMax { get; set; }
-        public PuneHedgehog IncreaseSpeedButtonPartial { get; set; }
-        public PuneHedgehog DecreaseSpeedButtonPartial { get; set; }
-        public HammerfestPonies IncreaseEnginesPowerBuggy { get; set; }
-        public HammerfestPonies IncreaseWeaponsPowerBuggy { get; set; }
-        public HammerfestPonies IncreaseSystemsPowerBuggy { get; set; }
-        public HammerfestPonies ResetPowerDistributionBuggy { get; set; }
-        public BuggyToggleReverseThrottleInput ToggleCargoScoopBuggy { get; set; }
-        public HammerfestPonies EjectAllCargoBuggy { get; set; }
-        public BuggyToggleReverseThrottleInput PhotoCameraToggleBuggy { get; set; }
-        public HammerfestPonies UiFocusBuggy { get; set; }
-        public HammerfestPonies FocusLeftPanelBuggy { get; set; }
-        public LivingstoneSouthernWhiteFacedOwl FocusCommsPanelBuggy { get; set; }
-        public HammerfestPonies QuickCommsPanelBuggy { get; set; }
-        public HammerfestPonies FocusRadarPanelBuggy { get; set; }
-        public HammerfestPonies FocusRightPanelBuggy { get; set; }
-        public HammerfestPonies GalaxyMapOpenBuggy { get; set; }
-        public HammerfestPonies SystemMapOpenBuggy { get; set; }
-        public CamTranslateZHold HeadLookToggleBuggy { get; set; }
+        public ValueInfo MouseXMode { get; set; }
+        public ValueInfo MouseXDecay { get; set; }
+        public ValueInfo MouseYMode { get; set; }
+        public ValueInfo MouseYDecay { get; set; }
+        public StandardBindingInfo MouseReset { get; set; }
+        public ValueInfo MouseSensitivity { get; set; }
+        public ValueInfo MouseDecayRate { get; set; }
+        public ValueInfo MouseDeadzone { get; set; }
+        public ValueInfo MouseLinearity { get; set; }
+        public ValueInfo MouseGui { get; set; }
+        public AxisBindingInfo YawAxisRaw { get; set; }
+        public StandardBindingInfo YawLeftButton { get; set; }
+        public StandardBindingInfo YawRightButton { get; set; }
+        public ValueInfo YawToRollMode { get; set; }
+        public ValueInfo YawToRollSensitivity { get; set; }
+        public ToggleBindingInfo YawToRollButton { get; set; }
+        public AxisBindingInfo RollAxisRaw { get; set; }
+        public StandardBindingInfo RollLeftButton { get; set; }
+        public StandardBindingInfo RollRightButton { get; set; }
+        public AxisBindingInfo PitchAxisRaw { get; set; }
+        public StandardBindingInfo PitchUpButton { get; set; }
+        public StandardBindingInfo PitchDownButton { get; set; }
+        public AxisBindingInfo LateralThrustRaw { get; set; }
+        public PrimaryBindingInfo LeftThrustButton { get; set; }
+        public PrimaryBindingInfo RightThrustButton { get; set; }
+        public AxisBindingInfo VerticalThrustRaw { get; set; }
+        public PrimaryBindingInfo UpThrustButton { get; set; }
+        public PrimaryBindingInfo DownThrustButton { get; set; }
+        public AxisBindingInfo AheadThrust { get; set; }
+        public StandardBindingInfo ForwardThrustButton { get; set; }
+        public PrimaryBindingInfo BackwardThrustButton { get; set; }
+        public AxisBindingInfo YawAxisAlternate { get; set; }
+        public AxisBindingInfo RollAxisAlternate { get; set; }
+        public AxisBindingInfo PitchAxisAlternate { get; set; }
+        public AxisBindingInfo LateralThrustAlternate { get; set; }
+        public AxisBindingInfo VerticalThrustAlternate { get; set; }
+        public ToggleBindingInfo UseAlternateFlightValuesToggle { get; set; }
+        public AxisBindingInfo ThrottleAxis { get; set; }
+        public ValueInfo ThrottleRange { get; set; }
+        public ToggleBindingInfo ToggleReverseThrottleInput { get; set; }
+        public StandardBindingInfo ForwardKey { get; set; }
+        public StandardBindingInfo BackwardKey { get; set; }
+        public ValueInfo ThrottleIncrement { get; set; }
+        public StandardBindingInfo SetSpeedMinus100 { get; set; }
+        public StandardBindingInfo SetSpeedMinus75 { get; set; }
+        public StandardBindingInfo SetSpeedMinus50 { get; set; }
+        public StandardBindingInfo SetSpeedMinus25 { get; set; }
+        public StandardBindingInfo SetSpeedZero { get; set; }
+        public StandardBindingInfo SetSpeed25 { get; set; }
+        public StandardBindingInfo SetSpeed50 { get; set; }
+        public StandardBindingInfo SetSpeed75 { get; set; }
+        public StandardBindingInfo SetSpeed100 { get; set; }
+        public AxisBindingInfo YawAxisLanding { get; set; }
+        public StandardBindingInfo YawLeftButtonLanding { get; set; }
+        public StandardBindingInfo YawRightButtonLanding { get; set; }
+        public ValueInfo YawToRollModeLanding { get; set; }
+        public AxisBindingInfo PitchAxisLanding { get; set; }
+        public StandardBindingInfo PitchUpButtonLanding { get; set; }
+        public StandardBindingInfo PitchDownButtonLanding { get; set; }
+        public AxisBindingInfo RollAxisLanding { get; set; }
+        public StandardBindingInfo RollLeftButtonLanding { get; set; }
+        public StandardBindingInfo RollRightButtonLanding { get; set; }
+        public AxisBindingInfo LateralThrustLanding { get; set; }
+        public StandardBindingInfo LeftThrustButtonLanding { get; set; }
+        public StandardBindingInfo RightThrustButtonLanding { get; set; }
+        public AxisBindingInfo VerticalThrustLanding { get; set; }
+        public StandardBindingInfo UpThrustButtonLanding { get; set; }
+        public StandardBindingInfo DownThrustButtonLanding { get; set; }
+        public AxisBindingInfo AheadThrustLanding { get; set; }
+        public StandardBindingInfo ForwardThrustButtonLanding { get; set; }
+        public StandardBindingInfo BackwardThrustButtonLanding { get; set; }
+        public ToggleBindingInfo ToggleFlightAssist { get; set; }
+        public ValueInfo YawToRollModeFaOff { get; set; }
+        public PrimaryBindingInfo UseBoostJuice { get; set; }
+        public StandardBindingInfo HyperSuperCombination { get; set; }
+        public PrimaryBindingInfo Supercruise { get; set; }
+        public PrimaryBindingInfo Hyperspace { get; set; }
+        public ToggleBindingInfo DisableRotationCorrectToggle { get; set; }
+        public StandardBindingInfo OrbitLinesToggle { get; set; }
+        public StandardBindingInfo SelectTarget { get; set; }
+        public PrimaryBindingInfo CycleNextTarget { get; set; }
+        public StandardBindingInfo CyclePreviousTarget { get; set; }
+        public StandardBindingInfo SelectHighestThreat { get; set; }
+        public PrimaryBindingInfo CycleNextHostileTarget { get; set; }
+        public PrimaryBindingInfo CyclePreviousHostileTarget { get; set; }
+        public PrimaryBindingInfo TargetWingman0 { get; set; }
+        public PrimaryBindingInfo TargetWingman1 { get; set; }
+        public PrimaryBindingInfo TargetWingman2 { get; set; }
+        public PrimaryBindingInfo SelectTargetsTarget { get; set; }
+        public PrimaryBindingInfo WingNavLock { get; set; }
+        public StandardBindingInfo CycleNextSubsystem { get; set; }
+        public StandardBindingInfo CyclePreviousSubsystem { get; set; }
+        public PrimaryBindingInfo TargetNextRouteSystem { get; set; }
+        public StandardBindingInfo PrimaryFire { get; set; }
+        public StandardBindingInfo SecondaryFire { get; set; }
+        public PrimaryBindingInfo CycleFireGroupNext { get; set; }
+        public PrimaryBindingInfo CycleFireGroupPrevious { get; set; }
+        public PrimaryBindingInfo DeployHardpointToggle { get; set; }
+        public ValueInfo DeployHardpointsOnFire { get; set; }
+        public SecondaryToggleBindingInfo ToggleButtonUpInput { get; set; }
+        public PrimaryBindingInfo DeployHeatSink { get; set; }
+        public PrimaryBindingInfo ShipSpotLightToggle { get; set; }
+        public AxisBindingInfo RadarRangeAxis { get; set; }
+        public PrimaryBindingInfo RadarIncreaseRange { get; set; }
+        public PrimaryBindingInfo RadarDecreaseRange { get; set; }
+        public PrimaryBindingInfo IncreaseEnginesPower { get; set; }
+        public PrimaryBindingInfo IncreaseWeaponsPower { get; set; }
+        public PrimaryBindingInfo IncreaseSystemsPower { get; set; }
+        public PrimaryBindingInfo ResetPowerDistribution { get; set; }
+        public StandardBindingInfo HmdReset { get; set; }
+        public SecondaryToggleBindingInfo ToggleCargoScoop { get; set; }
+        public PrimaryBindingInfo EjectAllCargo { get; set; }
+        public PrimaryBindingInfo LandingGearToggle { get; set; }
+        public PrimaryBindingInfo MicrophoneMute { get; set; }
+        public ValueInfo MuteButtonMode { get; set; }
+        public ValueInfo CqcMuteButtonMode { get; set; }
+        public PrimaryBindingInfo UseShieldCell { get; set; }
+        public StandardBindingInfo FireChaffLauncher { get; set; }
+        public StandardInfoBindingInfo PhotoCameraToggle { get; set; }
+        public ValueInfo EnableMenuGroups { get; set; }
+        public StandardBindingInfo UiFocus { get; set; }
+        public ValueInfo UiFocusMode { get; set; }
+        public StandardBindingInfo FocusLeftPanel { get; set; }
+        public StandardBindingInfo FocusCommsPanel { get; set; }
+        public ValueInfo FocusOnTextEntryField { get; set; }
+        public StandardBindingInfo QuickCommsPanel { get; set; }
+        public StandardBindingInfo FocusRadarPanel { get; set; }
+        public StandardBindingInfo FocusRightPanel { get; set; }
+        public ValueInfo LeftPanelFocusOptions { get; set; }
+        public ValueInfo CommsPanelFocusOptions { get; set; }
+        public ValueInfo RolePanelFocusOptions { get; set; }
+        public ValueInfo RightPanelFocusOptions { get; set; }
+        public ValueInfo EnableCameraLockOn { get; set; }
+        public PrimaryBindingInfo GalaxyMapOpen { get; set; }
+        public PrimaryBindingInfo SystemMapOpen { get; set; }
+        public ToggleBindingInfo ShowPgScoreSummaryInput { get; set; }
+        public ToggleBindingInfo HeadLookToggle { get; set; }
+        public StandardBindingInfo Pause { get; set; }
+        public StandardBindingInfo UiUp { get; set; }
+        public StandardBindingInfo UiDown { get; set; }
+        public StandardBindingInfo UiLeft { get; set; }
+        public StandardBindingInfo UiRight { get; set; }
+        public StandardBindingInfo UiSelect { get; set; }
+        public StandardBindingInfo UiBack { get; set; }
+        public StandardBindingInfo UiToggle { get; set; }
+        public PrimaryBindingInfo CycleNextPanel { get; set; }
+        public PrimaryBindingInfo CyclePreviousPanel { get; set; }
+        public ValueInfo MouseHeadlook { get; set; }
+        public ValueInfo MouseHeadlookInvert { get; set; }
+        public ValueInfo MouseHeadlookSensitivity { get; set; }
+        public ValueInfo HeadlookDefault { get; set; }
+        public ValueInfo HeadlookIncrement { get; set; }
+        public ValueInfo HeadlookMode { get; set; }
+        public ValueInfo HeadlookResetOnToggle { get; set; }
+        public ValueInfo HeadlookSensitivity { get; set; }
+        public StandardBindingInfo HeadLookReset { get; set; }
+        public StandardBindingInfo HeadLookPitchUp { get; set; }
+        public StandardBindingInfo HeadLookPitchDown { get; set; }
+        public AxisBindingInfo HeadLookPitchAxisRaw { get; set; }
+        public StandardBindingInfo HeadLookYawLeft { get; set; }
+        public StandardBindingInfo HeadLookYawRight { get; set; }
+        public AxisBindingInfo HeadLookYawAxis { get; set; }
+        public AxisBindingInfo CamPitchAxis { get; set; }
+        public StandardBindingInfo CamPitchUp { get; set; }
+        public StandardBindingInfo CamPitchDown { get; set; }
+        public AxisBindingInfo CamYawAxis { get; set; }
+        public StandardBindingInfo CamYawLeft { get; set; }
+        public StandardBindingInfo CamYawRight { get; set; }
+        public AxisBindingInfo CamTranslateYAxis { get; set; }
+        public StandardBindingInfo CamTranslateForward { get; set; }
+        public StandardBindingInfo CamTranslateBackward { get; set; }
+        public AxisBindingInfo CamTranslateXAxis { get; set; }
+        public StandardBindingInfo CamTranslateLeft { get; set; }
+        public StandardBindingInfo CamTranslateRight { get; set; }
+        public AxisBindingInfo CamTranslateZAxis { get; set; }
+        public PrimaryBindingInfo CamTranslateUp { get; set; }
+        public PrimaryBindingInfo CamTranslateDown { get; set; }
+        public AxisBindingInfo CamZoomAxis { get; set; }
+        public StandardBindingInfo CamZoomIn { get; set; }
+        public StandardBindingInfo CamZoomOut { get; set; }
+        public ToggleBindingInfo CamTranslateZHold { get; set; }
+        public ToggleBindingInfo ToggleDriveAssist { get; set; }
+        public ValueInfo DriveAssistDefault { get; set; }
+        public ValueInfo MouseBuggySteeringXMode { get; set; }
+        public ValueInfo MouseBuggySteeringXDecay { get; set; }
+        public ValueInfo MouseBuggyRollingXMode { get; set; }
+        public ValueInfo MouseBuggyRollingXDecay { get; set; }
+        public ValueInfo MouseBuggyYMode { get; set; }
+        public ValueInfo MouseBuggyYDecay { get; set; }
+        public AxisBindingInfo SteeringAxis { get; set; }
+        public StandardBindingInfo SteerLeftButton { get; set; }
+        public StandardBindingInfo SteerRightButton { get; set; }
+        public AxisBindingInfo BuggyRollAxisRaw { get; set; }
+        public StandardBindingInfo BuggyRollLeftButton { get; set; }
+        public StandardBindingInfo BuggyRollRightButton { get; set; }
+        public AxisBindingInfo BuggyPitchAxis { get; set; }
+        public StandardBindingInfo BuggyPitchUpButton { get; set; }
+        public StandardBindingInfo BuggyPitchDownButton { get; set; }
+        public ToggleBindingInfo VerticalThrustersButton { get; set; }
+        public StandardBindingInfo BuggyPrimaryFireButton { get; set; }
+        public StandardBindingInfo BuggySecondaryFireButton { get; set; }
+        public PrimaryToggleBindingInfo AutoBreakBuggyButton { get; set; }
+        public StandardBindingInfo HeadlightsBuggyButton { get; set; }
+        public StandardBindingInfo ToggleBuggyTurretButton { get; set; }
+        public StandardBindingInfo SelectTargetBuggy { get; set; }
+        public ValueInfo MouseTurretXMode { get; set; }
+        public ValueInfo MouseTurretXDecay { get; set; }
+        public ValueInfo MouseTurretYMode { get; set; }
+        public ValueInfo MouseTurretYDecay { get; set; }
+        public AxisBindingInfo BuggyTurretYawAxisRaw { get; set; }
+        public StandardBindingInfo BuggyTurretYawLeftButton { get; set; }
+        public StandardBindingInfo BuggyTurretYawRightButton { get; set; }
+        public AxisBindingInfo BuggyTurretPitchAxisRaw { get; set; }
+        public StandardBindingInfo BuggyTurretPitchUpButton { get; set; }
+        public StandardBindingInfo BuggyTurretPitchDownButton { get; set; }
+        public AxisBindingInfo DriveSpeedAxis { get; set; }
+        public ValueInfo BuggyThrottleRange { get; set; }
+        public SecondaryToggleBindingInfo BuggyToggleReverseThrottleInput { get; set; }
+        public ValueInfo BuggyThrottleIncrement { get; set; }
+        public StandardBindingInfo IncreaseSpeedButtonMax { get; set; }
+        public StandardBindingInfo DecreaseSpeedButtonMax { get; set; }
+        public AxisBindingInfo IncreaseSpeedButtonPartial { get; set; }
+        public AxisBindingInfo DecreaseSpeedButtonPartial { get; set; }
+        public PrimaryBindingInfo IncreaseEnginesPowerBuggy { get; set; }
+        public PrimaryBindingInfo IncreaseWeaponsPowerBuggy { get; set; }
+        public PrimaryBindingInfo IncreaseSystemsPowerBuggy { get; set; }
+        public PrimaryBindingInfo ResetPowerDistributionBuggy { get; set; }
+        public SecondaryToggleBindingInfo ToggleCargoScoopBuggy { get; set; }
+        public PrimaryBindingInfo EjectAllCargoBuggy { get; set; }
+        public SecondaryToggleBindingInfo PhotoCameraToggleBuggy { get; set; }
+        public PrimaryBindingInfo UiFocusBuggy { get; set; }
+        public PrimaryBindingInfo FocusLeftPanelBuggy { get; set; }
+        public StandardBindingInfo FocusCommsPanelBuggy { get; set; }
+        public PrimaryBindingInfo QuickCommsPanelBuggy { get; set; }
+        public PrimaryBindingInfo FocusRadarPanelBuggy { get; set; }
+        public PrimaryBindingInfo FocusRightPanelBuggy { get; set; }
+        public PrimaryBindingInfo GalaxyMapOpenBuggy { get; set; }
+        public PrimaryBindingInfo SystemMapOpenBuggy { get; set; }
+        public ToggleBindingInfo HeadLookToggleBuggy { get; set; }
     }
 
-    public partial class PuneHedgehog
+    public partial class AxisBindingInfo
     {
         public Binding Binding { get; set; }
-        public TartuGecko Inverted { get; set; }
-        public TartuGecko Deadzone { get; set; }
+        public ValueInfo Inverted { get; set; }
+        public ValueInfo Deadzone { get; set; }
     }
 
     public partial class Binding
@@ -270,45 +270,45 @@ namespace EliteAPI.Bindings
         public string Key { get; set; }
     }
 
-    public partial class TartuGecko
+    public partial class ValueInfo
     {
         public string Value { get; set; }
     }
 
-    public partial class AutoBreakBuggyButton
+    public partial class PrimaryToggleBindingInfo
     {
-        public SecondaryInfo Primary { get; set; }
+        public PrimaryInfo Primary { get; set; }
         public Binding Secondary { get; set; }
-        public TartuGecko ToggleOn { get; set; }
+        public ValueInfo ToggleOn { get; set; }
     }
 
-    public partial class LivingstoneSouthernWhiteFacedOwl
-    {
-        public Binding Primary { get; set; }
-        public Binding Secondary { get; set; }
-    }
-
-    public partial class HammerfestPonies
+    public partial class PrimaryBindingInfo
     {
         public Binding Primary { get; set; }
         public SecondaryInfo Secondary { get; set; }
     }
 
-    public partial class BuggyToggleReverseThrottleInput
-    {
-        public Binding Primary { get; set; }
-        public SecondaryInfo Secondary { get; set; }
-        public TartuGecko ToggleOn { get; set; }
-    }
-
-    public partial class CamTranslateZHold
+    public partial class StandardBindingInfo
     {
         public Binding Primary { get; set; }
         public Binding Secondary { get; set; }
-        public TartuGecko ToggleOn { get; set; }
     }
 
-    public partial class PhotoCameraToggle
+    public partial class SecondaryToggleBindingInfo
+    {
+        public Binding Primary { get; set; }
+        public SecondaryInfo Secondary { get; set; }
+        public ValueInfo ToggleOn { get; set; }
+    }
+
+    public partial class ToggleBindingInfo
+    {
+        public Binding Primary { get; set; }
+        public Binding Secondary { get; set; }
+        public ValueInfo ToggleOn { get; set; }
+    }
+
+    public partial class StandardInfoBindingInfo
     {
         public PrimaryInfo Primary { get; set; }
         public SecondaryInfo Secondary { get; set; }

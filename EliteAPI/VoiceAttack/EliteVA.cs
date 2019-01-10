@@ -108,21 +108,18 @@ namespace EliteAPI.VoiceAttack
 
                         foreach (var key in values)
                         {
-                            string type = key.Value.GetType().ToString().Replace("System.", "").Replace("Collections.Generic", "").ToLower();
+                            string type = key.Value.GetType().ToString().Replace("System.", "").Replace("Collections.Generic.", "").ToLower();
                             string name = key.Key;
                             string value = key.Value.ToString();
 
                             if (type.Contains("int")) { _vaProxy.SetInt("EliteAPI.Event." + name, int.Parse(value)); }
                             else if (type.Contains("long")) { _vaProxy.SetInt("EliteAPI.Event." + name, int.Parse(value)); }
                             else if (type.Contains("string")) { _vaProxy.SetText("EliteAPI.Event." + name, value); }
-                            else if (type.Contains("decimal")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, Decimal.Parse(value)); }
-                            else if (type.Contains("double")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, Decimal.Parse(value)); }
-                            else if (type.Contains("float")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, Decimal.Parse(value)); }
+                            else if (type.Contains("decimal")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
+                            else if (type.Contains("double")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
+                            else if (type.Contains("float")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
                         }
-
-
                         _vaProxy.ExecuteCommand(eventName);
-
                     }
                     else { }
                 }

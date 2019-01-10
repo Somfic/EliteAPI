@@ -21,8 +21,6 @@ namespace Example
             api.OtherEvent += (sender, arg) => File.AppendAllText(@"C:\ICT\EliteAPI\NotAddedEvents.txt", JsonConvert.SerializeObject(arg) + Environment.NewLine);
             api.Start();
 
-            api.Bindings.Root.PitchUpButton.Primary.Key;
-
             Thread.Sleep(-1);
         }
     }

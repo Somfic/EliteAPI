@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bindings\Binds.cs" />
     <Compile Include="Classes\Body.cs" />
     <Compile Include="Classes\Cargo.cs" />
     <Compile Include="Classes\ModulesInfo.cs" />
@@ -76,7 +77,7 @@
     <Compile Include="EDDB\Price.cs" />
     <Compile Include="EDDB\Station.cs" />
     <Compile Include="EDDB\System.cs" />
-    <Compile Include="EliteVA.cs" />
+    <Compile Include="VoiceAttack\EliteVA.cs" />
     <Compile Include="Events\ApproachBody.cs" />
     <Compile Include="Events\ApproachSettlement.cs" />
     <Compile Include="Events\AsteroidCracked.cs" />

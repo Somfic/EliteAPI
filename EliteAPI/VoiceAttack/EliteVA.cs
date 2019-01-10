@@ -5,7 +5,7 @@ using System.Linq;
 
 using Newtonsoft.Json.Linq;
 
-namespace EliteAPI.EliteVA
+namespace EliteAPI.VoiceAttack
 {
     namespace EliteVA
     {
@@ -44,8 +44,6 @@ namespace EliteAPI.EliteVA
                     catch { vaProxy.WriteToLog("EliteVA - Could not load custom Player Journal folder from .ini file", "red"); journalPath = ""; }
                 }
 
-                tryagain:
-
                 if (string.IsNullOrWhiteSpace(journalPath))
                 {
                     if (!Directory.Exists($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"))
@@ -69,14 +67,10 @@ namespace EliteAPI.EliteVA
                     if (journalPath != "")
                     {
                         journalPath = "";
-                        goto tryagain;
                     }
                     else
                     {
-
-                    }
-                    {
-                        vaProxy.WriteToLog($"EliteVA - Could not start EliteVA (cannot find Player Journals)", "red");
+                        vaProxy.WriteToLog($"EliteVA - Could not start EliteVA (cannot find Player Journals).", "red");
                     }
                 }
                 else
@@ -197,7 +191,7 @@ namespace EliteAPI.EliteVA
                     vaProxy.SetDecimal("EliteAPI.FUEL", (decimal)EliteAPI.Status.Fuel);
                     vaProxy.SetDecimal("EliteAPI.CARGO", (decimal)EliteAPI.Status.Cargo);
                 }
-                catch (Exception ex) { vaProxy.WriteToLog("EliteVA - There was an error while setting some of the fields, make sure ED is running"); }
+                catch { vaProxy.WriteToLog("EliteVA - There was an error while setting some of the fields, make sure ED is running"); }
             }
         }
     }

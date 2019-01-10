@@ -1,4 +1,5 @@
-﻿using EliteAPI.EDDB;
+﻿using EliteAPI.Bindings;
+using EliteAPI.EDDB;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -6,12 +7,15 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace EliteAPI
 {
     public class EliteDangerousAPI
     {
         public EDDBApi EDDB;
+
+        public BindingsInfo Bindings;
 
         private DirectoryInfo _playerJournalDirectory;
 
@@ -100,6 +104,7 @@ namespace EliteAPI
         {
             isRunning = true;
             Task.Run(() => { InitProcessLog(); });
+            UpdateBindings(new DirectoryInfo($@"C:\Users\{Environment.UserName}\AppData\Local\Frontier Developments\Elite Dangerous\Options\Bindings"));
             this.LocationEvent += EliteDangerousAPI_LocationEvent;
             this.DockedEvent += EliteDangerousAPI_DockedEvent;
             this.FSDJumpEvent += EliteDangerousAPI_FSDJumpEvent;
@@ -147,6 +152,17 @@ namespace EliteAPI
 
                 Thread.Sleep(333);
             }
+        }
+
+        public void UpdateBindings(DirectoryInfo bindingsDirectory)
+        {
+            try {
+                string wantedFile = File.ReadAllText(bindingsDirectory.FullName + @"\StartPreset.start") + ".binds";
+                XmlDocument xml = new XmlDocument();
+                xml.LoadXml(wantedFile);
+                Bindings = JsonConvert.DeserializeObject<BindingsInfo>(JsonConvert.SerializeXmlNode(xml));
+            }
+            catch { }
         }
 
         /// <summary>

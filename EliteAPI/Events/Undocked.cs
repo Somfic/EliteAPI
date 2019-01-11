@@ -1,12 +1,50 @@
-﻿using System;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class UndockedInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class UndockedInfo
     {
-        public DateTime timestamp { get; set; }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("StationName")]
         public string StationName { get; set; }
+
+        [JsonProperty("StationType")]
         public string StationType { get; set; }
-        public long MarketID { get; set; }
+
+        [JsonProperty("MarketID")]
+        public long MarketId { get; set; }
+    }
+
+    public partial class UndockedInfo
+    {
+        public static UndockedInfo Process(string json) => EventHandler.InvokeUndockedEvent(JsonConvert.DeserializeObject<UndockedInfo>(json, EliteAPI.Events.UndockedConverter.Settings));
+    }
+
+    public static class UndockedSerializer
+    {
+        public static string ToJson(this UndockedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.UndockedConverter.Settings);
+    }
+
+    internal static class UndockedConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

@@ -1,30 +1,92 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class StoredModulesInfo
-    {
-        public class ItemInfo
-        {
-            public string Name { get; set; }
-            public string Name_Localised { get; set; }
-            public int StorageSlot { get; set; }
-            public string StarSystem { get; set; }
-            public object MarketID { get; set; }
-            public int TransferCost { get; set; }
-            public int TransferTime { get; set; }
-            public int BuyPrice { get; set; }
-            public bool Hot { get; set; }
-            public string EngineerModifications { get; set; }
-            public int Level { get; set; }
-            public double Quality { get; set; }
-        }
+    using System;
+    using System.Collections.Generic;
 
-        public DateTime timestamp { get; set; }
-        public long MarketID { get; set; }
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class StoredModulesInfo
+    {
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("MarketID")]
+        public long MarketId { get; set; }
+
+        [JsonProperty("StationName")]
         public string StationName { get; set; }
+
+        [JsonProperty("StarSystem")]
         public string StarSystem { get; set; }
-        public List<ItemInfo> Items { get; set; }
+
+        [JsonProperty("Items")]
+        public List<Item> Items { get; set; }
+    }
+
+    public partial class Item
+    {
+        [JsonProperty("Name")]
+        public string Name { get; set; }
+
+        [JsonProperty("Name_Localised")]
+        public string NameLocalised { get; set; }
+
+        [JsonProperty("StorageSlot")]
+        public long StorageSlot { get; set; }
+
+        [JsonProperty("StarSystem")]
+        public string StarSystem { get; set; }
+
+        [JsonProperty("MarketID")]
+        public long MarketId { get; set; }
+
+        [JsonProperty("TransferCost")]
+        public long TransferCost { get; set; }
+
+        [JsonProperty("TransferTime")]
+        public long TransferTime { get; set; }
+
+        [JsonProperty("BuyPrice")]
+        public long BuyPrice { get; set; }
+
+        [JsonProperty("Hot")]
+        public bool Hot { get; set; }
+
+        [JsonProperty("EngineerModifications", NullValueHandling = NullValueHandling.Ignore)]
+        public string EngineerModifications { get; set; }
+
+        [JsonProperty("Level", NullValueHandling = NullValueHandling.Ignore)]
+        public long? Level { get; set; }
+
+        [JsonProperty("Quality", NullValueHandling = NullValueHandling.Ignore)]
+        public double? Quality { get; set; }
+    }
+
+    public partial class StoredModulesInfo
+    {
+        public static StoredModulesInfo Process(string json) => EventHandler.InvokeStoredModulesEvent(JsonConvert.DeserializeObject<StoredModulesInfo>(json, EliteAPI.Events.StoredModulesConverter.Settings));
+    }
+
+    public static class StoredModulesSerializer
+    {
+        public static string ToJson(this StoredModulesInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.StoredModulesConverter.Settings);
+    }
+
+    internal static class StoredModulesConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

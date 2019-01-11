@@ -1,11 +1,44 @@
-using System;
-using System.Collections.Generic;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-  public class EndCrewSessionInfo
-  {
-      public DateTime timestamp { get; set; }
-      public Boolean OnCrime { get; set; }
-  }
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class EndCrewSessionInfo
+    {
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("OnCrime")]
+        public bool OnCrime { get; set; }
+    }
+
+    public partial class EndCrewSessionInfo
+    {
+        public static EndCrewSessionInfo Process(string json) => EventHandler.InvokeEndCrewSessionEvent(JsonConvert.DeserializeObject<EndCrewSessionInfo>(json, EliteAPI.Events.EndCrewSessionConverter.Settings));
+    }
+
+    public static class EndCrewSessionSerializer
+    {
+        public static string ToJson(this EndCrewSessionInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.EndCrewSessionConverter.Settings);
+    }
+
+    internal static class EndCrewSessionConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
+    }
 }

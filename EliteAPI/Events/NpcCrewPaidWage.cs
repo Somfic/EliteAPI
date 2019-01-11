@@ -1,12 +1,50 @@
-﻿using System;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class NpcCrewPaidWageInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class NpcCrewPaidWageInfo
     {
-        public DateTime timestamp { get; set; }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("NpcCrewName")]
         public string NpcCrewName { get; set; }
-        public int NpcCrewId { get; set; }
-        public int Amount { get; set; }
+
+        [JsonProperty("NpcCrewId")]
+        public long NpcCrewId { get; set; }
+
+        [JsonProperty("Amount")]
+        public long Amount { get; set; }
+    }
+
+    public partial class NpcCrewPaidWageInfo
+    {
+        public static NpcCrewPaidWageInfo Process(string json) => EventHandler.InvokeNpcCrewPaidWageEvent(JsonConvert.DeserializeObject<NpcCrewPaidWageInfo>(json, EliteAPI.Events.NpcCrewPaidWageConverter.Settings));
+    }
+
+    public static class NpcCrewPaidWageSerializer
+    {
+        public static string ToJson(this NpcCrewPaidWageInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.NpcCrewPaidWageConverter.Settings);
+    }
+
+    internal static class NpcCrewPaidWageConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

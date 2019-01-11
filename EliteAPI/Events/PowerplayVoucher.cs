@@ -1,0 +1,47 @@
+namespace EliteAPI.Events
+{
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class PowerplayVoucherInfo
+    {
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("Power")]
+        public string Power { get; set; }
+
+        [JsonProperty("Systems")]
+        public List<string> Systems { get; set; }
+    }
+
+    public partial class PowerplayVoucherInfo
+    {
+        public static PowerplayVoucherInfo Process(string json) => EventHandler.InvokePowerplayVoucherEvent(JsonConvert.DeserializeObject<PowerplayVoucherInfo>(json, EliteAPI.Events.PowerplayVoucherConverter.Settings));
+    }
+
+    public static class PowerplayVoucherSerializer
+    {
+        public static string ToJson(this PowerplayVoucherInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.PowerplayVoucherConverter.Settings);
+    }
+
+    internal static class PowerplayVoucherConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
+    }
+}

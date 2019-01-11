@@ -1,9 +1,41 @@
-﻿using System;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class ShutdownInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class ShutdownInfo
     {
-        public DateTime timestamp { get; set; }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+    }
+
+    public partial class ShutdownInfo
+    {
+        public static ShutdownInfo Process(string json) => EventHandler.InvokeShutdownEvent(JsonConvert.DeserializeObject<ShutdownInfo>(json, EliteAPI.Events.ShutdownConverter.Settings));
+    }
+
+    public static class ShutdownSerializer
+    {
+        public static string ToJson(this ShutdownInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ShutdownConverter.Settings);
+    }
+
+    internal static class ShutdownConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

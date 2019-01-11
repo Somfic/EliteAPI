@@ -1,13 +1,56 @@
-﻿using System;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class InterdictionInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class InterdictionInfo
     {
-        public DateTime timestamp { get; set; }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("Success")]
         public bool Success { get; set; }
-        public string Interdicted { get; set; }
+
+        [JsonProperty("IsPlayer")]
         public bool IsPlayer { get; set; }
-        public int CombatRank { get; set; }
+
+        [JsonProperty("Interdicted")]
+        public string Interdicted { get; set; }
+
+        [JsonProperty("Faction")]
+        public string Faction { get; set; }
+
+        [JsonProperty("Power")]
+        public string Power { get; set; }
+    }
+
+    public partial class InterdictionInfo
+    {
+        public static InterdictionInfo Process(string json) => EventHandler.InvokeInterdictionEvent(JsonConvert.DeserializeObject<InterdictionInfo>(json, EliteAPI.Events.InterdictionConverter.Settings));
+    }
+
+    public static class InterdictionSerializer
+    {
+        public static string ToJson(this InterdictionInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.InterdictionConverter.Settings);
+    }
+
+    internal static class InterdictionConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

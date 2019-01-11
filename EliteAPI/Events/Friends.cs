@@ -1,11 +1,47 @@
-﻿using System;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class FriendsInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class FriendsInfo
     {
-        public DateTime timestamp { get; set; }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("Status")]
         public string Status { get; set; }
+
+        [JsonProperty("Name")]
         public string Name { get; set; }
+    }
+
+    public partial class FriendsInfo
+    {
+        public static FriendsInfo Process(string json) => EventHandler.InvokeFriendsEvent(JsonConvert.DeserializeObject<FriendsInfo>(json, EliteAPI.Events.FriendsConverter.Settings));
+    }
+
+    public static class FriendsSerializer
+    {
+        public static string ToJson(this FriendsInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.FriendsConverter.Settings);
+    }
+
+    internal static class FriendsConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

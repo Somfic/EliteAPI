@@ -1,10 +1,44 @@
-﻿using System;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class BuyAmmoInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class BuyAmmoInfo
     {
-        public DateTime timestamp { get; set; }
-        public int Cost { get; set; }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("Cost")]
+        public long Cost { get; set; }
+    }
+
+    public partial class BuyAmmoInfo
+    {
+        public static BuyAmmoInfo Process(string json) => EventHandler.InvokeBuyAmmoEvent(JsonConvert.DeserializeObject<BuyAmmoInfo>(json, EliteAPI.Events.BuyAmmoConverter.Settings));
+    }
+
+    public static class BuyAmmoSerializer
+    {
+        public static string ToJson(this BuyAmmoInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.BuyAmmoConverter.Settings);
+    }
+
+    internal static class BuyAmmoConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

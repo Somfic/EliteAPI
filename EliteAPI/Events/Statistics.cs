@@ -1,147 +1,320 @@
-﻿using System;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class StatisticsInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class StatisticsInfo
     {
-        public class BankAccountInfo
-        {
-            public int Current_Wealth { get; set; }
-            public int Spent_On_Ships { get; set; }
-            public long Spent_On_Outfitting { get; set; }
-            public int Spent_On_Repairs { get; set; }
-            public int Spent_On_Fuel { get; set; }
-            public int Spent_On_Ammo_Consumables { get; set; }
-            public int Insurance_Claims { get; set; }
-            public int Spent_On_Insurance { get; set; }
-        }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
 
-        public class CombatInfo
-        {
-            public int Bounties_Claimed { get; set; }
-            public int Bounty_Hunting_Profit { get; set; }
-            public int Combat_Bonds { get; set; }
-            public int Combat_Bond_Profits { get; set; }
-            public int Assassinations { get; set; }
-            public int Assassination_Profits { get; set; }
-            public int Highest_Single_Reward { get; set; }
-            public int Skimmers_Killed { get; set; }
-        }
+        [JsonProperty("event")]
+        public string Event { get; set; }
 
-        public class CrimeInfo
-        {
-            public int Notoriety { get; set; }
-            public int Fines { get; set; }
-            public int Total_Fines { get; set; }
-            public int Bounties_Received { get; set; }
-            public int Total_Bounties { get; set; }
-            public int Highest_Bounty { get; set; }
-        }
+        [JsonProperty("Bank_Account")]
+        public Dictionary<string, long> BankAccount { get; set; }
 
-        public class SmugglingInfo
-        {
-            public int Black_Markets_Traded_With { get; set; }
-            public int Black_Markets_Profits { get; set; }
-            public int Resources_Smuggled { get; set; }
-            public int Average_Profit { get; set; }
-            public int Highest_Single_Transaction { get; set; }
-        }
+        [JsonProperty("Combat")]
+        public Combat Combat { get; set; }
 
-        public class TradingInfo
-        {
-            public int Markets_Traded_With { get; set; }
-            public int Market_Profits { get; set; }
-            public int Resources_Traded { get; set; }
-            public double Average_Profit { get; set; }
-            public int Highest_Single_Transaction { get; set; }
-        }
+        [JsonProperty("Crime")]
+        public Crime Crime { get; set; }
 
-        public class MiningInfo
-        {
-            public int Mining_Profits { get; set; }
-            public int Quantity_Mined { get; set; }
-            public int Materials_Collected { get; set; }
-        }
+        [JsonProperty("Smuggling")]
+        public Smuggling Smuggling { get; set; }
 
-        public class ExplorationInfo
-        {
-            public int Systems_Visited { get; set; }
-            public int Exploration_Profits { get; set; }
-            public int Planets_Scanned_To_Level_2 { get; set; }
-            public int Planets_Scanned_To_Level_3 { get; set; }
-            public int Highest_Payout { get; set; }
-            public int Total_Hyperspace_Distance { get; set; }
-            public int Total_Hyperspace_Jumps { get; set; }
-            public double Greatest_Distance_From_Start { get; set; }
-            public int Time_Played { get; set; }
-        }
+        [JsonProperty("Trading")]
+        public Trading Trading { get; set; }
 
-        public class PassengersInfo
-        {
-            public int Passengers_Missions_Accepted { get; set; }
-            public int Passengers_Missions_Disgruntled { get; set; }
-            public int Passengers_Missions_Bulk { get; set; }
-            public int Passengers_Missions_VIP { get; set; }
-            public int Passengers_Missions_Delivered { get; set; }
-            public int Passengers_Missions_Ejected { get; set; }
-        }
+        [JsonProperty("Mining")]
+        public Mining Mining { get; set; }
 
-        public class SearchAndRescueInfo
-        {
-            public int SearchRescue_Traded { get; set; }
-            public int SearchRescue_Profit { get; set; }
-            public int SearchRescue_Count { get; set; }
-        }
+        [JsonProperty("Exploration")]
+        public Dictionary<string, double> Exploration { get; set; }
 
-        public class CraftingInfo
-        {
-            public int Count_Of_Used_Engineers { get; set; }
-            public int Recipes_Generated { get; set; }
-            public int Recipes_Generated_Rank_1 { get; set; }
-            public int Recipes_Generated_Rank_2 { get; set; }
-            public int Recipes_Generated_Rank_3 { get; set; }
-            public int Recipes_Generated_Rank_4 { get; set; }
-            public int Recipes_Generated_Rank_5 { get; set; }
-        }
+        [JsonProperty("Passengers")]
+        public Passengers Passengers { get; set; }
 
-        public class CrewInfo
-        {
-            public int NpcCrew_TotalWages { get; set; }
-            public int NpcCrew_Hired { get; set; }
-            public int NpcCrew_Fired { get; set; }
-            public int NpcCrew_Died { get; set; }
-        }
+        [JsonProperty("Search_And_Rescue")]
+        public SearchAndRescue SearchAndRescue { get; set; }
 
-        public class MulticrewInfo
-        {
-            public int Multicrew_Time_Total { get; set; }
-            public int Multicrew_Gunner_Time_Total { get; set; }
-            public int Multicrew_Fighter_Time_Total { get; set; }
-            public int Multicrew_Credits_Total { get; set; }
-            public int Multicrew_Fines_Total { get; set; }
-        }
+        [JsonProperty("TG_ENCOUNTERS")]
+        public TgEncounters TgEncounters { get; set; }
 
-        public class MaterialTraderStatsInfo
-        {
-            public int Trades_Completed { get; set; }
-            public int Materials_Traded { get; set; }
-            public int Raw_Materials_Traded { get; set; }
-            public int Grade_2_Materials_Traded { get; set; }
-        }
+        [JsonProperty("Crafting")]
+        public Crafting Crafting { get; set; }
 
-        public DateTime timestamp { get; set; }
-        public BankAccountInfo Bank_Account { get; set; }
-        public CombatInfo Combat { get; set; }
-        public CrimeInfo Crime { get; set; }
-        public SmugglingInfo Smuggling { get; set; }
-        public TradingInfo Trading { get; set; }
-        public MiningInfo Mining { get; set; }
-        public ExplorationInfo Exploration { get; set; }
-        public PassengersInfo Passengers { get; set; }
-        public SearchAndRescueInfo Search_And_Rescue { get; set; }
-        public CraftingInfo Crafting { get; set; }
-        public CrewInfo Crew { get; set; }
-        public MulticrewInfo Multicrew { get; set; }
-        public MaterialTraderStatsInfo Material_Trader_Stats { get; set; }
+        [JsonProperty("Crew")]
+        public Crew Crew { get; set; }
+
+        [JsonProperty("Multicrew")]
+        public Multicrew Multicrew { get; set; }
+
+        [JsonProperty("Material_Trader_Stats")]
+        public MaterialTraderStats MaterialTraderStats { get; set; }
+
+        [JsonProperty("CQC")]
+        public Dictionary<string, double> Cqc { get; set; }
+    }
+
+    public partial class Combat
+    {
+        [JsonProperty("Bounties_Claimed")]
+        public long BountiesClaimed { get; set; }
+
+        [JsonProperty("Bounty_Hunting_Profit")]
+        public double BountyHuntingProfit { get; set; }
+
+        [JsonProperty("Combat_Bonds")]
+        public long CombatBonds { get; set; }
+
+        [JsonProperty("Combat_Bond_Profits")]
+        public long CombatBondProfits { get; set; }
+
+        [JsonProperty("Assassinations")]
+        public long Assassinations { get; set; }
+
+        [JsonProperty("Assassination_Profits")]
+        public long AssassinationProfits { get; set; }
+
+        [JsonProperty("Highest_Single_Reward")]
+        public long HighestSingleReward { get; set; }
+
+        [JsonProperty("Skimmers_Killed")]
+        public long SkimmersKilled { get; set; }
+    }
+
+    public partial class Crafting
+    {
+        [JsonProperty("Count_Of_Used_Engineers")]
+        public long CountOfUsedEngineers { get; set; }
+
+        [JsonProperty("Recipes_Generated")]
+        public long RecipesGenerated { get; set; }
+
+        [JsonProperty("Recipes_Generated_Rank_1")]
+        public long RecipesGeneratedRank1 { get; set; }
+
+        [JsonProperty("Recipes_Generated_Rank_2")]
+        public long RecipesGeneratedRank2 { get; set; }
+
+        [JsonProperty("Recipes_Generated_Rank_3")]
+        public long RecipesGeneratedRank3 { get; set; }
+
+        [JsonProperty("Recipes_Generated_Rank_4")]
+        public long RecipesGeneratedRank4 { get; set; }
+
+        [JsonProperty("Recipes_Generated_Rank_5")]
+        public long RecipesGeneratedRank5 { get; set; }
+    }
+
+    public partial class Crew
+    {
+        [JsonProperty("NpcCrew_TotalWages")]
+        public long NpcCrewTotalWages { get; set; }
+
+        [JsonProperty("NpcCrew_Hired")]
+        public long NpcCrewHired { get; set; }
+
+        [JsonProperty("NpcCrew_Fired")]
+        public long NpcCrewFired { get; set; }
+
+        [JsonProperty("NpcCrew_Died")]
+        public long NpcCrewDied { get; set; }
+    }
+
+    public partial class Crime
+    {
+        [JsonProperty("Notoriety")]
+        public long Notoriety { get; set; }
+
+        [JsonProperty("Fines")]
+        public long Fines { get; set; }
+
+        [JsonProperty("Total_Fines")]
+        public long TotalFines { get; set; }
+
+        [JsonProperty("Bounties_Received")]
+        public long BountiesReceived { get; set; }
+
+        [JsonProperty("Total_Bounties")]
+        public long TotalBounties { get; set; }
+
+        [JsonProperty("Highest_Bounty")]
+        public long HighestBounty { get; set; }
+    }
+
+    public partial class MaterialTraderStats
+    {
+        [JsonProperty("Trades_Completed")]
+        public long TradesCompleted { get; set; }
+
+        [JsonProperty("Materials_Traded")]
+        public long MaterialsTraded { get; set; }
+
+        [JsonProperty("Encoded_Materials_Traded")]
+        public long EncodedMaterialsTraded { get; set; }
+
+        [JsonProperty("Raw_Materials_Traded")]
+        public long RawMaterialsTraded { get; set; }
+
+        [JsonProperty("Grade_1_Materials_Traded")]
+        public long Grade1_MaterialsTraded { get; set; }
+
+        [JsonProperty("Grade_2_Materials_Traded")]
+        public long Grade2_MaterialsTraded { get; set; }
+
+        [JsonProperty("Grade_3_Materials_Traded")]
+        public long Grade3_MaterialsTraded { get; set; }
+
+        [JsonProperty("Grade_4_Materials_Traded")]
+        public long Grade4_MaterialsTraded { get; set; }
+
+        [JsonProperty("Grade_5_Materials_Traded")]
+        public long Grade5_MaterialsTraded { get; set; }
+    }
+
+    public partial class Mining
+    {
+        [JsonProperty("Mining_Profits")]
+        public long MiningProfits { get; set; }
+
+        [JsonProperty("Quantity_Mined")]
+        public long QuantityMined { get; set; }
+
+        [JsonProperty("Materials_Collected")]
+        public long MaterialsCollected { get; set; }
+    }
+
+    public partial class Multicrew
+    {
+        [JsonProperty("Multicrew_Time_Total")]
+        public long MulticrewTimeTotal { get; set; }
+
+        [JsonProperty("Multicrew_Gunner_Time_Total")]
+        public long MulticrewGunnerTimeTotal { get; set; }
+
+        [JsonProperty("Multicrew_Fighter_Time_Total")]
+        public long MulticrewFighterTimeTotal { get; set; }
+
+        [JsonProperty("Multicrew_Credits_Total")]
+        public long MulticrewCreditsTotal { get; set; }
+
+        [JsonProperty("Multicrew_Fines_Total")]
+        public long MulticrewFinesTotal { get; set; }
+    }
+
+    public partial class Passengers
+    {
+        [JsonProperty("Passengers_Missions_Accepted")]
+        public long PassengersMissionsAccepted { get; set; }
+
+        [JsonProperty("Passengers_Missions_Disgruntled")]
+        public long PassengersMissionsDisgruntled { get; set; }
+
+        [JsonProperty("Passengers_Missions_Bulk")]
+        public long PassengersMissionsBulk { get; set; }
+
+        [JsonProperty("Passengers_Missions_VIP")]
+        public long PassengersMissionsVip { get; set; }
+
+        [JsonProperty("Passengers_Missions_Delivered")]
+        public long PassengersMissionsDelivered { get; set; }
+
+        [JsonProperty("Passengers_Missions_Ejected")]
+        public long PassengersMissionsEjected { get; set; }
+    }
+
+    public partial class SearchAndRescue
+    {
+        [JsonProperty("SearchRescue_Traded")]
+        public long SearchRescueTraded { get; set; }
+
+        [JsonProperty("SearchRescue_Profit")]
+        public long SearchRescueProfit { get; set; }
+
+        [JsonProperty("SearchRescue_Count")]
+        public long SearchRescueCount { get; set; }
+    }
+
+    public partial class Smuggling
+    {
+        [JsonProperty("Black_Markets_Traded_With")]
+        public long BlackMarketsTradedWith { get; set; }
+
+        [JsonProperty("Black_Markets_Profits")]
+        public long BlackMarketsProfits { get; set; }
+
+        [JsonProperty("Resources_Smuggled")]
+        public long ResourcesSmuggled { get; set; }
+
+        [JsonProperty("Average_Profit")]
+        public double AverageProfit { get; set; }
+
+        [JsonProperty("Highest_Single_Transaction")]
+        public long HighestSingleTransaction { get; set; }
+    }
+
+    public partial class TgEncounters
+    {
+        [JsonProperty("TG_ENCOUNTER_TOTAL")]
+        public long TgEncounterTotal { get; set; }
+
+        [JsonProperty("TG_ENCOUNTER_TOTAL_LAST_SYSTEM")]
+        public string TgEncounterTotalLastSystem { get; set; }
+
+        [JsonProperty("TG_ENCOUNTER_TOTAL_LAST_TIMESTAMP")]
+        public string TgEncounterTotalLastTimestamp { get; set; }
+
+        [JsonProperty("TG_ENCOUNTER_TOTAL_LAST_SHIP")]
+        public string TgEncounterTotalLastShip { get; set; }
+
+        [JsonProperty("TG_SCOUT_COUNT")]
+        public long TgScoutCount { get; set; }
+    }
+
+    public partial class Trading
+    {
+        [JsonProperty("Markets_Traded_With")]
+        public long MarketsTradedWith { get; set; }
+
+        [JsonProperty("Market_Profits")]
+        public long MarketProfits { get; set; }
+
+        [JsonProperty("Resources_Traded")]
+        public long ResourcesTraded { get; set; }
+
+        [JsonProperty("Average_Profit")]
+        public double AverageProfit { get; set; }
+
+        [JsonProperty("Highest_Single_Transaction")]
+        public long HighestSingleTransaction { get; set; }
+    }
+
+    public partial class StatisticsInfo
+    {
+        public static StatisticsInfo Process(string json) => EventHandler.InvokeStatisticsEvent(JsonConvert.DeserializeObject<StatisticsInfo>(json, EliteAPI.Events.StatisticsConverter.Settings));
+    }
+
+    public static class StatisticsSerializer
+    {
+        public static string ToJson(this StatisticsInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.StatisticsConverter.Settings);
+    }
+
+    internal static class StatisticsConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

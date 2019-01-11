@@ -1,12 +1,47 @@
-using System;
-using System.Collections.Generic;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class BuyTradeDataInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class BuyTradeDataInfo
     {
-        public DateTime timestamp { get; set; }
-        public String System { get; set; }
-        public Int64 Cost { get; set; }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("System")]
+        public string System { get; set; }
+
+        [JsonProperty("Cost")]
+        public long Cost { get; set; }
+    }
+
+    public partial class BuyTradeDataInfo
+    {
+        public static BuyTradeDataInfo Process(string json) => EventHandler.InvokeBuyTradeDataEvent(JsonConvert.DeserializeObject<BuyTradeDataInfo>(json, EliteAPI.Events.BuyTradeDataConverter.Settings));
+    }
+
+    public static class BuyTradeDataSerializer
+    {
+        public static string ToJson(this BuyTradeDataInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.BuyTradeDataConverter.Settings);
+    }
+
+    internal static class BuyTradeDataConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

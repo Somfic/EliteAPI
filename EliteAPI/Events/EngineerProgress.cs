@@ -1,21 +1,62 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class EngineerProgressInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class EngineerProgressInfo
     {
-        public DateTime timestamp { get; set; }
-        public List<EngineerInfo> Engineers { get; set; }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
 
-        public class EngineerInfo
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("Engineers")]
+        public List<Engineer> Engineers { get; set; }
+    }
+
+    public partial class Engineer
+    {
+        [JsonProperty("Engineer")]
+        public string EngineerEngineer { get; set; }
+
+        [JsonProperty("EngineerID")]
+        public long EngineerId { get; set; }
+
+        [JsonProperty("Progress")]
+        public string Progress { get; set; }
+
+        [JsonProperty("RankProgress", NullValueHandling = NullValueHandling.Ignore)]
+        public long? RankProgress { get; set; }
+
+        [JsonProperty("Rank", NullValueHandling = NullValueHandling.Ignore)]
+        public long? Rank { get; set; }
+    }
+
+    public partial class EngineerProgressInfo
+    {
+        public static EngineerProgressInfo Process(string json) => EventHandler.InvokeEngineerProgressEvent(JsonConvert.DeserializeObject<EngineerProgressInfo>(json, EliteAPI.Events.EngineerProgressConverter.Settings));
+    }
+
+    public static class EngineerProgressSerializer
+    {
+        public static string ToJson(this EngineerProgressInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.EngineerProgressConverter.Settings);
+    }
+
+    internal static class EngineerProgressConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
-            public string Engineer { get; set; }
-            public int EngineerID { get; set; }
-            public string Progress { get; set; }
-            public int RankProgress { get; set; }
-            public int Rank { get; set; }
-        }
-
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

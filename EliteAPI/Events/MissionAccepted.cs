@@ -1,21 +1,89 @@
-﻿using System;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class MissionAcceptedInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class MissionAcceptedInfo
     {
-        public DateTime timestamp { get; set; }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("Faction")]
         public string Faction { get; set; }
+
+        [JsonProperty("Name")]
         public string Name { get; set; }
+
+        [JsonProperty("LocalisedName")]
         public string LocalisedName { get; set; }
-        public string TargetFaction { get; set; }
+
+        [JsonProperty("Commodity")]
+        public string Commodity { get; set; }
+
+        [JsonProperty("Commodity_Localised")]
+        public string CommodityLocalised { get; set; }
+
+        [JsonProperty("Count")]
+        public long Count { get; set; }
+
+        [JsonProperty("DestinationSystem")]
         public string DestinationSystem { get; set; }
-        public string DestinationStation { get; set; }
+
+        [JsonProperty("Expiry")]
         public DateTime Expiry { get; set; }
-        public bool Wing { get; set; }
+
+        [JsonProperty("Influence")]
         public string Influence { get; set; }
+
+        [JsonProperty("Reputation")]
         public string Reputation { get; set; }
-        public int Reward { get; set; }
-        public int MissionID { get; set; }
+
+        [JsonProperty("Reward")]
+        public long Reward { get; set; }
+
+        [JsonProperty("PassengerCount")]
+        public long PassengerCount { get; set; }
+
+        [JsonProperty("PassengerVIPs")]
+        public bool PassengerViPs { get; set; }
+
+        [JsonProperty("PassengerWanted")]
+        public bool PassengerWanted { get; set; }
+
+        [JsonProperty("PassengerType")]
+        public string PassengerType { get; set; }
+
+        [JsonProperty("MissionID")]
+        public long MissionId { get; set; }
+    }
+
+    public partial class MissionAcceptedInfo
+    {
+        public static MissionAcceptedInfo Process(string json) => EventHandler.InvokeMissionAcceptedEvent(JsonConvert.DeserializeObject<MissionAcceptedInfo>(json, EliteAPI.Events.MissionAcceptedConverter.Settings));
+    }
+
+    public static class MissionAcceptedSerializer
+    {
+        public static string ToJson(this MissionAcceptedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.MissionAcceptedConverter.Settings);
+    }
+
+    internal static class MissionAcceptedConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

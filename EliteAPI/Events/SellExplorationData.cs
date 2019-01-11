@@ -1,15 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class SellExplorationDataInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class SellExplorationDataInfo
     {
-        public DateTime timestamp { get; set; }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("Systems")]
         public List<string> Systems { get; set; }
+
+        [JsonProperty("Discovered")]
         public List<string> Discovered { get; set; }
-        public int BaseValue { get; set; }
-        public int Bonus { get; set; }
-        public int TotalEarnings { get; set; }
+
+        [JsonProperty("BaseValue")]
+        public long BaseValue { get; set; }
+
+        [JsonProperty("Bonus")]
+        public long Bonus { get; set; }
+
+        [JsonProperty("TotalEarnings")]
+        public long TotalEarnings { get; set; }
+    }
+
+    public partial class SellExplorationDataInfo
+    {
+        public static SellExplorationDataInfo Process(string json) => EventHandler.InvokeSellExplorationDataEvent(JsonConvert.DeserializeObject<SellExplorationDataInfo>(json, EliteAPI.Events.SellExplorationDataConverter.Settings));
+    }
+
+    public static class SellExplorationDataSerializer
+    {
+        public static string ToJson(this SellExplorationDataInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.SellExplorationDataConverter.Settings);
+    }
+
+    internal static class SellExplorationDataConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

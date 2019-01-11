@@ -1,49 +1,161 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class LocationInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class LocationInfo
     {
-        public class RecoveringStateInfo
-        {
-            public string State { get; set; }
-            public int Trend { get; set; }
-        }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
 
-        public class FactionInfo
-        {
-            public string Name { get; set; }
-            public string FactionState { get; set; }
-            public string Government { get; set; }
-            public double Influence { get; set; }
-            public string Allegiance { get; set; }
-            public List<RecoveringStateInfo> RecoveringStates { get; set; }
-        }
+        [JsonProperty("event")]
+        public string Event { get; set; }
 
-        public DateTime timestamp { get; set; }
+        [JsonProperty("Docked")]
         public bool Docked { get; set; }
-        public long MarketID { get; set; }
+
+        [JsonProperty("MarketID")]
+        public long MarketId { get; set; }
+
+        [JsonProperty("StationName")]
         public string StationName { get; set; }
+
+        [JsonProperty("StationType")]
         public string StationType { get; set; }
+
+        [JsonProperty("StarSystem")]
         public string StarSystem { get; set; }
+
+        [JsonProperty("SystemAddress")]
         public long SystemAddress { get; set; }
+
+        [JsonProperty("StarPos")]
         public List<double> StarPos { get; set; }
+
+        [JsonProperty("SystemAllegiance")]
         public string SystemAllegiance { get; set; }
+
+        [JsonProperty("SystemEconomy")]
         public string SystemEconomy { get; set; }
-        public string SystemEconomy_Localised { get; set; }
+
+        [JsonProperty("SystemEconomy_Localised")]
+        public string SystemEconomyLocalised { get; set; }
+
+        [JsonProperty("SystemSecondEconomy")]
         public string SystemSecondEconomy { get; set; }
-        public string SystemSecondEconomy_Localised { get; set; }
+
+        [JsonProperty("SystemSecondEconomy_Localised")]
+        public string SystemSecondEconomyLocalised { get; set; }
+
+        [JsonProperty("SystemGovernment")]
         public string SystemGovernment { get; set; }
-        public string SystemGovernment_Localised { get; set; }
+
+        [JsonProperty("SystemGovernment_Localised")]
+        public string SystemGovernmentLocalised { get; set; }
+
+        [JsonProperty("SystemSecurity")]
         public string SystemSecurity { get; set; }
-        public string SystemSecurity_Localised { get; set; }
-        public ulong Population { get; set; }
+
+        [JsonProperty("SystemSecurity_Localised")]
+        public string SystemSecurityLocalised { get; set; }
+
+        [JsonProperty("Population")]
+        public long Population { get; set; }
+
+        [JsonProperty("Body")]
         public string Body { get; set; }
-        public int BodyID { get; set; }
+
+        [JsonProperty("BodyID")]
+        public long BodyId { get; set; }
+
+        [JsonProperty("BodyType")]
         public string BodyType { get; set; }
-        public List<FactionInfo> Factions { get; set; }
+
+        [JsonProperty("Factions")]
+        public List<Faction> Factions { get; set; }
+
+        [JsonProperty("SystemFaction")]
         public string SystemFaction { get; set; }
+
+        [JsonProperty("FactionState")]
         public string FactionState { get; set; }
+    }
+
+    public partial class Faction
+    {
+        [JsonProperty("Name")]
+        public string Name { get; set; }
+
+        [JsonProperty("FactionState")]
+        public string FactionState { get; set; }
+
+        [JsonProperty("Government")]
+        public string Government { get; set; }
+
+        [JsonProperty("Influence")]
+        public double Influence { get; set; }
+
+        [JsonProperty("Allegiance")]
+        public string Allegiance { get; set; }
+
+        [JsonProperty("Happiness")]
+        public string Happiness { get; set; }
+
+        [JsonProperty("Happiness_Localised", NullValueHandling = NullValueHandling.Ignore)]
+        public string HappinessLocalised { get; set; }
+
+        [JsonProperty("MyReputation")]
+        public double MyReputation { get; set; }
+
+        [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
+        public List<ActiveState> ActiveStates { get; set; }
+
+        [JsonProperty("PendingStates", NullValueHandling = NullValueHandling.Ignore)]
+        public List<IngState> PendingStates { get; set; }
+
+        [JsonProperty("RecoveringStates", NullValueHandling = NullValueHandling.Ignore)]
+        public List<IngState> RecoveringStates { get; set; }
+    }
+
+    public partial class ActiveState
+    {
+        [JsonProperty("State")]
+        public string State { get; set; }
+    }
+
+    public partial class IngState
+    {
+        [JsonProperty("State")]
+        public string State { get; set; }
+
+        [JsonProperty("Trend")]
+        public long Trend { get; set; }
+    }
+
+    public partial class LocationInfo
+    {
+        public static LocationInfo Process(string json) => EventHandler.InvokeLocationEvent(JsonConvert.DeserializeObject<LocationInfo>(json, EliteAPI.Events.LocationConverter.Settings));
+    }
+
+    public static class LocationSerializer
+    {
+        public static string ToJson(this LocationInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.LocationConverter.Settings);
+    }
+
+    internal static class LocationConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

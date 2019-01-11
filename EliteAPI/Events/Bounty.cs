@@ -1,20 +1,65 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class BountyInfo
-    {
-        public class RewardInfo
-        {
-            public string Faction { get; set; }
-            public int Reward { get; set; }
-        }
+    using System;
+    using System.Collections.Generic;
 
-        public DateTime timestamp { get; set; }
-        public List<RewardInfo> Rewards { get; set; }
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class BountyInfo
+    {
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("Rewards")]
+        public List<Reward> Rewards { get; set; }
+
+        [JsonProperty("Target")]
         public string Target { get; set; }
-        public int TotalReward { get; set; }
+
+        [JsonProperty("TotalReward")]
+        public long TotalReward { get; set; }
+
+        [JsonProperty("VictimFaction")]
         public string VictimFaction { get; set; }
+
+        [JsonProperty("SharedWithOthers")]
+        public long SharedWithOthers { get; set; }
+    }
+
+    public partial class Reward
+    {
+        [JsonProperty("Faction")]
+        public string Faction { get; set; }
+
+        [JsonProperty("Reward")]
+        public long RewardReward { get; set; }
+    }
+
+    public partial class BountyInfo
+    {
+        public static BountyInfo Process(string json) => EventHandler.InvokeBountyEvent(JsonConvert.DeserializeObject<BountyInfo>(json, EliteAPI.Events.BountyConverter.Settings));
+    }
+
+    public static class BountySerializer
+    {
+        public static string ToJson(this BountyInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.BountyConverter.Settings);
+    }
+
+    internal static class BountyConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

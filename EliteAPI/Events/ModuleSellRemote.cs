@@ -1,16 +1,62 @@
-﻿using System;
-
-namespace EliteAPI
+namespace EliteAPI.Events
 {
-    public class ModuleSellRemoteInfo
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class ModuleSellRemoteInfo
     {
-        public DateTime timestamp { get; set; }
-        public int StorageSlot { get; set; }
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        [JsonProperty("event")]
+        public string Event { get; set; }
+
+        [JsonProperty("StorageSlot")]
+        public long StorageSlot { get; set; }
+
+        [JsonProperty("SellItem")]
         public string SellItem { get; set; }
-        public string SellItem_Localised { get; set; }
-        public int ServerId { get; set; }
-        public int SellPrice { get; set; }
+
+        [JsonProperty("SellItem_Localised")]
+        public string SellItemLocalised { get; set; }
+
+        [JsonProperty("ServerId")]
+        public long ServerId { get; set; }
+
+        [JsonProperty("SellPrice")]
+        public long SellPrice { get; set; }
+
+        [JsonProperty("Ship")]
         public string Ship { get; set; }
-        public int ShipID { get; set; }
+
+        [JsonProperty("ShipID")]
+        public long ShipId { get; set; }
+    }
+
+    public partial class ModuleSellRemoteInfo
+    {
+        public static ModuleSellRemoteInfo Process(string json) => EventHandler.InvokeModuleSellRemoteEvent(JsonConvert.DeserializeObject<ModuleSellRemoteInfo>(json, EliteAPI.Events.ModuleSellRemoteConverter.Settings));
+    }
+
+    public static class ModuleSellRemoteSerializer
+    {
+        public static string ToJson(this ModuleSellRemoteInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ModuleSellRemoteConverter.Settings);
+    }
+
+    internal static class ModuleSellRemoteConverter
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+            },
+        };
     }
 }

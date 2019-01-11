@@ -180,15 +180,15 @@ namespace EliteAPI.VoiceAttack
 
                 try
                 {
-                    vaProxy.SetInt("EliteAPI.Pips.SYSTEMS", EliteAPI.Status.Pips[0]);
-                    vaProxy.SetInt("EliteAPI.Pips.ENGINES", EliteAPI.Status.Pips[1]);
-                    vaProxy.SetInt("EliteAPI.Pips.WEAPONS", EliteAPI.Status.Pips[2]);
-                    vaProxy.SetInt("EliteAPI.FIREGROUP", EliteAPI.Status.FireGroup);
-                    vaProxy.SetInt("EliteAPI.GUIFOCUS", EliteAPI.Status.GuiFocus);
-                    vaProxy.SetDecimal("EliteAPI.FUEL", (decimal)EliteAPI.Status.Fuel);
-                    vaProxy.SetDecimal("EliteAPI.CARGO", (decimal)EliteAPI.Status.Cargo);
+                    vaProxy.SetInt("EliteAPI.Pips.SYSTEMS", (int)EliteAPI.Status.Pips[0]);
+                    vaProxy.SetInt("EliteAPI.Pips.ENGINES", (int)EliteAPI.Status.Pips[1]);
+                    vaProxy.SetInt("EliteAPI.Pips.WEAPONS", (int)EliteAPI.Status.Pips[2]);
+                    vaProxy.SetInt("EliteAPI.FIREGROUP", (int)EliteAPI.Status.FireGroup);
+                    vaProxy.SetInt("EliteAPI.GUIFOCUS", (int)EliteAPI.Status.GuiFocus);
+                    vaProxy.SetDecimal("EliteAPI.FUEL", (decimal)EliteAPI.Status.Fuel);     
+                    vaProxy.SetInt("EliteAPI.CARGO", (int)EliteAPI.Status.Cargo);
                 }
-                catch { vaProxy.WriteToLog("EliteVA - There was an error while setting some of the fields, make sure ED is running"); }
+                catch(Exception ex) { vaProxy.WriteToLog("EliteVA - There was an error while setting some of the fields, make sure ED is running"); vaProxy.WriteToLog(ex.Message, "red"); }
             }
         }
     }

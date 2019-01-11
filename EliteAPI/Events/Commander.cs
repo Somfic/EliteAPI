@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class CommanderInfo
     {
-        public static CommanderInfo Process(string json) => EventHandler.InvokeCommanderEvent(JsonConvert.DeserializeObject<CommanderInfo>(json, EliteAPI.Events.CommanderConverter.Settings));
+        public static CommanderInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeCommanderEvent(JsonConvert.DeserializeObject<CommanderInfo>(json, EliteAPI.Events.CommanderConverter.Settings));
     }
 
     public static class CommanderSerializer

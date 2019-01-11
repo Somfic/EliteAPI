@@ -103,10 +103,10 @@ namespace EliteAPI.Events
         public string ExperimentalEffectLocalised { get; set; }
 
         [JsonProperty("Modifiers")]
-        public List<Modifier> Modifiers { get; set; }
+        public List<LoadOutModifier> Modifiers { get; set; }
     }
 
-    public partial class Modifier
+    public partial class LoadOutModifier
     {
         [JsonProperty("Label")]
         public string Label { get; set; }
@@ -123,7 +123,7 @@ namespace EliteAPI.Events
 
     public partial class LoadoutInfo
     {
-        public static LoadoutInfo Process(string json) => EventHandler.InvokeLoadoutEvent(JsonConvert.DeserializeObject<LoadoutInfo>(json, EliteAPI.Events.LoadoutConverter.Settings));
+        public static LoadoutInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeLoadoutEvent(JsonConvert.DeserializeObject<LoadoutInfo>(json, EliteAPI.Events.LoadoutConverter.Settings));
     }
 
     public static class LoadoutSerializer

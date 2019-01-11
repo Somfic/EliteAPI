@@ -18,7 +18,7 @@ namespace EliteAPI.Events
 
     public partial class ModuleInfoInfo
     {
-        public static ModuleInfoInfo Process(string json) => EventHandler.InvokeModuleInfoEvent(JsonConvert.DeserializeObject<ModuleInfoInfo>(json, EliteAPI.Events.ModuleInfoConverter.Settings));
+        public static ModuleInfoInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeModuleInfoEvent(JsonConvert.DeserializeObject<ModuleInfoInfo>(json, EliteAPI.Events.ModuleInfoConverter.Settings));
     }
 
     public static class ModuleInfoSerializer

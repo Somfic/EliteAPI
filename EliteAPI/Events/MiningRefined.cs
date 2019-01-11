@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class MiningRefinedInfo
     {
-        public static MiningRefinedInfo Process(string json) => EventHandler.InvokeMiningRefinedEvent(JsonConvert.DeserializeObject<MiningRefinedInfo>(json, EliteAPI.Events.MiningRefinedConverter.Settings));
+        public static MiningRefinedInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeMiningRefinedEvent(JsonConvert.DeserializeObject<MiningRefinedInfo>(json, EliteAPI.Events.MiningRefinedConverter.Settings));
     }
 
     public static class MiningRefinedSerializer

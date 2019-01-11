@@ -150,7 +150,7 @@ namespace EliteAPI.Events
 
     public partial class ScanInfo
     {
-        public static ScanInfo Process(string json) => EventHandler.InvokeScanEvent(JsonConvert.DeserializeObject<ScanInfo>(json, EliteAPI.Events.ScanConverter.Settings));
+        public static ScanInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeScanEvent(JsonConvert.DeserializeObject<ScanInfo>(json, EliteAPI.Events.ScanConverter.Settings));
     }
 
     public static class ScanSerializer

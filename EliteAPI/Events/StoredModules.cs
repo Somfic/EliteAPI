@@ -25,10 +25,10 @@ namespace EliteAPI.Events
         public string StarSystem { get; set; }
 
         [JsonProperty("Items")]
-        public List<Item> Items { get; set; }
+        public List<StoredModuleItem> Items { get; set; }
     }
 
-    public partial class Item
+    public partial class StoredModuleItem
     {
         [JsonProperty("Name")]
         public string Name { get; set; }
@@ -69,7 +69,7 @@ namespace EliteAPI.Events
 
     public partial class StoredModulesInfo
     {
-        public static StoredModulesInfo Process(string json) => EventHandler.InvokeStoredModulesEvent(JsonConvert.DeserializeObject<StoredModulesInfo>(json, EliteAPI.Events.StoredModulesConverter.Settings));
+        public static StoredModulesInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeStoredModulesEvent(JsonConvert.DeserializeObject<StoredModulesInfo>(json, EliteAPI.Events.StoredModulesConverter.Settings));
     }
 
     public static class StoredModulesSerializer

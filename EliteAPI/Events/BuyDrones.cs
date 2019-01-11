@@ -30,7 +30,7 @@ namespace EliteAPI.Events
 
     public partial class BuyDronesInfo
     {
-        public static BuyDronesInfo Process(string json) => EventHandler.InvokeBuyDronesEvent(JsonConvert.DeserializeObject<BuyDronesInfo>(json, EliteAPI.Events.BuyDronesConverter.Settings));
+        public static BuyDronesInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeBuyDronesEvent(JsonConvert.DeserializeObject<BuyDronesInfo>(json, EliteAPI.Events.BuyDronesConverter.Settings));
     }
 
     public static class BuyDronesSerializer

@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class PowerplayVoucherInfo
     {
-        public static PowerplayVoucherInfo Process(string json) => EventHandler.InvokePowerplayVoucherEvent(JsonConvert.DeserializeObject<PowerplayVoucherInfo>(json, EliteAPI.Events.PowerplayVoucherConverter.Settings));
+        public static PowerplayVoucherInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokePowerplayVoucherEvent(JsonConvert.DeserializeObject<PowerplayVoucherInfo>(json, EliteAPI.Events.PowerplayVoucherConverter.Settings));
     }
 
     public static class PowerplayVoucherSerializer

@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class SquadronCreatedInfo
     {
-        public static SquadronCreatedInfo Process(string json) => EventHandler.InvokeSquadronCreatedEvent(JsonConvert.DeserializeObject<SquadronCreatedInfo>(json, EliteAPI.Events.SquadronCreatedConverter.Settings));
+        public static SquadronCreatedInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeSquadronCreatedEvent(JsonConvert.DeserializeObject<SquadronCreatedInfo>(json, EliteAPI.Events.SquadronCreatedConverter.Settings));
     }
 
     public static class SquadronCreatedSerializer

@@ -33,7 +33,7 @@ namespace EliteAPI.Events
 
     public partial class SupercruiseExitInfo
     {
-        public static SupercruiseExitInfo Process(string json) => EventHandler.InvokeSupercruiseExitEvent(JsonConvert.DeserializeObject<SupercruiseExitInfo>(json, EliteAPI.Events.SupercruiseExitConverter.Settings));
+        public static SupercruiseExitInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeSupercruiseExitEvent(JsonConvert.DeserializeObject<SupercruiseExitInfo>(json, EliteAPI.Events.SupercruiseExitConverter.Settings));
     }
 
     public static class SupercruiseExitSerializer

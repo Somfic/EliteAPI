@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class CrewAssignInfo
     {
-        public static CrewAssignInfo Process(string json) => EventHandler.InvokeCrewAssignEvent(JsonConvert.DeserializeObject<CrewAssignInfo>(json, EliteAPI.Events.CrewAssignConverter.Settings));
+        public static CrewAssignInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeCrewAssignEvent(JsonConvert.DeserializeObject<CrewAssignInfo>(json, EliteAPI.Events.CrewAssignConverter.Settings));
     }
 
     public static class CrewAssignSerializer

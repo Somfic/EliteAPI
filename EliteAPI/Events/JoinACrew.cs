@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class JoinACrewInfo
     {
-        public static JoinACrewInfo Process(string json) => EventHandler.InvokeJoinACrewEvent(JsonConvert.DeserializeObject<JoinACrewInfo>(json, EliteAPI.Events.JoinACrewConverter.Settings));
+        public static JoinACrewInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeJoinACrewEvent(JsonConvert.DeserializeObject<JoinACrewInfo>(json, EliteAPI.Events.JoinACrewConverter.Settings));
     }
 
     public static class JoinACrewSerializer

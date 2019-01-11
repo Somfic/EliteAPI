@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class ChangeCrewRoleInfo
     {
-        public static ChangeCrewRoleInfo Process(string json) => EventHandler.InvokeChangeCrewRoleEvent(JsonConvert.DeserializeObject<ChangeCrewRoleInfo>(json, EliteAPI.Events.ChangeCrewRoleConverter.Settings));
+        public static ChangeCrewRoleInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeChangeCrewRoleEvent(JsonConvert.DeserializeObject<ChangeCrewRoleInfo>(json, EliteAPI.Events.ChangeCrewRoleConverter.Settings));
     }
 
     public static class ChangeCrewRoleSerializer

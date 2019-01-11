@@ -30,7 +30,7 @@ namespace EliteAPI.Events
 
     public partial class PayFinesInfo
     {
-        public static PayFinesInfo Process(string json) => EventHandler.InvokePayFinesEvent(JsonConvert.DeserializeObject<PayFinesInfo>(json, EliteAPI.Events.PayFinesConverter.Settings));
+        public static PayFinesInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokePayFinesEvent(JsonConvert.DeserializeObject<PayFinesInfo>(json, EliteAPI.Events.PayFinesConverter.Settings));
     }
 
     public static class PayFinesSerializer

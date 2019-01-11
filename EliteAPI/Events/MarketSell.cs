@@ -45,7 +45,7 @@ namespace EliteAPI.Events
 
     public partial class MarketSellInfo
     {
-        public static MarketSellInfo Process(string json) => EventHandler.InvokeMarketSellEvent(JsonConvert.DeserializeObject<MarketSellInfo>(json, EliteAPI.Events.MarketSellConverter.Settings));
+        public static MarketSellInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeMarketSellEvent(JsonConvert.DeserializeObject<MarketSellInfo>(json, EliteAPI.Events.MarketSellConverter.Settings));
     }
 
     public static class MarketSellSerializer

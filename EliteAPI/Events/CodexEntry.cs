@@ -57,7 +57,7 @@ namespace EliteAPI.Events
 
     public partial class CodexEntryInfo
     {
-        public static CodexEntryInfo Process(string json) => EventHandler.InvokeCodexEntryEvent(JsonConvert.DeserializeObject<CodexEntryInfo>(json, EliteAPI.Events.CodexEntryConverter.Settings));
+        public static CodexEntryInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeCodexEntryEvent(JsonConvert.DeserializeObject<CodexEntryInfo>(json, EliteAPI.Events.CodexEntryConverter.Settings));
     }
 
     public static class CodexEntrySerializer

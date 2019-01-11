@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class RefuelAllInfo
     {
-        public static RefuelAllInfo Process(string json) => EventHandler.InvokeRefuelAllEvent(JsonConvert.DeserializeObject<RefuelAllInfo>(json, EliteAPI.Events.RefuelAllConverter.Settings));
+        public static RefuelAllInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeRefuelAllEvent(JsonConvert.DeserializeObject<RefuelAllInfo>(json, EliteAPI.Events.RefuelAllConverter.Settings));
     }
 
     public static class RefuelAllSerializer

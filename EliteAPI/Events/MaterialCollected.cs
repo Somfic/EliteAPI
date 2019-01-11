@@ -30,7 +30,7 @@ namespace EliteAPI.Events
 
     public partial class MaterialCollectedInfo
     {
-        public static MaterialCollectedInfo Process(string json) => EventHandler.InvokeMaterialCollectedEvent(JsonConvert.DeserializeObject<MaterialCollectedInfo>(json, EliteAPI.Events.MaterialCollectedConverter.Settings));
+        public static MaterialCollectedInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeMaterialCollectedEvent(JsonConvert.DeserializeObject<MaterialCollectedInfo>(json, EliteAPI.Events.MaterialCollectedConverter.Settings));
     }
 
     public static class MaterialCollectedSerializer

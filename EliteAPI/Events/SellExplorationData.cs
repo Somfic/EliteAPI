@@ -33,7 +33,7 @@ namespace EliteAPI.Events
 
     public partial class SellExplorationDataInfo
     {
-        public static SellExplorationDataInfo Process(string json) => EventHandler.InvokeSellExplorationDataEvent(JsonConvert.DeserializeObject<SellExplorationDataInfo>(json, EliteAPI.Events.SellExplorationDataConverter.Settings));
+        public static SellExplorationDataInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeSellExplorationDataEvent(JsonConvert.DeserializeObject<SellExplorationDataInfo>(json, EliteAPI.Events.SellExplorationDataConverter.Settings));
     }
 
     public static class SellExplorationDataSerializer

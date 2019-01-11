@@ -66,7 +66,7 @@ namespace EliteAPI.Events
 
     public partial class StoredShipsInfo
     {
-        public static StoredShipsInfo Process(string json) => EventHandler.InvokeStoredShipsEvent(JsonConvert.DeserializeObject<StoredShipsInfo>(json, EliteAPI.Events.StoredShipsConverter.Settings));
+        public static StoredShipsInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeStoredShipsEvent(JsonConvert.DeserializeObject<StoredShipsInfo>(json, EliteAPI.Events.StoredShipsConverter.Settings));
     }
 
     public static class StoredShipsSerializer

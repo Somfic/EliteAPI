@@ -30,7 +30,7 @@ namespace EliteAPI.Events
 
     public partial class AfmuRepairsInfo
     {
-        public static AfmuRepairsInfo Process(string json) => EventHandler.InvokeAfmuRepairsEvent(JsonConvert.DeserializeObject<AfmuRepairsInfo>(json, EliteAPI.Events.AfmuRepairsConverter.Settings));
+        public static AfmuRepairsInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeAfmuRepairsEvent(JsonConvert.DeserializeObject<AfmuRepairsInfo>(json, EliteAPI.Events.AfmuRepairsConverter.Settings));
     }
 
     public static class AfmuRepairsSerializer

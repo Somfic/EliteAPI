@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class LaunchSRVInfo
     {
-        public static LaunchSRVInfo Process(string json) => EventHandler.InvokeLaunchSRVEvent(JsonConvert.DeserializeObject<LaunchSRVInfo>(json, EliteAPI.Events.LaunchSRVConverter.Settings));
+        public static LaunchSRVInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeLaunchSRVEvent(JsonConvert.DeserializeObject<LaunchSRVInfo>(json, EliteAPI.Events.LaunchSRVConverter.Settings));
     }
 
     public static class LaunchSRVSerializer

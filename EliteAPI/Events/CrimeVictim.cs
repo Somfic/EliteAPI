@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class CrimeVictimInfo
     {
-        public static CrimeVictimInfo Process(string json) => EventHandler.InvokeCrimeVictimEvent(JsonConvert.DeserializeObject<CrimeVictimInfo>(json, EliteAPI.Events.CrimeVictimConverter.Settings));
+        public static CrimeVictimInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeCrimeVictimEvent(JsonConvert.DeserializeObject<CrimeVictimInfo>(json, EliteAPI.Events.CrimeVictimConverter.Settings));
     }
 
     public static class CrimeVictimSerializer

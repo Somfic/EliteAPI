@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class EscapeInterdictionInfo
     {
-        public static EscapeInterdictionInfo Process(string json) => EventHandler.InvokeEscapeInterdictionEvent(JsonConvert.DeserializeObject<EscapeInterdictionInfo>(json, EliteAPI.Events.EscapeInterdictionConverter.Settings));
+        public static EscapeInterdictionInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeEscapeInterdictionEvent(JsonConvert.DeserializeObject<EscapeInterdictionInfo>(json, EliteAPI.Events.EscapeInterdictionConverter.Settings));
     }
 
     public static class EscapeInterdictionSerializer

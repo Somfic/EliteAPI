@@ -36,7 +36,7 @@ namespace EliteAPI.Events
 
     public partial class ProgressInfo
     {
-        public static ProgressInfo Process(string json) => EventHandler.InvokeProgressEvent(JsonConvert.DeserializeObject<ProgressInfo>(json, EliteAPI.Events.ProgressConverter.Settings));
+        public static ProgressInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeProgressEvent(JsonConvert.DeserializeObject<ProgressInfo>(json, EliteAPI.Events.ProgressConverter.Settings));
     }
 
     public static class ProgressSerializer

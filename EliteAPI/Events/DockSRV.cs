@@ -18,7 +18,7 @@ namespace EliteAPI.Events
 
     public partial class DockSRVInfo
     {
-        public static DockSRVInfo Process(string json) => EventHandler.InvokeDockSRVEvent(JsonConvert.DeserializeObject<DockSRVInfo>(json, EliteAPI.Events.DockSRVConverter.Settings));
+        public static DockSRVInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeDockSRVEvent(JsonConvert.DeserializeObject<DockSRVInfo>(json, EliteAPI.Events.DockSRVConverter.Settings));
     }
 
     public static class DockSRVSerializer

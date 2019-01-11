@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class FSSAllBodiesFoundInfo
     {
-        public static FSSAllBodiesFoundInfo Process(string json) => EventHandler.InvokeFSSAllBodiesFoundEvent(JsonConvert.DeserializeObject<FSSAllBodiesFoundInfo>(json, EliteAPI.Events.FSSAllBodiesFoundConverter.Settings));
+        public static FSSAllBodiesFoundInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeFSSAllBodiesFoundEvent(JsonConvert.DeserializeObject<FSSAllBodiesFoundInfo>(json, EliteAPI.Events.FSSAllBodiesFoundConverter.Settings));
     }
 
     public static class FSSAllBodiesFoundSerializer

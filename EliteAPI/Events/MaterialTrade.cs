@@ -48,7 +48,7 @@ namespace EliteAPI.Events
 
     public partial class MaterialTradeInfo
     {
-        public static MaterialTradeInfo Process(string json) => EventHandler.InvokeMaterialTradeEvent(JsonConvert.DeserializeObject<MaterialTradeInfo>(json, EliteAPI.Events.MaterialTradeConverter.Settings));
+        public static MaterialTradeInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeMaterialTradeEvent(JsonConvert.DeserializeObject<MaterialTradeInfo>(json, EliteAPI.Events.MaterialTradeConverter.Settings));
     }
 
     public static class MaterialTradeSerializer

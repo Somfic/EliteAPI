@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class PowerplayLeaveInfo
     {
-        public static PowerplayLeaveInfo Process(string json) => EventHandler.InvokePowerplayLeaveEvent(JsonConvert.DeserializeObject<PowerplayLeaveInfo>(json, EliteAPI.Events.PowerplayLeaveConverter.Settings));
+        public static PowerplayLeaveInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokePowerplayLeaveEvent(JsonConvert.DeserializeObject<PowerplayLeaveInfo>(json, EliteAPI.Events.PowerplayLeaveConverter.Settings));
     }
 
     public static class PowerplayLeaveSerializer

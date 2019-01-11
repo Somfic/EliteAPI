@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class PowerplayJoinInfo
     {
-        public static PowerplayJoinInfo Process(string json) => EventHandler.InvokePowerplayJoinEvent(JsonConvert.DeserializeObject<PowerplayJoinInfo>(json, EliteAPI.Events.PowerplayJoinConverter.Settings));
+        public static PowerplayJoinInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokePowerplayJoinEvent(JsonConvert.DeserializeObject<PowerplayJoinInfo>(json, EliteAPI.Events.PowerplayJoinConverter.Settings));
     }
 
     public static class PowerplayJoinSerializer

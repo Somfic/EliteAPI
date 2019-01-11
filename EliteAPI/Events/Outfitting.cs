@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class OutfittingInfo
     {
-        public static OutfittingInfo Process(string json) => EventHandler.InvokeOutfittingEvent(JsonConvert.DeserializeObject<OutfittingInfo>(json, EliteAPI.Events.OutfittingConverter.Settings));
+        public static OutfittingInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeOutfittingEvent(JsonConvert.DeserializeObject<OutfittingInfo>(json, EliteAPI.Events.OutfittingConverter.Settings));
     }
 
     public static class OutfittingSerializer

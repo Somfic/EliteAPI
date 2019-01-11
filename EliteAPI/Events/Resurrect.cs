@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class ResurrectInfo
     {
-        public static ResurrectInfo Process(string json) => EventHandler.InvokeResurrectEvent(JsonConvert.DeserializeObject<ResurrectInfo>(json, EliteAPI.Events.ResurrectConverter.Settings));
+        public static ResurrectInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeResurrectEvent(JsonConvert.DeserializeObject<ResurrectInfo>(json, EliteAPI.Events.ResurrectConverter.Settings));
     }
 
     public static class ResurrectSerializer

@@ -36,7 +36,7 @@ namespace EliteAPI.Events
 
     public partial class ShipyardSwapInfo
     {
-        public static ShipyardSwapInfo Process(string json) => EventHandler.InvokeShipyardSwapEvent(JsonConvert.DeserializeObject<ShipyardSwapInfo>(json, EliteAPI.Events.ShipyardSwapConverter.Settings));
+        public static ShipyardSwapInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeShipyardSwapEvent(JsonConvert.DeserializeObject<ShipyardSwapInfo>(json, EliteAPI.Events.ShipyardSwapConverter.Settings));
     }
 
     public static class ShipyardSwapSerializer

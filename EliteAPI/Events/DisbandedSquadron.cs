@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class DisbandedSquadronInfo
     {
-        public static DisbandedSquadronInfo Process(string json) => EventHandler.InvokeDisbandedSquadronEvent(JsonConvert.DeserializeObject<DisbandedSquadronInfo>(json, EliteAPI.Events.DisbandedSquadronConverter.Settings));
+        public static DisbandedSquadronInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeDisbandedSquadronEvent(JsonConvert.DeserializeObject<DisbandedSquadronInfo>(json, EliteAPI.Events.DisbandedSquadronConverter.Settings));
     }
 
     public static class DisbandedSquadronSerializer

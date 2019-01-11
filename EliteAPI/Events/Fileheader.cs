@@ -30,7 +30,7 @@ namespace EliteAPI.Events
 
     public partial class FileheaderInfo
     {
-        public static FileheaderInfo Process(string json) => EventHandler.InvokeFileheaderEvent(JsonConvert.DeserializeObject<FileheaderInfo>(json, EliteAPI.Events.FileheaderConverter.Settings));
+        public static FileheaderInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeFileheaderEvent(JsonConvert.DeserializeObject<FileheaderInfo>(json, EliteAPI.Events.FileheaderConverter.Settings));
     }
 
     public static class FileheaderSerializer

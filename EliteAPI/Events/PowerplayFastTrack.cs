@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class PowerplayFastTrackInfo
     {
-        public static PowerplayFastTrackInfo Process(string json) => EventHandler.InvokePowerplayFastTrackEvent(JsonConvert.DeserializeObject<PowerplayFastTrackInfo>(json, EliteAPI.Events.PowerplayFastTrackConverter.Settings));
+        public static PowerplayFastTrackInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokePowerplayFastTrackEvent(JsonConvert.DeserializeObject<PowerplayFastTrackInfo>(json, EliteAPI.Events.PowerplayFastTrackConverter.Settings));
     }
 
     public static class PowerplayFastTrackSerializer

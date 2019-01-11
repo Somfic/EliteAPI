@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class HullDamageInfo
     {
-        public static HullDamageInfo Process(string json) => EventHandler.InvokeHullDamageEvent(JsonConvert.DeserializeObject<HullDamageInfo>(json, EliteAPI.Events.HullDamageConverter.Settings));
+        public static HullDamageInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeHullDamageEvent(JsonConvert.DeserializeObject<HullDamageInfo>(json, EliteAPI.Events.HullDamageConverter.Settings));
     }
 
     public static class HullDamageSerializer

@@ -18,7 +18,7 @@ namespace EliteAPI.Events
 
     public partial class DockFighterInfo
     {
-        public static DockFighterInfo Process(string json) => EventHandler.InvokeDockFighterEvent(JsonConvert.DeserializeObject<DockFighterInfo>(json, EliteAPI.Events.DockFighterConverter.Settings));
+        public static DockFighterInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeDockFighterEvent(JsonConvert.DeserializeObject<DockFighterInfo>(json, EliteAPI.Events.DockFighterConverter.Settings));
     }
 
     public static class DockFighterSerializer

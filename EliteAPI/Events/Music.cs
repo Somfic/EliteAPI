@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class MusicInfo
     {
-        public static MusicInfo Process(string json) => EventHandler.InvokeMusicEvent(JsonConvert.DeserializeObject<MusicInfo>(json, EliteAPI.Events.MusicConverter.Settings));
+        public static MusicInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeMusicEvent(JsonConvert.DeserializeObject<MusicInfo>(json, EliteAPI.Events.MusicConverter.Settings));
     }
 
     public static class MusicSerializer

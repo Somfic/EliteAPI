@@ -33,7 +33,7 @@ namespace EliteAPI.Events
 
     public partial class EngineerContributionInfo
     {
-        public static EngineerContributionInfo Process(string json) => EventHandler.InvokeEngineerContributionEvent(JsonConvert.DeserializeObject<EngineerContributionInfo>(json, EliteAPI.Events.EngineerContributionConverter.Settings));
+        public static EngineerContributionInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeEngineerContributionEvent(JsonConvert.DeserializeObject<EngineerContributionInfo>(json, EliteAPI.Events.EngineerContributionConverter.Settings));
     }
 
     public static class EngineerContributionSerializer

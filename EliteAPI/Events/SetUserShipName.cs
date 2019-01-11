@@ -30,7 +30,7 @@ namespace EliteAPI.Events
 
     public partial class SetUserShipNameInfo
     {
-        public static SetUserShipNameInfo Process(string json) => EventHandler.InvokeSetUserShipNameEvent(JsonConvert.DeserializeObject<SetUserShipNameInfo>(json, EliteAPI.Events.SetUserShipNameConverter.Settings));
+        public static SetUserShipNameInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeSetUserShipNameEvent(JsonConvert.DeserializeObject<SetUserShipNameInfo>(json, EliteAPI.Events.SetUserShipNameConverter.Settings));
     }
 
     public static class SetUserShipNameSerializer

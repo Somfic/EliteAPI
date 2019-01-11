@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class WingJoinInfo
     {
-        public static WingJoinInfo Process(string json) => EventHandler.InvokeWingJoinEvent(JsonConvert.DeserializeObject<WingJoinInfo>(json, EliteAPI.Events.WingJoinConverter.Settings));
+        public static WingJoinInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeWingJoinEvent(JsonConvert.DeserializeObject<WingJoinInfo>(json, EliteAPI.Events.WingJoinConverter.Settings));
     }
 
     public static class WingJoinSerializer

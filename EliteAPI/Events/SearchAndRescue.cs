@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class SearchAndRescueInfo
     {
-        public static SearchAndRescueInfo Process(string json) => EventHandler.InvokeSearchAndRescueEvent(JsonConvert.DeserializeObject<SearchAndRescueInfo>(json, EliteAPI.Events.SearchAndRescueConverter.Settings));
+        public static SearchAndRescueInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeSearchAndRescueEvent(JsonConvert.DeserializeObject<SearchAndRescueInfo>(json, EliteAPI.Events.SearchAndRescueConverter.Settings));
     }
 
     public static class SearchAndRescueSerializer

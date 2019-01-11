@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class LaunchDroneInfo
     {
-        public static LaunchDroneInfo Process(string json) => EventHandler.InvokeLaunchDroneEvent(JsonConvert.DeserializeObject<LaunchDroneInfo>(json, EliteAPI.Events.LaunchDroneConverter.Settings));
+        public static LaunchDroneInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeLaunchDroneEvent(JsonConvert.DeserializeObject<LaunchDroneInfo>(json, EliteAPI.Events.LaunchDroneConverter.Settings));
     }
 
     public static class LaunchDroneSerializer

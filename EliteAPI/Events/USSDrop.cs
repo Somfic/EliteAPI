@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class USSDropInfo
     {
-        public static USSDropInfo Process(string json) => EventHandler.InvokeUSSDropEvent(JsonConvert.DeserializeObject<USSDropInfo>(json, EliteAPI.Events.USSDropConverter.Settings));
+        public static USSDropInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeUSSDropEvent(JsonConvert.DeserializeObject<USSDropInfo>(json, EliteAPI.Events.USSDropConverter.Settings));
     }
 
     public static class USSDropSerializer

@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class JoinedSquadronInfo
     {
-        public static JoinedSquadronInfo Process(string json) => EventHandler.InvokeJoinedSquadronEvent(JsonConvert.DeserializeObject<JoinedSquadronInfo>(json, EliteAPI.Events.JoinedSquadronConverter.Settings));
+        public static JoinedSquadronInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeJoinedSquadronEvent(JsonConvert.DeserializeObject<JoinedSquadronInfo>(json, EliteAPI.Events.JoinedSquadronConverter.Settings));
     }
 
     public static class JoinedSquadronSerializer

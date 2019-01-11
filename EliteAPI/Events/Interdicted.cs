@@ -33,7 +33,7 @@ namespace EliteAPI.Events
 
     public partial class InterdictedInfo
     {
-        public static InterdictedInfo Process(string json) => EventHandler.InvokeInterdictedEvent(JsonConvert.DeserializeObject<InterdictedInfo>(json, EliteAPI.Events.InterdictedConverter.Settings));
+        public static InterdictedInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeInterdictedEvent(JsonConvert.DeserializeObject<InterdictedInfo>(json, EliteAPI.Events.InterdictedConverter.Settings));
     }
 
     public static class InterdictedSerializer

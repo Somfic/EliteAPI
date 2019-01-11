@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class MissionAbandonedInfo
     {
-        public static MissionAbandonedInfo Process(string json) => EventHandler.InvokeMissionAbandonedEvent(JsonConvert.DeserializeObject<MissionAbandonedInfo>(json, EliteAPI.Events.MissionAbandonedConverter.Settings));
+        public static MissionAbandonedInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeMissionAbandonedEvent(JsonConvert.DeserializeObject<MissionAbandonedInfo>(json, EliteAPI.Events.MissionAbandonedConverter.Settings));
     }
 
     public static class MissionAbandonedSerializer

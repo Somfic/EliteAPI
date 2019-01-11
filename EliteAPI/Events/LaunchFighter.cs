@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class LaunchFighterInfo
     {
-        public static LaunchFighterInfo Process(string json) => EventHandler.InvokeLaunchFighterEvent(JsonConvert.DeserializeObject<LaunchFighterInfo>(json, EliteAPI.Events.LaunchFighterConverter.Settings));
+        public static LaunchFighterInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeLaunchFighterEvent(JsonConvert.DeserializeObject<LaunchFighterInfo>(json, EliteAPI.Events.LaunchFighterConverter.Settings));
     }
 
     public static class LaunchFighterSerializer

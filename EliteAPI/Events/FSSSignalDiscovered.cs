@@ -48,7 +48,7 @@ namespace EliteAPI.Events
 
     public partial class FSSSignalDiscoveredInfo
     {
-        public static FSSSignalDiscoveredInfo Process(string json) => EventHandler.InvokeFSSSignalDiscoveredEvent(JsonConvert.DeserializeObject<FSSSignalDiscoveredInfo>(json, EliteAPI.Events.FSSSignalDiscoveredConverter.Settings));
+        public static FSSSignalDiscoveredInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeFSSSignalDiscoveredEvent(JsonConvert.DeserializeObject<FSSSignalDiscoveredInfo>(json, EliteAPI.Events.FSSSignalDiscoveredConverter.Settings));
     }
 
     public static class FSSSignalDiscoveredSerializer

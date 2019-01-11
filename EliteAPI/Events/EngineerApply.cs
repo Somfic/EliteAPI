@@ -30,7 +30,7 @@ namespace EliteAPI.Events
 
     public partial class EngineerApplyInfo
     {
-        public static EngineerApplyInfo Process(string json) => EventHandler.InvokeEngineerApplyEvent(JsonConvert.DeserializeObject<EngineerApplyInfo>(json, EliteAPI.Events.EngineerApplyConverter.Settings));
+        public static EngineerApplyInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeEngineerApplyEvent(JsonConvert.DeserializeObject<EngineerApplyInfo>(json, EliteAPI.Events.EngineerApplyConverter.Settings));
     }
 
     public static class EngineerApplySerializer

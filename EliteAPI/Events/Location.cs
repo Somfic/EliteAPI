@@ -76,7 +76,7 @@ namespace EliteAPI.Events
         public string BodyType { get; set; }
 
         [JsonProperty("Factions")]
-        public List<Faction> Factions { get; set; }
+        public List<LocationFaction> Factions { get; set; }
 
         [JsonProperty("SystemFaction")]
         public string SystemFaction { get; set; }
@@ -85,7 +85,7 @@ namespace EliteAPI.Events
         public string FactionState { get; set; }
     }
 
-    public partial class Faction
+    public partial class LocationFaction
     {
         [JsonProperty("Name")]
         public string Name { get; set; }
@@ -112,22 +112,22 @@ namespace EliteAPI.Events
         public double MyReputation { get; set; }
 
         [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
-        public List<ActiveState> ActiveStates { get; set; }
+        public List<LocationActiveState> ActiveStates { get; set; }
 
         [JsonProperty("PendingStates", NullValueHandling = NullValueHandling.Ignore)]
-        public List<IngState> PendingStates { get; set; }
+        public List<LocationIngState> PendingStates { get; set; }
 
         [JsonProperty("RecoveringStates", NullValueHandling = NullValueHandling.Ignore)]
-        public List<IngState> RecoveringStates { get; set; }
+        public List<LocationIngState> RecoveringStates { get; set; }
     }
 
-    public partial class ActiveState
+    public partial class LocationActiveState
     {
         [JsonProperty("State")]
         public string State { get; set; }
     }
 
-    public partial class IngState
+    public partial class LocationIngState
     {
         [JsonProperty("State")]
         public string State { get; set; }
@@ -138,7 +138,7 @@ namespace EliteAPI.Events
 
     public partial class LocationInfo
     {
-        public static LocationInfo Process(string json) => EventHandler.InvokeLocationEvent(JsonConvert.DeserializeObject<LocationInfo>(json, EliteAPI.Events.LocationConverter.Settings));
+        public static LocationInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeLocationEvent(JsonConvert.DeserializeObject<LocationInfo>(json, EliteAPI.Events.LocationConverter.Settings));
     }
 
     public static class LocationSerializer

@@ -30,7 +30,7 @@ namespace EliteAPI.Events
 
     public partial class SAAScanCompleteInfo
     {
-        public static SAAScanCompleteInfo Process(string json) => EventHandler.InvokeSAAScanCompleteEvent(JsonConvert.DeserializeObject<SAAScanCompleteInfo>(json, EliteAPI.Events.SAAScanCompleteConverter.Settings));
+        public static SAAScanCompleteInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeSAAScanCompleteEvent(JsonConvert.DeserializeObject<SAAScanCompleteInfo>(json, EliteAPI.Events.SAAScanCompleteConverter.Settings));
     }
 
     public static class SAAScanCompleteSerializer

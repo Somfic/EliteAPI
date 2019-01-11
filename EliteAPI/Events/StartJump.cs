@@ -30,7 +30,7 @@ namespace EliteAPI.Events
 
     public partial class StartJumpInfo
     {
-        public static StartJumpInfo Process(string json) => EventHandler.InvokeStartJumpEvent(JsonConvert.DeserializeObject<StartJumpInfo>(json, EliteAPI.Events.StartJumpConverter.Settings));
+        public static StartJumpInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeStartJumpEvent(JsonConvert.DeserializeObject<StartJumpInfo>(json, EliteAPI.Events.StartJumpConverter.Settings));
     }
 
     public static class StartJumpSerializer

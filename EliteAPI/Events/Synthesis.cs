@@ -19,10 +19,10 @@ namespace EliteAPI.Events
         public string Name { get; set; }
 
         [JsonProperty("Materials")]
-        public List<Material> Materials { get; set; }
+        public List<SynthesisMaterial> Materials { get; set; }
     }
 
-    public partial class Material
+    public partial class SynthesisMaterial
     {
         [JsonProperty("Name")]
         public string Name { get; set; }
@@ -36,7 +36,7 @@ namespace EliteAPI.Events
 
     public partial class SynthesisInfo
     {
-        public static SynthesisInfo Process(string json) => EventHandler.InvokeSynthesisEvent(JsonConvert.DeserializeObject<SynthesisInfo>(json, EliteAPI.Events.SynthesisConverter.Settings));
+        public static SynthesisInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeSynthesisEvent(JsonConvert.DeserializeObject<SynthesisInfo>(json, EliteAPI.Events.SynthesisConverter.Settings));
     }
 
     public static class SynthesisSerializer

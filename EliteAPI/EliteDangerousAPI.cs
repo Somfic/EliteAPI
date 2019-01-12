@@ -6,8 +6,13 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
+
+using DiscordRPC;
+
 using EliteAPI.Bindings;
 using EliteAPI.Status;
+using EliteAPI.Discord;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI
@@ -18,10 +23,10 @@ namespace EliteAPI
         public bool IsRunning { get; private set; }
         public DirectoryInfo JournalDirectory { get; set; }
         public bool SkipCatchUp { get; set; }
-        public EliteAPI.Events.EventHandler EventHandler { get; set; }
+        public EliteAPI.Events.EventHandler Events { get; set; }
         public EliteAPI.Logging.Logger Logger { get; set; }
 
-        //Ship status fields.
+        //Status fields.
         public ShipStatus Status { get { return ShipStatus.FromFile(new FileInfo(JournalDirectory.FullName + "\\Status.json"), this); } }
         public ShipCargo Cargo { get { return ShipCargo.FromFile(new FileInfo(JournalDirectory.FullName + "\\Cargo.json"), this); } }
         public ShipModules Modules { get { return ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this); } }
@@ -39,13 +44,24 @@ namespace EliteAPI
                 catch { return new UserBindings(); }
             }
         }
+        public CommanderStatus Commander;
+        public LocationStatus Location;
+
+        //Servies.
+        public RichPresenceClient DiscordRichPresence;
 
         public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp = true)
         {
             //Set the fields to the parameters.
             this.JournalDirectory = JournalDirectory;
             this.SkipCatchUp = SkipCatchUp;
+
+            //Init services.
+            this.Events = new Events.EventHandler();
             this.Logger = new Logging.Logger();
+            this.Commander = new CommanderStatus(this);
+            this.Location = new LocationStatus(this);
+            this.DiscordRichPresence = new RichPresenceClient(this);
 
             //Reset the API.
             Reset();
@@ -53,7 +69,7 @@ namespace EliteAPI
 
         public void Reset()
         {
-            EventHandler = new Events.EventHandler();
+            Events = new Events.EventHandler();
         }
 
         public void Start()
@@ -104,11 +120,12 @@ namespace EliteAPI
             while (!streamReader.EndOfStream)
             {
                 //If this string hasn't been processed yet, process it and mark it as processed.
-                string thisEvent = streamReader.ReadLine();
-                if (!processedLogs.Contains(thisEvent))
+                string json = streamReader.ReadLine();
+                dynamic thisEvent = JsonConvert.DeserializeObject<dynamic>(json);
+                if (!processedLogs.Contains(json))
                 {
-                    if (!doNotTrigger) { Process(thisEvent); } //Only process it if it's marked true.
-                    processedLogs.Add(thisEvent);
+                    if (!doNotTrigger) { Process(json); } //Only process it if it's marked true.
+                    processedLogs.Add(json);
                 }
             }
         }
@@ -120,11 +137,11 @@ namespace EliteAPI
             string eventName = obj.@event;
 
             //Invoke the matching event.
-            try { Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name.Contains(eventName)).First().GetMethod("Process").Invoke(null, new object[] { json, this }); }
-            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}.{Environment.NewLine}Error: {ex.Message}"); }
+            try { Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name == $"{eventName}Info").First().GetMethod("Process").Invoke(null, new object[] { json, this }); }
+            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}. {Environment.NewLine}Error: {ex.Message}"); }
 
             //Invoke the AllEvent.
-            EventHandler.InvokeAllEvent(obj);
+            Events.InvokeAllEvent(obj);
         }
 
         public void Stop()

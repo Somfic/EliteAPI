@@ -92,7 +92,7 @@ namespace EliteAPI.VoiceAttack
 
                 FindJournalFolder(vaProxy);
                 EliteAPI = new EliteDangerousAPI(playerJournalDirectory, true);
-                EliteAPI.EventHandler.AllEvent += EliteAPI_AllEvent;
+                EliteAPI.Events.AllEvent += EliteAPI_AllEvent;
                 EliteAPI.Start();
                 EliteAPI.Logger.Log += Logger_Log;
             }

@@ -10,9 +10,11 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            EliteDangerousAPI api = new EliteDangerousAPI(new DirectoryInfo(@"C:\Users\Lucas\Saved Games\Frontier Developments\Elite Dangerous"), true);
-            api.EventHandler.SendTextEvent += (sender, arg) => Console.WriteLine(arg.Message);
+            EliteDangerousAPI api = new EliteDangerousAPI(new DirectoryInfo(@"C:\Users\Lucas\Saved Games\Frontier Developments\Elite Dangerous"));
+            api.Logger.Log += (sender, arg) => Console.WriteLine(arg.Message);
             api.Start();
+            api.DiscordRichPresence.TurnOn();
+
             Thread.Sleep(-1);
         }
     }

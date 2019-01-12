@@ -149,6 +149,7 @@
     <Compile Include="Events\LaunchFighter.cs" />
     <Compile Include="Events\LaunchSRV.cs" />
     <Compile Include="Events\LeaveBody.cs" />
+    <Compile Include="Events\LeftSquadron.cs" />
     <Compile Include="Events\Liftoff.cs" />
     <Compile Include="Events\LoadGame.cs" />
     <Compile Include="Events\Loadout.cs" />

@@ -11,13 +11,14 @@ namespace EliteAPI.Discord
 {
     public class RichPresenceClient
     {
+        private static readonly string clientID = "497862888128512041";
+
         private DiscordRpcClient rpc;
         private EliteDangerousAPI api;
         public bool IsRunning { get; private set; } = false;
 
         public RichPresenceClient(EliteDangerousAPI api)
         {
-            rpc = new DiscordRpcClient("497862888128512041");
             this.api = api;
         }
 
@@ -28,8 +29,8 @@ namespace EliteAPI.Discord
 
             DiscordRPC.RichPresence discordPresence = new DiscordRPC.RichPresence()
             {
-                State = presence.Text,
-                Details = presence.TextTwo,
+                Details = presence.Text,
+                State = presence.TextTwo,
                 Assets = new Assets()
                 {
                     LargeImageKey = presence.Icon,
@@ -45,6 +46,7 @@ namespace EliteAPI.Discord
         public void TurnOn()
         {
             //Initialize the presence.
+            rpc = new DiscordRpcClient(clientID);
             api.Logger.LogInfo("Starting rich presence ... ");
             rpc.OnConnectionFailed += (sender, e) => api.Logger.LogError("There was an error while trying to connect to the rich presence.");
             rpc.OnConnectionEstablished += (sender, e) => api.Logger.LogInfo("Rich presence connected.");
@@ -79,13 +81,19 @@ namespace EliteAPI.Discord
                 IconTwo = "ed",
                 IconTextTwo = "EliteAPI"
             });
-            api.Events.StartJumpEvent += (sender, e) => UpdatePresence(new RichPresence()
+            api.Events.StartJumpEvent += (sender, e) =>
             {
-                Text = $"Jumping to {e.StarSystem}",
-                TextTwo = $"Class {e.StarClass} star",
-                Icon = "ed",
-                IconText = "EliteAPI"
-            });
+                if (e.JumpType == "FSDJump")
+                {
+                    UpdatePresence(new RichPresence()
+                    {
+                        Text = $"Jumping to {e.StarSystem}",
+                        TextTwo = $"Class {e.StarClass} star",
+                        Icon = "ed",
+                        IconText = "EliteAPI"
+                    });
+                }
+            };
             api.Events.FSDJumpEvent += (sender, e) => UpdatePresence(new RichPresence()
             {
                 Text = $"Arrived in {e.StarSystem}",
@@ -137,7 +145,7 @@ namespace EliteAPI.Discord
             api.Events.SupercruiseExitEvent += (sender, e) => UpdatePresence(new RichPresence()
             {
                 Text = $"Travelling in normal space",
-                TextTwo = $"near {e.BodyType.ToLower()} {e.Body}",
+                TextTwo = $"near {e.BodyType.ToLower().Replace("planetaryring", "ring")} {e.Body.Replace("Ring", "")}",
                 Icon = "exploration",
                 IconTwo = "ed",
                 IconTextTwo = "EliteAPI"
@@ -165,6 +173,7 @@ namespace EliteAPI.Discord
             //Remove all presences from queue, and clear it.
             rpc.DequeueAll();
             rpc.ClearPresence();
+            rpc.Dispose();
 
             //Mark as not running.
             IsRunning = false;

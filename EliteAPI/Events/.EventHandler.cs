@@ -3,10 +3,14 @@ namespace EliteAPI.Events
     using System;
 
     public class EventHandler
-    {
+    { 
         //AllEvents
         public event EventHandler<dynamic> AllEvent;
         public dynamic InvokeAllEvent(dynamic arg) { AllEvent?.Invoke(null, arg); return arg; }
+
+        //LeftSquadron
+        public event EventHandler<LeftSquadronInfo> LeftSquadronEvent;
+        public LeftSquadronInfo InvokeLeftSquadronEvent(LeftSquadronInfo arg) { LeftSquadronEvent?.Invoke(null, arg); return arg; }
 
         //HeatWarning
         public event EventHandler<HeatWarningInfo> HeatWarningEvent;

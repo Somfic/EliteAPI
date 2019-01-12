@@ -246,6 +246,7 @@
     <Compile Include="Events\WingInvite.cs" />
     <Compile Include="Events\WingJoin.cs" />
     <Compile Include="Events\WingLeave.cs" />
+    <Compile Include="Logging\Logger.cs" />
     <Compile Include="Status\ShipCargo.cs" />
     <Compile Include="Status\ShipModules.cs" />
     <Compile Include="Status\ShipStatus.cs" />

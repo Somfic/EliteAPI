@@ -19,18 +19,24 @@ namespace EliteAPI
         public DirectoryInfo JournalDirectory { get; set; }
         public bool SkipCatchUp { get; set; }
         public EliteAPI.Events.EventHandler EventHandler { get; set; }
+        public EliteAPI.Logging.Logger Logger { get; set; }
 
         //Ship status fields.
-        public ShipStatus Status { get { return ShipStatus.FromJson(File.ReadAllText(JournalDirectory.FullName + "//Status.json")); } }
-        public ShipCargo Cargo { get { return ShipCargo.FromJson(File.ReadAllText(JournalDirectory.FullName + "//Cargo.json")); } }
-        public ShipModules Modules { get { return ShipModules.FromJson(File.ReadAllText(JournalDirectory.FullName + "//ModulesInfo.json")); } }
+        public ShipStatus Status { get { return ShipStatus.FromFile(new FileInfo(JournalDirectory.FullName + "\\Status.json"), this); } }
+        public ShipCargo Cargo { get { return ShipCargo.FromFile(new FileInfo(JournalDirectory.FullName + "\\Cargo.json"), this); } }
+        public ShipModules Modules { get { return ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this); } }
         public UserBindings Bindings
         {
             get
-            {   string wantedFile = File.ReadAllText($@"C:\Users\{Environment.UserName}\AppData\Local\Frontier Developments\Elite Dangerous\Options\Bindings\StartPreset.start") + ".binds";
-                XmlDocument xml = new XmlDocument();
-                xml.LoadXml(wantedFile);
-                return JsonConvert.DeserializeObject<UserBindings>(JsonConvert.SerializeXmlNode(xml));
+            {
+                try
+                {
+                    string wantedFile = File.ReadAllText($@"C:\Users\{Environment.UserName}\AppData\Local\Frontier Developments\Elite Dangerous\Options\Bindings\StartPreset.start") + ".binds";
+                    XmlDocument xml = new XmlDocument();
+                    xml.LoadXml(wantedFile);
+                    return JsonConvert.DeserializeObject<UserBindings>(JsonConvert.SerializeXmlNode(xml));
+                }
+                catch { return new UserBindings(); }
             }
         }
         public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp = true)
@@ -50,7 +56,7 @@ namespace EliteAPI
 
         public void Start()
         {
-            Log?.Invoke(this, "Starting EliteAPI.");
+            Logger.LogInfo("Starting EliteAPI.");
 
             //Mark the API as running.
             IsRunning = true;
@@ -65,7 +71,7 @@ namespace EliteAPI
                 //Process the journal file.
                 ProcessJournal(journalFile, SkipCatchUp);
 
-                Log?.Invoke(this, "EliteAPI is ready.");
+                Logger.LogInfo("EliteAPI is ready.");
 
                 //Run for as long as we're running.
                 while (IsRunning)
@@ -113,7 +119,7 @@ namespace EliteAPI
 
             //Invoke the matching event.
             try { Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name.Contains(eventName)).First().GetMethod("Process").Invoke(null, new object[] { json, this }); }
-            catch(Exception ex) { Log?.Invoke(this, $"Could not invoke event {eventName}.{Environment.NewLine}Error: {ex.Message}"); }
+            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}.{Environment.NewLine}Error: {ex.Message}"); }
 
             //Invoke the AllEvent.
             EventHandler.InvokeAllEvent(obj);
@@ -124,9 +130,7 @@ namespace EliteAPI
             //Mark the API as not running.
             IsRunning = false;
 
-            Log?.Invoke(this, "Stopping EliteAPI.");
+            Logger.LogInfo("Stopping EliteAPI.");
         }
-
-        public event EventHandler<string> Log;
     }
 }

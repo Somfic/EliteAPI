@@ -41,7 +41,7 @@ namespace EliteAPI.VoiceAttack
                             journalPath = "";
                         }
                     }
-                    catch { vaProxy.WriteToLog("EliteVA - Could not load custom Player Journal folder from .ini file", "red"); journalPath = ""; }
+                    catch { journalPath = ""; }
                 }
 
                 if (string.IsNullOrWhiteSpace(journalPath))
@@ -71,6 +71,7 @@ namespace EliteAPI.VoiceAttack
                     else
                     {
                         vaProxy.WriteToLog($"EliteVA - Could not start EliteVA (cannot find Player Journals).", "red");
+                        Environment.Exit(1);
                     }
                 }
                 else
@@ -93,6 +94,21 @@ namespace EliteAPI.VoiceAttack
                 EliteAPI = new EliteDangerousAPI(playerJournalDirectory, true);
                 EliteAPI.EventHandler.AllEvent += EliteAPI_AllEvent;
                 EliteAPI.Start();
+                EliteAPI.Logger.Log += Logger_Log;
+            }
+
+            private static void Logger_Log(object sender, Logging.LogMessage e)
+            {
+                switch(e.Severity)
+                {
+                    case Logging.Severity.Error:
+                        _vaProxy.WriteToLog(e.Message, "red");
+                        break;
+
+                    case Logging.Severity.Warning:
+                        _vaProxy.WriteToLog(e.Message, "yellow");
+                        break;
+                }
             }
 
             private static void EliteAPI_AllEvent(object sender, dynamic e)
@@ -123,7 +139,11 @@ namespace EliteAPI.VoiceAttack
                     }
                     else { }
                 }
-                catch (Exception ex) { _vaProxy.WriteToLog("error: " + ex.Message, "red  "); }
+                catch (Exception ex)
+                {
+                    EliteAPI.Logger.LogError("There was an error while setting some of the event variables:");
+                    EliteAPI.Logger.LogWarning(ex.Message);
+                }
             }
 
             public static void VA_Exit1(dynamic vaProxy)
@@ -145,50 +165,50 @@ namespace EliteAPI.VoiceAttack
                 {
                     FindJournalFolder(vaProxy);
                     EliteAPI = new EliteDangerousAPI(playerJournalDirectory);
-                    return;
                 }
-
-                vaProxy.SetBoolean("EliteAPI.DOCKED", EliteAPI.Status.Docked);
-                vaProxy.SetBoolean("EliteAPI.LANDED", EliteAPI.Status.Landed);
-                vaProxy.SetBoolean("EliteAPI.GEAR", EliteAPI.Status.Gear);
-                vaProxy.SetBoolean("EliteAPI.SHIELDS", EliteAPI.Status.Shields);
-                vaProxy.SetBoolean("EliteAPI.SUPERCRUISE", EliteAPI.Status.Supercruise);
-                vaProxy.SetBoolean("EliteAPI.FLIGHTASSIST", EliteAPI.Status.FlightAssist);
-                vaProxy.SetBoolean("EliteAPI.HARDPOINTS", EliteAPI.Status.Hardpoints);
-                vaProxy.SetBoolean("EliteAPI.WINGING", EliteAPI.Status.Winging);
-                vaProxy.SetBoolean("EliteAPI.LIGHTS", EliteAPI.Status.Lights);
-                vaProxy.SetBoolean("EliteAPI.CARGOSCOOP", EliteAPI.Status.CargoScoop);
-                vaProxy.SetBoolean("EliteAPI.SILENTRUNNING", EliteAPI.Status.SilentRunning);
-                vaProxy.SetBoolean("EliteAPI.SCOOPING", EliteAPI.Status.Scooping);
-                vaProxy.SetBoolean("EliteAPI.SRVHANDBREAK", EliteAPI.Status.SrvHandbreak);
-                vaProxy.SetBoolean("EliteAPI.SRVTURRENT", EliteAPI.Status.SrvTurrent);
-                vaProxy.SetBoolean("EliteAPI.SRVNEARSHIP", EliteAPI.Status.SrvNearShip);
-                vaProxy.SetBoolean("EliteAPI.SRVDRIVEASSIST", EliteAPI.Status.SrvDriveAssist);
-                vaProxy.SetBoolean("EliteAPI.MASSLOCKED", EliteAPI.Status.MassLocked);
-                vaProxy.SetBoolean("EliteAPI.FSDCHARGING", EliteAPI.Status.FsdCooldown);
-                vaProxy.SetBoolean("EliteAPI.FSDCOOLDOWN", EliteAPI.Status.FsdCooldown);
-                vaProxy.SetBoolean("EliteAPI.LOWFUEL", EliteAPI.Status.LowFuel);
-                vaProxy.SetBoolean("EliteAPI.OVERHEATING", EliteAPI.Status.Overheating);
-                vaProxy.SetBoolean("EliteAPI.HASLATLONG", EliteAPI.Status.HasLatLong);
-                vaProxy.SetBoolean("EliteAPI.INDANGER", EliteAPI.Status.InDanger);
-                vaProxy.SetBoolean("EliteAPI.ININTERDICTION", EliteAPI.Status.InInterdiction);
-                vaProxy.SetBoolean("EliteAPI.INMOTHERSHIP", EliteAPI.Status.InMothership);
-                vaProxy.SetBoolean("EliteAPI.INFIGHTER", EliteAPI.Status.InFighter);
-                vaProxy.SetBoolean("EliteAPI.INSRV", EliteAPI.Status.InSRV);
-                vaProxy.SetBoolean("EliteAPI.ANALYSISMODE", EliteAPI.Status.AnalysisMode);
-                vaProxy.SetBoolean("EliteAPI.NIGHTVISION", EliteAPI.Status.NightVision);
-
                 try
                 {
+                    vaProxy.SetBoolean("EliteAPI.DOCKED", EliteAPI.Status.Docked);
+                    vaProxy.SetBoolean("EliteAPI.LANDED", EliteAPI.Status.Landed);
+                    vaProxy.SetBoolean("EliteAPI.GEAR", EliteAPI.Status.Gear);
+                    vaProxy.SetBoolean("EliteAPI.SHIELDS", EliteAPI.Status.Shields);
+                    vaProxy.SetBoolean("EliteAPI.SUPERCRUISE", EliteAPI.Status.Supercruise);
+                    vaProxy.SetBoolean("EliteAPI.FLIGHTASSIST", EliteAPI.Status.FlightAssist);
+                    vaProxy.SetBoolean("EliteAPI.HARDPOINTS", EliteAPI.Status.Hardpoints);
+                    vaProxy.SetBoolean("EliteAPI.WINGING", EliteAPI.Status.Winging);
+                    vaProxy.SetBoolean("EliteAPI.LIGHTS", EliteAPI.Status.Lights);
+                    vaProxy.SetBoolean("EliteAPI.CARGOSCOOP", EliteAPI.Status.CargoScoop);
+                    vaProxy.SetBoolean("EliteAPI.SILENTRUNNING", EliteAPI.Status.SilentRunning);
+                    vaProxy.SetBoolean("EliteAPI.SCOOPING", EliteAPI.Status.Scooping);
+                    vaProxy.SetBoolean("EliteAPI.SRVHANDBREAK", EliteAPI.Status.SrvHandbreak);
+                    vaProxy.SetBoolean("EliteAPI.SRVTURRENT", EliteAPI.Status.SrvTurrent);
+                    vaProxy.SetBoolean("EliteAPI.SRVNEARSHIP", EliteAPI.Status.SrvNearShip);
+                    vaProxy.SetBoolean("EliteAPI.SRVDRIVEASSIST", EliteAPI.Status.SrvDriveAssist);
+                    vaProxy.SetBoolean("EliteAPI.MASSLOCKED", EliteAPI.Status.MassLocked);
+                    vaProxy.SetBoolean("EliteAPI.FSDCHARGING", EliteAPI.Status.FsdCooldown);
+                    vaProxy.SetBoolean("EliteAPI.FSDCOOLDOWN", EliteAPI.Status.FsdCooldown);
+                    vaProxy.SetBoolean("EliteAPI.LOWFUEL", EliteAPI.Status.LowFuel);
+                    vaProxy.SetBoolean("EliteAPI.OVERHEATING", EliteAPI.Status.Overheating);
+                    vaProxy.SetBoolean("EliteAPI.HASLATLONG", EliteAPI.Status.HasLatLong);
+                    vaProxy.SetBoolean("EliteAPI.INDANGER", EliteAPI.Status.InDanger);
+                    vaProxy.SetBoolean("EliteAPI.ININTERDICTION", EliteAPI.Status.InInterdiction);
+                    vaProxy.SetBoolean("EliteAPI.INMOTHERSHIP", EliteAPI.Status.InMothership);
+                    vaProxy.SetBoolean("EliteAPI.INFIGHTER", EliteAPI.Status.InFighter);
+                    vaProxy.SetBoolean("EliteAPI.INSRV", EliteAPI.Status.InSRV);
+                    vaProxy.SetBoolean("EliteAPI.ANALYSISMODE", EliteAPI.Status.AnalysisMode);
+                    vaProxy.SetBoolean("EliteAPI.NIGHTVISION", EliteAPI.Status.NightVision);
                     vaProxy.SetInt("EliteAPI.Pips.SYSTEMS", (int)EliteAPI.Status.Pips[0]);
                     vaProxy.SetInt("EliteAPI.Pips.ENGINES", (int)EliteAPI.Status.Pips[1]);
                     vaProxy.SetInt("EliteAPI.Pips.WEAPONS", (int)EliteAPI.Status.Pips[2]);
                     vaProxy.SetInt("EliteAPI.FIREGROUP", (int)EliteAPI.Status.FireGroup);
                     vaProxy.SetInt("EliteAPI.GUIFOCUS", (int)EliteAPI.Status.GuiFocus);
-                    vaProxy.SetDecimal("EliteAPI.FUEL", (decimal)EliteAPI.Status.Fuel);     
+                    vaProxy.SetDecimal("EliteAPI.FUEL", (decimal)EliteAPI.Status.Fuel);
                     vaProxy.SetInt("EliteAPI.CARGO", (int)EliteAPI.Status.Cargo);
                 }
-                catch(Exception ex) { vaProxy.WriteToLog("EliteVA - There was an error while setting some of the fields, make sure ED is running"); vaProxy.WriteToLog(ex.Message, "red"); }
+                catch (Exception ex) {
+                    EliteAPI.Logger.LogError("There was an error while setting some of the VoiceAttack variables:");
+                    EliteAPI.Logger.LogWarning(ex.Message);
+                }
             }
         }
     }

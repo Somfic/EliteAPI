@@ -17,7 +17,7 @@ namespace EliteAPI.Events
         public ShieldStateInfo InvokeShieldStateEvent(ShieldStateInfo arg) { ShieldStateEvent?.Invoke(null, arg); return arg; }
 
         //VehicleSwitch
-        public event EventHandler<VehicleSwitchInfo> VehicleSwitchEvent;
+        public event EventHandler<VehicleSwitchInfo> VehicleSwitchEvent;        
         public VehicleSwitchInfo InvokeVehicleSwitchEvent(VehicleSwitchInfo arg) { VehicleSwitchEvent?.Invoke(null, arg); return arg; }
 
         //DockFighter

@@ -4,6 +4,7 @@
     using System.Collections.Generic;
 
     using System.Globalization;
+    using System.IO;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
@@ -37,6 +38,27 @@
     public partial class ShipModules
     {
         public static ShipModules FromJson(string json) => JsonConvert.DeserializeObject<ShipModules>(json, EliteAPI.Status.ShipModulesConverter.Settings);
+        public static ShipModules FromFile(FileInfo file, EliteDangerousAPI api)
+        {
+            if (File.Exists(file.FullName)) { api.Logger.LogError("Could not find ModulesInfo.json."); return new ShipModules(); }
+
+            //Create a stream from the log file.
+            FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+
+            //Create a stream from the file stream.
+            StreamReader streamReader = new StreamReader(fileStream);
+
+            //Go through the stream.
+            while (!streamReader.EndOfStream)
+            {
+                //Process this string.
+                return FromJson(streamReader.ReadLine());
+            }
+
+            api.Logger.LogWarning("Could not update modules.");
+
+            return new ShipModules();
+        }
     }
 
     public static class ShipModulesSerializer

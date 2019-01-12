@@ -4,6 +4,7 @@
     using System.Collections.Generic;
 
     using System.Globalization;
+    using System.IO;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
@@ -43,6 +44,27 @@
     public partial class ShipCargo
     {
         public static ShipCargo FromJson(string json) => JsonConvert.DeserializeObject<ShipCargo>(json, EliteAPI.Status.ShipCargoConverter.Settings);
+        public static ShipCargo FromFile(FileInfo file, EliteDangerousAPI api)
+        {
+            if (File.Exists(file.FullName)) { api.Logger.LogError("Could not find Cargo.json."); return new ShipCargo(); }
+
+            //Create a stream from the log file.
+            FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+
+            //Create a stream from the file stream.
+            StreamReader streamReader = new StreamReader(fileStream);
+
+            //Go through the stream.
+            while (!streamReader.EndOfStream)
+            {
+                //Process this string.
+                return FromJson(streamReader.ReadLine());
+            }
+
+            api.Logger.LogWarning("Could not update cargo.");
+
+            return new ShipCargo();
+        }
     }
 
     public static class ShipCargoSerializer

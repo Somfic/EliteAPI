@@ -18,7 +18,7 @@ namespace EliteAPI.Events
 
     public partial class SelfDestructInfo
     {
-        public static SelfDestructInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeSelfDestructEvent(JsonConvert.DeserializeObject<SelfDestructInfo>(json, EliteAPI.Events.SelfDestructConverter.Settings));
+        public static SelfDestructInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSelfDestructEvent(JsonConvert.DeserializeObject<SelfDestructInfo>(json, EliteAPI.Events.SelfDestructConverter.Settings));
     }
 
     public static class SelfDestructSerializer

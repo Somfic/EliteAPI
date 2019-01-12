@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class CrewMemberQuitsInfo
     {
-        public static CrewMemberQuitsInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeCrewMemberQuitsEvent(JsonConvert.DeserializeObject<CrewMemberQuitsInfo>(json, EliteAPI.Events.CrewMemberQuitsConverter.Settings));
+        public static CrewMemberQuitsInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCrewMemberQuitsEvent(JsonConvert.DeserializeObject<CrewMemberQuitsInfo>(json, EliteAPI.Events.CrewMemberQuitsConverter.Settings));
     }
 
     public static class CrewMemberQuitsSerializer

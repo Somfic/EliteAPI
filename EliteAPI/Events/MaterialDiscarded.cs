@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class MaterialDiscardedInfo
     {
-        public static MaterialDiscardedInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeMaterialDiscardedEvent(JsonConvert.DeserializeObject<MaterialDiscardedInfo>(json, EliteAPI.Events.MaterialDiscardedConverter.Settings));
+        public static MaterialDiscardedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMaterialDiscardedEvent(JsonConvert.DeserializeObject<MaterialDiscardedInfo>(json, EliteAPI.Events.MaterialDiscardedConverter.Settings));
     }
 
     public static class MaterialDiscardedSerializer

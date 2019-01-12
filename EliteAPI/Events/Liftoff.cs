@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class LiftoffInfo
     {
-        public static LiftoffInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeLiftoffEvent(JsonConvert.DeserializeObject<LiftoffInfo>(json, EliteAPI.Events.LiftoffConverter.Settings));
+        public static LiftoffInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLiftoffEvent(JsonConvert.DeserializeObject<LiftoffInfo>(json, EliteAPI.Events.LiftoffConverter.Settings));
     }
 
     public static class LiftoffSerializer

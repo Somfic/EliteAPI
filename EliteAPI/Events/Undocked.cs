@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class UndockedInfo
     {
-        public static UndockedInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeUndockedEvent(JsonConvert.DeserializeObject<UndockedInfo>(json, EliteAPI.Events.UndockedConverter.Settings));
+        public static UndockedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeUndockedEvent(JsonConvert.DeserializeObject<UndockedInfo>(json, EliteAPI.Events.UndockedConverter.Settings));
     }
 
     public static class UndockedSerializer

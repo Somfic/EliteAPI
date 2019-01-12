@@ -30,7 +30,7 @@ namespace EliteAPI.Events
 
     public partial class LeaveBodyInfo
     {
-        public static LeaveBodyInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeLeaveBodyEvent(JsonConvert.DeserializeObject<LeaveBodyInfo>(json, EliteAPI.Events.LeaveBodyConverter.Settings));
+        public static LeaveBodyInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLeaveBodyEvent(JsonConvert.DeserializeObject<LeaveBodyInfo>(json, EliteAPI.Events.LeaveBodyConverter.Settings));
     }
 
     public static class LeaveBodySerializer

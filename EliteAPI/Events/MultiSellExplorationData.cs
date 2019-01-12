@@ -39,7 +39,7 @@ namespace EliteAPI.Events
 
     public partial class MultiSellExplorationDataInfo
     {
-        public static MultiSellExplorationDataInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeMultiSellExplorationDataEvent(JsonConvert.DeserializeObject<MultiSellExplorationDataInfo>(json, EliteAPI.Events.MultiSellExplorationDataConverter.Settings));
+        public static MultiSellExplorationDataInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMultiSellExplorationDataEvent(JsonConvert.DeserializeObject<MultiSellExplorationDataInfo>(json, EliteAPI.Events.MultiSellExplorationDataConverter.Settings));
     }
 
     public static class MultiSellExplorationDataSerializer

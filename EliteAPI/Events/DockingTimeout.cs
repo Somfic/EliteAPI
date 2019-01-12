@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class DockingTimeoutInfo
     {
-        public static DockingTimeoutInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeDockingTimeoutEvent(JsonConvert.DeserializeObject<DockingTimeoutInfo>(json, EliteAPI.Events.DockingTimeoutConverter.Settings));
+        public static DockingTimeoutInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockingTimeoutEvent(JsonConvert.DeserializeObject<DockingTimeoutInfo>(json, EliteAPI.Events.DockingTimeoutConverter.Settings));
     }
 
     public static class DockingTimeoutSerializer

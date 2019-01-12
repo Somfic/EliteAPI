@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class AsteroidCrackedInfo
     {
-        public static AsteroidCrackedInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeAsteroidCrackedEvent(JsonConvert.DeserializeObject<AsteroidCrackedInfo>(json, EliteAPI.Events.AsteroidCrackedConverter.Settings));
+        public static AsteroidCrackedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeAsteroidCrackedEvent(JsonConvert.DeserializeObject<AsteroidCrackedInfo>(json, EliteAPI.Events.AsteroidCrackedConverter.Settings));
     }
 
     public static class AsteroidCrackedSerializer

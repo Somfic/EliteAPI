@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class SendTextInfo
     {
-        public static SendTextInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeSendTextEvent(JsonConvert.DeserializeObject<SendTextInfo>(json, EliteAPI.Events.SendTextConverter.Settings));
+        public static SendTextInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSendTextEvent(JsonConvert.DeserializeObject<SendTextInfo>(json, EliteAPI.Events.SendTextConverter.Settings));
     }
 
     public static class SendTextSerializer

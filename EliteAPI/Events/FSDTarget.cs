@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class FSDTargetInfo
     {
-        public static FSDTargetInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeFSDTargetEvent(JsonConvert.DeserializeObject<FSDTargetInfo>(json, EliteAPI.Events.FSDTargetConverter.Settings));
+        public static FSDTargetInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFSDTargetEvent(JsonConvert.DeserializeObject<FSDTargetInfo>(json, EliteAPI.Events.FSDTargetConverter.Settings));
     }
 
     public static class FSDTargetSerializer

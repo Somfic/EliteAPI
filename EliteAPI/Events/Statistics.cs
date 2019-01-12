@@ -297,7 +297,7 @@ namespace EliteAPI.Events
 
     public partial class StatisticsInfo
     {
-        public static StatisticsInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeStatisticsEvent(JsonConvert.DeserializeObject<StatisticsInfo>(json, EliteAPI.Events.StatisticsConverter.Settings));
+        public static StatisticsInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeStatisticsEvent(JsonConvert.DeserializeObject<StatisticsInfo>(json, EliteAPI.Events.StatisticsConverter.Settings));
     }
 
     public static class StatisticsSerializer

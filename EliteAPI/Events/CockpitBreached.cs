@@ -18,7 +18,7 @@ namespace EliteAPI.Events
 
     public partial class CockpitBreachedInfo
     {
-        public static CockpitBreachedInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeCockpitBreachedEvent(JsonConvert.DeserializeObject<CockpitBreachedInfo>(json, EliteAPI.Events.CockpitBreachedConverter.Settings));
+        public static CockpitBreachedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCockpitBreachedEvent(JsonConvert.DeserializeObject<CockpitBreachedInfo>(json, EliteAPI.Events.CockpitBreachedConverter.Settings));
     }
 
     public static class CockpitBreachedSerializer

@@ -33,7 +33,7 @@ namespace EliteAPI.Events
 
     public partial class ReceiveTextInfo
     {
-        public static ReceiveTextInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeReceiveTextEvent(JsonConvert.DeserializeObject<ReceiveTextInfo>(json, EliteAPI.Events.ReceiveTextConverter.Settings));
+        public static ReceiveTextInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeReceiveTextEvent(JsonConvert.DeserializeObject<ReceiveTextInfo>(json, EliteAPI.Events.ReceiveTextConverter.Settings));
     }
 
     public static class ReceiveTextSerializer

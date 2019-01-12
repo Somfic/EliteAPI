@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class CollectCargoInfo
     {
-        public static CollectCargoInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeCollectCargoEvent(JsonConvert.DeserializeObject<CollectCargoInfo>(json, EliteAPI.Events.CollectCargoConverter.Settings));
+        public static CollectCargoInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCollectCargoEvent(JsonConvert.DeserializeObject<CollectCargoInfo>(json, EliteAPI.Events.CollectCargoConverter.Settings));
     }
 
     public static class CollectCargoSerializer

@@ -51,7 +51,7 @@ namespace EliteAPI.Events
 
     public partial class CargoDepotInfo
     {
-        public static CargoDepotInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeCargoDepotEvent(JsonConvert.DeserializeObject<CargoDepotInfo>(json, EliteAPI.Events.CargoDepotConverter.Settings));
+        public static CargoDepotInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCargoDepotEvent(JsonConvert.DeserializeObject<CargoDepotInfo>(json, EliteAPI.Events.CargoDepotConverter.Settings));
     }
 
     public static class CargoDepotSerializer

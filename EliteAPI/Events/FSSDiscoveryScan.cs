@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class FSSDiscoveryScanInfo
     {
-        public static FSSDiscoveryScanInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeFSSDiscoveryScanEvent(JsonConvert.DeserializeObject<FSSDiscoveryScanInfo>(json, EliteAPI.Events.FSSDiscoveryScanConverter.Settings));
+        public static FSSDiscoveryScanInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFSSDiscoveryScanEvent(JsonConvert.DeserializeObject<FSSDiscoveryScanInfo>(json, EliteAPI.Events.FSSDiscoveryScanConverter.Settings));
     }
 
     public static class FSSDiscoveryScanSerializer

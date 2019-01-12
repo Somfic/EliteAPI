@@ -42,7 +42,7 @@ namespace EliteAPI.Events
 
     public partial class BountyInfo
     {
-        public static BountyInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeBountyEvent(JsonConvert.DeserializeObject<BountyInfo>(json, EliteAPI.Events.BountyConverter.Settings));
+        public static BountyInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeBountyEvent(JsonConvert.DeserializeObject<BountyInfo>(json, EliteAPI.Events.BountyConverter.Settings));
     }
 
     public static class BountySerializer

@@ -36,7 +36,7 @@ namespace EliteAPI.Events
 
     public partial class SynthesisInfo
     {
-        public static SynthesisInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeSynthesisEvent(JsonConvert.DeserializeObject<SynthesisInfo>(json, EliteAPI.Events.SynthesisConverter.Settings));
+        public static SynthesisInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSynthesisEvent(JsonConvert.DeserializeObject<SynthesisInfo>(json, EliteAPI.Events.SynthesisConverter.Settings));
     }
 
     public static class SynthesisSerializer

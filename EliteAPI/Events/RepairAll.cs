@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class RepairAllInfo
     {
-        public static RepairAllInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeRepairAllEvent(JsonConvert.DeserializeObject<RepairAllInfo>(json, EliteAPI.Events.RepairAllConverter.Settings));
+        public static RepairAllInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRepairAllEvent(JsonConvert.DeserializeObject<RepairAllInfo>(json, EliteAPI.Events.RepairAllConverter.Settings));
     }
 
     public static class RepairAllSerializer

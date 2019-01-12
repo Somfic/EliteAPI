@@ -42,7 +42,7 @@ namespace EliteAPI.Events
 
     public partial class FetchRemoteModuleInfo
     {
-        public static FetchRemoteModuleInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeFetchRemoteModuleEvent(JsonConvert.DeserializeObject<FetchRemoteModuleInfo>(json, EliteAPI.Events.FetchRemoteModuleConverter.Settings));
+        public static FetchRemoteModuleInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFetchRemoteModuleEvent(JsonConvert.DeserializeObject<FetchRemoteModuleInfo>(json, EliteAPI.Events.FetchRemoteModuleConverter.Settings));
     }
 
     public static class FetchRemoteModuleSerializer

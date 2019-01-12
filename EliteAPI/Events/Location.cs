@@ -138,7 +138,7 @@ namespace EliteAPI.Events
 
     public partial class LocationInfo
     {
-        public static LocationInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeLocationEvent(JsonConvert.DeserializeObject<LocationInfo>(json, EliteAPI.Events.LocationConverter.Settings));
+        public static LocationInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLocationEvent(JsonConvert.DeserializeObject<LocationInfo>(json, EliteAPI.Events.LocationConverter.Settings));
     }
 
     public static class LocationSerializer

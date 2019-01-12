@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class NavBeaconScanInfo
     {
-        public static NavBeaconScanInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeNavBeaconScanEvent(JsonConvert.DeserializeObject<NavBeaconScanInfo>(json, EliteAPI.Events.NavBeaconScanConverter.Settings));
+        public static NavBeaconScanInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeNavBeaconScanEvent(JsonConvert.DeserializeObject<NavBeaconScanInfo>(json, EliteAPI.Events.NavBeaconScanConverter.Settings));
     }
 
     public static class NavBeaconScanSerializer

@@ -39,7 +39,7 @@ namespace EliteAPI.Events
 
     public partial class PassengersInfo
     {
-        public static PassengersInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokePassengersEvent(JsonConvert.DeserializeObject<PassengersInfo>(json, EliteAPI.Events.PassengersConverter.Settings));
+        public static PassengersInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePassengersEvent(JsonConvert.DeserializeObject<PassengersInfo>(json, EliteAPI.Events.PassengersConverter.Settings));
     }
 
     public static class PassengersSerializer

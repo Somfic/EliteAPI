@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class PromotionInfo
     {
-        public static PromotionInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokePromotionEvent(JsonConvert.DeserializeObject<PromotionInfo>(json, EliteAPI.Events.PromotionConverter.Settings));
+        public static PromotionInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePromotionEvent(JsonConvert.DeserializeObject<PromotionInfo>(json, EliteAPI.Events.PromotionConverter.Settings));
     }
 
     public static class PromotionSerializer

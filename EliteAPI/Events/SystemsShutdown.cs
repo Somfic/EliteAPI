@@ -18,7 +18,7 @@ namespace EliteAPI.Events
 
     public partial class SystemsShutdownInfo
     {
-        public static SystemsShutdownInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeSystemsShutdownEvent(JsonConvert.DeserializeObject<SystemsShutdownInfo>(json, EliteAPI.Events.SystemsShutdownConverter.Settings));
+        public static SystemsShutdownInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSystemsShutdownEvent(JsonConvert.DeserializeObject<SystemsShutdownInfo>(json, EliteAPI.Events.SystemsShutdownConverter.Settings));
     }
 
     public static class SystemsShutdownSerializer

@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class PowerplayVoteInfo
     {
-        public static PowerplayVoteInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokePowerplayVoteEvent(JsonConvert.DeserializeObject<PowerplayVoteInfo>(json, EliteAPI.Events.PowerplayVoteConverter.Settings));
+        public static PowerplayVoteInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayVoteEvent(JsonConvert.DeserializeObject<PowerplayVoteInfo>(json, EliteAPI.Events.PowerplayVoteConverter.Settings));
     }
 
     public static class PowerplayVoteSerializer

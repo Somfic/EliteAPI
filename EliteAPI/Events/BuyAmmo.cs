@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class BuyAmmoInfo
     {
-        public static BuyAmmoInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeBuyAmmoEvent(JsonConvert.DeserializeObject<BuyAmmoInfo>(json, EliteAPI.Events.BuyAmmoConverter.Settings));
+        public static BuyAmmoInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeBuyAmmoEvent(JsonConvert.DeserializeObject<BuyAmmoInfo>(json, EliteAPI.Events.BuyAmmoConverter.Settings));
     }
 
     public static class BuyAmmoSerializer

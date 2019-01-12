@@ -16,27 +16,27 @@ namespace EliteAPI.Events
         public string Event { get; set; }
 
         [JsonProperty("Combat")]
-        public long Combat { get; set; }
+        public int Combat { get; set; }
 
         [JsonProperty("Trade")]
-        public long Trade { get; set; }
+        public int Trade { get; set; }
 
         [JsonProperty("Explore")]
-        public long Explore { get; set; }
+        public int Explore { get; set; }
 
         [JsonProperty("Empire")]
-        public long Empire { get; set; }
+        public int Empire { get; set; }
 
         [JsonProperty("Federation")]
-        public long Federation { get; set; }
+        public int Federation { get; set; }
 
         [JsonProperty("CQC")]
-        public long Cqc { get; set; }
+        public int Cqc { get; set; }
     }
 
     public partial class ProgressInfo
     {
-        public static ProgressInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeProgressEvent(JsonConvert.DeserializeObject<ProgressInfo>(json, EliteAPI.Events.ProgressConverter.Settings));
+        public static ProgressInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeProgressEvent(JsonConvert.DeserializeObject<ProgressInfo>(json, EliteAPI.Events.ProgressConverter.Settings));
     }
 
     public static class ProgressSerializer

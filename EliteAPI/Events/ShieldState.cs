@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class ShieldStateInfo
     {
-        public static ShieldStateInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeShieldStateEvent(JsonConvert.DeserializeObject<ShieldStateInfo>(json, EliteAPI.Events.ShieldStateConverter.Settings));
+        public static ShieldStateInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeShieldStateEvent(JsonConvert.DeserializeObject<ShieldStateInfo>(json, EliteAPI.Events.ShieldStateConverter.Settings));
     }
 
     public static class ShieldStateSerializer

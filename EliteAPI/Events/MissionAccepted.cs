@@ -66,7 +66,7 @@ namespace EliteAPI.Events
 
     public partial class MissionAcceptedInfo
     {
-        public static MissionAcceptedInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeMissionAcceptedEvent(JsonConvert.DeserializeObject<MissionAcceptedInfo>(json, EliteAPI.Events.MissionAcceptedConverter.Settings));
+        public static MissionAcceptedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMissionAcceptedEvent(JsonConvert.DeserializeObject<MissionAcceptedInfo>(json, EliteAPI.Events.MissionAcceptedConverter.Settings));
     }
 
     public static class MissionAcceptedSerializer

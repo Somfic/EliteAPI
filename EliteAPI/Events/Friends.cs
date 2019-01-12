@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class FriendsInfo
     {
-        public static FriendsInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeFriendsEvent(JsonConvert.DeserializeObject<FriendsInfo>(json, EliteAPI.Events.FriendsConverter.Settings));
+        public static FriendsInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFriendsEvent(JsonConvert.DeserializeObject<FriendsInfo>(json, EliteAPI.Events.FriendsConverter.Settings));
     }
 
     public static class FriendsSerializer

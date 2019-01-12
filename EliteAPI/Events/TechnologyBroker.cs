@@ -57,7 +57,7 @@ namespace EliteAPI.Events
 
     public partial class TechnologyBrokerInfo
     {
-        public static TechnologyBrokerInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeTechnologyBrokerEvent(JsonConvert.DeserializeObject<TechnologyBrokerInfo>(json, EliteAPI.Events.TechnologyBrokerConverter.Settings));
+        public static TechnologyBrokerInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeTechnologyBrokerEvent(JsonConvert.DeserializeObject<TechnologyBrokerInfo>(json, EliteAPI.Events.TechnologyBrokerConverter.Settings));
     }
 
     public static class TechnologyBrokerSerializer

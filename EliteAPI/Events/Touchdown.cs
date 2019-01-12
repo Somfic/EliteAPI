@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class TouchdownInfo
     {
-        public static TouchdownInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeTouchdownEvent(JsonConvert.DeserializeObject<TouchdownInfo>(json, EliteAPI.Events.TouchdownConverter.Settings));
+        public static TouchdownInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeTouchdownEvent(JsonConvert.DeserializeObject<TouchdownInfo>(json, EliteAPI.Events.TouchdownConverter.Settings));
     }
 
     public static class TouchdownSerializer

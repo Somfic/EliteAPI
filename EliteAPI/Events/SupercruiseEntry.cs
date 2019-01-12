@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class SupercruiseEntryInfo
     {
-        public static SupercruiseEntryInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeSupercruiseEntryEvent(JsonConvert.DeserializeObject<SupercruiseEntryInfo>(json, EliteAPI.Events.SupercruiseEntryConverter.Settings));
+        public static SupercruiseEntryInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSupercruiseEntryEvent(JsonConvert.DeserializeObject<SupercruiseEntryInfo>(json, EliteAPI.Events.SupercruiseEntryConverter.Settings));
     }
 
     public static class SupercruiseEntrySerializer

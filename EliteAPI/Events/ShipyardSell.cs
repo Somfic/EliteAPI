@@ -33,7 +33,7 @@ namespace EliteAPI.Events
 
     public partial class ShipyardSellInfo
     {
-        public static ShipyardSellInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeShipyardSellEvent(JsonConvert.DeserializeObject<ShipyardSellInfo>(json, EliteAPI.Events.ShipyardSellConverter.Settings));
+        public static ShipyardSellInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeShipyardSellEvent(JsonConvert.DeserializeObject<ShipyardSellInfo>(json, EliteAPI.Events.ShipyardSellConverter.Settings));
     }
 
     public static class ShipyardSellSerializer

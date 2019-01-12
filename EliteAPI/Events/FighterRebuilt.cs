@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class FighterRebuiltInfo
     {
-        public static FighterRebuiltInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeFighterRebuiltEvent(JsonConvert.DeserializeObject<FighterRebuiltInfo>(json, EliteAPI.Events.FighterRebuiltConverter.Settings));
+        public static FighterRebuiltInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFighterRebuiltEvent(JsonConvert.DeserializeObject<FighterRebuiltInfo>(json, EliteAPI.Events.FighterRebuiltConverter.Settings));
     }
 
     public static class FighterRebuiltSerializer

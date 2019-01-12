@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class PVPKillInfo
     {
-        public static PVPKillInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokePVPKillEvent(JsonConvert.DeserializeObject<PVPKillInfo>(json, EliteAPI.Events.PVPKillConverter.Settings));
+        public static PVPKillInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePVPKillEvent(JsonConvert.DeserializeObject<PVPKillInfo>(json, EliteAPI.Events.PVPKillConverter.Settings));
     }
 
     public static class PVPKillSerializer

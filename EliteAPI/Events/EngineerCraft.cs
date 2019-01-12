@@ -84,7 +84,7 @@ namespace EliteAPI.Events
 
     public partial class EngineerCraftInfo
     {
-        public static EngineerCraftInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeEngineerCraftEvent(JsonConvert.DeserializeObject<EngineerCraftInfo>(json, EliteAPI.Events.EngineerCraftConverter.Settings));
+        public static EngineerCraftInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeEngineerCraftEvent(JsonConvert.DeserializeObject<EngineerCraftInfo>(json, EliteAPI.Events.EngineerCraftConverter.Settings));
     }
 
     public static class EngineerCraftSerializer

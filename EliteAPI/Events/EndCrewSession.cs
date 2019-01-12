@@ -21,7 +21,7 @@ namespace EliteAPI.Events
 
     public partial class EndCrewSessionInfo
     {
-        public static EndCrewSessionInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeEndCrewSessionEvent(JsonConvert.DeserializeObject<EndCrewSessionInfo>(json, EliteAPI.Events.EndCrewSessionConverter.Settings));
+        public static EndCrewSessionInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeEndCrewSessionEvent(JsonConvert.DeserializeObject<EndCrewSessionInfo>(json, EliteAPI.Events.EndCrewSessionConverter.Settings));
     }
 
     public static class EndCrewSessionSerializer

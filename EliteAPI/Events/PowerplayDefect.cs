@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class PowerplayDefectInfo
     {
-        public static PowerplayDefectInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokePowerplayDefectEvent(JsonConvert.DeserializeObject<PowerplayDefectInfo>(json, EliteAPI.Events.PowerplayDefectConverter.Settings));
+        public static PowerplayDefectInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayDefectEvent(JsonConvert.DeserializeObject<PowerplayDefectInfo>(json, EliteAPI.Events.PowerplayDefectConverter.Settings));
     }
 
     public static class PowerplayDefectSerializer

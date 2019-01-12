@@ -69,7 +69,7 @@ namespace EliteAPI.Events
 
     public partial class StoredModulesInfo
     {
-        public static StoredModulesInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeStoredModulesEvent(JsonConvert.DeserializeObject<StoredModulesInfo>(json, EliteAPI.Events.StoredModulesConverter.Settings));
+        public static StoredModulesInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeStoredModulesEvent(JsonConvert.DeserializeObject<StoredModulesInfo>(json, EliteAPI.Events.StoredModulesConverter.Settings));
     }
 
     public static class StoredModulesSerializer

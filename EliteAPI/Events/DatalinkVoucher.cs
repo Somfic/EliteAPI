@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class DatalinkVoucherInfo
     {
-        public static DatalinkVoucherInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeDatalinkVoucherEvent(JsonConvert.DeserializeObject<DatalinkVoucherInfo>(json, EliteAPI.Events.DatalinkVoucherConverter.Settings));
+        public static DatalinkVoucherInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDatalinkVoucherEvent(JsonConvert.DeserializeObject<DatalinkVoucherInfo>(json, EliteAPI.Events.DatalinkVoucherConverter.Settings));
     }
 
     public static class DatalinkVoucherSerializer

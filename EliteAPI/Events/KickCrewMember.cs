@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class KickCrewMemberInfo
     {
-        public static KickCrewMemberInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeKickCrewMemberEvent(JsonConvert.DeserializeObject<KickCrewMemberInfo>(json, EliteAPI.Events.KickCrewMemberConverter.Settings));
+        public static KickCrewMemberInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeKickCrewMemberEvent(JsonConvert.DeserializeObject<KickCrewMemberInfo>(json, EliteAPI.Events.KickCrewMemberConverter.Settings));
     }
 
     public static class KickCrewMemberSerializer

@@ -18,7 +18,7 @@ namespace EliteAPI.Events
 
     public partial class FighterDestroyedInfo
     {
-        public static FighterDestroyedInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeFighterDestroyedEvent(JsonConvert.DeserializeObject<FighterDestroyedInfo>(json, EliteAPI.Events.FighterDestroyedConverter.Settings));
+        public static FighterDestroyedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFighterDestroyedEvent(JsonConvert.DeserializeObject<FighterDestroyedInfo>(json, EliteAPI.Events.FighterDestroyedConverter.Settings));
     }
 
     public static class FighterDestroyedSerializer

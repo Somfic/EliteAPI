@@ -54,7 +54,7 @@ namespace EliteAPI.Events
 
     public partial class MassModuleStoreInfo
     {
-        public static MassModuleStoreInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeMassModuleStoreEvent(JsonConvert.DeserializeObject<MassModuleStoreInfo>(json, EliteAPI.Events.MassModuleStoreConverter.Settings));
+        public static MassModuleStoreInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMassModuleStoreEvent(JsonConvert.DeserializeObject<MassModuleStoreInfo>(json, EliteAPI.Events.MassModuleStoreConverter.Settings));
     }
 
     public static class MassModuleStoreSerializer

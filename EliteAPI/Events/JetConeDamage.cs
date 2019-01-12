@@ -24,7 +24,7 @@ namespace EliteAPI.Events
 
     public partial class JetConeDamageInfo
     {
-        public static JetConeDamageInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeJetConeDamageEvent(JsonConvert.DeserializeObject<JetConeDamageInfo>(json, EliteAPI.Events.JetConeDamageConverter.Settings));
+        public static JetConeDamageInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeJetConeDamageEvent(JsonConvert.DeserializeObject<JetConeDamageInfo>(json, EliteAPI.Events.JetConeDamageConverter.Settings));
     }
 
     public static class JetConeDamageSerializer

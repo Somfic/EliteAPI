@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class DockingRequestedInfo
     {
-        public static DockingRequestedInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeDockingRequestedEvent(JsonConvert.DeserializeObject<DockingRequestedInfo>(json, EliteAPI.Events.DockingRequestedConverter.Settings));
+        public static DockingRequestedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockingRequestedEvent(JsonConvert.DeserializeObject<DockingRequestedInfo>(json, EliteAPI.Events.DockingRequestedConverter.Settings));
     }
 
     public static class DockingRequestedSerializer

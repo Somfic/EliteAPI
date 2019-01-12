@@ -39,7 +39,7 @@ namespace EliteAPI.Events
 
     public partial class ModuleSellInfo
     {
-        public static ModuleSellInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeModuleSellEvent(JsonConvert.DeserializeObject<ModuleSellInfo>(json, EliteAPI.Events.ModuleSellConverter.Settings));
+        public static ModuleSellInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeModuleSellEvent(JsonConvert.DeserializeObject<ModuleSellInfo>(json, EliteAPI.Events.ModuleSellConverter.Settings));
     }
 
     public static class ModuleSellSerializer

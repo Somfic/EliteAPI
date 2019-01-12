@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class DockingCancelledInfo
     {
-        public static DockingCancelledInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeDockingCancelledEvent(JsonConvert.DeserializeObject<DockingCancelledInfo>(json, EliteAPI.Events.DockingCancelledConverter.Settings));
+        public static DockingCancelledInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockingCancelledEvent(JsonConvert.DeserializeObject<DockingCancelledInfo>(json, EliteAPI.Events.DockingCancelledConverter.Settings));
     }
 
     public static class DockingCancelledSerializer

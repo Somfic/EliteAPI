@@ -27,7 +27,7 @@ namespace EliteAPI.Events
 
     public partial class NpcCrewPaidWageInfo
     {
-        public static NpcCrewPaidWageInfo Process(string json, EliteDangerousAPI api) => api.EventHandler.InvokeNpcCrewPaidWageEvent(JsonConvert.DeserializeObject<NpcCrewPaidWageInfo>(json, EliteAPI.Events.NpcCrewPaidWageConverter.Settings));
+        public static NpcCrewPaidWageInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeNpcCrewPaidWageEvent(JsonConvert.DeserializeObject<NpcCrewPaidWageInfo>(json, EliteAPI.Events.NpcCrewPaidWageConverter.Settings));
     }
 
     public static class NpcCrewPaidWageSerializer

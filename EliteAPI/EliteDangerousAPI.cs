@@ -39,11 +39,13 @@ namespace EliteAPI
                 catch { return new UserBindings(); }
             }
         }
+
         public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp = true)
         {
             //Set the fields to the parameters.
             this.JournalDirectory = JournalDirectory;
             this.SkipCatchUp = SkipCatchUp;
+            this.Logger = new Logging.Logger();
 
             //Reset the API.
             Reset();

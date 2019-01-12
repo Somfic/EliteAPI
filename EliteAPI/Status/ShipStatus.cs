@@ -86,7 +86,7 @@ namespace EliteAPI.Status
         public static ShipStatus FromJson(string json) => JsonConvert.DeserializeObject<ShipStatus>(json, EliteAPI.Status.ShipStatusConverter.Settings);
         public static ShipStatus FromFile(FileInfo file, EliteDangerousAPI api)
         {
-            if(File.Exists(file.FullName)) { api.Logger.LogError("Could not find Status.json."); return new ShipStatus(); }
+            if(!File.Exists(file.FullName)) { api.Logger.LogError("Could not find Status.json."); return new ShipStatus(); }
 
             //Create a stream from the log file.
             FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);

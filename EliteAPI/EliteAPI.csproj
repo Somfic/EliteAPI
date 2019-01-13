@@ -34,7 +34,7 @@
   <ItemGroup>
     <Reference Include="DiscordRPC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\DiscordRPC.dll</HintPath>
+      <HintPath>..\lib\DiscordRPC.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -260,9 +260,6 @@
     <Compile Include="Status\ShipStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VoiceAttack\EliteVA.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DiscordRPC.dll" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -56,25 +56,36 @@ namespace EliteAPI
             this.JournalDirectory = JournalDirectory;
             this.SkipCatchUp = SkipCatchUp;
 
-            //Init services.
-            this.Events = new Events.EventHandler();
-            this.Logger = new Logging.Logger();
-            this.Commander = new CommanderStatus(this);
-            this.Location = new LocationStatus(this);
-            this.DiscordRichPresence = new RichPresenceClient(this);
-
             //Reset the API.
             Reset();
         }
 
         public void Reset()
         {
-            Events = new Events.EventHandler();
+            //Reset services.
+            this.Events = new Events.EventHandler();
+            this.Logger = new Logging.Logger();
+            this.Commander = new CommanderStatus(this);
+            this.Location = new LocationStatus(this);
+            this.DiscordRichPresence = new RichPresenceClient(this);
         }
 
         public void Start()
         {
             Logger.LogInfo("Starting EliteAPI.");
+
+            //Check if said JournalDirectory has all the files.
+            int errorCount = 0;
+            bool errorIsCritical = false;
+            if (JournalDirectory.GetFiles("Journal.*").Count() == 0) { Logger.LogWarning("Could not find Journal files."); errorCount++; errorIsCritical = true; }
+            if (JournalDirectory.GetFiles().Count(x => x.Name == "Status.json") == 0) { Logger.LogWarning("Could not find Status.json."); errorCount++; }
+            if (JournalDirectory.GetFiles().Count(x => x.Name == "Cargo.json") == 0) { Logger.LogWarning("Could not find Cargo.json."); errorCount++; }
+            if (JournalDirectory.GetFiles().Count(x => x.Name == "ModulesInfo.json") == 0) { Logger.LogWarning("Could not find ModulesInfo.json."); errorCount++; }
+            if (JournalDirectory.GetFiles().Count(x => x.Name == "Shipyard.json") == 0) { Logger.LogWarning("Could not find Shipyard.json."); errorCount++; }
+            if (JournalDirectory.GetFiles().Count(x => x.Name == "Outfitting.json") == 0) { Logger.LogWarning("Could not find Outfitting.json."); errorCount++; }
+            if (JournalDirectory.GetFiles().Count(x => x.Name == "Market.json") == 0) { Logger.LogWarning("Could not find Market.json."); errorCount++; }
+            if (errorCount == 0) { Logger.LogInfo("All files were found."); }
+            if (errorIsCritical) { Logger.LogError("Could not start EliteAPI."); return; }
 
             //Mark the API as running.
             IsRunning = true;

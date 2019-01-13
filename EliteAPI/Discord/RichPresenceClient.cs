@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using DiscordRPC;
-using DiscordRPC.Logging;
 
 namespace EliteAPI.Discord
 {
@@ -45,13 +40,19 @@ namespace EliteAPI.Discord
 
         public void TurnOn()
         {
-            //Initialize the presence.
-            rpc = new DiscordRpcClient(clientID);
+            //Create RPC client.
+            rpc = new DiscordRpcClient(clientID, true);
+            rpc.Subscribe(EventType.JoinRequest);
+            rpc.Subscribe(EventType.Join);
             api.Logger.LogInfo("Starting rich presence ... ");
+
+            //Subscribe to events.
             rpc.OnConnectionFailed += (sender, e) => api.Logger.LogError("There was an error while trying to connect to the rich presence.");
             rpc.OnConnectionEstablished += (sender, e) => api.Logger.LogInfo("Rich presence connected.");
             rpc.OnError += (sender, e) => api.Logger.LogError("Rich presence error: " + e.Message);
             rpc.OnReady += (sender, e) => api.Logger.LogInfo("Rich presence ready.");
+
+            //Start the RPC.
             rpc.Initialize();
 
             //Mark as running.

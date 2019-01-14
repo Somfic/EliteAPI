@@ -9,8 +9,13 @@ namespace EliteAPI.Inara
 {
     public class InaraConnection
     {
-        public string Post(InaraEntry entry)
+        public List<InaraEvent> EventsQueue = new List<InaraEvent>();
+
+        public string ExecuteQueue(InaraHeader header)
         {
+            InaraEntry entry = new InaraEntry(header, EventsQueue);
+            EventsQueue.Clear();
+
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://inara.cz/inapi/v1/");
             request.ContentType = "application/json";
             request.Method = "POST";

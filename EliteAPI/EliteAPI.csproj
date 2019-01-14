@@ -48,6 +48,9 @@
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security.AccessControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.AccessControl.4.5.0\lib\net461\System.Security.AccessControl.dll</HintPath>
@@ -252,6 +255,28 @@
     <Compile Include="Events\WingInvite.cs" />
     <Compile Include="Events\WingJoin.cs" />
     <Compile Include="Events\WingLeave.cs" />
+    <Compile Include="Inara\Events\DelCommanderShip.cs" />
+    <Compile Include="Inara\Events\AddCommanderShip.cs" />
+    <Compile Include="Inara\Events\SetCommanderInventoryMaterialsItem .cs" />
+    <Compile Include="Inara\Events\DelCommanderInventoryMaterialsItem.cs" />
+    <Compile Include="Inara\Events\AddCommanderInventoryMaterialsItem.cs" />
+    <Compile Include="Inara\Events\SetCommanderInventoryCargoItem.cs" />
+    <Compile Include="Inara\Events\DelCommanderInventoryCargoItem.cs" />
+    <Compile Include="Inara\Events\AddCommanderInventoryCargoItem.cs" />
+    <Compile Include="Inara\Events\AddCommanderPermit.cs" />
+    <Compile Include="Inara\Events\DelCommanderFriend .cs" />
+    <Compile Include="Inara\Events\AddCommanderFriend.cs" />
+    <Compile Include="Inara\Events\GetCommanderProfile.cs" />
+    <Compile Include="Inara\Events\SetCommanderCredits.cs" />
+    <Compile Include="Inara\Events\SetCommanderGameStatistics.cs" />
+    <Compile Include="Inara\Events\SetCommanderRankEngineer.cs" />
+    <Compile Include="Inara\Events\SetCommanderRankPilot.cs" />
+    <Compile Include="Inara\Events\SetCommanderRankPower.cs" />
+    <Compile Include="Inara\Events\SetCommanderReputationMajorFaction.cs" />
+    <Compile Include="Inara\Events\SetCommanderReputationMinorFaction.cs" />
+    <Compile Include="Inara\Events\SetCommanderShip.cs" />
+    <Compile Include="Inara\Events\SetCommanderShipLoadout.cs" />
+    <Compile Include="Inara\Events\SetCommanderStorageModules.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Status\LocationStatus.cs" />
     <Compile Include="Status\ShipCargo.cs" />
@@ -259,6 +284,7 @@
     <Compile Include="Status\ShipModules.cs" />
     <Compile Include="Status\ShipStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Inara\InaraConnection.cs" />
     <Compile Include="VoiceAttack\EliteVA.cs" />
   </ItemGroup>
   <ItemGroup>

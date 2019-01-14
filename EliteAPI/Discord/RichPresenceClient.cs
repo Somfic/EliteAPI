@@ -1,5 +1,6 @@
 ﻿using System;
-
+using System.Threading;
+using System.Threading.Tasks;
 using DiscordRPC;
 
 namespace EliteAPI.Discord
@@ -42,9 +43,7 @@ namespace EliteAPI.Discord
         {
             //Create RPC client.
             rpc = new DiscordRpcClient(clientID, true);
-            rpc.Subscribe(EventType.JoinRequest);
-            rpc.Subscribe(EventType.Join);
-            api.Logger.LogInfo("Starting rich presence ... ");
+            api.Logger.LogInfo("Starting rich presence. ");
 
             //Subscribe to events.
             rpc.OnConnectionFailed += (sender, e) => api.Logger.LogError("There was an error while trying to connect to the rich presence.");
@@ -52,11 +51,13 @@ namespace EliteAPI.Discord
             rpc.OnError += (sender, e) => api.Logger.LogError("Rich presence error: " + e.Message);
             rpc.OnReady += (sender, e) => api.Logger.LogInfo("Rich presence ready.");
 
-            //Start the RPC.
-            rpc.Initialize();
 
+            //Start the RPC.
             //Mark as running.
             IsRunning = true;
+            rpc.SetSubscription(EventType.Join | EventType.JoinRequest | EventType.Spectate);
+            rpc.Initialize();
+            Task.Run(() => { while (IsRunning) { Thread.Sleep(1000); rpc.Invoke(); } });
 
             api.Events.DockingGrantedEvent += (sender, e) => UpdatePresence(new RichPresence()
             {

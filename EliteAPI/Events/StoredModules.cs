@@ -61,7 +61,7 @@ namespace EliteAPI.Events
         public string EngineerModifications { get; set; }
 
         [JsonProperty("Level", NullValueHandling = NullValueHandling.Ignore)]
-        public long ? Level { get; set; }
+        public long? Level { get; set; }
 
         [JsonProperty("Quality", NullValueHandling = NullValueHandling.Ignore)]
         public double? Quality { get; set; }

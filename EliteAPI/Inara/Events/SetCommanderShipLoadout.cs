@@ -46,10 +46,10 @@ namespace EliteAPI.Inara.Events
         public long ItemPriority { get; set; }
 
         [JsonProperty("itemAmmoClip", NullValueHandling = NullValueHandling.Ignore)]
-        public long ? ItemAmmoClip { get; set; }
+        public long? ItemAmmoClip { get; set; }
 
         [JsonProperty("itemAmmoHopper", NullValueHandling = NullValueHandling.Ignore)]
-        public long ? ItemAmmoHopper { get; set; }
+        public long? ItemAmmoHopper { get; set; }
 
         [JsonProperty("engineering", NullValueHandling = NullValueHandling.Ignore)]
         public InaraLoadoutEngineering Engineering { get; set; }

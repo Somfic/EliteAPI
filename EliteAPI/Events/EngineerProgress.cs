@@ -31,10 +31,10 @@ namespace EliteAPI.Events
         public string Progress { get; set; }
 
         [JsonProperty("RankProgress", NullValueHandling = NullValueHandling.Ignore)]
-        public long ? RankProgress { get; set; }
+        public long? RankProgress { get; set; }
 
         [JsonProperty("Rank", NullValueHandling = NullValueHandling.Ignore)]
-        public long ? Rank { get; set; }
+        public long? Rank { get; set; }
     }
 
     public partial class EngineerProgressInfo

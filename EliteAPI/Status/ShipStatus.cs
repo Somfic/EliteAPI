@@ -21,7 +21,7 @@
         public long Flags { get; set; }
 
         [JsonProperty("Pips")]
-        public List<long > Pips { get; set; }
+        public List<long> Pips { get; set; }
 
         [JsonProperty("FireGroup")]
         public long FireGroup { get; set; }

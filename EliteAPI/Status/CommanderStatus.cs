@@ -12,19 +12,19 @@
         public string Commander { get; private set; }
         public long Credits { get; private set; }
 
-        public int EmpireRank { get; private set; }
-        public int FederationRank { get; private set; }
-        public int CombatRank { get; private set; }
-        public int TradeRank { get; private set; }
-        public int ExplorationRank { get; private set; }
-        public int CqcRank { get; private set; }
+        public long EmpireRank { get; private set; }
+        public long FederationRank { get; private set; }
+        public long CombatRank { get; private set; }
+        public long TradeRank { get; private set; }
+        public long ExplorationRank { get; private set; }
+        public long CqcRank { get; private set; }
 
-        public int EmpireRankProgress { get; private set; }
-        public int FederationRankProgress { get; private set; }
-        public int CombatRankProgress { get; private set; }
-        public int TradeRankProgress { get; private set; }
-        public int ExplorationRankProgress { get; private set; }
-        public int CqcRankProgress { get; private set; }
+        public long EmpireRankProgress { get; private set; }
+        public long FederationRankProgress { get; private set; }
+        public long CombatRankProgress { get; private set; }
+        public long TradeRankProgress { get; private set; }
+        public long ExplorationRankProgress { get; private set; }
+        public long CqcRankProgress { get; private set; }
 
         public string EmpireRankLocalised { get { return RankUtil.Empire(EmpireRank); } }
         public string FederationRankLocalised { get { return RankUtil.Federation(FederationRank); } }
@@ -35,7 +35,7 @@
 
     static class RankUtil
     {
-        public static string Empire(int x)
+        public static string Empire(long x)
         {
             if (x == 0) { return "None"; }
             if (x == 1) { return "Outsider"; }
@@ -55,7 +55,7 @@
             return "";
         }
 
-        public static string Federation(int x)
+        public static string Federation(long x)
         {
             if (x == 0) { return "None"; }
             if (x == 1) { return "Recruit"; }
@@ -75,7 +75,7 @@
             return "";
         }
 
-        public static string Combat(int x)
+        public static string Combat(long x)
         {
             if (x == 0) { return "Harmless"; }
             if (x == 1) { return "Mostly Harmless"; }
@@ -89,7 +89,7 @@
             return "";
         }
 
-        public static string Trade(int x)
+        public static string Trade(long x)
         {
             if (x == 0) { return "Penniless"; }
             if (x == 1) { return "Mostly Penniless"; }
@@ -103,7 +103,7 @@
             return "";
         }
 
-        public static string Exploration(int x)
+        public static string Exploration(long x)
         {
             if (x == 0) { return "Aimless"; }
             if (x == 1) { return "Mostly Aimless"; }

@@ -129,7 +129,7 @@ namespace EliteAPI.VoiceAttack
                             string value = key.Value.ToString();
 
                             if (type.Contains("int")) { _vaProxy.SetInt("EliteAPI.Event." + name, int.Parse(value)); }
-                            else if (type.Contains("long")) { _vaProxy.SetInt("EliteAPI.Event." + name, int.Parse(value)); }
+                            else if (type.Contains("long ")) { _vaProxy.SetInt("EliteAPI.Event." + name, int.Parse(value)); }
                             else if (type.Contains("string")) { _vaProxy.SetText("EliteAPI.Event." + name, value); }
                             else if (type.Contains("decimal")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
                             else if (type.Contains("double")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
@@ -194,7 +194,7 @@ namespace EliteAPI.VoiceAttack
                     vaProxy.SetBoolean("EliteAPI.FSDCOOLDOWN", status.FsdCooldown);
                     vaProxy.SetBoolean("EliteAPI.LOWFUEL", status.LowFuel);
                     vaProxy.SetBoolean("EliteAPI.OVERHEATING", status.Overheating);
-                    vaProxy.SetBoolean("EliteAPI.HASLATLONG", status.HasLatLong);
+                    vaProxy.SetBoolean("EliteAPI.HASLATlong ", status.HasLatlong );
                     vaProxy.SetBoolean("EliteAPI.INDANGER", status.InDanger);
                     vaProxy.SetBoolean("EliteAPI.ININTERDICTION", status.InInterdiction);
                     vaProxy.SetBoolean("EliteAPI.INMOTHERSHIP", status.InMothership);

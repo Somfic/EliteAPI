@@ -19,6 +19,9 @@ namespace EliteAPI
 {
     public class EliteDangerousAPI
     {
+        //Standard directory
+        public static DirectoryInfo StandardDirectory { get => new DirectoryInfo($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"); }
+
         //Public fields.
         public bool IsRunning { get; private set; }
         public DirectoryInfo JournalDirectory { get; set; }
@@ -75,7 +78,7 @@ namespace EliteAPI
             Logger.LogInfo("Starting EliteAPI.");
 
             //Check if said JournalDirectory has all the files.
-            int errorCount = 0;
+            long errorCount = 0;
             bool errorIsCritical = false;
             if (JournalDirectory.GetFiles("Journal.*").Count() == 0) { Logger.LogWarning("Could not find Journal files."); errorCount++; errorIsCritical = true; }
             if (JournalDirectory.GetFiles().Count(x => x.Name == "Status.json") == 0) { Logger.LogWarning("Could not find Status.json."); errorCount++; }

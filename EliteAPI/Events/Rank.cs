@@ -16,22 +16,22 @@ namespace EliteAPI.Events
         public string Event { get; set; }
 
         [JsonProperty("Combat")]
-        public int Combat { get; set; }
+        public long Combat { get; set; }
 
         [JsonProperty("Trade")]
-        public int Trade { get; set; }
+        public long Trade { get; set; }
 
         [JsonProperty("Explore")]
-        public int Explore { get; set; }
+        public long Explore { get; set; }
 
         [JsonProperty("Empire")]
-        public int Empire { get; set; }
+        public long Empire { get; set; }
 
         [JsonProperty("Federation")]
-        public int Federation { get; set; }
+        public long Federation { get; set; }
 
         [JsonProperty("CQC")]
-        public int Cqc { get; set; }
+        public long Cqc { get; set; }
     }
 
     public partial class RankInfo

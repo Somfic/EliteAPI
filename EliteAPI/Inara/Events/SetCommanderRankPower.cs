@@ -6,7 +6,7 @@ namespace EliteAPI.Inara.Events
 {
     public class SetCommanderRankPower : IInaraEventData
     {
-        public SetCommanderRankPower(string powerName, int rankValue)
+        public SetCommanderRankPower(string powerName, long rankValue)
         {
             PowerName = powerName;
             RankValue = rankValue;
@@ -17,6 +17,6 @@ namespace EliteAPI.Inara.Events
 
         [Range(0, 5)]
         [JsonProperty("rankValue")]
-        public int RankValue { get; set; }
+        public long RankValue { get; set; }
     }
 }

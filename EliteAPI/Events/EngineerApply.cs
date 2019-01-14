@@ -19,7 +19,7 @@ namespace EliteAPI.Events
         public string Engineer { get; set; }
 
         [JsonProperty("Blueprint")]
-        public string Blueprint { get; set; }
+        public string Blueprlong { get; set; }
 
         [JsonProperty("Level")]
         public long Level { get; set; }

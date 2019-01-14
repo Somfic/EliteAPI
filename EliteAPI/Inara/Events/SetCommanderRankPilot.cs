@@ -17,7 +17,7 @@ namespace EliteAPI.Inara.Events
 
         [Range(0, 14)]
         [JsonProperty("rankValue")]
-        public int RankValue { get; set; }
+        public long RankValue { get; set; }
 
         [Range(0, 1)]
         [JsonProperty("rankProgress")]

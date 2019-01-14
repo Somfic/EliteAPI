@@ -21,7 +21,7 @@
         public long Flags { get; set; }
 
         [JsonProperty("Pips")]
-        public List<long> Pips { get; set; }
+        public List<long > Pips { get; set; }
 
         [JsonProperty("FireGroup")]
         public long FireGroup { get; set; }
@@ -56,7 +56,7 @@
         public bool FsdCooldown { get { return GetFlag(18); } }
         public bool LowFuel { get { return GetFlag(19); } }
         public bool Overheating { get { return GetFlag(20); } }
-        public bool HasLatLong { get { return GetFlag(21); } }
+        public bool HasLatlong { get { return GetFlag(21); } }
         public bool InDanger { get { return GetFlag(22); } }
         public bool InInterdiction { get { return GetFlag(23); } }
         public bool InMothership { get { return GetFlag(24); } }
@@ -66,7 +66,7 @@
         public bool NightVision { get { return GetFlag(28); } }
 
 
-        public bool GetFlag(int bit)
+        public bool GetFlag(long bit)
         {
             char[] carray = Convert.ToString(Flags, 2).ToCharArray();
             Array.Reverse(carray);

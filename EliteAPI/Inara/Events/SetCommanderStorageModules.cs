@@ -4,6 +4,11 @@ namespace EliteAPI.Inara.Events
 {
     public class SetCommanderStorageModules : IInaraEventData
     {
+        public SetCommanderStorageModules(string itemName)
+        {
+            ItemName = itemName;
+        }
+
         [JsonProperty("itemName")]
         public string ItemName { get; set; }
 

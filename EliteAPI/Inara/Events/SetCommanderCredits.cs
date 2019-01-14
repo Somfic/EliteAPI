@@ -4,18 +4,18 @@ namespace EliteAPI.Inara.Events
 {
     public class SetCommanderCredits : IInaraEventData
     {
-        public SetCommanderCredits(int commanderCredits)
+        public SetCommanderCredits(long commanderCredits)
         {
             CommanderCredits = commanderCredits;
         }
 
         [JsonProperty("commanderCredits")]
-        public int CommanderCredits { get; set; }
+        public long CommanderCredits { get; set; }
 
         [JsonProperty("commanderAssets")]
-        public int CommanderAssets { get; set; }
+        public long CommanderAssets { get; set; }
 
         [JsonProperty("commanderLoan")]
-        public int CommanderLoan { get; set; }
+        public long CommanderLoan { get; set; }
     }
 }

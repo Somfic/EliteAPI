@@ -61,16 +61,16 @@ namespace EliteAPI.Events
         public long Priority { get; set; }
 
         [JsonProperty("AmmoInClip", NullValueHandling = NullValueHandling.Ignore)]
-        public long? AmmoInClip { get; set; }
+        public long ? AmmoInClip { get; set; }
 
         [JsonProperty("AmmoInHopper", NullValueHandling = NullValueHandling.Ignore)]
-        public long? AmmoInHopper { get; set; }
+        public long ? AmmoInHopper { get; set; }
 
         [JsonProperty("Health")]
         public double Health { get; set; }
 
         [JsonProperty("Value", NullValueHandling = NullValueHandling.Ignore)]
-        public long? Value { get; set; }
+        public long ? Value { get; set; }
 
         [JsonProperty("Engineering", NullValueHandling = NullValueHandling.Ignore)]
         public Engineering Engineering { get; set; }

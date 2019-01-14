@@ -9,7 +9,7 @@ namespace EliteAPI.Inara.Events
 {
     public class AddCommanderInventoryMaterialsItem : IInaraEventData
     {
-        public AddCommanderInventoryMaterialsItem(string itemName, int itemCount)
+        public AddCommanderInventoryMaterialsItem(string itemName, long itemCount)
         {
             ItemName = itemName;
             ItemCount = itemCount;
@@ -19,6 +19,6 @@ namespace EliteAPI.Inara.Events
         public string ItemName { get; set; }
 
         [JsonProperty("itemCount")]
-        public int ItemCount { get; set; }
+        public long ItemCount { get; set; }
     }
 }

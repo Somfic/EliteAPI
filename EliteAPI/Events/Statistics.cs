@@ -16,7 +16,7 @@ namespace EliteAPI.Events
         public string Event { get; set; }
 
         [JsonProperty("Bank_Account")]
-        public Dictionary<string, long> BankAccount { get; set; }
+        public Dictionary<string, long > BankAccount { get; set; }
 
         [JsonProperty("Combat")]
         public Combat Combat { get; set; }

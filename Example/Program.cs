@@ -13,14 +13,12 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            InaraConnection inara = new InaraConnection();
-            InaraHeader header = new InaraHeader("token", "EliteAPI", "2.0.0.0");
-            List<InaraEvent> events = new List<InaraEvent>
-            {
-                new InaraEvent(new SetCommanderRankPilot(RankType.Combat) {RankValue = 6 })
-            };
-            Console.WriteLine(inara.Post(new InaraEntry(header, events)));
-            Console.Read();
+            EliteDangerousAPI api = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
+            api.DiscordRichPresence.TurnOn();
+            api.Logger.Log += (sender, e) => Console.WriteLine(e.Message);
+            api.Start();
+
+            Thread.Sleep(-1);
         }
     }
 }

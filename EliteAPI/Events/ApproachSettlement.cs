@@ -27,7 +27,7 @@ namespace EliteAPI.Events
         [JsonProperty("Latitude")]
         public double Latitude { get; set; }
 
-        [JsonProperty("Longitude")]
+        [JsonProperty("longitude")]
         public double Longitude { get; set; }
     }
 

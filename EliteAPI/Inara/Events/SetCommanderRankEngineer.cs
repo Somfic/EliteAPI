@@ -23,7 +23,7 @@ namespace EliteAPI.Inara.Events
 
         [Range(1, 5)]
         [JsonProperty("rankValue")]
-        public int RankValue { get; set; }
+        public long RankValue { get; set; }
     }
 
     public enum RankStage

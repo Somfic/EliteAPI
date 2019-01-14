@@ -33,7 +33,7 @@
         public double Power { get; set; }
 
         [JsonProperty("Priority", NullValueHandling = NullValueHandling.Ignore)]
-        public long? Priority { get; set; }
+        public long ? Priority { get; set; }
     }
 
     public partial class ShipModules

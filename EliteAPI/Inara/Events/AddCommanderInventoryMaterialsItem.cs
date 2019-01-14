@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Inara.Events
 {
-    public class AddCommanderInventoryMaterialsItem
+    public class AddCommanderInventoryMaterialsItem : IInaraEventData
     {
         public AddCommanderInventoryMaterialsItem(string itemName, int itemCount)
         {

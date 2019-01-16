@@ -11,12 +11,12 @@ namespace EliteAPI.Inara
     {
         public List<InaraEvent> EventsQueue = new List<InaraEvent>();
 
-        public string ExecuteQueue(InaraHeader header)
+        public string ExecuteQueue(InaraConfiguration header)
         {
             InaraEntry entry = new InaraEntry(header, EventsQueue);
+            string result = Execute(entry);
             EventsQueue.Clear();
-            EventsQueue = new List<InaraEvent>();
-            return Execute(entry);
+            return result;
         }
 
         public string Execute(InaraEntry entry)
@@ -39,22 +39,22 @@ namespace EliteAPI.Inara
 
     public class InaraEntry
     {
-        public InaraEntry(InaraHeader header, List<InaraEvent> events)
+        public InaraEntry(InaraConfiguration configuration, List<InaraEvent> events)
         {
-            Header = header;
+            Configuration = configuration;
             Events = events;
         }
 
         [JsonProperty("header")]
-        public InaraHeader Header { get; set; }
+        public InaraConfiguration Configuration { get; set; }
 
         [JsonProperty("events")]
         public List<InaraEvent> Events { get; set; }
     }
 
-    public class InaraHeader
+    public class InaraConfiguration
     {
-        public InaraHeader(string apiKey, string appName, string appVersion)
+        public InaraConfiguration(string apiKey, string appName, string appVersion)
         {
             ApiKey = apiKey;
             AppName = appName;

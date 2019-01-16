@@ -12,6 +12,7 @@ namespace EliteAPI.Discord
         private DiscordRpcClient rpc;
         private EliteDangerousAPI api;
         public bool IsRunning { get; private set; } = false;
+        public bool IsReady { get; private set; }
 
         public RichPresenceClient(EliteDangerousAPI api)
         {
@@ -49,7 +50,7 @@ namespace EliteAPI.Discord
             rpc.OnConnectionFailed += (sender, e) => api.Logger.LogError("There was an error while trying to connect to the rich presence.");
             rpc.OnConnectionEstablished += (sender, e) => api.Logger.LogInfo("Rich presence connected.");
             rpc.OnError += (sender, e) => api.Logger.LogError("Rich presence error: " + e.Message);
-            rpc.OnReady += (sender, e) => api.Logger.LogInfo("Rich presence ready.");
+            rpc.OnReady += (sender, e) => { api.Logger.LogInfo("Rich presence ready."); IsReady = true; };
 
 
             //Start the RPC.

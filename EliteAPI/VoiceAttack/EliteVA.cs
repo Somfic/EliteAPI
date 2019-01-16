@@ -167,6 +167,13 @@ namespace EliteAPI.VoiceAttack
                 {
                     FindJournalFolder(vaProxy);
                     EliteAPI = new EliteDangerousAPI(playerJournalDirectory);
+                } else if (command == "drp on")
+                {
+                    EliteAPI.DiscordRichPresence.TurnOn();
+                }
+                else if (command == "drp off")
+                {
+                    EliteAPI.DiscordRichPresence.TurnOn();
                 }
 
                 try

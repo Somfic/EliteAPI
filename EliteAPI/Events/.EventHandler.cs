@@ -3,7 +3,97 @@ namespace EliteAPI.Events
     using System;
 
     public class EventHandler
-    { 
+    {
+        public event EventHandler<bool> StatusDockedEvent;
+        public bool InvokeStatusDocked(bool e) { StatusDockedEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusLandedEvent;
+        public bool InvokeStatusLanded(bool e) { StatusLandedEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusFsdCooldownEvent;
+        public bool InvokeStatusFsdCooldown(bool e) { StatusFsdCooldownEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusGearEvent;
+        public bool InvokeStatusGear(bool e) { StatusGearEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusShieldsEvent;
+        public bool InvokeStatusShields(bool e) { StatusShieldsEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusSupercruiseEvent;
+        public bool InvokeStatusSupercruise(bool e) { StatusSupercruiseEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusFlightAssistEvent;
+        public bool InvokeStatusFlightAssist(bool e) { StatusFlightAssistEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusHardpointsEvent;
+        public bool InvokeStatusHardpoints(bool e) { StatusHardpointsEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusWingingEvent;
+        public bool InvokeStatusWinging(bool e) { StatusWingingEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusLightsEvent;
+        public bool InvokeStatusLights(bool e) { StatusLightsEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusCargoScoopEvent;
+        public bool InvokeStatusCargoScoop(bool e) { StatusCargoScoopEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusSilentRunningEvent;
+        public bool InvokeStatusSilentRunning(bool e) { StatusSilentRunningEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusScoopingEvent;
+        public bool InvokeStatusScooping(bool e) { StatusScoopingEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusSrvHandbreakEvent;
+        public bool InvokeStatusSrvHandbreak(bool e) { StatusSrvHandbreakEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusSrvTurrentEvent;
+        public bool InvokeStatusSrvTurrent(bool e) { StatusSrvTurrentEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusSrvNearShipEvent;
+        public bool InvokeStatusSrvNearShip(bool e) { StatusSrvNearShipEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusSrvDriveAssistEvent;
+        public bool InvokeStatusSrvDriveAssist(bool e) { StatusSrvDriveAssistEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusMassLockedEvent;
+        public bool InvokeStatusMassLocked(bool e) { StatusMassLockedEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusFsdChargingEvent;
+        public bool InvokeStatusFsdCharging(bool e) { StatusFsdChargingEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusFsdCooldowEvent;
+        public bool InvokeStatusFsdCooldow(bool e) { StatusFsdCooldowEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusLowFuelEvent;
+        public bool InvokeStatusLowFuel(bool e) { StatusLowFuelEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusOverheatingEvent;
+        public bool InvokeStatusOverheating(bool e) { StatusOverheatingEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusHasLatLongEvent;
+        public bool InvokeStatusHasLatLong(bool e) { StatusHasLatLongEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusInDangerEvent;
+        public bool InvokeStatusInDanger(bool e) { StatusInDangerEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusInInterdictionEvent;
+        public bool InvokeStatusInInterdiction(bool e) { StatusInInterdictionEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusInMothershipEvent;
+        public bool InvokeStatusInMothership(bool e) { StatusInMothershipEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusInFighterEvent;
+        public bool InvokeStatusInFighter(bool e) { StatusInFighterEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusInSRVEvent;
+        public bool InvokeStatusInSRV(bool e) { StatusInSRVEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusAnalysisModeEvent;
+        public bool InvokAnalysisMode(bool e) { StatusAnalysisModeEvent?.Invoke(this, e); return e; }
+
+        public event EventHandler<bool> StatusNightVisionEvent;
+        public bool InvokeStatusNightVision(bool e) { StatusNightVisionEvent?.Invoke(this, e); return e; }
+
         //AllEvents
         public event EventHandler<dynamic> AllEvent;
         public dynamic InvokeAllEvent(dynamic arg) { AllEvent?.Invoke(null, arg); return arg; }

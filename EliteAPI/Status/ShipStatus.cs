@@ -11,25 +11,6 @@
 
     public partial class ShipStatus
     {
-        private EliteDangerousAPI api;
-
-        public ShipStatus()
-        { }
-
-        public ShipStatus(EliteDangerousAPI api)
-        {
-            this.api = api;
-            FileSystemWatcher watcher = new FileSystemWatcher(this.api.JournalDirectory.FullName, "Status.json");
-            watcher.Changed += (sender, e) => Update();
-            watcher.EnableRaisingEvents = true;
-        }
-
-        private void Update()
-        {
-           ShipStatus newStatus = FromFile(new FileInfo(api.JournalDirectory.FullName + "\\Status.json"), api);
-           if(newStatus.AnalysisMode != AnalysisMode) { api.Events.InvokeAllEvent(new StatusEvent("Status.AnalysisMode", newStatus.AnalysisMode)); }
-        }
-
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; set; }
 
@@ -101,40 +82,33 @@
         public double FuelReservoir { get; set; }
     }
 
-    public class StatusEvent
-    {
-        public StatusEvent(string eventName, object value)
-        {
-            this.@event = eventName;
-            this.value = value;
-        }
-
-        public string @event { get; set; }
-        public object value { get; set; }
-    }
-
     public partial class ShipStatus
     {
         public static ShipStatus FromJson(string json) => JsonConvert.DeserializeObject<ShipStatus>(json, EliteAPI.Status.ShipStatusConverter.Settings);
         public static ShipStatus FromFile(FileInfo file, EliteDangerousAPI api)
         {
-            if(!File.Exists(file.FullName)) { api.Logger.LogError("Could not find Status.json."); return new ShipStatus(); }
-
-            //Create a stream from the log file.
-            FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-
-            //Create a stream from the file stream.
-            StreamReader streamReader = new StreamReader(fileStream);
-
-            //Go through the stream.
-            while (!streamReader.EndOfStream)
+            try
             {
-                //Process this string.
-                string json = streamReader.ReadLine();
-                return FromJson(json);
-            }
+                if (!File.Exists(file.FullName)) { api.Logger.LogError("Could not find Status.json."); return new ShipStatus(); }
 
-            api.Logger.LogWarning("Could not update status.");
+                //Create a stream from the log file.
+                FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+
+                //Create a stream from the file stream.
+                StreamReader streamReader = new StreamReader(fileStream);
+
+                //Go through the stream.
+                while (!streamReader.EndOfStream)
+                {
+                    //Process this string.
+                    string json = streamReader.ReadLine();
+                    return FromJson(json);
+                }
+
+                return api.Status;
+
+            }
+            catch { api.Logger.LogWarning("Could not update status.");}
 
             return new ShipStatus();
         }

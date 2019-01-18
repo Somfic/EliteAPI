@@ -28,7 +28,7 @@ namespace EliteAPI
         public bool SkipCatchUp { get; set; }
         public EliteAPI.Events.EventHandler Events { get; set; }
         public EliteAPI.Logging.Logger Logger { get; set; }
-        public ShipStatus Status { get { return ShipStatus.FromFile(new FileInfo(JournalDirectory.FullName + "\\Status.json"), this); } }
+        public ShipStatus Status { get; set; }
         public ShipCargo Cargo { get { return ShipCargo.FromFile(new FileInfo(JournalDirectory.FullName + "\\Cargo.json"), this); } }
         public ShipModules Modules { get { return ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this); } }
         public UserBindings Bindings
@@ -47,6 +47,7 @@ namespace EliteAPI
         }
         public CommanderStatus Commander;
         public LocationStatus Location;
+        public StatusWatcher Watcher;
 
         //Servies.
         public RichPresenceClient DiscordRichPresence;
@@ -69,7 +70,8 @@ namespace EliteAPI
             this.Commander = new CommanderStatus(this);
             this.Location = new LocationStatus(this);
             this.DiscordRichPresence = new RichPresenceClient(this);
-            //this.Status = new ShipStatus(this);   WIP
+            this.Watcher = new StatusWatcher(this);
+            this.Status = new ShipStatus();
         }
 
         public void Start()
@@ -151,7 +153,7 @@ namespace EliteAPI
 
             //Invoke the matching event.
             try { Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name == $"{eventName}Info").First().GetMethod("Process").Invoke(null, new object[] { json, this }); }
-            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}. {Environment.NewLine}Error: {ex.Message}"); }
+            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}, it might not have been added yet. {Environment.NewLine}Error: {ex.Message}"); }
 
             //Invoke the AllEvent.
             Events.InvokeAllEvent(obj);

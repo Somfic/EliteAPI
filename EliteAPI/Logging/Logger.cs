@@ -13,6 +13,11 @@ namespace EliteAPI.Logging
             Log?.Invoke(this, new LogMessage(s, Severity.Info));
         }
 
+        public void LogSuccess(string s)
+        {
+            Log?.Invoke(this, new LogMessage(s, Severity.Success));
+        }
+
         public void LogWarning(string s)
         {
             Log?.Invoke(this, new LogMessage(s, Severity.Warning));
@@ -38,5 +43,7 @@ namespace EliteAPI.Logging
         public Severity Severity { get; private set; }
     }
 
-    public enum Severity { Info, Warning, Error }
+    public enum Severity { Info, Warning, Error,
+        Success
+    }
 }

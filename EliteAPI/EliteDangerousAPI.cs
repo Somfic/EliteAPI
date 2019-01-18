@@ -71,7 +71,7 @@ namespace EliteAPI
             this.Location = new LocationStatus(this);
             this.DiscordRichPresence = new RichPresenceClient(this);
             this.Watcher = new StatusWatcher(this);
-            this.Status = new ShipStatus();
+            this.Status = ShipStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this);
         }
 
         public void Start()

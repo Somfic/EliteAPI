@@ -5,12 +5,31 @@
 
     using System.Globalization;
     using System.IO;
-
+    using System.Linq;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
     public partial class ShipStatus
     {
+        private EliteDangerousAPI api;
+
+        public ShipStatus()
+        { }
+
+        public ShipStatus(EliteDangerousAPI api)
+        {
+            this.api = api;
+            FileSystemWatcher watcher = new FileSystemWatcher(this.api.JournalDirectory.FullName, "Status.json");
+            watcher.Changed += (sender, e) => Update();
+            watcher.EnableRaisingEvents = true;
+        }
+
+        private void Update()
+        {
+           ShipStatus newStatus = FromFile(new FileInfo(api.JournalDirectory.FullName + "\\Status.json"), api);
+           if(newStatus.AnalysisMode != AnalysisMode) { api.Events.InvokeAllEvent(new StatusEvent("Status.AnalysisMode", newStatus.AnalysisMode)); }
+        }
+
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; set; }
 
@@ -30,7 +49,7 @@
         public long GuiFocus { get; set; }
 
         [JsonProperty("Fuel")]
-        public double Fuel { get; set; }
+        public Fuel Fuel { get; set; }
 
         [JsonProperty("Cargo")]
         public long Cargo { get; set; }
@@ -65,13 +84,33 @@
         public bool AnalysisMode { get { return GetFlag(27); } }
         public bool NightVision { get { return GetFlag(28); } }
 
-
         public bool GetFlag(long bit)
         {
             char[] carray = Convert.ToString(Flags, 2).ToCharArray();
             Array.Reverse(carray);
             try { return Equals(carray[bit], '1'); } catch { return false; }
         }
+    }
+
+    public partial class Fuel
+    {
+        [JsonProperty("FuelMain")]
+        public long FuelMain { get; set; }
+
+        [JsonProperty("FuelReservoir")]
+        public double FuelReservoir { get; set; }
+    }
+
+    public class StatusEvent
+    {
+        public StatusEvent(string eventName, object value)
+        {
+            this.@event = eventName;
+            this.value = value;
+        }
+
+        public string @event { get; set; }
+        public object value { get; set; }
     }
 
     public partial class ShipStatus
@@ -91,7 +130,9 @@
             while (!streamReader.EndOfStream)
             {
                 //Process this string.
-                return FromJson(streamReader.ReadLine());
+                string json = streamReader.ReadLine();
+                Console.Beep();
+                return FromJson(json);
             }
 
             api.Logger.LogWarning("Could not update status.");

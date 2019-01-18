@@ -214,7 +214,8 @@ namespace EliteAPI.VoiceAttack
                     vaProxy.SetInt("EliteAPI.Pips.WEAPONS", (int)status.Pips[2]);
                     vaProxy.SetInt("EliteAPI.FIREGROUP", (int)status.FireGroup);
                     vaProxy.SetInt("EliteAPI.GUIFOCUS", (int)status.GuiFocus);
-                    vaProxy.SetDecimal("EliteAPI.FUEL", (decimal)status.Fuel);
+                    vaProxy.SetDecimal("EliteAPI.FUEL", (decimal)status.Fuel.FuelMain);
+                    vaProxy.SetDecimal("EliteAPI.FUELRESERVOIR", (decimal)status.Fuel.FuelReservoir);
                     vaProxy.SetInt("EliteAPI.CARGO", (int)status.Cargo);
                 }
                 catch (Exception ex) {

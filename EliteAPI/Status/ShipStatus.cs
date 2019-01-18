@@ -131,7 +131,6 @@
             {
                 //Process this string.
                 string json = streamReader.ReadLine();
-                Console.Beep();
                 return FromJson(json);
             }
 

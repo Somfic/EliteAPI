@@ -69,7 +69,7 @@ namespace EliteAPI
             this.Commander = new CommanderStatus(this);
             this.Location = new LocationStatus(this);
             this.DiscordRichPresence = new RichPresenceClient(this);
-            //this.Status = new ShipStatus(this); WIP
+            //this.Status = new ShipStatus(this);   WIP
         }
 
         public void Start()

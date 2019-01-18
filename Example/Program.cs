@@ -18,6 +18,11 @@ namespace Example
             api.Logger.Log += (sender, e) => Console.WriteLine(e.Message);
             api.Start();
 
+            while(true)
+            {
+                Console.WriteLine(api.Status.Gear);
+            }
+
             Thread.Sleep(-1);
         }
     }

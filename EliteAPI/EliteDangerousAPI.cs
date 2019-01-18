@@ -28,8 +28,6 @@ namespace EliteAPI
         public bool SkipCatchUp { get; set; }
         public EliteAPI.Events.EventHandler Events { get; set; }
         public EliteAPI.Logging.Logger Logger { get; set; }
-
-        //Status fields.
         public ShipStatus Status { get { return ShipStatus.FromFile(new FileInfo(JournalDirectory.FullName + "\\Status.json"), this); } }
         public ShipCargo Cargo { get { return ShipCargo.FromFile(new FileInfo(JournalDirectory.FullName + "\\Cargo.json"), this); } }
         public ShipModules Modules { get { return ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this); } }
@@ -71,6 +69,7 @@ namespace EliteAPI
             this.Commander = new CommanderStatus(this);
             this.Location = new LocationStatus(this);
             this.DiscordRichPresence = new RichPresenceClient(this);
+            //this.Status = new ShipStatus(this); WIP
         }
 
         public void Start()

@@ -89,7 +89,7 @@ namespace EliteAPI.Events
         public bool InvokeStatusInSRV(bool e) { StatusInSRVEvent?.Invoke(this, e); return e; }
 
         public event EventHandler<bool> StatusAnalysisModeEvent;
-        public bool InvokAnalysisMode(bool e) { StatusAnalysisModeEvent?.Invoke(this, e); return e; }
+        public bool InvokeAnalysisMode(bool e) { StatusAnalysisModeEvent?.Invoke(this, e); return e; }
 
         public event EventHandler<bool> StatusNightVisionEvent;
         public bool InvokeStatusNightVision(bool e) { StatusNightVisionEvent?.Invoke(this, e); return e; }

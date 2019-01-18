@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace EliteAPI.VoiceAttack
@@ -115,11 +115,11 @@ namespace EliteAPI.VoiceAttack
             {
                 try
                 {
-                    string eventName = "((EliteAPI." + e.@event + "))";
+                    string eventName = "((EliteAPI." + e.@event + "))";     
 
                     if (_vaProxy.CommandExists(eventName))
                     {
-                        JObject attributesAsJObject = e;
+                        JObject attributesAsJObject = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(e));
                         Dictionary<string, object> values = attributesAsJObject.ToObject<Dictionary<string, object>>();
 
                         foreach (var key in values)

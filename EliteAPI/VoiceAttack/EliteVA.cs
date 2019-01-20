@@ -21,7 +21,6 @@ namespace EliteAPI.VoiceAttack
 
                 if (!File.Exists("EliteVA.ini"))
                 {
-                    api.Logger.LogWarning("EliteVA - Could not find EliteVA.ini, trying default Journal folder.");
                     File.WriteAllText("EliteVA.ini", "//Example" + Environment.NewLine);
                     File.AppendAllText("EliteVA.ini", @"//path=D:\Saved Games\Frontier Developments");
                 }
@@ -33,11 +32,11 @@ namespace EliteAPI.VoiceAttack
 
                         if (Directory.Exists(journalPath))
                         {
-                            api.Logger.LogSuccess($@"EliteVA - Found custom Player Journal folder: '{journalPath}'.");
+                            vaProxy.WriteToLog($@"EliteVA - Found custom Player Journal folder: '{journalPath}'.", "green");
                         }
                         else
                         {
-                            api.Logger.LogError($@"EliteVA - Found custom Player Journal folder: '{journalPath}', but that folder doesn't exist.");
+                            vaProxy.WriteToLog($@"EliteVA - Found custom Player Journal folder: '{journalPath}', but that folder doesn't exist.", "red");
                             journalPath = "";
                         }
                     }
@@ -48,13 +47,13 @@ namespace EliteAPI.VoiceAttack
                 {
                     if (!Directory.Exists($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"))
                     {
-                        api.Logger.LogError("EliteVA - Could not find Player Journal folder at default location, please set the location in EliteVA.ini.");
+                        vaProxy.WriteToLog("EliteVA - Could not find Player Journal folder at default location, please set the location in EliteVA.ini.", "red");
                         Environment.Exit(1);
                     }
                     else
                     {
                         journalPath = $@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous";
-                        api.Logger.LogSuccess($@"EliteVA - Set Player Journal folder to default 'C:\Users\{ Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous'.");
+                        vaProxy.WriteToLog($@"EliteVA - Set Player Journal folder to default 'C:\Users\{ Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous'.", "green");
                     }
                 }
 
@@ -63,7 +62,7 @@ namespace EliteAPI.VoiceAttack
 
                 if (!File.Exists(statusFile.FullName))
                 {
-                    api.Logger.LogError($"EliteVA - Could not find Status.json file at {statusFile.FullName}.");
+                    vaProxy.WriteToLog($"EliteVA - Could not find Status.json file at {statusFile.FullName}.", "red");
 
                     if (journalPath != "")
                     {
@@ -71,13 +70,13 @@ namespace EliteAPI.VoiceAttack
                     }
                     else
                     {
-                        api.Logger.LogError($"EliteVA - Could not start EliteVA (cannot find Player Journals).");
+                        vaProxy.WriteToLog($"EliteVA - Could not start EliteVA (cannot find Player Journals).", "red");
                         Environment.Exit(1);
                     }
                 }
                 else
                 {
-                    api.Logger.LogSuccess($"EliteVA - Files found.");
+                    vaProxy.WriteToLog($"EliteVA - Files found.", "green");
                 }
             }
 
@@ -91,10 +90,9 @@ namespace EliteAPI.VoiceAttack
             {
                 _vaProxy = vaProxy;
 
-                api = new EliteDangerousAPI(new DirectoryInfo(Environment.CurrentDirectory));
-                api.Logger.Log += Logger_Log;
                 FindJournalFolder(vaProxy);
                 api = new EliteDangerousAPI(playerJournalDirectory, true);
+                api.Logger.Log += Logger_Log;
                 api.Events.AllEvent += EliteAPI_AllEvent;
                 api.Start();
             }
@@ -108,20 +106,26 @@ namespace EliteAPI.VoiceAttack
                         break;
 
                     case Logging.Severity.Warning:
-                        _vaProxy.WriteToLog("EliteVA - " + e.Message, "yellow");
+                        _vaProxy.WriteToLog("EliteVA - " + e.Message, "orange");
                         break;
 
                     case Logging.Severity.Success:
                         _vaProxy.WriteToLog("EliteVA - " + e.Message, "green");
+                        break;
+
+                    default:
+                        _vaProxy.WriteToLog("EliteVA - " + e.Message, "blue");
                         break;
                 }
             }
 
             private static void EliteAPI_AllEvent(object sender, dynamic e)
             {
+                string eventName = "";
+
                 try
                 {
-                    string eventName = "((EliteAPI." + e.@event + "))";
+                    eventName = "((EliteAPI." + e.@event + "))";
 
                     if (_vaProxy.CommandExists(eventName))
                     {
@@ -134,27 +138,32 @@ namespace EliteAPI.VoiceAttack
                             string name = key.Key;
                             string value = key.Value.ToString();
 
-                            if (type.Contains("int")) { _vaProxy.SetInt("EliteAPI.Event." + name, int.Parse(value)); }
-                            else if (type.Contains("long")) { _vaProxy.SetInt("EliteAPI.Event." + name, int.Parse(value)); }
-                            else if (type.Contains("string")) { _vaProxy.SetText("EliteAPI.Event." + name, value); }
-                            else if (type.Contains("decimal")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
-                            else if (type.Contains("double")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
-                            else if (type.Contains("float")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
+                            try
+                            {
+                                if (type.Contains("int")) { _vaProxy.SetInt("EliteAPI.Event." + name, int.Parse(value)); }
+                                else if (type.Contains("long")) { _vaProxy.SetInt("EliteAPI.Event." + name, int.Parse(value)); }
+                                else if (type.Contains("string")) { _vaProxy.SetText("EliteAPI.Event." + name, value); }
+                                else if (type.Contains("decimal")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
+                                else if (type.Contains("double")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
+                                else if (type.Contains("float")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
+                            } catch(Exception ex)
+                            {
+                                api.Logger.LogError($"There was an error while trying to parse field ['{name}' ({value})] for '{eventName}'. ({ex.Message})");
+                            }
                         }
                         _vaProxy.ExecuteCommand(eventName);
                     }
-                    else { }
                 }
                 catch (Exception ex)
                 {
-                    api.Logger.LogError("There was an error while setting some of the event variables.");
-                    api.Logger.LogWarning(ex.Message);
+                    api.Logger.LogError($"There was an error while invoking the event '{eventName}'. ({ex.Message})");
                 }
             }
 
             public static void VA_Exit1(dynamic vaProxy)
             {
                 _vaProxy = vaProxy;
+                api.Logger.LogSuccess("Stopping EliteVA.");
                 api.Stop();
             }
 
@@ -225,8 +234,7 @@ namespace EliteAPI.VoiceAttack
                     vaProxy.SetInt("EliteAPI.CARGO", (int)status.Cargo);
                 }
                 catch (Exception ex) {
-                    api.Logger.LogError("There was an error while setting some of the status variables.");
-                    api.Logger.LogWarning(ex.Message);
+                    api.Logger.LogError($"There was an error while setting some of the status variables. ({ex.Message})");
                 }
             }
         }

@@ -11,11 +11,12 @@ namespace EliteAPI.Status
     public class StatusWatcher
     {
         private EliteDangerousAPI api;
+        private FileSystemWatcher statusWatcher;
 
         public StatusWatcher(EliteDangerousAPI api)
         {
             this.api = api;
-            FileSystemWatcher statusWatcher = new FileSystemWatcher(api.JournalDirectory.FullName, "Status.json") { EnableRaisingEvents = true };
+            statusWatcher = new FileSystemWatcher(api.JournalDirectory.FullName, "Status.json") { EnableRaisingEvents = true };
             statusWatcher.Changed += (sender, e) => Update();
 
             Update();

@@ -12,8 +12,9 @@ namespace Example
             EliteDangerousAPI api = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
             api.DiscordRichPresence.TurnOn();
             api.Logger.Log += (sender, e) => Console.WriteLine(e.Message);
-            api.Events.AllEvent += (sender, e) => Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(e));
             api.Start();
+
+            api.DiscordRichPresence.TurnOn();
 
             Thread.Sleep(-1);
         }

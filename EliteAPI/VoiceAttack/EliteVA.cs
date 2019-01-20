@@ -92,11 +92,11 @@ namespace EliteAPI.VoiceAttack
                 _vaProxy = vaProxy;
 
                 api = new EliteDangerousAPI(new DirectoryInfo(Environment.CurrentDirectory));
+                api.Logger.Log += Logger_Log;
                 FindJournalFolder(vaProxy);
                 api = new EliteDangerousAPI(playerJournalDirectory, true);
                 api.Events.AllEvent += EliteAPI_AllEvent;
                 api.Start();
-                api.Logger.Log += Logger_Log;
             }
 
             private static void Logger_Log(object sender, Logging.LogMessage e)
@@ -121,7 +121,7 @@ namespace EliteAPI.VoiceAttack
             {
                 try
                 {
-                    string eventName = "((EliteAPI." + e.@event + "))";     
+                    string eventName = "((EliteAPI." + e.@event + "))";
 
                     if (_vaProxy.CommandExists(eventName))
                     {

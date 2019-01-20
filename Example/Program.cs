@@ -14,6 +14,8 @@ namespace Example
             api.Logger.Log += (sender, e) => Console.WriteLine(e.Message);
             api.Events.AllEvent += (sender, e) => Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(e));
             api.Start();
+
+            Thread.Sleep(-1);
         }
     }
 }

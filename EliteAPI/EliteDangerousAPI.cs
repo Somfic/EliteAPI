@@ -58,6 +58,9 @@ namespace EliteAPI
             this.JournalDirectory = JournalDirectory;
             this.SkipCatchUp = SkipCatchUp;
 
+            //Check the journal directory.
+            CheckJournal(JournalDirectory);
+
             //Reset the API.
             Reset();
         }
@@ -88,8 +91,19 @@ namespace EliteAPI
             if (JournalDirectory.GetFiles().Count(x => x.Name == "Shipyard.json") == 0) { Logger.LogWarning("Could not find Shipyard.json."); errorCount++; }
             if (JournalDirectory.GetFiles().Count(x => x.Name == "Outfitting.json") == 0) { Logger.LogWarning("Could not find Outfitting.json."); errorCount++; }
             if (JournalDirectory.GetFiles().Count(x => x.Name == "Market.json") == 0) { Logger.LogWarning("Could not find Market.json."); errorCount++; }
-            if (errorCount == 0) { Logger.LogInfo("All files were found."); }
-            if (errorIsCritical) { Logger.LogError("Could not start EliteAPI."); return; }
+
+            if (errorCount == 0)
+            {
+                Logger.LogInfo("All files were found.");
+                Events.InvokeAllEvent(new StatusEvent("OnReady", ""));
+            }
+
+            if (errorIsCritical)
+            {
+                Logger.LogError("Could not start EliteAPI.");
+                Events.InvokeAllEvent(new StatusEvent("OnError", $"Could not find game files at '{JournalDirectory.FullName}'."));
+                return;
+            }
 
             //Mark the API as running.
             IsRunning = true;

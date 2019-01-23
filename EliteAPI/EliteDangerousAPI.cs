@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -7,11 +8,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 
-using DiscordRPC;
-
 using EliteAPI.Bindings;
-using EliteAPI.Status;
 using EliteAPI.Discord;
+using EliteAPI.Status;
 
 using Newtonsoft.Json;
 
@@ -21,6 +20,12 @@ namespace EliteAPI
     {
         //Standard directory
         public static DirectoryInfo StandardDirectory { get => new DirectoryInfo($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"); }
+
+        //Version info.
+        public FileVersionInfo Version { get { return FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location); } }
+        public long MajorVersion { get { return Version.FileMajorPart; } }
+        public long MinorVersion { get { return Version.FileMinorPart; } }
+        public string BuildVersion { get { return Version.FileVersion; } }
 
         //Public fields.
         public bool IsRunning { get; private set; }
@@ -49,7 +54,7 @@ namespace EliteAPI
         public LocationStatus Location;
         public StatusWatcher Watcher;
 
-        //Servies.
+        //Services.
         public RichPresenceClient DiscordRichPresence;
 
         public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp = true)
@@ -57,9 +62,6 @@ namespace EliteAPI
             //Set the fields to the parameters.
             this.JournalDirectory = JournalDirectory;
             this.SkipCatchUp = SkipCatchUp;
-
-            //Check the journal directory.
-            CheckJournal(JournalDirectory);
 
             //Reset the API.
             Reset();

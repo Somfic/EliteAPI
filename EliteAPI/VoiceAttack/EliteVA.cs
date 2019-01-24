@@ -99,6 +99,8 @@ namespace EliteAPI.VoiceAttack
                 _vaProxy.SetInt("EliteAPI.Version.Major", (int)api.MajorVersion);
                 _vaProxy.SetInt("EliteAPI.Version.Minor", (int)     api.MinorVersion);
                 _vaProxy.SetText("EliteAPI.Version", api.BuildVersion);
+
+                VA_Invoke1(vaProxy);
             }
 
             private static void Logger_Log(object sender, Logging.LogMessage e)
@@ -179,25 +181,31 @@ namespace EliteAPI.VoiceAttack
             public static void VA_Invoke1(dynamic vaProxy)
             {
                 _vaProxy = vaProxy;
+    
+                try
+                {
+                    string command = vaProxy.Context.ToString().ToLower();
 
-                string command = vaProxy.Context.ToString().ToLower();
-
-                if (command == "updatejournal")
-                {
-                    FindJournalFolder(vaProxy);
-                    api = new EliteDangerousAPI(playerJournalDirectory);
-                } else if (command == "drp on")
-                {
-                    api.DiscordRichPresence.TurnOn();
+                    if (command == "updatejournal")
+                    {
+                        FindJournalFolder(vaProxy);
+                        api = new EliteDangerousAPI(playerJournalDirectory);
+                    }
+                    else if (command == "drp on")
+                    {
+                        api.DiscordRichPresence.TurnOn();
+                    }
+                    else if (command == "drp off")
+                    {
+                        api.DiscordRichPresence.TurnOn();
+                    }
                 }
-                else if (command == "drp off")
-                {
-                    api.DiscordRichPresence.TurnOn();
-                }
+                catch { }
 
                 try
                 {
                     var status = api.Status;
+                    var commander = api.Commander;
 
                     vaProxy.SetBoolean("EliteAPI.DOCKED", status.Docked);
                     vaProxy.SetBoolean("EliteAPI.LANDED", status.Landed);
@@ -236,6 +244,17 @@ namespace EliteAPI.VoiceAttack
                     vaProxy.SetDecimal("EliteAPI.FUEL", (decimal)status.Fuel.FuelMain);
                     vaProxy.SetDecimal("EliteAPI.FUELRESERVOIR", (decimal)status.Fuel.FuelReservoir);
                     vaProxy.SetInt("EliteAPI.CARGO", (int)status.Cargo);
+
+                    vaProxy.SetText("EliteAPI.Commander", commander.Commander);
+
+                    vaProxy.SetInt("EliteAPI.Rank.Combat", (int)commander.CombatRank);
+                    vaProxy.SetInt("EliteAPI.Rank.Cqc", (int)commander.CqcRank);
+                    vaProxy.SetInt("EliteAPI.Rank.Trade", (int)commander.TradeRank);
+                    vaProxy.SetInt("EliteAPI.Rank.Exploration", (int)commander.ExplorationRank);
+
+                    vaProxy.SetText("EliteAPI.Rank.Combat", commander.CombatRankLocalised);
+                    vaProxy.SetText("EliteAPI.Rank.Trade", commander.TradeRankLocalised);
+                    vaProxy.SetText("EliteAPI.Rank.Exploration", commander.ExplorationRankLocalised);
                 }
                 catch (Exception ex) {
                     api.Logger.LogError($"There was an error while setting some of the status variables. ({ex.Message})");

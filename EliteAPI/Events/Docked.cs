@@ -10,7 +10,7 @@ namespace EliteAPI.Events
     public partial class DockedInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTimeOffset Timestamp { get; set; }
 
         [JsonProperty("event")]
         public string Event { get; set; }
@@ -31,10 +31,7 @@ namespace EliteAPI.Events
         public long MarketId { get; set; }
 
         [JsonProperty("StationFaction")]
-        public string StationFaction { get; set; }
-
-        [JsonProperty("FactionState")]
-        public string FactionState { get; set; }
+        public StationFaction StationFaction { get; set; }
 
         [JsonProperty("StationGovernment")]
         public string StationGovernment { get; set; }
@@ -71,6 +68,12 @@ namespace EliteAPI.Events
 
         [JsonProperty("Proportion")]
         public double Proportion { get; set; }
+    }
+
+    public partial class StationFaction
+    {
+        [JsonProperty("Name")]
+        public string Name { get; set; }
     }
 
     public partial class DockedInfo

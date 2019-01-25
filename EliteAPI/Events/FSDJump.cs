@@ -4,6 +4,7 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
 
     using System.Globalization;
+
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
@@ -70,7 +71,7 @@ namespace EliteAPI.Events
         public double FuelLevel { get; set; }
 
         [JsonProperty("Factions")]
-        public List<Faction> Factions { get; set; }
+        public List<FSDFaction> Factions { get; set; }
 
         [JsonProperty("SystemFaction")]
         public string SystemFaction { get; set; }
@@ -79,7 +80,7 @@ namespace EliteAPI.Events
         public string FactionState { get; set; }
     }
 
-    public partial class Faction
+    public partial class FSDFaction
     {
         [JsonProperty("Name")]
         public string Name { get; set; }
@@ -115,7 +116,7 @@ namespace EliteAPI.Events
         public List<ActiveState> ActiveStates { get; set; }
     }
 
-    public partial class ActiveState
+    public partial class FSDActiveState
     {
         [JsonProperty("State")]
         public string State { get; set; }

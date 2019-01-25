@@ -14,8 +14,6 @@ namespace Example
             api.Logger.Log += (sender, e) => Console.WriteLine(e.Message);
             api.Start();
 
-            api.DiscordRichPresence.TurnOn();
-
             Thread.Sleep(-1);
         }
     }

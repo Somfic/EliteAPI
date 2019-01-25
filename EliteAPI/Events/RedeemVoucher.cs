@@ -22,10 +22,10 @@ namespace EliteAPI.Events
         public long Amount { get; set; }
 
         [JsonProperty("Factions")]
-        public List<Faction> Factions { get; set; }
+        public List<FSDFaction> Factions { get; set; }
     }
 
-    public partial class Faction
+    public partial class FSDFaction
     {
         [JsonProperty("Faction")]
         public string FactionFaction { get; set; }

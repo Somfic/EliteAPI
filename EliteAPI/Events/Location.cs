@@ -10,22 +10,13 @@ namespace EliteAPI.Events
     public partial class LocationInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTimeOffset Timestamp { get; set; }
 
         [JsonProperty("event")]
         public string Event { get; set; }
 
         [JsonProperty("Docked")]
         public bool Docked { get; set; }
-
-        [JsonProperty("MarketID")]
-        public long MarketId { get; set; }
-
-        [JsonProperty("StationName")]
-        public string StationName { get; set; }
-
-        [JsonProperty("StationType")]
-        public string StationType { get; set; }
 
         [JsonProperty("StarSystem")]
         public string StarSystem { get; set; }
@@ -76,16 +67,13 @@ namespace EliteAPI.Events
         public string BodyType { get; set; }
 
         [JsonProperty("Factions")]
-        public List<LocationFaction> Factions { get; set; }
+        public List<Faction> Factions { get; set; }
 
         [JsonProperty("SystemFaction")]
-        public string SystemFaction { get; set; }
-
-        [JsonProperty("FactionState")]
-        public string FactionState { get; set; }
+        public SystemFaction SystemFaction { get; set; }
     }
 
-    public partial class LocationFaction
+    public partial class Faction
     {
         [JsonProperty("Name")]
         public string Name { get; set; }
@@ -105,35 +93,26 @@ namespace EliteAPI.Events
         [JsonProperty("Happiness")]
         public string Happiness { get; set; }
 
-        [JsonProperty("Happiness_Localised", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("Happiness_Localised")]
         public string HappinessLocalised { get; set; }
 
         [JsonProperty("MyReputation")]
         public double MyReputation { get; set; }
 
         [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
-        public List<LocationActiveState> ActiveStates { get; set; }
-
-        [JsonProperty("PendingStates", NullValueHandling = NullValueHandling.Ignore)]
-        public List<LocationIngState> PendingStates { get; set; }
-
-        [JsonProperty("RecoveringStates", NullValueHandling = NullValueHandling.Ignore)]
-        public List<LocationIngState> RecoveringStates { get; set; }
+        public List<ActiveState> ActiveStates { get; set; }
     }
 
-    public partial class LocationActiveState
+    public partial class ActiveState
     {
         [JsonProperty("State")]
         public string State { get; set; }
     }
 
-    public partial class LocationIngState
+    public partial class SystemFaction
     {
-        [JsonProperty("State")]
-        public string State { get; set; }
-
-        [JsonProperty("Trend")]
-        public long Trend { get; set; }
+        [JsonProperty("Name")]
+        public string Name { get; set; }
     }
 
     public partial class LocationInfo

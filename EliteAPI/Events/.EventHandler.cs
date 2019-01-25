@@ -658,7 +658,7 @@ namespace EliteAPI.Events
         public event EventHandler<CargoDepotInfo> CargoDepotEvent;
         public CargoDepotInfo InvokeCargoDepotEvent(CargoDepotInfo arg) { CargoDepotEvent?.Invoke(null, arg); return arg; }
 
-        //FactionKillBond
+        //KillBond
         public event EventHandler<FactionKillBondInfo> FactionKillBondEvent;
         public FactionKillBondInfo InvokeFactionKillBondEvent(FactionKillBondInfo arg) { FactionKillBondEvent?.Invoke(null, arg); return arg; }
 

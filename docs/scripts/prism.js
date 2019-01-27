@@ -1,27 +1,635 @@
 /* PrismJS 1.15.0
-https://prismjs.com/download.html#themes=prism-dark&languages=markup+clike+csharp+aspnet&plugins=line-highlight+line-numbers+autolinker+data-uri-highlight+wpd+custom-class+file-highlight+toolbar+jsonp-highlight+highlight-keywords+remove-initial-line-feed+previewers+autoloader+unescaped-markup+command-line+normalize-whitespace+keep-markup+show-invisibles+show-language+copy-to-clipboard */
-var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-([\w-]+)\b/i,t=0,n=_self.Prism={manual:_self.Prism&&_self.Prism.manual,disableWorkerMessageHandler:_self.Prism&&_self.Prism.disableWorkerMessageHandler,util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).slice(8,-1)},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e,t){var a=n.util.type(e);switch(t=t||{},a){case"Object":if(t[n.util.objId(e)])return t[n.util.objId(e)];var r={};t[n.util.objId(e)]=r;for(var l in e)e.hasOwnProperty(l)&&(r[l]=n.util.clone(e[l],t));return r;case"Array":if(t[n.util.objId(e)])return t[n.util.objId(e)];var r=[];return t[n.util.objId(e)]=r,e.forEach(function(e,a){r[a]=n.util.clone(e,t)}),r}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e],i={};for(var o in l)if(l.hasOwnProperty(o)){if(o==t)for(var s in a)a.hasOwnProperty(s)&&(i[s]=a[s]);a.hasOwnProperty(o)||(i[o]=l[o])}var u=r[e];return r[e]=i,n.languages.DFS(n.languages,function(t,n){n===u&&t!=e&&(this[t]=i)}),i},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){n.highlightAllUnder(document,e,t)},highlightAllUnder:function(e,t,a){var r={callback:a,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",r);for(var l,i=r.elements||e.querySelectorAll(r.selector),o=0;l=i[o++];)n.highlightElement(l,t===!0,r.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1].toLowerCase(),i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,t.parentNode&&(o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l));var s=t.textContent,u={element:t,language:l,grammar:i,code:s},g=function(e){u.highlightedCode=e,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,n.hooks.run("after-highlight",u),n.hooks.run("complete",u),r&&r.call(u.element)};if(n.hooks.run("before-sanity-check",u),!u.code)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),!u.grammar)return g(n.util.encode(u.code)),void 0;if(a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){g(e.data)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else g(n.highlight(u.code,u.grammar,u.language))},highlight:function(e,t,r){var l={code:e,grammar:t,language:r};return n.hooks.run("before-tokenize",l),l.tokens=n.tokenize(l.code,l.grammar),n.hooks.run("after-tokenize",l),a.stringify(n.util.encode(l.tokens),l.language)},matchGrammar:function(e,t,a,r,l,i,o){var s=n.Token;for(var u in a)if(a.hasOwnProperty(u)&&a[u]){if(u==o)return;var g=a[u];g="Array"===n.util.type(g)?g:[g];for(var c=0;c<g.length;++c){var f=g[c],h=f.inside,d=!!f.lookbehind,m=!!f.greedy,p=0,y=f.alias;if(m&&!f.pattern.global){var v=f.pattern.toString().match(/[imuy]*$/)[0];f.pattern=RegExp(f.pattern.source,v+"g")}f=f.pattern||f;for(var b=r,k=l;b<t.length;k+=t[b].length,++b){var w=t[b];if(t.length>e.length)return;if(!(w instanceof s)){if(m&&b!=t.length-1){f.lastIndex=k;var _=f.exec(e);if(!_)break;for(var j=_.index+(d?_[1].length:0),P=_.index+_[0].length,A=b,O=k,x=t.length;x>A&&(P>O||!t[A].type&&!t[A-1].greedy);++A)O+=t[A].length,j>=O&&(++b,k=O);if(t[b]instanceof s)continue;I=A-b,w=e.slice(k,O),_.index-=k}else{f.lastIndex=0;var _=f.exec(w),I=1}if(_){d&&(p=_[1]?_[1].length:0);var j=_.index+p,_=_[0].slice(p),P=j+_.length,N=w.slice(0,j),S=w.slice(P),E=[b,I];N&&(++b,k+=N.length,E.push(N));var C=new s(u,h?n.tokenize(_,h):_,y,_,m);if(E.push(C),S&&E.push(S),Array.prototype.splice.apply(t,E),1!=I&&n.matchGrammar(e,t,a,b,k,!0,u),i)break}else if(i)break}}}}},tokenize:function(e,t){var a=[e],r=t.rest;if(r){for(var l in r)t[l]=r[l];delete t.rest}return n.matchGrammar(e,a,t,0,0,!1),a},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.length=0|(a||"").length,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if(e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o=Object.keys(l.attributes).map(function(e){return e+'="'+(l.attributes[e]||"").replace(/"/g,"&quot;")+'"'}).join(" ");return"<"+l.tag+' class="'+l.classes.join(" ")+'"'+(o?" "+o:"")+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(n.disableWorkerMessageHandler||_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,n.manual||r.hasAttribute("data-manual")||("loading"!==document.readyState?window.requestAnimationFrame?window.requestAnimationFrame(n.highlightAll):window.setTimeout(n.highlightAll,16):document.addEventListener("DOMContentLoaded",n.highlightAll))),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
-Prism.languages.markup={comment:/<!--[\s\S]*?-->/,prolog:/<\?[\s\S]+?\?>/,doctype:/<!DOCTYPE[\s\S]+?>/i,cdata:/<!\[CDATA\[[\s\S]*?]]>/i,tag:{pattern:/<\/?(?!\d)[^\s>\/=$<%]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/i,greedy:!0,inside:{tag:{pattern:/^<\/?[^\s>\/]+/i,inside:{punctuation:/^<\/?/,namespace:/^[^\s>\/:]+:/}},"attr-value":{pattern:/=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+)/i,inside:{punctuation:[/^=/,{pattern:/(^|[^\\])["']/,lookbehind:!0}]}},punctuation:/\/?>/,"attr-name":{pattern:/[^\s>\/]+/,inside:{namespace:/^[^\s>\/:]+:/}}}},entity:/&#?[\da-z]{1,8};/i},Prism.languages.markup.tag.inside["attr-value"].inside.entity=Prism.languages.markup.entity,Prism.hooks.add("wrap",function(a){"entity"===a.type&&(a.attributes.title=a.content.replace(/&amp;/,"&"))}),Prism.languages.xml=Prism.languages.extend("markup",{}),Prism.languages.html=Prism.languages.markup,Prism.languages.mathml=Prism.languages.markup,Prism.languages.svg=Prism.languages.markup;
-Prism.languages.clike={comment:[{pattern:/(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,lookbehind:!0},{pattern:/(^|[^\\:])\/\/.*/,lookbehind:!0,greedy:!0}],string:{pattern:/(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,greedy:!0},"class-name":{pattern:/((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[\w.\\]+/i,lookbehind:!0,inside:{punctuation:/[.\\]/}},keyword:/\b(?:if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,"boolean":/\b(?:true|false)\b/,"function":/\w+(?=\()/,number:/\b0x[\da-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?/i,operator:/--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,punctuation:/[{}[\];(),.:]/};
-Prism.languages.csharp=Prism.languages.extend("clike",{keyword:/\b(?:abstract|add|alias|as|ascending|async|await|base|bool|break|byte|case|catch|char|checked|class|const|continue|decimal|default|delegate|descending|do|double|dynamic|else|enum|event|explicit|extern|false|finally|fixed|float|for|foreach|from|get|global|goto|group|if|implicit|in|int|interface|internal|into|is|join|let|lock|long|namespace|new|null|object|operator|orderby|out|override|params|partial|private|protected|public|readonly|ref|remove|return|sbyte|sealed|select|set|short|sizeof|stackalloc|static|string|struct|switch|this|throw|true|try|typeof|uint|ulong|unchecked|unsafe|ushort|using|value|var|virtual|void|volatile|where|while|yield)\b/,string:[{pattern:/@("|')(?:\1\1|\\[\s\S]|(?!\1)[^\\])*\1/,greedy:!0},{pattern:/("|')(?:\\.|(?!\1)[^\\\r\n])*?\1/,greedy:!0}],"class-name":[{pattern:/\b[A-Z]\w*(?:\.\w+)*\b(?=\s+\w+)/,inside:{punctuation:/\./}},{pattern:/(\[)[A-Z]\w*(?:\.\w+)*\b/,lookbehind:!0,inside:{punctuation:/\./}},{pattern:/(\b(?:class|interface)\s+[A-Z]\w*(?:\.\w+)*\s*:\s*)[A-Z]\w*(?:\.\w+)*\b/,lookbehind:!0,inside:{punctuation:/\./}},{pattern:/((?:\b(?:class|interface|new)\s+)|(?:catch\s+\())[A-Z]\w*(?:\.\w+)*\b/,lookbehind:!0,inside:{punctuation:/\./}}],number:/\b0x[\da-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)f?/i,operator:/>>=?|<<=?|[-=]>|([-+&|?])\1|~|[-+*\/%&|^!=<>]=?/,punctuation:/\?\.?|::|[{}[\];(),.:]/}),Prism.languages.insertBefore("csharp","class-name",{"generic-method":{pattern:/\w+\s*<[^>\r\n]+?>\s*(?=\()/,inside:{"function":/^\w+/,"class-name":{pattern:/\b[A-Z]\w*(?:\.\w+)*\b/,inside:{punctuation:/\./}},keyword:Prism.languages.csharp.keyword,punctuation:/[<>(),.:]/}},preprocessor:{pattern:/(^\s*)#.*/m,lookbehind:!0,alias:"property",inside:{directive:{pattern:/(\s*#)\b(?:define|elif|else|endif|endregion|error|if|line|pragma|region|undef|warning)\b/,lookbehind:!0,alias:"keyword"}}}}),Prism.languages.dotnet=Prism.languages.csharp;
-Prism.languages.aspnet=Prism.languages.extend("markup",{"page-directive tag":{pattern:/<%\s*@.*%>/i,inside:{"page-directive tag":/<%\s*@\s*(?:Assembly|Control|Implements|Import|Master(?:Type)?|OutputCache|Page|PreviousPageType|Reference|Register)?|%>/i,rest:Prism.languages.markup.tag.inside}},"directive tag":{pattern:/<%.*%>/i,inside:{"directive tag":/<%\s*?[$=%#:]{0,2}|%>/i,rest:Prism.languages.csharp}}}),Prism.languages.aspnet.tag.pattern=/<(?!%)\/?[^\s>\/]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/i,Prism.languages.insertBefore("inside","punctuation",{"directive tag":Prism.languages.aspnet["directive tag"]},Prism.languages.aspnet.tag.inside["attr-value"]),Prism.languages.insertBefore("aspnet","comment",{"asp comment":/<%--[\s\S]*?--%>/}),Prism.languages.insertBefore("aspnet",Prism.languages.javascript?"script":"tag",{"asp script":{pattern:/(<script(?=.*runat=['"]?server['"]?)[\s\S]*?>)[\s\S]*?(?=<\/script>)/i,lookbehind:!0,inside:Prism.languages.csharp||{}}});
-!function(){function e(e,t){return Array.prototype.slice.call((t||document).querySelectorAll(e))}function t(e,t){return t=" "+t+" ",(" "+e.className+" ").replace(/[\n\t]/g," ").indexOf(t)>-1}function n(e,n,i){n="string"==typeof n?n:e.getAttribute("data-line");for(var o,l=n.replace(/\s+/g,"").split(","),a=+e.getAttribute("data-line-offset")||0,s=r()?parseInt:parseFloat,d=s(getComputedStyle(e).lineHeight),u=t(e,"line-numbers"),c=0;o=l[c++];){var p=o.split("-"),m=+p[0],f=+p[1]||m,h=e.querySelector('.line-highlight[data-range="'+o+'"]')||document.createElement("div");if(h.setAttribute("aria-hidden","true"),h.setAttribute("data-range",o),h.className=(i||"")+" line-highlight",u&&Prism.plugins.lineNumbers){var g=Prism.plugins.lineNumbers.getLine(e,m),y=Prism.plugins.lineNumbers.getLine(e,f);g&&(h.style.top=g.offsetTop+"px"),y&&(h.style.height=y.offsetTop-g.offsetTop+y.offsetHeight+"px")}else h.setAttribute("data-start",m),f>m&&h.setAttribute("data-end",f),h.style.top=(m-a-1)*d+"px",h.textContent=new Array(f-m+2).join(" \n");u?e.appendChild(h):(e.querySelector("code")||e).appendChild(h)}}function i(){var t=location.hash.slice(1);e(".temporary.line-highlight").forEach(function(e){e.parentNode.removeChild(e)});var i=(t.match(/\.([\d,-]+)$/)||[,""])[1];if(i&&!document.getElementById(t)){var r=t.slice(0,t.lastIndexOf(".")),o=document.getElementById(r);o&&(o.hasAttribute("data-line")||o.setAttribute("data-line",""),n(o,i,"temporary "),document.querySelector(".temporary.line-highlight").scrollIntoView())}}if("undefined"!=typeof self&&self.Prism&&self.document&&document.querySelector){var r=function(){var e;return function(){if("undefined"==typeof e){var t=document.createElement("div");t.style.fontSize="13px",t.style.lineHeight="1.5",t.style.padding=0,t.style.border=0,t.innerHTML="&nbsp;<br />&nbsp;",document.body.appendChild(t),e=38===t.offsetHeight,document.body.removeChild(t)}return e}}(),o=0;Prism.hooks.add("before-sanity-check",function(t){var n=t.element.parentNode,i=n&&n.getAttribute("data-line");if(n&&i&&/pre/i.test(n.nodeName)){var r=0;e(".line-highlight",n).forEach(function(e){r+=e.textContent.length,e.parentNode.removeChild(e)}),r&&/^( \n)+$/.test(t.code.slice(-r))&&(t.code=t.code.slice(0,-r))}}),Prism.hooks.add("complete",function l(e){var r=e.element.parentNode,a=r&&r.getAttribute("data-line");if(r&&a&&/pre/i.test(r.nodeName)){clearTimeout(o);var s=Prism.plugins.lineNumbers,d=e.plugins&&e.plugins.lineNumbers;t(r,"line-numbers")&&s&&!d?Prism.hooks.add("line-numbers",l):(n(r,a),o=setTimeout(i,1))}}),window.addEventListener("hashchange",i),window.addEventListener("resize",function(){var e=document.querySelectorAll("pre[data-line]");Array.prototype.forEach.call(e,function(e){n(e)})})}}();
-!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var e="line-numbers",t=/\n(?!$)/g,n=function(e){var n=r(e),s=n["white-space"];if("pre-wrap"===s||"pre-line"===s){var l=e.querySelector("code"),i=e.querySelector(".line-numbers-rows"),a=e.querySelector(".line-numbers-sizer"),o=l.textContent.split(t);a||(a=document.createElement("span"),a.className="line-numbers-sizer",l.appendChild(a)),a.style.display="block",o.forEach(function(e,t){a.textContent=e||"\n";var n=a.getBoundingClientRect().height;i.children[t].style.height=n+"px"}),a.textContent="",a.style.display="none"}},r=function(e){return e?window.getComputedStyle?getComputedStyle(e):e.currentStyle||null:null};window.addEventListener("resize",function(){Array.prototype.forEach.call(document.querySelectorAll("pre."+e),n)}),Prism.hooks.add("complete",function(e){if(e.code){var r=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(r&&/pre/i.test(r.nodeName)&&(s.test(r.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s," ")),s.test(r.className)||(r.className+=" line-numbers");var l,i=e.code.match(t),a=i?i.length+1:1,o=new Array(a+1);o=o.join("<span></span>"),l=document.createElement("span"),l.setAttribute("aria-hidden","true"),l.className="line-numbers-rows",l.innerHTML=o,r.hasAttribute("data-start")&&(r.style.counterReset="linenumber "+(parseInt(r.getAttribute("data-start"),10)-1)),e.element.appendChild(l),n(r),Prism.hooks.run("line-numbers",e)}}}),Prism.hooks.add("line-numbers",function(e){e.plugins=e.plugins||{},e.plugins.lineNumbers=!0}),Prism.plugins.lineNumbers={getLine:function(t,n){if("PRE"===t.tagName&&t.classList.contains(e)){var r=t.querySelector(".line-numbers-rows"),s=parseInt(t.getAttribute("data-start"),10)||1,l=s+(r.children.length-1);s>n&&(n=s),n>l&&(n=l);var i=n-s;return r.children[i]}}}}}();
-!function(){if(("undefined"==typeof self||self.Prism)&&("undefined"==typeof global||global.Prism)){var i=/\b([a-z]{3,7}:\/\/|tel:)[\w\-+%~\/.:=&]+(?:\?[\w\-+%~\/.:#=?&!$'()*,;]*)?(?:#[\w\-+%~\/.:#=?&!$'()*,;]*)?/,n=/\b\S+@[\w.]+[a-z]{2}/,e=/\[([^\]]+)]\(([^)]+)\)/,t=["comment","url","attr-value","string"];Prism.plugins.autolinker={processGrammar:function(r){r&&!r["url-link"]&&(Prism.languages.DFS(r,function(r,a,l){t.indexOf(l)>-1&&"Array"!==Prism.util.type(a)&&(a.pattern||(a=this[r]={pattern:a}),a.inside=a.inside||{},"comment"==l&&(a.inside["md-link"]=e),"attr-value"==l?Prism.languages.insertBefore("inside","punctuation",{"url-link":i},a):a.inside["url-link"]=i,a.inside["email-link"]=n)}),r["url-link"]=i,r["email-link"]=n)}},Prism.hooks.add("before-highlight",function(i){Prism.plugins.autolinker.processGrammar(i.grammar)}),Prism.hooks.add("wrap",function(i){if(/-link$/.test(i.type)){i.tag="a";var n=i.content;if("email-link"==i.type&&0!=n.indexOf("mailto:"))n="mailto:"+n;else if("md-link"==i.type){var t=i.content.match(e);n=t[2],i.content=t[1]}i.attributes.href=n}try{i.content=decodeURIComponent(i.content)}catch(r){}})}}();
-!function(){if(("undefined"==typeof self||self.Prism)&&("undefined"==typeof global||global.Prism)){var i=function(i){return Prism.plugins.autolinker&&Prism.plugins.autolinker.processGrammar(i),i},a={pattern:/(.)\bdata:[^\/]+\/[^,]+,(?:(?!\1)[\s\S]|\\\1)+(?=\1)/,lookbehind:!0,inside:{"language-css":{pattern:/(data:[^\/]+\/(?:[^+,]+\+)?css,)[\s\S]+/,lookbehind:!0},"language-javascript":{pattern:/(data:[^\/]+\/(?:[^+,]+\+)?javascript,)[\s\S]+/,lookbehind:!0},"language-json":{pattern:/(data:[^\/]+\/(?:[^+,]+\+)?json,)[\s\S]+/,lookbehind:!0},"language-markup":{pattern:/(data:[^\/]+\/(?:[^+,]+\+)?(?:html|xml),)[\s\S]+/,lookbehind:!0}}},n=["url","attr-value","string"];Prism.plugins.dataURIHighlight={processGrammar:function(i){i&&!i["data-uri"]&&(Prism.languages.DFS(i,function(i,e,r){n.indexOf(r)>-1&&"Array"!==Prism.util.type(e)&&(e.pattern||(e=this[i]={pattern:e}),e.inside=e.inside||{},"attr-value"==r?Prism.languages.insertBefore("inside",e.inside["url-link"]?"url-link":"punctuation",{"data-uri":a},e):e.inside["url-link"]?Prism.languages.insertBefore("inside","url-link",{"data-uri":a},e):e.inside["data-uri"]=a)}),i["data-uri"]=a)}},Prism.hooks.add("before-highlight",function(n){if(a.pattern.test(n.code))for(var e in a.inside)if(a.inside.hasOwnProperty(e)&&!a.inside[e].inside&&a.inside[e].pattern.test(n.code)){var r=e.match(/^language-(.+)/)[1];Prism.languages[r]&&(a.inside[e].inside={rest:i(Prism.languages[r])})}Prism.plugins.dataURIHighlight.processGrammar(n.grammar)})}}();
-!function(){function e(e){var n=e.toLowerCase();if(t.HTML[n])return"html";if(t.SVG[e])return"svg";if(t.MathML[e])return"mathml";if(0!==t.HTML[n]&&"undefined"!=typeof document){var a=(document.createElement(e).toString().match(/\[object HTML(.+)Element\]/)||[])[1];if(a&&"Unknown"!=a)return t.HTML[n]=1,"html"}if(t.HTML[n]=0,0!==t.SVG[e]&&"undefined"!=typeof document){var s=(document.createElementNS("http://www.w3.org/2000/svg",e).toString().match(/\[object SVG(.+)Element\]/)||[])[1];if(s&&"Unknown"!=s)return t.SVG[e]=1,"svg"}return t.SVG[e]=0,0!==t.MathML[e]&&0===e.indexOf("m")?(t.MathML[e]=1,"mathml"):(t.MathML[e]=0,null)}if(("undefined"==typeof self||self.Prism)&&("undefined"==typeof global||global.Prism)){if(Prism.languages.css&&(Prism.languages.css.selector.pattern?(Prism.languages.css.selector.inside["pseudo-class"]=/:[\w-]+/,Prism.languages.css.selector.inside["pseudo-element"]=/::[\w-]+/):Prism.languages.css.selector={pattern:Prism.languages.css.selector,inside:{"pseudo-class":/:[\w-]+/,"pseudo-element":/::[\w-]+/}}),Prism.languages.markup){Prism.languages.markup.tag.inside.tag.inside["tag-id"]=/[\w-]+/;var t={HTML:{a:1,abbr:1,acronym:1,b:1,basefont:1,bdo:1,big:1,blink:1,cite:1,code:1,dfn:1,em:1,kbd:1,i:1,rp:1,rt:1,ruby:1,s:1,samp:1,small:1,spacer:1,strike:1,strong:1,sub:1,sup:1,time:1,tt:1,u:1,"var":1,wbr:1,noframes:1,summary:1,command:1,dt:1,dd:1,figure:1,figcaption:1,center:1,section:1,nav:1,article:1,aside:1,hgroup:1,header:1,footer:1,address:1,noscript:1,isIndex:1,main:1,mark:1,marquee:1,meter:1,menu:1},SVG:{animateColor:1,animateMotion:1,animateTransform:1,glyph:1,feBlend:1,feColorMatrix:1,feComponentTransfer:1,feFuncR:1,feFuncG:1,feFuncB:1,feFuncA:1,feComposite:1,feConvolveMatrix:1,feDiffuseLighting:1,feDisplacementMap:1,feFlood:1,feGaussianBlur:1,feImage:1,feMerge:1,feMergeNode:1,feMorphology:1,feOffset:1,feSpecularLighting:1,feTile:1,feTurbulence:1,feDistantLight:1,fePointLight:1,feSpotLight:1,linearGradient:1,radialGradient:1,altGlyph:1,textPath:1,tref:1,altglyph:1,textpath:1,altglyphdef:1,altglyphitem:1,clipPath:1,"color-profile":1,cursor:1,"font-face":1,"font-face-format":1,"font-face-name":1,"font-face-src":1,"font-face-uri":1,foreignObject:1,glyphRef:1,hkern:1,vkern:1},MathML:{}}}var n;Prism.hooks.add("wrap",function(t){if(("tag-id"==t.type||"property"==t.type&&0!=t.content.indexOf("-")||"rule"==t.type&&0!=t.content.indexOf("@-")||"pseudo-class"==t.type&&0!=t.content.indexOf(":-")||"pseudo-element"==t.type&&0!=t.content.indexOf("::-")||"attr-name"==t.type&&0!=t.content.indexOf("data-"))&&-1===t.content.indexOf("<")&&("css"==t.language||"scss"==t.language||"markup"==t.language)){var a="https://webplatform.github.io/docs/",s=t.content;if("css"==t.language||"scss"==t.language)a+="css/","property"==t.type?a+="properties/":"rule"==t.type?(a+="atrules/",s=s.substring(1)):"pseudo-class"==t.type?(a+="selectors/pseudo-classes/",s=s.substring(1)):"pseudo-element"==t.type&&(a+="selectors/pseudo-elements/",s=s.substring(2));else if("markup"==t.language)if("tag-id"==t.type){if(n=e(t.content)||n,!n)return;a+=n+"/elements/"}else if("attr-name"==t.type){if(!n)return;a+=n+"/attributes/"}a+=s,t.tag="a",t.attributes.href=a,t.attributes.target="_blank"}})}}();
-!function(){if("undefined"!=typeof self&&self.Prism||"undefined"!=typeof global&&global.Prism){var s={classMap:{}};Prism.plugins.customClass={map:function(i){s.classMap=i},prefix:function(i){s.prefixString=i}},Prism.hooks.add("wrap",function(i){(s.classMap||s.prefixString)&&(i.classes=i.classes.map(function(i){return(s.prefixString||"")+(s.classMap[i]||i)}))})}}();
-!function(){"undefined"!=typeof self&&self.Prism&&self.document&&document.querySelector&&(self.Prism.fileHighlight=function(t){t=t||document;var e={js:"javascript",py:"python",rb:"ruby",ps1:"powershell",psm1:"powershell",sh:"bash",bat:"batch",h:"c",tex:"latex"};Array.prototype.slice.call(t.querySelectorAll("pre[data-src]")).forEach(function(t){if(!t.hasAttribute("data-src-loaded")){for(var a,n=t.getAttribute("data-src"),r=t,s=/\blang(?:uage)?-([\w-]+)\b/i;r&&!s.test(r.className);)r=r.parentNode;if(r&&(a=(t.className.match(s)||[,""])[1]),!a){var o=(n.match(/\.(\w+)$/)||[,""])[1];a=e[o]||o}var l=document.createElement("code");l.className="language-"+a,t.textContent="",l.textContent="Loading…",t.appendChild(l);var i=new XMLHttpRequest;i.open("GET",n,!0),i.onreadystatechange=function(){4==i.readyState&&(i.status<400&&i.responseText?(l.textContent=i.responseText,Prism.highlightElement(l),t.setAttribute("data-src-loaded","")):l.textContent=i.status>=400?"✖ Error "+i.status+" while fetching file: "+i.statusText:"✖ Error: File does not exist or is empty")},i.send(null)}}),Prism.plugins.toolbar&&Prism.plugins.toolbar.registerButton("download-file",function(t){var e=t.element.parentNode;if(e&&/pre/i.test(e.nodeName)&&e.hasAttribute("data-src")&&e.hasAttribute("data-download-link")){var a=e.getAttribute("data-src"),n=document.createElement("a");return n.textContent=e.getAttribute("data-download-link-label")||"Download",n.setAttribute("download",""),n.href=a,n}})},document.addEventListener("DOMContentLoaded",function(){self.Prism.fileHighlight()}))}();
-!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var t=[],e={},n=function(){};Prism.plugins.toolbar={};var a=Prism.plugins.toolbar.registerButton=function(n,a){var o;o="function"==typeof a?a:function(t){var e;return"function"==typeof a.onClick?(e=document.createElement("button"),e.type="button",e.addEventListener("click",function(){a.onClick.call(this,t)})):"string"==typeof a.url?(e=document.createElement("a"),e.href=a.url):e=document.createElement("span"),e.textContent=a.text,e},t.push(e[n]=o)},o=Prism.plugins.toolbar.hook=function(a){var o=a.element.parentNode;if(o&&/pre/i.test(o.nodeName)&&!o.parentNode.classList.contains("code-toolbar")){var r=document.createElement("div");r.classList.add("code-toolbar"),o.parentNode.insertBefore(r,o),r.appendChild(o);var i=document.createElement("div");i.classList.add("toolbar"),document.body.hasAttribute("data-toolbar-order")&&(t=document.body.getAttribute("data-toolbar-order").split(",").map(function(t){return e[t]||n})),t.forEach(function(t){var e=t(a);if(e){var n=document.createElement("div");n.classList.add("toolbar-item"),n.appendChild(e),i.appendChild(n)}}),r.appendChild(i)}};a("label",function(t){var e=t.element.parentNode;if(e&&/pre/i.test(e.nodeName)&&e.hasAttribute("data-label")){var n,a,o=e.getAttribute("data-label");try{a=document.querySelector("template#"+o)}catch(r){}return a?n=a.content:(e.hasAttribute("data-url")?(n=document.createElement("a"),n.href=e.getAttribute("data-url")):n=document.createElement("span"),n.textContent=o),n}}),Prism.hooks.add("complete",o)}}();
-!function(){function t(t){"function"!=typeof t||e(t)||r.push(t)}function e(t){return"function"==typeof t?r.filter(function(e){return e.valueOf()===t.valueOf()})[0]:"string"==typeof t&&t.length>0?r.filter(function(e){return e.name===t})[0]:null}function n(t){if("string"==typeof t&&(t=e(t)),"function"==typeof t){var n=r.indexOf(t);n>=0&&r.splice(n,1)}}function a(){Array.prototype.slice.call(document.querySelectorAll("pre[data-jsonp]")).forEach(function(t){t.textContent="";var e=document.createElement("code");e.textContent=i,t.appendChild(e);var n=t.getAttribute("data-adapter"),a=null;if(n){if("function"!=typeof window[n])return e.textContent="JSONP adapter function '"+n+"' doesn't exist",void 0;a=window[n]}var u="prismjsonp"+o++,f=document.createElement("a"),l=f.href=t.getAttribute("data-jsonp");f.href+=(f.search?"&":"?")+(t.getAttribute("data-callback")||"callback")+"="+u;var s=setTimeout(function(){e.textContent===i&&(e.textContent="Timeout loading '"+l+"'")},5e3),c=document.createElement("script");c.src=f.href,window[u]=function(n){document.head.removeChild(c),clearTimeout(s),delete window[u];var o="";if(a)o=a(n,t);else for(var i in r)if(o=r[i](n,t),null!==o)break;null===o?e.textContent="Cannot parse response (perhaps you need an adapter function?)":(e.textContent=o,Prism.highlightElement(e))},document.head.appendChild(c)})}if(self.Prism&&self.document&&document.querySelectorAll&&[].filter){var r=[];t(function(t){if(t&&t.meta&&t.data){if(t.meta.status&&t.meta.status>=400)return"Error: "+(t.data.message||t.meta.status);if("string"==typeof t.data.content)return"function"==typeof atob?atob(t.data.content.replace(/\s/g,"")):"Your browser cannot decode base64"}return null}),t(function(t,e){if(t&&t.meta&&t.data&&t.data.files){if(t.meta.status&&t.meta.status>=400)return"Error: "+(t.data.message||t.meta.status);var n=t.data.files,a=e.getAttribute("data-filename");if(null==a)for(var r in n)if(n.hasOwnProperty(r)){a=r;break}return void 0!==n[a]?n[a].content:"Error: unknown or missing gist file "+a}return null}),t(function(t){return t&&t.node&&"string"==typeof t.data?t.data:null});var o=0,i="Loading…";Prism.plugins.jsonphighlight={registerAdapter:t,removeAdapter:n,highlight:a},a()}}();
-!function(){"undefined"!=typeof self&&!self.Prism||"undefined"!=typeof global&&!global.Prism||Prism.hooks.add("wrap",function(e){"keyword"===e.type&&e.classes.push("keyword-"+e.content)})}();
-!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("before-sanity-check",function(e){if(e.code){var s=e.element.parentNode,n=/\s*\bkeep-initial-line-feed\b\s*/;!s||"pre"!==s.nodeName.toLowerCase()||n.test(s.className)||n.test(e.element.className)||(e.code=e.code.replace(/^(?:\r?\n|\r)/,""))}})}();
-!function(){if(("undefined"==typeof self||self.Prism)&&self.document&&Function.prototype.bind){var e={gradient:{create:function(){var e={},s=function(e,s,i){var t="180deg";return/^(?:-?\d*\.?\d+(?:deg|rad)|to\b|top|right|bottom|left)/.test(i[0])&&(t=i.shift(),t.indexOf("to ")<0&&(t.indexOf("top")>=0?t=t.indexOf("left")>=0?"to bottom right":t.indexOf("right")>=0?"to bottom left":"to bottom":t.indexOf("bottom")>=0?t=t.indexOf("left")>=0?"to top right":t.indexOf("right")>=0?"to top left":"to top":t.indexOf("left")>=0?t="to right":t.indexOf("right")>=0?t="to left":e&&(t.indexOf("deg")>=0?t=90-parseFloat(t)+"deg":t.indexOf("rad")>=0&&(t=Math.PI/2-parseFloat(t)+"rad")))),s+"("+t+","+i.join(",")+")"},i=function(e,s,i){if(i[0].indexOf("at")<0){var t="center",a="ellipse",r="farthest-corner";if(/\bcenter|top|right|bottom|left\b|^\d+/.test(i[0])&&(t=i.shift().replace(/\s*-?\d+(?:rad|deg)\s*/,"")),/\bcircle|ellipse|closest|farthest|contain|cover\b/.test(i[0])){var n=i.shift().split(/\s+/);!n[0]||"circle"!==n[0]&&"ellipse"!==n[0]||(a=n.shift()),n[0]&&(r=n.shift()),"cover"===r?r="farthest-corner":"contain"===r&&(r="clothest-side")}return s+"("+a+" "+r+" at "+t+","+i.join(",")+")"}return s+"("+i.join(",")+")"},t=function(t){if(e[t])return e[t];var a=t.match(/^(\b|\B-[a-z]{1,10}-)((?:repeating-)?(?:linear|radial)-gradient)/),r=a&&a[1],n=a&&a[2],l=t.replace(/^(?:\b|\B-[a-z]{1,10}-)(?:repeating-)?(?:linear|radial)-gradient\(|\)$/g,"").split(/\s*,\s*/);return e[t]=n.indexOf("linear")>=0?s(r,n,l):n.indexOf("radial")>=0?i(r,n,l):n+"("+l.join(",")+")"};return function(){new Prism.plugins.Previewer("gradient",function(e){return this.firstChild.style.backgroundImage="",this.firstChild.style.backgroundImage=t(e),!!this.firstChild.style.backgroundImage},"*",function(){this._elt.innerHTML="<div></div>"})}}(),tokens:{gradient:{pattern:/(?:\b|\B-[a-z]{1,10}-)(?:repeating-)?(?:linear|radial)-gradient\((?:(?:rgb|hsl)a?\(.+?\)|[^\)])+\)/gi,inside:{"function":/[\w-]+(?=\()/,punctuation:/[(),]/}}},languages:{css:!0,less:!0,sass:[{lang:"sass",before:"punctuation",inside:"inside",root:Prism.languages.sass&&Prism.languages.sass["variable-line"]},{lang:"sass",before:"punctuation",inside:"inside",root:Prism.languages.sass&&Prism.languages.sass["property-line"]}],scss:!0,stylus:[{lang:"stylus",before:"func",inside:"rest",root:Prism.languages.stylus&&Prism.languages.stylus["property-declaration"].inside},{lang:"stylus",before:"func",inside:"rest",root:Prism.languages.stylus&&Prism.languages.stylus["variable-declaration"].inside}]}},angle:{create:function(){new Prism.plugins.Previewer("angle",function(e){var s,i,t=parseFloat(e),a=e.match(/[a-z]+$/i);if(!t||!a)return!1;switch(a=a[0]){case"deg":s=360;break;case"grad":s=400;break;case"rad":s=2*Math.PI;break;case"turn":s=1}return i=100*t/s,i%=100,this[(0>t?"set":"remove")+"Attribute"]("data-negative",""),this.querySelector("circle").style.strokeDasharray=Math.abs(i)+",500",!0},"*",function(){this._elt.innerHTML='<svg viewBox="0 0 64 64"><circle r="16" cy="32" cx="32"></circle></svg>'})},tokens:{angle:/(?:\b|\B-|(?=\B\.))\d*\.?\d+(?:deg|g?rad|turn)\b/i},languages:{css:!0,less:!0,markup:{lang:"markup",before:"punctuation",inside:"inside",root:Prism.languages.markup&&Prism.languages.markup.tag.inside["attr-value"]},sass:[{lang:"sass",inside:"inside",root:Prism.languages.sass&&Prism.languages.sass["property-line"]},{lang:"sass",before:"operator",inside:"inside",root:Prism.languages.sass&&Prism.languages.sass["variable-line"]}],scss:!0,stylus:[{lang:"stylus",before:"func",inside:"rest",root:Prism.languages.stylus&&Prism.languages.stylus["property-declaration"].inside},{lang:"stylus",before:"func",inside:"rest",root:Prism.languages.stylus&&Prism.languages.stylus["variable-declaration"].inside}]}},color:{create:function(){new Prism.plugins.Previewer("color",function(e){return this.style.backgroundColor="",this.style.backgroundColor=e,!!this.style.backgroundColor})},tokens:{color:{pattern:/\B#(?:[0-9a-f]{3}){1,2}\b|\b(?:rgb|hsl)\(\s*\d{1,3}\s*,\s*\d{1,3}%?\s*,\s*\d{1,3}%?\s*\)\B|\b(?:rgb|hsl)a\(\s*\d{1,3}\s*,\s*\d{1,3}%?\s*,\s*\d{1,3}%?\s*,\s*(?:0|0?\.\d+|1)\s*\)\B|\b(?:AliceBlue|AntiqueWhite|Aqua|Aquamarine|Azure|Beige|Bisque|Black|BlanchedAlmond|Blue|BlueViolet|Brown|BurlyWood|CadetBlue|Chartreuse|Chocolate|Coral|CornflowerBlue|Cornsilk|Crimson|Cyan|DarkBlue|DarkCyan|DarkGoldenRod|DarkGray|DarkGreen|DarkKhaki|DarkMagenta|DarkOliveGreen|DarkOrange|DarkOrchid|DarkRed|DarkSalmon|DarkSeaGreen|DarkSlateBlue|DarkSlateGray|DarkTurquoise|DarkViolet|DeepPink|DeepSkyBlue|DimGray|DodgerBlue|FireBrick|FloralWhite|ForestGreen|Fuchsia|Gainsboro|GhostWhite|Gold|GoldenRod|Gray|Green|GreenYellow|HoneyDew|HotPink|IndianRed|Indigo|Ivory|Khaki|Lavender|LavenderBlush|LawnGreen|LemonChiffon|LightBlue|LightCoral|LightCyan|LightGoldenRodYellow|LightGray|LightGreen|LightPink|LightSalmon|LightSeaGreen|LightSkyBlue|LightSlateGray|LightSteelBlue|LightYellow|Lime|LimeGreen|Linen|Magenta|Maroon|MediumAquaMarine|MediumBlue|MediumOrchid|MediumPurple|MediumSeaGreen|MediumSlateBlue|MediumSpringGreen|MediumTurquoise|MediumVioletRed|MidnightBlue|MintCream|MistyRose|Moccasin|NavajoWhite|Navy|OldLace|Olive|OliveDrab|Orange|OrangeRed|Orchid|PaleGoldenRod|PaleGreen|PaleTurquoise|PaleVioletRed|PapayaWhip|PeachPuff|Peru|Pink|Plum|PowderBlue|Purple|Red|RosyBrown|RoyalBlue|SaddleBrown|Salmon|SandyBrown|SeaGreen|SeaShell|Sienna|Silver|SkyBlue|SlateBlue|SlateGray|Snow|SpringGreen|SteelBlue|Tan|Teal|Thistle|Tomato|Turquoise|Violet|Wheat|White|WhiteSmoke|Yellow|YellowGreen)\b/i,inside:{"function":/[\w-]+(?=\()/,punctuation:/[(),]/}}},languages:{css:!0,less:!0,markup:{lang:"markup",before:"punctuation",inside:"inside",root:Prism.languages.markup&&Prism.languages.markup.tag.inside["attr-value"]},sass:[{lang:"sass",before:"punctuation",inside:"inside",root:Prism.languages.sass&&Prism.languages.sass["variable-line"]},{lang:"sass",inside:"inside",root:Prism.languages.sass&&Prism.languages.sass["property-line"]}],scss:!0,stylus:[{lang:"stylus",before:"hexcode",inside:"rest",root:Prism.languages.stylus&&Prism.languages.stylus["property-declaration"].inside},{lang:"stylus",before:"hexcode",inside:"rest",root:Prism.languages.stylus&&Prism.languages.stylus["variable-declaration"].inside}]}},easing:{create:function(){new Prism.plugins.Previewer("easing",function(e){e={linear:"0,0,1,1",ease:".25,.1,.25,1","ease-in":".42,0,1,1","ease-out":"0,0,.58,1","ease-in-out":".42,0,.58,1"}[e]||e;var s=e.match(/-?\d*\.?\d+/g);if(4===s.length){s=s.map(function(e,s){return 100*(s%2?1-e:e)}),this.querySelector("path").setAttribute("d","M0,100 C"+s[0]+","+s[1]+", "+s[2]+","+s[3]+", 100,0");var i=this.querySelectorAll("line");return i[0].setAttribute("x2",s[0]),i[0].setAttribute("y2",s[1]),i[1].setAttribute("x2",s[2]),i[1].setAttribute("y2",s[3]),!0}return!1},"*",function(){this._elt.innerHTML='<svg viewBox="-20 -20 140 140" width="100" height="100"><defs><marker id="prism-previewer-easing-marker" viewBox="0 0 4 4" refX="2" refY="2" markerUnits="strokeWidth"><circle cx="2" cy="2" r="1.5" /></marker></defs><path d="M0,100 C20,50, 40,30, 100,0" /><line x1="0" y1="100" x2="20" y2="50" marker-start="url('+location.href+'#prism-previewer-easing-marker)" marker-end="url('+location.href+'#prism-previewer-easing-marker)" /><line x1="100" y1="0" x2="40" y2="30" marker-start="url('+location.href+'#prism-previewer-easing-marker)" marker-end="url('+location.href+'#prism-previewer-easing-marker)" /></svg>'})},tokens:{easing:{pattern:/\bcubic-bezier\((?:-?\d*\.?\d+,\s*){3}-?\d*\.?\d+\)\B|\b(?:linear|ease(?:-in)?(?:-out)?)(?=\s|[;}]|$)/i,inside:{"function":/[\w-]+(?=\()/,punctuation:/[(),]/}}},languages:{css:!0,less:!0,sass:[{lang:"sass",inside:"inside",before:"punctuation",root:Prism.languages.sass&&Prism.languages.sass["variable-line"]},{lang:"sass",inside:"inside",root:Prism.languages.sass&&Prism.languages.sass["property-line"]}],scss:!0,stylus:[{lang:"stylus",before:"hexcode",inside:"rest",root:Prism.languages.stylus&&Prism.languages.stylus["property-declaration"].inside},{lang:"stylus",before:"hexcode",inside:"rest",root:Prism.languages.stylus&&Prism.languages.stylus["variable-declaration"].inside}]}},time:{create:function(){new Prism.plugins.Previewer("time",function(e){var s=parseFloat(e),i=e.match(/[a-z]+$/i);return s&&i?(i=i[0],this.querySelector("circle").style.animationDuration=2*s+i,!0):!1},"*",function(){this._elt.innerHTML='<svg viewBox="0 0 64 64"><circle r="16" cy="32" cx="32"></circle></svg>'})},tokens:{time:/(?:\b|\B-|(?=\B\.))\d*\.?\d+m?s\b/i},languages:{css:!0,less:!0,markup:{lang:"markup",before:"punctuation",inside:"inside",root:Prism.languages.markup&&Prism.languages.markup.tag.inside["attr-value"]},sass:[{lang:"sass",inside:"inside",root:Prism.languages.sass&&Prism.languages.sass["property-line"]},{lang:"sass",before:"operator",inside:"inside",root:Prism.languages.sass&&Prism.languages.sass["variable-line"]}],scss:!0,stylus:[{lang:"stylus",before:"hexcode",inside:"rest",root:Prism.languages.stylus&&Prism.languages.stylus["property-declaration"].inside},{lang:"stylus",before:"hexcode",inside:"rest",root:Prism.languages.stylus&&Prism.languages.stylus["variable-declaration"].inside}]}}},s=function(e){var s=e.getBoundingClientRect(),i=s.left,t=s.top,a=document.documentElement.getBoundingClientRect();return i-=a.left,t-=a.top,{top:t,right:innerWidth-i-s.width,bottom:innerHeight-t-s.height,left:i,width:s.width,height:s.height}},i=/(?:^|\s)token(?=$|\s)/,t=/(?:^|\s)active(?=$|\s)/g,a=/(?:^|\s)flipped(?=$|\s)/g,r=function(e,s,i,t){this._elt=null,this._type=e,this._clsRegexp=RegExp("(?:^|\\s)"+e+"(?=$|\\s)"),this._token=null,this.updater=s,this._mouseout=this.mouseout.bind(this),this.initializer=t;var a=this;i||(i=["*"]),"Array"!==Prism.util.type(i)&&(i=[i]),i.forEach(function(e){"string"!=typeof e&&(e=e.lang),r.byLanguages[e]||(r.byLanguages[e]=[]),r.byLanguages[e].indexOf(a)<0&&r.byLanguages[e].push(a)}),r.byType[e]=this};r.prototype.init=function(){this._elt||(this._elt=document.createElement("div"),this._elt.className="prism-previewer prism-previewer-"+this._type,document.body.appendChild(this._elt),this.initializer&&this.initializer())},r.prototype.isDisabled=function(e){do if(e.hasAttribute&&e.hasAttribute("data-previewers")){var s=e.getAttribute("data-previewers");return-1===(s||"").split(/\s+/).indexOf(this._type)}while(e=e.parentNode);return!1},r.prototype.check=function(e){if(!i.test(e.className)||!this.isDisabled(e)){do if(i.test(e.className)&&this._clsRegexp.test(e.className))break;while(e=e.parentNode);e&&e!==this._token&&(this._token=e,this.show())}},r.prototype.mouseout=function(){this._token.removeEventListener("mouseout",this._mouseout,!1),this._token=null,this.hide()},r.prototype.show=function(){if(this._elt||this.init(),this._token)if(this.updater.call(this._elt,this._token.textContent)){this._token.addEventListener("mouseout",this._mouseout,!1);var e=s(this._token);this._elt.className+=" active",e.top-this._elt.offsetHeight>0?(this._elt.className=this._elt.className.replace(a,""),this._elt.style.top=e.top+"px",this._elt.style.bottom=""):(this._elt.className+=" flipped",this._elt.style.bottom=e.bottom+"px",this._elt.style.top=""),this._elt.style.left=e.left+Math.min(200,e.width/2)+"px"}else this.hide()},r.prototype.hide=function(){this._elt.className=this._elt.className.replace(t,"")},r.byLanguages={},r.byType={},r.initEvents=function(e,s){var i=[];r.byLanguages[s]&&(i=i.concat(r.byLanguages[s])),r.byLanguages["*"]&&(i=i.concat(r.byLanguages["*"])),e.addEventListener("mouseover",function(e){var s=e.target;i.forEach(function(e){e.check(s)})},!1)},Prism.plugins.Previewer=r,Prism.hooks.add("before-highlight",function(s){for(var i in e){var t=e[i].languages;if(s.language&&t[s.language]&&!t[s.language].initialized){var a=t[s.language];"Array"!==Prism.util.type(a)&&(a=[a]),a.forEach(function(a){var r,n,l,o;a===!0?(r="important",n=s.language,a=s.language):(r=a.before||"important",n=a.inside||a.lang,l=a.root||Prism.languages,o=a.skip,a=s.language),!o&&Prism.languages[a]&&(Prism.languages.insertBefore(n,r,e[i].tokens,l),s.grammar=Prism.languages[a],t[s.language]={initialized:!0})})}}}),Prism.hooks.add("after-highlight",function(e){(r.byLanguages["*"]||r.byLanguages[e.language])&&r.initEvents(e.element,e.language)});for(var n in e)e[n].create()}}();
-!function(){if("undefined"!=typeof self&&self.Prism&&self.document&&document.createElement){var e={javascript:"clike",actionscript:"javascript",arduino:"cpp",aspnet:["markup","csharp"],bison:"c",c:"clike",csharp:"clike",cpp:"c",coffeescript:"javascript",crystal:"ruby","css-extras":"css",d:"clike",dart:"clike",django:"markup",erb:["ruby","markup-templating"],fsharp:"clike",flow:"javascript",glsl:"clike",gml:"clike",go:"clike",groovy:"clike",haml:"ruby",handlebars:"markup-templating",haxe:"clike",java:"clike",jolie:"clike",kotlin:"clike",less:"css",markdown:"markup","markup-templating":"markup",n4js:"javascript",nginx:"clike",objectivec:"c",opencl:"cpp",parser:"markup",php:["clike","markup-templating"],"php-extras":"php",plsql:"sql",processing:"clike",protobuf:"clike",pug:"javascript",qore:"clike",jsx:["markup","javascript"],tsx:["jsx","typescript"],reason:"clike",ruby:"clike",sass:"css",scss:"css",scala:"java",smarty:"markup-templating",soy:"markup-templating",swift:"clike",tap:"yaml",textile:"markup",tt2:["clike","markup-templating"],twig:"markup",typescript:"javascript",vala:"clike",vbnet:"basic",velocity:"markup",wiki:"markup",xeora:"markup",xquery:"markup"},a={},c="none",t=document.getElementsByTagName("script");t=t[t.length-1];var r="components/";if(t.hasAttribute("data-autoloader-path")){var s=t.getAttribute("data-autoloader-path").trim();s.length>0&&!/^[a-z]+:\/\//i.test(t.src)&&(r=s.replace(/\/?$/,"/"))}else/[\w-]+\.js$/.test(t.src)&&(r=t.src.replace(/[\w-]+\.js$/,"components/"));var i=Prism.plugins.autoloader={languages_path:r,use_minified:!0},n=function(e,a,c){var t=document.createElement("script");t.src=e,t.async=!0,t.onload=function(){document.body.removeChild(t),a&&a()},t.onerror=function(){document.body.removeChild(t),c&&c()},document.body.appendChild(t)},l=function(e){return i.languages_path+"prism-"+e+(i.use_minified?".min":"")+".js"},o=function(e,c){var t=a[e];t||(t=a[e]={});var r=c.getAttribute("data-dependencies");!r&&c.parentNode&&"pre"===c.parentNode.tagName.toLowerCase()&&(r=c.parentNode.getAttribute("data-dependencies")),r=r?r.split(/\s*,\s*/g):[],p(r,function(){u(e,function(){Prism.highlightElement(c)})})},p=function(e,a,c){"string"==typeof e&&(e=[e]);var t=0,r=e.length,s=function(){r>t?u(e[t],function(){t++,s()},function(){c&&c(e[t])}):t===r&&a&&a(e)};s()},u=function(c,t,r){var s=function(){var e=!1;c.indexOf("!")>=0&&(e=!0,c=c.replace("!",""));var s=a[c];if(s||(s=a[c]={}),t&&(s.success_callbacks||(s.success_callbacks=[]),s.success_callbacks.push(t)),r&&(s.error_callbacks||(s.error_callbacks=[]),s.error_callbacks.push(r)),!e&&Prism.languages[c])m(c);else if(!e&&s.error)k(c);else if(e||!s.loading){s.loading=!0;var i=l(c);n(i,function(){s.loading=!1,m(c)},function(){s.loading=!1,s.error=!0,k(c)})}},i=e[c];i&&i.length?p(i,s):s()},m=function(e){a[e]&&a[e].success_callbacks&&a[e].success_callbacks.length&&a[e].success_callbacks.forEach(function(a){a(e)})},k=function(e){a[e]&&a[e].error_callbacks&&a[e].error_callbacks.length&&a[e].error_callbacks.forEach(function(a){a(e)})};Prism.hooks.add("complete",function(e){e.element&&e.language&&!e.grammar&&e.language!==c&&o(e.language,e.element)})}}();
-!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.languages.markup&&(Prism.plugins.UnescapedMarkup=!0,Prism.hooks.add("before-highlightall",function(e){e.selector+=", [class*='lang-'] script[type='text/plain'], [class*='language-'] script[type='text/plain'], script[type='text/plain'][class*='lang-'], script[type='text/plain'][class*='language-']"}),Prism.hooks.add("before-sanity-check",function(e){if((e.element.matches||e.element.msMatchesSelector).call(e.element,"script[type='text/plain']")){var t=document.createElement("code"),n=document.createElement("pre");return n.className=t.className=e.element.className,e.element.dataset&&Object.keys(e.element.dataset).forEach(function(t){Object.prototype.hasOwnProperty.call(e.element.dataset,t)&&(n.dataset[t]=e.element.dataset[t])}),e.code=e.code.replace(/&lt;\/script(>|&gt;)/gi,"</script>"),t.textContent=e.code,n.appendChild(t),e.element.parentNode.replaceChild(n,e.element),e.element=t,void 0}var n=e.element.parentNode;!e.code&&n&&"pre"==n.nodeName.toLowerCase()&&e.element.childNodes.length&&"#comment"==e.element.childNodes[0].nodeName&&(e.element.textContent=e.code=e.element.childNodes[0].textContent)}))}();
-!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var e=/(?:^|\s)command-line(?:\s|$)/;Prism.hooks.add("before-highlight",function(t){var a=t.vars=t.vars||{},n=a["command-line"]=a["command-line"]||{};if(n.complete||!t.code)return n.complete=!0,void 0;var r=t.element.parentNode;if(!r||!/pre/i.test(r.nodeName)||!e.test(r.className)&&!e.test(t.element.className))return n.complete=!0,void 0;if(t.element.querySelector(".command-line-prompt"))return n.complete=!0,void 0;var o=t.code.split("\n");n.numberOfLines=o.length;var s=n.outputLines=[],i=r.getAttribute("data-output"),l=r.getAttribute("data-filter-output");if(i||""===i){i=i.split(",");for(var m=0;m<i.length;m++){var d=i[m].split("-"),p=parseInt(d[0],10),c=2===d.length?parseInt(d[1],10):p;if(!isNaN(p)&&!isNaN(c)){1>p&&(p=1),c>o.length&&(c=o.length),p--,c--;for(var u=p;c>=u;u++)s[u]=o[u],o[u]=""}}}else if(l)for(var m=0;m<o.length;m++)0===o[m].indexOf(l)&&(s[m]=o[m].slice(l.length),o[m]="");t.code=o.join("\n")}),Prism.hooks.add("before-insert",function(e){var t=e.vars=e.vars||{},a=t["command-line"]=t["command-line"]||{};if(!a.complete){for(var n=e.highlightedCode.split("\n"),r=0;r<a.outputLines.length;r++)a.outputLines.hasOwnProperty(r)&&(n[r]=a.outputLines[r]);e.highlightedCode=n.join("\n")}}),Prism.hooks.add("complete",function(t){var a=t.vars=t.vars||{},n=a["command-line"]=a["command-line"]||{};if(!n.complete){var r=t.element.parentNode;e.test(t.element.className)&&(t.element.className=t.element.className.replace(e," ")),e.test(r.className)||(r.className+=" command-line");var o=function(e,t){return(r.getAttribute(e)||t).replace(/"/g,"&quot")},s=new Array(n.numberOfLines+1),i=o("data-prompt","");if(""!==i)s=s.join('<span data-prompt="'+i+'"></span>');else{var l=o("data-user","user"),m=o("data-host","localhost");s=s.join('<span data-user="'+l+'" data-host="'+m+'"></span>')}var d=document.createElement("span");d.className="command-line-prompt",d.innerHTML=s;for(var p=0;p<n.outputLines.length;p++)if(n.outputLines.hasOwnProperty(p)){var c=d.children[p];c.removeAttribute("data-user"),c.removeAttribute("data-host"),c.removeAttribute("data-prompt")}t.element.insertBefore(d,t.element.firstChild),n.complete=!0}})}}();
-!function(){function e(e){this.defaults=r({},e)}function n(e){return e.replace(/-(\w)/g,function(e,n){return n.toUpperCase()})}function t(e){for(var n=0,t=0;t<e.length;++t)e.charCodeAt(t)=="	".charCodeAt(0)&&(n+=3);return e.length+n}var r=Object.assign||function(e,n){for(var t in n)n.hasOwnProperty(t)&&(e[t]=n[t]);return e};e.prototype={setDefaults:function(e){this.defaults=r(this.defaults,e)},normalize:function(e,t){t=r(this.defaults,t);for(var i in t){var o=n(i);"normalize"!==i&&"setDefaults"!==o&&t[i]&&this[o]&&(e=this[o].call(this,e,t[i]))}return e},leftTrim:function(e){return e.replace(/^\s+/,"")},rightTrim:function(e){return e.replace(/\s+$/,"")},tabsToSpaces:function(e,n){return n=0|n||4,e.replace(/\t/g,new Array(++n).join(" "))},spacesToTabs:function(e,n){return n=0|n||4,e.replace(RegExp(" {"+n+"}","g"),"	")},removeTrailing:function(e){return e.replace(/\s*?$/gm,"")},removeInitialLineFeed:function(e){return e.replace(/^(?:\r?\n|\r)/,"")},removeIndent:function(e){var n=e.match(/^[^\S\n\r]*(?=\S)/gm);return n&&n[0].length?(n.sort(function(e,n){return e.length-n.length}),n[0].length?e.replace(RegExp("^"+n[0],"gm"),""):e):e},indent:function(e,n){return e.replace(/^[^\S\n\r]*(?=\S)/gm,new Array(++n).join("	")+"$&")},breakLines:function(e,n){n=n===!0?80:0|n||80;for(var r=e.split("\n"),i=0;i<r.length;++i)if(!(t(r[i])<=n)){for(var o=r[i].split(/(\s+)/g),a=0,s=0;s<o.length;++s){var l=t(o[s]);a+=l,a>n&&(o[s]="\n"+o[s],a=l)}r[i]=o.join("")}return r.join("\n")}},"undefined"!=typeof module&&module.exports&&(module.exports=e),"undefined"!=typeof Prism&&(Prism.plugins.NormalizeWhitespace=new e({"remove-trailing":!0,"remove-indent":!0,"left-trim":!0,"right-trim":!0}),Prism.hooks.add("before-sanity-check",function(e){var n=Prism.plugins.NormalizeWhitespace;if(!e.settings||e.settings["whitespace-normalization"]!==!1){if((!e.element||!e.element.parentNode)&&e.code)return e.code=n.normalize(e.code,e.settings),void 0;var t=e.element.parentNode,r=/\bno-whitespace-normalization\b/;if(e.code&&t&&"pre"===t.nodeName.toLowerCase()&&!r.test(t.className)&&!r.test(e.element.className)){for(var i=t.childNodes,o="",a="",s=!1,l=0;l<i.length;++l){var c=i[l];c==e.element?s=!0:"#text"===c.nodeName&&(s?a+=c.nodeValue:o+=c.nodeValue,t.removeChild(c),--l)}if(e.element.children.length&&Prism.plugins.KeepMarkup){var u=o+e.element.innerHTML+a;e.element.innerHTML=n.normalize(u,e.settings),e.code=e.element.textContent}else e.code=o+e.code+a,e.code=n.normalize(e.code,e.settings)}}}))}();
-!function(){"undefined"!=typeof self&&self.Prism&&self.document&&document.createRange&&(Prism.plugins.KeepMarkup=!0,Prism.hooks.add("before-highlight",function(e){if(e.element.children.length){var n=0,o=[],t=function(e,d){var r={};d||(r.clone=e.cloneNode(!1),r.posOpen=n,o.push(r));for(var a=0,s=e.childNodes.length;s>a;a++){var l=e.childNodes[a];1===l.nodeType?t(l):3===l.nodeType&&(n+=l.data.length)}d||(r.posClose=n)};t(e.element,!0),o&&o.length&&(e.keepMarkup=o)}}),Prism.hooks.add("after-highlight",function(e){if(e.keepMarkup&&e.keepMarkup.length){var n=function(e,o){for(var t=0,d=e.childNodes.length;d>t;t++){var r=e.childNodes[t];if(1===r.nodeType){if(!n(r,o))return!1}else 3===r.nodeType&&(!o.nodeStart&&o.pos+r.data.length>o.node.posOpen&&(o.nodeStart=r,o.nodeStartPos=o.node.posOpen-o.pos),o.nodeStart&&o.pos+r.data.length>=o.node.posClose&&(o.nodeEnd=r,o.nodeEndPos=o.node.posClose-o.pos),o.pos+=r.data.length);if(o.nodeStart&&o.nodeEnd){var a=document.createRange();return a.setStart(o.nodeStart,o.nodeStartPos),a.setEnd(o.nodeEnd,o.nodeEndPos),o.node.clone.appendChild(a.extractContents()),a.insertNode(o.node.clone),a.detach(),!1}}return!0};e.keepMarkup.forEach(function(o){n(e.element,{node:o,pos:0})}),e.highlightedCode=e.element.innerHTML}}))}();
-!function(){function r(a,i){var n=a[i],t=Prism.util.type(n);switch(t){case"RegExp":var f={};a[i]={pattern:n,inside:f},e(f);break;case"Array":for(var s=0,o=n.length;o>s;s++)r(n,s);break;default:var f=n.inside||(n.inside={});e(f)}}function e(i){if(i&&!i.tab){for(var n in a)a.hasOwnProperty(n)&&(i[n]=a[n]);for(var n in i)i.hasOwnProperty(n)&&!a[n]&&("rest"===n?e(i.rest):r(i,n))}}if(("undefined"==typeof self||self.Prism)&&("undefined"==typeof global||global.Prism)){var a={tab:/\t/,crlf:/\r\n/,lf:/\n/,cr:/\r/,space:/ /};Prism.hooks.add("before-highlight",function(r){e(r.grammar)})}}();
-!function(){if("undefined"!=typeof self&&self.Prism&&self.document){if(!Prism.plugins.toolbar)return console.warn("Show Languages plugin loaded before Toolbar plugin."),void 0;var e={html:"HTML",xml:"XML",svg:"SVG",mathml:"MathML",css:"CSS",clike:"C-like",js:"JavaScript",abap:"ABAP",apacheconf:"Apache Configuration",apl:"APL",arff:"ARFF",asciidoc:"AsciiDoc",adoc:"AsciiDoc",asm6502:"6502 Assembly",aspnet:"ASP.NET (C#)",autohotkey:"AutoHotkey",autoit:"AutoIt",shell:"Bash",basic:"BASIC",csharp:"C#",dotnet:"C#",cpp:"C++",cil:"CIL",csp:"Content-Security-Policy","css-extras":"CSS Extras",django:"Django/Jinja2",jinja2:"Django/Jinja2",dockerfile:"Docker",erb:"ERB",fsharp:"F#",gcode:"G-code",gedcom:"GEDCOM",glsl:"GLSL",gml:"GameMaker Language",gamemakerlanguage:"GameMaker Language",graphql:"GraphQL",hcl:"HCL",http:"HTTP",hpkp:"HTTP Public-Key-Pins",hsts:"HTTP Strict-Transport-Security",ichigojam:"IchigoJam",inform7:"Inform 7",javastacktrace:"Java stack trace",json:"JSON",jsonp:"JSONP",latex:"LaTeX",emacs:"Lisp",elisp:"Lisp","emacs-lisp":"Lisp",lolcode:"LOLCODE","markup-templating":"Markup templating",matlab:"MATLAB",mel:"MEL",n1ql:"N1QL",n4js:"N4JS",n4jsd:"N4JS","nand2tetris-hdl":"Nand To Tetris HDL",nasm:"NASM",nginx:"nginx",nsis:"NSIS",objectivec:"Objective-C",ocaml:"OCaml",opencl:"OpenCL",parigp:"PARI/GP",objectpascal:"Object Pascal",php:"PHP","php-extras":"PHP Extras",plsql:"PL/SQL",powershell:"PowerShell",properties:".properties",protobuf:"Protocol Buffers",q:"Q (kdb+ database)",jsx:"React JSX",tsx:"React TSX",renpy:"Ren'py",rest:"reST (reStructuredText)",sas:"SAS",sass:"Sass (Sass)",scss:"Sass (Scss)",sql:"SQL",soy:"Soy (Closure Template)",tap:"TAP",toml:"TOML",tt2:"Template Toolkit 2",ts:"TypeScript",vbnet:"VB.Net",vhdl:"VHDL",vim:"vim","visual-basic":"Visual Basic",vb:"Visual Basic",wasm:"WebAssembly",wiki:"Wiki markup",xeoracube:"XeoraCube",xojo:"Xojo (REALbasic)",xquery:"XQuery",yaml:"YAML"};Prism.plugins.toolbar.registerButton("show-language",function(a){function s(e){return e?(e.substring(0,1).toUpperCase()+e.substring(1)).replace(/s(?=cript)/,"S"):e}var t=a.element.parentNode;if(t&&/pre/i.test(t.nodeName)){var o=t.getAttribute("data-language")||e[a.language]||s(a.language);if(o){var i=document.createElement("span");return i.textContent=o,i}}})}}();
-!function(){if("undefined"!=typeof self&&self.Prism&&self.document){if(!Prism.plugins.toolbar)return console.warn("Copy to Clipboard plugin loaded before Toolbar plugin."),void 0;var o=window.ClipboardJS||void 0;o||"function"!=typeof require||(o=require("clipboard"));var e=[];if(!o){var t=document.createElement("script"),n=document.querySelector("head");t.onload=function(){if(o=window.ClipboardJS)for(;e.length;)e.pop()()},t.src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",n.appendChild(t)}Prism.plugins.toolbar.registerButton("copy-to-clipboard",function(t){function n(){var e=new o(i,{text:function(){return t.code}});e.on("success",function(){i.textContent="Copied!",r()}),e.on("error",function(){i.textContent="Press Ctrl+C to copy",r()})}function r(){setTimeout(function(){i.textContent="Copy"},5e3)}var i=document.createElement("a");return i.textContent="Copy",o?n():e.push(n),i})}}();
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+csharp&plugins=line-numbers+file-highlight+jsonp-highlight */
+var _self = "undefined" != typeof window ? window : "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? self : {},
+    Prism = function() {
+        var e = /\blang(?:uage)?-([\w-]+)\b/i,
+            t = 0,
+            n = _self.Prism = {
+                manual: _self.Prism && _self.Prism.manual,
+                disableWorkerMessageHandler: _self.Prism && _self.Prism.disableWorkerMessageHandler,
+                util: {
+                    encode: function(e) {
+                        return e instanceof a ? new a(e.type, n.util.encode(e.content), e.alias) : "Array" === n.util.type(e) ? e.map(n.util.encode) : e.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/\u00a0/g, " ")
+                    },
+                    type: function(e) {
+                        return Object.prototype.toString.call(e).slice(8, -1)
+                    },
+                    objId: function(e) {
+                        return e.__id || Object.defineProperty(e, "__id", {
+                            value: ++t
+                        }), e.__id
+                    },
+                    clone: function(e, t) {
+                        var a = n.util.type(e);
+                        switch (t = t || {}, a) {
+                            case "Object":
+                                if (t[n.util.objId(e)]) return t[n.util.objId(e)];
+                                var r = {};
+                                t[n.util.objId(e)] = r;
+                                for (var l in e) e.hasOwnProperty(l) && (r[l] = n.util.clone(e[l], t));
+                                return r;
+                            case "Array":
+                                if (t[n.util.objId(e)]) return t[n.util.objId(e)];
+                                var r = [];
+                                return t[n.util.objId(e)] = r, e.forEach(function(e, a) {
+                                    r[a] = n.util.clone(e, t)
+                                }), r
+                        }
+                        return e
+                    }
+                },
+                languages: {
+                    extend: function(e, t) {
+                        var a = n.util.clone(n.languages[e]);
+                        for (var r in t) a[r] = t[r];
+                        return a
+                    },
+                    insertBefore: function(e, t, a, r) {
+                        r = r || n.languages;
+                        var l = r[e],
+                            i = {};
+                        for (var o in l)
+                            if (l.hasOwnProperty(o)) {
+                                if (o == t)
+                                    for (var s in a) a.hasOwnProperty(s) && (i[s] = a[s]);
+                                a.hasOwnProperty(o) || (i[o] = l[o])
+                            } var u = r[e];
+                        return r[e] = i, n.languages.DFS(n.languages, function(t, n) {
+                            n === u && t != e && (this[t] = i)
+                        }), i
+                    },
+                    DFS: function(e, t, a, r) {
+                        r = r || {};
+                        for (var l in e) e.hasOwnProperty(l) && (t.call(e, l, e[l], a || l), "Object" !== n.util.type(e[l]) || r[n.util.objId(e[l])] ? "Array" !== n.util.type(e[l]) || r[n.util.objId(e[l])] || (r[n.util.objId(e[l])] = !0, n.languages.DFS(e[l], t, l, r)) : (r[n.util.objId(e[l])] = !0, n.languages.DFS(e[l], t, null, r)))
+                    }
+                },
+                plugins: {},
+                highlightAll: function(e, t) {
+                    n.highlightAllUnder(document, e, t)
+                },
+                highlightAllUnder: function(e, t, a) {
+                    var r = {
+                        callback: a,
+                        selector: 'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'
+                    };
+                    n.hooks.run("before-highlightall", r);
+                    for (var l, i = r.elements || e.querySelectorAll(r.selector), o = 0; l = i[o++];) n.highlightElement(l, t === !0, r.callback)
+                },
+                highlightElement: function(t, a, r) {
+                    for (var l, i, o = t; o && !e.test(o.className);) o = o.parentNode;
+                    o && (l = (o.className.match(e) || [, ""])[1].toLowerCase(), i = n.languages[l]), t.className = t.className.replace(e, "").replace(/\s+/g, " ") + " language-" + l, t.parentNode && (o = t.parentNode, /pre/i.test(o.nodeName) && (o.className = o.className.replace(e, "").replace(/\s+/g, " ") + " language-" + l));
+                    var s = t.textContent,
+                        u = {
+                            element: t,
+                            language: l,
+                            grammar: i,
+                            code: s
+                        },
+                        g = function(e) {
+                            u.highlightedCode = e, n.hooks.run("before-insert", u), u.element.innerHTML = u.highlightedCode, n.hooks.run("after-highlight", u), n.hooks.run("complete", u), r && r.call(u.element)
+                        };
+                    if (n.hooks.run("before-sanity-check", u), !u.code) return n.hooks.run("complete", u), void 0;
+                    if (n.hooks.run("before-highlight", u), !u.grammar) return g(n.util.encode(u.code)), void 0;
+                    if (a && _self.Worker) {
+                        var c = new Worker(n.filename);
+                        c.onmessage = function(e) {
+                            g(e.data)
+                        }, c.postMessage(JSON.stringify({
+                            language: u.language,
+                            code: u.code,
+                            immediateClose: !0
+                        }))
+                    } else g(n.highlight(u.code, u.grammar, u.language))
+                },
+                highlight: function(e, t, r) {
+                    var l = {
+                        code: e,
+                        grammar: t,
+                        language: r
+                    };
+                    return n.hooks.run("before-tokenize", l), l.tokens = n.tokenize(l.code, l.grammar), n.hooks.run("after-tokenize", l), a.stringify(n.util.encode(l.tokens), l.language)
+                },
+                matchGrammar: function(e, t, a, r, l, i, o) {
+                    var s = n.Token;
+                    for (var u in a)
+                        if (a.hasOwnProperty(u) && a[u]) {
+                            if (u == o) return;
+                            var g = a[u];
+                            g = "Array" === n.util.type(g) ? g : [g];
+                            for (var c = 0; c < g.length; ++c) {
+                                var f = g[c],
+                                    h = f.inside,
+                                    d = !!f.lookbehind,
+                                    m = !!f.greedy,
+                                    p = 0,
+                                    y = f.alias;
+                                if (m && !f.pattern.global) {
+                                    var v = f.pattern.toString().match(/[imuy]*$/)[0];
+                                    f.pattern = RegExp(f.pattern.source, v + "g")
+                                }
+                                f = f.pattern || f;
+                                for (var b = r, k = l; b < t.length; k += t[b].length, ++b) {
+                                    var w = t[b];
+                                    if (t.length > e.length) return;
+                                    if (!(w instanceof s)) {
+                                        if (m && b != t.length - 1) {
+                                            f.lastIndex = k;
+                                            var _ = f.exec(e);
+                                            if (!_) break;
+                                            for (var j = _.index + (d ? _[1].length : 0), P = _.index + _[0].length, A = b, O = k, x = t.length; x > A && (P > O || !t[A].type && !t[A - 1].greedy); ++A) O += t[A].length, j >= O && (++b, k = O);
+                                            if (t[b] instanceof s) continue;
+                                            I = A - b, w = e.slice(k, O), _.index -= k
+                                        } else {
+                                            f.lastIndex = 0;
+                                            var _ = f.exec(w),
+                                                I = 1
+                                        }
+                                        if (_) {
+                                            d && (p = _[1] ? _[1].length : 0);
+                                            var j = _.index + p,
+                                                _ = _[0].slice(p),
+                                                P = j + _.length,
+                                                N = w.slice(0, j),
+                                                S = w.slice(P),
+                                                E = [b, I];
+                                            N && (++b, k += N.length, E.push(N));
+                                            var C = new s(u, h ? n.tokenize(_, h) : _, y, _, m);
+                                            if (E.push(C), S && E.push(S), Array.prototype.splice.apply(t, E), 1 != I && n.matchGrammar(e, t, a, b, k, !0, u), i) break
+                                        } else if (i) break
+                                    }
+                                }
+                            }
+                        }
+                },
+                tokenize: function(e, t) {
+                    var a = [e],
+                        r = t.rest;
+                    if (r) {
+                        for (var l in r) t[l] = r[l];
+                        delete t.rest
+                    }
+                    return n.matchGrammar(e, a, t, 0, 0, !1), a
+                },
+                hooks: {
+                    all: {},
+                    add: function(e, t) {
+                        var a = n.hooks.all;
+                        a[e] = a[e] || [], a[e].push(t)
+                    },
+                    run: function(e, t) {
+                        var a = n.hooks.all[e];
+                        if (a && a.length)
+                            for (var r, l = 0; r = a[l++];) r(t)
+                    }
+                }
+            },
+            a = n.Token = function(e, t, n, a, r) {
+                this.type = e, this.content = t, this.alias = n, this.length = 0 | (a || "").length, this.greedy = !!r
+            };
+        if (a.stringify = function(e, t, r) {
+                if ("string" == typeof e) return e;
+                if ("Array" === n.util.type(e)) return e.map(function(n) {
+                    return a.stringify(n, t, e)
+                }).join("");
+                var l = {
+                    type: e.type,
+                    content: a.stringify(e.content, t, r),
+                    tag: "span",
+                    classes: ["token", e.type],
+                    attributes: {},
+                    language: t,
+                    parent: r
+                };
+                if (e.alias) {
+                    var i = "Array" === n.util.type(e.alias) ? e.alias : [e.alias];
+                    Array.prototype.push.apply(l.classes, i)
+                }
+                n.hooks.run("wrap", l);
+                var o = Object.keys(l.attributes).map(function(e) {
+                    return e + '="' + (l.attributes[e] || "").replace(/"/g, "&quot;") + '"'
+                }).join(" ");
+                return "<" + l.tag + ' class="' + l.classes.join(" ") + '"' + (o ? " " + o : "") + ">" + l.content + "</" + l.tag + ">"
+            }, !_self.document) return _self.addEventListener ? (n.disableWorkerMessageHandler || _self.addEventListener("message", function(e) {
+            var t = JSON.parse(e.data),
+                a = t.language,
+                r = t.code,
+                l = t.immediateClose;
+            _self.postMessage(n.highlight(r, n.languages[a], a)), l && _self.close()
+        }, !1), _self.Prism) : _self.Prism;
+        var r = document.currentScript || [].slice.call(document.getElementsByTagName("script")).pop();
+        return r && (n.filename = r.src, n.manual || r.hasAttribute("data-manual") || ("loading" !== document.readyState ? window.requestAnimationFrame ? window.requestAnimationFrame(n.highlightAll) : window.setTimeout(n.highlightAll, 16) : document.addEventListener("DOMContentLoaded", n.highlightAll))), _self.Prism
+    }();
+"undefined" != typeof module && module.exports && (module.exports = Prism), "undefined" != typeof global && (global.Prism = Prism);
+Prism.languages.markup = {
+    comment: /<!--[\s\S]*?-->/,
+    prolog: /<\?[\s\S]+?\?>/,
+    doctype: /<!DOCTYPE[\s\S]+?>/i,
+    cdata: /<!\[CDATA\[[\s\S]*?]]>/i,
+    tag: {
+        pattern: /<\/?(?!\d)[^\s>\/=$<%]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/i,
+        greedy: !0,
+        inside: {
+            tag: {
+                pattern: /^<\/?[^\s>\/]+/i,
+                inside: {
+                    punctuation: /^<\/?/,
+                    namespace: /^[^\s>\/:]+:/
+                }
+            },
+            "attr-value": {
+                pattern: /=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+)/i,
+                inside: {
+                    punctuation: [/^=/, {
+                        pattern: /(^|[^\\])["']/,
+                        lookbehind: !0
+                    }]
+                }
+            },
+            punctuation: /\/?>/,
+            "attr-name": {
+                pattern: /[^\s>\/]+/,
+                inside: {
+                    namespace: /^[^\s>\/:]+:/
+                }
+            }
+        }
+    },
+    entity: /&#?[\da-z]{1,8};/i
+}, Prism.languages.markup.tag.inside["attr-value"].inside.entity = Prism.languages.markup.entity, Prism.hooks.add("wrap", function(a) {
+    "entity" === a.type && (a.attributes.title = a.content.replace(/&amp;/, "&"))
+}), Prism.languages.xml = Prism.languages.extend("markup", {}), Prism.languages.html = Prism.languages.markup, Prism.languages.mathml = Prism.languages.markup, Prism.languages.svg = Prism.languages.markup;
+Prism.languages.css = {
+    comment: /\/\*[\s\S]*?\*\//,
+    atrule: {
+        pattern: /@[\w-]+?[\s\S]*?(?:;|(?=\s*\{))/i,
+        inside: {
+            rule: /@[\w-]+/
+        }
+    },
+    url: /url\((?:(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1|.*?)\)/i,
+    selector: /[^{}\s][^{};]*?(?=\s*\{)/,
+    string: {
+        pattern: /("|')(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
+        greedy: !0
+    },
+    property: /[-_a-z\xA0-\uFFFF][-\w\xA0-\uFFFF]*(?=\s*:)/i,
+    important: /!important\b/i,
+    "function": /[-a-z0-9]+(?=\()/i,
+    punctuation: /[(){};:,]/
+}, Prism.languages.css.atrule.inside.rest = Prism.languages.css, Prism.languages.markup && (Prism.languages.insertBefore("markup", "tag", {
+    style: {
+        pattern: /(<style[\s\S]*?>)[\s\S]*?(?=<\/style>)/i,
+        lookbehind: !0,
+        inside: Prism.languages.css,
+        alias: "language-css",
+        greedy: !0
+    }
+}), Prism.languages.insertBefore("inside", "attr-value", {
+    "style-attr": {
+        pattern: /\s*style=("|')(?:\\[\s\S]|(?!\1)[^\\])*\1/i,
+        inside: {
+            "attr-name": {
+                pattern: /^\s*style/i,
+                inside: Prism.languages.markup.tag.inside
+            },
+            punctuation: /^\s*=\s*['"]|['"]\s*$/,
+            "attr-value": {
+                pattern: /.+/i,
+                inside: Prism.languages.css
+            }
+        },
+        alias: "language-css"
+    }
+}, Prism.languages.markup.tag));
+Prism.languages.clike = {
+    comment: [{
+        pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,
+        lookbehind: !0
+    }, {
+        pattern: /(^|[^\\:])\/\/.*/,
+        lookbehind: !0,
+        greedy: !0
+    }],
+    string: {
+        pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
+        greedy: !0
+    },
+    "class-name": {
+        pattern: /((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[\w.\\]+/i,
+        lookbehind: !0,
+        inside: {
+            punctuation: /[.\\]/
+        }
+    },
+    keyword: /\b(?:if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,
+    "boolean": /\b(?:true|false)\b/,
+    "function": /\w+(?=\()/,
+    number: /\b0x[\da-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?/i,
+    operator: /--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,
+    punctuation: /[{}[\];(),.:]/
+};
+Prism.languages.javascript = Prism.languages.extend("clike", {
+    "class-name": [Prism.languages.clike["class-name"], {
+        pattern: /(^|[^$\w\xA0-\uFFFF])[_$A-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\.(?:prototype|constructor))/,
+        lookbehind: !0
+    }],
+    keyword: [{
+        pattern: /((?:^|})\s*)(?:catch|finally)\b/,
+        lookbehind: !0
+    }, /\b(?:as|async|await|break|case|class|const|continue|debugger|default|delete|do|else|enum|export|extends|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\b/],
+    number: /\b(?:(?:0[xX][\dA-Fa-f]+|0[bB][01]+|0[oO][0-7]+)n?|\d+n|NaN|Infinity)\b|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee][+-]?\d+)?/,
+    "function": /[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*\(|\.(?:apply|bind|call)\()/,
+    operator: /-[-=]?|\+[+=]?|!=?=?|<<?=?|>>?>?=?|=(?:==?|>)?|&[&=]?|\|[|=]?|\*\*?=?|\/=?|~|\^=?|%=?|\?|\.{3}/
+}), Prism.languages.javascript["class-name"][0].pattern = /(\b(?:class|interface|extends|implements|instanceof|new)\s+)[\w.\\]+/, Prism.languages.insertBefore("javascript", "keyword", {
+    regex: {
+        pattern: /((?:^|[^$\w\xA0-\uFFFF."'\])\s])\s*)\/(\[(?:[^\]\\\r\n]|\\.)*]|\\.|[^\/\\\[\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})\]]))/,
+        lookbehind: !0,
+        greedy: !0
+    },
+    "function-variable": {
+        pattern: /[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*[=:]\s*(?:async\s*)?(?:\bfunction\b|(?:\([^()]*\)|[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*)\s*=>))/i,
+        alias: "function"
+    },
+    parameter: [{
+        pattern: /(function(?:\s+[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*)?\s*\(\s*)[^\s()][^()]*?(?=\s*\))/,
+        lookbehind: !0,
+        inside: Prism.languages.javascript
+    }, {
+        pattern: /[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*=>)/,
+        inside: Prism.languages.javascript
+    }, {
+        pattern: /(\(\s*)[^\s()][^()]*?(?=\s*\)\s*=>)/,
+        lookbehind: !0,
+        inside: Prism.languages.javascript
+    }, {
+        pattern: /((?:\b|\s|^)(?!(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)(?![$\w\xA0-\uFFFF]))(?:[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*\s*)\(\s*)[^\s()][^()]*?(?=\s*\)\s*\{)/,
+        lookbehind: !0,
+        inside: Prism.languages.javascript
+    }],
+    constant: /\b[A-Z][A-Z\d_]*\b/
+}), Prism.languages.insertBefore("javascript", "string", {
+    "template-string": {
+        pattern: /`(?:\\[\s\S]|\${[^}]+}|[^\\`])*`/,
+        greedy: !0,
+        inside: {
+            interpolation: {
+                pattern: /\${[^}]+}/,
+                inside: {
+                    "interpolation-punctuation": {
+                        pattern: /^\${|}$/,
+                        alias: "punctuation"
+                    },
+                    rest: Prism.languages.javascript
+                }
+            },
+            string: /[\s\S]+/
+        }
+    }
+}), Prism.languages.markup && Prism.languages.insertBefore("markup", "tag", {
+    script: {
+        pattern: /(<script[\s\S]*?>)[\s\S]*?(?=<\/script>)/i,
+        lookbehind: !0,
+        inside: Prism.languages.javascript,
+        alias: "language-javascript",
+        greedy: !0
+    }
+}), Prism.languages.js = Prism.languages.javascript;
+Prism.languages.csharp = Prism.languages.extend("clike", {
+    keyword: /\b(?:abstract|add|alias|as|ascending|async|await|base|bool|break|byte|case|catch|char|checked|class|const|continue|decimal|default|delegate|descending|do|double|dynamic|else|enum|event|explicit|extern|false|finally|fixed|float|for|foreach|from|get|global|goto|group|if|implicit|in|int|interface|internal|into|is|join|let|lock|long|namespace|new|null|object|operator|orderby|out|override|params|partial|private|protected|public|readonly|ref|remove|return|sbyte|sealed|select|set|short|sizeof|stackalloc|static|string|struct|switch|this|throw|true|try|typeof|uint|ulong|unchecked|unsafe|ushort|using|value|var|virtual|void|volatile|where|while|yield)\b/,
+    string: [{
+        pattern: /@("|')(?:\1\1|\\[\s\S]|(?!\1)[^\\])*\1/,
+        greedy: !0
+    }, {
+        pattern: /("|')(?:\\.|(?!\1)[^\\\r\n])*?\1/,
+        greedy: !0
+    }],
+    "class-name": [{
+        pattern: /\b[A-Z]\w*(?:\.\w+)*\b(?=\s+\w+)/,
+        inside: {
+            punctuation: /\./
+        }
+    }, {
+        pattern: /(\[)[A-Z]\w*(?:\.\w+)*\b/,
+        lookbehind: !0,
+        inside: {
+            punctuation: /\./
+        }
+    }, {
+        pattern: /(\b(?:class|interface)\s+[A-Z]\w*(?:\.\w+)*\s*:\s*)[A-Z]\w*(?:\.\w+)*\b/,
+        lookbehind: !0,
+        inside: {
+            punctuation: /\./
+        }
+    }, {
+        pattern: /((?:\b(?:class|interface|new)\s+)|(?:catch\s+\())[A-Z]\w*(?:\.\w+)*\b/,
+        lookbehind: !0,
+        inside: {
+            punctuation: /\./
+        }
+    }],
+    number: /\b0x[\da-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)f?/i,
+    operator: />>=?|<<=?|[-=]>|([-+&|?])\1|~|[-+*\/%&|^!=<>]=?/,
+    punctuation: /\?\.?|::|[{}[\];(),.:]/
+}), Prism.languages.insertBefore("csharp", "class-name", {
+    "generic-method": {
+        pattern: /\w+\s*<[^>\r\n]+?>\s*(?=\()/,
+        inside: {
+            "function": /^\w+/,
+            "class-name": {
+                pattern: /\b[A-Z]\w*(?:\.\w+)*\b/,
+                inside: {
+                    punctuation: /\./
+                }
+            },
+            keyword: Prism.languages.csharp.keyword,
+            punctuation: /[<>(),.:]/
+        }
+    },
+    preprocessor: {
+        pattern: /(^\s*)#.*/m,
+        lookbehind: !0,
+        alias: "property",
+        inside: {
+            directive: {
+                pattern: /(\s*#)\b(?:define|elif|else|endif|endregion|error|if|line|pragma|region|undef|warning)\b/,
+                lookbehind: !0,
+                alias: "keyword"
+            }
+        }
+    }
+}), Prism.languages.dotnet = Prism.languages.csharp;
+! function() {
+    if ("undefined" != typeof self && self.Prism && self.document) {
+        var e = "line-numbers",
+            t = /\n(?!$)/g,
+            n = function(e) {
+                var n = r(e),
+                    s = n["white-space"];
+                if ("pre-wrap" === s || "pre-line" === s) {
+                    var l = e.querySelector("code"),
+                        i = e.querySelector(".line-numbers-rows"),
+                        a = e.querySelector(".line-numbers-sizer"),
+                        o = l.textContent.split(t);
+                    a || (a = document.createElement("span"), a.className = "line-numbers-sizer", l.appendChild(a)), a.style.display = "block", o.forEach(function(e, t) {
+                        a.textContent = e || "\n";
+                        var n = a.getBoundingClientRect().height;
+                        i.children[t].style.height = n + "px"
+                    }), a.textContent = "", a.style.display = "none"
+                }
+            },
+            r = function(e) {
+                return e ? window.getComputedStyle ? getComputedStyle(e) : e.currentStyle || null : null
+            };
+        window.addEventListener("resize", function() {
+            Array.prototype.forEach.call(document.querySelectorAll("pre." + e), n)
+        }), Prism.hooks.add("complete", function(e) {
+            if (e.code) {
+                var r = e.element.parentNode,
+                    s = /\s*\bline-numbers\b\s*/;
+                if (r && /pre/i.test(r.nodeName) && (s.test(r.className) || s.test(e.element.className)) && !e.element.querySelector(".line-numbers-rows")) {
+                    s.test(e.element.className) && (e.element.className = e.element.className.replace(s, " ")), s.test(r.className) || (r.className += " line-numbers");
+                    var l, i = e.code.match(t),
+                        a = i ? i.length + 1 : 1,
+                        o = new Array(a + 1);
+                    o = o.join("<span></span>"), l = document.createElement("span"), l.setAttribute("aria-hidden", "true"), l.className = "line-numbers-rows", l.innerHTML = o, r.hasAttribute("data-start") && (r.style.counterReset = "linenumber " + (parseInt(r.getAttribute("data-start"), 10) - 1)), e.element.appendChild(l), n(r), Prism.hooks.run("line-numbers", e)
+                }
+            }
+        }), Prism.hooks.add("line-numbers", function(e) {
+            e.plugins = e.plugins || {}, e.plugins.lineNumbers = !0
+        }), Prism.plugins.lineNumbers = {
+            getLine: function(t, n) {
+                if ("PRE" === t.tagName && t.classList.contains(e)) {
+                    var r = t.querySelector(".line-numbers-rows"),
+                        s = parseInt(t.getAttribute("data-start"), 10) || 1,
+                        l = s + (r.children.length - 1);
+                    s > n && (n = s), n > l && (n = l);
+                    var i = n - s;
+                    return r.children[i]
+                }
+            }
+        }
+    }
+}();
+! function() {
+    "undefined" != typeof self && self.Prism && self.document && document.querySelector && (self.Prism.fileHighlight = function(t) {
+        t = t || document;
+        var e = {
+            js: "javascript",
+            py: "python",
+            rb: "ruby",
+            ps1: "powershell",
+            psm1: "powershell",
+            sh: "bash",
+            bat: "batch",
+            h: "c",
+            tex: "latex"
+        };
+        Array.prototype.slice.call(t.querySelectorAll("pre[data-src]")).forEach(function(t) {
+            if (!t.hasAttribute("data-src-loaded")) {
+                for (var a, n = t.getAttribute("data-src"), r = t, s = /\blang(?:uage)?-([\w-]+)\b/i; r && !s.test(r.className);) r = r.parentNode;
+                if (r && (a = (t.className.match(s) || [, ""])[1]), !a) {
+                    var o = (n.match(/\.(\w+)$/) || [, ""])[1];
+                    a = e[o] || o
+                }
+                var l = document.createElement("code");
+                l.className = "language-" + a, t.textContent = "", l.textContent = "Loading…", t.appendChild(l);
+                var i = new XMLHttpRequest;
+                i.open("GET", n, !0), i.onreadystatechange = function() {
+                    4 == i.readyState && (i.status < 400 && i.responseText ? (l.textContent = i.responseText, Prism.highlightElement(l), t.setAttribute("data-src-loaded", "")) : l.textContent = i.status >= 400 ? "✖ Error " + i.status + " while fetching file: " + i.statusText : "✖ Error: File does not exist or is empty")
+                }, i.send(null)
+            }
+        }), Prism.plugins.toolbar && Prism.plugins.toolbar.registerButton("download-file", function(t) {
+            var e = t.element.parentNode;
+            if (e && /pre/i.test(e.nodeName) && e.hasAttribute("data-src") && e.hasAttribute("data-download-link")) {
+                var a = e.getAttribute("data-src"),
+                    n = document.createElement("a");
+                return n.textContent = e.getAttribute("data-download-link-label") || "Download", n.setAttribute("download", ""), n.href = a, n
+            }
+        })
+    }, document.addEventListener("DOMContentLoaded", function() {
+        self.Prism.fileHighlight()
+    }))
+}();
+! function() {
+    function t(t) {
+        "function" != typeof t || e(t) || r.push(t)
+    }
+
+    function e(t) {
+        return "function" == typeof t ? r.filter(function(e) {
+            return e.valueOf() === t.valueOf()
+        })[0] : "string" == typeof t && t.length > 0 ? r.filter(function(e) {
+            return e.name === t
+        })[0] : null
+    }
+
+    function n(t) {
+        if ("string" == typeof t && (t = e(t)), "function" == typeof t) {
+            var n = r.indexOf(t);
+            n >= 0 && r.splice(n, 1)
+        }
+    }
+
+    function a() {
+        Array.prototype.slice.call(document.querySelectorAll("pre[data-jsonp]")).forEach(function(t) {
+            t.textContent = "";
+            var e = document.createElement("code");
+            e.textContent = i, t.appendChild(e);
+            var n = t.getAttribute("data-adapter"),
+                a = null;
+            if (n) {
+                if ("function" != typeof window[n]) return e.textContent = "JSONP adapter function '" + n + "' doesn't exist", void 0;
+                a = window[n]
+            }
+            var u = "prismjsonp" + o++,
+                f = document.createElement("a"),
+                l = f.href = t.getAttribute("data-jsonp");
+            f.href += (f.search ? "&" : "?") + (t.getAttribute("data-callback") || "callback") + "=" + u;
+            var s = setTimeout(function() {
+                    e.textContent === i && (e.textContent = "Timeout loading '" + l + "'")
+                }, 5e3),
+                c = document.createElement("script");
+            c.src = f.href, window[u] = function(n) {
+                document.head.removeChild(c), clearTimeout(s), delete window[u];
+                var o = "";
+                if (a) o = a(n, t);
+                else
+                    for (var i in r)
+                        if (o = r[i](n, t), null !== o) break;
+                null === o ? e.textContent = "Cannot parse response (perhaps you need an adapter function?)" : (e.textContent = o, Prism.highlightElement(e))
+            }, document.head.appendChild(c)
+        })
+    }
+    if (self.Prism && self.document && document.querySelectorAll && [].filter) {
+        var r = [];
+        t(function(t) {
+            if (t && t.meta && t.data) {
+                if (t.meta.status && t.meta.status >= 400) return "Error: " + (t.data.message || t.meta.status);
+                if ("string" == typeof t.data.content) return "function" == typeof atob ? atob(t.data.content.replace(/\s/g, "")) : "Your browser cannot decode base64"
+            }
+            return null
+        }), t(function(t, e) {
+            if (t && t.meta && t.data && t.data.files) {
+                if (t.meta.status && t.meta.status >= 400) return "Error: " + (t.data.message || t.meta.status);
+                var n = t.data.files,
+                    a = e.getAttribute("data-filename");
+                if (null == a)
+                    for (var r in n)
+                        if (n.hasOwnProperty(r)) {
+                            a = r;
+                            break
+                        } return void 0 !== n[a] ? n[a].content : "Error: unknown or missing gist file " + a
+            }
+            return null
+        }), t(function(t) {
+            return t && t.node && "string" == typeof t.data ? t.data : null
+        });
+        var o = 0,
+            i = "Loading…";
+        Prism.plugins.jsonphighlight = {
+            registerAdapter: t,
+            removeAdapter: n,
+            highlight: a
+        }, a()
+    }
+}();

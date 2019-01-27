@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>EliteAPI documentation</title>
@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="css/scrollbar.css">
     <link rel="stylesheet" type="text/css" href="css/table.css">
     <link rel="stylesheet" type="text/css" href="css/scripts.css">
-
   </head>
   <body>
     <h1>EliteAPI documentation.</h1>
@@ -63,8 +62,8 @@
     <hr>
     <h4>Example: Docking.</h4>
     <p>EliteAPI works with any .NET langauge, for this example we will use C#.</p>
-    <p>Let's say we want to deploy the landing gear whenever the commander is allowed to dock. After having created a .NET project, add EliteAPI's namespaces to the project.</p>
-    <pre class="language-csharp line-numbers" data-src="code\ExampleDocking1.cs"></pre>
+    <p>Let's say we want to deploy the landing gear whenever the commander is allowed to dock. After having created a .NET project, add EliteAPI's namespace to the project.</p>
+    <pre class="language-csharp line-numbers" data-src="code/ExampleDocking1.cs"></pre>
     <p>Then, create a new EliteDangerousAPI object. Everything related to EliteAPI will be done in this object.</p>
     <pre class="language-csharp line-numbers" data-start="9" data-src="code/ExampleDocking2.cs"></pre>
     <p>Since EliteDangerousAPI needs a reference to the directory that contains the <a href="https://support.frontier.co.uk/kb/faq.php?id=372">Player Journals</a>, we have to pass it a DirectoryInfo object. Usually, the Player Journal folder is located in <i>C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous</i>.</p>
@@ -81,6 +80,6 @@
     <p>This is one of the many things you can do with EliteAPI. If you'd like to see the full source code for this specific command, you can find it <a href="code/ExampleDocking.html">here</a>.</p>
 
     <!-- Use C# highlighting script. -->
-    <script src="scripts/prism.js"</script>
+    <script src="scripts/prism.js"></script>
   </body>
 </html>

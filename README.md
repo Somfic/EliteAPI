@@ -9,4 +9,4 @@ A powerful event based API for [Elite: Dangerous](https://www.elitedangerous.com
 
 Join the [Discord](https://discord.gg/jwpFUPZ), or contact me personally: Somfic#9987
 
-# Check the [documentation](https://eliteapi.github.io/EliteAPI/index.html) for information.
+## Check the [documentation](https://eliteapi.github.io/EliteAPI/index.html) for information on installation, usage and more.

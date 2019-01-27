@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>EliteAPI documentation</title>
+
+    <!-- Import fonts. -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Source+Sans+Pro:300,300i,400,400i" rel="stylesheet">
+
+    <!-- Import C# highlighting. -->
+    <link rel="stylesheet" type="text/css" href="../css/prism.css">
+
+    <!-- Import stylesheets. -->
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/table.css">
+    <link rel="stylesheet" type="text/css" href="../css/scripts.css">
+    <link rel="stylesheet" type="text/css" href="../css/navigation.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../gettingstarted/index.html">Getting started</a></li>
+        <li><a href="index.html">Examples</a></li>
+        <li><a href="../eliteva/index.html">EliteVA</a></li>
+        <li style="float:right"><a href="https://github.com/EliteAPI/EliteAPI">GitHub</a></li>
+      </ul>
+    </nav>
+
+    <h1>EliteAPI documentation.</h1>
+    <h2>The official EliteAPI documentation.</h2>
+    <h3>Examples.</h3>
+    <h4>Example: Docking (C#).</h4>
+    <p>EliteAPI works with any .NET langauge, for this example we will use C#.</p>
+    <p>Let's say we want to deploy the landing gear whenever the commander is allowed to dock. After having created a .NET project, add EliteAPI's namespace to the project.</p>
+    <pre class="language-csharp line-numbers" data-src="code/ExampleDocking1.cs"></pre>
+    <p>Then, create a new EliteDangerousAPI object. Everything related to EliteAPI will be done in this object.</p>
+    <pre class="language-csharp line-numbers" data-start="9" data-src="code/ExampleDocking2.cs"></pre>
+    <p>Since EliteDangerousAPI needs a reference to the directory that contains the <a href="https://support.frontier.co.uk/kb/faq.php?id=372">Player Journals</a>, we have to pass it a DirectoryInfo object. Usually, the Player Journal folder is located in <i>C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous</i>.</p>
+    <pre class="language-csharp line-numbers" data-start="15" data-src="code/ExampleDocking3.cs"></pre>
+    <p>Now that we are hooked to the API, we can setup the events that we want to get information about. In our case want to know when the player is allowed to dock at a station. Simply hook into its event and create a method for it. After that start the API.</p>
+    <pre class="language-csharp line-numbers" data-start="15" data-src="code/ExampleDocking4.1.cs"></pre>
+    <pre class="language-csharp line-numbers" data-start="25" data-src="code/ExampleDocking4.2.cs"></pre>
+    <p>Now we can lower the landing gear. EliteAPI does not come with a keyboard manager, I recommend installing <a href="https://www.codeproject.com/Articles/117657/InputManager-library-Track-user-input-and-simulate">InputManager</a> for this purpose, which can also be found on Nuget. You will also need a reference to <i>System.Windows.Forms</i>, which can be found in the <i>Assemblies tab</i> in the <i>Add reference</i> window. Your namespaces should now look something like this:</p>
+    <pre class="language-csharp line-numbers" data-src="code/ExampleDocking5.1.cs"></pre>
+    <p>We can now add the pressing of the keyboard part.</p>
+    <pre class="language-csharp line-numbers" data-start="28" data-src="code/ExampleDocking5.2.cs"></pre>
+    <p>You could say we're done now, but what if the commander already had their gear down? We'd be retracting it in that case. EliteAPI allows you to check certain elements of your ship, including the gear, which can be found in the <i>Status</i> field as a bool.</p>
+    <pre class="language-csharp line-numbers" data-start="28" data-src="code/ExampleDocking6.cs"></pre>
+    <p>This is one of the many things you can do with EliteAPI. If you'd like to see the full source code for this specific example, you can find it <a href="../code/ExampleDocking.html">here</a>.</p>
+
+    <h4>Example: Jumping (VoiceAttack).</h4>
+
+    <!-- Use C# highlighting script. -->
+    <script src="../scripts/prism.js"></script>
+  </body>
+</html>

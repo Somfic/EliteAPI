@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>EliteAPI documentation</title>
+
+  <!-- Import fonts. -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Source+Sans+Pro:300,300i,400,400i" rel="stylesheet">
+
+  <!-- Import C# highlighting. -->
+  <link rel="stylesheet" type="text/css" href="../css/prism.css">
+
+  <!-- Import stylesheets. -->
+  <link rel="stylesheet" type="text/css" href="../css/default.css">
+  <link rel="stylesheet" type="text/css" href="../css/scrollbar.css">
+  <link rel="stylesheet" type="text/css" href="../css/table.css">
+  <link rel="stylesheet" type="text/css" href="../css/scripts.css">
+  <link rel="stylesheet" type="text/css" href="../css/navigation.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../gettingstarted/index.html">Getting started</a></li>
+      <li><a href="../examples/index.html">Examples</a></li>
+      <li><a href="index.html">EliteVA</a></li>
+      <li style="float:right;"><a href="https://github.com/EliteAPI/EliteAPI">GitHub</a></li>
+    </ul>
+  </nav>
+  <h1>EliteAPI documentation.</h1>
+  <h2>The official EliteAPI documentation.</h2>
+  <h3>EliteVA.</h3>
+  <p>EliteAPI also functions as a <a href="https://voiceattack.com/Default.aspx">VoiceAttack</a> plugin, codename EliteVA.</p>
+  <h4>Installation.</h4>
+  <p>Please head to the <a href="../gettingstarted/index.html">getting started</a> tab for installation instructions.</p>
+  <h4>VoiceAttack tokens.</h4>
+  <p>VoiceAttack uses variables in the form of <a href="https://forum.voiceattack.com/smf/index.php?topic=31.0">tokens</a>. EliteVA enables you to use a number of tokens which can tell you a lot about the current state of your ship and the game. You
+    can find the full list of available tokens further down.</p>
+  <p>The standard syntax for tokens in Voice Attack is as follows: {[Type]:[Name]}. So, if we have an interger token with the name Cargo, that holds the amount of cargo we have in our ship, it'd be {INT:Cargo}. You can use these everywhere, from
+    Voice Attack's text-to-speech feature to conditions in commands. If you'd like an example of tokens, head to the <a href="../examples/index.html">examples</a> tab.</p>
+  <p>The following tokens are supported in VoiceAttack:</p>
+  <table>
+    <tr>
+      <th>Token</th>
+      <th>Explanation</th>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.Docked}</td>
+      <td>This will return true when the player is docked at a station.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.Landed}</td>
+      <td>This will return true when the player is currently landed on a landable planet.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.Gear}</td>
+      <td>This token will return true whenever the landing gear has been lowered.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.Shields}</td>
+      <td>Returns true only if the ship's shields are online. Note that this is only true or false, and not a percentage.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.Supercruise}</td>
+      <td>Returns true when in supercruise.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.FlightAssist}</td>
+      <td>Will return true if the ship has flight assist enabled.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.Hardpoints}</td>
+      <td>Returns true if the ship's hardpoints (or weapons) are deployed.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.Winging}</td>
+      <td>If the player is currently in a wing, this token will return true.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.Lights}</td>
+      <td>When the ship's lights are turned on, this will return true.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.CargoScoop}</td>
+      <td>Returns true whenever the cargo scoop is open.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.SilentRunning}</td>
+      <td>If the Commander has silent running enabled, this will return true.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.Scooping}</td>
+      <td>Returns true whenever the ship is scooping fuel from a star.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.SrvHandbreak}</td>
+      <td>This token returns true whenever the handbreak on the SRV is being used.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.SrvTurrent}</td>
+      <td>If the turrent is being controlled by the player, this token will return true.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.SrvNearShip}</td>
+      <td>Returns true when the SRV turrent cannot be deployed, thus the SRV being close to the ship.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.SrvDriveAssist}</td>
+      <td>Returns true whenever the player has drive assist enabled in their SRV.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.MassLocked}</td>
+      <td>If the ship is mass locked, this will return true.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.FsdCharging}</td>
+      <td>If the frameshiftdrive is charging up for a jump, this will return true.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.FsdCooldow}</td>
+      <td>Returns true when the frameshiftdrive is cooling down.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.LowFuel}</td>
+      <td>If the ship is low on fuel (&lt;25%), this token will say true.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.Overheating}</td>
+      <td>If the ship's overheating this will return true.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.HasLatLong}</td>
+      <td>Will return true when latitude and longitude on a planet are available.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.InDanger}</td>
+      <td>Returns true if the player is in combat/danger.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.InInterdiction}</td>
+      <td>If the player is being interdicted, this will return true. It will not return true in the case of the player interdicting another ship.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.InMothership}</td>
+      <td>If the player is in the mothership, and thus not in a fighter/srv, this will return true.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.InFighter}</td>
+      <td>Returns true when the player is in a fighter.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.InSRV}</td>
+      <td>Returns true when the player is in a SRV.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.AnalysisMode}</td>
+      <td>Returns true if the ship's current mode is in analysis mode, and thus not in combat mode.</td>
+    </tr>
+    <tr>
+      <td>{BOOL:EliteAPI.NightVision}</td>
+      <td>Returns true when night vision is enabled. (<em>Currently bugged, Frontier is working on it</em>)</td>
+    </tr>
+    <tr>
+      <td>{INT:EliteAPI.Pips.Systems}</td>
+      <td>Returns a number [0-8] for the amount of pips designated for systems/shields.</td>
+    </tr>
+    <tr>
+      <td>{INT:EliteAPI.Pips.Engines}</td>
+      <td>Returns a number [0-8] for the amount of pips designated for the engines.</td>
+    </tr>
+    <tr>
+      <td>{INT:EliteAPI.Pips.Weapons}</td>
+      <td>Returns a number [0-8] for the amount of pips designated for weapons/hardpoints.</td>
+    </tr>
+    <tr>
+      <td>{INT:EliteAPI.Firegroup}</td>
+      <td>Returns the current firegroup.</td>
+    </tr>
+    <tr>
+      <td>{INT:EliteAPI.GuiFocus}</td>
+      <td>Returns the <a href="focussedpanel.html">currently focussed panel</a>.</td>
+    </tr>
+    <tr>
+      <td>{DEC:EliteAPI.Fuel}</td>
+      <td>The amount of fuel the ship currently has.</td>
+    </tr>
+    <tr>
+      <td>{DEC:EliteAPI.FuelReservoir}</td>
+      <td>The amount of fuel the ship currently has in its reservoir.</td>
+    </tr>
+    <tr>
+      <td>{DEC:EliteAPI.Cargo}</td>
+      <td>The number of tonnes of cargo currently being transported by the ship (INT:EliteAPI.Cargo in 2.0.0.0).</td>
+    </tr>
+  </table>
+
+  <!-- Use C# highlighting script. -->
+  <script src="../scripts/prism.js"></script>
+</body>
+
+</html>

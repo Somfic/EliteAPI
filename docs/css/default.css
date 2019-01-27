@@ -2,6 +2,11 @@ body {
   padding: 20px 12vw;
   background-image: linear-gradient(#2a2633, #262a33);
   background-attachment: fixed;
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 21px;
+  color: #c8c8c8;
 }
 
 h1 {
@@ -68,4 +73,9 @@ hr {
   border-left: none;
   border-right: none;
  margin: 30px 20px;
+}
+
+.badges {
+  text-align: center;
+  padding: 10px;
 }

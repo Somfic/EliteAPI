@@ -15,69 +15,31 @@
     <link rel="stylesheet" type="text/css" href="css/scrollbar.css">
     <link rel="stylesheet" type="text/css" href="css/table.css">
     <link rel="stylesheet" type="text/css" href="css/scripts.css">
+    <link rel="stylesheet" type="text/css" href="css/navigation.css">
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gettingstarted/index.html">Getting started</a></li>
+        <li><a href="examples/index.html">Examples</a></li>
+        <li><a href="eliteva/index.html">EliteVA</a></li>
+        <li style="float:right;"><a href="https://github.com/EliteAPI/EliteAPI">GitHub</a></li>
+      </ul>
+    </nav>
     <h1>EliteAPI documentation.</h1>
     <h2>The official EliteAPI documentation.</h2>
-    <h3>Getting started.</h3>
-    <h4>Installation.</h4>
-    <p>There are a number of ways to install EliteAPI. These are the most used options:</p>
-    <table>
-      <tr>
-        <th>Platform</th>
-        <th>Method</th>
-        <th>Execution</th>
-      </tr>
-      <tr>
-        <td>Nuget</td>
-        <td>Package manager</td>
-        <td><code>Install-Package EliteAPI</code></td>
-      </tr>
-      <tr>
-        <td>Nuget</td>
-        <td>.NET CLI</td>
-        <td><code>dotnet add package EliteAPI</code></td>
-      </tr>
-      <tr>
-        <td>Visual Studio</td>
-        <td>Nuget package manager</td>
-        <td>Search for EliteAPI in the package manager and install.</td>
-      </tr>
-      <tr>
-        <td>Visual Studio</td>
-        <td>By reference</td>
-        <td>Download <a href="https://github.com/EliteAPI/EliteAPI/releases">EliteAPI.dll</a> and reference it in your Visual Studio project.</td>
-      </tr>
-      <tr>
-        <td>Visual Studio</td>
-        <td>Download & build</td>
-        <td>Download the <a href="https://github.com/EliteAPI/EliteAPI/releases">source code</a>, open it in Visual Studio and build it to recieve the .dll files.</td>
-      </tr>
-      <tr>
-        <td>VoiceAttack</td>
-        <td>Download the installer</td>
-        <td>Download <a href="https://github.com/EliteAPI/EliteAPI/releases">EliteVA-setup.exe</a> and run it to install EliteAPI directly into VoiceAttack.</td>
-      </tr>
-    </table>
-    <hr>
-    <h4>Example: Docking.</h4>
-    <p>EliteAPI works with any .NET langauge, for this example we will use C#.</p>
-    <p>Let's say we want to deploy the landing gear whenever the commander is allowed to dock. After having created a .NET project, add EliteAPI's namespace to the project.</p>
-    <pre class="language-csharp line-numbers" data-src="code/ExampleDocking1.cs"></pre>
-    <p>Then, create a new EliteDangerousAPI object. Everything related to EliteAPI will be done in this object.</p>
-    <pre class="language-csharp line-numbers" data-start="9" data-src="code/ExampleDocking2.cs"></pre>
-    <p>Since EliteDangerousAPI needs a reference to the directory that contains the <a href="https://support.frontier.co.uk/kb/faq.php?id=372">Player Journals</a>, we have to pass it a DirectoryInfo object. Usually, the Player Journal folder is located in <i>C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous</i>.</p>
-    <pre class="language-csharp line-numbers" data-start="15" data-src="code/ExampleDocking3.cs"></pre>
-    <p>Now that we are hooked to the API, we can setup the events that we want to get information about. In our case want to know when the player is allowed to dock at a station. Simply hook into its event and create a method for it. After that start the API.</p>
-    <pre class="language-csharp line-numbers" data-start="15" data-src="code/ExampleDocking4.1.cs"></pre>
-    <pre class="language-csharp line-numbers" data-start="25" data-src="code/ExampleDocking4.2.cs"></pre>
-    <p>Now we can lower the landing gear. EliteAPI does not come with a keyboard manager, I recommend installing <a href="https://www.codeproject.com/Articles/117657/InputManager-library-Track-user-input-and-simulate">InputManager</a> for this purpose, which can also be found on Nuget. You will also need a reference to <i>System.Windows.Forms</i>, which can be found in the <i>Assemblies tab</i> in the <i>Add reference</i> window. Your namespaces should now look something like this:</p>
-    <pre class="language-csharp line-numbers" data-src="code/ExampleDocking5.1.cs"></pre>
-    <p>We can now add the pressing of the keyboard part.</p>
-    <pre class="language-csharp line-numbers" data-start="28" data-src="code/ExampleDocking5.2.cs"></pre>
-    <p>You could say we're done now, but what if the commander already had their gear down? We'd be retracting it in that case. EliteAPI allows you to check certain elements of your ship, including the gear, which can be found in the <i>Status</i> field as a bool.</p>
-    <pre class="language-csharp line-numbers" data-start="28" data-src="code/ExampleDocking6.cs"></pre>
-    <p>This is one of the many things you can do with EliteAPI. If you'd like to see the full source code for this specific command, you can find it <a href="code/ExampleDocking.html">here</a>.</p>
+    <h3>EliteAPI</h3>
+    <p>EliteAPI is a powerful event based API for <a href="https://www.elitedangerous.com/">Elite: Dangerous</a> that hooks into the <a href="http://edcodex.info/?m=doc">Player Journals</a> log files. Created by <a href="https://github.com/Somfic">CMDR Somfic</a>.</p>
+    <div class="badges">
+      <a href="https://github.com/EliteAPI/EliteAPI/issues"><img src="https://img.shields.io/github/issues/EliteAPI/EliteAPI.svg?style=for-the-badge"></a>
+      <a href="https://github.com/EliteAPI/EliteAPI/stargazers"><img src="https://img.shields.io/github/stars/EliteAPI/EliteAPI.svg?style=for-the-badge"></a>
+      <a href="https://github.com/EliteAPI/EliteAPI/releases"><img src="https://img.shields.io/github/release-pre/EliteAPI/EliteAPI.svg?style=for-the-badge"></a>
+      <a href="https://www.nuget.org/packages/EliteAPI/"><img src="https://img.shields.io/nuget/v/EliteAPI.svg?style=for-the-badge"></a>
+      <a href="https://www.nuget.org/packages/EliteAPI/"><img src="https://img.shields.io/nuget/dt/EliteAPI.svg?style=for-the-badge"></a>
+      <a href="https://discord.gg/jwpFUPZ"><img src="https://img.shields.io/discord/498422961297031168.svg?style=for-the-badge"></a>
+      <a href="https://github.com/EliteAPI/EliteAPI/commits/master"><img src="https://img.shields.io/github/last-commit/EliteAPI/EliteAPI.svg?style=for-the-badge"></a>
+    </div>
 
     <!-- Use C# highlighting script. -->
     <script src="scripts/prism.js"></script>

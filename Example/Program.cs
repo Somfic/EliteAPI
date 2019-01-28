@@ -1,11 +1,12 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Windows.Forms;
 
 using EliteAPI;
 using EliteAPI.Events;
 
 using InputManager;
+
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Example
 {
@@ -15,14 +16,8 @@ namespace Example
 
         static void Main(string[] args)
         {
-            DirectoryInfo playerJournalFolder = new DirectoryInfo(
-            $@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous");
-
-            EliteAPI = new EliteDangerousAPI(playerJournalFolder);
-
-            EliteAPI.Events.DockingGrantedEvent += EliteAPI_DockingGrantedEvent;
-
-            EliteAPI.Start();
+            IServiceCollection services = new ServiceCollection();
+            services.AddSingleton<IEliteDangerousAPI, EliteDangerousAPI>(x => new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory));
         }
 
         private static void EliteAPI_DockingGrantedEvent(object sender, DockingGrantedInfo e)

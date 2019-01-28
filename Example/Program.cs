@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -13,15 +14,9 @@ namespace Example
 {
     class Program
     {
-        private static EliteDangerousAPI EliteAPI;
-
         static void Main(string[] args)
         {
-            EliteDangerousAPI api = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory, false);
-            api.Logger.Log += (sender, arg) => System.Console.WriteLine(arg.Message);
-            api.Start();
-            api.Events.AllEvent += (sender, arg) => System.Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(arg));
-            while (true) { System.Console.WriteLine(api.Commander.Credits); }
+            EliteAPI.VoiceAttack.EliteVA.VAPlugin.VA_Init1(null);
         }
     }
 }

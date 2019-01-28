@@ -15,68 +15,20 @@ namespace EliteAPI.VoiceAttack
             private static EliteDangerousAPI api;
             private static dynamic _vaProxy;
 
-            private static void FindJournalFolder(dynamic vaProxy)
+            private static void SetJournalFolder()
             {
-                string journalPath = "";
-
                 if (!File.Exists("EliteVA.ini"))
                 {
                     File.WriteAllText("EliteVA.ini", "//Example" + Environment.NewLine);
                     File.AppendAllText("EliteVA.ini", @"//path=D:\Saved Games\Frontier Developments");
-                }
-                else
+                    playerJournalDirectory = EliteDangerousAPI.StandardDirectory;
+                } else
                 {
                     try
                     {
-                        journalPath = File.ReadAllLines("EliteVA.ini").Where(x => !x.StartsWith("/")).First().Split(new string[] { "path=" }, StringSplitOptions.None)[1];
-
-                        if (Directory.Exists(journalPath))
-                        {
-                            vaProxy.WriteToLog($@"EliteVA - Found custom Player Journal folder: '{journalPath}'.", "green");
-                        }
-                        else
-                        {
-                            vaProxy.WriteToLog($@"EliteVA - Found custom Player Journal folder: '{journalPath}', but that folder doesn't exist.", "red");
-                            journalPath = "";
-                        }
+                        playerJournalDirectory = new DirectoryInfo(File.ReadAllLines("EliteVA.ini").Where(x => !x.StartsWith("/")).First().Split(new string[] { "path=" }, StringSplitOptions.None)[1]);
                     }
-                    catch { journalPath = ""; }
-                }
-
-                if (string.IsNullOrWhiteSpace(journalPath))
-                {
-                    if (!Directory.Exists($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"))
-                    {
-                        vaProxy.WriteToLog("EliteVA - Could not find Player Journal folder at default location, please set the location in EliteVA.ini.", "red");
-                        Environment.Exit(1);
-                    }
-                    else
-                    {
-                        journalPath = $@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous";
-                        vaProxy.WriteToLog($@"EliteVA - Set Player Journal folder to default 'C:\Users\{ Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous'.", "green");
-                    }
-                }
-
-                playerJournalDirectory = new DirectoryInfo(journalPath);
-                FileInfo statusFile = new FileInfo(playerJournalDirectory.FullName + "//Status.json");
-
-                if (!File.Exists(statusFile.FullName))
-                {
-                    vaProxy.WriteToLog($"EliteVA - Could not find Status.json file at {statusFile.FullName}.", "red");
-
-                    if (journalPath != "")
-                    {
-                        journalPath = "";
-                    }
-                    else
-                    {
-                        vaProxy.WriteToLog($"EliteVA - Could not start EliteVA (cannot find Player Journals).", "red");
-                        Environment.Exit(1);
-                    }
-                }
-                else
-                {
-                    vaProxy.WriteToLog($"EliteVA - Files found.", "green");
+                    catch { playerJournalDirectory = EliteDangerousAPI.StandardDirectory; }
                 }
             }
 
@@ -90,7 +42,8 @@ namespace EliteAPI.VoiceAttack
             {
                 _vaProxy = vaProxy;
 
-                FindJournalFolder(vaProxy);
+                SetJournalFolder();
+
                 api = new EliteDangerousAPI(playerJournalDirectory, true);
                 api.Logger.Log += Logger_Log;
                 api.Events.AllEvent += EliteAPI_AllEvent;
@@ -105,7 +58,7 @@ namespace EliteAPI.VoiceAttack
 
             private static void Logger_Log(object sender, Logging.LogMessage e)
             {
-                switch(e.Severity)
+                switch (e.Severity)
                 {
                     case Logging.Severity.Error:
                         _vaProxy.WriteToLog("EliteVA - " + e.Message, "red");
@@ -188,7 +141,7 @@ namespace EliteAPI.VoiceAttack
 
                     if (command == "updatejournal")
                     {
-                        FindJournalFolder(vaProxy);
+                        SetJournalFolder();
                         api = new EliteDangerousAPI(playerJournalDirectory);
                     }
                     else if (command == "drp on")

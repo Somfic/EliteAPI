@@ -65,12 +65,16 @@ namespace EliteAPI
             //Reset the API.
             Reset();
 
-            //Go through file to set status fields.
-            //Select the last edited Journal file.
-            FileInfo journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
-     
-            //Process the journal file.
-            ProcessJournal(journalFile, false);
+            try
+            {
+                //Go through file to set status fields.
+                //Select the last edited Journal file.
+                FileInfo journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
+
+                //Process the journal file.
+                ProcessJournal(journalFile, false);
+            }
+            catch { }
         }
 
         public void Reset()
@@ -89,36 +93,19 @@ namespace EliteAPI
         {
             Logger.LogInfo("Starting EliteAPI.");
 
-            //Check if said JournalDirectory has all the files.
-            long errorCount = 0;
-            bool errorIsCritical = false;
-            if (JournalDirectory.GetFiles("Journal.*").Count() == 0) { Logger.LogWarning("Could not find Journal files."); errorCount++; errorIsCritical = true; }
-            if (JournalDirectory.GetFiles().Count(x => x.Name == "Status.json") == 0) { Logger.LogWarning("Could not find Status.json."); errorCount++; }
-            if (JournalDirectory.GetFiles().Count(x => x.Name == "Cargo.json") == 0) { Logger.LogWarning("Could not find Cargo.json."); errorCount++; }
-            if (JournalDirectory.GetFiles().Count(x => x.Name == "ModulesInfo.json") == 0) { Logger.LogWarning("Could not find ModulesInfo.json."); errorCount++; }
-            if (JournalDirectory.GetFiles().Count(x => x.Name == "Shipyard.json") == 0) { Logger.LogWarning("Could not find Shipyard.json."); errorCount++; }
-            if (JournalDirectory.GetFiles().Count(x => x.Name == "Outfitting.json") == 0) { Logger.LogWarning("Could not find Outfitting.json."); errorCount++; }
-            if (JournalDirectory.GetFiles().Count(x => x.Name == "Market.json") == 0) { Logger.LogWarning("Could not find Market.json."); errorCount++; }
-
-            if (errorCount == 0)
-            {
-                Logger.LogInfo("All files were found.");
-                Events.InvokeAllEvent(new StatusEvent("OnReady", ""));
-            }
-
-            if (errorIsCritical)
-            {
-                Logger.LogError("Could not start EliteAPI.");
-                Events.InvokeAllEvent(new StatusEvent("OnError", $"Could not find game files at '{JournalDirectory.FullName}'."));
-                return;
-            }            
-            
             //Mark the API as running.
-            IsRunning = true;
 
             //We'll process the journal one time first, to catch up.
             //Select the last edited Journal file.
-            FileInfo journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
+
+            FileInfo journalFile = null;
+
+            try
+            {
+                journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
+                Logger.LogSuccess("Could find Journal files."); 
+            }
+            catch { Logger.LogError("Could not start EliteAPI. Could not find Journal files."); return; }
 
             //Process the journal file.
             ProcessJournal(journalFile, SkipCatchUp);

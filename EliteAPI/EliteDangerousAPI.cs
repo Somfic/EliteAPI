@@ -28,12 +28,12 @@ namespace EliteAPI
         public string BuildVersion { get { return Version.FileVersion; } }
 
         //Public fields.
-        public bool IsRunning { get; private set; }
-        public DirectoryInfo JournalDirectory { get; private set; }
-        public bool SkipCatchUp { get; private set; }
-        public EliteAPI.Events.EventHandler Events { get; private set; }
-        public EliteAPI.Logging.Logger Logger { get; private set; }
-        public ShipStatus Status { get; private set; }
+        public bool IsRunning { get; set; }
+        public DirectoryInfo JournalDirectory { get; set; }
+        public bool SkipCatchUp { get; set; }
+        public EliteAPI.Events.EventHandler Events { get; set; }
+        public EliteAPI.Logging.Logger Logger { get; set; }
+        public ShipStatus Status { get; set; }
         public ShipCargo Cargo { get { return ShipCargo.FromFile(new FileInfo(JournalDirectory.FullName + "\\Cargo.json"), this); } }
         public ShipModules Modules { get { return ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this); } }
         public UserBindings Bindings
@@ -50,12 +50,12 @@ namespace EliteAPI
                 catch { return new UserBindings(); }
             }
         }
-        public CommanderStatus Commander { get; private set; }
-        public LocationStatus Location { get; private set; }
-        public StatusWatcher Watcher { get; private set; }
+        public CommanderStatus Commander { get; set; }
+        public LocationStatus Location { get; set; }
+        public StatusWatcher Watcher { get; set; }
 
         //Services.
-        public RichPresenceClient DiscordRichPresence { get; private set; }
+        public RichPresenceClient DiscordRichPresence { get; set; }
 
         public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp = true)
         {

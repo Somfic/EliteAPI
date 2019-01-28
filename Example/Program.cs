@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 using EliteAPI;
@@ -16,17 +17,11 @@ namespace Example
 
         static void Main(string[] args)
         {
-            IServiceCollection services = new ServiceCollection();
-            services.AddSingleton<IEliteDangerousAPI, EliteDangerousAPI>(x => new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory));
-        }
-
-        private static void EliteAPI_DockingGrantedEvent(object sender, DockingGrantedInfo e)
-        {
-            //This method will be ran every time the player is allowed to dock.
-            if(EliteAPI.Status.Gear != true) //If the gear is not deployed, deploy it.
-            {
-                Keyboard.KeyPress(Keys.G);
-            }
+            EliteDangerousAPI api = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory, false);
+            api.Logger.Log += (sender, arg) => System.Console.WriteLine(arg.Message);
+            api.Start();
+            api.Events.AllEvent += (sender, arg) => System.Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(arg));
+            while (true) { System.Console.WriteLine(api.Commander.Credits); }
         }
     }
 }

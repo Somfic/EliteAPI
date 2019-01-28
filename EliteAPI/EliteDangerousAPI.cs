@@ -27,7 +27,6 @@ namespace EliteAPI
         public long MinorVersion { get { return Version.FileMinorPart; } }
         public string BuildVersion { get { return Version.FileVersion; } }
 
-        //Public fields.
         public bool IsRunning { get; set; }
         public DirectoryInfo JournalDirectory { get; set; }
         public bool SkipCatchUp { get; set; }
@@ -65,6 +64,13 @@ namespace EliteAPI
 
             //Reset the API.
             Reset();
+
+            //Go through file to set status fields.
+            //Select the last edited Journal file.
+            FileInfo journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
+     
+            //Process the journal file.
+            ProcessJournal(journalFile, false);
         }
 
         public void Reset()
@@ -105,23 +111,21 @@ namespace EliteAPI
                 Logger.LogError("Could not start EliteAPI.");
                 Events.InvokeAllEvent(new StatusEvent("OnError", $"Could not find game files at '{JournalDirectory.FullName}'."));
                 return;
-            }
-
+            }            
+            
             //Mark the API as running.
             IsRunning = true;
+
+            //We'll process the journal one time first, to catch up.
+            //Select the last edited Journal file.
+            FileInfo journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
+
+            //Process the journal file.
+            ProcessJournal(journalFile, SkipCatchUp);
 
             //Go async.
             Task.Run(() =>
             {
-                //We'll process the journal one time first, to catch up.
-                //Select the last edited Journal file.
-                FileInfo journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
-
-                //Process the journal file.
-                ProcessJournal(journalFile, SkipCatchUp);
-
-                Logger.LogInfo("EliteAPI is ready.");
-
                 //Run for as long as we're running.
                 while (IsRunning)
                 {
@@ -135,6 +139,8 @@ namespace EliteAPI
                     Thread.Sleep(500);
                 }
             });
+
+            Logger.LogInfo("EliteAPI is ready.");
         }
 
         private List<string> processedLogs = new List<string>();

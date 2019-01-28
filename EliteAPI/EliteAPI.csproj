@@ -299,6 +299,7 @@
     <Compile Include="Inara\Events\SetCommanderTravelLocation.cs" />
     <Compile Include="Inara\Events\SetCommunityGoal.cs" />
     <Compile Include="Logging\Logger.cs" />
+    <Compile Include="ServiceInterfaces.cs" />
     <Compile Include="Status\LocationStatus.cs" />
     <Compile Include="Status\ShipCargo.cs" />
     <Compile Include="Status\CommanderStatus.cs" />

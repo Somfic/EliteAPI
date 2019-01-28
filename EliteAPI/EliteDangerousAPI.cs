@@ -14,9 +14,11 @@ using EliteAPI.Status;
 
 using Newtonsoft.Json;
 
+using static EliteAPI.ServiceInterfaces;
+
 namespace EliteAPI
 {
-    public class EliteDangerousAPI
+    public class EliteDangerousAPI : IEliteDangerousAPI
     {
         //Standard directory
         public static DirectoryInfo StandardDirectory { get => new DirectoryInfo($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"); }
@@ -29,11 +31,11 @@ namespace EliteAPI
 
         //Public fields.
         public bool IsRunning { get; private set; }
-        public DirectoryInfo JournalDirectory { get; set; }
-        public bool SkipCatchUp { get; set; }
-        public EliteAPI.Events.EventHandler Events { get; set; }
-        public EliteAPI.Logging.Logger Logger { get; set; }
-        public ShipStatus Status { get; set; }
+        public DirectoryInfo JournalDirectory { get; private set; }
+        public bool SkipCatchUp { get; private set; }
+        public EliteAPI.Events.EventHandler Events { get; private set; }
+        public EliteAPI.Logging.Logger Logger { get; private set; }
+        public ShipStatus Status { get; private set; }
         public ShipCargo Cargo { get { return ShipCargo.FromFile(new FileInfo(JournalDirectory.FullName + "\\Cargo.json"), this); } }
         public ShipModules Modules { get { return ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this); } }
         public UserBindings Bindings
@@ -50,12 +52,12 @@ namespace EliteAPI
                 catch { return new UserBindings(); }
             }
         }
-        public CommanderStatus Commander;
-        public LocationStatus Location;
-        public StatusWatcher Watcher;
+        public CommanderStatus Commander { get; private set; }
+        public LocationStatus Location { get; private set; }
+        public StatusWatcher Watcher { get; private set; }
 
         //Services.
-        public RichPresenceClient DiscordRichPresence;
+        public RichPresenceClient DiscordRichPresence { get; private set; }
 
         public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp = true)
         {

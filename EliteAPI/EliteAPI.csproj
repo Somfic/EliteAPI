@@ -312,16 +312,10 @@
     <Compile Include="VoiceAttack\EliteVA.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="api\index.md" />
     <None Include="app.config" />
-    <None Include="articles\intro.md" />
-    <None Include="articles\toc.md" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="api\.gitignore" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

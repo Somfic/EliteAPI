@@ -14,8 +14,6 @@ using EliteAPI.Status;
 
 using Newtonsoft.Json;
 
-using static EliteAPI.ServiceInterfaces;
-
 namespace EliteAPI
 {
     public class EliteDangerousAPI : IEliteDangerousAPI
@@ -165,16 +163,24 @@ namespace EliteAPI
 
         private void Process(string json)
         {
-            //Turn the json into an object to find out which event it is.
-            dynamic obj = JsonConvert.DeserializeObject<dynamic>(json);
-            string eventName = obj.@event;
+            dynamic obj = null;
+            string eventName = "";
+
+            try
+            {
+                //Turn the json into an object to find out which event it is.
+                obj = JsonConvert.DeserializeObject<dynamic>(json);
+                eventName = obj.@event;
+            }
+            catch(Exception ex) { Logger.LogWarning($"Couldn't process event [{json}]. {Environment.NewLine}Error: {ex.Message}"); }
 
             //Invoke the matching event.
             try { Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name == $"{eventName}Info").First().GetMethod("Process").Invoke(null, new object[] { json, this }); }
-            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}, it might not have been added yet. {Environment.NewLine}Error: {ex.Message}"); }
+            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}, it might not have been (correctly) added yet. {Environment.NewLine}Error: {ex.Message}"); }
 
             //Invoke the AllEvent.
-            Events.InvokeAllEvent(obj);
+            try { Events.InvokeAllEvent(obj); }
+            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}. {Environment.NewLine}Error: {ex.Message}"); }
         }
 
         public void Stop()

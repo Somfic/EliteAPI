@@ -20,8 +20,19 @@
   <body>
     <h1>EliteAPI documentation.</h1>
     <h2>Example: Docking.</h2>
+    <p>Deploys the landing gear whenever allowed to dock, given the landing gear isn't already deployed.</p>
     <p><a href="../examples/index.html">Go back</a>.</p>
+    <h3 name="csharp">Example: Docking (C#).</h3>
     <pre class="language-csharp line-numbers" data-src="../code/ExampleDocking.cs"></pre>
+    <hr>
+    <h3 name="voiceattack ">Example: Docking (VoiceAttack).</h3>
+    <pre class="language-*">When I say: ((EliteAPI.DockingGranted))</pre>
+    <pre class="language-*">Execute external plugin, 'EliteVA'
+Begin Boolean Compare : [EliteAPI.Gear] Equals False
+    Press L key and hold for 0,2 seconds and release
+End Condition
+</pre>
+
     <!-- Use C# highlighting script. -->
     <script src="../scripts/prism.js"></script>
   </body>

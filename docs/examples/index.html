@@ -59,7 +59,7 @@
     <pre class="language-*">Say, 'Docking granted for pad {INT:EliteAPI.Event.LandingPad}.'</pre>
     <p>Then, we can have VoiceAttack lower the gear.</p>
     <pre class="language-*">Press L key and hold for 0.2 seconds and release</pre>
-    <p>You could say we're done now, but what if the commander already had their gear down? We'd be retracting it in that case. EliteAPI allows you to check certain elements of your ship, including the gear, which can be found as VoiceAttack commands. Unless you want to work with outdated status variables, you'll have let EliteVA update them. You can do this by simple calling EliteVA from within the command.</p>
+    <p>You could say we're done now, but what if the commander already had their gear down? We'd be retracting it in that case. EliteAPI allows you to check certain elements of your ship, including the gear, which can be found as VoiceAttack commands. Unless you want to work with outdated status variables, you'll have to let EliteVA update them. You can do this by simple calling EliteVA from within the command.</p>
     <pre class="language-*">Execute external plugin, 'EliteVA'</pre>
     <pre class="language-*">Begin Boolean Compare : [EliteAPI.Gear] Equals False
     Press L key and hold for 0,2 seconds and release

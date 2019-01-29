@@ -94,6 +94,7 @@ namespace EliteAPI
             Logger.LogInfo("Starting EliteAPI.");
 
             //Mark the API as running.
+            IsRunning = true;
 
             //We'll process the journal one time first, to catch up.
             //Select the last edited Journal file.

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 //using System.Windows.Forms;
 
 using EliteAPI;
@@ -20,18 +21,17 @@ namespace Example
 
             EliteAPI = new EliteDangerousAPI(playerJournalFolder);
 
-            EliteAPI.Events.DockingGrantedEvent += EliteAPI_DockingGrantedEvent;
+            EliteAPI.Events.AllEvent += EliteAPI_DockingGrantedEvent;
+            EliteAPI.Logger.Log += (sender, arg) => Console.WriteLine(arg.Message);
+            EliteAPI.Events.DockingGrantedEvent += (sender, arg) => Console.WriteLine(arg.LandingPad);
 
             EliteAPI.Start();
+            Thread.Sleep(-1);
         }
 
-        private static void EliteAPI_DockingGrantedEvent(object sender, DockingGrantedInfo e)
+        private static void EliteAPI_DockingGrantedEvent(object sender, dynamic e)
         {
-            //This method will be ran every time the player is allowed to dock.
-            if (EliteAPI.Status.Gear != true) //If the gear is not deployed, deploy it.
-            {
-                //Keyboard.KeyPress(Keys.G);
-            }
+            Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(e));
         }
     }
 }

@@ -50,7 +50,7 @@ namespace EliteAPI.VoiceAttack
                 api.Start();
 
                 _vaProxy.SetInt("EliteAPI.Version.Major", (int)api.MajorVersion);
-                _vaProxy.SetInt("EliteAPI.Version.Minor", (int)     api.MinorVersion);
+                _vaProxy.SetInt("EliteAPI.Version.Minor", (int)api.MinorVersion);
                 _vaProxy.SetText("EliteAPI.Version", api.BuildVersion);
 
                 VA_Invoke1(vaProxy);
@@ -159,6 +159,7 @@ namespace EliteAPI.VoiceAttack
                 {
                     var status = api.Status;
                     var commander = api.Commander;
+                    var location = api.Location;
 
                     vaProxy.SetBoolean("EliteAPI.DOCKED", status.Docked);
                     vaProxy.SetBoolean("EliteAPI.LANDED", status.Landed);
@@ -199,6 +200,9 @@ namespace EliteAPI.VoiceAttack
                     vaProxy.SetInt("EliteAPI.CARGO", (int)status.Cargo);
 
                     vaProxy.SetText("EliteAPI.Commander", commander.Commander);
+                    vaProxy.SetText("EliteAPI.System", location.StarSystem);
+                    vaProxy.SetText("EliteAPI.Body", location.Body);
+                    vaProxy.SetText("EliteAPI.BodyType", location.BodyType);
 
                     vaProxy.SetInt("EliteAPI.Rank.Combat", (int)commander.CombatRank);
                     vaProxy.SetInt("EliteAPI.Rank.Cqc", (int)commander.CqcRank);
@@ -210,7 +214,7 @@ namespace EliteAPI.VoiceAttack
                     vaProxy.SetText("EliteAPI.Rank.Exploration", commander.ExplorationRankLocalised);
                 }
                 catch (Exception ex) {
-                    api.Logger.LogError($"There was an error while setting some of the status variables. ({ex.Message})");
+                    api.Logger.LogError($"There was an error while setting some of the status variables. ({ex.Message}) (Make sure the game is running.)");
                 }
             }
         }

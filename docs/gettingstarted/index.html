@@ -90,8 +90,7 @@
     </table>
     <p>You'll also have to enable <i>Plugin Support</i> in VoiceAttack in order for plugins to be, well, supported. After having enabled this option, you have to restart VoiceAttack.</p>
     <p>If you have a custom Player Journal directory you can make use of the <i>EliteVA.ini</i> file, which you'll be able to find in your VoiceAttack directory after having ran EliteVA. Open the file, and write <i>path=Your\Custom\Path\Here</i> in it. Do not surround the path by <i>"</i> or <i>'</i>, spaces in the path are supported just fine. The next time EliteVA gets started up, it wil detect your custom path and look for the Journals there, if it cannot find them there, it will default back to the standard location.</p>
-    <p>If you want to update the custom path without restarting VoiceAttack, that is possible too. Create a new command, and add an Execute an External Plugin Function block. Select EliteAPI and in the plugin context panel, write updatejournal. When you now trigger this command, EliteVA will open EliteVA.ini again, and look in the custom path for Journals.</p>
-
+    <p>If you want to update the custom path without restarting VoiceAttack, that is possible too. Create a new command, and add an Execute an External Plugin Function block. Select EliteAPI and in the plugin context panel, enter 'updatejournal'. When you now trigger this command, EliteVA will open EliteVA.ini again, and look in the custom path for Journals.</p>
     <!-- Use C# highlighting script. -->
     <script src="../scripts/prism.js"></script>
   </body>

@@ -3,3 +3,12 @@ pre {
   border-radius: 5px;
   margin: 30px 0px !important;
 }
+
+p code, table code {
+  background-color: rgba(156, 157, 158, 0.31);
+  border-radius: 5px;
+  padding: 1px 6px;
+  margin: 0px 4px;
+  font-size: 80%;
+  color: rgb(226, 211, 241);
+}

@@ -105,6 +105,7 @@ namespace EliteAPI.VoiceAttack
                                 else if (type.Contains("decimal")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
                                 else if (type.Contains("double")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
                                 else if (type.Contains("float")) { _vaProxy.SetDecimal("EliteAPI.Event." + name, decimal.Parse(value)); }
+                                else if (type.Contains("bool")) { _vaProxy.SetBoolean("EliteAPI.Event." + name, bool.Parse(value)); }
                             } catch(Exception ex)
                             {
                                 api.Logger.LogError($"There was an error while trying to parse field ['{name}' ({value})] for '{eventName}'. ({ex.Message})");

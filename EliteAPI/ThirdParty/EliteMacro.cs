@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using EliteAPI.Logging;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+
 using vmAPI;
 
 namespace EliteAPI.ThirdParty
@@ -42,7 +43,7 @@ namespace EliteAPI.ThirdParty
 
         public string ID => new Guid("{B16F6232-5AD2-4451-BBED-C7696B41AB67}").ToString();
 
-        public void Init()
+        void vmInterface.Init()
         {
             SetJournalFolder();
 
@@ -117,19 +118,18 @@ namespace EliteAPI.ThirdParty
             }
         }
 
-
-        public void Dispose()
+        void vmInterface.Dispose()
         {
             api.Logger.LogSuccess("Stopping EliteMacro.");
             api.Stop();
         }
 
-        public void ProfileSwitched(string ProfileGUID, string ProfileName)
+        void vmInterface.ProfileSwitched(string ProfileGUID, string ProfileName)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
-        public void ReceiveParams(string Param1, string Param2, string Param3, bool Synchron)
+        void vmInterface.ReceiveParams(string Param1, string Param2, string Param3, bool Synchron)
         {
             try
             {
@@ -157,58 +157,53 @@ namespace EliteAPI.ThirdParty
                 var commander = api.Commander;
                 var location = api.Location;
 
-                vmCommand.SetVariable("EliteAPI.DOCKED", status.Docked.ToString().ToString());
-                vmCommand.SetVariable("EliteAPI.LANDED", status.Landed.ToString());
-                vmCommand.SetVariable("EliteAPI.GEAR", status.Gear.ToString());
-                vmCommand.SetVariable("EliteAPI.SHIELDS", status.Shields.ToString());
-                vmCommand.SetVariable("EliteAPI.SUPERCRUISE", status.Supercruise.ToString());
-                vmCommand.SetVariable("EliteAPI.FLIGHTASSIST", status.FlightAssist.ToString());
-                vmCommand.SetVariable("EliteAPI.HARDPOINTS", status.Hardpoints.ToString());
-                vmCommand.SetVariable("EliteAPI.WINGING", status.Winging.ToString());
-                vmCommand.SetVariable("EliteAPI.LIGHTS", status.Lights.ToString());
-                vmCommand.SetVariable("EliteAPI.CARGOSCOOP", status.CargoScoop.ToString());
-                vmCommand.SetVariable("EliteAPI.SILENTRUNNING", status.SilentRunning.ToString());
-                vmCommand.SetVariable("EliteAPI.SCOOPING", status.Scooping.ToString());
-                vmCommand.SetVariable("EliteAPI.SRVHANDBREAK", status.SrvHandbreak.ToString());
-                vmCommand.SetVariable("EliteAPI.SRVTURRENT", status.SrvTurrent.ToString());
-                vmCommand.SetVariable("EliteAPI.SRVNEARSHIP", status.SrvNearShip.ToString());
-                vmCommand.SetVariable("EliteAPI.SRVDRIVEASSIST", status.SrvDriveAssist.ToString());
-                vmCommand.SetVariable("EliteAPI.MASSLOCKED", status.MassLocked.ToString());
-                vmCommand.SetVariable("EliteAPI.FSDCHARGING", status.FsdCooldown.ToString());
-                vmCommand.SetVariable("EliteAPI.FSDCOOLDOWN", status.FsdCooldown.ToString());
-                vmCommand.SetVariable("EliteAPI.LOWFUEL", status.LowFuel.ToString());
-                vmCommand.SetVariable("EliteAPI.OVERHEATING", status.Overheating.ToString());
-                vmCommand.SetVariable("EliteAPI.HASLATLONG", status.HasLatlong.ToString());
-                vmCommand.SetVariable("EliteAPI.INDANGER", status.InDanger.ToString());
-                vmCommand.SetVariable("EliteAPI.ININTERDICTION", status.InInterdiction.ToString());
-                vmCommand.SetVariable("EliteAPI.INMOTHERSHIP", status.InMothership.ToString());
-                vmCommand.SetVariable("EliteAPI.INNOFIREZONE", status.InNoFireZone.ToString());
-                vmCommand.SetVariable("EliteAPI.INFIGHTER", status.InFighter.ToString());
-                vmCommand.SetVariable("EliteAPI.INSRV", status.InSRV.ToString());
-                vmCommand.SetVariable("EliteAPI.ANALYSISMODE", status.AnalysisMode.ToString());
-                vmCommand.SetVariable("EliteAPI.NIGHTVISION", status.NightVision.ToString());
-                vmCommand.SetVariable("EliteAPI.Pips.SYSTEMS", status.Pips[0].ToString());
-                vmCommand.SetVariable("EliteAPI.Pips.ENGINES", status.Pips[1].ToString());
-                vmCommand.SetVariable("EliteAPI.Pips.WEAPONS", status.Pips[2].ToString());
-                vmCommand.SetVariable("EliteAPI.FIREGROUP", status.FireGroup.ToString());
-                vmCommand.SetVariable("EliteAPI.GUIFOCUS", status.GuiFocus.ToString());
-                vmCommand.SetVariable("EliteAPI.FUEL", status.Fuel.FuelMain.ToString());
-                vmCommand.SetVariable("EliteAPI.FUELRESERVOIR", status.Fuel.FuelReservoir.ToString());
-                vmCommand.SetVariable("EliteAPI.CARGO", status.Cargo.ToString());
+                vmCommand.SetVariable("EliteAPI.DOCKED_p", status.Docked.ToString().ToString());
+                vmCommand.SetVariable("EliteAPI.LANDED_p", status.Landed.ToString());
+                vmCommand.SetVariable("EliteAPI.GEAR_p", status.Gear.ToString());
+                vmCommand.SetVariable("EliteAPI.SHIELDS_p", status.Shields.ToString());
+                vmCommand.SetVariable("EliteAPI.SUPERCRUISE_p", status.Supercruise.ToString());
+                vmCommand.SetVariable("EliteAPI.FLIGHTASSIST_p", status.FlightAssist.ToString());
+                vmCommand.SetVariable("EliteAPI.HARDPOINTS_p", status.Hardpoints.ToString());
+                vmCommand.SetVariable("EliteAPI.WINGING_p", status.Winging.ToString());
+                vmCommand.SetVariable("EliteAPI.LIGHTS_p", status.Lights.ToString());
+                vmCommand.SetVariable("EliteAPI.CARGOSCOOP_p", status.CargoScoop.ToString());
+                vmCommand.SetVariable("EliteAPI.SILENTRUNNING_p", status.SilentRunning.ToString());
+                vmCommand.SetVariable("EliteAPI.SCOOPING_p", status.Scooping.ToString());
+                vmCommand.SetVariable("EliteAPI.SRVHANDBREAK_p", status.SrvHandbreak.ToString());
+                vmCommand.SetVariable("EliteAPI.SRVTURRENT_p", status.SrvTurrent.ToString());
+                vmCommand.SetVariable("EliteAPI.SRVNEARSHIP_p", status.SrvNearShip.ToString());
+                vmCommand.SetVariable("EliteAPI.SRVDRIVEASSIST_p", status.SrvDriveAssist.ToString());
+                vmCommand.SetVariable("EliteAPI.MASSLOCKED_p", status.MassLocked.ToString());
+                vmCommand.SetVariable("EliteAPI.FSDCHARGING_p", status.FsdCooldown.ToString());
+                vmCommand.SetVariable("EliteAPI.FSDCOOLDOWN_p", status.FsdCooldown.ToString());
+                vmCommand.SetVariable("EliteAPI.LOWFUEL_p", status.LowFuel.ToString());
+                vmCommand.SetVariable("EliteAPI.OVERHEATING_p", status.Overheating.ToString());
+                vmCommand.SetVariable("EliteAPI.HASLATLONG_p", status.HasLatlong.ToString());
+                vmCommand.SetVariable("EliteAPI.INDANGER_p", status.InDanger.ToString());
+                vmCommand.SetVariable("EliteAPI.ININTERDICTION_p", status.InInterdiction.ToString());
+                vmCommand.SetVariable("EliteAPI.INMOTHERSHIP_p", status.InMothership.ToString());
+                vmCommand.SetVariable("EliteAPI.INNOFIREZONE_p", status.InNoFireZone.ToString());
+                vmCommand.SetVariable("EliteAPI.INFIGHTER_p", status.InFighter.ToString());
+                vmCommand.SetVariable("EliteAPI.INSRV_p", status.InSRV.ToString());
+                vmCommand.SetVariable("EliteAPI.ANALYSISMODE_p", status.AnalysisMode.ToString());
+                vmCommand.SetVariable("EliteAPI.NIGHTVISION_p", status.NightVision.ToString());
+                vmCommand.SetVariable("EliteAPI.Pips.SYSTEMS_p", status.Pips[0].ToString());
+                vmCommand.SetVariable("EliteAPI.Pips.ENGINES_p", status.Pips[1].ToString());
+                vmCommand.SetVariable("EliteAPI.Pips.WEAPONS_p", status.Pips[2].ToString());
+                vmCommand.SetVariable("EliteAPI.FIREGROUP_p", status.FireGroup.ToString());
+                vmCommand.SetVariable("EliteAPI.GUIFOCUS_p", status.GuiFocus.ToString());
+                vmCommand.SetVariable("EliteAPI.FUEL_p", status.Fuel.FuelMain.ToString());
+                vmCommand.SetVariable("EliteAPI.FUELRESERVOIR_p", status.Fuel.FuelReservoir.ToString());
+                vmCommand.SetVariable("EliteAPI.CARGO_p", status.Cargo.ToString());
 
-                vmCommand.SetVariable("EliteAPI.Commander", commander.Commander);
-                vmCommand.SetVariable("EliteAPI.System", location.StarSystem);
-                vmCommand.SetVariable("EliteAPI.Body", location.Body);
-                vmCommand.SetVariable("EliteAPI.BodyType", location.BodyType);
+                vmCommand.SetVariable("EliteAPI.Commander_p", commander.Commander);
+                vmCommand.SetVariable("EliteAPI.System_p", location.StarSystem);
+                vmCommand.SetVariable("EliteAPI.Body_p", location.Body);
+                vmCommand.SetVariable("EliteAPI.BodyType_p", location.BodyType);
 
-                vmCommand.SetVariable("EliteAPI.Rank.Combat", commander.CombatRank.ToString());
-                vmCommand.SetVariable("EliteAPI.Rank.Cqc", commander.CqcRank.ToString());
-                vmCommand.SetVariable("EliteAPI.Rank.Trade", commander.TradeRank.ToString());
-                vmCommand.SetVariable("EliteAPI.Rank.Exploration", commander.ExplorationRank.ToString());
-
-                vmCommand.SetVariable("EliteAPI.Rank.Combat", commander.CombatRankLocalised);
-                vmCommand.SetVariable("EliteAPI.Rank.Trade", commander.TradeRankLocalised);
-                vmCommand.SetVariable("EliteAPI.Rank.Exploration", commander.ExplorationRankLocalised);
+                vmCommand.SetVariable("EliteAPI.Rank.Combat_p", commander.CombatRankLocalised);
+                vmCommand.SetVariable("EliteAPI.Rank.Trade_p", commander.TradeRankLocalised);
+                vmCommand.SetVariable("EliteAPI.Rank.Exploration_p", commander.ExplorationRankLocalised);
             }
             catch (Exception ex)
             {

@@ -150,7 +150,7 @@ namespace EliteAPI.ThirdParty
                 }
                 else if (command == "drp off")
                 {
-                    api.DiscordRichPresence.TurnOn();
+                    api.DiscordRichPresence.TurnOff();
                 }
             }
             catch { }

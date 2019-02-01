@@ -187,6 +187,7 @@ namespace EliteAPI.VoiceAttack
                     vaProxy.SetBoolean("EliteAPI.INDANGER", status.InDanger);
                     vaProxy.SetBoolean("EliteAPI.ININTERDICTION", status.InInterdiction);
                     vaProxy.SetBoolean("EliteAPI.INMOTHERSHIP", status.InMothership);
+                    vaProxy.SetBoolean("EliteAPI.INNOFIREZONE", status.InNoFireZone);
                     vaProxy.SetBoolean("EliteAPI.INFIGHTER", status.InFighter);
                     vaProxy.SetBoolean("EliteAPI.INSRV", status.InSRV);
                     vaProxy.SetBoolean("EliteAPI.ANALYSISMODE", status.AnalysisMode);

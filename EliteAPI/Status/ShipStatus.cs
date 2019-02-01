@@ -65,6 +65,8 @@
         public bool AnalysisMode { get { return GetFlag(27); } }
         public bool NightVision { get { return GetFlag(28); } }
 
+        public bool InNoFireZone { get; set; }
+
         public bool GetFlag(long bit)
         {
             char[] carray = Convert.ToString(Flags, 2).ToCharArray();

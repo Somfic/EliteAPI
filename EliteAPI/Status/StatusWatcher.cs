@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EliteAPI.Status
 {
@@ -13,11 +10,23 @@ namespace EliteAPI.Status
         private EliteDangerousAPI api;
         private FileSystemWatcher statusWatcher;
 
+        private bool InNoFireZone = false;
+
         public StatusWatcher(EliteDangerousAPI api)
         {
             this.api = api;
+
+            api.Events.ReceiveTextEvent += Events_ReceiveTextEvent;
             statusWatcher = new FileSystemWatcher(api.JournalDirectory.FullName, "Status.json") { EnableRaisingEvents = true };
             statusWatcher.Changed += (sender, e) => Update();
+
+            Update();
+        }
+
+        private void Events_ReceiveTextEvent(object sender, Events.ReceiveTextInfo e)
+        {
+            if(e.Message.Contains("NoFireZone_entered")) { InNoFireZone = true; }
+            else if(e.Message.Contains("NoFireZone_exited")) { InNoFireZone = false; }
 
             Update();
         }
@@ -27,12 +36,12 @@ namespace EliteAPI.Status
             //Save the old status.
             ShipStatus oldStatus = api.Status;
             ShipStatus newStatus = ShipStatus.FromFile(new FileInfo(api.JournalDirectory + "//Status.json"), api);
+            newStatus.InNoFireZone = InNoFireZone;
 
             //Set the new status.
             api.Status = newStatus;
 
             if(oldStatus == null) { return; }
-            if(oldStatus.Flags == newStatus.Flags) { return; }
 
             TriggerIfDifferent(oldStatus, newStatus);
         }

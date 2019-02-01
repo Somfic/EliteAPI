@@ -4,6 +4,9 @@ namespace EliteAPI.Events
 
     public class EventHandler
     {
+        public event EventHandler<bool> StatusInNoFireZoneEvent;
+        public bool InvokeStatusInNoFireZone(bool e) { StatusInNoFireZoneEvent?.Invoke(this, e); return e; }
+
         public event EventHandler<bool> StatusDockedEvent;
         public bool InvokeStatusDocked(bool e) { StatusDockedEvent?.Invoke(this, e); return e; }
 

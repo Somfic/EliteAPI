@@ -23,7 +23,6 @@ namespace Example
 
             EliteAPI.Events.AllEvent += EliteAPI_DockingGrantedEvent;
             EliteAPI.Logger.Log += (sender, arg) => Console.WriteLine(arg.Message);
-            EliteAPI.Events.DockingGrantedEvent += (sender, arg) => Console.WriteLine(arg.LandingPad);
 
             EliteAPI.Start();
             Thread.Sleep(-1);

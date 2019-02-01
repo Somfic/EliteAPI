@@ -71,6 +71,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="vmAPI">
+      <HintPath>..\lib\vmAPI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bindings\UserBindings.cs" />
@@ -306,7 +309,8 @@
     <Compile Include="Inara\InaraConnection.cs" />
     <Compile Include="Status\StatusWatcher.cs" />
     <None Include="VERSION" />
-    <Compile Include="VoiceAttack\EliteVA.cs" />
+    <Compile Include="ThirdParty\EliteMacro.cs" />
+    <Compile Include="ThirdParty\EliteVA.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

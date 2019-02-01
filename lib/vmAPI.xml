@@ -1,0 +1,171 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+vmAPI
+</name>
+</assembly>
+<members>
+<member name="T:vmAPI.My.Resources.Resources">
+<summary>
+  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+</summary>
+</member>
+<member name="P:vmAPI.My.Resources.Resources.ResourceManager">
+<summary>
+  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+</summary>
+</member>
+<member name="P:vmAPI.My.Resources.Resources.Culture">
+<summary>
+  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+</summary>
+</member>
+<member name="P:vmAPI.vmInterface.DisplayName">
+ <summary>
+ The Display name of your plugin.
+ </summary>
+</member>
+<member name="P:vmAPI.vmInterface.Description">
+ <summary>
+ The Description of your plugin.
+ </summary>
+</member>
+<member name="P:vmAPI.vmInterface.ID">
+ <summary>
+ The ID (GUID) of your plugin.
+ </summary>
+</member>
+<member name="M:vmAPI.vmInterface.Init">
+ <summary>
+ This is invoked when your plugin is loaded.
+ </summary>
+</member>
+<member name="M:vmAPI.vmInterface.Dispose">
+ <summary>
+ This is invoked when VoiceMacro is terminated.
+ </summary>
+</member>
+<member name="M:vmAPI.vmInterface.ReceiveParams(System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ This is invoked when a macro is sending parameters.
+ </summary>
+</member>
+<member name="M:vmAPI.vmInterface.ProfileSwitched(System.String,System.String)">
+ <summary>
+ This is invoked when a profile is switched.
+ </summary>
+</member>
+<member name="T:vmAPI.vmProfile">
+ <summary>
+ This is the structure for a profile.
+ </summary>
+</member>
+<member name="F:vmAPI.vmProfile.ProfileName">
+ <summary>
+ The name of a profile.
+ </summary>
+</member>
+<member name="F:vmAPI.vmProfile.GUID">
+ <summary>
+ Unique ID of the profile.
+ </summary>
+</member>
+<member name="F:vmAPI.vmProfile.Commands">
+ <summary>
+ A list of commands.
+ </summary>
+</member>
+<member name="T:vmAPI.Commands">
+ <summary>
+ This is the structure for a command.
+ </summary>
+</member>
+<member name="F:vmAPI.Commands.RecocnitionText">
+ <summary>
+ The name and recognitiontext of a command.
+ </summary>
+</member>
+<member name="F:vmAPI.Commands.GUID">
+ <summary>
+ unique ID of the command.
+ </summary>
+</member>
+<member name="T:vmAPI.KeyboardAction">
+ <summary>
+ This is the structure for a Keyboard action.
+ </summary>
+</member>
+<member name="F:vmAPI.KeyboardAction.ClickDownUp">
+ <summary>
+ (0 = Click, 1 = Down, 2 = Up).
+ </summary>
+</member>
+<member name="F:vmAPI.KeyboardAction.ClickDuration">
+ <summary>
+ Click duration in milliseconds.
+ </summary>
+</member>
+<member name="F:vmAPI.vmCommand.APIClass">
+ <summary>
+ Used to store VoiceMacro's API class, not used by plugins.
+ </summary>
+</member>
+<member name="M:vmAPI.vmCommand.zRegistervmclass(System.Object)">
+ <summary>
+ Registers VoiceMacro's API class, not used by plugins.
+ </summary>
+</member>
+<member name="M:vmAPI.vmCommand.GetVariable(System.String,System.String)">
+ <summary>
+ Returns the value of a variable by name. Returns "ERR!" if variable is not existing.
+ Note: Only works for profile (_p), global (_g) and saved (_s) variables.
+ Specify GUIDP if you want to get a Variable not from current profile.
+ </summary>
+</member>
+<member name="M:vmAPI.vmCommand.SetVariable(System.String,System.String,System.String)">
+ <summary>
+ Sets the value of a variable by name. Creates the variable if not existing.
+ Note: Only works for profile (_p), global (_g) and saved (_s) variables.
+ Specify GUIDP if you want to set a Variable not from current profile.
+ </summary>
+</member>
+<member name="M:vmAPI.vmCommand.AddLogEntry(System.String,System.Drawing.Color,System.String,System.String,System.String)">
+ <summary>
+ Writes a text to the log file with a specific color.
+ text is the message, color is the color of the log sign, ID is your plugin ID, sign is your sign (only 1 character allowed), statusText is showed in the status bar of the main window.
+ </summary>
+</member>
+<member name="M:vmAPI.vmCommand.GetProfiles">
+ <summary>
+ Returns all the profiles and commands as List(Of vmProfile).
+ </summary>
+</member>
+<member name="M:vmAPI.vmCommand.ExecuteMacro(System.String)">
+ <summary>
+ Starts a macro by Profile/Macro GUID.
+ </summary>
+</member>
+<member name="M:vmAPI.vmCommand.GetActiveProfileGUID">
+ <summary>
+ Gets active Profile GUID. "No Profile" is returned if there is none.
+ </summary>
+</member>
+<member name="M:vmAPI.vmCommand.CommandExists(System.String)">
+ <summary>
+ Checks if a command exists. Returns Profile GUID/Macro GUID of the command.
+ </summary>
+</member>
+<member name="M:vmAPI.vmCommand.GetDataDirectory">
+ <summary>
+ Returns VoiceMacro's Data Directory.
+ </summary>
+</member>
+<member name="M:vmAPI.vmCommand.SendKey(vmAPI.KeyboardAction)">
+ <summary>
+ Sends a key.
+ </summary>
+</member>
+</members>
+</doc>

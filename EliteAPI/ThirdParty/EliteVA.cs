@@ -180,7 +180,7 @@ namespace EliteAPI.ThirdParty
                     vaProxy.SetBoolean("EliteAPI.SRVNEARSHIP", status.SrvNearShip);
                     vaProxy.SetBoolean("EliteAPI.SRVDRIVEASSIST", status.SrvDriveAssist);
                     vaProxy.SetBoolean("EliteAPI.MASSLOCKED", status.MassLocked);
-                    vaProxy.SetBoolean("EliteAPI.FSDCHARGING", status.FsdCooldown);
+                    vaProxy.SetBoolean("EliteAPI.FSDCHARGING", status.FsdCharging);
                     vaProxy.SetBoolean("EliteAPI.FSDCOOLDOWN", status.FsdCooldown);
                     vaProxy.SetBoolean("EliteAPI.LOWFUEL", status.LowFuel);
                     vaProxy.SetBoolean("EliteAPI.OVERHEATING", status.Overheating);

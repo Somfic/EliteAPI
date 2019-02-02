@@ -87,6 +87,74 @@ namespace EliteAPI.ThirdParty
                 {
                     eventName = "((EliteAPI." + e.@event + "))";
 
+                    if (eventName.Contains("Status"))
+                    {
+
+                        try
+                        {
+                            var status = api.Status;
+                            var commander = api.Commander;
+                            var location = api.Location;
+
+                            _vaProxy.SetBoolean("EliteAPI.DOCKED", status.Docked);
+                            _vaProxy.SetBoolean("EliteAPI.LANDED", status.Landed);
+                            _vaProxy.SetBoolean("EliteAPI.GEAR", status.Gear);
+                            _vaProxy.SetBoolean("EliteAPI.SHIELDS", status.Shields);
+                            _vaProxy.SetBoolean("EliteAPI.SUPERCRUISE", status.Supercruise);
+                            _vaProxy.SetBoolean("EliteAPI.FLIGHTASSIST", status.FlightAssist);
+                            _vaProxy.SetBoolean("EliteAPI.HARDPOINTS", status.Hardpoints);
+                            _vaProxy.SetBoolean("EliteAPI.WINGING", status.Winging);
+                            _vaProxy.SetBoolean("EliteAPI.LIGHTS", status.Lights);
+                            _vaProxy.SetBoolean("EliteAPI.CARGOSCOOP", status.CargoScoop);
+                            _vaProxy.SetBoolean("EliteAPI.SILENTRUNNING", status.SilentRunning);
+                            _vaProxy.SetBoolean("EliteAPI.SCOOPING", status.Scooping);
+                            _vaProxy.SetBoolean("EliteAPI.SRVHANDBREAK", status.SrvHandbreak);
+                            _vaProxy.SetBoolean("EliteAPI.SRVTURRENT", status.SrvTurrent);
+                            _vaProxy.SetBoolean("EliteAPI.SRVNEARSHIP", status.SrvNearShip);
+                            _vaProxy.SetBoolean("EliteAPI.SRVDRIVEASSIST", status.SrvDriveAssist);
+                            _vaProxy.SetBoolean("EliteAPI.MASSLOCKED", status.MassLocked);
+                            _vaProxy.SetBoolean("EliteAPI.FSDCHARGING", status.FsdCharging);
+                            _vaProxy.SetBoolean("EliteAPI.FSDCOOLDOWN", status.FsdCooldown);
+                            _vaProxy.SetBoolean("EliteAPI.LOWFUEL", status.LowFuel);
+                            _vaProxy.SetBoolean("EliteAPI.OVERHEATING", status.Overheating);
+                            _vaProxy.SetBoolean("EliteAPI.HASLATLONG", status.HasLatlong);
+                            _vaProxy.SetBoolean("EliteAPI.INDANGER", status.InDanger);
+                            _vaProxy.SetBoolean("EliteAPI.ININTERDICTION", status.InInterdiction);
+                            _vaProxy.SetBoolean("EliteAPI.INMOTHERSHIP", status.InMothership);
+                            _vaProxy.SetBoolean("EliteAPI.INNOFIREZONE", status.InNoFireZone);
+                            _vaProxy.SetBoolean("EliteAPI.INFIGHTER", status.InFighter);
+                            _vaProxy.SetBoolean("EliteAPI.INSRV", status.InSRV);
+                            _vaProxy.SetBoolean("EliteAPI.ANALYSISMODE", status.AnalysisMode);
+                            _vaProxy.SetBoolean("EliteAPI.NIGHTVISION", status.NightVision);
+                            _vaProxy.SetInt("EliteAPI.Pips.SYSTEMS", (int)status.Pips[0]);
+                            _vaProxy.SetInt("EliteAPI.Pips.ENGINES", (int)status.Pips[1]);
+                            _vaProxy.SetInt("EliteAPI.Pips.WEAPONS", (int)status.Pips[2]);
+                            _vaProxy.SetInt("EliteAPI.FIREGROUP", (int)status.FireGroup);
+                            _vaProxy.SetInt("EliteAPI.GUIFOCUS", (int)status.GuiFocus);
+                            _vaProxy.SetDecimal("EliteAPI.FUEL", (decimal)status.Fuel.FuelMain);
+                            _vaProxy.SetDecimal("EliteAPI.FUELRESERVOIR", (decimal)status.Fuel.FuelReservoir);
+                            _vaProxy.SetInt("EliteAPI.CARGO", (int)status.Cargo);
+
+                            _vaProxy.SetText("EliteAPI.Commander", commander.Commander);
+                            _vaProxy.SetText("EliteAPI.System", location.StarSystem);
+                            _vaProxy.SetText("EliteAPI.Body", location.Body);
+                            _vaProxy.SetText("EliteAPI.BodyType", location.BodyType);
+
+                            _vaProxy.SetInt("EliteAPI.Rank.Combat", (int)commander.CombatRank);
+                            _vaProxy.SetInt("EliteAPI.Rank.Cqc", (int)commander.CqcRank);
+                            _vaProxy.SetInt("EliteAPI.Rank.Trade", (int)commander.TradeRank);
+                            _vaProxy.SetInt("EliteAPI.Rank.Exploration", (int)commander.ExplorationRank);
+
+                            _vaProxy.SetText("EliteAPI.Rank.Combat", commander.CombatRankLocalised);
+                            _vaProxy.SetText("EliteAPI.Rank.Trade", commander.TradeRankLocalised);
+                            _vaProxy.SetText("EliteAPI.Rank.Exploration", commander.ExplorationRankLocalised);
+                        }
+                        catch (Exception ex)
+                        {
+                            api.Logger.LogError($"There was an error while setting some of the status variables. ({ex.Message}) (Make sure the game is running.)");
+                        }
+                    }
+
                     if (_vaProxy.CommandExists(eventName))
                     {
                         JObject attributesAsJObject = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(e));
@@ -145,80 +213,20 @@ namespace EliteAPI.ThirdParty
                     {
                         SetJournalFolder();
                         api = new EliteDangerousAPI(playerJournalDirectory);
+                        return;
                     }
                     else if (command == "drp on")
                     {
                         api.DiscordRichPresence.TurnOn();
+                        return;
                     }
                     else if (command == "drp off")
                     {
                         api.DiscordRichPresence.TurnOff();
+                        return;
                     }
                 }
                 catch { }
-
-                try
-                {
-                    var status = api.Status;
-                    var commander = api.Commander;
-                    var location = api.Location;
-
-                    vaProxy.SetBoolean("EliteAPI.DOCKED", status.Docked);
-                    vaProxy.SetBoolean("EliteAPI.LANDED", status.Landed);
-                    vaProxy.SetBoolean("EliteAPI.GEAR", status.Gear);
-                    vaProxy.SetBoolean("EliteAPI.SHIELDS", status.Shields);
-                    vaProxy.SetBoolean("EliteAPI.SUPERCRUISE", status.Supercruise);
-                    vaProxy.SetBoolean("EliteAPI.FLIGHTASSIST", status.FlightAssist);
-                    vaProxy.SetBoolean("EliteAPI.HARDPOINTS", status.Hardpoints);
-                    vaProxy.SetBoolean("EliteAPI.WINGING", status.Winging);
-                    vaProxy.SetBoolean("EliteAPI.LIGHTS", status.Lights);
-                    vaProxy.SetBoolean("EliteAPI.CARGOSCOOP", status.CargoScoop);
-                    vaProxy.SetBoolean("EliteAPI.SILENTRUNNING", status.SilentRunning);
-                    vaProxy.SetBoolean("EliteAPI.SCOOPING", status.Scooping);
-                    vaProxy.SetBoolean("EliteAPI.SRVHANDBREAK", status.SrvHandbreak);
-                    vaProxy.SetBoolean("EliteAPI.SRVTURRENT", status.SrvTurrent);
-                    vaProxy.SetBoolean("EliteAPI.SRVNEARSHIP", status.SrvNearShip);
-                    vaProxy.SetBoolean("EliteAPI.SRVDRIVEASSIST", status.SrvDriveAssist);
-                    vaProxy.SetBoolean("EliteAPI.MASSLOCKED", status.MassLocked);
-                    vaProxy.SetBoolean("EliteAPI.FSDCHARGING", status.FsdCharging);
-                    vaProxy.SetBoolean("EliteAPI.FSDCOOLDOWN", status.FsdCooldown);
-                    vaProxy.SetBoolean("EliteAPI.LOWFUEL", status.LowFuel);
-                    vaProxy.SetBoolean("EliteAPI.OVERHEATING", status.Overheating);
-                    vaProxy.SetBoolean("EliteAPI.HASLATLONG", status.HasLatlong);
-                    vaProxy.SetBoolean("EliteAPI.INDANGER", status.InDanger);
-                    vaProxy.SetBoolean("EliteAPI.ININTERDICTION", status.InInterdiction);
-                    vaProxy.SetBoolean("EliteAPI.INMOTHERSHIP", status.InMothership);
-                    vaProxy.SetBoolean("EliteAPI.INNOFIREZONE", status.InNoFireZone);
-                    vaProxy.SetBoolean("EliteAPI.INFIGHTER", status.InFighter);
-                    vaProxy.SetBoolean("EliteAPI.INSRV", status.InSRV);
-                    vaProxy.SetBoolean("EliteAPI.ANALYSISMODE", status.AnalysisMode);
-                    vaProxy.SetBoolean("EliteAPI.NIGHTVISION", status.NightVision);
-                    vaProxy.SetInt("EliteAPI.Pips.SYSTEMS", (int)status.Pips[0]);
-                    vaProxy.SetInt("EliteAPI.Pips.ENGINES", (int)status.Pips[1]);
-                    vaProxy.SetInt("EliteAPI.Pips.WEAPONS", (int)status.Pips[2]);
-                    vaProxy.SetInt("EliteAPI.FIREGROUP", (int)status.FireGroup);
-                    vaProxy.SetInt("EliteAPI.GUIFOCUS", (int)status.GuiFocus);
-                    vaProxy.SetDecimal("EliteAPI.FUEL", (decimal)status.Fuel.FuelMain);
-                    vaProxy.SetDecimal("EliteAPI.FUELRESERVOIR", (decimal)status.Fuel.FuelReservoir);
-                    vaProxy.SetInt("EliteAPI.CARGO", (int)status.Cargo);
-
-                    vaProxy.SetText("EliteAPI.Commander", commander.Commander);
-                    vaProxy.SetText("EliteAPI.System", location.StarSystem);
-                    vaProxy.SetText("EliteAPI.Body", location.Body);
-                    vaProxy.SetText("EliteAPI.BodyType", location.BodyType);
-
-                    vaProxy.SetInt("EliteAPI.Rank.Combat", (int)commander.CombatRank);
-                    vaProxy.SetInt("EliteAPI.Rank.Cqc", (int)commander.CqcRank);
-                    vaProxy.SetInt("EliteAPI.Rank.Trade", (int)commander.TradeRank);
-                    vaProxy.SetInt("EliteAPI.Rank.Exploration", (int)commander.ExplorationRank);
-
-                    vaProxy.SetText("EliteAPI.Rank.Combat", commander.CombatRankLocalised);
-                    vaProxy.SetText("EliteAPI.Rank.Trade", commander.TradeRankLocalised);
-                    vaProxy.SetText("EliteAPI.Rank.Exploration", commander.ExplorationRankLocalised);
-                }
-                catch (Exception ex) {
-                    api.Logger.LogError($"There was an error while setting some of the status variables. ({ex.Message}) (Make sure the game is running.)");
-                }
             }
         }
     }

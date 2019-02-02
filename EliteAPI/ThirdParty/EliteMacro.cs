@@ -47,9 +47,6 @@ namespace EliteAPI.ThirdParty
         {
             SetJournalFolder();
 
-            SetVar("TEST.2_p", "testing");
-            SetVar("TEST2_p", "testing");
-
             api = new EliteDangerousAPI(playerJournalDirectory, true);
             api.Logger.Log += Logger_Log;
             api.Events.AllEvent += EliteAPI_AllEvent;

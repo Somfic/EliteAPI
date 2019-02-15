@@ -8,10 +8,9 @@ using EliteAPI.Logging;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-
 using vmAPI;
 
-namespace EliteAPI.ThirdParty
+namespace EliteAPI.ThirdParty.EliteMacro
 {
     public class EliteMacro : vmInterface
     {

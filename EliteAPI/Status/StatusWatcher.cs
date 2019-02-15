@@ -35,6 +35,8 @@ namespace EliteAPI.Status
         {
             //Save the old status.
             ShipStatus oldStatus = api.Status;
+            if(oldStatus == null) { oldStatus = new ShipStatus(); }
+
             ShipStatus newStatus = ShipStatus.FromFile(new FileInfo(api.JournalDirectory + "//Status.json"), api);
             newStatus.InNoFireZone = InNoFireZone;
 
@@ -69,11 +71,11 @@ namespace EliteAPI.Status
     {
         public StatusEvent(string eventName, object value)
         {
-            this.@event = eventName;
-            this.value = value;
+            @Event = eventName;
+            Value = value;
         }
 
-        public string @event { get; set; }
-        public object value { get; set; }
+        public string @Event { get; set; }
+        public object Value { get; set; }
     }
 }

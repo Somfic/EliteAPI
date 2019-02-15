@@ -42,8 +42,6 @@ namespace EliteAPI.ThirdParty.EliteVA
         {
             _vaProxy = vaProxy;
 
-            vaProxy.WriteToLog("test", "red");
-
             SetJournalFolder();
 
             api = new EliteDangerousAPI(playerJournalDirectory, true);

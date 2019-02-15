@@ -22,11 +22,10 @@ namespace EliteAPI
         public static DirectoryInfo StandardDirectory { get => new DirectoryInfo($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"); }
 
         //Version info.
-        public FileVersionInfo GetVersion()
-        { return FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location); }
-        public long MajorVersion { get { return GetVersion().FileMajorPart; } }
-        public long MinorVersion { get { return GetVersion().FileMinorPart; } }
-        public string BuildVersion { get { return GetVersion().FileVersion; } }
+        public FileVersionInfo Version { get { return FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location); } }
+        public long MajorVersion { get { return Version.FileMajorPart; } }
+        public long MinorVersion { get { return Version.FileMinorPart; } }
+        public string BuildVersion { get { return Version.FileVersion; } }
 
         public bool IsRunning { get; set; }
         public DirectoryInfo JournalDirectory { get; set; }

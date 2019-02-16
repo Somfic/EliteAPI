@@ -24,7 +24,7 @@ namespace EliteAPI.Discord
             //If we're not running, return;
             //if(!IsRunning) { return; }
 
-            DiscordRPC.RichPresence discordPresence = new DiscordRPC.RichPresence()
+            DiscordRPC.RichPresence discordPresence = new DiscordRPC.RichPresence
             {
                 Details = presence.Text,
                 State = presence.TextTwo,
@@ -59,7 +59,7 @@ namespace EliteAPI.Discord
             rpc.Initialize();
             Task.Run(() => { while (!IsReady) { Thread.Sleep(1000); rpc.Invoke(); } });
 
-            api.Events.DockingGrantedEvent += (sender, e) => UpdatePresence(new RichPresence()
+            api.Events.DockingGrantedEvent += (sender, e) => UpdatePresence(new RichPresence
             {
                 Text = $"Attemping to dock",
                 TextTwo = $"at {e.StationName}",
@@ -67,7 +67,7 @@ namespace EliteAPI.Discord
                 IconTwo = "ed",
                 IconTextTwo = "EliteAPI"
             });
-            api.Events.DockedEvent += (sender, e) => UpdatePresence(new RichPresence()
+            api.Events.DockedEvent += (sender, e) => UpdatePresence(new RichPresence
             {
                 Text = $"Docked at {e.StationName}",
                 TextTwo = $"in {e.StarSystem}",
@@ -75,7 +75,7 @@ namespace EliteAPI.Discord
                 IconTwo = "ed",
                 IconTextTwo = "EliteAPI"
             });
-            api.Events.UndockedEvent += (sender, e) => UpdatePresence(new RichPresence()
+            api.Events.UndockedEvent += (sender, e) => UpdatePresence(new RichPresence
             {
                 Text = $"Leaving {e.StationName}",
                 TextTwo = $"in {api.Location.StarSystem}",
@@ -87,7 +87,7 @@ namespace EliteAPI.Discord
             {
                 if (e.JumpType == "FSDJump")
                 {
-                    UpdatePresence(new RichPresence()
+                    UpdatePresence(new RichPresence
                     {
                         Text = $"Jumping to {e.StarSystem}",
                         TextTwo = $"Class {e.StarClass} star",
@@ -96,7 +96,7 @@ namespace EliteAPI.Discord
                     });
                 }
             };
-            api.Events.FSDJumpEvent += (sender, e) => UpdatePresence(new RichPresence()
+            api.Events.FSDJumpEvent += (sender, e) => UpdatePresence(new RichPresence
             {
                 Text = $"Arrived in {e.StarSystem}",
                 TextTwo = $"after travelling {Math.Round(e.JumpDist, 1)} ly",
@@ -104,7 +104,7 @@ namespace EliteAPI.Discord
                 IconTwo = "ed",
                 IconTextTwo = "EliteAPI"
             });
-            api.Events.ApproachBodyEvent += (sender, e) => UpdatePresence(new RichPresence()
+            api.Events.ApproachBodyEvent += (sender, e) => UpdatePresence(new RichPresence
             {
                 Text = $"Approaching planet",
                 TextTwo = e.Body,
@@ -112,7 +112,7 @@ namespace EliteAPI.Discord
                 IconTwo = "ed",
                 IconTextTwo = "EliteAPI"
             });
-            api.Events.LeaveBodyEvent += (sender, e) => UpdatePresence(new RichPresence()
+            api.Events.LeaveBodyEvent += (sender, e) => UpdatePresence(new RichPresence
             {
                 Text = $"Leaving planet",
                 TextTwo = e.Body,
@@ -120,7 +120,7 @@ namespace EliteAPI.Discord
                 IconTwo = "ed",
                 IconTextTwo = "EliteAPI"
             });
-            api.Events.TouchdownEvent += (sender, e) => UpdatePresence(new RichPresence()
+            api.Events.TouchdownEvent += (sender, e) => UpdatePresence(new RichPresence
             {
                 Text = $"Touched down on",
                 TextTwo = api.Location.Body,
@@ -128,7 +128,7 @@ namespace EliteAPI.Discord
                 IconTwo = "ed",
                 IconTextTwo = "EliteAPI"
             });
-            api.Events.LiftoffEvent += (sender, e) => UpdatePresence(new RichPresence()
+            api.Events.LiftoffEvent += (sender, e) => UpdatePresence(new RichPresence
             {
                 Text = $"Lifted off from",
                 TextTwo = api.Location.Body,
@@ -136,7 +136,7 @@ namespace EliteAPI.Discord
                 IconTwo = "ed",
                 IconTextTwo = "EliteAPI"
             });
-            api.Events.SupercruiseEntryEvent += (sender, e) => UpdatePresence(new RichPresence()
+            api.Events.SupercruiseEntryEvent += (sender, e) => UpdatePresence(new RichPresence
             {
                 Text = $"Travelling in supercruise",
                 TextTwo = $"in {e.StarSystem}",
@@ -144,7 +144,7 @@ namespace EliteAPI.Discord
                 IconTwo = "ed",
                 IconTextTwo = "EliteAPI"
             });
-            api.Events.SupercruiseExitEvent += (sender, e) => UpdatePresence(new RichPresence()
+            api.Events.SupercruiseExitEvent += (sender, e) => UpdatePresence(new RichPresence
             {
                 Text = $"Travelling in normal space",
                 TextTwo = $"near {e.BodyType.ToLower().Replace("planetaryring", "ring")} {e.Body.Replace("Ring", "")}",
@@ -156,7 +156,7 @@ namespace EliteAPI.Discord
             {
                 if (e.MusicTrack == "DockingComputer")
                 {
-                    UpdatePresence(new RichPresence()
+                    UpdatePresence(new RichPresence
                     {
                         Text = $"Having autopilot dock",
                         TextTwo = $"them at {api.Location.Body}",
@@ -167,7 +167,7 @@ namespace EliteAPI.Discord
                 }
             };
 
-            UpdatePresence(new RichPresence() { Text = "Just started playing", Icon = "ed", IconText = "EliteAPI" });
+            UpdatePresence(new RichPresence { Text = "Just started playing", Icon = "ed", IconText = "EliteAPI" });
         }
 
         public void TurnOff()

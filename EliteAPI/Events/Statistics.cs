@@ -61,7 +61,7 @@ namespace EliteAPI.Events
         public Dictionary<string, double> Cqc { get; set; }
     }
 
-    public partial class Combat
+    public class Combat
     {
         [JsonProperty("Bounties_Claimed")]
         public long BountiesClaimed { get; set; }
@@ -88,7 +88,7 @@ namespace EliteAPI.Events
         public long SkimmersKilled { get; set; }
     }
 
-    public partial class Crafting
+    public class Crafting
     {
         [JsonProperty("Count_Of_Used_Engineers")]
         public long CountOfUsedEngineers { get; set; }
@@ -112,7 +112,7 @@ namespace EliteAPI.Events
         public long RecipesGeneratedRank5 { get; set; }
     }
 
-    public partial class Crew
+    public class Crew
     {
         [JsonProperty("NpcCrew_TotalWages")]
         public long NpcCrewTotalWages { get; set; }
@@ -127,7 +127,7 @@ namespace EliteAPI.Events
         public long NpcCrewDied { get; set; }
     }
 
-    public partial class Crime
+    public class Crime
     {
         [JsonProperty("Notoriety")]
         public long Notoriety { get; set; }
@@ -148,7 +148,7 @@ namespace EliteAPI.Events
         public long HighestBounty { get; set; }
     }
 
-    public partial class MaterialTraderStats
+    public class MaterialTraderStats
     {
         [JsonProperty("Trades_Completed")]
         public long TradesCompleted { get; set; }
@@ -178,7 +178,7 @@ namespace EliteAPI.Events
         public long Grade5_MaterialsTraded { get; set; }
     }
 
-    public partial class Mining
+    public class Mining
     {
         [JsonProperty("Mining_Profits")]
         public long MiningProfits { get; set; }
@@ -190,7 +190,7 @@ namespace EliteAPI.Events
         public long MaterialsCollected { get; set; }
     }
 
-    public partial class Multicrew
+    public class Multicrew
     {
         [JsonProperty("Multicrew_Time_Total")]
         public long MulticrewTimeTotal { get; set; }
@@ -208,7 +208,7 @@ namespace EliteAPI.Events
         public long MulticrewFinesTotal { get; set; }
     }
 
-    public partial class Passengers
+    public class Passengers
     {
         [JsonProperty("Passengers_Missions_Accepted")]
         public long PassengersMissionsAccepted { get; set; }
@@ -229,7 +229,7 @@ namespace EliteAPI.Events
         public long PassengersMissionsEjected { get; set; }
     }
 
-    public partial class SearchAndRescue
+    public class SearchAndRescue
     {
         [JsonProperty("SearchRescue_Traded")]
         public long SearchRescueTraded { get; set; }
@@ -241,7 +241,7 @@ namespace EliteAPI.Events
         public long SearchRescueCount { get; set; }
     }
 
-    public partial class Smuggling
+    public class Smuggling
     {
         [JsonProperty("Black_Markets_Traded_With")]
         public long BlackMarketsTradedWith { get; set; }
@@ -259,7 +259,7 @@ namespace EliteAPI.Events
         public long HighestSingleTransaction { get; set; }
     }
 
-    public partial class TgEncounters
+    public class TgEncounters
     {
         [JsonProperty("TG_ENCOUNTER_TOTAL")]
         public long TgEncounterTotal { get; set; }
@@ -277,7 +277,7 @@ namespace EliteAPI.Events
         public long TgScoutCount { get; set; }
     }
 
-    public partial class Trading
+    public class Trading
     {
         [JsonProperty("Markets_Traded_With")]
         public long MarketsTradedWith { get; set; }

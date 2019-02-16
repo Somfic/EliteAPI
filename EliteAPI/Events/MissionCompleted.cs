@@ -58,7 +58,7 @@ namespace EliteAPI.Events
         public List<FactionEffect> FactionEffects { get; set; }
     }
 
-    public partial class FactionEffect
+    public class FactionEffect
     {
         [JsonProperty("Faction")]
         public string Faction { get; set; }
@@ -76,7 +76,7 @@ namespace EliteAPI.Events
         public string Reputation { get; set; }
     }
 
-    public partial class Effect
+    public class Effect
     {
         [JsonProperty("Effect")]
         public string EffectEffect { get; set; }
@@ -88,7 +88,7 @@ namespace EliteAPI.Events
         public string Trend { get; set; }
     }
 
-    public partial class Influence
+    public class Influence
     {
         [JsonProperty("SystemAddress")]
         public long SystemAddress { get; set; }
@@ -100,7 +100,7 @@ namespace EliteAPI.Events
         public string InfluenceInfluence { get; set; }
     }
 
-    public partial class MaterialsReward
+    public class MaterialsReward
     {
         [JsonProperty("Name")]
         public string Name { get; set; }

@@ -116,13 +116,13 @@ namespace EliteAPI.Events
         public List<ActiveState> ActiveStates { get; set; }
     }
 
-    public partial class FSDActiveState
+    public class FSDActiveState
     {
         [JsonProperty("State")]
         public string State { get; set; }
     }
 
-    public partial class IngState
+    public class IngState
     {
         [JsonProperty("State")]
         public string State { get; set; }

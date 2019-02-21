@@ -16,21 +16,14 @@ namespace Example
 
         static void Main(string[] args)
         {
-            DirectoryInfo playerJournalFolder = new DirectoryInfo(
-            $@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous");
-
-            EliteAPI = new EliteDangerousAPI(playerJournalFolder);
-
-            EliteAPI.Events.AllEvent += EliteAPI_DockingGrantedEvent;
+            EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
             EliteAPI.Logger.Log += (sender, arg) => Console.WriteLine(arg.Message);
 
             EliteAPI.Start();
-            Thread.Sleep(-1);
-        }
 
-        private static void EliteAPI_DockingGrantedEvent(object sender, dynamic e)
-        {
-            Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(e));
+            EliteAPI.Events.AllEvent += (sender, arg) => Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(arg));
+
+            Thread.Sleep(-1);
         }
     }
 }

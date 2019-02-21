@@ -73,7 +73,7 @@
         public static string ToJson(this ShipCargo self) => JsonConvert.SerializeObject(self, EliteAPI.Status.ShipCargoConverter.Settings);
     }
 
-    internal static class ShipCargoConverter
+    public static class ShipCargoConverter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {

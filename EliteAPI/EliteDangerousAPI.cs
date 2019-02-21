@@ -92,6 +92,7 @@ namespace EliteAPI
         public void Start()
         {
             Logger.LogInfo("Starting EliteAPI.");
+            Logger.LogInfo("EliteAPI v" + BuildVersion + ".");
 
             //Mark the API as running.
             IsRunning = true;
@@ -106,7 +107,7 @@ namespace EliteAPI
                 journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
                 Logger.LogSuccess("Could find Journal files."); 
             }
-            catch { Logger.LogError("Could not start EliteAPI. Could not find Journal files."); return; }
+            catch(Exception ex) { Logger.LogError("Could not start EliteAPI. Could not find Journal files.", ex); return; }
 
             //Process the journal file.
             ProcessJournal(journalFile, SkipCatchUp);
@@ -166,15 +167,15 @@ namespace EliteAPI
                 obj = JsonConvert.DeserializeObject<dynamic>(json);
                 eventName = obj.@event;
             }
-            catch(Exception ex) { Logger.LogWarning($"Couldn't process event [{json}]. {Environment.NewLine}Error: {ex.Message}"); }
+            catch(Exception ex) { Logger.LogWarning($"Couldn't process event [{json}].", ex); }
 
             //Invoke the matching event.
             try { Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name == $"{eventName}Info").First().GetMethod("Process").Invoke(null, new object[] { json, this }); }
-            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}, it might not have been (correctly) added yet. {Environment.NewLine}Error: {ex.Message}. {Environment.NewLine}Error: {ex.StackTrace}"); }
+            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}, it might not have been (correctly) added yet.", ex); }
 
             //Invoke the AllEvent.
             try { Events.InvokeAllEvent(obj); }
-            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}. {Environment.NewLine}Error: {ex.Message}"); }
+            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}.", ex); }
         }
 
         public void Stop()

@@ -17,11 +17,10 @@ namespace Example
         static void Main(string[] args)
         {
             EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
-            EliteAPI.Logger.Log += (sender, arg) => Console.WriteLine(arg.Message);
+
+            EliteAPI.Logger.UseConsole();
 
             EliteAPI.Start();
-
-            EliteAPI.Events.AllEvent += (sender, arg) => Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(arg));
 
             Thread.Sleep(-1);
         }

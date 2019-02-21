@@ -61,7 +61,7 @@ namespace EliteAPI.Status
                 {
                     api.Events.InvokeAllEvent(new StatusEvent("Status." + propA.Name, B));
                     try { api.Events.GetType().GetMethod("InvokeStatus" + propA.Name).Invoke(api.Events, new object[] { B }); }
-                    catch (Exception ex) { api.Logger.LogError($"Could not invoke status event {propA.Name}, it might not have been added yet. {Environment.NewLine}Error: {ex.Message}"); }
+                    catch (Exception ex) { api.Logger.LogError($"Could not invoke status event {propA.Name}, it might not have been added yet.", ex); }
                 }
             }
         }

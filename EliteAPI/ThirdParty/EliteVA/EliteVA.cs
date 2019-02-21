@@ -150,7 +150,7 @@ namespace EliteAPI.ThirdParty.EliteVA
                     }
                     catch (Exception ex)
                     {
-                        api.Logger.LogError($"There was an error while setting some of the status variables. ({ex.Message}) (Make sure the game is running.)");
+                        api.Logger.LogError($"There was an error while setting some of the status variables. (Make sure the game is running.)", ex);
                     }
                 }
 
@@ -177,7 +177,7 @@ namespace EliteAPI.ThirdParty.EliteVA
                         }
                         catch (Exception ex)
                         {
-                            api.Logger.LogError($"There was an error while trying to parse field ['{name}' ({value})] for '{eventName}'. ({ex.Message})");
+                            api.Logger.LogError($"There was an error while trying to parse field ['{name}' ({value})] for '{eventName}'.", ex);
                         }
                     }
                     _vaProxy.ExecuteCommand(eventName);
@@ -185,7 +185,7 @@ namespace EliteAPI.ThirdParty.EliteVA
             }
             catch (Exception ex)
             {
-                api.Logger.LogError($"There was an error while invoking the event '{eventName}'. ({ex.Message})");
+                api.Logger.LogError($"There was an error while invoking the event '{eventName}'.", ex);
             }
         }
 

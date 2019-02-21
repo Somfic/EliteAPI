@@ -91,7 +91,7 @@
         {
             try
             {
-                if (!File.Exists(file.FullName)) { api.Logger.LogError("Could not find Status.json."); return new ShipStatus(); }
+                if (!File.Exists(file.FullName)) { api.Logger.LogError("Could not find Status.json.", new Exception($"Could not find {file}.")); return new ShipStatus(); }
 
                 //Create a stream from the log file.
                 FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -110,7 +110,7 @@
                 return api.Status;
 
             }
-            catch { api.Logger.LogWarning("Could not update status.");}
+            catch(Exception ex) { api.Logger.LogWarning("Could not update status.", ex);}
 
             return new ShipStatus();
         }

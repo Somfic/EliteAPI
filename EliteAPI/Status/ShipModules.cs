@@ -41,7 +41,7 @@
         public static ShipModules FromJson(string json) => JsonConvert.DeserializeObject<ShipModules>(json, EliteAPI.Status.ShipModulesConverter.Settings);
         public static ShipModules FromFile(FileInfo file, EliteDangerousAPI api)
         {
-            if (File.Exists(file.FullName)) { api.Logger.LogError("Could not find ModulesInfo.json."); return new ShipModules(); }
+            if (File.Exists(file.FullName)) { api.Logger.LogError("Could not find ModulesInfo.json.", new Exception($"Could not find {file}.")); return new ShipModules(); }
 
             //Create a stream from the log file.
             FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);

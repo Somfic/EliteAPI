@@ -48,7 +48,7 @@ namespace EliteAPI.Discord
 
             //Subscribe to events.
             rpc.OnConnectionFailed += (sender, e) => api.Logger.LogError("There was an error while trying to connect to the rich presence.");
-            rpc.OnError += (sender, e) => api.Logger.LogError("Rich presence error: " + e.Message);
+            rpc.OnError += (sender, e) => api.Logger.LogError("Rich presence error.", new Exception(e.Message));
             rpc.OnReady += (sender, e) => { api.Logger.LogInfo("Rich presence ready."); IsReady = true; };
 
 

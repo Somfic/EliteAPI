@@ -47,7 +47,7 @@
         public static ShipCargo FromJson(string json) => JsonConvert.DeserializeObject<ShipCargo>(json, EliteAPI.Status.ShipCargoConverter.Settings);
         public static ShipCargo FromFile(FileInfo file, EliteDangerousAPI api)
         {
-            if (File.Exists(file.FullName)) { api.Logger.LogError("Could not find Cargo.json."); return new ShipCargo(); }
+            if (File.Exists(file.FullName)) { api.Logger.LogError("Could not find Cargo.json.", new Exception($"Could not find {file.FullName}")); return new ShipCargo(); }
 
             //Create a stream from the log file.
             FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);

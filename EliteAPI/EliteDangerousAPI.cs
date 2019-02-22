@@ -73,9 +73,6 @@ namespace EliteAPI
                 //Go through file to set status fields.
                 //Select the last edited Journal file.
                 FileInfo journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
-
-                //Process the journal file.
-                ProcessJournal(journalFile, false);
             }
             catch { }
         }

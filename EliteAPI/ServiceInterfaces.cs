@@ -27,7 +27,6 @@ namespace EliteAPI
         UserBindings Bindings { get; }
         CommanderStatus Commander { get; }
         LocationStatus Location { get; }
-        StatusWatcher Watcher { get; }
 
         //Services.
         RichPresenceClient DiscordRichPresence { get; }

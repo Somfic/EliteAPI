@@ -28,12 +28,13 @@ namespace EliteAPI
         public string BuildVersion { get { return Version.FileVersion; } }
 
         public bool IsRunning { get; set; }
-        public DirectoryInfo JournalDirectory { get; set; }
-        public bool SkipCatchUp { get; set; }
-        public Events.EventHandler Events { get; set; }
-        public Logging.Logger Logger { get; set; }
-        public ShipStatus Status { get; set; }
-        public ShipCargo Cargo { get { return ShipCargo.FromFile(new FileInfo(JournalDirectory.FullName + "\\Cargo.json"), this); } }
+        public DirectoryInfo JournalDirectory { get; internal set; }
+        public bool SkipCatchUp { get; internal set; }
+        public Events.EventHandler Events { get; internal set; }
+        public Logging.Logger Logger { get; internal set; }
+
+        public ShipStatus Status { get; internal set; }
+        public ShipCargo Cargo { get; internal set; }
         public ShipModules Modules { get { return ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this); } }
         public UserBindings Bindings
         {
@@ -49,9 +50,11 @@ namespace EliteAPI
                 catch { return new UserBindings(); }
             }
         }
-        public CommanderStatus Commander { get; set; }
-        public LocationStatus Location { get; set; }
-        public StatusWatcher Watcher { get; set; }
+        public CommanderStatus Commander { get; internal set; }
+        public LocationStatus Location { get; internal set; }
+
+        internal StatusWatcher StatusWatcher { get; set; }
+        internal CargoWatcher CargoWatcher { get; set; }
 
         //Services.
         public RichPresenceClient DiscordRichPresence { get; set; }
@@ -85,7 +88,8 @@ namespace EliteAPI
             this.Commander = new CommanderStatus(this);
             this.Location = new LocationStatus(this);
             this.DiscordRichPresence = new RichPresenceClient(this);
-            this.Watcher = new StatusWatcher(this);
+            this.StatusWatcher = new StatusWatcher(this);
+            this.CargoWatcher = new CargoWatcher(this);
             this.Status = ShipStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this);
         }
 

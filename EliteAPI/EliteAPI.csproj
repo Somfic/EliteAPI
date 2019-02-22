@@ -355,6 +355,7 @@
     <Compile Include="Status\ShipStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Inara\InaraConnection.cs" />
+    <Compile Include="Status\CargoWatcher.cs" />
     <Compile Include="Status\StatusWatcher.cs" />
     <None Include="NuGet.Config" />
     <Compile Include="ThirdParty\EliteMacro\EliteMacro.cs" />

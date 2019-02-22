@@ -36,6 +36,16 @@ namespace EliteAPI.Logging
             Log?.Invoke(this, new LogMessage(s.ToString(), Severity.Error, ex));
         }
 
+        public void LogDebug(object s)
+        {
+            Log?.Invoke(this, new LogMessage(s.ToString(), Severity.Debug));
+        }
+
+        public void LogDebug(object s, Exception ex)
+        {
+            Log?.Invoke(this, new LogMessage(s.ToString(), Severity.Debug, ex));
+        }
+
         public Logger UseConsole()
         {
             Log += (sender, arg) =>
@@ -56,6 +66,10 @@ namespace EliteAPI.Logging
 
                     case Severity.Error:
                         Write(arg.Severity, ConsoleColor.Red, arg.Message, arg.Exception);
+                        break;
+
+                    case Severity.Debug:
+                        Write(arg.Severity, ConsoleColor.DarkGray, arg.Message, arg.Exception);
                         break;
                 }
             };
@@ -84,6 +98,10 @@ namespace EliteAPI.Logging
                         break;
 
                     case Severity.Error:
+                        WriteLog(arg.Severity, arg.Message, arg.Exception);
+                        break;
+
+                    case Severity.Debug:
                         WriteLog(arg.Severity, arg.Message, arg.Exception);
                         break;
                 }
@@ -166,5 +184,7 @@ namespace EliteAPI.Logging
         public Exception Exception { get; private set; }
     }
 
-    public enum Severity { Info, Warning, Error, Success  }
+    public enum Severity { Info, Warning, Error, Success,
+        Debug
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Threading;
 
 namespace EliteAPI.Logging
 {
@@ -125,7 +126,7 @@ namespace EliteAPI.Logging
             {
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.SetCursorPosition(8, Console.CursorTop);
-                Console.Write("+");
+                Console.Write(">");
                 Console.SetCursorPosition(10, Console.CursorTop);
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.BackgroundColor = color;
@@ -146,19 +147,25 @@ namespace EliteAPI.Logging
             if(ex != null)
             {
                 s = new StringBuilder("        ");
-                s.Insert(8, "+ " + ex.Message);
+                s.Insert(8, "> " + ex.Message);
                 WriteToLog(s);
 
                 s = new StringBuilder("        ");
-                s.Insert(8, "+ " + ex.StackTrace);
+                s.Insert(8, "> " + ex.StackTrace);
                 WriteToLog(s);
-
             }
         }
 
         private void WriteToLog(object s)
         {
-            File.AppendAllText($"EliteAPI.{DateTime.Now.ToShortDateString()}.log", DateTime.Now.ToShortTimeString() + " : " + s.ToString() + Environment.NewLine);
+            for (int i = 0; i < 5; i++)
+            {
+                try
+                {
+                    File.AppendAllText($"EliteAPI.{DateTime.Now.ToShortDateString()}.log", DateTime.Now.ToLongTimeString() + " : " + s.ToString() + Environment.NewLine);
+                }
+                catch { Thread.Sleep(100); }
+            }
         }
 
         public event EventHandler<LogMessage> Log;

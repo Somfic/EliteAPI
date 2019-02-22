@@ -16,15 +16,11 @@ namespace Example
 
         static void Main(string[] args)
         {
-            EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
+            EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory, false);
 
             EliteAPI.Logger.UseConsole().UseLogFile();
 
             EliteAPI.Start();
-
-            EliteAPI.Logger.LogDebug("testing");
-
-            EliteAPI.Logger.LogWarning("ERROR", new NotImplementedException());
 
             Thread.Sleep(-1);
         }

@@ -95,20 +95,24 @@ namespace EliteAPI
 
         public void Start()
         {
+            Stopwatch s = new Stopwatch();
+            s.Start();
+
             Logger.LogInfo("Starting EliteAPI.");
-            Logger.LogInfo("EliteAPI v" + BuildVersion + ".");
+            Logger.LogDebug("EliteAPI v" + BuildVersion + ".");
 
             //Mark the API as running.
             IsRunning = true;
 
             //We'll process the journal one time first, to catch up.
             //Select the last edited Journal file.
-
             FileInfo journalFile = null;
 
             try
             {
+                Logger.LogDebug($"Searching for 'Journal.*.log' files in {JournalDirectory}.");
                 journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
+                Logger.LogDebug($"Found '{journalFile}'.");
                 Logger.LogSuccess("Could find Journal files."); 
             }
             catch(Exception ex) { Logger.LogError("Could not start EliteAPI. Could not find Journal files.", ex); return; }
@@ -123,7 +127,9 @@ namespace EliteAPI
                 while (IsRunning)
                 {
                     //Select the last edited Journal file.
-                    journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
+                    FileInfo newJournalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
+                    if(journalFile.FullName != newJournalFile.FullName) { Logger.LogDebug($"Switched to '{newJournalFile}'."); }
+                    journalFile = newJournalFile; 
 
                     //Process the journal file.
                     ProcessJournal(journalFile, false);
@@ -133,7 +139,10 @@ namespace EliteAPI
                 }
             });
 
+            s.Stop();
+
             Logger.LogInfo("EliteAPI is ready.");
+            Logger.LogDebug($"Finished in {s.ElapsedMilliseconds}ms.");
         }
 
         private List<string> processedLogs = new List<string>();
@@ -170,16 +179,23 @@ namespace EliteAPI
                 //Turn the json into an object to find out which event it is.
                 obj = JsonConvert.DeserializeObject<dynamic>(json);
                 eventName = obj.@event;
+                Logger.LogDebug($"Processing event '{eventName}'.");
             }
-            catch(Exception ex) { Logger.LogWarning($"Couldn't process event [{json}].", ex); }
+            catch(Exception ex) { Logger.LogWarning($"Couldn't process json ({json}).", ex); }
 
             //Invoke the matching event.
-            try { Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name == $"{eventName}Info").First().GetMethod("Process").Invoke(null, new object[] { json, this }); }
-            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}, it might not have been (correctly) added yet.", ex); }
+            Type eventClass; MethodInfo eventMethod;
+
+            try { eventClass = Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name == $"{eventName}Info").First();
+                try { eventMethod = eventClass.GetMethod("Process");
+                    try { eventMethod.Invoke(null, new object[] { json, this }); }
+                    catch (Exception ex) { Logger.LogError($"Could not invoke event method '{eventName}Info.Process()'.", ex); }
+                } catch (Exception ex) { Logger.LogWarning($"Could not find event method '{eventName}Info.Process()'.", ex); }
+            } catch (Exception ex) { Logger.LogWarning($"Could not find event class '{eventName}Info'.", ex); }
 
             //Invoke the AllEvent.
-            try { Events.InvokeAllEvent(obj); }
-            catch(Exception ex) { Logger.LogError($"Could not invoke event {eventName}.", ex); }
+            try { Events.InvokeAllEvent(obj);  }
+            catch (Exception ex) { Logger.LogError($"Could not invoke AllEvent for '{eventName}'.", ex); }
         }
 
         public void Stop()

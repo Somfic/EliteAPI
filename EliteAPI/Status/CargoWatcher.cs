@@ -10,23 +10,12 @@ namespace EliteAPI.Status
         private EliteDangerousAPI api;
         private FileSystemWatcher CargoFileWatcher;
 
-        private bool InNoFireZone = false;
-
         public CargoWatcher(EliteDangerousAPI api)
         {
             this.api = api;
 
-            api.Events.ReceiveTextEvent += Events_ReceiveTextEvent;
             CargoFileWatcher = new FileSystemWatcher(api.JournalDirectory.FullName, "Cargo.json") { EnableRaisingEvents = true };
             CargoFileWatcher.Changed += (sender, e) => Update();
-
-            Update();
-        }
-
-        private void Events_ReceiveTextEvent(object sender, Events.ReceiveTextInfo e)
-        {
-            if(e.Message.Contains("NoFireZone_entered")) { InNoFireZone = true; }
-            else if(e.Message.Contains("NoFireZone_exited")) { InNoFireZone = false; }
 
             Update();
         }

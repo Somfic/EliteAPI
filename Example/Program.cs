@@ -22,6 +22,8 @@ namespace Example
 
             EliteAPI.Start();
 
+            EliteAPI.Logger.LogDebug("testing");
+
             EliteAPI.Logger.LogWarning("ERROR", new NotImplementedException());
 
             Thread.Sleep(-1);

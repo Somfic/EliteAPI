@@ -128,7 +128,7 @@ namespace EliteAPI
                 {
                     //Select the last edited Journal file.
                     FileInfo newJournalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
-                    if(journalFile.FullName != newJournalFile.FullName) { Logger.LogDebug($"Switched to '{newJournalFile}'."); }
+                    if(journalFile.FullName != newJournalFile.FullName) { Logger.LogDebug($"Switched to '{newJournalFile}'."); processedLogs.Clear(); }
                     journalFile = newJournalFile; 
 
                     //Process the journal file.
@@ -165,9 +165,6 @@ namespace EliteAPI
                     if (!doNotTrigger) { Process(json); } //Only process it if it's marked true.
                     processedLogs.Add(json);
                 }
-		
-		dynamic thisEvent = JsonConvert.DeserializeObject<dynamic>(json);
-		if (thisEvent.@event != "Shutdown") { processedLogs.Clear(); }
             }
         }
 

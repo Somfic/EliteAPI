@@ -156,14 +156,9 @@ namespace EliteAPI
                     if (!doNotTrigger) { Process(json); } //Only process it if it's marked true.
                     processedLogs.Add(json);
                 }
-
-				//Clearing the list when the game is still running.
-				if (!IsRunning && streamReader.EndOfStream)
-				{
-					dynamic thisEvent = JsonConvert.DeserializeObject<dynamic>(json);
-					if (thisEvent.@event != "Shutdown")
-						processedLogs.Clear();
-				}
+		
+		dynamic thisEvent = JsonConvert.DeserializeObject<dynamic>(json);
+		if (thisEvent.@event != "Shutdown") { processedLogs.Clear(); }
             }
         }
 

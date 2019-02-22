@@ -18,9 +18,11 @@ namespace Example
         {
             EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
 
-            EliteAPI.Logger.UseConsole();
+            EliteAPI.Logger.UseConsole().UseLogFile();
 
             EliteAPI.Start();
+
+            EliteAPI.Logger.LogWarning("ERROR", new NotImplementedException());
 
             Thread.Sleep(-1);
         }

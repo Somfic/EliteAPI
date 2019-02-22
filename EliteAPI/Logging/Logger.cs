@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 
 namespace EliteAPI.Logging
 {
@@ -34,7 +36,7 @@ namespace EliteAPI.Logging
             Log?.Invoke(this, new LogMessage(s.ToString(), Severity.Error, ex));
         }
 
-        public void UseConsole()
+        public Logger UseConsole()
         {
             Log += (sender, arg) =>
             {
@@ -57,6 +59,37 @@ namespace EliteAPI.Logging
                         break;
                 }
             };
+
+            return this;
+        }
+
+        public Logger UseLogFile()
+        {
+            WriteToLog("======= NEW LOG ENTRY =======");
+
+            Log += (sender, arg) =>
+            {
+                switch (arg.Severity)
+                {
+                    case Severity.Info:
+                        WriteLog(arg.Severity, arg.Message, arg.Exception);
+                        break;
+
+                    case Severity.Success:
+                        WriteLog(arg.Severity, arg.Message, arg.Exception);
+                        break;
+
+                    case Severity.Warning:
+                        WriteLog(arg.Severity, arg.Message, arg.Exception);
+                        break;
+
+                    case Severity.Error:
+                        WriteLog(arg.Severity, arg.Message, arg.Exception);
+                        break;
+                }
+            };
+
+            return this;
         }
 
         private void Write(Severity severity, ConsoleColor color, string content, Exception ex = null)
@@ -82,6 +115,32 @@ namespace EliteAPI.Logging
                 Console.BackgroundColor = ConsoleColor.Black;
             }
 
+        }
+
+        private void WriteLog(Severity severity, string content, Exception ex  = null)
+        {
+            StringBuilder s = new StringBuilder("        ");
+            s.Insert(0, severity.ToString());
+            s.Insert(8, ": " + content);
+
+            WriteToLog(s);
+
+            if(ex != null)
+            {
+                s = new StringBuilder("        ");
+                s.Insert(8, "+ " + ex.Message);
+                WriteToLog(s);
+
+                s = new StringBuilder("        ");
+                s.Insert(8, "+ " + ex.StackTrace);
+                WriteToLog(s);
+
+            }
+        }
+
+        private void WriteToLog(object s)
+        {
+            File.AppendAllText($"EliteAPI.{DateTime.Now.ToShortDateString()}.log", DateTime.Now.ToShortTimeString() + " : " + s.ToString() + Environment.NewLine);
         }
 
         public event EventHandler<LogMessage> Log;

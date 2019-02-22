@@ -55,12 +55,13 @@
             //Create a stream from the file stream.
             StreamReader streamReader = new StreamReader(fileStream);
 
+            string json = "";
+
             //Go through the stream.
-            while (!streamReader.EndOfStream)
-            {
-                //Process this string.
-                try { return FromJson(streamReader.ReadLine()); } catch(Exception ex) { api.Logger.LogWarning("Could not update Cargo.json.", ex); }
-            }
+            while (!streamReader.EndOfStream) { json = json + streamReader.ReadLine(); }
+
+            //Process this string.
+            try { return FromJson(json); } catch (Exception ex) { api.Logger.LogWarning("Could not update Cargo.json.", ex); }
 
             return new ShipCargo();
         }

@@ -163,6 +163,7 @@ namespace EliteAPI.Logging
                 try
                 {
                     File.AppendAllText($"EliteAPI.{DateTime.Now.ToShortDateString()}.log", DateTime.Now.ToLongTimeString() + " : " + s.ToString() + Environment.NewLine);
+                    return;
                 }
                 catch { Thread.Sleep(100); }
             }

@@ -102,9 +102,13 @@
                 //Go through the stream.
                 while (!streamReader.EndOfStream)
                 {
-                    //Process this string.
-                    string json = streamReader.ReadLine();
-                    return FromJson(json);
+                    try
+                    {
+                        //Process this string.
+                        string json = streamReader.ReadLine();
+                        return FromJson(json);
+                    }
+                    catch(Exception ex) { api.Logger.LogWarning("Could not update Status.json.", ex); }
                 }
 
                 return api.Status;

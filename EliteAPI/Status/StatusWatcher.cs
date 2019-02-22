@@ -38,6 +38,8 @@ namespace EliteAPI.Status
             if(oldStatus == null) { oldStatus = new ShipStatus(); }
 
             ShipStatus newStatus = ShipStatus.FromFile(new FileInfo(api.JournalDirectory + "//Status.json"), api);
+            if(newStatus == null) { api.Logger.LogWarning("Could not update Status.json file."); return; }
+
             newStatus.InNoFireZone = InNoFireZone;
 
             //Set the new status.
@@ -59,9 +61,10 @@ namespace EliteAPI.Status
 
                 if(A != B)
                 {
+                    api.Logger.LogDebug($"Processing status event '{propA.Name}'.");
                     api.Events.InvokeAllEvent(new StatusEvent("Status." + propA.Name, B));
                     try { api.Events.GetType().GetMethod("InvokeStatus" + propA.Name).Invoke(api.Events, new object[] { B }); }
-                    catch (Exception ex) { api.Logger.LogError($"Could not invoke status event {propA.Name}, it might not have been added yet.", ex); }
+                    catch (Exception ex) { api.Logger.LogError($"Could not invoke status event '{propA.Name}', it might not have been added yet.", ex); }
                 }
             }
         }

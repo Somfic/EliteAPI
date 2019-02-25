@@ -45,7 +45,7 @@ namespace EliteAPI.Events
         public static BountyInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeBountyEvent(JsonConvert.DeserializeObject<BountyInfo>(json, EliteAPI.Events.BountyConverter.Settings));
     }
 
-    public static class BountySerializer
+    public static class BountySerializer    
     {
         public static string ToJson(this BountyInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.BountyConverter.Settings);
     }
@@ -54,7 +54,7 @@ namespace EliteAPI.Events
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
-            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
             DateParseHandling = DateParseHandling.None,
             Converters =
             {

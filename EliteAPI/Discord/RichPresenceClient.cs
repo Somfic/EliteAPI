@@ -14,12 +14,16 @@ namespace EliteAPI.Discord
         public bool IsRunning { get; private set; } = false;
         public bool IsReady { get; private set; } = false;
 
+        /// <summary>
+        /// Creates a new Discord Rich Presence client based on the EliteDangerousAPI object.
+        /// </summary>
+        /// <param name="api"></param>
         public RichPresenceClient(EliteDangerousAPI api)
         {
             this.api = api;
         }
 
-        public void UpdatePresence(RichPresence presence)
+        private void UpdatePresence(RichPresence presence)
         {
             //If we're not running, return;
             //if(!IsRunning) { return; }
@@ -40,6 +44,9 @@ namespace EliteAPI.Discord
             rpc.SetPresence(discordPresence);
         }
 
+        /// <summary>
+        /// Turn the rich presence on.
+        /// </summary>
         public void TurnOn()
         {
             //Create RPC client.
@@ -170,6 +177,9 @@ namespace EliteAPI.Discord
             UpdatePresence(new RichPresence { Text = "Just started playing", Icon = "ed", IconText = "EliteAPI" });
         }
 
+        /// <summary>
+        /// Turn the rich pressence off.
+        /// </summary>
         public void TurnOff()
         {
             //Remove all presences from queue, and clear it.

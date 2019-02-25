@@ -10,10 +10,7 @@ namespace EliteAPI
     public interface IEliteDangerousAPI
     {
         //Version info.
-        FileVersionInfo Version { get; }
-        long MajorVersion { get; }
-        long MinorVersion { get; }
-        string BuildVersion { get; }
+        string Version { get; }
 
         //Public fields.
         bool IsRunning { get; }

@@ -2,7 +2,7 @@
 {
     public class CommanderStatus
     {
-        public CommanderStatus(EliteDangerousAPI api)
+        internal CommanderStatus(EliteDangerousAPI api)
         {
             api.Events.LoadGameEvent += (sender, e) => { Commander = e.Commander; Credits = e.Credits; };
             api.Events.RankEvent += (sender, e) => { EmpireRank = e.Empire; FederationRank = e.Federation; CombatRank = e.Combat; TradeRank = e.Trade; ExplorationRank = e.Explore; CqcRank = e.Cqc; };

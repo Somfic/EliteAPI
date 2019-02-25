@@ -10,7 +10,7 @@ namespace EliteAPI.Status
         private EliteDangerousAPI api;
         private FileSystemWatcher CargoFileWatcher;
 
-        public CargoWatcher(EliteDangerousAPI api)
+        internal CargoWatcher(EliteDangerousAPI api)
         {
             this.api = api;
 

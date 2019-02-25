@@ -47,7 +47,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
             SetJournalFolder();
 
             api = new EliteDangerousAPI(playerJournalDirectory, true);
-            api.Logger.UseLogFile();
+            api.Logger.UseLogFile(new DirectoryInfo(Directory.GetCurrentDirectory()));
             api.Logger.Log += Logger_Log;
             api.Events.AllEvent += EliteAPI_AllEvent;
             api.Start();

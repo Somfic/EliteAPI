@@ -74,7 +74,7 @@ namespace EliteAPI.Events
         public List<FSDFaction> Factions { get; set; }
 
         [JsonProperty("SystemFaction")]
-        public string SystemFaction { get; set; }
+        public SystemFaction SystemFaction { get; set; }
 
         [JsonProperty("FactionState")]
         public string FactionState { get; set; }
@@ -145,7 +145,7 @@ namespace EliteAPI.Events
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
-            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
             DateParseHandling = DateParseHandling.None,
             Converters =
             {

@@ -12,7 +12,7 @@ namespace EliteAPI.Status
 
         private bool InNoFireZone = false;
 
-        public StatusWatcher(EliteDangerousAPI api)
+        internal StatusWatcher(EliteDangerousAPI api)
         {
             this.api = api;
 

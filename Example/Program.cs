@@ -1,12 +1,7 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Threading;
-//using System.Windows.Forms;
 
 using EliteAPI;
-using EliteAPI.Events;
-
-//using InputManager;
 
 namespace Example
 {
@@ -16,10 +11,8 @@ namespace Example
 
         static void Main(string[] args)
         {
-            EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory, false);
-
-            EliteAPI.Logger.UseConsole().UseLogFile();
-
+            EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
+            EliteAPI.Logger.UseConsole().UseLogFile(new DirectoryInfo(Directory.GetCurrentDirectory()));
             EliteAPI.Start();
 
             Thread.Sleep(-1);

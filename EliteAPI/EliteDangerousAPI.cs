@@ -18,24 +18,54 @@ namespace EliteAPI
 {
     public class EliteDangerousAPI : IEliteDangerousAPI
     {
-        //Standard directory
+        /// <summary>
+        /// The standard Directory of the Player Journal files (C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous).
+        /// </summary>
         public static DirectoryInfo StandardDirectory { get => new DirectoryInfo($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"); }
 
-        //Version info.
-        public FileVersionInfo Version { get { return FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location); } }
-        public long MajorVersion { get { return Version.FileMajorPart; } }
-        public long MinorVersion { get { return Version.FileMinorPart; } }
-        public string BuildVersion { get { return Version.FileVersion; } }
+        /// <summary>
+        /// The version of EliteAPI.
+        /// </summary>
+        public string Version { get { return "2.0.2.0"; } }
 
+        /// <summary>
+        /// Whether the API is currently running.
+        /// </summary>
         public bool IsRunning { get; set; }
+
+        /// <summary>
+        /// The Journal directoy that is being used by the API.
+        /// </summary>
         public DirectoryInfo JournalDirectory { get; internal set; }
-        public bool SkipCatchUp { get; internal set; }
+
+        /// <summary>
+        /// Object that holds all the events.
+        /// </summary>
         public Events.EventHandler Events { get; internal set; }
+
+        /// <summary>
+        /// Objects that holds all logging related functions.
+        /// </summary>
         public Logging.Logger Logger { get; internal set; }
 
+        /// <summary>
+        /// Holds the ship's current status.
+        /// </summary>
         public ShipStatus Status { get; internal set; }
+
+        /// <summary>
+        /// Holds the ship's current cargo situation.
+        /// </summary>
         public ShipCargo Cargo { get; internal set; }
+
+        /// <summary>
+        /// Returns all the modules installed on the current ship.
+        /// </summary>
         public ShipModules Modules { get { return ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this); } }
+
+        /// <summary>
+        /// Holds information on all keybindings in the game set by the user.
+        /// </summary>
         public UserBindings Bindings
         {
             get
@@ -50,15 +80,35 @@ namespace EliteAPI
                 catch { return new UserBindings(); }
             }
         }
+
+        /// <summary>
+        /// Holds information about the commander.
+        /// </summary>
         public CommanderStatus Commander { get; internal set; }
+
+        /// <summary>
+        /// Holds information about the last known location of the commander.
+        /// </summary>
         public LocationStatus Location { get; internal set; }
 
         internal StatusWatcher StatusWatcher { get; set; }
         internal CargoWatcher CargoWatcher { get; set; }
 
-        //Services.
-        public RichPresenceClient DiscordRichPresence { get; set; }
+        /// <summary>
+        /// Rich presence service for Discord.
+        /// </summary>
+        public RichPresenceClient DiscordRichPresence { get; internal set; }
 
+        /// <summary>
+        /// Wether the API should skip the processing of previous events before the API was started.
+        /// </summary>
+        public bool SkipCatchUp { get; internal set; }
+
+        /// <summary>
+        /// Creates a new EliteDangerousAPI object.
+        /// </summary>
+        /// <param name="JournalDirectory">The directory in which the Player Journals are located.</param>
+        /// <param name="SkipCatchUp">Wether the API should skip the processing of previous events before the API was started.</param>
         public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp = true)
         {
             //Set the fields to the parameters.
@@ -77,6 +127,9 @@ namespace EliteAPI
             catch { }
         }
 
+        /// <summary>
+        /// Resets the API.
+        /// </summary>
         public void Reset()
         {
             //Reset services.
@@ -88,15 +141,19 @@ namespace EliteAPI
             this.StatusWatcher = new StatusWatcher(this);
             this.CargoWatcher = new CargoWatcher(this);
             this.Status = ShipStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this);
+            processedLogs = new List<string>();
         }
 
+        /// <summary>
+        /// Starts the API.
+        /// </summary>
         public void Start()
         {
             Stopwatch s = new Stopwatch();
             s.Start();
 
             Logger.LogInfo("Starting EliteAPI.");
-            Logger.LogDebug("EliteAPI v" + BuildVersion + ".");
+            Logger.LogDebug("EliteAPI v" + Version + ".");
 
             //Mark the API as running.
             IsRunning = true;
@@ -112,7 +169,7 @@ namespace EliteAPI
                 Logger.LogDebug($"Found '{journalFile}'.");
                 Logger.LogSuccess("Could find Journal files."); 
             }
-            catch(Exception ex) { Logger.LogError("Could not start EliteAPI. Could not find Journal files.", ex); return; }
+            catch(Exception ex) { IsRunning = false; Logger.LogError("Could not start EliteAPI. Could not find Journal files.", ex); return; }
 
             //Process the journal file.
             ProcessJournal(journalFile, SkipCatchUp);
@@ -194,6 +251,9 @@ namespace EliteAPI
             catch (Exception ex) { Logger.LogError($"Could not invoke AllEvent for '{eventName}'.", ex); }
         }
 
+        /// <summary>
+        /// Stops the API.
+        /// </summary>
         public void Stop()
         {
             //Mark the API as not running.

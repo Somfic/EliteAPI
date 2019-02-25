@@ -63,7 +63,7 @@ namespace EliteAPI.Events
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
-            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
             DateParseHandling = DateParseHandling.None,
             Converters =
             {

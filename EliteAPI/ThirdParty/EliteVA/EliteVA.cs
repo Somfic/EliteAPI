@@ -45,14 +45,12 @@ namespace EliteAPI.ThirdParty.EliteVA
             SetJournalFolder();
 
             api = new EliteDangerousAPI(playerJournalDirectory, true);
-            api.Logger.UseLogFile();
+            api.Logger.UseLogFile(new DirectoryInfo(Directory.GetCurrentDirectory()));
             api.Logger.Log += Logger_Log;
             api.Events.AllEvent += EliteAPI_AllEvent;
             api.Start();
 
-            _vaProxy.SetInt("EliteAPI.Version.Major", (int)api.MajorVersion);
-            _vaProxy.SetInt("EliteAPI.Version.Minor", (int)api.MinorVersion);
-            _vaProxy.SetText("EliteAPI.Version", api.BuildVersion);
+            _vaProxy.SetText("EliteAPI.Version", api.Version);
 
             VA_Invoke1(vaProxy);
         }

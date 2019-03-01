@@ -71,7 +71,7 @@ namespace EliteAPI.ThirdParty.EliteVA
                     _vaProxy.WriteToLog("EliteVA - " + e.Message, "green");
                     break;
 
-                default:
+                case Logging.Severity.Info:
                     _vaProxy.WriteToLog("EliteVA - " + e.Message, "blue");
                     break;
             }

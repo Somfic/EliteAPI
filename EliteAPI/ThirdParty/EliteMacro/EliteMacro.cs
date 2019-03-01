@@ -46,8 +46,8 @@ namespace EliteAPI.ThirdParty.EliteMacro
         {
             SetJournalFolder();
 
-            api = new EliteDangerousAPI(playerJournalDirectory, true);
-            api.Logger.UseLogFile(new DirectoryInfo(Directory.GetCurrentDirectory()));
+            api = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory, true);
+            api.Logger.UseLogFile(new DirectoryInfo(vmCommand.GetDataDirectory()));
             api.Logger.Log += Logger_Log;
             api.Events.AllEvent += EliteAPI_AllEvent;
             api.Start();
@@ -57,19 +57,19 @@ namespace EliteAPI.ThirdParty.EliteMacro
         {
             switch (e.Severity)
             {
-                case Logging.Severity.Error:
+                case Severity.Error:
                     vmCommand.AddLogEntry("EliteMacro - " + e.Message, Color.Red, ID);
                     break;
 
-                case Logging.Severity.Warning:
+                case Severity.Warning:
                     vmCommand.AddLogEntry("EliteMacro - " + e.Message, Color.Orange, ID);
                     break;
 
-                case Logging.Severity.Success:
+                case Severity.Success:
                     vmCommand.AddLogEntry("EliteMacro - " + e.Message, Color.Green, ID);
                     break;
 
-                default:
+                case Severity.Info:
                     vmCommand.AddLogEntry("EliteMacro - " + e.Message, Color.Blue, ID);
                     break;
             }
@@ -198,8 +198,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
             {
                 string command = Param1.ToLower();
 
-                if (command == "updatejourn" +
-                    "al")
+                if (command == "updatejournal")
                 {
                     SetJournalFolder();
                     api = new EliteDangerousAPI(playerJournalDirectory);
@@ -221,7 +220,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
 
         private void SetVar(string name, object value)
         {
-            SetVar(name, value.ToString());
+            vmCommand.SetVariable(name, value.ToString());
         }
     }
 }

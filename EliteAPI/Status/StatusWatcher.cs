@@ -74,11 +74,11 @@ namespace EliteAPI.Status
     {
         public StatusEvent(string eventName, object value)
         {
-            @Event = eventName;
-            Value = value;
+            @event = eventName;
+            this.value = value;
         }
 
-        public string @Event { get; internal set; }
-        public object Value { get; internal set; }
+        public string @event { get; internal set; }
+        public object value { get; internal set; }
     }
 }

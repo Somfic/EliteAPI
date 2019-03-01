@@ -114,10 +114,13 @@ namespace EliteAPI
         /// <param name="SkipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
         public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp = true)
         {
+            //Register events.
+            this.OnError += (sender, e) => Logger.LogError("Could not start EliteAPI. Could not find Journal files.", e);
+            this.OnReady += (sender, e) => Logger.LogSuccess("EliteAPI is ready.");
+
             //Set the fields to the parameters.
             this.JournalDirectory = JournalDirectory;
             this.SkipCatchUp = SkipCatchUp;
-            JournalParser = new JournalParser(this);
 
             //Reset the API.
             Reset();
@@ -137,6 +140,7 @@ namespace EliteAPI
             this.StatusWatcher = new StatusWatcher(this);
             this.CargoWatcher = new CargoWatcher(this);
             this.Status = ShipStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this);
+            this.JournalParser = new JournalParser(this);
             JournalParser.processedLogs = new List<string>();
         }
 
@@ -166,7 +170,12 @@ namespace EliteAPI
                 Logger.LogDebug($"Found '{journalFile}'.");
                 Logger.LogSuccess("Found Journal files."); 
             }
-            catch(Exception ex) { IsRunning = false; Logger.LogError("Could not start EliteAPI. Could not find Journal files.", ex); return; }
+            catch(Exception ex)
+            {
+                IsRunning = false;
+                OnReady?.Invoke(this, EventArgs.Empty);
+                return;
+            }
 
             //Check if Elite: Dangerous is running by checking the last event for 'Shutdown'.
             try
@@ -201,6 +210,7 @@ namespace EliteAPI
             s.Stop();
 
             Logger.LogDebug($"Finished in {s.ElapsedMilliseconds}ms.");
+            OnReady?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>
@@ -222,6 +232,6 @@ namespace EliteAPI
         /// <summary>
         /// Gets triggered when EliteAPI could not successfully load up.
         /// </summary>
-        public event System.EventHandler OnError;
+        public event System.EventHandler<Exception> OnError;
     }
 }

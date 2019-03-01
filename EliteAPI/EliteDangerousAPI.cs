@@ -28,7 +28,7 @@ namespace EliteAPI
         /// <summary>
         /// The version of EliteAPI.
         /// </summary>
-        public string Version { get { return "2.0.2.0"; } }
+        public string Version { get { return "2.0.2.1"; } }
 
         /// <summary>
         /// Whether the API is currently running.

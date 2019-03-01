@@ -10,25 +10,25 @@ namespace EliteAPI.Events
     public partial class EngineerContributionInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Engineer")]
-        public string Engineer { get; set; }
+        public string Engineer { get; internal set; }
 
         [JsonProperty("Type")]
-        public string Type { get; set; }
+        public string Type { get; internal set; }
 
         [JsonProperty("Material")]
-        public string Material { get; set; }
+        public string Material { get; internal set; }
 
         [JsonProperty("Quantity")]
-        public long Quantity { get; set; }
+        public long Quantity { get; internal set; }
 
         [JsonProperty("TotalQuantity")]
-        public long TotalQuantity { get; set; }
+        public long TotalQuantity { get; internal set; }
     }
 
     public partial class EngineerContributionInfo

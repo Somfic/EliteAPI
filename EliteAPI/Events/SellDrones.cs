@@ -10,22 +10,22 @@ namespace EliteAPI.Events
     public partial class SellDronesInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Type")]
-        public string Type { get; set; }
+        public string Type { get; internal set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public long Count { get; internal set; }
 
         [JsonProperty("SellPrice")]
-        public long SellPrice { get; set; }
+        public long SellPrice { get; internal set; }
 
         [JsonProperty("TotalSale")]
-        public long TotalSale { get; set; }
+        public long TotalSale { get; internal set; }
     }
 
     public partial class SellDronesInfo

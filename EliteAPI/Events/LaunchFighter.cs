@@ -10,16 +10,16 @@ namespace EliteAPI.Events
     public partial class LaunchFighterInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Loadout")]
-        public string Loadout { get; set; }
+        public string Loadout { get; internal set; }
 
         [JsonProperty("PlayerControlled")]
-        public bool PlayerControlled { get; set; }
+        public bool PlayerControlled { get; internal set; }
     }
 
     public partial class LaunchFighterInfo

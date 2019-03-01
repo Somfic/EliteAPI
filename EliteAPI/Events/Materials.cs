@@ -10,40 +10,40 @@ namespace EliteAPI.Events
     public partial class MaterialsInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Raw")]
-        public List<Raw> Raw { get; set; }
+        public List<Raw> Raw { get; internal set; }
 
         [JsonProperty("Manufactured")]
-        public List<Encoded> Manufactured { get; set; }
+        public List<Encoded> Manufactured { get; internal set; }
 
         [JsonProperty("Encoded")]
-        public List<Encoded> Encoded { get; set; }
+        public List<Encoded> Encoded { get; internal set; }
     }
 
     public partial class Encoded
     {
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; set; }
+        public string NameLocalised { get; internal set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public long Count { get; internal set; }
     }
 
     public partial class Raw
     {
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public long Count { get; internal set; }
     }
 
     public partial class MaterialsInfo

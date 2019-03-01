@@ -16,39 +16,39 @@ namespace EliteAPI.Inara.Events
         }
 
         [JsonProperty("communitygoalGameID")]
-        public long CommunitygoalGameId { get; set; }
+        public long CommunitygoalGameId { get; internal set; }
 
         [JsonProperty("communitygoalName")]
-        public string CommunitygoalName { get; set; }
+        public string CommunitygoalName { get; internal set; }
 
         [JsonProperty("starsystemName")]
-        public string StarsystemName { get; set; }
+        public string StarsystemName { get; internal set; }
 
         [JsonProperty("stationName")]
-        public string StationName { get; set; }
+        public string StationName { get; internal set; }
 
         [JsonProperty("goalExpiry")]
-        public DateTime GoalExpiry { get; set; }
+        public DateTime GoalExpiry { get; internal set; }
 
         [JsonProperty("tierReached")]
-        public long TierReached { get; set; }
+        public long TierReached { get; internal set; }
 
         [JsonProperty("tierMax")]
-        public long TierMax { get; set; }
+        public long TierMax { get; internal set; }
 
         [JsonProperty("topRankSize")]
-        public long TopRankSize { get; set; }
+        public long TopRankSize { get; internal set; }
 
         [JsonProperty("isCompleted")]
-        public bool IsCompleted { get; set; }
+        public bool IsCompleted { get; internal set; }
 
         [JsonProperty("contributorsNum")]
-        public long ContributorsNum { get; set; }
+        public long ContributorsNum { get; internal set; }
 
         [JsonProperty("contributionsTotal")]
-        public long ContributionsTotal { get; set; }
+        public long ContributionsTotal { get; internal set; }
 
         [JsonProperty("completionBonus")]
-        public string CompletionBonus { get; set; }
+        public string CompletionBonus { get; internal set; }
     }
 }

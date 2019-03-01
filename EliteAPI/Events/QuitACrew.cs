@@ -10,13 +10,13 @@ namespace EliteAPI.Events
     public partial class QuitACrewInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Captain")]
-        public string Captain { get; set; }
+        public string Captain { get; internal set; }
     }
 
     public partial class QuitACrewInfo

@@ -10,58 +10,58 @@ namespace EliteAPI.Events
     public partial class MissionAcceptedInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Faction")]
-        public string Faction { get; set; }
+        public string Faction { get; internal set; }
 
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("LocalisedName")]
-        public string LocalisedName { get; set; }
+        public string LocalisedName { get; internal set; }
 
         [JsonProperty("Commodity")]
-        public string Commodity { get; set; }
+        public string Commodity { get; internal set; }
 
         [JsonProperty("Commodity_Localised")]
-        public string CommodityLocalised { get; set; }
+        public string CommodityLocalised { get; internal set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public long Count { get; internal set; }
 
         [JsonProperty("DestinationSystem")]
-        public string DestinationSystem { get; set; }
+        public string DestinationSystem { get; internal set; }
 
         [JsonProperty("Expiry")]
-        public DateTime Expiry { get; set; }
+        public DateTime Expiry { get; internal set; }
 
         [JsonProperty("Influence")]
-        public string Influence { get; set; }
+        public string Influence { get; internal set; }
 
         [JsonProperty("Reputation")]
-        public string Reputation { get; set; }
+        public string Reputation { get; internal set; }
 
         [JsonProperty("Reward")]
-        public long Reward { get; set; }
+        public long Reward { get; internal set; }
 
         [JsonProperty("PassengerCount")]
-        public long PassengerCount { get; set; }
+        public long PassengerCount { get; internal set; }
 
         [JsonProperty("PassengerVIPs")]
-        public bool PassengerViPs { get; set; }
+        public bool PassengerViPs { get; internal set; }
 
         [JsonProperty("PassengerWanted")]
-        public bool PassengerWanted { get; set; }
+        public bool PassengerWanted { get; internal set; }
 
         [JsonProperty("PassengerType")]
-        public string PassengerType { get; set; }
+        public string PassengerType { get; internal set; }
 
         [JsonProperty("MissionID")]
-        public long MissionId { get; set; }
+        public long MissionId { get; internal set; }
     }
 
     public partial class MissionAcceptedInfo

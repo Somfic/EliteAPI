@@ -10,25 +10,25 @@ namespace EliteAPI.Events
     public partial class CrewHireInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("CrewID")]
-        public long CrewId { get; set; }
+        public long CrewId { get; internal set; }
 
         [JsonProperty("Faction")]
-        public string Faction { get; set; }
+        public string Faction { get; internal set; }
 
         [JsonProperty("Cost")]
-        public long Cost { get; set; }
+        public long Cost { get; internal set; }
 
         [JsonProperty("CombatRank")]
-        public long CombatRank { get; set; }
+        public long CombatRank { get; internal set; }
     }
 
     public partial class CrewHireInfo

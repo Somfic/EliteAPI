@@ -10,16 +10,16 @@ namespace EliteAPI.Events
     public partial class PowerplayDefectInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("FromPower")]
-        public string FromPower { get; set; }
+        public string FromPower { get; internal set; }
 
         [JsonProperty("ToPower")]
-        public string ToPower { get; set; }
+        public string ToPower { get; internal set; }
     }
 
     public partial class PowerplayDefectInfo

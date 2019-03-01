@@ -10,28 +10,28 @@ namespace EliteAPI.Events
     public partial class RankInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Combat")]
-        public long Combat { get; set; }
+        public long Combat { get; internal set; }
 
         [JsonProperty("Trade")]
-        public long Trade { get; set; }
+        public long Trade { get; internal set; }
 
         [JsonProperty("Explore")]
-        public long Explore { get; set; }
+        public long Explore { get; internal set; }
 
         [JsonProperty("Empire")]
-        public long Empire { get; set; }
+        public long Empire { get; internal set; }
 
         [JsonProperty("Federation")]
-        public long Federation { get; set; }
+        public long Federation { get; internal set; }
 
         [JsonProperty("CQC")]
-        public long Cqc { get; set; }
+        public long Cqc { get; internal set; }
     }
 
     public partial class RankInfo

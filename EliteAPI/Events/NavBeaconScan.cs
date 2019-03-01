@@ -10,16 +10,16 @@ namespace EliteAPI.Events
     public partial class NavBeaconScanInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; set; }
+        public long SystemAddress { get; internal set; }
 
         [JsonProperty("NumBodies")]
-        public long NumBodies { get; set; }
+        public long NumBodies { get; internal set; }
     }
 
     public partial class NavBeaconScanInfo

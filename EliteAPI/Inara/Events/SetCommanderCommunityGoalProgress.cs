@@ -13,18 +13,18 @@ namespace EliteAPI.Inara.Events
         }
 
         [JsonProperty("communitygoalGameID")]
-        public long CommunitygoalGameId { get; set; }
+        public long CommunitygoalGameId { get; internal set; }
 
         [JsonProperty("contribution")]
-        public long Contribution { get; set; }
+        public long Contribution { get; internal set; }
 
         [JsonProperty("percentileBand")]
-        public long PercentileBand { get; set; }
+        public long PercentileBand { get; internal set; }
 
         [JsonProperty("percentileBandReward")]
-        public long PercentileBandReward { get; set; }
+        public long PercentileBandReward { get; internal set; }
 
         [JsonProperty("isTopRank")]
-        public bool IsTopRank { get; set; }
+        public bool IsTopRank { get; internal set; }
     }
 }

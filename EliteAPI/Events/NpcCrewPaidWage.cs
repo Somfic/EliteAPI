@@ -10,19 +10,19 @@ namespace EliteAPI.Events
     public partial class NpcCrewPaidWageInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("NpcCrewName")]
-        public string NpcCrewName { get; set; }
+        public string NpcCrewName { get; internal set; }
 
         [JsonProperty("NpcCrewId")]
-        public long NpcCrewId { get; set; }
+        public long NpcCrewId { get; internal set; }
 
         [JsonProperty("Amount")]
-        public long Amount { get; set; }
+        public long Amount { get; internal set; }
     }
 
     public partial class NpcCrewPaidWageInfo

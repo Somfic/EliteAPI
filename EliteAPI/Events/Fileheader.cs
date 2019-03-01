@@ -10,22 +10,22 @@ namespace EliteAPI.Events
     public partial class FileheaderInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("part")]
-        public long Part { get; set; }
+        public long Part { get; internal set; }
 
         [JsonProperty("language")]
-        public string Language { get; set; }
+        public string Language { get; internal set; }
 
         [JsonProperty("gameversion")]
-        public string Gameversion { get; set; }
+        public string Gameversion { get; internal set; }
 
         [JsonProperty("build")]
-        public string Build { get; set; }
+        public string Build { get; internal set; }
     }
 
     public partial class FileheaderInfo

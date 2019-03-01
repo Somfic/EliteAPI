@@ -46,10 +46,10 @@ namespace EliteAPI.Inara
         }
 
         [JsonProperty("header")]
-        public InaraConfiguration Configuration { get; set; }
+        public InaraConfiguration Configuration { get; internal set; }
 
         [JsonProperty("events")]
-        public List<InaraEvent> Events { get; set; }
+        public List<InaraEvent> Events { get; internal set; }
     }
 
     public class InaraConfiguration
@@ -62,22 +62,22 @@ namespace EliteAPI.Inara
         }
 
         [JsonProperty("appName")]
-        public string AppName { get; set; }
+        public string AppName { get; internal set; }
 
         [JsonProperty("appVersion")]
-        public string AppVersion { get; set; }
+        public string AppVersion { get; internal set; }
 
         [JsonProperty("isDeveloped")]
-        public bool? IsDeveloped { get; set; }
+        public bool? IsDeveloped { get; internal set; }
 
         [JsonProperty("APIkey")]
-        public string ApiKey { get; set; }
+        public string ApiKey { get; internal set; }
 
         [JsonProperty("commanderName")]
-        public string CommanderName { get; set; }
+        public string CommanderName { get; internal set; }
 
         [JsonProperty("commanderFrontierID")]
-        public string CommanderFrontierId { get; set; }
+        public string CommanderFrontierId { get; internal set; }
     }
 
     public class InaraEvent

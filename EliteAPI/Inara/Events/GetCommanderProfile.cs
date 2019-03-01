@@ -15,6 +15,6 @@ namespace EliteAPI.Inara.Events
         }
 
         [JsonProperty("searchName")]
-        public string SearchName { get; set; }
+        public string SearchName { get; internal set; }
     }
 }

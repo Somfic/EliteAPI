@@ -10,13 +10,13 @@ namespace EliteAPI.Events
     public partial class ScannedInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("ScanType")]
-        public string ScanType { get; set; }
+        public string ScanType { get; internal set; }
     }
 
     public partial class ScannedInfo

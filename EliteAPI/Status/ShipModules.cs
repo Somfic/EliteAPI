@@ -12,28 +12,28 @@
     public partial class ShipModules
     {
         [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; set; }
+        public DateTimeOffset Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Modules")]
-        public List<Module> Modules { get; set; }
+        public List<Module> Modules { get; internal set; }
     }
 
     public partial class Module
     {
         [JsonProperty("Slot")]
-        public string Slot { get; set; }
+        public string Slot { get; internal set; }
 
         [JsonProperty("Item")]
-        public string Item { get; set; }
+        public string Item { get; internal set; }
 
         [JsonProperty("Power")]
-        public double Power { get; set; }
+        public double Power { get; internal set; }
 
         [JsonProperty("Priority", NullValueHandling = NullValueHandling.Ignore)]
-        public long? Priority { get; set; }
+        public long? Priority { get; internal set; }
     }
 
     public partial class ShipModules

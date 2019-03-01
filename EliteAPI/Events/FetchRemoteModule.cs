@@ -10,34 +10,34 @@ namespace EliteAPI.Events
     public partial class FetchRemoteModuleInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("StorageSlot")]
-        public long StorageSlot { get; set; }
+        public long StorageSlot { get; internal set; }
 
         [JsonProperty("StoredItem")]
-        public string StoredItem { get; set; }
+        public string StoredItem { get; internal set; }
 
         [JsonProperty("StoredItem_Localised")]
-        public string StoredItemLocalised { get; set; }
+        public string StoredItemLocalised { get; internal set; }
 
         [JsonProperty("ServerId")]
-        public long ServerId { get; set; }
+        public long ServerId { get; internal set; }
 
         [JsonProperty("TransferCost")]
-        public long TransferCost { get; set; }
+        public long TransferCost { get; internal set; }
 
         [JsonProperty("TransferTime")]
-        public long TransferTime { get; set; }
+        public long TransferTime { get; internal set; }
 
         [JsonProperty("Ship")]
-        public string Ship { get; set; }
+        public string Ship { get; internal set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; set; }
+        public long ShipId { get; internal set; }
     }
 
     public partial class FetchRemoteModuleInfo

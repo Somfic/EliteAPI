@@ -10,40 +10,40 @@ namespace EliteAPI.Events
     public partial class FSSSignalDiscoveredInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; set; }
+        public long SystemAddress { get; internal set; }
 
         [JsonProperty("SignalName")]
-        public string SignalName { get; set; }
+        public string SignalName { get; internal set; }
 
         [JsonProperty("SignalName_Localised")]
-        public string SignalNameLocalised { get; set; }
+        public string SignalNameLocalised { get; internal set; }
 
         [JsonProperty("USSType")]
-        public string UssType { get; set; }
+        public string UssType { get; internal set; }
 
         [JsonProperty("USSType_Localised")]
-        public string UssTypeLocalised { get; set; }
+        public string UssTypeLocalised { get; internal set; }
 
         [JsonProperty("SpawningState")]
-        public string SpawningState { get; set; }
+        public string SpawningState { get; internal set; }
 
         [JsonProperty("SpawningState_Localised")]
-        public string SpawningStateLocalised { get; set; }
+        public string SpawningStateLocalised { get; internal set; }
 
         [JsonProperty("SpawningFaction")]
-        public string SpawningFaction { get; set; }
+        public string SpawningFaction { get; internal set; }
 
         [JsonProperty("ThreatLevel")]
-        public long ThreatLevel { get; set; }
+        public long ThreatLevel { get; internal set; }
 
         [JsonProperty("TimeRemaining")]
-        public double TimeRemaining { get; set; }
+        public double TimeRemaining { get; internal set; }
     }
 
     public partial class FSSSignalDiscoveredInfo

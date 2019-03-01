@@ -10,13 +10,13 @@ namespace EliteAPI.Events
     public partial class AsteroidCrackedInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Body")]
-        public string Body { get; set; }
+        public string Body { get; internal set; }
     }
 
     public partial class AsteroidCrackedInfo

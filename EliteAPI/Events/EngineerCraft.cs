@@ -10,76 +10,76 @@ namespace EliteAPI.Events
     public partial class EngineerCraftInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Slot")]
-        public string Slot { get; set; }
+        public string Slot { get; internal set; }
 
         [JsonProperty("Module")]
-        public string Module { get; set; }
+        public string Module { get; internal set; }
 
         [JsonProperty("ApplyExperimentalEffect")]
-        public string ApplyExperimentalEffect { get; set; }
+        public string ApplyExperimentalEffect { get; internal set; }
 
         [JsonProperty("Ingredients")]
-        public List<Ingredient> Ingredients { get; set; }
+        public List<Ingredient> Ingredients { get; internal set; }
 
         [JsonProperty("Engineer")]
-        public string Engineer { get; set; }
+        public string Engineer { get; internal set; }
 
         [JsonProperty("EngineerID")]
-        public long EngineerId { get; set; }
+        public long EngineerId { get; internal set; }
 
         [JsonProperty("BlueprintID")]
-        public long BlueprintId { get; set; }
+        public long BlueprintId { get; internal set; }
 
         [JsonProperty("BlueprintName")]
-        public string BlueprintName { get; set; }
+        public string BlueprintName { get; internal set; }
 
         [JsonProperty("Level")]
-        public long Level { get; set; }
+        public long Level { get; internal set; }
 
         [JsonProperty("Quality")]
-        public double Quality { get; set; }
+        public double Quality { get; internal set; }
 
         [JsonProperty("ExperimentalEffect")]
-        public string ExperimentalEffect { get; set; }
+        public string ExperimentalEffect { get; internal set; }
 
         [JsonProperty("ExperimentalEffect_Localised")]
-        public string ExperimentalEffectLocalised { get; set; }
+        public string ExperimentalEffectLocalised { get; internal set; }
 
         [JsonProperty("Modifiers")]
-        public List<Modifier> Modifiers { get; set; }
+        public List<Modifier> Modifiers { get; internal set; }
     }
 
     public partial class Ingredient
     {
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Name_Localised", NullValueHandling = NullValueHandling.Ignore)]
-        public string NameLocalised { get; set; }
+        public string NameLocalised { get; internal set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public long Count { get; internal set; }
     }
 
     public partial class Modifier
     {
         [JsonProperty("Label")]
-        public string Label { get; set; }
+        public string Label { get; internal set; }
 
         [JsonProperty("Value")]
-        public double Value { get; set; }
+        public double Value { get; internal set; }
 
         [JsonProperty("OriginalValue")]
-        public double OriginalValue { get; set; }
+        public double OriginalValue { get; internal set; }
 
         [JsonProperty("LessIsGood")]
-        public long LessIsGood { get; set; }
+        public long LessIsGood { get; internal set; }
     }
 
     public partial class EngineerCraftInfo

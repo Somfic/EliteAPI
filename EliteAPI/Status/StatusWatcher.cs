@@ -78,7 +78,7 @@ namespace EliteAPI.Status
             Value = value;
         }
 
-        public string @Event { get; set; }
-        public object Value { get; set; }
+        public string @Event { get; internal set; }
+        public object Value { get; internal set; }
     }
 }

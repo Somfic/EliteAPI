@@ -10,49 +10,49 @@ namespace EliteAPI.Events
     public partial class TechnologyBrokerInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("BrokerType")]
-        public string BrokerType { get; set; }
+        public string BrokerType { get; internal set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; set; }
+        public long MarketId { get; internal set; }
 
         [JsonProperty("ItemsUnlocked")]
-        public List<ItemsUnlocked> ItemsUnlocked { get; set; }
+        public List<ItemsUnlocked> ItemsUnlocked { get; internal set; }
 
         [JsonProperty("Commodities")]
-        public List<Commodity> Commodities { get; set; }
+        public List<Commodity> Commodities { get; internal set; }
 
         [JsonProperty("Materials")]
-        public List<Commodity> Materials { get; set; }
+        public List<Commodity> Materials { get; internal set; }
     }
 
     public partial class Commodity
     {
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; set; }
+        public string NameLocalised { get; internal set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public long Count { get; internal set; }
 
         [JsonProperty("Category", NullValueHandling = NullValueHandling.Ignore)]
-        public string Category { get; set; }
+        public string Category { get; internal set; }
     }
 
     public partial class ItemsUnlocked
     {
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; set; }
+        public string NameLocalised { get; internal set; }
     }
 
     public partial class TechnologyBrokerInfo

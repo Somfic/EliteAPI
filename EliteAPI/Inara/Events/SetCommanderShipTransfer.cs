@@ -13,21 +13,21 @@ namespace EliteAPI.Inara.Events
         }
 
         [JsonProperty("shipType")]
-        public string ShipType { get; set; }
+        public string ShipType { get; internal set; }
 
         [JsonProperty("shipGameID")]
-        public long ShipGameId { get; set; }
+        public long ShipGameId { get; internal set; }
 
         [JsonProperty("starsystemName")]
-        public string StarsystemName { get; set; }
+        public string StarsystemName { get; internal set; }
 
         [JsonProperty("stationName")]
-        public string StationName { get; set; }
+        public string StationName { get; internal set; }
 
         [JsonProperty("marketID")]
-        public long MarketID { get; set; }
+        public long MarketID { get; internal set; }
 
         [JsonProperty("transferTime")]
-        public long TransferTime { get; set; }
+        public long TransferTime { get; internal set; }
     }
 }

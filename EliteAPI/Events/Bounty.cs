@@ -10,34 +10,34 @@ namespace EliteAPI.Events
     public partial class BountyInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Rewards")]
-        public List<Reward> Rewards { get; set; }
+        public List<Reward> Rewards { get; internal set; }
 
         [JsonProperty("Target")]
-        public string Target { get; set; }
+        public string Target { get; internal set; }
 
         [JsonProperty("TotalReward")]
-        public long TotalReward { get; set; }
+        public long TotalReward { get; internal set; }
 
         [JsonProperty("VictimFaction")]
-        public string VictimFaction { get; set; }
+        public string VictimFaction { get; internal set; }
 
         [JsonProperty("SharedWithOthers")]
-        public long SharedWithOthers { get; set; }
+        public long SharedWithOthers { get; internal set; }
     }
 
     public partial class Reward
     {
         [JsonProperty("Faction")]
-        public string Faction { get; set; }
+        public string Faction { get; internal set; }
 
         [JsonProperty("Reward")]
-        public long RewardReward { get; set; }
+        public long RewardReward { get; internal set; }
     }
 
     public partial class BountyInfo

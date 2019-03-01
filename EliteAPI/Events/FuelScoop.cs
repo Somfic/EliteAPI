@@ -10,16 +10,16 @@ namespace EliteAPI.Events
     public partial class FuelScoopInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Scooped")]
-        public double Scooped { get; set; }
+        public double Scooped { get; internal set; }
 
         [JsonProperty("Total")]
-        public double Total { get; set; }
+        public double Total { get; internal set; }
     }
 
     public partial class FuelScoopInfo

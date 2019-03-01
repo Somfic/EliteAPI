@@ -10,19 +10,19 @@ namespace EliteAPI.Events
     public partial class ResurrectInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Option")]
-        public string Option { get; set; }
+        public string Option { get; internal set; }
 
         [JsonProperty("Cost")]
-        public long Cost { get; set; }
+        public long Cost { get; internal set; }
 
         [JsonProperty("Bankrupt")]
-        public bool Bankrupt { get; set; }
+        public bool Bankrupt { get; internal set; }
     }
 
     public partial class ResurrectInfo

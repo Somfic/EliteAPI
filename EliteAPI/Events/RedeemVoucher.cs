@@ -10,28 +10,28 @@ namespace EliteAPI.Events
     public partial class RedeemVoucherInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Type")]
-        public string Type { get; set; }
+        public string Type { get; internal set; }
 
         [JsonProperty("Amount")]
-        public long Amount { get; set; }
+        public long Amount { get; internal set; }
 
         [JsonProperty("Factions")]
-        public List<FSDFaction> Factions { get; set; }
+        public List<FSDFaction> Factions { get; internal set; }
     }
 
     public partial class FSDFaction
     {
         [JsonProperty("Faction")]
-        public string FactionFaction { get; set; }
+        public string FactionFaction { get; internal set; }
 
         [JsonProperty("Amount")]
-        public long Amount { get; set; }
+        public long Amount { get; internal set; }
     }
 
     public partial class RedeemVoucherInfo

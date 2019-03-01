@@ -12,28 +12,28 @@
     public partial class ShipStatus
     {
         [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; set; }
+        public DateTimeOffset Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Flags")]
-        public long Flags { get; set; }
+        public long Flags { get; internal set; }
 
         [JsonProperty("Pips")]
-        public List<long> Pips { get; set; }
+        public List<long> Pips { get; internal set; }
 
         [JsonProperty("FireGroup")]
-        public long FireGroup { get; set; }
+        public long FireGroup { get; internal set; }
 
         [JsonProperty("GuiFocus")]
-        public long GuiFocus { get; set; }
+        public long GuiFocus { get; internal set; }
 
         [JsonProperty("Fuel")]
-        public Fuel Fuel { get; set; }
+        public Fuel Fuel { get; internal set; }
 
         [JsonProperty("Cargo")]
-        public long Cargo { get; set; }
+        public long Cargo { get; internal set; }
 
         public bool Docked { get { return GetFlag(0); } }
         public bool Landed { get { return GetFlag(1); } }
@@ -65,7 +65,7 @@
         public bool AnalysisMode { get { return GetFlag(27); } }
         public bool NightVision { get { return GetFlag(28); } }
 
-        public bool InNoFireZone { get; set; }
+        public bool InNoFireZone { get; internal set; }
 
         public bool GetFlag(long bit)
         {
@@ -78,10 +78,10 @@
     public partial class Fuel
     {
         [JsonProperty("FuelMain")]
-        public long FuelMain { get; set; }
+        public long FuelMain { get; internal set; }
 
         [JsonProperty("FuelReservoir")]
-        public double FuelReservoir { get; set; }
+        public double FuelReservoir { get; internal set; }
     }
 
     public partial class ShipStatus

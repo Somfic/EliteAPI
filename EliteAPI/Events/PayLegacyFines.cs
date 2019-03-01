@@ -10,16 +10,16 @@ namespace EliteAPI.Events
     public partial class PayLegacyFinesInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Amount")]
-        public long Amount { get; set; }
+        public long Amount { get; internal set; }
 
         [JsonProperty("BrokerPercentage")]
-        public double BrokerPercentage { get; set; }
+        public double BrokerPercentage { get; internal set; }
     }
 
     public partial class PayLegacyFinesInfo

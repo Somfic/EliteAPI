@@ -10,19 +10,19 @@ namespace EliteAPI.Events
     public partial class HullDamageInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Health")]
-        public double Health { get; set; }
+        public double Health { get; internal set; }
 
         [JsonProperty("PlayerPilot")]
-        public bool PlayerPilot { get; set; }
+        public bool PlayerPilot { get; internal set; }
 
         [JsonProperty("Fighter")]
-        public bool Fighter { get; set; }
+        public bool Fighter { get; internal set; }
     }
 
     public partial class HullDamageInfo

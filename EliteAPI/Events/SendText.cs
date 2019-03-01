@@ -10,19 +10,19 @@ namespace EliteAPI.Events
     public partial class SendTextInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("To")]
-        public string To { get; set; }
+        public string To { get; internal set; }
 
         [JsonProperty("To_Localised")]
-        public string ToLocalised { get; set; }
+        public string ToLocalised { get; internal set; }
 
         [JsonProperty("Message")]
-        public string Message { get; set; }
+        public string Message { get; internal set; }
     }
 
     public partial class SendTextInfo

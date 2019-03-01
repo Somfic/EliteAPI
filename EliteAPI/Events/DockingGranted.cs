@@ -10,22 +10,22 @@ namespace EliteAPI.Events
     public partial class DockingGrantedInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("LandingPad")]
-        public long LandingPad { get; set; }
+        public long LandingPad { get; internal set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; set; }
+        public long MarketId { get; internal set; }
 
         [JsonProperty("StationName")]
-        public string StationName { get; set; }
+        public string StationName { get; internal set; }
 
         [JsonProperty("StationType")]
-        public string StationType { get; set; }
+        public string StationType { get; internal set; }
     }
 
     public partial class DockingGrantedInfo

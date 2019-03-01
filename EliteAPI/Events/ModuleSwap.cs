@@ -10,37 +10,37 @@ namespace EliteAPI.Events
     public partial class ModuleSwapInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; set; }
+        public long MarketId { get; internal set; }
 
         [JsonProperty("FromSlot")]
-        public string FromSlot { get; set; }
+        public string FromSlot { get; internal set; }
 
         [JsonProperty("ToSlot")]
-        public string ToSlot { get; set; }
+        public string ToSlot { get; internal set; }
 
         [JsonProperty("FromItem")]
-        public string FromItem { get; set; }
+        public string FromItem { get; internal set; }
 
         [JsonProperty("FromItem_Localised")]
-        public string FromItemLocalised { get; set; }
+        public string FromItemLocalised { get; internal set; }
 
         [JsonProperty("ToItem")]
-        public string ToItem { get; set; }
+        public string ToItem { get; internal set; }
 
         [JsonProperty("ToItem_Localised")]
-        public string ToItemLocalised { get; set; }
+        public string ToItemLocalised { get; internal set; }
 
         [JsonProperty("Ship")]
-        public string Ship { get; set; }
+        public string Ship { get; internal set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; set; }
+        public long ShipId { get; internal set; }
     }
 
     public partial class ModuleSwapInfo

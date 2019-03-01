@@ -10,39 +10,39 @@ namespace EliteAPI.Inara.Events
         }
 
         [JsonProperty("itemName")]
-        public string ItemName { get; set; }
+        public string ItemName { get; internal set; }
 
         [JsonProperty("itemValue")]
-        public long ItemValue { get; set; }
+        public long ItemValue { get; internal set; }
 
         [JsonProperty("isHot")]
-        public bool IsHot { get; set; }
+        public bool IsHot { get; internal set; }
 
         [JsonProperty("starsystemName")]
-        public string StarsystemName { get; set; }
+        public string StarsystemName { get; internal set; }
 
         [JsonProperty("stationName")]
-        public string StationName { get; set; }
+        public string StationName { get; internal set; }
 
         [JsonProperty("marketID")]
-        public long MarketId { get; set; }
+        public long MarketId { get; internal set; }
 
         [JsonProperty("engineering")]
-        public InaraEngineering Engineering { get; set; }
+        public InaraEngineering Engineering { get; internal set; }
     }
 
     public class InaraEngineering
     {
         [JsonProperty("blueprintName")]
-        public string BlueprintName { get; set; }
+        public string BlueprintName { get; internal set; }
 
         [JsonProperty("blueprintLevel")]
-        public long BlueprintLevel { get; set; }
+        public long BlueprintLevel { get; internal set; }
 
         [JsonProperty("blueprintQuality")]
-        public long BlueprintQuality { get; set; }
+        public long BlueprintQuality { get; internal set; }
 
         [JsonProperty("experimentalEffect")]
-        public string ExperimentalEffect { get; set; }
+        public string ExperimentalEffect { get; internal set; }
     }
 }

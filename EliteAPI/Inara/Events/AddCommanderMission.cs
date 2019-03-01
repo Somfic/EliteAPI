@@ -13,66 +13,66 @@ namespace EliteAPI.Inara.Events
         }
 
         [JsonProperty("missionName")]
-        public string MissionName { get; set; }
+        public string MissionName { get; internal set; }
 
         [JsonProperty("missionGameID")]
-        public string MissionGameID { get; set; }
+        public string MissionGameID { get; internal set; }
 
         [JsonProperty("missionExpiry")]
-        public DateTime MissionExpiry { get; set; }
+        public DateTime MissionExpiry { get; internal set; }
 
         [JsonProperty("influenceGain")]
         public string InfluenceGain { get => InfluenceGain.ToString(); }
-        public GainType InfluenceGainAmount { get; set; }
+        public GainType InfluenceGainAmount { get; internal set; }
 
         [JsonProperty("reputationGain")]
         public string ReputationGain { get => ReputationGain.ToString(); }
-        public GainType ReputationGainAmount { get; set; }
+        public GainType ReputationGainAmount { get; internal set; }
 
         [JsonProperty("starSystemNameOrigin")]
-        public string StarSystemNameOrigin { get; set; }
+        public string StarSystemNameOrigin { get; internal set; }
 
         [JsonProperty("stationNameOrigin")]
-        public string StationNameOrigin { get; set; }
+        public string StationNameOrigin { get; internal set; }
 
         [JsonProperty("minorFactionNameOrigin")]
-        public string MinorFactionNameOrigin { get; set; }
+        public string MinorFactionNameOrigin { get; internal set; }
 
         [JsonProperty("starSystemNameTarget")]
-        public string StarsystemNameTarget { get; set; }
+        public string StarsystemNameTarget { get; internal set; }
 
         [JsonProperty("stationNameTarget")]
-        public string StationNameTarget { get; set; }
+        public string StationNameTarget { get; internal set; }
 
         [JsonProperty("minorFactionNameTarget")]
-        public string MinorFactionNameTarget { get; set; }
+        public string MinorFactionNameTarget { get; internal set; }
 
         [JsonProperty("commodityName")]
-        public string CommodityName { get; set; }
+        public string CommodityName { get; internal set; }
 
         [JsonProperty("commodityCount")]
-        public long CommodityCount { get; set; }
+        public long CommodityCount { get; internal set; }
 
         [JsonProperty("targetName")]
-        public string TargetName { get; set; }
+        public string TargetName { get; internal set; }
 
         [JsonProperty("targetType")]
-        public string TargetType { get; set; }
+        public string TargetType { get; internal set; }
 
         [JsonProperty("killCount")]
-        public long KillCount { get; set; }
+        public long KillCount { get; internal set; }
 
         [JsonProperty("passengerType")]
-        public string PassengerType { get; set; }
+        public string PassengerType { get; internal set; }
 
         [JsonProperty("passengerCount")]
-        public long PassengerCount { get; set; }
+        public long PassengerCount { get; internal set; }
 
         [JsonProperty("passengerIsVIP")]
-        public bool? PassengerIsVIP { get; set; }
+        public bool? PassengerIsVIP { get; internal set; }
 
         [JsonProperty("passengerIsWanted")]
-        public bool? PassengerIsWanted { get; set; }
+        public bool? PassengerIsWanted { get; internal set; }
     }
 
     public enum GainType

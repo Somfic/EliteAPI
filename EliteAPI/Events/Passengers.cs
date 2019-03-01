@@ -10,31 +10,31 @@ namespace EliteAPI.Events
     public partial class PassengersInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Manifest")]
-        public List<Manifest> Manifest { get; set; }
+        public List<Manifest> Manifest { get; internal set; }
     }
 
     public partial class Manifest
     {
         [JsonProperty("MissionID")]
-        public long MissionId { get; set; }
+        public long MissionId { get; internal set; }
 
         [JsonProperty("Type")]
-        public string Type { get; set; }
+        public string Type { get; internal set; }
 
         [JsonProperty("VIP")]
-        public bool Vip { get; set; }
+        public bool Vip { get; internal set; }
 
         [JsonProperty("Wanted")]
-        public bool Wanted { get; set; }
+        public bool Wanted { get; internal set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public long Count { get; internal set; }
     }
 
     public partial class PassengersInfo

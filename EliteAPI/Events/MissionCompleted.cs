@@ -10,112 +10,112 @@ namespace EliteAPI.Events
     public partial class MissionCompletedInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Faction")]
-        public string Faction { get; set; }
+        public string Faction { get; internal set; }
 
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("MissionID")]
-        public long MissionId { get; set; }
+        public long MissionId { get; internal set; }
 
         [JsonProperty("TargetType")]
-        public string TargetType { get; set; }
+        public string TargetType { get; internal set; }
 
         [JsonProperty("TargetType_Localised")]
-        public string TargetTypeLocalised { get; set; }
+        public string TargetTypeLocalised { get; internal set; }
 
         [JsonProperty("TargetFaction")]
-        public string TargetFaction { get; set; }
+        public string TargetFaction { get; internal set; }
 
         [JsonProperty("NewDestinationSystem")]
-        public string NewDestinationSystem { get; set; }
+        public string NewDestinationSystem { get; internal set; }
 
         [JsonProperty("DestinationSystem")]
-        public string DestinationSystem { get; set; }
+        public string DestinationSystem { get; internal set; }
 
         [JsonProperty("NewDestinationStation")]
-        public string NewDestinationStation { get; set; }
+        public string NewDestinationStation { get; internal set; }
 
         [JsonProperty("DestinationStation")]
-        public string DestinationStation { get; set; }
+        public string DestinationStation { get; internal set; }
 
         [JsonProperty("Target")]
-        public string Target { get; set; }
+        public string Target { get; internal set; }
 
         [JsonProperty("Reward")]
-        public long Reward { get; set; }
+        public long Reward { get; internal set; }
 
         [JsonProperty("MaterialsReward")]
-        public List<MaterialsReward> MaterialsReward { get; set; }
+        public List<MaterialsReward> MaterialsReward { get; internal set; }
 
         [JsonProperty("FactionEffects")]
-        public List<FactionEffect> FactionEffects { get; set; }
+        public List<FactionEffect> FactionEffects { get; internal set; }
     }
 
     public class FactionEffect
     {
         [JsonProperty("Faction")]
-        public string Faction { get; set; }
+        public string Faction { get; internal set; }
 
         [JsonProperty("Effects")]
-        public List<Effect> Effects { get; set; }
+        public List<Effect> Effects { get; internal set; }
 
         [JsonProperty("Influence")]
-        public List<Influence> Influence { get; set; }
+        public List<Influence> Influence { get; internal set; }
 
         [JsonProperty("ReputationTrend")]
-        public string ReputationTrend { get; set; }
+        public string ReputationTrend { get; internal set; }
 
         [JsonProperty("Reputation")]
-        public string Reputation { get; set; }
+        public string Reputation { get; internal set; }
     }
 
     public class Effect
     {
         [JsonProperty("Effect")]
-        public string EffectEffect { get; set; }
+        public string EffectEffect { get; internal set; }
 
         [JsonProperty("Effect_Localised")]
-        public string EffectLocalised { get; set; }
+        public string EffectLocalised { get; internal set; }
 
         [JsonProperty("Trend")]
-        public string Trend { get; set; }
+        public string Trend { get; internal set; }
     }
 
     public class Influence
     {
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; set; }
+        public long SystemAddress { get; internal set; }
 
         [JsonProperty("Trend")]
-        public string Trend { get; set; }
+        public string Trend { get; internal set; }
 
         [JsonProperty("Influence")]
-        public string InfluenceInfluence { get; set; }
+        public string InfluenceInfluence { get; internal set; }
     }
 
     public class MaterialsReward
     {
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; set; }
+        public string NameLocalised { get; internal set; }
 
         [JsonProperty("Category")]
-        public string Category { get; set; }
+        public string Category { get; internal set; }
 
         [JsonProperty("Category_Localised")]
-        public string CategoryLocalised { get; set; }
+        public string CategoryLocalised { get; internal set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public long Count { get; internal set; }
     }
 
     public partial class MissionCompletedInfo

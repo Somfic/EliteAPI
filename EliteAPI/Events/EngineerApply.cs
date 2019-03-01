@@ -10,22 +10,22 @@ namespace EliteAPI.Events
     public partial class EngineerApplyInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Engineer")]
-        public string Engineer { get; set; }
+        public string Engineer { get; internal set; }
 
         [JsonProperty("Blueprint")]
-        public string Blueprint { get; set; }
+        public string Blueprint { get; internal set; }
 
         [JsonProperty("Level")]
-        public long Level { get; set; }
+        public long Level { get; internal set; }
 
         [JsonProperty("Override")]
-        public string Override { get; set; }
+        public string Override { get; internal set; }
     }
 
     public partial class EngineerApplyInfo

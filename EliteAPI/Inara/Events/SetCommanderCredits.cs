@@ -10,12 +10,12 @@ namespace EliteAPI.Inara.Events
         }
 
         [JsonProperty("commanderCredits")]
-        public long CommanderCredits { get; set; }
+        public long CommanderCredits { get; internal set; }
 
         [JsonProperty("commanderAssets")]
-        public long CommanderAssets { get; set; }
+        public long CommanderAssets { get; internal set; }
 
         [JsonProperty("commanderLoan")]
-        public long CommanderLoan { get; set; }
+        public long CommanderLoan { get; internal set; }
     }
 }

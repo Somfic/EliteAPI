@@ -17,10 +17,10 @@ namespace EliteAPI.Inara.Events
         }
 
         [JsonProperty("minorFactionName")]
-        public string FactionName { get; set; }
+        public string FactionName { get; internal set; }
 
         [Range(-1, 1)]
         [JsonProperty("minorFactionReputation")]
-        public decimal FactionReputation { get; set; }
+        public decimal FactionReputation { get; internal set; }
     }
 }

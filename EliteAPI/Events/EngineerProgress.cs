@@ -10,31 +10,31 @@ namespace EliteAPI.Events
     public partial class EngineerProgressInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Engineers")]
-        public List<Engineer> Engineers { get; set; }
+        public List<Engineer> Engineers { get; internal set; }
     }
 
     public partial class Engineer
     {
         [JsonProperty("Engineer")]
-        public string EngineerEngineer { get; set; }
+        public string EngineerEngineer { get; internal set; }
 
         [JsonProperty("EngineerID")]
-        public long EngineerId { get; set; }
+        public long EngineerId { get; internal set; }
 
         [JsonProperty("Progress")]
-        public string Progress { get; set; }
+        public string Progress { get; internal set; }
 
         [JsonProperty("RankProgress", NullValueHandling = NullValueHandling.Ignore)]
-        public long? RankProgress { get; set; }
+        public long? RankProgress { get; internal set; }
 
         [JsonProperty("Rank", NullValueHandling = NullValueHandling.Ignore)]
-        public long? Rank { get; set; }
+        public long? Rank { get; internal set; }
     }
 
     public partial class EngineerProgressInfo

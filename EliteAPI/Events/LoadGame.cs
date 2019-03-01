@@ -10,52 +10,52 @@ namespace EliteAPI.Events
     public partial class LoadGameInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("FID")]
-        public string Fid { get; set; }
+        public string Fid { get; internal set; }
 
         [JsonProperty("Commander")]
-        public string Commander { get; set; }
+        public string Commander { get; internal set; }
 
         [JsonProperty("Horizons")]
-        public bool Horizons { get; set; }
+        public bool Horizons { get; internal set; }
 
         [JsonProperty("Ship")]
-        public string Ship { get; set; }
+        public string Ship { get; internal set; }
 
         [JsonProperty("Ship_Localised")]
-        public string ShipLocalised { get; set; }
+        public string ShipLocalised { get; internal set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; set; }
+        public long ShipId { get; internal set; }
 
         [JsonProperty("ShipName")]
-        public string ShipName { get; set; }
+        public string ShipName { get; internal set; }
 
         [JsonProperty("ShipIdent")]
-        public string ShipIdent { get; set; }
+        public string ShipIdent { get; internal set; }
 
         [JsonProperty("FuelLevel")]
-        public double FuelLevel { get; set; }
+        public double FuelLevel { get; internal set; }
 
         [JsonProperty("FuelCapacity")]
-        public double FuelCapacity { get; set; }
+        public double FuelCapacity { get; internal set; }
 
         [JsonProperty("GameMode")]
-        public string GameMode { get; set; }
+        public string GameMode { get; internal set; }
 
         [JsonProperty("Group")]
-        public string Group { get; set; }
+        public string Group { get; internal set; }
 
         [JsonProperty("Credits")]
-        public long Credits { get; set; }
+        public long Credits { get; internal set; }
 
         [JsonProperty("Loan")]
-        public long Loan { get; set; }
+        public long Loan { get; internal set; }
     }
 
     public partial class LoadGameInfo

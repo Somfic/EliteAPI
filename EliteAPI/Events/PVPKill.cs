@@ -10,16 +10,16 @@ namespace EliteAPI.Events
     public partial class PVPKillInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Victim")]
-        public string Victim { get; set; }
+        public string Victim { get; internal set; }
 
         [JsonProperty("CombatRank")]
-        public long CombatRank { get; set; }
+        public long CombatRank { get; internal set; }
     }
 
     public partial class PVPKillInfo

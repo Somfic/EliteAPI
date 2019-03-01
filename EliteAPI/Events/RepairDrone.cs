@@ -10,16 +10,16 @@ namespace EliteAPI.Events
     public partial class RepairDroneInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("HullRepaired")]
-        public double HullRepaired { get; set; }
+        public double HullRepaired { get; internal set; }
 
         [JsonProperty("CockpitRepaired")]
-        public double CockpitRepaired { get; set; }
+        public double CockpitRepaired { get; internal set; }
     }
 
     public partial class RepairDroneInfo

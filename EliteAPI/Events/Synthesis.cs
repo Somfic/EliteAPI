@@ -10,28 +10,28 @@ namespace EliteAPI.Events
     public partial class SynthesisInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Materials")]
-        public List<SynthesisMaterial> Materials { get; set; }
+        public List<SynthesisMaterial> Materials { get; internal set; }
     }
 
     public partial class SynthesisMaterial
     {
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Name_Localised", NullValueHandling = NullValueHandling.Ignore)]
-        public string NameLocalised { get; set; }
+        public string NameLocalised { get; internal set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public long Count { get; internal set; }
     }
 
     public partial class SynthesisInfo

@@ -10,25 +10,25 @@ namespace EliteAPI.Events
     public partial class ApproachSettlementInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; set; }
+        public string NameLocalised { get; internal set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; set; }
+        public long MarketId { get; internal set; }
 
         [JsonProperty("Latitude")]
-        public double Latitude { get; set; }
+        public double Latitude { get; internal set; }
 
         [JsonProperty("Longitude")]
-        public double Longitude { get; set; }
+        public double Longitude { get; internal set; }
     }
 
     public partial class ApproachSettlementInfo

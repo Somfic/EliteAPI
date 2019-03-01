@@ -10,19 +10,19 @@ namespace EliteAPI.Events
     public partial class DatalinkVoucherInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Reward")]
-        public long Reward { get; set; }
+        public long Reward { get; internal set; }
 
         [JsonProperty("VictimFaction")]
-        public string VictimFaction { get; set; }
+        public string VictimFaction { get; internal set; }
 
         [JsonProperty("PayeeFaction")]
-        public string PayeeFaction { get; set; }
+        public string PayeeFaction { get; internal set; }
     }
 
     public partial class DatalinkVoucherInfo

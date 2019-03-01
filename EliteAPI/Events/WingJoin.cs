@@ -10,13 +10,13 @@ namespace EliteAPI.Events
     public partial class WingJoinInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Others")]
-        public List<string> Others { get; set; }
+        public List<string> Others { get; internal set; }
     }
 
     public partial class WingJoinInfo

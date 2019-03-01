@@ -11,15 +11,15 @@ namespace EliteAPI.Inara.Events
         }
 
         [JsonProperty("starsystemName")]
-        public string StarSystemName { get; set; }
+        public string StarSystemName { get; internal set; }
 
         [JsonProperty("opponentName")]
-        public string OpponentName { get; set; }
+        public string OpponentName { get; internal set; }
 
         [JsonProperty("wingOpponentNames")]
-        public List<string> WingOpponentNames { get; set; }
+        public List<string> WingOpponentNames { get; internal set; }
 
         [JsonProperty("isPlayer")]
-        public bool IsPlayer { get; set; }
+        public bool IsPlayer { get; internal set; }
     }
 }

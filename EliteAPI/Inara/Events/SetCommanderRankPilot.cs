@@ -17,11 +17,11 @@ namespace EliteAPI.Inara.Events
 
         [Range(0, 14)]
         [JsonProperty("rankValue")]
-        public long RankValue { get; set; }
+        public long RankValue { get; internal set; }
 
         [Range(0, 1)]
         [JsonProperty("rankProgress")]
-        public decimal RankProgress { get; set; }
+        public decimal RankProgress { get; internal set; }
     }
 
     public enum RankType

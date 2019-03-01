@@ -10,19 +10,19 @@ namespace EliteAPI.Events
     public partial class CommunityGoalRewardInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("System")]
-        public string System { get; set; }
+        public string System { get; internal set; }
 
         [JsonProperty("Reward")]
-        public long Reward { get; set; }
+        public long Reward { get; internal set; }
     }
 
     public partial class CommunityGoalRewardInfo

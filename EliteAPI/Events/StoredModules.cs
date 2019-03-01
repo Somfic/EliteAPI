@@ -10,61 +10,61 @@ namespace EliteAPI.Events
     public partial class StoredModulesInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; set; }
+        public long MarketId { get; internal set; }
 
         [JsonProperty("StationName")]
-        public string StationName { get; set; }
+        public string StationName { get; internal set; }
 
         [JsonProperty("StarSystem")]
-        public string StarSystem { get; set; }
+        public string StarSystem { get; internal set; }
 
         [JsonProperty("Items")]
-        public List<StoredModuleItem> Items { get; set; }
+        public List<StoredModuleItem> Items { get; internal set; }
     }
 
     public partial class StoredModuleItem
     {
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; set; }
+        public string NameLocalised { get; internal set; }
 
         [JsonProperty("StorageSlot")]
-        public long StorageSlot { get; set; }
+        public long StorageSlot { get; internal set; }
 
         [JsonProperty("StarSystem")]
-        public string StarSystem { get; set; }
+        public string StarSystem { get; internal set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; set; }
+        public long MarketId { get; internal set; }
 
         [JsonProperty("TransferCost")]
-        public long TransferCost { get; set; }
+        public long TransferCost { get; internal set; }
 
         [JsonProperty("TransferTime")]
-        public long TransferTime { get; set; }
+        public long TransferTime { get; internal set; }
 
         [JsonProperty("BuyPrice")]
-        public long BuyPrice { get; set; }
+        public long BuyPrice { get; internal set; }
 
         [JsonProperty("Hot")]
-        public bool Hot { get; set; }
+        public bool Hot { get; internal set; }
 
         [JsonProperty("EngineerModifications", NullValueHandling = NullValueHandling.Ignore)]
-        public string EngineerModifications { get; set; }
+        public string EngineerModifications { get; internal set; }
 
         [JsonProperty("Level", NullValueHandling = NullValueHandling.Ignore)]
-        public long? Level { get; set; }
+        public long? Level { get; internal set; }
 
         [JsonProperty("Quality", NullValueHandling = NullValueHandling.Ignore)]
-        public double? Quality { get; set; }
+        public double? Quality { get; internal set; }
     }
 
     public partial class StoredModulesInfo

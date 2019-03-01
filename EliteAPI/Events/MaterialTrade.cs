@@ -10,40 +10,40 @@ namespace EliteAPI.Events
     public partial class MaterialTradeInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; set; }
+        public long MarketId { get; internal set; }
 
         [JsonProperty("TraderType")]
-        public string TraderType { get; set; }
+        public string TraderType { get; internal set; }
 
         [JsonProperty("Paid")]
-        public Paid Paid { get; set; }
+        public Paid Paid { get; internal set; }
 
         [JsonProperty("Received")]
-        public Paid Received { get; set; }
+        public Paid Received { get; internal set; }
     }
 
     public partial class Paid
     {
         [JsonProperty("Material")]
-        public string Material { get; set; }
+        public string Material { get; internal set; }
 
         [JsonProperty("Material_Localised")]
-        public string MaterialLocalised { get; set; }
+        public string MaterialLocalised { get; internal set; }
 
         [JsonProperty("Category")]
-        public string Category { get; set; }
+        public string Category { get; internal set; }
 
         [JsonProperty("Category_Localised")]
-        public string CategoryLocalised { get; set; }
+        public string CategoryLocalised { get; internal set; }
 
         [JsonProperty("Quantity")]
-        public long Quantity { get; set; }
+        public long Quantity { get; internal set; }
     }
 
     public partial class MaterialTradeInfo

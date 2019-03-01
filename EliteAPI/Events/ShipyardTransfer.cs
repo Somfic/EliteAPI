@@ -10,37 +10,37 @@ namespace EliteAPI.Events
     public partial class ShipyardTransferInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("ShipType")]
-        public string ShipType { get; set; }
+        public string ShipType { get; internal set; }
 
         [JsonProperty("ShipType_Localised")]
-        public string ShipTypeLocalised { get; set; }
+        public string ShipTypeLocalised { get; internal set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; set; }
+        public long ShipId { get; internal set; }
 
         [JsonProperty("System")]
-        public string System { get; set; }
+        public string System { get; internal set; }
 
         [JsonProperty("ShipMarketID")]
-        public long ShipMarketId { get; set; }
+        public long ShipMarketId { get; internal set; }
 
         [JsonProperty("Distance")]
-        public double Distance { get; set; }
+        public double Distance { get; internal set; }
 
         [JsonProperty("TransferPrice")]
-        public long TransferPrice { get; set; }
+        public long TransferPrice { get; internal set; }
 
         [JsonProperty("TransferTime")]
-        public long TransferTime { get; set; }
+        public long TransferTime { get; internal set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; set; }
+        public long MarketId { get; internal set; }
     }
 
     public partial class ShipyardTransferInfo

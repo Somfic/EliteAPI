@@ -10,46 +10,46 @@ namespace EliteAPI.Events
     public partial class MassModuleStoreInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; set; }
+        public long MarketId { get; internal set; }
 
         [JsonProperty("Ship")]
-        public string Ship { get; set; }
+        public string Ship { get; internal set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; set; }
+        public long ShipId { get; internal set; }
 
         [JsonProperty("Items")]
-        public List<Item> Items { get; set; }
+        public List<Item> Items { get; internal set; }
     }
 
     public partial class Item
     {
         [JsonProperty("Slot")]
-        public string Slot { get; set; }
+        public string Slot { get; internal set; }
 
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; set; }
+        public string NameLocalised { get; internal set; }
 
         [JsonProperty("Hot")]
-        public bool Hot { get; set; }
+        public bool Hot { get; internal set; }
 
         [JsonProperty("EngineerModifications")]
-        public string EngineerModifications { get; set; }
+        public string EngineerModifications { get; internal set; }
 
         [JsonProperty("Level")]
-        public long Level { get; set; }
+        public long Level { get; internal set; }
 
         [JsonProperty("Quality")]
-        public double Quality { get; set; }
+        public double Quality { get; internal set; }
     }
 
     public partial class MassModuleStoreInfo

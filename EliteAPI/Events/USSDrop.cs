@@ -10,19 +10,19 @@ namespace EliteAPI.Events
     public partial class USSDropInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("USSType")]
-        public string UssType { get; set; }
+        public string UssType { get; internal set; }
 
         [JsonProperty("USSType_Localised")]
-        public string UssTypeLocalised { get; set; }
+        public string UssTypeLocalised { get; internal set; }
 
         [JsonProperty("USSThreat")]
-        public long UssThreat { get; set; }
+        public long UssThreat { get; internal set; }
     }
 
     public partial class USSDropInfo

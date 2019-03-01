@@ -10,6 +10,6 @@ namespace EliteAPI.Inara.Events
         }
 
         [JsonProperty("starsystemName")]
-        public string StarSystemName { get; set; }
+        public string StarSystemName { get; internal set; }
     }
 }

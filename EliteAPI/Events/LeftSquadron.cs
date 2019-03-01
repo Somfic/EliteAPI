@@ -10,13 +10,13 @@
     public partial class LeftSquadronInfo
     {
         [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; set; }
+        public DateTimeOffset Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("SquadronName")]
-        public string SquadronName { get; set; }
+        public string SquadronName { get; internal set; }
     }
 
     public partial class LeftSquadronInfo

@@ -10,12 +10,16 @@ using System.Xml;
 
 using EliteAPI.Bindings;
 using EliteAPI.Discord;
+using EliteAPI.Events;
 using EliteAPI.Status;
 
 using Newtonsoft.Json;
 
 namespace EliteAPI
 {
+    /// <summary>
+    /// Main EliteAPI class.
+    /// </summary>
     public class EliteDangerousAPI : IEliteDangerousAPI
     {
         /// <summary>
@@ -31,10 +35,10 @@ namespace EliteAPI
         /// <summary>
         /// Whether the API is currently running.
         /// </summary>
-        public bool IsRunning { get; set; }
+        public bool IsRunning { get; internal set; }
 
         /// <summary>
-        /// The Journal directoy that is being used by the API.
+        /// The Journal directory that is being used by the API.
         /// </summary>
         public DirectoryInfo JournalDirectory { get; internal set; }
 
@@ -64,7 +68,7 @@ namespace EliteAPI
         public ShipModules Modules { get { return ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this); } }
 
         /// <summary>
-        /// Holds information on all keybindings in the game set by the user.
+        /// Holds information on all key bindings in the game set by the user.
         /// </summary>
         public UserBindings Bindings
         {
@@ -100,7 +104,7 @@ namespace EliteAPI
         public RichPresenceClient DiscordRichPresence { get; internal set; }
 
         /// <summary>
-        /// Wether the API should skip the processing of previous events before the API was started.
+        /// Whether the API should skip the processing of previous events before the API was started.
         /// </summary>
         public bool SkipCatchUp { get; internal set; }
 
@@ -108,7 +112,7 @@ namespace EliteAPI
         /// Creates a new EliteDangerousAPI object.
         /// </summary>
         /// <param name="JournalDirectory">The directory in which the Player Journals are located.</param>
-        /// <param name="SkipCatchUp">Wether the API should skip the processing of previous events before the API was started.</param>
+        /// <param name="SkipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
         public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp = true)
         {
             //Set the fields to the parameters.
@@ -117,14 +121,6 @@ namespace EliteAPI
 
             //Reset the API.
             Reset();
-
-            try
-            {
-                //Go through file to set status fields.
-                //Select the last edited Journal file.
-                FileInfo journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
-            }
-            catch { }
         }
 
         /// <summary>
@@ -162,14 +158,23 @@ namespace EliteAPI
             //Select the last edited Journal file.
             FileInfo journalFile = null;
 
+            //Find the last edited Journal file.
             try
             {
                 Logger.LogDebug($"Searching for 'Journal.*.log' files in {JournalDirectory}.");
                 journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
                 Logger.LogDebug($"Found '{journalFile}'.");
-                Logger.LogSuccess("Could find Journal files."); 
+                Logger.LogSuccess("Found Journal files."); 
             }
             catch(Exception ex) { IsRunning = false; Logger.LogError("Could not start EliteAPI. Could not find Journal files.", ex); return; }
+
+            //Check if Elite: Dangerous is running by checking the last event for 'Shutdown'.
+            try
+            {
+                dynamic e = JsonConvert.DeserializeObject<dynamic>(File.ReadAllLines(journalFile.FullName).Last());
+                if(e.@event == "Shutdown") { Logger.LogWarning("Elite: Dangerous is not running."); }
+            }
+            catch { }
 
             //Process the journal file.
             ProcessJournal(journalFile, SkipCatchUp);
@@ -216,25 +221,25 @@ namespace EliteAPI
                 string json = streamReader.ReadLine();
                 if (!processedLogs.Contains(json))
                 {
-                    if (!doNotTrigger) { Process(json); } //Only process it if it's marked true.
+                    if (!doNotTrigger) { ProcessJson(json); } //Only process it if it's marked true.
                     processedLogs.Add(json);
                 }
             }
         }
 
-        private void Process(string json)
+        private void ProcessJson(string json)
         {
             dynamic obj = null;
             string eventName = "";
 
             try
             {
-                //Turn the json into an object to find out which event it is.
+                //Turn the JSON into an object to find out which event it is.
                 obj = JsonConvert.DeserializeObject<dynamic>(json);
                 eventName = obj.@event;
                 Logger.LogDebug($"Processing event '{eventName}'.");
             }
-            catch(Exception ex) { Logger.LogWarning($"Couldn't process json ({json}).", ex); }
+            catch(Exception ex) { Logger.LogWarning($"Couldn't process JSON ({json}).", ex); }
 
             //Invoke the matching event.
             Type eventClass; MethodInfo eventMethod;

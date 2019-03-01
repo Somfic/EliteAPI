@@ -10,37 +10,37 @@ namespace EliteAPI.Events
     public partial class ScreenshotInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Filename")]
-        public string Filename { get; set; }
+        public string Filename { get; internal set; }
 
         [JsonProperty("Width")]
-        public long Width { get; set; }
+        public long Width { get; internal set; }
 
         [JsonProperty("Height")]
-        public long Height { get; set; }
+        public long Height { get; internal set; }
 
         [JsonProperty("System")]
-        public string System { get; set; }
+        public string System { get; internal set; }
 
         [JsonProperty("Body")]
-        public string Body { get; set; }
+        public string Body { get; internal set; }
 
         [JsonProperty("Latitude")]
-        public double Latitude { get; set; }
+        public double Latitude { get; internal set; }
 
         [JsonProperty("Longitude")]
-        public double Longitude { get; set; }
+        public double Longitude { get; internal set; }
 
         [JsonProperty("Heading")]
-        public long Heading { get; set; }
+        public long Heading { get; internal set; }
 
         [JsonProperty("Altitude")]
-        public double Altitude { get; set; }
+        public double Altitude { get; internal set; }
     }
 
     public partial class ScreenshotInfo

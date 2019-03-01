@@ -10,22 +10,22 @@ namespace EliteAPI.Events
     public partial class StartJumpInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("JumpType")]
-        public string JumpType { get; set; }
+        public string JumpType { get; internal set; }
 
         [JsonProperty("StarSystem")]
-        public string StarSystem { get; set; }
+        public string StarSystem { get; internal set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; set; }
+        public long SystemAddress { get; internal set; }
 
         [JsonProperty("StarClass")]
-        public string StarClass { get; set; }
+        public string StarClass { get; internal set; }
     }
 
     public partial class StartJumpInfo

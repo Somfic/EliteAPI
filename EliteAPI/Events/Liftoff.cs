@@ -10,19 +10,19 @@ namespace EliteAPI.Events
     public partial class LiftoffInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("PlayerControlled")]
-        public bool PlayerControlled { get; set; }
+        public bool PlayerControlled { get; internal set; }
 
         [JsonProperty("Latitude")]
-        public double Latitude { get; set; }
+        public double Latitude { get; internal set; }
 
         [JsonProperty("Longitude")]
-        public double Longitude { get; set; }
+        public double Longitude { get; internal set; }
     }
 
     public partial class LiftoffInfo

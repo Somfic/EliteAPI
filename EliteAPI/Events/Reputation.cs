@@ -10,22 +10,22 @@ namespace EliteAPI.Events
     public partial class ReputationInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Empire")]
-        public double Empire { get; set; }
+        public double Empire { get; internal set; }
 
         [JsonProperty("Federation")]
-        public double Federation { get; set; }
+        public double Federation { get; internal set; }
 
         [JsonProperty("Independent")]
-        public double Independent { get; set; }
+        public double Independent { get; internal set; }
 
         [JsonProperty("Alliance")]
-        public double Alliance { get; set; }
+        public double Alliance { get; internal set; }
     }
 
     public partial class ReputationInfo

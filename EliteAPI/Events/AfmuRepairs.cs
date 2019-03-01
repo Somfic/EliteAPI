@@ -10,22 +10,22 @@ namespace EliteAPI.Events
     public partial class AfmuRepairsInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Module")]
-        public string Module { get; set; }
+        public string Module { get; internal set; }
 
         [JsonProperty("Module_Localised")]
-        public string ModuleLocalised { get; set; }
+        public string ModuleLocalised { get; internal set; }
 
         [JsonProperty("FullyRepaired")]
-        public bool FullyRepaired { get; set; }
+        public bool FullyRepaired { get; internal set; }
 
         [JsonProperty("Health")]
-        public double Health { get; set; }
+        public double Health { get; internal set; }
     }
 
     public partial class AfmuRepairsInfo

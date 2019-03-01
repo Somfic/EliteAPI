@@ -10,31 +10,31 @@ namespace EliteAPI.Events
     public partial class MultiSellExplorationDataInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Discovered")]
-        public List<Discovered> Discovered { get; set; }
+        public List<Discovered> Discovered { get; internal set; }
 
         [JsonProperty("BaseValue")]
-        public long BaseValue { get; set; }
+        public long BaseValue { get; internal set; }
 
         [JsonProperty("Bonus")]
-        public long Bonus { get; set; }
+        public long Bonus { get; internal set; }
 
         [JsonProperty("TotalEarnings")]
-        public long TotalEarnings { get; set; }
+        public long TotalEarnings { get; internal set; }
     }
 
     public partial class Discovered
     {
         [JsonProperty("SystemName")]
-        public string SystemName { get; set; }
+        public string SystemName { get; internal set; }
 
         [JsonProperty("NumBodies")]
-        public long NumBodies { get; set; }
+        public long NumBodies { get; internal set; }
     }
 
     public partial class MultiSellExplorationDataInfo

@@ -10,22 +10,22 @@ namespace EliteAPI.Events
     public partial class SAAScanCompleteInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("BodyName")]
-        public string BodyName { get; set; }
+        public string BodyName { get; internal set; }
 
         [JsonProperty("BodyID")]
-        public long BodyId { get; set; }
+        public long BodyId { get; internal set; }
 
         [JsonProperty("ProbesUsed")]
-        public long ProbesUsed { get; set; }
+        public long ProbesUsed { get; internal set; }
 
         [JsonProperty("EfficiencyTarget")]
-        public long EfficiencyTarget { get; set; }
+        public long EfficiencyTarget { get; internal set; }
     }
 
     public partial class SAAScanCompleteInfo

@@ -194,11 +194,11 @@ namespace EliteAPI.Discord
 
     public class RichPresence
     {
-        public string Text { get; set; }
-        public string TextTwo { get; set; }
-        public string Icon { get; set; }
-        public string IconText { get; set; }
-        public string IconTwo { get; set; }
-        public string IconTextTwo { get; set; }
+        public string Text { get; internal set; }
+        public string TextTwo { get; internal set; }
+        public string Icon { get; internal set; }
+        public string IconText { get; internal set; }
+        public string IconTwo { get; internal set; }
+        public string IconTextTwo { get; internal set; }
     }
 }

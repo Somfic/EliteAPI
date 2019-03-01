@@ -10,16 +10,16 @@ namespace EliteAPI.Events
     public partial class DatalinkScanInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Message")]
-        public string Message { get; set; }
+        public string Message { get; internal set; }
 
         [JsonProperty("Message_Localised")]
-        public string MessageLocalised { get; set; }
+        public string MessageLocalised { get; internal set; }
     }
 
     public partial class DatalinkScanInfo

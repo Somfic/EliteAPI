@@ -10,13 +10,13 @@ namespace EliteAPI.Events
     public partial class ChangeCrewRoleInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Role")]
-        public string Role { get; set; }
+        public string Role { get; internal set; }
     }
 
     public partial class ChangeCrewRoleInfo

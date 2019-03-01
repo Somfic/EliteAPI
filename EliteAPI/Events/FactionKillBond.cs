@@ -10,25 +10,25 @@ namespace EliteAPI.Events
     public partial class FactionKillBondInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Reward")]
-        public long Reward { get; set; }
+        public long Reward { get; internal set; }
 
         [JsonProperty("AwardingFaction")]
-        public string AwardingFaction { get; set; }
+        public string AwardingFaction { get; internal set; }
 
         [JsonProperty("AwardingFaction_Localised")]
-        public string AwardingFactionLocalised { get; set; }
+        public string AwardingFactionLocalised { get; internal set; }
 
         [JsonProperty("VictimFaction")]
-        public string VictimFaction { get; set; }
+        public string VictimFaction { get; internal set; }
 
         [JsonProperty("VictimFaction_Localised")]
-        public string VictimFactionLocalised { get; set; }
+        public string VictimFactionLocalised { get; internal set; }
     }
 
     public partial class FactionKillBondInfo

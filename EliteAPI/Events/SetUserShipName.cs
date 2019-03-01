@@ -10,22 +10,22 @@ namespace EliteAPI.Events
     public partial class SetUserShipNameInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Ship")]
-        public string Ship { get; set; }
+        public string Ship { get; internal set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; set; }
+        public long ShipId { get; internal set; }
 
         [JsonProperty("UserShipName")]
-        public string UserShipName { get; set; }
+        public string UserShipName { get; internal set; }
 
         [JsonProperty("UserShipId")]
-        public string UserShipId { get; set; }
+        public string UserShipId { get; internal set; }
     }
 
     public partial class SetUserShipNameInfo

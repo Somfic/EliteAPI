@@ -10,13 +10,13 @@ namespace EliteAPI.Events
     public partial class MusicInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("MusicTrack")]
-        public string MusicTrack { get; set; }
+        public string MusicTrack { get; internal set; }
     }
 
     public partial class MusicInfo

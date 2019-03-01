@@ -10,25 +10,25 @@ namespace EliteAPI.Events
     public partial class InterdictionInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Success")]
-        public bool Success { get; set; }
+        public bool Success { get; internal set; }
 
         [JsonProperty("IsPlayer")]
-        public bool IsPlayer { get; set; }
+        public bool IsPlayer { get; internal set; }
 
         [JsonProperty("Interdicted")]
-        public string Interdicted { get; set; }
+        public string Interdicted { get; internal set; }
 
         [JsonProperty("Faction")]
-        public string Faction { get; set; }
+        public string Faction { get; internal set; }
 
         [JsonProperty("Power")]
-        public string Power { get; set; }
+        public string Power { get; internal set; }
     }
 
     public partial class InterdictionInfo

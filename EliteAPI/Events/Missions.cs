@@ -10,34 +10,34 @@ namespace EliteAPI.Events
     public partial class MissionsInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Active")]
-        public List<Active> Active { get; set; }
+        public List<Active> Active { get; internal set; }
 
         [JsonProperty("Failed")]
-        public List<object> Failed { get; set; }
+        public List<object> Failed { get; internal set; }
 
         [JsonProperty("Complete")]
-        public List<object> Complete { get; set; }
+        public List<object> Complete { get; internal set; }
     }
 
     public partial class Active
     {
         [JsonProperty("MissionID")]
-        public long MissionId { get; set; }
+        public long MissionId { get; internal set; }
 
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("PassengerMission")]
-        public bool PassengerMission { get; set; }
+        public bool PassengerMission { get; internal set; }
 
         [JsonProperty("Expires")]
-        public long Expires { get; set; }
+        public long Expires { get; internal set; }
     }
 
     public partial class MissionsInfo

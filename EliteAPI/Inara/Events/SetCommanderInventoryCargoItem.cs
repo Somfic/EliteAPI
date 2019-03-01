@@ -16,15 +16,15 @@ namespace EliteAPI.Inara.Events
         }
 
         [JsonProperty("itemName")]
-        public string ItemName { get; set; }
+        public string ItemName { get; internal set; }
 
         [JsonProperty("itemCount")]
-        public long ItemCount { get; set; }
+        public long ItemCount { get; internal set; }
 
         [JsonProperty("isStolen")]
-        public bool? IsStolen { get; set; }
+        public bool? IsStolen { get; internal set; }
 
         [JsonProperty("missionGameID")]
-        public int? MissionID { get; set; }
+        public int? MissionID { get; internal set; }
     }
 }

@@ -10,49 +10,49 @@ namespace EliteAPI.Events
     public partial class CodexEntryInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("EntryID")]
-        public long EntryId { get; set; }
+        public long EntryId { get; internal set; }
 
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; set; }
+        public string NameLocalised { get; internal set; }
 
         [JsonProperty("SubCategory")]
-        public string SubCategory { get; set; }
+        public string SubCategory { get; internal set; }
 
         [JsonProperty("SubCategory_Localised")]
-        public string SubCategoryLocalised { get; set; }
+        public string SubCategoryLocalised { get; internal set; }
 
         [JsonProperty("Category")]
-        public string Category { get; set; }
+        public string Category { get; internal set; }
 
         [JsonProperty("Category_Localised")]
-        public string CategoryLocalised { get; set; }
+        public string CategoryLocalised { get; internal set; }
 
         [JsonProperty("Region")]
-        public string Region { get; set; }
+        public string Region { get; internal set; }
 
         [JsonProperty("Region_Localised")]
-        public string RegionLocalised { get; set; }
+        public string RegionLocalised { get; internal set; }
 
         [JsonProperty("System")]
-        public string System { get; set; }
+        public string System { get; internal set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; set; }
+        public long SystemAddress { get; internal set; }
 
         [JsonProperty("IsNewEntry")]
-        public bool IsNewEntry { get; set; }
+        public bool IsNewEntry { get; internal set; }
 
         [JsonProperty("VoucherAmount")]
-        public long VoucherAmount { get; set; }
+        public long VoucherAmount { get; internal set; }
     }
 
     public partial class CodexEntryInfo

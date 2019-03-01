@@ -10,13 +10,13 @@ namespace EliteAPI.Events
     public partial class LaunchDroneInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Type")]
-        public string Type { get; set; }
+        public string Type { get; internal set; }
     }
 
     public partial class LaunchDroneInfo

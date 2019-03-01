@@ -10,55 +10,55 @@ namespace EliteAPI.Events
     public partial class ShipTargetedInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("TargetLocked")]
-        public bool TargetLocked { get; set; }
+        public bool TargetLocked { get; internal set; }
 
         [JsonProperty("Ship")]
-        public string Ship { get; set; }
+        public string Ship { get; internal set; }
 
         [JsonProperty("Ship_Localised")]
-        public string ShipLocalised { get; set; }
+        public string ShipLocalised { get; internal set; }
 
         [JsonProperty("ScanStage")]
-        public long ScanStage { get; set; }
+        public long ScanStage { get; internal set; }
 
         [JsonProperty("PilotName")]
-        public string PilotName { get; set; }
+        public string PilotName { get; internal set; }
 
         [JsonProperty("PilotName_Localised")]
-        public string PilotNameLocalised { get; set; }
+        public string PilotNameLocalised { get; internal set; }
 
         [JsonProperty("PilotRank")]
-        public string PilotRank { get; set; }
+        public string PilotRank { get; internal set; }
 
         [JsonProperty("ShieldHealth")]
-        public double ShieldHealth { get; set; }
+        public double ShieldHealth { get; internal set; }
 
         [JsonProperty("HullHealth")]
-        public double HullHealth { get; set; }
+        public double HullHealth { get; internal set; }
 
         [JsonProperty("Faction")]
-        public string Faction { get; set; }
+        public string Faction { get; internal set; }
 
         [JsonProperty("LegalStatus")]
-        public string LegalStatus { get; set; }
+        public string LegalStatus { get; internal set; }
 
         [JsonProperty("Bounty")]
-        public long Bounty { get; set; }
+        public long Bounty { get; internal set; }
 
         [JsonProperty("Subsystem")]
-        public string Subsystem { get; set; }
+        public string Subsystem { get; internal set; }
 
         [JsonProperty("Subsystem_Localised")]
-        public string SubsystemLocalised { get; set; }
+        public string SubsystemLocalised { get; internal set; }
 
         [JsonProperty("SubsystemHealth")]
-        public double SubsystemHealth { get; set; }
+        public double SubsystemHealth { get; internal set; }
     }
 
     public partial class ShipTargetedInfo

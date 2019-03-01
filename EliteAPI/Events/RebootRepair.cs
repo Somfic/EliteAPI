@@ -10,13 +10,13 @@ namespace EliteAPI.Events
     public partial class RebootRepairInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Modules")]
-        public List<string> Modules { get; set; }
+        public List<string> Modules { get; internal set; }
     }
 
     public partial class RebootRepairInfo

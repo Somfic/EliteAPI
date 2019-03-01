@@ -10,13 +10,13 @@ namespace EliteAPI.Events
     public partial class ShieldStateInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("ShieldsUp")]
-        public bool ShieldsUp { get; set; }
+        public bool ShieldsUp { get; internal set; }
     }
 
     public partial class ShieldStateInfo

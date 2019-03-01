@@ -12,34 +12,34 @@
     public partial class ShipCargo
     {
         [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; set; }
+        public DateTimeOffset Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Vessel")]
-        public string Vessel { get; set; }
+        public string Vessel { get; internal set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public long Count { get; internal set; }
 
         [JsonProperty("Inventory")]
-        public List<Item> Inventory { get; set; }
+        public List<Item> Inventory { get; internal set; }
     }
 
     public partial class Item
     {
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; internal set; }
 
         [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; set; }
+        public string NameLocalised { get; internal set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public long Count { get; internal set; }
 
         [JsonProperty("Stolen")]
-        public long Stolen { get; set; }
+        public long Stolen { get; internal set; }
     }
 
     public partial class ShipCargo

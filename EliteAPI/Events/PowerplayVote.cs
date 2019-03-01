@@ -10,19 +10,19 @@ namespace EliteAPI.Events
     public partial class PowerplayVoteInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Power")]
-        public string Power { get; set; }
+        public string Power { get; internal set; }
 
         [JsonProperty("Votes")]
-        public long Votes { get; set; }
+        public long Votes { get; internal set; }
 
         [JsonProperty("VoteToConsolidate")]
-        public long VoteToConsolidate { get; set; }
+        public long VoteToConsolidate { get; internal set; }
     }
 
     public partial class PowerplayVoteInfo

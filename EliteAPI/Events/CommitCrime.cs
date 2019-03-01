@@ -10,25 +10,25 @@ namespace EliteAPI.Events
     public partial class CommitCrimeInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("CrimeType")]
-        public string CrimeType { get; set; }
+        public string CrimeType { get; internal set; }
 
         [JsonProperty("Faction")]
-        public string Faction { get; set; }
+        public string Faction { get; internal set; }
 
         [JsonProperty("Victim")]
-        public string Victim { get; set; }
+        public string Victim { get; internal set; }
 
         [JsonProperty("Victim_Localised")]
-        public string VictimLocalised { get; set; }
+        public string VictimLocalised { get; internal set; }
 
         [JsonProperty("Bounty")]
-        public long Bounty { get; set; }
+        public long Bounty { get; internal set; }
     }
 
     public partial class CommitCrimeInfo

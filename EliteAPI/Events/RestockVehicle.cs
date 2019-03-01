@@ -10,22 +10,22 @@ namespace EliteAPI.Events
     public partial class RestockVehicleInfo
     {
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; internal set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; }
+        public string Event { get; internal set; }
 
         [JsonProperty("Type")]
-        public string Type { get; set; }
+        public string Type { get; internal set; }
 
         [JsonProperty("Loadout")]
-        public string Loadout { get; set; }
+        public string Loadout { get; internal set; }
 
         [JsonProperty("Cost")]
-        public long Cost { get; set; }
+        public long Cost { get; internal set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public long Count { get; internal set; }
     }
 
     public partial class RestockVehicleInfo

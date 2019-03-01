@@ -7,7 +7,7 @@ namespace EliteCoPilot.Services
     public class ServiceHandler
     {
         private List<IService> Services;
-        private EliteDangerousAPI EliteAPI;
+        private readonly EliteDangerousAPI EliteAPI;
 
         public ServiceHandler(EliteDangerousAPI EliteAPI)
         {

@@ -11,8 +11,8 @@ EliteAPI's goal is to greatly reduce the time it takes for programmers to hook i
 
 The project is completely open-source and is hosted on [GitHub](https://github.com/EliteAPI/EliteAPI). The .NET library currently has more than 2,000 downloads on [NuGet](https://www.nuget.org/packages/EliteAPI/) already!
 
-- You can download the .NET library via [GitHub](https://github.com/EliteAPI/EliteAPI/releases) or [NuGet](https://www.nuget.org/packages/EliteAPI/).
-- You can download the VoiceAttack plugin (codename *EliteVA*) via [GitHub](https://github.com/EliteAPI/EliteAPI/releases) (*EliteVA-setup.exe*).
+- You can download the *.NET library* via [GitHub](https://github.com/EliteAPI/EliteAPI/releases) or [NuGet](https://www.nuget.org/packages/EliteAPI/).
+- You can download the *VoiceAttack plugin* (codename *EliteVA*) via [GitHub](https://github.com/EliteAPI/EliteAPI/releases) (*EliteVA-setup.exe*).
 - You can download the *VoiceMacro plugin* (codename *EliteMacro*) via [GitHub](https://github.com/EliteAPI/EliteAPI/releases) (*EliteMacro-setup.exe*) (***Requires beta version 1.3.x***).
 
 If you have any questions / ideas / issues, please do not hesitate to contact me on the *[EliteAPI discord](https://discordapp.com/invite/jwpFUPZ)*.

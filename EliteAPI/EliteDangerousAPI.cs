@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 
 using EliteAPI.Bindings;
 using EliteAPI.Discord;
-using EliteAPI.Events;
 using EliteAPI.Status;
 
 using Newtonsoft.Json;
@@ -97,6 +95,7 @@ namespace EliteAPI
 
         internal StatusWatcher StatusWatcher { get; set; }
         internal CargoWatcher CargoWatcher { get; set; }
+        internal JournalParser JournalParser { get; set; }
 
         /// <summary>
         /// Rich presence service for Discord.
@@ -118,6 +117,7 @@ namespace EliteAPI
             //Set the fields to the parameters.
             this.JournalDirectory = JournalDirectory;
             this.SkipCatchUp = SkipCatchUp;
+            JournalParser = new JournalParser(this);
 
             //Reset the API.
             Reset();
@@ -137,7 +137,7 @@ namespace EliteAPI
             this.StatusWatcher = new StatusWatcher(this);
             this.CargoWatcher = new CargoWatcher(this);
             this.Status = ShipStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this);
-            processedLogs = new List<string>();
+            JournalParser.processedLogs = new List<string>();
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace EliteAPI
             catch { }
 
             //Process the journal file.
-            ProcessJournal(journalFile, SkipCatchUp);
+            JournalParser.ProcessJournal(journalFile, SkipCatchUp);
 
             //Go async.
             Task.Run(() =>
@@ -187,11 +187,11 @@ namespace EliteAPI
                 {
                     //Select the last edited Journal file.
                     FileInfo newJournalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
-                    if(journalFile.FullName != newJournalFile.FullName) { Logger.LogDebug($"Switched to '{newJournalFile}'."); processedLogs.Clear(); }
-                    journalFile = newJournalFile; 
+                    if(journalFile.FullName != newJournalFile.FullName) { Logger.LogDebug($"Switched to '{newJournalFile}'."); JournalParser.processedLogs.Clear(); }
+                    journalFile = newJournalFile;
 
                     //Process the journal file.
-                    ProcessJournal(journalFile, false);
+                    JournalParser.ProcessJournal(journalFile, false);
 
                     //Wait half a second to avoid overusing the CPU.
                     Thread.Sleep(500);
@@ -200,60 +200,7 @@ namespace EliteAPI
 
             s.Stop();
 
-            Logger.LogInfo("EliteAPI is ready.");
             Logger.LogDebug($"Finished in {s.ElapsedMilliseconds}ms.");
-        }
-
-        private List<string> processedLogs = new List<string>();
-
-        private void ProcessJournal(FileInfo logFile, bool doNotTrigger = true)
-        {
-            //Create a stream from the log file.
-            FileStream fileStream = logFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-
-            //Create a stream from the file stream.
-            StreamReader streamReader = new StreamReader(fileStream);
-
-            //Go through the stream.
-            while (!streamReader.EndOfStream)
-            {
-                //If this string hasn't been processed yet, process it and mark it as processed.
-                string json = streamReader.ReadLine();
-                if (!processedLogs.Contains(json))
-                {
-                    if (!doNotTrigger) { ProcessJson(json); } //Only process it if it's marked true.
-                    processedLogs.Add(json);
-                }
-            }
-        }
-
-        private void ProcessJson(string json)
-        {
-            dynamic obj = null;
-            string eventName = "";
-
-            try
-            {
-                //Turn the JSON into an object to find out which event it is.
-                obj = JsonConvert.DeserializeObject<dynamic>(json);
-                eventName = obj.@event;
-                Logger.LogDebug($"Processing event '{eventName}'.");
-            }
-            catch(Exception ex) { Logger.LogWarning($"Couldn't process JSON ({json}).", ex); }
-
-            //Invoke the matching event.
-            Type eventClass; MethodInfo eventMethod;
-
-            try { eventClass = Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name == $"{eventName}Info").First();
-                try { eventMethod = eventClass.GetMethod("Process");
-                    try { eventMethod.Invoke(null, new object[] { json, this }); }
-                    catch (Exception ex) { Logger.LogError($"Could not invoke event method '{eventName}Info.Process()'.", ex); }
-                } catch (Exception ex) { Logger.LogWarning($"Could not find event method '{eventName}Info.Process()'.", ex); }
-            } catch (Exception ex) { Logger.LogWarning($"Could not find event class '{eventName}Info'.", ex); }
-
-            //Invoke the AllEvent.
-            try { Events.InvokeAllEvent(obj);  }
-            catch (Exception ex) { Logger.LogError($"Could not invoke AllEvent for '{eventName}'.", ex); }
         }
 
         /// <summary>
@@ -266,5 +213,15 @@ namespace EliteAPI
 
             Logger.LogInfo("Stopping EliteAPI.");
         }
+
+        /// <summary>
+        /// Gets triggered when EliteAPI has successfully loaded up.
+        /// </summary>
+        public event System.EventHandler OnReady;
+
+        /// <summary>
+        /// Gets triggered when EliteAPI could not successfully load up.
+        /// </summary>
+        public event System.EventHandler OnError;
     }
 }

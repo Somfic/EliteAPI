@@ -121,6 +121,7 @@
     </Reference>
     <Reference Include="vmAPI">
       <HintPath>..\lib\vmAPI.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>

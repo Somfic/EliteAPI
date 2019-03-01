@@ -167,8 +167,14 @@ namespace EliteAPI.Logging
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.SetCursorPosition(8, Console.CursorTop);
             Console.Write(": ");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(content);
+
+            if (severity == Severity.Error || severity == Severity.Warning || severity == Severity.Success)
+            {
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = color;
+            }
+            else { Console.ForegroundColor = color; }
+            Console.WriteLine($" {content} ");
             
             if(ex != null)
             {

@@ -154,6 +154,7 @@ namespace EliteAPI
 
             Logger.LogInfo("Starting EliteAPI.");
             Logger.LogDebug("EliteAPI v" + Version + ".");
+            Logger.LogInfo($"Journal directory set to '{JournalDirectory}'.");
 
             //Mark the API as running.
             IsRunning = true;
@@ -165,17 +166,49 @@ namespace EliteAPI
             //Find the last edited Journal file.
             try
             {
-                Logger.LogDebug($"Searching for 'Journal.*.log' files in {JournalDirectory}.");
+                Logger.LogDebug($"Searching for 'Journal.*.log' files.");
                 journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
                 Logger.LogDebug($"Found '{journalFile}'.");
-                Logger.LogSuccess("Found Journal files."); 
             }
             catch(Exception ex)
             {
                 IsRunning = false;
-                OnError?.Invoke(this, new Tuple<string, Exception>("Could not find Journal files", ex));
+                OnError?.Invoke(this, new Tuple<string, Exception>($"Could not find Journal files in '{JournalDirectory}'", ex));
                 return;
             }
+
+            //Check for the support JSON files.
+            bool foundStatus = false;
+
+            try
+            {
+                //Status.json.
+                if (File.Exists(JournalDirectory.FullName + "\\Status.json")) { Logger.LogDebug("Found 'Status.json'."); foundStatus = true; }
+                else { Logger.LogWarning($"Could not find 'Status.json' file."); foundStatus = false; }
+
+                //Cargo.json.
+                if (File.Exists(JournalDirectory.FullName + "\\Cargo.json")) { Logger.LogDebug("Found 'Cargo.json'."); }
+                else { Logger.LogWarning($"Could not find 'Cargo.json' file."); }
+
+                //Shipyard.json.
+                if (File.Exists(JournalDirectory.FullName + "\\Shipyard.json")) { Logger.LogDebug("Found 'Shipyard.json'."); }
+                else { Logger.LogDebug($"Could not find 'Shipyard.json' file."); }
+
+                //Outfitting.json.
+                if (File.Exists(JournalDirectory.FullName + "\\Outfitting.json")) { Logger.LogDebug("Found 'Outfitting.json'."); }
+                else { Logger.LogDebug($"Could not find 'Outfitting.json' file."); }
+
+                //Market.json.
+                if (File.Exists(JournalDirectory.FullName + "\\Market.json")) { Logger.LogDebug("Found 'Market.json'."); }
+                else { Logger.LogDebug($"Could not find 'Market.json' file."); }   
+                
+                //ModulesInfo.json.
+                if (File.Exists(JournalDirectory.FullName + "\\ModulesInfo.json")) { Logger.LogDebug("Found 'ModulesInfo.json'."); }
+                else { Logger.LogDebug($"Could not find 'ModulesInfo.json' file."); }
+            }
+            catch { }
+
+            if(foundStatus) { Logger.LogInfo("Found Journal and Status files."); }
 
             //Check if Elite: Dangerous is running by checking the last event for 'Shutdown'.
             try
@@ -227,11 +260,11 @@ namespace EliteAPI
         /// <summary>
         /// Gets triggered when EliteAPI has successfully loaded up.
         /// </summary>
-        public event System.EventHandler OnReady;
+        public event EventHandler OnReady;
 
         /// <summary>
         /// Gets triggered when EliteAPI could not successfully load up.
         /// </summary>
-        public event System.EventHandler<Tuple<string, Exception>> OnError;
+        public event EventHandler<Tuple<string, Exception>> OnError;
     }
 }

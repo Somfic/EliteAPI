@@ -115,7 +115,7 @@ namespace EliteAPI
         public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp = true)
         {
             //Register events.
-            this.OnError += (sender, e) => Logger.LogError("Could not start EliteAPI. Could not find Journal files.", e);
+            this.OnError += (sender, e) => Logger.LogError($"Could not start EliteAPI. {e.Item1}", e.Item2);
             this.OnReady += (sender, e) => Logger.LogSuccess("EliteAPI is ready.");
 
             //Set the fields to the parameters.
@@ -173,7 +173,7 @@ namespace EliteAPI
             catch(Exception ex)
             {
                 IsRunning = false;
-                OnReady?.Invoke(this, EventArgs.Empty);
+                OnError?.Invoke(this, new Tuple<string, Exception>("Could not find Journal files", ex));
                 return;
             }
 
@@ -232,6 +232,6 @@ namespace EliteAPI
         /// <summary>
         /// Gets triggered when EliteAPI could not successfully load up.
         /// </summary>
-        public event System.EventHandler<Exception> OnError;
+        public event System.EventHandler<Tuple<string, Exception>> OnError;
     }
 }

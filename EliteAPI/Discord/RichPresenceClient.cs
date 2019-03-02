@@ -26,7 +26,9 @@ namespace EliteAPI.Discord
         private void UpdatePresence(RichPresence presence)
         {
             //If we're not running, return;
-            //if(!IsRunning) { return; }
+            if(!IsRunning) { return; }
+
+            api.Logger.LogDebug($"Updated rich presence: '{Newtonsoft.Json.JsonConvert.SerializeObject(presence)}'.");
 
             DiscordRPC.RichPresence discordPresence = new DiscordRPC.RichPresence
             {
@@ -51,13 +53,16 @@ namespace EliteAPI.Discord
         {
             //Create RPC client.
             rpc = new DiscordRpcClient(clientID, true);
-            api.Logger.LogInfo("Starting rich presence. ");
+            api.Logger.LogInfo("Starting rich presence.");
 
             //Subscribe to events.
-            rpc.OnConnectionFailed += (sender, e) => api.Logger.LogError("There was an error while trying to connect to the rich presence.");
-            rpc.OnError += (sender, e) => api.Logger.LogError("Rich presence error.", new Exception(e.Message));
-            rpc.OnReady += (sender, e) => { api.Logger.LogInfo("Rich presence ready."); IsReady = true; };
-
+            rpc.OnConnectionEstablished += (sender, e) => api.Logger.LogDebug($"Rich presence connected to pipe {e.ConnectedPipe}.");
+            rpc.OnConnectionFailed += (sender, e) => api.Logger.LogWarning($"There was an error while trying to connect to rich presence pipe {e.FailedPipe}. Make sure Discord is running.");
+            rpc.OnError += (sender, e) => api.Logger.LogError($"Rich presence stumbled upon an error.", new Exception(e.Message));
+            rpc.OnReady += (sender, e) => { api.Logger.LogSuccess($"Rich presence is running."); IsReady = true; };
+            rpc.OnClose += (sender, e) => api.Logger.LogDebug($"Rich presence closed: '{e.Reason}'.");
+            rpc.OnJoin += (sender, e) => api.Logger.LogDebug($"Rich presence joined with secret '{e.Secret}'.");
+            rpc.OnJoinRequested += (sender, e) => api.Logger.LogDebug($"Rich presence joining with '{e.User.Username}' (ID {e.User.ID})");
 
             //Start the RPC.
             //Mark as running.
@@ -182,6 +187,8 @@ namespace EliteAPI.Discord
         /// </summary>
         public void TurnOff()
         {
+            api.Logger.LogInfo("Terminating rich presence.");   
+
             //Remove all presences from queue, and clear it.
             rpc.DequeueAll();
             rpc.ClearPresence();

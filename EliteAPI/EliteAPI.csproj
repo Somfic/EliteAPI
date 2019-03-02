@@ -127,6 +127,7 @@
   <ItemGroup>
     <Compile Include="Bindings\UserBindings.cs" />
     <Compile Include="Discord\RichPresenceClient.cs" />
+    <Compile Include="EDSM\EDSMConnection.cs" />
     <Compile Include="EliteDangerousAPI.cs" />
     <Compile Include="Events\.EventHandler.cs" />
     <Compile Include="Events\AfmuRepairs.cs" />

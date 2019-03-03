@@ -9,6 +9,7 @@
             api.Events.LeaveBodyEvent += (sender, e) => { StarSystem = e.StarSystem; Body = e.Body; BodyType = "Planet"; };
             api.Events.DockedEvent += (sender, e) => { Station = e.StationName; };
             api.Events.DockingRequestedEvent += (sender, e) => { Station = e.StationName; };
+            api.Events.FSDJumpEvent += (sender, e) => { StarSystem = e.StarSystem; };
 
         }
 

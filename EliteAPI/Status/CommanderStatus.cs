@@ -1,4 +1,6 @@
-﻿namespace EliteAPI.Status
+﻿using EliteAPI.Events;
+
+namespace EliteAPI.Status
 {
     public class CommanderStatus
     {
@@ -7,6 +9,7 @@
             api.Events.LoadGameEvent += (sender, e) => { Commander = e.Commander; Credits = e.Credits; };
             api.Events.RankEvent += (sender, e) => { EmpireRank = e.Empire; FederationRank = e.Federation; CombatRank = e.Combat; TradeRank = e.Trade; ExplorationRank = e.Explore; CqcRank = e.Cqc; };
             api.Events.ProgressEvent += (sender, e) => { EmpireRankProgress = e.Empire; FederationRankProgress = e.Federation; CombatRankProgress = e.Combat; TradeRankProgress = e.Trade; ExplorationRankProgress = e.Explore; CqcRankProgress = e.Cqc; };
+            api.Events.StatisticsEvent += (sender, e) => { Statistics = e; };
         }
 
         public string Commander { get; private set; }
@@ -31,6 +34,8 @@
         public string CombatRankLocalised { get { return RankUtil.Combat(CombatRank); } }
         public string TradeRankLocalised { get { return RankUtil.Trade(TradeRank); } }
         public string ExplorationRankLocalised { get { return RankUtil.Exploration(ExplorationRank); } }
+
+        public StatisticsInfo Statistics { get; internal set; }
     }
 
     static class RankUtil

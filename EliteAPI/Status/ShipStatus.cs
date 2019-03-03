@@ -5,7 +5,7 @@
 
     using System.Globalization;
     using System.IO;
-    using System.Linq;
+
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
@@ -78,7 +78,7 @@
     public partial class Fuel
     {
         [JsonProperty("FuelMain")]
-        public long FuelMain { get; internal set; }
+        public double FuelMain { get; internal set; }
 
         [JsonProperty("FuelReservoir")]
         public double FuelReservoir { get; internal set; }

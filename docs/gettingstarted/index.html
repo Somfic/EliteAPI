@@ -73,24 +73,29 @@
 
     <hr>
 
-    <p>Make sure you are installing into the correct directory when installing EliteAPI for VoiceAttack:</p>
+    <p>Make sure you are installing into the correct directory when installing EliteAPI for third party plugins.</p>
     <table>
       <tr>
         <th>Installation type</th>
         <th>Path</th>
       </tr>
       <tr>
-        <td>Usual installation</td>
+        <td>VoiceAttack, usual installation</td>
         <td>C:\Program Files (x86)\VoiceAttack\Apps</td>
       </tr>
       <tr>
-        <td>Steam installation</td>
-        <td>C:\Program Files (x86)\Steam\steamapps\common\VoiceAttack\Apps</td>
+        <td>VoiceAttack, Steam installation</td>
+        <td>C:\Program Files (x86)\Steam\steamapps\common\VoiceAttack\Apps\EliteVA</td>
+      </tr>
+      <tr>
+        <td>VoiceMacro</td>
+        <td>C:\Program Files (x86)\VoiceMacro\Plugins/td>
       </tr>
     </table>
-    <p>You'll also have to enable <i>Plugin Support</i> in VoiceAttack in order for plugins to be, well, supported. After having enabled this option, you have to restart VoiceAttack.</p>
-    <p>If you have a custom Player Journal directory you can make use of the <i>EliteVA.ini</i> file, which you'll be able to find in your VoiceAttack directory after having ran EliteVA. Open the file, and write <i>path=Your\Custom\Path\Here</i> in it. Do not surround the path by <i>"</i> or <i>'</i>, spaces in the path are supported just fine. The next time EliteVA gets started up, it wil detect your custom path and look for the Journals there, if it cannot find them there, it will default back to the standard location.</p>
-    <p>If you want to update the custom path without restarting VoiceAttack, that is possible too. Create a new command, and add an Execute an External Plugin Function block. Select EliteAPI and in the plugin context panel, enter 'updatejournal'. When you now trigger this command, EliteVA will open EliteVA.ini again, and look in the custom path for Journals.</p>
+    <p><b>EliteMacro only works on VoiceMacro v1.3.0.11+!</b></p>
+    <p>You'll have to enable <i>Plugin Support</i> in VoiceAttack in order for plugins to be, well, supported. After having enabled this option, you have to restart VoiceAttack.</p>
+    <p>If you have a custom Player Journal directory you can make use of the <i>EliteVA.ini</i> or <i>EliteMacro.ini</i> file, which you'll be able to find in your third-party directory after having ran EliteAPI at least once. Open the file, and write <i>path=Your\Custom\Path\Here</i> in it. Do not surround the path by <i>"</i> or <i>'</i>, spaces in the path are supported just fine. The next time the plugin starts up, it wil detect your custom path and look for the Journals there, if it cannot find them there, it will default back to the standard location.</p>
+    
     <!-- Use C# highlighting script. -->
     <script src="../scripts/prism.js"></script>
   </body>

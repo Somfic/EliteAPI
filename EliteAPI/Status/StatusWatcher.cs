@@ -11,16 +11,24 @@ namespace EliteAPI.Status
         private FileSystemWatcher statusWatcher;
 
         private bool InNoFireZone = false;
+        private double JumpRange = -1;
 
         internal StatusWatcher(EliteDangerousAPI api)
         {
             this.api = api;
 
             api.Events.ReceiveTextEvent += Events_ReceiveTextEvent;
+            api.Events.FSDJumpEvent += Events_FSDJumpEvent;
+
             statusWatcher = new FileSystemWatcher(api.JournalDirectory.FullName, "Status.json") { EnableRaisingEvents = true };
             statusWatcher.Changed += (sender, e) => Update();
 
             Update();
+        }
+
+        private void Events_FSDJumpEvent(object sender, Events.FSDJumpInfo e)
+        {
+            if(JumpRange < e.JumpDist) { JumpRange = e.JumpDist; }
         }
 
         private void Events_ReceiveTextEvent(object sender, Events.ReceiveTextInfo e)
@@ -41,6 +49,7 @@ namespace EliteAPI.Status
             if(newStatus == null) { api.Logger.LogWarning("Could not update Status.json file."); return; }
 
             newStatus.InNoFireZone = InNoFireZone;
+            newStatus.JumpRange = JumpRange;
 
             //Set the new status.
             api.Status = newStatus;
@@ -74,11 +83,11 @@ namespace EliteAPI.Status
     {
         public StatusEvent(string eventName, object value)
         {
-            @event = eventName;
-            this.value = value;
+            Event = eventName;
+            Value = value;
         }
 
-        public string @event { get; internal set; }
-        public object value { get; internal set; }
+        public string Event { get; internal set; }
+        public object Value { get; internal set; }
     }
 }

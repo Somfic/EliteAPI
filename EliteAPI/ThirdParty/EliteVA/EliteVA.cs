@@ -148,6 +148,7 @@ namespace EliteAPI.ThirdParty.EliteVA
                         _vaProxy.SetText("EliteAPI.Rank.Exploration", commander.ExplorationRankLocalised);
 
                         _vaProxy.SetDecimal("EliteAPI.JumpRange", (decimal)status.JumpRange);
+                        _vaProxy.SetDecimal("EliteAPI.FuelMax", (decimal)status.Fuel.MaxFuel);
                     }
                     catch (Exception ex)
                     {

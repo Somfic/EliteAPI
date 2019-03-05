@@ -83,6 +83,8 @@
 
         [JsonProperty("FuelReservoir")]
         public double FuelReservoir { get; internal set; }
+
+        public double MaxFuel { get; internal set; }
     }
 
     public partial class ShipStatus

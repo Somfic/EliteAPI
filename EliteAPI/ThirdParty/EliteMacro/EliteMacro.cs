@@ -142,6 +142,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
                         vmCommand.SetVariable("EliteAPI.Rank.Exploration_p", commander.ExplorationRankLocalised);
 
                         vmCommand.SetVariable("EliteAPI.JumpRange_p", status.JumpRange.ToString());
+                        vmCommand.SetVariable("EliteAPI.FuelMax_p", status.Fuel.MaxFuel.ToString());
                     }
                     catch (Exception ex)
                     {

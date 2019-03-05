@@ -12,6 +12,7 @@ namespace EliteAPI.Status
 
         private bool InNoFireZone = false;
         private double JumpRange = -1;
+        private double MaxFuel = -1;
 
         internal StatusWatcher(EliteDangerousAPI api)
         {
@@ -19,11 +20,17 @@ namespace EliteAPI.Status
 
             api.Events.ReceiveTextEvent += Events_ReceiveTextEvent;
             api.Events.FSDJumpEvent += Events_FSDJumpEvent;
+            api.Events.LoadGameEvent += Events_LoadGameEvent;
 
             statusWatcher = new FileSystemWatcher(api.JournalDirectory.FullName, "Status.json") { EnableRaisingEvents = true };
             statusWatcher.Changed += (sender, e) => Update();
 
             Update();
+        }
+
+        private void Events_LoadGameEvent(object sender, Events.LoadGameInfo e)
+        {
+            MaxFuel = e.FuelCapacity;
         }
 
         private void Events_FSDJumpEvent(object sender, Events.FSDJumpInfo e)
@@ -50,6 +57,7 @@ namespace EliteAPI.Status
 
             newStatus.InNoFireZone = InNoFireZone;
             newStatus.JumpRange = JumpRange;
+            newStatus.Fuel.MaxFuel = MaxFuel;
 
             //Set the new status.
             api.Status = newStatus;

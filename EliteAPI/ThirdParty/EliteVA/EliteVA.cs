@@ -83,7 +83,7 @@ namespace EliteAPI.ThirdParty.EliteVA
 
             try
             {
-                eventName = "((EliteAPI." + e.@event + "))";
+                eventName = "((EliteAPI." + e.@Event + "))";
 
                 if (eventName.Contains("Status"))
                 {
@@ -146,6 +146,8 @@ namespace EliteAPI.ThirdParty.EliteVA
                         _vaProxy.SetText("EliteAPI.Rank.Combat", commander.CombatRankLocalised);
                         _vaProxy.SetText("EliteAPI.Rank.Trade", commander.TradeRankLocalised);
                         _vaProxy.SetText("EliteAPI.Rank.Exploration", commander.ExplorationRankLocalised);
+
+                        _vaProxy.SetDecimal("EliteAPI.JumpRange", (decimal)status.JumpRange);
                     }
                     catch (Exception ex)
                     {

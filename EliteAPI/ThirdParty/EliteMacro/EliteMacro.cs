@@ -81,7 +81,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
 
             try
             {
-                eventName = "((EliteAPI." + e.@event + "))";
+                eventName = "((EliteAPI." + e.Event + "))";
                 string macroName = vmCommand.CommandExists(eventName);
 
                 if (eventName.Contains("Status"))
@@ -92,53 +92,56 @@ namespace EliteAPI.ThirdParty.EliteMacro
                         var commander = api.Commander;
                         var location = api.Location;
 
-                        SetVar("EliteAPI.Docked_p", status.Docked.ToString());
-                        SetVar("EliteAPI.Landed_p", status.Landed.ToString());
-                        SetVar("EliteAPI.Gear_p", status.Gear.ToString());
-                        SetVar("EliteAPI.Shields_p", status.Shields.ToString());
-                        SetVar("EliteAPI.Supercruise_p", status.Supercruise.ToString());
-                        SetVar("EliteAPI.FlightAssist_p", status.FlightAssist.ToString());
-                        SetVar("EliteAPI.Hardpoints_p", status.Hardpoints.ToString());
-                        SetVar("EliteAPI.Winging_p", status.Winging.ToString());
-                        SetVar("EliteAPI.Lights_p", status.Lights.ToString());
-                        SetVar("EliteAPI.CargoScoop_p", status.CargoScoop.ToString());
-                        SetVar("EliteAPI.SilentRunning_p", status.SilentRunning.ToString());
-                        SetVar("EliteAPI.Scooping_p", status.Scooping.ToString());
-                        SetVar("EliteAPI.SrvHandbreak_p", status.SrvHandbreak.ToString());
-                        SetVar("EliteAPI.SrvTurrent_p", status.SrvTurrent.ToString());
-                        SetVar("EliteAPI.SrvNearShip_p", status.SrvNearShip.ToString());
-                        SetVar("EliteAPI.SrvDriveAssist_p", status.SrvDriveAssist.ToString());
-                        SetVar("EliteAPI.SrvDriveAssist_p", status.SrvDriveAssist.ToString());
-                        SetVar("EliteAPI.FsdCharging_p", status.FsdCharging.ToString());
-                        SetVar("EliteAPI.FsdCooldown_p", status.FsdCooldown.ToString());
-                        SetVar("EliteAPI.LowFuel_p", status.LowFuel.ToString());
-                        SetVar("EliteAPI.Overheating_p", status.Overheating.ToString());
-                        SetVar("EliteAPI.HasLatlong_p", status.HasLatlong.ToString());
-                        SetVar("EliteAPI.InDanger_p", status.InDanger.ToString());
-                        SetVar("EliteAPI.InInterdiction_p", status.InInterdiction.ToString());
-                        SetVar("EliteAPI.InMothership_p", status.InMothership.ToString());
-                        SetVar("EliteAPI.InNoFireZone_p", status.InNoFireZone.ToString());
-                        SetVar("EliteAPI.InFighter_p", status.InFighter.ToString());
-                        SetVar("EliteAPI.InSRV_p", status.InSRV.ToString());
-                        SetVar("EliteAPI.AnalysisMode_p", status.AnalysisMode.ToString());
-                        SetVar("EliteAPI.NightVision_p", status.NightVision.ToString());
-                        SetVar("EliteAPI.Pips.Systems_p", status.Pips[0].ToString());
-                        SetVar("EliteAPI.Pips.Engines_p", status.Pips[1].ToString());
-                        SetVar("EliteAPI.Pips.Weapons_p", status.Pips[2].ToString());
-                        SetVar("EliteAPI.FireGroup_p", status.FireGroup.ToString());
-                        SetVar("EliteAPI.GuiFocus_p", status.GuiFocus.ToString());
-                        SetVar("EliteAPI.Fuel_p", status.Fuel.FuelMain.ToString());
-                        SetVar("EliteAPI.FuelReservoir_p", status.Fuel.FuelReservoir.ToString());
-                        SetVar("EliteAPI.Cargo_p", status.Cargo.ToString());
+                        vmCommand.SetVariable("EliteAPI.Docked_p", status.Docked.ToString());
+                        vmCommand.SetVariable("EliteAPI.Landed_p", status.Landed.ToString());
+                        vmCommand.SetVariable("EliteAPI.Gear_p", status.Gear.ToString());
+                        vmCommand.SetVariable("EliteAPI.Shields_p", status.Shields.ToString());
+                        vmCommand.SetVariable("EliteAPI.Supercruise_p", status.Supercruise.ToString());
+                        vmCommand.SetVariable("EliteAPI.FlightAssist_p", status.FlightAssist.ToString());
+                        vmCommand.SetVariable("EliteAPI.MassLocked_p", status.MassLocked.ToString());
+                        vmCommand.SetVariable("EliteAPI.Hardpoints_p", status.Hardpoints.ToString());
+                        vmCommand.SetVariable("EliteAPI.Winging_p", status.Winging.ToString());
+                        vmCommand.SetVariable("EliteAPI.Lights_p", status.Lights.ToString());
+                        vmCommand.SetVariable("EliteAPI.CargoScoop_p", status.CargoScoop.ToString());
+                        vmCommand.SetVariable("EliteAPI.SilentRunning_p", status.SilentRunning.ToString());
+                        vmCommand.SetVariable("EliteAPI.Scooping_p", status.Scooping.ToString());
+                        vmCommand.SetVariable("EliteAPI.SrvHandbreak_p", status.SrvHandbreak.ToString());
+                        vmCommand.SetVariable("EliteAPI.SrvTurrent_p", status.SrvTurrent.ToString());
+                        vmCommand.SetVariable("EliteAPI.SrvNearShip_p", status.SrvNearShip.ToString());
+                        vmCommand.SetVariable("EliteAPI.SrvDriveAssist_p", status.SrvDriveAssist.ToString());
+                        vmCommand.SetVariable("EliteAPI.SrvDriveAssist_p", status.SrvDriveAssist.ToString());
+                        vmCommand.SetVariable("EliteAPI.FsdCharging_p", status.FsdCharging.ToString());
+                        vmCommand.SetVariable("EliteAPI.FsdCooldown_p", status.FsdCooldown.ToString());
+                        vmCommand.SetVariable("EliteAPI.LowFuel_p", status.LowFuel.ToString());
+                        vmCommand.SetVariable("EliteAPI.Overheating_p", status.Overheating.ToString());
+                        vmCommand.SetVariable("EliteAPI.HasLatlong_p", status.HasLatlong.ToString());
+                        vmCommand.SetVariable("EliteAPI.InDanger_p", status.InDanger.ToString());
+                        vmCommand.SetVariable("EliteAPI.InInterdiction_p", status.InInterdiction.ToString());
+                        vmCommand.SetVariable("EliteAPI.InMothership_p", status.InMothership.ToString());
+                        vmCommand.SetVariable("EliteAPI.InNoFireZone_p", status.InNoFireZone.ToString());
+                        vmCommand.SetVariable("EliteAPI.InFighter_p", status.InFighter.ToString());
+                        vmCommand.SetVariable("EliteAPI.InSRV_p", status.InSRV.ToString());
+                        vmCommand.SetVariable("EliteAPI.AnalysisMode_p", status.AnalysisMode.ToString());
+                        vmCommand.SetVariable("EliteAPI.NightVision_p", status.NightVision.ToString());
+                        vmCommand.SetVariable("EliteAPI.Pips.Systems_p", status.Pips[0].ToString());
+                        vmCommand.SetVariable("EliteAPI.Pips.Engines_p", status.Pips[1].ToString());
+                        vmCommand.SetVariable("EliteAPI.Pips.Weapons_p", status.Pips[2].ToString());
+                        vmCommand.SetVariable("EliteAPI.FireGroup_p", status.FireGroup.ToString());
+                        vmCommand.SetVariable("EliteAPI.GuiFocus_p", status.GuiFocus.ToString());
+                        vmCommand.SetVariable("EliteAPI.Fuel_p", status.Fuel.FuelMain.ToString());
+                        vmCommand.SetVariable("EliteAPI.FuelReservoir_p", status.Fuel.FuelReservoir.ToString());
+                        vmCommand.SetVariable("EliteAPI.Cargo_p", status.Cargo.ToString());
 
-                        SetVar("EliteAPI.Commander_p", commander.Commander);
-                        SetVar("EliteAPI.System_p", location.StarSystem);
-                        SetVar("EliteAPI.Body_p", location.Body);
-                        SetVar("EliteAPI.BodyType_p", location.BodyType);
+                        vmCommand.SetVariable("EliteAPI.Commander_p", commander.Commander);
+                        vmCommand.SetVariable("EliteAPI.System_p", location.StarSystem);
+                        vmCommand.SetVariable("EliteAPI.Body_p", location.Body);
+                        vmCommand.SetVariable("EliteAPI.BodyType_p", location.BodyType);
 
-                        SetVar("EliteAPI.Rank.Combat_p", commander.CombatRankLocalised);
-                        SetVar("EliteAPI.Rank.Trade_p", commander.TradeRankLocalised);
-                        SetVar("EliteAPI.Rank.Exploration_p", commander.ExplorationRankLocalised);
+                        vmCommand.SetVariable("EliteAPI.Rank.Combat_p", commander.CombatRankLocalised);
+                        vmCommand.SetVariable("EliteAPI.Rank.Trade_p", commander.TradeRankLocalised);
+                        vmCommand.SetVariable("EliteAPI.Rank.Exploration_p", commander.ExplorationRankLocalised);
+
+                        vmCommand.SetVariable("EliteAPI.JumpRange_p", status.JumpRange.ToString());
                     }
                     catch (Exception ex)
                     {
@@ -159,13 +162,13 @@ namespace EliteAPI.ThirdParty.EliteMacro
 
                         try
                         {
-                            if (type.Contains("int")) { SetVar("EliteAPI.Event." + name + "_p", value); }
-                            else if (type.Contains("long")) { SetVar("EliteAPI.Event." + name + "_p", value); }
-                            else if (type.Contains("string")) { SetVar("EliteAPI.Event." + name + "_p", value); }
-                            else if (type.Contains("decimal")) { SetVar("EliteAPI.Event." + name + "_p", value); }
-                            else if (type.Contains("double")) { SetVar("EliteAPI.Event." + name + "_p", value); }
-                            else if (type.Contains("float")) { SetVar("EliteAPI.Event." + name + "_p", value); }
-                            else if (type.Contains("bool")) { SetVar("EliteAPI.Event." + name + "_p", value); }
+                            if (type.Contains("int")) { vmCommand.SetVariable("EliteAPI.Event." + name + "_p", value); }
+                            else if (type.Contains("long")) { vmCommand.SetVariable("EliteAPI.Event." + name + "_p", value); }
+                            else if (type.Contains("string")) { vmCommand.SetVariable("EliteAPI.Event." + name + "_p", value); }
+                            else if (type.Contains("decimal")) { vmCommand.SetVariable("EliteAPI.Event." + name + "_p", value); }
+                            else if (type.Contains("double")) { vmCommand.SetVariable("EliteAPI.Event." + name + "_p", value); }
+                            else if (type.Contains("float")) { vmCommand.SetVariable("EliteAPI.Event." + name + "_p", value); }
+                            else if (type.Contains("bool")) { vmCommand.SetVariable("EliteAPI.Event." + name + "_p", value); }
                         }
                         catch (Exception ex)
                         {
@@ -216,11 +219,6 @@ namespace EliteAPI.ThirdParty.EliteMacro
                 }
             }
             catch { }
-        }
-
-        private void SetVar(string name, object value)
-        {
-            vmCommand.SetVariable(name, value.ToString());
         }
     }
 }

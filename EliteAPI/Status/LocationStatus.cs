@@ -13,9 +13,9 @@
 
         }
 
-        public string StarSystem { get; private set; }
-        public string Body { get; private set; }
-        public string BodyType { get; private set; }
-        public string Station { get; private set; }
+        public string StarSystem { get; private set; } = "";
+        public string Body { get; private set; } = "";
+        public string BodyType { get; private set; } = "";
+        public string Station { get; private set; } = "";
     }
 }

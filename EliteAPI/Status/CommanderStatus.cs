@@ -12,7 +12,7 @@ namespace EliteAPI.Status
             api.Events.StatisticsEvent += (sender, e) => { Statistics = e; };
         }
 
-        public string Commander { get; private set; }
+        public string Commander { get; private set; } = "";
         public long Credits { get; private set; }
 
         public long EmpireRank { get; private set; }

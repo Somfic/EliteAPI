@@ -109,7 +109,10 @@
                     {
                         //Process this string.
                         string json = streamReader.ReadLine();
-                        return FromJson(json);
+                        ShipStatus s = FromJson(json);
+                        if(s.Fuel == null) { s.Fuel = new Fuel(); }
+                        if(s.Pips == null) { s.Pips = new List<long>() { 0, 0, 0}; }
+                        return s;
                     }
                     catch(Exception ex) { api.Logger.LogWarning("Could not update Status.json.", ex); }
                 }

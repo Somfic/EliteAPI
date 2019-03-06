@@ -360,6 +360,7 @@
     <Compile Include="Inara\InaraConnection.cs" />
     <Compile Include="Status\CargoWatcher.cs" />
     <Compile Include="Status\StatusWatcher.cs" />
+    <Compile Include="ThirdParty\ThirdPartyWrapper.cs" />
     <None Include="NuGet.Config" />
     <Compile Include="ThirdParty\EliteMacro\EliteMacro.cs" />
     <Compile Include="ThirdParty\EliteVA\EliteVA.cs" />

@@ -179,7 +179,14 @@ namespace EliteAPI.Discord
                 }
             };
 
-            UpdatePresence(new RichPresence { Text = "Just started playing", Icon = "ed", IconText = "EliteAPI" });
+            if (string.IsNullOrWhiteSpace(api.Location.StarSystem))
+            {
+                UpdatePresence(new RichPresence { Text = "Just started playing", Icon = "ed", IconText = "EliteAPI" });
+            }
+            else
+            {
+                UpdatePresence(new RichPresence { Text = "Just started playing", TextTwo = "In " + api.Location.StarSystem, Icon = "ed", IconText = "EliteAPI" });
+            }
         }
 
         /// <summary>

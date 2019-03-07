@@ -355,7 +355,7 @@
     <Compile Include="Status\ShipCargo.cs" />
     <Compile Include="Status\CommanderStatus.cs" />
     <Compile Include="Status\ShipModules.cs" />
-    <Compile Include="Status\ShipStatus.cs" />
+    <Compile Include="Status\GameStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Inara\InaraConnection.cs" />
     <Compile Include="Status\CargoWatcher.cs" />

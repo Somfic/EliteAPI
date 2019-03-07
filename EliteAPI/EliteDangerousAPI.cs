@@ -23,12 +23,19 @@ namespace EliteAPI
         /// <summary>
         /// The standard Directory of the Player Journal files (C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous).
         /// </summary>
-        public static DirectoryInfo StandardDirectory { get => new DirectoryInfo($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"); }
+        public static DirectoryInfo StandardDirectory { get {
+                try
+                {
+                    return new DirectoryInfo($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous");
+                }
+                catch { return new DirectoryInfo(Directory.GetCurrentDirectory()); }
+            }
+        }
 
         /// <summary>
         /// The version of EliteAPI.
         /// </summary>
-        public string Version { get { return "2.0.2.2"; } }
+        public string Version { get { return "2.0.2.3"; } }
 
         /// <summary>
         /// Whether the API is currently running.
@@ -53,7 +60,7 @@ namespace EliteAPI
         /// <summary>
         /// Holds the ship's current status.
         /// </summary>
-        public ShipStatus Status { get; internal set; }
+        public GameStatus Status { get; internal set; }
 
         /// <summary>
         /// Holds the ship's current cargo situation.
@@ -114,10 +121,6 @@ namespace EliteAPI
         /// <param name="SkipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
         public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp = true)
         {
-            //Register events.
-            this.OnError += (sender, e) => Logger.LogError($"Could not start EliteAPI. {e.Item1}", e.Item2);
-            this.OnReady += (sender, e) => Logger.LogSuccess("EliteAPI is ready.");
-
             //Set the fields to the parameters.
             this.JournalDirectory = JournalDirectory;
             this.SkipCatchUp = SkipCatchUp;
@@ -132,15 +135,15 @@ namespace EliteAPI
         public void Reset()
         {
             //Reset services.
-            this.Events = new Events.EventHandler();
-            this.Logger = new Logging.Logger();
-            this.Commander = new CommanderStatus(this);
-            this.Location = new LocationStatus(this);
-            this.DiscordRichPresence = new RichPresenceClient(this);
-            this.StatusWatcher = new StatusWatcher(this);
-            this.CargoWatcher = new CargoWatcher(this);
-            this.Status = ShipStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this);
-            this.JournalParser = new JournalParser(this);
+            this.Logger = new Logging.Logger(this);
+            try { this.Events = new Events.EventHandler(); } catch(Exception ex) { Logger.LogWarning("Couldn't instantiate object 'Events'.", ex); }
+            try { this.Commander = new CommanderStatus(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'Commander'.", ex); }
+            try { this.Location = new LocationStatus(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'Location'.", ex); }
+            try { this.DiscordRichPresence = new RichPresenceClient(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'DiscordRichPresence'.", ex); }
+            try { this.StatusWatcher = new StatusWatcher(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'StatusWatcher'.", ex); }
+            try { this.CargoWatcher = new CargoWatcher(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'CargoWatcher'.", ex); }
+            try { this.Status = EliteAPI.Status.GameStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'Status'.", ex); }
+            try { this.JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'JournalParser'.", ex); }
             JournalParser.processedLogs = new List<string>();
         }
 
@@ -173,7 +176,7 @@ namespace EliteAPI
             catch(Exception ex)
             {
                 IsRunning = false;
-                OnError?.Invoke(this, new Tuple<string, Exception>($"Could not find Journal files in '{JournalDirectory}'.", ex));
+                OnError?.Invoke(this, new Tuple<string, Exception>($"Could not find Journal files in '{JournalDirectory}'", ex));
                 return;
             }
 

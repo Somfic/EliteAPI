@@ -49,10 +49,10 @@ namespace EliteAPI.Status
         private void Update()
         {
             //Save the old status.
-            ShipStatus oldStatus = api.Status;
-            if(oldStatus == null) { oldStatus = new ShipStatus(); }
+            GameStatus oldStatus = api.Status;
+            if(oldStatus == null) { oldStatus = new GameStatus(); }
 
-            ShipStatus newStatus = ShipStatus.FromFile(new FileInfo(api.JournalDirectory + "//Status.json"), api);
+            GameStatus newStatus = GameStatus.FromFile(new FileInfo(api.JournalDirectory + "//Status.json"), api);
             if(newStatus == null || !File.Exists(api.JournalDirectory + "//Status.json")) { api.Logger.LogWarning("Could not update Status.json file."); return; }
 
             newStatus.InNoFireZone = InNoFireZone;
@@ -67,7 +67,7 @@ namespace EliteAPI.Status
             TriggerIfDifferent(oldStatus, newStatus);
         }
 
-        private void TriggerIfDifferent(ShipStatus oldStatus, ShipStatus newStatus)
+        private void TriggerIfDifferent(GameStatus oldStatus, GameStatus newStatus)
         {
             foreach (PropertyInfo propA in oldStatus.GetType().GetProperties().Where(x => x.PropertyType == typeof(bool)))
             {

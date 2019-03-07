@@ -18,7 +18,7 @@ namespace EliteAPI
         bool SkipCatchUp { get; }
         EliteAPI.Events.EventHandler Events { get; }
         EliteAPI.Logging.Logger Logger { get; }
-        ShipStatus Status { get; }
+        GameStatus Status { get; }
         ShipCargo Cargo { get; }
         ShipModules Modules { get; }
         UserBindings Bindings { get; }
@@ -32,5 +32,6 @@ namespace EliteAPI
         void Reset();
         void Start();
         void Stop();
+        void ChangeJournal(DirectoryInfo newJournalDirectory);
     }
 }

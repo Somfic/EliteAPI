@@ -9,7 +9,7 @@
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class ShipStatus
+    public partial class GameStatus
     {
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; internal set; }
@@ -67,6 +67,7 @@
 
         public bool InNoFireZone { get; internal set; }
         public double JumpRange { get; internal set; }
+        public bool IsRunning { get { return Equals(Flags, 0); } }
 
         public bool GetFlag(long bit)
         {
@@ -87,14 +88,14 @@
         public double MaxFuel { get; internal set; }
     }
 
-    public partial class ShipStatus
+    public partial class GameStatus
     {
-        public static ShipStatus FromJson(string json) => JsonConvert.DeserializeObject<ShipStatus>(json, EliteAPI.Status.ShipStatusConverter.Settings);
-        public static ShipStatus FromFile(FileInfo file, EliteDangerousAPI api)
+        public static GameStatus FromJson(string json) => JsonConvert.DeserializeObject<GameStatus>(json, EliteAPI.Status.ShipStatusConverter.Settings);
+        public static GameStatus FromFile(FileInfo file, EliteDangerousAPI api)
         {
             try
             {
-                if (!File.Exists(file.FullName)) { api.Logger.LogError("Could not find Status.json.", new Exception($"Could not find {file}.")); return new ShipStatus(); }
+                if (!File.Exists(file.FullName)) { api.Logger.LogError("Could not find Status.json.", new Exception($"Could not find {file}.")); return new GameStatus(); }
 
                 //Create a stream from the log file.
                 FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -109,7 +110,7 @@
                     {
                         //Process this string.
                         string json = streamReader.ReadLine();
-                        ShipStatus s = FromJson(json);
+                        GameStatus s = FromJson(json);
                         if(s.Fuel == null) { s.Fuel = new Fuel(); }
                         if(s.Pips == null) { s.Pips = new List<long>() { 0, 0, 0}; }
                         return s;
@@ -122,13 +123,13 @@
             }
             catch(Exception ex) { api.Logger.LogWarning("Could not update status.", ex);}
 
-            return new ShipStatus();
+            return new GameStatus();
         }
     }
 
     public static class ShipStatusSerializer
     {
-        public static string ToJson(this ShipStatus self) => JsonConvert.SerializeObject(self, EliteAPI.Status.ShipStatusConverter.Settings);
+        public static string ToJson(this GameStatus self) => JsonConvert.SerializeObject(self, EliteAPI.Status.ShipStatusConverter.Settings);
     }
 
     public static class ShipStatusConverter

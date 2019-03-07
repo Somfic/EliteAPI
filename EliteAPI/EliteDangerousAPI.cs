@@ -33,12 +33,12 @@ namespace EliteAPI
         /// <summary>
         /// Whether the API is currently running.
         /// </summary>
-        public bool IsRunning { get; internal set; }
+        public bool IsRunning { get; internal set; } = false;
 
         /// <summary>
         /// The Journal directory that is being used by the API.
         /// </summary>
-        public DirectoryInfo JournalDirectory { get; internal set; }
+        public DirectoryInfo JournalDirectory { get; private set; }
 
         /// <summary>
         /// Object that holds all the events.
@@ -173,7 +173,7 @@ namespace EliteAPI
             catch(Exception ex)
             {
                 IsRunning = false;
-                OnError?.Invoke(this, new Tuple<string, Exception>($"Could not find Journal files in '{JournalDirectory}'", ex));
+                OnError?.Invoke(this, new Tuple<string, Exception>($"Could not find Journal files in '{JournalDirectory}'.", ex));
                 return;
             }
 
@@ -244,6 +244,12 @@ namespace EliteAPI
 
             Logger.LogDebug($"Finished in {s.ElapsedMilliseconds}ms.");
             OnReady?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void ChangeJournal(DirectoryInfo newJournalDirectory)
+        {
+            if(Logger != null) { Logger.LogDebug($"Changed Journal Directory to '{newJournalDirectory}'."); }
+            JournalDirectory = newJournalDirectory;
         }
 
         /// <summary>

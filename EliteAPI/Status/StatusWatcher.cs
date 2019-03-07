@@ -53,7 +53,7 @@ namespace EliteAPI.Status
             if(oldStatus == null) { oldStatus = new ShipStatus(); }
 
             ShipStatus newStatus = ShipStatus.FromFile(new FileInfo(api.JournalDirectory + "//Status.json"), api);
-            if(newStatus == null) { api.Logger.LogWarning("Could not update Status.json file."); return; }
+            if(newStatus == null || !File.Exists(api.JournalDirectory + "//Status.json")) { api.Logger.LogWarning("Could not update Status.json file."); return; }
 
             newStatus.InNoFireZone = InNoFireZone;
             newStatus.JumpRange = JumpRange;

@@ -8,6 +8,14 @@ namespace EliteAPI.Logging
     public class Logger
     {
         private string DirectoryPath = "";
+        private EliteDangerousAPI EliteAPI;
+
+        public Logger(EliteDangerousAPI api)
+        {
+            EliteAPI = api;
+            api.OnError += (sender, e) => LogError($"EliteAPI could not start: {e.Item1}.", e.Item2);
+            api.OnReady += (sender, e) => LogSuccess($"EliteAPI is ready.");
+        }
 
         /// <summary>
         /// Creates a new log entry with a severity of Info.
@@ -161,9 +169,6 @@ namespace EliteAPI.Logging
 
         private void Write(Severity severity, ConsoleColor color, string content, Exception ex = null)
         {
-            ConsoleColor orgBack = Console.BackgroundColor;
-            ConsoleColor orgFront = Console.ForegroundColor;
-
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = color;
             Console.Write(severity);
@@ -182,17 +187,15 @@ namespace EliteAPI.Logging
             if(ex != null)
             {
                 Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.BackgroundColor = ConsoleColor.Black; ;
                 Console.SetCursorPosition(8, Console.CursorTop);
-                Console.Write(">");
+                Console.Write("|");
                 Console.SetCursorPosition(10, Console.CursorTop);
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.BackgroundColor = color;
                 Console.WriteLine($" {ex.Message} ");
                 Console.BackgroundColor = ConsoleColor.Black;
             }
-
-            Console.BackgroundColor = orgBack;
-            Console.BackgroundColor = orgFront;
         }
 
         private void WriteLog(Severity severity, string content, Exception ex  = null)

@@ -32,7 +32,7 @@ namespace EliteAPI.ThirdParty.EliteVA
             Wrapper = new ThirdPartyWrapper(EliteAPI, VA_DisplayName());
 
             //Set the correct journal directory.
-            EliteAPI.JournalDirectory = Wrapper.GetJournalFolder("EliteVA.ini");
+            EliteAPI.ChangeJournal(Wrapper.GetJournalFolder("EliteVA.ini"));
 
             //Start the API.
             EliteAPI.Start();

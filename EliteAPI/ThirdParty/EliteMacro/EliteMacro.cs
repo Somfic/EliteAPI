@@ -35,7 +35,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
             Wrapper = new ThirdPartyWrapper(EliteAPI, DisplayName);
 
             //Set the correct journal directory.
-            EliteAPI.JournalDirectory = Wrapper.GetJournalFolder("EliteMacro.ini");
+            EliteAPI.ChangeJournal(Wrapper.GetJournalFolder("EliteMacro.ini"));
 
             //Start the API.
             EliteAPI.Start();

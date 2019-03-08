@@ -32,7 +32,7 @@
     <h2>The official EliteAPI documentation.</h2>
     <h3>Examples.</h3>
     <h4 name="csharp">Example: Docking (C#).</h4>
-    <p>EliteAPI works with any .NET langauge, for this example we will use C#.</p>
+    <p>EliteAPI works with any .NET language, for this example we will use C#.</p>
     <p>Let's say we want to deploy the landing gear whenever the commander is allowed to dock</p>
     <p>After having created a .NET project, add EliteAPI's namespace to the project.</p>
     <pre class="language-csharp line-numbers" data-src="../code/ExampleDocking1.cs"></pre>
@@ -55,7 +55,7 @@
     <p>Let's do the same thing as above, to deploy the landing gear whenever the commander is allowed to dock, but in VoiceAttack.</p>
     <p>EliteVA handles events in the following format: <code>((EliteAPI.[EventName]))</code>. In our case the event's name would be <code>DockingGranted</code>.</p>
     <pre class="language-*">When I say: ((EliteAPI.DockingGranted))</pre>
-    <p>If you'd like VoiceAttack to let you know which landing pad, you can use one of the event's paramteres for that.</p>
+    <p>If you'd like VoiceAttack to let you know which landing pad, you can use one of the event's parameters for that.</p>
     <pre class="language-*">Say, 'Docking granted for pad {INT:EliteAPI.Event.LandingPad}.'</pre>
     <p>Then, we can have VoiceAttack lower the gear.</p>
     <pre class="language-*">Press L key and hold for 0.2 seconds and release</pre>

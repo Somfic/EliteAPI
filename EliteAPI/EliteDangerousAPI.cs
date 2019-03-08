@@ -173,7 +173,7 @@ namespace EliteAPI
                 journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
                 Logger.LogDebug($"Found '{journalFile}'.");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 IsRunning = false;
                 OnError?.Invoke(this, new Tuple<string, Exception>($"Could not find Journal files in '{JournalDirectory}'", ex));
@@ -203,23 +203,18 @@ namespace EliteAPI
 
                 //Market.json.
                 if (File.Exists(JournalDirectory.FullName + "\\Market.json")) { Logger.LogDebug("Found 'Market.json'."); }
-                else { Logger.LogDebug($"Could not find 'Market.json' file."); }   
-                
+                else { Logger.LogDebug($"Could not find 'Market.json' file."); }
+
                 //ModulesInfo.json.
                 if (File.Exists(JournalDirectory.FullName + "\\ModulesInfo.json")) { Logger.LogDebug("Found 'ModulesInfo.json'."); }
                 else { Logger.LogDebug($"Could not find 'ModulesInfo.json' file."); }
             }
             catch { }
 
-            if(foundStatus) { Logger.LogInfo("Found Journal and Status files."); }
+            if (foundStatus) { Logger.LogInfo("Found Journal and Status files."); }
 
-            //Check if Elite: Dangerous is running by checking the last event for 'Shutdown'.
-            try
-            {
-                dynamic e = JsonConvert.DeserializeObject<dynamic>(File.ReadAllLines(journalFile.FullName).Last());
-                if(e.@event == "Shutdown") { Logger.LogWarning("Elite: Dangerous is not running."); }
-            }
-            catch { }
+            //Check if Elite: Dangerous is running.
+            if (!Status.IsRunning) { Logger.LogWarning("Elite: Dangerous is not running."); }
 
             //Process the journal file.
             JournalParser.ProcessJournal(journalFile, SkipCatchUp);

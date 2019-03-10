@@ -65,6 +65,7 @@
         public bool AnalysisMode { get { return GetFlag(27); } }
         public bool NightVision { get { return GetFlag(28); } }
 
+        public string GameMode { get; internal set; }
         public bool InNoFireZone { get; internal set; }
         public double JumpRange { get; internal set; }
         public bool IsRunning { get { return Equals(Flags, 0); } }

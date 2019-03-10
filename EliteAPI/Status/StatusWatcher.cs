@@ -13,6 +13,7 @@ namespace EliteAPI.Status
         private bool InNoFireZone = false;
         private double JumpRange = -1;
         private double MaxFuel = -1;
+        private string GameMode = "";
 
         internal StatusWatcher(EliteDangerousAPI api)
         {
@@ -31,6 +32,7 @@ namespace EliteAPI.Status
         private void Events_LoadGameEvent(object sender, Events.LoadGameInfo e)
         {
             MaxFuel = e.FuelCapacity;
+            GameMode = e.GameMode;
         }
 
         private void Events_FSDJumpEvent(object sender, Events.FSDJumpInfo e)
@@ -58,6 +60,7 @@ namespace EliteAPI.Status
             newStatus.InNoFireZone = InNoFireZone;
             newStatus.JumpRange = JumpRange;
             newStatus.Fuel.MaxFuel = MaxFuel;
+            newStatus.GameMode = GameMode;
 
             //Set the new status.
             api.Status = newStatus;

@@ -196,6 +196,9 @@ namespace EliteAPI.Logging
                 Console.WriteLine($" {ex.Message} ");
                 Console.BackgroundColor = ConsoleColor.Black;
             }
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Black;
         }
 
         private void WriteLog(Severity severity, string content, Exception ex  = null)

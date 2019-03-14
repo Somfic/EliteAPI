@@ -13,11 +13,10 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            EliteDangerousAPI EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
+            EliteDangerousAPI EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory, false);
             EliteAPI.Logger.UseConsole().UseLogFile(new DirectoryInfo(Directory.GetCurrentDirectory()));
             //EliteAPI.Events.AllEvent += (sender, e) => EliteAPI.Logger.LogInfo(Newtonsoft.Json.JsonConvert.SerializeObject(e));
             EliteAPI.Start();
-            EliteAPI.DiscordRichPresence.TurnOn();
             Thread.Sleep(-1);
         }
     }

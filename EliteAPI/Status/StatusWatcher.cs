@@ -33,11 +33,15 @@ namespace EliteAPI.Status
         {
             MaxFuel = e.FuelCapacity;
             GameMode = e.GameMode;
+
+            Update();
         }
 
         private void Events_FSDJumpEvent(object sender, Events.FSDJumpInfo e)
         {
             if(JumpRange < e.JumpDist) { JumpRange = e.JumpDist; }
+
+            Update();
         }
 
         private void Events_ReceiveTextEvent(object sender, Events.ReceiveTextInfo e)

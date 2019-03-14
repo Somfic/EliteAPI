@@ -68,7 +68,7 @@
         public string GameMode { get; internal set; }
         public bool InNoFireZone { get; internal set; }
         public double JumpRange { get; internal set; }
-        public bool IsRunning { get { return Equals(Flags, 0); } }
+        public bool IsRunning { get { return (Flags != 0); } }
 
         public bool GetFlag(long bit)
         {

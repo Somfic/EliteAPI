@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace EliteAPI.Status
 {
-    public class StatusWatcher
+    internal class StatusWatcher
     {
         private EliteDangerousAPI api;
         private FileSystemWatcher statusWatcher;
@@ -14,6 +14,7 @@ namespace EliteAPI.Status
         private double JumpRange = -1;
         private double MaxFuel = -1;
         private string GameMode = "";
+        private bool InMainMenu = false;
 
         internal StatusWatcher(EliteDangerousAPI api)
         {
@@ -22,9 +23,18 @@ namespace EliteAPI.Status
             api.Events.ReceiveTextEvent += Events_ReceiveTextEvent;
             api.Events.FSDJumpEvent += Events_FSDJumpEvent;
             api.Events.LoadGameEvent += Events_LoadGameEvent;
+            api.Events.MusicEvent += Events_MusicEvent;
 
             statusWatcher = new FileSystemWatcher(api.JournalDirectory.FullName, "Status.json") { EnableRaisingEvents = true };
             statusWatcher.Changed += (sender, e) => Update();
+
+            Update();
+        }
+
+        private void Events_MusicEvent(object sender, Events.MusicInfo e)
+        {
+            if(e.MusicTrack == "MainMenu") { InMainMenu = true; }
+            else { InMainMenu = false; }
 
             Update();
         }
@@ -65,6 +75,7 @@ namespace EliteAPI.Status
             newStatus.JumpRange = JumpRange;
             newStatus.Fuel.MaxFuel = MaxFuel;
             newStatus.GameMode = GameMode;
+            newStatus.InMainMenu = InMainMenu;
 
             //Set the new status.
             api.Status = newStatus;
@@ -87,7 +98,7 @@ namespace EliteAPI.Status
                 {
                     api.Logger.LogDebug($"Processing status event '{propA.Name}'.");
                     api.Events.InvokeAllEvent(new StatusEvent("Status." + propA.Name, B));
-                    try { api.Events.GetType().GetMethod("InvokeStatus" + propA.Name).Invoke(api.Events, new object[] { B }); }
+                    try { api.Events.GetType().GetMethod("InvokeStatus" + propA.Name, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static).Invoke(api.Events, new object[] { B }); }
                     catch (Exception ex) { api.Logger.LogError($"Could not invoke status event '{propA.Name}', it might not have been added yet.", ex); }
                 }
             }
@@ -96,7 +107,7 @@ namespace EliteAPI.Status
 
     public class StatusEvent
     {
-        public StatusEvent(string eventName, object value)
+        internal StatusEvent(string eventName, object value)
         {
             Event = eventName;
             Value = value;

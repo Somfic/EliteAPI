@@ -354,6 +354,7 @@
     <Compile Include="Status\LocationStatus.cs" />
     <Compile Include="Status\ShipCargo.cs" />
     <Compile Include="Status\CommanderStatus.cs" />
+    <Compile Include="Status\MaterialWatcher.cs" />
     <Compile Include="Status\ShipModules.cs" />
     <Compile Include="Status\GameStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

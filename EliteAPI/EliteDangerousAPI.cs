@@ -73,6 +73,11 @@ namespace EliteAPI
         public ShipModules Modules { get { return ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this); } }
 
         /// <summary>
+        /// Holds the ship's current materials situation.
+        /// </summary>
+        public Events.MaterialsInfo Materials { get; internal set; }
+
+        /// <summary>
         /// Holds information on all key bindings in the game set by the user.
         /// </summary>
         public UserBindings Bindings
@@ -103,6 +108,7 @@ namespace EliteAPI
         internal StatusWatcher StatusWatcher { get; set; }
         internal CargoWatcher CargoWatcher { get; set; }
         internal JournalParser JournalParser { get; set; }
+        internal MaterialWatcher MaterialWatcher { get; set; }
 
         /// <summary>
         /// Rich presence service for Discord.
@@ -136,14 +142,15 @@ namespace EliteAPI
         {
             //Reset services.
             this.Logger = new Logging.Logger(this);
-            try { this.Events = new Events.EventHandler(); } catch(Exception ex) { Logger.LogWarning("Couldn't instantiate object 'Events'.", ex); }
-            try { this.Commander = new CommanderStatus(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'Commander'.", ex); }
-            try { this.Location = new LocationStatus(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'Location'.", ex); }
-            try { this.DiscordRichPresence = new RichPresenceClient(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'DiscordRichPresence'.", ex); }
-            try { this.StatusWatcher = new StatusWatcher(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'StatusWatcher'.", ex); }
-            try { this.CargoWatcher = new CargoWatcher(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'CargoWatcher'.", ex); }
-            try { this.Status = EliteAPI.Status.GameStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'Status'.", ex); }
-            try { this.JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate object 'JournalParser'.", ex); }
+            try { this.Events = new Events.EventHandler(); } catch(Exception ex) { Logger.LogWarning("Couldn't instantiate service 'Events'.", ex); }
+            try { this.Commander = new CommanderStatus(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'Commander'.", ex); }
+            try { this.Location = new LocationStatus(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'Location'.", ex); }
+            try { this.DiscordRichPresence = new RichPresenceClient(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'DiscordRichPresence'.", ex); }
+            try { this.StatusWatcher = new StatusWatcher(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'StatusWatcher'.", ex); }
+            try { this.CargoWatcher = new CargoWatcher(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'CargoWatcher'.", ex); }
+            try { this.Status = EliteAPI.Status.GameStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'Status'.", ex); }
+            try { this.JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'JournalParser'.", ex); }
+            try { this.MaterialWatcher = new MaterialWatcher(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'MaterialWatcher'.", ex); }
             JournalParser.processedLogs = new List<string>();
         }
 

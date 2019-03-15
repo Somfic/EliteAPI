@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace EliteAPI.Status
 {
-    public class CargoWatcher
+    internal class CargoWatcher
     {
         private EliteDangerousAPI api;
         private FileSystemWatcher CargoFileWatcher;

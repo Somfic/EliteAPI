@@ -62,7 +62,7 @@ namespace EliteAPI
                 eventClass = Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name == $"{eventName}Info").First();
                 try
                 {
-                    eventMethod = eventClass.GetMethod("Process");
+                    eventMethod = eventClass.GetMethod("Process", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static );
                     try { eventMethod.Invoke(null, new object[] { json, EliteAPI }); }
                     catch (Exception ex) { EliteAPI.Logger.LogError($"Could not invoke event method '{eventName}Info.Process()'.", ex); }
                 }

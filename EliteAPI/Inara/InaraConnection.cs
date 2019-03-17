@@ -91,7 +91,7 @@ namespace EliteAPI.Inara
         string EventName { get => EventData.GetType().Name; }
 
         [JsonProperty("eventTimestamp")]
-        string EventTimestamp { get => DateTime.Now.ToString(); }
+        string EventTimestamp { get => DateTime.UtcNow.ToString("o"); }
 
         [JsonProperty("eventData")]
         IInaraEventData EventData { get; set; }

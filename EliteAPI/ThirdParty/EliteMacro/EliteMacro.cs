@@ -27,15 +27,16 @@ namespace EliteAPI.ThirdParty.EliteMacro
         {
             //Create new EliteAPI.
             EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
-            EliteAPI.Logger.UseLogFile(new DirectoryInfo(vmCommand.GetDataDirectory()));
             EliteAPI.Logger.Log += Logger_Log;
+            EliteAPI.Logger.UseLogFile(new DirectoryInfo(vmCommand.GetDataDirectory()));
             EliteAPI.Events.AllEvent += Events_AllEvent;
 
             //Create new Wrapper.
             Wrapper = new ThirdPartyWrapper(EliteAPI, DisplayName);
 
             //Set the correct journal directory.
-            EliteAPI.ChangeJournal(Wrapper.GetJournalFolder("EliteMacro.ini"));
+            DirectoryInfo newDirectory = Wrapper.GetJournalFolder("EliteMacro.ini");
+            if(newDirectory.FullName != EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.ChangeJournal(newDirectory); }
 
             //Start the API.
             EliteAPI.Start();
@@ -52,7 +53,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
 
         void vmInterface.Dispose()
         {
-            EliteAPI.Logger.LogSuccess("Stopping VoiceMacro");
+            EliteAPI.Logger.LogDebug("VoiceMacro is closing.");
             EliteAPI.Stop();
         }
 

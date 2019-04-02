@@ -24,15 +24,17 @@ namespace EliteAPI.ThirdParty.EliteVA
 
             //Create new EliteAPI.
             EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
-            EliteAPI.Logger.UseLogFile(new DirectoryInfo(Directory.GetCurrentDirectory()));
             EliteAPI.Logger.Log += Logger_Log;
+            EliteAPI.Logger.UseLogFile(new DirectoryInfo(Directory.GetCurrentDirectory()));
             EliteAPI.Events.AllEvent += Events_AllEvent;
 
             //Create new Wrapper.
             Wrapper = new ThirdPartyWrapper(EliteAPI, VA_DisplayName());
 
             //Set the correct journal directory.
-            EliteAPI.ChangeJournal(Wrapper.GetJournalFolder("EliteVA.ini"));
+            DirectoryInfo newDirectory = Wrapper.GetJournalFolder("EliteVA.ini");
+            if (newDirectory.FullName != EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.ChangeJournal(newDirectory); }
+
 
             //Start the API.
             EliteAPI.Start();
@@ -52,7 +54,7 @@ namespace EliteAPI.ThirdParty.EliteVA
         public static void VA_Exit1(dynamic vaProxy)
         {
             proxy = vaProxy;
-            EliteAPI.Logger.LogSuccess("Stopping EliteVA.");
+            EliteAPI.Logger.LogDebug("VoiceAttack is closing.");
             EliteAPI.Stop();
         }
 

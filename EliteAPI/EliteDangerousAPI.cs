@@ -265,13 +265,20 @@ namespace EliteAPI
             //Mark the API as not running.
             IsRunning = false;
 
-            Logger.LogInfo("Stopping EliteAPI.");
+            Logger.LogInfo("EliteAPI has been terminated.");
+
+            OnQuit?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>
         /// Gets triggered when EliteAPI has successfully loaded up.
         /// </summary>
         public event EventHandler OnReady;
+
+        /// <summary>
+        /// Gets triggered when EliteAPI is closing.
+        /// </summary>
+        public event EventHandler OnQuit;
 
         /// <summary>
         /// Gets triggered when EliteAPI could not successfully load up.

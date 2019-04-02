@@ -137,6 +137,7 @@ namespace EliteAPI.Logging
             DirectoryPath = directory.FullName;
 
             WriteToLog("======= NEW LOG ENTRY =======");
+            EliteAPI.OnQuit += (sender, arg) => WriteToLog("======== END OF LOG =========");
 
             Log += (sender, arg) =>
             {
@@ -163,6 +164,8 @@ namespace EliteAPI.Logging
                         break;
                 }
             };
+
+            LogInfo($"Logging to {DirectoryPath}.");
 
             return this;
         }

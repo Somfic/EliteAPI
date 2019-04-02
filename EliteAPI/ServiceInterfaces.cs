@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 
 using EliteAPI.Bindings;
@@ -24,6 +25,10 @@ namespace EliteAPI
         UserBindings Bindings { get; }
         CommanderStatus Commander { get; }
         LocationStatus Location { get; }
+
+        event EventHandler<Tuple<string, Exception>> OnError;
+        event EventHandler OnQuit;
+        event EventHandler OnReady;
 
         //Services.
         RichPresenceClient DiscordRichPresence { get; }

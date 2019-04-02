@@ -123,12 +123,15 @@ namespace EliteAPI.ThirdParty
             }
             else
             {
-                EliteAPI.Logger.LogDebug($"Found '{iniFilePath}'.");
                 try
                 {
-                    return new DirectoryInfo(File.ReadAllLines(iniFilePath).Where(x => !x.StartsWith("/")).First().Split(new string[] { "path=" }, StringSplitOptions.None)[1]);
+                    if (File.ReadAllLines(iniFilePath).Count(x => !x.StartsWith("/")) == 0) { EliteAPI.Logger.LogDebug($"Found '{iniFilePath}', but no custom directory has been set."); return EliteDangerousAPI.StandardDirectory; }
+                    string path = File.ReadAllLines(iniFilePath).Where(x => !x.StartsWith("/")).First().Split(new string[] { "path=" }, StringSplitOptions.None)[1];
+                    if (path == EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.Logger.LogDebug($"Found '{iniFilePath}', but it doesn't contain a custom directory."); return EliteDangerousAPI.StandardDirectory; }
+                    if (Directory.Exists(path)) {EliteAPI.Logger.LogDebug($"Found '{iniFilePath}'."); return new DirectoryInfo(path); }
+                    else { EliteAPI.Logger.LogWarning($"Found '{iniFilePath}', but the path is invalid ('{path}')."); return EliteDangerousAPI.StandardDirectory; }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     EliteAPI.Logger.LogWarning($"Could not read from '{iniFilePath}'.", ex);
                     return EliteDangerousAPI.StandardDirectory;

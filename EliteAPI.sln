@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI", "EliteAPI\EliteA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{91079C18-94F7-4680-8E51-33F1D7741F67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdPartyProfileGenerator", "ThirdPartyProfileGenerator\ThirdPartyProfileGenerator.csproj", "{4B51FFC9-9473-4037-9E89-FBDE14D2414F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{91079C18-94F7-4680-8E51-33F1D7741F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91079C18-94F7-4680-8E51-33F1D7741F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91079C18-94F7-4680-8E51-33F1D7741F67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B51FFC9-9473-4037-9E89-FBDE14D2414F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B51FFC9-9473-4037-9E89-FBDE14D2414F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B51FFC9-9473-4037-9E89-FBDE14D2414F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B51FFC9-9473-4037-9E89-FBDE14D2414F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

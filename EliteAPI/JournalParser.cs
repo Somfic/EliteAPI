@@ -1,10 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-
-using Newtonsoft.Json;
 
 namespace EliteAPI
 {
@@ -16,7 +15,7 @@ namespace EliteAPI
             this.EliteAPI = EliteAPI;
         }
 
-        private EliteDangerousAPI EliteAPI;
+        private readonly EliteDangerousAPI EliteAPI;
         internal List<string> processedLogs = new List<string>();
 
         public void ProcessJournal(FileInfo logFile, bool doNotTrigger = true)
@@ -50,7 +49,7 @@ namespace EliteAPI
                 //Turn the JSON into an object to find out which event it is.
                 obj = JsonConvert.DeserializeObject<dynamic>(json);
                 eventName = obj.@event;
-                EliteAPI.Logger.LogDebug($"Processing event '{eventName}'.");
+                EliteAPI.Logger.LogDebugEvent($"Processing event '{eventName}'.", obj);
             }
             catch (Exception ex) { EliteAPI.Logger.LogWarning($"Couldn't process JSON ({json}).", ex); }
 
@@ -62,7 +61,7 @@ namespace EliteAPI
                 eventClass = Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name == $"{eventName}Info").First();
                 try
                 {
-                    eventMethod = eventClass.GetMethod("Process", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static );
+                    eventMethod = eventClass.GetMethod("Process", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static);
                     try { eventMethod.Invoke(null, new object[] { json, EliteAPI }); }
                     catch (Exception ex) { EliteAPI.Logger.LogError($"Could not invoke event method '{eventName}Info.Process()'.", ex); }
                 }

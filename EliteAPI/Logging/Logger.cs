@@ -8,7 +8,7 @@ namespace EliteAPI.Logging
     public class Logger
     {
         private string DirectoryPath = "";
-        private EliteDangerousAPI EliteAPI;
+        private readonly EliteDangerousAPI EliteAPI;
 
         public Logger(EliteDangerousAPI api)
         {
@@ -81,7 +81,19 @@ namespace EliteAPI.Logging
         {
             Log?.Invoke(this, new LogMessage(s.ToString(), Severity.Debug));
         }
-       
+
+        /// <summary>
+        /// Creates a new log entry with a severity of Debug for events.
+        /// </summary>
+        /// <param name="s">The content of the log.</param>
+        public void LogDebugEvent(object s, object x)
+        {
+            Log?.Invoke(this, new LogMessage(s.ToString(), Severity.Debug));
+
+            string currentEvent = Newtonsoft.Json.JsonConvert.SerializeObject(x);
+            Log?.Invoke(this, new LogMessage(currentEvent, Severity.DebugEvent));
+        }
+
         /// <summary>
         /// Creates a new log entry with a severity of Debug.
         /// </summary>
@@ -91,7 +103,7 @@ namespace EliteAPI.Logging
         {
             Log?.Invoke(this, new LogMessage(s.ToString(), Severity.Debug, ex));
         }
-    
+
         /// <summary>
         /// Outputs the logs to console.
         /// </summary>
@@ -162,6 +174,10 @@ namespace EliteAPI.Logging
                     case Severity.Debug:
                         WriteLog(arg.Severity, arg.Message, arg.Exception);
                         break;
+
+                    case Severity.DebugEvent:
+                        WriteLog(arg.Message);
+                        break;
                 }
             };
 
@@ -186,8 +202,8 @@ namespace EliteAPI.Logging
             }
             else { Console.ForegroundColor = color; }
             Console.WriteLine($" {content} ");
-            
-            if(ex != null)
+
+            if (ex != null)
             {
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.BackgroundColor = ConsoleColor.Black; ;
@@ -204,24 +220,37 @@ namespace EliteAPI.Logging
             Console.BackgroundColor = ConsoleColor.Black;
         }
 
-        private void WriteLog(Severity severity, string content, Exception ex  = null)
+        private void WriteLog(Severity severity, string content, Exception ex = null)
         {
             StringBuilder s = new StringBuilder("        ");
             s.Insert(0, severity.ToString());
-            s.Insert(8, ": " + content);
+            s.Insert(8, $": " + content);
 
             WriteToLog(s);
 
-            if(ex != null)
+            if (ex != null)
             {
                 s = new StringBuilder("        ");
-                s.Insert(8, "> " + ex.Message);
+                s.Insert(8, "| " + ex.Message);
                 WriteToLog(s);
 
-                s = new StringBuilder("        ");
-                s.Insert(8, "> " + ex.StackTrace);
-                WriteToLog(s);
+                string[] trace = ex.StackTrace.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+                foreach (string x in trace)
+                {
+                    string m = x.Trim();
+                    s = new StringBuilder("        ");
+                    s.Insert(8, "| " + m);
+                    WriteToLog(s);
+                }
             }
+        }
+
+        private void WriteLog(string content)
+        {
+            StringBuilder s = new StringBuilder("        ");
+            s.Insert(8, $"| " + content);
+
+            WriteToLog(s);
         }
 
         private void WriteToLog(object s)
@@ -285,5 +314,9 @@ namespace EliteAPI.Logging
     /// <summary>
     /// The severity levle of the message.
     /// </summary>
-    public enum Severity { Info, Warning, Error, Success, Debug }
+    public enum Severity
+    {
+        Info, Warning, Error, Success, Debug,
+        DebugEvent
+    }
 }

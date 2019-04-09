@@ -48,7 +48,7 @@ namespace EliteAPI.ThirdParty.EliteVA
 
         public static void VA_StopCommand()
         {
-            
+
         }
 
         public static void VA_Exit1(dynamic vaProxy)
@@ -62,7 +62,7 @@ namespace EliteAPI.ThirdParty.EliteVA
         {
             foreach (Variable v in variables)
             {
-                switch(v.Type)
+                switch (v.Type)
                 {
                     case Variable.VarType.Bool:
                         proxy.SetBoolean("EliteAPI." + v.Name, bool.Parse(v.Value.ToString()));

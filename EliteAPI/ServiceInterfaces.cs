@@ -1,10 +1,8 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
-
-using EliteAPI.Bindings;
+﻿using EliteAPI.Bindings;
 using EliteAPI.Discord;
 using EliteAPI.Status;
+using System;
+using System.IO;
 
 namespace EliteAPI
 {

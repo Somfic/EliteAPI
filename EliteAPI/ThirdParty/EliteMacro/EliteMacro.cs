@@ -1,13 +1,8 @@
-﻿using System;
+﻿using EliteAPI.Logging;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-
-using EliteAPI.Logging;
-
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using vmAPI;
 
 namespace EliteAPI.ThirdParty.EliteMacro
@@ -36,7 +31,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
 
             //Set the correct journal directory.
             DirectoryInfo newDirectory = Wrapper.GetJournalFolder("EliteMacro.ini");
-            if(newDirectory.FullName != EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.ChangeJournal(newDirectory); }
+            if (newDirectory.FullName != EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.ChangeJournal(newDirectory); }
 
             //Start the API.
             EliteAPI.Start();
@@ -61,7 +56,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
         {
             foreach (Variable v in variables)
             {
-                if(v.Type == Variable.VarType.Unknown) { continue; }
+                if (v.Type == Variable.VarType.Unknown) { continue; }
                 vmCommand.SetVariable($"EliteAPI.{v.Name}_p", v.Value.ToString());
             }
         }

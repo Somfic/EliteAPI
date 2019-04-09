@@ -1,16 +1,16 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace EliteAPI.ThirdParty
 {
     public class ThirdPartyWrapper
     {
-        private EliteDangerousAPI EliteAPI;
+        private readonly EliteDangerousAPI EliteAPI;
 
         public ThirdPartyWrapper(EliteDangerousAPI api, string name)
         {
@@ -19,10 +19,12 @@ namespace EliteAPI.ThirdParty
 
         public List<Variable> GetVariables()
         {
-            List<Variable> variables = new List<Variable>();
+            List<Variable> variables = new List<Variable>
+            {
 
-            //Add version variable.
-            variables.Add(new Variable("Version", EliteAPI.Version));
+                //Add version variable.
+                new Variable("Version", EliteAPI.Version)
+            };
 
             //Add commander variables.
             foreach (PropertyInfo f in EliteAPI.Commander.GetType().GetProperties())
@@ -37,16 +39,16 @@ namespace EliteAPI.ThirdParty
             foreach (PropertyInfo f in EliteAPI.Location.GetType().GetProperties())
             {
                 variables.Add(new Variable(f.Name, f.GetValue(EliteAPI.Location)));
-            } 
+            }
 
             //Add status variables.
             foreach (PropertyInfo f in EliteAPI.Status.GetType().GetProperties())
             {
                 //Do not add Timestamp and Event variables.
-                if(f.Name == "Timestamp" || f.Name == "Event") { continue; }
+                if (f.Name == "Timestamp" || f.Name == "Event") { continue; }
 
                 //Do not try to output an array for pips, rather output the pips separate.
-                if(f.Name == "Pips")
+                if (f.Name == "Pips")
                 {
                     variables.Add(new Variable("Pips.Systems", EliteAPI.Status.Pips[0]));
                     variables.Add(new Variable("Pips.Engines", EliteAPI.Status.Pips[1]));
@@ -80,7 +82,7 @@ namespace EliteAPI.ThirdParty
             //Get the event name.
             string eventName = GetEventName(e);
 
-            foreach (var key in values)
+            foreach (KeyValuePair<string, object> key in values)
             {
                 string type = key.Value.GetType().ToString().Replace("System.", "").Replace("Collections.Generic.", "").ToLower();
                 string name = key.Key;
@@ -128,7 +130,7 @@ namespace EliteAPI.ThirdParty
                     if (File.ReadAllLines(iniFilePath).Count(x => !x.StartsWith("/")) == 0) { EliteAPI.Logger.LogDebug($"Found '{iniFilePath}', but no custom directory has been set."); return EliteDangerousAPI.StandardDirectory; }
                     string path = File.ReadAllLines(iniFilePath).Where(x => !x.StartsWith("/")).First().Split(new string[] { "path=" }, StringSplitOptions.None)[1];
                     if (path == EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.Logger.LogDebug($"Found '{iniFilePath}', but it doesn't contain a custom directory."); return EliteDangerousAPI.StandardDirectory; }
-                    if (Directory.Exists(path)) {EliteAPI.Logger.LogDebug($"Found '{iniFilePath}'."); return new DirectoryInfo(path); }
+                    if (Directory.Exists(path)) { EliteAPI.Logger.LogDebug($"Found '{iniFilePath}'."); return new DirectoryInfo(path); }
                     else { EliteAPI.Logger.LogWarning($"Found '{iniFilePath}', but the path is invalid ('{path}')."); return EliteDangerousAPI.StandardDirectory; }
                 }
                 catch (Exception ex)
@@ -156,7 +158,7 @@ namespace EliteAPI.ThirdParty
                     return;
                 }
             }
-            catch(Exception ex) { EliteAPI.Logger.LogWarning($"There was a problem while trying to process '{content}'.", ex); }
+            catch (Exception ex) { EliteAPI.Logger.LogWarning($"There was a problem while trying to process '{content}'.", ex); }
         }
     }
 
@@ -172,7 +174,7 @@ namespace EliteAPI.ThirdParty
 
         public string Name { get; }
         public object Value { get; }
-        public VarType Type { get { return GetVarType(Value); } }
+        public VarType Type => GetVarType(Value);
 
         private VarType GetVarType(object s)
         {

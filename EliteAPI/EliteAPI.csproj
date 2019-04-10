@@ -268,6 +268,7 @@
     <Compile Include="Events\RepairAll.cs" />
     <Compile Include="Events\RepairDrone.cs" />
     <Compile Include="Events\Reputation.cs" />
+    <Compile Include="Events\ReservoirReplenished.cs" />
     <Compile Include="Events\RestockVehicle.cs" />
     <Compile Include="Events\Resurrect.cs" />
     <Compile Include="Events\SAAScanComplete.cs" />

@@ -122,11 +122,53 @@ namespace EliteAPI
         public bool SkipCatchUp { get; internal set; }
 
         /// <summary>
+        /// Creates a new EliteDangerousAPI object using the standard Journal directory.
+        /// </summary>
+        public EliteDangerousAPI()
+        {
+            //Set the fields to the parameters.
+            JournalDirectory = StandardDirectory;
+            SkipCatchUp = false;
+
+            //Reset the API.
+            Reset();
+        }
+
+        /// <summary>
+        /// Creates a new EliteDangerousAPI object.
+        /// </summary>
+        /// <param name="JournalDirectory">The directory in which the Player Journals are located.</param>
+        public EliteDangerousAPI(DirectoryInfo JournalDirectory)
+        {
+            //Set the fields to the parameters.
+            this.JournalDirectory = JournalDirectory;
+            SkipCatchUp = false;
+
+            //Reset the API.
+            Reset();
+        }
+
+
+        /// <summary>
+        /// Creates a new EliteDangerousAPI object using the standard Journal directory.
+        /// </summary>
+        /// <param name="SkipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
+        public EliteDangerousAPI(bool SkipCatchUp)
+        {
+            //Set the fields to the parameters.
+            JournalDirectory = StandardDirectory;
+            this.SkipCatchUp = SkipCatchUp;
+
+            //Reset the API.
+            Reset();
+        }
+
+        /// <summary>
         /// Creates a new EliteDangerousAPI object.
         /// </summary>
         /// <param name="JournalDirectory">The directory in which the Player Journals are located.</param>
         /// <param name="SkipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
-        public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp = true)
+        public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp)
         {
             //Set the fields to the parameters.
             this.JournalDirectory = JournalDirectory;

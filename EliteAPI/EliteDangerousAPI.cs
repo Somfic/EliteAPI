@@ -233,7 +233,7 @@ namespace EliteAPI
             s.Start();
 
             Logger.LogInfo("Starting EliteAPI.");
-            Logger.LogDebug("EliteAPI by CMDR Somfic, visit github.com/EliteAPI for more projects.");
+            Logger.LogDebug("EliteAPI by CMDR Somfic (discord.gg/jwpFUPZ) (github.com/EliteAPI/EliteAPI).");
             Logger.LogDebug("EliteAPI v" + Version + ".");
             
             //Check for updates.

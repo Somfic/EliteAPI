@@ -13,9 +13,10 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            EliteDangerousAPI EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory, false);
+            EliteDangerousAPI EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory, true);
             EliteAPI.Logger.UseConsole().UseLogFile(new DirectoryInfo(Directory.GetCurrentDirectory()));
             EliteAPI.Start();
+
             Thread.Sleep(-1);
         }
     }

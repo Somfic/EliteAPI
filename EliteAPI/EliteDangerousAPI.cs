@@ -1,12 +1,15 @@
 ﻿using EliteAPI.Bindings;
 using EliteAPI.Discord;
 using EliteAPI.Status;
+
 using Newtonsoft.Json;
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
@@ -36,7 +39,7 @@ namespace EliteAPI
         /// <summary>
         /// The version of EliteAPI.
         /// </summary>
-        public string Version => "2.0.2.4";
+        public string Version => "2.0.2.5";
 
         /// <summary>
         /// Whether the API is currently running.
@@ -179,6 +182,30 @@ namespace EliteAPI
         }
 
         /// <summary>
+        /// Checks for a new update.
+        /// </summary>
+        /// <returns>Returns true if a newer version is available.</returns>
+        public bool CheckForUpdate()
+        {
+            Logger.LogDebug("Checking for updates from GitHub.");
+
+            try
+            {
+                WebClient versionChecker = new WebClient();
+                string latestVersionString = versionChecker.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI/versioncontrol.xml").Trim();
+
+                Logger.LogDebug($"Latest version: {latestVersionString} (curr. {Version}).");
+
+                int latestVersion = int.Parse(latestVersionString.Replace(".", ""));
+                int thisVersoin = int.Parse(Version.Replace(".", ""));
+
+                if (thisVersoin < latestVersion) { Logger.LogInfo($"A new update ({latestVersionString}) is available. Visit github.com/EliteAPI/EliteAPI to download the latest version."); return true; } else { Logger.LogDebug("EliteAPI is up-to-date with the latest version."); }
+            } catch(Exception ex) { Logger.LogDebug("Could not check for updates.", ex); }
+
+            return false;
+        }
+
+        /// <summary>
         /// Resets the API.
         /// </summary>
         public void Reset()
@@ -206,7 +233,12 @@ namespace EliteAPI
             s.Start();
 
             Logger.LogInfo("Starting EliteAPI.");
+            Logger.LogDebug("EliteAPI by CMDR Somfic, visit github.com/EliteAPI for more projects.");
             Logger.LogDebug("EliteAPI v" + Version + ".");
+            
+            //Check for updates.
+            CheckForUpdate();
+
             Logger.LogInfo($"Journal directory set to '{JournalDirectory}'.");
 
             //Mark the API as running.

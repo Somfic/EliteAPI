@@ -7,7 +7,7 @@ namespace EliteAPI.Events
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class ScreenshotInfo
+    public partial class ScreenshotInfo : IEvent
     {
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

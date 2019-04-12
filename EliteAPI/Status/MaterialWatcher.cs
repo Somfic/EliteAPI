@@ -24,7 +24,7 @@ namespace EliteAPI.Status
         {
             foreach (var m in e.Materials)
             {
-                Events_MaterialDiscardedEvent(this, new Events.MaterialDiscardedInfo() { Category = "Raw", Name = m.NameLocalised, Count = m.Count });
+                Events_MaterialDiscardedEvent(this, new Events.MaterialDiscardedInfo { Category = "Raw", Name = m.NameLocalised, Count = m.Count });
             }
         }
 

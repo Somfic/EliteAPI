@@ -7,7 +7,7 @@ namespace EliteAPI.Events
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class PayLegacyFinesInfo
+    public partial class PayLegacyFinesInfo : IEvent
     {
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

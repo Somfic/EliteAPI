@@ -7,7 +7,7 @@ namespace EliteAPI.Events
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class DockedInfo
+    public partial class DockedInfo : IEvent
     {
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; internal set; }

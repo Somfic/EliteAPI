@@ -7,7 +7,7 @@
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class LeftSquadronInfo
+    public partial class LeftSquadronInfo : IEvent
     {
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; internal set; }

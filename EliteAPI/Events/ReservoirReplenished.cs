@@ -7,7 +7,7 @@
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class ReservoirReplenishedInfo
+    public partial class ReservoirReplenishedInfo : IEvent
     {
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; set; }

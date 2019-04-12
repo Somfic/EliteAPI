@@ -2,6 +2,8 @@ namespace EliteAPI.Events
 {
     using System;
 
+    public interface IEvent { }
+
     public class EventHandler
     {
         public event EventHandler<bool> StatusInMainMenu;
@@ -415,9 +417,9 @@ namespace EliteAPI.Events
         public event EventHandler<ShutdownInfo> ShutdownEvent;
         internal ShutdownInfo InvokeShutdownEvent(ShutdownInfo arg) { ShutdownEvent?.Invoke(null, arg); return arg; }
 
-        //ModuleInfo
-        public event EventHandler<ModuleInfoInfo> ModuleInfoEvent;
-        internal ModuleInfoInfo InvokeModuleInfoEvent(ModuleInfoInfo arg) { ModuleInfoEvent?.Invoke(null, arg); return arg; }
+        //ModuleInfo : IEvent
+        public event EventHandler<ModuleInfo> ModuleInfo;
+        internal ModuleInfo InvokeModuleInfo(ModuleInfo arg) { ModuleInfo?.Invoke(null, arg); return arg; }
 
         //Market
         public event EventHandler<MarketInfo> MarketEvent;

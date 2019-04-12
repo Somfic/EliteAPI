@@ -10,7 +10,7 @@ namespace EliteAPI.Discord
         private static readonly string clientID = "497862888128512041";
 
         private DiscordRpcClient rpc;
-        private EliteDangerousAPI api;
+        private readonly EliteDangerousAPI api;
         public bool IsRunning { get; private set; } = false;
         public bool IsReady { get; private set; } = false;
 

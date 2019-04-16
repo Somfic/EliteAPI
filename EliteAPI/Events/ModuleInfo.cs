@@ -7,7 +7,7 @@ namespace EliteAPI.Events
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class ModuleInfo : IEvent
+    public partial class ModuleInfoInfo : IEvent
     {
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }
@@ -16,14 +16,14 @@ namespace EliteAPI.Events
         public string Event { get; internal set; }
     }
 
-    public partial class ModuleInfo
+    public partial class ModuleInfoInfo
     {
-        public static ModuleInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeModuleInfo(JsonConvert.DeserializeObject<ModuleInfo>(json, EliteAPI.Events.ModuleInfoConverter.Settings));
+        public static ModuleInfoInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeModuleInfo(JsonConvert.DeserializeObject<ModuleInfoInfo>(json, EliteAPI.Events.ModuleInfoConverter.Settings));
     }
 
     public static class ModuleInfoSerializer
     {
-        public static string ToJson(this ModuleInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ModuleInfoConverter.Settings);
+        public static string ToJson(this ModuleInfoInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ModuleInfoConverter.Settings);
     }
 
     internal static class ModuleInfoConverter

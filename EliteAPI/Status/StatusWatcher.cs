@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EliteAPI.Events;
+using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -15,6 +16,7 @@ namespace EliteAPI.Status
         private double MaxFuel = -1;
         private string GameMode = "";
         private bool InMainMenu = false;
+        private string MusicTrack = "";
 
         internal StatusWatcher(EliteDangerousAPI api)
         {
@@ -33,6 +35,8 @@ namespace EliteAPI.Status
 
         private void Events_MusicEvent(object sender, Events.MusicInfo e)
         {
+            MusicTrack = e.MusicTrack;
+
             if(e.MusicTrack == "MainMenu") { InMainMenu = true; }
             else { InMainMenu = false; }
 
@@ -91,29 +95,20 @@ namespace EliteAPI.Status
             {
                 PropertyInfo propB = newStatus.GetType().GetProperty(propA.Name);
 
-                bool A = (bool)propA.GetValue(oldStatus);
-                bool B = (bool)propB.GetValue(newStatus);
+                dynamic A = (dynamic)propA.GetValue(oldStatus);
+                dynamic B = (dynamic)propB.GetValue(newStatus);
 
                 if(A != B)
                 {
-                    api.Logger.LogDebug($"Processing status event '{propA.Name}' ({B}).");
+                    StatusEvent e = new StatusEvent("Status." + propA.Name, B);
+
+                    api.Logger.LogDebugEvent($"Processing status event '{propA.Name}' ({B}).", e);
+
                     api.Events.InvokeAllEvent(new StatusEvent("Status." + propA.Name, B));
-                    try { api.Events.GetType().GetMethod("InvokeStatus" + propA.Name, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static).Invoke(api.Events, new object[] { B }); }
+                    try { api.Events.GetType().GetMethod("InvokeStatus" + propA.Name, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static).Invoke(api.Events, new object[] { e }); }
                     catch (Exception ex) { api.Logger.LogError($"Could not invoke status event '{propA.Name}', it might not have been added yet.", ex); }
                 }
             }
         }
-    }
-
-    public class StatusEvent
-    {
-        internal StatusEvent(string eventName, object value)
-        {
-            Event = eventName;
-            Value = value;
-        }
-
-        public string Event { get; internal set; }
-        public object Value { get; internal set; }
     }
 }

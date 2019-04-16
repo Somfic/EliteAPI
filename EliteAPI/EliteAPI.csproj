@@ -295,6 +295,7 @@
     <Compile Include="Events\SRVDestroyed.cs" />
     <Compile Include="Events\StartJump.cs" />
     <Compile Include="Events\Statistics.cs" />
+    <Compile Include="Events\StatusEvent.cs" />
     <Compile Include="Events\StoredModules.cs" />
     <Compile Include="Events\StoredShips.cs" />
     <Compile Include="Events\SupercruiseEntry.cs" />

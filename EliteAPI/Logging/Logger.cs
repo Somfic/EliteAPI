@@ -27,12 +27,32 @@ namespace EliteAPI.Logging
         }
 
         /// <summary>
+        /// Creates a new log entry with a severity of Info.
+        /// </summary>
+        /// <param name="s">The content of the log.</param>
+        /// <param name="ex">The linked exception that caused the log.</param>
+        public void LogInfo(object s, Exception ex)
+        {
+            Log?.Invoke(this, new LogMessage(s.ToString(), Severity.Info, ex));
+        }
+
+        /// <summary>
         /// Creates a new log entry with a severity of Success.
         /// </summary>
         /// <param name="s">The content of the log.</param>
         public void LogSuccess(object s)
         {
             Log?.Invoke(this, new LogMessage(s.ToString(), Severity.Success));
+        }
+
+        /// <summary>
+        /// Creates a new log entry with a severity of Success.
+        /// </summary>
+        /// <param name="s">The content of the log.</param>
+        /// <param name="ex">The linked exception that caused the log.</param>
+        public void LogSuccess(object s, Exception ex)
+        {
+            Log?.Invoke(this, new LogMessage(s.ToString(), Severity.Success, ex));
         }
 
         /// <summary>
@@ -214,6 +234,23 @@ namespace EliteAPI.Logging
                 Console.BackgroundColor = color;
                 Console.WriteLine($" {ex.Message} ");
                 Console.BackgroundColor = ConsoleColor.Black;
+
+                if (ex.StackTrace != null)
+                {
+                    string[] trace = ex.StackTrace.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+                    foreach (string x in trace)
+                    {
+                        string m = x.Trim();
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.BackgroundColor = ConsoleColor.Black; ;
+                        Console.SetCursorPosition(8, Console.CursorTop);
+                        Console.Write("|");
+                        Console.SetCursorPosition(10, Console.CursorTop);
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = color;
+                        Console.WriteLine($" {m} ");
+                    }
+                }
             }
 
             Console.ForegroundColor = ConsoleColor.White;
@@ -234,13 +271,15 @@ namespace EliteAPI.Logging
                 s.Insert(8, "| " + ex.Message);
                 WriteToLog(s);
 
-                string[] trace = ex.StackTrace.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-                foreach (string x in trace)
-                {
-                    string m = x.Trim();
-                    s = new StringBuilder("        ");
-                    s.Insert(8, "| " + m);
-                    WriteToLog(s);
+                if (ex.StackTrace != null) { 
+                    string[] trace = ex.StackTrace.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+                    foreach (string x in trace)
+                    {
+                        string m = x.Trim();
+                        s = new StringBuilder("        ");
+                        s.Insert(8, "| " + m);
+                        WriteToLog(s);
+                    }
                 }
             }
         }

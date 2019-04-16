@@ -70,6 +70,7 @@
         public double JumpRange { get; internal set; }
         public bool IsRunning { get { return (Flags != 0); } }
         public bool InMainMenu { get; internal set; }
+        public string MusicTrack { get; internal set; }
 
         public bool GetFlag(long bit)
         {

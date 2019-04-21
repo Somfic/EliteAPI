@@ -9,6 +9,7 @@ namespace EliteAPI.Logging
     {
         private string DirectoryPath = "";
         private readonly EliteDangerousAPI EliteAPI;
+        private Severity MinType = Severity.Debug;
 
         public Logger(EliteDangerousAPI api)
         {
@@ -124,6 +125,12 @@ namespace EliteAPI.Logging
             Log?.Invoke(this, new LogMessage(s.ToString(), Severity.Debug, ex));
         }
 
+        public Logger UseConsole(Severity type)
+        {
+            MinType = type;
+            return UseConsole();
+        }
+
         /// <summary>
         /// Outputs the logs to console.
         /// </summary>
@@ -132,28 +139,36 @@ namespace EliteAPI.Logging
         {
             Log += (sender, arg) =>
             {
-                switch (arg.Severity)
+                if (arg.Severity <= MinType)
                 {
-                    case Severity.Info:
-                        Write(arg.Severity, ConsoleColor.Gray, arg.Message, arg.Exception);
-                        break;
 
-                    case Severity.Success:
-                        Write(arg.Severity, ConsoleColor.Green, arg.Message, arg.Exception);
-                        break;
+                    switch (arg.Severity)
+                    {
+                        case Severity.Info:
+                            Write(arg.Severity, ConsoleColor.Gray, arg.Message, arg.Exception);
+                            break;
 
-                    case Severity.Warning:
-                        Write(arg.Severity, ConsoleColor.DarkYellow, arg.Message, arg.Exception);
-                        break;
+                        case Severity.Success:
+                            Write(arg.Severity, ConsoleColor.Green, arg.Message, arg.Exception);
+                            break;
 
-                    case Severity.Error:
-                        Write(arg.Severity, ConsoleColor.Red, arg.Message, arg.Exception);
-                        break;
+                        case Severity.Warning:
+                            Write(arg.Severity, ConsoleColor.DarkYellow, arg.Message, arg.Exception);
+                            break;
 
-                    case Severity.Debug:
-                        Write(arg.Severity, ConsoleColor.DarkGray, arg.Message, arg.Exception);
-                        break;
-                }
+                        case Severity.Error:
+                            Write(arg.Severity, ConsoleColor.Red, arg.Message, arg.Exception);
+                            break;
+
+                        case Severity.Debug:
+                            Write(arg.Severity, ConsoleColor.DarkGray, arg.Message, arg.Exception);
+                            break;
+
+                        case Severity.DebugEvent:
+                            Write(Severity.Debug, ConsoleColor.DarkGray, arg.Message, arg.Exception);
+                            break;
+                    }
+                };
             };
 
             return this;
@@ -355,7 +370,6 @@ namespace EliteAPI.Logging
     /// </summary>
     public enum Severity
     {
-        Info, Warning, Error, Success, Debug,
-        DebugEvent
+        Success, Error, Warning, Info, Debug, DebugEvent
     }
 }

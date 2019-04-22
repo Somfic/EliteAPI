@@ -192,7 +192,7 @@ namespace EliteAPI
             try
             {
                 WebClient versionChecker = new WebClient();
-                string latestVersionString = versionChecker.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI/versioncontrol.xml").Trim();
+                string latestVersionString = versionChecker.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI/versioncontrol.version").Trim();
 
                 Logger.LogDebug($"Latest version: {latestVersionString} (curr. {Version}).");
 

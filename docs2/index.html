@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/main.css">
+    <!--  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">  -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <title>EliteAPI</title>
+</head>
+
+<body>
+    <h1>Elite API</h1>
+    <h2>.Net Framework<span id="documentation">DOCUMENTATION</span><span id="cmdr">[ CMDR <span
+                id="author">Somfic</span> ]</span></h2>
+    <h3>Getting started</h3>
+    <h4>Gets you started with using the framework</h4>
+    <div class="header"><span id="counter">[1]</span><span id="title">What you'll need</span></div>
+    <p>There are a few things you'll need in order to be able to run and use EliteAPI.
+        <ul>
+            <li><a href="https://visualstudio.microsoft.com/downloads/">Visual Studio</a></li>
+            <li>Elite: Dangerous</li>
+            <li>Basic understanding of a .NET language, such as C#</li>
+        </ul>
+    </p>
+    <div class="header"><span id="counter">[2]</span><span id="title">Installing EliteAPI</span></div>
+    <p>There are a number of ways to install EliteAPI. The most obvious one is using the <b>NuGet package manager</b>
+        that's built-in in Visual Studio. Simple search for <i>EliteAPI</i> and hit install. But, in case that's not an
+        option, there are also a number of other ways to install EliteAPI.
+        <table>
+            <tr>
+                <th>Platform</th>
+                <th>Method</th>
+                <th>Execution</th>
+            </tr>
+            <tr>
+                <td>NuGet</td>
+                <td>Package manager</td>
+                <td><span class="code">Install-Package EliteAPI</span></td>
+            </tr>
+            <tr>
+                <td>NuGet</td>
+                <td>.Net CLI</td>
+                <td><span class="code">dotnet add package EliteAPI</span></td>
+            </tr>
+            <tr>
+                <td>Visual Studio</td>
+                <td>By reference</td>
+                <td>Download <a href="https://github.com/EliteAPI/EliteAPI/releases">EliteAPI.dll</a> and reference it
+                    in your project</td>
+            </tr>
+            <tr>
+                <td>Visual Studio</td>
+                <td>Compiling</td>
+                <td>Download the <a href="https://github.com/EliteAPI/EliteAPI/releases">source code</a> and compile it
+                    to retrieve the .dll files</td>
+            </tr>
+        </table>
+    </p>
+    <div class="header"><span id="counter">[3]</span><span id="title">Getting EliteAPI running</span></div>
+    <p>Now comes the fun part; starting EliteAPI. First, we will have to add EliteAPI's <b>namespace</b> to the class
+        file, which is, yes you guessed it: <span class="code">EliteAPI</span>. EliteAPI has a number of other
+        namespaces, which will be covered later. Now, you can create a <span class="code">EliteDangerousAPI</span>
+        object, and run its <span class="code">Start()</span> method. Congratulations, you've successfully started your
+        first EliteAPI instance!
+        <pre><code>
+using EliteAPI;
+
+namespace Example
+{
+    class Program
+    {
+        static EliteDangerousAPI EliteAPI;
+
+        static void Main(string[] args)
+        {
+            EliteAPI = new EliteDangerousAPI();
+            EliteAPI.Start();
+        }
+    }
+}
+    </code></pre>
+    </p>
+    <div class="header"><span id="counter">[3]</span><span id="title">Hello world?</span></div>
+    <p>EliteAPI has a built-in <b>logging system</b>. You can hook into it by using <span
+            class="code">EliteAPI.Logger.UseConsole();</span>. Now we can actually see what's going on, and if there are
+        any errors. Also, it might be smart to stop the code from terminating after the initialisation.</p>
+    <pre><code>
+using EliteAPI;
+using System.Threading;
+        
+namespace Example
+{
+    class Program
+    {
+        static EliteDangerousAPI EliteAPI;
+
+        static void Main(string[] args)
+        {
+            EliteAPI = new EliteDangerousAPI();
+            EliteAPI.Logger.UseConsole();
+            EliteAPI.Start();
+
+            Thread.Sleep(-1);
+        }
+    }
+}
+    </code></pre>
+    <p>Wow, that's a lot of logging! You can reduce the amount of logged items by specifying what kind of messages you
+        want to see.</p>
+    <pre><code class="cs">
+EliteAPI.Logger.UseConsole(Severity.Info);
+    </code></pre>
+    <p>Now that the console isn't blowing up in our faces, let's continue with an example.</p>
+    <div class="header"><span id="counter">[4]</span><span id="title">Retract weapons when entering a
+            no-fire-zone</span></div>
+    <p>The last thing we want to happen when we dock at our home station is to be shot to bits by it. Let's help our
+        future selfs and <b>automatically retract the hardpoints</b> when we enter the no-fire-zone.</p>
+    <p>First of all, we have to find out when we enter the no-fire-zone. Thankfully EliteAPI does all the hard work for
+        us, and we only have to hook into the no-fire-zone event and create a method for it.</p>
+    <pre><code>
+static void Main(string[] args)
+{
+    EliteAPI = new EliteDangerousAPI();
+    EliteAPI.Logger.UseConsole(Severity.Info);
+    EliteAPI.Start();
+    
+    EliteAPI.Events.StatusInNoFireZoneEvent += StatusInNoFireZoneEvent;
+    
+    Thread.Sleep(-1);
+}
+    </code></pre>
+    <pre><code>
+private static void StatusInNoFireZoneEvent(object sender, EliteAPI.Events.StatusEvent e)
+{
+    //This will be ran every time we enter or leave a no-fire-zone.
+}
+    </code></pre>
+    <p>However, this method will run whenever we enter and <i>leave</i> a no-fire-zone, and we're only interested in
+        when we're entering. So let's filter the leaving triggers out.</p>
+    <pre><code class="cs">
+//If we're no longer in a no-fire-zone (we've left it), return.
+if(e.Value == false) { return; }
+    </code></pre>
+    <p>Now, we can check whether the hardpoints are deployed, and if they are, retract them. For this example I am using
+        <a
+            href="https://www.codeproject.com/Articles/117657/InputManager-library-Track-user-input-and-simulate">InputManager</a>
+        in order to send keypresses to Elite: Dangerous. InputManager can also be found on <a
+            href="https://www.nuget.org/packages/InputManager/">NuGet</a>.</p>
+    <pre><code class="cs">
+//If we're no longer in a no-fire-zone (we've left it), return.
+if(e.Value == false) { return; }
+
+//Retract the hardpoints if they're deployed.
+if(EliteAPI.Status.Hardpoints == true) { Keyboard.KeyPress(Keys.L); }
+    </code></pre>
+    <p>And that's how simple it can be! Now, whenever we enter a no-fire-zone and our hardpoints are deployed, EliteAPI
+        will retract them for us. Here's the full example file:</p>
+    <pre><code>
+using EliteAPI;
+using EliteAPI.Logging;
+
+using InputManager;
+
+using System.Threading;
+using System.Windows.Forms;
+
+namespace Example
+{
+    class Program
+    {
+        static EliteDangerousAPI EliteAPI;
+
+        static void Main(string[] args)
+        {
+            //Create a new EliteDangerousAPI object.
+            EliteAPI = new EliteDangerousAPI();
+
+            //Make sure to output to the console.
+            EliteAPI.Logger.UseConsole(Severity.Debug);
+
+            //Start the API.
+            EliteAPI.Start();
+
+            //Whenever we enter or leave a no-fire-zone, trigger the method.
+            EliteAPI.Events.StatusInNoFireZoneEvent += StatusInNoFireZoneEvent;
+
+            //Run forever.
+            Thread.Sleep(-1);
+        }
+
+        private static void StatusInNoFireZoneEvent(object sender, EliteAPI.Events.StatusEvent e)
+        {
+            //This will be ran every time we enter or leave a no-fire-zone.
+
+            //If we're no longer in a no-fire-zone (we've left it), return.
+            if(e.Value == false) { return; }
+
+            //Retract the hardpoints if they're deployed.
+            if(EliteAPI.Status.Hardpoints == true) { Keyboard.KeyPress(Keys.L); }
+        }
+    }
+}
+    </code></pre>
+</body>
+
+</html>

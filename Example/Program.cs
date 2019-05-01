@@ -1,23 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using EliteAPI;
+using EliteAPI.Logging;
+
+using InputManager;
 using System.IO;
 using System.Threading;
-
-using EliteAPI;
-using EliteAPI.EDSM;
-using EliteAPI.ThirdParty;
+using System.Windows.Forms;
 
 namespace Example
 {
     class Program
     {
+        static EliteDangerousAPI EliteAPI;
+
         static void Main(string[] args)
         {
-            EliteDangerousAPI EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory, false);
-            EliteAPI.Logger.UseConsole().UseLogFile(new DirectoryInfo(Directory.GetCurrentDirectory()));
+            EliteAPI = new EliteDangerousAPI();
+            EliteAPI.Logger.UseConsole(Severity.Debug).UseLogFile(new DirectoryInfo(Directory.GetCurrentDirectory()));
             EliteAPI.Start();
 
+            EliteAPI.Events.StatusInNoFireZoneEvent += StatusInNoFireZoneEvent;
+
             Thread.Sleep(-1);
+        }
+
+        private static void StatusInNoFireZoneEvent(object sender, EliteAPI.Events.StatusEvent e)
+        {
+            //This will be ran every time we enter or leave a no-fire-zone.
+
+            //If we're no longer in a no-fire-zone (we've left it), return.
+            if(e.Value == false) { return; }
+
+            //Retract the hardpoints if they're deployed.
+            if(EliteAPI.Status.Hardpoints == true) { Keyboard.KeyPress(Keys.L); }
         }
     }
 }

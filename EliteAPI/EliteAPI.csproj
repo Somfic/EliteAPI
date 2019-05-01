@@ -130,6 +130,7 @@
     <Compile Include="EDSM\EDSMConnection.cs" />
     <Compile Include="EliteDangerousAPI.cs" />
     <Compile Include="Events\.EventHandler.cs" />
+    <Compile Include="Events\ProspectedAsteroid.cs" />
     <Compile Include="Events\AfmuRepairs.cs" />
     <Compile Include="Events\AppliedToSquadron.cs" />
     <Compile Include="Events\ApproachBody.cs" />
@@ -374,9 +375,6 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="versioncontrol.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

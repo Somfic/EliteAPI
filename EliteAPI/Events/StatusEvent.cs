@@ -10,11 +10,11 @@ namespace EliteAPI.Events
     {
         public StatusEvent(string Event, dynamic Value)
         {
-            @event = Event;
-            value = Value;
+            this.Event = Event;
+            this.Value = Value;
         }
 
-        public string @event { get; set; }
-        public dynamic value { get; set; }
+        public string Event { get; set; }
+        public dynamic Value { get; set; }
     }
 }

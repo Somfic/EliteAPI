@@ -26,10 +26,24 @@ namespace EliteAPI.Status
             api.Events.FSDJumpEvent += Events_FSDJumpEvent;
             api.Events.LoadGameEvent += Events_LoadGameEvent;
             api.Events.MusicEvent += Events_MusicEvent;
+            api.Events.SupercruiseEntryEvent += Events_SupercruiseEntryEvent;
+            api.Events.StartJumpEvent += Events_StartJumpEvent;
 
             statusWatcher = new FileSystemWatcher(api.JournalDirectory.FullName, "Status.json") { EnableRaisingEvents = true };
             statusWatcher.Changed += (sender, e) => Update();
 
+            Update();
+        }
+
+        private void Events_StartJumpEvent(object sender, StartJumpInfo e)
+        {
+            InNoFireZone = false;
+            Update();
+        }
+
+        private void Events_SupercruiseEntryEvent(object sender, SupercruiseEntryInfo e)
+        {
+            InNoFireZone = false;
             Update();
         }
 
@@ -53,6 +67,7 @@ namespace EliteAPI.Status
 
         private void Events_FSDJumpEvent(object sender, Events.FSDJumpInfo e)
         {
+            InNoFireZone = false;
             if(JumpRange < e.JumpDist) { JumpRange = e.JumpDist; }
 
             Update();
@@ -70,16 +85,18 @@ namespace EliteAPI.Status
         {
             //Save the old status.
             GameStatus oldStatus = api.Status;
-            if(oldStatus == null) { oldStatus = new GameStatus(); }
+            if (oldStatus == null) { oldStatus = new GameStatus(); }
 
             GameStatus newStatus = GameStatus.FromFile(new FileInfo(api.JournalDirectory + "//Status.json"), api);
-            if(newStatus == null || !File.Exists(api.JournalDirectory + "//Status.json")) { api.Logger.LogWarning("Could not update Status.json file."); return; }
+            if (newStatus == null || !File.Exists(api.JournalDirectory + "//Status.json")) { api.Logger.LogWarning("Could not update Status.json file."); return; }
 
             newStatus.InNoFireZone = InNoFireZone;
             newStatus.JumpRange = JumpRange;
             newStatus.Fuel.MaxFuel = MaxFuel;
             newStatus.GameMode = GameMode;
             newStatus.InMainMenu = InMainMenu;
+
+            if (newStatus.Docked) { newStatus.InNoFireZone = true; }
 
             //Set the new status.
             api.Status = newStatus;

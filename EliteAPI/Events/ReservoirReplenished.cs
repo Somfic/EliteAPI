@@ -24,7 +24,7 @@
 
     public partial class ReservoirReplenishedInfo
     {
-        public static ReservoirReplenishedInfo FromJson(string json) => JsonConvert.DeserializeObject<ReservoirReplenishedInfo>(json, EliteAPI.Events.Converter.Settings);
+        public static ReservoirReplenishedInfo Process(string json) => JsonConvert.DeserializeObject<ReservoirReplenishedInfo>(json, EliteAPI.Events.Converter.Settings);
     }
 
     public static class Serialize

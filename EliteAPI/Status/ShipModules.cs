@@ -38,7 +38,7 @@
 
     public partial class ShipModules
     {
-        public static ShipModules FromJson(string json) => JsonConvert.DeserializeObject<ShipModules>(json, EliteAPI.Status.ShipModulesConverter.Settings);
+        public static ShipModules Process(string json) => JsonConvert.DeserializeObject<ShipModules>(json, EliteAPI.Status.ShipModulesConverter.Settings);
         public static ShipModules FromFile(FileInfo file, EliteDangerousAPI api)
         {
             if (File.Exists(file.FullName)) { api.Logger.LogError("Could not find ModulesInfo.json.", new Exception($"Could not find {file}.")); return new ShipModules(); }
@@ -53,7 +53,7 @@
             while (!streamReader.EndOfStream)
             {
                 //Process this string.
-                return FromJson(streamReader.ReadLine());
+                return Process(streamReader.ReadLine());
             }
 
             api.Logger.LogWarning("Could not update modules.");

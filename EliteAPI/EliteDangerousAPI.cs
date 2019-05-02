@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
@@ -21,6 +22,13 @@ namespace EliteAPI
     /// </summary>
     public class EliteDangerousAPI : IEliteDangerousAPI
     {
+        //Credits to DarkWanderer for this fix.
+        private class UnsafeNativeMethods
+        {
+            [DllImport("Shell32.dll")]
+            public static extern int SHGetKnownFolderPath([MarshalAs(UnmanagedType.LPStruct)]Guid rfid, uint dwFlags, IntPtr hToken, out IntPtr ppszPath);
+        }
+
         /// <summary>
         /// The standard Directory of the Player Journal files (C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous).
         /// </summary>
@@ -28,11 +36,16 @@ namespace EliteAPI
         {
             get
             {
-                try
+                int result = UnsafeNativeMethods.SHGetKnownFolderPath(new Guid("4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4"), 0, new IntPtr(0), out IntPtr path);
+                if (result >= 0)
                 {
-                    return new DirectoryInfo($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous");
+                    try { return new DirectoryInfo(Marshal.PtrToStringUni(path) + @"\Frontier Developments\Elite Dangerous"); }
+                    catch { return new DirectoryInfo(Directory.GetCurrentDirectory()); }
                 }
-                catch { return new DirectoryInfo(Directory.GetCurrentDirectory()); }
+                else
+                {
+                    return new DirectoryInfo(Directory.GetCurrentDirectory());
+                }
             }
         }
 
@@ -200,7 +213,8 @@ namespace EliteAPI
                 int thisVersoin = int.Parse(Version.Replace(".", ""));
 
                 if (thisVersoin < latestVersion) { Logger.LogInfo($"A new update ({latestVersionString}) is available. Visit github.com/EliteAPI/EliteAPI to download the latest version."); return true; } else { Logger.LogDebug("EliteAPI is up-to-date with the latest version."); }
-            } catch(Exception ex) { Logger.LogDebug("Could not check for updates.", ex); }
+            }
+            catch (Exception ex) { Logger.LogDebug("Could not check for updates.", ex); }
 
             return false;
         }
@@ -235,7 +249,7 @@ namespace EliteAPI
             Logger.LogInfo("Starting EliteAPI.");
             Logger.LogDebug("EliteAPI by CMDR Somfic (discord.gg/jwpFUPZ) (github.com/EliteAPI/EliteAPI).");
             Logger.LogDebug("EliteAPI v" + Version + ".");
-            
+
             //Check for updates.
             CheckForUpdate();
 

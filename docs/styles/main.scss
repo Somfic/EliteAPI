@@ -10,8 +10,8 @@ $smallColor2 : #BFBFBF;
 
 $h1Size : 65px;
 $h2Size : 45px;
-$h3Size : 35px;
-$h4Size : 18px;
+$h3Size : 40px;
+$h4Size : 20px;
 
 $creditSize : 23px;
 $textSize : 28px;
@@ -38,6 +38,7 @@ body {
 }
 
 h1 {
+    letter-spacing: 5px;
     position: relative;
     right: 40px;
     font-family: 'Roboto';
@@ -48,6 +49,7 @@ h1 {
 }
 
 h2 {
+    letter-spacing: 3px;
     position: relative;
     right: 40px;
     font-family: 'Roboto';
@@ -79,6 +81,7 @@ h2 {
 }
 
 h3 {
+    letter-spacing: 1.5px;
     padding-top: 80px;
     font-family: 'Roboto';
     font-size: $h3Size;
@@ -88,6 +91,7 @@ h3 {
 }
 
 h4 {
+    letter-spacing: 1px;
     font-family: 'Roboto';
     font-size: $h4Size;
     font-weight: 400;
@@ -100,6 +104,8 @@ p,
 ul,
 ol {
     font-family: 'Roboto';
+    letter-spacing: 0.75px;
+    line-height: 140%;
     font-size: $textSize;
     font-weight: 300;
     color: $frontColor;

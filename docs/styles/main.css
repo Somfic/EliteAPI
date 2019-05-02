@@ -61,6 +61,7 @@ body {
 }
 
 h1 {
+  letter-spacing: 5px;
   position: relative;
   right: 40px;
   font-family: 'Roboto';
@@ -71,6 +72,7 @@ h1 {
 }
 
 h2 {
+  letter-spacing: 3px;
   position: relative;
   right: 40px;
   font-family: 'Roboto';
@@ -102,17 +104,19 @@ h2 #cmdr #author {
 }
 
 h3 {
+  letter-spacing: 1.5px;
   padding-top: 80px;
   font-family: 'Roboto';
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 400;
   color: #F7941D;
   text-transform: uppercase;
 }
 
 h4 {
+  letter-spacing: 1px;
   font-family: 'Roboto';
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   font-style: italic;
   color: #68686B;
@@ -123,6 +127,8 @@ p,
 ul,
 ol {
   font-family: 'Roboto';
+  letter-spacing: 0.75px;
+  line-height: 140%;
   font-size: 28px;
   font-weight: 300;
   color: #F3F3F4;
@@ -210,7 +216,7 @@ table th {
   line-height: 70px;
   text-align: left;
   font-family: 'Roboto';
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 8px;
   font-weight: 400;

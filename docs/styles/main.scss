@@ -226,8 +226,9 @@ footer {
     border-radius: 15px 15px 0px 0px;
     border: 2px solid $accentColor;
     border-bottom: 0px;
+    margin-top: 100px;
 
-    hr { 
+    hr {
         margin-top: 80px;
         background: url("../ed.png") no-repeat top center;
         background-size: contain;
@@ -236,6 +237,7 @@ footer {
         border: 0;
         position: relative;
     }
+
     hr:before,
     hr:after {
         content: '    ';
@@ -245,11 +247,13 @@ footer {
         height: 2px;
         top: 50px;
     }
+
     hr:before {
         left: 0;
         right: 50%;
         margin-right: 10px;
     }
+
     hr:after {
         right: 0;
         left: 50%;
@@ -297,7 +301,7 @@ nav {
         font-weight: 700;
         text-decoration: none;
         font-style: normal;
-      }
+    }
 
     ul {
         list-style-type: none;
@@ -309,7 +313,7 @@ nav {
             display: inline;
             margin: 0px 5px;
         }
-      }
+    }
 }
 
 .badges {
@@ -319,11 +323,48 @@ nav {
     border: 2px solid $accentColor;
     border-radius: 10px;
 
-position: relative;
+    position: relative;
 
     img {
         border-radius: 5px;
         margin: 0px 5px;
         height: 35px;
+    }
+}
+
+.notice {
+    $stripeColor: rgba(252, 226, 113, 0.096);
+
+    $c1: $stripeColor;
+    $c2: $backColor;
+    $c3: $stripeColor;
+
+    border: 2px solid $accentColor;
+    border-radius: 10px;
+    margin: 30px 0px;
+    padding: 20px;
+    padding-bottom: 22px;
+
+    background-color: $c2;
+    background-repeat: repeat-y;
+    background-size: 100% 88px;
+    background-position: 0% 0%;
+    background-image: repeating-linear-gradient(-25deg, $c2, $c2 20px, $c1 20px, $c1 40px, $c2 40px, $c2 60px, $c3 60px, $c3 80px);
+    animation: barberpole 6s linear infinite;
+
+    p {
+        color: $accentColor;
+        font-style: italic;
+    }
+}
+
+
+@keyframes barberpole {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 0% 670%;
     }
 }

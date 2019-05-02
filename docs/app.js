@@ -39,8 +39,6 @@ var FadeTransition = Barba.BaseTransition.extend({
         visibility : 'visible',
         opacity : 0
       });
-  
-      location.reload();
 
       $el.animate({ opacity: 1 }, 400, function() {
         /**
@@ -49,6 +47,7 @@ var FadeTransition = Barba.BaseTransition.extend({
          */
 
         _this.done();
+        location.reload();
       });
     }
   })

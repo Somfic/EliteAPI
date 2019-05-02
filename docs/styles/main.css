@@ -247,6 +247,7 @@ footer {
   border-radius: 15px 15px 0px 0px;
   border: 2px solid #F7941D;
   border-bottom: 0px;
+  margin-top: 100px;
 }
 
 footer hr {
@@ -348,5 +349,43 @@ nav ul li {
   border-radius: 5px;
   margin: 0px 5px;
   height: 35px;
+}
+
+.notice {
+  border: 2px solid #F7941D;
+  border-radius: 10px;
+  margin: 30px 0px;
+  padding: 20px;
+  padding-bottom: 22px;
+  background-color: #181819;
+  background-repeat: repeat-y;
+  background-size: 100% 88px;
+  background-position: 0% 0%;
+  background-image: repeating-linear-gradient(-25deg, #181819, #181819 20px, rgba(252, 226, 113, 0.096) 20px, rgba(252, 226, 113, 0.096) 40px, #181819 40px, #181819 60px, rgba(252, 226, 113, 0.096) 60px, rgba(252, 226, 113, 0.096) 80px);
+  -webkit-animation: barberpole 6s linear infinite;
+          animation: barberpole 6s linear infinite;
+}
+
+.notice p {
+  color: #F7941D;
+  font-style: italic;
+}
+
+@-webkit-keyframes barberpole {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 670%;
+  }
+}
+
+@keyframes barberpole {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 670%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

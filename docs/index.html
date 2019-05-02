@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>EliteAPI documentation</title>
 
-    <!-- Import fonts. -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Source+Sans+Pro:300,300i,400,400i" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>EliteAPI</title>
+</head>
 
-    <!-- Import C# highlighting. -->
-    <link rel="stylesheet" type="text/css" href="css/prism.css">
-
-    <!-- Import stylesheets. -->
-    <link rel="stylesheet" type="text/css" href="css/default.css">
-    <link rel="stylesheet" type="text/css" href="css/scrollbar.css">
-    <link rel="stylesheet" type="text/css" href="css/table.css">
-    <link rel="stylesheet" type="text/css" href="css/scripts.css">
-    <link rel="stylesheet" type="text/css" href="css/navigation.css">
-  </head>
-  <body>
+<body>
+    <h1>Elite API</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gettingstarted/index.html">Getting started</a></li>
-        <li><a href="examples/index.html">Examples</a></li>
-        <li><a href="plugins/index.html">Plugins</a></li>
-        <li style="float:right;"><a href="https://github.com/EliteAPI/EliteAPI">GitHub</a></li>
-      </ul>
+        <ul>
+            <li>[ <a href="index.html">home</a> ]</li>
+            <li>[ <a href="framework.html">.NET Framework</a> ]</li>
+            <li>[ <a href="voiceattack.html">Voiceattack</a> ]</li>
+            <li>[ <a href="voicemacro.html">voicemacro</a> ]</li>
+            <li>[ <a href="https://www.github.com/EliteAPI/EliteAPI">github</a> ]</li>
+        </ul>
     </nav>
-    <h1>EliteAPI documentation.</h1>
-    <h2>The official EliteAPI documentation.</h2>
-    <h3>EliteAPI</h3>
-    <p>EliteAPI is a powerful event based API for <a href="https://www.elitedangerous.com/">Elite: Dangerous</a> that hooks into the <a href="http://edcodex.info/?m=doc">Player Journals</a> log files. Created by <a href="https://github.com/Somfic">CMDR Somfic</a>.</p>
-    <div class="badges">
-      <a href="https://github.com/EliteAPI/EliteAPI/issues"><img src="https://img.shields.io/github/issues/EliteAPI/EliteAPI.svg?style=for-the-badge"></a>
-      <a href="https://github.com/EliteAPI/EliteAPI/stargazers"><img src="https://img.shields.io/github/stars/EliteAPI/EliteAPI.svg?style=for-the-badge"></a>
-      <a href="https://github.com/EliteAPI/EliteAPI/releases"><img src="https://img.shields.io/github/release-pre/EliteAPI/EliteAPI.svg?style=for-the-badge"></a>
-      <a href="https://www.nuget.org/packages/EliteAPI/"><img src="https://img.shields.io/nuget/v/EliteAPI.svg?style=for-the-badge"></a>
-      <a href="https://www.nuget.org/packages/EliteAPI/"><img src="https://img.shields.io/nuget/dt/EliteAPI.svg?style=for-the-badge"></a>
-      <a href="https://discord.gg/jwpFUPZ"><img src="https://img.shields.io/discord/498422961297031168.svg?style=for-the-badge"></a>
-      <a href="https://github.com/EliteAPI/EliteAPI/commits/master"><img src="https://img.shields.io/github/last-commit/EliteAPI/EliteAPI.svg?style=for-the-badge"></a>
-    </div>
 
-    <!-- Use C# highlighting script. -->
-    <script src="scripts/prism.js"></script>
-  </body>
+    <div id="barba-wrapper">
+        <div class="barba-container">
+            <h2>Welcome to the elite api<span id="documentation">DOCUMENTATION</span></h2>
+            <h3>current status</h3>
+            <h4>Here you can see all the current status badges</h4>
+            <div class="badges">
+                <a href="https://github.com/EliteAPI/EliteAPI/issues"><img
+                        src="https://img.shields.io/github/issues/EliteAPI/EliteAPI.svg?color=F7941D&style=for-the-badge"></a>
+                <a href="https://github.com/EliteAPI/EliteAPI/stargazers"><img
+                        src="https://img.shields.io/github/stars/EliteAPI/EliteAPI.svg?color=F7941D&style=for-the-badge"></a>
+                <a href="https://github.com/EliteAPI/EliteAPI/releases"><img
+                        src="https://img.shields.io/github/release-pre/EliteAPI/EliteAPI.svg?color=F7941D&style=for-the-badge"></a>
+                <a href="https://www.nuget.org/packages/EliteAPI/"><img
+                        src="https://img.shields.io/nuget/v/EliteAPI.svg?color=F7941D&style=for-the-badge"></a>
+                <a href="https://www.nuget.org/packages/EliteAPI/"><img
+                        src="https://img.shields.io/nuget/dt/EliteAPI.svg?color=F7941D&style=for-the-badge"></a>
+                <a href="https://discord.gg/jwpFUPZ"><img
+                        src="https://img.shields.io/discord/498422961297031168.svg?color=F7941D&style=for-the-badge"></a>
+                <a href="https://github.com/EliteAPI/EliteAPI/commits/master"><img
+                        src="https://img.shields.io/github/last-commit/EliteAPI/EliteAPI.svg?color=F7941D&style=for-the-badge"></a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
 </html>

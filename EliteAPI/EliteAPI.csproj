@@ -369,6 +369,7 @@
     <None Include="NuGet.Config" />
     <Compile Include="ThirdParty\EliteMacro\EliteMacro.cs" />
     <Compile Include="ThirdParty\EliteVA\EliteVA.cs" />
+    <None Include="versioncontrol.version" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -21,7 +21,7 @@
 
     public partial class LeftSquadronInfo
     {
-        public static LeftSquadronInfo Process(string json) => JsonConvert.DeserializeObject<LeftSquadronInfo>(json, EliteAPI.Events.LeftSquadronConverter.Settings);
+        public static LeftSquadronInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLeftSquadronEvent(JsonConvert.DeserializeObject<LeftSquadronInfo>(json, EliteAPI.Events.LeftSquadronConverter.Settings));
     }
 
     public static class LeftSquadronSerializer

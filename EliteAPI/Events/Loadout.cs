@@ -82,10 +82,10 @@ namespace EliteAPI.Events
         public string Engineer { get; internal set; }
 
         [JsonProperty("EngineerID")]
-        public long EngineerId { get; internal set; }
+        public ulong EngineerId { get; internal set; }
 
         [JsonProperty("BlueprintID")]
-        public long BlueprintId { get; internal set; }
+        public ulong BlueprintId { get; internal set; }
 
         [JsonProperty("BlueprintName")]
         public string BlueprintName { get; internal set; }

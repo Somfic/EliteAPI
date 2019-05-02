@@ -109,10 +109,13 @@ namespace EliteAPI.Events
         public event EventHandler<dynamic> AllEvent;
         internal dynamic InvokeAllEvent(dynamic arg) { AllEvent?.Invoke(null, arg); return arg; }
 
+        //ReservoirReplenished
+        public event EventHandler<ReservoirReplenishedInfo> ReservoirReplenishedEvent;
+        internal ReservoirReplenishedInfo InvokeReservoirReplenishedEvent(ReservoirReplenishedInfo arg) { ReservoirReplenishedEvent?.Invoke(null, arg); return arg; }
+
         //ProspectedAsteroid
         public event EventHandler<ProspectedAsteroidInfo> ProspectedAsteroidEvent;
         internal ProspectedAsteroidInfo InvokeProspectedAsteroidEvent(ProspectedAsteroidInfo arg) { ProspectedAsteroidEvent?.Invoke(null, arg); return arg; }
-
 
         //LeftSquadron
         public event EventHandler<LeftSquadronInfo> LeftSquadronEvent;

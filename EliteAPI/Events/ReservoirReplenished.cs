@@ -24,15 +24,15 @@
 
     public partial class ReservoirReplenishedInfo
     {
-        public static ReservoirReplenishedInfo Process(string json) => JsonConvert.DeserializeObject<ReservoirReplenishedInfo>(json, EliteAPI.Events.Converter.Settings);
+        public static ReservoirReplenishedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeReservoirReplenishedEvent(JsonConvert.DeserializeObject<ReservoirReplenishedInfo>(json, EliteAPI.Events.ReservoirReplenishedConverter.Settings));
     }
 
-    public static class Serialize
+    public static class ReservoirReplenishedSerializer
     {
-        public static string ToJson(this ReservoirReplenishedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.Converter.Settings);
+        public static string ToJson(this ReservoirReplenishedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ReservoirReplenishedConverter.Settings);
     }
 
-    internal static class Converter
+    internal static class ReservoirReplenishedConverter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {

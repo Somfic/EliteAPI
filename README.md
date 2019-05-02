@@ -1,9 +1,10 @@
+
+## Check the [documentation](https://eliteapi.github.io/EliteAPI/index.html) for information on installation, usage and more.
+
 <img src="https://i.imgur.com/keDXwjY.png" align="right"
      title="EliteAPI by Somfic" width="280" height="280">
 # EliteAPI
 A powerful event based API for [Elite: Dangerous](https://www.elitedangerous.com/) that hooks into the [Player Journal](http://edcodex.info/?m=doc) and other log files. Created by CMDR [Somfic](https://github.com/Somfic).
-
-## Check the [documentation](https://eliteapi.github.io/EliteAPI/index.html) for information on installation, usage and more.
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/480f394b3d044412afb33351120253f9)](https://app.codacy.com/app/EliteAPI/EliteAPI?utm_source=github.com&utm_medium=referral&utm_content=Somfic/EliteAPI&utm_campaign=Badge_Grade_Dashboard) [![Discord](https://img.shields.io/discord/498422961297031168.svg)](https://discord.gg/jwpFUPZ) [![GitHub issues](https://img.shields.io/github/issues/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/issues) [![GitHub forks](https://img.shields.io/github/forks/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/network) [![GitHub stars](https://img.shields.io/github/stars/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/stargazers) [![GitHub license](https://img.shields.io/github/license/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/blob/master/LICENSE)
 

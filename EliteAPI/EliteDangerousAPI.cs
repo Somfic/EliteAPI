@@ -52,7 +52,7 @@ namespace EliteAPI
         /// <summary>
         /// The version of EliteAPI.
         /// </summary>
-        public string Version => "2.0.2.5";
+        public string Version => "2.0.2.6";
 
         /// <summary>
         /// Whether the API is currently running.

@@ -19,8 +19,15 @@ namespace Example
             EliteAPI.Start();
 
             EliteAPI.Events.StatusInNoFireZoneEvent += StatusInNoFireZoneEvent;
+            EliteAPI.Events.ProspectedAsteroidEvent += Events_ProspectedAsteroidEvent;
+
 
             Thread.Sleep(-1);
+        }
+
+        private static void Events_ProspectedAsteroidEvent(object sender, EliteAPI.Events.ProspectedAsteroidInfo e)
+        {
+            EliteAPI.Logger.LogInfo(e);
         }
 
         private static void StatusInNoFireZoneEvent(object sender, EliteAPI.Events.StatusEvent e)

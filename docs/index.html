@@ -11,18 +11,19 @@
 
 <body>
     <h1>Elite API</h1>
-    <nav>
+    <div id="barba-wrapper">
+            <div class="barba-container">
+    <div class="nav">
         <ul>
-            <li>[ <a href="index.html">home</a> ]</li>
-            <li>[ <a href="framework.html">.NET Framework</a> ]</li>
-            <li>[ <a href="voiceattack.html">Voiceattack</a> ]</li>
-            <li>[ <a href="voicemacro.html">voicemacro</a> ]</li>
+            <li>[ <a class="active" href="#">home</a> ]</li>
+            <li>[ <a href="framework">.NET Framework</a> ]</li>
+            <li>[ <a href="voiceattack">Voiceattack</a> ]</li>
+            <li>[ <a href="voicemacro">voicemacro</a> ]</li>
             <li>[ <a href="https://www.github.com/EliteAPI/EliteAPI">download from github</a> ]</li>
         </ul>
-    </nav>
+    </div>
 
-    <div id="barba-wrapper">
-        <div class="barba-container">
+
             <h2>Welcome to the elite api<span id="documentation">DOCUMENTATION</span></h2>
             <h3>current status</h3>
             <h4>Here you can see all the current status badges</h4>
@@ -42,6 +43,13 @@
                 <a href="https://github.com/EliteAPI/EliteAPI/commits/master"><img
                         src="https://img.shields.io/github/last-commit/EliteAPI/EliteAPI.svg?color=F7941D&style=for-the-badge"></a>
             </div>
+
+            <div class="header"><span id="counter">[*]</span><span id="title">What is EliteAPI?</span></div>
+            <p><b>EliteAPI</b> is a powerful event based API for Elite: Dangerous that hooks into the Player Journal and other log files. Created by CMDR Somfic.</p>
+            <p>EliteAPI's goal is to greatly reduce the time it takes for programmers to hook into the game by doing all the parsing and deserializing of the Elite: Dangerous log files for you, leaving you to fully focus on your application.</p>
+            <p>EliteAPI currently supports all 180 possible events, as well as real time tracking of items like the landing gear, cargo scoop, night vision, mass lock, etc, which are all available in VoiceAttack and VoiceMacro from the get-go. It also has an Inara API and Discord Rich Presence client built in. As stated before EliteAPI comes as both a .NET library as a VoiceAttack & VoiceMacro plugin, giving you a lot of possibilities to create tools you otherwise would need months for to create.</p>
+            <p>The project is completely open-source and is hosted on GitHub. The .NET library currently has more than 3,000 downloads on NuGet already!</p>
+            <p>If you have any questions / ideas / issues, please do not hesitate to contact me on the EliteAPI discord.</p>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

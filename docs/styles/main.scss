@@ -163,6 +163,19 @@ a:hover {
     color: $accentColor;
     border-radius: 15px;
     padding: 4px 15px;
+    white-space: nowrap;
+}
+
+.indent {
+    position: relative;
+    transform: translateX(50px);
+}
+
+#eventsTable {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
 }
 
 table {
@@ -171,24 +184,27 @@ table {
     border-radius: 10px;
     padding: 0px 80px;
     padding-bottom: 20px;
+    width: 100%;
 
-    margin: 30px 50px;
+    margin: 30px 0px;
 
     td {
-        padding-right: 70px;
+        padding-right: 50px;
         line-height: 50px;
 
         font-family: 'Roboto';
         font-size: $smallTextSize;
 
-        letter-spacing: 3px;
+        letter-spacing: 2px;
 
         font-weight: 300;
         color: $frontColor;
+
+        vertical-align: top;
     }
 
     th {
-        padding-right: 70px;
+        padding-right: 50px;
         padding-bottom: 20px;
         padding-top: 10px;
         line-height: 70px;
@@ -198,7 +214,7 @@ table {
         font-size: $h4Size;
         text-transform: uppercase;
 
-        letter-spacing: 8px;
+        letter-spacing: 8px !important;
 
         font-weight: 400;
         color: $smallColor2;
@@ -287,7 +303,11 @@ footer {
     }
 }
 
-nav {
+.subnav {
+    padding-left: 45px;
+}
+
+.nav {
 
     position: relative;
     right: 44px;
@@ -297,7 +317,16 @@ nav {
     vertical-align: middle;
     bottom: 5px;
 
+    .active {
+        color: $accentColor;
+    }
+
+    .active:hover {
+        color: $accentColor2;
+    }
+
     a {
+        transition-duration: 1s;
         font-family: 'Roboto';
         font-size: $creditSize;
         color: $smallColor;
@@ -307,6 +336,11 @@ nav {
         font-weight: 700;
         text-decoration: none;
         font-style: normal;
+    }
+
+    a:hover {
+        color: $accentColor2;
+        transition-duration: 500ms;
     }
 
     ul {
@@ -351,17 +385,17 @@ nav {
     padding: 20px;
     padding-bottom: 22px;
 
+    text-align: center;
+
     background-color: $c2;
     background-repeat: repeat-y;
     background-size: 100% 88px;
     background-position: 0% 0%;
     background-image: repeating-linear-gradient(-25deg, $c2, $c2 20px, $c1 20px, $c1 40px, $c2 40px, $c2 60px, $c3 60px, $c3 80px);
-    animation: barberpole 6s linear infinite;
+    animation: barberpole 1200s linear infinite;
 
-    p {
-        color: $accentColor;
-        font-style: italic;
-    }
+    color: $accentColor;
+    font-style: italic;
 }
 
 
@@ -371,6 +405,35 @@ nav {
     }
 
     100% {
-        background-position: 0% 670%;
+        background-position: 0% -250000%;
     }
+}
+
+input {
+    transition-duration: 500ms;
+
+margin-top: 20px;
+
+    font-family: 'Roboto';
+    letter-spacing: 0.75px;
+    line-height: 140%;
+    font-size: $textSize;
+    font-weight: 300;
+    color: $frontColor;
+    background-color: $codeBlockBackColor;
+    padding: 0px 50px;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    width: 400px;
+
+    border: 2px solid $accentColor;
+    border-radius: 10px;
+
+    outline: none;
+}
+
+input:active, input:hover, input:focus {
+    transition-duration: 500ms;
+    width: 600px;
+    border: 2px solid $accentColor2;
 }

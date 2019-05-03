@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="styles/main.css">
+        <title>EliteAPI</title>
+</head>
+
+<body style="margin: 0px;">
+        <input type="text" id="EventsSearcher" onkeyup="searchTable('EventsSearcher', 'Events')"
+                placeholder="Search for events ...">
+
+        <table id="Events">
+                <tr>
+                        <th>Event</th>
+                        <th>Explanation</th>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.AfmuRepairs))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.AppliedToSquadron))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ApproachBody))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ApproachSettlement))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.AsteroidCracked))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Bounty))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.BuyAmmo))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.BuyDrones))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.BuyExplorationData))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.BuyTradeData))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Cargo))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CargoDepot))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ChangeCrewRole))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CockpitBreached))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CodexEntry))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CollectCargo))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Commander))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CommitCrime))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CommunityGoal))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CommunityGoalDiscard))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CommunityGoalJoin))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CommunityGoalReward))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CrewAssign))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CrewFire))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CrewHire))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CrewLaunchFighter))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CrewMemberJoins))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CrewMemberQuits))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CrewMemberRoleChange))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.CrimeVictim))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.DataScanned))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.DatalinkScan))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.DatalinkVoucher))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Died))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.DisbandedSquadron))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.DiscoveryScan))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.DockFighter))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.DockSRV))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Docked))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.DockingCancelled))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.DockingDenied))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.DockingGranted))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.DockingRequested))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.DockingTimeout))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.EjectCargo))</span></td>
+                        <td></td>
+                </tr>
+
+                <tr>
+                        <td><span class="code">((EliteAPI.EndCrewSession))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.EngineerApply))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.EngineerContribution))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.EngineerCraft))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.EngineerProgress))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.EscapeInterdiction))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.FSDJump))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.FSSAllBodiesFound))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.FSSDiscoveryScan))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.FSSSignalDiscovered))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.FactionKillBond))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.FetchRemoteModule))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.FighterDestroyed))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.FighterRebuilt))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Fileheader))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Friends))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.FuelScoop))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.HeatDamage))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.HeatWarning))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.HullDamage))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Interdicted))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Interdiction))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.JetConeBoost))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.JetConeDamage))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.JoinACrew))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.JoinedSquadron))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.KickCrewMember))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.LaunchDrone))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.LaunchFighter))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.LaunchSRV))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.LeaveBody))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.LeftSquadron))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Liftoff))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.LoadGame))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Loadout))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Location))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Market))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MarketBuy))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MarketSell))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MassModuleStore))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MaterialCollected))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MaterialDiscarded))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MaterialDiscovered))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MaterialTrade))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Materials))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MiningRefined))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MissionAbandoned))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MissionAccepted))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MissionFailed))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MissionRedirected))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Missions))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ModuleBuy))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ModuleInfo))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ModuleRetrieve))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ModuleSell))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ModuleSellRemote))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ModuleStore))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ModuleSwap))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.MultiSellExplorationData))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Music))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.NavBeaconScan))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.NewCommander))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.npcCrewPaidWage))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Outfitting))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PVPKill))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Passengers))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PayBounties))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PayFines))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PayLegacyFines))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Powerplay))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PowerplayCollect))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PowerplayDefect))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PowerplayDeliver))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PowerplayFastTrack))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PowerplayJoin))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PowerplayLeave))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PowerplaySalary))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PowerplayVote))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.PowerplayVoucher))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Progress))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Promotion))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.QuitACrew))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Rank))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.RebootRepair))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.RecieveText))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.RedeemVoucher))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.RefuelAll))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Repair))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.RepairAll))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.RepairDrone))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Reputation))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.RestockVehicle))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Resurrect))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.SAAScanComplete))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.SRVDestroyed))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Scan))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Scanned))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ScientificResearch))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Screenshot))</span></td>
+                        <td>Triggered when the Commander takes a selfie.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.SearchAndRescue))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.SelfDestruct))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.SellDrones))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.SellExplorationData))</span></td>
+                        <td>Triggered when the Commander sells exploration data.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.SendText))</span></td>
+                        <td>Triggered when the Commander sends a text.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.SetUserShipName))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ShieldState))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ShipTargeted))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Shipyard))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ShipyardBuy))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ShipyardNew))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ShipyardSell))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ShipyardSwap))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.ShipyardTransfer))</span></td>
+                        <td>Triggered when the Commander orders a ship from another station to be transferred.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Shutdown))</span></td>
+                        <td>Triggered when the game has closed.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.SquadronCreated))</span></td>
+                        <td>Triggered when the commander creates a Squadron.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.StartJump))</span></td>
+                        <td>Triggered when the Commander starts a jump to another system.</td>
+                <tr>
+                        <td><span class="code">((EliteAPI.Statistics))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.StoredModules))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.StoredShips))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.SupercruiseEntry))</span></td>
+                        <td>Triggered when the Commander enters supercruise.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.SupercruiseExit))</span></td>
+                        <td>Triggered when the Commander leaves supercruise.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Synthesis))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.SystemsShutdown))</span></td>
+                        <td>Triggered when the Commander's systems shut down due to Targoids.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.TechnologyBroker))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Touchdown))</span></td>
+                        <td>Triggered when the Commander lands on a planetary station.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.USSdrop))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.UnderAttack))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Undocked))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.VehicleSwitch))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.WingAdd))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.WingInvite))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.WingJoin))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.WingLeave))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.Docked))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.Landed))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.FsdCooldown))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.Gear))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.Shields))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.Supercruise))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.FlightAssist))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.Hardpoints))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.Winging))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.Lights))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.CargoScoop))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.SilentRunning))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.Scooping))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.SrvHandbreak))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.SrvTurrent))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.SrvDriveAssist))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.MassLocked))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.FsdCharging))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.FsdCooldow))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.LowFuel))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.Overheating))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.HasLatLong))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.InDanger))</span></td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.InInterdiction))</span></td>
+                        <td>Triggered when the Commander gets interdicted and when the interdiction is completed. <b>Does not trigger when the Commander is the one interdicting.</b></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.InMothership))</span></td>
+                        <td>Triggered when the Commander enters or leaves the mothership</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.InNoFireZone))</span></td>
+                        <td>Triggered when the Commander enters or leaves a no-fire-zone.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.InFighter))</span></td>
+                        <td>Triggered when the Commander uses or stops using a fighter.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.InSRV))</span></td>
+                        <td>Triggered when the Commander enters or leaves a SRV.</td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.AnalysisMode))</span></td>
+                        <td>Triggered when the Commander toggles between analysis and combat mode.</td>
+                        <td></td>
+                </tr>
+                <tr>
+                        <td><span class="code">((EliteAPI.Status.NightVision))</span></td>
+                        <td>Triggered when the Commander toggles their night vision.</td>
+                </tr>
+        </table>
+</body>
+
+</html>

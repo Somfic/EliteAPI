@@ -1,4 +1,7 @@
-window.addEventListener('load', Barba.Pjax.start());
+window.addEventListener('load', function() {
+   Barba.Pjax.start();
+   hljs.initHighlighting();
+});
 
 var FadeTransition = Barba.BaseTransition.extend({
     start: function() {
@@ -46,8 +49,9 @@ var FadeTransition = Barba.BaseTransition.extend({
          * .done() will automatically remove from the DOM the old Container
          */
 
+location.reload();
+
         _this.done();
-        location.reload();
       });
     }
   })
@@ -64,3 +68,27 @@ var FadeTransition = Barba.BaseTransition.extend({
   
     return FadeTransition;
   };
+
+  $("#eventsTable").load("../events.html");
+
+  function searchTable(inputID, tableID) {
+    // Declare variables 
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById(inputID);
+    filter = input.value.toUpperCase();
+    table = document.getElementById(tableID);
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      } 
+    }
+  }

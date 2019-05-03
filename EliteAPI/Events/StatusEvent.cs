@@ -16,9 +16,12 @@ namespace EliteAPI.Events
 
         public string Event { get; set; }
 
+        [Obsolete("Use Event instead")]
+        public string @event { get; set; }
+
         public dynamic Value { get; set; }
 
         [Obsolete("Use Value instead")]
-        public dynamic @value { get => Value; set => Value = value; }
+        public dynamic value { get => Value; set => Value = value; }
     }
 }

@@ -23,6 +23,8 @@ namespace EliteAPI.ThirdParty.EliteMacro
             //Create new EliteAPI.
             EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
             EliteAPI.Logger.Log += Logger_Log;
+
+            if(!Directory.Exists(vmCommand.GetDataDirectory())) { Directory.CreateDirectory(vmCommand.GetDataDirectory()); }
             EliteAPI.Logger.UseLogFile(new DirectoryInfo(vmCommand.GetDataDirectory()));
             EliteAPI.Events.AllEvent += Events_AllEvent;
 

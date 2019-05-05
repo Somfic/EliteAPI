@@ -15,7 +15,7 @@ namespace Example
         static void Main(string[] args)
         {
             EliteAPI = new EliteDangerousAPI();
-            EliteAPI.Logger.UseConsole(Severity.Debug).UseLogFile(new DirectoryInfo(Directory.GetCurrentDirectory()));
+            EliteAPI.Logger.UseConsole(Severity.Debug).UseLogFile(Directory.GetCurrentDirectory());
             EliteAPI.Start();
 
             EliteAPI.Events.StatusInNoFireZoneEvent += StatusInNoFireZoneEvent;

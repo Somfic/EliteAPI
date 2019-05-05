@@ -8,6 +8,9 @@ namespace EliteAPI.Logging
     public class Logger
     {
         private string DirectoryPath = "";
+
+        private string LogFile = "";
+
         private readonly EliteDangerousAPI EliteAPI;
         private Severity MinType = Severity.Debug;
 
@@ -179,9 +182,26 @@ namespace EliteAPI.Logging
         /// </summary>
         /// <param name="directory">The directory in which to save the log files.</param>
         /// <returns></returns>
-        public Logger UseLogFile(DirectoryInfo directory)
+        public Logger UseLogFile(string directoryString)
         {
-            DirectoryPath = directory.FullName;
+            if(!Directory.Exists(directoryString)) { LogWarning($"Path '{directoryString}' could not be found for logging."); return this; }
+
+            DirectoryPath = directoryString;
+
+            int i = 1;
+            while (true) {
+                if (!File.Exists(DirectoryPath + $"\\EliteAPI.{DateTime.Now.ToShortDateString()}.{i}.log"))
+                {
+                    LogFile = DirectoryPath + $"\\EliteAPI.{DateTime.Now.ToShortDateString()}.{i}.log";
+                    break;
+                } else
+                {
+                    i++;
+                }
+            }
+
+            try { File.WriteAllText(LogFile, ""); }
+            catch (Exception ex) { LogError($"Could not use {LogFile} as log file. Proceeding without logging.", ex); return this; }
 
             WriteToLog("======= NEW LOG ENTRY =======");
             EliteAPI.OnQuit += (sender, arg) => WriteToLog("======== END OF LOG =========");
@@ -216,7 +236,7 @@ namespace EliteAPI.Logging
                 }
             };
 
-            LogInfo($"Logging to {DirectoryPath}.");
+            LogInfo($"Logging to {LogFile}.");
 
             return this;
         }
@@ -313,10 +333,10 @@ namespace EliteAPI.Logging
             {
                 try
                 {
-                    File.AppendAllText(DirectoryPath + $"\\EliteAPI.{DateTime.Now.ToShortDateString()}.log", DateTime.Now.ToLongTimeString() + " : " + s.ToString() + Environment.NewLine);
+                    File.AppendAllText(LogFile, DateTime.Now.ToLongTimeString() + " : " + s.ToString() + Environment.NewLine);
                     return;
                 }
-                catch { Thread.Sleep(100); }
+                catch (Exception ex) { Console.WriteLine(ex.Message); Thread.Sleep(1000); }
             }
         }
 

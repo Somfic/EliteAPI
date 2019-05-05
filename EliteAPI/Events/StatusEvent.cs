@@ -11,17 +11,17 @@ namespace EliteAPI.Events
         public StatusEvent(string Event, dynamic Value)
         {
             this.Event = Event;
+            this.@event = Event;
             this.Value = Value;
+            this.value = Value;
         }
 
         public string Event { get; set; }
 
-        [Obsolete("Use Event instead")]
-        public string @event { get; set; }
+        public string @event { get => Event; set => Event = value; }
 
         public dynamic Value { get; set; }
 
-        [Obsolete("Use Value instead")]
         public dynamic value { get => Value; set => Value = value; }
     }
 }

@@ -10,7 +10,7 @@ namespace EliteAPI.ThirdParty
 {
     public class ThirdPartyWrapper
     {
-        private readonly EliteDangerousAPI EliteAPI;
+        private static EliteDangerousAPI EliteAPI;
 
         public ThirdPartyWrapper(EliteDangerousAPI api, string name)
         {
@@ -161,7 +161,6 @@ namespace EliteAPI.ThirdParty
             catch (Exception ex) { EliteAPI.Logger.LogWarning($"There was a problem while trying to process '{content}'.", ex); }
         }
     }
-
     public class Variable
     {
         public Variable(string name, object value)
@@ -178,15 +177,19 @@ namespace EliteAPI.ThirdParty
 
         private VarType GetVarType(object s)
         {
-            string type = s.GetType().ToString().Replace("System.", "").Replace("Collections.Generic.", "").ToLower();
-            if (type.Contains("int")) { return VarType.Int; }
-            else if (type.Contains("long")) { return VarType.Int; }
-            else if (type.Contains("string")) { return VarType.String; }
-            else if (type.Contains("decimal")) { return VarType.Decimal; }
-            else if (type.Contains("double")) { return VarType.Decimal; }
-            else if (type.Contains("float")) { return VarType.Decimal; }
-            else if (type.Contains("bool")) { return VarType.Bool; }
-            else { return VarType.Unknown; }
+            try
+            {
+                string type = s.GetType().ToString().Replace("System.", "").Replace("Collections.Generic.", "").ToLower();
+                if (type.Contains("int")) { return VarType.Int; }
+                else if (type.Contains("long")) { return VarType.Int; }
+                else if (type.Contains("string")) { return VarType.String; }
+                else if (type.Contains("decimal")) { return VarType.Decimal; }
+                else if (type.Contains("double")) { return VarType.Decimal; }
+                else if (type.Contains("float")) { return VarType.Decimal; }
+                else if (type.Contains("bool")) { return VarType.Bool; }
+                else { return VarType.Unknown; }
+            }
+            catch { return VarType.Unknown; }
         }
     }
 }

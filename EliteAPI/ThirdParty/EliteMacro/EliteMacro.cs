@@ -24,8 +24,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
             EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
             EliteAPI.Logger.Log += Logger_Log;
 
-            if(!Directory.Exists(vmCommand.GetDataDirectory())) { Directory.CreateDirectory(vmCommand.GetDataDirectory()); }
-            EliteAPI.Logger.UseLogFile(new DirectoryInfo(vmCommand.GetDataDirectory()));
+            EliteAPI.Logger.UseLogFile(vmCommand.GetDataDirectory());
             EliteAPI.Events.AllEvent += Events_AllEvent;
 
             //Create new Wrapper.
@@ -58,8 +57,11 @@ namespace EliteAPI.ThirdParty.EliteMacro
         {
             foreach (Variable v in variables)
             {
-                if (v.Type == Variable.VarType.Unknown) { continue; }
-                vmCommand.SetVariable($"EliteAPI.{v.Name}_p", v.Value.ToString());
+             //   try
+           //     {
+                    if (v.Type == Variable.VarType.Unknown) { continue; }
+                    vmCommand.SetVariable($"EliteAPI.{v.Name}_p", v.Value.ToString());
+               // }catch(Exception ex) { EliteAPI.Logger.LogError($"Could not set variable {v.Name}.", ex); }
             }
         }
 

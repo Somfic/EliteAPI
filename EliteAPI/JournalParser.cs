@@ -78,8 +78,7 @@ namespace EliteAPI
                     {
                         object parsedEvent = eventMethod.Invoke(null, new object[] { json, EliteAPI });
                         //amountOfProcessedFields = parsedEvent.GetType().GetProperties().Length;
-                        parsed = parsedEvent.GetType().GetProperties();
-
+                        //parsed = parsedEvent.GetType().GetProperties();
                     }
                     catch (Exception ex) { EliteAPI.Logger.LogError($"Could not invoke event method '{eventName}Info.Process()'.", ex); }
                 }

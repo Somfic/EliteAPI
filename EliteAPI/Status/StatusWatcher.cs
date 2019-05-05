@@ -117,13 +117,19 @@ namespace EliteAPI.Status
 
                 if(A != B)
                 {
-                    StatusEvent e = new StatusEvent("Status." + propA.Name, B);
+                    try
+                    {
 
-                    api.Logger.LogDebugEvent($"Processing status event '{propA.Name}' ({B}).", e);
+                        StatusEvent e = new StatusEvent("Status." + propA.Name, B);
 
-                    api.Events.InvokeAllEvent(new StatusEvent("Status." + propA.Name, B));
-                    try { api.Events.GetType().GetMethod("InvokeStatus" + propA.Name, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static).Invoke(api.Events, new object[] { e }); }
-                    catch (Exception ex) { api.Logger.LogError($"Could not invoke status event '{propA.Name}', it might not have been added yet.", ex); }
+                        api.Logger.LogDebugEvent($"Processing status event '{propA.Name}' ({B}).", e);
+
+                        api.Events.InvokeAllEvent(new StatusEvent("Status." + propA.Name, B));
+
+                        try { api.Events.GetType().GetMethod("InvokeStatus" + propA.Name, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static).Invoke(api.Events, new object[] { e }); }
+                        catch (Exception ex) { api.Logger.LogError($"Could not invoke status event '{propA.Name}', it might not have been added yet.", ex); }
+                    }
+                    catch(Exception ex) { api.Logger.LogError("Could not do status.", ex); }
                 }
             }
         }

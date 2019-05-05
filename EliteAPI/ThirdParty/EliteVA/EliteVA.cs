@@ -25,7 +25,7 @@ namespace EliteAPI.ThirdParty.EliteVA
             //Create new EliteAPI.
             EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
             EliteAPI.Logger.Log += Logger_Log;
-            EliteAPI.Logger.UseLogFile(new DirectoryInfo(Directory.GetCurrentDirectory()));
+            EliteAPI.Logger.UseLogFile(Directory.GetCurrentDirectory());
             EliteAPI.Events.AllEvent += Events_AllEvent;
 
             //Create new Wrapper.

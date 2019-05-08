@@ -57,11 +57,15 @@ namespace EliteAPI.ThirdParty.EliteMacro
         {
             foreach (Variable v in variables)
             {
-             //   try
-           //     {
-                    if (v.Type == Variable.VarType.Unknown) { continue; }
-                    vmCommand.SetVariable($"EliteAPI.{v.Name}_p", v.Value.ToString());
-               // }catch(Exception ex) { EliteAPI.Logger.LogError($"Could not set variable {v.Name}.", ex); }
+                //Check if the variable isn't type unknown.
+                if (v.Type == Variable.VarType.Unknown) { EliteAPI.Logger.LogDebug($"Could not set VoiceMacro variable 'EliteAPI.{v.Name}_p' to {v.Value}.", new Exception("Type is unknown")); continue; }
+
+                //Check if the variable has actually changed.
+                if (vmCommand.GetVariable($"EliteAPI.{v.Name}_p") == v.Value.ToString()) { continue; }
+
+                //Change variable.
+                EliteAPI.Logger.LogDebug($"Set VoiceMacro variable 'EliteAPI.{v.Name}_p' to {v.Value}.");
+                vmCommand.SetVariable($"EliteAPI.{v.Name}_p", v.Value.ToString());
             }
         }
 

@@ -15,6 +15,7 @@ namespace EliteAPI.ThirdParty
         public ThirdPartyWrapper(EliteDangerousAPI api, string name)
         {
             EliteAPI = api;
+            EliteAPI.Logger.LogDebug($"Enabled third party wrapper for {name}.");
         }
 
         public List<Variable> GetVariables()
@@ -57,7 +58,7 @@ namespace EliteAPI.ThirdParty
                 }
 
                 //Do not try to output an object for fuel, rather output the fields separate.
-                if (f.Name == "Fuel")
+                else if (f.Name == "Fuel")
                 {
                     variables.Add(new Variable("Fuel.Main", EliteAPI.Status.Fuel.FuelMain));
                     variables.Add(new Variable("Fuel.Reservoir", EliteAPI.Status.Fuel.FuelReservoir));
@@ -65,7 +66,10 @@ namespace EliteAPI.ThirdParty
                     continue;
                 }
 
-                variables.Add(new Variable(f.Name, f.GetValue(EliteAPI.Status)));
+                else
+                {
+                    variables.Add(new Variable(f.Name, f.GetValue(EliteAPI.Status)));
+                }
             }
 
             return variables;
@@ -100,7 +104,7 @@ namespace EliteAPI.ThirdParty
                 }
                 catch (Exception ex)
                 {
-                    EliteAPI.Logger.LogError($"There was an error while trying to parse field ['{name}' ({value})] for '{eventName}'.", ex);
+                    EliteAPI.Logger.LogError($"There was an error while trying to parse field [{name} ({value})] for {eventName}.", ex);
                 }
             }
 

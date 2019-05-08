@@ -95,6 +95,7 @@ namespace EliteAPI.Status
             newStatus.Fuel.MaxFuel = MaxFuel;
             newStatus.GameMode = GameMode;
             newStatus.InMainMenu = InMainMenu;
+            newStatus.MusicTrack = MusicTrack;
 
             if (newStatus.Docked) { newStatus.InNoFireZone = true; }
 

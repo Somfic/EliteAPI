@@ -24,20 +24,20 @@ namespace EliteAPI.ThirdParty.EliteVA
 
             //Create new EliteAPI.
             EliteAPI = new EliteDangerousAPI(EliteDangerousAPI.StandardDirectory);
-            EliteAPI.Logger.Log += Logger_Log;
-            EliteAPI.Logger.UseLogFile(Directory.GetCurrentDirectory());
-            EliteAPI.Events.AllEvent += Events_AllEvent;
 
             //Create new Wrapper.
-            Wrapper = new ThirdPartyWrapper(EliteAPI, VA_DisplayName());
+            Wrapper = new ThirdPartyWrapper(EliteAPI, VA_DisplayName(), $@"{Directory.GetCurrentDirectory()}\EliteVA.ini");
 
-            //Set the correct journal directory.
-            DirectoryInfo newDirectory = Wrapper.GetJournalFolder("EliteVA.ini");
-            if (newDirectory.FullName != EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.ChangeJournal(newDirectory); }
-
+            //Setup EliteAPI.
+            EliteAPI.Logger.Log += Logger_Log;
+            EliteAPI.Logger.UseLogFile(Wrapper.GetLogFolder().ToString());
+            EliteAPI.ChangeJournal(Wrapper.GetJournalFolder());
 
             //Start the API.
             EliteAPI.Start();
+
+            //Listen for events.
+            EliteAPI.Events.AllEvent += Events_AllEvent;
         }
 
         public static void VA_Invoke1(dynamic vaProxy)
@@ -62,34 +62,41 @@ namespace EliteAPI.ThirdParty.EliteVA
         {
             foreach (Variable v in variables)
             {
-                //Check if the variable isn't type unknown.
-                if (v.Type == Variable.VarType.Unknown) { EliteAPI.Logger.LogDebug($"Could not set VoiceAttack variable 'EliteAPI.{v.Name}' to {v.Value}.", new Exception("Type is unknown")); continue; }
-
-                switch (v.Type)
+                try
                 {
-                    case Variable.VarType.Bool:
-                        if(proxy.GetBoolean("EliteAPI." + v.Name) == bool.Parse(v.Value.ToString())) { continue; }
-                        EliteAPI.Logger.LogDebug($"Set VoiceAttack bool 'EliteAPI.{v.Name}' to {v.Value}.");
-                        proxy.SetBoolean("EliteAPI." + v.Name, bool.Parse(v.Value.ToString()));
-                        break;
+                    //Check if the variable isn't type unknown.
+                    if (v.Type == Variable.VarType.Unknown) { EliteAPI.Logger.LogDebug($"Could not set VoiceAttack variable 'EliteAPI.{v.Name}' to {v.Value}.", new Exception("Type is unknown")); continue; }
 
-                    case Variable.VarType.Decimal:
-                        if (proxy.GetDecimal("EliteAPI." + v.Name) == decimal.Parse(v.Value.ToString())) { continue; }
-                        EliteAPI.Logger.LogDebug($"Set VoiceAttack decimal 'EliteAPI.{v.Name}' to {v.Value}.");
-                        proxy.SetDecimal("EliteAPI." + v.Name, decimal.Parse(v.Value.ToString()));
-                        break;
+                    switch (v.Type)
+                    {
+                        case Variable.VarType.Bool:
+                            if (proxy.GetBoolean("EliteAPI." + v.Name) == bool.Parse(v.Value.ToString())) { continue; }
+                            EliteAPI.Logger.LogDebug($"Set VoiceAttack bool 'EliteAPI.{v.Name}' to '{v.Value}'.");
+                            proxy.SetBoolean("EliteAPI." + v.Name, bool.Parse(v.Value.ToString()));
+                            break;
 
-                    case Variable.VarType.String:
-                        if (proxy.GetText("EliteAPI." + v.Name) == v.Value.ToString()) { continue; }
-                        EliteAPI.Logger.LogDebug($"Set VoiceAttack text 'EliteAPI.{v.Name}' to {v.Value}.");
-                        proxy.SetText("EliteAPI." + v.Name, v.Value.ToString());
-                        break;
+                        case Variable.VarType.Decimal:
+                            if (proxy.GetDecimal("EliteAPI." + v.Name) == decimal.Parse(v.Value.ToString())) { continue; }
+                            EliteAPI.Logger.LogDebug($"Set VoiceAttack decimal 'EliteAPI.{v.Name}' to '{v.Value}'.");
+                            proxy.SetDecimal("EliteAPI." + v.Name, decimal.Parse(v.Value.ToString()));
+                            break;
 
-                    case Variable.VarType.Int:
-                        if (proxy.GetInt("EliteAPI." + v.Name) == int.Parse(v.Value.ToString())) { continue; }
-                        EliteAPI.Logger.LogDebug($"Set VoiceAttack int 'EliteAPI.{v.Name}' to {v.Value}.");
-                        proxy.SetInt("EliteAPI." + v.Name, int.Parse(v.Value.ToString()));
-                        break;
+                        case Variable.VarType.String:
+                            if (proxy.GetText("EliteAPI." + v.Name) == v.Value.ToString()) { continue; }
+                            EliteAPI.Logger.LogDebug($"Set VoiceAttack text 'EliteAPI.{v.Name}' to '{v.Value}'.");
+                            proxy.SetText("EliteAPI." + v.Name, v.Value.ToString());
+                            break;
+
+                        case Variable.VarType.Int:
+                            if (proxy.GetInt("EliteAPI." + v.Name) == int.Parse(v.Value.ToString())) { continue; }
+                            EliteAPI.Logger.LogDebug($"Set VoiceAttack int 'EliteAPI.{v.Name}' to '{v.Value}'.");
+                            proxy.SetInt("EliteAPI." + v.Name, int.Parse(v.Value.ToString()));
+                            break;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    EliteAPI.Logger.LogDebug($"Could not set variable {v.Name}.", ex);
                 }
             }
         }
@@ -118,6 +125,8 @@ namespace EliteAPI.ThirdParty.EliteVA
 
         private static void Events_AllEvent(object sender, dynamic e)
         {
+            if(!EliteAPI.IsReady) { return; }
+
             string commandName = $"((EliteAPI.{Wrapper.GetEventName(e)}))";
 
             if (commandName.Contains("Status"))
@@ -129,8 +138,12 @@ namespace EliteAPI.ThirdParty.EliteVA
             if (proxy.CommandExists(commandName))
             {
                 //Set event variables.
+                EliteAPI.Logger.LogDebug($"Executing VoiceAttack command '{commandName}'.");
                 SetVariables(Wrapper.GetEventVariables(e));
                 proxy.ExecuteCommand(commandName);
+            } else
+            {
+                EliteAPI.Logger.LogDebug($"VoiceAttack command '{commandName}' was not found, continuing.");
             }
         }
     }

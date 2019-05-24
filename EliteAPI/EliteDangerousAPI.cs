@@ -29,6 +29,8 @@ namespace EliteAPI
             public static extern int SHGetKnownFolderPath([MarshalAs(UnmanagedType.LPStruct)]Guid rfid, uint dwFlags, IntPtr hToken, out IntPtr ppszPath);
         }
 
+        public bool IsReady { get; internal set; }
+
         /// <summary>
         /// The standard Directory of the Player Journal files (C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous).
         /// </summary>
@@ -52,7 +54,7 @@ namespace EliteAPI
         /// <summary>
         /// The version of EliteAPI.
         /// </summary>
-        public string Version => "2.0.2.8";
+        public string Version => "2.0.2.9";
 
         /// <summary>
         /// Whether the API is currently running.
@@ -310,10 +312,12 @@ namespace EliteAPI
             if (foundStatus) { Logger.LogInfo("Found Journal and Status files."); }
 
             //Check if Elite: Dangerous is running.
-            if (!Status.IsRunning) { Logger.LogWarning("Elite: Dangerous is not running."); }
+            if (!Status.IsRunning) { Logger.LogWarning("Elite: Dangerous is not in-game."); }
 
             //Process the journal file.
+            if (!SkipCatchUp) { Logger.LogDebug("Catching up with past events from this session."); }
             JournalParser.ProcessJournal(journalFile, SkipCatchUp);
+            if (!SkipCatchUp) { Logger.LogDebug("Catchup on past events completed."); }
 
             //Go async.
             Task.Run(() =>
@@ -337,13 +341,18 @@ namespace EliteAPI
             s.Stop();
 
             Logger.LogDebug($"Finished in {s.ElapsedMilliseconds}ms.");
+            IsReady = true;
             OnReady?.Invoke(this, EventArgs.Empty);
         }
 
         public void ChangeJournal(DirectoryInfo newJournalDirectory)
         {
-            if (Logger != null) { Logger.LogDebug($"Changed Journal Directory to '{newJournalDirectory}'."); }
-            JournalDirectory = newJournalDirectory;
+            if (newJournalDirectory == JournalDirectory) { return; }
+            else if (Logger != null)
+            {
+                JournalDirectory = newJournalDirectory;
+                Logger.LogDebug($"Changed Journal Directory to '{newJournalDirectory}'.");
+            }
         }
 
         /// <summary>

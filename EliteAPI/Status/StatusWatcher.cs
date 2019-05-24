@@ -120,7 +120,6 @@ namespace EliteAPI.Status
                 {
                     try
                     {
-
                         StatusEvent e = new StatusEvent("Status." + propA.Name, B);
 
                         api.Logger.LogDebugEvent($"Processing status event '{propA.Name}' ({B}).", e);

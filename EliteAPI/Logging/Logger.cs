@@ -182,17 +182,19 @@ namespace EliteAPI.Logging
         /// </summary>
         /// <param name="directory">The directory in which to save the log files.</param>
         /// <returns></returns>
-        public Logger UseLogFile(string directoryString)
+        public Logger UseLogFile(string directory)
         {
-            if(!Directory.Exists(directoryString)) { LogWarning($"Path '{directoryString}' could not be found for logging."); return this; }
+            if(!Directory.Exists(directory)) { LogError($"Path '{directory}' could not be found for logging."); return this; }
 
-            DirectoryPath = directoryString;
+            DirectoryPath = directory;
+
+            string date = $"{DateTime.Now.Day}-{DateTime.Now.Month}-{DateTime.Now.Year}";
 
             int i = 1;
             while (true) {
-                if (!File.Exists(DirectoryPath + $"\\EliteAPI.{DateTime.Now.ToShortDateString()}.{i}.log"))
+                if (!File.Exists(DirectoryPath + $"\\EliteAPI.{date}.{i}.log"))
                 {
-                    LogFile = DirectoryPath + $"\\EliteAPI.{DateTime.Now.ToShortDateString()}.{i}.log";
+                    LogFile = DirectoryPath + $"\\EliteAPI.{date}.{i}.log";
                     break;
                 } else
                 {
@@ -294,16 +296,17 @@ namespace EliteAPI.Logging
 
         private void WriteLog(Severity severity, string content, Exception ex = null)
         {
-            StringBuilder s = new StringBuilder("        ");
-            s.Insert(0, severity.ToString());
-            s.Insert(8, $": " + content);
+            StringBuilder s = new StringBuilder("                     ");
+            s.Insert(0, DateTime.Now.ToLongTimeString() + " :");
+            s.Insert(11, severity.ToString());
+            s.Insert(19, $": " + content);
 
             WriteToLog(s);
 
             if (ex != null)
             {
-                s = new StringBuilder("        ");
-                s.Insert(8, "| " + ex.Message);
+                s = new StringBuilder("                     ");
+                s.Insert(19, "| " + ex.Message);
                 WriteToLog(s);
 
                 if (ex.StackTrace != null) { 
@@ -311,8 +314,8 @@ namespace EliteAPI.Logging
                     foreach (string x in trace)
                     {
                         string m = x.Trim();
-                        s = new StringBuilder("        ");
-                        s.Insert(8, "| " + m);
+                        s = new StringBuilder("                     ");
+                        s.Insert(19, "| " + m);
                         WriteToLog(s);
                     }
                 }
@@ -321,8 +324,8 @@ namespace EliteAPI.Logging
 
         private void WriteLog(string content)
         {
-            StringBuilder s = new StringBuilder("        ");
-            s.Insert(8, $"| " + content);
+            StringBuilder s = new StringBuilder("                     ");
+            s.Insert(19, $"| " + content);
 
             WriteToLog(s);
         }
@@ -333,7 +336,7 @@ namespace EliteAPI.Logging
             {
                 try
                 {
-                    File.AppendAllText(LogFile, DateTime.Now.ToLongTimeString() + " : " + s.ToString() + Environment.NewLine);
+                    File.AppendAllText(LogFile, $"{s.ToString()}{Environment.NewLine}");
                     return;
                 }
                 catch (Exception ex) { Console.WriteLine(ex.Message); Thread.Sleep(1000); }

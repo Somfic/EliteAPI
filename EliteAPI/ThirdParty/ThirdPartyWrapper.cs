@@ -1,21 +1,34 @@
-﻿using Newtonsoft.Json;
+﻿using IniParser;
+using IniParser.Model;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
+
 
 namespace EliteAPI.ThirdParty
 {
     public class ThirdPartyWrapper
     {
         private static EliteDangerousAPI EliteAPI;
+        private readonly string iniPath;
 
-        public ThirdPartyWrapper(EliteDangerousAPI api, string name)
+        public ThirdPartyWrapper(EliteDangerousAPI api, string name, string iniPath)
         {
             EliteAPI = api;
             EliteAPI.Logger.LogDebug($"Enabled third party wrapper for {name}.");
+            this.iniPath = iniPath;
+
+            try
+            {
+                if (File.ReadAllLines(iniPath)[0] == "//Use this to set a custom path to your Journal directory.")
+                {
+                    File.Delete(iniPath);
+                }
+            }
+            catch { }
         }
 
         public List<Variable> GetVariables()
@@ -104,7 +117,7 @@ namespace EliteAPI.ThirdParty
                 }
                 catch (Exception ex)
                 {
-                    EliteAPI.Logger.LogError($"There was an error while trying to parse field [{name} ({value})] for {eventName}.", ex);
+                    EliteAPI.Logger.LogError($"There was an error while trying to parse field [{name} ({value})] for event '{eventName}'.", ex);
                 }
             }
 
@@ -113,35 +126,60 @@ namespace EliteAPI.ThirdParty
 
         public string GetEventName(dynamic e)
         {
-            //Set the event name.
-            return e.@Event;
+            //Get the event name.
+            string eventName = e.@event;
+            if (!string.IsNullOrWhiteSpace(eventName)) { return eventName; }
+            else { return e.@Event; }
         }
 
-        public DirectoryInfo GetJournalFolder(string iniFilePath)
+        public IniData GetIni()
         {
-            EliteAPI.Logger.LogDebug($"Looking for '{iniFilePath}'.");
-            if (!File.Exists(iniFilePath))
+            FileIniDataParser parser = new FileIniDataParser();
+
+            //If the ini file does not exist, create a new one.
+            if (!File.Exists(iniPath))
             {
-                EliteAPI.Logger.LogDebug($"Could not find '{iniFilePath}'.");
-                File.WriteAllText(iniFilePath, "//Use this to set a custom path to your Journal directory." + Environment.NewLine);
-                File.AppendAllText(iniFilePath, $"path={EliteDangerousAPI.StandardDirectory}");
-                return EliteDangerousAPI.StandardDirectory;
+                IniData ini = new IniData();
+                ini["ELITEAPI"]["path"] = EliteDangerousAPI.StandardDirectory.ToString();
+                ini["LOGGING"]["path"] = Directory.GetCurrentDirectory();
+                parser.WriteFile(iniPath, ini);
             }
             else
             {
-                try
-                {
-                    if (File.ReadAllLines(iniFilePath).Count(x => !x.StartsWith("/")) == 0) { EliteAPI.Logger.LogDebug($"Found '{iniFilePath}', but no custom directory has been set."); return EliteDangerousAPI.StandardDirectory; }
-                    string path = File.ReadAllLines(iniFilePath).Where(x => !x.StartsWith("/")).First().Split(new string[] { "path=" }, StringSplitOptions.None)[1];
-                    if (path == EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.Logger.LogDebug($"Found '{iniFilePath}', but it doesn't contain a custom directory."); return EliteDangerousAPI.StandardDirectory; }
-                    if (Directory.Exists(path)) { EliteAPI.Logger.LogDebug($"Found '{iniFilePath}'."); return new DirectoryInfo(path); }
-                    else { EliteAPI.Logger.LogWarning($"Found '{iniFilePath}', but the path is invalid ('{path}')."); return EliteDangerousAPI.StandardDirectory; }
-                }
-                catch (Exception ex)
-                {
-                    EliteAPI.Logger.LogWarning($"Could not read from '{iniFilePath}'.", ex);
-                    return EliteDangerousAPI.StandardDirectory;
-                }
+                EliteAPI.Logger.LogDebug($"Reading custom configuration from '{iniPath}'.");
+            }
+
+            return parser.ReadFile(iniPath);
+        }
+
+        public DirectoryInfo GetJournalFolder()
+        {
+            try
+            {
+                string path = GetIni()["ELITEAPI"]["path"];
+                if (path == EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.Logger.LogDebug($"Using default path."); return EliteDangerousAPI.StandardDirectory; }
+                else if (Directory.Exists(path)) { EliteAPI.Logger.LogDebug($"Found '{path}'."); return new DirectoryInfo(path); }
+                else { EliteAPI.Logger.LogWarning($"Found '{path}', but the path is invalid, using default path."); return EliteDangerousAPI.StandardDirectory; }
+            }
+            catch (Exception ex)
+            {
+                EliteAPI.Logger.LogWarning($"Could not read from '{iniPath}', using default Journal path.", ex);
+                return EliteDangerousAPI.StandardDirectory;
+            }
+        }
+
+        public DirectoryInfo GetLogFolder()
+        {
+            try
+            {
+                string path = GetIni()["LOGGING"]["path"];
+                if (Directory.Exists(path)) { EliteAPI.Logger.LogDebug($"Using '{path}' for logging."); return new DirectoryInfo(path); }
+                else { EliteAPI.Logger.LogWarning($"Found '{path}' for logging, but the path is invalid, using '{Directory.GetCurrentDirectory()}' instead."); return new DirectoryInfo(Directory.GetCurrentDirectory()); }
+            }
+            catch (Exception ex)
+            {
+                EliteAPI.Logger.LogWarning($"Could not read from '{iniPath}', using '{Directory.GetCurrentDirectory()}' for logging.", ex);
+                return new DirectoryInfo(Directory.GetCurrentDirectory());
             }
         }
 
@@ -165,6 +203,7 @@ namespace EliteAPI.ThirdParty
             catch (Exception ex) { EliteAPI.Logger.LogWarning($"There was a problem while trying to process '{content}'.", ex); }
         }
     }
+
     public class Variable
     {
         public Variable(string name, object value)

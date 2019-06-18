@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static RepairDroneInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRepairDroneEvent(JsonConvert.DeserializeObject<RepairDroneInfo>(json, EliteAPI.Events.RepairDroneConverter.Settings));
     }
 
-    public static class RepairDroneSerializer
-    {
-        public static string ToJson(this RepairDroneInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.RepairDroneConverter.Settings);
-    }
+    
 
     internal static class RepairDroneConverter
     {

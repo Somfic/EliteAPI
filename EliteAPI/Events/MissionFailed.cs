@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static MissionFailedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMissionFailedEvent(JsonConvert.DeserializeObject<MissionFailedInfo>(json, EliteAPI.Events.MissionFailedConverter.Settings));
     }
 
-    public static class MissionFailedSerializer
-    {
-        public static string ToJson(this MissionFailedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.MissionFailedConverter.Settings);
-    }
+    
 
     internal static class MissionFailedConverter
     {

@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static StartJumpInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeStartJumpEvent(JsonConvert.DeserializeObject<StartJumpInfo>(json, EliteAPI.Events.StartJumpConverter.Settings));
     }
 
-    public static class StartJumpSerializer
-    {
-        public static string ToJson(this StartJumpInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.StartJumpConverter.Settings);
-    }
+    
 
     internal static class StartJumpConverter
     {

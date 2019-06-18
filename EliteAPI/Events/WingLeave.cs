@@ -21,10 +21,7 @@ namespace EliteAPI.Events
         public static WingLeaveInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeWingLeaveEvent(JsonConvert.DeserializeObject<WingLeaveInfo>(json, EliteAPI.Events.WingLeaveConverter.Settings));
     }
 
-    public static class WingLeaveSerializer
-    {
-        public static string ToJson(this WingLeaveInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.WingLeaveConverter.Settings);
-    }
+    
 
     internal static class WingLeaveConverter
     {

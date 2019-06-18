@@ -300,10 +300,7 @@ namespace EliteAPI.Events
         public static StatisticsInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeStatisticsEvent(JsonConvert.DeserializeObject<StatisticsInfo>(json, EliteAPI.Events.StatisticsConverter.Settings));
     }
 
-    public static class StatisticsSerializer
-    {
-        public static string ToJson(this StatisticsInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.StatisticsConverter.Settings);
-    }
+    
 
     internal static class StatisticsConverter
     {

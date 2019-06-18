@@ -21,10 +21,7 @@ namespace EliteAPI.Events
         public static HeatDamageInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeHeatDamageEvent(JsonConvert.DeserializeObject<HeatDamageInfo>(json, EliteAPI.Events.HeatDamageConverter.Settings));
     }
 
-    public static class HeatDamageSerializer
-    {
-        public static string ToJson(this HeatDamageInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.HeatDamageConverter.Settings);
-    }
+    
 
     internal static class HeatDamageConverter
     {

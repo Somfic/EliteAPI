@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static FighterRebuiltInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFighterRebuiltEvent(JsonConvert.DeserializeObject<FighterRebuiltInfo>(json, EliteAPI.Events.FighterRebuiltConverter.Settings));
     }
 
-    public static class FighterRebuiltSerializer
-    {
-        public static string ToJson(this FighterRebuiltInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.FighterRebuiltConverter.Settings);
-    }
+    
 
     internal static class FighterRebuiltConverter
     {

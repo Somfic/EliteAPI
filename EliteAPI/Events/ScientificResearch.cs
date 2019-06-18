@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static ScientificResearchInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeScientificResearchEvent(JsonConvert.DeserializeObject<ScientificResearchInfo>(json, EliteAPI.Events.ScientificResearchConverter.Settings));
     }
 
-    public static class ScientificResearchSerializer
-    {
-        public static string ToJson(this ScientificResearchInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ScientificResearchConverter.Settings);
-    }
+    
 
     internal static class ScientificResearchConverter
     {

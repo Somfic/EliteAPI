@@ -36,10 +36,7 @@ namespace EliteAPI.Events
         public static ApproachSettlementInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeApproachSettlementEvent(JsonConvert.DeserializeObject<ApproachSettlementInfo>(json, EliteAPI.Events.ApproachSettlementConverter.Settings));
     }
 
-    public static class ApproachSettlementSerializer
-    {
-        public static string ToJson(this ApproachSettlementInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ApproachSettlementConverter.Settings);
-    }
+    
 
     internal static class ApproachSettlementConverter
     {

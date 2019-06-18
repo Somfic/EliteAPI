@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static PowerplayJoinInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayJoinEvent(JsonConvert.DeserializeObject<PowerplayJoinInfo>(json, EliteAPI.Events.PowerplayJoinConverter.Settings));
     }
 
-    public static class PowerplayJoinSerializer
-    {
-        public static string ToJson(this PowerplayJoinInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.PowerplayJoinConverter.Settings);
-    }
+    
 
     internal static class PowerplayJoinConverter
     {

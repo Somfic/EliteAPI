@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static EscapeInterdictionInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeEscapeInterdictionEvent(JsonConvert.DeserializeObject<EscapeInterdictionInfo>(json, EliteAPI.Events.EscapeInterdictionConverter.Settings));
     }
 
-    public static class EscapeInterdictionSerializer
-    {
-        public static string ToJson(this EscapeInterdictionInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.EscapeInterdictionConverter.Settings);
-    }
+    
 
     internal static class EscapeInterdictionConverter
     {

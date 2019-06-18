@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static EngineerApplyInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeEngineerApplyEvent(JsonConvert.DeserializeObject<EngineerApplyInfo>(json, EliteAPI.Events.EngineerApplyConverter.Settings));
     }
 
-    public static class EngineerApplySerializer
-    {
-        public static string ToJson(this EngineerApplyInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.EngineerApplyConverter.Settings);
-    }
+    
 
     internal static class EngineerApplyConverter
     {

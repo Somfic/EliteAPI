@@ -39,10 +39,7 @@ namespace EliteAPI.Events
         public static ProgressInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeProgressEvent(JsonConvert.DeserializeObject<ProgressInfo>(json, EliteAPI.Events.ProgressConverter.Settings));
     }
 
-    public static class ProgressSerializer
-    {
-        public static string ToJson(this ProgressInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ProgressConverter.Settings);
-    }
+    
 
     internal static class ProgressConverter
     {

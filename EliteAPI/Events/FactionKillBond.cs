@@ -36,10 +36,7 @@ namespace EliteAPI.Events
         public static FactionKillBondInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFactionKillBondEvent(JsonConvert.DeserializeObject<FactionKillBondInfo>(json, EliteAPI.Events.FactionKillBondConverter.Settings));
     }
 
-    public static class FactionKillBondSerializer
-    {
-        public static string ToJson(this FactionKillBondInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.FactionKillBondConverter.Settings);
-    }
+    
 
     internal static class FactionKillBondConverter
     {

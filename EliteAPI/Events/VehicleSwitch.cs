@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static VehicleSwitchInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeVehicleSwitchEvent(JsonConvert.DeserializeObject<VehicleSwitchInfo>(json, EliteAPI.Events.VehicleSwitchConverter.Settings));
     }
 
-    public static class VehicleSwitchSerializer
-    {
-        public static string ToJson(this VehicleSwitchInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.VehicleSwitchConverter.Settings);
-    }
+    
 
     internal static class VehicleSwitchConverter
     {

@@ -21,10 +21,7 @@ namespace EliteAPI.Events
         public static SystemsShutdownInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSystemsShutdownEvent(JsonConvert.DeserializeObject<SystemsShutdownInfo>(json, EliteAPI.Events.SystemsShutdownConverter.Settings));
     }
 
-    public static class SystemsShutdownSerializer
-    {
-        public static string ToJson(this SystemsShutdownInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.SystemsShutdownConverter.Settings);
-    }
+    
 
     internal static class SystemsShutdownConverter
     {

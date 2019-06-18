@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static JetConeBoostInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeJetConeBoostEvent(JsonConvert.DeserializeObject<JetConeBoostInfo>(json, EliteAPI.Events.JetConeBoostConverter.Settings));
     }
 
-    public static class JetConeBoostSerializer
-    {
-        public static string ToJson(this JetConeBoostInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.JetConeBoostConverter.Settings);
-    }
+    
 
     internal static class JetConeBoostConverter
     {

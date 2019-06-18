@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static LeaveBodyInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLeaveBodyEvent(JsonConvert.DeserializeObject<LeaveBodyInfo>(json, EliteAPI.Events.LeaveBodyConverter.Settings));
     }
 
-    public static class LeaveBodySerializer
-    {
-        public static string ToJson(this LeaveBodyInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.LeaveBodyConverter.Settings);
-    }
+    
 
     internal static class LeaveBodyConverter
     {

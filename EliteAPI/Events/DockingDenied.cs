@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static DockingDeniedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockingDeniedEvent(JsonConvert.DeserializeObject<DockingDeniedInfo>(json, EliteAPI.Events.DockingDeniedConverter.Settings));
     }
 
-    public static class DockingDeniedSerializer
-    {
-        public static string ToJson(this DockingDeniedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.DockingDeniedConverter.Settings);
-    }
+    
 
     internal static class DockingDeniedConverter
     {

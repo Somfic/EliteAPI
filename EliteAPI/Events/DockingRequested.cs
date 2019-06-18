@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static DockingRequestedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockingRequestedEvent(JsonConvert.DeserializeObject<DockingRequestedInfo>(json, EliteAPI.Events.DockingRequestedConverter.Settings));
     }
 
-    public static class DockingRequestedSerializer
-    {
-        public static string ToJson(this DockingRequestedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.DockingRequestedConverter.Settings);
-    }
+    
 
     internal static class DockingRequestedConverter
     {

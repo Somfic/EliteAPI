@@ -123,10 +123,7 @@ namespace EliteAPI.Events
         public static MissionCompletedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMissionCompletedEvent(JsonConvert.DeserializeObject<MissionCompletedInfo>(json, EliteAPI.Events.MissionCompletedConverter.Settings));
     }
 
-    public static class MissionCompletedSerializer
-    {
-        public static string ToJson(this MissionCompletedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.MissionCompletedConverter.Settings);
-    }
+    
 
     internal static class MissionCompletedConverter
     {

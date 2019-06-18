@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static CrewFireInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCrewFireEvent(JsonConvert.DeserializeObject<CrewFireInfo>(json, EliteAPI.Events.CrewFireConverter.Settings));
     }
 
-    public static class CrewFireSerializer
-    {
-        public static string ToJson(this CrewFireInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.CrewFireConverter.Settings);
-    }
+    
 
     internal static class CrewFireConverter
     {

@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static HullDamageInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeHullDamageEvent(JsonConvert.DeserializeObject<HullDamageInfo>(json, EliteAPI.Events.HullDamageConverter.Settings));
     }
 
-    public static class HullDamageSerializer
-    {
-        public static string ToJson(this HullDamageInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.HullDamageConverter.Settings);
-    }
+    
 
     internal static class HullDamageConverter
     {

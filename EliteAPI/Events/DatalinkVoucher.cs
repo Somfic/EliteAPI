@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static DatalinkVoucherInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDatalinkVoucherEvent(JsonConvert.DeserializeObject<DatalinkVoucherInfo>(json, EliteAPI.Events.DatalinkVoucherConverter.Settings));
     }
 
-    public static class DatalinkVoucherSerializer
-    {
-        public static string ToJson(this DatalinkVoucherInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.DatalinkVoucherConverter.Settings);
-    }
+    
 
     internal static class DatalinkVoucherConverter
     {

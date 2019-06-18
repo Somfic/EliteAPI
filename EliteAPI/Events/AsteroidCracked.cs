@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static AsteroidCrackedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeAsteroidCrackedEvent(JsonConvert.DeserializeObject<AsteroidCrackedInfo>(json, EliteAPI.Events.AsteroidCrackedConverter.Settings));
     }
 
-    public static class AsteroidCrackedSerializer
-    {
-        public static string ToJson(this AsteroidCrackedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.AsteroidCrackedConverter.Settings);
-    }
+    
 
     internal static class AsteroidCrackedConverter
     {

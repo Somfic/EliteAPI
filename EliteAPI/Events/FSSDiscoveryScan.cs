@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static FSSDiscoveryScanInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFSSDiscoveryScanEvent(JsonConvert.DeserializeObject<FSSDiscoveryScanInfo>(json, EliteAPI.Events.FSSDiscoveryScanConverter.Settings));
     }
 
-    public static class FSSDiscoveryScanSerializer
-    {
-        public static string ToJson(this FSSDiscoveryScanInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.FSSDiscoveryScanConverter.Settings);
-    }
+    
 
     internal static class FSSDiscoveryScanConverter
     {

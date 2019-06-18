@@ -166,7 +166,6 @@ namespace EliteAPI
             Reset();
         }
 
-
         /// <summary>
         /// Creates a new EliteDangerousAPI object using the standard Journal directory.
         /// </summary>

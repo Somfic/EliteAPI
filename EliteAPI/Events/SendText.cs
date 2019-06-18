@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static SendTextInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSendTextEvent(JsonConvert.DeserializeObject<SendTextInfo>(json, EliteAPI.Events.SendTextConverter.Settings));
     }
 
-    public static class SendTextSerializer
-    {
-        public static string ToJson(this SendTextInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.SendTextConverter.Settings);
-    }
+    
 
     internal static class SendTextConverter
     {

@@ -51,10 +51,7 @@ namespace EliteAPI.Events
         public static ProspectedAsteroidInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeProspectedAsteroidEvent(JsonConvert.DeserializeObject<ProspectedAsteroidInfo>(json, EliteAPI.Events.ProspectedAsteroidConverter.Settings));
     }
 
-    public static class ProspectedAsteroidSerializer
-    {
-        public static string ToJson(this ProspectedAsteroidInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ProspectedAsteroidConverter.Settings);
-    }
+    
 
     internal static class ProspectedAsteroidConverter
     {

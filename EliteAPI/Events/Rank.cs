@@ -39,10 +39,7 @@ namespace EliteAPI.Events
         public static RankInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRankEvent(JsonConvert.DeserializeObject<RankInfo>(json, EliteAPI.Events.RankConverter.Settings));
     }
 
-    public static class RankSerializer
-    {
-        public static string ToJson(this RankInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.RankConverter.Settings);
-    }
+    
 
     internal static class RankConverter
     {

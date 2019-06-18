@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static CollectCargoInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCollectCargoEvent(JsonConvert.DeserializeObject<CollectCargoInfo>(json, EliteAPI.Events.CollectCargoConverter.Settings));
     }
 
-    public static class CollectCargoSerializer
-    {
-        public static string ToJson(this CollectCargoInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.CollectCargoConverter.Settings);
-    }
+    
 
     internal static class CollectCargoConverter
     {

@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static ReputationInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeReputationEvent(JsonConvert.DeserializeObject<ReputationInfo>(json, EliteAPI.Events.ReputationConverter.Settings));
     }
 
-    public static class ReputationSerializer
-    {
-        public static string ToJson(this ReputationInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ReputationConverter.Settings);
-    }
+    
 
     internal static class ReputationConverter
     {

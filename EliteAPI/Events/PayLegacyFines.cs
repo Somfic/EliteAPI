@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static PayLegacyFinesInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePayLegacyFinesEvent(JsonConvert.DeserializeObject<PayLegacyFinesInfo>(json, EliteAPI.Events.PayLegacyFinesConverter.Settings));
     }
 
-    public static class PayLegacyFinesSerializer
-    {
-        public static string ToJson(this PayLegacyFinesInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.PayLegacyFinesConverter.Settings);
-    }
+    
 
     internal static class PayLegacyFinesConverter
     {

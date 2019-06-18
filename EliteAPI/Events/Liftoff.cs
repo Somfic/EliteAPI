@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static LiftoffInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLiftoffEvent(JsonConvert.DeserializeObject<LiftoffInfo>(json, EliteAPI.Events.LiftoffConverter.Settings));
     }
 
-    public static class LiftoffSerializer
-    {
-        public static string ToJson(this LiftoffInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.LiftoffConverter.Settings);
-    }
+    
 
     internal static class LiftoffConverter
     {

@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static ApproachBodyInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeApproachBodyEvent(JsonConvert.DeserializeObject<ApproachBodyInfo>(json, EliteAPI.Events.ApproachBodyConverter.Settings));
     }
 
-    public static class ApproachBodySerializer
-    {
-        public static string ToJson(this ApproachBodyInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ApproachBodyConverter.Settings);
-    }
+    
 
     internal static class ApproachBodyConverter
     {

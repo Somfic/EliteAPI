@@ -42,10 +42,7 @@ namespace EliteAPI.Events
         public static ModuleSellRemoteInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeModuleSellRemoteEvent(JsonConvert.DeserializeObject<ModuleSellRemoteInfo>(json, EliteAPI.Events.ModuleSellRemoteConverter.Settings));
     }
 
-    public static class ModuleSellRemoteSerializer
-    {
-        public static string ToJson(this ModuleSellRemoteInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ModuleSellRemoteConverter.Settings);
-    }
+    
 
     internal static class ModuleSellRemoteConverter
     {

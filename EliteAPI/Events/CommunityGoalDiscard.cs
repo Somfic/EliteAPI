@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static CommunityGoalDiscardInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCommunityGoalDiscardEvent(JsonConvert.DeserializeObject<CommunityGoalDiscardInfo>(json, EliteAPI.Events.CommunityGoalDiscardConverter.Settings));
     }
 
-    public static class CommunityGoalDiscardSerializer
-    {
-        public static string ToJson(this CommunityGoalDiscardInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.CommunityGoalDiscardConverter.Settings);
-    }
+    
 
     internal static class CommunityGoalDiscardConverter
     {

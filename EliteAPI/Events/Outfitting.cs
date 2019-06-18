@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static OutfittingInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeOutfittingEvent(JsonConvert.DeserializeObject<OutfittingInfo>(json, EliteAPI.Events.OutfittingConverter.Settings));
     }
 
-    public static class OutfittingSerializer
-    {
-        public static string ToJson(this OutfittingInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.OutfittingConverter.Settings);
-    }
+    
 
     internal static class OutfittingConverter
     {

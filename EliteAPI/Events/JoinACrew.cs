@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static JoinACrewInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeJoinACrewEvent(JsonConvert.DeserializeObject<JoinACrewInfo>(json, EliteAPI.Events.JoinACrewConverter.Settings));
     }
 
-    public static class JoinACrewSerializer
-    {
-        public static string ToJson(this JoinACrewInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.JoinACrewConverter.Settings);
-    }
+    
 
     internal static class JoinACrewConverter
     {

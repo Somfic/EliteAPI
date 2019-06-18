@@ -159,10 +159,7 @@
         }
     }
 
-    public static class ShipStatusSerializer
-    {
-        public static string ToJson(this GameStatus self) => JsonConvert.SerializeObject(self, EliteAPI.Status.ShipStatusConverter.Settings);
-    }
+    
 
     public static class ShipStatusConverter
     {

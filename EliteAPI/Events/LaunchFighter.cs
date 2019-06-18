@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static LaunchFighterInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLaunchFighterEvent(JsonConvert.DeserializeObject<LaunchFighterInfo>(json, EliteAPI.Events.LaunchFighterConverter.Settings));
     }
 
-    public static class LaunchFighterSerializer
-    {
-        public static string ToJson(this LaunchFighterInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.LaunchFighterConverter.Settings);
-    }
+    
 
     internal static class LaunchFighterConverter
     {

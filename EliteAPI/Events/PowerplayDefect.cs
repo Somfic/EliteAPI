@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static PowerplayDefectInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayDefectEvent(JsonConvert.DeserializeObject<PowerplayDefectInfo>(json, EliteAPI.Events.PowerplayDefectConverter.Settings));
     }
 
-    public static class PowerplayDefectSerializer
-    {
-        public static string ToJson(this PowerplayDefectInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.PowerplayDefectConverter.Settings);
-    }
+    
 
     internal static class PowerplayDefectConverter
     {

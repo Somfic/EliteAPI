@@ -36,10 +36,7 @@ namespace EliteAPI.Events
         public static PayBountiesInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePayBountiesEvent(JsonConvert.DeserializeObject<PayBountiesInfo>(json, EliteAPI.Events.PayBountiesConverter.Settings));
     }
 
-    public static class PayBountiesSerializer
-    {
-        public static string ToJson(this PayBountiesInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.PayBountiesConverter.Settings);
-    }
+    
 
     internal static class PayBountiesConverter
     {

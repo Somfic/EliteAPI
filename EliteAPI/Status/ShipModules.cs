@@ -62,10 +62,7 @@
         }
     }
 
-    public static class ShipModulesSerializer
-    {
-        public static string ToJson(this ShipModules self) => JsonConvert.SerializeObject(self, EliteAPI.Status.ShipModulesConverter.Settings);
-    }
+    
 
     public static class ShipModulesConverter
     {

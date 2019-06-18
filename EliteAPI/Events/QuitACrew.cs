@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static QuitACrewInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeQuitACrewEvent(JsonConvert.DeserializeObject<QuitACrewInfo>(json, EliteAPI.Events.QuitACrewConverter.Settings));
     }
 
-    public static class QuitACrewSerializer
-    {
-        public static string ToJson(this QuitACrewInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.QuitACrewConverter.Settings);
-    }
+    
 
     internal static class QuitACrewConverter
     {

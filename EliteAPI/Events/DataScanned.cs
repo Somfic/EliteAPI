@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static DataScannedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDataScannedEvent(JsonConvert.DeserializeObject<DataScannedInfo>(json, EliteAPI.Events.DataScannedConverter.Settings));
     }
 
-    public static class DataScannedSerializer
-    {
-        public static string ToJson(this DataScannedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.DataScannedConverter.Settings);
-    }
+    
 
     internal static class DataScannedConverter
     {

@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static WingInviteInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeWingInviteEvent(JsonConvert.DeserializeObject<WingInviteInfo>(json, EliteAPI.Events.WingInviteConverter.Settings));
     }
 
-    public static class WingInviteSerializer
-    {
-        public static string ToJson(this WingInviteInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.WingInviteConverter.Settings);
-    }
+    
 
     internal static class WingInviteConverter
     {

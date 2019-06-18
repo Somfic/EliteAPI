@@ -136,10 +136,7 @@ namespace EliteAPI.Events
         public static FSDJumpInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFSDJumpEvent(JsonConvert.DeserializeObject<FSDJumpInfo>(json, EliteAPI.Events.FSDJumpConverter.Settings));
     }
 
-    public static class FSDJumpSerializer
-    {
-        public static string ToJson(this FSDJumpInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.FSDJumpConverter.Settings);
-    }
+    
 
     internal static class FSDJumpConverter
     {

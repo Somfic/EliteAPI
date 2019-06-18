@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static DiedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDiedEvent(JsonConvert.DeserializeObject<DiedInfo>(json, EliteAPI.Events.DiedConverter.Settings));
     }
 
-    public static class DiedSerializer
-    {
-        public static string ToJson(this DiedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.DiedConverter.Settings);
-    }
+    
 
     internal static class DiedConverter
     {

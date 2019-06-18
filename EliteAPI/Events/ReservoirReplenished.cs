@@ -27,10 +27,7 @@
         public static ReservoirReplenishedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeReservoirReplenishedEvent(JsonConvert.DeserializeObject<ReservoirReplenishedInfo>(json, EliteAPI.Events.ReservoirReplenishedConverter.Settings));
     }
 
-    public static class ReservoirReplenishedSerializer
-    {
-        public static string ToJson(this ReservoirReplenishedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ReservoirReplenishedConverter.Settings);
-    }
+    
 
     internal static class ReservoirReplenishedConverter
     {

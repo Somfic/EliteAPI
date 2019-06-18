@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static DockingGrantedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockingGrantedEvent(JsonConvert.DeserializeObject<DockingGrantedInfo>(json, EliteAPI.Events.DockingGrantedConverter.Settings));
     }
 
-    public static class DockingGrantedSerializer
-    {
-        public static string ToJson(this DockingGrantedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.DockingGrantedConverter.Settings);
-    }
+    
 
     internal static class DockingGrantedConverter
     {

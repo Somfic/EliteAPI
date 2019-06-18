@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static UndockedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeUndockedEvent(JsonConvert.DeserializeObject<UndockedInfo>(json, EliteAPI.Events.UndockedConverter.Settings));
     }
 
-    public static class UndockedSerializer
-    {
-        public static string ToJson(this UndockedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.UndockedConverter.Settings);
-    }
+    
 
     internal static class UndockedConverter
     {

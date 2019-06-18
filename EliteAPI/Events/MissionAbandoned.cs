@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static MissionAbandonedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMissionAbandonedEvent(JsonConvert.DeserializeObject<MissionAbandonedInfo>(json, EliteAPI.Events.MissionAbandonedConverter.Settings));
     }
 
-    public static class MissionAbandonedSerializer
-    {
-        public static string ToJson(this MissionAbandonedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.MissionAbandonedConverter.Settings);
-    }
+    
 
     internal static class MissionAbandonedConverter
     {

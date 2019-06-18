@@ -60,10 +60,7 @@ namespace EliteAPI.Events
         public static CodexEntryInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCodexEntryEvent(JsonConvert.DeserializeObject<CodexEntryInfo>(json, EliteAPI.Events.CodexEntryConverter.Settings));
     }
 
-    public static class CodexEntrySerializer
-    {
-        public static string ToJson(this CodexEntryInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.CodexEntryConverter.Settings);
-    }
+    
 
     internal static class CodexEntryConverter
     {

@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static RebootRepairInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRebootRepairEvent(JsonConvert.DeserializeObject<RebootRepairInfo>(json, EliteAPI.Events.RebootRepairConverter.Settings));
     }
 
-    public static class RebootRepairSerializer
-    {
-        public static string ToJson(this RebootRepairInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.RebootRepairConverter.Settings);
-    }
+    
 
     internal static class RebootRepairConverter
     {

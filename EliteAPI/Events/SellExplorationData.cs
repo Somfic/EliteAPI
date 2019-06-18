@@ -36,10 +36,7 @@ namespace EliteAPI.Events
         public static SellExplorationDataInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSellExplorationDataEvent(JsonConvert.DeserializeObject<SellExplorationDataInfo>(json, EliteAPI.Events.SellExplorationDataConverter.Settings));
     }
 
-    public static class SellExplorationDataSerializer
-    {
-        public static string ToJson(this SellExplorationDataInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.SellExplorationDataConverter.Settings);
-    }
+    
 
     internal static class SellExplorationDataConverter
     {

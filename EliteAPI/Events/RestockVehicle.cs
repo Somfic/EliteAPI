@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static RestockVehicleInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRestockVehicleEvent(JsonConvert.DeserializeObject<RestockVehicleInfo>(json, EliteAPI.Events.RestockVehicleConverter.Settings));
     }
 
-    public static class RestockVehicleSerializer
-    {
-        public static string ToJson(this RestockVehicleInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.RestockVehicleConverter.Settings);
-    }
+    
 
     internal static class RestockVehicleConverter
     {

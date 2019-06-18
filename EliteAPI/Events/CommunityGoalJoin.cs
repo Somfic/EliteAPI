@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static CommunityGoalJoinInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCommunityGoalJoinEvent(JsonConvert.DeserializeObject<CommunityGoalJoinInfo>(json, EliteAPI.Events.CommunityGoalJoinConverter.Settings));
     }
 
-    public static class CommunityGoalJoinSerializer
-    {
-        public static string ToJson(this CommunityGoalJoinInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.CommunityGoalJoinConverter.Settings);
-    }
+    
 
     internal static class CommunityGoalJoinConverter
     {

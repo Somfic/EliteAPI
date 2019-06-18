@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static SAAScanCompleteInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSAAScanCompleteEvent(JsonConvert.DeserializeObject<SAAScanCompleteInfo>(json, EliteAPI.Events.SAAScanCompleteConverter.Settings));
     }
 
-    public static class SAAScanCompleteSerializer
-    {
-        public static string ToJson(this SAAScanCompleteInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.SAAScanCompleteConverter.Settings);
-    }
+    
 
     internal static class SAAScanCompleteConverter
     {

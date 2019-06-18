@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static USSDropInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeUSSDropEvent(JsonConvert.DeserializeObject<USSDropInfo>(json, EliteAPI.Events.USSDropConverter.Settings));
     }
 
-    public static class USSDropSerializer
-    {
-        public static string ToJson(this USSDropInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.USSDropConverter.Settings);
-    }
+    
 
     internal static class USSDropConverter
     {

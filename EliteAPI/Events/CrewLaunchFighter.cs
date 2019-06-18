@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static CrewLaunchFighterInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCrewLaunchFighterEvent(JsonConvert.DeserializeObject<CrewLaunchFighterInfo>(json, EliteAPI.Events.CrewLaunchFighterConverter.Settings));
     }
 
-    public static class CrewLaunchFighterSerializer
-    {
-        public static string ToJson(this CrewLaunchFighterInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.CrewLaunchFighterConverter.Settings);
-    }
+    
 
     internal static class CrewLaunchFighterConverter
     {

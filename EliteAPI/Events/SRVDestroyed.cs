@@ -21,10 +21,7 @@ namespace EliteAPI.Events
         public static SRVDestroyedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSRVDestroyedEvent(JsonConvert.DeserializeObject<SRVDestroyedInfo>(json, EliteAPI.Events.SRVDestroyedConverter.Settings));
     }
 
-    public static class SRVDestroyedSerializer
-    {
-        public static string ToJson(this SRVDestroyedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.SRVDestroyedConverter.Settings);
-    }
+    
 
     internal static class SRVDestroyedConverter
     {

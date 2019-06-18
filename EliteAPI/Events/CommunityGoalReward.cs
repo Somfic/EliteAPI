@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static CommunityGoalRewardInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCommunityGoalRewardEvent(JsonConvert.DeserializeObject<CommunityGoalRewardInfo>(json, EliteAPI.Events.CommunityGoalRewardConverter.Settings));
     }
 
-    public static class CommunityGoalRewardSerializer
-    {
-        public static string ToJson(this CommunityGoalRewardInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.CommunityGoalRewardConverter.Settings);
-    }
+    
 
     internal static class CommunityGoalRewardConverter
     {

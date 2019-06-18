@@ -51,10 +51,7 @@ namespace EliteAPI.Events
         public static MaterialTradeInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMaterialTradeEvent(JsonConvert.DeserializeObject<MaterialTradeInfo>(json, EliteAPI.Events.MaterialTradeConverter.Settings));
     }
 
-    public static class MaterialTradeSerializer
-    {
-        public static string ToJson(this MaterialTradeInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.MaterialTradeConverter.Settings);
-    }
+    
 
     internal static class MaterialTradeConverter
     {

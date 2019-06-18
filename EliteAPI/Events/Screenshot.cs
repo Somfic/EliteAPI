@@ -48,10 +48,7 @@ namespace EliteAPI.Events
         public static ScreenshotInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeScreenshotEvent(JsonConvert.DeserializeObject<ScreenshotInfo>(json, EliteAPI.Events.ScreenshotConverter.Settings));
     }
 
-    public static class ScreenshotSerializer
-    {
-        public static string ToJson(this ScreenshotInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ScreenshotConverter.Settings);
-    }
+    
 
     internal static class ScreenshotConverter
     {

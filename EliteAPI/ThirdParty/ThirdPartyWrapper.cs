@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-
 namespace EliteAPI.ThirdParty
 {
     public class ThirdPartyWrapper

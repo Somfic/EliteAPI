@@ -67,10 +67,7 @@
         }
     }
 
-    public static class ShipCargoSerializer
-    {
-        public static string ToJson(this ShipCargo self) => JsonConvert.SerializeObject(self, EliteAPI.Status.ShipCargoConverter.Settings);
-    }
+    
 
     public static class ShipCargoConverter
     {

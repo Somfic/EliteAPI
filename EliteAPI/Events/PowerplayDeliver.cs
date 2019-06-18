@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static PowerplayDeliverInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayDeliverEvent(JsonConvert.DeserializeObject<PowerplayDeliverInfo>(json, EliteAPI.Events.PowerplayDeliverConverter.Settings));
     }
 
-    public static class PowerplayDeliverSerializer
-    {
-        public static string ToJson(this PowerplayDeliverInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.PowerplayDeliverConverter.Settings);
-    }
+    
 
     internal static class PowerplayDeliverConverter
     {

@@ -48,10 +48,7 @@ namespace EliteAPI.Events
         public static ModuleSwapInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeModuleSwapEvent(JsonConvert.DeserializeObject<ModuleSwapInfo>(json, EliteAPI.Events.ModuleSwapConverter.Settings));
     }
 
-    public static class ModuleSwapSerializer
-    {
-        public static string ToJson(this ModuleSwapInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ModuleSwapConverter.Settings);
-    }
+    
 
     internal static class ModuleSwapConverter
     {

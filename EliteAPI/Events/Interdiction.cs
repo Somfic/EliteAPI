@@ -36,10 +36,7 @@ namespace EliteAPI.Events
         public static InterdictionInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeInterdictionEvent(JsonConvert.DeserializeObject<InterdictionInfo>(json, EliteAPI.Events.InterdictionConverter.Settings));
     }
 
-    public static class InterdictionSerializer
-    {
-        public static string ToJson(this InterdictionInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.InterdictionConverter.Settings);
-    }
+    
 
     internal static class InterdictionConverter
     {

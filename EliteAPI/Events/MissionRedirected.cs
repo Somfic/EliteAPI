@@ -39,10 +39,7 @@ namespace EliteAPI.Events
         public static MissionRedirectedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMissionRedirectedEvent(JsonConvert.DeserializeObject<MissionRedirectedInfo>(json, EliteAPI.Events.MissionRedirectedConverter.Settings));
     }
 
-    public static class MissionRedirectedSerializer
-    {
-        public static string ToJson(this MissionRedirectedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.MissionRedirectedConverter.Settings);
-    }
+    
 
     internal static class MissionRedirectedConverter
     {

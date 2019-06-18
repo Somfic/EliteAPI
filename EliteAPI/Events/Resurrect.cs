@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static ResurrectInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeResurrectEvent(JsonConvert.DeserializeObject<ResurrectInfo>(json, EliteAPI.Events.ResurrectConverter.Settings));
     }
 
-    public static class ResurrectSerializer
-    {
-        public static string ToJson(this ResurrectInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ResurrectConverter.Settings);
-    }
+    
 
     internal static class ResurrectConverter
     {

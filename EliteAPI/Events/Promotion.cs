@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static PromotionInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePromotionEvent(JsonConvert.DeserializeObject<PromotionInfo>(json, EliteAPI.Events.PromotionConverter.Settings));
     }
 
-    public static class PromotionSerializer
-    {
-        public static string ToJson(this PromotionInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.PromotionConverter.Settings);
-    }
+    
 
     internal static class PromotionConverter
     {

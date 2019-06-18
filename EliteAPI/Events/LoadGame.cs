@@ -63,10 +63,7 @@ namespace EliteAPI.Events
         public static LoadGameInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLoadGameEvent(JsonConvert.DeserializeObject<LoadGameInfo>(json, EliteAPI.Events.LoadGameConverter.Settings));
     }
 
-    public static class LoadGameSerializer
-    {
-        public static string ToJson(this LoadGameInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.LoadGameConverter.Settings);
-    }
+    
 
     internal static class LoadGameConverter
     {

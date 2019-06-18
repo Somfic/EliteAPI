@@ -39,10 +39,7 @@ namespace EliteAPI.Events
         public static RedeemVoucherInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRedeemVoucherEvent(JsonConvert.DeserializeObject<RedeemVoucherInfo>(json, EliteAPI.Events.RedeemVoucherConverter.Settings));
     }
 
-    public static class RedeemVoucherSerializer
-    {
-        public static string ToJson(this RedeemVoucherInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.RedeemVoucherConverter.Settings);
-    }
+    
 
     internal static class RedeemVoucherConverter
     {

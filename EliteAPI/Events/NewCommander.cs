@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static NewCommanderInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeNewCommanderEvent(JsonConvert.DeserializeObject<NewCommanderInfo>(json, EliteAPI.Events.NewCommanderConverter.Settings));
     }
 
-    public static class NewCommanderSerializer
-    {
-        public static string ToJson(this NewCommanderInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.NewCommanderConverter.Settings);
-    }
+    
 
     internal static class NewCommanderConverter
     {

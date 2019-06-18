@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static PowerplaySalaryInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplaySalaryEvent(JsonConvert.DeserializeObject<PowerplaySalaryInfo>(json, EliteAPI.Events.PowerplaySalaryConverter.Settings));
     }
 
-    public static class PowerplaySalarySerializer
-    {
-        public static string ToJson(this PowerplaySalaryInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.PowerplaySalaryConverter.Settings);
-    }
+    
 
     internal static class PowerplaySalaryConverter
     {

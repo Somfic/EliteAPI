@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static EjectCargoInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeEjectCargoEvent(JsonConvert.DeserializeObject<EjectCargoInfo>(json, EliteAPI.Events.EjectCargoConverter.Settings));
     }
 
-    public static class EjectCargoSerializer
-    {
-        public static string ToJson(this EjectCargoInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.EjectCargoConverter.Settings);
-    }
+    
 
     internal static class EjectCargoConverter
     {

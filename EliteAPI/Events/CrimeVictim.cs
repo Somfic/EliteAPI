@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static CrimeVictimInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCrimeVictimEvent(JsonConvert.DeserializeObject<CrimeVictimInfo>(json, EliteAPI.Events.CrimeVictimConverter.Settings));
     }
 
-    public static class CrimeVictimSerializer
-    {
-        public static string ToJson(this CrimeVictimInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.CrimeVictimConverter.Settings);
-    }
+    
 
     internal static class CrimeVictimConverter
     {

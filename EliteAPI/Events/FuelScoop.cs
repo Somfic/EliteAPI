@@ -27,10 +27,7 @@ namespace EliteAPI.Events
         public static FuelScoopInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFuelScoopEvent(JsonConvert.DeserializeObject<FuelScoopInfo>(json, EliteAPI.Events.FuelScoopConverter.Settings));
     }
 
-    public static class FuelScoopSerializer
-    {
-        public static string ToJson(this FuelScoopInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.FuelScoopConverter.Settings);
-    }
+    
 
     internal static class FuelScoopConverter
     {

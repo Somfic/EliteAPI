@@ -36,10 +36,7 @@ namespace EliteAPI.Events
         public static CrewHireInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCrewHireEvent(JsonConvert.DeserializeObject<CrewHireInfo>(json, EliteAPI.Events.CrewHireConverter.Settings));
     }
 
-    public static class CrewHireSerializer
-    {
-        public static string ToJson(this CrewHireInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.CrewHireConverter.Settings);
-    }
+    
 
     internal static class CrewHireConverter
     {

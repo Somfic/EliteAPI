@@ -126,10 +126,7 @@ namespace EliteAPI.Events
         public static LoadoutInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLoadoutEvent(JsonConvert.DeserializeObject<LoadoutInfo>(json, EliteAPI.Events.LoadoutConverter.Settings));
     }
 
-    public static class LoadoutSerializer
-    {
-        public static string ToJson(this LoadoutInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.LoadoutConverter.Settings);
-    }
+    
 
     internal static class LoadoutConverter
     {

@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static SearchAndRescueInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSearchAndRescueEvent(JsonConvert.DeserializeObject<SearchAndRescueInfo>(json, EliteAPI.Events.SearchAndRescueConverter.Settings));
     }
 
-    public static class SearchAndRescueSerializer
-    {
-        public static string ToJson(this SearchAndRescueInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.SearchAndRescueConverter.Settings);
-    }
+    
 
     internal static class SearchAndRescueConverter
     {

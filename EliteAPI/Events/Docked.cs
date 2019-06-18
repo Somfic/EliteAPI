@@ -81,10 +81,7 @@ namespace EliteAPI.Events
         public static DockedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockedEvent(JsonConvert.DeserializeObject<DockedInfo>(json, EliteAPI.Events.DockedConverter.Settings));
     }
 
-    public static class DockedSerializer
-    {
-        public static string ToJson(this DockedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.DockedConverter.Settings);
-    }
+    
 
     internal static class DockedConverter
     {

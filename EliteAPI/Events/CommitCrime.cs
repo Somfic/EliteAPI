@@ -36,10 +36,7 @@ namespace EliteAPI.Events
         public static CommitCrimeInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCommitCrimeEvent(JsonConvert.DeserializeObject<CommitCrimeInfo>(json, EliteAPI.Events.CommitCrimeConverter.Settings));
     }
 
-    public static class CommitCrimeSerializer
-    {
-        public static string ToJson(this CommitCrimeInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.CommitCrimeConverter.Settings);
-    }
+    
 
     internal static class CommitCrimeConverter
     {

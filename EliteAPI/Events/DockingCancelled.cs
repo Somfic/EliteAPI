@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static DockingCancelledInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockingCancelledEvent(JsonConvert.DeserializeObject<DockingCancelledInfo>(json, EliteAPI.Events.DockingCancelledConverter.Settings));
     }
 
-    public static class DockingCancelledSerializer
-    {
-        public static string ToJson(this DockingCancelledInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.DockingCancelledConverter.Settings);
-    }
+    
 
     internal static class DockingCancelledConverter
     {

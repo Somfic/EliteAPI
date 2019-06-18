@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static AppliedToSquadronInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeAppliedToSquadronEvent(JsonConvert.DeserializeObject<AppliedToSquadronInfo>(json, EliteAPI.Events.AppliedToSquadronConverter.Settings));
     }
 
-    public static class AppliedToSquadronSerializer
-    {
-        public static string ToJson(this AppliedToSquadronInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.AppliedToSquadronConverter.Settings);
-    }
+    
 
     internal static class AppliedToSquadronConverter
     {

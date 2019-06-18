@@ -120,10 +120,7 @@ namespace EliteAPI.Events
         public static LocationInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLocationEvent(JsonConvert.DeserializeObject<LocationInfo>(json, EliteAPI.Events.LocationConverter.Settings));
     }
 
-    public static class LocationSerializer
-    {
-        public static string ToJson(this LocationInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.LocationConverter.Settings);
-    }
+    
 
     internal static class LocationConverter
     {

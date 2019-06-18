@@ -48,10 +48,7 @@ namespace EliteAPI.Events
         public static MarketSellInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMarketSellEvent(JsonConvert.DeserializeObject<MarketSellInfo>(json, EliteAPI.Events.MarketSellConverter.Settings));
     }
 
-    public static class MarketSellSerializer
-    {
-        public static string ToJson(this MarketSellInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.MarketSellConverter.Settings);
-    }
+    
 
     internal static class MarketSellConverter
     {

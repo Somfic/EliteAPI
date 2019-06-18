@@ -42,10 +42,7 @@ namespace EliteAPI.Events
         public static EngineerProgressInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeEngineerProgressEvent(JsonConvert.DeserializeObject<EngineerProgressInfo>(json, EliteAPI.Events.EngineerProgressConverter.Settings));
     }
 
-    public static class EngineerProgressSerializer
-    {
-        public static string ToJson(this EngineerProgressInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.EngineerProgressConverter.Settings);
-    }
+    
 
     internal static class EngineerProgressConverter
     {

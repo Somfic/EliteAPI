@@ -69,10 +69,7 @@ namespace EliteAPI.Events
         public static StoredShipsInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeStoredShipsEvent(JsonConvert.DeserializeObject<StoredShipsInfo>(json, EliteAPI.Events.StoredShipsConverter.Settings));
     }
 
-    public static class StoredShipsSerializer
-    {
-        public static string ToJson(this StoredShipsInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.StoredShipsConverter.Settings);
-    }
+    
 
     internal static class StoredShipsConverter
     {

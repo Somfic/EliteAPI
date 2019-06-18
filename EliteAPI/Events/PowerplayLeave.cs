@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static PowerplayLeaveInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayLeaveEvent(JsonConvert.DeserializeObject<PowerplayLeaveInfo>(json, EliteAPI.Events.PowerplayLeaveConverter.Settings));
     }
 
-    public static class PowerplayLeaveSerializer
-    {
-        public static string ToJson(this PowerplayLeaveInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.PowerplayLeaveConverter.Settings);
-    }
+    
 
     internal static class PowerplayLeaveConverter
     {

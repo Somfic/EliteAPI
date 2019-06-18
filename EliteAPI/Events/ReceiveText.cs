@@ -36,10 +36,7 @@ namespace EliteAPI.Events
         public static ReceiveTextInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeReceiveTextEvent(JsonConvert.DeserializeObject<ReceiveTextInfo>(json, EliteAPI.Events.ReceiveTextConverter.Settings));
     }
 
-    public static class ReceiveTextSerializer
-    {
-        public static string ToJson(this ReceiveTextInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ReceiveTextConverter.Settings);
-    }
+    
 
     internal static class ReceiveTextConverter
     {

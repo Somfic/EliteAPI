@@ -60,10 +60,7 @@ namespace EliteAPI.Events
         public static TechnologyBrokerInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeTechnologyBrokerEvent(JsonConvert.DeserializeObject<TechnologyBrokerInfo>(json, EliteAPI.Events.TechnologyBrokerConverter.Settings));
     }
 
-    public static class TechnologyBrokerSerializer
-    {
-        public static string ToJson(this TechnologyBrokerInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.TechnologyBrokerConverter.Settings);
-    }
+    
 
     internal static class TechnologyBrokerConverter
     {

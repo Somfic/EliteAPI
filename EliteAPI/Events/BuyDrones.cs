@@ -33,10 +33,7 @@ namespace EliteAPI.Events
         public static BuyDronesInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeBuyDronesEvent(JsonConvert.DeserializeObject<BuyDronesInfo>(json, EliteAPI.Events.BuyDronesConverter.Settings));
     }
 
-    public static class BuyDronesSerializer
-    {
-        public static string ToJson(this BuyDronesInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.BuyDronesConverter.Settings);
-    }
+    
 
     internal static class BuyDronesConverter
     {

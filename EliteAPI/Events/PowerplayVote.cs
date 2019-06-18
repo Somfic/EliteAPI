@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static PowerplayVoteInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayVoteEvent(JsonConvert.DeserializeObject<PowerplayVoteInfo>(json, EliteAPI.Events.PowerplayVoteConverter.Settings));
     }
 
-    public static class PowerplayVoteSerializer
-    {
-        public static string ToJson(this PowerplayVoteInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.PowerplayVoteConverter.Settings);
-    }
+    
 
     internal static class PowerplayVoteConverter
     {

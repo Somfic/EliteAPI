@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static TouchdownInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeTouchdownEvent(JsonConvert.DeserializeObject<TouchdownInfo>(json, EliteAPI.Events.TouchdownConverter.Settings));
     }
 
-    public static class TouchdownSerializer
-    {
-        public static string ToJson(this TouchdownInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.TouchdownConverter.Settings);
-    }
+    
 
     internal static class TouchdownConverter
     {

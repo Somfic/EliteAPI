@@ -66,10 +66,7 @@ namespace EliteAPI.Events
         public static ShipTargetedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeShipTargetedEvent(JsonConvert.DeserializeObject<ShipTargetedInfo>(json, EliteAPI.Events.ShipTargetedConverter.Settings));
     }
 
-    public static class ShipTargetedSerializer
-    {
-        public static string ToJson(this ShipTargetedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ShipTargetedConverter.Settings);
-    }
+    
 
     internal static class ShipTargetedConverter
     {

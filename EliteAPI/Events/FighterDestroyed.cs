@@ -21,10 +21,7 @@ namespace EliteAPI.Events
         public static FighterDestroyedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFighterDestroyedEvent(JsonConvert.DeserializeObject<FighterDestroyedInfo>(json, EliteAPI.Events.FighterDestroyedConverter.Settings));
     }
 
-    public static class FighterDestroyedSerializer
-    {
-        public static string ToJson(this FighterDestroyedInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.FighterDestroyedConverter.Settings);
-    }
+    
 
     internal static class FighterDestroyedConverter
     {

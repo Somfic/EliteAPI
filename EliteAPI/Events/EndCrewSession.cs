@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static EndCrewSessionInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeEndCrewSessionEvent(JsonConvert.DeserializeObject<EndCrewSessionInfo>(json, EliteAPI.Events.EndCrewSessionConverter.Settings));
     }
 
-    public static class EndCrewSessionSerializer
-    {
-        public static string ToJson(this EndCrewSessionInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.EndCrewSessionConverter.Settings);
-    }
+    
 
     internal static class EndCrewSessionConverter
     {

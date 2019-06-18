@@ -30,10 +30,7 @@ namespace EliteAPI.Events
         public static ShipyardNewInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeShipyardNewEvent(JsonConvert.DeserializeObject<ShipyardNewInfo>(json, EliteAPI.Events.ShipyardNewConverter.Settings));
     }
 
-    public static class ShipyardNewSerializer
-    {
-        public static string ToJson(this ShipyardNewInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ShipyardNewConverter.Settings);
-    }
+    
 
     internal static class ShipyardNewConverter
     {

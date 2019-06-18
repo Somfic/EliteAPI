@@ -21,10 +21,7 @@ namespace EliteAPI.Events
         public static ModuleInfoInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeModuleInfoEvent(JsonConvert.DeserializeObject<ModuleInfoInfo>(json, EliteAPI.Events.ModuleInfoConverter.Settings));
     }
 
-    public static class ModuleInfoSerializer
-    {
-        public static string ToJson(this ModuleInfoInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.ModuleInfoConverter.Settings);
-    }
+    
 
     internal static class ModuleInfoConverter
     {

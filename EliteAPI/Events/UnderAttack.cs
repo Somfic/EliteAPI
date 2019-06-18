@@ -24,10 +24,7 @@ namespace EliteAPI.Events
         public static UnderAttackInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeUnderAttackEvent(JsonConvert.DeserializeObject<UnderAttackInfo>(json, EliteAPI.Events.UnderAttackConverter.Settings));
     }
 
-    public static class UnderAttackSerializer
-    {
-        public static string ToJson(this UnderAttackInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.UnderAttackConverter.Settings);
-    }
+    
 
     internal static class UnderAttackConverter
     {

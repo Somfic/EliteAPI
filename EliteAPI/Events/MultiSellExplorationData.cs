@@ -1,59 +1,23 @@
-namespace EliteAPI.Events
+using System;
+using System.Collections.Generic;
+
+namespace EliteAPI
 {
-    using System;
-    using System.Collections.Generic;
 
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
-    public partial class MultiSellExplorationDataInfo : IEvent
+    public class MultiSellExplorationDataInfo
     {
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
+        public DateTime timestamp { get; set; }
 
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
-
-        [JsonProperty("Discovered")]
-        public List<Discovered> Discovered { get; internal set; }
-
-        [JsonProperty("BaseValue")]
-        public long BaseValue { get; internal set; }
-
-        [JsonProperty("Bonus")]
-        public long Bonus { get; internal set; }
-
-        [JsonProperty("TotalEarnings")]
-        public long TotalEarnings { get; internal set; }
+        public List<DiscoveredInfo> Discovered { get; set; }
+        public int BaseValue { get; set; }
+        public int Bonus { get; set; }
+        public int TotalEarnings { get; set; }
     }
 
-    public partial class Discovered
+    public class DiscoveredInfo
     {
-        [JsonProperty("SystemName")]
-        public string SystemName { get; internal set; }
-
-        [JsonProperty("NumBodies")]
-        public long NumBodies { get; internal set; }
+        public string SystemName { get; set; }
+        public int NumBodies { get; set; }
     }
 
-    public partial class MultiSellExplorationDataInfo
-    {
-        public static MultiSellExplorationDataInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMultiSellExplorationDataEvent(JsonConvert.DeserializeObject<MultiSellExplorationDataInfo>(json, EliteAPI.Events.MultiSellExplorationDataConverter.Settings));
-    }
-
-    
-
-    internal static class MultiSellExplorationDataConverter
-    {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
-        {
-            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
-            Converters =
-            {
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
-        };
-    }
 }

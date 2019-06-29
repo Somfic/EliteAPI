@@ -1,44 +1,11 @@
-namespace EliteAPI.Events
+﻿using System;
+
+namespace EliteAPI
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
-    public partial class RefuelAllInfo : IEvent
+    public class RefuelAllInfo
     {
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
-
-        [JsonProperty("Cost")]
-        public long Cost { get; internal set; }
-
-        [JsonProperty("Amount")]
-        public double Amount { get; internal set; }
-    }
-
-    public partial class RefuelAllInfo
-    {
-        public static RefuelAllInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRefuelAllEvent(JsonConvert.DeserializeObject<RefuelAllInfo>(json, EliteAPI.Events.RefuelAllConverter.Settings));
-    }
-
-    
-
-    internal static class RefuelAllConverter
-    {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
-        {
-            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
-            Converters =
-            {
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
-        };
+        public DateTime timestamp { get; set; }
+        public int Cost { get; set; }
+        public double Amount { get; set; }
     }
 }

@@ -1,137 +1,49 @@
-namespace EliteAPI.Events
+﻿using System;
+using System.Collections.Generic;
+
+namespace EliteAPI
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
-    public partial class LocationInfo : IEvent
+    public class LocationInfo
     {
-        [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; internal set; }
-
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
-
-        [JsonProperty("Docked")]
-        public bool Docked { get; internal set; }
-
-        [JsonProperty("StarSystem")]
-        public string StarSystem { get; internal set; }
-
-        [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; internal set; }
-
-        [JsonProperty("StarPos")]
-        public List<double> StarPos { get; internal set; }
-
-        [JsonProperty("SystemAllegiance")]
-        public string SystemAllegiance { get; internal set; }
-
-        [JsonProperty("SystemEconomy")]
-        public string SystemEconomy { get; internal set; }
-
-        [JsonProperty("SystemEconomy_Localised")]
-        public string SystemEconomyLocalised { get; internal set; }
-
-        [JsonProperty("SystemSecondEconomy")]
-        public string SystemSecondEconomy { get; internal set; }
-
-        [JsonProperty("SystemSecondEconomy_Localised")]
-        public string SystemSecondEconomyLocalised { get; internal set; }
-
-        [JsonProperty("SystemGovernment")]
-        public string SystemGovernment { get; internal set; }
-
-        [JsonProperty("SystemGovernment_Localised")]
-        public string SystemGovernmentLocalised { get; internal set; }
-
-        [JsonProperty("SystemSecurity")]
-        public string SystemSecurity { get; internal set; }
-
-        [JsonProperty("SystemSecurity_Localised")]
-        public string SystemSecurityLocalised { get; internal set; }
-
-        [JsonProperty("Population")]
-        public long Population { get; internal set; }
-
-        [JsonProperty("Body")]
-        public string Body { get; internal set; }
-
-        [JsonProperty("BodyID")]
-        public long BodyId { get; internal set; }
-
-        [JsonProperty("BodyType")]
-        public string BodyType { get; internal set; }
-
-        [JsonProperty("Factions")]
-        public List<Faction> Factions { get; internal set; }
-
-        [JsonProperty("SystemFaction")]
-        public SystemFaction SystemFaction { get; internal set; }
-    }
-
-    public partial class Faction
-    {
-        [JsonProperty("Name")]
-        public string Name { get; internal set; }
-
-        [JsonProperty("FactionState")]
-        public string FactionState { get; internal set; }
-
-        [JsonProperty("Government")]
-        public string Government { get; internal set; }
-
-        [JsonProperty("Influence")]
-        public double Influence { get; internal set; }
-
-        [JsonProperty("Allegiance")]
-        public string Allegiance { get; internal set; }
-
-        [JsonProperty("Happiness")]
-        public string Happiness { get; internal set; }
-
-        [JsonProperty("Happiness_Localised")]
-        public string HappinessLocalised { get; internal set; }
-
-        [JsonProperty("MyReputation")]
-        public double MyReputation { get; internal set; }
-
-        [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
-        public List<ActiveState> ActiveStates { get; internal set; }
-    }
-
-    public partial class ActiveState
-    {
-        [JsonProperty("State")]
-        public string State { get; internal set; }
-    }
-
-    public partial class SystemFaction
-    {
-        [JsonProperty("Name")]
-        public string Name { get; internal set; }
-    }
-
-    public partial class LocationInfo
-    {
-        public static LocationInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLocationEvent(JsonConvert.DeserializeObject<LocationInfo>(json, EliteAPI.Events.LocationConverter.Settings));
-    }
-
-    
-
-    internal static class LocationConverter
-    {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        public class RecoveringStateInfo
         {
-            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
-            Converters =
-            {
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
-        };
+            public string State { get; set; }
+            public int Trend { get; set; }
+        }
+
+        public class FactionInfo
+        {
+            public string Name { get; set; }
+            public string FactionState { get; set; }
+            public string Government { get; set; }
+            public double Influence { get; set; }
+            public string Allegiance { get; set; }
+            public List<RecoveringStateInfo> RecoveringStates { get; set; }
+        }
+
+        public DateTime timestamp { get; set; }
+        public bool Docked { get; set; }
+        public long MarketID { get; set; }
+        public string StationName { get; set; }
+        public string StationType { get; set; }
+        public string StarSystem { get; set; }
+        public long SystemAddress { get; set; }
+        public List<double> StarPos { get; set; }
+        public string SystemAllegiance { get; set; }
+        public string SystemEconomy { get; set; }
+        public string SystemEconomy_Localised { get; set; }
+        public string SystemSecondEconomy { get; set; }
+        public string SystemSecondEconomy_Localised { get; set; }
+        public string SystemGovernment { get; set; }
+        public string SystemGovernment_Localised { get; set; }
+        public string SystemSecurity { get; set; }
+        public string SystemSecurity_Localised { get; set; }
+        public ulong Population { get; set; }
+        public string Body { get; set; }
+        public int BodyID { get; set; }
+        public string BodyType { get; set; }
+        public List<FactionInfo> Factions { get; set; }
+        public string SystemFaction { get; set; }
+        public string FactionState { get; set; }
     }
 }

@@ -1,59 +1,21 @@
-namespace EliteAPI.Events
+﻿using System;
+using System.Collections.Generic;
+
+namespace EliteAPI
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
-    public partial class EngineerProgressInfo : IEvent
+    public class EngineerProgressInfo
     {
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
+        public DateTime timestamp { get; set; }
+        public List<EngineerInfo> Engineers { get; set; }
 
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
-
-        [JsonProperty("Engineers")]
-        public List<Engineer> Engineers { get; internal set; }
-    }
-
-    public partial class Engineer
-    {
-        [JsonProperty("Engineer")]
-        public string EngineerEngineer { get; internal set; }
-
-        [JsonProperty("EngineerID")]
-        public long EngineerId { get; internal set; }
-
-        [JsonProperty("Progress")]
-        public string Progress { get; internal set; }
-
-        [JsonProperty("RankProgress", NullValueHandling = NullValueHandling.Ignore)]
-        public long? RankProgress { get; internal set; }
-
-        [JsonProperty("Rank", NullValueHandling = NullValueHandling.Ignore)]
-        public long? Rank { get; internal set; }
-    }
-
-    public partial class EngineerProgressInfo
-    {
-        public static EngineerProgressInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeEngineerProgressEvent(JsonConvert.DeserializeObject<EngineerProgressInfo>(json, EliteAPI.Events.EngineerProgressConverter.Settings));
-    }
-
-    
-
-    internal static class EngineerProgressConverter
-    {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        public class EngineerInfo
         {
-            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
-            Converters =
-            {
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
-        };
+            public string Engineer { get; set; }
+            public int EngineerID { get; set; }
+            public string Progress { get; set; }
+            public int RankProgress { get; set; }
+            public int Rank { get; set; }
+        }
+
     }
 }

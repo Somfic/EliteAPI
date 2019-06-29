@@ -1,44 +1,11 @@
-namespace EliteAPI.Events
+﻿using System;
+
+namespace EliteAPI
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
-    public partial class DiscoveryScanInfo : IEvent
+    public class DiscoveryScanInfo
     {
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
-
-        [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; internal set; }
-
-        [JsonProperty("Bodies")]
-        public long Bodies { get; internal set; }
-    }
-
-    public partial class DiscoveryScanInfo
-    {
-        public static DiscoveryScanInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDiscoveryScanEvent(JsonConvert.DeserializeObject<DiscoveryScanInfo>(json, EliteAPI.Events.DiscoveryScanConverter.Settings));
-    }
-
-    
-
-    internal static class DiscoveryScanConverter
-    {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
-        {
-            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
-            Converters =
-            {
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
-        };
+        public DateTime timestamp { get; set; }
+        public long SystemAddress { get; set; }
+        public int Bodies { get; set; }
     }
 }

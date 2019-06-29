@@ -1,50 +1,14 @@
-namespace EliteAPI.Events
+using System;
+using System.Collections.Generic;
+
+namespace EliteAPI
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
-    public partial class SAAScanCompleteInfo : IEvent
-    {
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
-
-        [JsonProperty("BodyName")]
-        public string BodyName { get; internal set; }
-
-        [JsonProperty("BodyID")]
-        public long BodyId { get; internal set; }
-
-        [JsonProperty("ProbesUsed")]
-        public long ProbesUsed { get; internal set; }
-
-        [JsonProperty("EfficiencyTarget")]
-        public long EfficiencyTarget { get; internal set; }
-    }
-
-    public partial class SAAScanCompleteInfo
-    {
-        public static SAAScanCompleteInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSAAScanCompleteEvent(JsonConvert.DeserializeObject<SAAScanCompleteInfo>(json, EliteAPI.Events.SAAScanCompleteConverter.Settings));
-    }
-
-    
-
-    internal static class SAAScanCompleteConverter
-    {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
-        {
-            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
-            Converters =
-            {
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
-        };
-    }
+  public class SAAScanCompleteInfo
+  {
+      public DateTime timestamp { get; set; }
+      public string BodyName { get; set; }
+      public int BodyID { get; set; }
+      public int ProbesUsed { get; set; }
+      public int EfficiencyTarget { get; set; }
+  }
 }

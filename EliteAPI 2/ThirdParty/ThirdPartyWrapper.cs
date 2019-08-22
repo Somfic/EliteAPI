@@ -108,14 +108,14 @@ namespace EliteAPI.ThirdParty
                 {
                     if (type.Contains("int")) { variables.Add(new Variable("Event." + name, int.Parse(value))); }
                     else if (type.Contains("long")) { variables.Add(new Variable("Event." + name, int.Parse(value))); }
-                    else if (type.Contains("string")) { variables.Add(new Variable("Event." + name, decimal.Parse(value))); }
+                    else if (type.Contains("string")) { variables.Add(new Variable("Event." + name, value)); }
                     else if (type.Contains("double")) { variables.Add(new Variable("Event." + name, decimal.Parse(value))); }
                     else if (type.Contains("float")) { variables.Add(new Variable("Event." + name, decimal.Parse(value))); }
                     else if (type.Contains("bool")) { variables.Add(new Variable("Event." + name, bool.Parse(value))); }
                 }
                 catch (Exception ex)
                 {
-                    EliteAPI.Logger.LogError($"There was an error while trying to parse field [{name} ({value})] for event '{eventName}'.", ex);
+                    EliteAPI.Logger.LogError($"There was an error while trying to parse field [{name} ('{value}')] for event '{eventName}'.", ex);
                 }
             }
 

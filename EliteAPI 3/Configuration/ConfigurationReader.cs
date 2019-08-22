@@ -6,7 +6,7 @@ using System.Text;
 using IniParser;
 using IniParser.Model;
 
-namespace EliteAPI_3.Configuration
+namespace EliteAPI.Configuration
 {
     /// <summary>
     /// Class that's able to read configuration files for EliteAPI.

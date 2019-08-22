@@ -107,12 +107,11 @@ namespace EliteAPI.ThirdParty
                 try
                 {
                     if (type.Contains("int")) { variables.Add(new Variable("Event." + name, int.Parse(value))); }
-                    else if (type.Contains("long")) { variables.Add(new Variable("EliteAPI.Event." + name, int.Parse(value))); }
-                    else if (type.Contains("string")) { variables.Add(new Variable("EliteAPI.Event." + name, value)); }
-                    else if (type.Contains("decimal")) { variables.Add(new Variable("EliteAPI.Event." + name, decimal.Parse(value))); }
-                    else if (type.Contains("double")) { variables.Add(new Variable("EliteAPI.Event." + name, decimal.Parse(value))); }
-                    else if (type.Contains("float")) { variables.Add(new Variable("EliteAPI.Event." + name, decimal.Parse(value))); }
-                    else if (type.Contains("bool")) { variables.Add(new Variable("EliteAPI.Event." + name, bool.Parse(value))); }
+                    else if (type.Contains("long")) { variables.Add(new Variable("Event." + name, int.Parse(value))); }
+                    else if (type.Contains("string")) { variables.Add(new Variable("Event." + name, decimal.Parse(value))); }
+                    else if (type.Contains("double")) { variables.Add(new Variable("Event." + name, decimal.Parse(value))); }
+                    else if (type.Contains("float")) { variables.Add(new Variable("Event." + name, decimal.Parse(value))); }
+                    else if (type.Contains("bool")) { variables.Add(new Variable("Event." + name, bool.Parse(value))); }
                 }
                 catch (Exception ex)
                 {

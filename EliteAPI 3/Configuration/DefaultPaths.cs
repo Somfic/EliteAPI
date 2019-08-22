@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace EliteAPI_3.Configuration
+namespace EliteAPI.Configuration
 {
     internal static class DefaultPaths
     {

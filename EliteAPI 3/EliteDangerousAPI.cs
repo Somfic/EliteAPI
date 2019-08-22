@@ -1,6 +1,8 @@
-﻿using System;
+﻿using EliteAPI.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
 
 namespace EliteAPI
@@ -14,7 +16,7 @@ namespace EliteAPI
         /// <summary>
         /// The constructor for the the EliteDangerousAPI class.
         /// </summary>
-        public EliteDangerousAPI( )
+        public EliteDangerousAPI()
         {
         }
 
@@ -24,8 +26,11 @@ namespace EliteAPI
         public void Start( )
         {
             //Create a stopwatch object to keep track of the process.
+            Stopwatch bootStopwatch = new Stopwatch();
+            bootStopwatch.Start();
 
             //Get the Journal directory from the configuration file.
+            string journalsPath = Path.GetFullPath(new ConfigurationReader("EliteAPI.ini").GetEntry("Startup", "DirectoryPath"));
 
             //Check if the Journal directory exists.
 

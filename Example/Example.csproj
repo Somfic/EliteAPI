@@ -57,5 +57,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EliteAPI 2\EliteAPI 2.csproj">
+      <Project>{9B2968C2-1F10-45A0-A388-9DA1FBA3922B}</Project>
+      <Name>EliteAPI 2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

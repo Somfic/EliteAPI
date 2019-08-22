@@ -1,4 +1,6 @@
 ﻿using EliteAPI;
+using EliteAPI.EDSM;
+using EliteAPI.Inara;
 using EliteAPI.Logging;
 
 using InputManager;
@@ -17,10 +19,17 @@ namespace Example
         {
             EliteAPI = new EliteDangerousAPI();
             EliteAPI.Logger.UseConsole(Severity.Debug).UseLogFile(Directory.GetCurrentDirectory());
+            EliteAPI.DiscordRichPresence.TurnOn();
+
+            EliteAPI.Events.DockedEvent += (sender, e) =>
+            {
+                InaraConnection inara = new InaraConnection();
+                inara.EventsQueue.Add(new InaraEvent(new EliteAPI.Inara.Events.SetCommanderCredits(EliteAPI.Commander.Credits)));
+
+                inara.ExecuteQueue(new InaraConfiguration("9auf63ovovgosoo008cowwscogkk4sggsswwwkc", "EliteAPI", "1.0.0"));
+            };
+
             EliteAPI.Start();
-
-            EliteAPI.Events.AllEvent += (sender, e) => Console.Beep();
-
             Thread.Sleep(-1);
         }
     }

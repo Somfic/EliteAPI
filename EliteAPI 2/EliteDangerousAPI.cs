@@ -29,6 +29,9 @@ namespace EliteAPI
             public static extern int SHGetKnownFolderPath([MarshalAs(UnmanagedType.LPStruct)]Guid rfid, uint dwFlags, IntPtr hToken, out IntPtr ppszPath);
         }
 
+        /// <summary>
+        /// Set to true when the API is ready.
+        /// </summary>
         public bool IsReady { get; internal set; }
 
         /// <summary>
@@ -54,7 +57,7 @@ namespace EliteAPI
         /// <summary>
         /// The version of EliteAPI.
         /// </summary>
-        public string Version => "2.0.2.9";
+        public string Version => "2.0.2.10";
 
         /// <summary>
         /// Whether the API is currently running.
@@ -206,7 +209,7 @@ namespace EliteAPI
             try
             {
                 WebClient versionChecker = new WebClient();
-                string latestVersionString = versionChecker.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI/versioncontrol.version").Trim();
+                string latestVersionString = versionChecker.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI%202/versioncontrol.version").Trim();
 
                 Logger.LogDebug($"Latest version: {latestVersionString} (curr. {Version}).");
 
@@ -344,6 +347,10 @@ namespace EliteAPI
             OnReady?.Invoke(this, EventArgs.Empty);
         }
 
+        /// <summary>
+        /// Changes the journal directory.
+        /// </summary>
+        /// <param name="newJournalDirectory">The new journal directory.</param>
         public void ChangeJournal(DirectoryInfo newJournalDirectory)
         {
             if (newJournalDirectory == JournalDirectory) { return; }

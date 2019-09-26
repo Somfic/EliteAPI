@@ -11,7 +11,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EliteAPI</RootNamespace>
     <AssemblyName>EliteAPI</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -26,7 +26,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\EliteAPI.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -56,6 +57,9 @@
     </Reference>
     <Reference Include="PresentationFramework">
       <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Somfic">
+      <HintPath>..\..\Somfic\Somfic\bin\Debug\Somfic.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -354,7 +358,6 @@
     <Compile Include="Inara\Events\SetCommanderTravelLocation.cs" />
     <Compile Include="Inara\Events\SetCommunityGoal.cs" />
     <Compile Include="JournalParser.cs" />
-    <Compile Include="Logging\Logger.cs" />
     <Compile Include="ServiceInterfaces.cs" />
     <Compile Include="Status\LocationStatus.cs" />
     <Compile Include="Status\ShipCargo.cs" />

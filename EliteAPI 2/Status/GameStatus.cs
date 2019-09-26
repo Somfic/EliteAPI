@@ -127,7 +127,7 @@
         {
             try
             {
-                if (!File.Exists(file.FullName)) { api.Logger.LogError("Could not find Status.json.", new Exception($"Could not find {file}.")); return new GameStatus(); }
+                if (!File.Exists(file.FullName)) { api.Logger.Error("Could not find Status.json.", new Exception($"Could not find {file}.")); return new GameStatus(); }
 
                 //Create a stream from the log file.
                 FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -147,13 +147,13 @@
                         if(s.Pips == null) { s.Pips = new List<long>() { 0, 0, 0}; }
                         return s;
                     }
-                    catch(Exception ex) { api.Logger.LogWarning("Could not update Status.json.", ex); }
+                    catch(Exception ex) { api.Logger.Warning("Could not update Status.json.", ex); }
                 }
 
                 return api.Status;
 
             }
-            catch(Exception ex) { api.Logger.LogWarning("Could not update status.", ex);}
+            catch(Exception ex) { api.Logger.Warning("Could not update status.", ex);}
 
             return new GameStatus();
         }

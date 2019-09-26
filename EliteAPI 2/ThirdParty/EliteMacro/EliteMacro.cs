@@ -1,4 +1,4 @@
-﻿using EliteAPI.Logging;
+﻿using Somfic.Logging;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -27,7 +27,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
             Wrapper = new ThirdPartyWrapper(EliteAPI, DisplayName, $@"{vmCommand.GetDataDirectory()}\EliteMacro.ini");
 
             //Setup EliteAPI.
-            EliteAPI.Logger.Log += Logger_Log;
+            EliteAPI.Logger.LogEvent += Logger_Log;
             EliteAPI.Logger.UseLogFile(Wrapper.GetLogFolder().ToString());
             EliteAPI.ChangeJournal(Wrapper.GetJournalFolder());
 
@@ -49,7 +49,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
 
         void vmInterface.Dispose()
         {
-            EliteAPI.Logger.LogDebug("VoiceMacro is closing.");
+            EliteAPI.Logger.Debug("VoiceMacro is closing.");
             EliteAPI.Stop();
         }
 
@@ -60,18 +60,18 @@ namespace EliteAPI.ThirdParty.EliteMacro
                 try
                 {
                     //Check if the variable isn't type unknown.
-                    if (v.Type == Variable.VarType.Unknown) { EliteAPI.Logger.LogDebug($"Could not set VoiceMacro variable 'EliteAPI.{v.Name}_p' to {v.Value}.", new Exception("Type is unknown")); continue; }
+                    if (v.Type == Variable.VarType.Unknown) { EliteAPI.Logger.Debug($"Could not set VoiceMacro variable 'EliteAPI.{v.Name}_p' to {v.Value}.", new Exception("Type is unknown")); continue; }
 
                     //Check if the variable has actually changed.
                     if (vmCommand.GetVariable($"EliteAPI.{v.Name}_p") == v.Value.ToString()) { continue; }
 
                     //Change variable.
-                    EliteAPI.Logger.LogDebug($"Set VoiceMacro variable 'EliteAPI.{v.Name}_p' to '{v.Value}'.");
+                    EliteAPI.Logger.Debug($"Set VoiceMacro variable 'EliteAPI.{v.Name}_p' to '{v.Value}'.");
                     vmCommand.SetVariable($"EliteAPI.{v.Name}_p", v.Value.ToString());
                 }
                 catch (Exception ex)
                 {
-                    EliteAPI.Logger.LogDebug($"Could not set variable {v.Name}.", ex);
+                    EliteAPI.Logger.Debug($"Could not set variable {v.Name}.", ex);
                 }
             }
         }
@@ -114,12 +114,12 @@ namespace EliteAPI.ThirdParty.EliteMacro
             if (macroGUID != null)
             {
                 //Set event variables.
-                EliteAPI.Logger.LogDebug($"Executing VoiceMacro command '{commandName}'.");
+                EliteAPI.Logger.Debug($"Executing VoiceMacro command '{commandName}'.");
                 SetVariables(Wrapper.GetEventVariables(e));
                 vmCommand.ExecuteMacro(macroGUID);
             } else
             {
-                EliteAPI.Logger.LogDebug($"VoiceMacro command '{commandName}' was not found, continuing.");
+                EliteAPI.Logger.Debug($"VoiceMacro command '{commandName}' was not found, continuing.");
             }
         }
     }

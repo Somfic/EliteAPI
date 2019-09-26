@@ -1,6 +1,7 @@
 ﻿using EliteAPI.Bindings;
 using EliteAPI.Discord;
 using EliteAPI.Status;
+using Somfic.Logging;
 using System;
 using System.IO;
 
@@ -16,7 +17,7 @@ namespace EliteAPI
         DirectoryInfo JournalDirectory { get; }
         bool SkipCatchUp { get; }
         EliteAPI.Events.EventHandler Events { get; }
-        EliteAPI.Logging.Logger Logger { get; }
+        Logger Logger { get; }
         GameStatus Status { get; }
         ShipCargo Cargo { get; }
         ShipModules Modules { get; }

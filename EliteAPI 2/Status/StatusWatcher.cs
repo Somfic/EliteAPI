@@ -1,4 +1,5 @@
 ﻿using EliteAPI.Events;
+using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Linq;
@@ -88,7 +89,7 @@ namespace EliteAPI.Status
             if (oldStatus == null) { oldStatus = new GameStatus(); }
 
             GameStatus newStatus = GameStatus.FromFile(new FileInfo(api.JournalDirectory + "//Status.json"), api);
-            if (newStatus == null || !File.Exists(api.JournalDirectory + "//Status.json")) { api.Logger.LogWarning("Could not update Status.json file."); return; }
+            if (newStatus == null || !File.Exists(api.JournalDirectory + "//Status.json")) { api.Logger.Warning("Could not update Status.json file."); return; }
 
             newStatus.InNoFireZone = InNoFireZone;
             newStatus.JumpRange = JumpRange;
@@ -122,14 +123,14 @@ namespace EliteAPI.Status
                     {
                         StatusEvent e = new StatusEvent("Status." + propA.Name, B);
 
-                        api.Logger.LogDebugEvent($"Processing status event '{propA.Name}' ({B}).", e);
+                        api.Logger.Debug($"Processing status event '{propA.Name}' ({B})." + JsonConvert.SerializeObject(e));
 
                         api.Events.InvokeAllEvent(new StatusEvent("Status." + propA.Name, B));
 
                         try { api.Events.GetType().GetMethod("InvokeStatus" + propA.Name, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static).Invoke(api.Events, new object[] { e }); }
-                        catch (Exception ex) { api.Logger.LogError($"Could not invoke status event '{propA.Name}', it might not have been added yet.", ex); }
+                        catch (Exception ex) { api.Logger.Error($"Could not invoke status event '{propA.Name}', it might not have been added yet.", ex); }
                     }
-                    catch(Exception ex) { api.Logger.LogError("Could not do status.", ex); }
+                    catch(Exception ex) { api.Logger.Error("Could not do status.", ex); }
                 }
             }
         }

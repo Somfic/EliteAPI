@@ -49,7 +49,7 @@ namespace EliteAPI.Status
                 {
                     api.Events.InvokeAllEvent(new CargoEvent("Cargo." + propA.Name, B));
                     try { api.Events.GetType().GetMethod("InvokeCargo" + propA.Name).Invoke(api.Events, new object[] { B }); }
-                    catch (Exception ex) { api.Logger.LogError($"Could not invoke Cargo event {propA.Name}, it might not have been added yet.", ex); }
+                    catch (Exception ex) { api.Logger.Error($"Could not invoke Cargo event {propA.Name}, it might not have been added yet.", ex); }
                 }
             }
         }

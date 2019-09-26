@@ -61,9 +61,9 @@ namespace EliteAPI
                 //amountOfFields = jobj.Count;
 
                 eventName = obj.@event;
-                EliteAPI.Logger.LogDebugEvent($"Processing event '{eventName}'.", obj);
+                EliteAPI.Logger.Debug($"Processing event '{eventName}'.", obj);
             }
-            catch (Exception ex) { EliteAPI.Logger.LogWarning($"Couldn't process JSON '{json}'.", ex); }
+            catch (Exception ex) { EliteAPI.Logger.Warning($"Couldn't process JSON '{json}'.", ex); }
 
             //Invoke the matching event.
             Type eventClass; MethodInfo eventMethod;
@@ -80,15 +80,15 @@ namespace EliteAPI
                         //amountOfProcessedFields = parsedEvent.GetType().GetProperties().Length;
                         //parsed = parsedEvent.GetType().GetProperties();
                     }
-                    catch (Exception ex) { EliteAPI.Logger.LogError($"Could not invoke event method '{eventName}Info.Process()'.", ex); }
+                    catch (Exception ex) { EliteAPI.Logger.Error($"Could not invoke event method '{eventName}Info.Process()'.", ex); }
                 }
-                catch (Exception ex) { EliteAPI.Logger.LogWarning($"Could not find event method '{eventName}Info.Process()'.", ex); }
+                catch (Exception ex) { EliteAPI.Logger.Warning($"Could not find event method '{eventName}Info.Process()'.", ex); }
             }
-            catch (Exception ex) { EliteAPI.Logger.LogWarning($"Could not find event class '{eventName}Info'.", ex); }
+            catch (Exception ex) { EliteAPI.Logger.Warning($"Could not find event class '{eventName}Info'.", ex); }
 
             //Invoke the AllEvent.
             try { EliteAPI.Events.InvokeAllEvent(obj); }
-            catch (Exception ex) { EliteAPI.Logger.LogError($"Could not invoke AllEvent for '{eventName}'.", ex); }
+            catch (Exception ex) { EliteAPI.Logger.Error($"Could not invoke AllEvent for '{eventName}'.", ex); }
 
             //if (amountOfProcessedFields < amountOfFields)
             //{
@@ -99,7 +99,7 @@ namespace EliteAPI
 
             //    missingFields = missingFields.Substring(0, missingFields.Length - 2) + " were missing";
 
-            //    EliteAPI.Logger.LogDebug($"Not all fields were parsed for '{eventName}'.", new Exception(missingFields));
+            //    EliteAPI.Logger.LogEventEventDebug($"Not all fields were parsed for '{eventName}'.", new Exception(missingFields));
             //}
         }
     }

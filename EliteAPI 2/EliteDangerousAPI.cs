@@ -3,7 +3,7 @@ using EliteAPI.Discord;
 using EliteAPI.Status;
 
 using Newtonsoft.Json;
-
+using Somfic.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -77,7 +77,7 @@ namespace EliteAPI
         /// <summary>
         /// Objects that holds all logging related functions.
         /// </summary>
-        public Logging.Logger Logger { get; internal set; }
+        public Logger Logger { get; internal set; }
 
         /// <summary>
         /// Holds the ship's current status.
@@ -204,21 +204,21 @@ namespace EliteAPI
         /// <returns>Returns true if a newer version is available.</returns>
         public bool CheckForUpdate()
         {
-            Logger.LogDebug("Checking for updates from GitHub.");
+            Logger.Debug("Checking for updates from GitHub.");
 
             try
             {
                 WebClient versionChecker = new WebClient();
                 string latestVersionString = versionChecker.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI%202/versioncontrol.version").Trim();
 
-                Logger.LogDebug($"Latest version: {latestVersionString} (curr. {Version}).");
+                Logger.Debug($"Latest version: {latestVersionString} (curr. {Version}).");
 
                 int latestVersion = int.Parse(latestVersionString.Replace(".", ""));
                 int thisVersoin = int.Parse(Version.Replace(".", ""));
 
-                if (thisVersoin < latestVersion) { Logger.LogInfo($"A new update ({latestVersionString}) is available. Visit github.com/EliteAPI/EliteAPI to download the latest version."); return true; } else { Logger.LogDebug("EliteAPI is up-to-date with the latest version."); }
+                if (thisVersoin < latestVersion) { Logger.Log($"A new update ({latestVersionString}) is available. Visit github.com/EliteAPI/EliteAPI to download the latest version."); return true; } else { Logger.Debug("EliteAPI is up-to-date with the latest version."); }
             }
-            catch (Exception ex) { Logger.LogDebug("Could not check for updates.", ex); }
+            catch (Exception ex) { Logger.Debug("Could not check for updates.", ex); }
 
             return false;
         }
@@ -229,16 +229,16 @@ namespace EliteAPI
         public void Reset()
         {
             //Reset services.
-            Logger = new Logging.Logger(this);
-            try { Events = new Events.EventHandler(); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'Events'.", ex); }
-            try { Commander = new CommanderStatus(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'Commander'.", ex); }
-            try { Location = new LocationStatus(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'Location'.", ex); }
-            try { DiscordRichPresence = new RichPresenceClient(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'DiscordRichPresence'.", ex); }
-            try { StatusWatcher = new StatusWatcher(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'StatusWatcher'.", ex); }
-            try { CargoWatcher = new CargoWatcher(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'CargoWatcher'.", ex); }
-            try { Status = EliteAPI.Status.GameStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'Status'.", ex); }
-            try { JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'JournalParser'.", ex); }
-            try { MaterialWatcher = new MaterialWatcher(this); } catch (Exception ex) { Logger.LogWarning("Couldn't instantiate service 'MaterialWatcher'.", ex); }
+            Logger = new Logger();
+            try { Events = new Events.EventHandler(); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service 'Events'.", ex); }
+            try { Commander = new CommanderStatus(this); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service 'Commander'.", ex); }
+            try { Location = new LocationStatus(this); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service 'Location'.", ex); }
+            try { DiscordRichPresence = new RichPresenceClient(this); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service 'DiscordRichPresence'.", ex); }
+            try { StatusWatcher = new StatusWatcher(this); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service 'StatusWatcher'.", ex); }
+            try { CargoWatcher = new CargoWatcher(this); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service 'CargoWatcher'.", ex); }
+            try { Status = EliteAPI.Status.GameStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service 'Status'.", ex); }
+            try { JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service 'JournalParser'.", ex); }
+            try { MaterialWatcher = new MaterialWatcher(this); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service 'MaterialWatcher'.", ex); }
             JournalParser.processedLogs = new List<string>();
         }
 
@@ -247,17 +247,29 @@ namespace EliteAPI
         /// </summary>
         public void Start()
         {
+            OnError += (sender, e) => Logger.Error(e.Item1, e.Item2);
+            OnReady += (sender, e) => Logger.Success("EliteAPI is ready.");
+
             Stopwatch s = new Stopwatch();
             s.Start();
 
-            Logger.LogInfo("Starting EliteAPI.");
-            Logger.LogDebug("EliteAPI by CMDR Somfic (discord.gg/jwpFUPZ) (github.com/EliteAPI/EliteAPI).");
-            Logger.LogDebug("EliteAPI v" + Version + ".");
+            Logger.Log("Starting EliteAPI.");
+            Logger.Debug("EliteAPI by CMDR Somfic (discord.gg/jwpFUPZ) (github.com/EliteAPI/EliteAPI).");
+            Logger.Debug("EliteAPI v" + Version + ".");
 
             //Check for updates.
             CheckForUpdate();
 
-            Logger.LogInfo($"Journal directory set to '{JournalDirectory}'.");
+            Logger.Log($"Journal directory set to '{JournalDirectory}'.");
+            if (!Directory.Exists(JournalDirectory.FullName))
+            {
+                Logger.Warning("That directory does not exist.");
+                if (!Directory.Exists(EliteDangerousAPI.StandardDirectory.FullName))
+                {
+                    OnError?.Invoke(this, new Tuple<string, Exception>("The default journal directory does not exist on this machine. Please run Elite: Dangerous at least once.", null));
+                    return;
+                }
+            }
 
             //Mark the API as running.
             IsRunning = true;
@@ -269,9 +281,9 @@ namespace EliteAPI
             //Find the last edited Journal file.
             try
             {
-                Logger.LogDebug($"Searching for 'Journal.*.log' files.");
+                Logger.Debug($"Searching for 'Journal.*.log' files.");
                 journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
-                Logger.LogDebug($"Found '{journalFile}'.");
+                Logger.Debug($"Found '{journalFile}'.");
             }
             catch (Exception ex)
             {
@@ -286,40 +298,40 @@ namespace EliteAPI
             try
             {
                 //Status.json.
-                if (File.Exists(JournalDirectory.FullName + "\\Status.json")) { Logger.LogDebug("Found 'Status.json'."); foundStatus = true; }
-                else { Logger.LogWarning($"Could not find 'Status.json' file."); foundStatus = false; }
+                if (File.Exists(JournalDirectory.FullName + "\\Status.json")) { Logger.Debug("Found 'Status.json'."); foundStatus = true; }
+                else { Logger.Warning($"Could not find 'Status.json' file."); foundStatus = false; }
 
                 //Cargo.json.
-                if (File.Exists(JournalDirectory.FullName + "\\Cargo.json")) { Logger.LogDebug("Found 'Cargo.json'."); }
-                else { Logger.LogWarning($"Could not find 'Cargo.json' file."); }
+                if (File.Exists(JournalDirectory.FullName + "\\Cargo.json")) { Logger.Debug("Found 'Cargo.json'."); }
+                else { Logger.Warning($"Could not find 'Cargo.json' file."); }
 
                 //Shipyard.json.
-                if (File.Exists(JournalDirectory.FullName + "\\Shipyard.json")) { Logger.LogDebug("Found 'Shipyard.json'."); }
-                else { Logger.LogDebug($"Could not find 'Shipyard.json' file."); }
+                if (File.Exists(JournalDirectory.FullName + "\\Shipyard.json")) { Logger.Debug("Found 'Shipyard.json'."); }
+                else { Logger.Debug($"Could not find 'Shipyard.json' file."); }
 
                 //Outfitting.json.
-                if (File.Exists(JournalDirectory.FullName + "\\Outfitting.json")) { Logger.LogDebug("Found 'Outfitting.json'."); }
-                else { Logger.LogDebug($"Could not find 'Outfitting.json' file."); }
+                if (File.Exists(JournalDirectory.FullName + "\\Outfitting.json")) { Logger.Debug("Found 'Outfitting.json'."); }
+                else { Logger.Debug($"Could not find 'Outfitting.json' file."); }
 
                 //Market.json.
-                if (File.Exists(JournalDirectory.FullName + "\\Market.json")) { Logger.LogDebug("Found 'Market.json'."); }
-                else { Logger.LogDebug($"Could not find 'Market.json' file."); }
+                if (File.Exists(JournalDirectory.FullName + "\\Market.json")) { Logger.Debug("Found 'Market.json'."); }
+                else { Logger.Debug($"Could not find 'Market.json' file."); }
 
                 //ModulesInfo.json.
-                if (File.Exists(JournalDirectory.FullName + "\\ModulesInfo.json")) { Logger.LogDebug("Found 'ModulesInfo.json'."); }
-                else { Logger.LogDebug($"Could not find 'ModulesInfo.json' file."); }
+                if (File.Exists(JournalDirectory.FullName + "\\ModulesInfo.json")) { Logger.Debug("Found 'ModulesInfo.json'."); }
+                else { Logger.Debug($"Could not find 'ModulesInfo.json' file."); }
             }
             catch { }
 
-            if (foundStatus) { Logger.LogInfo("Found Journal and Status files."); }
+            if (foundStatus) { Logger.Log("Found Journal and Status files."); }
 
             //Check if Elite: Dangerous is running.
-            if (!Status.IsRunning) { Logger.LogWarning("Elite: Dangerous is not in-game."); }
+            if (!Status.IsRunning) { Logger.Warning("Elite: Dangerous is not in-game."); }
 
             //Process the journal file.
-            if (!SkipCatchUp) { Logger.LogDebug("Catching up with past events from this session."); }
+            if (!SkipCatchUp) { Logger.Debug("Catching up with past events from this session."); }
             JournalParser.ProcessJournal(journalFile, SkipCatchUp);
-            if (!SkipCatchUp) { Logger.LogDebug("Catchup on past events completed."); }
+            if (!SkipCatchUp) { Logger.Debug("Catchup on past events completed."); }
 
             //Go async.
             Task.Run(() =>
@@ -329,7 +341,7 @@ namespace EliteAPI
                 {
                     //Select the last edited Journal file.
                     FileInfo newJournalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
-                    if (journalFile.FullName != newJournalFile.FullName) { Logger.LogDebug($"Switched to '{newJournalFile}'."); JournalParser.processedLogs.Clear(); }
+                    if (journalFile.FullName != newJournalFile.FullName) { Logger.Debug($"Switched to '{newJournalFile}'."); JournalParser.processedLogs.Clear(); }
                     journalFile = newJournalFile;
 
                     //Process the journal file.
@@ -342,7 +354,7 @@ namespace EliteAPI
 
             s.Stop();
 
-            Logger.LogDebug($"Finished in {s.ElapsedMilliseconds}ms.");
+            Logger.Debug($"Finished in {s.ElapsedMilliseconds}ms.");
             IsReady = true;
             OnReady?.Invoke(this, EventArgs.Empty);
         }
@@ -357,7 +369,7 @@ namespace EliteAPI
             else if (Logger != null)
             {
                 JournalDirectory = newJournalDirectory;
-                Logger.LogDebug($"Changed Journal Directory to '{newJournalDirectory}'.");
+                Logger.Debug($"Changed Journal Directory to '{newJournalDirectory}'.");
             }
         }
 
@@ -369,7 +381,7 @@ namespace EliteAPI
             //Mark the API as not running.
             IsRunning = false;
 
-            Logger.LogInfo("EliteAPI has been terminated.");
+            Logger.Log("EliteAPI has been terminated.");
 
             OnQuit?.Invoke(this, EventArgs.Empty);
         }

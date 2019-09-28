@@ -61,7 +61,7 @@ namespace EliteAPI
                 //amountOfFields = jobj.Count;
 
                 eventName = obj.@event;
-                EliteAPI.Logger.Debug($"Processing event '{eventName}'.", obj);
+                EliteAPI.Logger.Debug($"Processing event '{eventName}'.");
             }
             catch (Exception ex) { EliteAPI.Logger.Warning($"Couldn't process JSON '{json}'.", ex); }
 

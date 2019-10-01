@@ -7,27 +7,63 @@ namespace EliteAPI.Discord
 {
     public class RichPresenceClient
     {
-        private static readonly string clientID = "497862888128512041";
+        private static string clientID = "497862888128512041";
 
         private DiscordRpcClient rpc;
         private readonly EliteDangerousAPI api;
+
+        /// <summary>
+        /// Whether the rich presence is running.
+        /// </summary>
         public bool IsRunning { get; private set; } = false;
+
+        /// <summary>
+        /// Whether the rich presence is connected and ready.
+        /// </summary>
         public bool IsReady { get; private set; } = false;
 
         /// <summary>
         /// Creates a new Discord Rich Presence client based on the EliteDangerousAPI object.
         /// </summary>
-        /// <param name="api"></param>
+        /// <param name="api">EliteDangerousAPI</param>
         public RichPresenceClient(EliteDangerousAPI api)
         {
             this.api = api;
         }
 
-        private void UpdatePresence(RichPresence presence)
+
+        /// <summary>
+        /// Creates a new Discord Rich Presence client based on the EliteDangerousAPI object, with a custom RPC ID, for when you have your own Rich Presence registered with Discord.
+        /// </summary>
+        /// <param name="api">EliteDangerousAPI</param>
+        public RichPresenceClient(EliteDangerousAPI api, string rpcID)
+        {
+            this.api = api;
+            clientID = rpcID;
+        }
+
+        /// <summary>
+        /// Set a custom ID to be used, for when you have your own RPC registered with Discord.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public RichPresenceClient WithCustomID(string id)
+        {
+            clientID = id;
+            api.Logger.Debug($"Set custom Discord Rich Presence ID to {id}.");
+            return this;
+        }
+
+        /// <summary>
+        /// Update the rich presence.
+        /// </summary>
+        /// <param name="presence">The custom rich presence to display.</param>
+        public RichPresenceClient UpdatePresence(RichPresence presence)
         {
             //If we're not running, return;
-            if(!IsRunning) { return; }
+            if(!IsRunning) { return this; }
 
+            api.Logger.UseFormat(false);
             api.Logger.Debug($"Updated rich presence: {Newtonsoft.Json.JsonConvert.SerializeObject(presence)}");
 
             DiscordRPC.RichPresence discordPresence = new DiscordRPC.RichPresence
@@ -44,23 +80,27 @@ namespace EliteAPI.Discord
             };
 
             rpc.SetPresence(discordPresence);
+
+            return this;
         }
 
         /// <summary>
         /// Turn the rich presence on.
         /// </summary>
-        public void TurnOn()
+        /// <param name="automatic">Whether to have EliteAPI send events to the presence.</param>
+        public RichPresenceClient TurnOn(bool automatic = true)
         {
             //Create RPC client.
             rpc = new DiscordRpcClient(clientID, true);
             api.Logger.Log("Starting rich presence.");
 
+
             //Subscribe to events.
-            rpc.OnConnectionEstablished += (sender, e) => api.Logger.Debug($"Discord Rich Presence connected to pipe {e.ConnectedPipe}.");
+            rpc.OnConnectionEstablished += (sender, e) => api.Logger.Debug($"Attempting to connect to Discord ... ");
             rpc.OnConnectionFailed += (sender, e) => api.Logger.Warning($"There was an error while trying to connect to Discord Rich Presence pipe {e.FailedPipe}. Make sure Discord is running.");
             rpc.OnError += (sender, e) => api.Logger.Error($"Discord Rich Presence stumbled upon an error.", new Exception(e.Message));
             rpc.OnReady += (sender, e) => { api.Logger.Success($"Discord Rich Presence has connected and is running."); IsReady = true; };
-            rpc.OnClose += (sender, e) => api.Logger.Debug($"Discord Rich Presence closed: '{e.Reason}'.");
+            rpc.OnClose += (sender, e) => { api.Logger.Error($"Discord Rich Presence closed: '{e.Reason}'."); TurnOff(); };
             rpc.OnJoin += (sender, e) => api.Logger.Debug($"Discord Rich Presence joined with secret '{e.Secret}'.");
             rpc.OnJoinRequested += (sender, e) => api.Logger.Debug($"Discord Rich Presence joining with '{e.User.Username}' (ID {e.User.ID})");
 
@@ -68,9 +108,17 @@ namespace EliteAPI.Discord
             //Mark as running.
             IsRunning = true;
             rpc.SetSubscription(EventType.Join | EventType.JoinRequest | EventType.Spectate);
+
             rpc.Initialize();
             Task.Run(() => { while (!IsReady) { Thread.Sleep(1000); rpc.Invoke(); } });
 
+            if(automatic) { DoAutomaticEvents(); }
+
+            return this;
+        }
+
+        private void DoAutomaticEvents()
+        {
             api.Events.DockingGrantedEvent += (sender, e) => UpdatePresence(new RichPresence
             {
                 Text = $"Attemping to dock",
@@ -190,9 +238,9 @@ namespace EliteAPI.Discord
         }
 
         /// <summary>
-        /// Turn the rich pressence off.
+        /// Turn the rich presence off.
         /// </summary>
-        public void TurnOff()
+        public RichPresenceClient TurnOff()
         {
             api.Logger.Log("Terminating rich presence.");   
 
@@ -203,16 +251,8 @@ namespace EliteAPI.Discord
 
             //Mark as not running.
             IsRunning = false;
-        }
-    }
 
-    public class RichPresence
-    {
-        public string Text { get; internal set; }
-        public string TextTwo { get; internal set; }
-        public string Icon { get; internal set; }
-        public string IconText { get; internal set; }
-        public string IconTwo { get; internal set; }
-        public string IconTextTwo { get; internal set; }
+            return this;
+        }
     }
 }

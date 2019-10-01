@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyVersion>2.1.9.833</AssemblyVersion>
+    <FileVersion>2.1.9.833</FileVersion>
+    <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
+    <PackageIconUrl>https://i.imgur.com/keDXwjY.png</PackageIconUrl>
+    <RepositoryType>Public</RepositoryType>
+    <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Description>A powerful event based API for Elite: Dangerous.
+VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
+    <Copyright>Somfic 2019</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.1.3.827</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ini-parser" Version="2.5.2" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.6.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Somfic" Version="1.0.3" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DiscordRPC">
+      <HintPath>..\lib\DiscordRPC.dll</HintPath>
+    </Reference>
+    <Reference Include="vmAPI">
+      <HintPath>..\lib\vmAPI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -9,6 +9,7 @@ using System.Reflection;
 
 namespace EliteAPI.ThirdParty
 {
+
     public class ThirdPartyWrapper
     {
         private static EliteDangerousAPI EliteAPI;

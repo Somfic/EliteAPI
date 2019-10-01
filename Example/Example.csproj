@@ -13,6 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <AssemblyVersion>1.0.21.2054</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -40,8 +41,8 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Somfic">
-      <HintPath>..\..\Somfic\Somfic\bin\Debug\Somfic.dll</HintPath>
+    <Reference Include="Somfic, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Somfic.1.0.0.1\lib\net472\Somfic.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,9 +63,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EliteAPI 2\EliteAPI 2.csproj">
-      <Project>{9B2968C2-1F10-45A0-A388-9DA1FBA3922B}</Project>
-      <Name>EliteAPI 2</Name>
+    <ProjectReference Include="..\EliteAPI\EliteAPI.csproj">
+      <Project>{A45F3B6D-BDBB-4BC5-AFF7-E732FE679B54}</Project>
+      <Name>EliteAPI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -57,7 +57,7 @@ namespace EliteAPI
         /// <summary>
         /// The version of EliteAPI.
         /// </summary>
-        public string Version => "2.0.2.10";
+        public string Version => "2.1.15.838";
 
         /// <summary>
         /// Whether the API is currently running.
@@ -209,14 +209,20 @@ namespace EliteAPI
             try
             {
                 WebClient versionChecker = new WebClient();
-                string latestVersionString = versionChecker.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI%202/versioncontrol.version").Trim();
+                string latestVersionString = versionChecker.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI/versioncontrol.version").Trim();
 
                 Logger.Debug($"Latest version: {latestVersionString} (curr. {Version}).");
 
-                int latestVersion = int.Parse(latestVersionString.Replace(".", ""));
-                int thisVersoin = int.Parse(Version.Replace(".", ""));
+                string[] latestVersion = latestVersionString.Split('.');
+                string[] thisVersion = Version.Split('.');
 
-                if (thisVersoin < latestVersion) { Logger.Log($"A new update ({latestVersionString}) is available. Visit github.com/EliteAPI/EliteAPI to download the latest version."); return true; } else { Logger.Debug("EliteAPI is up-to-date with the latest version."); }
+                bool hasBiggerVersion = false;
+                for (int i = 0; i < latestVersion.Length; i++)
+                {
+                    if(int.Parse(latestVersion[i]) > int.Parse(thisVersion[i])) { hasBiggerVersion = true; }
+                }
+
+                if (hasBiggerVersion) { Logger.Log($"A new update ({latestVersionString}) is available. Visit github.com/EliteAPI/EliteAPI to download the latest version."); return true; } else { Logger.Debug("EliteAPI is up-to-date with the latest version."); }
             }
             catch (Exception ex) { Logger.Debug("Could not check for updates.", ex); }
 

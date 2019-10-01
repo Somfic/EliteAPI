@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "EliteVA"
-#define MyAppVersion "2.0.2.10"
+#define MyAppVersion "2.1.12.835"
 #define MyAppPublisher "Somfic"
 #define MyAppURL "https://github.com/EliteAPI/EliteAPI"
 
@@ -28,8 +28,8 @@ SolidCompression=yes
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\bin\Debug\EliteAPI.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\bin\Debug\EliteAPI.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\bin\Debug\netstandard2.0\EliteAPI.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\bin\Debug\netstandard2.0\EliteAPI.pdb"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\Lucas\Documents\GitHub\EliteAPI\lib\vmAPI.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

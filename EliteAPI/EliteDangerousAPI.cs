@@ -57,7 +57,7 @@ namespace EliteAPI
         /// <summary>
         /// The version of EliteAPI.
         /// </summary>
-        public string Version => "2.2.4.860";
+        public string Version => "2.2.6.862";
 
         /// <summary>
         /// Whether the API is currently running.
@@ -252,7 +252,7 @@ namespace EliteAPI
         /// <summary>
         /// Starts the API.
         /// </summary>
-        public void Start()
+        public void Start(bool runRichPresence = true)
         {
             OnError += (sender, e) => Logger.Error(e.Item1, e.Item2);
             OnReady += (sender, e) => Logger.Success("EliteAPI is ready.");
@@ -364,6 +364,12 @@ namespace EliteAPI
             Logger.Debug($"Finished in {s.ElapsedMilliseconds}ms.");
             IsReady = true;
             OnReady?.Invoke(this, EventArgs.Empty);
+
+            if (runRichPresence)
+            {
+                //Start the Rich Presence.
+                DiscordRichPresence.TurnOn();
+            }
         }
 
         /// <summary>

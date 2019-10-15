@@ -34,7 +34,7 @@ namespace EliteAPI
 
         //Methods.
         void Reset();
-        void Start();
+        void Start(bool runRichPresence = true);
         void Stop();
         void ChangeJournal(DirectoryInfo newJournalDirectory);
     }

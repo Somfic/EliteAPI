@@ -28,7 +28,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
 
             //Setup EliteAPI.
             EliteAPI.Logger.LogEvent += Logger_Log;
-            EliteAPI.Logger.UseLogFile(Wrapper.GetLogFolder().ToString());
+            EliteAPI.Logger.UseLogFile(Wrapper.GetLogFolder().ToString(), "EliteAPI");
             EliteAPI.ChangeJournal(Wrapper.GetJournalFolder());
 
             //Start the API.

@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "EliteVA"
-#define MyAppVersion "2.1.15.838"
+#define MyAppVersion "2.2.4.860"
 #define MyAppPublisher "Somfic"
 #define MyAppURL "https://github.com/EliteAPI/EliteAPI"
 

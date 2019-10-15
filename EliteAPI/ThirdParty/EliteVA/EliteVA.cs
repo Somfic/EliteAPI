@@ -9,7 +9,7 @@ namespace EliteAPI.ThirdParty.EliteVA
         //VoiceAttack fields.
         public static string VA_DisplayName() => "EliteVA";
         public static string VA_DisplayInfo() => "EliteVA by Somfic.";
-        public static Guid VA_Id() => new Guid("{B16F6232-5AD2-4451-BBED-C7696B41AB67}");
+        public static Guid VA_Id() => new Guid("{B16F6232-5AD2-4451-BBED-C7696B41AB66}");
 
         //Private VoiceAttack fields.
         private static dynamic proxy;
@@ -30,7 +30,7 @@ namespace EliteAPI.ThirdParty.EliteVA
 
             //Setup EliteAPI.
             EliteAPI.Logger.LogEvent += Logger_Log;
-            EliteAPI.Logger.UseLogFile(Wrapper.GetLogFolder().ToString());
+            EliteAPI.Logger.UseLogFile(Wrapper.GetLogFolder().ToString(), "EliteAPI");
             EliteAPI.ChangeJournal(Wrapper.GetJournalFolder());
 
             //Start the API.

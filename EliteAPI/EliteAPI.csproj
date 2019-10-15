@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyVersion>2.1.16.839</AssemblyVersion>
-    <FileVersion>2.1.16.839</FileVersion>
+    <AssemblyVersion>2.2.5.861</AssemblyVersion>
+    <FileVersion>2.2.5.861</FileVersion>
     <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
     <PackageIconUrl>https://i.imgur.com/keDXwjY.png</PackageIconUrl>
@@ -14,11 +14,21 @@
 VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     <Copyright>Somfic 2019</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.1.15.838</Version>
+    <Version>2.2.4.856</Version>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="4.1.0" />
+    <PackageReference Include="Fody" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="ini-parser" Version="2.5.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.6.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="Somfic" Version="1.0.3" />
@@ -33,5 +43,9 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
       <HintPath>..\lib\vmAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\lib\vmAPI.dll&quot; &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\bin\Debug\netstandard2.0\vmAPI.dll&quot;&#xD;&#xA;" />
+  </Target>
 
 </Project>

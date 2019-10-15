@@ -57,7 +57,7 @@ namespace EliteAPI
         /// <summary>
         /// The version of EliteAPI.
         /// </summary>
-        public string Version => "2.1.15.838";
+        public string Version => "2.2.4.860";
 
         /// <summary>
         /// Whether the API is currently running.
@@ -208,7 +208,8 @@ namespace EliteAPI
 
             try
             {
-                WebClient versionChecker = new WebClient();
+                WebClient webClient = new WebClient();
+                WebClient versionChecker = webClient;
                 string latestVersionString = versionChecker.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI/versioncontrol.version").Trim();
 
                 Logger.Debug($"Latest version: {latestVersionString} (curr. {Version}).");
@@ -219,7 +220,7 @@ namespace EliteAPI
                 bool hasBiggerVersion = false;
                 for (int i = 0; i < latestVersion.Length; i++)
                 {
-                    if(int.Parse(latestVersion[i]) > int.Parse(thisVersion[i])) { hasBiggerVersion = true; }
+                    if (int.Parse(latestVersion[i]) > int.Parse(thisVersion[i])) { hasBiggerVersion = true; }
                 }
 
                 if (hasBiggerVersion) { Logger.Log($"A new update ({latestVersionString}) is available. Visit github.com/EliteAPI/EliteAPI to download the latest version."); return true; } else { Logger.Debug("EliteAPI is up-to-date with the latest version."); }

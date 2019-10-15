@@ -7,6 +7,8 @@ namespace EliteAPI.Events
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
+    //{ "timestamp":"2019-10-15T17:50:50Z", "event":"FSDTarget", "Name":"Crucis Sector JC-V b2-5", "SystemAddress":11666607580601, "RemainingJumpsInRoute":2 }
+
     public partial class FSDTargetInfo : IEvent
     {
         [JsonProperty("timestamp")]
@@ -20,6 +22,9 @@ namespace EliteAPI.Events
 
         [JsonProperty("SystemAddress")]
         public long SystemAddress { get; internal set; }
+
+        [JsonProperty("RemainingJumpsInRoute")]
+        public int RemainingJumpsInRoute { get; internal set; }
     }
 
     public partial class FSDTargetInfo

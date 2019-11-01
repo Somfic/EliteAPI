@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyVersion>2.2.14.870</AssemblyVersion>
-    <FileVersion>2.2.14.870</FileVersion>
+    <AssemblyVersion>2.2.15.871</AssemblyVersion>
+    <FileVersion>2.2.15.871</FileVersion>
     <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
     <PackageIconUrl>https://i.imgur.com/keDXwjY.png</PackageIconUrl>
@@ -14,7 +14,7 @@
 VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     <Copyright>Somfic 2019</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.2.6.862</Version>
+    <Version>2.2.14.870</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 

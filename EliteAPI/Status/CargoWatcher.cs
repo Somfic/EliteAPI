@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace EliteAPI.Status
 {
-    internal class CargoWatcher
+    public class CargoWatcher
     {
         private EliteDangerousAPI api;
         private FileSystemWatcher CargoFileWatcher;
@@ -57,7 +57,7 @@ namespace EliteAPI.Status
 
     public class CargoEvent
     {
-        public CargoEvent(string eventName, object value)
+        internal CargoEvent(string eventName, object value)
         {
             @Event = eventName;
             Value = value;

@@ -34,7 +34,7 @@ namespace EliteAPI.ThirdParty.EliteVA
             EliteAPI.ChangeJournal(Wrapper.GetJournalFolder());
 
             //Start the API.
-            EliteAPI.Start();
+            EliteAPI.Start(Wrapper.GetRichPresenceSetting());
 
             //Listen for events.
             EliteAPI.Events.AllEvent += Events_AllEvent;

@@ -62,6 +62,7 @@ namespace EliteAPI
 
                 eventName = obj.@event;
                 EliteAPI.Logger.Debug($"Processing event '{eventName}'.");
+                EliteAPI.Logger.Debug(json);
             }
             catch (Exception ex) { EliteAPI.Logger.Warning($"Couldn't process JSON '{json}'.", ex); }
 

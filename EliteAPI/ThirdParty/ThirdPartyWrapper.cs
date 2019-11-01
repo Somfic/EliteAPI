@@ -88,6 +88,13 @@ namespace EliteAPI.ThirdParty
             return variables;
         }
 
+        public bool GetRichPresenceSetting()
+        {
+            string value = GetIni()["DISCORD"]["richPresene"].ToLower();
+
+            return value == "on" || value == "true" || value == "yes";
+        }
+
         public List<Variable> GetEventVariables(dynamic e)
         {
             List<Variable> variables = new List<Variable>();
@@ -141,6 +148,7 @@ namespace EliteAPI.ThirdParty
                 IniData ini = new IniData();
                 ini["ELITEAPI"]["path"] = EliteDangerousAPI.StandardDirectory.ToString();
                 ini["LOGGING"]["path"] = Directory.GetCurrentDirectory();
+                ini["DISCORD"]["richPresene"] = "on";
                 parser.WriteFile(iniPath, ini);
             }
             else

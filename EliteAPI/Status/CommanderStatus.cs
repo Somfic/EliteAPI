@@ -4,7 +4,7 @@ namespace EliteAPI.Status
 {
     public class CommanderStatus
     {
-        internal CommanderStatus(EliteDangerousAPI api)
+        public CommanderStatus(EliteDangerousAPI api)
         {
             api.Events.LoadGameEvent += (sender, e) => { Commander = e.Commander; Credits = e.Credits; };
             api.Events.RankEvent += (sender, e) => { EmpireRank = e.Empire; FederationRank = e.Federation; CombatRank = e.Combat; TradeRank = e.Trade; ExplorationRank = e.Explore; CqcRank = e.Cqc; };
@@ -12,7 +12,7 @@ namespace EliteAPI.Status
             api.Events.StatisticsEvent += (sender, e) => { Statistics = e; };
         }
 
-        public string Commander { get; private set; } = "";
+        public string Commander { get; private set; }
         public long Credits { get; private set; }
 
         public long EmpireRank { get; private set; }
@@ -38,7 +38,7 @@ namespace EliteAPI.Status
         public StatisticsInfo Statistics { get; internal set; }
     }
 
-    static class RankUtil
+    internal static class RankUtil
     {
         public static string Empire(long x)
         {

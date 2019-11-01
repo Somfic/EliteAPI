@@ -11,6 +11,8 @@
 
     public partial class GameStatus
     {
+        internal GameStatus() { }
+
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; internal set; }
 
@@ -122,8 +124,8 @@
 
     public partial class GameStatus
     {
-        public static GameStatus Process(string json) => JsonConvert.DeserializeObject<GameStatus>(json, EliteAPI.Status.ShipStatusConverter.Settings);
-        public static GameStatus FromFile(FileInfo file, EliteDangerousAPI api)
+        internal static GameStatus Process(string json) => JsonConvert.DeserializeObject<GameStatus>(json, EliteAPI.Status.ShipStatusConverter.Settings);
+        internal static GameStatus FromFile(FileInfo file, EliteDangerousAPI api)
         {
             try
             {
@@ -161,7 +163,7 @@
 
     
 
-    public static class ShipStatusConverter
+    internal static class ShipStatusConverter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {

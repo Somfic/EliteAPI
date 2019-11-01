@@ -64,7 +64,7 @@
 
     
 
-    public static class ShipModulesConverter
+    internal static class ShipModulesConverter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {

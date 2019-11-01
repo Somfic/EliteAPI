@@ -69,7 +69,7 @@
 
     
 
-    public static class ShipCargoConverter
+    internal static class ShipCargoConverter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {

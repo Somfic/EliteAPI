@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EliteAPI</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+
+    <!-- Code css -->
+    <link rel="stylesheet" href="../styles/code.css">
+</head>
+
+<body">
+    <nav class="site-header sticky-top py-1" id="navbar">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a href="index.html" class="icon">
+                <img class="d-block mx-auto" src="../icon.png" alt="EliteAPI">
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="../index.html">Home</a>
+            <a class="py-2 d-none d-md-inline-block active" href="indx.html">Getting started</a>
+            <a class="py-2 d-none d-md-inline-block" href="../NET">.NET</a>
+            <a class="py-2 d-none d-md-inline-block" href="../ThirdParty">Plugins</a>
+            <a class="py-2 d-none d-md-inline-block" href="https://www.github.com/EliteAPI/EliteAPI">Github</a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <p class="title display-3">Getting started</p>
+        <p class="subtitle h3">A guide on how to get EliteAPI up and running.</p>
+
+        <div class="picker">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button class="btn active" onclick="select(this, 'net')">.NET</button>
+                <button class="btn" onclick="select(this, 'va')">VoiceAttack</button>
+                <button class="btn" onclick="select(this, 'vm')">VoiceMacro</button>
+            </div>
+            <div class="content active" id="net">
+                <h1>.NET Framework</h1>
+                <h3>What you'll need</h3>
+                <ul>
+                    <li>EliteAPI</li>
+                    <li><a href="https://visualstudio.microsoft.com/">Visual Studio</a></li>
+                    <li>Elite: Dangerous</li>
+                    <li>Basic understanding of a .NET language, such as C#</li>
+                </ul>
+                <h3>Installation</h3>
+                <p>There are a number of ways to install EliteAPI. The most obvious one is using the NuGet package manager that is built-in to Visual Studio. Simply search for <b>EliteAPI</b> and hit install. This way updates can easily be installed later on, and all dependecies are automatically installed.</p>
+                <p>In case that's not an option, there are also other ways to install EliteAPI.</p>
+                <table class="table table-dark table-hover table-borderless">
+                        <thead>
+                          <tr>
+                            <th scope="col">Platform</th>
+                            <th scope="col">Method</th>
+                            <th scope="col">Execution</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>  
+                            <td>NuGet</td>
+                            <td>Package Manager</td>
+                            <td><code>Install-Package EliteAPI</code></td>
+                          </tr>
+                          <tr>  
+                                <td>NuGet</td>
+                                <td>.NET CLI</td>
+                                <td><code>dotnet add package EliteAPI</code></td>
+                              </tr>
+                          <tr>
+                            <td>Visual Studio</td>
+                            <td>By reference</td>
+                            <td>Download <a href="https://github.com/EliteAPI/EliteAPI/releases">EliteAPI.dll</a> a reference it in your project</td>
+                          </tr>
+                          <tr>
+                                <td>Visual Studio</td>
+                                <td>By compiling</td>
+                                <td>Download the <a href="https://github.com/EliteAPI/EliteAPI/releases">source code</a> and compile the project to retrieve the EliteAPI.dll file</td>
+                              </tr>
+                        </tbody>
+                      </table>
+                      <h3>Starting EliteAPI</h3>
+                      <p>Now comes the fun part, running EliteAPI.</p>
+                      <p>Once you've referenced EliteAPI to your project, add the EliteAPI namespace. EliteAPI has a number of other namespaces, which will be covered later. Now, you can create an <code>EliteDangerousAPI</code> object, and run its <code>Start()</code>  method. Congratulations, you've successfully started your first EliteAPI instance!</p>
+                      <pre><code>
+using EliteAPI;
+
+namespace Example
+{
+    class Program
+    {
+        static EliteDangerousAPI EliteAPI;
+
+        static void Main(string[] args)
+        {
+            EliteAPI = new EliteDangerousAPI();
+            EliteAPI.Start();
+        }
+    }
+}
+                      </code></pre>
+            </div>
+            <div class="content" id="va">
+                <h1>VoiceAttack</h1>
+            </div>
+            <div class="content" id="vm">
+                <h1>VoiceMacro</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Boostrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="../scripts/picker.js"></script>
+    <script src="../scripts/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+
+</html>

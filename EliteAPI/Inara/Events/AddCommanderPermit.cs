@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-
 namespace EliteAPI.Inara.Events
 {
     public class AddCommanderPermit : IInaraEventData
@@ -8,7 +7,6 @@ namespace EliteAPI.Inara.Events
         {
             StarSystemName = starSystemName;
         }
-
         [JsonProperty("starsystemName")]
         public string StarSystemName { get; internal set; }
     }

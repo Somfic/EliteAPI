@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-
 namespace EliteAPI.Inara.Events
 {
     public class GetCommanderProfile : IInaraEventData
@@ -13,7 +12,6 @@ namespace EliteAPI.Inara.Events
         {
             SearchName = searchName;
         }
-
         [JsonProperty("searchName")]
         public string SearchName { get; internal set; }
     }

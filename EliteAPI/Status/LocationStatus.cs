@@ -11,9 +11,7 @@
             api.Events.DockedEvent += (sender, e) => { Station = e.StationName; };
             api.Events.DockingRequestedEvent += (sender, e) => { Station = e.StationName; };
             api.Events.FSDJumpEvent += (sender, e) => { StarSystem = e.StarSystem; };
-
         }
-
         public string StarSystem { get; private set; } = "";
         public string Body { get; private set; } = "";
         public string BodyType { get; private set; } = "";

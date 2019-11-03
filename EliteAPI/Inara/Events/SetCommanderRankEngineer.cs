@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-
 namespace EliteAPI.Inara.Events
 {
     public class SetCommanderRankEngineer : IInaraEventData
@@ -14,18 +13,14 @@ namespace EliteAPI.Inara.Events
         {
             EngineerName = engineerName;
         }
-
         [JsonProperty("engineerName")]
         public string EngineerName { get; internal set; }
-
         [JsonProperty("rankStage")]
         public RankStage RankStage { get; internal set; }
-
         [Range(1, 5)]
         [JsonProperty("rankValue")]
         public long RankValue { get; internal set; }
     }
-
     public enum RankStage
     {
         Invited,

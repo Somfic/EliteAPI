@@ -39,12 +39,10 @@
         /// The first line of text.
         /// </summary>
         public string Text { get; set; }
-
         /// <summary>
         /// The second line of text.
         /// </summary>
         public string TextTwo { get; set; }
-
         /// <summary>
         /// The main icon ID.
         /// </summary>
@@ -54,12 +52,10 @@
         /// The text that should be displayed when hovering over the main icon.
         /// </summary>
         public string IconText { get; set; }
-
         /// <summary>
         /// The secondary icon ID.
         /// </summary>
         public string IconTwo { get; set; }
-
         /// <summary>
         /// The text that should be displayed when hovering over the secondary icon.
         /// </summary>

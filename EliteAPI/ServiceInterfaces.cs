@@ -4,14 +4,12 @@ using EliteAPI.Status;
 using Somfic.Logging;
 using System;
 using System.IO;
-
 namespace EliteAPI
 {
     public interface IEliteDangerousAPI
     {
         //Version info.
         string Version { get; }
-
         //Public fields.
         bool IsRunning { get; }
         DirectoryInfo JournalDirectory { get; }
@@ -24,14 +22,11 @@ namespace EliteAPI
         UserBindings Bindings { get; }
         CommanderStatus Commander { get; }
         LocationStatus Location { get; }
-
         event EventHandler<Tuple<string, Exception>> OnError;
         event EventHandler OnQuit;
         event EventHandler OnReady;
-
         //Services.
         RichPresenceClient DiscordRichPresence { get; }
-
         //Methods.
         void Reset();
         void Start(bool runRichPresence = true);

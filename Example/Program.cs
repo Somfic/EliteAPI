@@ -18,11 +18,6 @@ namespace Example
                 .UseConsole(Severity.Debug)
                 .UseLogFile(Directory.GetCurrentDirectory());
 
-            EliteAPI.DiscordRichPresence
-                .WithCustomID("12")
-                .UpdatePresence(new RichPresence("In combat", "in Wolf 983"))
-                .TurnOn(false);
-
             EliteAPI.Start();
 
             Thread.Sleep(-1);

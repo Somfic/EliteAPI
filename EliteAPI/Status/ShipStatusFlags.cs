@@ -1,7 +1,6 @@
 ﻿namespace EliteAPI.Status
 {
     using System;
-
     [Flags]
     public enum ShipStatusFlags
     {

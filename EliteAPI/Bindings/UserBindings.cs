@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-
 namespace EliteAPI.Bindings
 {
     public class UserBindings
@@ -7,7 +6,6 @@ namespace EliteAPI.Bindings
         public Xml Xml { get; internal set; }
         public KeysInfo Root { get; internal set; }
     }
-
     public partial class KeysInfo
     {
         public string PresetName { get; internal set; }
@@ -255,78 +253,66 @@ namespace EliteAPI.Bindings
         public PrimaryBindingInfo SystemMapOpenBuggy { get; internal set; }
         public ToggleBindingInfo HeadLookToggleBuggy { get; internal set; }
     }
-
     public partial class AxisBindingInfo
     {
         public Binding Binding { get; internal set; }
         public ValueInfo Inverted { get; internal set; }
         public ValueInfo Deadzone { get; internal set; }
     }
-
     public partial class Binding
     {
         public string Device { get; internal set; }
         public string Key { get; internal set; }
     }
-
     public partial class ValueInfo
     {
         public string Value { get; internal set; }
     }
-
     public partial class PrimaryToggleBindingInfo
     {
         public PrimaryInfo Primary { get; internal set; }
         public Binding Secondary { get; internal set; }
         public ValueInfo ToggleOn { get; internal set; }
     }
-
     public partial class PrimaryBindingInfo
     {
         public Binding Primary { get; internal set; }
         public SecondaryInfo Secondary { get; internal set; }
     }
-
     public partial class StandardBindingInfo
     {
         public Binding Primary { get; internal set; }
         public Binding Secondary { get; internal set; }
     }
-
     public partial class SecondaryToggleBindingInfo
     {
         public Binding Primary { get; internal set; }
         public SecondaryInfo Secondary { get; internal set; }
         public ValueInfo ToggleOn { get; internal set; }
     }
-
     public partial class ToggleBindingInfo
     {
         public Binding Primary { get; internal set; }
         public Binding Secondary { get; internal set; }
         public ValueInfo ToggleOn { get; internal set; }
     }
-
     public partial class StandardInfoBindingInfo
     {
         public PrimaryInfo Primary { get; internal set; }
         public SecondaryInfo Secondary { get; internal set; }
     }
-
     public partial class PrimaryInfo
     {
         public string Device { get; internal set; }
         public string Key { get; internal set; }
         public List<Binding> Modifier { get; internal set; }
     }
-
     public partial class SecondaryInfo
     {
         public string Device { get; internal set; }
         public string Key { get; internal set; }
         public Binding Modifier { get; internal set; }
     }
-
     public partial class Xml
     {
         public string Version { get; internal set; }

@@ -1,0 +1,130 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #303136;
+  min-height: 100%;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 90%;
+}
+
+.main-container {
+  background-color: #363942;
+  min-height: 200px;
+  margin: 0px 5%;
+  padding: 80px 7%;
+  color: #C1C5C5;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.226) 0px 0px 20px;
+          box-shadow: rgba(0, 0, 0, 0.226) 0px 0px 20px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.main-container a, .main-container .btn {
+  text-decoration: none;
+  color: #d3b485;
+  border-bottom: rgba(0, 0, 0, 0) solid;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-style: italic;
+}
+
+.main-container a:hover, .main-container a.active, .main-container .btn:hover, .main-container .btn.active {
+  text-decoration: none;
+  color: #eba755;
+  border-bottom: #FF9616 solid;
+}
+
+.main-container .title {
+  font-weight: 400;
+}
+
+.main-container .subtitle {
+  font-weight: 200;
+}
+
+.main-container .btn {
+  background-color: #222327;
+  margin: 2px 0px;
+  color: #999;
+  font-style: normal;
+}
+
+.main-container hr {
+  background-color: rgba(193, 197, 197, 0.247);
+  width: 98%;
+  margin: 40px auto;
+}
+
+.main-container #github {
+  background-image: url(https://icon-library.net/images/github-icon-png/github-icon-png-29.jpg);
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100%;
+}
+
+.main-container .picker .content {
+  background-color: #222327;
+  position: relative;
+  bottom: 4px;
+  border-radius: 0px 10px 10px 10px;
+  padding: 20px;
+  display: none;
+}
+
+.main-container .picker .active {
+  display: block;
+}
+
+.main-container .table {
+  border-radius: 10px;
+  border: none;
+}
+
+.main-container code.hljs {
+  padding: 20px;
+  border-radius: 2   0px;
+}
+
+.site-header {
+  background-color: #222327;
+  line-height: 30px;
+}
+
+.site-header .icon {
+  margin: 3px 0px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.site-header .icon img {
+  height: 38px;
+}
+
+.site-header .icon:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.site-header a {
+  color: #999;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-top: rgba(0, 0, 0, 0) solid;
+  padding: 0px 20px;
+}
+
+.site-header a:hover,
+.site-header .active {
+  color: #FF9616;
+  text-decoration: none;
+  border-top: #FF9616 solid;
+}
+/*# sourceMappingURL=main.css.map */

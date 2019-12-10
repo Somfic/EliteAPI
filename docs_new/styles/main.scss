@@ -1,0 +1,126 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #303136;
+    min-height: 100%;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 90%;
+}
+
+.main-container {
+    background-color: #363942;
+    min-height: 200px;
+    margin: 0px 5%;
+    padding: 80px 7%;
+    color: #C1C5C5;
+    box-shadow: rgba(0, 0, 0, 0.226) 0px 0px 20px;
+    border-radius: 0px 0px 20px 20px;
+
+    a, .btn {
+        text-decoration: none;
+        color: rgb(211, 180, 133);
+        border-bottom: rgba(0, 0, 0, 0) solid;
+        transition: all 0.2s ease;
+        font-style: italic;
+    }
+
+    a:hover, a.active, .btn:hover, .btn.active {
+        text-decoration: none;
+        color: rgb(235, 167, 85);
+        border-bottom: #FF9616 solid;
+    }
+
+    .title {
+        font-weight: 400;
+    }
+    
+    .subtitle {
+        font-weight: 200;
+    }
+    
+    .btn {
+        background-color: #222327;
+        margin: 2px 0px;
+        color: #999;
+        font-style: normal;
+    }
+    
+    hr {
+        background-color: rgba(193, 197, 197, 0.247);
+        width: 98%;
+        margin: 40px auto;
+    }
+    
+    #github {
+        background-image: url(https://icon-library.net/images/github-icon-png/github-icon-png-29.jpg);
+        background-position: center;
+        background-size: 70%;
+        background-repeat: no-repeat;  
+        width: 100px;   
+        height: 100%
+    }
+
+    .picker {
+        .content {
+            background-color: #222327;
+            position: relative;
+            bottom: 4px;
+            border-radius: 0px 10px 10px 10px;
+            padding: 20px;
+
+            display: none;
+        }
+        
+        .active {
+            display: block;
+        }
+    }
+
+    .table {
+        border-radius: 10px;
+        border: none;
+    }
+
+    code.hljs {
+         padding: 20px;
+         border-radius: 2   0px;
+    }
+}
+
+.site-header {
+    background-color: #222327;
+    line-height: 30px;
+
+    .icon {
+        margin: 3px 0px;
+        filter: grayscale(100%);
+        transition: all 0.2s ease;
+
+        img {
+            height: 38px;
+        }
+    }
+
+    .icon:hover {
+        filter: grayscale(0%);
+    }
+
+    a {
+        color: #999;
+        transition: all 0.2s ease;
+        border-top: rgba(0, 0, 0, 0) solid;
+        padding: 0px 20px;
+    }
+
+    a:hover,
+    .active {
+        color: #FF9616;
+        text-decoration: none;
+        border-top: #FF9616 solid;
+    }
+}

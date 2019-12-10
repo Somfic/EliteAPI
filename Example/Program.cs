@@ -1,31 +1,25 @@
 ﻿using EliteAPI;
-using EliteAPI.EDSM;
-using EliteAPI.Inara;
-
-
-using InputManager;
+using EliteAPI.Discord;
 using Somfic.Logging;
-using System; 
 
 using System.IO;
 using System.Threading;
-using System.Windows.Forms;
 
 namespace Example
 {
-    class Program
+    internal class Program
     {
-        static EliteDangerousAPI EliteAPI;
+        private static EliteDangerousAPI EliteAPI;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             EliteAPI = new EliteDangerousAPI();
-            EliteAPI.Logger.UseConsole(Severity.Debug);
-            EliteAPI.Logger.UseLogFile(Directory.GetCurrentDirectory());
-            EliteAPI.Logger.UseTCP(500);
-
+            EliteAPI.Logger
+                .UseConsole(Severity.Debug)
+                .UseLogFile(Directory.GetCurrentDirectory());
 
             EliteAPI.Start();
+
             Thread.Sleep(-1);
         }
     }

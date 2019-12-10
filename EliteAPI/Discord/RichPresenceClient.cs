@@ -85,7 +85,7 @@ namespace EliteAPI.Discord
 
             //Subscribe to events.
             rpc.OnConnectionEstablished += (sender, e) => api.Logger.Debug($"Attempting to connect to Discord ... ");
-            rpc.OnConnectionFailed += (sender, e) => api.Logger.Warning($"There was an error while trying to connect to Discord Rich Presence pipe {e.FailedPipe}. Make sure Discord is running.");
+            rpc.OnConnectionFailed += (sender, e) => { api.Logger.Warning($"There was an error while trying to connect to Discord Rich Presence pipe {e.FailedPipe}. Make sure Discord is running."); TurnOff(); };
             rpc.OnError += (sender, e) => api.Logger.Error($"Discord Rich Presence stumbled upon an error.", new Exception(e.Message));
             rpc.OnReady += (sender, e) => { api.Logger.Success($"Discord Rich Presence has connected and is running."); IsReady = true; };
             rpc.OnClose += (sender, e) => { api.Logger.Error($"Discord Rich Presence closed: '{e.Reason}'."); TurnOff(); };

@@ -5,13 +5,25 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 namespace EliteAPI.ThirdParty
 {
+
+    /// <summary>
+    /// Class that functions as a wrapper for third party plugins.
+    /// </summary>
     public class ThirdPartyWrapper
     {
         private static EliteDangerousAPI EliteAPI;
         private readonly string iniPath;
+
+        /// <summary>
+        /// Creates a new ThirdPartyWrapper object.
+        /// </summary>
+        /// <param name="api">The EliteDangerousAPI api</param>
+        /// <param name="name">The name of the plugin</param>
+        /// <param name="iniPath">The path to the configuration file</param>
         public ThirdPartyWrapper(EliteDangerousAPI api, string name, string iniPath)
         {
             EliteAPI = api;
@@ -26,6 +38,11 @@ namespace EliteAPI.ThirdParty
             }
             catch { }
         }
+
+        /// <summary>
+        /// Returns all the variables to be set.
+        /// </summary>
+        /// <returns>A list of variables</returns>
         public List<Variable> GetVariables()
         {
             List<Variable> variables = new List<Variable>
@@ -33,18 +50,10 @@ namespace EliteAPI.ThirdParty
                 //Add version variable.
                 new Variable("Version", EliteAPI.Version)
             };
+            variables.AddRange(from f in EliteAPI.Commander.GetType().GetProperties() where f.Name != "Statistics" select new Variable(f.Name, f.GetValue(EliteAPI.Commander)));
             //Add commander variables.
-            foreach (PropertyInfo f in EliteAPI.Commander.GetType().GetProperties())
-            {
-                //Do not add statistics variables.
-                if (f.Name == "Statistics") { continue; }
-                variables.Add(new Variable(f.Name, f.GetValue(EliteAPI.Commander)));
-            }
             //Add location variables.
-            foreach (PropertyInfo f in EliteAPI.Location.GetType().GetProperties())
-            {
-                variables.Add(new Variable(f.Name, f.GetValue(EliteAPI.Location)));
-            }
+            variables.AddRange(EliteAPI.Location.GetType().GetProperties().Select(f => new Variable(f.Name, f.GetValue(EliteAPI.Location))));
             //Add status variables.
             foreach (PropertyInfo f in EliteAPI.Status.GetType().GetProperties())
             {
@@ -73,6 +82,11 @@ namespace EliteAPI.ThirdParty
             }
             return variables;
         }
+
+        /// <summary>
+        /// Returns a value whether the API should automatically start the Discord Rich Presence.
+        /// </summary>
+        /// <returns></returns>
         public bool GetRichPresenceSetting()
         {
             try
@@ -82,6 +96,12 @@ namespace EliteAPI.ThirdParty
             }
             catch { return true; }
         }
+
+        /// <summary>
+        /// Gets all the variables to be set from an event.
+        /// </summary>
+        /// <param name="e">A list of variables</param>
+        /// <returns></returns>
         public List<Variable> GetEventVariables(dynamic e)
         {
             List<Variable> variables = new List<Variable>();
@@ -111,6 +131,12 @@ namespace EliteAPI.ThirdParty
             }
             return variables;
         }
+
+        /// <summary>
+        /// Gets the name from an event.
+        /// </summary>
+        /// <param name="e">The name of the event.</param>
+        /// <returns></returns>
         public string GetEventName(dynamic e)
         {
             //Get the event name.
@@ -118,6 +144,11 @@ namespace EliteAPI.ThirdParty
             if (!string.IsNullOrWhiteSpace(eventName)) { return eventName; }
             else { return e.@Event; }
         }
+
+        /// <summary>
+        /// Returns the configuration file content.
+        /// </summary>
+        /// <returns></returns>
         public IniData GetIni()
         {
             FileIniDataParser parser = new FileIniDataParser();
@@ -136,6 +167,11 @@ namespace EliteAPI.ThirdParty
             }
             return parser.ReadFile(iniPath);
         }
+
+        /// <summary>
+        /// Gets the journal directory from the configuration file.
+        /// </summary>
+        /// <returns></returns>
         public DirectoryInfo GetJournalFolder()
         {
             try
@@ -151,6 +187,11 @@ namespace EliteAPI.ThirdParty
                 return EliteDangerousAPI.StandardDirectory;
             }
         }
+
+        /// <summary>
+        /// Gets the log directory from the configuration file.
+        /// </summary>
+        /// <returns></returns>
         public DirectoryInfo GetLogFolder()
         {
             try
@@ -165,20 +206,23 @@ namespace EliteAPI.ThirdParty
                 return new DirectoryInfo(Directory.GetCurrentDirectory());
             }
         }
+
+        /// <summary>
+        /// Processes third party plugin functions
+        /// </summary>
+        /// <param name="content"></param>
         public void ProcessCall(string content)
         {
             try
             {
-                content = content.ToString();
-                if (content == "drp on")
+                switch (content)
                 {
-                    EliteAPI.DiscordRichPresence.TurnOn();
-                    return;
-                }
-                else if (content == "drp off")
-                {
-                    EliteAPI.DiscordRichPresence.TurnOff();
-                    return;
+                    case "drp on":
+                        EliteAPI.DiscordRichPresence.TurnOn();
+                        return;
+                    case "drp off":
+                        EliteAPI.DiscordRichPresence.TurnOff();
+                        return;
                 }
             }
             catch (Exception ex) { EliteAPI.Logger.Warning($"There was a problem while trying to process '{content}'.", ex); }
@@ -199,7 +243,11 @@ namespace EliteAPI.ThirdParty
         {
             try
             {
-                string type = s.GetType().ToString().Replace("System.", "").Replace("Collections.Generic.", "").ToLower();
+                string type = s.GetType()
+                    .ToString()
+                    .Replace("System.", "")
+                    .Replace("Collections.Generic.","")
+                    .ToLower();
                 if (type.Contains("int")) { return VarType.Int; }
                 else if (type.Contains("long")) { return VarType.Int; }
                 else if (type.Contains("string")) { return VarType.String; }

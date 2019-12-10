@@ -26,14 +26,13 @@ namespace EliteAPI
             {
                 //If this string hasn't been processed yet, process it and mark it as processed.
                 string json = streamReader.ReadLine();
-                if (!processedLogs.Contains(json))
-                {
-                    if (!doNotTrigger) { ProcessJson(json); } //Only process it if it's marked true.
-                    processedLogs.Add(json);
-                }
+                if (processedLogs.Contains(json)) continue;
+                if (!doNotTrigger) { ProcessJson(json); } //Only process it if it's marked true.
+                processedLogs.Add(json);
             }
         }
-        public void ProcessJson(string json)
+
+        private void ProcessJson(string json)
         {
             dynamic obj = null;
             string eventName = "";
@@ -54,16 +53,19 @@ namespace EliteAPI
             }
             catch (Exception ex) { EliteAPI.Logger.Warning($"Couldn't process JSON '{json}'.", ex); }
             //Invoke the matching event.
-            Type eventClass; MethodInfo eventMethod;
             try
             {
-                eventClass = Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name == $"{eventName}Info").First();
+                var eventClass = Assembly.GetExecutingAssembly().GetTypes().First(x => x.Name == $"{eventName}Info");
                 try
                 {
-                    eventMethod = eventClass.GetMethod("Process", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static);
+                    var eventMethod = eventClass.GetMethod("Process", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static);
                     try
                     {
-                        object parsedEvent = eventMethod.Invoke(null, new object[] { json, EliteAPI });
+                        if (eventMethod != null)
+                        {
+                            var parsedEvent = eventMethod.Invoke(null, new object[] {json, EliteAPI});
+                        }
+
                         //amountOfProcessedFields = parsedEvent.GetType().GetProperties().Length;
                         //parsed = parsedEvent.GetType().GetProperties();
                     }

@@ -62,7 +62,7 @@ namespace EliteAPI
         /// <summary>
         /// Whether the API is currently running.
         /// </summary>
-        public bool IsRunning { get; internal set; } = false;
+        public bool IsRunning { get; private set; } = false;
 
         /// <summary>
         /// The Journal directory that is being used by the API.
@@ -77,7 +77,7 @@ namespace EliteAPI
         /// <summary>
         /// Objects that holds all logging related functions.
         /// </summary>
-        public Logger Logger { get; internal set; }
+        public Logger Logger { get; private set; }
 
         /// <summary>
         /// Holds the ship's current status.
@@ -186,13 +186,13 @@ namespace EliteAPI
         /// <summary>
         /// Creates a new EliteDangerousAPI object.
         /// </summary>
-        /// <param name="JournalDirectory">The directory in which the Player Journals are located.</param>
-        /// <param name="SkipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
-        public EliteDangerousAPI(DirectoryInfo JournalDirectory, bool SkipCatchUp)
+        /// <param name="journalDirectory">The directory in which the Player Journals are located.</param>
+        /// <param name="skipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
+        public EliteDangerousAPI(DirectoryInfo journalDirectory, bool skipCatchUp)
         {
             //Set the fields to the parameters.
-            this.JournalDirectory = JournalDirectory;
-            this.SkipCatchUp = SkipCatchUp;
+            this.JournalDirectory = journalDirectory;
+            this.SkipCatchUp = skipCatchUp;
 
             //Reset the API.
             Reset();
@@ -202,7 +202,7 @@ namespace EliteAPI
         /// Checks for a new update.
         /// </summary>
         /// <returns>Returns true if a newer version is available.</returns>
-        public bool CheckForUpdate()
+        private bool CheckForUpdate()
         {
             Logger.Debug("Checking for updates from GitHub.");
 
@@ -313,16 +313,19 @@ namespace EliteAPI
                 else { Logger.Warning($"Could not find 'Cargo.json' file."); }
 
                 //Shipyard.json.
-                if (File.Exists(JournalDirectory.FullName + "\\Shipyard.json")) { Logger.Debug("Found 'Shipyard.json'."); }
-                else { Logger.Debug($"Could not find 'Shipyard.json' file."); }
+                Logger.Debug(File.Exists(JournalDirectory.FullName + "\\Shipyard.json")
+                    ? "Found 'Shipyard.json'."
+                    : $"Could not find 'Shipyard.json' file.");
 
                 //Outfitting.json.
-                if (File.Exists(JournalDirectory.FullName + "\\Outfitting.json")) { Logger.Debug("Found 'Outfitting.json'."); }
-                else { Logger.Debug($"Could not find 'Outfitting.json' file."); }
+                Logger.Debug(File.Exists(JournalDirectory.FullName + "\\Outfitting.json")
+                    ? "Found 'Outfitting.json'."
+                    : $"Could not find 'Outfitting.json' file.");
 
                 //Market.json.
-                if (File.Exists(JournalDirectory.FullName + "\\Market.json")) { Logger.Debug("Found 'Market.json'."); }
-                else { Logger.Debug($"Could not find 'Market.json' file."); }
+                Logger.Debug(File.Exists(JournalDirectory.FullName + "\\Market.json")
+                    ? "Found 'Market.json'."
+                    : $"Could not find 'Market.json' file.");
 
                 //ModulesInfo.json.
                 if (File.Exists(JournalDirectory.FullName + "\\ModulesInfo.json")) { Logger.Debug("Found 'ModulesInfo.json'."); }

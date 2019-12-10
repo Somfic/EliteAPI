@@ -44,10 +44,13 @@
   
   .hljs-subst,
   .hljs-function,
-  .hljs-title,
   .hljs-params,
   .hljs-formula {
     color: #DCDCDC;
+  }
+
+  .hljs-title {
+    color: #b7ddb6;
   }
   
   .hljs-comment,

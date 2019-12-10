@@ -86,7 +86,7 @@
                       </table>
                       <h3>Starting EliteAPI</h3>
                       <p>Now comes the fun part, running EliteAPI.</p>
-                      <p>Once you've referenced EliteAPI to your project, add the EliteAPI namespace. EliteAPI has a number of other namespaces, which will be covered later. Now, you can create an <code>EliteDangerousAPI</code> object, and run its <code>Start()</code>  method. Congratulations, you've successfully started your first EliteAPI instance!</p>
+                      <p>Once you've referenced EliteAPI to your project, add the EliteAPI namespace.  Now, you're able to create an <code>EliteDangerousAPI</code> object, and run its <code>Start()</code> method. Enable logging before starting the API by calling the <code>UseConsole()</code> method in the <code>Logger</code> poperty. Congratulations, you've successfully started your first EliteAPI instance!</p>
                       <pre><code>
 using EliteAPI;
 
@@ -99,11 +99,14 @@ namespace Example
         static void Main(string[] args)
         {
             EliteAPI = new EliteDangerousAPI();
+            EliteAPI.Logger.UseConsole();
             EliteAPI.Start();
         }
     }
 }
                       </code></pre>
+                      <hr>
+                      <p>See for more examples and information the <a href="../NET">.NET documentation page</a>.</p>
             </div>
             <div class="content" id="va">
                 <h1>VoiceAttack</h1>
@@ -122,6 +125,7 @@ namespace Example
     <script src="../scripts/picker.js"></script>
     <script src="../scripts/highlight.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../scripts/scroll.js"></script>
     </body>
 
 </html>

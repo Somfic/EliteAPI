@@ -197,7 +197,7 @@ namespace EliteAPI.ThirdParty
             try
             {
                 string path = GetIni()["LOGGING"]["path"];
-                if (Directory.Exists(path)) { EliteAPI.Logger.Debug($"Using '{path}' for logging."); return new DirectoryInfo(path); }
+                if (Directory.Exists(path)) { EliteAPI.Logger.Log($"Using '{path}' for logging."); return new DirectoryInfo(path); }
                 else { EliteAPI.Logger.Warning($"Found '{path}' for logging, but the path is invalid, using '{Directory.GetCurrentDirectory()}' instead."); return new DirectoryInfo(Directory.GetCurrentDirectory()); }
             }
             catch (Exception ex)

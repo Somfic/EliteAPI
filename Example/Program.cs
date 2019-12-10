@@ -22,8 +22,7 @@ namespace Example
             EliteAPI = new EliteDangerousAPI();
             EliteAPI.Logger.UseConsole(Severity.Debug);
             EliteAPI.Logger.UseLogFile(Directory.GetCurrentDirectory());
-            EliteAPI.Logger.UseTCP();
-            EliteAPI.DiscordRichPresence.TurnOn();
+            EliteAPI.Logger.UseTCP(500);
 
 
             EliteAPI.Start();

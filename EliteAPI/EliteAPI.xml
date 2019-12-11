@@ -18,14 +18,14 @@
             <summary>
             Basic constructor for a rich presence.
             </summary>
-            <param name="text">The first line of text.</param>
+            <param name="line1">The first line of text.</param>
         </member>
         <member name="M:EliteAPI.Discord.RichPresence.#ctor(System.String,System.String)">
             <summary>
             Basic constructor for a rich presence.
             </summary>
-            <param name="text">The first line of text.</param>
-            <param name="textTwo">The second line of text.</param>
+            <param name="line1">The first line of text.</param>
+            <param name="line2">The second line of text.</param>
         </member>
         <member name="P:EliteAPI.Discord.RichPresence.Text">
             <summary>
@@ -267,8 +267,8 @@
             <summary>
             Creates a new EliteDangerousAPI object.
             </summary>
-            <param name="JournalDirectory">The directory in which the Player Journals are located.</param>
-            <param name="SkipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
+            <param name="journalDirectory">The directory in which the Player Journals are located.</param>
+            <param name="skipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
         </member>
         <member name="M:EliteAPI.EliteDangerousAPI.CheckForUpdate">
             <summary>
@@ -311,6 +311,196 @@
             <summary>
             Gets triggered when EliteAPI could not successfully load up.
             </summary>
+        </member>
+        <member name="P:EliteAPI.Events.AfmuRepairsInfo.Module">
+            <summary>
+            The name of the module
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.AfmuRepairsInfo.ModuleLocalised">
+            <summary>
+            The local name of the module
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.AfmuRepairsInfo.FullyRepaired">
+            <summary>
+            Whether modules are now fully repaired
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.AfmuRepairsInfo.Health">
+            <summary>
+            Value between 0 and 1.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.IEliteDangerousAPI">
+            <summary>
+            Interface for the EliteDangerousAPI class.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.Version">
+            <summary>
+            Set to true when the API is ready.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.IsRunning">
+            <summary>
+            Whether the API is currently running.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.JournalDirectory">
+            <summary>
+            The Journal directory that is being used by the API.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.SkipCatchUp">
+            <summary>
+            Whether the API should skip the processing of previous events before the API was started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.Events">
+            <summary>
+            Object that holds all the events.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.Logger">
+            <summary>
+            Objects that holds all logging related functions.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.Status">
+            <summary>
+            Holds the ship's current status.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.Cargo">
+            <summary>
+            Holds the ship's current cargo situation.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.Modules">
+            <summary>
+            Returns all the modules installed on the current ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.Bindings">
+            <summary>
+            Holds information on all key bindings in the game set by the user.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.Commander">
+            <summary>
+            Holds information about the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.Location">
+            <summary>
+            Holds information about the last known location of the commander.
+            </summary>
+        </member>
+        <member name="E:EliteAPI.IEliteDangerousAPI.OnError">
+            <summary>
+            Gets triggered when EliteAPI could not successfully load up.
+            </summary>
+        </member>
+        <member name="E:EliteAPI.IEliteDangerousAPI.OnQuit">
+            <summary>
+            Gets triggered when EliteAPI is closing.
+            </summary>
+        </member>
+        <member name="E:EliteAPI.IEliteDangerousAPI.OnReady">
+            <summary>
+            Gets triggered when EliteAPI has successfully loaded up.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.DiscordRichPresence">
+            <summary>
+            Rich presence service for Discord.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.IEliteDangerousAPI.Reset">
+            <summary>
+            Resets the API.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.IEliteDangerousAPI.Start(System.Boolean)">
+            <summary>
+            Starts the API.
+            </summary>
+            <param name="runRichPresence"></param>
+        </member>
+        <member name="M:EliteAPI.IEliteDangerousAPI.Stop">
+            <summary>
+            Stops the API.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.IEliteDangerousAPI.ChangeJournal(System.IO.DirectoryInfo)">
+            <summary>
+            Changes the journal directory.
+            </summary>
+            <param name="newJournalDirectory"></param>
+        </member>
+        <member name="T:EliteAPI.ThirdParty.ThirdPartyWrapper">
+            <summary>
+            Class that functions as a wrapper for third party plugins.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.#ctor(EliteAPI.EliteDangerousAPI,System.String,System.String)">
+            <summary>
+            Creates a new ThirdPartyWrapper object.
+            </summary>
+            <param name="api">The EliteDangerousAPI api</param>
+            <param name="name">The name of the plugin</param>
+            <param name="iniPath">The path to the configuration file</param>
+        </member>
+        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetVariables">
+            <summary>
+            Returns all the variables to be set.
+            </summary>
+            <returns>A list of variables</returns>
+        </member>
+        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetRichPresenceSetting">
+            <summary>
+            Returns a value whether the API should automatically start the Discord Rich Presence.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetEventVariables(System.Object)">
+            <summary>
+            Gets all the variables to be set from an event.
+            </summary>
+            <param name="e">A list of variables</param>
+            <returns></returns>
+        </member>
+        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetEventName(System.Object)">
+            <summary>
+            Gets the name from an event.
+            </summary>
+            <param name="e">The name of the event.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetIni">
+            <summary>
+            Returns the configuration file content.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetJournalFolder">
+            <summary>
+            Gets the journal directory from the configuration file.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetLogFolder">
+            <summary>
+            Gets the log directory from the configuration file.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.ProcessCall(System.String)">
+            <summary>
+            Processes third party plugin functions
+            </summary>
+            <param name="content"></param>
         </member>
     </members>
 </doc>

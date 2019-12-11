@@ -71,9 +71,9 @@ namespace EliteAPI
                     }
                     catch (Exception ex) { EliteAPI.Logger.Error($"Could not invoke event method '{eventName}Info.Process()'.", ex); }
                 }
-                catch (Exception ex) { EliteAPI.Logger.Warning($"Could not find event method '{eventName}Info.Process()'.", ex); }
+                catch (Exception ex) { EliteAPI.Logger.Debug($"Could not find event method '{eventName}Info.Process()'.", ex); }
             }
-            catch (Exception ex) { EliteAPI.Logger.Warning($"Could not find event class '{eventName}Info'.", ex); }
+            catch (Exception ex) { EliteAPI.Logger.Debug($"Could not find event class '{eventName}Info'.", ex); }
             //Invoke the AllEvent.
             try { EliteAPI.Events.InvokeAllEvent(obj); }
             catch (Exception ex) { EliteAPI.Logger.Error($"Could not invoke AllEvent for '{eventName}'.", ex); }

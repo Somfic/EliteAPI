@@ -141,8 +141,7 @@ namespace EliteAPI.ThirdParty
         {
             //Get the event name.
             string eventName = e.@event;
-            if (!string.IsNullOrWhiteSpace(eventName)) { return eventName; }
-            else { return e.@Event; }
+            return !string.IsNullOrWhiteSpace(eventName) ? eventName : (string) e.Event;
         }
 
         /// <summary>
@@ -178,7 +177,7 @@ namespace EliteAPI.ThirdParty
             {
                 string path = GetIni()["ELITEAPI"]["path"];
                 if (path == EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.Logger.Debug($"Using default path."); return EliteDangerousAPI.StandardDirectory; }
-                else if (Directory.Exists(path)) { EliteAPI.Logger.Debug($"Found '{path}'."); return new DirectoryInfo(path); }
+                else if (Directory.Exists(path)) { EliteAPI.Logger.Log($"Found '{path}'."); return new DirectoryInfo(path); }
                 else { EliteAPI.Logger.Warning($"Found '{path}', but the path is invalid, using default path."); return EliteDangerousAPI.StandardDirectory; }
             }
             catch (Exception ex)

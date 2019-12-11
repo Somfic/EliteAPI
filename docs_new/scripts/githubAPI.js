@@ -21,8 +21,7 @@ $("#contributors").text(contributors.length);
 $("#version").text(lastRelease.tag_name);
 $("#forks").text(repo.forks_count);
 $("#watchers").text(repo.watchers_count);
-
-
+$("#commit").text(timeSince(new Date(repo.pushed_at)));
 
 function GithubAPI(api) {
   var response;

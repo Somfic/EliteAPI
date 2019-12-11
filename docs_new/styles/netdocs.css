@@ -1,0 +1,79 @@
+.type-wrapper {
+  margin: 20px 0px;
+  padding: 20px 3%;
+  border-radius: 10px;
+  background-color: #282C34;
+}
+
+.type {
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: none;
+}
+
+.type-link, .type-link-disabled {
+  color: #3B9BC0;
+}
+
+.type-key {
+  color: #D19A66;
+}
+
+.type-generic {
+  color: #a3a33d;
+}
+
+.type-value {
+  color: #E06C75;
+}
+
+.name {
+  color: #61AD79;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bolder;
+}
+
+.parameter {
+  font-style: italic;
+}
+
+.parameter .name {
+  font-weight: normal;
+}
+
+.type-link:active,
+.type-link:hover {
+  text-decoration: underline;
+}
+
+.syntax {
+  font-family: 'Roboto Mono', monospace !important;
+  font-style: italic;
+  color: #ABB2BF;
+}
+
+.syntax-seperator {
+  color: #3E9FBA;
+}
+
+.documentation {
+  color: #6d6d6d;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 2px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.button {
+  display: block;
+  border-radius: 10px;
+  border: #2a2b3a solid 2px;
+  background-color: #282C34;
+  color: #b9b9b9;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bolder;
+  padding: 14px 80px;
+  margin-left: 20px;
+  top: 45px;
+  position: relative;
+}
+/*# sourceMappingURL=netdocs.css.map */

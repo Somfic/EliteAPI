@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/netdocs.css">
+    <title>EliteDangerousAPI</title>
+  </head>
+  <body>
+    <h1 id="name">EliteDangerousAPI</h1>
+    <h2 id="namespace">EliteAPI</h2><span class="documentation">Main EliteAPI class.</span>
+    <button onclick="$('#constructors').slideToggle();" class="button">Constructors</button>
+    <div class="type-wrapper">
+      <div id="constructors" class="type-wrapper-content">
+        <p class="constructor"><span class="documentation">Creates a new EliteDangerousAPI object using the standard Journal directory.</span>
+          <br><span id="M:EliteAPI.EliteDangerousAPI.#ctor">
+            <a class="type type-link" href="EliteDangerousAPI.html">EliteDangerousAPI</a><span class="name"> EliteDangerousAPI </span>
+          </span><span class="syntax">(</span><span class="syntax">)</span>
+        </p>
+        <p class="constructor"><span class="documentation">Creates a new EliteDangerousAPI object.</span>
+          <br><span id="M:EliteAPI.EliteDangerousAPI.#ctor(System.IO.DirectoryInfo)">
+            <a class="type type-link" href="EliteDangerousAPI.html">EliteDangerousAPI</a><span class="name"> EliteDangerousAPI </span>
+          </span><span class="syntax">(</span><span id="JournalDirectory" class="parameter"><span class="type type-link-disabled">DirectoryInfo</span><span class="name"> JournalDirectory</span>
+          </span><span class="syntax">)</span>
+        </p>
+        <p class="constructor"><span class="documentation">Creates a new EliteDangerousAPI object using the standard Journal directory.</span>
+          <br><span id="M:EliteAPI.EliteDangerousAPI.#ctor(System.Boolean)">
+            <a class="type type-link" href="EliteDangerousAPI.html">EliteDangerousAPI</a><span class="name"> EliteDangerousAPI </span>
+          </span><span class="syntax">(</span><span id="SkipCatchUp" class="parameter"><span class="type type-link-disabled">Boolean</span><span class="name"> SkipCatchUp</span>
+          </span><span class="syntax">)</span>
+        </p>
+        <p class="constructor"><span class="documentation">Creates a new EliteDangerousAPI object.</span>
+          <br><span id="M:EliteAPI.EliteDangerousAPI.#ctor(System.IO.DirectoryInfo,System.Boolean)">
+            <a class="type type-link" href="EliteDangerousAPI.html">EliteDangerousAPI</a><span class="name"> EliteDangerousAPI </span>
+          </span><span class="syntax">(</span><span id="journalDirectory" class="parameter"><span class="type type-link-disabled">DirectoryInfo</span><span class="name"> journalDirectory</span><span class="syntax syntax-seperator">, </span>
+          </span><span id="skipCatchUp" class="parameter"><span class="type type-link-disabled">Boolean</span><span class="name"> skipCatchUp</span>
+          </span><span class="syntax">)</span>
+        </p>
+      </div>
+    </div>
+    <button onclick="$('#properties').slideToggle();" class="button">Properties</button>
+    <div class="type-wrapper">
+      <div id="properties" class="type-wrapper-content">
+        <p class="property"><span class="documentation">Set to true when the API is ready.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.IsReady"><span class="type type-link-disabled">Boolean</span><span class="name"> IsReady </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="type type-key">set</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">The standard Directory of the Player Journal files (C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous).</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.StandardDirectory"><span class="type type-link-disabled">DirectoryInfo</span><span class="name"> StandardDirectory </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">The version of EliteAPI.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.Version"><span class="type type-link-disabled">String</span><span class="name"> Version </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">Whether the API is currently running.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.IsRunning"><span class="type type-link-disabled">Boolean</span><span class="name"> IsRunning </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="type type-key">set</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">The Journal directory that is being used by the API.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.JournalDirectory"><span class="type type-link-disabled">DirectoryInfo</span><span class="name"> JournalDirectory </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="type type-key">set</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">Object that holds all the events.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.Events">
+            <a class="type type-link" href="EventHandler.html">EventHandler</a><span class="name"> Events </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="type type-key">set</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">Objects that holds all logging related functions.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.Logger"><span class="type type-link-disabled">Logger</span><span class="name"> Logger </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="type type-key">set</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">Holds the ship's current status.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.Status"><span class="type type-link-disabled">GameStatus</span><span class="name"> Status </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="type type-key">set</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">Holds the ship's current cargo situation.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.Cargo">
+            <a class="type type-link" href="ShipCargo.html">ShipCargo</a><span class="name"> Cargo </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="type type-key">set</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">Returns all the modules installed on the current ship.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.Modules"><span class="type type-link-disabled">ShipModules</span><span class="name"> Modules </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">Holds the ship's current materials situation.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.Materials"><span class="type type-link-disabled">MaterialsInfo</span><span class="name"> Materials </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="type type-key">set</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">Holds information on all key bindings in the game set by the user.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.Bindings"><span class="type type-link-disabled">UserBindings</span><span class="name"> Bindings </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">Holds information about the commander.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.Commander"><span class="type type-link-disabled">CommanderStatus</span><span class="name"> Commander </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="type type-key">set</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">Holds information about the last known location of the commander.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.Location">
+            <a class="type type-link" href="LocationStatus.html">LocationStatus</a><span class="name"> Location </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="type type-key">set</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">Rich presence service for Discord.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.DiscordRichPresence">
+            <a class="type type-link" href="RichPresenceClient.html">RichPresenceClient</a><span class="name"> DiscordRichPresence </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="type type-key">set</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+        <p class="property"><span class="documentation">Whether the API should skip the processing of previous events before the API was started.</span>
+          <br><span id="P:EliteAPI.EliteDangerousAPI.SkipCatchUp"><span class="type type-link-disabled">Boolean</span><span class="name"> SkipCatchUp </span>
+          </span><span class="syntax">{ </span><span class="type type-key">get</span><span class="syntax syntax-seperator">; </span><span class="type type-key">set</span><span class="syntax syntax-seperator">; </span><span class="syntax">}</span>
+        </p>
+      </div>
+    </div>
+    <button onclick="$('#methods').slideToggle();" class="button">Methods</button>
+    <div class="type-wrapper">
+      <div id="methods" class="type-wrapper-content">
+        <p class="method"><span class="documentation">Resets the API.</span>
+          <br><span id="M:EliteAPI.EliteDangerousAPI.Reset"><span class="type type-link-disabled">Void</span><span class="name"> Reset </span>
+          </span><span class="syntax">(</span><span class="syntax">)</span>
+        </p>
+        <p class="method"><span class="documentation">Starts the API.</span>
+          <br><span id="M:EliteAPI.EliteDangerousAPI.Start(System.Boolean)"><span class="type type-link-disabled">Void</span><span class="name"> Start </span>
+          </span><span class="syntax">(</span><span id="runRichPresence" class="parameter"><span class="type type-link-disabled">Boolean</span><span class="name"> runRichPresence</span><span class="syntax special-syntax"> = </span><span class="type type-value">True</span>
+          </span><span class="syntax">)</span>
+        </p>
+        <p class="method"><span class="documentation">Changes the journal directory.</span>
+          <br><span id="M:EliteAPI.EliteDangerousAPI.ChangeJournal(System.IO.DirectoryInfo)"><span class="type type-link-disabled">Void</span><span class="name"> ChangeJournal </span>
+          </span><span class="syntax">(</span><span id="newJournalDirectory" class="parameter"><span class="type type-link-disabled">DirectoryInfo</span><span class="name"> newJournalDirectory</span>
+          </span><span class="syntax">)</span>
+        </p>
+        <p class="method"><span class="documentation">Stops the API.</span>
+          <br><span id="M:EliteAPI.EliteDangerousAPI.Stop"><span class="type type-link-disabled">Void</span><span class="name"> Stop </span>
+          </span><span class="syntax">(</span><span class="syntax">)</span>
+        </p>
+      </div>
+    </div>
+    <button onclick="$('#events').slideToggle();" class="button">Events</button>
+    <div class="type-wrapper">
+      <div id="events" class="type-wrapper-content">
+        <p class="event"><span class="documentation">Gets triggered when EliteAPI has successfully loaded up.</span>
+          <br><span id="E:EliteAPI.EliteDangerousAPI.OnReady"><span class="type type-link-disabled">EventArgs</span><span class="name"> OnReady </span>
+          </span>
+        </p>
+        <p class="event"><span class="documentation">Gets triggered when EliteAPI is closing.</span>
+          <br><span id="E:EliteAPI.EliteDangerousAPI.OnQuit"><span class="type type-link-disabled">EventArgs</span><span class="name"> OnQuit </span>
+          </span>
+        </p>
+        <p class="event"><span class="documentation">Gets triggered when EliteAPI could not successfully load up.</span>
+          <br><span id="E:EliteAPI.EliteDangerousAPI.OnError"><span class="type type-generic">ICollection</span><span class="syntax">&lt;</span><span class="type type-link-disabled">String</span><span class="syntax">&gt;</span><span class="name"> OnError </span>
+          </span>
+        </p>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </body>
+</html>

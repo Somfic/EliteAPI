@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/netdocs.css">
+    <title>EventHandler</title>
+  </head>
+  <body>
+    <h1 id="name">EventHandler</h1>
+    <h2 id="namespace">EliteAPI.Events</h2>
+    <button onclick="$('#constructors').slideToggle();" class="button">Constructors</button>
+    <div class="type-wrapper">
+      <div id="constructors" class="type-wrapper-content">
+        <p class="constructor"><span id="M:EliteAPI.Events.EventHandler.#ctor">
+            <a class="type type-link" href="EventHandler.html">EventHandler</a><span class="name"> EventHandler </span>
+          </span><span class="syntax">(</span><span class="syntax">)</span>
+        </p>
+      </div>
+    </div>
+    <button onclick="$('#events').slideToggle();" class="button">Events</button>
+    <div class="type-wrapper">
+      <div id="events" class="type-wrapper-content">
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusInMainMenu">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusInMainMenu </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusIsRunning">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusIsRunning </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusInNoFireZoneEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusInNoFireZoneEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusDockedEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusDockedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusLandedEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusLandedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusFsdCooldownEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusFsdCooldownEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusGearEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusGearEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusShieldsEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusShieldsEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusSupercruiseEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusSupercruiseEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusFlightAssistEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusFlightAssistEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusHardpointsEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusHardpointsEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusWingingEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusWingingEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusLightsEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusLightsEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusCargoScoopEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusCargoScoopEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusSilentRunningEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusSilentRunningEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusScoopingEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusScoopingEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusSrvHandbreakEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusSrvHandbreakEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusSrvTurrentEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusSrvTurrentEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusSrvNearShipEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusSrvNearShipEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusSrvDriveAssistEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusSrvDriveAssistEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusMassLockedEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusMassLockedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusFsdChargingEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusFsdChargingEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusFsdCooldowEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusFsdCooldowEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusLowFuelEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusLowFuelEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusOverheatingEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusOverheatingEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusHasLatLongEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusHasLatLongEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusInDangerEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusInDangerEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusInInterdictionEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusInInterdictionEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusInMothershipEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusInMothershipEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusInFighterEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusInFighterEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusInSRVEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusInSRVEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusAnalysisModeEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusAnalysisModeEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatusNightVisionEvent">
+            <a class="type type-link" href="StatusEvent.html">StatusEvent</a><span class="name"> StatusNightVisionEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.AllEvent"><span class="type type-link-disabled">Object</span><span class="name"> AllEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ReservoirReplenishedEvent">
+            <a class="type type-link" href="ReservoirReplenishedInfo.html">ReservoirReplenishedInfo</a><span class="name"> ReservoirReplenishedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ProspectedAsteroidEvent"><span class="type type-link-disabled">ProspectedAsteroidInfo</span><span class="name"> ProspectedAsteroidEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.LeftSquadronEvent">
+            <a class="type type-link" href="LeftSquadronInfo.html">LeftSquadronInfo</a><span class="name"> LeftSquadronEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.HeatWarningEvent">
+            <a class="type type-link" href="HeatWarningInfo.html">HeatWarningInfo</a><span class="name"> HeatWarningEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ShieldStateEvent">
+            <a class="type type-link" href="ShieldStateInfo.html">ShieldStateInfo</a><span class="name"> ShieldStateEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.VehicleSwitchEvent">
+            <a class="type type-link" href="VehicleSwitchInfo.html">VehicleSwitchInfo</a><span class="name"> VehicleSwitchEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DockFighterEvent">
+            <a class="type type-link" href="DockFighterInfo.html">DockFighterInfo</a><span class="name"> DockFighterEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.LaunchSRVEvent">
+            <a class="type type-link" href="LaunchSRVInfo.html">LaunchSRVInfo</a><span class="name"> LaunchSRVEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SelfDestructEvent">
+            <a class="type type-link" href="SelfDestructInfo.html">SelfDestructInfo</a><span class="name"> SelfDestructEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DockSRVEvent">
+            <a class="type type-link" href="DockSRVInfo.html">DockSRVInfo</a><span class="name"> DockSRVEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.HeatDamageEvent">
+            <a class="type type-link" href="HeatDamageInfo.html">HeatDamageInfo</a><span class="name"> HeatDamageEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.LaunchFighterEvent">
+            <a class="type type-link" href="LaunchFighterInfo.html">LaunchFighterInfo</a><span class="name"> LaunchFighterEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DatalinkScanEvent">
+            <a class="type type-link" href="DatalinkScanInfo.html">DatalinkScanInfo</a><span class="name"> DatalinkScanEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CockpitBreachedEvent"><span class="type type-link-disabled">CockpitBreachedInfo</span><span class="name"> CockpitBreachedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.JetConeBoostEvent">
+            <a class="type type-link" href="JetConeBoostInfo.html">JetConeBoostInfo</a><span class="name"> JetConeBoostEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PowerplayLeaveEvent"><span class="type type-link-disabled">PowerplayLeaveInfo</span><span class="name"> PowerplayLeaveEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.InterdictionEvent">
+            <a class="type type-link" href="InterdictionInfo.html">InterdictionInfo</a><span class="name"> InterdictionEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.USSDropEvent">
+            <a class="type type-link" href="USSDropInfo.html">USSDropInfo</a><span class="name"> USSDropEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PowerplayCollectEvent"><span class="type type-link-disabled">PowerplayCollectInfo</span><span class="name"> PowerplayCollectEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PowerplayDeliverEvent"><span class="type type-link-disabled">PowerplayDeliverInfo</span><span class="name"> PowerplayDeliverEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PayLegacyFinesEvent"><span class="type type-link-disabled">PayLegacyFinesInfo</span><span class="name"> PayLegacyFinesEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.EngineerApplyEvent">
+            <a class="type type-link" href="EngineerApplyInfo.html">EngineerApplyInfo</a><span class="name"> EngineerApplyEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.WingLeaveEvent">
+            <a class="type type-link" href="WingLeaveInfo.html">WingLeaveInfo</a><span class="name"> WingLeaveEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SystemsShutdownEvent">
+            <a class="type type-link" href="SystemsShutdownInfo.html">SystemsShutdownInfo</a><span class="name"> SystemsShutdownEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.HullDamageEvent">
+            <a class="type type-link" href="HullDamageInfo.html">HullDamageInfo</a><span class="name"> HullDamageEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.BuyDronesEvent">
+            <a class="type type-link" href="BuyDronesInfo.html">BuyDronesInfo</a><span class="name"> BuyDronesEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.RestockVehicleEvent">
+            <a class="type type-link" href="RestockVehicleInfo.html">RestockVehicleInfo</a><span class="name"> RestockVehicleEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.BuyAmmoEvent">
+            <a class="type type-link" href="BuyAmmoInfo.html">BuyAmmoInfo</a><span class="name"> BuyAmmoEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MiningRefinedEvent">
+            <a class="type type-link" href="MiningRefinedInfo.html">MiningRefinedInfo</a><span class="name"> MiningRefinedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DatalinkVoucherEvent">
+            <a class="type type-link" href="DatalinkVoucherInfo.html">DatalinkVoucherInfo</a><span class="name"> DatalinkVoucherEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ScannedEvent">
+            <a class="type type-link" href="ScannedInfo.html">ScannedInfo</a><span class="name"> ScannedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ChangeCrewRoleEvent"><span class="type type-link-disabled">ChangeCrewRoleInfo</span><span class="name"> ChangeCrewRoleEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.TouchdownEvent">
+            <a class="type type-link" href="TouchdownInfo.html">TouchdownInfo</a><span class="name"> TouchdownEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SendTextEvent">
+            <a class="type type-link" href="SendTextInfo.html">SendTextInfo</a><span class="name"> SendTextEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.RefuelAllEvent">
+            <a class="type type-link" href="RefuelAllInfo.html">RefuelAllInfo</a><span class="name"> RefuelAllEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.EndCrewSessionEvent">
+            <a class="type type-link" href="EndCrewSessionInfo.html">EndCrewSessionInfo</a><span class="name"> EndCrewSessionEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.LiftoffEvent">
+            <a class="type type-link" href="LiftoffInfo.html">LiftoffInfo</a><span class="name"> LiftoffEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.EscapeInterdictionEvent"><span class="type type-link-disabled">EscapeInterdictionInfo</span><span class="name"> EscapeInterdictionEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.WingAddEvent">
+            <a class="type type-link" href="WingAddInfo.html">WingAddInfo</a><span class="name"> WingAddEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SellDronesEvent">
+            <a class="type type-link" href="SellDronesInfo.html">SellDronesInfo</a><span class="name"> SellDronesEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.FileheaderEvent"><span class="type type-link-disabled">FileheaderInfo</span><span class="name"> FileheaderEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.InterdictedEvent">
+            <a class="type type-link" href="InterdictedInfo.html">InterdictedInfo</a><span class="name"> InterdictedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CrewMemberJoinsEvent">
+            <a class="type type-link" href="CrewMemberJoinsInfo.html">CrewMemberJoinsInfo</a><span class="name"> CrewMemberJoinsEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CrewMemberQuitsEvent">
+            <a class="type type-link" href="CrewMemberQuitsInfo.html">CrewMemberQuitsInfo</a><span class="name"> CrewMemberQuitsEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CrewMemberRoleChangeEvent">
+            <a class="type type-link" href="CrewMemberRoleChangeInfo.html">CrewMemberRoleChangeInfo</a><span class="name"> CrewMemberRoleChangeEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PVPKillEvent">
+            <a class="type type-link" href="PVPKillInfo.html">PVPKillInfo</a><span class="name"> PVPKillEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.JoinACrewEvent">
+            <a class="type type-link" href="JoinACrewInfo.html">JoinACrewInfo</a><span class="name"> JoinACrewEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.QuitACrewEvent">
+            <a class="type type-link" href="QuitACrewInfo.html">QuitACrewInfo</a><span class="name"> QuitACrewEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ProgressEvent"><span class="type type-link-disabled">ProgressInfo</span><span class="name"> ProgressEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PromotionEvent"><span class="type type-link-disabled">PromotionInfo</span><span class="name"> PromotionEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.RankEvent">
+            <a class="type type-link" href="RankInfo.html">RankInfo</a><span class="name"> RankEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CommitCrimeEvent"><span class="type type-link-disabled">CommitCrimeInfo</span><span class="name"> CommitCrimeEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.EngineerContributionEvent">
+            <a class="type type-link" href="EngineerContributionInfo.html">EngineerContributionInfo</a><span class="name"> EngineerContributionEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MusicEvent">
+            <a class="type type-link" href="MusicInfo.html">MusicInfo</a><span class="name"> MusicEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DiedEvent">
+            <a class="type type-link" href="DiedInfo.html">DiedInfo</a><span class="name"> DiedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PassengersEvent">
+            <a class="type type-link" href="PassengersInfo.html">PassengersInfo</a><span class="name"> PassengersEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SearchAndRescueEvent">
+            <a class="type type-link" href="SearchAndRescueInfo.html">SearchAndRescueInfo</a><span class="name"> SearchAndRescueEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.KickCrewMemberEvent">
+            <a class="type type-link" href="KickCrewMemberInfo.html">KickCrewMemberInfo</a><span class="name"> KickCrewMemberEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.RedeemVoucherEvent">
+            <a class="type type-link" href="RedeemVoucherInfo.html">RedeemVoucherInfo</a><span class="name"> RedeemVoucherEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ResurrectEvent">
+            <a class="type type-link" href="ResurrectInfo.html">ResurrectInfo</a><span class="name"> ResurrectEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CommunityGoalJoinEvent">
+            <a class="type type-link" href="CommunityGoalJoinInfo.html">CommunityGoalJoinInfo</a><span class="name"> CommunityGoalJoinEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CommunityGoalEvent"><span class="type type-link-disabled">CommunityGoalInfo</span><span class="name"> CommunityGoalEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.RepairDroneEvent">
+            <a class="type type-link" href="RepairDroneInfo.html">RepairDroneInfo</a><span class="name"> RepairDroneEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.RepairEvent">
+            <a class="type type-link" href="RepairInfo.html">RepairInfo</a><span class="name"> RepairEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.JetConeDamageEvent">
+            <a class="type type-link" href="JetConeDamageInfo.html">JetConeDamageInfo</a><span class="name"> JetConeDamageEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CommunityGoalDiscardEvent">
+            <a class="type type-link" href="CommunityGoalDiscardInfo.html">CommunityGoalDiscardInfo</a><span class="name"> CommunityGoalDiscardEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MissionAcceptedEvent">
+            <a class="type type-link" href="MissionAcceptedInfo.html">MissionAcceptedInfo</a><span class="name"> MissionAcceptedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.BuyExplorationDataEvent">
+            <a class="type type-link" href="BuyExplorationDataInfo.html">BuyExplorationDataInfo</a><span class="name"> BuyExplorationDataEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.RepairAllEvent">
+            <a class="type type-link" href="RepairAllInfo.html">RepairAllInfo</a><span class="name"> RepairAllEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CrewLaunchFighterEvent">
+            <a class="type type-link" href="CrewLaunchFighterInfo.html">CrewLaunchFighterInfo</a><span class="name"> CrewLaunchFighterEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MaterialDiscardedEvent"><span class="type type-link-disabled">MaterialDiscardedInfo</span><span class="name"> MaterialDiscardedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.NewCommanderEvent">
+            <a class="type type-link" href="NewCommanderInfo.html">NewCommanderInfo</a><span class="name"> NewCommanderEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CommunityGoalRewardEvent">
+            <a class="type type-link" href="CommunityGoalRewardInfo.html">CommunityGoalRewardInfo</a><span class="name"> CommunityGoalRewardEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PowerplayVoteEvent"><span class="type type-link-disabled">PowerplayVoteInfo</span><span class="name"> PowerplayVoteEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PowerplayJoinEvent"><span class="type type-link-disabled">PowerplayJoinInfo</span><span class="name"> PowerplayJoinEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PowerplayDefectEvent"><span class="type type-link-disabled">PowerplayDefectInfo</span><span class="name"> PowerplayDefectEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MissionFailedEvent">
+            <a class="type type-link" href="MissionFailedInfo.html">MissionFailedInfo</a><span class="name"> MissionFailedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MissionRedirectedEvent">
+            <a class="type type-link" href="MissionRedirectedInfo.html">MissionRedirectedInfo</a><span class="name"> MissionRedirectedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ShutdownEvent">
+            <a class="type type-link" href="ShutdownInfo.html">ShutdownInfo</a><span class="name"> ShutdownEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ModuleInfoEvent"><span class="type type-link-disabled">ModuleInfoInfo</span><span class="name"> ModuleInfoEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MarketEvent">
+            <a class="type type-link" href="MarketInfo.html">MarketInfo</a><span class="name"> MarketEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MassModuleStoreEvent">
+            <a class="type type-link" href="MassModuleStoreInfo.html">MassModuleStoreInfo</a><span class="name"> MassModuleStoreEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MaterialDiscoveredEvent"><span class="type type-link-disabled">MaterialDiscoveredInfo</span><span class="name"> MaterialDiscoveredEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MaterialCollectedEvent"><span class="type type-link-disabled">MaterialCollectedInfo</span><span class="name"> MaterialCollectedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SRVDestroyedEvent">
+            <a class="type type-link" href="SRVDestroyedInfo.html">SRVDestroyedInfo</a><span class="name"> SRVDestroyedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DockingDeniedEvent">
+            <a class="type type-link" href="DockingDeniedInfo.html">DockingDeniedInfo</a><span class="name"> DockingDeniedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.UnderAttackEvent">
+            <a class="type type-link" href="UnderAttackInfo.html">UnderAttackInfo</a><span class="name"> UnderAttackEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ShipTargetedEvent">
+            <a class="type type-link" href="ShipTargetedInfo.html">ShipTargetedInfo</a><span class="name"> ShipTargetedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ShipyardEvent">
+            <a class="type type-link" href="ShipyardInfo.html">ShipyardInfo</a><span class="name"> ShipyardEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.OutfittingEvent">
+            <a class="type type-link" href="OutfittingInfo.html">OutfittingInfo</a><span class="name"> OutfittingEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PowerplayFastTrackEvent"><span class="type type-link-disabled">PowerplayFastTrackInfo</span><span class="name"> PowerplayFastTrackEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PowerplayEvent"><span class="type type-link-disabled">PowerplayInfo</span><span class="name"> PowerplayEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CollectCargoEvent"><span class="type type-link-disabled">CollectCargoInfo</span><span class="name"> CollectCargoEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.FetchRemoteModuleEvent"><span class="type type-link-disabled">FetchRemoteModuleInfo</span><span class="name"> FetchRemoteModuleEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ModuleStoreEvent"><span class="type type-link-disabled">ModuleStoreInfo</span><span class="name"> ModuleStoreEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ShipyardBuyEvent">
+            <a class="type type-link" href="ShipyardBuyInfo.html">ShipyardBuyInfo</a><span class="name"> ShipyardBuyEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ShipyardNewEvent">
+            <a class="type type-link" href="ShipyardNewInfo.html">ShipyardNewInfo</a><span class="name"> ShipyardNewEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ModuleBuyEvent"><span class="type type-link-disabled">ModuleBuyInfo</span><span class="name"> ModuleBuyEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ModuleRetrieveEvent"><span class="type type-link-disabled">ModuleRetrieveInfo</span><span class="name"> ModuleRetrieveEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.AfmuRepairsEvent">
+            <a class="type type-link" href="AfmuRepairsInfo.html">AfmuRepairsInfo</a><span class="name"> AfmuRepairsEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.LaunchDroneEvent">
+            <a class="type type-link" href="LaunchDroneInfo.html">LaunchDroneInfo</a><span class="name"> LaunchDroneEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MarketSellEvent">
+            <a class="type type-link" href="MarketSellInfo.html">MarketSellInfo</a><span class="name"> MarketSellEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ModuleSellEvent"><span class="type type-link-disabled">ModuleSellInfo</span><span class="name"> ModuleSellEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.FuelScoopEvent">
+            <a class="type type-link" href="FuelScoopInfo.html">FuelScoopInfo</a><span class="name"> FuelScoopEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.FighterDestroyedEvent"><span class="type type-link-disabled">FighterDestroyedInfo</span><span class="name"> FighterDestroyedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DiscoveryScanEvent">
+            <a class="type type-link" href="DiscoveryScanInfo.html">DiscoveryScanInfo</a><span class="name"> DiscoveryScanEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.LeaveBodyEvent">
+            <a class="type type-link" href="LeaveBodyInfo.html">LeaveBodyInfo</a><span class="name"> LeaveBodyEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PowerplayVoucherEvent"><span class="type type-link-disabled">PowerplayVoucherInfo</span><span class="name"> PowerplayVoucherEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ReputationEvent">
+            <a class="type type-link" href="ReputationInfo.html">ReputationInfo</a><span class="name"> ReputationEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.NavBeaconScanEvent">
+            <a class="type type-link" href="NavBeaconScanInfo.html">NavBeaconScanInfo</a><span class="name"> NavBeaconScanEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MissionsEvent">
+            <a class="type type-link" href="MissionsInfo.html">MissionsInfo</a><span class="name"> MissionsEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.FriendsEvent"><span class="type type-link-disabled">FriendsInfo</span><span class="name"> FriendsEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ShipyardSellEvent">
+            <a class="type type-link" href="ShipyardSellInfo.html">ShipyardSellInfo</a><span class="name"> ShipyardSellEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MissionAbandonedEvent">
+            <a class="type type-link" href="MissionAbandonedInfo.html">MissionAbandonedInfo</a><span class="name"> MissionAbandonedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ScientificResearchEvent">
+            <a class="type type-link" href="ScientificResearchInfo.html">ScientificResearchInfo</a><span class="name"> ScientificResearchEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DockingTimeoutEvent">
+            <a class="type type-link" href="DockingTimeoutInfo.html">DockingTimeoutInfo</a><span class="name"> DockingTimeoutEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DockingCancelledEvent">
+            <a class="type type-link" href="DockingCancelledInfo.html">DockingCancelledInfo</a><span class="name"> DockingCancelledEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DockingRequestedEvent">
+            <a class="type type-link" href="DockingRequestedInfo.html">DockingRequestedInfo</a><span class="name"> DockingRequestedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DockingGrantedEvent">
+            <a class="type type-link" href="DockingGrantedInfo.html">DockingGrantedInfo</a><span class="name"> DockingGrantedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.UndockedEvent">
+            <a class="type type-link" href="UndockedInfo.html">UndockedInfo</a><span class="name"> UndockedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CrewHireEvent">
+            <a class="type type-link" href="CrewHireInfo.html">CrewHireInfo</a><span class="name"> CrewHireEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ScreenshotEvent">
+            <a class="type type-link" href="ScreenshotInfo.html">ScreenshotInfo</a><span class="name"> ScreenshotEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SynthesisEvent"><span class="type type-link-disabled">SynthesisInfo</span><span class="name"> SynthesisEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.FighterRebuiltEvent"><span class="type type-link-disabled">FighterRebuiltInfo</span><span class="name"> FighterRebuiltEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SellExplorationDataEvent">
+            <a class="type type-link" href="SellExplorationDataInfo.html">SellExplorationDataInfo</a><span class="name"> SellExplorationDataEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.RebootRepairEvent">
+            <a class="type type-link" href="RebootRepairInfo.html">RebootRepairInfo</a><span class="name"> RebootRepairEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ScanEvent">
+            <a class="type type-link" href="ScanInfo.html">ScanInfo</a><span class="name"> ScanEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.WingInviteEvent">
+            <a class="type type-link" href="WingInviteInfo.html">WingInviteInfo</a><span class="name"> WingInviteEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StartJumpEvent">
+            <a class="type type-link" href="StartJumpInfo.html">StartJumpInfo</a><span class="name"> StartJumpEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SupercruiseExitEvent"><span class="type type-link-disabled">SupercruiseExitInfo</span><span class="name"> SupercruiseExitEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PayBountiesEvent"><span class="type type-link-disabled">PayBountiesInfo</span><span class="name"> PayBountiesEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PowerplaySalaryEvent"><span class="type type-link-disabled">PowerplaySalaryInfo</span><span class="name"> PowerplaySalaryEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ShipyardTransferEvent">
+            <a class="type type-link" href="ShipyardTransferInfo.html">ShipyardTransferInfo</a><span class="name"> ShipyardTransferEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.TechnologyBrokerEvent">
+            <a class="type type-link" href="TechnologyBrokerInfo.html">TechnologyBrokerInfo</a><span class="name"> TechnologyBrokerEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.PayFinesEvent"><span class="type type-link-disabled">PayFinesInfo</span><span class="name"> PayFinesEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.BountyEvent">
+            <a class="type type-link" href="BountyInfo.html">BountyInfo</a><span class="name"> BountyEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MaterialTradeEvent"><span class="type type-link-disabled">MaterialTradeInfo</span><span class="name"> MaterialTradeEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ReceiveTextEvent">
+            <a class="type type-link" href="ReceiveTextInfo.html">ReceiveTextInfo</a><span class="name"> ReceiveTextEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ModuleSellRemoteEvent"><span class="type type-link-disabled">ModuleSellRemoteInfo</span><span class="name"> ModuleSellRemoteEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ShipyardSwapEvent">
+            <a class="type type-link" href="ShipyardSwapInfo.html">ShipyardSwapInfo</a><span class="name"> ShipyardSwapEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MarketBuyEvent">
+            <a class="type type-link" href="MarketBuyInfo.html">MarketBuyInfo</a><span class="name"> MarketBuyEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CargoDepotEvent"><span class="type type-link-disabled">CargoDepotInfo</span><span class="name"> CargoDepotEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.FactionKillBondEvent"><span class="type type-link-disabled">FactionKillBondInfo</span><span class="name"> FactionKillBondEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StoredModulesEvent"><span class="type type-link-disabled">StoredModulesInfo</span><span class="name"> StoredModulesEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.WingJoinEvent">
+            <a class="type type-link" href="WingJoinInfo.html">WingJoinInfo</a><span class="name"> WingJoinEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ApproachBodyEvent">
+            <a class="type type-link" href="ApproachBodyInfo.html">ApproachBodyInfo</a><span class="name"> ApproachBodyEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.EngineerProgressEvent">
+            <a class="type type-link" href="EngineerProgressInfo.html">EngineerProgressInfo</a><span class="name"> EngineerProgressEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.FSSDiscoveryScanEvent">
+            <a class="type type-link" href="FSSDiscoveryScanInfo.html">FSSDiscoveryScanInfo</a><span class="name"> FSSDiscoveryScanEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SquadronCreatedEvent">
+            <a class="type type-link" href="SquadronCreatedInfo.html">SquadronCreatedInfo</a><span class="name"> SquadronCreatedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CommanderEvent"><span class="type type-link-disabled">CommanderInfo</span><span class="name"> CommanderEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.JoinedSquadronEvent">
+            <a class="type type-link" href="JoinedSquadronInfo.html">JoinedSquadronInfo</a><span class="name"> JoinedSquadronEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.EjectCargoEvent">
+            <a class="type type-link" href="EjectCargoInfo.html">EjectCargoInfo</a><span class="name"> EjectCargoEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.NpcCrewPaidWageEvent">
+            <a class="type type-link" href="NpcCrewPaidWageInfo.html">NpcCrewPaidWageInfo</a><span class="name"> NpcCrewPaidWageEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MaterialsEvent"><span class="type type-link-disabled">MaterialsInfo</span><span class="name"> MaterialsEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.LoadGameEvent">
+            <a class="type type-link" href="LoadGameInfo.html">LoadGameInfo</a><span class="name"> LoadGameEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SupercruiseEntryEvent"><span class="type type-link-disabled">SupercruiseEntryInfo</span><span class="name"> SupercruiseEntryEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.FSDTargetEvent">
+            <a class="type type-link" href="FSDTargetInfo.html">FSDTargetInfo</a><span class="name"> FSDTargetEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.FSSAllBodiesFoundEvent">
+            <a class="type type-link" href="FSSAllBodiesFoundInfo.html">FSSAllBodiesFoundInfo</a><span class="name"> FSSAllBodiesFoundEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SAAScanCompleteEvent">
+            <a class="type type-link" href="SAAScanCompleteInfo.html">SAAScanCompleteInfo</a><span class="name"> SAAScanCompleteEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CodexEntryEvent"><span class="type type-link-disabled">CodexEntryInfo</span><span class="name"> CodexEntryEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CrimeVictimEvent">
+            <a class="type type-link" href="CrimeVictimInfo.html">CrimeVictimInfo</a><span class="name"> CrimeVictimEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.LoadoutEvent">
+            <a class="type type-link" href="LoadoutInfo.html">LoadoutInfo</a><span class="name"> LoadoutEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MissionCompletedEvent">
+            <a class="type type-link" href="MissionCompletedInfo.html">MissionCompletedInfo</a><span class="name"> MissionCompletedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.BuyTradeDataEvent">
+            <a class="type type-link" href="BuyTradeDataInfo.html">BuyTradeDataInfo</a><span class="name"> BuyTradeDataEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CrewAssignEvent">
+            <a class="type type-link" href="CrewAssignInfo.html">CrewAssignInfo</a><span class="name"> CrewAssignEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CrewFireEvent">
+            <a class="type type-link" href="CrewFireInfo.html">CrewFireInfo</a><span class="name"> CrewFireEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.MultiSellExplorationDataEvent"><span class="type type-link-disabled">MultiSellExplorationDataInfo</span><span class="name"> MultiSellExplorationDataEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.LocationEvent"><span class="type type-link-disabled">LocationInfo</span><span class="name"> LocationEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.AsteroidCrackedEvent">
+            <a class="type type-link" href="AsteroidCrackedInfo.html">AsteroidCrackedInfo</a><span class="name"> AsteroidCrackedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ModuleSwapEvent"><span class="type type-link-disabled">ModuleSwapInfo</span><span class="name"> ModuleSwapEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DataScannedEvent">
+            <a class="type type-link" href="DataScannedInfo.html">DataScannedInfo</a><span class="name"> DataScannedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DisbandedSquadronEvent">
+            <a class="type type-link" href="DisbandedSquadronInfo.html">DisbandedSquadronInfo</a><span class="name"> DisbandedSquadronEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.AppliedToSquadronEvent">
+            <a class="type type-link" href="AppliedToSquadronInfo.html">AppliedToSquadronInfo</a><span class="name"> AppliedToSquadronEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.DockedEvent">
+            <a class="type type-link" href="DockedInfo.html">DockedInfo</a><span class="name"> DockedEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StatisticsEvent">
+            <a class="type type-link" href="StatisticsInfo.html">StatisticsInfo</a><span class="name"> StatisticsEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.SetUserShipNameEvent">
+            <a class="type type-link" href="SetUserShipNameInfo.html">SetUserShipNameInfo</a><span class="name"> SetUserShipNameEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.FSDJumpEvent"><span class="type type-link-disabled">FSDJumpInfo</span><span class="name"> FSDJumpEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.CargoEvent">
+            <a class="type type-link" href="CargoInfo.html">CargoInfo</a><span class="name"> CargoEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.EngineerCraftEvent">
+            <a class="type type-link" href="EngineerCraftInfo.html">EngineerCraftInfo</a><span class="name"> EngineerCraftEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.ApproachSettlementEvent">
+            <a class="type type-link" href="ApproachSettlementInfo.html">ApproachSettlementInfo</a><span class="name"> ApproachSettlementEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.StoredShipsEvent">
+            <a class="type type-link" href="StoredShipsInfo.html">StoredShipsInfo</a><span class="name"> StoredShipsEvent </span>
+          </span>
+        </p>
+        <p class="event"><span id="E:EliteAPI.Events.EventHandler.FSSSignalDiscoveredEvent">
+            <a class="type type-link" href="FSSSignalDiscoveredInfo.html">FSSSignalDiscoveredInfo</a><span class="name"> FSSSignalDiscoveredEvent </span>
+          </span>
+        </p>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </body>
+</html>

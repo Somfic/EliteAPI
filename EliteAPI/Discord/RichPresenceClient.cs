@@ -9,6 +9,8 @@ namespace EliteAPI.Discord
         private static string clientID = "497862888128512041";
         private DiscordRpcClient rpc;
         private readonly EliteDangerousAPI api;
+        private bool justDocked = false;
+
         /// <summary>
         /// Whether the rich presence is running.
         /// </summary>
@@ -91,6 +93,9 @@ namespace EliteAPI.Discord
             rpc.OnClose += (sender, e) => { api.Logger.Error($"Discord Rich Presence closed: '{e.Reason}'."); TurnOff(); };
             rpc.OnJoin += (sender, e) => api.Logger.Debug($"Discord Rich Presence joined with secret '{e.Secret}'.");
             rpc.OnJoinRequested += (sender, e) => api.Logger.Debug($"Discord Rich Presence joining with '{e.User.Username}' (ID {e.User.ID})");
+            api.Events.DockedEvent += (sender, e) => { justDocked = true; };
+            api.Events.UndockedEvent += (sender, e) => { justDocked = false; };
+
             //Start the RPC.
             //Mark as running.
             IsRunning = true;
@@ -199,14 +204,28 @@ namespace EliteAPI.Discord
             {
                 if (e.MusicTrack == "DockingComputer")
                 {
-                    UpdatePresence(new RichPresence
+                    if (justDocked)
+                    { 
+                        UpdatePresence(new RichPresence
+                        {
+                            Text = $"Having autopilot undock",
+                            TextTwo = $"them from {api.Location.Body}",
+                            Icon = "coriolis",
+                            IconTwo = "ed",
+                            IconTextTwo = "EliteAPI"
+                        });
+                    }
+                    else
                     {
-                        Text = $"Having autopilot dock",
-                        TextTwo = $"them at {api.Location.Body}",
-                        Icon = "coriolis",
-                        IconTwo = "ed",
-                        IconTextTwo = "EliteAPI"
-                    });
+                        UpdatePresence(new RichPresence
+                        {
+                            Text = $"Having autopilot dock",
+                            TextTwo = $"them at {api.Location.Body}",
+                            Icon = "coriolis",
+                            IconTwo = "ed",
+                            IconTextTwo = "EliteAPI"
+                        });
+                    }
                 }
             };
             if (string.IsNullOrWhiteSpace(api.Location.StarSystem))

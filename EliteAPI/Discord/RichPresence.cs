@@ -16,7 +16,7 @@
         /// <summary>
         /// Basic constructor for a rich presence.
         /// </summary>
-        /// <param name="text">The first line of text.</param>
+        /// <param name="line1">The first line of text.</param>
         public RichPresence(string line1)
         {
             Text = line1;
@@ -26,8 +26,8 @@
         /// <summary>
         /// Basic constructor for a rich presence.
         /// </summary>
-        /// <param name="text">The first line of text.</param>
-        /// <param name="textTwo">The second line of text.</param>
+        /// <param name="line1">The first line of text.</param>
+        /// <param name="line2">The second line of text.</param>
         public RichPresence(string line1, string line2)
         {
             Text = line1;

@@ -71,11 +71,11 @@ namespace EliteAPI
                         //amountOfProcessedFields = parsedEvent.GetType().GetProperties().Length;
                         //parsed = parsedEvent.GetType().GetProperties();
                     }
-                    catch (Exception ex) { EliteAPI.Logger.Log(Severity.Error, $"Could not invoke event method '{eventName}Info.Process()'.", ex); }
+                    catch (Exception ex) { EliteAPI.Logger.Log(Severity.Error, $"Could not invoke event method '{eventName}Info.Process()'.", (object)obj, ex); }
                 }
-                catch (Exception ex) { EliteAPI.Logger.Log(Severity.Debug, $"Could not find event method '{eventName}Info.Process()'.", ex); }
+                catch (Exception ex) { EliteAPI.Logger.Log(Severity.Debug, $"Could not find event method '{eventName}Info.Process()'.", (object)obj, ex); }
             }
-            catch (Exception ex) { EliteAPI.Logger.Log(Severity.Debug, $"Could not find event class '{eventName}Info'.", ex); }
+            catch (Exception ex) { EliteAPI.Logger.Log(Severity.Debug, $"Could not find event class '{eventName}Info'.", (object)obj, ex); }
             //Invoke the AllEvent.
             try { EliteAPI.Events.InvokeAllEvent(obj); }
             catch (Exception ex) { EliteAPI.Logger.Log(Severity.Error, $"Could not invoke AllEvent for '{eventName}'.", ex); }

@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Somfic.Logging;
+
 namespace EliteAPI.ThirdParty
 {
 
@@ -27,7 +29,7 @@ namespace EliteAPI.ThirdParty
         public ThirdPartyWrapper(EliteDangerousAPI api, string name, string iniPath)
         {
             EliteAPI = api;
-            EliteAPI.Logger.Debug($"Enabled third party wrapper for {name}.");
+            EliteAPI.Logger.Log(Severity.Debug, $"Enabled third party wrapper for {name}.");
             this.iniPath = iniPath;
             try
             {
@@ -126,7 +128,7 @@ namespace EliteAPI.ThirdParty
                 }
                 catch (Exception ex)
                 {
-                    EliteAPI.Logger.Error($"There was an error while trying to parse field [{name} ('{value}')] for event '{eventName}'.", ex);
+                    EliteAPI.Logger.Log(Severity.Error, $"There was an error while trying to parse field [{name} ('{value}')] for event '{eventName}'.", ex);
                 }
             }
             return variables;
@@ -162,7 +164,7 @@ namespace EliteAPI.ThirdParty
             }
             else
             {
-                EliteAPI.Logger.Debug($"Reading custom configuration from '{iniPath}'.");
+                EliteAPI.Logger.Log(Severity.Debug, $"Reading custom configuration from '{iniPath}'.");
             }
             return parser.ReadFile(iniPath);
         }
@@ -176,13 +178,13 @@ namespace EliteAPI.ThirdParty
             try
             {
                 string path = GetIni()["ELITEAPI"]["path"];
-                if (path == EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.Logger.Debug($"Using default path."); return EliteDangerousAPI.StandardDirectory; }
+                if (path == EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.Logger.Log(Severity.Debug, $"Using default path."); return EliteDangerousAPI.StandardDirectory; }
                 else if (Directory.Exists(path)) { EliteAPI.Logger.Log($"Found '{path}'."); return new DirectoryInfo(path); }
-                else { EliteAPI.Logger.Warning($"Found '{path}', but the path is invalid, using default path."); return EliteDangerousAPI.StandardDirectory; }
+                else { EliteAPI.Logger.Log(Severity.Warning, $"Found '{path}', but the path is invalid, using default path."); return EliteDangerousAPI.StandardDirectory; }
             }
             catch (Exception ex)
             {
-                EliteAPI.Logger.Warning($"Could not read from '{iniPath}', using default Journal path.", ex);
+                EliteAPI.Logger.Log(Severity.Warning, $"Could not read from '{iniPath}', using default Journal path.", ex);
                 return EliteDangerousAPI.StandardDirectory;
             }
         }
@@ -197,11 +199,11 @@ namespace EliteAPI.ThirdParty
             {
                 string path = GetIni()["LOGGING"]["path"];
                 if (Directory.Exists(path)) { EliteAPI.Logger.Log($"Using '{path}' for logging."); return new DirectoryInfo(path); }
-                else { EliteAPI.Logger.Warning($"Found '{path}' for logging, but the path is invalid, using '{Directory.GetCurrentDirectory()}' instead."); return new DirectoryInfo(Directory.GetCurrentDirectory()); }
+                else { EliteAPI.Logger.Log(Severity.Warning, $"Found '{path}' for logging, but the path is invalid, using '{Directory.GetCurrentDirectory()}' instead."); return new DirectoryInfo(Directory.GetCurrentDirectory()); }
             }
             catch (Exception ex)
             {
-                EliteAPI.Logger.Warning($"Could not read from '{iniPath}', using '{Directory.GetCurrentDirectory()}' for logging.", ex);
+                EliteAPI.Logger.Log(Severity.Warning, $"Could not read from '{iniPath}', using '{Directory.GetCurrentDirectory()}' for logging.", ex);
                 return new DirectoryInfo(Directory.GetCurrentDirectory());
             }
         }
@@ -224,7 +226,7 @@ namespace EliteAPI.ThirdParty
                         return;
                 }
             }
-            catch (Exception ex) { EliteAPI.Logger.Warning($"There was a problem while trying to process '{content}'.", ex); }
+            catch (Exception ex) { EliteAPI.Logger.Log(Severity.Warning, $"There was a problem while trying to process '{content}'.", ex); }
         }
     }
     public class Variable

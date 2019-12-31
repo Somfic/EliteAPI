@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using DiscordRPC;
+using Newtonsoft.Json;
+using Somfic.Logging;
+
 namespace EliteAPI.Discord
 {
     public class RichPresenceClient
@@ -46,7 +50,7 @@ namespace EliteAPI.Discord
         public RichPresenceClient WithCustomID(string id)
         {
             clientID = id;
-            api.Logger.Debug($"Set custom Discord Rich Presence ID to {id}.");
+            api.Logger.Log(Severity.Debug, $"Set custom Discord Rich Presence ID to {id}.");
             return this;
         }
         /// <summary>
@@ -57,8 +61,7 @@ namespace EliteAPI.Discord
         {
             //If we're not running, return;
             if(!IsRunning) { return this; }
-            api.Logger.UseFormat(false);
-            api.Logger.Debug($"Updated rich presence: {Newtonsoft.Json.JsonConvert.SerializeObject(presence)}");
+            api.Logger.Log(Severity.Debug, $"Updated Discord rich presence.", presence);
             DiscordRPC.RichPresence discordPresence = new DiscordRPC.RichPresence
             {
                 Details = presence.Text,
@@ -86,13 +89,13 @@ namespace EliteAPI.Discord
             api.Logger.Log("Starting rich presence.");
 
             //Subscribe to events.
-            rpc.OnConnectionEstablished += (sender, e) => api.Logger.Debug($"Attempting to connect to Discord ... ");
-            rpc.OnConnectionFailed += (sender, e) => { api.Logger.Warning($"There was an error while trying to connect to Discord Rich Presence pipe {e.FailedPipe}. Make sure Discord is running."); TurnOff(); };
-            rpc.OnError += (sender, e) => api.Logger.Error($"Discord Rich Presence stumbled upon an error.", new Exception(e.Message));
-            rpc.OnReady += (sender, e) => { api.Logger.Success($"Discord Rich Presence has connected and is running."); IsReady = true; };
-            rpc.OnClose += (sender, e) => { api.Logger.Error($"Discord Rich Presence closed: '{e.Reason}'."); TurnOff(); };
-            rpc.OnJoin += (sender, e) => api.Logger.Debug($"Discord Rich Presence joined with secret '{e.Secret}'.");
-            rpc.OnJoinRequested += (sender, e) => api.Logger.Debug($"Discord Rich Presence joining with '{e.User.Username}' (ID {e.User.ID})");
+            rpc.OnConnectionEstablished += (sender, e) => api.Logger.Log(Severity.Debug, $"Attempting to connect to Discord ... ");
+            rpc.OnConnectionFailed += (sender, e) => { api.Logger.Log(Severity.Error, $"There was an error while trying to connect to Discord. Make sure Discord is running.", new ExternalException("Discord is unresponsive, or might not be running on this machine.")); TurnOff(); };
+            rpc.OnError += (sender, e) => api.Logger.Log(Severity.Error, $"Discord Rich Presence stumbled upon an error.", new ExternalException(e.Message, (int)e.Code));
+            rpc.OnReady += (sender, e) => { api.Logger.Log(Severity.Success, $"Discord Rich Presence has connected and is running."); IsReady = true; };
+            rpc.OnClose += (sender, e) => { api.Logger.Log($"Discord Rich Presence closed.", new ExternalException(e.Reason, e.Code)); TurnOff(); };
+            rpc.OnJoin += (sender, e) => api.Logger.Log(Severity.Debug, $"Discord Rich Presence joined with secret '{e.Secret}'.");
+            rpc.OnJoinRequested += (sender, e) => api.Logger.Log(Severity.Debug, $"Discord Rich Presence joining with '{e.User.Username}' (ID {e.User.ID})");
             api.Events.DockedEvent += (sender, e) => { justDocked = true; };
             api.Events.UndockedEvent += (sender, e) => { justDocked = false; };
 
@@ -109,8 +112,8 @@ namespace EliteAPI.Discord
         {
             api.Events.DockingGrantedEvent += (sender, e) => UpdatePresence(new RichPresence
             {
-                Text = $"Attemping to dock",
-                TextTwo = $"at {e.StationName}",
+                Text = $"Docking at",
+                TextTwo = $"{e.StationName}",
                 Icon = "coriolis",
                 IconTwo = "ed",
                 IconTextTwo = "EliteAPI"
@@ -204,7 +207,7 @@ namespace EliteAPI.Discord
             {
                 if (e.MusicTrack == "DockingComputer")
                 {
-                    if (justDocked)
+                    if (api.Status.Docked)
                     { 
                         UpdatePresence(new RichPresence
                         {

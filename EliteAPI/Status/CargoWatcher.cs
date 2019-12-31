@@ -2,6 +2,8 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Somfic.Logging;
+
 namespace EliteAPI.Status
 {
     public class CargoWatcher
@@ -36,8 +38,8 @@ namespace EliteAPI.Status
                 if(A != B)
                 {
                     api.Events.InvokeAllEvent(new CargoEvent("Cargo." + propA.Name, B));
-                    try { api.Events.GetType().GetMethod("InvokeCargo" + propA.Name).Invoke(api.Events, new object[] { B }); }
-                    catch (Exception ex) { api.Logger.Error($"Could not invoke Cargo event {propA.Name}, it might not have been added yet.", ex); }
+                    try { api.Events.GetType().GetMethod("InvokeCargo" + propA.Name)?.Invoke(api.Events, new object[] { B }); }
+                    catch (Exception ex) { api.Logger.Log(Severity.Error, $"Could not invoke Cargo event {propA.Name}, it might not have been added yet.", ex); }
                 }
             }
         }

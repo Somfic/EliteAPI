@@ -35,80 +35,157 @@ namespace EliteAPI.Status
     {
         public static string Empire(long x)
         {
-            if (x == 0) { return "None"; }
-            if (x == 1) { return "Outsider"; }
-            if (x == 2) { return "Serf"; }
-            if (x == 3) { return "Master"; }
-            if (x == 4) { return "Squire"; }
-            if (x == 5) { return "Knight"; }
-            if (x == 6) { return "Lord"; }
-            if (x == 7) { return "Baron"; }
-            if (x == 8) { return "Viscount"; }
-            if (x == 9) { return "Count"; }
-            if (x == 10) { return "Earl"; }
-            if (x == 11) { return "Marquis"; }
-            if (x == 12) { return "Duke"; }
-            if (x == 13) { return "Prince"; }
-            if (x == 14) { return "King"; }
-            return "";
+            switch (x)
+            {
+                case 0:
+                    return "None";
+                case 1:
+                    return "Outsider";
+                case 2:
+                    return "Serf";
+                case 3:
+                    return "Master";
+                case 4:
+                    return "Squire";
+                case 5:
+                    return "Knight";
+                case 6:
+                    return "Lord";
+                case 7:
+                    return "Baron";
+                case 8:
+                    return "Viscount";
+                case 9:
+                    return "Count";
+                case 10:
+                    return "Earl";
+                case 11:
+                    return "Marquis";
+                case 12:
+                    return "Duke";
+                case 13:
+                    return "Prince";
+                case 14:
+                    return "King";
+                default:
+                    return "";
+            }
         }
         public static string Federation(long x)
         {
-            if (x == 0) { return "None"; }
-            if (x == 1) { return "Recruit"; }
-            if (x == 2) { return "Cadet"; }
-            if (x == 3) { return "Midshipman"; }
-            if (x == 4) { return "Petty Officer"; }
-            if (x == 5) { return "Chief Petty Officer"; }
-            if (x == 6) { return "Warrant Officer"; }
-            if (x == 7) { return "Ensign"; }
-            if (x == 8) { return "Lieutenant"; }
-            if (x == 9) { return "Lieutenant Commander"; }
-            if (x == 10) { return "Post Commander"; }
-            if (x == 11) { return "Post Captain"; }
-            if (x == 12) { return "Rear Admiral"; }
-            if (x == 13) { return "Vice Admiral	"; }
-            if (x == 14) { return "Admiral"; }
-            return "";
+            switch (x)
+            {
+                case 0:
+                    return "None";
+                case 1:
+                    return "Recruit";
+                case 2:
+                    return "Cadet";
+                case 3:
+                    return "Midshipman";
+                case 4:
+                    return "Petty Officer";
+                case 5:
+                    return "Chief Petty Officer";
+                case 6:
+                    return "Warrant Officer";
+                case 7:
+                    return "Ensign";
+                case 8:
+                    return "Lieutenant";
+                case 9:
+                    return "Lieutenant Commander";
+                case 10:
+                    return "Post Commander";
+                case 11:
+                    return "Post Captain";
+                case 12:
+                    return "Rear Admiral";
+                case 13:
+                    return "Vice Admiral	";
+                case 14:
+                    return "Admiral";
+                default:
+                    return "";
+            }
         }
         public static string Combat(long x)
         {
-            if (x == 0) { return "Harmless"; }
-            if (x == 1) { return "Mostly Harmless"; }
-            if (x == 2) { return "Novice"; }
-            if (x == 3) { return "Competent"; }
-            if (x == 4) { return "Expert"; }
-            if (x == 5) { return "Master"; }
-            if (x == 6) { return "Dangerous"; }
-            if (x == 7) { return "Deadly"; }
-            if (x == 8) { return "Elite"; }
-            return "";
+            switch (x)
+            {
+                case 0:
+                    return "Harmless";
+                case 1:
+                    return "Mostly Harmless";
+                case 2:
+                    return "Novice";
+                case 3:
+                    return "Competent";
+                case 4:
+                    return "Expert";
+                case 5:
+                    return "Master";
+                case 6:
+                    return "Dangerous";
+                case 7:
+                    return "Deadly";
+                case 8:
+                    return "Elite";
+                default:
+                    return "";
+            }
         }
         public static string Trade(long x)
         {
-            if (x == 0) { return "Penniless"; }
-            if (x == 1) { return "Mostly Penniless"; }
-            if (x == 2) { return "Peddler"; }
-            if (x == 3) { return "Dealer"; }
-            if (x == 4) { return "Merchant"; }
-            if (x == 5) { return "Broker"; }
-            if (x == 6) { return "Entrepreneur"; }
-            if (x == 7) { return "Tycoon"; }
-            if (x == 8) { return "Elite"; }
-            return "";
+            switch (x)
+            {
+                case 0:
+                    return "Penniless";
+                case 1:
+                    return "Mostly Penniless";
+                case 2:
+                    return "Peddler";
+                case 3:
+                    return "Dealer";
+                case 4:
+                    return "Merchant";
+                case 5:
+                    return "Broker";
+                case 6:
+                    return "Entrepreneur";
+                case 7:
+                    return "Tycoon";
+                case 8:
+                    return "Elite";
+                default:
+                    return "";
+            }
         }
         public static string Exploration(long x)
         {
-            if (x == 0) { return "Aimless"; }
-            if (x == 1) { return "Mostly Aimless"; }
-            if (x == 2) { return "Scout"; }
-            if (x == 3) { return "Surveyor"; }
-            if (x == 4) { return "Trailblazer"; }
-            if (x == 5) { return "Pathfinder"; }
-            if (x == 6) { return "Ranger"; }
-            if (x == 7) { return "Pioneer"; }
-            if (x == 8) { return "Elite"; }
-            return "";
+            switch (x)
+            {
+                case 0:
+                    return "Aimless";
+                case 1:
+                    return "Mostly Aimless";
+                case 2:
+                    return "Scout";
+                case 3:
+                    return "Surveyor";
+                case 4:
+                    return "Trailblazer";
+                case 5:
+                    return "Pathfinder";
+                case 6:
+                    return "Ranger";
+                case 7:
+                    return "Pioneer";
+                case 8:
+                    return "Elite";
+                default:
+                    return "";
+            }
         }
     }
 }

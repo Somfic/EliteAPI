@@ -4,6 +4,7 @@ using Somfic.Logging;
 
 using System.IO;
 using System.Threading;
+using Somfic.Logging.Handlers;
 
 namespace Example
 {
@@ -14,10 +15,7 @@ namespace Example
         private static void Main(string[] args)
         {
             EliteAPI = new EliteDangerousAPI();
-            EliteAPI.Logger
-                .UseConsole(Severity.Debug)
-                .UseLogFile(Directory.GetCurrentDirectory());
-
+            EliteAPI.Logger.AddHandler(new ConsoleHandler());
             EliteAPI.Start();
 
             Thread.Sleep(-1);

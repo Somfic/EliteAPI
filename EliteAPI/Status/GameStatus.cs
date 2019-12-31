@@ -1,11 +1,13 @@
-﻿namespace EliteAPI.Status
+﻿using Somfic.Logging;
+
+namespace EliteAPI.Status
 {
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
     using System;
     using System.Collections.Generic;
     using System.Globalization;
     using System.IO;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
     public partial class GameStatus
     {
         internal GameStatus() { }
@@ -27,39 +29,39 @@
         public string LegalState { get; internal set; }
         [JsonProperty("Cargo")]
         public long Cargo { get; internal set; }
-        public bool Docked { get { return GetFlag(0); } }
-        public bool Landed { get { return GetFlag(1); } }
-        public bool Gear { get { return GetFlag(2); } }
-        public bool Shields { get { return GetFlag(3); } }
-        public bool Supercruise { get { return GetFlag(4); } }
-        public bool FlightAssist { get { return !GetFlag(5); } }
-        public bool Hardpoints { get { return GetFlag(6); } }
-        public bool Winging { get { return GetFlag(7); } }
-        public bool Lights { get { return GetFlag(8); } }
-        public bool CargoScoop { get { return GetFlag(9); } }
-        public bool SilentRunning { get { return GetFlag(10); } }
-        public bool Scooping { get { return GetFlag(11); } }
-        public bool SrvHandbreak { get { return GetFlag(12); } }
-        public bool SrvTurrent { get { return GetFlag(13); } }
-        public bool SrvNearShip { get { return GetFlag(14); } }
-        public bool SrvDriveAssist { get { return GetFlag(15); } }
-        public bool MassLocked { get { return GetFlag(16); } }
-        public bool FsdCharging { get { return GetFlag(17); } }
-        public bool FsdCooldown { get { return GetFlag(18); } }
-        public bool LowFuel { get { return GetFlag(19); } }
-        public bool Overheating { get { return GetFlag(20); } }
-        public bool HasLatlong { get { return GetFlag(21); } }
-        public bool InDanger { get { return GetFlag(22); } }
-        public bool InInterdiction { get { return GetFlag(23); } }
-        public bool InMothership { get { return GetFlag(24); } }
-        public bool InFighter { get { return GetFlag(25); } }
-        public bool InSRV { get { return GetFlag(26); } }
-        public bool AnalysisMode { get { return GetFlag(27); } }
-        public bool NightVision { get { return GetFlag(28); } }
+        public bool Docked => GetFlag(0);
+        public bool Landed => GetFlag(1);
+        public bool Gear => GetFlag(2);
+        public bool Shields => GetFlag(3);
+        public bool Supercruise => GetFlag(4);
+        public bool FlightAssist => !GetFlag(5);
+        public bool Hardpoints => GetFlag(6);
+        public bool Winging => GetFlag(7);
+        public bool Lights => GetFlag(8);
+        public bool CargoScoop => GetFlag(9);
+        public bool SilentRunning => GetFlag(10);
+        public bool Scooping => GetFlag(11);
+        public bool SrvHandbreak => GetFlag(12);
+        public bool SrvTurrent => GetFlag(13);
+        public bool SrvNearShip => GetFlag(14);
+        public bool SrvDriveAssist => GetFlag(15);
+        public bool MassLocked => GetFlag(16);
+        public bool FsdCharging => GetFlag(17);
+        public bool FsdCooldown => GetFlag(18);
+        public bool LowFuel => GetFlag(19);
+        public bool Overheating => GetFlag(20);
+        public bool HasLatlong => GetFlag(21);
+        public bool InDanger => GetFlag(22);
+        public bool InInterdiction => GetFlag(23);
+        public bool InMothership => GetFlag(24);
+        public bool InFighter => GetFlag(25);
+        public bool InSRV => GetFlag(26);
+        public bool AnalysisMode => GetFlag(27);
+        public bool NightVision => GetFlag(28);
         public string GameMode { get; internal set; }
         public bool InNoFireZone { get; internal set; }
         public double JumpRange { get; internal set; }
-        public bool IsRunning { get { return (Flags != 0); } }
+        public bool IsRunning => (Flags != 0);
         public bool InMainMenu { get; internal set; }
         public string MusicTrack { get; internal set; }
         public bool GetFlag(int bit)
@@ -77,12 +79,16 @@
     }
     public partial class GameStatus
     {
-        internal static GameStatus Process(string json) => JsonConvert.DeserializeObject<GameStatus>(json, EliteAPI.Status.ShipStatusConverter.Settings);
+        internal static GameStatus Process(string json)
+        {
+            return JsonConvert.DeserializeObject<GameStatus>(json, EliteAPI.Status.ShipStatusConverter.Settings);
+        }
+
         internal static GameStatus FromFile(FileInfo file, EliteDangerousAPI api)
         {
             try
             {
-                if (!File.Exists(file.FullName)) { api.Logger.Error("Could not find Status.json.", new Exception($"Could not find {file}.")); return new GameStatus(); }
+                if (!File.Exists(file.FullName)) {/*  api.Logger.Log(Severity.Error, "Could not find Status.json.", new FileNotFoundException("Status.json could not be found.", file.FullName)); */ return new GameStatus(); }
                 //Create a stream from the log file.
                 FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 //Create a stream from the file stream.
@@ -95,24 +101,25 @@
                         //Process this string.
                         string json = streamReader.ReadLine();
                         GameStatus s = Process(json);
-                        if(s.Fuel == null) { s.Fuel = new Fuel(); }
-                        if(s.Pips == null) { s.Pips = new List<long>() { 0, 0, 0}; }
+                        if (s.Fuel == null) { s.Fuel = new Fuel(); }
+                        if (s.Pips == null) { s.Pips = new List<long>() { 0, 0, 0 }; }
                         return s;
                     }
-                    catch(Exception ex) { api.Logger.Warning("Could not update Status.json.", ex); }
+                    catch (Exception ex) { api.Logger.Log(Severity.Warning, "Could not update Status.json.", ex); }
                 }
                 return api.Status;
             }
-            catch(Exception ex) { api.Logger.Warning("Could not update status.", ex);}
+            catch (Exception ex) { api.Logger.Log(Severity.Warning, "Could not update status.", ex); }
             return new GameStatus();
         }
     }
-    
+
     internal static class ShipStatusConverter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
-            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            MissingMemberHandling = MissingMemberHandling.Ignore,
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
             DateParseHandling = DateParseHandling.None,
             Converters =
             {

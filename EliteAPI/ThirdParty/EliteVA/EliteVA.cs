@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Somfic.Logging;
+using Somfic.Logging.Handlers;
+
 namespace EliteAPI.ThirdParty.EliteVA
 {
     public class VAPlugin
@@ -23,7 +26,7 @@ namespace EliteAPI.ThirdParty.EliteVA
             Wrapper = new ThirdPartyWrapper(EliteAPI, VA_DisplayName(), $@"{Directory.GetCurrentDirectory()}\EliteVA.ini");
             //Setup EliteAPI.
             EliteAPI.Logger.LogEvent += Logger_Log;
-            EliteAPI.Logger.UseLogFile(Wrapper.GetLogFolder().ToString(), "EliteAPI");
+            EliteAPI.Logger.AddHandler(new LogFileHandler(Wrapper.GetLogFolder().ToString(), "EliteAPI"));
             EliteAPI.ChangeJournal(Wrapper.GetJournalFolder());
             //Start the API.
             EliteAPI.Start(Wrapper.GetRichPresenceSetting());
@@ -42,7 +45,7 @@ namespace EliteAPI.ThirdParty.EliteVA
         public static void VA_Exit1(dynamic vaProxy)
         {
             proxy = vaProxy;
-            EliteAPI.Logger.Debug("VoiceAttack is closing.");
+            EliteAPI.Logger.Log(Severity.Debug, "VoiceAttack is closing.");
             EliteAPI.Stop();
         }
         private static void SetVariables(List<Variable> variables)
@@ -52,34 +55,34 @@ namespace EliteAPI.ThirdParty.EliteVA
                 try
                 {
                     //Check if the variable isn't type unknown.
-                    if (v.Type == Variable.VarType.Unknown) { EliteAPI.Logger.Debug($"Could not set VoiceAttack variable 'EliteAPI.{v.Name}' to {v.Value}.", new Exception("Type is unknown")); continue; }
+                    if (v.Type == Variable.VarType.Unknown) { EliteAPI.Logger.Log(Severity.Debug, $"Could not set VoiceAttack variable 'EliteAPI.{v.Name}' to {v.Value}.", new ArgumentException("Type is unknown.", v.Name)); continue; }
                     switch (v.Type)
                     {
                         case Variable.VarType.Bool:
                             if (proxy.GetBoolean("EliteAPI." + v.Name) == bool.Parse(v.Value.ToString())) { continue; }
-                            EliteAPI.Logger.Debug($"Set VoiceAttack bool 'EliteAPI.{v.Name}' to '{v.Value}'.");
+                            EliteAPI.Logger.Log(Severity.Debug, $"Set VoiceAttack bool 'EliteAPI.{v.Name}' to '{v.Value}'.");
                             proxy.SetBoolean("EliteAPI." + v.Name, bool.Parse(v.Value.ToString()));
                             break;
                         case Variable.VarType.Decimal:
                             if (proxy.GetDecimal("EliteAPI." + v.Name) == decimal.Parse(v.Value.ToString())) { continue; }
-                            EliteAPI.Logger.Debug($"Set VoiceAttack decimal 'EliteAPI.{v.Name}' to '{v.Value}'.");
+                            EliteAPI.Logger.Log(Severity.Debug, $"Set VoiceAttack decimal 'EliteAPI.{v.Name}' to '{v.Value}'.");
                             proxy.SetDecimal("EliteAPI." + v.Name, decimal.Parse(v.Value.ToString()));
                             break;
                         case Variable.VarType.String:
                             if (proxy.GetText("EliteAPI." + v.Name) == v.Value.ToString()) { continue; }
-                            EliteAPI.Logger.Debug($"Set VoiceAttack text 'EliteAPI.{v.Name}' to '{v.Value}'.");
+                            EliteAPI.Logger.Log(Severity.Debug, $"Set VoiceAttack text 'EliteAPI.{v.Name}' to '{v.Value}'.");
                             proxy.SetText("EliteAPI." + v.Name, v.Value.ToString());
                             break;
                         case Variable.VarType.Int:
                             if (proxy.GetInt("EliteAPI." + v.Name) == int.Parse(v.Value.ToString())) { continue; }
-                            EliteAPI.Logger.Debug($"Set VoiceAttack int 'EliteAPI.{v.Name}' to '{v.Value}'.");
+                            EliteAPI.Logger.Log(Severity.Debug, $"Set VoiceAttack int 'EliteAPI.{v.Name}' to '{v.Value}'.");
                             proxy.SetInt("EliteAPI." + v.Name, int.Parse(v.Value.ToString()));
                             break;
                     }
                 }
                 catch(Exception ex)
                 {
-                    EliteAPI.Logger.Debug($"Could not set variable {v.Name}.", ex);
+                    EliteAPI.Logger.Log(Severity.Debug, $"Could not set variable {v.Name}.", ex);
                 }
             }
         }
@@ -113,12 +116,12 @@ namespace EliteAPI.ThirdParty.EliteVA
             if (proxy.CommandExists(commandName))
             {
                 //Set event variables.
-                EliteAPI.Logger.Debug($"Executing VoiceAttack command '{commandName}'.");
+                EliteAPI.Logger.Log(Severity.Debug, $"Executing VoiceAttack command '{commandName}'.");
                 SetVariables(Wrapper.GetEventVariables(e));
                 proxy.ExecuteCommand(commandName);
             } else
             {
-                EliteAPI.Logger.Debug($"VoiceAttack command '{commandName}' was not found, continuing.");
+                EliteAPI.Logger.Log(Severity.Debug, $"VoiceAttack command '{commandName}' was not found, continuing.");
             }
         }
     }

@@ -4,6 +4,8 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Somfic.Logging;
+
 namespace EliteAPI.Status
 {
     public class StatusWatcher
@@ -42,8 +44,7 @@ namespace EliteAPI.Status
         private void Events_MusicEvent(object sender, Events.MusicInfo e)
         {
             MusicTrack = e.MusicTrack;
-            if(e.MusicTrack == "MainMenu") { InMainMenu = true; }
-            else { InMainMenu = false; }
+            InMainMenu = e.MusicTrack == "MainMenu";
             Update();
         }
         private void Events_LoadGameEvent(object sender, Events.LoadGameInfo e)
@@ -67,10 +68,9 @@ namespace EliteAPI.Status
         private void Update()
         {
             //Save the old status.
-            GameStatus oldStatus = api.Status;
-            if (oldStatus == null) { oldStatus = new GameStatus(); }
+            GameStatus oldStatus = api.Status ?? new GameStatus();
             GameStatus newStatus = GameStatus.FromFile(new FileInfo(api.JournalDirectory + "//Status.json"), api);
-            if (newStatus == null || !File.Exists(api.JournalDirectory + "//Status.json")) { api.Logger.Warning("Could not update Status.json file."); return; }
+            if (newStatus == null || !File.Exists(api.JournalDirectory + "//Status.json")) { return; }
             newStatus.InNoFireZone = InNoFireZone;
             newStatus.JumpRange = JumpRange;
             newStatus.Fuel.MaxFuel = MaxFuel;
@@ -80,7 +80,6 @@ namespace EliteAPI.Status
             if (newStatus.Docked) { newStatus.InNoFireZone = true; }
             //Set the new status.
             api.Status = newStatus;
-            if(oldStatus == null) { return; }
             TriggerIfDifferent(oldStatus, newStatus);
         }
         private void TriggerIfDifferent(GameStatus oldStatus, GameStatus newStatus)
@@ -88,20 +87,18 @@ namespace EliteAPI.Status
             foreach (PropertyInfo propA in oldStatus.GetType().GetProperties().Where(x => x.PropertyType == typeof(bool)))
             {
                 PropertyInfo propB = newStatus.GetType().GetProperty(propA.Name);
-                dynamic A = (dynamic)propA.GetValue(oldStatus);
-                dynamic B = (dynamic)propB.GetValue(newStatus);
-                if(A != B)
+                dynamic A = propA.GetValue(oldStatus);
+                dynamic B = propB.GetValue(newStatus);
+                if (A == B) continue;
+                try
                 {
-                    try
-                    {
-                        StatusEvent e = new StatusEvent("Status." + propA.Name, B);
-                        api.Logger.Debug($"Processing status event '{propA.Name}' ({B})." + JsonConvert.SerializeObject(e));
-                        api.Events.InvokeAllEvent(new StatusEvent("Status." + propA.Name, B));
-                        try { api.Events.GetType().GetMethod("InvokeStatus" + propA.Name, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static).Invoke(api.Events, new object[] { e }); }
-                        catch (Exception ex) { api.Logger.Error($"Could not invoke status event '{propA.Name}', it might not have been added yet.", ex); }
-                    }
-                    catch(Exception ex) { api.Logger.Error("Could not do status.", ex); }
+                    StatusEvent e = new StatusEvent("Status." + propA.Name, B);
+                    api.Logger.Log(Severity.Debug, $"Setting status '{propA.Name}' to {Convert.ToString(B).ToLower()}.", e);
+                    api.Events.InvokeAllEvent(new StatusEvent("Status." + propA.Name, B));
+                    try { api.Events.GetType().GetMethod("InvokeStatus" + propA.Name, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static)?.Invoke(api.Events, new object[] { e }); }
+                    catch (Exception ex) { api.Logger.Log(Severity.Debug, $"Could not invoke status event '{propA.Name}'.", ex); }
                 }
+                catch(Exception ex) { api.Logger.Log(Severity.Error, "Could not do status.", ex); }
             }
         }
     }

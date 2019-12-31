@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyVersion>2.2.24.880</AssemblyVersion>
-    <FileVersion>2.2.24.880</FileVersion>
+    <AssemblyVersion>2.2.53.909</AssemblyVersion>
+    <FileVersion>2.2.53.909</FileVersion>
     <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
     <PackageIconUrl>https://i.imgur.com/keDXwjY.png</PackageIconUrl>
@@ -23,11 +23,6 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Costura.Fody" Version="4.1.0" />
-    <PackageReference Include="Fody" Version="6.0.5">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
     <PackageReference Include="ini-parser" Version="2.5.2" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
       <PrivateAssets>all</PrivateAssets>
@@ -35,13 +30,15 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Somfic" Version="1.0.3" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="DiscordRPC">
       <HintPath>..\lib\DiscordRPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Somfic">
+      <HintPath>..\..\Somfic\Somfic\bin\Debug\netstandard2.0\Somfic.dll</HintPath>
     </Reference>
     <Reference Include="vmAPI">
       <HintPath>..\lib\vmAPI.dll</HintPath>

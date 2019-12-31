@@ -619,5 +619,8 @@ namespace EliteAPI.Events
         //FSSSignalDiscovered
         public event EventHandler<FSSSignalDiscoveredInfo> FSSSignalDiscoveredEvent;
         internal FSSSignalDiscoveredInfo InvokeFSSSignalDiscoveredEvent(FSSSignalDiscoveredInfo arg) { FSSSignalDiscoveredEvent?.Invoke(null, arg); return arg; }
+        //SquadronStartup
+        public event EventHandler<SquadronStartupInfo> SquadronStartupEvent;
+        internal SquadronStartupInfo InvokeSquadronStartupEvent(SquadronStartupInfo arg) { SquadronStartupEvent?.Invoke(null, arg); return arg; }
     }
 }

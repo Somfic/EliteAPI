@@ -275,15 +275,23 @@ namespace EliteAPI
             {
                 if (JournalDirectory.FullName != StandardDirectory.FullName)
                 {
-                    Logger.Log(Severity.Warning, $"{JournalDirectory.Name} does not exist.", new DirectoryNotFoundException($"'{JournalDirectory.FullName}' could not be found."));
-                    Logger.Log(Severity.Debug, "Trying standard journal directory.");
+                    Logger.Log(Severity.Warning, $"{JournalDirectory.Name} does not exist.",
+                        new DirectoryNotFoundException($"'{JournalDirectory.FullName}' could not be found."));
+                    Logger.Log(Severity.Debug, "Trying standard journal directory instead.");
                 }
+
                 if (!Directory.Exists(EliteDangerousAPI.StandardDirectory.FullName))
                 {
-                    OnError?.Invoke(this, new Tuple<string, Exception>("The default journal directory does not exist on this machine. This error usually occurs when Elite: Dangerous hasn't been run on this machine yet.", new DirectoryNotFoundException($"'{StandardDirectory.FullName}' could not be found.")));
+                    OnError?.Invoke(this,
+                        new Tuple<string, Exception>(
+                            "The default journal directory does not exist on this machine. This error usually occurs when Elite: Dangerous hasn't been run on this machine yet.",
+                            new DirectoryNotFoundException($"'{StandardDirectory.FullName}' could not be found.")));
                     return;
                 }
+
+                JournalDirectory = StandardDirectory;
             }
+
             Logger.Log($"Journal directory set to '{JournalDirectory}'.");
 
             //Mark the API as running.
@@ -291,7 +299,7 @@ namespace EliteAPI
 
             //We'll process the journal one time first, to catch up.
             //Select the last edited Journal file.
-            FileInfo journalFile = null;
+            FileInfo journalFile;
 
             //Find the last edited Journal file.
             try

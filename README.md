@@ -1,7 +1,7 @@
 
 ## Check the [documentation](https://eliteapi.github.io/EliteAPI-docs/) for information on installation, usage and more.
 
-<img src="https://i.imgur.com/keDXwjY.png" align="right"
+<img src="https://github.com/EliteAPI/EliteAPI/blob/master/Icons/logo.jpg?raw=true" align="right"
      title="EliteAPI by Somfic" width="280" height="280">
 # EliteAPI
 A powerful event based API for [Elite: Dangerous](https://www.elitedangerous.com/) that hooks into the [Player Journal](http://edcodex.info/?m=doc) and other log files. Created by CMDR [Somfic](https://github.com/Somfic).

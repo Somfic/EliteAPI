@@ -3,7 +3,6 @@ using EliteAPI.Discord;
 using EliteAPI.Status;
 using Newtonsoft.Json;
 using Somfic.Logging;
-using Somfic.Logging.Handlers;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -206,9 +205,9 @@ namespace EliteAPI
         {
             Logger.Log(Severity.Debug, "Checking for updates from GitHub.");
 
+            WebClient webClient = new WebClient();
             try
             {
-                WebClient webClient = new WebClient();
                 WebClient versionChecker = webClient;
                 string latestVersionString = versionChecker.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI/versioncontrol.version").Trim();
 
@@ -226,6 +225,7 @@ namespace EliteAPI
                 if (hasBiggerVersion) { Logger.Log($"A new update ({latestVersionString}) is available. Visit github.com/EliteAPI/EliteAPI to download the latest version."); return true; } else { Logger.Log(Severity.Debug, "EliteAPI is up-to-date with the latest version."); }
             }
             catch (Exception ex) { Logger.Log(Severity.Debug, "Could not check for updates.", ex); }
+            finally { webClient.Dispose(); }
 
             return false;
         }
@@ -270,7 +270,7 @@ namespace EliteAPI
             //Check for updates.
             CheckForUpdate();
 
-            Logger.Log(Severity.Debug,"Checking journal directory.");
+            Logger.Log(Severity.Debug, "Checking journal directory.");
             if (!Directory.Exists(JournalDirectory.FullName))
             {
                 if (JournalDirectory.FullName != StandardDirectory.FullName)
@@ -420,7 +420,10 @@ namespace EliteAPI
             OnQuit?.Invoke(this, EventArgs.Empty);
         }
 
-        internal void TriggerOnLoad(string message, float percentage) => OnLoad?.Invoke(this, new Tuple<string, float>(message, percentage));
+        internal void TriggerOnLoad(string message, float percentage)
+        {
+            OnLoad?.Invoke(this, new Tuple<string, float>(message, percentage));
+        }
 
         /// <summary>
         /// Gets triggered when EliteAPI has successfully loaded up.

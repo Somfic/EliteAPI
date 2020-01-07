@@ -17,6 +17,8 @@ namespace Example
             EliteAPI = new EliteDangerousAPI();
             EliteAPI.Logger.AddHandler(new ConsoleHandler());
             EliteAPI.Logger.AddHandler(new LogFileHandler(Directory.GetCurrentDirectory(), "EliteAPI"));
+            EliteAPI.OnLoad += (sender, e) => EliteAPI.Logger.Log(e);
+
             EliteAPI.Start();
 
             Thread.Sleep(-1);

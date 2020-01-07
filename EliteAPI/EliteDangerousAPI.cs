@@ -369,7 +369,7 @@ namespace EliteAPI
                 {
                     //Select the last edited Journal file.
                     FileInfo newJournalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
-                    if (journalFile.FullName != newJournalFile.FullName) { Logger.Log(Severity.Debug, $"Switched to '{newJournalFile}'."); JournalParser.processedLogs.Clear(); }
+                    if (journalFile.FullName != newJournalFile.FullName) { Logger.Log(Severity.Info, $"Switched to '{newJournalFile}'."); JournalParser.processedLogs.Clear(); }
                     journalFile = newJournalFile;
 
                     //Process the journal file.

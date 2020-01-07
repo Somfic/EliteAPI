@@ -358,7 +358,7 @@ namespace EliteAPI
 
             //Process the journal file.
             if (!SkipCatchUp) { Logger.Log(Severity.Debug, "Catching up with past events from this session."); }
-            JournalParser.ProcessJournal(journalFile, SkipCatchUp, false);
+            JournalParser.ProcessJournal(journalFile, SkipCatchUp, false, true);
             if (!SkipCatchUp) { Logger.Log(Severity.Debug, "Catchup on past events completed."); }
 
             //Go async.
@@ -420,6 +420,8 @@ namespace EliteAPI
             OnQuit?.Invoke(this, EventArgs.Empty);
         }
 
+        internal void TriggerOnLoad(string message, float percentage) => OnLoad?.Invoke(this, new Tuple<string, float>(message, percentage));
+
         /// <summary>
         /// Gets triggered when EliteAPI has successfully loaded up.
         /// </summary>
@@ -434,5 +436,10 @@ namespace EliteAPI
         /// Gets triggered when EliteAPI could not successfully load up.
         /// </summary>
         public event EventHandler<Tuple<string, Exception>> OnError;
+
+        /// <summary>
+        /// Gets triggered when EliteAPI is starting up.
+        /// </summary>
+        public event EventHandler<Tuple<string, float>> OnLoad;
     }
 }

@@ -17,24 +17,32 @@ namespace EliteAPI
         }
         private readonly EliteDangerousAPI EliteAPI;
         internal List<string> processedLogs = new List<string>();
-        public void ProcessJournal(FileInfo logFile, bool doNotTrigger = true, bool printJson = true)
+        private int totalLines = 0;
+
+        public void ProcessJournal(FileInfo logFile, bool doNotTrigger = true, bool printJson = true, bool triggerOnLoad = false)
         {
             //Create a stream from the log file.
             FileStream fileStream = logFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             //Create a stream from the file stream.
             StreamReader streamReader = new StreamReader(fileStream);
+
+            if(triggerOnLoad) { totalLines = File.ReadAllLines(logFile.FullName).Length; }
+            int i = 0;
+
             //Go through the stream.
             while (!streamReader.EndOfStream)
             {
                 //If this string hasn't been processed yet, process it and mark it as processed.
+                string eventName = "";
                 string json = streamReader.ReadLine();
                 if (processedLogs.Contains(json)) continue;
-                if (!doNotTrigger) { ProcessJson(json, printJson); } //Only process it if it's marked true.
+                if (!doNotTrigger) { eventName = ProcessJson(json, printJson); } //Only process it if it's marked true.
                 processedLogs.Add(json);
+                if(triggerOnLoad) { EliteAPI.TriggerOnLoad(eventName, (float)i / totalLines); i++; }
             }
         }
 
-        private void ProcessJson(string json, bool printJson)
+        private string ProcessJson(string json, bool printJson)
         {
             dynamic obj = null;
             string eventName = "";
@@ -87,6 +95,8 @@ namespace EliteAPI
             //    missingFields = missingFields.Substring(0, missingFields.Length - 2) + " were missing";
             //    EliteAPI.Logger.LogEventEventDebug($"Not all fields were parsed for '{eventName}'.", new Exception(missingFields));
             //}
+
+            return eventName;
         }
     }
 }

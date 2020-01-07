@@ -6,9 +6,9 @@
     <FileVersion>2.3.0.0</FileVersion>
     <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
-    <PackageIconUrl>https://i.imgur.com/keDXwjY.png</PackageIconUrl>
+    <PackageIconUrl>https://github.com/EliteAPI/EliteAPI/blob/dev/Icons/logo.jpg</PackageIconUrl>
     <RepositoryType>Public</RepositoryType>
-    <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic</PackageTags>
+    <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic Frontier</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <Description>A powerful event based API for Elite: Dangerous.
 VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
@@ -24,7 +24,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
 
   <ItemGroup>
     <PackageReference Include="Costura.Fody" Version="4.1.0" />
-    <PackageReference Include="Fody" Version="6.0.5">
+    <PackageReference Include="Fody" Version="6.0.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

@@ -38,7 +38,8 @@ namespace EliteAPI
                 if (processedLogs.Contains(json)) continue;
                 if (!doNotTrigger) { eventName = ProcessJson(json, printJson); } //Only process it if it's marked true.
                 processedLogs.Add(json);
-                if(triggerOnLoad) { EliteAPI.TriggerOnLoad(eventName, (float)i / totalLines); i++; }
+                if (!triggerOnLoad) continue;
+                i++; EliteAPI.TriggerOnLoad(eventName, (float)i / totalLines);
             }
         }
 

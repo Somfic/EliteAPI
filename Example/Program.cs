@@ -17,6 +17,7 @@ namespace Example
             EliteAPI = new EliteDangerousAPI();
             EliteAPI.Logger.AddHandler(new ConsoleHandler());
             EliteAPI.Logger.SetAllowedLevels(Severity.Info | Severity.Warning | Severity.Error);
+          
             EliteAPI.Start();
             EliteAPI.Events.MarketSellEvent += Events_MarketSellEvent;
 

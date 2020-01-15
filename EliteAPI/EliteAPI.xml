@@ -312,6 +312,11 @@
             Gets triggered when EliteAPI could not successfully load up.
             </summary>
         </member>
+        <member name="E:EliteAPI.EliteDangerousAPI.OnLoad">
+            <summary>
+            Gets triggered when EliteAPI is starting up.
+            </summary>
+        </member>
         <member name="P:EliteAPI.Events.AfmuRepairsInfo.Module">
             <summary>
             The name of the module

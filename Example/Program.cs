@@ -16,11 +16,17 @@ namespace Example
         {
             EliteAPI = new EliteDangerousAPI();
             EliteAPI.Logger.AddHandler(new ConsoleHandler());
-            EliteAPI.Logger.AddHandler(new LogFileHandler(Directory.GetCurrentDirectory(), "EliteAPI"));
-            EliteAPI.ChangeJournal(new DirectoryInfo("x"));
+            EliteAPI.Logger.SetAllowedLevels(Severity.Info | Severity.Warning | Severity.Error);
+          
             EliteAPI.Start();
+            EliteAPI.Events.MarketSellEvent += Events_MarketSellEvent;
 
             Thread.Sleep(-1);
+        }
+
+        private static void Events_MarketSellEvent(object sender, EliteAPI.Events.MarketSellInfo eventArg)
+        {
+            EliteAPI.Logger.Log("MarketSell event has been triggered", eventArg);
         }
     }
 }

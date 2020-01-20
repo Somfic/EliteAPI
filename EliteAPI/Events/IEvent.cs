@@ -8,7 +8,7 @@ namespace EliteAPI.Events
 
     }
 
-    public abstract class EventBase : EventBase
+    public abstract class EventBase : IEvent
     {
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; protected set; }

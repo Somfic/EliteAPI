@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    public class Active
+    public class ActiveMission
     {
         [JsonProperty("MissionID")]
         public long MissionId { get; internal set; }

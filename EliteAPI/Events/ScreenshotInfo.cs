@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class ScreenshotInfo : IEvent
+    public class ScreenshotInfo : EventBase
     {
         internal static ScreenshotInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeScreenshotEvent(JsonConvert.DeserializeObject<ScreenshotInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Filename")]
         public string Filename { get; internal set; }
         [JsonProperty("Width")]

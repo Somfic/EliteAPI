@@ -5,7 +5,7 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class LeftSquadronInfo : IEvent
+    public class LeftSquadronInfo : EventBase
     {
         internal static LeftSquadronInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLeftSquadronEvent(JsonConvert.DeserializeObject<LeftSquadronInfo>(json, JsonSettings.Settings));
 

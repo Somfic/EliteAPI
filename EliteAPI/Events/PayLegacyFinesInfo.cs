@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class PayLegacyFinesInfo : IEvent
+    public class PayLegacyFinesInfo : EventBase
     {
         internal static PayLegacyFinesInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePayLegacyFinesEvent(JsonConvert.DeserializeObject<PayLegacyFinesInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Amount")]
         public long Amount { get; internal set; }
         [JsonProperty("BrokerPercentage")]

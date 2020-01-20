@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class DiscoveryScanInfo : IEvent
+    public class DiscoveryScanInfo : EventBase
     {
         internal static DiscoveryScanInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDiscoveryScanEvent(JsonConvert.DeserializeObject<DiscoveryScanInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("SystemAddress")]
         public long SystemAddress { get; internal set; }
         [JsonProperty("Bodies")]

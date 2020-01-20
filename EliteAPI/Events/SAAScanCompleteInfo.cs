@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class SAAScanCompleteInfo : IEvent
+    public class SAAScanCompleteInfo : EventBase
     {
         internal static SAAScanCompleteInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSAAScanCompleteEvent(JsonConvert.DeserializeObject<SAAScanCompleteInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("BodyName")]
         public string BodyName { get; internal set; }
         [JsonProperty("BodyID")]

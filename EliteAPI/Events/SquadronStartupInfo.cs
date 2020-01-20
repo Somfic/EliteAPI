@@ -5,7 +5,7 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class SquadronStartupInfo : IEvent
+    public class SquadronStartupInfo : EventBase
     {
         internal static SquadronStartupInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSquadronStartupEvent(JsonConvert.DeserializeObject<SquadronStartupInfo>(json, JsonSettings.Settings));
 

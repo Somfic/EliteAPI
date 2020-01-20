@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class CodexEntryInfo : IEvent
+    public class CodexEntryInfo : EventBase
     {
         internal static CodexEntryInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCodexEntryEvent(JsonConvert.DeserializeObject<CodexEntryInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("EntryID")]
         public long EntryId { get; internal set; }
         [JsonProperty("Name")]

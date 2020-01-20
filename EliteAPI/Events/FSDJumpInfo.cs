@@ -5,14 +5,10 @@ namespace EliteAPI.Events
 {
     using Newtonsoft.Json;
 
-    public class FSDJumpInfo : IEvent
+    public class FSDJumpInfo : EventBase
     {
         internal static FSDJumpInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFSDJumpEvent(JsonConvert.DeserializeObject<FSDJumpInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("StarSystem")]
         public string StarSystem { get; internal set; }
         [JsonProperty("SystemAddress")]

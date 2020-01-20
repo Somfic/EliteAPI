@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class DockingDeniedInfo : IEvent
+    public class DockingDeniedInfo : EventBase
     {
         internal static DockingDeniedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockingDeniedEvent(JsonConvert.DeserializeObject<DockingDeniedInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Reason")]
         public string Reason { get; internal set; }
         [JsonProperty("MarketID")]

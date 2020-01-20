@@ -5,7 +5,7 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class ReservoirReplenishedInfo : IEvent
+    public class ReservoirReplenishedInfo : EventBase
     {
         internal static ReservoirReplenishedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeReservoirReplenishedEvent(JsonConvert.DeserializeObject<ReservoirReplenishedInfo>(json, JsonSettings.Settings));
 

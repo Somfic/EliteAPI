@@ -5,14 +5,10 @@ namespace EliteAPI.Events
 {
     using Newtonsoft.Json;
 
-    public class SellExplorationDataInfo : IEvent
+    public class SellExplorationDataInfo : EventBase
     {
         internal static SellExplorationDataInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSellExplorationDataEvent(JsonConvert.DeserializeObject<SellExplorationDataInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Systems")]
         public List<string> Systems { get; internal set; }
         [JsonProperty("Discovered")]

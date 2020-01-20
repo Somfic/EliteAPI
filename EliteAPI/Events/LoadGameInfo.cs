@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class LoadGameInfo : IEvent
+    public class LoadGameInfo : EventBase
     {
         internal static LoadGameInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLoadGameEvent(JsonConvert.DeserializeObject<LoadGameInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("FID")]
         public string Fid { get; internal set; }
         [JsonProperty("Commander")]

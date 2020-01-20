@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class PVPKillInfo : IEvent
+    public class PVPKillInfo : EventBase
     {
         internal static PVPKillInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePVPKillEvent(JsonConvert.DeserializeObject<PVPKillInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Victim")]
         public string Victim { get; internal set; }
         [JsonProperty("CombatRank")]

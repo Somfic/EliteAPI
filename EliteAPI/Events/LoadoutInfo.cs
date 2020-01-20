@@ -5,14 +5,10 @@ namespace EliteAPI.Events
 {
     using Newtonsoft.Json;
 
-    public class LoadoutInfo : IEvent
+    public class LoadoutInfo : EventBase
     {
         internal static LoadoutInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLoadoutEvent(JsonConvert.DeserializeObject<LoadoutInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Ship")]
         public string Ship { get; internal set; }
         [JsonProperty("ShipID")]

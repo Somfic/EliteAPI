@@ -5,14 +5,10 @@ namespace EliteAPI.Events
 {
     using Newtonsoft.Json;
 
-    public class ScanInfo : IEvent
+    public class ScanInfo : EventBase
     {
         internal static ScanInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeScanEvent(JsonConvert.DeserializeObject<ScanInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("ScanType")]
         public string ScanType { get; internal set; }
         [JsonProperty("BodyName")]

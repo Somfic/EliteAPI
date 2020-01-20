@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class RefuelAllInfo : IEvent
+    public class RefuelAllInfo : EventBase
     {
         internal static RefuelAllInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRefuelAllEvent(JsonConvert.DeserializeObject<RefuelAllInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Cost")]
         public long Cost { get; internal set; }
         [JsonProperty("Amount")]

@@ -5,14 +5,10 @@ namespace EliteAPI.Events
 {
     using Newtonsoft.Json;
 
-    public class WingJoinInfo : IEvent
+    public class WingJoinInfo : EventBase
     {
         internal static WingJoinInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeWingJoinEvent(JsonConvert.DeserializeObject<WingJoinInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Others")]
         public List<string> Others { get; internal set; }
     }

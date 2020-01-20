@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class CrewHireInfo : IEvent
+    public class CrewHireInfo : EventBase
     {
         internal static CrewHireInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCrewHireEvent(JsonConvert.DeserializeObject<CrewHireInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Name")]
         public string Name { get; internal set; }
         [JsonProperty("CrewID")]

@@ -5,14 +5,10 @@ namespace EliteAPI.Events
 {
     using Newtonsoft.Json;
 
-    public class StoredModulesInfo : IEvent
+    public class StoredModulesInfo : EventBase
     {
         internal static StoredModulesInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeStoredModulesEvent(JsonConvert.DeserializeObject<StoredModulesInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("MarketID")]
         public long MarketId { get; internal set; }
         [JsonProperty("StationName")]

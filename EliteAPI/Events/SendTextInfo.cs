@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class SendTextInfo : IEvent
+    public class SendTextInfo : EventBase
     {
         internal static SendTextInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSendTextEvent(JsonConvert.DeserializeObject<SendTextInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("To")]
         public string To { get; internal set; }
         [JsonProperty("To_Localised")]

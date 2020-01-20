@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class MaterialCollectedInfo : IEvent
+    public class MaterialCollectedInfo : EventBase
     {
         internal static MaterialCollectedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMaterialCollectedEvent(JsonConvert.DeserializeObject<MaterialCollectedInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Category")]
         public string Category { get; internal set; }
         [JsonProperty("Name")]

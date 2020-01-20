@@ -5,14 +5,10 @@ namespace EliteAPI.Events
 {
     using Newtonsoft.Json;
 
-    public class RebootRepairInfo : IEvent
+    public class RebootRepairInfo : EventBase
     {
         internal static RebootRepairInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRebootRepairEvent(JsonConvert.DeserializeObject<RebootRepairInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Modules")]
         public List<string> Modules { get; internal set; }
     }

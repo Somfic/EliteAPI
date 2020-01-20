@@ -4,14 +4,10 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    public class StatisticsInfo : IEvent
+    public class StatisticsInfo : EventBase
     {
         internal static StatisticsInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeStatisticsEvent(JsonConvert.DeserializeObject<StatisticsInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Bank_Account")]
         public Dictionary<string, long> BankAccount { get; internal set; }
         [JsonProperty("Combat")]

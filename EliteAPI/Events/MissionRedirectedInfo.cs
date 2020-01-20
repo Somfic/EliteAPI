@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class MissionRedirectedInfo : IEvent
+    public class MissionRedirectedInfo : EventBase
     {
         internal static MissionRedirectedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMissionRedirectedEvent(JsonConvert.DeserializeObject<MissionRedirectedInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("MissionID")]
         public long MissionId { get; internal set; }
         [JsonProperty("Name")]

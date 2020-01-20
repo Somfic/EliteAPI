@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class UndockedInfo : IEvent
+    public class UndockedInfo : EventBase
     {
         internal static UndockedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeUndockedEvent(JsonConvert.DeserializeObject<UndockedInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("StationName")]
         public string StationName { get; internal set; }
         [JsonProperty("StationType")]

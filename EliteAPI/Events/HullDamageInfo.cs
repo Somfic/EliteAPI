@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class HullDamageInfo : IEvent
+    public class HullDamageInfo : EventBase
     {
         internal static HullDamageInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeHullDamageEvent(JsonConvert.DeserializeObject<HullDamageInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Health")]
         public double Health { get; internal set; }
         [JsonProperty("PlayerPilot")]

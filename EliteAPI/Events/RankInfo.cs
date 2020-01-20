@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class RankInfo : IEvent
+    public class RankInfo : EventBase
     {
         internal static RankInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRankEvent(JsonConvert.DeserializeObject<RankInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Combat")]
         public long Combat { get; internal set; }
         [JsonProperty("Trade")]

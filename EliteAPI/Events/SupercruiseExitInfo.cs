@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class SupercruiseExitInfo : IEvent
+    public class SupercruiseExitInfo : EventBase
     {
         internal static SupercruiseExitInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSupercruiseExitEvent(JsonConvert.DeserializeObject<SupercruiseExitInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("StarSystem")]
         public string StarSystem { get; internal set; }
         [JsonProperty("SystemAddress")]

@@ -3,14 +3,10 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    public class LeaveBodyInfo : IEvent
+    public class LeaveBodyInfo : EventBase
     {
         internal static LeaveBodyInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLeaveBodyEvent(JsonConvert.DeserializeObject<LeaveBodyInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("StarSystem")]
         public string StarSystem { get; internal set; }
         [JsonProperty("SystemAddress")]

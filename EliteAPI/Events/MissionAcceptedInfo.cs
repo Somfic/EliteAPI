@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class MissionAcceptedInfo : IEvent
+    public class MissionAcceptedInfo : EventBase
     {
         internal static MissionAcceptedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMissionAcceptedEvent(JsonConvert.DeserializeObject<MissionAcceptedInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Faction")]
         public string Faction { get; internal set; }
         [JsonProperty("Name")]

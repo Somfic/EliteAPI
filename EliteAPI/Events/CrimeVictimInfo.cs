@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class CrimeVictimInfo : IEvent
+    public class CrimeVictimInfo : EventBase
     {
         internal static CrimeVictimInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCrimeVictimEvent(JsonConvert.DeserializeObject<CrimeVictimInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Offender")]
         public string Offender { get; internal set; }
         [JsonProperty("CrimeType")]

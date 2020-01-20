@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class CommanderInfo : IEvent
+    public class CommanderInfo : EventBase
     {
         internal static CommanderInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCommanderEvent(JsonConvert.DeserializeObject<CommanderInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("FID")]
         public string Fid { get; internal set; }
         [JsonProperty("Name")]

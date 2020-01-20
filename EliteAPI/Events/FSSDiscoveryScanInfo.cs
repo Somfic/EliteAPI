@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class FSSDiscoveryScanInfo : IEvent
+    public class FSSDiscoveryScanInfo : EventBase
     {
         internal static FSSDiscoveryScanInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFSSDiscoveryScanEvent(JsonConvert.DeserializeObject<FSSDiscoveryScanInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Progress")]
         public double Progress { get; internal set; }
         [JsonProperty("BodyCount")]

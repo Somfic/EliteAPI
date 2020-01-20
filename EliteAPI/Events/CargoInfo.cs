@@ -5,14 +5,10 @@ namespace EliteAPI.Events
 {
     using Newtonsoft.Json;
 
-    public class CargoInfo : IEvent
+    public class CargoInfo : EventBase
     {
         internal static CargoInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCargoEvent(JsonConvert.DeserializeObject<CargoInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Vessel")]
         public string Vessel { get; internal set; }
         [JsonProperty("Count")]

@@ -5,7 +5,7 @@ namespace EliteAPI.Events
 {
     using Newtonsoft.Json;
 
-    public class LocationInfo : IEvent
+    public class LocationInfo : EventBase
     {
         internal static LocationInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLocationEvent(JsonConvert.DeserializeObject<LocationInfo>(json, JsonSettings.Settings));
 

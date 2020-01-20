@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class CollectCargoInfo : IEvent
+    public class CollectCargoInfo : EventBase
     {
         internal static CollectCargoInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCollectCargoEvent(JsonConvert.DeserializeObject<CollectCargoInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Type")]
         public string Type { get; internal set; }
         [JsonProperty("Type_Localised")]

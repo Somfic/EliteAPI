@@ -5,7 +5,7 @@ namespace EliteAPI.Events
 {
     using Newtonsoft.Json;
 
-    public class DockedInfo : IEvent
+    public class DockedInfo : EventBase
     {
         internal static DockedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockedEvent(JsonConvert.DeserializeObject<DockedInfo>(json, JsonSettings.Settings));
 

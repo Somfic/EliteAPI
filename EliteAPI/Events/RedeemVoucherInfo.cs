@@ -4,14 +4,10 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    public class RedeemVoucherInfo : IEvent
+    public class RedeemVoucherInfo : EventBase
     {
         internal static RedeemVoucherInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRedeemVoucherEvent(JsonConvert.DeserializeObject<RedeemVoucherInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Type")]
         public string Type { get; internal set; }
         [JsonProperty("Amount")]

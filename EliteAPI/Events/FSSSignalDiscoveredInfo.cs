@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class FSSSignalDiscoveredInfo : IEvent
+    public class FSSSignalDiscoveredInfo : EventBase
     {
         internal static FSSSignalDiscoveredInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFSSSignalDiscoveredEvent(JsonConvert.DeserializeObject<FSSSignalDiscoveredInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("SystemAddress")]
         public long SystemAddress { get; internal set; }
         [JsonProperty("SignalName")]

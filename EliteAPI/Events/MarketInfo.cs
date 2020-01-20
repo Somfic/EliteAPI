@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class MarketInfo : IEvent
+    public class MarketInfo : EventBase
     {
         internal static MarketInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMarketEvent(JsonConvert.DeserializeObject<MarketInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("MarketID")]
         public long MarketId { get; internal set; }
         [JsonProperty("StationName")]

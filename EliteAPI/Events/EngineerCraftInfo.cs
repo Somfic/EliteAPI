@@ -5,14 +5,10 @@ namespace EliteAPI.Events
 {
     using Newtonsoft.Json;
 
-    public class EngineerCraftInfo : IEvent
+    public class EngineerCraftInfo : EventBase
     {
         internal static EngineerCraftInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeEngineerCraftEvent(JsonConvert.DeserializeObject<EngineerCraftInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Slot")]
         public string Slot { get; internal set; }
         [JsonProperty("Module")]

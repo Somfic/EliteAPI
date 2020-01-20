@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class PowerplayCollectInfo : IEvent
+    public class PowerplayCollectInfo : EventBase
     {
         internal static PowerplayCollectInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayCollectEvent(JsonConvert.DeserializeObject<PowerplayCollectInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Power")]
         public string Power { get; internal set; }
         [JsonProperty("Type")]

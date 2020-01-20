@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class ApproachBodyInfo : IEvent
+    public class ApproachBodyInfo : EventBase
     {
         internal static ApproachBodyInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeApproachBodyEvent(JsonConvert.DeserializeObject<ApproachBodyInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("StarSystem")]
         public string StarSystem { get; internal set; }
         [JsonProperty("SystemAddress")]

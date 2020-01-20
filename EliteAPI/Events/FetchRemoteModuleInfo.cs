@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class FetchRemoteModuleInfo : IEvent
+    public class FetchRemoteModuleInfo : EventBase
     {
         internal static FetchRemoteModuleInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFetchRemoteModuleEvent(JsonConvert.DeserializeObject<FetchRemoteModuleInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("StorageSlot")]
         public long StorageSlot { get; internal set; }
         [JsonProperty("StoredItem")]

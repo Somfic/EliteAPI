@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace EliteAPI.Events
 {
-    public class StatusEvent : IEvent
+    public class StatusEvent : EventBase
     {
         public StatusEvent(string Event, dynamic Value)
         {

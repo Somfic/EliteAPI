@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class ShipyardTransferInfo : IEvent
+    public class ShipyardTransferInfo : EventBase
     {
         internal static ShipyardTransferInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeShipyardTransferEvent(JsonConvert.DeserializeObject<ShipyardTransferInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("ShipType")]
         public string ShipType { get; internal set; }
         [JsonProperty("ShipType_Localised")]

@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class ShipTargetedInfo : IEvent
+    public class ShipTargetedInfo : EventBase
     {
         internal static ShipTargetedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeShipTargetedEvent(JsonConvert.DeserializeObject<ShipTargetedInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("TargetLocked")]
         public bool TargetLocked { get; internal set; }
         [JsonProperty("Ship")]

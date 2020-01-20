@@ -5,14 +5,10 @@ namespace EliteAPI.Events
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class ReputationInfo : IEvent
+    public class ReputationInfo : EventBase
     {
         internal static ReputationInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeReputationEvent(JsonConvert.DeserializeObject<ReputationInfo>(json, JsonSettings.Settings));
 
-        [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; internal set; }
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
         [JsonProperty("Empire")]
         public double Empire { get; internal set; }
         [JsonProperty("Federation")]

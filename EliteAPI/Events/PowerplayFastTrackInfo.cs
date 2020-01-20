@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class PowerplayFastTrackInfo : IEvent
     {
-        internal static PowerplayFastTrackInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayFastTrackEvent(JsonConvert.DeserializeObject<PowerplayFastTrackInfo>(json, EliteAPI.Events.PowerplayFastTrackConverter.Settings));
+        internal static PowerplayFastTrackInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayFastTrackEvent(JsonConvert.DeserializeObject<PowerplayFastTrackInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

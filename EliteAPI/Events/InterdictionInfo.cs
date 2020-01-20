@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class InterdictionInfo : IEvent
     {
-        internal static InterdictionInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeInterdictionEvent(JsonConvert.DeserializeObject<InterdictionInfo>(json, EliteAPI.Events.InterdictionConverter.Settings));
+        internal static InterdictionInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeInterdictionEvent(JsonConvert.DeserializeObject<InterdictionInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

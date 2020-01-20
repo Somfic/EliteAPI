@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class PVPKillInfo : IEvent
     {
-        internal static PVPKillInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePVPKillEvent(JsonConvert.DeserializeObject<PVPKillInfo>(json, EliteAPI.Events.PVPKillConverter.Settings));
+        internal static PVPKillInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePVPKillEvent(JsonConvert.DeserializeObject<PVPKillInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

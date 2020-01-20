@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class RankInfo : IEvent
     {
-        internal static RankInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRankEvent(JsonConvert.DeserializeObject<RankInfo>(json, EliteAPI.Events.RankConverter.Settings));
+        internal static RankInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeRankEvent(JsonConvert.DeserializeObject<RankInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

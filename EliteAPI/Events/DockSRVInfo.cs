@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class DockSRVInfo : IEvent
     {
-        internal static DockSRVInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockSRVEvent(JsonConvert.DeserializeObject<DockSRVInfo>(json, EliteAPI.Events.DockSRVConverter.Settings));
+        internal static DockSRVInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockSRVEvent(JsonConvert.DeserializeObject<DockSRVInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

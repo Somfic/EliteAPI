@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class ReservoirReplenishedInfo : IEvent
     {
-        internal static ReservoirReplenishedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeReservoirReplenishedEvent(JsonConvert.DeserializeObject<ReservoirReplenishedInfo>(json, EliteAPI.Events.ReservoirReplenishedConverter.Settings));
+        internal static ReservoirReplenishedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeReservoirReplenishedEvent(JsonConvert.DeserializeObject<ReservoirReplenishedInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; set; }

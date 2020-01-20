@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class LeftSquadronInfo : IEvent
     {
-        internal static LeftSquadronInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLeftSquadronEvent(JsonConvert.DeserializeObject<LeftSquadronInfo>(json, EliteAPI.Events.LeftSquadronConverter.Settings));
+        internal static LeftSquadronInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLeftSquadronEvent(JsonConvert.DeserializeObject<LeftSquadronInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; internal set; }

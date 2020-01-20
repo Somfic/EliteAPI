@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class SearchAndRescueInfo : IEvent
     {
-        internal static SearchAndRescueInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSearchAndRescueEvent(JsonConvert.DeserializeObject<SearchAndRescueInfo>(json, EliteAPI.Events.SearchAndRescueConverter.Settings));
+        internal static SearchAndRescueInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSearchAndRescueEvent(JsonConvert.DeserializeObject<SearchAndRescueInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class StartJumpInfo : IEvent
     {
-        internal static StartJumpInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeStartJumpEvent(JsonConvert.DeserializeObject<StartJumpInfo>(json, EliteAPI.Events.StartJumpConverter.Settings));
+        internal static StartJumpInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeStartJumpEvent(JsonConvert.DeserializeObject<StartJumpInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

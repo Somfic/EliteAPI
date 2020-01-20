@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class ShipyardInfo : IEvent
     {
-        internal static ShipyardInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeShipyardEvent(JsonConvert.DeserializeObject<ShipyardInfo>(json, EliteAPI.Events.ShipyardConverter.Settings));
+        internal static ShipyardInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeShipyardEvent(JsonConvert.DeserializeObject<ShipyardInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

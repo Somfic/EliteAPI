@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class FSSSignalDiscoveredInfo : IEvent
     {
-        internal static FSSSignalDiscoveredInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFSSSignalDiscoveredEvent(JsonConvert.DeserializeObject<FSSSignalDiscoveredInfo>(json, EliteAPI.Events.FSSSignalDiscoveredConverter.Settings));
+        internal static FSSSignalDiscoveredInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFSSSignalDiscoveredEvent(JsonConvert.DeserializeObject<FSSSignalDiscoveredInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

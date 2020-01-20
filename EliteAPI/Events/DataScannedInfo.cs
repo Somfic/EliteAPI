@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class DataScannedInfo : IEvent
     {
-        internal static DataScannedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDataScannedEvent(JsonConvert.DeserializeObject<DataScannedInfo>(json, EliteAPI.Events.DataScannedConverter.Settings));
+        internal static DataScannedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDataScannedEvent(JsonConvert.DeserializeObject<DataScannedInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

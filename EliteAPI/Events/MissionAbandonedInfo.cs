@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class MissionAbandonedInfo : IEvent
     {
-        internal static MissionAbandonedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMissionAbandonedEvent(JsonConvert.DeserializeObject<MissionAbandonedInfo>(json, EliteAPI.Events.MissionAbandonedConverter.Settings));
+        internal static MissionAbandonedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMissionAbandonedEvent(JsonConvert.DeserializeObject<MissionAbandonedInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

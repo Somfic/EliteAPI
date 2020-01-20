@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class TouchdownInfo : IEvent
     {
-        internal static TouchdownInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeTouchdownEvent(JsonConvert.DeserializeObject<TouchdownInfo>(json, EliteAPI.Events.TouchdownConverter.Settings));
+        internal static TouchdownInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeTouchdownEvent(JsonConvert.DeserializeObject<TouchdownInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

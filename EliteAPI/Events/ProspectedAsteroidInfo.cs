@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class ProspectedAsteroidInfo
     {
-        internal static ProspectedAsteroidInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeProspectedAsteroidEvent(JsonConvert.DeserializeObject<ProspectedAsteroidInfo>(json, EliteAPI.Events.ProspectedAsteroidConverter.Settings));
+        internal static ProspectedAsteroidInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeProspectedAsteroidEvent(JsonConvert.DeserializeObject<ProspectedAsteroidInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; set; }

@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class MusicInfo : IEvent
     {
-        internal static MusicInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMusicEvent(JsonConvert.DeserializeObject<MusicInfo>(json, EliteAPI.Events.MusicConverter.Settings));
+        internal static MusicInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMusicEvent(JsonConvert.DeserializeObject<MusicInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

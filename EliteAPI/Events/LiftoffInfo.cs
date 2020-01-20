@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class LiftoffInfo : IEvent
     {
-        internal static LiftoffInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLiftoffEvent(JsonConvert.DeserializeObject<LiftoffInfo>(json, EliteAPI.Events.LiftoffConverter.Settings));
+        internal static LiftoffInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLiftoffEvent(JsonConvert.DeserializeObject<LiftoffInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class MiningRefinedInfo : IEvent
     {
-        internal static MiningRefinedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMiningRefinedEvent(JsonConvert.DeserializeObject<MiningRefinedInfo>(json, EliteAPI.Events.MiningRefinedConverter.Settings));
+        internal static MiningRefinedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMiningRefinedEvent(JsonConvert.DeserializeObject<MiningRefinedInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

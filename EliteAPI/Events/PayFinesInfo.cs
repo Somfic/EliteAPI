@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class PayFinesInfo : IEvent
     {
-        internal static PayFinesInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePayFinesEvent(JsonConvert.DeserializeObject<PayFinesInfo>(json, EliteAPI.Events.PayFinesConverter.Settings));
+        internal static PayFinesInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePayFinesEvent(JsonConvert.DeserializeObject<PayFinesInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

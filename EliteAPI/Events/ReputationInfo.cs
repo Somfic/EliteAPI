@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class ReputationInfo : IEvent
     {
-        internal static ReputationInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeReputationEvent(JsonConvert.DeserializeObject<ReputationInfo>(json, EliteAPI.Events.ReputationConverter.Settings));
+        internal static ReputationInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeReputationEvent(JsonConvert.DeserializeObject<ReputationInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class CrewHireInfo : IEvent
     {
-        internal static CrewHireInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCrewHireEvent(JsonConvert.DeserializeObject<CrewHireInfo>(json, EliteAPI.Events.CrewHireConverter.Settings));
+        internal static CrewHireInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeCrewHireEvent(JsonConvert.DeserializeObject<CrewHireInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

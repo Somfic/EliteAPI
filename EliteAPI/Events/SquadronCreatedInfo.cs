@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class SquadronCreatedInfo : IEvent
     {
-        internal static SquadronCreatedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSquadronCreatedEvent(JsonConvert.DeserializeObject<SquadronCreatedInfo>(json, EliteAPI.Events.SquadronCreatedConverter.Settings));
+        internal static SquadronCreatedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSquadronCreatedEvent(JsonConvert.DeserializeObject<SquadronCreatedInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

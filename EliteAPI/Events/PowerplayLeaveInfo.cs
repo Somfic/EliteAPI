@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class PowerplayLeaveInfo : IEvent
     {
-        internal static PowerplayLeaveInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayLeaveEvent(JsonConvert.DeserializeObject<PowerplayLeaveInfo>(json, EliteAPI.Events.PowerplayLeaveConverter.Settings));
+        internal static PowerplayLeaveInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayLeaveEvent(JsonConvert.DeserializeObject<PowerplayLeaveInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

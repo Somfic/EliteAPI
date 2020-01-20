@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class MarketBuyInfo : IEvent
     {
-        internal static MarketBuyInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMarketBuyEvent(JsonConvert.DeserializeObject<MarketBuyInfo>(json, EliteAPI.Events.MarketBuyConverter.Settings));
+        internal static MarketBuyInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeMarketBuyEvent(JsonConvert.DeserializeObject<MarketBuyInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

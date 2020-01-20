@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class DockedInfo : IEvent
     {
-        internal static DockedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockedEvent(JsonConvert.DeserializeObject<DockedInfo>(json, EliteAPI.Events.DockedConverter.Settings));
+        internal static DockedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockedEvent(JsonConvert.DeserializeObject<DockedInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; internal set; }

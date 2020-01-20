@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class FileheaderInfo : IEvent
     {
-        internal static FileheaderInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFileheaderEvent(JsonConvert.DeserializeObject<FileheaderInfo>(json, EliteAPI.Events.FileheaderConverter.Settings));
+        internal static FileheaderInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFileheaderEvent(JsonConvert.DeserializeObject<FileheaderInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

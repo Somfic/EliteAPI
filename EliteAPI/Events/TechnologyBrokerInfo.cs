@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class TechnologyBrokerInfo : IEvent
     {
-        internal static TechnologyBrokerInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeTechnologyBrokerEvent(JsonConvert.DeserializeObject<TechnologyBrokerInfo>(json, EliteAPI.Events.TechnologyBrokerConverter.Settings));
+        internal static TechnologyBrokerInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeTechnologyBrokerEvent(JsonConvert.DeserializeObject<TechnologyBrokerInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

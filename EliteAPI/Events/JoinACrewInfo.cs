@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class JoinACrewInfo : IEvent
     {
-        internal static JoinACrewInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeJoinACrewEvent(JsonConvert.DeserializeObject<JoinACrewInfo>(json, EliteAPI.Events.JoinACrewConverter.Settings));
+        internal static JoinACrewInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeJoinACrewEvent(JsonConvert.DeserializeObject<JoinACrewInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class LocationInfo : IEvent
     {
-        internal static LocationInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLocationEvent(JsonConvert.DeserializeObject<LocationInfo>(json, EliteAPI.Events.LocationConverter.Settings));
+        internal static LocationInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLocationEvent(JsonConvert.DeserializeObject<LocationInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; internal set; }

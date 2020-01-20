@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class FSSAllBodiesFoundInfo : IEvent
     {
-        internal static FSSAllBodiesFoundInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFSSAllBodiesFoundEvent(JsonConvert.DeserializeObject<FSSAllBodiesFoundInfo>(json, EliteAPI.Events.FSSAllBodiesFoundConverter.Settings));
+        internal static FSSAllBodiesFoundInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeFSSAllBodiesFoundEvent(JsonConvert.DeserializeObject<FSSAllBodiesFoundInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

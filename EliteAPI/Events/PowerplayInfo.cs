@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class PowerplayInfo : IEvent
     {
-        internal static PowerplayInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayEvent(JsonConvert.DeserializeObject<PowerplayInfo>(json, EliteAPI.Events.PowerplayConverter.Settings));
+        internal static PowerplayInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayEvent(JsonConvert.DeserializeObject<PowerplayInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

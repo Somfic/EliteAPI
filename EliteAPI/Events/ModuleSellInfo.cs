@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class ModuleSellInfo : IEvent
     {
-        internal static ModuleSellInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeModuleSellEvent(JsonConvert.DeserializeObject<ModuleSellInfo>(json, EliteAPI.Events.ModuleSellConverter.Settings));
+        internal static ModuleSellInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeModuleSellEvent(JsonConvert.DeserializeObject<ModuleSellInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

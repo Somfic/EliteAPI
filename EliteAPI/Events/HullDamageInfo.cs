@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class HullDamageInfo : IEvent
     {
-        internal static HullDamageInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeHullDamageEvent(JsonConvert.DeserializeObject<HullDamageInfo>(json, EliteAPI.Events.HullDamageConverter.Settings));
+        internal static HullDamageInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeHullDamageEvent(JsonConvert.DeserializeObject<HullDamageInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

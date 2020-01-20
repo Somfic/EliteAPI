@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class JetConeBoostInfo : IEvent
     {
-        internal static JetConeBoostInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeJetConeBoostEvent(JsonConvert.DeserializeObject<JetConeBoostInfo>(json, EliteAPI.Events.JetConeBoostConverter.Settings));
+        internal static JetConeBoostInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeJetConeBoostEvent(JsonConvert.DeserializeObject<JetConeBoostInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

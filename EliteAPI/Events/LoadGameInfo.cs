@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class LoadGameInfo : IEvent
     {
-        internal static LoadGameInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLoadGameEvent(JsonConvert.DeserializeObject<LoadGameInfo>(json, EliteAPI.Events.LoadGameConverter.Settings));
+        internal static LoadGameInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeLoadGameEvent(JsonConvert.DeserializeObject<LoadGameInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

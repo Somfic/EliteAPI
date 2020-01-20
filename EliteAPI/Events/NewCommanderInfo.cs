@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class NewCommanderInfo : IEvent
     {
-        internal static NewCommanderInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeNewCommanderEvent(JsonConvert.DeserializeObject<NewCommanderInfo>(json, EliteAPI.Events.NewCommanderConverter.Settings));
+        internal static NewCommanderInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeNewCommanderEvent(JsonConvert.DeserializeObject<NewCommanderInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

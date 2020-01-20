@@ -7,7 +7,7 @@ namespace EliteAPI.Events
 
     public class OutfittingInfo : IEvent
     {
-        internal static OutfittingInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeOutfittingEvent(JsonConvert.DeserializeObject<OutfittingInfo>(json, EliteAPI.Events.OutfittingConverter.Settings));
+        internal static OutfittingInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeOutfittingEvent(JsonConvert.DeserializeObject<OutfittingInfo>(json, JsonSettings.Settings));
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; internal set; }

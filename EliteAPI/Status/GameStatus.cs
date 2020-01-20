@@ -3,10 +3,8 @@
 namespace EliteAPI.Status
 {
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
     using System;
     using System.Collections.Generic;
-    using System.Globalization;
     using System.IO;
     public partial class GameStatus
     {
@@ -69,14 +67,7 @@ namespace EliteAPI.Status
             return Flags.HasFlag((ShipStatusFlags)(1 << bit));
         }
     }
-    public partial class Fuel
-    {
-        [JsonProperty("FuelMain")]
-        public double FuelMain { get; internal set; }
-        [JsonProperty("FuelReservoir")]
-        public double FuelReservoir { get; internal set; }
-        public double MaxFuel { get; internal set; }
-    }
+
     public partial class GameStatus
     {
         internal static GameStatus Process(string json)
@@ -112,19 +103,5 @@ namespace EliteAPI.Status
             catch (Exception ex) { api.Logger.Log(Severity.Warning, "Could not update status.", ex); }
             return new GameStatus();
         }
-    }
-
-    internal static class ShipStatusConverter
-    {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
-        {
-            MissingMemberHandling = MissingMemberHandling.Ignore,
-            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
-            Converters =
-            {
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
-        };
     }
 }

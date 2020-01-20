@@ -4,10 +4,9 @@ namespace EliteAPI.Status
 {
     using System;
     using System.Collections.Generic;
-    using System.Globalization;
     using System.IO;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
+
     public partial class ShipCargo
     {
         [JsonProperty("timestamp")]
@@ -20,20 +19,6 @@ namespace EliteAPI.Status
         public long Count { get; internal set; }
         [JsonProperty("Inventory")]
         public List<Item> Inventory { get; internal set; }
-    }
-    public partial class Item
-    {
-        [JsonProperty("Name")]
-        public string Name { get; internal set; }
-        [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; internal set; }
-        [JsonProperty("Count")]
-        public long Count { get; internal set; }
-        [JsonProperty("Stolen")]
-        public long Stolen { get; internal set; }
-    }
-    public partial class ShipCargo
-    {
         public static ShipCargo Process(string json) => JsonConvert.DeserializeObject<ShipCargo>(json, EliteAPI.Status.ShipCargoConverter.Settings);
         public static ShipCargo FromFile(FileInfo file, EliteDangerousAPI api)
         {
@@ -50,17 +35,5 @@ namespace EliteAPI.Status
             return new ShipCargo();
         }
     }
-    
-    internal static class ShipCargoConverter
-    {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
-        {
-            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
-            Converters =
-            {
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
-        };
-    }
+
 }

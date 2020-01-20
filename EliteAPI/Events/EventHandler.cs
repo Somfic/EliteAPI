@@ -1,7 +1,7 @@
 namespace EliteAPI.Events
 {
     using System;
-    public interface IEvent { }
+
     public class EventHandler
     {
         public event EventHandler<StatusEvent> StatusInMainMenu;

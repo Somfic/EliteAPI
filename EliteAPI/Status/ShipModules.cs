@@ -4,10 +4,9 @@ namespace EliteAPI.Status
 {
     using System;
     using System.Collections.Generic;
-    using System.Globalization;
     using System.IO;
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
+
     public partial class ShipModules
     {
         [JsonProperty("timestamp")]
@@ -17,17 +16,7 @@ namespace EliteAPI.Status
         [JsonProperty("Modules")]
         public List<Module> Modules { get; internal set; }
     }
-    public partial class Module
-    {
-        [JsonProperty("Slot")]
-        public string Slot { get; internal set; }
-        [JsonProperty("Item")]
-        public string Item { get; internal set; }
-        [JsonProperty("Power")]
-        public double Power { get; internal set; }
-        [JsonProperty("Priority", NullValueHandling = NullValueHandling.Ignore)]
-        public long? Priority { get; internal set; }
-    }
+
     public partial class ShipModules
     {
         public static ShipModules Process(string json) => JsonConvert.DeserializeObject<ShipModules>(json, EliteAPI.Status.ShipModulesConverter.Settings);
@@ -47,18 +36,5 @@ namespace EliteAPI.Status
             api.Logger.Log(Severity.Warning, "Could not update modules.");
             return new ShipModules();
         }
-    }
-    
-    internal static class ShipModulesConverter
-    {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
-        {
-            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
-            Converters =
-            {
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
-        };
     }
 }

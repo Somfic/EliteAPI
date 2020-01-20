@@ -1,15 +1,16 @@
-using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    using Newtonsoft.Json;
-
     public class EngineerProgressInfo : EventBase
     {
-        internal static EngineerProgressInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeEngineerProgressEvent(JsonConvert.DeserializeObject<EngineerProgressInfo>(json, JsonSettings.Settings));
-
         [JsonProperty("Engineers")]
         public List<Engineer> Engineers { get; internal set; }
+
+        internal static EngineerProgressInfo Process(string json, EliteDangerousAPI api)
+        {
+            return api.Events.InvokeEngineerProgressEvent(JsonConvert.DeserializeObject<EngineerProgressInfo>(json, JsonSettings.Settings));
+        }
     }
 }

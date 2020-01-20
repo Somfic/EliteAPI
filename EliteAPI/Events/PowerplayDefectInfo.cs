@@ -1,17 +1,18 @@
-using System;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    using System.Collections.Generic;
-    using Newtonsoft.Json;
-
     public class PowerplayDefectInfo : EventBase
     {
-        internal static PowerplayDefectInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokePowerplayDefectEvent(JsonConvert.DeserializeObject<PowerplayDefectInfo>(json, JsonSettings.Settings));
-
         [JsonProperty("FromPower")]
         public string FromPower { get; internal set; }
+
         [JsonProperty("ToPower")]
         public string ToPower { get; internal set; }
+
+        internal static PowerplayDefectInfo Process(string json, EliteDangerousAPI api)
+        {
+            return api.Events.InvokePowerplayDefectEvent(JsonConvert.DeserializeObject<PowerplayDefectInfo>(json, JsonSettings.Settings));
+        }
     }
 }

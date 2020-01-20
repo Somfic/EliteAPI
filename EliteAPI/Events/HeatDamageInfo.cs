@@ -1,13 +1,12 @@
-using System;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    using System.Collections.Generic;
-    using Newtonsoft.Json;
-
     public class HeatDamageInfo : EventBase
     {
-        internal static HeatDamageInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeHeatDamageEvent(JsonConvert.DeserializeObject<HeatDamageInfo>(json, JsonSettings.Settings));
-
+        internal static HeatDamageInfo Process(string json, EliteDangerousAPI api)
+        {
+            return api.Events.InvokeHeatDamageEvent(JsonConvert.DeserializeObject<HeatDamageInfo>(json, JsonSettings.Settings));
+        }
     }
 }

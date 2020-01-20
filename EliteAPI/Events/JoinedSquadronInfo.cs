@@ -1,15 +1,15 @@
-using System;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    using System.Collections.Generic;
-    using Newtonsoft.Json;
-
     public class JoinedSquadronInfo : EventBase
     {
-        internal static JoinedSquadronInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeJoinedSquadronEvent(JsonConvert.DeserializeObject<JoinedSquadronInfo>(json, JsonSettings.Settings));
-
         [JsonProperty("SquadronName")]
         public string SquadronName { get; internal set; }
+
+        internal static JoinedSquadronInfo Process(string json, EliteDangerousAPI api)
+        {
+            return api.Events.InvokeJoinedSquadronEvent(JsonConvert.DeserializeObject<JoinedSquadronInfo>(json, JsonSettings.Settings));
+        }
     }
 }

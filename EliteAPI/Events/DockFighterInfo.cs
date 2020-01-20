@@ -1,13 +1,12 @@
-using System;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    using System.Collections.Generic;
-    using Newtonsoft.Json;
-
     public class DockFighterInfo : EventBase
     {
-        internal static DockFighterInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeDockFighterEvent(JsonConvert.DeserializeObject<DockFighterInfo>(json, JsonSettings.Settings));
-
+        internal static DockFighterInfo Process(string json, EliteDangerousAPI api)
+        {
+            return api.Events.InvokeDockFighterEvent(JsonConvert.DeserializeObject<DockFighterInfo>(json, JsonSettings.Settings));
+        }
     }
 }

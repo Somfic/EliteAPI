@@ -1,13 +1,12 @@
-using System;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    using System.Collections.Generic;
-    using Newtonsoft.Json;
-
     public class SelfDestructInfo : EventBase
     {
-        internal static SelfDestructInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSelfDestructEvent(JsonConvert.DeserializeObject<SelfDestructInfo>(json, JsonSettings.Settings));
-
+        internal static SelfDestructInfo Process(string json, EliteDangerousAPI api)
+        {
+            return api.Events.InvokeSelfDestructEvent(JsonConvert.DeserializeObject<SelfDestructInfo>(json, JsonSettings.Settings));
+        }
     }
 }

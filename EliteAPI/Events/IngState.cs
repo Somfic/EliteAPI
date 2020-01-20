@@ -6,6 +6,7 @@ namespace EliteAPI.Events
     {
         [JsonProperty("State")]
         public string State { get; internal set; }
+
         [JsonProperty("Trend")]
         public long Trend { get; internal set; }
     }

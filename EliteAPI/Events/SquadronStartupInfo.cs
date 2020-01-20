@@ -1,14 +1,10 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    using System.Collections.Generic;
-    using Newtonsoft.Json;
-
     public class SquadronStartupInfo : EventBase
     {
-        internal static SquadronStartupInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSquadronStartupEvent(JsonConvert.DeserializeObject<SquadronStartupInfo>(json, JsonSettings.Settings));
-
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; set; }
 
@@ -20,5 +16,10 @@ namespace EliteAPI.Events
 
         [JsonProperty("CurrentRank")]
         public long CurrentRank { get; set; }
+
+        internal static SquadronStartupInfo Process(string json, EliteDangerousAPI api)
+        {
+            return api.Events.InvokeSquadronStartupEvent(JsonConvert.DeserializeObject<SquadronStartupInfo>(json, JsonSettings.Settings));
+        }
     }
 }

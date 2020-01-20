@@ -1,13 +1,12 @@
-using System;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    using System.Collections.Generic;
-    using Newtonsoft.Json;
-
     public class ShutdownInfo : EventBase
     {
-        internal static ShutdownInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeShutdownEvent(JsonConvert.DeserializeObject<ShutdownInfo>(json, JsonSettings.Settings));
-
+        internal static ShutdownInfo Process(string json, EliteDangerousAPI api)
+        {
+            return api.Events.InvokeShutdownEvent(JsonConvert.DeserializeObject<ShutdownInfo>(json, JsonSettings.Settings));
+        }
     }
 }

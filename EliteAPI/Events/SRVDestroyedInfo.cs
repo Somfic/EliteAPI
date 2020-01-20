@@ -1,13 +1,12 @@
-using System;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    using System.Collections.Generic;
-    using Newtonsoft.Json;
-
     public class SRVDestroyedInfo : EventBase
     {
-        internal static SRVDestroyedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeSRVDestroyedEvent(JsonConvert.DeserializeObject<SRVDestroyedInfo>(json, JsonSettings.Settings));
-
+        internal static SRVDestroyedInfo Process(string json, EliteDangerousAPI api)
+        {
+            return api.Events.InvokeSRVDestroyedEvent(JsonConvert.DeserializeObject<SRVDestroyedInfo>(json, JsonSettings.Settings));
+        }
     }
 }

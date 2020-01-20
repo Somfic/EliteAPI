@@ -1,21 +1,25 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    using System.Collections.Generic;
-    using Newtonsoft.Json;
-
     public class ReservoirReplenishedInfo : EventBase
     {
-        internal static ReservoirReplenishedInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeReservoirReplenishedEvent(JsonConvert.DeserializeObject<ReservoirReplenishedInfo>(json, JsonSettings.Settings));
-
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; set; }
+
         [JsonProperty("event")]
         public string Event { get; set; }
+
         [JsonProperty("FuelMain")]
         public double FuelMain { get; set; }
+
         [JsonProperty("FuelReservoir")]
         public double FuelReservoir { get; set; }
+
+        internal static ReservoirReplenishedInfo Process(string json, EliteDangerousAPI api)
+        {
+            return api.Events.InvokeReservoirReplenishedEvent(JsonConvert.DeserializeObject<ReservoirReplenishedInfo>(json, JsonSettings.Settings));
+        }
     }
 }

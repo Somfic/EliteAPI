@@ -6,6 +6,7 @@ namespace EliteAPI.Events
     {
         [JsonProperty("Faction")]
         public string Faction { get; internal set; }
+
         [JsonProperty("Reward")]
         public long RewardReward { get; internal set; }
     }

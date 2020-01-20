@@ -1,13 +1,12 @@
-using System;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    using System.Collections.Generic;
-    using Newtonsoft.Json;
-
     public class WingLeaveInfo : EventBase
     {
-        internal static WingLeaveInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeWingLeaveEvent(JsonConvert.DeserializeObject<WingLeaveInfo>(json, JsonSettings.Settings));
-
+        internal static WingLeaveInfo Process(string json, EliteDangerousAPI api)
+        {
+            return api.Events.InvokeWingLeaveEvent(JsonConvert.DeserializeObject<WingLeaveInfo>(json, JsonSettings.Settings));
+        }
     }
 }

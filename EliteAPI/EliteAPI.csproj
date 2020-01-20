@@ -19,7 +19,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\EliteAPI.xml</DocumentationFile>
+    <DocumentationFile>EliteAPI.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

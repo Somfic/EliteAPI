@@ -6,7 +6,7 @@ using Somfic.Logging;
 
 namespace EliteAPI.Status
 {
-    public partial class ShipCargo
+    public class ShipCargo
     {
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; internal set; }

@@ -10,36 +10,51 @@ namespace EliteAPI.Status
     {
         private EliteDangerousAPI api;
         private FileSystemWatcher CargoFileWatcher;
+
         internal CargoWatcher(EliteDangerousAPI api)
         {
             this.api = api;
-            CargoFileWatcher = new FileSystemWatcher(api.JournalDirectory.FullName, "Cargo.json") { EnableRaisingEvents = true };
+            CargoFileWatcher = new FileSystemWatcher(api.JournalDirectory.FullName, "Cargo.json") {EnableRaisingEvents = true};
             CargoFileWatcher.Changed += (sender, e) => Update();
             Update();
         }
+
         private void Update()
         {
-            //Save the old Cargo.
-            ShipCargo oldCargo = api.Cargo;
-            if(oldCargo == null) { oldCargo = new ShipCargo(); }
-            ShipCargo newCargo = ShipCargo.FromFile(new FileInfo(api.JournalDirectory + "//Cargo.json"), api);
-            //Set the new Cargo.
+            var oldCargo = api.Cargo ?? new ShipCargo();
+
+            var newCargo = ShipCargo.FromFile(new FileInfo(api.JournalDirectory + "//Cargo.json"), api);
+
             api.Cargo = newCargo;
-            if(oldCargo == null) { return; }
+
+            if (oldCargo == null)
+            {
+                return;
+            }
+
             TriggerIfDifferent(oldCargo, newCargo);
         }
+
         private void TriggerIfDifferent(ShipCargo oldCargo, ShipCargo newCargo)
         {
             foreach (PropertyInfo propA in oldCargo.GetType().GetProperties().Where(x => x.PropertyType == typeof(bool)))
             {
                 PropertyInfo propB = newCargo.GetType().GetProperty(propA.Name);
-                bool A = (bool)propA.GetValue(oldCargo);
-                bool B = (bool)propB.GetValue(newCargo);
-                if(A != B)
+                bool A = (bool) propA.GetValue(oldCargo);
+                bool B = (bool) propB.GetValue(newCargo);
+
+                if (A != B)
                 {
                     api.Events.InvokeAllEvent(new CargoEvent("Cargo." + propA.Name, B));
-                    try { api.Events.GetType().GetMethod("InvokeCargo" + propA.Name)?.Invoke(api.Events, new object[] { B }); }
-                    catch (Exception ex) { api.Logger.Log(Severity.Error, $"Could not invoke Cargo event {propA.Name}, it might not have been added yet.", ex); }
+
+                    try
+                    {
+                        api.Events.GetType().GetMethod("InvokeCargo" + propA.Name)?.Invoke(api.Events, new object[] {B});
+                    }
+                    catch (Exception ex)
+                    {
+                        api.Logger.Log(Severity.Error, $"Could not invoke Cargo event {propA.Name}, it might not have been added yet.", ex);
+                    }
                 }
             }
         }

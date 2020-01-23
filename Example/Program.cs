@@ -1,10 +1,9 @@
 ﻿using EliteAPI;
-using EliteAPI.Discord;
 using Somfic.Logging;
-
-using System.IO;
-using System.Threading;
 using Somfic.Logging.Handlers;
+using System.Threading;
+using System.Windows.Forms;
+using InputManager;
 
 namespace Example
 {
@@ -16,17 +15,21 @@ namespace Example
         {
             EliteAPI = new EliteDangerousAPI();
             EliteAPI.Logger.AddHandler(new ConsoleHandler());
-            EliteAPI.Logger.SetAllowedLevels(Severity.Info | Severity.Warning | Severity.Error);
-          
+
+            EliteAPI.Events.StatusInNoFireZoneEvent += Events_StatusInNoFireZoneEvent;
             EliteAPI.Start();
-            EliteAPI.Events.MarketSellEvent += Events_MarketSellEvent;
 
             Thread.Sleep(-1);
         }
 
-        private static void Events_MarketSellEvent(object sender, EliteAPI.Events.MarketSellInfo eventArg)
+        private static void Events_StatusInNoFireZoneEvent(object sender, EliteAPI.Events.StatusEvent e)
         {
-            EliteAPI.Logger.Log("MarketSell event has been triggered", eventArg);
+            // Will be called every time we enter or leave a no-fire zone.
+            if (!EliteAPI.Status.InNoFireZone) { return; } // If we aren't in a no-fire zone anymore, return.
+            if (!EliteAPI.Status.Hardpoints) { return; } // If the hardpoints aren't deployed, return.
+
+            // If everything's good, retract the hardpoints.
+            Keyboard.KeyPress(Keys.U);
         }
     }
 }

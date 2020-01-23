@@ -103,7 +103,7 @@
             Turn the rich presence off.
             </summary>
         </member>
-        <member name="M:EliteAPI.EDSM.EDSMConnection.Execute(EliteAPI.EDSM.EDSMEntry)">
+        <member name="M:EliteAPI.EDSM.EDSM.Execute(EliteAPI.EDSM.EDSMEntry)">
             <summary>
             Executes an EDSM API request.
             </summary>
@@ -122,7 +122,7 @@
             <param name="url">The base URL for the API call.</param>
             <param name="parameter">The parameters for the API call.</param>
         </member>
-        <member name="M:EliteAPI.EDSM.EDSMEntry.#ctor(System.String,System.Collections.Generic.List{EliteAPI.EDSM.EDSMParameter})">
+        <member name="M:EliteAPI.EDSM.EDSMEntry.#ctor(System.String,EliteAPI.EDSM.EDSMParameter[])">
             <summary>
             Creates a new EDSM API entry.
             </summary>

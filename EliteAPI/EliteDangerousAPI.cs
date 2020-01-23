@@ -152,6 +152,7 @@ namespace EliteAPI
 
             //Create the logger.
             Logger = new Logger();
+            Events = new Events.EventHandler();
         }
 
         /// <summary>
@@ -166,6 +167,7 @@ namespace EliteAPI
 
             //Create the logger.
             Logger = new Logger();
+            Events = new Events.EventHandler();
         }
 
         /// <summary>
@@ -180,6 +182,7 @@ namespace EliteAPI
 
             //Create the logger.
             Logger = new Logger();
+            Events = new Events.EventHandler();
         }
 
         /// <summary>
@@ -195,6 +198,7 @@ namespace EliteAPI
 
             //Create the logger.
             Logger = new Logger();
+            Events = new Events.EventHandler();
         }
 
         /// <summary>
@@ -236,7 +240,7 @@ namespace EliteAPI
         public void Reset()
         {
             //Reset services.
-            try { Events = new Events.EventHandler(); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'Events'.", ex); }
+            //try { Events = new Events.EventHandler(); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'Events'.", ex); }
             try { Commander = new CommanderStatus(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'Commander'.", ex); }
             try { Location = new LocationStatus(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'Location'.", ex); }
             try { DiscordRichPresence = new RichPresenceClient(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'DiscordRichPresence'.", ex); }

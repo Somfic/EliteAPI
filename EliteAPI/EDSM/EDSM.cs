@@ -1,24 +1,25 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net;
+ using System.Linq;
+ using System.Net;
 namespace EliteAPI.EDSM
 {
-    public class EDSMConnection
+    public static class EDSM
     {
         /// <summary>
         /// Executes an EDSM API request.
         /// </summary>
         /// <param name="entry">The entry to process.</param>
         /// <returns></returns>
-        public string Execute(EDSMEntry entry) => Execute(entry.Url, entry.Parameters);
-        private string Execute(string url, List<EDSMParameter> Parameters)
+        public static string Execute(EDSMEntry entry) => Execute(entry.Url, entry.Parameters);
+        private static string Execute(string url, params EDSMParameter[] Parameters)
         {
             string html = "";
             string returnHtml = "";
             //Convert the list to a HTML query.
             List<string> parametersLocalised = new List<string>();
-            Parameters.ForEach(x => parametersLocalised.Add($"{x.Name}={x.Value.ToString()}"));
+            Parameters.ToList().ForEach(x => parametersLocalised.Add($"{x.Name}={x.Value.ToString()}"));
             html = $"{url}?{string.Join("&", parametersLocalised)}";
             //Preform the GET request.
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(html);
@@ -45,20 +46,32 @@ namespace EliteAPI.EDSM
         public EDSMEntry(string url, EDSMParameter parameter)
         {
             Url = url;
-            Parameters = new List<EDSMParameter> { parameter };
+            Parameters = new List<EDSMParameter> { parameter }.ToArray();
         }
         /// <summary>
         /// Creates a new EDSM API entry.
         /// </summary>
         /// <param name="url">The base URL for the API call.</param>
         /// <param name="parameters">A list of parameters for the API call.</param>
-        public EDSMEntry(string url, List<EDSMParameter> parameters)
+        public EDSMEntry(string url, params EDSMParameter[] parameters)
         {
             Url = url;
             Parameters = parameters;
         }
-        void AddParameter(EDSMParameter parameter) => Parameters.Add(parameter);
-        void RemoveParameter(EDSMParameter parameter) => Parameters.Remove(parameter);
+
+        void AddParameter(EDSMParameter parameter)
+        {
+            var x = Parameters.ToList();
+            x.Add(parameter);
+            Parameters = x.ToArray();
+        }
+
+        void RemoveParameter(EDSMParameter parameter)
+        {
+            var x = Parameters.ToList();
+            x.Remove(parameter);
+            Parameters = x.ToArray();
+        }
         /// <summary>
         /// The base URL of the API call.
         /// </summary>
@@ -66,7 +79,7 @@ namespace EliteAPI.EDSM
         /// <summary>
         /// The list of parameters for the API call.
         /// </summary>
-        public List<EDSMParameter> Parameters { get; private set; }
+        public EDSMParameter[] Parameters { get; private set; }
     }
     /// <summary>
     /// A parameter for an EDSM API call.

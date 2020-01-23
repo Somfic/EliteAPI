@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using EliteAPI.EDSM;
 using Somfic.Logging;
 
 namespace EliteAPI.ThirdParty

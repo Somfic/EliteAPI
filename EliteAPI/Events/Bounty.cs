@@ -33,7 +33,7 @@ namespace EliteAPI.Events
     {
         internal static BountyInfo Process(string json, EliteDangerousAPI api) => api.Events.InvokeBountyEvent(JsonConvert.DeserializeObject<BountyInfo>(json, EliteAPI.Events.BountyConverter.Settings));
     }
-    public static class BountySerializer    
+    internal static class BountySerializer    
     {
         public static string ToJson(this BountyInfo self) => JsonConvert.SerializeObject(self, EliteAPI.Events.BountyConverter.Settings);
     }

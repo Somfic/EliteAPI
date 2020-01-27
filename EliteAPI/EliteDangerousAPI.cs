@@ -34,8 +34,11 @@ namespace EliteAPI
         public bool IsReady { get; internal set; }
 
         /// <summary>
-        /// The standard Directory of the Player Journal files (C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous).
+        /// The default directory of the Journal files <c>C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous</c>.
         /// </summary>
+        /// <remarks>
+        /// If the default directory could not be returned, the current directory will be returned.
+        /// </remarks>
         public static DirectoryInfo StandardDirectory
         {
             get
@@ -54,7 +57,7 @@ namespace EliteAPI
         }
 
         /// <summary>
-        /// The version of EliteAPI.
+        /// This version of EliteAPI.
         /// </summary>
         public string Version => "2.3.0.0";
 
@@ -64,27 +67,31 @@ namespace EliteAPI
         public bool IsRunning { get; private set; } = false;
 
         /// <summary>
-        /// The Journal directory that is being used by the API.
+        /// The Journal directory that is EliteAPI is currently using.
         /// </summary>
+        /// <see cref="ChangeJournal"/>
         public DirectoryInfo JournalDirectory { get; private set; }
 
         /// <summary>
-        /// Object that holds all the events.
+        /// All of the EliteAPI events are stored in this object. 
         /// </summary>
-        public Events.EventHandler Events { get; internal set; }
+        public Events.EventHandler Events { get; }
 
         /// <summary>
-        /// Objects that holds all logging related functions.
+        /// The logger using across the API.
         /// </summary>
         public Logger Logger { get; private set; }
 
         /// <summary>
-        /// Holds the ship's current status.
+        /// Holds the ship's live status.
         /// </summary>
+        /// <remarks>
+        /// Values like the landing gear and other variables are stored here.
+        /// </remarks>
         public GameStatus Status { get; internal set; }
 
         /// <summary>
-        /// Holds the ship's current cargo situation.
+        /// Holds information on the ship's current cargo situation.
         /// </summary>
         public ShipCargo Cargo { get; internal set; }
 
@@ -94,7 +101,7 @@ namespace EliteAPI
         public ShipModules Modules => ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this);
 
         /// <summary>
-        /// Holds the ship's current materials situation.
+        /// Holds information on the ship's current materials situation.
         /// </summary>
         public Events.MaterialsInfo Materials { get; internal set; }
 

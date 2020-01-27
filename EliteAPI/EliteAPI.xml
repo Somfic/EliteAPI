@@ -173,12 +173,15 @@
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.StandardDirectory">
             <summary>
-            The standard Directory of the Player Journal files (C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous).
+            The default directory of the Journal files <c>C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous</c>.
             </summary>
+            <remarks>
+            If the default directory could not be returned, the current directory will be returned.
+            </remarks>
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Version">
             <summary>
-            The version of EliteAPI.
+            This version of EliteAPI.
             </summary>
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.IsRunning">
@@ -188,27 +191,31 @@
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.JournalDirectory">
             <summary>
-            The Journal directory that is being used by the API.
+            The Journal directory that is EliteAPI is currently using.
             </summary>
+            <see cref="M:EliteAPI.EliteDangerousAPI.ChangeJournal(System.IO.DirectoryInfo)"/>
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Events">
             <summary>
-            Object that holds all the events.
+            All of the EliteAPI events are stored in this object. 
             </summary>
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Logger">
             <summary>
-            Objects that holds all logging related functions.
+            The logger using across the API.
             </summary>
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Status">
             <summary>
-            Holds the ship's current status.
+            Holds the ship's live status.
             </summary>
+            <remarks>
+            Values like the landing gear and other variables are stored here.
+            </remarks>
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Cargo">
             <summary>
-            Holds the ship's current cargo situation.
+            Holds information on the ship's current cargo situation.
             </summary>
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Modules">
@@ -218,7 +225,7 @@
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Materials">
             <summary>
-            Holds the ship's current materials situation.
+            Holds information on the ship's current materials situation.
             </summary>
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Bindings">

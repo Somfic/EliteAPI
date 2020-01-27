@@ -264,3 +264,4 @@ __pycache__/
 *.rar
 NotAddedEvents.txt
 Test/Program.cs
+.vscode/settings.json

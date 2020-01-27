@@ -2,7 +2,7 @@
 
 # Download and installation
 
-## 01Compiled code
+## 01 Compiled code
 
 EliteAPI is distributed under the [GNU General Public License v3.0](https://github.com/EliteAPI/EliteAPI/blob/master/LICENSE).
 
@@ -13,7 +13,7 @@ EliteAPI can also be found on NuGet under the name `EliteAPI`.
 <div class="console"><span class="icon">$</span><span class="platform">NuGet package manager</span><span class="text">Install-Package EliteAPI</span></div>
 <div class="console"><span class="icon">$</span><span class="platform">NuGet .NET CLI</span><span class="text">dotnet add package EliteAPI</span></div>
 
-## 02VoiceAttack & VoiceMacro
+## 02 VoiceAttack & VoiceMacro
 
 The setup files for the VoiceAttack and VoiceMacro plugins can be found on the [EliteAPI GitHub releases page](https://github.com/EliteAPI/EliteAPI/releases).
 
@@ -31,7 +31,7 @@ Example: `C:\Program Files (x86)\VoiceMacro\Plugins`.
 
 Please note that EliteAPI is only supported on VoiceMacro `>= v1.3.0.11`.
 
-## 03Source code
+## 03 Source code
 
 EliteAPI runs on .NET Standard 2.0.
 
@@ -39,7 +39,7 @@ The EliteAPI source code is hosted on the [EliteAPI GitHub repository](https://g
 
 <div class="console"><span class="icon">$</span><span class="platform">Git</span><span class="text">git clone https://github.com/EliteAPI/EliteAPI.git</span></div>
 
-## 04Dependencies
+## 04 Dependencies
 
 EliteAPI needs a few dependencies to be installed before being able to compile.
 

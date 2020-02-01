@@ -16,7 +16,7 @@ Inheritance: `Object` → `GameStatus`
 
 ### `ShipStatusFlags` Flags
 
-### `List`1` Pips
+### `List<Int64>` Pips
 
 ### `Int64` FireGroup
 

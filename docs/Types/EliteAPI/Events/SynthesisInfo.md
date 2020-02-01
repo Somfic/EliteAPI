@@ -20,5 +20,5 @@ Inheritance: `Object` → `SynthesisInfo`
 
 ### `String` Name
 
-### `List`1` Materials
+### `List<SynthesisMaterial>` Materials
 

@@ -30,11 +30,11 @@ Inheritance: `Object` → `FSDFaction`
 
 ### `Double` MyReputation
 
-### `List`1` RecoveringStates
+### `List<IngState>` RecoveringStates
 
-### `List`1` PendingStates
+### `List<IngState>` PendingStates
 
-### `List`1` ActiveStates
+### `List<ActiveState>` ActiveStates
 
 ### `String` FactionFaction
 

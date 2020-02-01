@@ -18,5 +18,5 @@ Inheritance: `Object` → `RebootRepairInfo`
 
 ### `String` Event
 
-### `List`1` Modules
+### `List<String>` Modules
 

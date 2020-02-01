@@ -36,13 +36,13 @@ Inheritance: `Object` → `DockedInfo`
 
 ### `String` StationAllegiance
 
-### `List`1` StationServices
+### `List<String>` StationServices
 
 ### `String` StationEconomy
 
 ### `String` StationEconomyLocalised
 
-### `List`1` StationEconomies
+### `List<StationEconomy>` StationEconomies
 
 ### `Double` DistFromStarLs
 

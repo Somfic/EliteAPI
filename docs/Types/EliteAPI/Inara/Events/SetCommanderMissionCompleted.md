@@ -20,9 +20,9 @@ Inheritance: `Object` → `SetCommanderMissionCompleted`
 
 ### `Int64` RewardCredits
 
-### `List`1` RewardPermits
+### `List<InaraRewardPermit>` RewardPermits
 
-### `List`1` RewardCommodities
+### `List<InaraReward>` RewardCommodities
 
-### `List`1` RewardMaterials
+### `List<InaraReward>` RewardMaterials
 

@@ -18,7 +18,7 @@ Inheritance: `Object` → `AddCommanderCombatDeath`
 
 ### `String` OpponentName
 
-### `List`1` WingOpponentNames
+### `List<String>` WingOpponentNames
 
 ### `Boolean` IsPlayer
 

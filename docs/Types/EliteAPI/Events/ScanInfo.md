@@ -24,7 +24,7 @@ Inheritance: `Object` → `ScanInfo`
 
 ### `Int64` BodyId
 
-### `List`1` Parents
+### `List<Parent>` Parents
 
 ### `Double` DistanceFromArrivalLs
 
@@ -52,7 +52,7 @@ Inheritance: `Object` → `ScanInfo`
 
 ### `Boolean` Landable
 
-### `List`1` Materials
+### `List<Material>` Materials
 
 ### `Composition` Composition
 
@@ -70,7 +70,7 @@ Inheritance: `Object` → `ScanInfo`
 
 ### `Double` AxialTilt
 
-### `List`1` Rings
+### `List<Ring>` Rings
 
 ### `String` ReserveLevel
 

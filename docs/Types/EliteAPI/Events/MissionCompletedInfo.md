@@ -42,7 +42,7 @@ Inheritance: `Object` → `MissionCompletedInfo`
 
 ### `Int64` Reward
 
-### `List`1` MaterialsReward
+### `List<MaterialsReward>` MaterialsReward
 
-### `List`1` FactionEffects
+### `List<FactionEffect>` FactionEffects
 

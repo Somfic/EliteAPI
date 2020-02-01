@@ -18,5 +18,5 @@ Inheritance: `Object` → `PrimaryInfo`
 
 ### `String` Key
 
-### `List`1` Modifier
+### `List<Binding>` Modifier
 

@@ -18,7 +18,7 @@ Inheritance: `Object` → `MultiSellExplorationDataInfo`
 
 ### `String` Event
 
-### `List`1` Discovered
+### `List<Discovered>` Discovered
 
 ### `Int64` BaseValue
 

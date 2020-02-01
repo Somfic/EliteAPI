@@ -22,5 +22,5 @@ Inheritance: `Object` → `RedeemVoucherInfo`
 
 ### `Int64` Amount
 
-### `List`1` Factions
+### `List<FSDFaction>` Factions
 

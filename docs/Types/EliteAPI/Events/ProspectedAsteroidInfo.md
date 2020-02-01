@@ -18,7 +18,7 @@ Inheritance: `Object` → `ProspectedAsteroidInfo`
 
 ### `String` Event
 
-### `List`1` Materials
+### `List<ProspectedMaterial>` Materials
 
 ### `String` MotherlodeMaterial
 

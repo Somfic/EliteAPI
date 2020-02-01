@@ -22,7 +22,7 @@ Inheritance: `Object` → `ShipCargo`
 
 ### `Int64` Count
 
-### `List`1` Inventory
+### `List<Item>` Inventory
 
 ## 04 Methods
 

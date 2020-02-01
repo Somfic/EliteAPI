@@ -24,7 +24,7 @@ Inheritance: `Object` → `LocationInfo`
 
 ### `Int64` SystemAddress
 
-### `List`1` StarPos
+### `List<Double>` StarPos
 
 ### `String` SystemAllegiance
 
@@ -52,7 +52,7 @@ Inheritance: `Object` → `LocationInfo`
 
 ### `String` BodyType
 
-### `List`1` Factions
+### `List<Faction>` Factions
 
 ### `SystemFaction` SystemFaction
 

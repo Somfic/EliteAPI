@@ -18,7 +18,7 @@ Inheritance: `Object` → `BountyInfo`
 
 ### `String` Event
 
-### `List`1` Rewards
+### `List<Reward>` Rewards
 
 ### `String` Target
 

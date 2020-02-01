@@ -14,7 +14,7 @@ Inheritance: `Object` → `InaraConnection`
 
 ## 03 Fields
 
-### `List`1` EventsQueue
+### `List<InaraEvent>` EventsQueue
 
 ## 04 Methods
 

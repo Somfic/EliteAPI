@@ -18,5 +18,5 @@ Inheritance: `Object` → `CommunityGoalInfo`
 
 ### `String` Event
 
-### `List`1` CurrentGoals
+### `List<CurrentGoal>` CurrentGoals
 

@@ -20,5 +20,5 @@ Inheritance: `Object` → `PowerplayVoucherInfo`
 
 ### `String` Power
 
-### `List`1` Systems
+### `List<String>` Systems
 

@@ -24,5 +24,5 @@ Inheritance: `Object` → `StoredModulesInfo`
 
 ### `String` StarSystem
 
-### `List`1` Items
+### `List<StoredModuleItem>` Items
 

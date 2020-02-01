@@ -24,7 +24,7 @@ Inheritance: `Object` → `EngineerCraftInfo`
 
 ### `String` ApplyExperimentalEffect
 
-### `List`1` Ingredients
+### `List<Ingredient>` Ingredients
 
 ### `String` Engineer
 
@@ -42,5 +42,5 @@ Inheritance: `Object` → `EngineerCraftInfo`
 
 ### `String` ExperimentalEffectLocalised
 
-### `List`1` Modifiers
+### `List<Modifier>` Modifiers
 

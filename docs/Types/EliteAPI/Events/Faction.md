@@ -30,5 +30,5 @@ Inheritance: `Object` → `Faction`
 
 ### `Double` MyReputation
 
-### `List`1` ActiveStates
+### `List<ActiveState>` ActiveStates
 

@@ -24,5 +24,5 @@ Inheritance: `Object` → `MassModuleStoreInfo`
 
 ### `Int64` ShipId
 
-### `List`1` Items
+### `List<Item>` Items
 

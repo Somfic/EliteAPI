@@ -16,9 +16,9 @@ Inheritance: `Object` → `FactionEffect`
 
 ### `String` Faction
 
-### `List`1` Effects
+### `List<Effect>` Effects
 
-### `List`1` Influence
+### `List<Influence>` Influence
 
 ### `String` ReputationTrend
 

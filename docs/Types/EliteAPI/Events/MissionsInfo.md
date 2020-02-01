@@ -18,9 +18,9 @@ Inheritance: `Object` → `MissionsInfo`
 
 ### `String` Event
 
-### `List`1` Active
+### `List<Active>` Active
 
-### `List`1` Failed
+### `List<Object>` Failed
 
-### `List`1` Complete
+### `List<Object>` Complete
 

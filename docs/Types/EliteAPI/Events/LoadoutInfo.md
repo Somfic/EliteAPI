@@ -36,5 +36,5 @@ Inheritance: `Object` → `LoadoutInfo`
 
 ### `Int64` Rebuy
 
-### `List`1` Modules
+### `List<Module>` Modules
 

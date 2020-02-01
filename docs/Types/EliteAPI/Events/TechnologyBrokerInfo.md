@@ -22,9 +22,9 @@ Inheritance: `Object` → `TechnologyBrokerInfo`
 
 ### `Int64` MarketId
 
-### `List`1` ItemsUnlocked
+### `List<ItemsUnlocked>` ItemsUnlocked
 
-### `List`1` Commodities
+### `List<Commodity>` Commodities
 
-### `List`1` Materials
+### `List<Commodity>` Materials
 

@@ -22,7 +22,7 @@ Inheritance: `Object` → `FSDJumpInfo`
 
 ### `Int64` SystemAddress
 
-### `List`1` StarPos
+### `List<Double>` StarPos
 
 ### `String` SystemAllegiance
 
@@ -44,7 +44,7 @@ Inheritance: `Object` → `FSDJumpInfo`
 
 ### `Int64` Population
 
-### `List`1` Powers
+### `List<String>` Powers
 
 ### `String` PowerplayState
 
@@ -54,7 +54,7 @@ Inheritance: `Object` → `FSDJumpInfo`
 
 ### `Double` FuelLevel
 
-### `List`1` Factions
+### `List<FSDFaction>` Factions
 
 ### `SystemFaction` SystemFaction
 

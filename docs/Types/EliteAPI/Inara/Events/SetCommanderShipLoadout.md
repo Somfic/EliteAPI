@@ -18,5 +18,5 @@ Inheritance: `Object` → `SetCommanderShipLoadout`
 
 ### `Int64` ShipGameId
 
-### `List`1` ShipLoadout
+### `List<InaraShipLoadout>` ShipLoadout
 

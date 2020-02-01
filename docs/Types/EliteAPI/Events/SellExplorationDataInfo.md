@@ -18,9 +18,9 @@ Inheritance: `Object` → `SellExplorationDataInfo`
 
 ### `String` Event
 
-### `List`1` Systems
+### `List<String>` Systems
 
-### `List`1` Discovered
+### `List<String>` Discovered
 
 ### `Int64` BaseValue
 

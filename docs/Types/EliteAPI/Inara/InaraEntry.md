@@ -10,11 +10,11 @@ Inheritance: `Object` → `InaraEntry`
 
 ## 02 Constructors
 
-### `InaraEntry` (`InaraConfiguration` configuration, `List`1` events)
+### `InaraEntry` (`InaraConfiguration` configuration, `List<InaraEvent>` events)
 
 ## 03 Properties
 
 ### `InaraConfiguration` Configuration
 
-### `List`1` Events
+### `List<InaraEvent>` Events
 

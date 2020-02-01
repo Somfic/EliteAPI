@@ -18,7 +18,7 @@ Inheritance: `Object` → `ShipModules`
 
 ### `String` Event
 
-### `List`1` Modules
+### `List<Module>` Modules
 
 ## 04 Methods
 

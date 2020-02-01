@@ -24,7 +24,7 @@ Creates a new EDSM API entry.
 
 
 
-### `EDSMEntry` (`String` url, `EDSMParameter[]` parameters)
+### `EDSMEntry` (`String` url, `EDSMParameter<>` parameters)
 
 
 
@@ -42,7 +42,7 @@ The base URL of the API call.
 
 
 
-### `EDSMParameter[]` Parameters
+### `EDSMParameter<>` Parameters
 
 
 

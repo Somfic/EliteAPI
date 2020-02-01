@@ -18,5 +18,5 @@ Inheritance: `Object` → `WingJoinInfo`
 
 ### `String` Event
 
-### `List`1` Others
+### `List<String>` Others
 

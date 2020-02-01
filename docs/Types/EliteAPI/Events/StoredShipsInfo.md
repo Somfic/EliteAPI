@@ -24,7 +24,7 @@ Inheritance: `Object` → `StoredShipsInfo`
 
 ### `String` StarSystem
 
-### `List`1` ShipsHere
+### `List<Object>` ShipsHere
 
-### `List`1` ShipsRemote
+### `List<ShipsRemote>` ShipsRemote
 

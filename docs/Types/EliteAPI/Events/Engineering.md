@@ -30,5 +30,5 @@ Inheritance: `Object` → `Engineering`
 
 ### `String` ExperimentalEffectLocalised
 
-### `List`1` Modifiers
+### `List<LoadOutModifier>` Modifiers
 

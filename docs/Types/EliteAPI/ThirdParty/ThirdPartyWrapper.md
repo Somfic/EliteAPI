@@ -26,7 +26,7 @@ Creates a new ThirdPartyWrapper object.
 
 ## 03 Methods
 
-### `List`1` GetVariables ()
+### `List<Variable>` GetVariables ()
 
 
 
@@ -42,7 +42,7 @@ Returns a value whether the API should automatically start the Discord Rich Pres
 
 
 
-### `List`1` GetEventVariables (`Object` e)
+### `List<Variable>` GetEventVariables (`Object` e)
 
 
 

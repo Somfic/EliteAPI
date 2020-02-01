@@ -18,5 +18,5 @@ Inheritance: `Object` → `PassengersInfo`
 
 ### `String` Event
 
-### `List`1` Manifest
+### `List<Manifest>` Manifest
 

@@ -22,5 +22,5 @@ Inheritance: `Object` → `InaraLoadoutEngineering`
 
 ### `String` ExperimentalEffect
 
-### `List`1` Modifiers
+### `List<InaraModifier>` Modifiers
 

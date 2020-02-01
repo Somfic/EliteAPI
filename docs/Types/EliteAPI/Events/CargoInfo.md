@@ -22,5 +22,5 @@ Inheritance: `Object` → `CargoInfo`
 
 ### `Int64` Count
 
-### `List`1` Inventory
+### `List<Inventory>` Inventory
 

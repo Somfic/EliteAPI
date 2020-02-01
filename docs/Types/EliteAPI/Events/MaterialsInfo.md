@@ -18,9 +18,9 @@ Inheritance: `Object` → `MaterialsInfo`
 
 ### `String` Event
 
-### `List`1` Raw
+### `List<Raw>` Raw
 
-### `List`1` Manufactured
+### `List<Encoded>` Manufactured
 
-### `List`1` Encoded
+### `List<Encoded>` Encoded
 

@@ -17,10 +17,10 @@ namespace EliteAPI.Inara.Events
         [JsonProperty("missionExpiry")]
         public DateTime MissionExpiry { get; internal set; }
         [JsonProperty("influenceGain")]
-        public string InfluenceGain { get => InfluenceGain.ToString(); }
+        public string InfluenceGain { get; internal set; }
         public GainType InfluenceGainAmount { get; internal set; }
         [JsonProperty("reputationGain")]
-        public string ReputationGain { get => ReputationGain.ToString(); }
+        public string ReputationGain { get; internal set; }
         public GainType ReputationGainAmount { get; internal set; }
         [JsonProperty("starSystemNameOrigin")]
         public string StarSystemNameOrigin { get; internal set; }

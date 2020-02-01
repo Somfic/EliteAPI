@@ -1,4 +1,5 @@
-﻿using Somfic.Logging;
+﻿using System.Text;
+using Somfic.Logging;
 
 namespace EliteAPI.Status
 {
@@ -42,11 +43,11 @@ namespace EliteAPI.Status
             FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             //Create a stream from the file stream.
             StreamReader streamReader = new StreamReader(fileStream);
-            string json = "";
+            StringBuilder json = new StringBuilder();
             //Go through the stream.
-            while (!streamReader.EndOfStream) { json = json + streamReader.ReadLine(); }
+            while (!streamReader.EndOfStream) { json.AppendLine(streamReader.ReadLine()); }
             //Process this string.
-            try { return Process(json); } catch (Exception ex) { api.Logger.Log(Severity.Warning, "Could not update Cargo.json.", ex); }
+            try { return Process(json.ToString()); } catch (Exception ex) { api.Logger.Log(Severity.Warning, "Could not update Cargo.json.", ex); }
             return new ShipCargo();
         }
     }

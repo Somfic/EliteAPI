@@ -1,4 +1,4 @@
-{"tags":["FileheaderInfo","EliteAPI","Events","Timestamp","Event","Part","Language","Gameversion","Build"],"status":1}
+{"tags":["FileheaderInfo","EliteAPI","Events","Part","Language","Gameversion","Build","Timestamp","Event"],"status":1}
 
 # FileheaderInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[FileheaderInfo](../../EliteAPI/Events/FileheaderInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[FileheaderInfo](../../EliteAPI/Events/FileheaderInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[FileheaderInfo](../../EliteAPI/Events/FileheaderInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>Int64</span> Part
 
@@ -25,4 +21,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Fileheader
 ### <span class='code'>String</span> Gameversion
 
 ### <span class='code'>String</span> Build
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

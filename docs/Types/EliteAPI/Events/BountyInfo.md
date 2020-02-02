@@ -1,4 +1,4 @@
-{"tags":["BountyInfo","EliteAPI","Events","Timestamp","Event","Rewards","Target","TotalReward","VictimFaction","SharedWithOthers"],"status":1}
+{"tags":["BountyInfo","EliteAPI","Events","Rewards","Target","TotalReward","VictimFaction","SharedWithOthers","Timestamp","Event"],"status":1}
 
 # BountyInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[BountyInfo](../../EliteAPI/Events/BountyInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[BountyInfo](../../EliteAPI/Events/BountyInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[BountyInfo](../../EliteAPI/Events/BountyInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>List<[Reward](../../EliteAPI/Events/Reward.html)></span> Rewards
 
@@ -27,4 +23,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[BountyInfo
 ### <span class='code'>String</span> VictimFaction
 
 ### <span class='code'>Int64</span> SharedWithOthers
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

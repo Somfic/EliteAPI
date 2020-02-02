@@ -1,4 +1,4 @@
-{"tags":["DockedInfo","EliteAPI","Events","Timestamp","Event","StationName","StationType","StarSystem","SystemAddress","MarketId","StationFaction","StationGovernment","StationGovernmentLocalised","StationAllegiance","StationServices","StationEconomy","StationEconomyLocalised","StationEconomies","DistFromStarLs"],"status":1}
+{"tags":["DockedInfo","EliteAPI","Events","Timestamp","Event","StationName","StationType","StarSystem","SystemAddress","MarketId","StationFaction","StationGovernment","StationGovernmentLocalised","StationAllegiance","StationServices","StationEconomy","StationEconomyLocalised","StationEconomies","DistFromStarLs","Timestamp"],"status":1}
 
 # DockedInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[DockedInfo](../../EliteAPI/Events/DockedInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[DockedInfo](../../EliteAPI/Events/DockedInfo.html)</span>
 
 ## 02 Constructors
 
@@ -45,4 +45,6 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[DockedInfo
 ### <span class='code'>List<[StationEconomy](../../EliteAPI/Events/StationEconomy.html)></span> StationEconomies
 
 ### <span class='code'>Double</span> DistFromStarLs
+
+### <span class='code'>DateTime</span> Timestamp
 

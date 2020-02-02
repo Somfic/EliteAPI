@@ -1,4 +1,4 @@
-{"tags":["CodexEntryInfo","EliteAPI","Events","Timestamp","Event","EntryId","Name","NameLocalised","SubCategory","SubCategoryLocalised","Category","CategoryLocalised","Region","RegionLocalised","System","SystemAddress","IsNewEntry","VoucherAmount"],"status":1}
+{"tags":["CodexEntryInfo","EliteAPI","Events","EntryId","Name","NameLocalised","SubCategory","SubCategoryLocalised","Category","CategoryLocalised","Region","RegionLocalised","System","SystemAddress","IsNewEntry","VoucherAmount","Timestamp","Event"],"status":1}
 
 # CodexEntryInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[CodexEntryInfo](../../EliteAPI/Events/CodexEntryInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[CodexEntryInfo](../../EliteAPI/Events/CodexEntryInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[CodexEntryInfo](../../EliteAPI/Events/CodexEntryInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>Int64</span> EntryId
 
@@ -43,4 +39,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[CodexEntry
 ### <span class='code'>Boolean</span> IsNewEntry
 
 ### <span class='code'>Int64</span> VoucherAmount
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

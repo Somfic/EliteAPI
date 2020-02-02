@@ -1,4 +1,4 @@
-{"tags":["FSDTargetInfo","EliteAPI","Events","Timestamp","Event","Name","SystemAddress","RemainingJumpsInRoute"],"status":1}
+{"tags":["FSDTargetInfo","EliteAPI","Events","Name","SystemAddress","RemainingJumpsInRoute","Timestamp","Event"],"status":1}
 
 # FSDTargetInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[FSDTargetInfo](../../EliteAPI/Events/FSDTargetInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[FSDTargetInfo](../../EliteAPI/Events/FSDTargetInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,13 +14,13 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[FSDTargetI
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> Name
 
 ### <span class='code'>Int64</span> SystemAddress
 
 ### <span class='code'>Int32</span> RemainingJumpsInRoute
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

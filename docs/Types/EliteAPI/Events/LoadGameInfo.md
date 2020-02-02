@@ -1,4 +1,4 @@
-{"tags":["LoadGameInfo","EliteAPI","Events","Timestamp","Event","Fid","Commander","Horizons","Ship","ShipLocalised","ShipId","ShipName","ShipIdent","FuelLevel","FuelCapacity","GameMode","Group","Credits","Loan"],"status":1}
+{"tags":["LoadGameInfo","EliteAPI","Events","Fid","Commander","Horizons","Ship","ShipLocalised","ShipId","ShipName","ShipIdent","FuelLevel","FuelCapacity","GameMode","Group","Credits","Loan","Timestamp","Event"],"status":1}
 
 # LoadGameInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[LoadGameInfo](../../EliteAPI/Events/LoadGameInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[LoadGameInfo](../../EliteAPI/Events/LoadGameInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[LoadGameInfo](../../EliteAPI/Events/LoadGameInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> Fid
 
@@ -45,4 +41,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[LoadGameIn
 ### <span class='code'>Int64</span> Credits
 
 ### <span class='code'>Int64</span> Loan
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

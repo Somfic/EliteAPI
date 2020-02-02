@@ -1,4 +1,4 @@
-{"tags":["JoinACrewInfo","EliteAPI","Events","Timestamp","Event","Captain"],"status":1}
+{"tags":["JoinACrewInfo","EliteAPI","Events","Captain","Timestamp","Event"],"status":1}
 
 # JoinACrewInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[JoinACrewInfo](../../EliteAPI/Events/JoinACrewInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[JoinACrewInfo](../../EliteAPI/Events/JoinACrewInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,9 +14,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[JoinACrewI
 
 ## 03 Properties
 
+### <span class='code'>String</span> Captain
+
 ### <span class='code'>DateTime</span> Timestamp
 
 ### <span class='code'>String</span> Event
-
-### <span class='code'>String</span> Captain
 

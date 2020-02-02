@@ -1,4 +1,4 @@
-{"tags":["EngineerContributionInfo","EliteAPI","Events","Timestamp","Event","Engineer","Type","Material","Quantity","TotalQuantity"],"status":1}
+{"tags":["EngineerContributionInfo","EliteAPI","Events","Engineer","Type","Material","Quantity","TotalQuantity","Timestamp","Event"],"status":1}
 
 # EngineerContributionInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[EngineerContributionInfo](../../EliteAPI/Events/EngineerContributionInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[EngineerContributionInfo](../../EliteAPI/Events/EngineerContributionInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[EngineerContributionInfo](../../EliteAPI/Events/EngineerContributionInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> Engineer
 
@@ -27,4 +23,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EngineerCo
 ### <span class='code'>Int64</span> Quantity
 
 ### <span class='code'>Int64</span> TotalQuantity
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

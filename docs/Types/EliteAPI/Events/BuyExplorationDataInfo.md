@@ -1,4 +1,4 @@
-{"tags":["BuyExplorationDataInfo","EliteAPI","Events","Timestamp","Event","System","Cost"],"status":1}
+{"tags":["BuyExplorationDataInfo","EliteAPI","Events","System","Cost","Timestamp","Event"],"status":1}
 
 # BuyExplorationDataInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[BuyExplorationDataInfo](../../EliteAPI/Events/BuyExplorationDataInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[BuyExplorationDataInfo](../../EliteAPI/Events/BuyExplorationDataInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,11 +14,11 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[BuyExplora
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> System
 
 ### <span class='code'>Int64</span> Cost
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

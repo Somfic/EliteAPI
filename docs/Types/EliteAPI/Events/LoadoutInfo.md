@@ -1,4 +1,4 @@
-{"tags":["LoadoutInfo","EliteAPI","Events","Timestamp","Event","Ship","ShipId","ShipName","ShipIdent","HullValue","ModulesValue","HullHealth","Hot","Rebuy","Modules"],"status":1}
+{"tags":["LoadoutInfo","EliteAPI","Events","Ship","ShipId","ShipName","ShipIdent","HullValue","ModulesValue","HullHealth","Hot","Rebuy","Modules","Timestamp","Event"],"status":1}
 
 # LoadoutInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[LoadoutInfo](../../EliteAPI/Events/LoadoutInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[LoadoutInfo](../../EliteAPI/Events/LoadoutInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[LoadoutInfo](../../EliteAPI/Events/LoadoutInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> Ship
 
@@ -37,4 +33,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[LoadoutInf
 ### <span class='code'>Int64</span> Rebuy
 
 ### <span class='code'>List<[Module](../../EliteAPI/Status/Module.html)></span> Modules
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

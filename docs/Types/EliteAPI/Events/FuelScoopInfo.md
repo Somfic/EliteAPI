@@ -1,4 +1,4 @@
-{"tags":["FuelScoopInfo","EliteAPI","Events","Timestamp","Event","Scooped","Total"],"status":1}
+{"tags":["FuelScoopInfo","EliteAPI","Events","Scooped","Total","Timestamp","Event"],"status":1}
 
 # FuelScoopInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[FuelScoopInfo](../../EliteAPI/Events/FuelScoopInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[FuelScoopInfo](../../EliteAPI/Events/FuelScoopInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,11 +14,11 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[FuelScoopI
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>Double</span> Scooped
 
 ### <span class='code'>Double</span> Total
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

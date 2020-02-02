@@ -62,13 +62,7 @@ Set to true when the API is ready.
 
 
 
-The default directory of the Journal files <span class='code'>C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous</span>.
-
-
-
-
-
-If the default directory could not be returned, the current directory will be returned.
+The standard Directory of the Player Journal files (C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous).
 
 
 
@@ -76,7 +70,7 @@ If the default directory could not be returned, the current directory will be re
 
 
 
-This version of EliteAPI.
+The version of EliteAPI.
 
 
 
@@ -92,7 +86,7 @@ Whether the API is currently running.
 
 
 
-The Journal directory that is EliteAPI is currently using.
+The Journal directory that is being used by the API.
 
 
 
@@ -100,7 +94,7 @@ The Journal directory that is EliteAPI is currently using.
 
 
 
-All of the EliteAPI events are stored in this object.
+Object that holds all the events.
 
 
 
@@ -108,7 +102,7 @@ All of the EliteAPI events are stored in this object.
 
 
 
-The logger using across the API.
+Objects that holds all logging related functions.
 
 
 
@@ -116,13 +110,7 @@ The logger using across the API.
 
 
 
-Holds the ship's live status.
-
-
-
-
-
-Values like the landing gear and other variables are stored here.
+Holds the ship's current status.
 
 
 
@@ -130,7 +118,7 @@ Values like the landing gear and other variables are stored here.
 
 
 
-Holds information on the ship's current cargo situation.
+Holds the ship's current cargo situation.
 
 
 
@@ -146,7 +134,7 @@ Returns all the modules installed on the current ship.
 
 
 
-Holds information on the ship's current materials situation.
+Holds the ship's current materials situation.
 
 
 

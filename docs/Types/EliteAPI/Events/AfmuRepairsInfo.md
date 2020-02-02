@@ -1,4 +1,4 @@
-{"tags":["AfmuRepairsInfo","EliteAPI","Events","Timestamp","Event","Module","ModuleLocalised","FullyRepaired","Health"],"status":1}
+{"tags":["AfmuRepairsInfo","EliteAPI","Events","Module","ModuleLocalised","FullyRepaired","Health","Timestamp","Event"],"status":1}
 
 # AfmuRepairsInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[AfmuRepairsInfo](../../EliteAPI/Events/AfmuRepairsInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[AfmuRepairsInfo](../../EliteAPI/Events/AfmuRepairsInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[AfmuRepairsInfo](../../EliteAPI/Events/AfmuRepairsInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> Module
 
@@ -49,4 +45,8 @@ Whether modules are now fully repaired
 Value between 0 and 1.
 
 
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

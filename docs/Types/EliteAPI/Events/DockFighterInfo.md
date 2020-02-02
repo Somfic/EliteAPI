@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[DockFighterInfo](../../EliteAPI/Events/DockFighterInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[DockFighterInfo](../../EliteAPI/Events/DockFighterInfo.html)</span>
 
 ## 02 Constructors
 

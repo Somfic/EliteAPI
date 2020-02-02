@@ -1,4 +1,4 @@
-{"tags":["AsteroidCrackedInfo","EliteAPI","Events","Timestamp","Event","Body"],"status":1}
+{"tags":["AsteroidCrackedInfo","EliteAPI","Events","Body","Timestamp","Event"],"status":1}
 
 # AsteroidCrackedInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[AsteroidCrackedInfo](../../EliteAPI/Events/AsteroidCrackedInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[AsteroidCrackedInfo](../../EliteAPI/Events/AsteroidCrackedInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,9 +14,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[AsteroidCr
 
 ## 03 Properties
 
+### <span class='code'>String</span> Body
+
 ### <span class='code'>DateTime</span> Timestamp
 
 ### <span class='code'>String</span> Event
-
-### <span class='code'>String</span> Body
 

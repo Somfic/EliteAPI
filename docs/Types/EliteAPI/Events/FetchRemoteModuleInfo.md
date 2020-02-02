@@ -1,4 +1,4 @@
-{"tags":["FetchRemoteModuleInfo","EliteAPI","Events","Timestamp","Event","StorageSlot","StoredItem","StoredItemLocalised","ServerId","TransferCost","TransferTime","Ship","ShipId"],"status":1}
+{"tags":["FetchRemoteModuleInfo","EliteAPI","Events","StorageSlot","StoredItem","StoredItemLocalised","ServerId","TransferCost","TransferTime","Ship","ShipId","Timestamp","Event"],"status":1}
 
 # FetchRemoteModuleInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[FetchRemoteModuleInfo](../../EliteAPI/Events/FetchRemoteModuleInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[FetchRemoteModuleInfo](../../EliteAPI/Events/FetchRemoteModuleInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[FetchRemoteModuleInfo](../../EliteAPI/Events/FetchRemoteModuleInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>Int64</span> StorageSlot
 
@@ -33,4 +29,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[FetchRemot
 ### <span class='code'>String</span> Ship
 
 ### <span class='code'>Int64</span> ShipId
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

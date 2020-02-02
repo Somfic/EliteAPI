@@ -1,4 +1,4 @@
-{"tags":["EngineerProgressInfo","EliteAPI","Events","Timestamp","Event","Engineers"],"status":1}
+{"tags":["EngineerProgressInfo","EliteAPI","Events","Engineers","Timestamp","Event"],"status":1}
 
 # EngineerProgressInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[EngineerProgressInfo](../../EliteAPI/Events/EngineerProgressInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[EngineerProgressInfo](../../EliteAPI/Events/EngineerProgressInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,9 +14,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EngineerPr
 
 ## 03 Properties
 
+### <span class='code'>List<[Engineer](../../EliteAPI/Events/Engineer.html)></span> Engineers
+
 ### <span class='code'>DateTime</span> Timestamp
 
 ### <span class='code'>String</span> Event
-
-### <span class='code'>List<[Engineer](../../EliteAPI/Events/Engineer.html)></span> Engineers
 

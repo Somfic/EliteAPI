@@ -1,4 +1,4 @@
-{"tags":["LaunchDroneInfo","EliteAPI","Events","Timestamp","Event","Type"],"status":1}
+{"tags":["LaunchDroneInfo","EliteAPI","Events","Type","Timestamp","Event"],"status":1}
 
 # LaunchDroneInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[LaunchDroneInfo](../../EliteAPI/Events/LaunchDroneInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[LaunchDroneInfo](../../EliteAPI/Events/LaunchDroneInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,9 +14,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[LaunchDron
 
 ## 03 Properties
 
+### <span class='code'>String</span> Type
+
 ### <span class='code'>DateTime</span> Timestamp
 
 ### <span class='code'>String</span> Event
-
-### <span class='code'>String</span> Type
 

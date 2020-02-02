@@ -1,4 +1,4 @@
-{"tags":["ChangeCrewRoleInfo","EliteAPI","Events","Timestamp","Event","Role"],"status":1}
+{"tags":["ChangeCrewRoleInfo","EliteAPI","Events","Role","Timestamp","Event"],"status":1}
 
 # ChangeCrewRoleInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[ChangeCrewRoleInfo](../../EliteAPI/Events/ChangeCrewRoleInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[ChangeCrewRoleInfo](../../EliteAPI/Events/ChangeCrewRoleInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,9 +14,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[ChangeCrew
 
 ## 03 Properties
 
+### <span class='code'>String</span> Role
+
 ### <span class='code'>DateTime</span> Timestamp
 
 ### <span class='code'>String</span> Event
-
-### <span class='code'>String</span> Role
 

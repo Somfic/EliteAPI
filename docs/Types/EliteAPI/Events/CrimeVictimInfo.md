@@ -1,4 +1,4 @@
-{"tags":["CrimeVictimInfo","EliteAPI","Events","Timestamp","Event","Offender","CrimeType","Bounty"],"status":1}
+{"tags":["CrimeVictimInfo","EliteAPI","Events","Offender","CrimeType","Bounty","Timestamp","Event"],"status":1}
 
 # CrimeVictimInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[CrimeVictimInfo](../../EliteAPI/Events/CrimeVictimInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[CrimeVictimInfo](../../EliteAPI/Events/CrimeVictimInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,13 +14,13 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[CrimeVicti
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> Offender
 
 ### <span class='code'>String</span> CrimeType
 
 ### <span class='code'>Int64</span> Bounty
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

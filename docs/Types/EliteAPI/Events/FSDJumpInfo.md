@@ -1,4 +1,4 @@
-{"tags":["FSDJumpInfo","EliteAPI","Events","Timestamp","Event","StarSystem","SystemAddress","StarPos","SystemAllegiance","SystemEconomy","SystemEconomyLocalised","SystemSecondEconomy","SystemSecondEconomyLocalised","SystemGovernment","SystemGovernmentLocalised","SystemSecurity","SystemSecurityLocalised","Population","Powers","PowerplayState","JumpDist","FuelUsed","FuelLevel","Factions","SystemFaction","FactionState"],"status":1}
+{"tags":["FSDJumpInfo","EliteAPI","Events","StarSystem","SystemAddress","StarPos","SystemAllegiance","SystemEconomy","SystemEconomyLocalised","SystemSecondEconomy","SystemSecondEconomyLocalised","SystemGovernment","SystemGovernmentLocalised","SystemSecurity","SystemSecurityLocalised","Population","Powers","PowerplayState","JumpDist","FuelUsed","FuelLevel","Factions","SystemFaction","FactionState","Timestamp","Event"],"status":1}
 
 # FSDJumpInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[FSDJumpInfo](../../EliteAPI/Events/FSDJumpInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[FSDJumpInfo](../../EliteAPI/Events/FSDJumpInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[FSDJumpInfo](../../EliteAPI/Events/FSDJumpInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> StarSystem
 
@@ -59,4 +55,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[FSDJumpInf
 ### <span class='code'>[SystemFaction](../../EliteAPI/Events/SystemFaction.html)</span> SystemFaction
 
 ### <span class='code'>String</span> FactionState
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

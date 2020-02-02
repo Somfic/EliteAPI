@@ -1,4 +1,4 @@
-{"tags":["DatalinkVoucherInfo","EliteAPI","Events","Timestamp","Event","Reward","VictimFaction","PayeeFaction"],"status":1}
+{"tags":["DatalinkVoucherInfo","EliteAPI","Events","Reward","VictimFaction","PayeeFaction","Timestamp","Event"],"status":1}
 
 # DatalinkVoucherInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[DatalinkVoucherInfo](../../EliteAPI/Events/DatalinkVoucherInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[DatalinkVoucherInfo](../../EliteAPI/Events/DatalinkVoucherInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,13 +14,13 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[DatalinkVo
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>Int64</span> Reward
 
 ### <span class='code'>String</span> VictimFaction
 
 ### <span class='code'>String</span> PayeeFaction
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

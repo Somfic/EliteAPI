@@ -1,4 +1,4 @@
-{"tags":["FSSAllBodiesFoundInfo","EliteAPI","Events","Timestamp","Event","SystemName","SystemAddress","Count"],"status":1}
+{"tags":["FSSAllBodiesFoundInfo","EliteAPI","Events","SystemName","SystemAddress","Count","Timestamp","Event"],"status":1}
 
 # FSSAllBodiesFoundInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[FSSAllBodiesFoundInfo](../../EliteAPI/Events/FSSAllBodiesFoundInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[FSSAllBodiesFoundInfo](../../EliteAPI/Events/FSSAllBodiesFoundInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,13 +14,13 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[FSSAllBodi
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> SystemName
 
 ### <span class='code'>Int64</span> SystemAddress
 
 ### <span class='code'>Int64</span> Count
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

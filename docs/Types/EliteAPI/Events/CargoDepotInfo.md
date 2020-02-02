@@ -1,4 +1,4 @@
-{"tags":["CargoDepotInfo","EliteAPI","Events","Timestamp","Event","MissionId","UpdateType","CargoType","CargoTypeLocalised","Count","StartMarketId","EndMarketId","ItemsCollected","ItemsDelivered","TotalItemsToDeliver","Progress"],"status":1}
+{"tags":["CargoDepotInfo","EliteAPI","Events","MissionId","UpdateType","CargoType","CargoTypeLocalised","Count","StartMarketId","EndMarketId","ItemsCollected","ItemsDelivered","TotalItemsToDeliver","Progress","Timestamp","Event"],"status":1}
 
 # CargoDepotInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[CargoDepotInfo](../../EliteAPI/Events/CargoDepotInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[CargoDepotInfo](../../EliteAPI/Events/CargoDepotInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[CargoDepotInfo](../../EliteAPI/Events/CargoDepotInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>Int64</span> MissionId
 
@@ -39,4 +35,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[CargoDepot
 ### <span class='code'>Int64</span> TotalItemsToDeliver
 
 ### <span class='code'>Double</span> Progress
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

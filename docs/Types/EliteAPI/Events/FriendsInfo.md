@@ -1,4 +1,4 @@
-{"tags":["FriendsInfo","EliteAPI","Events","Timestamp","Event","Status","Name"],"status":1}
+{"tags":["FriendsInfo","EliteAPI","Events","Status","Name","Timestamp","Event"],"status":1}
 
 # FriendsInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[FriendsInfo](../../EliteAPI/Events/FriendsInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[FriendsInfo](../../EliteAPI/Events/FriendsInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,11 +14,11 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[FriendsInf
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> Status
 
 ### <span class='code'>String</span> Name
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

@@ -1,4 +1,4 @@
-{"tags":["IEliteDangerousAPI","EliteAPI","Reset","Start","Stop","ChangeJournal","Version","IsRunning","JournalDirectory","SkipCatchUp","Events","Logger","Status","Cargo","Modules","Bindings","Commander","Location","DiscordRichPresence","OnError","OnQuit","OnReady"],"status":1}
+{"tags":["IEliteDangerousAPI","EliteAPI","Reset","Start","Stop","ChangeJournal","IsRunning","JournalDirectory","SkipCatchUp","Events","Logger","Status","Cargo","Modules","Bindings","Commander","Location","DiscordRichPresence","OnError","OnQuit","OnReady"],"status":1}
 
 # IEliteDangerousAPI
 
@@ -15,14 +15,6 @@ Interface for the EliteDangerousAPI class.
 
 
 ## 02 Properties
-
-### <span class='code'>String</span> Version
-
-
-
-Set to true when the API is ready.
-
-
 
 ### <span class='code'>Boolean</span> IsRunning
 

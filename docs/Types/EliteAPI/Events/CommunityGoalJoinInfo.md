@@ -1,4 +1,4 @@
-{"tags":["CommunityGoalJoinInfo","EliteAPI","Events","Timestamp","Event","Name","System"],"status":1}
+{"tags":["CommunityGoalJoinInfo","EliteAPI","Events","Name","System","Timestamp","Event"],"status":1}
 
 # CommunityGoalJoinInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[CommunityGoalJoinInfo](../../EliteAPI/Events/CommunityGoalJoinInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[CommunityGoalJoinInfo](../../EliteAPI/Events/CommunityGoalJoinInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,11 +14,11 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[CommunityG
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> Name
 
 ### <span class='code'>String</span> System
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

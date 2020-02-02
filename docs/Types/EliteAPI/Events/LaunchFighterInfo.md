@@ -1,4 +1,4 @@
-{"tags":["LaunchFighterInfo","EliteAPI","Events","Timestamp","Event","Loadout","PlayerControlled"],"status":1}
+{"tags":["LaunchFighterInfo","EliteAPI","Events","Loadout","PlayerControlled","Timestamp","Event"],"status":1}
 
 # LaunchFighterInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[LaunchFighterInfo](../../EliteAPI/Events/LaunchFighterInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[LaunchFighterInfo](../../EliteAPI/Events/LaunchFighterInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,11 +14,11 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[LaunchFigh
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> Loadout
 
 ### <span class='code'>Boolean</span> PlayerControlled
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

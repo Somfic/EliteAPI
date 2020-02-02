@@ -1,4 +1,4 @@
-{"tags":["EngineerCraftInfo","EliteAPI","Events","Timestamp","Event","Slot","Module","ApplyExperimentalEffect","Ingredients","Engineer","EngineerId","BlueprintId","BlueprintName","Level","Quality","ExperimentalEffect","ExperimentalEffectLocalised","Modifiers"],"status":1}
+{"tags":["EngineerCraftInfo","EliteAPI","Events","Slot","Module","ApplyExperimentalEffect","Ingredients","Engineer","EngineerId","BlueprintId","BlueprintName","Level","Quality","ExperimentalEffect","ExperimentalEffectLocalised","Modifiers","Timestamp","Event"],"status":1}
 
 # EngineerCraftInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[EngineerCraftInfo](../../EliteAPI/Events/EngineerCraftInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[EngineerCraftInfo](../../EliteAPI/Events/EngineerCraftInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[EngineerCraftInfo](../../EliteAPI/Events/EngineerCraftInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> Slot
 
@@ -43,4 +39,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EngineerCr
 ### <span class='code'>String</span> ExperimentalEffectLocalised
 
 ### <span class='code'>List<[Modifier](../../EliteAPI/Events/Modifier.html)></span> Modifiers
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

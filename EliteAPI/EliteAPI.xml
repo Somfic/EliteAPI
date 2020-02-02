@@ -319,22 +319,22 @@
         </member>
         <member name="P:EliteAPI.Events.AfmuRepairsInfo.Module">
             <summary>
-            The name of the module
+                The name of the module
             </summary>
         </member>
         <member name="P:EliteAPI.Events.AfmuRepairsInfo.ModuleLocalised">
             <summary>
-            The local name of the module
+                The local name of the module
             </summary>
         </member>
         <member name="P:EliteAPI.Events.AfmuRepairsInfo.FullyRepaired">
             <summary>
-            Whether modules are now fully repaired
+                Whether modules are now fully repaired
             </summary>
         </member>
         <member name="P:EliteAPI.Events.AfmuRepairsInfo.Health">
             <summary>
-            Value between 0 and 1.
+                Value between 0 and 1.
             </summary>
         </member>
         <member name="T:EliteAPI.IEliteDangerousAPI">

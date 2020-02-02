@@ -1,4 +1,4 @@
-{"tags":["DatalinkScanInfo","EliteAPI","Events","Timestamp","Event","Message","MessageLocalised"],"status":1}
+{"tags":["DatalinkScanInfo","EliteAPI","Events","Message","MessageLocalised","Timestamp","Event"],"status":1}
 
 # DatalinkScanInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[DatalinkScanInfo](../../EliteAPI/Events/DatalinkScanInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[DatalinkScanInfo](../../EliteAPI/Events/DatalinkScanInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,11 +14,11 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[DatalinkSc
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> Message
 
 ### <span class='code'>String</span> MessageLocalised
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

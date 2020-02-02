@@ -1,4 +1,4 @@
-{"tags":["FSDFaction","EliteAPI","Events","Name","FactionState","Government","Influence","Allegiance","Happiness","HappinessLocalised","MyReputation","RecoveringStates","PendingStates","ActiveStates","FactionFaction","Amount"],"status":1}
+{"tags":["FSDFaction","EliteAPI","Events","FactionFaction","Amount","Name","FactionState","Government","Influence","Allegiance","Happiness","HappinessLocalised","MyReputation","RecoveringStates","PendingStates","ActiveStates"],"status":1}
 
 # FSDFaction
 
@@ -13,6 +13,10 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[FSDFaction
 ### <span class='code'>[FSDFaction](../../EliteAPI/Events/FSDFaction.html)</span> ()
 
 ## 03 Properties
+
+### <span class='code'>String</span> FactionFaction
+
+### <span class='code'>Int64</span> Amount
 
 ### <span class='code'>String</span> Name
 
@@ -35,8 +39,4 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[FSDFaction
 ### <span class='code'>List<[IngState](../../EliteAPI/Events/IngState.html)></span> PendingStates
 
 ### <span class='code'>List<[ActiveState](../../EliteAPI/Events/ActiveState.html)></span> ActiveStates
-
-### <span class='code'>String</span> FactionFaction
-
-### <span class='code'>Int64</span> Amount
 

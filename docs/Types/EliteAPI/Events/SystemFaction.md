@@ -1,4 +1,4 @@
-{"tags":["SystemFaction","EliteAPI","Events","Name"],"status":1}
+{"tags":["SystemFaction","EliteAPI","Events","Name","FactionState"],"status":1}
 
 # SystemFaction
 
@@ -15,4 +15,6 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[SystemFact
 ## 03 Properties
 
 ### <span class='code'>String</span> Name
+
+### <span class='code'>String</span> FactionState
 

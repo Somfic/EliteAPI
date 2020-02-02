@@ -6,7 +6,7 @@
     <FileVersion>2.3.1.0</FileVersion>
     <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
-    <PackageIconUrl>https://github.com/EliteAPI/EliteAPI/blob/dev/Icons/logo.jpg</PackageIconUrl>
+    <PackageIconUrl></PackageIconUrl>
     <RepositoryType>Public</RepositoryType>
     <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic Frontier</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
@@ -14,8 +14,9 @@
 VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     <Copyright>Somfic 2019</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.3.1.0</Version>
+    <Version>2.3.1.0-alpha</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <PackageIcon>logo_gradient_small.jpg</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -51,6 +52,13 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     <Reference Include="vmAPI">
       <HintPath>..\lib\vmAPI.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Icons\logo_gradient_small.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

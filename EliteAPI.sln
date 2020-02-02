@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EliteAPI", "EliteAPI\EliteAPI.csproj", "{A45F3B6D-BDBB-4BC5-AFF7-E732FE679B54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPIHelper", "EliteAPIHelper\EliteAPIHelper.csproj", "{25821BE1-64A1-46FD-995F-1AEA1BF28B6D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,14 +31,6 @@ Global
 		{A45F3B6D-BDBB-4BC5-AFF7-E732FE679B54}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A45F3B6D-BDBB-4BC5-AFF7-E732FE679B54}.Release|x86.ActiveCfg = Release|Any CPU
 		{A45F3B6D-BDBB-4BC5-AFF7-E732FE679B54}.Release|x86.Build.0 = Release|Any CPU
-		{25821BE1-64A1-46FD-995F-1AEA1BF28B6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25821BE1-64A1-46FD-995F-1AEA1BF28B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25821BE1-64A1-46FD-995F-1AEA1BF28B6D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{25821BE1-64A1-46FD-995F-1AEA1BF28B6D}.Debug|x86.Build.0 = Debug|Any CPU
-		{25821BE1-64A1-46FD-995F-1AEA1BF28B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25821BE1-64A1-46FD-995F-1AEA1BF28B6D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{25821BE1-64A1-46FD-995F-1AEA1BF28B6D}.Release|x86.ActiveCfg = Release|Any CPU
-		{25821BE1-64A1-46FD-995F-1AEA1BF28B6D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

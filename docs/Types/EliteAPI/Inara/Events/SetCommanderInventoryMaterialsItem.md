@@ -4,17 +4,17 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderInventoryMaterialsItem`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderInventoryMaterialsItem](../../../EliteAPI/Inara/Events/SetCommanderInventoryMaterialsItem.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderInventoryMaterialsItem` (`String` itemName, `Int64` itemCount)
+### <span class='code'>[SetCommanderInventoryMaterialsItem](../../../EliteAPI/Inara/Events/SetCommanderInventoryMaterialsItem.html)</span> (<span class='code'>String</span> itemName, <span class='code'>Int64</span> itemCount)
 
 ## 03 Properties
 
-### `String` ItemName
+### <span class='code'>String</span> ItemName
 
-### `Int64` ItemCount
+### <span class='code'>Int64</span> ItemCount
 

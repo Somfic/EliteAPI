@@ -4,37 +4,37 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `FSSSignalDiscoveredInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[FSSSignalDiscoveredInfo](../../EliteAPI/Events/FSSSignalDiscoveredInfo.html)</span>
 
 ## 02 Constructors
 
-### `FSSSignalDiscoveredInfo` ()
+### <span class='code'>[FSSSignalDiscoveredInfo](../../EliteAPI/Events/FSSSignalDiscoveredInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Int64` SystemAddress
+### <span class='code'>Int64</span> SystemAddress
 
-### `String` SignalName
+### <span class='code'>String</span> SignalName
 
-### `String` SignalNameLocalised
+### <span class='code'>String</span> SignalNameLocalised
 
-### `String` UssType
+### <span class='code'>String</span> UssType
 
-### `String` UssTypeLocalised
+### <span class='code'>String</span> UssTypeLocalised
 
-### `String` SpawningState
+### <span class='code'>String</span> SpawningState
 
-### `String` SpawningStateLocalised
+### <span class='code'>String</span> SpawningStateLocalised
 
-### `String` SpawningFaction
+### <span class='code'>String</span> SpawningFaction
 
-### `Int64` ThreatLevel
+### <span class='code'>Int64</span> ThreatLevel
 
-### `Double` TimeRemaining
+### <span class='code'>Double</span> TimeRemaining
 

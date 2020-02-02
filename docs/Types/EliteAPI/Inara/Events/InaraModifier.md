@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `InaraModifier`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[InaraModifier](../../../EliteAPI/Inara/Events/InaraModifier.html)</span>
 
 ## 02 Constructors
 
-### `InaraModifier` ()
+### <span class='code'>[InaraModifier](../../../EliteAPI/Inara/Events/InaraModifier.html)</span> ()
 
 ## 03 Properties
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `Decimal` Value
+### <span class='code'>Decimal</span> Value
 
-### `Nullable`1` OriginalValue
+### <span class='code'>Nullable`1</span> OriginalValue
 
-### `Nullable`1` LessIsGood
+### <span class='code'>Nullable`1</span> LessIsGood
 

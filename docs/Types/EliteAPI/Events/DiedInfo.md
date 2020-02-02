@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `DiedInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[DiedInfo](../../EliteAPI/Events/DiedInfo.html)</span>
 
 ## 02 Constructors
 
-### `DiedInfo` ()
+### <span class='code'>[DiedInfo](../../EliteAPI/Events/DiedInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` KillerName
+### <span class='code'>String</span> KillerName
 
-### `String` KillerNameLocalised
+### <span class='code'>String</span> KillerNameLocalised
 
-### `String` KillerShip
+### <span class='code'>String</span> KillerShip
 
-### `String` KillerRank
+### <span class='code'>String</span> KillerRank
 

@@ -4,39 +4,39 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `FSDFaction`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[FSDFaction](../../EliteAPI/Events/FSDFaction.html)</span>
 
 ## 02 Constructors
 
-### `FSDFaction` ()
+### <span class='code'>[FSDFaction](../../EliteAPI/Events/FSDFaction.html)</span> ()
 
 ## 03 Properties
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `String` FactionState
+### <span class='code'>String</span> FactionState
 
-### `String` Government
+### <span class='code'>String</span> Government
 
-### `Double` Influence
+### <span class='code'>Double</span> Influence
 
-### `String` Allegiance
+### <span class='code'>String</span> Allegiance
 
-### `String` Happiness
+### <span class='code'>String</span> Happiness
 
-### `String` HappinessLocalised
+### <span class='code'>String</span> HappinessLocalised
 
-### `Double` MyReputation
+### <span class='code'>Double</span> MyReputation
 
-### `List<IngState>` RecoveringStates
+### <span class='code'>List<[IngState](../../EliteAPI/Events/IngState.html)></span> RecoveringStates
 
-### `List<IngState>` PendingStates
+### <span class='code'>List<[IngState](../../EliteAPI/Events/IngState.html)></span> PendingStates
 
-### `List<ActiveState>` ActiveStates
+### <span class='code'>List<[ActiveState](../../EliteAPI/Events/ActiveState.html)></span> ActiveStates
 
-### `String` FactionFaction
+### <span class='code'>String</span> FactionFaction
 
-### `Int64` Amount
+### <span class='code'>Int64</span> Amount
 

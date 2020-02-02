@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Crime`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Crime](../../EliteAPI/Events/Crime.html)</span>
 
 ## 02 Constructors
 
-### `Crime` ()
+### <span class='code'>[Crime](../../EliteAPI/Events/Crime.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` Notoriety
+### <span class='code'>Int64</span> Notoriety
 
-### `Int64` Fines
+### <span class='code'>Int64</span> Fines
 
-### `Int64` TotalFines
+### <span class='code'>Int64</span> TotalFines
 
-### `Int64` BountiesReceived
+### <span class='code'>Int64</span> BountiesReceived
 
-### `Int64` TotalBounties
+### <span class='code'>Int64</span> TotalBounties
 
-### `Int64` HighestBounty
+### <span class='code'>Int64</span> HighestBounty
 

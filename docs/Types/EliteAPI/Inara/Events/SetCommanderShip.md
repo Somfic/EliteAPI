@@ -4,37 +4,37 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderShip`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderShip](../../../EliteAPI/Inara/Events/SetCommanderShip.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderShip` (`String` shipType, `Int64` shipGameId)
+### <span class='code'>[SetCommanderShip](../../../EliteAPI/Inara/Events/SetCommanderShip.html)</span> (<span class='code'>String</span> shipType, <span class='code'>Int64</span> shipGameId)
 
 ## 03 Properties
 
-### `String` ShipType
+### <span class='code'>String</span> ShipType
 
-### `Int64` ShipGameId
+### <span class='code'>Int64</span> ShipGameId
 
-### `String` ShipName
+### <span class='code'>String</span> ShipName
 
-### `String` ShipIdent
+### <span class='code'>String</span> ShipIdent
 
-### `Boolean` IsCurrentShip
+### <span class='code'>Boolean</span> IsCurrentShip
 
-### `Boolean` IsMainShip
+### <span class='code'>Boolean</span> IsMainShip
 
-### `Boolean` IsHot
+### <span class='code'>Boolean</span> IsHot
 
-### `Int64` ShipHullValue
+### <span class='code'>Int64</span> ShipHullValue
 
-### `Int64` ShipModulesValue
+### <span class='code'>Int64</span> ShipModulesValue
 
-### `Int64` ShipRebuyCost
+### <span class='code'>Int64</span> ShipRebuyCost
 
-### `String` StarsystemName
+### <span class='code'>String</span> StarsystemName
 
-### `String` StationName
+### <span class='code'>String</span> StationName
 

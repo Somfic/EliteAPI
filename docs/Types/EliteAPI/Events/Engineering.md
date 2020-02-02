@@ -4,31 +4,31 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Engineering`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Engineering](../../EliteAPI/Events/Engineering.html)</span>
 
 ## 02 Constructors
 
-### `Engineering` ()
+### <span class='code'>[Engineering](../../EliteAPI/Events/Engineering.html)</span> ()
 
 ## 03 Properties
 
-### `String` Engineer
+### <span class='code'>String</span> Engineer
 
-### `UInt64` EngineerId
+### <span class='code'>UInt64</span> EngineerId
 
-### `UInt64` BlueprintId
+### <span class='code'>UInt64</span> BlueprintId
 
-### `String` BlueprintName
+### <span class='code'>String</span> BlueprintName
 
-### `Int64` Level
+### <span class='code'>Int64</span> Level
 
-### `Double` Quality
+### <span class='code'>Double</span> Quality
 
-### `String` ExperimentalEffect
+### <span class='code'>String</span> ExperimentalEffect
 
-### `String` ExperimentalEffectLocalised
+### <span class='code'>String</span> ExperimentalEffectLocalised
 
-### `List<LoadOutModifier>` Modifiers
+### <span class='code'>List<[LoadOutModifier](../../EliteAPI/Events/LoadOutModifier.html)></span> Modifiers
 

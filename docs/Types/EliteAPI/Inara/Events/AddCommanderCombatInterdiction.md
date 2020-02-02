@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `AddCommanderCombatInterdiction`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[AddCommanderCombatInterdiction](../../../EliteAPI/Inara/Events/AddCommanderCombatInterdiction.html)</span>
 
 ## 02 Constructors
 
-### `AddCommanderCombatInterdiction` (`String` starsystemName, `String` opponentName, `Boolean` isPlayer)
+### <span class='code'>[AddCommanderCombatInterdiction](../../../EliteAPI/Inara/Events/AddCommanderCombatInterdiction.html)</span> (<span class='code'>String</span> starsystemName, <span class='code'>String</span> opponentName, <span class='code'>Boolean</span> isPlayer)
 
 ## 03 Properties
 
-### `String` StarsystemName
+### <span class='code'>String</span> StarsystemName
 
-### `String` OpponentName
+### <span class='code'>String</span> OpponentName
 
-### `Boolean` IsPlayer
+### <span class='code'>Boolean</span> IsPlayer
 
-### `Boolean` IsSubmit
+### <span class='code'>Boolean</span> IsSubmit
 

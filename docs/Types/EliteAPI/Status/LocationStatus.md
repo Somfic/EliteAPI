@@ -4,17 +4,17 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Status`
+Namespace: <span class='code'>EliteAPI.Status</span>
 
-Inheritance: `Object` → `LocationStatus`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[LocationStatus](../../EliteAPI/Status/LocationStatus.html)</span>
 
 ## 02 Properties
 
-### `String` StarSystem
+### <span class='code'>String</span> StarSystem
 
-### `String` Body
+### <span class='code'>String</span> Body
 
-### `String` BodyType
+### <span class='code'>String</span> BodyType
 
-### `String` Station
+### <span class='code'>String</span> Station
 

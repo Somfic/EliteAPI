@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `CrewMemberRoleChangeInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[CrewMemberRoleChangeInfo](../../EliteAPI/Events/CrewMemberRoleChangeInfo.html)</span>
 
 ## 02 Constructors
 
-### `CrewMemberRoleChangeInfo` ()
+### <span class='code'>[CrewMemberRoleChangeInfo](../../EliteAPI/Events/CrewMemberRoleChangeInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Crew
+### <span class='code'>String</span> Crew
 
-### `String` Role
+### <span class='code'>String</span> Role
 

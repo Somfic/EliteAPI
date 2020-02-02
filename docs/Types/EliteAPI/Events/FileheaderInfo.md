@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `FileheaderInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[FileheaderInfo](../../EliteAPI/Events/FileheaderInfo.html)</span>
 
 ## 02 Constructors
 
-### `FileheaderInfo` ()
+### <span class='code'>[FileheaderInfo](../../EliteAPI/Events/FileheaderInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Int64` Part
+### <span class='code'>Int64</span> Part
 
-### `String` Language
+### <span class='code'>String</span> Language
 
-### `String` Gameversion
+### <span class='code'>String</span> Gameversion
 
-### `String` Build
+### <span class='code'>String</span> Build
 

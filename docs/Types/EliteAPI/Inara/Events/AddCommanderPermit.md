@@ -4,15 +4,15 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `AddCommanderPermit`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[AddCommanderPermit](../../../EliteAPI/Inara/Events/AddCommanderPermit.html)</span>
 
 ## 02 Constructors
 
-### `AddCommanderPermit` (`String` starSystemName)
+### <span class='code'>[AddCommanderPermit](../../../EliteAPI/Inara/Events/AddCommanderPermit.html)</span> (<span class='code'>String</span> starSystemName)
 
 ## 03 Properties
 
-### `String` StarSystemName
+### <span class='code'>String</span> StarSystemName
 

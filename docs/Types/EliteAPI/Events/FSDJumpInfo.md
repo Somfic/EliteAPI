@@ -4,59 +4,59 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `FSDJumpInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[FSDJumpInfo](../../EliteAPI/Events/FSDJumpInfo.html)</span>
 
 ## 02 Constructors
 
-### `FSDJumpInfo` ()
+### <span class='code'>[FSDJumpInfo](../../EliteAPI/Events/FSDJumpInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` StarSystem
+### <span class='code'>String</span> StarSystem
 
-### `Int64` SystemAddress
+### <span class='code'>Int64</span> SystemAddress
 
-### `List<Double>` StarPos
+### <span class='code'>List<Double></span> StarPos
 
-### `String` SystemAllegiance
+### <span class='code'>String</span> SystemAllegiance
 
-### `String` SystemEconomy
+### <span class='code'>String</span> SystemEconomy
 
-### `String` SystemEconomyLocalised
+### <span class='code'>String</span> SystemEconomyLocalised
 
-### `String` SystemSecondEconomy
+### <span class='code'>String</span> SystemSecondEconomy
 
-### `String` SystemSecondEconomyLocalised
+### <span class='code'>String</span> SystemSecondEconomyLocalised
 
-### `String` SystemGovernment
+### <span class='code'>String</span> SystemGovernment
 
-### `String` SystemGovernmentLocalised
+### <span class='code'>String</span> SystemGovernmentLocalised
 
-### `String` SystemSecurity
+### <span class='code'>String</span> SystemSecurity
 
-### `String` SystemSecurityLocalised
+### <span class='code'>String</span> SystemSecurityLocalised
 
-### `Int64` Population
+### <span class='code'>Int64</span> Population
 
-### `List<String>` Powers
+### <span class='code'>List<String></span> Powers
 
-### `String` PowerplayState
+### <span class='code'>String</span> PowerplayState
 
-### `Double` JumpDist
+### <span class='code'>Double</span> JumpDist
 
-### `Double` FuelUsed
+### <span class='code'>Double</span> FuelUsed
 
-### `Double` FuelLevel
+### <span class='code'>Double</span> FuelLevel
 
-### `List<FSDFaction>` Factions
+### <span class='code'>List<[FSDFaction](../../EliteAPI/Events/FSDFaction.html)></span> Factions
 
-### `SystemFaction` SystemFaction
+### <span class='code'>[SystemFaction](../../EliteAPI/Events/SystemFaction.html)</span> SystemFaction
 
-### `String` FactionState
+### <span class='code'>String</span> FactionState
 

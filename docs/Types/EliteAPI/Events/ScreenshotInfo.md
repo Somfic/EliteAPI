@@ -4,35 +4,35 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ScreenshotInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ScreenshotInfo](../../EliteAPI/Events/ScreenshotInfo.html)</span>
 
 ## 02 Constructors
 
-### `ScreenshotInfo` ()
+### <span class='code'>[ScreenshotInfo](../../EliteAPI/Events/ScreenshotInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Filename
+### <span class='code'>String</span> Filename
 
-### `Int64` Width
+### <span class='code'>Int64</span> Width
 
-### `Int64` Height
+### <span class='code'>Int64</span> Height
 
-### `String` System
+### <span class='code'>String</span> System
 
-### `String` Body
+### <span class='code'>String</span> Body
 
-### `Double` Latitude
+### <span class='code'>Double</span> Latitude
 
-### `Double` Longitude
+### <span class='code'>Double</span> Longitude
 
-### `Int64` Heading
+### <span class='code'>Int64</span> Heading
 
-### `Double` Altitude
+### <span class='code'>Double</span> Altitude
 

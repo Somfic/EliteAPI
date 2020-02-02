@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderMissionCompleted`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderMissionCompleted](../../../EliteAPI/Inara/Events/SetCommanderMissionCompleted.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderMissionCompleted` (`Int64` missionGameId)
+### <span class='code'>[SetCommanderMissionCompleted](../../../EliteAPI/Inara/Events/SetCommanderMissionCompleted.html)</span> (<span class='code'>Int64</span> missionGameId)
 
 ## 03 Properties
 
-### `Int64` MissionGameId
+### <span class='code'>Int64</span> MissionGameId
 
-### `Int64` DonationCredits
+### <span class='code'>Int64</span> DonationCredits
 
-### `Int64` RewardCredits
+### <span class='code'>Int64</span> RewardCredits
 
-### `List<InaraRewardPermit>` RewardPermits
+### <span class='code'>List<[InaraRewardPermit](../../../EliteAPI/Inara/Events/InaraRewardPermit.html)></span> RewardPermits
 
-### `List<InaraReward>` RewardCommodities
+### <span class='code'>List<[InaraReward](../../../EliteAPI/Inara/Events/InaraReward.html)></span> RewardCommodities
 
-### `List<InaraReward>` RewardMaterials
+### <span class='code'>List<[InaraReward](../../../EliteAPI/Inara/Events/InaraReward.html)></span> RewardMaterials
 

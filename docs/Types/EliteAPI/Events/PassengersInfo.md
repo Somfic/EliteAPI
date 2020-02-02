@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `PassengersInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[PassengersInfo](../../EliteAPI/Events/PassengersInfo.html)</span>
 
 ## 02 Constructors
 
-### `PassengersInfo` ()
+### <span class='code'>[PassengersInfo](../../EliteAPI/Events/PassengersInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `List<Manifest>` Manifest
+### <span class='code'>List<[Manifest](../../EliteAPI/Events/Manifest.html)></span> Manifest
 

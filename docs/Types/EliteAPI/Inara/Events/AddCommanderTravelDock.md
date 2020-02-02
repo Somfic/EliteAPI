@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `AddCommanderTravelDock`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[AddCommanderTravelDock](../../../EliteAPI/Inara/Events/AddCommanderTravelDock.html)</span>
 
 ## 02 Constructors
 
-### `AddCommanderTravelDock` (`String` starsystemName, `String` stationName)
+### <span class='code'>[AddCommanderTravelDock](../../../EliteAPI/Inara/Events/AddCommanderTravelDock.html)</span> (<span class='code'>String</span> starsystemName, <span class='code'>String</span> stationName)
 
 ## 03 Properties
 
-### `String` StarsystemName
+### <span class='code'>String</span> StarsystemName
 
-### `String` StationName
+### <span class='code'>String</span> StationName
 
-### `Int64` MarketID
+### <span class='code'>Int64</span> MarketID
 
-### `String` ShipType
+### <span class='code'>String</span> ShipType
 
-### `Int64` ShipGameId
+### <span class='code'>Int64</span> ShipGameId
 

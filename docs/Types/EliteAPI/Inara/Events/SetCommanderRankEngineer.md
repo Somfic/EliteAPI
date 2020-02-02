@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderRankEngineer`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderRankEngineer](../../../EliteAPI/Inara/Events/SetCommanderRankEngineer.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderRankEngineer` (`String` engineerName)
+### <span class='code'>[SetCommanderRankEngineer](../../../EliteAPI/Inara/Events/SetCommanderRankEngineer.html)</span> (<span class='code'>String</span> engineerName)
 
 ## 03 Properties
 
-### `String` EngineerName
+### <span class='code'>String</span> EngineerName
 
-### `RankStage` RankStage
+### <span class='code'>[RankStage](../../../EliteAPI/Inara/Events/RankStage.html)</span> RankStage
 
-### `Int64` RankValue
+### <span class='code'>Int64</span> RankValue
 

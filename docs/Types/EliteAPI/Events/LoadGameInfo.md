@@ -4,45 +4,45 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `LoadGameInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[LoadGameInfo](../../EliteAPI/Events/LoadGameInfo.html)</span>
 
 ## 02 Constructors
 
-### `LoadGameInfo` ()
+### <span class='code'>[LoadGameInfo](../../EliteAPI/Events/LoadGameInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Fid
+### <span class='code'>String</span> Fid
 
-### `String` Commander
+### <span class='code'>String</span> Commander
 
-### `Boolean` Horizons
+### <span class='code'>Boolean</span> Horizons
 
-### `String` Ship
+### <span class='code'>String</span> Ship
 
-### `String` ShipLocalised
+### <span class='code'>String</span> ShipLocalised
 
-### `Int64` ShipId
+### <span class='code'>Int64</span> ShipId
 
-### `String` ShipName
+### <span class='code'>String</span> ShipName
 
-### `String` ShipIdent
+### <span class='code'>String</span> ShipIdent
 
-### `Double` FuelLevel
+### <span class='code'>Double</span> FuelLevel
 
-### `Double` FuelCapacity
+### <span class='code'>Double</span> FuelCapacity
 
-### `String` GameMode
+### <span class='code'>String</span> GameMode
 
-### `String` Group
+### <span class='code'>String</span> Group
 
-### `Int64` Credits
+### <span class='code'>Int64</span> Credits
 
-### `Int64` Loan
+### <span class='code'>Int64</span> Loan
 

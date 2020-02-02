@@ -4,9 +4,9 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.EDSM`
+Namespace: <span class='code'>EliteAPI.EDSM</span>
 
-Inheritance: `Object` → `EDSMEntry`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EDSMEntry](../../EliteAPI/EDSM/EDSMEntry.html)</span>
 
 
 
@@ -16,7 +16,7 @@ An entry for the EDSM API.
 
 ## 02 Constructors
 
-### `EDSMEntry` (`String` url, `EDSMParameter` parameter)
+### <span class='code'>[EDSMEntry](../../EliteAPI/EDSM/EDSMEntry.html)</span> (<span class='code'>String</span> url, <span class='code'>[EDSMParameter](../../EliteAPI/EDSM/EDSMParameter.html)</span> parameter)
 
 
 
@@ -24,7 +24,7 @@ Creates a new EDSM API entry.
 
 
 
-### `EDSMEntry` (`String` url, `EDSMParameter<>` parameters)
+### <span class='code'>[EDSMEntry](../../EliteAPI/EDSM/EDSMEntry.html)</span> (<span class='code'>String</span> url, <span class='code'>EDSMParameter<></span> parameters)
 
 
 
@@ -34,7 +34,7 @@ Creates a new EDSM API entry.
 
 ## 03 Properties
 
-### `String` Url
+### <span class='code'>String</span> Url
 
 
 
@@ -42,7 +42,7 @@ The base URL of the API call.
 
 
 
-### `EDSMParameter<>` Parameters
+### <span class='code'>EDSMParameter<></span> Parameters
 
 
 

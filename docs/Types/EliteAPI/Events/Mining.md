@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Mining`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Mining](../../EliteAPI/Events/Mining.html)</span>
 
 ## 02 Constructors
 
-### `Mining` ()
+### <span class='code'>[Mining](../../EliteAPI/Events/Mining.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` MiningProfits
+### <span class='code'>Int64</span> MiningProfits
 
-### `Int64` QuantityMined
+### <span class='code'>Int64</span> QuantityMined
 
-### `Int64` MaterialsCollected
+### <span class='code'>Int64</span> MaterialsCollected
 

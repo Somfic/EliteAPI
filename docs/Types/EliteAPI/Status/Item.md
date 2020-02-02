@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Status`
+Namespace: <span class='code'>EliteAPI.Status</span>
 
-Inheritance: `Object` → `Item`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Item](../../EliteAPI/Status/Item.html)</span>
 
 ## 02 Constructors
 
-### `Item` ()
+### <span class='code'>[Item](../../EliteAPI/Status/Item.html)</span> ()
 
 ## 03 Properties
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `String` NameLocalised
+### <span class='code'>String</span> NameLocalised
 
-### `Int64` Count
+### <span class='code'>Int64</span> Count
 
-### `Int64` Stolen
+### <span class='code'>Int64</span> Stolen
 

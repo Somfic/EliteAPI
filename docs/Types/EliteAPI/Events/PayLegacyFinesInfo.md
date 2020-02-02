@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `PayLegacyFinesInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[PayLegacyFinesInfo](../../EliteAPI/Events/PayLegacyFinesInfo.html)</span>
 
 ## 02 Constructors
 
-### `PayLegacyFinesInfo` ()
+### <span class='code'>[PayLegacyFinesInfo](../../EliteAPI/Events/PayLegacyFinesInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Int64` Amount
+### <span class='code'>Int64</span> Amount
 
-### `Double` BrokerPercentage
+### <span class='code'>Double</span> BrokerPercentage
 

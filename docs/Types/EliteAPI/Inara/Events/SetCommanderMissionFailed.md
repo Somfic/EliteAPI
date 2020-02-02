@@ -4,15 +4,15 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderMissionFailed`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderMissionFailed](../../../EliteAPI/Inara/Events/SetCommanderMissionFailed.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderMissionFailed` (`Int64` missionGameId)
+### <span class='code'>[SetCommanderMissionFailed](../../../EliteAPI/Inara/Events/SetCommanderMissionFailed.html)</span> (<span class='code'>Int64</span> missionGameId)
 
 ## 03 Properties
 
-### `Int64` MissionGameId
+### <span class='code'>Int64</span> MissionGameId
 

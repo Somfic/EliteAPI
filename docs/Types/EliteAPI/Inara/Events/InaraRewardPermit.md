@@ -4,15 +4,15 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `InaraRewardPermit`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[InaraRewardPermit](../../../EliteAPI/Inara/Events/InaraRewardPermit.html)</span>
 
 ## 02 Constructors
 
-### `InaraRewardPermit` ()
+### <span class='code'>[InaraRewardPermit](../../../EliteAPI/Inara/Events/InaraRewardPermit.html)</span> ()
 
 ## 03 Properties
 
-### `String` StarsystemName
+### <span class='code'>String</span> StarsystemName
 

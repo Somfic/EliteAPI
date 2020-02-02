@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `AfmuRepairsInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[AfmuRepairsInfo](../../EliteAPI/Events/AfmuRepairsInfo.html)</span>
 
 ## 02 Constructors
 
-### `AfmuRepairsInfo` ()
+### <span class='code'>[AfmuRepairsInfo](../../EliteAPI/Events/AfmuRepairsInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Module
+### <span class='code'>String</span> Module
 
 
 
@@ -26,7 +26,7 @@ The name of the module
 
 
 
-### `String` ModuleLocalised
+### <span class='code'>String</span> ModuleLocalised
 
 
 
@@ -34,7 +34,7 @@ The local name of the module
 
 
 
-### `Boolean` FullyRepaired
+### <span class='code'>Boolean</span> FullyRepaired
 
 
 
@@ -42,7 +42,7 @@ Whether modules are now fully repaired
 
 
 
-### `Double` Health
+### <span class='code'>Double</span> Health
 
 
 

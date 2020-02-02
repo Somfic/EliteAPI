@@ -4,15 +4,15 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ActiveState`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ActiveState](../../EliteAPI/Events/ActiveState.html)</span>
 
 ## 02 Constructors
 
-### `ActiveState` ()
+### <span class='code'>[ActiveState](../../EliteAPI/Events/ActiveState.html)</span> ()
 
 ## 03 Properties
 
-### `String` State
+### <span class='code'>String</span> State
 

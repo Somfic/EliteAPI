@@ -4,43 +4,43 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `EngineerCraftInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EngineerCraftInfo](../../EliteAPI/Events/EngineerCraftInfo.html)</span>
 
 ## 02 Constructors
 
-### `EngineerCraftInfo` ()
+### <span class='code'>[EngineerCraftInfo](../../EliteAPI/Events/EngineerCraftInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Slot
+### <span class='code'>String</span> Slot
 
-### `String` Module
+### <span class='code'>String</span> Module
 
-### `String` ApplyExperimentalEffect
+### <span class='code'>String</span> ApplyExperimentalEffect
 
-### `List<Ingredient>` Ingredients
+### <span class='code'>List<[Ingredient](../../EliteAPI/Events/Ingredient.html)></span> Ingredients
 
-### `String` Engineer
+### <span class='code'>String</span> Engineer
 
-### `Int64` EngineerId
+### <span class='code'>Int64</span> EngineerId
 
-### `Int64` BlueprintId
+### <span class='code'>Int64</span> BlueprintId
 
-### `String` BlueprintName
+### <span class='code'>String</span> BlueprintName
 
-### `Int64` Level
+### <span class='code'>Int64</span> Level
 
-### `Double` Quality
+### <span class='code'>Double</span> Quality
 
-### `String` ExperimentalEffect
+### <span class='code'>String</span> ExperimentalEffect
 
-### `String` ExperimentalEffectLocalised
+### <span class='code'>String</span> ExperimentalEffectLocalised
 
-### `List<Modifier>` Modifiers
+### <span class='code'>List<[Modifier](../../EliteAPI/Events/Modifier.html)></span> Modifiers
 

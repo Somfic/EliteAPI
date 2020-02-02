@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Engineer`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Engineer](../../EliteAPI/Events/Engineer.html)</span>
 
 ## 02 Constructors
 
-### `Engineer` ()
+### <span class='code'>[Engineer](../../EliteAPI/Events/Engineer.html)</span> ()
 
 ## 03 Properties
 
-### `String` EngineerEngineer
+### <span class='code'>String</span> EngineerEngineer
 
-### `Int64` EngineerId
+### <span class='code'>Int64</span> EngineerId
 
-### `String` Progress
+### <span class='code'>String</span> Progress
 
-### `Nullable`1` RankProgress
+### <span class='code'>Nullable`1</span> RankProgress
 
-### `Nullable`1` Rank
+### <span class='code'>Nullable`1</span> Rank
 

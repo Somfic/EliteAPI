@@ -4,47 +4,47 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `StatisticsInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[StatisticsInfo](../../EliteAPI/Events/StatisticsInfo.html)</span>
 
 ## 02 Constructors
 
-### `StatisticsInfo` ()
+### <span class='code'>[StatisticsInfo](../../EliteAPI/Events/StatisticsInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Dictionary`2` BankAccount
+### <span class='code'>Dictionary`2</span> BankAccount
 
-### `Combat` Combat
+### <span class='code'>[Combat](../../EliteAPI/Events/Combat.html)</span> Combat
 
-### `Crime` Crime
+### <span class='code'>[Crime](../../EliteAPI/Events/Crime.html)</span> Crime
 
-### `Smuggling` Smuggling
+### <span class='code'>[Smuggling](../../EliteAPI/Events/Smuggling.html)</span> Smuggling
 
-### `Trading` Trading
+### <span class='code'>[Trading](../../EliteAPI/Events/Trading.html)</span> Trading
 
-### `Mining` Mining
+### <span class='code'>[Mining](../../EliteAPI/Events/Mining.html)</span> Mining
 
-### `Dictionary`2` Exploration
+### <span class='code'>Dictionary`2</span> Exploration
 
-### `Passengers` Passengers
+### <span class='code'>[Passengers](../../EliteAPI/Events/Passengers.html)</span> Passengers
 
-### `SearchAndRescue` SearchAndRescue
+### <span class='code'>[SearchAndRescue](../../EliteAPI/Events/SearchAndRescue.html)</span> SearchAndRescue
 
-### `TgEncounters` TgEncounters
+### <span class='code'>[TgEncounters](../../EliteAPI/Events/TgEncounters.html)</span> TgEncounters
 
-### `Crafting` Crafting
+### <span class='code'>[Crafting](../../EliteAPI/Events/Crafting.html)</span> Crafting
 
-### `Crew` Crew
+### <span class='code'>[Crew](../../EliteAPI/Events/Crew.html)</span> Crew
 
-### `Multicrew` Multicrew
+### <span class='code'>[Multicrew](../../EliteAPI/Events/Multicrew.html)</span> Multicrew
 
-### `MaterialTraderStats` MaterialTraderStats
+### <span class='code'>[MaterialTraderStats](../../EliteAPI/Events/MaterialTraderStats.html)</span> MaterialTraderStats
 
-### `Dictionary`2` Cqc
+### <span class='code'>Dictionary`2</span> Cqc
 

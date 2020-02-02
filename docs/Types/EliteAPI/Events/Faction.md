@@ -4,31 +4,31 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Faction`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Faction](../../EliteAPI/Events/Faction.html)</span>
 
 ## 02 Constructors
 
-### `Faction` ()
+### <span class='code'>[Faction](../../EliteAPI/Events/Faction.html)</span> ()
 
 ## 03 Properties
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `String` FactionState
+### <span class='code'>String</span> FactionState
 
-### `String` Government
+### <span class='code'>String</span> Government
 
-### `Double` Influence
+### <span class='code'>Double</span> Influence
 
-### `String` Allegiance
+### <span class='code'>String</span> Allegiance
 
-### `String` Happiness
+### <span class='code'>String</span> Happiness
 
-### `String` HappinessLocalised
+### <span class='code'>String</span> HappinessLocalised
 
-### `Double` MyReputation
+### <span class='code'>Double</span> MyReputation
 
-### `List<ActiveState>` ActiveStates
+### <span class='code'>List<[ActiveState](../../EliteAPI/Events/ActiveState.html)></span> ActiveStates
 

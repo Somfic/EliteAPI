@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `AddCommanderTravelFSDJump`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[AddCommanderTravelFSDJump](../../../EliteAPI/Inara/Events/AddCommanderTravelFSDJump.html)</span>
 
 ## 02 Constructors
 
-### `AddCommanderTravelFSDJump` (`String` starsystemName)
+### <span class='code'>[AddCommanderTravelFSDJump](../../../EliteAPI/Inara/Events/AddCommanderTravelFSDJump.html)</span> (<span class='code'>String</span> starsystemName)
 
 ## 03 Properties
 
-### `String` StarsystemName
+### <span class='code'>String</span> StarsystemName
 
-### `Double` JumpDistance
+### <span class='code'>Double</span> JumpDistance
 
-### `String` ShipType
+### <span class='code'>String</span> ShipType
 
-### `Int64` ShipGameId
+### <span class='code'>Int64</span> ShipGameId
 

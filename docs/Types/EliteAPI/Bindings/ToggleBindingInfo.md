@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Bindings`
+Namespace: <span class='code'>EliteAPI.Bindings</span>
 
-Inheritance: `Object` → `ToggleBindingInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ToggleBindingInfo](../../EliteAPI/Bindings/ToggleBindingInfo.html)</span>
 
 ## 02 Constructors
 
-### `ToggleBindingInfo` ()
+### <span class='code'>[ToggleBindingInfo](../../EliteAPI/Bindings/ToggleBindingInfo.html)</span> ()
 
 ## 03 Properties
 
-### `Binding` Primary
+### <span class='code'>[Binding](../../EliteAPI/Bindings/Binding.html)</span> Primary
 
-### `Binding` Secondary
+### <span class='code'>[Binding](../../EliteAPI/Bindings/Binding.html)</span> Secondary
 
-### `ValueInfo` ToggleOn
+### <span class='code'>[ValueInfo](../../EliteAPI/Bindings/ValueInfo.html)</span> ToggleOn
 

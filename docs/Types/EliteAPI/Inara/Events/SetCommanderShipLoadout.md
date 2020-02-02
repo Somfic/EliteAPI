@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderShipLoadout`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderShipLoadout](../../../EliteAPI/Inara/Events/SetCommanderShipLoadout.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderShipLoadout` (`String` shipType, `Int64` shipGameId)
+### <span class='code'>[SetCommanderShipLoadout](../../../EliteAPI/Inara/Events/SetCommanderShipLoadout.html)</span> (<span class='code'>String</span> shipType, <span class='code'>Int64</span> shipGameId)
 
 ## 03 Properties
 
-### `String` ShipType
+### <span class='code'>String</span> ShipType
 
-### `Int64` ShipGameId
+### <span class='code'>Int64</span> ShipGameId
 
-### `List<InaraShipLoadout>` ShipLoadout
+### <span class='code'>List<[InaraShipLoadout](../../../EliteAPI/Inara/Events/InaraShipLoadout.html)></span> ShipLoadout
 

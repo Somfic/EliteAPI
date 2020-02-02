@@ -4,27 +4,27 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `InterdictedInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[InterdictedInfo](../../EliteAPI/Events/InterdictedInfo.html)</span>
 
 ## 02 Constructors
 
-### `InterdictedInfo` ()
+### <span class='code'>[InterdictedInfo](../../EliteAPI/Events/InterdictedInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Boolean` Submitted
+### <span class='code'>Boolean</span> Submitted
 
-### `String` Interdictor
+### <span class='code'>String</span> Interdictor
 
-### `String` InterdictorLocalised
+### <span class='code'>String</span> InterdictorLocalised
 
-### `Boolean` IsPlayer
+### <span class='code'>Boolean</span> IsPlayer
 
-### `String` Faction
+### <span class='code'>String</span> Faction
 

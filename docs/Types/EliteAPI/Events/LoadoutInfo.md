@@ -4,37 +4,37 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `LoadoutInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[LoadoutInfo](../../EliteAPI/Events/LoadoutInfo.html)</span>
 
 ## 02 Constructors
 
-### `LoadoutInfo` ()
+### <span class='code'>[LoadoutInfo](../../EliteAPI/Events/LoadoutInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Ship
+### <span class='code'>String</span> Ship
 
-### `Int64` ShipId
+### <span class='code'>Int64</span> ShipId
 
-### `String` ShipName
+### <span class='code'>String</span> ShipName
 
-### `String` ShipIdent
+### <span class='code'>String</span> ShipIdent
 
-### `Int64` HullValue
+### <span class='code'>Int64</span> HullValue
 
-### `Int64` ModulesValue
+### <span class='code'>Int64</span> ModulesValue
 
-### `Double` HullHealth
+### <span class='code'>Double</span> HullHealth
 
-### `Boolean` Hot
+### <span class='code'>Boolean</span> Hot
 
-### `Int64` Rebuy
+### <span class='code'>Int64</span> Rebuy
 
-### `List<Module>` Modules
+### <span class='code'>List<[Module](../../EliteAPI/Status/Module.html)></span> Modules
 

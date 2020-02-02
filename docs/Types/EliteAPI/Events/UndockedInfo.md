@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `UndockedInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[UndockedInfo](../../EliteAPI/Events/UndockedInfo.html)</span>
 
 ## 02 Constructors
 
-### `UndockedInfo` ()
+### <span class='code'>[UndockedInfo](../../EliteAPI/Events/UndockedInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` StationName
+### <span class='code'>String</span> StationName
 
-### `String` StationType
+### <span class='code'>String</span> StationType
 
-### `Int64` MarketId
+### <span class='code'>Int64</span> MarketId
 

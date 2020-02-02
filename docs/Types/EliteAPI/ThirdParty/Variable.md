@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.ThirdParty`
+Namespace: <span class='code'>EliteAPI.ThirdParty</span>
 
-Inheritance: `Object` → `Variable`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Variable](../../EliteAPI/ThirdParty/Variable.html)</span>
 
 ## 02 Constructors
 
-### `Variable` (`String` name, `Object` value)
+### <span class='code'>[Variable](../../EliteAPI/ThirdParty/Variable.html)</span> (<span class='code'>String</span> name, <span class='code'>Object</span> value)
 
 ## 03 Properties
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `Object` Value
+### <span class='code'>Object</span> Value
 
-### `VarType` Type
+### <span class='code'>[VarType](../../EliteAPI/ThirdParty/VarType.html)</span> Type
 

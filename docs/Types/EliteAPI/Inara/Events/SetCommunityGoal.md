@@ -4,37 +4,37 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommunityGoal`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommunityGoal](../../../EliteAPI/Inara/Events/SetCommunityGoal.html)</span>
 
 ## 02 Constructors
 
-### `SetCommunityGoal` (`Int64` communitygoalGameId, `String` communitygoalName, `String` starsystemName, `String` stationName, `DateTime` goalExpiry)
+### <span class='code'>[SetCommunityGoal](../../../EliteAPI/Inara/Events/SetCommunityGoal.html)</span> (<span class='code'>Int64</span> communitygoalGameId, <span class='code'>String</span> communitygoalName, <span class='code'>String</span> starsystemName, <span class='code'>String</span> stationName, <span class='code'>DateTime</span> goalExpiry)
 
 ## 03 Properties
 
-### `Int64` CommunitygoalGameId
+### <span class='code'>Int64</span> CommunitygoalGameId
 
-### `String` CommunitygoalName
+### <span class='code'>String</span> CommunitygoalName
 
-### `String` StarsystemName
+### <span class='code'>String</span> StarsystemName
 
-### `String` StationName
+### <span class='code'>String</span> StationName
 
-### `DateTime` GoalExpiry
+### <span class='code'>DateTime</span> GoalExpiry
 
-### `Int64` TierReached
+### <span class='code'>Int64</span> TierReached
 
-### `Int64` TierMax
+### <span class='code'>Int64</span> TierMax
 
-### `Int64` TopRankSize
+### <span class='code'>Int64</span> TopRankSize
 
-### `Boolean` IsCompleted
+### <span class='code'>Boolean</span> IsCompleted
 
-### `Int64` ContributorsNum
+### <span class='code'>Int64</span> ContributorsNum
 
-### `Int64` ContributionsTotal
+### <span class='code'>Int64</span> ContributionsTotal
 
-### `String` CompletionBonus
+### <span class='code'>String</span> CompletionBonus
 

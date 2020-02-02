@@ -4,27 +4,27 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.ThirdParty.EliteVA`
+Namespace: <span class='code'>EliteAPI.ThirdParty.EliteVA</span>
 
-Inheritance: `Object` → `VAPlugin`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[VAPlugin](../../../EliteAPI/ThirdParty/EliteVA/VAPlugin.html)</span>
 
 ## 02 Constructors
 
-### `VAPlugin` ()
+### <span class='code'>[VAPlugin](../../../EliteAPI/ThirdParty/EliteVA/VAPlugin.html)</span> ()
 
 ## 03 Methods
 
-### `String` VA_DisplayName ()
+### <span class='code'>String</span> VA_DisplayName ()
 
-### `String` VA_DisplayInfo ()
+### <span class='code'>String</span> VA_DisplayInfo ()
 
-### `Guid` VA_Id ()
+### <span class='code'>Guid</span> VA_Id ()
 
-### `Void` VA_Init1 (`Object` vaProxy)
+### <span class='code'>Void</span> VA_Init1 (<span class='code'>Object</span> vaProxy)
 
-### `Void` VA_Invoke1 (`Object` vaProxy)
+### <span class='code'>Void</span> VA_Invoke1 (<span class='code'>Object</span> vaProxy)
 
-### `Void` VA_StopCommand ()
+### <span class='code'>Void</span> VA_StopCommand ()
 
-### `Void` VA_Exit1 (`Object` vaProxy)
+### <span class='code'>Void</span> VA_Exit1 (<span class='code'>Object</span> vaProxy)
 

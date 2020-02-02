@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Ring`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Ring](../../EliteAPI/Events/Ring.html)</span>
 
 ## 02 Constructors
 
-### `Ring` ()
+### <span class='code'>[Ring](../../EliteAPI/Events/Ring.html)</span> ()
 
 ## 03 Properties
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `String` RingClass
+### <span class='code'>String</span> RingClass
 
-### `Double` MassMt
+### <span class='code'>Double</span> MassMt
 
-### `Double` InnerRad
+### <span class='code'>Double</span> InnerRad
 
-### `Double` OuterRad
+### <span class='code'>Double</span> OuterRad
 

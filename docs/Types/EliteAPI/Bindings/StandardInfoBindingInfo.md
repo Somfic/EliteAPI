@@ -4,17 +4,17 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Bindings`
+Namespace: <span class='code'>EliteAPI.Bindings</span>
 
-Inheritance: `Object` → `StandardInfoBindingInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[StandardInfoBindingInfo](../../EliteAPI/Bindings/StandardInfoBindingInfo.html)</span>
 
 ## 02 Constructors
 
-### `StandardInfoBindingInfo` ()
+### <span class='code'>[StandardInfoBindingInfo](../../EliteAPI/Bindings/StandardInfoBindingInfo.html)</span> ()
 
 ## 03 Properties
 
-### `PrimaryInfo` Primary
+### <span class='code'>[PrimaryInfo](../../EliteAPI/Bindings/PrimaryInfo.html)</span> Primary
 
-### `SecondaryInfo` Secondary
+### <span class='code'>[SecondaryInfo](../../EliteAPI/Bindings/SecondaryInfo.html)</span> Secondary
 

@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ShieldStateInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ShieldStateInfo](../../EliteAPI/Events/ShieldStateInfo.html)</span>
 
 ## 02 Constructors
 
-### `ShieldStateInfo` ()
+### <span class='code'>[ShieldStateInfo](../../EliteAPI/Events/ShieldStateInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Boolean` ShieldsUp
+### <span class='code'>Boolean</span> ShieldsUp
 

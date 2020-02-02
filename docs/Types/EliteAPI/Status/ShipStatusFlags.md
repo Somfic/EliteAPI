@@ -4,91 +4,91 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Status`
+Namespace: <span class='code'>EliteAPI.Status</span>
 
-Inheritance: `Object` → `ValueType` → `Enum` → `ShipStatusFlags`
+Inheritance: <span class='code'>Object</span> → <span class='code'>ValueType</span> → <span class='code'>Enum</span> → <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span>
 
 ## 02 Fields
 
-### `Int32` value__
+### <span class='code'>Int32</span> value__
 
-### `ShipStatusFlags` None
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> None
 
-### `ShipStatusFlags` Docked
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> Docked
 
-### `ShipStatusFlags` Landed
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> Landed
 
-### `ShipStatusFlags` Gear
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> Gear
 
-### `ShipStatusFlags` Shields
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> Shields
 
-### `ShipStatusFlags` Supercruise
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> Supercruise
 
-### `ShipStatusFlags` FlightAssistOff
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> FlightAssistOff
 
-### `ShipStatusFlags` Hardpoints
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> Hardpoints
 
-### `ShipStatusFlags` Winging
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> Winging
 
-### `ShipStatusFlags` Lights
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> Lights
 
-### `ShipStatusFlags` CargoScoop
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> CargoScoop
 
-### `ShipStatusFlags` SilentRunning
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> SilentRunning
 
-### `ShipStatusFlags` Scooping
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> Scooping
 
-### `ShipStatusFlags` SrvHandbreak
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> SrvHandbreak
 
-### `ShipStatusFlags` SrvTurret
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> SrvTurret
 
-### `ShipStatusFlags` SrvNearShip
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> SrvNearShip
 
-### `ShipStatusFlags` SrvDriveAssist
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> SrvDriveAssist
 
-### `ShipStatusFlags` MassLocked
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> MassLocked
 
-### `ShipStatusFlags` FsdCharging
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> FsdCharging
 
-### `ShipStatusFlags` FsdCooldown
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> FsdCooldown
 
-### `ShipStatusFlags` LowFuel
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> LowFuel
 
-### `ShipStatusFlags` Overheating
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> Overheating
 
-### `ShipStatusFlags` HasLatlong
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> HasLatlong
 
-### `ShipStatusFlags` InDanger
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> InDanger
 
-### `ShipStatusFlags` InInterdiction
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> InInterdiction
 
-### `ShipStatusFlags` InMothership
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> InMothership
 
-### `ShipStatusFlags` InFighter
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> InFighter
 
-### `ShipStatusFlags` InSrv
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> InSrv
 
-### `ShipStatusFlags` AnalysisMode
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> AnalysisMode
 
-### `ShipStatusFlags` NightVision
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> NightVision
 
 ## 03 Methods
 
-### `Boolean` Equals (`Object` obj)
+### <span class='code'>Boolean</span> Equals (<span class='code'>Object</span> obj)
 
-### `Boolean` HasFlag (`Enum` flag)
+### <span class='code'>Boolean</span> HasFlag (<span class='code'>Enum</span> flag)
 
-### `Int32` CompareTo (`Object` target)
+### <span class='code'>Int32</span> CompareTo (<span class='code'>Object</span> target)
 
-### `Int32` GetHashCode ()
+### <span class='code'>Int32</span> GetHashCode ()
 
-### `String` ToString ()
+### <span class='code'>String</span> ToString ()
 
-### `String` ToString (`String` format, `IFormatProvider` provider)
+### <span class='code'>String</span> ToString (<span class='code'>String</span> format, <span class='code'>IFormatProvider</span> provider)
 
-### `String` ToString (`String` format)
+### <span class='code'>String</span> ToString (<span class='code'>String</span> format)
 
-### `String` ToString (`IFormatProvider` provider)
+### <span class='code'>String</span> ToString (<span class='code'>IFormatProvider</span> provider)
 
-### `TypeCode` GetTypeCode ()
+### <span class='code'>TypeCode</span> GetTypeCode ()
 

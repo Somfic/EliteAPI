@@ -4,39 +4,39 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `CargoDepotInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[CargoDepotInfo](../../EliteAPI/Events/CargoDepotInfo.html)</span>
 
 ## 02 Constructors
 
-### `CargoDepotInfo` ()
+### <span class='code'>[CargoDepotInfo](../../EliteAPI/Events/CargoDepotInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Int64` MissionId
+### <span class='code'>Int64</span> MissionId
 
-### `String` UpdateType
+### <span class='code'>String</span> UpdateType
 
-### `String` CargoType
+### <span class='code'>String</span> CargoType
 
-### `String` CargoTypeLocalised
+### <span class='code'>String</span> CargoTypeLocalised
 
-### `Int64` Count
+### <span class='code'>Int64</span> Count
 
-### `Int64` StartMarketId
+### <span class='code'>Int64</span> StartMarketId
 
-### `Int64` EndMarketId
+### <span class='code'>Int64</span> EndMarketId
 
-### `Int64` ItemsCollected
+### <span class='code'>Int64</span> ItemsCollected
 
-### `Int64` ItemsDelivered
+### <span class='code'>Int64</span> ItemsDelivered
 
-### `Int64` TotalItemsToDeliver
+### <span class='code'>Int64</span> TotalItemsToDeliver
 
-### `Double` Progress
+### <span class='code'>Double</span> Progress
 

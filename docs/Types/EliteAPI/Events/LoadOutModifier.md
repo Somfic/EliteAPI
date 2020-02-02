@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `LoadOutModifier`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[LoadOutModifier](../../EliteAPI/Events/LoadOutModifier.html)</span>
 
 ## 02 Constructors
 
-### `LoadOutModifier` ()
+### <span class='code'>[LoadOutModifier](../../EliteAPI/Events/LoadOutModifier.html)</span> ()
 
 ## 03 Properties
 
-### `String` Label
+### <span class='code'>String</span> Label
 
-### `Double` Value
+### <span class='code'>Double</span> Value
 
-### `Double` OriginalValue
+### <span class='code'>Double</span> OriginalValue
 
-### `Int64` LessIsGood
+### <span class='code'>Int64</span> LessIsGood
 

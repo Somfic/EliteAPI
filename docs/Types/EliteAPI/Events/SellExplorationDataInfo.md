@@ -4,27 +4,27 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `SellExplorationDataInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SellExplorationDataInfo](../../EliteAPI/Events/SellExplorationDataInfo.html)</span>
 
 ## 02 Constructors
 
-### `SellExplorationDataInfo` ()
+### <span class='code'>[SellExplorationDataInfo](../../EliteAPI/Events/SellExplorationDataInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `List<String>` Systems
+### <span class='code'>List<String></span> Systems
 
-### `List<String>` Discovered
+### <span class='code'>List<String></span> Discovered
 
-### `Int64` BaseValue
+### <span class='code'>Int64</span> BaseValue
 
-### `Int64` Bonus
+### <span class='code'>Int64</span> Bonus
 
-### `Int64` TotalEarnings
+### <span class='code'>Int64</span> TotalEarnings
 

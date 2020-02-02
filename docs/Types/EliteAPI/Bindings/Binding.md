@@ -4,17 +4,17 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Bindings`
+Namespace: <span class='code'>EliteAPI.Bindings</span>
 
-Inheritance: `Object` → `Binding`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Binding](../../EliteAPI/Bindings/Binding.html)</span>
 
 ## 02 Constructors
 
-### `Binding` ()
+### <span class='code'>[Binding](../../EliteAPI/Bindings/Binding.html)</span> ()
 
 ## 03 Properties
 
-### `String` Device
+### <span class='code'>String</span> Device
 
-### `String` Key
+### <span class='code'>String</span> Key
 

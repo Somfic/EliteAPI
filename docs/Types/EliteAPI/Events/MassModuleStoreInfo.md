@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `MassModuleStoreInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[MassModuleStoreInfo](../../EliteAPI/Events/MassModuleStoreInfo.html)</span>
 
 ## 02 Constructors
 
-### `MassModuleStoreInfo` ()
+### <span class='code'>[MassModuleStoreInfo](../../EliteAPI/Events/MassModuleStoreInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Int64` MarketId
+### <span class='code'>Int64</span> MarketId
 
-### `String` Ship
+### <span class='code'>String</span> Ship
 
-### `Int64` ShipId
+### <span class='code'>Int64</span> ShipId
 
-### `List<Item>` Items
+### <span class='code'>List<[Item](../../EliteAPI/Status/Item.html)></span> Items
 

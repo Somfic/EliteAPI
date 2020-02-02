@@ -4,37 +4,37 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ModuleBuyInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ModuleBuyInfo](../../EliteAPI/Events/ModuleBuyInfo.html)</span>
 
 ## 02 Constructors
 
-### `ModuleBuyInfo` ()
+### <span class='code'>[ModuleBuyInfo](../../EliteAPI/Events/ModuleBuyInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Slot
+### <span class='code'>String</span> Slot
 
-### `String` SellItem
+### <span class='code'>String</span> SellItem
 
-### `String` SellItemLocalised
+### <span class='code'>String</span> SellItemLocalised
 
-### `Int64` SellPrice
+### <span class='code'>Int64</span> SellPrice
 
-### `String` BuyItem
+### <span class='code'>String</span> BuyItem
 
-### `String` BuyItemLocalised
+### <span class='code'>String</span> BuyItemLocalised
 
-### `Int64` MarketId
+### <span class='code'>Int64</span> MarketId
 
-### `Int64` BuyPrice
+### <span class='code'>Int64</span> BuyPrice
 
-### `String` Ship
+### <span class='code'>String</span> Ship
 
-### `Int64` ShipId
+### <span class='code'>Int64</span> ShipId
 

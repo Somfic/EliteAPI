@@ -4,37 +4,37 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `StoredModuleItem`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[StoredModuleItem](../../EliteAPI/Events/StoredModuleItem.html)</span>
 
 ## 02 Constructors
 
-### `StoredModuleItem` ()
+### <span class='code'>[StoredModuleItem](../../EliteAPI/Events/StoredModuleItem.html)</span> ()
 
 ## 03 Properties
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `String` NameLocalised
+### <span class='code'>String</span> NameLocalised
 
-### `Int64` StorageSlot
+### <span class='code'>Int64</span> StorageSlot
 
-### `String` StarSystem
+### <span class='code'>String</span> StarSystem
 
-### `Int64` MarketId
+### <span class='code'>Int64</span> MarketId
 
-### `Int64` TransferCost
+### <span class='code'>Int64</span> TransferCost
 
-### `Int64` TransferTime
+### <span class='code'>Int64</span> TransferTime
 
-### `Int64` BuyPrice
+### <span class='code'>Int64</span> BuyPrice
 
-### `Boolean` Hot
+### <span class='code'>Boolean</span> Hot
 
-### `String` EngineerModifications
+### <span class='code'>String</span> EngineerModifications
 
-### `Nullable`1` Level
+### <span class='code'>Nullable`1</span> Level
 
-### `Nullable`1` Quality
+### <span class='code'>Nullable`1</span> Quality
 

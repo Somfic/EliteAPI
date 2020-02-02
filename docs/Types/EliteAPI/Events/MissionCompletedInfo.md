@@ -4,45 +4,45 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `MissionCompletedInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[MissionCompletedInfo](../../EliteAPI/Events/MissionCompletedInfo.html)</span>
 
 ## 02 Constructors
 
-### `MissionCompletedInfo` ()
+### <span class='code'>[MissionCompletedInfo](../../EliteAPI/Events/MissionCompletedInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Faction
+### <span class='code'>String</span> Faction
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `Int64` MissionId
+### <span class='code'>Int64</span> MissionId
 
-### `String` TargetType
+### <span class='code'>String</span> TargetType
 
-### `String` TargetTypeLocalised
+### <span class='code'>String</span> TargetTypeLocalised
 
-### `String` TargetFaction
+### <span class='code'>String</span> TargetFaction
 
-### `String` NewDestinationSystem
+### <span class='code'>String</span> NewDestinationSystem
 
-### `String` DestinationSystem
+### <span class='code'>String</span> DestinationSystem
 
-### `String` NewDestinationStation
+### <span class='code'>String</span> NewDestinationStation
 
-### `String` DestinationStation
+### <span class='code'>String</span> DestinationStation
 
-### `String` Target
+### <span class='code'>String</span> Target
 
-### `Int64` Reward
+### <span class='code'>Int64</span> Reward
 
-### `List<MaterialsReward>` MaterialsReward
+### <span class='code'>List<[MaterialsReward](../../EliteAPI/Events/MaterialsReward.html)></span> MaterialsReward
 
-### `List<FactionEffect>` FactionEffects
+### <span class='code'>List<[FactionEffect](../../EliteAPI/Events/FactionEffect.html)></span> FactionEffects
 

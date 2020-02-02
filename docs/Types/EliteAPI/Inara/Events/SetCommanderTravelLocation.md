@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderTravelLocation`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderTravelLocation](../../../EliteAPI/Inara/Events/SetCommanderTravelLocation.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderTravelLocation` (`String` starSystemName)
+### <span class='code'>[SetCommanderTravelLocation](../../../EliteAPI/Inara/Events/SetCommanderTravelLocation.html)</span> (<span class='code'>String</span> starSystemName)
 
 ## 03 Properties
 
-### `String` StarSystemName
+### <span class='code'>String</span> StarSystemName
 
-### `String` StationName
+### <span class='code'>String</span> StationName
 
-### `Int64` MarketId
+### <span class='code'>Int64</span> MarketId
 

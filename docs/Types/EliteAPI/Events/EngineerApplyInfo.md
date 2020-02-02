@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `EngineerApplyInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EngineerApplyInfo](../../EliteAPI/Events/EngineerApplyInfo.html)</span>
 
 ## 02 Constructors
 
-### `EngineerApplyInfo` ()
+### <span class='code'>[EngineerApplyInfo](../../EliteAPI/Events/EngineerApplyInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Engineer
+### <span class='code'>String</span> Engineer
 
-### `String` Blueprint
+### <span class='code'>String</span> Blueprint
 
-### `Int64` Level
+### <span class='code'>Int64</span> Level
 
-### `String` Override
+### <span class='code'>String</span> Override
 

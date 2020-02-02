@@ -4,33 +4,33 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `FetchRemoteModuleInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[FetchRemoteModuleInfo](../../EliteAPI/Events/FetchRemoteModuleInfo.html)</span>
 
 ## 02 Constructors
 
-### `FetchRemoteModuleInfo` ()
+### <span class='code'>[FetchRemoteModuleInfo](../../EliteAPI/Events/FetchRemoteModuleInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Int64` StorageSlot
+### <span class='code'>Int64</span> StorageSlot
 
-### `String` StoredItem
+### <span class='code'>String</span> StoredItem
 
-### `String` StoredItemLocalised
+### <span class='code'>String</span> StoredItemLocalised
 
-### `Int64` ServerId
+### <span class='code'>Int64</span> ServerId
 
-### `Int64` TransferCost
+### <span class='code'>Int64</span> TransferCost
 
-### `Int64` TransferTime
+### <span class='code'>Int64</span> TransferTime
 
-### `String` Ship
+### <span class='code'>String</span> Ship
 
-### `Int64` ShipId
+### <span class='code'>Int64</span> ShipId
 

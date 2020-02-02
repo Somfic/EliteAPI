@@ -4,33 +4,33 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `InaraShipLoadout`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[InaraShipLoadout](../../../EliteAPI/Inara/Events/InaraShipLoadout.html)</span>
 
 ## 02 Constructors
 
-### `InaraShipLoadout` ()
+### <span class='code'>[InaraShipLoadout](../../../EliteAPI/Inara/Events/InaraShipLoadout.html)</span> ()
 
 ## 03 Properties
 
-### `String` SlotName
+### <span class='code'>String</span> SlotName
 
-### `String` ItemName
+### <span class='code'>String</span> ItemName
 
-### `Int64` ItemValue
+### <span class='code'>Int64</span> ItemValue
 
-### `Double` ItemHealth
+### <span class='code'>Double</span> ItemHealth
 
-### `Boolean` IsOn
+### <span class='code'>Boolean</span> IsOn
 
-### `Boolean` IsHot
+### <span class='code'>Boolean</span> IsHot
 
-### `Int64` ItemPriority
+### <span class='code'>Int64</span> ItemPriority
 
-### `Nullable`1` ItemAmmoClip
+### <span class='code'>Nullable`1</span> ItemAmmoClip
 
-### `Nullable`1` ItemAmmoHopper
+### <span class='code'>Nullable`1</span> ItemAmmoHopper
 
-### `InaraLoadoutEngineering` Engineering
+### <span class='code'>[InaraLoadoutEngineering](../../../EliteAPI/Inara/Events/InaraLoadoutEngineering.html)</span> Engineering
 

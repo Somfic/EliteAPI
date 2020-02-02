@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.ThirdParty.EliteMacro`
+Namespace: <span class='code'>EliteAPI.ThirdParty.EliteMacro</span>
 
-Inheritance: `Object` → `EliteMacro`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EliteMacro](../../../EliteAPI/ThirdParty/EliteMacro/EliteMacro.html)</span>
 
 ## 02 Constructors
 
-### `EliteMacro` ()
+### <span class='code'>[EliteMacro](../../../EliteAPI/ThirdParty/EliteMacro/EliteMacro.html)</span> ()
 
 ## 03 Properties
 
-### `String` DisplayName
+### <span class='code'>String</span> DisplayName
 
-### `String` Description
+### <span class='code'>String</span> Description
 
-### `String` ID
+### <span class='code'>String</span> ID
 

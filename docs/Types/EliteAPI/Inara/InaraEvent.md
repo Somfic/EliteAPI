@@ -4,11 +4,11 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara`
+Namespace: <span class='code'>EliteAPI.Inara</span>
 
-Inheritance: `Object` → `InaraEvent`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[InaraEvent](../../EliteAPI/Inara/InaraEvent.html)</span>
 
 ## 02 Constructors
 
-### `InaraEvent` (`IInaraEventData` eventData)
+### <span class='code'>[InaraEvent](../../EliteAPI/Inara/InaraEvent.html)</span> (<span class='code'>[IInaraEventData](../../EliteAPI/Inara/IInaraEventData.html)</span> eventData)
 

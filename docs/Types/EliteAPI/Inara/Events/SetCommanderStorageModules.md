@@ -4,27 +4,27 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderStorageModules`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderStorageModules](../../../EliteAPI/Inara/Events/SetCommanderStorageModules.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderStorageModules` (`String` itemName)
+### <span class='code'>[SetCommanderStorageModules](../../../EliteAPI/Inara/Events/SetCommanderStorageModules.html)</span> (<span class='code'>String</span> itemName)
 
 ## 03 Properties
 
-### `String` ItemName
+### <span class='code'>String</span> ItemName
 
-### `Int64` ItemValue
+### <span class='code'>Int64</span> ItemValue
 
-### `Boolean` IsHot
+### <span class='code'>Boolean</span> IsHot
 
-### `String` StarsystemName
+### <span class='code'>String</span> StarsystemName
 
-### `String` StationName
+### <span class='code'>String</span> StationName
 
-### `Int64` MarketId
+### <span class='code'>Int64</span> MarketId
 
-### `InaraEngineering` Engineering
+### <span class='code'>[InaraEngineering](../../../EliteAPI/Inara/Events/InaraEngineering.html)</span> Engineering
 

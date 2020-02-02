@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderCommunityGoalProgress`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderCommunityGoalProgress](../../../EliteAPI/Inara/Events/SetCommanderCommunityGoalProgress.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderCommunityGoalProgress` (`Int64` communitygoalGameId, `Int64` contribution, `Int64` percentileBand, `Int64` percentileBandReward)
+### <span class='code'>[SetCommanderCommunityGoalProgress](../../../EliteAPI/Inara/Events/SetCommanderCommunityGoalProgress.html)</span> (<span class='code'>Int64</span> communitygoalGameId, <span class='code'>Int64</span> contribution, <span class='code'>Int64</span> percentileBand, <span class='code'>Int64</span> percentileBandReward)
 
 ## 03 Properties
 
-### `Int64` CommunitygoalGameId
+### <span class='code'>Int64</span> CommunitygoalGameId
 
-### `Int64` Contribution
+### <span class='code'>Int64</span> Contribution
 
-### `Int64` PercentileBand
+### <span class='code'>Int64</span> PercentileBand
 
-### `Int64` PercentileBandReward
+### <span class='code'>Int64</span> PercentileBandReward
 
-### `Boolean` IsTopRank
+### <span class='code'>Boolean</span> IsTopRank
 

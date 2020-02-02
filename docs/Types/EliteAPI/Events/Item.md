@@ -4,27 +4,27 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Item`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Item](../../EliteAPI/Status/Item.html)</span>
 
 ## 02 Constructors
 
-### `Item` ()
+### <span class='code'>[Item](../../EliteAPI/Status/Item.html)</span> ()
 
 ## 03 Properties
 
-### `String` Slot
+### <span class='code'>String</span> Slot
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `String` NameLocalised
+### <span class='code'>String</span> NameLocalised
 
-### `Boolean` Hot
+### <span class='code'>Boolean</span> Hot
 
-### `String` EngineerModifications
+### <span class='code'>String</span> EngineerModifications
 
-### `Int64` Level
+### <span class='code'>Int64</span> Level
 
-### `Double` Quality
+### <span class='code'>Double</span> Quality
 

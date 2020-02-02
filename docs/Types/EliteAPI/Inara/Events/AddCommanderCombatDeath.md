@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `AddCommanderCombatDeath`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[AddCommanderCombatDeath](../../../EliteAPI/Inara/Events/AddCommanderCombatDeath.html)</span>
 
 ## 02 Constructors
 
-### `AddCommanderCombatDeath` (`String` starSystemName)
+### <span class='code'>[AddCommanderCombatDeath](../../../EliteAPI/Inara/Events/AddCommanderCombatDeath.html)</span> (<span class='code'>String</span> starSystemName)
 
 ## 03 Properties
 
-### `String` StarSystemName
+### <span class='code'>String</span> StarSystemName
 
-### `String` OpponentName
+### <span class='code'>String</span> OpponentName
 
-### `List<String>` WingOpponentNames
+### <span class='code'>List<String></span> WingOpponentNames
 
-### `Boolean` IsPlayer
+### <span class='code'>Boolean</span> IsPlayer
 

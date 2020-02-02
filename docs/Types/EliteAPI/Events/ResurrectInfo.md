@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ResurrectInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ResurrectInfo](../../EliteAPI/Events/ResurrectInfo.html)</span>
 
 ## 02 Constructors
 
-### `ResurrectInfo` ()
+### <span class='code'>[ResurrectInfo](../../EliteAPI/Events/ResurrectInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Option
+### <span class='code'>String</span> Option
 
-### `Int64` Cost
+### <span class='code'>Int64</span> Cost
 
-### `Boolean` Bankrupt
+### <span class='code'>Boolean</span> Bankrupt
 

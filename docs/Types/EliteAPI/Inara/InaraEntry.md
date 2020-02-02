@@ -4,17 +4,17 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara`
+Namespace: <span class='code'>EliteAPI.Inara</span>
 
-Inheritance: `Object` → `InaraEntry`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[InaraEntry](../../EliteAPI/Inara/InaraEntry.html)</span>
 
 ## 02 Constructors
 
-### `InaraEntry` (`InaraConfiguration` configuration, `List<InaraEvent>` events)
+### <span class='code'>[InaraEntry](../../EliteAPI/Inara/InaraEntry.html)</span> (<span class='code'>[InaraConfiguration](../../EliteAPI/Inara/InaraConfiguration.html)</span> configuration, <span class='code'>List<[InaraEvent](../../EliteAPI/Inara/InaraEvent.html)></span> events)
 
 ## 03 Properties
 
-### `InaraConfiguration` Configuration
+### <span class='code'>[InaraConfiguration](../../EliteAPI/Inara/InaraConfiguration.html)</span> Configuration
 
-### `List<InaraEvent>` Events
+### <span class='code'>List<[InaraEvent](../../EliteAPI/Inara/InaraEvent.html)></span> Events
 

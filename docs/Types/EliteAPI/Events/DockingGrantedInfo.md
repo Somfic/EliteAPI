@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `DockingGrantedInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[DockingGrantedInfo](../../EliteAPI/Events/DockingGrantedInfo.html)</span>
 
 ## 02 Constructors
 
-### `DockingGrantedInfo` ()
+### <span class='code'>[DockingGrantedInfo](../../EliteAPI/Events/DockingGrantedInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Int64` LandingPad
+### <span class='code'>Int64</span> LandingPad
 
-### `Int64` MarketId
+### <span class='code'>Int64</span> MarketId
 
-### `String` StationName
+### <span class='code'>String</span> StationName
 
-### `String` StationType
+### <span class='code'>String</span> StationType
 

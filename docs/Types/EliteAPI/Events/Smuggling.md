@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Smuggling`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Smuggling](../../EliteAPI/Events/Smuggling.html)</span>
 
 ## 02 Constructors
 
-### `Smuggling` ()
+### <span class='code'>[Smuggling](../../EliteAPI/Events/Smuggling.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` BlackMarketsTradedWith
+### <span class='code'>Int64</span> BlackMarketsTradedWith
 
-### `Int64` BlackMarketsProfits
+### <span class='code'>Int64</span> BlackMarketsProfits
 
-### `Int64` ResourcesSmuggled
+### <span class='code'>Int64</span> ResourcesSmuggled
 
-### `Double` AverageProfit
+### <span class='code'>Double</span> AverageProfit
 
-### `Int64` HighestSingleTransaction
+### <span class='code'>Int64</span> HighestSingleTransaction
 

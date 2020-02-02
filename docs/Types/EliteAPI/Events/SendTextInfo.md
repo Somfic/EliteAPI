@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `SendTextInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SendTextInfo](../../EliteAPI/Events/SendTextInfo.html)</span>
 
 ## 02 Constructors
 
-### `SendTextInfo` ()
+### <span class='code'>[SendTextInfo](../../EliteAPI/Events/SendTextInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` To
+### <span class='code'>String</span> To
 
-### `String` ToLocalised
+### <span class='code'>String</span> ToLocalised
 
-### `String` Message
+### <span class='code'>String</span> Message
 

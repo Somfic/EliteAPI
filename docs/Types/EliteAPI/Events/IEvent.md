@@ -4,7 +4,7 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `IEvent`
+Inheritance: <span class='code'>[IEvent](../../EliteAPI/Events/IEvent.html)</span>
 

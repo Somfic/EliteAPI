@@ -4,17 +4,17 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `IngState`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[IngState](../../EliteAPI/Events/IngState.html)</span>
 
 ## 02 Constructors
 
-### `IngState` ()
+### <span class='code'>[IngState](../../EliteAPI/Events/IngState.html)</span> ()
 
 ## 03 Properties
 
-### `String` State
+### <span class='code'>String</span> State
 
-### `Int64` Trend
+### <span class='code'>Int64</span> Trend
 

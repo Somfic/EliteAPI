@@ -4,17 +4,17 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `DelCommanderShip`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[DelCommanderShip](../../../EliteAPI/Inara/Events/DelCommanderShip.html)</span>
 
 ## 02 Constructors
 
-### `DelCommanderShip` (`String` shipType, `Int64` shipGameId)
+### <span class='code'>[DelCommanderShip](../../../EliteAPI/Inara/Events/DelCommanderShip.html)</span> (<span class='code'>String</span> shipType, <span class='code'>Int64</span> shipGameId)
 
 ## 03 Properties
 
-### `String` ShipType
+### <span class='code'>String</span> ShipType
 
-### `Int64` ShipGameId
+### <span class='code'>Int64</span> ShipGameId
 

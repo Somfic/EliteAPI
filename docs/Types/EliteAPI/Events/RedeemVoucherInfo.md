@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `RedeemVoucherInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[RedeemVoucherInfo](../../EliteAPI/Events/RedeemVoucherInfo.html)</span>
 
 ## 02 Constructors
 
-### `RedeemVoucherInfo` ()
+### <span class='code'>[RedeemVoucherInfo](../../EliteAPI/Events/RedeemVoucherInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Type
+### <span class='code'>String</span> Type
 
-### `Int64` Amount
+### <span class='code'>Int64</span> Amount
 
-### `List<FSDFaction>` Factions
+### <span class='code'>List<[FSDFaction](../../EliteAPI/Events/FSDFaction.html)></span> Factions
 

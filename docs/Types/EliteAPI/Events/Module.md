@@ -4,31 +4,31 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Module`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Module](../../EliteAPI/Status/Module.html)</span>
 
 ## 02 Constructors
 
-### `Module` ()
+### <span class='code'>[Module](../../EliteAPI/Status/Module.html)</span> ()
 
 ## 03 Properties
 
-### `String` Slot
+### <span class='code'>String</span> Slot
 
-### `String` Item
+### <span class='code'>String</span> Item
 
-### `Boolean` On
+### <span class='code'>Boolean</span> On
 
-### `Int64` Priority
+### <span class='code'>Int64</span> Priority
 
-### `Nullable`1` AmmoInClip
+### <span class='code'>Nullable`1</span> AmmoInClip
 
-### `Nullable`1` AmmoInHopper
+### <span class='code'>Nullable`1</span> AmmoInHopper
 
-### `Double` Health
+### <span class='code'>Double</span> Health
 
-### `Nullable`1` Value
+### <span class='code'>Nullable`1</span> Value
 
-### `Engineering` Engineering
+### <span class='code'>[Engineering](../../EliteAPI/Events/Engineering.html)</span> Engineering
 

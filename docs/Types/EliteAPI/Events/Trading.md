@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Trading`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Trading](../../EliteAPI/Events/Trading.html)</span>
 
 ## 02 Constructors
 
-### `Trading` ()
+### <span class='code'>[Trading](../../EliteAPI/Events/Trading.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` MarketsTradedWith
+### <span class='code'>Int64</span> MarketsTradedWith
 
-### `Int64` MarketProfits
+### <span class='code'>Int64</span> MarketProfits
 
-### `Int64` ResourcesTraded
+### <span class='code'>Int64</span> ResourcesTraded
 
-### `Double` AverageProfit
+### <span class='code'>Double</span> AverageProfit
 
-### `Int64` HighestSingleTransaction
+### <span class='code'>Int64</span> HighestSingleTransaction
 

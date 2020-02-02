@@ -4,43 +4,43 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `CodexEntryInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[CodexEntryInfo](../../EliteAPI/Events/CodexEntryInfo.html)</span>
 
 ## 02 Constructors
 
-### `CodexEntryInfo` ()
+### <span class='code'>[CodexEntryInfo](../../EliteAPI/Events/CodexEntryInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Int64` EntryId
+### <span class='code'>Int64</span> EntryId
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `String` NameLocalised
+### <span class='code'>String</span> NameLocalised
 
-### `String` SubCategory
+### <span class='code'>String</span> SubCategory
 
-### `String` SubCategoryLocalised
+### <span class='code'>String</span> SubCategoryLocalised
 
-### `String` Category
+### <span class='code'>String</span> Category
 
-### `String` CategoryLocalised
+### <span class='code'>String</span> CategoryLocalised
 
-### `String` Region
+### <span class='code'>String</span> Region
 
-### `String` RegionLocalised
+### <span class='code'>String</span> RegionLocalised
 
-### `String` System
+### <span class='code'>String</span> System
 
-### `Int64` SystemAddress
+### <span class='code'>Int64</span> SystemAddress
 
-### `Boolean` IsNewEntry
+### <span class='code'>Boolean</span> IsNewEntry
 
-### `Int64` VoucherAmount
+### <span class='code'>Int64</span> VoucherAmount
 

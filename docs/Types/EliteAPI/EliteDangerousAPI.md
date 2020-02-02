@@ -4,9 +4,9 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI`
+Namespace: <span class='code'>EliteAPI</span>
 
-Inheritance: `Object` → `EliteDangerousAPI`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EliteDangerousAPI](../EliteAPI/EliteDangerousAPI.html)</span>
 
 
 
@@ -16,7 +16,7 @@ Main EliteAPI class.
 
 ## 02 Constructors
 
-### `EliteDangerousAPI` ()
+### <span class='code'>[EliteDangerousAPI](../EliteAPI/EliteDangerousAPI.html)</span> ()
 
 
 
@@ -24,7 +24,7 @@ Creates a new EliteDangerousAPI object using the standard Journal directory.
 
 
 
-### `EliteDangerousAPI` (`DirectoryInfo` JournalDirectory)
+### <span class='code'>[EliteDangerousAPI](../EliteAPI/EliteDangerousAPI.html)</span> (<span class='code'>DirectoryInfo</span> JournalDirectory)
 
 
 
@@ -32,7 +32,7 @@ Creates a new EliteDangerousAPI object.
 
 
 
-### `EliteDangerousAPI` (`Boolean` SkipCatchUp)
+### <span class='code'>[EliteDangerousAPI](../EliteAPI/EliteDangerousAPI.html)</span> (<span class='code'>Boolean</span> SkipCatchUp)
 
 
 
@@ -40,7 +40,7 @@ Creates a new EliteDangerousAPI object using the standard Journal directory.
 
 
 
-### `EliteDangerousAPI` (`DirectoryInfo` journalDirectory, `Boolean` skipCatchUp)
+### <span class='code'>[EliteDangerousAPI](../EliteAPI/EliteDangerousAPI.html)</span> (<span class='code'>DirectoryInfo</span> journalDirectory, <span class='code'>Boolean</span> skipCatchUp)
 
 
 
@@ -50,7 +50,7 @@ Creates a new EliteDangerousAPI object.
 
 ## 03 Properties
 
-### `Boolean` IsReady
+### <span class='code'>Boolean</span> IsReady
 
 
 
@@ -58,11 +58,11 @@ Set to true when the API is ready.
 
 
 
-### `DirectoryInfo` StandardDirectory
+### <span class='code'>DirectoryInfo</span> StandardDirectory
 
 
 
-The default directory of the Journal files `C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous`.
+The default directory of the Journal files <span class='code'>C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous</span>.
 
 
 
@@ -72,7 +72,7 @@ If the default directory could not be returned, the current directory will be re
 
 
 
-### `String` Version
+### <span class='code'>String</span> Version
 
 
 
@@ -80,7 +80,7 @@ This version of EliteAPI.
 
 
 
-### `Boolean` IsRunning
+### <span class='code'>Boolean</span> IsRunning
 
 
 
@@ -88,7 +88,7 @@ Whether the API is currently running.
 
 
 
-### `DirectoryInfo` JournalDirectory
+### <span class='code'>DirectoryInfo</span> JournalDirectory
 
 
 
@@ -96,7 +96,7 @@ The Journal directory that is EliteAPI is currently using.
 
 
 
-### `EventHandler` Events
+### <span class='code'>[EventHandler](../../EliteAPI/Events/EventHandler.html)</span> Events
 
 
 
@@ -104,7 +104,7 @@ All of the EliteAPI events are stored in this object.
 
 
 
-### `Logger` Logger
+### <span class='code'>Logger</span> Logger
 
 
 
@@ -112,7 +112,7 @@ The logger using across the API.
 
 
 
-### `GameStatus` Status
+### <span class='code'>[GameStatus](../../EliteAPI/Status/GameStatus.html)</span> Status
 
 
 
@@ -126,7 +126,7 @@ Values like the landing gear and other variables are stored here.
 
 
 
-### `ShipCargo` Cargo
+### <span class='code'>[ShipCargo](../../EliteAPI/Status/ShipCargo.html)</span> Cargo
 
 
 
@@ -134,7 +134,7 @@ Holds information on the ship's current cargo situation.
 
 
 
-### `ShipModules` Modules
+### <span class='code'>[ShipModules](../../EliteAPI/Status/ShipModules.html)</span> Modules
 
 
 
@@ -142,7 +142,7 @@ Returns all the modules installed on the current ship.
 
 
 
-### `MaterialsInfo` Materials
+### <span class='code'>[MaterialsInfo](../../EliteAPI/Events/MaterialsInfo.html)</span> Materials
 
 
 
@@ -150,7 +150,7 @@ Holds information on the ship's current materials situation.
 
 
 
-### `UserBindings` Bindings
+### <span class='code'>[UserBindings](../../EliteAPI/Bindings/UserBindings.html)</span> Bindings
 
 
 
@@ -158,7 +158,7 @@ Holds information on all key bindings in the game set by the user.
 
 
 
-### `CommanderStatus` Commander
+### <span class='code'>[CommanderStatus](../../EliteAPI/Status/CommanderStatus.html)</span> Commander
 
 
 
@@ -166,7 +166,7 @@ Holds information about the commander.
 
 
 
-### `LocationStatus` Location
+### <span class='code'>[LocationStatus](../../EliteAPI/Status/LocationStatus.html)</span> Location
 
 
 
@@ -174,7 +174,7 @@ Holds information about the last known location of the commander.
 
 
 
-### `RichPresenceClient` DiscordRichPresence
+### <span class='code'>[RichPresenceClient](../../EliteAPI/Discord/RichPresenceClient.html)</span> DiscordRichPresence
 
 
 
@@ -182,7 +182,7 @@ Rich presence service for Discord.
 
 
 
-### `Boolean` SkipCatchUp
+### <span class='code'>Boolean</span> SkipCatchUp
 
 
 
@@ -192,7 +192,7 @@ Whether the API should skip the processing of previous events before the API was
 
 ## 04 Methods
 
-### `Void` Reset ()
+### <span class='code'>Void</span> Reset ()
 
 
 
@@ -200,7 +200,7 @@ Resets the API.
 
 
 
-### `Void` Start (`Boolean` runRichPresence)
+### <span class='code'>Void</span> Start (<span class='code'>Boolean</span> runRichPresence)
 
 
 
@@ -208,7 +208,7 @@ Starts the API.
 
 
 
-### `Void` ChangeJournal (`DirectoryInfo` newJournalDirectory)
+### <span class='code'>Void</span> ChangeJournal (<span class='code'>DirectoryInfo</span> newJournalDirectory)
 
 
 
@@ -216,7 +216,7 @@ Changes the journal directory.
 
 
 
-### `Void` Stop ()
+### <span class='code'>Void</span> Stop ()
 
 
 
@@ -226,7 +226,7 @@ Stops the API.
 
 ## 05 Events
 
-### `EventHandler<EventArgs>` OnReady
+### <span class='code'>EventHandler<EventArgs></span> OnReady
 
 
 
@@ -234,7 +234,7 @@ Gets triggered when EliteAPI has successfully loaded up.
 
 
 
-### `EventHandler<EventArgs>` OnQuit
+### <span class='code'>EventHandler<EventArgs></span> OnQuit
 
 
 
@@ -242,7 +242,7 @@ Gets triggered when EliteAPI is closing.
 
 
 
-### `EventHandler`1<Tuple`2>` OnError
+### <span class='code'>EventHandler`1<Tuple`2></span> OnError
 
 
 
@@ -250,7 +250,7 @@ Gets triggered when EliteAPI could not successfully load up.
 
 
 
-### `EventHandler`1<Tuple`2>` OnLoad
+### <span class='code'>EventHandler`1<Tuple`2></span> OnLoad
 
 
 

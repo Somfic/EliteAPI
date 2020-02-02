@@ -4,13 +4,13 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Discord`
+Namespace: <span class='code'>EliteAPI.Discord</span>
 
-Inheritance: `Object` → `RichPresenceClient`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[RichPresenceClient](../../EliteAPI/Discord/RichPresenceClient.html)</span>
 
 ## 02 Constructors
 
-### `RichPresenceClient` (`EliteDangerousAPI` api)
+### <span class='code'>[RichPresenceClient](../../EliteAPI/Discord/RichPresenceClient.html)</span> (<span class='code'>[EliteDangerousAPI](../EliteAPI/EliteDangerousAPI.html)</span> api)
 
 
 
@@ -18,7 +18,7 @@ Creates a new Discord Rich Presence client based on the EliteDangerousAPI object
 
 
 
-### `RichPresenceClient` (`EliteDangerousAPI` api, `String` rpcID)
+### <span class='code'>[RichPresenceClient](../../EliteAPI/Discord/RichPresenceClient.html)</span> (<span class='code'>[EliteDangerousAPI](../EliteAPI/EliteDangerousAPI.html)</span> api, <span class='code'>String</span> rpcID)
 
 
 
@@ -28,7 +28,7 @@ Creates a new Discord Rich Presence client based on the EliteDangerousAPI object
 
 ## 03 Properties
 
-### `Boolean` IsRunning
+### <span class='code'>Boolean</span> IsRunning
 
 
 
@@ -36,7 +36,7 @@ Whether the rich presence is running.
 
 
 
-### `Boolean` IsReady
+### <span class='code'>Boolean</span> IsReady
 
 
 
@@ -46,7 +46,7 @@ Whether the rich presence is connected and ready.
 
 ## 04 Methods
 
-### `RichPresenceClient` WithCustomID (`String` id)
+### <span class='code'>[RichPresenceClient](../../EliteAPI/Discord/RichPresenceClient.html)</span> WithCustomID (<span class='code'>String</span> id)
 
 
 
@@ -54,7 +54,7 @@ Set a custom ID to be used, for when you have your own RPC registered with Disco
 
 
 
-### `RichPresenceClient` UpdatePresence (`RichPresence` presence)
+### <span class='code'>[RichPresenceClient](../../EliteAPI/Discord/RichPresenceClient.html)</span> UpdatePresence (<span class='code'>[RichPresence](../../EliteAPI/Discord/RichPresence.html)</span> presence)
 
 
 
@@ -62,7 +62,7 @@ Update the rich presence.
 
 
 
-### `RichPresenceClient` TurnOn (`Boolean` automatic)
+### <span class='code'>[RichPresenceClient](../../EliteAPI/Discord/RichPresenceClient.html)</span> TurnOn (<span class='code'>Boolean</span> automatic)
 
 
 
@@ -70,7 +70,7 @@ Turn the rich presence on.
 
 
 
-### `RichPresenceClient` TurnOff ()
+### <span class='code'>[RichPresenceClient](../../EliteAPI/Discord/RichPresenceClient.html)</span> TurnOff ()
 
 
 

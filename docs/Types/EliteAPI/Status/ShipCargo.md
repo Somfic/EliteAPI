@@ -4,29 +4,29 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Status`
+Namespace: <span class='code'>EliteAPI.Status</span>
 
-Inheritance: `Object` → `ShipCargo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ShipCargo](../../EliteAPI/Status/ShipCargo.html)</span>
 
 ## 02 Constructors
 
-### `ShipCargo` ()
+### <span class='code'>[ShipCargo](../../EliteAPI/Status/ShipCargo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTimeOffset` Timestamp
+### <span class='code'>DateTimeOffset</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Vessel
+### <span class='code'>String</span> Vessel
 
-### `Int64` Count
+### <span class='code'>Int64</span> Count
 
-### `List<Item>` Inventory
+### <span class='code'>List<[Item](../../EliteAPI/Status/Item.html)></span> Inventory
 
 ## 04 Methods
 
-### `ShipCargo` Process (`String` json)
+### <span class='code'>[ShipCargo](../../EliteAPI/Status/ShipCargo.html)</span> Process (<span class='code'>String</span> json)
 
-### `ShipCargo` FromFile (`FileInfo` file, `EliteDangerousAPI` api)
+### <span class='code'>[ShipCargo](../../EliteAPI/Status/ShipCargo.html)</span> FromFile (<span class='code'>FileInfo</span> file, <span class='code'>[EliteDangerousAPI](../EliteAPI/EliteDangerousAPI.html)</span> api)
 

@@ -4,27 +4,27 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ApproachSettlementInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ApproachSettlementInfo](../../EliteAPI/Events/ApproachSettlementInfo.html)</span>
 
 ## 02 Constructors
 
-### `ApproachSettlementInfo` ()
+### <span class='code'>[ApproachSettlementInfo](../../EliteAPI/Events/ApproachSettlementInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `String` NameLocalised
+### <span class='code'>String</span> NameLocalised
 
-### `Int64` MarketId
+### <span class='code'>Int64</span> MarketId
 
-### `Double` Latitude
+### <span class='code'>Double</span> Latitude
 
-### `Double` Longitude
+### <span class='code'>Double</span> Longitude
 

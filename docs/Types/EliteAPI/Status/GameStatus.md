@@ -4,101 +4,101 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Status`
+Namespace: <span class='code'>EliteAPI.Status</span>
 
-Inheritance: `Object` → `GameStatus`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[GameStatus](../../EliteAPI/Status/GameStatus.html)</span>
 
 ## 02 Properties
 
-### `DateTimeOffset` Timestamp
+### <span class='code'>DateTimeOffset</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `ShipStatusFlags` Flags
+### <span class='code'>[ShipStatusFlags](../../EliteAPI/Status/ShipStatusFlags.html)</span> Flags
 
-### `List<Int64>` Pips
+### <span class='code'>List<Int64></span> Pips
 
-### `Int64` FireGroup
+### <span class='code'>Int64</span> FireGroup
 
-### `Int64` GuiFocus
+### <span class='code'>Int64</span> GuiFocus
 
-### `Fuel` Fuel
+### <span class='code'>[Fuel](../../EliteAPI/Status/Fuel.html)</span> Fuel
 
-### `String` LegalState
+### <span class='code'>String</span> LegalState
 
-### `Int64` Cargo
+### <span class='code'>Int64</span> Cargo
 
-### `Boolean` Docked
+### <span class='code'>Boolean</span> Docked
 
-### `Boolean` Landed
+### <span class='code'>Boolean</span> Landed
 
-### `Boolean` Gear
+### <span class='code'>Boolean</span> Gear
 
-### `Boolean` Shields
+### <span class='code'>Boolean</span> Shields
 
-### `Boolean` Supercruise
+### <span class='code'>Boolean</span> Supercruise
 
-### `Boolean` FlightAssist
+### <span class='code'>Boolean</span> FlightAssist
 
-### `Boolean` Hardpoints
+### <span class='code'>Boolean</span> Hardpoints
 
-### `Boolean` Winging
+### <span class='code'>Boolean</span> Winging
 
-### `Boolean` Lights
+### <span class='code'>Boolean</span> Lights
 
-### `Boolean` CargoScoop
+### <span class='code'>Boolean</span> CargoScoop
 
-### `Boolean` SilentRunning
+### <span class='code'>Boolean</span> SilentRunning
 
-### `Boolean` Scooping
+### <span class='code'>Boolean</span> Scooping
 
-### `Boolean` SrvHandbreak
+### <span class='code'>Boolean</span> SrvHandbreak
 
-### `Boolean` SrvTurrent
+### <span class='code'>Boolean</span> SrvTurrent
 
-### `Boolean` SrvNearShip
+### <span class='code'>Boolean</span> SrvNearShip
 
-### `Boolean` SrvDriveAssist
+### <span class='code'>Boolean</span> SrvDriveAssist
 
-### `Boolean` MassLocked
+### <span class='code'>Boolean</span> MassLocked
 
-### `Boolean` FsdCharging
+### <span class='code'>Boolean</span> FsdCharging
 
-### `Boolean` FsdCooldown
+### <span class='code'>Boolean</span> FsdCooldown
 
-### `Boolean` LowFuel
+### <span class='code'>Boolean</span> LowFuel
 
-### `Boolean` Overheating
+### <span class='code'>Boolean</span> Overheating
 
-### `Boolean` HasLatlong
+### <span class='code'>Boolean</span> HasLatlong
 
-### `Boolean` InDanger
+### <span class='code'>Boolean</span> InDanger
 
-### `Boolean` InInterdiction
+### <span class='code'>Boolean</span> InInterdiction
 
-### `Boolean` InMothership
+### <span class='code'>Boolean</span> InMothership
 
-### `Boolean` InFighter
+### <span class='code'>Boolean</span> InFighter
 
-### `Boolean` InSRV
+### <span class='code'>Boolean</span> InSRV
 
-### `Boolean` AnalysisMode
+### <span class='code'>Boolean</span> AnalysisMode
 
-### `Boolean` NightVision
+### <span class='code'>Boolean</span> NightVision
 
-### `String` GameMode
+### <span class='code'>String</span> GameMode
 
-### `Boolean` InNoFireZone
+### <span class='code'>Boolean</span> InNoFireZone
 
-### `Double` JumpRange
+### <span class='code'>Double</span> JumpRange
 
-### `Boolean` IsRunning
+### <span class='code'>Boolean</span> IsRunning
 
-### `Boolean` InMainMenu
+### <span class='code'>Boolean</span> InMainMenu
 
-### `String` MusicTrack
+### <span class='code'>String</span> MusicTrack
 
 ## 03 Methods
 
-### `Boolean` GetFlag (`Int32` bit)
+### <span class='code'>Boolean</span> GetFlag (<span class='code'>Int32</span> bit)
 

@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderShipTransfer`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderShipTransfer](../../../EliteAPI/Inara/Events/SetCommanderShipTransfer.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderShipTransfer` (`String` shipType, `Int64` shipGameId, `String` starsystemName, `String` stationName)
+### <span class='code'>[SetCommanderShipTransfer](../../../EliteAPI/Inara/Events/SetCommanderShipTransfer.html)</span> (<span class='code'>String</span> shipType, <span class='code'>Int64</span> shipGameId, <span class='code'>String</span> starsystemName, <span class='code'>String</span> stationName)
 
 ## 03 Properties
 
-### `String` ShipType
+### <span class='code'>String</span> ShipType
 
-### `Int64` ShipGameId
+### <span class='code'>Int64</span> ShipGameId
 
-### `String` StarsystemName
+### <span class='code'>String</span> StarsystemName
 
-### `String` StationName
+### <span class='code'>String</span> StationName
 
-### `Int64` MarketID
+### <span class='code'>Int64</span> MarketID
 
-### `Int64` TransferTime
+### <span class='code'>Int64</span> TransferTime
 

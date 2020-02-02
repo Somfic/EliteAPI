@@ -4,29 +4,29 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `RankInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[RankInfo](../../EliteAPI/Events/RankInfo.html)</span>
 
 ## 02 Constructors
 
-### `RankInfo` ()
+### <span class='code'>[RankInfo](../../EliteAPI/Events/RankInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Int64` Combat
+### <span class='code'>Int64</span> Combat
 
-### `Int64` Trade
+### <span class='code'>Int64</span> Trade
 
-### `Int64` Explore
+### <span class='code'>Int64</span> Explore
 
-### `Int64` Empire
+### <span class='code'>Int64</span> Empire
 
-### `Int64` Federation
+### <span class='code'>Int64</span> Federation
 
-### `Int64` Cqc
+### <span class='code'>Int64</span> Cqc
 

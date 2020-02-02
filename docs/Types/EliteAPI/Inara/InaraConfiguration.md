@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara`
+Namespace: <span class='code'>EliteAPI.Inara</span>
 
-Inheritance: `Object` → `InaraConfiguration`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[InaraConfiguration](../../EliteAPI/Inara/InaraConfiguration.html)</span>
 
 ## 02 Constructors
 
-### `InaraConfiguration` (`String` apiKey, `String` appName, `String` appVersion)
+### <span class='code'>[InaraConfiguration](../../EliteAPI/Inara/InaraConfiguration.html)</span> (<span class='code'>String</span> apiKey, <span class='code'>String</span> appName, <span class='code'>String</span> appVersion)
 
 ## 03 Properties
 
-### `String` AppName
+### <span class='code'>String</span> AppName
 
-### `String` AppVersion
+### <span class='code'>String</span> AppVersion
 
-### `Nullable`1` IsDeveloped
+### <span class='code'>Nullable`1</span> IsDeveloped
 
-### `String` ApiKey
+### <span class='code'>String</span> ApiKey
 
-### `String` CommanderName
+### <span class='code'>String</span> CommanderName
 
-### `String` CommanderFrontierId
+### <span class='code'>String</span> CommanderFrontierId
 

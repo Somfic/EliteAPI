@@ -4,15 +4,15 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Parent`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Parent](../../EliteAPI/Events/Parent.html)</span>
 
 ## 02 Constructors
 
-### `Parent` ()
+### <span class='code'>[Parent](../../EliteAPI/Events/Parent.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` Null
+### <span class='code'>Int64</span> Null
 

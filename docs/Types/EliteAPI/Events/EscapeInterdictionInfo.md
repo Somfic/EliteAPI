@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `EscapeInterdictionInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EscapeInterdictionInfo](../../EliteAPI/Events/EscapeInterdictionInfo.html)</span>
 
 ## 02 Constructors
 
-### `EscapeInterdictionInfo` ()
+### <span class='code'>[EscapeInterdictionInfo](../../EliteAPI/Events/EscapeInterdictionInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Interdictor
+### <span class='code'>String</span> Interdictor
 
-### `String` InterdictorLocalised
+### <span class='code'>String</span> InterdictorLocalised
 
-### `Boolean` IsPlayer
+### <span class='code'>Boolean</span> IsPlayer
 

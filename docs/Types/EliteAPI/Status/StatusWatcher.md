@@ -4,7 +4,7 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Status`
+Namespace: <span class='code'>EliteAPI.Status</span>
 
-Inheritance: `Object` → `StatusWatcher`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[StatusWatcher](../../EliteAPI/Status/StatusWatcher.html)</span>
 

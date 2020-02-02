@@ -4,29 +4,29 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ProspectedAsteroidInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ProspectedAsteroidInfo](../../EliteAPI/Events/ProspectedAsteroidInfo.html)</span>
 
 ## 02 Constructors
 
-### `ProspectedAsteroidInfo` ()
+### <span class='code'>[ProspectedAsteroidInfo](../../EliteAPI/Events/ProspectedAsteroidInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTimeOffset` Timestamp
+### <span class='code'>DateTimeOffset</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `List<ProspectedMaterial>` Materials
+### <span class='code'>List<[ProspectedMaterial](../../EliteAPI/Events/ProspectedMaterial.html)></span> Materials
 
-### `String` MotherlodeMaterial
+### <span class='code'>String</span> MotherlodeMaterial
 
-### `String` MotherlodeMaterialLocalised
+### <span class='code'>String</span> MotherlodeMaterialLocalised
 
-### `String` Content
+### <span class='code'>String</span> Content
 
-### `String` ContentLocalised
+### <span class='code'>String</span> ContentLocalised
 
-### `Int64` Remaining
+### <span class='code'>Int64</span> Remaining
 

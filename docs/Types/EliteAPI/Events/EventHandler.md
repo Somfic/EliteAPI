@@ -4,447 +4,447 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `EventHandler`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventHandler](../../EliteAPI/Events/EventHandler.html)</span>
 
 ## 02 Constructors
 
-### `EventHandler` ()
+### <span class='code'>[EventHandler](../../EliteAPI/Events/EventHandler.html)</span> ()
 
 ## 03 Events
 
-### `EventHandler`1<StatusEvent>` StatusInMainMenu
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusInMainMenu
 
-### `EventHandler`1<StatusEvent>` StatusIsRunning
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusIsRunning
 
-### `EventHandler`1<StatusEvent>` StatusInNoFireZoneEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusInNoFireZoneEvent
 
-### `EventHandler`1<StatusEvent>` StatusDockedEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusDockedEvent
 
-### `EventHandler`1<StatusEvent>` StatusLandedEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusLandedEvent
 
-### `EventHandler`1<StatusEvent>` StatusFsdCooldownEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusFsdCooldownEvent
 
-### `EventHandler`1<StatusEvent>` StatusGearEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusGearEvent
 
-### `EventHandler`1<StatusEvent>` StatusShieldsEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusShieldsEvent
 
-### `EventHandler`1<StatusEvent>` StatusSupercruiseEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusSupercruiseEvent
 
-### `EventHandler`1<StatusEvent>` StatusFlightAssistEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusFlightAssistEvent
 
-### `EventHandler`1<StatusEvent>` StatusHardpointsEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusHardpointsEvent
 
-### `EventHandler`1<StatusEvent>` StatusWingingEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusWingingEvent
 
-### `EventHandler`1<StatusEvent>` StatusLightsEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusLightsEvent
 
-### `EventHandler`1<StatusEvent>` StatusCargoScoopEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusCargoScoopEvent
 
-### `EventHandler`1<StatusEvent>` StatusSilentRunningEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusSilentRunningEvent
 
-### `EventHandler`1<StatusEvent>` StatusScoopingEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusScoopingEvent
 
-### `EventHandler`1<StatusEvent>` StatusSrvHandbreakEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusSrvHandbreakEvent
 
-### `EventHandler`1<StatusEvent>` StatusSrvTurrentEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusSrvTurrentEvent
 
-### `EventHandler`1<StatusEvent>` StatusSrvNearShipEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusSrvNearShipEvent
 
-### `EventHandler`1<StatusEvent>` StatusSrvDriveAssistEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusSrvDriveAssistEvent
 
-### `EventHandler`1<StatusEvent>` StatusMassLockedEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusMassLockedEvent
 
-### `EventHandler`1<StatusEvent>` StatusFsdChargingEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusFsdChargingEvent
 
-### `EventHandler`1<StatusEvent>` StatusFsdCooldowEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusFsdCooldowEvent
 
-### `EventHandler`1<StatusEvent>` StatusLowFuelEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusLowFuelEvent
 
-### `EventHandler`1<StatusEvent>` StatusOverheatingEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusOverheatingEvent
 
-### `EventHandler`1<StatusEvent>` StatusHasLatLongEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusHasLatLongEvent
 
-### `EventHandler`1<StatusEvent>` StatusInDangerEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusInDangerEvent
 
-### `EventHandler`1<StatusEvent>` StatusInInterdictionEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusInInterdictionEvent
 
-### `EventHandler`1<StatusEvent>` StatusInMothershipEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusInMothershipEvent
 
-### `EventHandler`1<StatusEvent>` StatusInFighterEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusInFighterEvent
 
-### `EventHandler`1<StatusEvent>` StatusInSRVEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusInSRVEvent
 
-### `EventHandler`1<StatusEvent>` StatusAnalysisModeEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusAnalysisModeEvent
 
-### `EventHandler`1<StatusEvent>` StatusNightVisionEvent
+### <span class='code'>EventHandler`1<[StatusEvent](../../EliteAPI/Events/StatusEvent.html)></span> StatusNightVisionEvent
 
-### `EventHandler`1<Object>` AllEvent
+### <span class='code'>EventHandler`1<Object></span> AllEvent
 
-### `EventHandler`1<ReservoirReplenishedInfo>` ReservoirReplenishedEvent
+### <span class='code'>EventHandler`1<[ReservoirReplenishedInfo](../../EliteAPI/Events/ReservoirReplenishedInfo.html)></span> ReservoirReplenishedEvent
 
-### `EventHandler`1<ProspectedAsteroidInfo>` ProspectedAsteroidEvent
+### <span class='code'>EventHandler`1<[ProspectedAsteroidInfo](../../EliteAPI/Events/ProspectedAsteroidInfo.html)></span> ProspectedAsteroidEvent
 
-### `EventHandler`1<LeftSquadronInfo>` LeftSquadronEvent
+### <span class='code'>EventHandler`1<[LeftSquadronInfo](../../EliteAPI/Events/LeftSquadronInfo.html)></span> LeftSquadronEvent
 
-### `EventHandler`1<HeatWarningInfo>` HeatWarningEvent
+### <span class='code'>EventHandler`1<[HeatWarningInfo](../../EliteAPI/Events/HeatWarningInfo.html)></span> HeatWarningEvent
 
-### `EventHandler`1<ShieldStateInfo>` ShieldStateEvent
+### <span class='code'>EventHandler`1<[ShieldStateInfo](../../EliteAPI/Events/ShieldStateInfo.html)></span> ShieldStateEvent
 
-### `EventHandler`1<VehicleSwitchInfo>` VehicleSwitchEvent
+### <span class='code'>EventHandler`1<[VehicleSwitchInfo](../../EliteAPI/Events/VehicleSwitchInfo.html)></span> VehicleSwitchEvent
 
-### `EventHandler`1<DockFighterInfo>` DockFighterEvent
+### <span class='code'>EventHandler`1<[DockFighterInfo](../../EliteAPI/Events/DockFighterInfo.html)></span> DockFighterEvent
 
-### `EventHandler`1<LaunchSRVInfo>` LaunchSRVEvent
+### <span class='code'>EventHandler`1<[LaunchSRVInfo](../../EliteAPI/Events/LaunchSRVInfo.html)></span> LaunchSRVEvent
 
-### `EventHandler`1<SelfDestructInfo>` SelfDestructEvent
+### <span class='code'>EventHandler`1<[SelfDestructInfo](../../EliteAPI/Events/SelfDestructInfo.html)></span> SelfDestructEvent
 
-### `EventHandler`1<DockSRVInfo>` DockSRVEvent
+### <span class='code'>EventHandler`1<[DockSRVInfo](../../EliteAPI/Events/DockSRVInfo.html)></span> DockSRVEvent
 
-### `EventHandler`1<HeatDamageInfo>` HeatDamageEvent
+### <span class='code'>EventHandler`1<[HeatDamageInfo](../../EliteAPI/Events/HeatDamageInfo.html)></span> HeatDamageEvent
 
-### `EventHandler`1<LaunchFighterInfo>` LaunchFighterEvent
+### <span class='code'>EventHandler`1<[LaunchFighterInfo](../../EliteAPI/Events/LaunchFighterInfo.html)></span> LaunchFighterEvent
 
-### `EventHandler`1<DatalinkScanInfo>` DatalinkScanEvent
+### <span class='code'>EventHandler`1<[DatalinkScanInfo](../../EliteAPI/Events/DatalinkScanInfo.html)></span> DatalinkScanEvent
 
-### `EventHandler`1<CockpitBreachedInfo>` CockpitBreachedEvent
+### <span class='code'>EventHandler`1<[CockpitBreachedInfo](../../EliteAPI/Events/CockpitBreachedInfo.html)></span> CockpitBreachedEvent
 
-### `EventHandler`1<JetConeBoostInfo>` JetConeBoostEvent
+### <span class='code'>EventHandler`1<[JetConeBoostInfo](../../EliteAPI/Events/JetConeBoostInfo.html)></span> JetConeBoostEvent
 
-### `EventHandler`1<PowerplayLeaveInfo>` PowerplayLeaveEvent
+### <span class='code'>EventHandler`1<[PowerplayLeaveInfo](../../EliteAPI/Events/PowerplayLeaveInfo.html)></span> PowerplayLeaveEvent
 
-### `EventHandler`1<InterdictionInfo>` InterdictionEvent
+### <span class='code'>EventHandler`1<[InterdictionInfo](../../EliteAPI/Events/InterdictionInfo.html)></span> InterdictionEvent
 
-### `EventHandler`1<USSDropInfo>` USSDropEvent
+### <span class='code'>EventHandler`1<[USSDropInfo](../../EliteAPI/Events/USSDropInfo.html)></span> USSDropEvent
 
-### `EventHandler`1<PowerplayCollectInfo>` PowerplayCollectEvent
+### <span class='code'>EventHandler`1<[PowerplayCollectInfo](../../EliteAPI/Events/PowerplayCollectInfo.html)></span> PowerplayCollectEvent
 
-### `EventHandler`1<PowerplayDeliverInfo>` PowerplayDeliverEvent
+### <span class='code'>EventHandler`1<[PowerplayDeliverInfo](../../EliteAPI/Events/PowerplayDeliverInfo.html)></span> PowerplayDeliverEvent
 
-### `EventHandler`1<PayLegacyFinesInfo>` PayLegacyFinesEvent
+### <span class='code'>EventHandler`1<[PayLegacyFinesInfo](../../EliteAPI/Events/PayLegacyFinesInfo.html)></span> PayLegacyFinesEvent
 
-### `EventHandler`1<EngineerApplyInfo>` EngineerApplyEvent
+### <span class='code'>EventHandler`1<[EngineerApplyInfo](../../EliteAPI/Events/EngineerApplyInfo.html)></span> EngineerApplyEvent
 
-### `EventHandler`1<WingLeaveInfo>` WingLeaveEvent
+### <span class='code'>EventHandler`1<[WingLeaveInfo](../../EliteAPI/Events/WingLeaveInfo.html)></span> WingLeaveEvent
 
-### `EventHandler`1<SystemsShutdownInfo>` SystemsShutdownEvent
+### <span class='code'>EventHandler`1<[SystemsShutdownInfo](../../EliteAPI/Events/SystemsShutdownInfo.html)></span> SystemsShutdownEvent
 
-### `EventHandler`1<HullDamageInfo>` HullDamageEvent
+### <span class='code'>EventHandler`1<[HullDamageInfo](../../EliteAPI/Events/HullDamageInfo.html)></span> HullDamageEvent
 
-### `EventHandler`1<BuyDronesInfo>` BuyDronesEvent
+### <span class='code'>EventHandler`1<[BuyDronesInfo](../../EliteAPI/Events/BuyDronesInfo.html)></span> BuyDronesEvent
 
-### `EventHandler`1<RestockVehicleInfo>` RestockVehicleEvent
+### <span class='code'>EventHandler`1<[RestockVehicleInfo](../../EliteAPI/Events/RestockVehicleInfo.html)></span> RestockVehicleEvent
 
-### `EventHandler`1<BuyAmmoInfo>` BuyAmmoEvent
+### <span class='code'>EventHandler`1<[BuyAmmoInfo](../../EliteAPI/Events/BuyAmmoInfo.html)></span> BuyAmmoEvent
 
-### `EventHandler`1<MiningRefinedInfo>` MiningRefinedEvent
+### <span class='code'>EventHandler`1<[MiningRefinedInfo](../../EliteAPI/Events/MiningRefinedInfo.html)></span> MiningRefinedEvent
 
-### `EventHandler`1<DatalinkVoucherInfo>` DatalinkVoucherEvent
+### <span class='code'>EventHandler`1<[DatalinkVoucherInfo](../../EliteAPI/Events/DatalinkVoucherInfo.html)></span> DatalinkVoucherEvent
 
-### `EventHandler`1<ScannedInfo>` ScannedEvent
+### <span class='code'>EventHandler`1<[ScannedInfo](../../EliteAPI/Events/ScannedInfo.html)></span> ScannedEvent
 
-### `EventHandler`1<ChangeCrewRoleInfo>` ChangeCrewRoleEvent
+### <span class='code'>EventHandler`1<[ChangeCrewRoleInfo](../../EliteAPI/Events/ChangeCrewRoleInfo.html)></span> ChangeCrewRoleEvent
 
-### `EventHandler`1<TouchdownInfo>` TouchdownEvent
+### <span class='code'>EventHandler`1<[TouchdownInfo](../../EliteAPI/Events/TouchdownInfo.html)></span> TouchdownEvent
 
-### `EventHandler`1<SendTextInfo>` SendTextEvent
+### <span class='code'>EventHandler`1<[SendTextInfo](../../EliteAPI/Events/SendTextInfo.html)></span> SendTextEvent
 
-### `EventHandler`1<RefuelAllInfo>` RefuelAllEvent
+### <span class='code'>EventHandler`1<[RefuelAllInfo](../../EliteAPI/Events/RefuelAllInfo.html)></span> RefuelAllEvent
 
-### `EventHandler`1<EndCrewSessionInfo>` EndCrewSessionEvent
+### <span class='code'>EventHandler`1<[EndCrewSessionInfo](../../EliteAPI/Events/EndCrewSessionInfo.html)></span> EndCrewSessionEvent
 
-### `EventHandler`1<LiftoffInfo>` LiftoffEvent
+### <span class='code'>EventHandler`1<[LiftoffInfo](../../EliteAPI/Events/LiftoffInfo.html)></span> LiftoffEvent
 
-### `EventHandler`1<EscapeInterdictionInfo>` EscapeInterdictionEvent
+### <span class='code'>EventHandler`1<[EscapeInterdictionInfo](../../EliteAPI/Events/EscapeInterdictionInfo.html)></span> EscapeInterdictionEvent
 
-### `EventHandler`1<WingAddInfo>` WingAddEvent
+### <span class='code'>EventHandler`1<[WingAddInfo](../../EliteAPI/Events/WingAddInfo.html)></span> WingAddEvent
 
-### `EventHandler`1<SellDronesInfo>` SellDronesEvent
+### <span class='code'>EventHandler`1<[SellDronesInfo](../../EliteAPI/Events/SellDronesInfo.html)></span> SellDronesEvent
 
-### `EventHandler`1<FileheaderInfo>` FileheaderEvent
+### <span class='code'>EventHandler`1<[FileheaderInfo](../../EliteAPI/Events/FileheaderInfo.html)></span> FileheaderEvent
 
-### `EventHandler`1<InterdictedInfo>` InterdictedEvent
+### <span class='code'>EventHandler`1<[InterdictedInfo](../../EliteAPI/Events/InterdictedInfo.html)></span> InterdictedEvent
 
-### `EventHandler`1<CrewMemberJoinsInfo>` CrewMemberJoinsEvent
+### <span class='code'>EventHandler`1<[CrewMemberJoinsInfo](../../EliteAPI/Events/CrewMemberJoinsInfo.html)></span> CrewMemberJoinsEvent
 
-### `EventHandler`1<CrewMemberQuitsInfo>` CrewMemberQuitsEvent
+### <span class='code'>EventHandler`1<[CrewMemberQuitsInfo](../../EliteAPI/Events/CrewMemberQuitsInfo.html)></span> CrewMemberQuitsEvent
 
-### `EventHandler`1<CrewMemberRoleChangeInfo>` CrewMemberRoleChangeEvent
+### <span class='code'>EventHandler`1<[CrewMemberRoleChangeInfo](../../EliteAPI/Events/CrewMemberRoleChangeInfo.html)></span> CrewMemberRoleChangeEvent
 
-### `EventHandler`1<PVPKillInfo>` PVPKillEvent
+### <span class='code'>EventHandler`1<[PVPKillInfo](../../EliteAPI/Events/PVPKillInfo.html)></span> PVPKillEvent
 
-### `EventHandler`1<JoinACrewInfo>` JoinACrewEvent
+### <span class='code'>EventHandler`1<[JoinACrewInfo](../../EliteAPI/Events/JoinACrewInfo.html)></span> JoinACrewEvent
 
-### `EventHandler`1<QuitACrewInfo>` QuitACrewEvent
+### <span class='code'>EventHandler`1<[QuitACrewInfo](../../EliteAPI/Events/QuitACrewInfo.html)></span> QuitACrewEvent
 
-### `EventHandler`1<ProgressInfo>` ProgressEvent
+### <span class='code'>EventHandler`1<[ProgressInfo](../../EliteAPI/Events/ProgressInfo.html)></span> ProgressEvent
 
-### `EventHandler`1<PromotionInfo>` PromotionEvent
+### <span class='code'>EventHandler`1<[PromotionInfo](../../EliteAPI/Events/PromotionInfo.html)></span> PromotionEvent
 
-### `EventHandler`1<RankInfo>` RankEvent
+### <span class='code'>EventHandler`1<[RankInfo](../../EliteAPI/Events/RankInfo.html)></span> RankEvent
 
-### `EventHandler`1<CommitCrimeInfo>` CommitCrimeEvent
+### <span class='code'>EventHandler`1<[CommitCrimeInfo](../../EliteAPI/Events/CommitCrimeInfo.html)></span> CommitCrimeEvent
 
-### `EventHandler`1<EngineerContributionInfo>` EngineerContributionEvent
+### <span class='code'>EventHandler`1<[EngineerContributionInfo](../../EliteAPI/Events/EngineerContributionInfo.html)></span> EngineerContributionEvent
 
-### `EventHandler`1<MusicInfo>` MusicEvent
+### <span class='code'>EventHandler`1<[MusicInfo](../../EliteAPI/Events/MusicInfo.html)></span> MusicEvent
 
-### `EventHandler`1<DiedInfo>` DiedEvent
+### <span class='code'>EventHandler`1<[DiedInfo](../../EliteAPI/Events/DiedInfo.html)></span> DiedEvent
 
-### `EventHandler`1<PassengersInfo>` PassengersEvent
+### <span class='code'>EventHandler`1<[PassengersInfo](../../EliteAPI/Events/PassengersInfo.html)></span> PassengersEvent
 
-### `EventHandler`1<SearchAndRescueInfo>` SearchAndRescueEvent
+### <span class='code'>EventHandler`1<[SearchAndRescueInfo](../../EliteAPI/Events/SearchAndRescueInfo.html)></span> SearchAndRescueEvent
 
-### `EventHandler`1<KickCrewMemberInfo>` KickCrewMemberEvent
+### <span class='code'>EventHandler`1<[KickCrewMemberInfo](../../EliteAPI/Events/KickCrewMemberInfo.html)></span> KickCrewMemberEvent
 
-### `EventHandler`1<RedeemVoucherInfo>` RedeemVoucherEvent
+### <span class='code'>EventHandler`1<[RedeemVoucherInfo](../../EliteAPI/Events/RedeemVoucherInfo.html)></span> RedeemVoucherEvent
 
-### `EventHandler`1<ResurrectInfo>` ResurrectEvent
+### <span class='code'>EventHandler`1<[ResurrectInfo](../../EliteAPI/Events/ResurrectInfo.html)></span> ResurrectEvent
 
-### `EventHandler`1<CommunityGoalJoinInfo>` CommunityGoalJoinEvent
+### <span class='code'>EventHandler`1<[CommunityGoalJoinInfo](../../EliteAPI/Events/CommunityGoalJoinInfo.html)></span> CommunityGoalJoinEvent
 
-### `EventHandler`1<CommunityGoalInfo>` CommunityGoalEvent
+### <span class='code'>EventHandler`1<[CommunityGoalInfo](../../EliteAPI/Events/CommunityGoalInfo.html)></span> CommunityGoalEvent
 
-### `EventHandler`1<RepairDroneInfo>` RepairDroneEvent
+### <span class='code'>EventHandler`1<[RepairDroneInfo](../../EliteAPI/Events/RepairDroneInfo.html)></span> RepairDroneEvent
 
-### `EventHandler`1<RepairInfo>` RepairEvent
+### <span class='code'>EventHandler`1<[RepairInfo](../../EliteAPI/Events/RepairInfo.html)></span> RepairEvent
 
-### `EventHandler`1<JetConeDamageInfo>` JetConeDamageEvent
+### <span class='code'>EventHandler`1<[JetConeDamageInfo](../../EliteAPI/Events/JetConeDamageInfo.html)></span> JetConeDamageEvent
 
-### `EventHandler`1<CommunityGoalDiscardInfo>` CommunityGoalDiscardEvent
+### <span class='code'>EventHandler`1<[CommunityGoalDiscardInfo](../../EliteAPI/Events/CommunityGoalDiscardInfo.html)></span> CommunityGoalDiscardEvent
 
-### `EventHandler`1<MissionAcceptedInfo>` MissionAcceptedEvent
+### <span class='code'>EventHandler`1<[MissionAcceptedInfo](../../EliteAPI/Events/MissionAcceptedInfo.html)></span> MissionAcceptedEvent
 
-### `EventHandler`1<BuyExplorationDataInfo>` BuyExplorationDataEvent
+### <span class='code'>EventHandler`1<[BuyExplorationDataInfo](../../EliteAPI/Events/BuyExplorationDataInfo.html)></span> BuyExplorationDataEvent
 
-### `EventHandler`1<RepairAllInfo>` RepairAllEvent
+### <span class='code'>EventHandler`1<[RepairAllInfo](../../EliteAPI/Events/RepairAllInfo.html)></span> RepairAllEvent
 
-### `EventHandler`1<CrewLaunchFighterInfo>` CrewLaunchFighterEvent
+### <span class='code'>EventHandler`1<[CrewLaunchFighterInfo](../../EliteAPI/Events/CrewLaunchFighterInfo.html)></span> CrewLaunchFighterEvent
 
-### `EventHandler`1<MaterialDiscardedInfo>` MaterialDiscardedEvent
+### <span class='code'>EventHandler`1<[MaterialDiscardedInfo](../../EliteAPI/Events/MaterialDiscardedInfo.html)></span> MaterialDiscardedEvent
 
-### `EventHandler`1<NewCommanderInfo>` NewCommanderEvent
+### <span class='code'>EventHandler`1<[NewCommanderInfo](../../EliteAPI/Events/NewCommanderInfo.html)></span> NewCommanderEvent
 
-### `EventHandler`1<CommunityGoalRewardInfo>` CommunityGoalRewardEvent
+### <span class='code'>EventHandler`1<[CommunityGoalRewardInfo](../../EliteAPI/Events/CommunityGoalRewardInfo.html)></span> CommunityGoalRewardEvent
 
-### `EventHandler`1<PowerplayVoteInfo>` PowerplayVoteEvent
+### <span class='code'>EventHandler`1<[PowerplayVoteInfo](../../EliteAPI/Events/PowerplayVoteInfo.html)></span> PowerplayVoteEvent
 
-### `EventHandler`1<PowerplayJoinInfo>` PowerplayJoinEvent
+### <span class='code'>EventHandler`1<[PowerplayJoinInfo](../../EliteAPI/Events/PowerplayJoinInfo.html)></span> PowerplayJoinEvent
 
-### `EventHandler`1<PowerplayDefectInfo>` PowerplayDefectEvent
+### <span class='code'>EventHandler`1<[PowerplayDefectInfo](../../EliteAPI/Events/PowerplayDefectInfo.html)></span> PowerplayDefectEvent
 
-### `EventHandler`1<MissionFailedInfo>` MissionFailedEvent
+### <span class='code'>EventHandler`1<[MissionFailedInfo](../../EliteAPI/Events/MissionFailedInfo.html)></span> MissionFailedEvent
 
-### `EventHandler`1<MissionRedirectedInfo>` MissionRedirectedEvent
+### <span class='code'>EventHandler`1<[MissionRedirectedInfo](../../EliteAPI/Events/MissionRedirectedInfo.html)></span> MissionRedirectedEvent
 
-### `EventHandler`1<ShutdownInfo>` ShutdownEvent
+### <span class='code'>EventHandler`1<[ShutdownInfo](../../EliteAPI/Events/ShutdownInfo.html)></span> ShutdownEvent
 
-### `EventHandler`1<ModuleInfoInfo>` ModuleInfoEvent
+### <span class='code'>EventHandler`1<[ModuleInfoInfo](../../EliteAPI/Events/ModuleInfoInfo.html)></span> ModuleInfoEvent
 
-### `EventHandler`1<MarketInfo>` MarketEvent
+### <span class='code'>EventHandler`1<[MarketInfo](../../EliteAPI/Events/MarketInfo.html)></span> MarketEvent
 
-### `EventHandler`1<MassModuleStoreInfo>` MassModuleStoreEvent
+### <span class='code'>EventHandler`1<[MassModuleStoreInfo](../../EliteAPI/Events/MassModuleStoreInfo.html)></span> MassModuleStoreEvent
 
-### `EventHandler`1<MaterialDiscoveredInfo>` MaterialDiscoveredEvent
+### <span class='code'>EventHandler`1<[MaterialDiscoveredInfo](../../EliteAPI/Events/MaterialDiscoveredInfo.html)></span> MaterialDiscoveredEvent
 
-### `EventHandler`1<MaterialCollectedInfo>` MaterialCollectedEvent
+### <span class='code'>EventHandler`1<[MaterialCollectedInfo](../../EliteAPI/Events/MaterialCollectedInfo.html)></span> MaterialCollectedEvent
 
-### `EventHandler`1<SRVDestroyedInfo>` SRVDestroyedEvent
+### <span class='code'>EventHandler`1<[SRVDestroyedInfo](../../EliteAPI/Events/SRVDestroyedInfo.html)></span> SRVDestroyedEvent
 
-### `EventHandler`1<DockingDeniedInfo>` DockingDeniedEvent
+### <span class='code'>EventHandler`1<[DockingDeniedInfo](../../EliteAPI/Events/DockingDeniedInfo.html)></span> DockingDeniedEvent
 
-### `EventHandler`1<UnderAttackInfo>` UnderAttackEvent
+### <span class='code'>EventHandler`1<[UnderAttackInfo](../../EliteAPI/Events/UnderAttackInfo.html)></span> UnderAttackEvent
 
-### `EventHandler`1<ShipTargetedInfo>` ShipTargetedEvent
+### <span class='code'>EventHandler`1<[ShipTargetedInfo](../../EliteAPI/Events/ShipTargetedInfo.html)></span> ShipTargetedEvent
 
-### `EventHandler`1<ShipyardInfo>` ShipyardEvent
+### <span class='code'>EventHandler`1<[ShipyardInfo](../../EliteAPI/Events/ShipyardInfo.html)></span> ShipyardEvent
 
-### `EventHandler`1<OutfittingInfo>` OutfittingEvent
+### <span class='code'>EventHandler`1<[OutfittingInfo](../../EliteAPI/Events/OutfittingInfo.html)></span> OutfittingEvent
 
-### `EventHandler`1<PowerplayFastTrackInfo>` PowerplayFastTrackEvent
+### <span class='code'>EventHandler`1<[PowerplayFastTrackInfo](../../EliteAPI/Events/PowerplayFastTrackInfo.html)></span> PowerplayFastTrackEvent
 
-### `EventHandler`1<PowerplayInfo>` PowerplayEvent
+### <span class='code'>EventHandler`1<[PowerplayInfo](../../EliteAPI/Events/PowerplayInfo.html)></span> PowerplayEvent
 
-### `EventHandler`1<CollectCargoInfo>` CollectCargoEvent
+### <span class='code'>EventHandler`1<[CollectCargoInfo](../../EliteAPI/Events/CollectCargoInfo.html)></span> CollectCargoEvent
 
-### `EventHandler`1<FetchRemoteModuleInfo>` FetchRemoteModuleEvent
+### <span class='code'>EventHandler`1<[FetchRemoteModuleInfo](../../EliteAPI/Events/FetchRemoteModuleInfo.html)></span> FetchRemoteModuleEvent
 
-### `EventHandler`1<ModuleStoreInfo>` ModuleStoreEvent
+### <span class='code'>EventHandler`1<[ModuleStoreInfo](../../EliteAPI/Events/ModuleStoreInfo.html)></span> ModuleStoreEvent
 
-### `EventHandler`1<ShipyardBuyInfo>` ShipyardBuyEvent
+### <span class='code'>EventHandler`1<[ShipyardBuyInfo](../../EliteAPI/Events/ShipyardBuyInfo.html)></span> ShipyardBuyEvent
 
-### `EventHandler`1<ShipyardNewInfo>` ShipyardNewEvent
+### <span class='code'>EventHandler`1<[ShipyardNewInfo](../../EliteAPI/Events/ShipyardNewInfo.html)></span> ShipyardNewEvent
 
-### `EventHandler`1<ModuleBuyInfo>` ModuleBuyEvent
+### <span class='code'>EventHandler`1<[ModuleBuyInfo](../../EliteAPI/Events/ModuleBuyInfo.html)></span> ModuleBuyEvent
 
-### `EventHandler`1<ModuleRetrieveInfo>` ModuleRetrieveEvent
+### <span class='code'>EventHandler`1<[ModuleRetrieveInfo](../../EliteAPI/Events/ModuleRetrieveInfo.html)></span> ModuleRetrieveEvent
 
-### `EventHandler`1<AfmuRepairsInfo>` AfmuRepairsEvent
+### <span class='code'>EventHandler`1<[AfmuRepairsInfo](../../EliteAPI/Events/AfmuRepairsInfo.html)></span> AfmuRepairsEvent
 
-### `EventHandler`1<LaunchDroneInfo>` LaunchDroneEvent
+### <span class='code'>EventHandler`1<[LaunchDroneInfo](../../EliteAPI/Events/LaunchDroneInfo.html)></span> LaunchDroneEvent
 
-### `EventHandler`1<MarketSellInfo>` MarketSellEvent
+### <span class='code'>EventHandler`1<[MarketSellInfo](../../EliteAPI/Events/MarketSellInfo.html)></span> MarketSellEvent
 
-### `EventHandler`1<ModuleSellInfo>` ModuleSellEvent
+### <span class='code'>EventHandler`1<[ModuleSellInfo](../../EliteAPI/Events/ModuleSellInfo.html)></span> ModuleSellEvent
 
-### `EventHandler`1<FuelScoopInfo>` FuelScoopEvent
+### <span class='code'>EventHandler`1<[FuelScoopInfo](../../EliteAPI/Events/FuelScoopInfo.html)></span> FuelScoopEvent
 
-### `EventHandler`1<FighterDestroyedInfo>` FighterDestroyedEvent
+### <span class='code'>EventHandler`1<[FighterDestroyedInfo](../../EliteAPI/Events/FighterDestroyedInfo.html)></span> FighterDestroyedEvent
 
-### `EventHandler`1<DiscoveryScanInfo>` DiscoveryScanEvent
+### <span class='code'>EventHandler`1<[DiscoveryScanInfo](../../EliteAPI/Events/DiscoveryScanInfo.html)></span> DiscoveryScanEvent
 
-### `EventHandler`1<LeaveBodyInfo>` LeaveBodyEvent
+### <span class='code'>EventHandler`1<[LeaveBodyInfo](../../EliteAPI/Events/LeaveBodyInfo.html)></span> LeaveBodyEvent
 
-### `EventHandler`1<PowerplayVoucherInfo>` PowerplayVoucherEvent
+### <span class='code'>EventHandler`1<[PowerplayVoucherInfo](../../EliteAPI/Events/PowerplayVoucherInfo.html)></span> PowerplayVoucherEvent
 
-### `EventHandler`1<ReputationInfo>` ReputationEvent
+### <span class='code'>EventHandler`1<[ReputationInfo](../../EliteAPI/Events/ReputationInfo.html)></span> ReputationEvent
 
-### `EventHandler`1<NavBeaconScanInfo>` NavBeaconScanEvent
+### <span class='code'>EventHandler`1<[NavBeaconScanInfo](../../EliteAPI/Events/NavBeaconScanInfo.html)></span> NavBeaconScanEvent
 
-### `EventHandler`1<MissionsInfo>` MissionsEvent
+### <span class='code'>EventHandler`1<[MissionsInfo](../../EliteAPI/Events/MissionsInfo.html)></span> MissionsEvent
 
-### `EventHandler`1<FriendsInfo>` FriendsEvent
+### <span class='code'>EventHandler`1<[FriendsInfo](../../EliteAPI/Events/FriendsInfo.html)></span> FriendsEvent
 
-### `EventHandler`1<ShipyardSellInfo>` ShipyardSellEvent
+### <span class='code'>EventHandler`1<[ShipyardSellInfo](../../EliteAPI/Events/ShipyardSellInfo.html)></span> ShipyardSellEvent
 
-### `EventHandler`1<MissionAbandonedInfo>` MissionAbandonedEvent
+### <span class='code'>EventHandler`1<[MissionAbandonedInfo](../../EliteAPI/Events/MissionAbandonedInfo.html)></span> MissionAbandonedEvent
 
-### `EventHandler`1<ScientificResearchInfo>` ScientificResearchEvent
+### <span class='code'>EventHandler`1<[ScientificResearchInfo](../../EliteAPI/Events/ScientificResearchInfo.html)></span> ScientificResearchEvent
 
-### `EventHandler`1<DockingTimeoutInfo>` DockingTimeoutEvent
+### <span class='code'>EventHandler`1<[DockingTimeoutInfo](../../EliteAPI/Events/DockingTimeoutInfo.html)></span> DockingTimeoutEvent
 
-### `EventHandler`1<DockingCancelledInfo>` DockingCancelledEvent
+### <span class='code'>EventHandler`1<[DockingCancelledInfo](../../EliteAPI/Events/DockingCancelledInfo.html)></span> DockingCancelledEvent
 
-### `EventHandler`1<DockingRequestedInfo>` DockingRequestedEvent
+### <span class='code'>EventHandler`1<[DockingRequestedInfo](../../EliteAPI/Events/DockingRequestedInfo.html)></span> DockingRequestedEvent
 
-### `EventHandler`1<DockingGrantedInfo>` DockingGrantedEvent
+### <span class='code'>EventHandler`1<[DockingGrantedInfo](../../EliteAPI/Events/DockingGrantedInfo.html)></span> DockingGrantedEvent
 
-### `EventHandler`1<UndockedInfo>` UndockedEvent
+### <span class='code'>EventHandler`1<[UndockedInfo](../../EliteAPI/Events/UndockedInfo.html)></span> UndockedEvent
 
-### `EventHandler`1<CrewHireInfo>` CrewHireEvent
+### <span class='code'>EventHandler`1<[CrewHireInfo](../../EliteAPI/Events/CrewHireInfo.html)></span> CrewHireEvent
 
-### `EventHandler`1<ScreenshotInfo>` ScreenshotEvent
+### <span class='code'>EventHandler`1<[ScreenshotInfo](../../EliteAPI/Events/ScreenshotInfo.html)></span> ScreenshotEvent
 
-### `EventHandler`1<SynthesisInfo>` SynthesisEvent
+### <span class='code'>EventHandler`1<[SynthesisInfo](../../EliteAPI/Events/SynthesisInfo.html)></span> SynthesisEvent
 
-### `EventHandler`1<FighterRebuiltInfo>` FighterRebuiltEvent
+### <span class='code'>EventHandler`1<[FighterRebuiltInfo](../../EliteAPI/Events/FighterRebuiltInfo.html)></span> FighterRebuiltEvent
 
-### `EventHandler`1<SellExplorationDataInfo>` SellExplorationDataEvent
+### <span class='code'>EventHandler`1<[SellExplorationDataInfo](../../EliteAPI/Events/SellExplorationDataInfo.html)></span> SellExplorationDataEvent
 
-### `EventHandler`1<RebootRepairInfo>` RebootRepairEvent
+### <span class='code'>EventHandler`1<[RebootRepairInfo](../../EliteAPI/Events/RebootRepairInfo.html)></span> RebootRepairEvent
 
-### `EventHandler`1<ScanInfo>` ScanEvent
+### <span class='code'>EventHandler`1<[ScanInfo](../../EliteAPI/Events/ScanInfo.html)></span> ScanEvent
 
-### `EventHandler`1<WingInviteInfo>` WingInviteEvent
+### <span class='code'>EventHandler`1<[WingInviteInfo](../../EliteAPI/Events/WingInviteInfo.html)></span> WingInviteEvent
 
-### `EventHandler`1<StartJumpInfo>` StartJumpEvent
+### <span class='code'>EventHandler`1<[StartJumpInfo](../../EliteAPI/Events/StartJumpInfo.html)></span> StartJumpEvent
 
-### `EventHandler`1<SupercruiseExitInfo>` SupercruiseExitEvent
+### <span class='code'>EventHandler`1<[SupercruiseExitInfo](../../EliteAPI/Events/SupercruiseExitInfo.html)></span> SupercruiseExitEvent
 
-### `EventHandler`1<PayBountiesInfo>` PayBountiesEvent
+### <span class='code'>EventHandler`1<[PayBountiesInfo](../../EliteAPI/Events/PayBountiesInfo.html)></span> PayBountiesEvent
 
-### `EventHandler`1<PowerplaySalaryInfo>` PowerplaySalaryEvent
+### <span class='code'>EventHandler`1<[PowerplaySalaryInfo](../../EliteAPI/Events/PowerplaySalaryInfo.html)></span> PowerplaySalaryEvent
 
-### `EventHandler`1<ShipyardTransferInfo>` ShipyardTransferEvent
+### <span class='code'>EventHandler`1<[ShipyardTransferInfo](../../EliteAPI/Events/ShipyardTransferInfo.html)></span> ShipyardTransferEvent
 
-### `EventHandler`1<TechnologyBrokerInfo>` TechnologyBrokerEvent
+### <span class='code'>EventHandler`1<[TechnologyBrokerInfo](../../EliteAPI/Events/TechnologyBrokerInfo.html)></span> TechnologyBrokerEvent
 
-### `EventHandler`1<PayFinesInfo>` PayFinesEvent
+### <span class='code'>EventHandler`1<[PayFinesInfo](../../EliteAPI/Events/PayFinesInfo.html)></span> PayFinesEvent
 
-### `EventHandler`1<BountyInfo>` BountyEvent
+### <span class='code'>EventHandler`1<[BountyInfo](../../EliteAPI/Events/BountyInfo.html)></span> BountyEvent
 
-### `EventHandler`1<MaterialTradeInfo>` MaterialTradeEvent
+### <span class='code'>EventHandler`1<[MaterialTradeInfo](../../EliteAPI/Events/MaterialTradeInfo.html)></span> MaterialTradeEvent
 
-### `EventHandler`1<ReceiveTextInfo>` ReceiveTextEvent
+### <span class='code'>EventHandler`1<[ReceiveTextInfo](../../EliteAPI/Events/ReceiveTextInfo.html)></span> ReceiveTextEvent
 
-### `EventHandler`1<ModuleSellRemoteInfo>` ModuleSellRemoteEvent
+### <span class='code'>EventHandler`1<[ModuleSellRemoteInfo](../../EliteAPI/Events/ModuleSellRemoteInfo.html)></span> ModuleSellRemoteEvent
 
-### `EventHandler`1<ShipyardSwapInfo>` ShipyardSwapEvent
+### <span class='code'>EventHandler`1<[ShipyardSwapInfo](../../EliteAPI/Events/ShipyardSwapInfo.html)></span> ShipyardSwapEvent
 
-### `EventHandler`1<MarketBuyInfo>` MarketBuyEvent
+### <span class='code'>EventHandler`1<[MarketBuyInfo](../../EliteAPI/Events/MarketBuyInfo.html)></span> MarketBuyEvent
 
-### `EventHandler`1<CargoDepotInfo>` CargoDepotEvent
+### <span class='code'>EventHandler`1<[CargoDepotInfo](../../EliteAPI/Events/CargoDepotInfo.html)></span> CargoDepotEvent
 
-### `EventHandler`1<FactionKillBondInfo>` FactionKillBondEvent
+### <span class='code'>EventHandler`1<[FactionKillBondInfo](../../EliteAPI/Events/FactionKillBondInfo.html)></span> FactionKillBondEvent
 
-### `EventHandler`1<StoredModulesInfo>` StoredModulesEvent
+### <span class='code'>EventHandler`1<[StoredModulesInfo](../../EliteAPI/Events/StoredModulesInfo.html)></span> StoredModulesEvent
 
-### `EventHandler`1<WingJoinInfo>` WingJoinEvent
+### <span class='code'>EventHandler`1<[WingJoinInfo](../../EliteAPI/Events/WingJoinInfo.html)></span> WingJoinEvent
 
-### `EventHandler`1<ApproachBodyInfo>` ApproachBodyEvent
+### <span class='code'>EventHandler`1<[ApproachBodyInfo](../../EliteAPI/Events/ApproachBodyInfo.html)></span> ApproachBodyEvent
 
-### `EventHandler`1<EngineerProgressInfo>` EngineerProgressEvent
+### <span class='code'>EventHandler`1<[EngineerProgressInfo](../../EliteAPI/Events/EngineerProgressInfo.html)></span> EngineerProgressEvent
 
-### `EventHandler`1<FSSDiscoveryScanInfo>` FSSDiscoveryScanEvent
+### <span class='code'>EventHandler`1<[FSSDiscoveryScanInfo](../../EliteAPI/Events/FSSDiscoveryScanInfo.html)></span> FSSDiscoveryScanEvent
 
-### `EventHandler`1<SquadronCreatedInfo>` SquadronCreatedEvent
+### <span class='code'>EventHandler`1<[SquadronCreatedInfo](../../EliteAPI/Events/SquadronCreatedInfo.html)></span> SquadronCreatedEvent
 
-### `EventHandler`1<CommanderInfo>` CommanderEvent
+### <span class='code'>EventHandler`1<[CommanderInfo](../../EliteAPI/Events/CommanderInfo.html)></span> CommanderEvent
 
-### `EventHandler`1<JoinedSquadronInfo>` JoinedSquadronEvent
+### <span class='code'>EventHandler`1<[JoinedSquadronInfo](../../EliteAPI/Events/JoinedSquadronInfo.html)></span> JoinedSquadronEvent
 
-### `EventHandler`1<EjectCargoInfo>` EjectCargoEvent
+### <span class='code'>EventHandler`1<[EjectCargoInfo](../../EliteAPI/Events/EjectCargoInfo.html)></span> EjectCargoEvent
 
-### `EventHandler`1<NpcCrewPaidWageInfo>` NpcCrewPaidWageEvent
+### <span class='code'>EventHandler`1<[NpcCrewPaidWageInfo](../../EliteAPI/Events/NpcCrewPaidWageInfo.html)></span> NpcCrewPaidWageEvent
 
-### `EventHandler`1<MaterialsInfo>` MaterialsEvent
+### <span class='code'>EventHandler`1<[MaterialsInfo](../../EliteAPI/Events/MaterialsInfo.html)></span> MaterialsEvent
 
-### `EventHandler`1<LoadGameInfo>` LoadGameEvent
+### <span class='code'>EventHandler`1<[LoadGameInfo](../../EliteAPI/Events/LoadGameInfo.html)></span> LoadGameEvent
 
-### `EventHandler`1<SupercruiseEntryInfo>` SupercruiseEntryEvent
+### <span class='code'>EventHandler`1<[SupercruiseEntryInfo](../../EliteAPI/Events/SupercruiseEntryInfo.html)></span> SupercruiseEntryEvent
 
-### `EventHandler`1<FSDTargetInfo>` FSDTargetEvent
+### <span class='code'>EventHandler`1<[FSDTargetInfo](../../EliteAPI/Events/FSDTargetInfo.html)></span> FSDTargetEvent
 
-### `EventHandler`1<FSSAllBodiesFoundInfo>` FSSAllBodiesFoundEvent
+### <span class='code'>EventHandler`1<[FSSAllBodiesFoundInfo](../../EliteAPI/Events/FSSAllBodiesFoundInfo.html)></span> FSSAllBodiesFoundEvent
 
-### `EventHandler`1<SAAScanCompleteInfo>` SAAScanCompleteEvent
+### <span class='code'>EventHandler`1<[SAAScanCompleteInfo](../../EliteAPI/Events/SAAScanCompleteInfo.html)></span> SAAScanCompleteEvent
 
-### `EventHandler`1<CodexEntryInfo>` CodexEntryEvent
+### <span class='code'>EventHandler`1<[CodexEntryInfo](../../EliteAPI/Events/CodexEntryInfo.html)></span> CodexEntryEvent
 
-### `EventHandler`1<CrimeVictimInfo>` CrimeVictimEvent
+### <span class='code'>EventHandler`1<[CrimeVictimInfo](../../EliteAPI/Events/CrimeVictimInfo.html)></span> CrimeVictimEvent
 
-### `EventHandler`1<LoadoutInfo>` LoadoutEvent
+### <span class='code'>EventHandler`1<[LoadoutInfo](../../EliteAPI/Events/LoadoutInfo.html)></span> LoadoutEvent
 
-### `EventHandler`1<MissionCompletedInfo>` MissionCompletedEvent
+### <span class='code'>EventHandler`1<[MissionCompletedInfo](../../EliteAPI/Events/MissionCompletedInfo.html)></span> MissionCompletedEvent
 
-### `EventHandler`1<BuyTradeDataInfo>` BuyTradeDataEvent
+### <span class='code'>EventHandler`1<[BuyTradeDataInfo](../../EliteAPI/Events/BuyTradeDataInfo.html)></span> BuyTradeDataEvent
 
-### `EventHandler`1<CrewAssignInfo>` CrewAssignEvent
+### <span class='code'>EventHandler`1<[CrewAssignInfo](../../EliteAPI/Events/CrewAssignInfo.html)></span> CrewAssignEvent
 
-### `EventHandler`1<CrewFireInfo>` CrewFireEvent
+### <span class='code'>EventHandler`1<[CrewFireInfo](../../EliteAPI/Events/CrewFireInfo.html)></span> CrewFireEvent
 
-### `EventHandler`1<MultiSellExplorationDataInfo>` MultiSellExplorationDataEvent
+### <span class='code'>EventHandler`1<[MultiSellExplorationDataInfo](../../EliteAPI/Events/MultiSellExplorationDataInfo.html)></span> MultiSellExplorationDataEvent
 
-### `EventHandler`1<LocationInfo>` LocationEvent
+### <span class='code'>EventHandler`1<[LocationInfo](../../EliteAPI/Events/LocationInfo.html)></span> LocationEvent
 
-### `EventHandler`1<AsteroidCrackedInfo>` AsteroidCrackedEvent
+### <span class='code'>EventHandler`1<[AsteroidCrackedInfo](../../EliteAPI/Events/AsteroidCrackedInfo.html)></span> AsteroidCrackedEvent
 
-### `EventHandler`1<ModuleSwapInfo>` ModuleSwapEvent
+### <span class='code'>EventHandler`1<[ModuleSwapInfo](../../EliteAPI/Events/ModuleSwapInfo.html)></span> ModuleSwapEvent
 
-### `EventHandler`1<DataScannedInfo>` DataScannedEvent
+### <span class='code'>EventHandler`1<[DataScannedInfo](../../EliteAPI/Events/DataScannedInfo.html)></span> DataScannedEvent
 
-### `EventHandler`1<DisbandedSquadronInfo>` DisbandedSquadronEvent
+### <span class='code'>EventHandler`1<[DisbandedSquadronInfo](../../EliteAPI/Events/DisbandedSquadronInfo.html)></span> DisbandedSquadronEvent
 
-### `EventHandler`1<AppliedToSquadronInfo>` AppliedToSquadronEvent
+### <span class='code'>EventHandler`1<[AppliedToSquadronInfo](../../EliteAPI/Events/AppliedToSquadronInfo.html)></span> AppliedToSquadronEvent
 
-### `EventHandler`1<DockedInfo>` DockedEvent
+### <span class='code'>EventHandler`1<[DockedInfo](../../EliteAPI/Events/DockedInfo.html)></span> DockedEvent
 
-### `EventHandler`1<StatisticsInfo>` StatisticsEvent
+### <span class='code'>EventHandler`1<[StatisticsInfo](../../EliteAPI/Events/StatisticsInfo.html)></span> StatisticsEvent
 
-### `EventHandler`1<SetUserShipNameInfo>` SetUserShipNameEvent
+### <span class='code'>EventHandler`1<[SetUserShipNameInfo](../../EliteAPI/Events/SetUserShipNameInfo.html)></span> SetUserShipNameEvent
 
-### `EventHandler`1<FSDJumpInfo>` FSDJumpEvent
+### <span class='code'>EventHandler`1<[FSDJumpInfo](../../EliteAPI/Events/FSDJumpInfo.html)></span> FSDJumpEvent
 
-### `EventHandler`1<CargoInfo>` CargoEvent
+### <span class='code'>EventHandler`1<[CargoInfo](../../EliteAPI/Events/CargoInfo.html)></span> CargoEvent
 
-### `EventHandler`1<EngineerCraftInfo>` EngineerCraftEvent
+### <span class='code'>EventHandler`1<[EngineerCraftInfo](../../EliteAPI/Events/EngineerCraftInfo.html)></span> EngineerCraftEvent
 
-### `EventHandler`1<ApproachSettlementInfo>` ApproachSettlementEvent
+### <span class='code'>EventHandler`1<[ApproachSettlementInfo](../../EliteAPI/Events/ApproachSettlementInfo.html)></span> ApproachSettlementEvent
 
-### `EventHandler`1<StoredShipsInfo>` StoredShipsEvent
+### <span class='code'>EventHandler`1<[StoredShipsInfo](../../EliteAPI/Events/StoredShipsInfo.html)></span> StoredShipsEvent
 
-### `EventHandler`1<FSSSignalDiscoveredInfo>` FSSSignalDiscoveredEvent
+### <span class='code'>EventHandler`1<[FSSSignalDiscoveredInfo](../../EliteAPI/Events/FSSSignalDiscoveredInfo.html)></span> FSSSignalDiscoveredEvent
 
-### `EventHandler`1<SquadronStartupInfo>` SquadronStartupEvent
+### <span class='code'>EventHandler`1<[SquadronStartupInfo](../../EliteAPI/Events/SquadronStartupInfo.html)></span> SquadronStartupEvent
 

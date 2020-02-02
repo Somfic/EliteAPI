@@ -4,9 +4,9 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.ThirdParty`
+Namespace: <span class='code'>EliteAPI.ThirdParty</span>
 
-Inheritance: `Object` → `ThirdPartyWrapper`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ThirdPartyWrapper](../../EliteAPI/ThirdParty/ThirdPartyWrapper.html)</span>
 
 
 
@@ -16,7 +16,7 @@ Class that functions as a wrapper for third party plugins.
 
 ## 02 Constructors
 
-### `ThirdPartyWrapper` (`EliteDangerousAPI` api, `String` name, `String` iniPath)
+### <span class='code'>[ThirdPartyWrapper](../../EliteAPI/ThirdParty/ThirdPartyWrapper.html)</span> (<span class='code'>[EliteDangerousAPI](../EliteAPI/EliteDangerousAPI.html)</span> api, <span class='code'>String</span> name, <span class='code'>String</span> iniPath)
 
 
 
@@ -26,7 +26,7 @@ Creates a new ThirdPartyWrapper object.
 
 ## 03 Methods
 
-### `List<Variable>` GetVariables ()
+### <span class='code'>List<[Variable](../../EliteAPI/ThirdParty/Variable.html)></span> GetVariables ()
 
 
 
@@ -34,7 +34,7 @@ Returns all the variables to be set.
 
 
 
-### `Boolean` GetRichPresenceSetting ()
+### <span class='code'>Boolean</span> GetRichPresenceSetting ()
 
 
 
@@ -42,7 +42,7 @@ Returns a value whether the API should automatically start the Discord Rich Pres
 
 
 
-### `List<Variable>` GetEventVariables (`Object` e)
+### <span class='code'>List<[Variable](../../EliteAPI/ThirdParty/Variable.html)></span> GetEventVariables (<span class='code'>Object</span> e)
 
 
 
@@ -50,7 +50,7 @@ Gets all the variables to be set from an event.
 
 
 
-### `String` GetEventName (`Object` e)
+### <span class='code'>String</span> GetEventName (<span class='code'>Object</span> e)
 
 
 
@@ -58,7 +58,7 @@ Gets the name from an event.
 
 
 
-### `DirectoryInfo` GetJournalFolder ()
+### <span class='code'>DirectoryInfo</span> GetJournalFolder ()
 
 
 
@@ -66,7 +66,7 @@ Gets the journal directory from the configuration file.
 
 
 
-### `DirectoryInfo` GetLogFolder ()
+### <span class='code'>DirectoryInfo</span> GetLogFolder ()
 
 
 
@@ -74,7 +74,7 @@ Gets the log directory from the configuration file.
 
 
 
-### `Void` ProcessCall (`String` content)
+### <span class='code'>Void</span> ProcessCall (<span class='code'>String</span> content)
 
 
 

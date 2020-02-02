@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara`
+Namespace: <span class='code'>EliteAPI.Inara</span>
 
-Inheritance: `Object` → `InaraConnection`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[InaraConnection](../../EliteAPI/Inara/InaraConnection.html)</span>
 
 ## 02 Constructors
 
-### `InaraConnection` ()
+### <span class='code'>[InaraConnection](../../EliteAPI/Inara/InaraConnection.html)</span> ()
 
 ## 03 Fields
 
-### `List<InaraEvent>` EventsQueue
+### <span class='code'>List<[InaraEvent](../../EliteAPI/Inara/InaraEvent.html)></span> EventsQueue
 
 ## 04 Methods
 
-### `String` ExecuteQueue (`InaraConfiguration` header)
+### <span class='code'>String</span> ExecuteQueue (<span class='code'>[InaraConfiguration](../../EliteAPI/Inara/InaraConfiguration.html)</span> header)
 
-### `String` Execute (`InaraEntry` entry)
+### <span class='code'>String</span> Execute (<span class='code'>[InaraEntry](../../EliteAPI/Inara/InaraEntry.html)</span> entry)
 

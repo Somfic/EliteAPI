@@ -4,11 +4,11 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderGameStatistics`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderGameStatistics](../../../EliteAPI/Inara/Events/SetCommanderGameStatistics.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderGameStatistics` ()
+### <span class='code'>[SetCommanderGameStatistics](../../../EliteAPI/Inara/Events/SetCommanderGameStatistics.html)</span> ()
 

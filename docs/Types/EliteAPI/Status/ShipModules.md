@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Status`
+Namespace: <span class='code'>EliteAPI.Status</span>
 
-Inheritance: `Object` → `ShipModules`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ShipModules](../../EliteAPI/Status/ShipModules.html)</span>
 
 ## 02 Constructors
 
-### `ShipModules` ()
+### <span class='code'>[ShipModules](../../EliteAPI/Status/ShipModules.html)</span> ()
 
 ## 03 Properties
 
-### `DateTimeOffset` Timestamp
+### <span class='code'>DateTimeOffset</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `List<Module>` Modules
+### <span class='code'>List<[Module](../../EliteAPI/Status/Module.html)></span> Modules
 
 ## 04 Methods
 
-### `ShipModules` Process (`String` json)
+### <span class='code'>[ShipModules](../../EliteAPI/Status/ShipModules.html)</span> Process (<span class='code'>String</span> json)
 
-### `ShipModules` FromFile (`FileInfo` file, `EliteDangerousAPI` api)
+### <span class='code'>[ShipModules](../../EliteAPI/Status/ShipModules.html)</span> FromFile (<span class='code'>FileInfo</span> file, <span class='code'>[EliteDangerousAPI](../EliteAPI/EliteDangerousAPI.html)</span> api)
 

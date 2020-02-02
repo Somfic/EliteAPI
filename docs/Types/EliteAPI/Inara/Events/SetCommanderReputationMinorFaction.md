@@ -4,17 +4,17 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderReputationMinorFaction`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderReputationMinorFaction](../../../EliteAPI/Inara/Events/SetCommanderReputationMinorFaction.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderReputationMinorFaction` (`String` factionName, `Decimal` factionReputation)
+### <span class='code'>[SetCommanderReputationMinorFaction](../../../EliteAPI/Inara/Events/SetCommanderReputationMinorFaction.html)</span> (<span class='code'>String</span> factionName, <span class='code'>Decimal</span> factionReputation)
 
 ## 03 Properties
 
-### `String` FactionName
+### <span class='code'>String</span> FactionName
 
-### `Decimal` FactionReputation
+### <span class='code'>Decimal</span> FactionReputation
 

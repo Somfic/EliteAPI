@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `SetCommanderCredits`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SetCommanderCredits](../../../EliteAPI/Inara/Events/SetCommanderCredits.html)</span>
 
 ## 02 Constructors
 
-### `SetCommanderCredits` (`Int64` commanderCredits)
+### <span class='code'>[SetCommanderCredits](../../../EliteAPI/Inara/Events/SetCommanderCredits.html)</span> (<span class='code'>Int64</span> commanderCredits)
 
 ## 03 Properties
 
-### `Int64` CommanderCredits
+### <span class='code'>Int64</span> CommanderCredits
 
-### `Int64` CommanderAssets
+### <span class='code'>Int64</span> CommanderAssets
 
-### `Int64` CommanderLoan
+### <span class='code'>Int64</span> CommanderLoan
 

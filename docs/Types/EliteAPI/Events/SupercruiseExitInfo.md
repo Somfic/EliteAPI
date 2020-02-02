@@ -4,27 +4,27 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `SupercruiseExitInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SupercruiseExitInfo](../../EliteAPI/Events/SupercruiseExitInfo.html)</span>
 
 ## 02 Constructors
 
-### `SupercruiseExitInfo` ()
+### <span class='code'>[SupercruiseExitInfo](../../EliteAPI/Events/SupercruiseExitInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` StarSystem
+### <span class='code'>String</span> StarSystem
 
-### `Int64` SystemAddress
+### <span class='code'>Int64</span> SystemAddress
 
-### `String` Body
+### <span class='code'>String</span> Body
 
-### `Int64` BodyId
+### <span class='code'>Int64</span> BodyId
 
-### `String` BodyType
+### <span class='code'>String</span> BodyType
 

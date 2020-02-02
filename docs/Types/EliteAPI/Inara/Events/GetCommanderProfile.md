@@ -4,15 +4,15 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `GetCommanderProfile`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[GetCommanderProfile](../../../EliteAPI/Inara/Events/GetCommanderProfile.html)</span>
 
 ## 02 Constructors
 
-### `GetCommanderProfile` (`String` searchName)
+### <span class='code'>[GetCommanderProfile](../../../EliteAPI/Inara/Events/GetCommanderProfile.html)</span> (<span class='code'>String</span> searchName)
 
 ## 03 Properties
 
-### `String` SearchName
+### <span class='code'>String</span> SearchName
 

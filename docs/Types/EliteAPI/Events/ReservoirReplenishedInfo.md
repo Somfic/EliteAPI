@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ReservoirReplenishedInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ReservoirReplenishedInfo](../../EliteAPI/Events/ReservoirReplenishedInfo.html)</span>
 
 ## 02 Constructors
 
-### `ReservoirReplenishedInfo` ()
+### <span class='code'>[ReservoirReplenishedInfo](../../EliteAPI/Events/ReservoirReplenishedInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTimeOffset` Timestamp
+### <span class='code'>DateTimeOffset</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Double` FuelMain
+### <span class='code'>Double</span> FuelMain
 
-### `Double` FuelReservoir
+### <span class='code'>Double</span> FuelReservoir
 

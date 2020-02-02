@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `SearchAndRescue`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SearchAndRescue](../../EliteAPI/Events/SearchAndRescue.html)</span>
 
 ## 02 Constructors
 
-### `SearchAndRescue` ()
+### <span class='code'>[SearchAndRescue](../../EliteAPI/Events/SearchAndRescue.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` SearchRescueTraded
+### <span class='code'>Int64</span> SearchRescueTraded
 
-### `Int64` SearchRescueProfit
+### <span class='code'>Int64</span> SearchRescueProfit
 
-### `Int64` SearchRescueCount
+### <span class='code'>Int64</span> SearchRescueCount
 

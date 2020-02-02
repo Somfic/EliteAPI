@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Passengers`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Passengers](../../EliteAPI/Events/Passengers.html)</span>
 
 ## 02 Constructors
 
-### `Passengers` ()
+### <span class='code'>[Passengers](../../EliteAPI/Events/Passengers.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` PassengersMissionsAccepted
+### <span class='code'>Int64</span> PassengersMissionsAccepted
 
-### `Int64` PassengersMissionsDisgruntled
+### <span class='code'>Int64</span> PassengersMissionsDisgruntled
 
-### `Int64` PassengersMissionsBulk
+### <span class='code'>Int64</span> PassengersMissionsBulk
 
-### `Int64` PassengersMissionsVip
+### <span class='code'>Int64</span> PassengersMissionsVip
 
-### `Int64` PassengersMissionsDelivered
+### <span class='code'>Int64</span> PassengersMissionsDelivered
 
-### `Int64` PassengersMissionsEjected
+### <span class='code'>Int64</span> PassengersMissionsEjected
 

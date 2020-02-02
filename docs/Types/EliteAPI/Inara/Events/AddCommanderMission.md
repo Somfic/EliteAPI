@@ -4,57 +4,57 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `AddCommanderMission`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[AddCommanderMission](../../../EliteAPI/Inara/Events/AddCommanderMission.html)</span>
 
 ## 02 Constructors
 
-### `AddCommanderMission` (`String` missionName, `String` missionGameID, `String` starSystemNameOrigin)
+### <span class='code'>[AddCommanderMission](../../../EliteAPI/Inara/Events/AddCommanderMission.html)</span> (<span class='code'>String</span> missionName, <span class='code'>String</span> missionGameID, <span class='code'>String</span> starSystemNameOrigin)
 
 ## 03 Properties
 
-### `String` MissionName
+### <span class='code'>String</span> MissionName
 
-### `String` MissionGameID
+### <span class='code'>String</span> MissionGameID
 
-### `DateTime` MissionExpiry
+### <span class='code'>DateTime</span> MissionExpiry
 
-### `String` InfluenceGain
+### <span class='code'>String</span> InfluenceGain
 
-### `GainType` InfluenceGainAmount
+### <span class='code'>[GainType](../../../EliteAPI/Inara/Events/GainType.html)</span> InfluenceGainAmount
 
-### `String` ReputationGain
+### <span class='code'>String</span> ReputationGain
 
-### `GainType` ReputationGainAmount
+### <span class='code'>[GainType](../../../EliteAPI/Inara/Events/GainType.html)</span> ReputationGainAmount
 
-### `String` StarSystemNameOrigin
+### <span class='code'>String</span> StarSystemNameOrigin
 
-### `String` StationNameOrigin
+### <span class='code'>String</span> StationNameOrigin
 
-### `String` MinorFactionNameOrigin
+### <span class='code'>String</span> MinorFactionNameOrigin
 
-### `String` StarsystemNameTarget
+### <span class='code'>String</span> StarsystemNameTarget
 
-### `String` StationNameTarget
+### <span class='code'>String</span> StationNameTarget
 
-### `String` MinorFactionNameTarget
+### <span class='code'>String</span> MinorFactionNameTarget
 
-### `String` CommodityName
+### <span class='code'>String</span> CommodityName
 
-### `Int64` CommodityCount
+### <span class='code'>Int64</span> CommodityCount
 
-### `String` TargetName
+### <span class='code'>String</span> TargetName
 
-### `String` TargetType
+### <span class='code'>String</span> TargetType
 
-### `Int64` KillCount
+### <span class='code'>Int64</span> KillCount
 
-### `String` PassengerType
+### <span class='code'>String</span> PassengerType
 
-### `Int64` PassengerCount
+### <span class='code'>Int64</span> PassengerCount
 
-### `Nullable`1` PassengerIsVIP
+### <span class='code'>Nullable`1</span> PassengerIsVIP
 
-### `Nullable`1` PassengerIsWanted
+### <span class='code'>Nullable`1</span> PassengerIsWanted
 

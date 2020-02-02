@@ -4,29 +4,29 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Combat`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Combat](../../EliteAPI/Events/Combat.html)</span>
 
 ## 02 Constructors
 
-### `Combat` ()
+### <span class='code'>[Combat](../../EliteAPI/Events/Combat.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` BountiesClaimed
+### <span class='code'>Int64</span> BountiesClaimed
 
-### `Double` BountyHuntingProfit
+### <span class='code'>Double</span> BountyHuntingProfit
 
-### `Int64` CombatBonds
+### <span class='code'>Int64</span> CombatBonds
 
-### `Int64` CombatBondProfits
+### <span class='code'>Int64</span> CombatBondProfits
 
-### `Int64` Assassinations
+### <span class='code'>Int64</span> Assassinations
 
-### `Int64` AssassinationProfits
+### <span class='code'>Int64</span> AssassinationProfits
 
-### `Int64` HighestSingleReward
+### <span class='code'>Int64</span> HighestSingleReward
 
-### `Int64` SkimmersKilled
+### <span class='code'>Int64</span> SkimmersKilled
 

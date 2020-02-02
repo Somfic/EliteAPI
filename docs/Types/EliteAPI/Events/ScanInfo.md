@@ -4,73 +4,73 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ScanInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ScanInfo](../../EliteAPI/Events/ScanInfo.html)</span>
 
 ## 02 Constructors
 
-### `ScanInfo` ()
+### <span class='code'>[ScanInfo](../../EliteAPI/Events/ScanInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` ScanType
+### <span class='code'>String</span> ScanType
 
-### `String` BodyName
+### <span class='code'>String</span> BodyName
 
-### `Int64` BodyId
+### <span class='code'>Int64</span> BodyId
 
-### `List<Parent>` Parents
+### <span class='code'>List<[Parent](../../EliteAPI/Events/Parent.html)></span> Parents
 
-### `Double` DistanceFromArrivalLs
+### <span class='code'>Double</span> DistanceFromArrivalLs
 
-### `Boolean` TidalLock
+### <span class='code'>Boolean</span> TidalLock
 
-### `String` TerraformState
+### <span class='code'>String</span> TerraformState
 
-### `String` PlanetClass
+### <span class='code'>String</span> PlanetClass
 
-### `String` Atmosphere
+### <span class='code'>String</span> Atmosphere
 
-### `String` AtmosphereType
+### <span class='code'>String</span> AtmosphereType
 
-### `String` Volcanism
+### <span class='code'>String</span> Volcanism
 
-### `Double` MassEm
+### <span class='code'>Double</span> MassEm
 
-### `Double` Radius
+### <span class='code'>Double</span> Radius
 
-### `Double` SurfaceGravity
+### <span class='code'>Double</span> SurfaceGravity
 
-### `Double` SurfaceTemperature
+### <span class='code'>Double</span> SurfaceTemperature
 
-### `Double` SurfacePressure
+### <span class='code'>Double</span> SurfacePressure
 
-### `Boolean` Landable
+### <span class='code'>Boolean</span> Landable
 
-### `List<Material>` Materials
+### <span class='code'>List<[Material](../../EliteAPI/Events/Material.html)></span> Materials
 
-### `Composition` Composition
+### <span class='code'>[Composition](../../EliteAPI/Events/Composition.html)</span> Composition
 
-### `Double` SemiMajorAxis
+### <span class='code'>Double</span> SemiMajorAxis
 
-### `Double` Eccentricity
+### <span class='code'>Double</span> Eccentricity
 
-### `Double` OrbitalInclination
+### <span class='code'>Double</span> OrbitalInclination
 
-### `Double` Periapsis
+### <span class='code'>Double</span> Periapsis
 
-### `Double` OrbitalPeriod
+### <span class='code'>Double</span> OrbitalPeriod
 
-### `Double` RotationPeriod
+### <span class='code'>Double</span> RotationPeriod
 
-### `Double` AxialTilt
+### <span class='code'>Double</span> AxialTilt
 
-### `List<Ring>` Rings
+### <span class='code'>List<[Ring](../../EliteAPI/Events/Ring.html)></span> Rings
 
-### `String` ReserveLevel
+### <span class='code'>String</span> ReserveLevel
 

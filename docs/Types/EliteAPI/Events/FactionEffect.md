@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `FactionEffect`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[FactionEffect](../../EliteAPI/Events/FactionEffect.html)</span>
 
 ## 02 Constructors
 
-### `FactionEffect` ()
+### <span class='code'>[FactionEffect](../../EliteAPI/Events/FactionEffect.html)</span> ()
 
 ## 03 Properties
 
-### `String` Faction
+### <span class='code'>String</span> Faction
 
-### `List<Effect>` Effects
+### <span class='code'>List<[Effect](../../EliteAPI/Events/Effect.html)></span> Effects
 
-### `List<Influence>` Influence
+### <span class='code'>List<[Influence](../../EliteAPI/Events/Influence.html)></span> Influence
 
-### `String` ReputationTrend
+### <span class='code'>String</span> ReputationTrend
 
-### `String` Reputation
+### <span class='code'>String</span> Reputation
 

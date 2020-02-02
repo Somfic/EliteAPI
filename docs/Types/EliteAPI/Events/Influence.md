@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Influence`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Influence](../../EliteAPI/Events/Influence.html)</span>
 
 ## 02 Constructors
 
-### `Influence` ()
+### <span class='code'>[Influence](../../EliteAPI/Events/Influence.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` SystemAddress
+### <span class='code'>Int64</span> SystemAddress
 
-### `String` Trend
+### <span class='code'>String</span> Trend
 
-### `String` InfluenceInfluence
+### <span class='code'>String</span> InfluenceInfluence
 

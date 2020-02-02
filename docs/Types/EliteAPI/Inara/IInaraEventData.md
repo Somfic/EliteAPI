@@ -4,7 +4,7 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara`
+Namespace: <span class='code'>EliteAPI.Inara</span>
 
-Inheritance: `IInaraEventData`
+Inheritance: <span class='code'>[IInaraEventData](../../EliteAPI/Inara/IInaraEventData.html)</span>
 

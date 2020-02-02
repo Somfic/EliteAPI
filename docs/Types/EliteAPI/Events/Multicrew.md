@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Multicrew`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Multicrew](../../EliteAPI/Events/Multicrew.html)</span>
 
 ## 02 Constructors
 
-### `Multicrew` ()
+### <span class='code'>[Multicrew](../../EliteAPI/Events/Multicrew.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` MulticrewTimeTotal
+### <span class='code'>Int64</span> MulticrewTimeTotal
 
-### `Int64` MulticrewGunnerTimeTotal
+### <span class='code'>Int64</span> MulticrewGunnerTimeTotal
 
-### `Int64` MulticrewFighterTimeTotal
+### <span class='code'>Int64</span> MulticrewFighterTimeTotal
 
-### `Int64` MulticrewCreditsTotal
+### <span class='code'>Int64</span> MulticrewCreditsTotal
 
-### `Int64` MulticrewFinesTotal
+### <span class='code'>Int64</span> MulticrewFinesTotal
 

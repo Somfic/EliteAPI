@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ReputationInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ReputationInfo](../../EliteAPI/Events/ReputationInfo.html)</span>
 
 ## 02 Constructors
 
-### `ReputationInfo` ()
+### <span class='code'>[ReputationInfo](../../EliteAPI/Events/ReputationInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Double` Empire
+### <span class='code'>Double</span> Empire
 
-### `Double` Federation
+### <span class='code'>Double</span> Federation
 
-### `Double` Independent
+### <span class='code'>Double</span> Independent
 
-### `Double` Alliance
+### <span class='code'>Double</span> Alliance
 

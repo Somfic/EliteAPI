@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `TgEncounters`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[TgEncounters](../../EliteAPI/Events/TgEncounters.html)</span>
 
 ## 02 Constructors
 
-### `TgEncounters` ()
+### <span class='code'>[TgEncounters](../../EliteAPI/Events/TgEncounters.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` TgEncounterTotal
+### <span class='code'>Int64</span> TgEncounterTotal
 
-### `String` TgEncounterTotalLastSystem
+### <span class='code'>String</span> TgEncounterTotalLastSystem
 
-### `String` TgEncounterTotalLastTimestamp
+### <span class='code'>String</span> TgEncounterTotalLastTimestamp
 
-### `String` TgEncounterTotalLastShip
+### <span class='code'>String</span> TgEncounterTotalLastShip
 
-### `Int64` TgScoutCount
+### <span class='code'>Int64</span> TgScoutCount
 

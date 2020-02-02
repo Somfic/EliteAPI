@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `PowerplaySalaryInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[PowerplaySalaryInfo](../../EliteAPI/Events/PowerplaySalaryInfo.html)</span>
 
 ## 02 Constructors
 
-### `PowerplaySalaryInfo` ()
+### <span class='code'>[PowerplaySalaryInfo](../../EliteAPI/Events/PowerplaySalaryInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Power
+### <span class='code'>String</span> Power
 
-### `Int64` Amount
+### <span class='code'>Int64</span> Amount
 

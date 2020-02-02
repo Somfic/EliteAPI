@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Crew`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Crew](../../EliteAPI/Events/Crew.html)</span>
 
 ## 02 Constructors
 
-### `Crew` ()
+### <span class='code'>[Crew](../../EliteAPI/Events/Crew.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` NpcCrewTotalWages
+### <span class='code'>Int64</span> NpcCrewTotalWages
 
-### `Int64` NpcCrewHired
+### <span class='code'>Int64</span> NpcCrewHired
 
-### `Int64` NpcCrewFired
+### <span class='code'>Int64</span> NpcCrewFired
 
-### `Int64` NpcCrewDied
+### <span class='code'>Int64</span> NpcCrewDied
 

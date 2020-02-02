@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Manifest`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Manifest](../../EliteAPI/Events/Manifest.html)</span>
 
 ## 02 Constructors
 
-### `Manifest` ()
+### <span class='code'>[Manifest](../../EliteAPI/Events/Manifest.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` MissionId
+### <span class='code'>Int64</span> MissionId
 
-### `String` Type
+### <span class='code'>String</span> Type
 
-### `Boolean` Vip
+### <span class='code'>Boolean</span> Vip
 
-### `Boolean` Wanted
+### <span class='code'>Boolean</span> Wanted
 
-### `Int64` Count
+### <span class='code'>Int64</span> Count
 

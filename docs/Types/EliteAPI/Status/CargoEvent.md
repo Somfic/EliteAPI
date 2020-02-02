@@ -4,13 +4,13 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Status`
+Namespace: <span class='code'>EliteAPI.Status</span>
 
-Inheritance: `Object` → `CargoEvent`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[CargoEvent](../../EliteAPI/Status/CargoEvent.html)</span>
 
 ## 02 Properties
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Object` Value
+### <span class='code'>Object</span> Value
 

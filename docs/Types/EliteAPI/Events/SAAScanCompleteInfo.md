@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `SAAScanCompleteInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[SAAScanCompleteInfo](../../EliteAPI/Events/SAAScanCompleteInfo.html)</span>
 
 ## 02 Constructors
 
-### `SAAScanCompleteInfo` ()
+### <span class='code'>[SAAScanCompleteInfo](../../EliteAPI/Events/SAAScanCompleteInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` BodyName
+### <span class='code'>String</span> BodyName
 
-### `Int64` BodyId
+### <span class='code'>Int64</span> BodyId
 
-### `Int64` ProbesUsed
+### <span class='code'>Int64</span> ProbesUsed
 
-### `Int64` EfficiencyTarget
+### <span class='code'>Int64</span> EfficiencyTarget
 

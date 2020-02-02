@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `PVPKillInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[PVPKillInfo](../../EliteAPI/Events/PVPKillInfo.html)</span>
 
 ## 02 Constructors
 
-### `PVPKillInfo` ()
+### <span class='code'>[PVPKillInfo](../../EliteAPI/Events/PVPKillInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Victim
+### <span class='code'>String</span> Victim
 
-### `Int64` CombatRank
+### <span class='code'>Int64</span> CombatRank
 

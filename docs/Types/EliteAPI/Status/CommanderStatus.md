@@ -4,53 +4,53 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Status`
+Namespace: <span class='code'>EliteAPI.Status</span>
 
-Inheritance: `Object` → `CommanderStatus`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[CommanderStatus](../../EliteAPI/Status/CommanderStatus.html)</span>
 
 ## 02 Constructors
 
-### `CommanderStatus` (`EliteDangerousAPI` api)
+### <span class='code'>[CommanderStatus](../../EliteAPI/Status/CommanderStatus.html)</span> (<span class='code'>[EliteDangerousAPI](../EliteAPI/EliteDangerousAPI.html)</span> api)
 
 ## 03 Properties
 
-### `String` Commander
+### <span class='code'>String</span> Commander
 
-### `Int64` Credits
+### <span class='code'>Int64</span> Credits
 
-### `Int64` EmpireRank
+### <span class='code'>Int64</span> EmpireRank
 
-### `Int64` FederationRank
+### <span class='code'>Int64</span> FederationRank
 
-### `Int64` CombatRank
+### <span class='code'>Int64</span> CombatRank
 
-### `Int64` TradeRank
+### <span class='code'>Int64</span> TradeRank
 
-### `Int64` ExplorationRank
+### <span class='code'>Int64</span> ExplorationRank
 
-### `Int64` CqcRank
+### <span class='code'>Int64</span> CqcRank
 
-### `Int64` EmpireRankProgress
+### <span class='code'>Int64</span> EmpireRankProgress
 
-### `Int64` FederationRankProgress
+### <span class='code'>Int64</span> FederationRankProgress
 
-### `Int64` CombatRankProgress
+### <span class='code'>Int64</span> CombatRankProgress
 
-### `Int64` TradeRankProgress
+### <span class='code'>Int64</span> TradeRankProgress
 
-### `Int64` ExplorationRankProgress
+### <span class='code'>Int64</span> ExplorationRankProgress
 
-### `Int64` CqcRankProgress
+### <span class='code'>Int64</span> CqcRankProgress
 
-### `String` EmpireRankLocalised
+### <span class='code'>String</span> EmpireRankLocalised
 
-### `String` FederationRankLocalised
+### <span class='code'>String</span> FederationRankLocalised
 
-### `String` CombatRankLocalised
+### <span class='code'>String</span> CombatRankLocalised
 
-### `String` TradeRankLocalised
+### <span class='code'>String</span> TradeRankLocalised
 
-### `String` ExplorationRankLocalised
+### <span class='code'>String</span> ExplorationRankLocalised
 
-### `StatisticsInfo` Statistics
+### <span class='code'>[StatisticsInfo](../../EliteAPI/Events/StatisticsInfo.html)</span> Statistics
 

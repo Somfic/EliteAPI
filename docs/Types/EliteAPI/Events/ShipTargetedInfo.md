@@ -4,47 +4,47 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ShipTargetedInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ShipTargetedInfo](../../EliteAPI/Events/ShipTargetedInfo.html)</span>
 
 ## 02 Constructors
 
-### `ShipTargetedInfo` ()
+### <span class='code'>[ShipTargetedInfo](../../EliteAPI/Events/ShipTargetedInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Boolean` TargetLocked
+### <span class='code'>Boolean</span> TargetLocked
 
-### `String` Ship
+### <span class='code'>String</span> Ship
 
-### `String` ShipLocalised
+### <span class='code'>String</span> ShipLocalised
 
-### `Int64` ScanStage
+### <span class='code'>Int64</span> ScanStage
 
-### `String` PilotName
+### <span class='code'>String</span> PilotName
 
-### `String` PilotNameLocalised
+### <span class='code'>String</span> PilotNameLocalised
 
-### `String` PilotRank
+### <span class='code'>String</span> PilotRank
 
-### `Double` ShieldHealth
+### <span class='code'>Double</span> ShieldHealth
 
-### `Double` HullHealth
+### <span class='code'>Double</span> HullHealth
 
-### `String` Faction
+### <span class='code'>String</span> Faction
 
-### `String` LegalStatus
+### <span class='code'>String</span> LegalStatus
 
-### `Int64` Bounty
+### <span class='code'>Int64</span> Bounty
 
-### `String` Subsystem
+### <span class='code'>String</span> Subsystem
 
-### `String` SubsystemLocalised
+### <span class='code'>String</span> SubsystemLocalised
 
-### `Double` SubsystemHealth
+### <span class='code'>Double</span> SubsystemHealth
 

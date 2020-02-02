@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `FSSDiscoveryScanInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[FSSDiscoveryScanInfo](../../EliteAPI/Events/FSSDiscoveryScanInfo.html)</span>
 
 ## 02 Constructors
 
-### `FSSDiscoveryScanInfo` ()
+### <span class='code'>[FSSDiscoveryScanInfo](../../EliteAPI/Events/FSSDiscoveryScanInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Double` Progress
+### <span class='code'>Double</span> Progress
 
-### `Int64` BodyCount
+### <span class='code'>Int64</span> BodyCount
 
-### `Int64` NonBodyCount
+### <span class='code'>Int64</span> NonBodyCount
 

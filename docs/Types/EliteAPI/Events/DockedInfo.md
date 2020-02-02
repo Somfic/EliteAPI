@@ -4,45 +4,45 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `DockedInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[DockedInfo](../../EliteAPI/Events/DockedInfo.html)</span>
 
 ## 02 Constructors
 
-### `DockedInfo` ()
+### <span class='code'>[DockedInfo](../../EliteAPI/Events/DockedInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTimeOffset` Timestamp
+### <span class='code'>DateTimeOffset</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` StationName
+### <span class='code'>String</span> StationName
 
-### `String` StationType
+### <span class='code'>String</span> StationType
 
-### `String` StarSystem
+### <span class='code'>String</span> StarSystem
 
-### `Int64` SystemAddress
+### <span class='code'>Int64</span> SystemAddress
 
-### `Int64` MarketId
+### <span class='code'>Int64</span> MarketId
 
-### `StationFaction` StationFaction
+### <span class='code'>[StationFaction](../../EliteAPI/Events/StationFaction.html)</span> StationFaction
 
-### `String` StationGovernment
+### <span class='code'>String</span> StationGovernment
 
-### `String` StationGovernmentLocalised
+### <span class='code'>String</span> StationGovernmentLocalised
 
-### `String` StationAllegiance
+### <span class='code'>String</span> StationAllegiance
 
-### `List<String>` StationServices
+### <span class='code'>List<String></span> StationServices
 
-### `String` StationEconomy
+### <span class='code'>String</span> StationEconomy
 
-### `String` StationEconomyLocalised
+### <span class='code'>String</span> StationEconomyLocalised
 
-### `List<StationEconomy>` StationEconomies
+### <span class='code'>List<[StationEconomy](../../EliteAPI/Events/StationEconomy.html)></span> StationEconomies
 
-### `Double` DistFromStarLs
+### <span class='code'>Double</span> DistFromStarLs
 

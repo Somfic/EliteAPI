@@ -4,27 +4,27 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Crafting`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Crafting](../../EliteAPI/Events/Crafting.html)</span>
 
 ## 02 Constructors
 
-### `Crafting` ()
+### <span class='code'>[Crafting](../../EliteAPI/Events/Crafting.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` CountOfUsedEngineers
+### <span class='code'>Int64</span> CountOfUsedEngineers
 
-### `Int64` RecipesGenerated
+### <span class='code'>Int64</span> RecipesGenerated
 
-### `Int64` RecipesGeneratedRank1
+### <span class='code'>Int64</span> RecipesGeneratedRank1
 
-### `Int64` RecipesGeneratedRank2
+### <span class='code'>Int64</span> RecipesGeneratedRank2
 
-### `Int64` RecipesGeneratedRank3
+### <span class='code'>Int64</span> RecipesGeneratedRank3
 
-### `Int64` RecipesGeneratedRank4
+### <span class='code'>Int64</span> RecipesGeneratedRank4
 
-### `Int64` RecipesGeneratedRank5
+### <span class='code'>Int64</span> RecipesGeneratedRank5
 

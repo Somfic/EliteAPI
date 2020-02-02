@@ -4,17 +4,17 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `AddCommanderFriend`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[AddCommanderFriend](../../../EliteAPI/Inara/Events/AddCommanderFriend.html)</span>
 
 ## 02 Constructors
 
-### `AddCommanderFriend` (`String` commanderName)
+### <span class='code'>[AddCommanderFriend](../../../EliteAPI/Inara/Events/AddCommanderFriend.html)</span> (<span class='code'>String</span> commanderName)
 
 ## 03 Properties
 
-### `String` CommanderName
+### <span class='code'>String</span> CommanderName
 
-### `String` GamePlatform
+### <span class='code'>String</span> GamePlatform
 

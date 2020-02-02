@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `LiftoffInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[LiftoffInfo](../../EliteAPI/Events/LiftoffInfo.html)</span>
 
 ## 02 Constructors
 
-### `LiftoffInfo` ()
+### <span class='code'>[LiftoffInfo](../../EliteAPI/Events/LiftoffInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Boolean` PlayerControlled
+### <span class='code'>Boolean</span> PlayerControlled
 
-### `Double` Latitude
+### <span class='code'>Double</span> Latitude
 
-### `Double` Longitude
+### <span class='code'>Double</span> Longitude
 

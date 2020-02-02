@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `DatalinkScanInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[DatalinkScanInfo](../../EliteAPI/Events/DatalinkScanInfo.html)</span>
 
 ## 02 Constructors
 
-### `DatalinkScanInfo` ()
+### <span class='code'>[DatalinkScanInfo](../../EliteAPI/Events/DatalinkScanInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Message
+### <span class='code'>String</span> Message
 
-### `String` MessageLocalised
+### <span class='code'>String</span> MessageLocalised
 

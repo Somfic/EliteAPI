@@ -4,33 +4,33 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ShipsRemote`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ShipsRemote](../../EliteAPI/Events/ShipsRemote.html)</span>
 
 ## 02 Constructors
 
-### `ShipsRemote` ()
+### <span class='code'>[ShipsRemote](../../EliteAPI/Events/ShipsRemote.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` ShipId
+### <span class='code'>Int64</span> ShipId
 
-### `String` ShipType
+### <span class='code'>String</span> ShipType
 
-### `String` StarSystem
+### <span class='code'>String</span> StarSystem
 
-### `Int64` ShipMarketId
+### <span class='code'>Int64</span> ShipMarketId
 
-### `Int64` TransferPrice
+### <span class='code'>Int64</span> TransferPrice
 
-### `Int64` TransferTime
+### <span class='code'>Int64</span> TransferTime
 
-### `Int64` Value
+### <span class='code'>Int64</span> Value
 
-### `Boolean` Hot
+### <span class='code'>Boolean</span> Hot
 
-### `String` ShipTypeLocalised
+### <span class='code'>String</span> ShipTypeLocalised
 
-### `String` Name
+### <span class='code'>String</span> Name
 

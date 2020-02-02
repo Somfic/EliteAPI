@@ -4,9 +4,9 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.EDSM`
+Namespace: <span class='code'>EliteAPI.EDSM</span>
 
-Inheritance: `Object` → `EDSMParameter`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EDSMParameter](../../EliteAPI/EDSM/EDSMParameter.html)</span>
 
 
 
@@ -16,7 +16,7 @@ A parameter for an EDSM API call.
 
 ## 02 Constructors
 
-### `EDSMParameter` (`String` name, `Object` value)
+### <span class='code'>[EDSMParameter](../../EliteAPI/EDSM/EDSMParameter.html)</span> (<span class='code'>String</span> name, <span class='code'>Object</span> value)
 
 
 
@@ -26,7 +26,7 @@ Creates a new EDSM parameter.
 
 ## 03 Properties
 
-### `String` Name
+### <span class='code'>String</span> Name
 
 
 
@@ -34,7 +34,7 @@ The name of the parameter.
 
 
 
-### `Object` Value
+### <span class='code'>Object</span> Value
 
 
 

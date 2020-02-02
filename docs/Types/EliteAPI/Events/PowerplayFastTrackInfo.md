@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `PowerplayFastTrackInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[PowerplayFastTrackInfo](../../EliteAPI/Events/PowerplayFastTrackInfo.html)</span>
 
 ## 02 Constructors
 
-### `PowerplayFastTrackInfo` ()
+### <span class='code'>[PowerplayFastTrackInfo](../../EliteAPI/Events/PowerplayFastTrackInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Power
+### <span class='code'>String</span> Power
 
-### `Int64` Cost
+### <span class='code'>Int64</span> Cost
 

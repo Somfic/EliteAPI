@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `AddCommanderInventoryCargoItem`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[AddCommanderInventoryCargoItem](../../../EliteAPI/Inara/Events/AddCommanderInventoryCargoItem.html)</span>
 
 ## 02 Constructors
 
-### `AddCommanderInventoryCargoItem` (`String` itemName, `Int64` itemCount)
+### <span class='code'>[AddCommanderInventoryCargoItem](../../../EliteAPI/Inara/Events/AddCommanderInventoryCargoItem.html)</span> (<span class='code'>String</span> itemName, <span class='code'>Int64</span> itemCount)
 
 ## 03 Properties
 
-### `String` ItemName
+### <span class='code'>String</span> ItemName
 
-### `Int64` ItemCount
+### <span class='code'>Int64</span> ItemCount
 
-### `Nullable`1` IsStolen
+### <span class='code'>Nullable`1</span> IsStolen
 
-### `Nullable`1` MissionID
+### <span class='code'>Nullable`1</span> MissionID
 

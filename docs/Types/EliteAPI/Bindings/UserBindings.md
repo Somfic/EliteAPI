@@ -4,17 +4,17 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Bindings`
+Namespace: <span class='code'>EliteAPI.Bindings</span>
 
-Inheritance: `Object` → `UserBindings`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[UserBindings](../../EliteAPI/Bindings/UserBindings.html)</span>
 
 ## 02 Constructors
 
-### `UserBindings` ()
+### <span class='code'>[UserBindings](../../EliteAPI/Bindings/UserBindings.html)</span> ()
 
 ## 03 Properties
 
-### `Xml` Xml
+### <span class='code'>[Xml](../../EliteAPI/Bindings/Xml.html)</span> Xml
 
-### `KeysInfo` Root
+### <span class='code'>[KeysInfo](../../EliteAPI/Bindings/KeysInfo.html)</span> Root
 

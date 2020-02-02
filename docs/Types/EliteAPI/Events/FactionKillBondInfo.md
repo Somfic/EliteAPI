@@ -4,27 +4,27 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `FactionKillBondInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[FactionKillBondInfo](../../EliteAPI/Events/FactionKillBondInfo.html)</span>
 
 ## 02 Constructors
 
-### `FactionKillBondInfo` ()
+### <span class='code'>[FactionKillBondInfo](../../EliteAPI/Events/FactionKillBondInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Int64` Reward
+### <span class='code'>Int64</span> Reward
 
-### `String` AwardingFaction
+### <span class='code'>String</span> AwardingFaction
 
-### `String` AwardingFactionLocalised
+### <span class='code'>String</span> AwardingFactionLocalised
 
-### `String` VictimFaction
+### <span class='code'>String</span> VictimFaction
 
-### `String` VictimFactionLocalised
+### <span class='code'>String</span> VictimFactionLocalised
 

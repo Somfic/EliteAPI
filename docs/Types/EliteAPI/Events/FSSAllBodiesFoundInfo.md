@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `FSSAllBodiesFoundInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[FSSAllBodiesFoundInfo](../../EliteAPI/Events/FSSAllBodiesFoundInfo.html)</span>
 
 ## 02 Constructors
 
-### `FSSAllBodiesFoundInfo` ()
+### <span class='code'>[FSSAllBodiesFoundInfo](../../EliteAPI/Events/FSSAllBodiesFoundInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` SystemName
+### <span class='code'>String</span> SystemName
 
-### `Int64` SystemAddress
+### <span class='code'>Int64</span> SystemAddress
 
-### `Int64` Count
+### <span class='code'>Int64</span> Count
 

@@ -4,55 +4,55 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `LocationInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[LocationInfo](../../EliteAPI/Events/LocationInfo.html)</span>
 
 ## 02 Constructors
 
-### `LocationInfo` ()
+### <span class='code'>[LocationInfo](../../EliteAPI/Events/LocationInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTimeOffset` Timestamp
+### <span class='code'>DateTimeOffset</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Boolean` Docked
+### <span class='code'>Boolean</span> Docked
 
-### `String` StarSystem
+### <span class='code'>String</span> StarSystem
 
-### `Int64` SystemAddress
+### <span class='code'>Int64</span> SystemAddress
 
-### `List<Double>` StarPos
+### <span class='code'>List<Double></span> StarPos
 
-### `String` SystemAllegiance
+### <span class='code'>String</span> SystemAllegiance
 
-### `String` SystemEconomy
+### <span class='code'>String</span> SystemEconomy
 
-### `String` SystemEconomyLocalised
+### <span class='code'>String</span> SystemEconomyLocalised
 
-### `String` SystemSecondEconomy
+### <span class='code'>String</span> SystemSecondEconomy
 
-### `String` SystemSecondEconomyLocalised
+### <span class='code'>String</span> SystemSecondEconomyLocalised
 
-### `String` SystemGovernment
+### <span class='code'>String</span> SystemGovernment
 
-### `String` SystemGovernmentLocalised
+### <span class='code'>String</span> SystemGovernmentLocalised
 
-### `String` SystemSecurity
+### <span class='code'>String</span> SystemSecurity
 
-### `String` SystemSecurityLocalised
+### <span class='code'>String</span> SystemSecurityLocalised
 
-### `Int64` Population
+### <span class='code'>Int64</span> Population
 
-### `String` Body
+### <span class='code'>String</span> Body
 
-### `Int64` BodyId
+### <span class='code'>Int64</span> BodyId
 
-### `String` BodyType
+### <span class='code'>String</span> BodyType
 
-### `List<Faction>` Factions
+### <span class='code'>List<[Faction](../../EliteAPI/Events/Faction.html)></span> Factions
 
-### `SystemFaction` SystemFaction
+### <span class='code'>[SystemFaction](../../EliteAPI/Events/SystemFaction.html)</span> SystemFaction
 

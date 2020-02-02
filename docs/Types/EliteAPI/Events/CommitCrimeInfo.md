@@ -4,27 +4,27 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `CommitCrimeInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[CommitCrimeInfo](../../EliteAPI/Events/CommitCrimeInfo.html)</span>
 
 ## 02 Constructors
 
-### `CommitCrimeInfo` ()
+### <span class='code'>[CommitCrimeInfo](../../EliteAPI/Events/CommitCrimeInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` CrimeType
+### <span class='code'>String</span> CrimeType
 
-### `String` Faction
+### <span class='code'>String</span> Faction
 
-### `String` Victim
+### <span class='code'>String</span> Victim
 
-### `String` VictimLocalised
+### <span class='code'>String</span> VictimLocalised
 
-### `Int64` Bounty
+### <span class='code'>Int64</span> Bounty
 

@@ -4,23 +4,23 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `CommunityGoalRewardInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[CommunityGoalRewardInfo](../../EliteAPI/Events/CommunityGoalRewardInfo.html)</span>
 
 ## 02 Constructors
 
-### `CommunityGoalRewardInfo` ()
+### <span class='code'>[CommunityGoalRewardInfo](../../EliteAPI/Events/CommunityGoalRewardInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `String` System
+### <span class='code'>String</span> System
 
-### `Int64` Reward
+### <span class='code'>Int64</span> Reward
 

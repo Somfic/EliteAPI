@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Bindings`
+Namespace: <span class='code'>EliteAPI.Bindings</span>
 
-Inheritance: `Object` → `AxisBindingInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[AxisBindingInfo](../../EliteAPI/Bindings/AxisBindingInfo.html)</span>
 
 ## 02 Constructors
 
-### `AxisBindingInfo` ()
+### <span class='code'>[AxisBindingInfo](../../EliteAPI/Bindings/AxisBindingInfo.html)</span> ()
 
 ## 03 Properties
 
-### `Binding` Binding
+### <span class='code'>[Binding](../../EliteAPI/Bindings/Binding.html)</span> Binding
 
-### `ValueInfo` Inverted
+### <span class='code'>[ValueInfo](../../EliteAPI/Bindings/ValueInfo.html)</span> Inverted
 
-### `ValueInfo` Deadzone
+### <span class='code'>[ValueInfo](../../EliteAPI/Bindings/ValueInfo.html)</span> Deadzone
 

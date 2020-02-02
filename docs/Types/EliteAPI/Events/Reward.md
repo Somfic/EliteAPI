@@ -4,17 +4,17 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Reward`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Reward](../../EliteAPI/Events/Reward.html)</span>
 
 ## 02 Constructors
 
-### `Reward` ()
+### <span class='code'>[Reward](../../EliteAPI/Events/Reward.html)</span> ()
 
 ## 03 Properties
 
-### `String` Faction
+### <span class='code'>String</span> Faction
 
-### `Int64` RewardReward
+### <span class='code'>Int64</span> RewardReward
 

@@ -4,49 +4,49 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `MissionAcceptedInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[MissionAcceptedInfo](../../EliteAPI/Events/MissionAcceptedInfo.html)</span>
 
 ## 02 Constructors
 
-### `MissionAcceptedInfo` ()
+### <span class='code'>[MissionAcceptedInfo](../../EliteAPI/Events/MissionAcceptedInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Faction
+### <span class='code'>String</span> Faction
 
-### `String` Name
+### <span class='code'>String</span> Name
 
-### `String` LocalisedName
+### <span class='code'>String</span> LocalisedName
 
-### `String` Commodity
+### <span class='code'>String</span> Commodity
 
-### `String` CommodityLocalised
+### <span class='code'>String</span> CommodityLocalised
 
-### `Int64` Count
+### <span class='code'>Int64</span> Count
 
-### `String` DestinationSystem
+### <span class='code'>String</span> DestinationSystem
 
-### `DateTime` Expiry
+### <span class='code'>DateTime</span> Expiry
 
-### `String` Influence
+### <span class='code'>String</span> Influence
 
-### `String` Reputation
+### <span class='code'>String</span> Reputation
 
-### `Int64` Reward
+### <span class='code'>Int64</span> Reward
 
-### `Int64` PassengerCount
+### <span class='code'>Int64</span> PassengerCount
 
-### `Boolean` PassengerViPs
+### <span class='code'>Boolean</span> PassengerViPs
 
-### `Boolean` PassengerWanted
+### <span class='code'>Boolean</span> PassengerWanted
 
-### `String` PassengerType
+### <span class='code'>String</span> PassengerType
 
-### `Int64` MissionId
+### <span class='code'>Int64</span> MissionId
 

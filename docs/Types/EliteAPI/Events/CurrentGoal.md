@@ -4,41 +4,41 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `CurrentGoal`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[CurrentGoal](../../EliteAPI/Events/CurrentGoal.html)</span>
 
 ## 02 Constructors
 
-### `CurrentGoal` ()
+### <span class='code'>[CurrentGoal](../../EliteAPI/Events/CurrentGoal.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` Cgid
+### <span class='code'>Int64</span> Cgid
 
-### `String` Title
+### <span class='code'>String</span> Title
 
-### `String` SystemName
+### <span class='code'>String</span> SystemName
 
-### `String` MarketName
+### <span class='code'>String</span> MarketName
 
-### `DateTime` Expiry
+### <span class='code'>DateTime</span> Expiry
 
-### `Boolean` IsComplete
+### <span class='code'>Boolean</span> IsComplete
 
-### `Int64` CurrentTotal
+### <span class='code'>Int64</span> CurrentTotal
 
-### `Int64` PlayerContribution
+### <span class='code'>Int64</span> PlayerContribution
 
-### `Int64` NumContributors
+### <span class='code'>Int64</span> NumContributors
 
-### `Int64` TopRankSize
+### <span class='code'>Int64</span> TopRankSize
 
-### `Boolean` PlayerInTopRank
+### <span class='code'>Boolean</span> PlayerInTopRank
 
-### `String` TierReached
+### <span class='code'>String</span> TierReached
 
-### `Int64` PlayerPercentileBand
+### <span class='code'>Int64</span> PlayerPercentileBand
 
-### `Int64` Bonus
+### <span class='code'>Int64</span> Bonus
 

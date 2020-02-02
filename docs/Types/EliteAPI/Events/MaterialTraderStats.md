@@ -4,31 +4,31 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `MaterialTraderStats`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[MaterialTraderStats](../../EliteAPI/Events/MaterialTraderStats.html)</span>
 
 ## 02 Constructors
 
-### `MaterialTraderStats` ()
+### <span class='code'>[MaterialTraderStats](../../EliteAPI/Events/MaterialTraderStats.html)</span> ()
 
 ## 03 Properties
 
-### `Int64` TradesCompleted
+### <span class='code'>Int64</span> TradesCompleted
 
-### `Int64` MaterialsTraded
+### <span class='code'>Int64</span> MaterialsTraded
 
-### `Int64` EncodedMaterialsTraded
+### <span class='code'>Int64</span> EncodedMaterialsTraded
 
-### `Int64` RawMaterialsTraded
+### <span class='code'>Int64</span> RawMaterialsTraded
 
-### `Int64` Grade1_MaterialsTraded
+### <span class='code'>Int64</span> Grade1_MaterialsTraded
 
-### `Int64` Grade2_MaterialsTraded
+### <span class='code'>Int64</span> Grade2_MaterialsTraded
 
-### `Int64` Grade3_MaterialsTraded
+### <span class='code'>Int64</span> Grade3_MaterialsTraded
 
-### `Int64` Grade4_MaterialsTraded
+### <span class='code'>Int64</span> Grade4_MaterialsTraded
 
-### `Int64` Grade5_MaterialsTraded
+### <span class='code'>Int64</span> Grade5_MaterialsTraded
 

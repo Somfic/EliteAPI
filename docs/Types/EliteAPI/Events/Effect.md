@@ -4,19 +4,19 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `Effect`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[Effect](../../EliteAPI/Events/Effect.html)</span>
 
 ## 02 Constructors
 
-### `Effect` ()
+### <span class='code'>[Effect](../../EliteAPI/Events/Effect.html)</span> ()
 
 ## 03 Properties
 
-### `String` EffectEffect
+### <span class='code'>String</span> EffectEffect
 
-### `String` EffectLocalised
+### <span class='code'>String</span> EffectLocalised
 
-### `String` Trend
+### <span class='code'>String</span> Trend
 

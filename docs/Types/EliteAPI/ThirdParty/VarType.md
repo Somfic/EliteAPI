@@ -4,41 +4,41 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.ThirdParty`
+Namespace: <span class='code'>EliteAPI.ThirdParty</span>
 
-Inheritance: `Object` → `ValueType` → `Enum` → `VarType`
+Inheritance: <span class='code'>Object</span> → <span class='code'>ValueType</span> → <span class='code'>Enum</span> → <span class='code'>[VarType](../../EliteAPI/ThirdParty/VarType.html)</span>
 
 ## 02 Fields
 
-### `Int32` value__
+### <span class='code'>Int32</span> value__
 
-### `VarType` String
+### <span class='code'>[VarType](../../EliteAPI/ThirdParty/VarType.html)</span> String
 
-### `VarType` Bool
+### <span class='code'>[VarType](../../EliteAPI/ThirdParty/VarType.html)</span> Bool
 
-### `VarType` Int
+### <span class='code'>[VarType](../../EliteAPI/ThirdParty/VarType.html)</span> Int
 
-### `VarType` Decimal
+### <span class='code'>[VarType](../../EliteAPI/ThirdParty/VarType.html)</span> Decimal
 
-### `VarType` Unknown
+### <span class='code'>[VarType](../../EliteAPI/ThirdParty/VarType.html)</span> Unknown
 
 ## 03 Methods
 
-### `Boolean` Equals (`Object` obj)
+### <span class='code'>Boolean</span> Equals (<span class='code'>Object</span> obj)
 
-### `Boolean` HasFlag (`Enum` flag)
+### <span class='code'>Boolean</span> HasFlag (<span class='code'>Enum</span> flag)
 
-### `Int32` CompareTo (`Object` target)
+### <span class='code'>Int32</span> CompareTo (<span class='code'>Object</span> target)
 
-### `Int32` GetHashCode ()
+### <span class='code'>Int32</span> GetHashCode ()
 
-### `String` ToString ()
+### <span class='code'>String</span> ToString ()
 
-### `String` ToString (`String` format, `IFormatProvider` provider)
+### <span class='code'>String</span> ToString (<span class='code'>String</span> format, <span class='code'>IFormatProvider</span> provider)
 
-### `String` ToString (`String` format)
+### <span class='code'>String</span> ToString (<span class='code'>String</span> format)
 
-### `String` ToString (`IFormatProvider` provider)
+### <span class='code'>String</span> ToString (<span class='code'>IFormatProvider</span> provider)
 
-### `TypeCode` GetTypeCode ()
+### <span class='code'>TypeCode</span> GetTypeCode ()
 

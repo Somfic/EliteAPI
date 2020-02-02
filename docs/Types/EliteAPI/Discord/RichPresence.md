@@ -4,9 +4,9 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Discord`
+Namespace: <span class='code'>EliteAPI.Discord</span>
 
-Inheritance: `Object` → `RichPresence`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[RichPresence](../../EliteAPI/Discord/RichPresence.html)</span>
 
 
 
@@ -16,7 +16,7 @@ Class used to update the Rich Presence with.
 
 ## 02 Constructors
 
-### `RichPresence` ()
+### <span class='code'>[RichPresence](../../EliteAPI/Discord/RichPresence.html)</span> ()
 
 
 
@@ -24,7 +24,7 @@ Empty constructor for a rich presence.
 
 
 
-### `RichPresence` (`String` line1)
+### <span class='code'>[RichPresence](../../EliteAPI/Discord/RichPresence.html)</span> (<span class='code'>String</span> line1)
 
 
 
@@ -32,7 +32,7 @@ Basic constructor for a rich presence.
 
 
 
-### `RichPresence` (`String` line1, `String` line2)
+### <span class='code'>[RichPresence](../../EliteAPI/Discord/RichPresence.html)</span> (<span class='code'>String</span> line1, <span class='code'>String</span> line2)
 
 
 
@@ -42,7 +42,7 @@ Basic constructor for a rich presence.
 
 ## 03 Properties
 
-### `String` Text
+### <span class='code'>String</span> Text
 
 
 
@@ -50,7 +50,7 @@ The first line of text.
 
 
 
-### `String` TextTwo
+### <span class='code'>String</span> TextTwo
 
 
 
@@ -58,7 +58,7 @@ The second line of text.
 
 
 
-### `String` Icon
+### <span class='code'>String</span> Icon
 
 
 
@@ -66,7 +66,7 @@ The main icon ID.
 
 
 
-### `String` IconText
+### <span class='code'>String</span> IconText
 
 
 
@@ -74,7 +74,7 @@ The text that should be displayed when hovering over the main icon.
 
 
 
-### `String` IconTwo
+### <span class='code'>String</span> IconTwo
 
 
 
@@ -82,7 +82,7 @@ The secondary icon ID.
 
 
 
-### `String` IconTextTwo
+### <span class='code'>String</span> IconTextTwo
 
 
 

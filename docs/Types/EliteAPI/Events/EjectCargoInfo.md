@@ -4,25 +4,25 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `EjectCargoInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EjectCargoInfo](../../EliteAPI/Events/EjectCargoInfo.html)</span>
 
 ## 02 Constructors
 
-### `EjectCargoInfo` ()
+### <span class='code'>[EjectCargoInfo](../../EliteAPI/Events/EjectCargoInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `String` Type
+### <span class='code'>String</span> Type
 
-### `String` TypeLocalised
+### <span class='code'>String</span> TypeLocalised
 
-### `Int64` Count
+### <span class='code'>Int64</span> Count
 
-### `Boolean` Abandoned
+### <span class='code'>Boolean</span> Abandoned
 

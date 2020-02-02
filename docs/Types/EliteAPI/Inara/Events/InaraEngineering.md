@@ -4,21 +4,21 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Inara.Events`
+Namespace: <span class='code'>EliteAPI.Inara.Events</span>
 
-Inheritance: `Object` → `InaraEngineering`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[InaraEngineering](../../../EliteAPI/Inara/Events/InaraEngineering.html)</span>
 
 ## 02 Constructors
 
-### `InaraEngineering` ()
+### <span class='code'>[InaraEngineering](../../../EliteAPI/Inara/Events/InaraEngineering.html)</span> ()
 
 ## 03 Properties
 
-### `String` BlueprintName
+### <span class='code'>String</span> BlueprintName
 
-### `Int64` BlueprintLevel
+### <span class='code'>Int64</span> BlueprintLevel
 
-### `Int64` BlueprintQuality
+### <span class='code'>Int64</span> BlueprintQuality
 
-### `String` ExperimentalEffect
+### <span class='code'>String</span> ExperimentalEffect
 

@@ -4,27 +4,27 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `BountyInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[BountyInfo](../../EliteAPI/Events/BountyInfo.html)</span>
 
 ## 02 Constructors
 
-### `BountyInfo` ()
+### <span class='code'>[BountyInfo](../../EliteAPI/Events/BountyInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `List<Reward>` Rewards
+### <span class='code'>List<[Reward](../../EliteAPI/Events/Reward.html)></span> Rewards
 
-### `String` Target
+### <span class='code'>String</span> Target
 
-### `Int64` TotalReward
+### <span class='code'>Int64</span> TotalReward
 
-### `String` VictimFaction
+### <span class='code'>String</span> VictimFaction
 
-### `Int64` SharedWithOthers
+### <span class='code'>Int64</span> SharedWithOthers
 

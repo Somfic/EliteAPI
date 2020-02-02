@@ -4,35 +4,35 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ModuleSwapInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ModuleSwapInfo](../../EliteAPI/Events/ModuleSwapInfo.html)</span>
 
 ## 02 Constructors
 
-### `ModuleSwapInfo` ()
+### <span class='code'>[ModuleSwapInfo](../../EliteAPI/Events/ModuleSwapInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Int64` MarketId
+### <span class='code'>Int64</span> MarketId
 
-### `String` FromSlot
+### <span class='code'>String</span> FromSlot
 
-### `String` ToSlot
+### <span class='code'>String</span> ToSlot
 
-### `String` FromItem
+### <span class='code'>String</span> FromItem
 
-### `String` FromItemLocalised
+### <span class='code'>String</span> FromItemLocalised
 
-### `String` ToItem
+### <span class='code'>String</span> ToItem
 
-### `String` ToItemLocalised
+### <span class='code'>String</span> ToItemLocalised
 
-### `String` Ship
+### <span class='code'>String</span> Ship
 
-### `Int64` ShipId
+### <span class='code'>Int64</span> ShipId
 

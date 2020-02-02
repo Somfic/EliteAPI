@@ -4,31 +4,31 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Events`
+Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: `Object` → `ModuleSellRemoteInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ModuleSellRemoteInfo](../../EliteAPI/Events/ModuleSellRemoteInfo.html)</span>
 
 ## 02 Constructors
 
-### `ModuleSellRemoteInfo` ()
+### <span class='code'>[ModuleSellRemoteInfo](../../EliteAPI/Events/ModuleSellRemoteInfo.html)</span> ()
 
 ## 03 Properties
 
-### `DateTime` Timestamp
+### <span class='code'>DateTime</span> Timestamp
 
-### `String` Event
+### <span class='code'>String</span> Event
 
-### `Int64` StorageSlot
+### <span class='code'>Int64</span> StorageSlot
 
-### `String` SellItem
+### <span class='code'>String</span> SellItem
 
-### `String` SellItemLocalised
+### <span class='code'>String</span> SellItemLocalised
 
-### `Int64` ServerId
+### <span class='code'>Int64</span> ServerId
 
-### `Int64` SellPrice
+### <span class='code'>Int64</span> SellPrice
 
-### `String` Ship
+### <span class='code'>String</span> Ship
 
-### `Int64` ShipId
+### <span class='code'>Int64</span> ShipId
 

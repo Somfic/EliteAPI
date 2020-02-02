@@ -4,15 +4,15 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.Bindings`
+Namespace: <span class='code'>EliteAPI.Bindings</span>
 
-Inheritance: `Object` → `ValueInfo`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[ValueInfo](../../EliteAPI/Bindings/ValueInfo.html)</span>
 
 ## 02 Constructors
 
-### `ValueInfo` ()
+### <span class='code'>[ValueInfo](../../EliteAPI/Bindings/ValueInfo.html)</span> ()
 
 ## 03 Properties
 
-### `String` Value
+### <span class='code'>String</span> Value
 

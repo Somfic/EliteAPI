@@ -4,13 +4,13 @@
 
 ## 01 Definition
 
-Namespace: `EliteAPI.EDSM`
+Namespace: <span class='code'>EliteAPI.EDSM</span>
 
-Inheritance: `Object` → `EDSM`
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EDSM](../../EliteAPI/EDSM/EDSM.html)</span>
 
 ## 02 Methods
 
-### `String` Execute (`EDSMEntry` entry)
+### <span class='code'>String</span> Execute (<span class='code'>[EDSMEntry](../../EliteAPI/EDSM/EDSMEntry.html)</span> entry)
 
 
 

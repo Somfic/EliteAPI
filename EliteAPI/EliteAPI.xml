@@ -342,11 +342,6 @@
             Interface for the EliteDangerousAPI class.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Version">
-            <summary>
-            Set to true when the API is ready.
-            </summary>
-        </member>
         <member name="P:EliteAPI.IEliteDangerousAPI.IsRunning">
             <summary>
             Whether the API is currently running.

@@ -4,6 +4,7 @@ using EliteAPI.Status;
 using Somfic.Logging;
 using System;
 using System.IO;
+
 namespace EliteAPI
 {
     /// <summary>
@@ -11,11 +12,6 @@ namespace EliteAPI
     /// </summary>
     public interface IEliteDangerousAPI
     {
-        /// <summary>
-        /// Set to true when the API is ready.
-        /// </summary>
-        string Version { get; }
-
         /// <summary>
         /// Whether the API is currently running.
         /// </summary>

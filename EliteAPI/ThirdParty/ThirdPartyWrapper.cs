@@ -50,7 +50,7 @@ namespace EliteAPI.ThirdParty
             List<Variable> variables = new List<Variable>
             {
                 //Add version variable.
-                new Variable("Version", EliteAPI.Version)
+                new Variable("Version", EliteDangerousAPI.Version)
             };
             variables.AddRange(from f in EliteAPI.Commander.GetType().GetProperties() where f.Name != "Statistics" select new Variable(f.Name, f.GetValue(EliteAPI.Commander)));
             //Add commander variables.

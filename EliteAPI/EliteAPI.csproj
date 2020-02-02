@@ -19,7 +19,8 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\EliteAPI.xml</DocumentationFile>
+    <DocumentationFile>EliteAPI.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -53,7 +54,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\lib\vmAPI.dll&quot; &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\bin\Debug\netstandard2.0\vmAPI.dll&quot;&#xD;&#xA;" />
+    <Exec Command="REM copy &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\lib\vmAPI.dll&quot; &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\bin\Debug\netstandard2.0\vmAPI.dll&quot;&#xD;&#xA;" />
   </Target>
 
 </Project>

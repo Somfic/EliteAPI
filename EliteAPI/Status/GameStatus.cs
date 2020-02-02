@@ -1,34 +1,42 @@
-﻿using Somfic.Logging;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
+using Somfic.Logging;
 
 namespace EliteAPI.Status
 {
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-    using System;
-    using System.Collections.Generic;
-    using System.Globalization;
-    using System.IO;
-    public partial class GameStatus
+    public class GameStatus
     {
         internal GameStatus() { }
+
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; internal set; }
+
         [JsonProperty("event")]
         public string Event { get; internal set; }
+
         [JsonProperty("Flags")]
         public ShipStatusFlags Flags { get; internal set; }
+
         [JsonProperty("Pips")]
         public List<long> Pips { get; internal set; }
+
         [JsonProperty("FireGroup")]
         public long FireGroup { get; internal set; }
+
         [JsonProperty("GuiFocus")]
         public long GuiFocus { get; internal set; }
+
         [JsonProperty("Fuel")]
         public Fuel Fuel { get; internal set; }
+
         [JsonProperty("LegalState")]
         public string LegalState { get; internal set; }
+
         [JsonProperty("Cargo")]
         public long Cargo { get; internal set; }
+
         public bool Docked => GetFlag(0);
         public bool Landed => GetFlag(1);
         public bool Gear => GetFlag(2);
@@ -61,70 +69,64 @@ namespace EliteAPI.Status
         public string GameMode { get; internal set; }
         public bool InNoFireZone { get; internal set; }
         public double JumpRange { get; internal set; }
-        public bool IsRunning => (Flags != 0);
+        public bool IsRunning => Flags != 0;
         public bool InMainMenu { get; internal set; }
         public string MusicTrack { get; internal set; }
-        public bool GetFlag(int bit)
-        {
-            return Flags.HasFlag((ShipStatusFlags)(1 << bit));
-        }
-    }
-    public partial class Fuel
-    {
-        [JsonProperty("FuelMain")]
-        public double FuelMain { get; internal set; }
-        [JsonProperty("FuelReservoir")]
-        public double FuelReservoir { get; internal set; }
-        public double MaxFuel { get; internal set; }
-    }
-    public partial class GameStatus
-    {
+
         internal static GameStatus Process(string json)
         {
-            return JsonConvert.DeserializeObject<GameStatus>(json, EliteAPI.Status.ShipStatusConverter.Settings);
+            return JsonConvert.DeserializeObject<GameStatus>(json, ShipStatusConverter.Settings);
         }
 
         internal static GameStatus FromFile(FileInfo file, EliteDangerousAPI api)
         {
             try
             {
-                if (!File.Exists(file.FullName)) {/*  api.Logger.Log(Severity.Error, "Could not find Status.json.", new FileNotFoundException("Status.json could not be found.", file.FullName)); */ return new GameStatus(); }
+                if (!File.Exists(file.FullName)) /*  api.Logger.Log(Severity.Error, "Could not find Status.json.", new FileNotFoundException("Status.json could not be found.", file.FullName)); */ return new GameStatus();
+
                 //Create a stream from the log file.
-                FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                var fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 //Create a stream from the file stream.
-                StreamReader streamReader = new StreamReader(fileStream);
+                var streamReader = new StreamReader(fileStream);
+
                 //Go through the stream.
                 while (!streamReader.EndOfStream)
-                {
                     try
                     {
                         //Process this string.
-                        string json = streamReader.ReadLine();
-                        GameStatus s = Process(json);
-                        if (s.Fuel == null) { s.Fuel = new Fuel(); }
-                        if (s.Pips == null) { s.Pips = new List<long>() { 0, 0, 0 }; }
+                        var json = streamReader.ReadLine();
+                        var s = Process(json);
+
+                        if (s.Fuel == null)
+                        {
+                            s.Fuel = new Fuel();
+                        }
+
+                        if (s.Pips == null)
+                        {
+                            s.Pips = new List<long> {0, 0, 0};
+                        }
+
                         return s;
                     }
-                    catch (Exception ex) { api.Logger.Log(Severity.Warning, "Could not update Status.json.", ex); }
-                }
+                    catch (Exception ex)
+                    {
+                        api.Logger.Log(Severity.Warning, "Could not update Status.json.", ex);
+                    }
+
                 return api.Status;
             }
-            catch (Exception ex) { api.Logger.Log(Severity.Warning, "Could not update status.", ex); }
+            catch (Exception ex)
+            {
+                api.Logger.Log(Severity.Warning, "Could not update status.", ex);
+            }
+
             return new GameStatus();
         }
-    }
 
-    internal static class ShipStatusConverter
-    {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        public bool GetFlag(int bit)
         {
-            MissingMemberHandling = MissingMemberHandling.Ignore,
-            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
-            Converters =
-            {
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
-        };
+            return Flags.HasFlag((ShipStatusFlags) (1 << bit));
+        }
     }
 }

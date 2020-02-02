@@ -1,4 +1,4 @@
-{"tags":["SendTextInfo","EliteAPI","Events","Timestamp","Event","To","ToLocalised","Message"],"status":1}
+{"tags":["SendTextInfo","EliteAPI","Events","To","ToLocalised","Message","Timestamp","Event"],"status":1}
 
 # SendTextInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[SendTextInfo](../../EliteAPI/Events/SendTextInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[SendTextInfo](../../EliteAPI/Events/SendTextInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,13 +14,13 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[SendTextIn
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> To
 
 ### <span class='code'>String</span> ToLocalised
 
 ### <span class='code'>String</span> Message
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

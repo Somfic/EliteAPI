@@ -1,4 +1,4 @@
-{"tags":["ShipTargetedInfo","EliteAPI","Events","Timestamp","Event","TargetLocked","Ship","ShipLocalised","ScanStage","PilotName","PilotNameLocalised","PilotRank","ShieldHealth","HullHealth","Faction","LegalStatus","Bounty","Subsystem","SubsystemLocalised","SubsystemHealth"],"status":1}
+{"tags":["ShipTargetedInfo","EliteAPI","Events","TargetLocked","Ship","ShipLocalised","ScanStage","PilotName","PilotNameLocalised","PilotRank","ShieldHealth","HullHealth","Faction","LegalStatus","Bounty","Subsystem","SubsystemLocalised","SubsystemHealth","Timestamp","Event"],"status":1}
 
 # ShipTargetedInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[ShipTargetedInfo](../../EliteAPI/Events/ShipTargetedInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[ShipTargetedInfo](../../EliteAPI/Events/ShipTargetedInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[ShipTargetedInfo](../../EliteAPI/Events/ShipTargetedInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>Boolean</span> TargetLocked
 
@@ -47,4 +43,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[ShipTarget
 ### <span class='code'>String</span> SubsystemLocalised
 
 ### <span class='code'>Double</span> SubsystemHealth
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

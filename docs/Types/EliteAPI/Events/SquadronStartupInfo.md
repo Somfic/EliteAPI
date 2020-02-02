@@ -1,4 +1,4 @@
-{"tags":["SquadronStartupInfo","EliteAPI","Events","Timestamp","Event","SquadronName","CurrentRank"],"status":1}
+{"tags":["SquadronStartupInfo","EliteAPI","Events","Timestamp","Event","SquadronName","CurrentRank","Timestamp"],"status":1}
 
 # SquadronStartupInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[SquadronStartupInfo](../../EliteAPI/Events/SquadronStartupInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[SquadronStartupInfo](../../EliteAPI/Events/SquadronStartupInfo.html)</span>
 
 ## 02 Constructors
 
@@ -21,4 +21,6 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[SquadronSt
 ### <span class='code'>String</span> SquadronName
 
 ### <span class='code'>Int64</span> CurrentRank
+
+### <span class='code'>DateTime</span> Timestamp
 

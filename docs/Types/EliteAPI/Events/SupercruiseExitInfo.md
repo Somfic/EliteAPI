@@ -1,4 +1,4 @@
-{"tags":["SupercruiseExitInfo","EliteAPI","Events","Timestamp","Event","StarSystem","SystemAddress","Body","BodyId","BodyType"],"status":1}
+{"tags":["SupercruiseExitInfo","EliteAPI","Events","StarSystem","SystemAddress","Body","BodyId","BodyType","Timestamp","Event"],"status":1}
 
 # SupercruiseExitInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[SupercruiseExitInfo](../../EliteAPI/Events/SupercruiseExitInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[SupercruiseExitInfo](../../EliteAPI/Events/SupercruiseExitInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[SupercruiseExitInfo](../../EliteAPI/Events/SupercruiseExitInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> StarSystem
 
@@ -27,4 +23,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Supercruis
 ### <span class='code'>Int64</span> BodyId
 
 ### <span class='code'>String</span> BodyType
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

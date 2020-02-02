@@ -1,4 +1,4 @@
-{"tags":["ScreenshotInfo","EliteAPI","Events","Timestamp","Event","Filename","Width","Height","System","Body","Latitude","Longitude","Heading","Altitude"],"status":1}
+{"tags":["ScreenshotInfo","EliteAPI","Events","Filename","Width","Height","System","Body","Latitude","Longitude","Heading","Altitude","Timestamp","Event"],"status":1}
 
 # ScreenshotInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[ScreenshotInfo](../../EliteAPI/Events/ScreenshotInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[ScreenshotInfo](../../EliteAPI/Events/ScreenshotInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[ScreenshotInfo](../../EliteAPI/Events/ScreenshotInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> Filename
 
@@ -35,4 +31,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Screenshot
 ### <span class='code'>Int64</span> Heading
 
 ### <span class='code'>Double</span> Altitude
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

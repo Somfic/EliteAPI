@@ -1,4 +1,4 @@
-{"tags":["StatusEvent","EliteAPI","Events","Event","event","Value","value"],"status":1}
+{"tags":["StatusEvent","EliteAPI","Events","Event","event","Value","value","Timestamp"],"status":1}
 
 # StatusEvent
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[StatusEvent](../../EliteAPI/Events/StatusEvent.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[StatusEvent](../../EliteAPI/Events/StatusEvent.html)</span>
 
 ## 02 Constructors
 
@@ -21,4 +21,6 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[StatusEven
 ### <span class='code'>Object</span> Value
 
 ### <span class='code'>Object</span> value
+
+### <span class='code'>DateTime</span> Timestamp
 

@@ -1,4 +1,4 @@
-{"tags":["ScanInfo","EliteAPI","Events","Timestamp","Event","ScanType","BodyName","BodyId","Parents","DistanceFromArrivalLs","TidalLock","TerraformState","PlanetClass","Atmosphere","AtmosphereType","Volcanism","MassEm","Radius","SurfaceGravity","SurfaceTemperature","SurfacePressure","Landable","Materials","Composition","SemiMajorAxis","Eccentricity","OrbitalInclination","Periapsis","OrbitalPeriod","RotationPeriod","AxialTilt","Rings","ReserveLevel"],"status":1}
+{"tags":["ScanInfo","EliteAPI","Events","ScanType","BodyName","BodyId","Parents","DistanceFromArrivalLs","TidalLock","TerraformState","PlanetClass","Atmosphere","AtmosphereType","Volcanism","MassEm","Radius","SurfaceGravity","SurfaceTemperature","SurfacePressure","Landable","Materials","Composition","SemiMajorAxis","Eccentricity","OrbitalInclination","Periapsis","OrbitalPeriod","RotationPeriod","AxialTilt","Rings","ReserveLevel","Timestamp","Event"],"status":1}
 
 # ScanInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[ScanInfo](../../EliteAPI/Events/ScanInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[ScanInfo](../../EliteAPI/Events/ScanInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[ScanInfo](../../EliteAPI/Events/ScanInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> ScanType
 
@@ -73,4 +69,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[ScanInfo](
 ### <span class='code'>List<[Ring](../../EliteAPI/Events/Ring.html)></span> Rings
 
 ### <span class='code'>String</span> ReserveLevel
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

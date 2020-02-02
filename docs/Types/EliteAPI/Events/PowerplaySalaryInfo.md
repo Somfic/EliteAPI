@@ -1,4 +1,4 @@
-{"tags":["PowerplaySalaryInfo","EliteAPI","Events","Timestamp","Event","Power","Amount"],"status":1}
+{"tags":["PowerplaySalaryInfo","EliteAPI","Events","Power","Amount","Timestamp","Event"],"status":1}
 
 # PowerplaySalaryInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[PowerplaySalaryInfo](../../EliteAPI/Events/PowerplaySalaryInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[PowerplaySalaryInfo](../../EliteAPI/Events/PowerplaySalaryInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,11 +14,11 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[PowerplayS
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> Power
 
 ### <span class='code'>Int64</span> Amount
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

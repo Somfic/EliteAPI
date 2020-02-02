@@ -1,4 +1,4 @@
-{"tags":["MiningRefinedInfo","EliteAPI","Events","Timestamp","Event","Type","TypeLocalised"],"status":1}
+{"tags":["MiningRefinedInfo","EliteAPI","Events","Type","TypeLocalised","Timestamp","Event"],"status":1}
 
 # MiningRefinedInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[MiningRefinedInfo](../../EliteAPI/Events/MiningRefinedInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[MiningRefinedInfo](../../EliteAPI/Events/MiningRefinedInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,11 +14,11 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[MiningRefi
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> Type
 
 ### <span class='code'>String</span> TypeLocalised
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

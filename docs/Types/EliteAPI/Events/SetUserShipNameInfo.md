@@ -1,4 +1,4 @@
-{"tags":["SetUserShipNameInfo","EliteAPI","Events","Timestamp","Event","Ship","ShipId","UserShipName","UserShipId"],"status":1}
+{"tags":["SetUserShipNameInfo","EliteAPI","Events","Ship","ShipId","UserShipName","UserShipId","Timestamp","Event"],"status":1}
 
 # SetUserShipNameInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[SetUserShipNameInfo](../../EliteAPI/Events/SetUserShipNameInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[SetUserShipNameInfo](../../EliteAPI/Events/SetUserShipNameInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[SetUserShipNameInfo](../../EliteAPI/Events/SetUserShipNameInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> Ship
 
@@ -25,4 +21,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[SetUserShi
 ### <span class='code'>String</span> UserShipName
 
 ### <span class='code'>String</span> UserShipId
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

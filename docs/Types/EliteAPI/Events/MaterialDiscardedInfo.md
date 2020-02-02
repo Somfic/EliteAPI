@@ -1,4 +1,4 @@
-{"tags":["MaterialDiscardedInfo","EliteAPI","Events","Timestamp","Event","Category","Name","Count"],"status":1}
+{"tags":["MaterialDiscardedInfo","EliteAPI","Events","Category","Name","Count","Timestamp","Event"],"status":1}
 
 # MaterialDiscardedInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[MaterialDiscardedInfo](../../EliteAPI/Events/MaterialDiscardedInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[MaterialDiscardedInfo](../../EliteAPI/Events/MaterialDiscardedInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,13 +14,13 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[MaterialDi
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> Category
 
 ### <span class='code'>String</span> Name
 
 ### <span class='code'>Int64</span> Count
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

@@ -1,4 +1,4 @@
-{"tags":["ShipyardTransferInfo","EliteAPI","Events","Timestamp","Event","ShipType","ShipTypeLocalised","ShipId","System","ShipMarketId","Distance","TransferPrice","TransferTime","MarketId"],"status":1}
+{"tags":["ShipyardTransferInfo","EliteAPI","Events","ShipType","ShipTypeLocalised","ShipId","System","ShipMarketId","Distance","TransferPrice","TransferTime","MarketId","Timestamp","Event"],"status":1}
 
 # ShipyardTransferInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[ShipyardTransferInfo](../../EliteAPI/Events/ShipyardTransferInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[ShipyardTransferInfo](../../EliteAPI/Events/ShipyardTransferInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[ShipyardTransferInfo](../../EliteAPI/Events/ShipyardTransferInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> ShipType
 
@@ -35,4 +31,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[ShipyardTr
 ### <span class='code'>Int64</span> TransferTime
 
 ### <span class='code'>Int64</span> MarketId
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

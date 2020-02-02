@@ -1,4 +1,4 @@
-{"tags":["MusicInfo","EliteAPI","Events","Timestamp","Event","MusicTrack"],"status":1}
+{"tags":["MusicInfo","EliteAPI","Events","MusicTrack","Timestamp","Event"],"status":1}
 
 # MusicInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[MusicInfo](../../EliteAPI/Events/MusicInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[MusicInfo](../../EliteAPI/Events/MusicInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,9 +14,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[MusicInfo]
 
 ## 03 Properties
 
+### <span class='code'>String</span> MusicTrack
+
 ### <span class='code'>DateTime</span> Timestamp
 
 ### <span class='code'>String</span> Event
-
-### <span class='code'>String</span> MusicTrack
 

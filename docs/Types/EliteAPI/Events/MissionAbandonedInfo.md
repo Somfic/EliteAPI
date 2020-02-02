@@ -1,4 +1,4 @@
-{"tags":["MissionAbandonedInfo","EliteAPI","Events","Timestamp","Event","Name","MissionId"],"status":1}
+{"tags":["MissionAbandonedInfo","EliteAPI","Events","Name","MissionId","Timestamp","Event"],"status":1}
 
 # MissionAbandonedInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[MissionAbandonedInfo](../../EliteAPI/Events/MissionAbandonedInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[MissionAbandonedInfo](../../EliteAPI/Events/MissionAbandonedInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,11 +14,11 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[MissionAba
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> Name
 
 ### <span class='code'>Int64</span> MissionId
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

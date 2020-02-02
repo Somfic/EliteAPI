@@ -1,4 +1,4 @@
-{"tags":["PayLegacyFinesInfo","EliteAPI","Events","Timestamp","Event","Amount","BrokerPercentage"],"status":1}
+{"tags":["PayLegacyFinesInfo","EliteAPI","Events","Amount","BrokerPercentage","Timestamp","Event"],"status":1}
 
 # PayLegacyFinesInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[PayLegacyFinesInfo](../../EliteAPI/Events/PayLegacyFinesInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[PayLegacyFinesInfo](../../EliteAPI/Events/PayLegacyFinesInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,11 +14,11 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[PayLegacyF
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>Int64</span> Amount
 
 ### <span class='code'>Double</span> BrokerPercentage
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

@@ -1,4 +1,4 @@
-{"tags":["MissionCompletedInfo","EliteAPI","Events","Timestamp","Event","Faction","Name","MissionId","TargetType","TargetTypeLocalised","TargetFaction","NewDestinationSystem","DestinationSystem","NewDestinationStation","DestinationStation","Target","Reward","MaterialsReward","FactionEffects"],"status":1}
+{"tags":["MissionCompletedInfo","EliteAPI","Events","Faction","Name","MissionId","TargetType","TargetTypeLocalised","TargetFaction","NewDestinationSystem","DestinationSystem","NewDestinationStation","DestinationStation","Target","Reward","MaterialsReward","FactionEffects","Timestamp","Event"],"status":1}
 
 # MissionCompletedInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[MissionCompletedInfo](../../EliteAPI/Events/MissionCompletedInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[MissionCompletedInfo](../../EliteAPI/Events/MissionCompletedInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[MissionCompletedInfo](../../EliteAPI/Events/MissionCompletedInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> Faction
 
@@ -45,4 +41,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[MissionCom
 ### <span class='code'>List<[MaterialsReward](../../EliteAPI/Events/MaterialsReward.html)></span> MaterialsReward
 
 ### <span class='code'>List<[FactionEffect](../../EliteAPI/Events/FactionEffect.html)></span> FactionEffects
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

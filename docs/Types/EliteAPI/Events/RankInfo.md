@@ -1,4 +1,4 @@
-{"tags":["RankInfo","EliteAPI","Events","Timestamp","Event","Combat","Trade","Explore","Empire","Federation","Cqc"],"status":1}
+{"tags":["RankInfo","EliteAPI","Events","Combat","Trade","Explore","Empire","Federation","Cqc","Timestamp","Event"],"status":1}
 
 # RankInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[RankInfo](../../EliteAPI/Events/RankInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[RankInfo](../../EliteAPI/Events/RankInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[RankInfo](../../EliteAPI/Events/RankInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>Int64</span> Combat
 
@@ -29,4 +25,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[RankInfo](
 ### <span class='code'>Int64</span> Federation
 
 ### <span class='code'>Int64</span> Cqc
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

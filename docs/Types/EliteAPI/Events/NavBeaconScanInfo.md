@@ -1,4 +1,4 @@
-{"tags":["NavBeaconScanInfo","EliteAPI","Events","Timestamp","Event","SystemAddress","NumBodies"],"status":1}
+{"tags":["NavBeaconScanInfo","EliteAPI","Events","SystemAddress","NumBodies","Timestamp","Event"],"status":1}
 
 # NavBeaconScanInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[NavBeaconScanInfo](../../EliteAPI/Events/NavBeaconScanInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[NavBeaconScanInfo](../../EliteAPI/Events/NavBeaconScanInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,11 +14,11 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[NavBeaconS
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>Int64</span> SystemAddress
 
 ### <span class='code'>Int64</span> NumBodies
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

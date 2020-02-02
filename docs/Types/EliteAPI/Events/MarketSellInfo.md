@@ -1,4 +1,4 @@
-{"tags":["MarketSellInfo","EliteAPI","Events","Timestamp","Event","MarketId","Type","TypeLocalised","Count","SellPrice","TotalSale","AvgPricePaid","StolenGoods","BlackMarket"],"status":1}
+{"tags":["MarketSellInfo","EliteAPI","Events","MarketId","Type","TypeLocalised","Count","SellPrice","TotalSale","AvgPricePaid","StolenGoods","BlackMarket","Timestamp","Event"],"status":1}
 
 # MarketSellInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[MarketSellInfo](../../EliteAPI/Events/MarketSellInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[MarketSellInfo](../../EliteAPI/Events/MarketSellInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[MarketSellInfo](../../EliteAPI/Events/MarketSellInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>Int64</span> MarketId
 
@@ -35,4 +31,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[MarketSell
 ### <span class='code'>Boolean</span> StolenGoods
 
 ### <span class='code'>Boolean</span> BlackMarket
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

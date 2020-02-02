@@ -1,4 +1,4 @@
-{"tags":["ReservoirReplenishedInfo","EliteAPI","Events","Timestamp","Event","FuelMain","FuelReservoir"],"status":1}
+{"tags":["ReservoirReplenishedInfo","EliteAPI","Events","Timestamp","Event","FuelMain","FuelReservoir","Timestamp"],"status":1}
 
 # ReservoirReplenishedInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[ReservoirReplenishedInfo](../../EliteAPI/Events/ReservoirReplenishedInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[ReservoirReplenishedInfo](../../EliteAPI/Events/ReservoirReplenishedInfo.html)</span>
 
 ## 02 Constructors
 
@@ -21,4 +21,6 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[ReservoirR
 ### <span class='code'>Double</span> FuelMain
 
 ### <span class='code'>Double</span> FuelReservoir
+
+### <span class='code'>DateTime</span> Timestamp
 

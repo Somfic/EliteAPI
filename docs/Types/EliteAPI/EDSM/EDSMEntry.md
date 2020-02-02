@@ -24,13 +24,7 @@ Creates a new EDSM API entry.
 
 
 
-### <span class='code'>[EDSMEntry](../../EliteAPI/EDSM/EDSMEntry.html)</span> (<span class='code'>String</span> url, <span class='code'>EDSMParameter<></span> parameters)
-
-
-
-Creates a new EDSM API entry.
-
-
+### <span class='code'>[EDSMEntry](../../EliteAPI/EDSM/EDSMEntry.html)</span> (<span class='code'>String</span> url, <span class='code'>List<[EDSMParameter](../../EliteAPI/EDSM/EDSMParameter.html)></span> parameters)
 
 ## 03 Properties
 
@@ -42,7 +36,7 @@ The base URL of the API call.
 
 
 
-### <span class='code'>EDSMParameter<></span> Parameters
+### <span class='code'>List<[EDSMParameter](../../EliteAPI/EDSM/EDSMParameter.html)></span> Parameters
 
 
 

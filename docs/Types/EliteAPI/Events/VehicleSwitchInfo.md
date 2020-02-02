@@ -1,4 +1,4 @@
-{"tags":["VehicleSwitchInfo","EliteAPI","Events","Timestamp","Event","To"],"status":1}
+{"tags":["VehicleSwitchInfo","EliteAPI","Events","To","Timestamp","Event"],"status":1}
 
 # VehicleSwitchInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[VehicleSwitchInfo](../../EliteAPI/Events/VehicleSwitchInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[VehicleSwitchInfo](../../EliteAPI/Events/VehicleSwitchInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,9 +14,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[VehicleSwi
 
 ## 03 Properties
 
+### <span class='code'>String</span> To
+
 ### <span class='code'>DateTime</span> Timestamp
 
 ### <span class='code'>String</span> Event
-
-### <span class='code'>String</span> To
 

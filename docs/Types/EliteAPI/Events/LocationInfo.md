@@ -1,4 +1,4 @@
-{"tags":["LocationInfo","EliteAPI","Events","Timestamp","Event","Docked","StarSystem","SystemAddress","StarPos","SystemAllegiance","SystemEconomy","SystemEconomyLocalised","SystemSecondEconomy","SystemSecondEconomyLocalised","SystemGovernment","SystemGovernmentLocalised","SystemSecurity","SystemSecurityLocalised","Population","Body","BodyId","BodyType","Factions","SystemFaction"],"status":1}
+{"tags":["LocationInfo","EliteAPI","Events","Timestamp","Event","Docked","StarSystem","SystemAddress","StarPos","SystemAllegiance","SystemEconomy","SystemEconomyLocalised","SystemSecondEconomy","SystemSecondEconomyLocalised","SystemGovernment","SystemGovernmentLocalised","SystemSecurity","SystemSecurityLocalised","Population","Body","BodyId","BodyType","Factions","SystemFaction","Timestamp"],"status":1}
 
 # LocationInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[LocationInfo](../../EliteAPI/Events/LocationInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[LocationInfo](../../EliteAPI/Events/LocationInfo.html)</span>
 
 ## 02 Constructors
 
@@ -55,4 +55,6 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[LocationIn
 ### <span class='code'>List<[Faction](../../EliteAPI/Events/Faction.html)></span> Factions
 
 ### <span class='code'>[SystemFaction](../../EliteAPI/Events/SystemFaction.html)</span> SystemFaction
+
+### <span class='code'>DateTime</span> Timestamp
 

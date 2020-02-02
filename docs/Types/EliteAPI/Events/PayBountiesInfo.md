@@ -1,4 +1,4 @@
-{"tags":["PayBountiesInfo","EliteAPI","Events","Timestamp","Event","Amount","Faction","FactionLocalised","ShipId","BrokerPercentage"],"status":1}
+{"tags":["PayBountiesInfo","EliteAPI","Events","Amount","Faction","FactionLocalised","ShipId","BrokerPercentage","Timestamp","Event"],"status":1}
 
 # PayBountiesInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[PayBountiesInfo](../../EliteAPI/Events/PayBountiesInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[PayBountiesInfo](../../EliteAPI/Events/PayBountiesInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[PayBountiesInfo](../../EliteAPI/Events/PayBountiesInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>Int64</span> Amount
 
@@ -27,4 +23,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[PayBountie
 ### <span class='code'>Int64</span> ShipId
 
 ### <span class='code'>Double</span> BrokerPercentage
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

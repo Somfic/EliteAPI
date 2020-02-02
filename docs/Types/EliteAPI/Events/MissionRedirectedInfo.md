@@ -1,4 +1,4 @@
-{"tags":["MissionRedirectedInfo","EliteAPI","Events","Timestamp","Event","MissionId","Name","NewDestinationStation","NewDestinationSystem","OldDestinationStation","OldDestinationSystem"],"status":1}
+{"tags":["MissionRedirectedInfo","EliteAPI","Events","MissionId","Name","NewDestinationStation","NewDestinationSystem","OldDestinationStation","OldDestinationSystem","Timestamp","Event"],"status":1}
 
 # MissionRedirectedInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[MissionRedirectedInfo](../../EliteAPI/Events/MissionRedirectedInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[MissionRedirectedInfo](../../EliteAPI/Events/MissionRedirectedInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[MissionRedirectedInfo](../../EliteAPI/Events/MissionRedirectedInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>Int64</span> MissionId
 
@@ -29,4 +25,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[MissionRed
 ### <span class='code'>String</span> OldDestinationStation
 
 ### <span class='code'>String</span> OldDestinationSystem
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

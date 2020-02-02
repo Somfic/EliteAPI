@@ -1,4 +1,4 @@
-{"tags":["MaterialsInfo","EliteAPI","Events","Timestamp","Event","Raw","Manufactured","Encoded"],"status":1}
+{"tags":["MaterialsInfo","EliteAPI","Events","Raw","Manufactured","Encoded","Timestamp","Event"],"status":1}
 
 # MaterialsInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[MaterialsInfo](../../EliteAPI/Events/MaterialsInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[MaterialsInfo](../../EliteAPI/Events/MaterialsInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,13 +14,13 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[MaterialsI
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>List<[Raw](../../EliteAPI/Events/Raw.html)></span> Raw
 
 ### <span class='code'>List<[Encoded](../../EliteAPI/Events/Encoded.html)></span> Manufactured
 
 ### <span class='code'>List<[Encoded](../../EliteAPI/Events/Encoded.html)></span> Encoded
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

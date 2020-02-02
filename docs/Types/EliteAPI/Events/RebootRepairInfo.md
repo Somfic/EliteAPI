@@ -1,4 +1,4 @@
-{"tags":["RebootRepairInfo","EliteAPI","Events","Timestamp","Event","Modules"],"status":1}
+{"tags":["RebootRepairInfo","EliteAPI","Events","Modules","Timestamp","Event"],"status":1}
 
 # RebootRepairInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[RebootRepairInfo](../../EliteAPI/Events/RebootRepairInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[RebootRepairInfo](../../EliteAPI/Events/RebootRepairInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,9 +14,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[RebootRepa
 
 ## 03 Properties
 
+### <span class='code'>List<String></span> Modules
+
 ### <span class='code'>DateTime</span> Timestamp
 
 ### <span class='code'>String</span> Event
-
-### <span class='code'>List<String></span> Modules
 

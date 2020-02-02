@@ -1,4 +1,4 @@
-{"tags":["SAAScanCompleteInfo","EliteAPI","Events","Timestamp","Event","BodyName","BodyId","ProbesUsed","EfficiencyTarget"],"status":1}
+{"tags":["SAAScanCompleteInfo","EliteAPI","Events","BodyName","BodyId","ProbesUsed","EfficiencyTarget","Timestamp","Event"],"status":1}
 
 # SAAScanCompleteInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[SAAScanCompleteInfo](../../EliteAPI/Events/SAAScanCompleteInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[SAAScanCompleteInfo](../../EliteAPI/Events/SAAScanCompleteInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[SAAScanCompleteInfo](../../EliteAPI/Events/SAAScanCompleteInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> BodyName
 
@@ -25,4 +21,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[SAAScanCom
 ### <span class='code'>Int64</span> ProbesUsed
 
 ### <span class='code'>Int64</span> EfficiencyTarget
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

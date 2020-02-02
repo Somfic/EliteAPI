@@ -1,4 +1,4 @@
-{"tags":["ModuleSellInfo","EliteAPI","Events","Timestamp","Event","MarketId","Slot","SellItem","SellItemLocalised","SellPrice","Ship","ShipId"],"status":1}
+{"tags":["ModuleSellInfo","EliteAPI","Events","MarketId","Slot","SellItem","SellItemLocalised","SellPrice","Ship","ShipId","Timestamp","Event"],"status":1}
 
 # ModuleSellInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[ModuleSellInfo](../../EliteAPI/Events/ModuleSellInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[ModuleSellInfo](../../EliteAPI/Events/ModuleSellInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[ModuleSellInfo](../../EliteAPI/Events/ModuleSellInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>Int64</span> MarketId
 
@@ -31,4 +27,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[ModuleSell
 ### <span class='code'>String</span> Ship
 
 ### <span class='code'>Int64</span> ShipId
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

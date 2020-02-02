@@ -1,4 +1,4 @@
-{"tags":["StatisticsInfo","EliteAPI","Events","Timestamp","Event","BankAccount","Combat","Crime","Smuggling","Trading","Mining","Exploration","Passengers","SearchAndRescue","TgEncounters","Crafting","Crew","Multicrew","MaterialTraderStats","Cqc"],"status":1}
+{"tags":["StatisticsInfo","EliteAPI","Events","BankAccount","Combat","Crime","Smuggling","Trading","Mining","Exploration","Passengers","SearchAndRescue","TgEncounters","Crafting","Crew","Multicrew","MaterialTraderStats","Cqc","Timestamp","Event"],"status":1}
 
 # StatisticsInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[StatisticsInfo](../../EliteAPI/Events/StatisticsInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[StatisticsInfo](../../EliteAPI/Events/StatisticsInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[StatisticsInfo](../../EliteAPI/Events/StatisticsInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>Dictionary`2</span> BankAccount
 
@@ -32,9 +28,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Statistics
 
 ### <span class='code'>Dictionary`2</span> Exploration
 
-### <span class='code'>[Passengers](../../EliteAPI/Events/Passengers.html)</span> Passengers
+### <span class='code'>[PassengersStatistics](../../EliteAPI/Events/PassengersStatistics.html)</span> Passengers
 
-### <span class='code'>[SearchAndRescue](../../EliteAPI/Events/SearchAndRescue.html)</span> SearchAndRescue
+### <span class='code'>[SearchAndRescueStatistics](../../EliteAPI/Events/SearchAndRescueStatistics.html)</span> SearchAndRescue
 
 ### <span class='code'>[TgEncounters](../../EliteAPI/Events/TgEncounters.html)</span> TgEncounters
 
@@ -47,4 +43,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Statistics
 ### <span class='code'>[MaterialTraderStats](../../EliteAPI/Events/MaterialTraderStats.html)</span> MaterialTraderStats
 
 ### <span class='code'>Dictionary`2</span> Cqc
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

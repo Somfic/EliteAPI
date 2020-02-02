@@ -1,4 +1,4 @@
-{"tags":["USSDropInfo","EliteAPI","Events","Timestamp","Event","UssType","UssTypeLocalised","UssThreat"],"status":1}
+{"tags":["USSDropInfo","EliteAPI","Events","UssType","UssTypeLocalised","UssThreat","Timestamp","Event"],"status":1}
 
 # USSDropInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[USSDropInfo](../../EliteAPI/Events/USSDropInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[USSDropInfo](../../EliteAPI/Events/USSDropInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,13 +14,13 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[USSDropInf
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> UssType
 
 ### <span class='code'>String</span> UssTypeLocalised
 
 ### <span class='code'>Int64</span> UssThreat
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

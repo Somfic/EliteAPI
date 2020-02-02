@@ -1,4 +1,4 @@
-{"tags":["ResurrectInfo","EliteAPI","Events","Timestamp","Event","Option","Cost","Bankrupt"],"status":1}
+{"tags":["ResurrectInfo","EliteAPI","Events","Option","Cost","Bankrupt","Timestamp","Event"],"status":1}
 
 # ResurrectInfo
 
@@ -6,7 +6,7 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[ResurrectInfo](../../EliteAPI/Events/ResurrectInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[ResurrectInfo](../../EliteAPI/Events/ResurrectInfo.html)</span>
 
 ## 02 Constructors
 
@@ -14,13 +14,13 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[ResurrectI
 
 ## 03 Properties
 
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
-
 ### <span class='code'>String</span> Option
 
 ### <span class='code'>Int64</span> Cost
 
 ### <span class='code'>Boolean</span> Bankrupt
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

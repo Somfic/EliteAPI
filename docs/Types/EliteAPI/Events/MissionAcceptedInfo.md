@@ -1,4 +1,4 @@
-{"tags":["MissionAcceptedInfo","EliteAPI","Events","Timestamp","Event","Faction","Name","LocalisedName","Commodity","CommodityLocalised","Count","DestinationSystem","Expiry","Influence","Reputation","Reward","PassengerCount","PassengerViPs","PassengerWanted","PassengerType","MissionId"],"status":1}
+{"tags":["MissionAcceptedInfo","EliteAPI","Events","Faction","Name","LocalisedName","Commodity","CommodityLocalised","Count","DestinationSystem","Expiry","Influence","Reputation","Reward","PassengerCount","PassengerViPs","PassengerWanted","PassengerType","MissionId","Timestamp","Event"],"status":1}
 
 # MissionAcceptedInfo
 
@@ -6,17 +6,13 @@
 
 Namespace: <span class='code'>EliteAPI.Events</span>
 
-Inheritance: <span class='code'>Object</span> → <span class='code'>[MissionAcceptedInfo](../../EliteAPI/Events/MissionAcceptedInfo.html)</span>
+Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase](../../EliteAPI/Events/EventBase.html)</span> → <span class='code'>[MissionAcceptedInfo](../../EliteAPI/Events/MissionAcceptedInfo.html)</span>
 
 ## 02 Constructors
 
 ### <span class='code'>[MissionAcceptedInfo](../../EliteAPI/Events/MissionAcceptedInfo.html)</span> ()
 
 ## 03 Properties
-
-### <span class='code'>DateTime</span> Timestamp
-
-### <span class='code'>String</span> Event
 
 ### <span class='code'>String</span> Faction
 
@@ -49,4 +45,8 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[MissionAcc
 ### <span class='code'>String</span> PassengerType
 
 ### <span class='code'>Int64</span> MissionId
+
+### <span class='code'>DateTime</span> Timestamp
+
+### <span class='code'>String</span> Event
 

@@ -61,6 +61,10 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Events\Travel\" />
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="copy &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\lib\vmAPI.dll&quot; &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\bin\Debug\netstandard2.0\vmAPI.dll&quot;&#xD;&#xA;" />
   </Target>

@@ -4,7 +4,7 @@ namespace EliteAPI.Inara.Events
 {
     public class SetCommanderRankPower : IInaraEventData
     {
-        public SetCommanderRankPower(string powerName, long rankValue)
+        public SetCommanderRankPower(string powerName, short rankValue)
         {
             PowerName = powerName;
             RankValue = rankValue;

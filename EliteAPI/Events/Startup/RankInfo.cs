@@ -18,7 +18,7 @@ namespace EliteAPI.Events.Startup
         /// </summary>
         [JsonProperty("Combat")]
         [Range(0, 8)]
-        public long Combat { get; internal set; }
+        public short Combat { get; internal set; }
 
         /// <summary>
         /// The rank within Combat the commander has.
@@ -32,7 +32,7 @@ namespace EliteAPI.Events.Startup
         /// </summary>
         [JsonProperty("Trade")]
         [Range(0, 8)]
-        public long Trade { get; internal set; }
+        public short Trade { get; internal set; }
 
         /// <summary>
         /// The rank within Trade the commander has.
@@ -46,7 +46,7 @@ namespace EliteAPI.Events.Startup
         /// </summary>
         [JsonProperty("Explore")]
         [Range(0, 8)]
-        public long Exploration { get; internal set; }
+        public short Exploration { get; internal set; }
 
         /// <summary>
         /// The rank within Explore the commander has.
@@ -60,7 +60,7 @@ namespace EliteAPI.Events.Startup
         /// </summary>
         [JsonProperty("Empire")]
         [Range(0, 14)]
-        public long Empire { get; internal set; }
+        public short Empire { get; internal set; }
 
         /// <summary>
         /// The rank within the Empire the commander has.
@@ -74,7 +74,7 @@ namespace EliteAPI.Events.Startup
         /// </summary>
         [JsonProperty("Federation")]
         [Range(0, 14)]
-        public long Federation { get; internal set; }
+        public short Federation { get; internal set; }
 
         /// <summary>
         /// The rank within the Federation the commander has.
@@ -88,7 +88,7 @@ namespace EliteAPI.Events.Startup
         /// </summary>
         [JsonProperty("CQC")]
         [Range(0, 8)]
-        public long Cqc { get; internal set; }
+        public short Cqc { get; internal set; }
 
         internal static RankInfo Process(string json, EliteDangerousAPI api)
         {

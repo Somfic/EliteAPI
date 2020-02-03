@@ -33,7 +33,7 @@ namespace EliteAPI.ThirdParty
             this.iniPath = iniPath;
             try
             {
-                if (File.ReadAllLines(iniPath)[0] == "//Use this to set a custom path to your Journal directory.")
+                if (FileReader.ReadLines(iniPath).ToList()[0] == "//Use this to set a custom path to your Journal directory.")
                 {
                     File.Delete(iniPath);
                 }

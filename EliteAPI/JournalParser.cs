@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using Newtonsoft.Json;
 using Somfic.Logging;
 
@@ -21,35 +22,39 @@ namespace EliteAPI
 
         public void ProcessJournal(FileInfo logFile, bool doNotTrigger = true, bool printJson = true, bool triggerOnLoad = false)
         {
-            var readAllLines = File.ReadAllLines(logFile.FullName);
-            
-            if (triggerOnLoad)
+            try
             {
-                totalLines = readAllLines.Length;
-            }
+                var readAllLines = FileReader.ReadLines(logFile.FullName);
 
-            var i = 0;
-
-            foreach (var line in readAllLines.Where(e=> !processedLogs.Contains(e) ))
-            {
-                string eventName = "";
-
-                if (!doNotTrigger)
+                if (triggerOnLoad)
                 {
-                    eventName = ProcessJson(line, printJson);
+                    totalLines = readAllLines.Count();
                 }
 
-                processedLogs.Add(line);
+                var i = 0;
 
-                if (!triggerOnLoad)
+                foreach (var line in readAllLines.Where(e => !processedLogs.Contains(e)))
                 {
-                    continue;
+                    string eventName = "";
+
+                    if (!doNotTrigger)
+                    {
+                        eventName = ProcessJson(line, printJson);
+                    }
+
+                    processedLogs.Add(line);
+
+                    if (!triggerOnLoad)
+                    {
+                        continue;
+                    }
+
+                    i++;
+
+                    EliteAPI.TriggerOnLoad(eventName, (float)i / totalLines);
                 }
-
-                i++;
-
-                EliteAPI.TriggerOnLoad(eventName, (float)i / totalLines);
             }
+            catch (Exception ex) { EliteAPI.Logger.Log(Severity.Error, "Could not process Journal file.", ex); }
         }
 
         private string ProcessJson(string json, bool printJson)

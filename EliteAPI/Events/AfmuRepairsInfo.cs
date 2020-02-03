@@ -5,28 +5,28 @@ namespace EliteAPI.Events
     public class AfmuRepairsInfo : EventBase
     {
         /// <summary>
-        ///     The name of the module
+        /// The name of the module
         /// </summary>
         [JsonProperty("Module")]
         public string Module { get; internal set; }
 
         /// <summary>
-        ///     The local name of the module
+        /// The local name of the module
         /// </summary>
         [JsonProperty("Module_Localised")]
         public string ModuleLocalised { get; internal set; }
 
         /// <summary>
-        ///     Whether modules are now fully repaired
+        /// Whether modules are now fully repaired
         /// </summary>
         [JsonProperty("FullyRepaired")]
         public bool FullyRepaired { get; internal set; }
 
         /// <summary>
-        ///     Value between 0 and 1.
+        /// Value between 0 and 1.
         /// </summary>
         [JsonProperty("Health")]
-        public double Health { get; internal set; }
+        public float Health { get; internal set; }
 
         internal static AfmuRepairsInfo Process(string json, EliteDangerousAPI api)
         {

@@ -59,7 +59,7 @@ namespace EliteAPI.Events.Startup
         /// The mass of the hull and all modules. Fuel and cargo are not included.
         /// </summary>
         [JsonProperty("UnladenMass")]
-        public int UnladenMass { get; internal set; }
+        public float UnladenMass { get; internal set; }
 
         /// <summary>
         /// Information on the fuel of the ship.

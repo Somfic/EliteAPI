@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace EliteAPI.Events.Startup
 {
     /// <summary>
-    /// This event is written when loading from the main menu.
+    /// This event is written when the game has started.
     /// </summary>
     public class MaterialsInfo : EventBase
     {

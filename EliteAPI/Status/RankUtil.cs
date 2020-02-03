@@ -156,5 +156,14 @@
                     return "";
             }
         }
+
+        public static string Repuation(float alliance)
+        {
+            if (alliance <= -90) { return "Hostile"; }
+            if (alliance <= -35) { return "Unfriendly"; }
+            if (alliance <= 4) { return "Neutral"; }
+            if (alliance <= 35) { return "Cordial"; }
+            return alliance <= 90 ? "Friendly" : "Allied";
+        }
     }
 }

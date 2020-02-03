@@ -8,6 +8,8 @@ namespace EliteAPI.Events
     /// </summary>
     public class LoadGameInfo : EventBase
     {
+        internal LoadGameInfo() { }
+
         /// <summary>
         /// The Frontier ID of the commander.
         /// </summary>

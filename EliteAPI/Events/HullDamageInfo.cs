@@ -5,7 +5,7 @@ namespace EliteAPI.Events
     public class HullDamageInfo : EventBase
     {
         [JsonProperty("Health")]
-        public double Health { get; internal set; }
+        public float Health { get; internal set; }
 
         [JsonProperty("PlayerPilot")]
         public bool PlayerPilot { get; internal set; }

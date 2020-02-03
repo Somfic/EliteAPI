@@ -26,10 +26,10 @@ namespace EliteAPI.Events
         public string PilotRank { get; internal set; }
 
         [JsonProperty("ShieldHealth")]
-        public double ShieldHealth { get; internal set; }
+        public float ShieldHealth { get; internal set; }
 
         [JsonProperty("HullHealth")]
-        public double HullHealth { get; internal set; }
+        public float HullHealth { get; internal set; }
 
         [JsonProperty("Faction")]
         public string Faction { get; internal set; }
@@ -47,7 +47,7 @@ namespace EliteAPI.Events
         public string SubsystemLocalised { get; internal set; }
 
         [JsonProperty("SubsystemHealth")]
-        public double SubsystemHealth { get; internal set; }
+        public float SubsystemHealth { get; internal set; }
 
         internal static ShipTargetedInfo Process(string json, EliteDangerousAPI api)
         {

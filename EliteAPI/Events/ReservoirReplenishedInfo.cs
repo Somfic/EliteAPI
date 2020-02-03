@@ -12,10 +12,10 @@ namespace EliteAPI.Events
         public string Event { get; set; }
 
         [JsonProperty("FuelMain")]
-        public double FuelMain { get; set; }
+        public float FuelMain { get; set; }
 
         [JsonProperty("FuelReservoir")]
-        public double FuelReservoir { get; set; }
+        public float FuelReservoir { get; set; }
 
         internal static ReservoirReplenishedInfo Process(string json, EliteDangerousAPI api)
         {

@@ -24,7 +24,7 @@
                 else if (type.Contains("long")) { return VarType.Int; }
                 else if (type.Contains("string")) { return VarType.String; }
                 else if (type.Contains("decimal")) { return VarType.Decimal; }
-                else if (type.Contains("double")) { return VarType.Decimal; }
+                else if (type.Contains("float")) { return VarType.Decimal; }
                 else if (type.Contains("float")) { return VarType.Decimal; }
                 else if (type.Contains("bool")) { return VarType.Bool; }
                 else { return VarType.Unknown; }

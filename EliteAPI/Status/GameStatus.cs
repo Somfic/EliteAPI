@@ -68,7 +68,7 @@ namespace EliteAPI.Status
         public bool NightVision => GetFlag(28);
         public string GameMode { get; internal set; }
         public bool InNoFireZone { get; internal set; }
-        public double JumpRange { get; internal set; }
+        public float JumpRange { get; internal set; }
         public bool IsRunning => Flags != 0;
         public bool InMainMenu { get; internal set; }
         public string MusicTrack { get; internal set; }

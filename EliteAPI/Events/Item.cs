@@ -23,6 +23,6 @@ namespace EliteAPI.Events
         public long Level { get; internal set; }
 
         [JsonProperty("Quality")]
-        public double Quality { get; internal set; }
+        public float Quality { get; internal set; }
     }
 }

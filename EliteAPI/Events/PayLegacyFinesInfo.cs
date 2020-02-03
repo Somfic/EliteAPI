@@ -8,7 +8,7 @@ namespace EliteAPI.Events
         public long Amount { get; internal set; }
 
         [JsonProperty("BrokerPercentage")]
-        public double BrokerPercentage { get; internal set; }
+        public float BrokerPercentage { get; internal set; }
 
         internal static PayLegacyFinesInfo Process(string json, EliteDangerousAPI api)
         {

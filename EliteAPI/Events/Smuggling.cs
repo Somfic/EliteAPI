@@ -14,7 +14,7 @@ namespace EliteAPI.Events
         public long ResourcesSmuggled { get; internal set; }
 
         [JsonProperty("Average_Profit")]
-        public double AverageProfit { get; internal set; }
+        public float AverageProfit { get; internal set; }
 
         [JsonProperty("Highest_Single_Transaction")]
         public long HighestSingleTransaction { get; internal set; }

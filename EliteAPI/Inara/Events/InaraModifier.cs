@@ -9,7 +9,7 @@ namespace EliteAPI.Inara.Events
         [JsonProperty("value")]
         public decimal Value { get; internal set; }
         [JsonProperty("originalValue", NullValueHandling = NullValueHandling.Ignore)]
-        public double? OriginalValue { get; internal set; }
+        public float? OriginalValue { get; internal set; }
         [JsonProperty("lessIsGood", NullValueHandling = NullValueHandling.Ignore)]
         public bool? LessIsGood { get; internal set; }
     }

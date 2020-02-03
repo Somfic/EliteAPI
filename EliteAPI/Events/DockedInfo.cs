@@ -52,7 +52,7 @@ namespace EliteAPI.Events
         public List<StationEconomy> StationEconomies { get; internal set; }
 
         [JsonProperty("DistFromStarLS")]
-        public double DistFromStarLs { get; internal set; }
+        public float DistFromStarLs { get; internal set; }
 
         internal static DockedInfo Process(string json, EliteDangerousAPI api)
         {

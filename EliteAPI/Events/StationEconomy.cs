@@ -11,6 +11,6 @@ namespace EliteAPI.Events
         public string NameLocalised { get; internal set; }
 
         [JsonProperty("Proportion")]
-        public double Proportion { get; internal set; }
+        public float Proportion { get; internal set; }
     }
 }

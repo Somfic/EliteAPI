@@ -1,4 +1,5 @@
 using System;
+using EliteAPI.Events.Startup;
 
 namespace EliteAPI.Events
 {
@@ -2077,6 +2078,16 @@ namespace EliteAPI.Events
         internal FSDJumpInfo InvokeFSDJumpEvent(FSDJumpInfo arg)
         {
             FSDJumpEvent?.Invoke(null, arg);
+
+            return arg;
+        }
+
+        //ClearSavedGame
+        public event EventHandler<ClearSavedGameInfo> ClearSavedGameEvent;
+
+        internal ClearSavedGameInfo InvokeClearSavedGameEvent(ClearSavedGameInfo arg)
+        {
+            ClearSavedGameEvent?.Invoke(null, arg);
 
             return arg;
         }

@@ -22,7 +22,7 @@ namespace EliteAPI.Events
         public long SystemAddress { get; internal set; }
 
         [JsonProperty("StarPos")]
-        public List<double> StarPos { get; internal set; }
+        public List<float> StarPos { get; internal set; }
 
         [JsonProperty("SystemAllegiance")]
         public string SystemAllegiance { get; internal set; }

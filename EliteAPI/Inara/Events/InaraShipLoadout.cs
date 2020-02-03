@@ -11,7 +11,7 @@ namespace EliteAPI.Inara.Events
         [JsonProperty("itemValue")]
         public long ItemValue { get; internal set; }
         [JsonProperty("itemHealth")]
-        public double ItemHealth { get; internal set; }
+        public float ItemHealth { get; internal set; }
         [JsonProperty("isOn")]
         public bool IsOn { get; internal set; }
         [JsonProperty("isHot")]

@@ -35,7 +35,7 @@ namespace EliteAPI.Events
         public long TotalItemsToDeliver { get; internal set; }
 
         [JsonProperty("Progress")]
-        public double Progress { get; internal set; }
+        public float Progress { get; internal set; }
 
         internal static CargoDepotInfo Process(string json, EliteDangerousAPI api)
         {

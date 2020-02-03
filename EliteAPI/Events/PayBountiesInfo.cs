@@ -17,7 +17,7 @@ namespace EliteAPI.Events
         public long ShipId { get; internal set; }
 
         [JsonProperty("BrokerPercentage")]
-        public double BrokerPercentage { get; internal set; }
+        public float BrokerPercentage { get; internal set; }
 
         internal static PayBountiesInfo Process(string json, EliteDangerousAPI api)
         {

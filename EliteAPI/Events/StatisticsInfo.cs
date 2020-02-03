@@ -24,7 +24,7 @@ namespace EliteAPI.Events
         public Mining Mining { get; internal set; }
 
         [JsonProperty("Exploration")]
-        public Dictionary<string, double> Exploration { get; internal set; }
+        public Dictionary<string, float> Exploration { get; internal set; }
 
         [JsonProperty("Passengers")]
         public PassengersStatistics Passengers { get; internal set; }
@@ -48,7 +48,7 @@ namespace EliteAPI.Events
         public MaterialTraderStats MaterialTraderStats { get; internal set; }
 
         [JsonProperty("CQC")]
-        public Dictionary<string, double> Cqc { get; internal set; }
+        public Dictionary<string, float> Cqc { get; internal set; }
 
         internal static StatisticsInfo Process(string json, EliteDangerousAPI api)
         {

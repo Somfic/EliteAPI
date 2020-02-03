@@ -38,6 +38,6 @@ namespace EliteAPI.Events
         public long? Level { get; internal set; }
 
         [JsonProperty("Quality", NullValueHandling = NullValueHandling.Ignore)]
-        public double? Quality { get; internal set; }
+        public float? Quality { get; internal set; }
     }
 }

@@ -20,16 +20,16 @@ namespace EliteAPI.Events
         public string Body { get; internal set; }
 
         [JsonProperty("Latitude")]
-        public double Latitude { get; internal set; }
+        public float Latitude { get; internal set; }
 
         [JsonProperty("Longitude")]
-        public double Longitude { get; internal set; }
+        public float Longitude { get; internal set; }
 
         [JsonProperty("Heading")]
         public long Heading { get; internal set; }
 
         [JsonProperty("Altitude")]
-        public double Altitude { get; internal set; }
+        public float Altitude { get; internal set; }
 
         internal static ScreenshotInfo Process(string json, EliteDangerousAPI api)
         {

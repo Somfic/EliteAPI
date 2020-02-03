@@ -12,7 +12,7 @@ namespace EliteAPI.Events
         public long SystemAddress { get; internal set; }
 
         [JsonProperty("StarPos")]
-        public List<double> StarPos { get; internal set; }
+        public List<float> StarPos { get; internal set; }
 
         [JsonProperty("SystemAllegiance")]
         public string SystemAllegiance { get; internal set; }
@@ -51,13 +51,13 @@ namespace EliteAPI.Events
         public string PowerplayState { get; internal set; }
 
         [JsonProperty("JumpDist")]
-        public double JumpDist { get; internal set; }
+        public float JumpDist { get; internal set; }
 
         [JsonProperty("FuelUsed")]
-        public double FuelUsed { get; internal set; }
+        public float FuelUsed { get; internal set; }
 
         [JsonProperty("FuelLevel")]
-        public double FuelLevel { get; internal set; }
+        public float FuelLevel { get; internal set; }
 
         [JsonProperty("Factions")]
         public List<FSDFaction> Factions { get; internal set; }

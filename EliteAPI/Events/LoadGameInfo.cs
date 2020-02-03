@@ -29,10 +29,10 @@ namespace EliteAPI.Events
         public string ShipIdent { get; internal set; }
 
         [JsonProperty("FuelLevel")]
-        public double FuelLevel { get; internal set; }
+        public float FuelLevel { get; internal set; }
 
         [JsonProperty("FuelCapacity")]
-        public double FuelCapacity { get; internal set; }
+        public float FuelCapacity { get; internal set; }
 
         [JsonProperty("GameMode")]
         public string GameMode { get; internal set; }

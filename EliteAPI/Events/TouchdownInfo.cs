@@ -8,10 +8,10 @@ namespace EliteAPI.Events
         public bool PlayerControlled { get; internal set; }
 
         [JsonProperty("Latitude")]
-        public double Latitude { get; internal set; }
+        public float Latitude { get; internal set; }
 
         [JsonProperty("Longitude")]
-        public double Longitude { get; internal set; }
+        public float Longitude { get; internal set; }
 
         internal static TouchdownInfo Process(string json, EliteDangerousAPI api)
         {

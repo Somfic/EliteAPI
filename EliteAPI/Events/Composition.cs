@@ -5,12 +5,12 @@ namespace EliteAPI.Events
     public class Composition
     {
         [JsonProperty("Ice")]
-        public double Ice { get; internal set; }
+        public float Ice { get; internal set; }
 
         [JsonProperty("Rock")]
-        public double Rock { get; internal set; }
+        public float Rock { get; internal set; }
 
         [JsonProperty("Metal")]
-        public double Metal { get; internal set; }
+        public float Metal { get; internal set; }
     }
 }

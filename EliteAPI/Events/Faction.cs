@@ -15,7 +15,7 @@ namespace EliteAPI.Events
         public string Government { get; internal set; }
 
         [JsonProperty("Influence")]
-        public double Influence { get; internal set; }
+        public float Influence { get; internal set; }
 
         [JsonProperty("Allegiance")]
         public string Allegiance { get; internal set; }
@@ -27,7 +27,7 @@ namespace EliteAPI.Events
         public string HappinessLocalised { get; internal set; }
 
         [JsonProperty("MyReputation")]
-        public double MyReputation { get; internal set; }
+        public float MyReputation { get; internal set; }
 
         [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
         public List<ActiveState> ActiveStates { get; internal set; }

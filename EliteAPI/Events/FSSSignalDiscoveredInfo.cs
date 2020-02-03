@@ -32,7 +32,7 @@ namespace EliteAPI.Events
         public long ThreatLevel { get; internal set; }
 
         [JsonProperty("TimeRemaining")]
-        public double TimeRemaining { get; internal set; }
+        public float TimeRemaining { get; internal set; }
 
         internal static FSSSignalDiscoveredInfo Process(string json, EliteDangerousAPI api)
         {

@@ -20,7 +20,7 @@ namespace EliteAPI.Events
         public long ShipMarketId { get; internal set; }
 
         [JsonProperty("Distance")]
-        public double Distance { get; internal set; }
+        public float Distance { get; internal set; }
 
         [JsonProperty("TransferPrice")]
         public long TransferPrice { get; internal set; }

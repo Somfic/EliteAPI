@@ -5,7 +5,7 @@ namespace EliteAPI.Events
     public class JetConeBoostInfo : EventBase
     {
         [JsonProperty("BoostValue")]
-        public double BoostValue { get; internal set; }
+        public float BoostValue { get; internal set; }
 
         internal static JetConeBoostInfo Process(string json, EliteDangerousAPI api)
         {

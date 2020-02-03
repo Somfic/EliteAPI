@@ -18,7 +18,7 @@ namespace EliteAPI.Events
         public List<Parent> Parents { get; internal set; }
 
         [JsonProperty("DistanceFromArrivalLS")]
-        public double DistanceFromArrivalLs { get; internal set; }
+        public float DistanceFromArrivalLs { get; internal set; }
 
         [JsonProperty("TidalLock")]
         public bool TidalLock { get; internal set; }
@@ -39,19 +39,19 @@ namespace EliteAPI.Events
         public string Volcanism { get; internal set; }
 
         [JsonProperty("MassEM")]
-        public double MassEm { get; internal set; }
+        public float MassEm { get; internal set; }
 
         [JsonProperty("Radius")]
-        public double Radius { get; internal set; }
+        public float Radius { get; internal set; }
 
         [JsonProperty("SurfaceGravity")]
-        public double SurfaceGravity { get; internal set; }
+        public float SurfaceGravity { get; internal set; }
 
         [JsonProperty("SurfaceTemperature")]
-        public double SurfaceTemperature { get; internal set; }
+        public float SurfaceTemperature { get; internal set; }
 
         [JsonProperty("SurfacePressure")]
-        public double SurfacePressure { get; internal set; }
+        public float SurfacePressure { get; internal set; }
 
         [JsonProperty("Landable")]
         public bool Landable { get; internal set; }
@@ -63,25 +63,25 @@ namespace EliteAPI.Events
         public Composition Composition { get; internal set; }
 
         [JsonProperty("SemiMajorAxis")]
-        public double SemiMajorAxis { get; internal set; }
+        public float SemiMajorAxis { get; internal set; }
 
         [JsonProperty("Eccentricity")]
-        public double Eccentricity { get; internal set; }
+        public float Eccentricity { get; internal set; }
 
         [JsonProperty("OrbitalInclination")]
-        public double OrbitalInclination { get; internal set; }
+        public float OrbitalInclination { get; internal set; }
 
         [JsonProperty("Periapsis")]
-        public double Periapsis { get; internal set; }
+        public float Periapsis { get; internal set; }
 
         [JsonProperty("OrbitalPeriod")]
-        public double OrbitalPeriod { get; internal set; }
+        public float OrbitalPeriod { get; internal set; }
 
         [JsonProperty("RotationPeriod")]
-        public double RotationPeriod { get; internal set; }
+        public float RotationPeriod { get; internal set; }
 
         [JsonProperty("AxialTilt")]
-        public double AxialTilt { get; internal set; }
+        public float AxialTilt { get; internal set; }
 
         [JsonProperty("Rings")]
         public List<Ring> Rings { get; internal set; }

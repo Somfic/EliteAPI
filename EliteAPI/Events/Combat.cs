@@ -8,7 +8,7 @@ namespace EliteAPI.Events
         public long BountiesClaimed { get; internal set; }
 
         [JsonProperty("Bounty_Hunting_Profit")]
-        public double BountyHuntingProfit { get; internal set; }
+        public float BountyHuntingProfit { get; internal set; }
 
         [JsonProperty("Combat_Bonds")]
         public long CombatBonds { get; internal set; }

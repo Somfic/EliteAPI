@@ -11,12 +11,12 @@ namespace EliteAPI.Events
         public string RingClass { get; internal set; }
 
         [JsonProperty("MassMT")]
-        public double MassMt { get; internal set; }
+        public float MassMt { get; internal set; }
 
         [JsonProperty("InnerRad")]
-        public double InnerRad { get; internal set; }
+        public float InnerRad { get; internal set; }
 
         [JsonProperty("OuterRad")]
-        public double OuterRad { get; internal set; }
+        public float OuterRad { get; internal set; }
     }
 }

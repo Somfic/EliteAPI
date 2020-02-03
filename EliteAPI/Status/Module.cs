@@ -9,7 +9,7 @@ namespace EliteAPI.Status
         [JsonProperty("Item")]
         public string Item { get; internal set; }
         [JsonProperty("Power")]
-        public double Power { get; internal set; }
+        public float Power { get; internal set; }
         [JsonProperty("Priority", NullValueHandling = NullValueHandling.Ignore)]
         public long? Priority { get; internal set; }
     }

@@ -5,7 +5,7 @@ namespace EliteAPI.Events
     public class FSSDiscoveryScanInfo : EventBase
     {
         [JsonProperty("Progress")]
-        public double Progress { get; internal set; }
+        public float Progress { get; internal set; }
 
         [JsonProperty("BodyCount")]
         public long BodyCount { get; internal set; }

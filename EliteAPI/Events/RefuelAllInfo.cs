@@ -8,7 +8,7 @@ namespace EliteAPI.Events
         public long Cost { get; internal set; }
 
         [JsonProperty("Amount")]
-        public double Amount { get; internal set; }
+        public float Amount { get; internal set; }
 
         internal static RefuelAllInfo Process(string json, EliteDangerousAPI api)
         {

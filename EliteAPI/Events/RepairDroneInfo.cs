@@ -5,10 +5,10 @@ namespace EliteAPI.Events
     public class RepairDroneInfo : EventBase
     {
         [JsonProperty("HullRepaired")]
-        public double HullRepaired { get; internal set; }
+        public float HullRepaired { get; internal set; }
 
         [JsonProperty("CockpitRepaired")]
-        public double CockpitRepaired { get; internal set; }
+        public float CockpitRepaired { get; internal set; }
 
         internal static RepairDroneInfo Process(string json, EliteDangerousAPI api)
         {

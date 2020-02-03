@@ -5,16 +5,16 @@ namespace EliteAPI.Events
     public class ReputationInfo : EventBase
     {
         [JsonProperty("Empire")]
-        public double Empire { get; internal set; }
+        public float Empire { get; internal set; }
 
         [JsonProperty("Federation")]
-        public double Federation { get; internal set; }
+        public float Federation { get; internal set; }
 
         [JsonProperty("Independent")]
-        public double Independent { get; internal set; }
+        public float Independent { get; internal set; }
 
         [JsonProperty("Alliance")]
-        public double Alliance { get; internal set; }
+        public float Alliance { get; internal set; }
 
         internal static ReputationInfo Process(string json, EliteDangerousAPI api)
         {

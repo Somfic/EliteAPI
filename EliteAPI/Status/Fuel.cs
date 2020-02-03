@@ -5,9 +5,9 @@ namespace EliteAPI.Status
     public partial class Fuel
     {
         [JsonProperty("FuelMain")]
-        public double FuelMain { get; internal set; }
+        public float FuelMain { get; internal set; }
         [JsonProperty("FuelReservoir")]
-        public double FuelReservoir { get; internal set; }
-        public double MaxFuel { get; internal set; }
+        public float FuelReservoir { get; internal set; }
+        public float MaxFuel { get; internal set; }
     }
 }

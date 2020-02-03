@@ -3,6 +3,7 @@ using EliteAPI.Discord;
 using EliteAPI.Status;
 using Newtonsoft.Json;
 using Somfic.Logging;
+using Somfic.Logging.Handlers;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -56,7 +57,7 @@ namespace EliteAPI
         /// <summary>
         /// The version of EliteAPI.
         /// </summary>
-        public static string Version => "2.3.1.0";
+        public string Version => "2.3.0.0";
 
         /// <summary>
         /// Whether the API is currently running.
@@ -94,6 +95,11 @@ namespace EliteAPI
         public ShipModules Modules => ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this);
 
         /// <summary>
+        /// Holds the ship's current materials situation.
+        /// </summary>
+        public Events.MaterialsInfo Materials { get; internal set; }
+
+        /// <summary>
         /// Holds information on all key bindings in the game set by the user.
         /// </summary>
         public UserBindings Bindings
@@ -124,6 +130,7 @@ namespace EliteAPI
         internal StatusWatcher StatusWatcher { get; set; }
         internal CargoWatcher CargoWatcher { get; set; }
         internal JournalParser JournalParser { get; set; }
+        internal MaterialWatcher MaterialWatcher { get; set; }
 
         /// <summary>
         /// Rich presence service for Discord.
@@ -199,9 +206,9 @@ namespace EliteAPI
         {
             Logger.Log(Severity.Debug, "Checking for updates from GitHub.");
 
-            WebClient webClient = new WebClient();
             try
             {
+                WebClient webClient = new WebClient();
                 WebClient versionChecker = webClient;
                 string latestVersionString = versionChecker.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI/versioncontrol.version").Trim();
 
@@ -219,7 +226,6 @@ namespace EliteAPI
                 if (hasBiggerVersion) { Logger.Log($"A new update ({latestVersionString}) is available. Visit github.com/EliteAPI/EliteAPI to download the latest version."); return true; } else { Logger.Log(Severity.Debug, "EliteAPI is up-to-date with the latest version."); }
             }
             catch (Exception ex) { Logger.Log(Severity.Debug, "Could not check for updates.", ex); }
-            finally { webClient.Dispose(); }
 
             return false;
         }
@@ -237,7 +243,8 @@ namespace EliteAPI
             try { StatusWatcher = new StatusWatcher(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'StatusWatcher'.", ex); }
             try { CargoWatcher = new CargoWatcher(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'CargoWatcher'.", ex); }
             try { Status = EliteAPI.Status.GameStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'Status'.", ex); }
-            try { JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'JournalParser'.", ex); } 
+            try { JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'JournalParser'.", ex); }
+            try { MaterialWatcher = new MaterialWatcher(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'MaterialWatcher'.", ex); }
             JournalParser.processedLogs = new List<string>();
         }
 
@@ -263,28 +270,20 @@ namespace EliteAPI
             //Check for updates.
             CheckForUpdate();
 
-            Logger.Log(Severity.Debug, "Checking journal directory.");
+            Logger.Log(Severity.Debug,"Checking journal directory.");
             if (!Directory.Exists(JournalDirectory.FullName))
             {
                 if (JournalDirectory.FullName != StandardDirectory.FullName)
                 {
-                    Logger.Log(Severity.Warning, $"{JournalDirectory.Name} does not exist.",
-                        new DirectoryNotFoundException($"'{JournalDirectory.FullName}' could not be found."));
-                    Logger.Log(Severity.Debug, "Trying standard journal directory instead.");
+                    Logger.Log(Severity.Warning, $"{JournalDirectory.Name} does not exist.", new DirectoryNotFoundException($"'{JournalDirectory.FullName}' could not be found."));
+                    Logger.Log(Severity.Debug, "Trying standard journal directory.");
                 }
-
                 if (!Directory.Exists(EliteDangerousAPI.StandardDirectory.FullName))
                 {
-                    OnError?.Invoke(this,
-                        new Tuple<string, Exception>(
-                            "The default journal directory does not exist on this machine. This error usually occurs when Elite: Dangerous hasn't been run on this machine yet.",
-                            new DirectoryNotFoundException($"'{StandardDirectory.FullName}' could not be found.")));
+                    OnError?.Invoke(this, new Tuple<string, Exception>("The default journal directory does not exist on this machine. This error usually occurs when Elite: Dangerous hasn't been run on this machine yet.", new DirectoryNotFoundException($"'{StandardDirectory.FullName}' could not be found.")));
                     return;
                 }
-
-                JournalDirectory = StandardDirectory;
             }
-
             Logger.Log($"Journal directory set to '{JournalDirectory}'.");
 
             //Mark the API as running.
@@ -292,7 +291,7 @@ namespace EliteAPI
 
             //We'll process the journal one time first, to catch up.
             //Select the last edited Journal file.
-            FileInfo journalFile;
+            FileInfo journalFile = null;
 
             //Find the last edited Journal file.
             try
@@ -359,7 +358,7 @@ namespace EliteAPI
 
             //Process the journal file.
             if (!SkipCatchUp) { Logger.Log(Severity.Debug, "Catching up with past events from this session."); }
-            JournalParser.ProcessJournal(journalFile, SkipCatchUp, false, true);
+            JournalParser.ProcessJournal(journalFile, SkipCatchUp, false);
             if (!SkipCatchUp) { Logger.Log(Severity.Debug, "Catchup on past events completed."); }
 
             //Go async.
@@ -370,7 +369,7 @@ namespace EliteAPI
                 {
                     //Select the last edited Journal file.
                     FileInfo newJournalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
-                    if (journalFile.FullName != newJournalFile.FullName) { Logger.Log(Severity.Info, $"Switched to '{newJournalFile}'."); JournalParser.processedLogs.Clear(); }
+                    if (journalFile.FullName != newJournalFile.FullName) { Logger.Log(Severity.Debug, $"Switched to '{newJournalFile}'."); JournalParser.processedLogs.Clear(); }
                     journalFile = newJournalFile;
 
                     //Process the journal file.
@@ -421,11 +420,6 @@ namespace EliteAPI
             OnQuit?.Invoke(this, EventArgs.Empty);
         }
 
-        internal void TriggerOnLoad(string message, float percentage)
-        {
-            OnLoad?.Invoke(this, new Tuple<string, float>(message, percentage));
-        }
-
         /// <summary>
         /// Gets triggered when EliteAPI has successfully loaded up.
         /// </summary>
@@ -440,10 +434,5 @@ namespace EliteAPI
         /// Gets triggered when EliteAPI could not successfully load up.
         /// </summary>
         public event EventHandler<Tuple<string, Exception>> OnError;
-
-        /// <summary>
-        /// Gets triggered when EliteAPI is starting up.
-        /// </summary>
-        public event EventHandler<Tuple<string, float>> OnLoad;
     }
 }

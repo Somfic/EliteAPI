@@ -13,9 +13,9 @@ namespace EliteAPI.Status
         private EliteDangerousAPI api;
         private FileSystemWatcher statusWatcher;
         private bool InNoFireZone = false;
-        private float JumpRange = -1;
-        private float MaxFuel = -1;
-        private GameModeType GameMode = GameModeType.Solo;
+        private double JumpRange = -1;
+        private double MaxFuel = -1;
+        private string GameMode = "";
         private bool InMainMenu = false;
         private string MusicTrack = "";
         internal StatusWatcher(EliteDangerousAPI api)

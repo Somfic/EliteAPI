@@ -18,4 +18,13 @@ namespace EliteAPI.Inara.Events
         [JsonProperty("rankProgress")]
         public decimal RankProgress { get; internal set; }
     }
+    public enum RankType
+    {
+        Combat,
+        Trade,
+        Explore,
+        CQC,
+        Federation,
+        Empire
+    }
 }

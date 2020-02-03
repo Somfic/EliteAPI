@@ -2,31 +2,29 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyVersion>2.3.1.0</AssemblyVersion>
-    <FileVersion>2.3.1.0</FileVersion>
+    <AssemblyVersion>2.3.0.0</AssemblyVersion>
+    <FileVersion>2.3.0.0</FileVersion>
     <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
-    <PackageIconUrl></PackageIconUrl>
+    <PackageIconUrl>https://i.imgur.com/keDXwjY.png</PackageIconUrl>
     <RepositoryType>Public</RepositoryType>
-    <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic Frontier</PackageTags>
+    <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <Description>A powerful event based API for Elite: Dangerous.
 VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     <Copyright>Somfic 2019</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.3.1.0-alpha</Version>
+    <Version>2.3.0.0</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <PackageIcon>logo_gradient_small.jpg</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>EliteAPI.xml</DocumentationFile>
-    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\EliteAPI.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Costura.Fody" Version="4.1.0" />
-    <PackageReference Include="Fody" Version="6.0.6">
+    <PackageReference Include="Fody" Version="6.0.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -37,7 +35,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Somfic" Version="1.1.4" />
+    <PackageReference Include="Somfic" Version="1.1.3" />
 
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
@@ -54,15 +52,8 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     </Reference>
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="..\Icons\logo_gradient_small.jpg">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="REM copy &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\lib\vmAPI.dll&quot; &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\bin\Debug\netstandard2.0\vmAPI.dll&quot;&#xD;&#xA;" />
+    <Exec Command="copy &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\lib\vmAPI.dll&quot; &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\bin\Debug\netstandard2.0\vmAPI.dll&quot;&#xD;&#xA;" />
   </Target>
 
 </Project>

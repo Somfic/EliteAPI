@@ -1,7 +1,7 @@
 
-## Check the [documentation](https://somfic.github.io/docs/EliteAPI/) for information on installation, usage and more.
+## Check the [documentation](https://eliteapi.github.io/EliteAPI-docs/) for information on installation, usage and more.
 
-<img src="https://github.com/EliteAPI/EliteAPI/blob/master/Icons/logo_gradient_shine.jpg?raw=true" align="right"
+<img src="https://i.imgur.com/keDXwjY.png" align="right"
      title="EliteAPI by Somfic" width="280" height="280">
 # EliteAPI
 A powerful event based API for [Elite: Dangerous](https://www.elitedangerous.com/) that hooks into the [Player Journal](http://edcodex.info/?m=doc) and other log files. Created by CMDR [Somfic](https://github.com/Somfic).
@@ -14,7 +14,7 @@ EliteAPI's goal is to greatly reduce the time it takes for programmers to hook i
 
 EliteAPI currently supports all *180* possible events, as well as *real time tracking* of items like the landing gear, cargo scoop, night vision, mass lock, etc, which are all available in VoiceAttack and VoiceMacro from the get-go. It also has an *[Inara](https://inara.cz/inara-api/) API* and *[Discord Rich Presence](https://discordapp.com/rich-presence) client* built in. As stated before EliteAPI comes as both a .NET library as a VoiceAttack & VoiceMacro plugin, giving you a lot of possibilities to create tools you otherwise would need months for to create.
 
-The project is completely open-source and is hosted on [GitHub](https://github.com/EliteAPI/EliteAPI). The .NET library currently has more than 10,000 downloads on [NuGet](https://www.nuget.org/packages/EliteAPI/) already!
+The project is completely open-source and is hosted on [GitHub](https://github.com/EliteAPI/EliteAPI). The .NET library currently has more than 2,000 downloads on [NuGet](https://www.nuget.org/packages/EliteAPI/) already!
 
 - You can download the *.NET library* via [GitHub](https://github.com/EliteAPI/EliteAPI/releases) or [NuGet](https://www.nuget.org/packages/EliteAPI/).
 - You can download the *VoiceAttack plugin* (codename *EliteVA*) via [GitHub](https://github.com/EliteAPI/EliteAPI/releases) (*EliteVA-setup.exe*).

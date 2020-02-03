@@ -21,4 +21,11 @@ namespace EliteAPI.Inara.Events
         [JsonProperty("rankValue")]
         public long RankValue { get; internal set; }
     }
+    public enum RankStage
+    {
+        Invited,
+        Acquainted,
+        Unlocked,
+        Barred
+    }
 }

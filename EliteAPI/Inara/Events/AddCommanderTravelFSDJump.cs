@@ -10,7 +10,7 @@ namespace EliteAPI.Inara.Events
         [JsonProperty("starsystemName")]
         public string StarsystemName { get; internal set; }
         [JsonProperty("jumpDistance")]
-        public float JumpDistance { get; internal set; }
+        public double JumpDistance { get; internal set; }
         [JsonProperty("shipType")]
         public string ShipType { get; internal set; }
         [JsonProperty("shipGameID")]

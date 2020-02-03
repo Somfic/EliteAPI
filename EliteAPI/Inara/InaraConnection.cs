@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using Newtonsoft.Json;
@@ -27,5 +28,54 @@ namespace EliteAPI.Inara
             StreamReader reader = new StreamReader(response.GetResponseStream());
             return reader.ReadToEnd();
         }
+    }
+    public class InaraEntry
+    {
+        public InaraEntry(InaraConfiguration configuration, List<InaraEvent> events)
+        {
+            Configuration = configuration;
+            Events = events;
+        }
+        [JsonProperty("header")]
+        public InaraConfiguration Configuration { get; internal set; }
+        [JsonProperty("events")]
+        public List<InaraEvent> Events { get; internal set; }
+    }
+    public class InaraConfiguration
+    {
+        public InaraConfiguration(string apiKey, string appName, string appVersion)
+        {
+            ApiKey = apiKey;
+            AppName = appName;
+            AppVersion = appVersion;
+        }
+        [JsonProperty("appName")]
+        public string AppName { get; internal set; }
+        [JsonProperty("appVersion")]
+        public string AppVersion { get; internal set; }
+        [JsonProperty("isDeveloped")]
+        public bool? IsDeveloped { get; internal set; }
+        [JsonProperty("APIkey")]
+        public string ApiKey { get; internal set; }
+        [JsonProperty("commanderName")]
+        public string CommanderName { get; internal set; }
+        [JsonProperty("commanderFrontierID")]
+        public string CommanderFrontierId { get; internal set; }
+    }
+    public class InaraEvent
+    {
+        public InaraEvent(IInaraEventData eventData)
+        {
+            EventData = eventData;
+        }
+        [JsonProperty("eventName")]
+        string EventName { get => EventData.GetType().Name; }
+        [JsonProperty("eventTimestamp")]
+        string EventTimestamp { get => DateTime.UtcNow.ToString("o"); }
+        [JsonProperty("eventData")]
+        IInaraEventData EventData { get; set; }
+    }
+    public interface IInaraEventData
+    {
     }
 }

@@ -21,4 +21,16 @@ namespace EliteAPI.Inara.Events
         [JsonProperty("rewardMaterials")]
         public List<InaraReward> RewardMaterials { get; internal set; }
     }
+    public class InaraReward
+    {
+        [JsonProperty("itemName")]
+        public string ItemName { get; internal set; }
+        [JsonProperty("itemCount")]
+        public long ItemCount { get; internal set; }
+    }
+    public class InaraRewardPermit
+    {
+        [JsonProperty("starsystemName")]
+        public string StarsystemName { get; internal set; }
+    }
 }

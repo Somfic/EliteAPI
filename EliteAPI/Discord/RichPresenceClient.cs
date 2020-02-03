@@ -14,7 +14,6 @@ namespace EliteAPI.Discord
         private DiscordRpcClient rpc;
         private readonly EliteDangerousAPI api;
         private bool justDocked = false;
-        private DateTime start;
 
         /// <summary>
         /// Whether the rich presence is running.
@@ -31,7 +30,6 @@ namespace EliteAPI.Discord
         public RichPresenceClient(EliteDangerousAPI api)
         {
             this.api = api;
-            start = DateTime.Now;
         }
 
 
@@ -43,7 +41,6 @@ namespace EliteAPI.Discord
         {
             this.api = api;
             clientID = rpcID;
-            start = DateTime.Now;
         }
         /// <summary>
         /// Set a custom ID to be used, for when you have your own RPC registered with Discord.
@@ -75,8 +72,7 @@ namespace EliteAPI.Discord
                     LargeImageText = presence.IconText,
                     SmallImageKey = presence.IconTwo,
                     SmallImageText = presence.IconTextTwo
-                },
-                //Timestamps = new Timestamps() { Start = start, End = null}
+                }
             };
             rpc.SetPresence(discordPresence);
             return this;

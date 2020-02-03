@@ -53,4 +53,10 @@ namespace EliteAPI.Inara.Events
         [JsonProperty("passengerIsWanted")]
         public bool? PassengerIsWanted { get; internal set; }
     }
+    public enum GainType
+    {
+        Low,
+        Med,
+        High
+    }
 }

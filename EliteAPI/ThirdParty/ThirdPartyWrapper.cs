@@ -50,7 +50,7 @@ namespace EliteAPI.ThirdParty
             List<Variable> variables = new List<Variable>
             {
                 //Add version variable.
-                new Variable("Version", EliteDangerousAPI.Version)
+                new Variable("Version", EliteAPI.Version)
             };
             variables.AddRange(from f in EliteAPI.Commander.GetType().GetProperties() where f.Name != "Statistics" select new Variable(f.Name, f.GetValue(EliteAPI.Commander)));
             //Add commander variables.
@@ -227,6 +227,38 @@ namespace EliteAPI.ThirdParty
                 }
             }
             catch (Exception ex) { EliteAPI.Logger.Log(Severity.Warning, $"There was a problem while trying to process '{content}'.", ex); }
+        }
+    }
+    public class Variable
+    {
+        public Variable(string name, object value)
+        {
+            Name = name;
+            Value = value;
+        }
+        public enum VarType { String, Bool, Int, Decimal, Unknown }
+        public string Name { get; }
+        public object Value { get; }
+        public VarType Type => GetVarType(Value);
+        private VarType GetVarType(object s)
+        {
+            try
+            {
+                string type = s.GetType()
+                    .ToString()
+                    .Replace("System.", "")
+                    .Replace("Collections.Generic.","")
+                    .ToLower();
+                if (type.Contains("int")) { return VarType.Int; }
+                else if (type.Contains("long")) { return VarType.Int; }
+                else if (type.Contains("string")) { return VarType.String; }
+                else if (type.Contains("decimal")) { return VarType.Decimal; }
+                else if (type.Contains("double")) { return VarType.Decimal; }
+                else if (type.Contains("float")) { return VarType.Decimal; }
+                else if (type.Contains("bool")) { return VarType.Bool; }
+                else { return VarType.Unknown; }
+            }
+            catch { return VarType.Unknown; }
         }
     }
 }

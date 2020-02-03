@@ -1,29 +1,22 @@
-﻿namespace EliteAPI.Events
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace EliteAPI.Events
 {
-    public class StatusEvent : EventBase
+    public class StatusEvent : IEvent
     {
         public StatusEvent(string Event, dynamic Value)
         {
             this.Event = Event;
-            @event = Event;
+            this.@event = Event;
             this.Value = Value;
-            value = Value;
+            this.value = Value;
         }
-
         public string Event { get; set; }
-
-        public string @event
-        {
-            get => Event;
-            set => Event = value;
-        }
-
+        public string @event { get => Event; set => Event = value; }
         public dynamic Value { get; set; }
-
-        public dynamic value
-        {
-            get => Value;
-            set => Value = value;
-        }
+        public dynamic value { get => Value; set => Value = value; }
     }
 }

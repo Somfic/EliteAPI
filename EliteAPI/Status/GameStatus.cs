@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using EliteAPI.Events;
 using Newtonsoft.Json;
 using Somfic.Logging;
 
@@ -66,7 +67,7 @@ namespace EliteAPI.Status
         public bool InSRV => GetFlag(26);
         public bool AnalysisMode => GetFlag(27);
         public bool NightVision => GetFlag(28);
-        public string GameMode { get; internal set; }
+        public GameModeType GameMode { get; internal set; }
         public bool InNoFireZone { get; internal set; }
         public float JumpRange { get; internal set; }
         public bool IsRunning => Flags != 0;

@@ -65,19 +65,30 @@ namespace EliteAPI.Status
             else if(e.Message.Contains("NoFireZone_exited")) { InNoFireZone = false; }
             Update();
         }
+
         private void Update()
         {
             //Save the old status.
-            GameStatus oldStatus = api.Status ?? new GameStatus();
-            GameStatus newStatus = GameStatus.FromFile(new FileInfo(api.JournalDirectory + "//Status.json"), api);
-            if (newStatus == null || !File.Exists(api.JournalDirectory + "//Status.json")) { return; }
+            var oldStatus = api.Status ?? new GameStatus();
+            var newStatus = GameStatus.FromFile(new FileInfo(Path.Combine(api.JournalDirectory.FullName, "Status.json")), api);
+
+            if (newStatus == null || !File.Exists(Path.Combine(api.JournalDirectory.FullName, "Status.json")))
+            {
+                return;
+            }
+
             newStatus.InNoFireZone = InNoFireZone;
             newStatus.JumpRange = JumpRange;
             newStatus.Fuel.MaxFuel = MaxFuel;
             newStatus.GameMode = GameMode;
             newStatus.InMainMenu = InMainMenu;
             newStatus.MusicTrack = MusicTrack;
-            if (newStatus.Docked) { newStatus.InNoFireZone = true; }
+
+            if (newStatus.Docked)
+            {
+                newStatus.InNoFireZone = true;
+            }
+
             //Set the new status.
             api.Status = newStatus;
             TriggerIfDifferent(oldStatus, newStatus);

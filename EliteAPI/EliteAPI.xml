@@ -362,6 +362,57 @@
             The name of the event.
             </summary>
         </member>
+        <member name="T:EliteAPI.Events.Startup.BankAccountInfo">
+            <summary>
+            Holds statistics on the commander's bank account.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.BankAccountInfo.CurrentWealth">
+            <summary>
+            The total amount of wealth the commander has.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.BankAccountInfo.SpentOnShips">
+            <summary>
+            The total amount of credits spent on ships.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.BankAccountInfo.SpentOnOutfitting">
+            <summary>
+            The total amount of credits spent on ships.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.BankAccountInfo.SpentOnRepairs">
+            <summary>
+            The total amount of credits spent on ship repairs.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.BankAccountInfo.SpentOnFuel">
+            <summary>
+            The total amount of credits spent on refueling.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.BankAccountInfo.SpentOnAmmoConsumables">
+            <summary>
+            The total amount of credits spent on ammunition.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.BankAccountInfo.InsuranceClaims">
+            <summary>
+            The total amount of times insurance has been used.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.BankAccountInfo.SpentOnInsurance">
+            <summary>
+            The total amount of credits spent on insurance.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.BankAccountInfo.OwnedShipCount">
+            <summary>
+            The total amount of ships the commander has owned.
+            </summary>
+        </member>
         <member name="T:EliteAPI.Events.Startup.CargoInfo">
             <summary>
             This event is written when the game has started.
@@ -384,11 +435,239 @@
             </summary>
             <see cref="T:EliteAPI.Events.Startup.InventoryInfo"/>
         </member>
-        <member name="T:EliteAPI.Events.Startup.VesselType">
+        <member name="T:EliteAPI.Events.Startup.ClearSavedGameInfo">
             <summary>
-            The type of vessel, either 'Ship' or 'SRV'.
+            This event is written when the commander chooses to clear their save.
             </summary>
-            <see cref="T:EliteAPI.Events.Startup.CargoInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ClearSavedGameInfo.Name">
+            <summary>
+            The commander's name.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ClearSavedGameInfo.FID">
+            <summary>
+            The commander's Frontier ID.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.CombatInfo">
+            <summary>
+            Holds statistics on the commander's combat.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CombatInfo.BountiesClaimed">
+            <summary>
+            The total amount of bounties claimed.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CombatInfo.BountyHuntingProfit">
+            <summary>
+            The total amount of profit made from bounties.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CombatInfo.CombatBonds">
+            <summary>
+            The total amount of combat bonds claimed.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CombatInfo.CombatBondProfits">
+            <summary>
+            The total amount of profit made from combat bonds.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CombatInfo.Assassinations">
+            <summary>
+            The total amount of assassinations done.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CombatInfo.AssassinationProfits">
+            <summary>
+            The total amount of profit made from assassinations.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CombatInfo.HighestSingleReward">
+            <summary>
+            The highest reward ever rewarded to the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CombatInfo.SkimmersKilled">
+            <summary>
+            The total amount of skimmers destroyed.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.CommanderInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CommanderInfo.FID">
+            <summary>
+            The commander's Frontier ID.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CommanderInfo.Name">
+            <summary>
+            The commander's name.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.CrimeInfo">
+            <summary>
+            Holds statistics on the commander's crime.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CrimeInfo.Notoriety">
+            <summary>
+            Unknown.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CrimeInfo.Fines">
+            <summary>
+            The total amount of fines issued to the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CrimeInfo.TotalFines">
+            <summary>
+            The total amount of fines in credits. 
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CrimeInfo.BountiesReceived">
+            <summary>
+            The total amount of bounties issued to the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CrimeInfo.TotalBounties">
+            <summary>
+            The total amount of bounties in credits.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CrimeInfo.HighestBounty">
+            <summary>
+            The highest bounty ever issued to the commander.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.EngineeringInfo">
+            <summary>
+            The engineering that has been done on a module.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.Engineer">
+            <summary>
+            The name of the engineer.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.EngineerId">
+            <summary>
+            The id of the engineer.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.BlueprintId">
+            <summary>
+            The id of the blueprint.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.BlueprintName">
+            <summary>
+            The name of the blueprint.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.Level">
+            <summary>
+            The level of the modification.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.Quality">
+            <summary>
+            The quality of the modification.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.ExperimentalEffect">
+            <summary>
+            The experimental effect of the modification, if any.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.ExperimentalEffectLocalised">
+            <summary>
+            The localised experimental effect of the modification, if any.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.Modifiers">
+            <summary>
+            A list of modifiers for this modification, if any.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.ExplorationInfo">
+            <summary>
+            Holds statistics on the commander's exploration.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ExplorationInfo.SystemsVisited">
+            <summary>
+            The total amount of systems visited.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ExplorationInfo.ExplorationProfits">
+            <summary>
+            The total amount of profit gained by exploration.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ExplorationInfo.PlanetsScannedToLevel2">
+            <summary>
+            The total amount of planets scanned to level 2.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ExplorationInfo.PlanetsScannedToLevel3">
+            <summary>
+            The total amount of planets scanned to level 3.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ExplorationInfo.EfficientScans">
+            <summary>
+            The total amount of efficient scans done by.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ExplorationInfo.HighestPayout">
+            <summary>
+            The highest payout ever received by the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ExplorationInfo.TotalHyperspaceDistance">
+            <summary>
+            The total amount of distance jumped in light-years.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ExplorationInfo.TotalHyperspaceJumps">
+            <summary>
+            The total amount of hyperspace jumps made.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ExplorationInfo.GreatestDistanceFromStart">
+            <summary>
+            The greatest distance from the starting location in light-years.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ExplorationInfo.TimePlayed">
+            <summary>
+            The total amount of seconds played.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.FuelInfo">
+            <summary>
+            Contains information about the fuel of the ship.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.LoadoutInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.FuelInfo.Main">
+            <summary>
+            The amount of fuel in the main tank.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.FuelInfo.Reserve">
+            <summary>
+            The amount of fuel in the reserve tank.
+            </summary>
         </member>
         <member name="T:EliteAPI.Events.Startup.InventoryInfo">
             <summary>
@@ -415,36 +694,6 @@
         <member name="P:EliteAPI.Events.Startup.InventoryInfo.Stolen">
             <summary>
             The amount of stolen cargo of this type.
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Events.Startup.ClearSavedGameInfo">
-            <summary>
-            This event is written when the commander chooses to clear their save.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.ClearSavedGameInfo.Name">
-            <summary>
-            The commander's name.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.ClearSavedGameInfo.FID">
-            <summary>
-            The commander's Frontier ID.
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Events.Startup.CommanderInfo">
-            <summary>
-            This event is written when the game has started.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.CommanderInfo.FID">
-            <summary>
-            The commander's Frontier ID.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.CommanderInfo.Name">
-            <summary>
-            The commander's name.
             </summary>
         </member>
         <member name="T:EliteAPI.Events.Startup.LoadoutInfo">
@@ -527,21 +776,188 @@
             </summary>
             <see cref="T:EliteAPI.Events.Startup.ModuleInfo"/>
         </member>
-        <member name="T:EliteAPI.Events.Startup.FuelInfo">
+        <member name="T:EliteAPI.Events.Startup.LoadOutModifier">
             <summary>
-            Contains information about the fuel of the ship.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.LoadoutInfo"/>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.FuelInfo.Main">
-            <summary>
-            The amount of fuel in the main tank.
+            The modifier applied on a modification.
             </summary>
         </member>
-        <member name="P:EliteAPI.Events.Startup.FuelInfo.Reserve">
+        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.Label">
             <summary>
-            The amount of fuel in the reserve tank.
+            The label of this modifier.
             </summary>
+            <see cref="T:EliteAPI.Events.Startup.ModifierLabel"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.Value">
+            <summary>
+            The value of this modifier.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.ValueStr">
+            <summary>
+            The value of this modifier as a string.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.OriginalValue">
+            <summary>
+            The original value before this modifier.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.LessIsGood">
+            <summary>
+            Whether a lower value means better.
+            </summary>
+            <see cref="P:EliteAPI.Events.Startup.LoadOutModifier.Value"/>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.Manifest">
+            <summary>
+            A record of a group of passengers.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.Manifest.MissionId">
+            <summary>
+            The id of mission related to these passengers.
+            </summary>
+            <seealso cref="T:EliteAPI.Events.Startup.MissionInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.Manifest.Type">
+            <summary>
+            The type of passengers.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.Manifest.Vip">
+            <summary>
+            Whether these passengers are VIPs.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.Manifest.Wanted">
+            <summary>
+            Whether these passengers are wanted.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.Manifest.Count">
+            <summary>
+            The amount of passengers.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.MaterialInfo">
+            <summary>
+            Contains information about grouped material.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MaterialsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MaterialInfo.Name">
+            <summary>
+            The name of the material.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MaterialInfo.NameLocalised">
+            <summary>
+            The localised name of the material.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MaterialInfo.Count">
+            <summary>
+            The amount of materials in this group.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.MaterialsInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MaterialsInfo.Raw">
+            <summary>
+            A list of raw materials, grouped by name.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MaterialInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MaterialsInfo.Manufactured">
+            <summary>
+            A list of manufactured materials, grouped by name.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MaterialInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MaterialsInfo.Encoded">
+            <summary>
+            A list of encoded materials, grouped by name.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MaterialInfo"/>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.MiningInfo">
+            <summary>
+            Holds statistics on the commander's mining.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MiningInfo.MiningProfits">
+            <summary>
+            The total amount of profit made while mining.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MiningInfo.QuantityMined">
+            <summary>
+            The total amount of resources mined.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MiningInfo.MaterialsCollected">
+            <summary>
+            The total amount of materials collected.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.MissionInfo">
+            <summary>
+            Contains information about a mission.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MissionsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionInfo.MissionId">
+            <summary>
+            The id of the mission.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionInfo.Name">
+            <summary>
+            The name of the mission.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionInfo.PassengerMission">
+            <summary>
+            Whether this mission is a passenger mission.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionInfo.Expires">
+            <summary>
+            The amount of seconds left for this mission.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.MissionsInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionsInfo.Active">
+            <summary>
+            A list of the active missions, if any.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MissionInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionsInfo.Failed">
+            <summary>
+            A list of the failed missions, if any.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MissionInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionsInfo.Complete">
+            <summary>
+            A list of the completed missions, if any.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MissionInfo"/>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.ModifierLabel">
+            <summary>
+            The label of the modifier.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.LoadOutModifier"/>
         </member>
         <member name="T:EliteAPI.Events.Startup.ModuleInfo">
             <summary>
@@ -596,187 +1012,6 @@
             </summary>
             <see cref="P:EliteAPI.Events.Startup.ModuleInfo.EngineeringInfo"/>
         </member>
-        <member name="T:EliteAPI.Events.Startup.EngineeringInfo">
-            <summary>
-            The engineering that has been done on a module.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.Engineer">
-            <summary>
-            The name of the engineer.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.EngineerId">
-            <summary>
-            The id of the engineer.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.BlueprintId">
-            <summary>
-            The id of the blueprint.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.BlueprintName">
-            <summary>
-            The name of the blueprint.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.Level">
-            <summary>
-            The level of the modification.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.Quality">
-            <summary>
-            The quality of the modification.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.ExperimentalEffect">
-            <summary>
-            The experimental effect of the modification, if any.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.ExperimentalEffectLocalised">
-            <summary>
-            The localised experimental effect of the modification, if any.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.Modifiers">
-            <summary>
-            A list of modifiers for this modification, if any.
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Events.Startup.LoadOutModifier">
-            <summary>
-            The modifier applied on a modification.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.Label">
-            <summary>
-            The label of this modifier.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.ModifierLabel"/>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.Value">
-            <summary>
-            The value of this modifier.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.ValueStr">
-            <summary>
-            The value of this modifier as a string.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.OriginalValue">
-            <summary>
-            The original value before this modifier.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.LessIsGood">
-            <summary>
-            Whether a lower value means better.
-            </summary>
-            <see cref="P:EliteAPI.Events.Startup.LoadOutModifier.Value"/>
-        </member>
-        <member name="T:EliteAPI.Events.Startup.ModifierLabel">
-            <summary>
-            The label of the modifier.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.LoadOutModifier"/>
-        </member>
-        <member name="T:EliteAPI.Events.Startup.MaterialsInfo">
-            <summary>
-            This event is written when the game has started.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MaterialsInfo.Raw">
-            <summary>
-            A list of raw materials, grouped by name.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.MaterialInfo"/>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MaterialsInfo.Manufactured">
-            <summary>
-            A list of manufactured materials, grouped by name.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.MaterialInfo"/>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MaterialsInfo.Encoded">
-            <summary>
-            A list of encoded materials, grouped by name.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.MaterialInfo"/>
-        </member>
-        <member name="T:EliteAPI.Events.Startup.MaterialInfo">
-            <summary>
-            Contains information about grouped material.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.MaterialsInfo"/>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MaterialInfo.Name">
-            <summary>
-            The name of the material.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MaterialInfo.NameLocalised">
-            <summary>
-            The localised name of the material.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MaterialInfo.Count">
-            <summary>
-            The amount of materials in this group.
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Events.Startup.MissionsInfo">
-            <summary>
-            This event is written when the game has started.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MissionsInfo.Active">
-            <summary>
-            A list of the active missions, if any.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.MissionInfo"/>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MissionsInfo.Failed">
-            <summary>
-            A list of the failed missions, if any.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.MissionInfo"/>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MissionsInfo.Complete">
-            <summary>
-            A list of the completed missions, if any.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.MissionInfo"/>
-        </member>
-        <member name="T:EliteAPI.Events.Startup.MissionInfo">
-            <summary>
-            Contains information about a mission.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.MissionsInfo"/>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MissionInfo.MissionId">
-            <summary>
-            The id of the mission.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MissionInfo.Name">
-            <summary>
-            The name of the mission.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MissionInfo.PassengerMission">
-            <summary>
-            Whether this mission is a passenger mission.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.MissionInfo.Expires">
-            <summary>
-            The amount of seconds left for this mission.
-            </summary>
-        </member>
         <member name="T:EliteAPI.Events.Startup.NewCommanderInfo">
             <summary>
             This event is written when creating a new commander.
@@ -805,37 +1040,6 @@
         <member name="P:EliteAPI.Events.Startup.PassengersInfo.Manifest">
             <summary>
             A list of passenger records.
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Events.Startup.Manifest">
-            <summary>
-            A record of a group of passengers.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.Manifest.MissionId">
-            <summary>
-            The id of mission related to these passengers.
-            </summary>
-            <seealso cref="T:EliteAPI.Events.Startup.MissionInfo"/>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.Manifest.Type">
-            <summary>
-            The type of passengers.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.Manifest.Vip">
-            <summary>
-            Whether these passengers are VIPs.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.Manifest.Wanted">
-            <summary>
-            Whether these passengers are wanted.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.Startup.Manifest.Count">
-            <summary>
-            The amount of passengers.
             </summary>
         </member>
         <member name="T:EliteAPI.Events.Startup.PowerplayInfo">
@@ -1032,6 +1236,126 @@
             The commander's localised title reputation with the Alliance.
             </summary>
         </member>
+        <member name="T:EliteAPI.Events.Startup.SmugglingInfo">
+            <summary>
+            Hold statistics on the commander's smuggling.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.SmugglingInfo.BlackMarketsTradedWith">
+            <summary>
+            The total amount of black markets interacted with.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.SmugglingInfo.BlackMarketsProfits">
+            <summary>
+            The total amount of profit made from black markets.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.SmugglingInfo.ResourcesSmuggled">
+            <summary>
+            The total amount of resources smuggled.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.SmugglingInfo.AverageProfit">
+            <summary>
+            The average amount of profit made from smuggling.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.SmugglingInfo.HighestSingleTransaction">
+            <summary>
+            The highest transaction ever done by the commander while smuggling.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.StatisticsInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.StatisticsInfo.BankAccount">
+            <summary>
+            Contains statistics on the commander's bank account.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.BankAccountInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.StatisticsInfo.Combat">
+            <summary>
+            Contains statistics on the commander's combat.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.CombatInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.StatisticsInfo.Crime">
+            <summary>
+            Contains statistics on the commander's crimes.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.CrimeInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.StatisticsInfo.Smuggling">
+            <summary>
+            Contains statistics on the commander's smuggling.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.SmugglingInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.StatisticsInfo.Trading">
+            <summary>
+            Contains statistics on the commander's trading.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.TradingInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.StatisticsInfo.Mining">
+            <summary>
+            Contains statistics on the commander's mining.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MiningInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.StatisticsInfo.Exploration">
+            <summary>
+            Contains statistics on the commander's exploration.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.ExplorationInfo"/>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.TradingInfo">
+            <summary>
+            Holds statistics on the commander's trading.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.TradingInfo.MarketsTradedWith">
+            <summary>
+            The total amount of markets traded with.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.TradingInfo.MarketProfits">
+            <summary>
+            The total amount of profit made from trading.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.TradingInfo.ResourcesTraded">
+            <summary>
+            The total amount of resources traded.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.TradingInfo.AverageProfit">
+            <summary>
+            The average profit made while trading.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.TradingInfo.HighestSingleTransaction">
+            <summary>
+            The highest transaction ever made while trading by the commander.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.VesselType">
+            <summary>
+            The type of vessel, either 'Ship' or 'SRV'.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.CargoInfo"/>
+        </member>
+        <member name="T:EliteAPI.Events.GameModeType">
+            <summary>
+            Game mode a commander plays in.
+            </summary>
+        </member>
         <member name="T:EliteAPI.Events.LoadGameInfo">
             <summary>
             This event is written when the game has started.
@@ -1117,11 +1441,6 @@
         <member name="P:EliteAPI.Events.LoadGameInfo.FuelCapacity">
             <summary>
             The size of the main fuel tank.
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Events.GameModeType">
-            <summary>
-            Game mode a commander plays in.
             </summary>
         </member>
         <member name="T:EliteAPI.IEliteDangerousAPI">

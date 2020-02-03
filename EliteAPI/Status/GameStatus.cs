@@ -76,7 +76,7 @@ namespace EliteAPI.Status
 
         internal static GameStatus Process(string json)
         {
-            return JsonConvert.DeserializeObject<GameStatus>(json, ShipStatusConverter.Settings);
+            return JsonConvert.DeserializeObject<GameStatus>(json, JsonConverter.Settings);
         }
 
         internal static GameStatus FromFile(FileInfo file, EliteDangerousAPI api)

@@ -4,11 +4,12 @@ using Newtonsoft.Json.Converters;
 
 namespace EliteAPI.Status
 {
-    internal static class ShipCargoConverter
+    internal static class JsonConverter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
-            MissingMemberHandling = MissingMemberHandling.Ignore, MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            MissingMemberHandling = MissingMemberHandling.Ignore,
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
             DateParseHandling = DateParseHandling.None,
             Converters =
             {

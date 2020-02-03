@@ -9,29 +9,27 @@ namespace EliteAPI.Status
     public class ShipModules
     {
         public static ShipModules Process(string json) =>
-            JsonConvert.DeserializeObject<ShipModules>(json, EliteAPI.Status.ShipModulesConverter.Settings);
+            JsonConvert.DeserializeObject<ShipModules>(json, JsonConverter.Settings);
 
         public static ShipModules FromFile(FileInfo file, EliteDangerousAPI api)
         {
-            if (File.Exists(file.FullName))
+            if (!File.Exists(file.FullName))
             {
                 api.Logger.Log(Severity.Error, "Could not find ModulesInfo.json.", new FileNotFoundException("ModulesInfo.json could not be found.", file.FullName));
                 return new ShipModules();
             }
 
-            //Create a stream from the log file.
-            FileStream fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-            //Create a stream from the file stream.
-            StreamReader streamReader = new StreamReader(fileStream);
-            //Go through the stream.
-            while (!streamReader.EndOfStream)
+            try
             {
-                //Process this string.
-                return Process(streamReader.ReadLine());
+                return Process(File.ReadAllText(file.FullName));
             }
+            catch (Exception e)
+            {
+                api.Logger.Log(Severity.Warning, "Could not update modules.");
+                return new ShipModules();
+            }
+            
 
-            api.Logger.Log(Severity.Warning, "Could not update modules.");
-            return new ShipModules();
         }
 
         [JsonProperty("timestamp")] public DateTimeOffset Timestamp { get; internal set; }

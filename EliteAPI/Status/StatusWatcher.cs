@@ -18,6 +18,7 @@ namespace EliteAPI.Status
         private GameModeType GameMode = GameModeType.Solo;
         private bool InMainMenu = false;
         private string MusicTrack = "";
+
         internal StatusWatcher(EliteDangerousAPI api)
         {
             this.api = api;
@@ -27,7 +28,10 @@ namespace EliteAPI.Status
             api.Events.MusicEvent += Events_MusicEvent;
             api.Events.SupercruiseEntryEvent += Events_SupercruiseEntryEvent;
             api.Events.StartJumpEvent += Events_StartJumpEvent;
-            statusWatcher = new FileSystemWatcher(api.JournalDirectory.FullName, "Status.json") { EnableRaisingEvents = true };
+            statusWatcher = new FileSystemWatcher(api.JournalDirectory.FullName, "Status.json")
+            {
+                EnableRaisingEvents = true
+            };
             statusWatcher.Changed += (sender, e) => Update();
             Update();
         }
@@ -59,46 +63,81 @@ namespace EliteAPI.Status
             if(JumpRange < e.JumpDist) { JumpRange = e.JumpDist; }
             Update();
         }
-        private void Events_ReceiveTextEvent(object sender, Events.ReceiveTextInfo e)
+
+        private void Events_ReceiveTextEvent(object sender, ReceiveTextInfo e)
         {
-            if(e.Message.Contains("NoFireZone_entered")) { InNoFireZone = true; }
-            else if(e.Message.Contains("NoFireZone_exited")) { InNoFireZone = false; }
+            if (e.Message.Contains("NoFireZone_entered"))
+            {
+                InNoFireZone = true;
+            }
+            else if (e.Message.Contains("NoFireZone_exited"))
+            {
+                InNoFireZone = false;
+            }
+
             Update();
         }
+
         private void Update()
         {
             //Save the old status.
-            GameStatus oldStatus = api.Status ?? new GameStatus();
-            GameStatus newStatus = GameStatus.FromFile(new FileInfo(api.JournalDirectory + "//Status.json"), api);
-            if (newStatus == null || !File.Exists(api.JournalDirectory + "//Status.json")) { return; }
+            var oldStatus = api.Status ?? new GameStatus();
+            var newStatus = GameStatus.FromFile(new FileInfo(Path.Combine(api.JournalDirectory.FullName, "Status.json")), api);
+
+            if (newStatus == null || !File.Exists(Path.Combine(api.JournalDirectory.FullName, "Status.json")))
+            {
+                return;
+            }
+
             newStatus.InNoFireZone = InNoFireZone;
             newStatus.JumpRange = JumpRange;
             newStatus.Fuel.MaxFuel = MaxFuel;
             newStatus.GameMode = GameMode;
             newStatus.InMainMenu = InMainMenu;
             newStatus.MusicTrack = MusicTrack;
-            if (newStatus.Docked) { newStatus.InNoFireZone = true; }
+
+            if (newStatus.Docked)
+            {
+                newStatus.InNoFireZone = true;
+            }
+
             //Set the new status.
             api.Status = newStatus;
             TriggerIfDifferent(oldStatus, newStatus);
         }
+
         private void TriggerIfDifferent(GameStatus oldStatus, GameStatus newStatus)
         {
-            foreach (PropertyInfo propA in oldStatus.GetType().GetProperties().Where(x => x.PropertyType == typeof(bool)))
+            foreach (var propA in oldStatus.GetType().GetProperties().Where(x => x.PropertyType == typeof(bool)))
             {
-                PropertyInfo propB = newStatus.GetType().GetProperty(propA.Name);
+                var propB = newStatus.GetType().GetProperty(propA.Name);
                 dynamic A = propA.GetValue(oldStatus);
                 dynamic B = propB.GetValue(newStatus);
-                if (A == B) continue;
+
+                if (A == B)
+                {
+                    continue;
+                }
+
                 try
                 {
-                    StatusEvent e = new StatusEvent("Status." + propA.Name, B);
+                    var e = new StatusEvent($"Status.{propA.Name}", B);
                     api.Logger.Log(Severity.Debug, $"Setting status '{propA.Name}' to {Convert.ToString(B).ToLower()}.", e);
-                    api.Events.InvokeAllEvent(new StatusEvent("Status." + propA.Name, B));
-                    try { api.Events.GetType().GetMethod("InvokeStatus" + propA.Name, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static)?.Invoke(api.Events, new object[] { e }); }
-                    catch (Exception ex) { api.Logger.Log(Severity.Debug, $"Could not invoke status event '{propA.Name}'.", ex); }
+                    api.Events.InvokeAllEvent(new StatusEvent($"Status.{propA.Name}", B));
+
+                    try
+                    {
+                        api.Events.GetType().GetMethod($"InvokeStatus{propA.Name}", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static)?.Invoke(api.Events, new object[] {e});
+                    }
+                    catch (Exception ex)
+                    {
+                        api.Logger.Log(Severity.Debug, $"Could not invoke status event '{propA.Name}'.", ex);
+                    }
                 }
-                catch(Exception ex) { api.Logger.Log(Severity.Error, "Could not do status.", ex); }
+                catch (Exception ex)
+                {
+                    api.Logger.Log(Severity.Error, "Could not do status.", ex);
+                }
             }
         }
     }

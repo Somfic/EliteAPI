@@ -62,7 +62,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\lib\vmAPI.dll&quot; &quot;C:\Users\Lucas\Documents\GitHub\EliteAPI\EliteAPI\bin\Debug\netstandard2.0\vmAPI.dll&quot;&#xD;&#xA;" />
+    <Exec Command="copy &quot;$(SolutionDir)lib\vmAPI.dll&quot; &quot;$(TargetDir)vmAPI.dll&quot;&#xD;&#xA;" />
   </Target>
 
 </Project>

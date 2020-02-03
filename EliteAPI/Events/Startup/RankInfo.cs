@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using EliteAPI.Status;
 using Newtonsoft.Json;
 
@@ -16,6 +17,7 @@ namespace EliteAPI.Events.Startup
         /// Returns a scale from 0-8.
         /// </summary>
         [JsonProperty("Combat")]
+        [Range(0, 8)]
         public long Combat { get; internal set; }
 
         /// <summary>
@@ -29,6 +31,7 @@ namespace EliteAPI.Events.Startup
         /// Returns a scale from 0-8.
         /// </summary>
         [JsonProperty("Trade")]
+        [Range(0, 8)]
         public long Trade { get; internal set; }
 
         /// <summary>
@@ -42,6 +45,7 @@ namespace EliteAPI.Events.Startup
         /// Returns a scale from 0-8.
         /// </summary>
         [JsonProperty("Explore")]
+        [Range(0, 8)]
         public long Exploration { get; internal set; }
 
         /// <summary>
@@ -55,6 +59,7 @@ namespace EliteAPI.Events.Startup
         /// Returns a scale from 0-14.
         /// </summary>
         [JsonProperty("Empire")]
+        [Range(0, 14)]
         public long Empire { get; internal set; }
 
         /// <summary>
@@ -68,6 +73,7 @@ namespace EliteAPI.Events.Startup
         /// Returns a scale from 0-14.
         /// </summary>
         [JsonProperty("Federation")]
+        [Range(0, 14)]
         public long Federation { get; internal set; }
 
         /// <summary>
@@ -81,6 +87,7 @@ namespace EliteAPI.Events.Startup
         /// Returns a scale from 0-8.
         /// </summary>
         [JsonProperty("CQC")]
+        [Range(0, 8)]
         public long Cqc { get; internal set; }
 
         internal static RankInfo Process(string json, EliteDangerousAPI api)

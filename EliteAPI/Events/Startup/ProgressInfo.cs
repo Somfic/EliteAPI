@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Events.Startup
@@ -22,6 +23,7 @@ namespace EliteAPI.Events.Startup
         /// Goes from 0-100.
         /// </summary>
         [JsonProperty("Trade")]
+        [Range(0, 100)]
         public long Trade { get; internal set; }
 
         /// <summary>
@@ -29,6 +31,7 @@ namespace EliteAPI.Events.Startup
         /// Goes from 0-100.
         /// </summary>
         [JsonProperty("Explore")]
+        [Range(0, 100)]
         public long Explore { get; internal set; }
 
         /// <summary>
@@ -36,6 +39,7 @@ namespace EliteAPI.Events.Startup
         /// Goes from 0-100.
         /// </summary>
         [JsonProperty("Empire")]
+        [Range(0, 100)]
         public long Empire { get; internal set; }
 
         /// <summary>
@@ -43,6 +47,7 @@ namespace EliteAPI.Events.Startup
         /// Goes from 0-100.
         /// </summary>
         [JsonProperty("Federation")]
+        [Range(0, 100)]
         public long Federation { get; internal set; }
 
         /// <summary>
@@ -50,6 +55,7 @@ namespace EliteAPI.Events.Startup
         /// Goes from 0-100.
         /// </summary>
         [JsonProperty("CQC")]
+        [Range(0, 100)]
         public long Cqc { get; internal set; }
 
         internal static ProgressInfo Process(string json, EliteDangerousAPI api)

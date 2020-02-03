@@ -94,11 +94,6 @@ namespace EliteAPI
         public ShipModules Modules => ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this);
 
         /// <summary>
-        /// Holds the ship's current materials situation.
-        /// </summary>
-        public Events.MaterialsInfo Materials { get; internal set; }
-
-        /// <summary>
         /// Holds information on all key bindings in the game set by the user.
         /// </summary>
         public UserBindings Bindings
@@ -129,7 +124,6 @@ namespace EliteAPI
         internal StatusWatcher StatusWatcher { get; set; }
         internal CargoWatcher CargoWatcher { get; set; }
         internal JournalParser JournalParser { get; set; }
-        internal MaterialWatcher MaterialWatcher { get; set; }
 
         /// <summary>
         /// Rich presence service for Discord.
@@ -243,8 +237,7 @@ namespace EliteAPI
             try { StatusWatcher = new StatusWatcher(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'StatusWatcher'.", ex); }
             try { CargoWatcher = new CargoWatcher(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'CargoWatcher'.", ex); }
             try { Status = EliteAPI.Status.GameStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'Status'.", ex); }
-            try { JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'JournalParser'.", ex); }
-            try { MaterialWatcher = new MaterialWatcher(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'MaterialWatcher'.", ex); }
+            try { JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'JournalParser'.", ex); } 
             JournalParser.processedLogs = new List<string>();
         }
 

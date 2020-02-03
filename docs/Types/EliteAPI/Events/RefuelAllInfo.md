@@ -16,7 +16,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>Int64</span> Cost
 
-### <span class='code'>Double</span> Amount
+### <span class='code'>Single</span> Amount
 
 ### <span class='code'>DateTime</span> Timestamp
 

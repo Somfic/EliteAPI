@@ -20,7 +20,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Faction](.
 
 ### <span class='code'>String</span> Government
 
-### <span class='code'>Double</span> Influence
+### <span class='code'>Single</span> Influence
 
 ### <span class='code'>String</span> Allegiance
 
@@ -28,7 +28,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Faction](.
 
 ### <span class='code'>String</span> HappinessLocalised
 
-### <span class='code'>Double</span> MyReputation
+### <span class='code'>Single</span> MyReputation
 
 ### <span class='code'>List<[ActiveState](../../EliteAPI/Events/ActiveState.html)></span> ActiveStates
 

@@ -28,9 +28,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>String</span> PilotRank
 
-### <span class='code'>Double</span> ShieldHealth
+### <span class='code'>Single</span> ShieldHealth
 
-### <span class='code'>Double</span> HullHealth
+### <span class='code'>Single</span> HullHealth
 
 ### <span class='code'>String</span> Faction
 
@@ -42,7 +42,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>String</span> SubsystemLocalised
 
-### <span class='code'>Double</span> SubsystemHealth
+### <span class='code'>Single</span> SubsystemHealth
 
 ### <span class='code'>DateTime</span> Timestamp
 

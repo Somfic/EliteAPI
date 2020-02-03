@@ -14,9 +14,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Fuel](../.
 
 ## 03 Properties
 
-### <span class='code'>Double</span> FuelMain
+### <span class='code'>Single</span> FuelMain
 
-### <span class='code'>Double</span> FuelReservoir
+### <span class='code'>Single</span> FuelReservoir
 
-### <span class='code'>Double</span> MaxFuel
+### <span class='code'>Single</span> MaxFuel
 

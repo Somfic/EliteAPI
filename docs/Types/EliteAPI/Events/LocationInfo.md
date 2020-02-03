@@ -24,7 +24,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>Int64</span> SystemAddress
 
-### <span class='code'>List<Double></span> StarPos
+### <span class='code'>List<Single></span> StarPos
 
 ### <span class='code'>String</span> SystemAllegiance
 

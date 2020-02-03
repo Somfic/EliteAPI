@@ -20,9 +20,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>Int64</span> MarketId
 
-### <span class='code'>Double</span> Latitude
+### <span class='code'>Single</span> Latitude
 
-### <span class='code'>Double</span> Longitude
+### <span class='code'>Single</span> Longitude
 
 ### <span class='code'>DateTime</span> Timestamp
 

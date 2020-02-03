@@ -44,7 +44,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>List<[StationEconomy](../../EliteAPI/Events/StationEconomy.html)></span> StationEconomies
 
-### <span class='code'>Double</span> DistFromStarLs
+### <span class='code'>Single</span> DistFromStarLs
 
 ### <span class='code'>DateTime</span> Timestamp
 

@@ -16,7 +16,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Combat](..
 
 ### <span class='code'>Int64</span> BountiesClaimed
 
-### <span class='code'>Double</span> BountyHuntingProfit
+### <span class='code'>Single</span> BountyHuntingProfit
 
 ### <span class='code'>Int64</span> CombatBonds
 

@@ -14,13 +14,13 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ## 03 Properties
 
-### <span class='code'>Double</span> Empire
+### <span class='code'>Single</span> Empire
 
-### <span class='code'>Double</span> Federation
+### <span class='code'>Single</span> Federation
 
-### <span class='code'>Double</span> Independent
+### <span class='code'>Single</span> Independent
 
-### <span class='code'>Double</span> Alliance
+### <span class='code'>Single</span> Alliance
 
 ### <span class='code'>DateTime</span> Timestamp
 

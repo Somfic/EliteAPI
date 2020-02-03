@@ -16,7 +16,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[AddCommand
 
 ### <span class='code'>String</span> StarsystemName
 
-### <span class='code'>Double</span> JumpDistance
+### <span class='code'>Single</span> JumpDistance
 
 ### <span class='code'>String</span> ShipType
 

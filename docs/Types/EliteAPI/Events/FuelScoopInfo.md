@@ -14,9 +14,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ## 03 Properties
 
-### <span class='code'>Double</span> Scooped
+### <span class='code'>Single</span> Scooped
 
-### <span class='code'>Double</span> Total
+### <span class='code'>Single</span> Total
 
 ### <span class='code'>DateTime</span> Timestamp
 

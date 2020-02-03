@@ -22,7 +22,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>Int64</span> ShipId
 
-### <span class='code'>Double</span> BrokerPercentage
+### <span class='code'>Single</span> BrokerPercentage
 
 ### <span class='code'>DateTime</span> Timestamp
 

@@ -90,7 +90,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[GameStatus
 
 ### <span class='code'>Boolean</span> InNoFireZone
 
-### <span class='code'>Double</span> JumpRange
+### <span class='code'>Single</span> JumpRange
 
 ### <span class='code'>Boolean</span> IsRunning
 

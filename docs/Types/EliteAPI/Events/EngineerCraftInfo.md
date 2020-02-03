@@ -32,7 +32,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>Int64</span> Level
 
-### <span class='code'>Double</span> Quality
+### <span class='code'>Single</span> Quality
 
 ### <span class='code'>String</span> ExperimentalEffect
 

@@ -319,23 +319,345 @@
         </member>
         <member name="P:EliteAPI.Events.AfmuRepairsInfo.Module">
             <summary>
-                The name of the module
+            The name of the module
             </summary>
         </member>
         <member name="P:EliteAPI.Events.AfmuRepairsInfo.ModuleLocalised">
             <summary>
-                The local name of the module
+            The local name of the module
             </summary>
         </member>
         <member name="P:EliteAPI.Events.AfmuRepairsInfo.FullyRepaired">
             <summary>
-                Whether modules are now fully repaired
+            Whether modules are now fully repaired
             </summary>
         </member>
         <member name="P:EliteAPI.Events.AfmuRepairsInfo.Health">
             <summary>
-                Value between 0 and 1.
+            Value between 0 and 1.
             </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.CargoInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CargoInfo.Vessel">
+            <summary>
+            The type of vessel, either 'Ship' or 'SRV'.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.VesselType"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CargoInfo.Count">
+            <summary>
+            The total amount of cargo in the vessel.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CargoInfo.Inventory">
+            <summary>
+            A list of all inventory in the vessel, grouped by name.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.InventoryInfo"/>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.VesselType">
+            <summary>
+            The type of vessel, either 'Ship' or 'SRV'.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.CargoInfo"/>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.InventoryInfo">
+            <summary>
+            Inventory in the vessel, grouped by name.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.CargoInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.InventoryInfo.Name">
+            <summary>
+            The name of the cargo item.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.InventoryInfo.NameLocalised">
+            <summary>
+            The localised name of the cargo item.
+            Returns null when the 'Name' property is already localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.InventoryInfo.Count">
+            <summary>
+            The amount of cargo of this type.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.InventoryInfo.Stolen">
+            <summary>
+            The amount of stolen cargo of this type.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.ClearSavedGameInfo">
+            <summary>
+            This event is written when the commander chooses to clear their save.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ClearSavedGameInfo.Name">
+            <summary>
+            The commander's name.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ClearSavedGameInfo.FID">
+            <summary>
+            The commander's Frontier ID.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.CommanderInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CommanderInfo.FID">
+            <summary>
+            The commander's Frontier ID.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.CommanderInfo.Name">
+            <summary>
+            The commander's name.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.LoadoutInfo">
+            <summary>
+            This event is written when the game has started, after switching ships, after outfitting, and after docking a SRV.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.Ship">
+            <summary>
+            The type of ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.ShipId">
+            <summary>
+            The id of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.ShipName">
+            <summary>
+            The user-defined name of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.ShipIdent">
+            <summary>
+            The user-defined id of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.HullValue">
+            <summary>
+            The value of the integrity of the hull.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.ModulesValue">
+            <summary>
+            The value of the integrity of the modules.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.HullHealth">
+            <summary>
+            The health of the hull.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.UnladenMass">
+            <summary>
+            The mass of the hull and all modules. Fuel and cargo are not included.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.FuelCapacity">
+            <summary>
+            Information on the fuel of the ship.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.FuelInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.CargoCapacity">
+            <summary>
+            The maximum amount of cargo this ship can carry.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.MaxJumpRange">
+            <summary>
+            The maximum jump range of the ship.
+            </summary>
+            <remarks>
+            This value is based on no cargo and limited fuel.
+            </remarks>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.Rebuy">
+            <summary>
+            The cost of rebuy.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.Hot">
+            <summary>
+            Whether the ship is wanted.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadoutInfo.Modules">
+            <summary>
+            A list of installed items on the ship.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.ModuleInfo"/>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.FuelInfo">
+            <summary>
+            Contains information about the fuel of the ship.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.LoadoutInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.FuelInfo.Main">
+            <summary>
+            The amount of fuel in the main tank.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.FuelInfo.Reserve">
+            <summary>
+            The amount of fuel in the reserve tank.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.ModuleInfo">
+            <summary>
+            An installed item on the ship.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.LoadoutInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ModuleInfo.Slot">
+            <summary>
+            The name of the slot.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ModuleInfo.Item">
+            <summary>
+            The name of the module in this slow in lowercase.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ModuleInfo.On">
+            <summary>
+            Whether this module is turned on.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ModuleInfo.Priority">
+            <summary>
+            The priority group of power for this module.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ModuleInfo.Health">
+            <summary>
+            The health of the module.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ModuleInfo.Value">
+            <summary>
+            The value of the module.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ModuleInfo.AmmoInClip">
+            <summary>
+            Amount of ammunition in the clip.
+            Can also be amount of places in a passenger cabin.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ModuleInfo.AmmoInHopper">
+            <summary>
+            The amount of ammunition in the hopper.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ModuleInfo.EngineeringInfo">
+            <summary>
+            The engineering that has been done on this module.
+            </summary>
+            <see cref="P:EliteAPI.Events.Startup.ModuleInfo.EngineeringInfo"/>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.EngineeringInfo">
+            <summary>
+            The engineering that has been done on a module.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.Engineer">
+            <summary>
+            The name of the engineer.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.EngineerId">
+            <summary>
+            The id of the engineer.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.BlueprintId">
+            <summary>
+            The id of the blueprint.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.BlueprintName">
+            <summary>
+            The name of the blueprint.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.Level">
+            <summary>
+            The level of the modification.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.Quality">
+            <summary>
+            The quality of the modification.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.ExperimentalEffect">
+            <summary>
+            The experimental effect of the modification, if any.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.ExperimentalEffectLocalised">
+            <summary>
+            The localised experimental effect of the modification, if any.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.EngineeringInfo.Modifiers">
+            <summary>
+            A list of modifiers for this modification, if any.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.LoadOutModifier">
+            <summary>
+            The modifier applied on a modification.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.Label">
+            <summary>
+            The label of this modifier.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.ModifierLabel"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.Value">
+            <summary>
+            The value of this modifier.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.ValueStr">
+            <summary>
+            The value of this modifier as a string.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.OriginalValue">
+            <summary>
+            The original value before this modifier.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.LoadOutModifier.LessIsGood">
+            <summary>
+            Whether a lower value means better.
+            </summary>
+            <see cref="P:EliteAPI.Events.Startup.LoadOutModifier.Value"/>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.ModifierLabel">
+            <summary>
+            The label of the modifier.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.LoadOutModifier"/>
         </member>
         <member name="T:EliteAPI.IEliteDangerousAPI">
             <summary>

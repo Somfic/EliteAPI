@@ -24,13 +24,13 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>String</span> Body
 
-### <span class='code'>Double</span> Latitude
+### <span class='code'>Single</span> Latitude
 
-### <span class='code'>Double</span> Longitude
+### <span class='code'>Single</span> Longitude
 
 ### <span class='code'>Int64</span> Heading
 
-### <span class='code'>Double</span> Altitude
+### <span class='code'>Single</span> Altitude
 
 ### <span class='code'>DateTime</span> Timestamp
 

@@ -24,7 +24,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>Int64</span> ShipMarketId
 
-### <span class='code'>Double</span> Distance
+### <span class='code'>Single</span> Distance
 
 ### <span class='code'>Int64</span> TransferPrice
 

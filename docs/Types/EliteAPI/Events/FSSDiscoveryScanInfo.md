@@ -14,7 +14,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ## 03 Properties
 
-### <span class='code'>Double</span> Progress
+### <span class='code'>Single</span> Progress
 
 ### <span class='code'>Int64</span> BodyCount
 

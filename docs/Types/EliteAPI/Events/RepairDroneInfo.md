@@ -14,9 +14,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ## 03 Properties
 
-### <span class='code'>Double</span> HullRepaired
+### <span class='code'>Single</span> HullRepaired
 
-### <span class='code'>Double</span> CockpitRepaired
+### <span class='code'>Single</span> CockpitRepaired
 
 ### <span class='code'>DateTime</span> Timestamp
 

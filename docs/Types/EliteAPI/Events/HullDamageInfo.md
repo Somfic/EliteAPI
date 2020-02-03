@@ -14,7 +14,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ## 03 Properties
 
-### <span class='code'>Double</span> Health
+### <span class='code'>Single</span> Health
 
 ### <span class='code'>Boolean</span> PlayerPilot
 

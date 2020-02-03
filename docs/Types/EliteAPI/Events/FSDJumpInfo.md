@@ -18,7 +18,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>Int64</span> SystemAddress
 
-### <span class='code'>List<Double></span> StarPos
+### <span class='code'>List<Single></span> StarPos
 
 ### <span class='code'>String</span> SystemAllegiance
 
@@ -44,11 +44,11 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>String</span> PowerplayState
 
-### <span class='code'>Double</span> JumpDist
+### <span class='code'>Single</span> JumpDist
 
-### <span class='code'>Double</span> FuelUsed
+### <span class='code'>Single</span> FuelUsed
 
-### <span class='code'>Double</span> FuelLevel
+### <span class='code'>Single</span> FuelLevel
 
 ### <span class='code'>List<[FSDFaction](../../EliteAPI/Events/FSDFaction.html)></span> Factions
 

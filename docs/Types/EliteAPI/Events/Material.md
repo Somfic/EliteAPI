@@ -18,5 +18,5 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Material](
 
 ### <span class='code'>String</span> NameLocalised
 
-### <span class='code'>Double</span> Percent
+### <span class='code'>Single</span> Percent
 

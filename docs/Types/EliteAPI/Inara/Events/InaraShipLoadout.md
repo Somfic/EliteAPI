@@ -20,7 +20,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[InaraShipL
 
 ### <span class='code'>Int64</span> ItemValue
 
-### <span class='code'>Double</span> ItemHealth
+### <span class='code'>Single</span> ItemHealth
 
 ### <span class='code'>Boolean</span> IsOn
 

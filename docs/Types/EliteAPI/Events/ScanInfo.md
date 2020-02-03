@@ -22,7 +22,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>List<[Parent](../../EliteAPI/Events/Parent.html)></span> Parents
 
-### <span class='code'>Double</span> DistanceFromArrivalLs
+### <span class='code'>Single</span> DistanceFromArrivalLs
 
 ### <span class='code'>Boolean</span> TidalLock
 
@@ -36,15 +36,15 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>String</span> Volcanism
 
-### <span class='code'>Double</span> MassEm
+### <span class='code'>Single</span> MassEm
 
-### <span class='code'>Double</span> Radius
+### <span class='code'>Single</span> Radius
 
-### <span class='code'>Double</span> SurfaceGravity
+### <span class='code'>Single</span> SurfaceGravity
 
-### <span class='code'>Double</span> SurfaceTemperature
+### <span class='code'>Single</span> SurfaceTemperature
 
-### <span class='code'>Double</span> SurfacePressure
+### <span class='code'>Single</span> SurfacePressure
 
 ### <span class='code'>Boolean</span> Landable
 
@@ -52,19 +52,19 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>[Composition](../../EliteAPI/Events/Composition.html)</span> Composition
 
-### <span class='code'>Double</span> SemiMajorAxis
+### <span class='code'>Single</span> SemiMajorAxis
 
-### <span class='code'>Double</span> Eccentricity
+### <span class='code'>Single</span> Eccentricity
 
-### <span class='code'>Double</span> OrbitalInclination
+### <span class='code'>Single</span> OrbitalInclination
 
-### <span class='code'>Double</span> Periapsis
+### <span class='code'>Single</span> Periapsis
 
-### <span class='code'>Double</span> OrbitalPeriod
+### <span class='code'>Single</span> OrbitalPeriod
 
-### <span class='code'>Double</span> RotationPeriod
+### <span class='code'>Single</span> RotationPeriod
 
-### <span class='code'>Double</span> AxialTilt
+### <span class='code'>Single</span> AxialTilt
 
 ### <span class='code'>List<[Ring](../../EliteAPI/Events/Ring.html)></span> Rings
 

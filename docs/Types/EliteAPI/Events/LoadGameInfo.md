@@ -30,9 +30,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>String</span> ShipIdent
 
-### <span class='code'>Double</span> FuelLevel
+### <span class='code'>Single</span> FuelLevel
 
-### <span class='code'>Double</span> FuelCapacity
+### <span class='code'>Single</span> FuelCapacity
 
 ### <span class='code'>String</span> GameMode
 

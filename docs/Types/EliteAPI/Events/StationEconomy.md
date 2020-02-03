@@ -18,5 +18,5 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[StationEco
 
 ### <span class='code'>String</span> NameLocalised
 
-### <span class='code'>Double</span> Proportion
+### <span class='code'>Single</span> Proportion
 

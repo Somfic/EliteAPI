@@ -18,9 +18,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>String</span> Event
 
-### <span class='code'>Double</span> FuelMain
+### <span class='code'>Single</span> FuelMain
 
-### <span class='code'>Double</span> FuelReservoir
+### <span class='code'>Single</span> FuelReservoir
 
 ### <span class='code'>DateTime</span> Timestamp
 

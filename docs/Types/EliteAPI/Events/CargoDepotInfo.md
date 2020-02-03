@@ -34,7 +34,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>Int64</span> TotalItemsToDeliver
 
-### <span class='code'>Double</span> Progress
+### <span class='code'>Single</span> Progress
 
 ### <span class='code'>DateTime</span> Timestamp
 

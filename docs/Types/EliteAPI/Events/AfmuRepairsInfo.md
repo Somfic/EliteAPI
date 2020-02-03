@@ -38,7 +38,7 @@ Whether modules are now fully repaired
 
 
 
-### <span class='code'>Double</span> Health
+### <span class='code'>Single</span> Health
 
 
 

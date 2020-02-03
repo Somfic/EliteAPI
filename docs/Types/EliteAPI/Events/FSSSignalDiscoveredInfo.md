@@ -32,7 +32,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[EventBase]
 
 ### <span class='code'>Int64</span> ThreatLevel
 
-### <span class='code'>Double</span> TimeRemaining
+### <span class='code'>Single</span> TimeRemaining
 
 ### <span class='code'>DateTime</span> Timestamp
 

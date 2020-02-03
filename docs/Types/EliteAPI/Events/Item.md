@@ -26,5 +26,5 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Item](../.
 
 ### <span class='code'>Int64</span> Level
 
-### <span class='code'>Double</span> Quality
+### <span class='code'>Single</span> Quality
 

@@ -10,6 +10,5 @@ namespace EliteAPI.Tests
 {
     public class EliteDangerousAPITests
     {
-         public void 
     }
 }

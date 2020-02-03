@@ -14,9 +14,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Compositio
 
 ## 03 Properties
 
-### <span class='code'>Double</span> Ice
+### <span class='code'>Single</span> Ice
 
-### <span class='code'>Double</span> Rock
+### <span class='code'>Single</span> Rock
 
-### <span class='code'>Double</span> Metal
+### <span class='code'>Single</span> Metal
 

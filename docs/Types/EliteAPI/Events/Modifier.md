@@ -16,9 +16,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Modifier](
 
 ### <span class='code'>String</span> Label
 
-### <span class='code'>Double</span> Value
+### <span class='code'>Single</span> Value
 
-### <span class='code'>Double</span> OriginalValue
+### <span class='code'>Single</span> OriginalValue
 
 ### <span class='code'>Int64</span> LessIsGood
 

@@ -20,7 +20,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Trading](.
 
 ### <span class='code'>Int64</span> ResourcesTraded
 
-### <span class='code'>Double</span> AverageProfit
+### <span class='code'>Single</span> AverageProfit
 
 ### <span class='code'>Int64</span> HighestSingleTransaction
 

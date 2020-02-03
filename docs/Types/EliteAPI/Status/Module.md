@@ -18,7 +18,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Module](..
 
 ### <span class='code'>String</span> Item
 
-### <span class='code'>Double</span> Power
+### <span class='code'>Single</span> Power
 
 ### <span class='code'>Nullable`1</span> Priority
 

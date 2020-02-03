@@ -18,9 +18,9 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Ring](../.
 
 ### <span class='code'>String</span> RingClass
 
-### <span class='code'>Double</span> MassMt
+### <span class='code'>Single</span> MassMt
 
-### <span class='code'>Double</span> InnerRad
+### <span class='code'>Single</span> InnerRad
 
-### <span class='code'>Double</span> OuterRad
+### <span class='code'>Single</span> OuterRad
 

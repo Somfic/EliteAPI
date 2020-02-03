@@ -20,7 +20,7 @@ Inheritance: <span class='code'>Object</span> → <span class='code'>[Smuggling]
 
 ### <span class='code'>Int64</span> ResourcesSmuggled
 
-### <span class='code'>Double</span> AverageProfit
+### <span class='code'>Single</span> AverageProfit
 
 ### <span class='code'>Int64</span> HighestSingleTransaction
 

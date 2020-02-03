@@ -9,7 +9,7 @@ namespace EliteAPI.Status
     public class ShipModules
     {
         public static ShipModules Process(string json) =>
-            JsonConvert.DeserializeObject<ShipModules>(json, EliteAPI.Status.ShipModulesConverter.Settings);
+            JsonConvert.DeserializeObject<ShipModules>(json, JsonConverter.Settings);
 
         public static ShipModules FromFile(FileInfo file, EliteDangerousAPI api)
         {

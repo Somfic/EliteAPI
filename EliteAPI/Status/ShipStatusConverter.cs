@@ -4,7 +4,7 @@ using Newtonsoft.Json.Converters;
 
 namespace EliteAPI.Status
 {
-    internal static class ShipStatusConverter
+    internal static class JsonConverter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {

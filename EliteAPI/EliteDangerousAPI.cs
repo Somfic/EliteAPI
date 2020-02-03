@@ -259,7 +259,7 @@ namespace EliteAPI
                 Logger.Log(Severity.Error, e.Item1, e.Item2);
                 Logger.Log(Severity.Warning, "EliteAPI stumbled upon a critical error and cannot continue.", new Exception("ELITEAPI TERMINATED"));
             };
-            OnReady += (sender, e) => Logger.Success("EliteAPI is ready.");
+            OnReady += (sender, e) => Logger.Log(Severity.Success, "EliteAPI is ready.");
 
             var s = new Stopwatch();
             s.Start();
@@ -321,6 +321,7 @@ namespace EliteAPI
 
             //Check for the support JSON files.
             var foundStatus = false;
+            Logger.Log(Severity.Debug, "Checking support files.");
 
             try
             {
@@ -362,16 +363,14 @@ namespace EliteAPI
                     : "Could not find 'Market.json' file.");
 
                 //ModulesInfo.json.
-                if (File.Exists(Path.Combine(JournalDirectory.FullName, "\\ModulesInfo.json")))
-                {
-                    Logger.Log(Severity.Debug, "Found 'ModulesInfo.json'.");
-                }
-                else
-                {
-                    Logger.Log(Severity.Debug, "Could not find 'ModulesInfo.json' file.");
-                }
+                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "\\ModulesInfo.json"))
+                    ? "Found 'ModulesInfo.json'."
+                    : "Could not find 'ModulesInfo.json' file.");
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Logger.Log(Severity.Error, "Could not check for support files.", ex);
+            }
 
             if (foundStatus)
             {
@@ -446,7 +445,7 @@ namespace EliteAPI
         }
 
         /// <summary>
-        ///     Changes the journal directory.
+        /// Changes the journal directory.
         /// </summary>
         /// <param name="newJournalDirectory">The new journal directory.</param>
         public void ChangeJournal(DirectoryInfo newJournalDirectory)

@@ -25,7 +25,6 @@ namespace EliteAPI
             
             if (triggerOnLoad)
             {
-                
                 totalLines = readAllLines.Length;
             }
 

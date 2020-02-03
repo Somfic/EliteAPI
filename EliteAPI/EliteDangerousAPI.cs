@@ -261,17 +261,18 @@ namespace EliteAPI
             };
             OnReady += (sender, e) => Logger.Success("EliteAPI is ready.");
 
-            Stopwatch s = new Stopwatch();
+            var s = new Stopwatch();
             s.Start();
 
             Logger.Log("Starting EliteAPI.");
             Logger.Log(Severity.Debug, "EliteAPI by CMDR Somfic (discord.gg/jwpFUPZ) (github.com/EliteAPI/EliteAPI).");
-            Logger.Log(Severity.Debug, "EliteAPI v" + Version + ".");
+            Logger.Log(Severity.Debug, $"EliteAPI v{Version}.");
 
             //Check for updates.
             CheckForUpdate();
 
             Logger.Log(Severity.Debug, "Checking journal directory.");
+
             if (!Directory.Exists(JournalDirectory.FullName))
             {
                 if (JournalDirectory.FullName != StandardDirectory.FullName)
@@ -281,12 +282,13 @@ namespace EliteAPI
                     Logger.Log(Severity.Debug, "Trying standard journal directory instead.");
                 }
 
-                if (!Directory.Exists(EliteDangerousAPI.StandardDirectory.FullName))
+                if (!Directory.Exists(StandardDirectory.FullName))
                 {
                     OnError?.Invoke(this,
                         new Tuple<string, Exception>(
                             "The default journal directory does not exist on this machine. This error usually occurs when Elite: Dangerous hasn't been run on this machine yet.",
                             new DirectoryNotFoundException($"'{StandardDirectory.FullName}' could not be found.")));
+
                     return;
                 }
 
@@ -305,7 +307,7 @@ namespace EliteAPI
             //Find the last edited Journal file.
             try
             {
-                Logger.Log(Severity.Debug, $"Searching for 'Journal.*.log' files.");
+                Logger.Log(Severity.Debug, "Searching for 'Journal.*.log' files.");
                 journalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
                 Logger.Log(Severity.Debug, $"Found '{journalFile}'.");
             }
@@ -313,44 +315,68 @@ namespace EliteAPI
             {
                 IsRunning = false;
                 OnError?.Invoke(this, new Tuple<string, Exception>($"Could not find Journal files in '{JournalDirectory}'.", ex));
+
                 return;
             }
 
             //Check for the support JSON files.
-            bool foundStatus = false;
+            var foundStatus = false;
 
             try
             {
                 //Status.json.
-                if (File.Exists(JournalDirectory.FullName + "\\Status.json")) { Logger.Log(Severity.Debug, "Found 'Status.json'."); foundStatus = true; }
-                else { Logger.Log(Severity.Warning, $"Could not find 'Status.json' file."); foundStatus = false; }
+                if (File.Exists(Path.Combine(JournalDirectory.FullName, "\\Status.json")))
+                {
+                    Logger.Log(Severity.Debug, "Found 'Status.json'.");
+                    foundStatus = true;
+                }
+                else
+                {
+                    Logger.Log(Severity.Warning, "Could not find 'Status.json' file.");
+                    foundStatus = false;
+                }
 
                 //Cargo.json.
-                if (File.Exists(JournalDirectory.FullName + "\\Cargo.json")) { Logger.Log(Severity.Debug, "Found 'Cargo.json'."); }
-                else { Logger.Log(Severity.Warning, $"Could not find 'Cargo.json' file."); }
+                if (File.Exists(Path.Combine(JournalDirectory.FullName, "\\Cargo.json")))
+                {
+                    Logger.Log(Severity.Debug, "Found 'Cargo.json'.");
+                }
+                else
+                {
+                    Logger.Log(Severity.Warning, "Could not find 'Cargo.json' file.");
+                }
 
                 //Shipyard.json.
-                Logger.Log(Severity.Debug, File.Exists(JournalDirectory.FullName + "\\Shipyard.json")
+                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "\\Shipyard.json"))
                     ? "Found 'Shipyard.json'."
-                    : $"Could not find 'Shipyard.json' file.");
+                    : "Could not find 'Shipyard.json' file.");
 
                 //Outfitting.json.
-                Logger.Log(Severity.Debug, File.Exists(JournalDirectory.FullName + "\\Outfitting.json")
+                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "\\Outfitting.json"))
                     ? "Found 'Outfitting.json'."
-                    : $"Could not find 'Outfitting.json' file.");
+                    : "Could not find 'Outfitting.json' file.");
 
                 //Market.json.
-                Logger.Log(Severity.Debug, File.Exists(JournalDirectory.FullName + "\\Market.json")
+                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "\\Market.json"))
                     ? "Found 'Market.json'."
-                    : $"Could not find 'Market.json' file.");
+                    : "Could not find 'Market.json' file.");
 
                 //ModulesInfo.json.
-                if (File.Exists(JournalDirectory.FullName + "\\ModulesInfo.json")) { Logger.Log(Severity.Debug, "Found 'ModulesInfo.json'."); }
-                else { Logger.Log(Severity.Debug, $"Could not find 'ModulesInfo.json' file."); }
+                if (File.Exists(Path.Combine(JournalDirectory.FullName, "\\ModulesInfo.json")))
+                {
+                    Logger.Log(Severity.Debug, "Found 'ModulesInfo.json'.");
+                }
+                else
+                {
+                    Logger.Log(Severity.Debug, "Could not find 'ModulesInfo.json' file.");
+                }
             }
             catch { }
 
-            if (foundStatus) { Logger.Log("Found Journal and Status files."); }
+            if (foundStatus)
+            {
+                Logger.Log("Found Journal and Status files.");
+            }
             else
             {
                 Logger.Log(Severity.Error, "Could not find Status.json.", new FileNotFoundException("This error usually occurs when Elite: Dangerous hasn't been run on this machine yet.", $"{JournalDirectory.FullName}\\Status.json"));
@@ -363,12 +389,23 @@ namespace EliteAPI
             Reset();
 
             //Check if Elite: Dangerous is running.
-            if (!Status.IsRunning) { Logger.Log(Severity.Warning, "Elite: Dangerous is not in-game."); }
+            if (!Status.IsRunning)
+            {
+                Logger.Log(Severity.Warning, "Elite: Dangerous is not in-game.");
+            }
 
             //Process the journal file.
-            if (!SkipCatchUp) { Logger.Log(Severity.Debug, "Catching up with past events from this session."); }
+            if (!SkipCatchUp)
+            {
+                Logger.Log(Severity.Debug, "Catching up with past events from this session.");
+            }
+
             JournalParser.ProcessJournal(journalFile, SkipCatchUp, false, true);
-            if (!SkipCatchUp) { Logger.Log(Severity.Debug, "Catchup on past events completed."); }
+
+            if (!SkipCatchUp)
+            {
+                Logger.Log(Severity.Debug, "Catchup on past events completed.");
+            }
 
             //Go async.
             Task.Run(() =>
@@ -377,8 +414,14 @@ namespace EliteAPI
                 while (IsRunning)
                 {
                     //Select the last edited Journal file.
-                    FileInfo newJournalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
-                    if (journalFile.FullName != newJournalFile.FullName) { Logger.Log(Severity.Info, $"Switched to '{newJournalFile}'."); JournalParser.processedLogs.Clear(); }
+                    var newJournalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
+
+                    if (journalFile.FullName != newJournalFile.FullName)
+                    {
+                        Logger.Log(Severity.Info, $"Switched to '{newJournalFile}'.");
+                        JournalParser.processedLogs.Clear();
+                    }
+
                     journalFile = newJournalFile;
 
                     //Process the journal file.
@@ -403,12 +446,12 @@ namespace EliteAPI
         }
 
         /// <summary>
-        /// Changes the journal directory.
+        ///     Changes the journal directory.
         /// </summary>
         /// <param name="newJournalDirectory">The new journal directory.</param>
         public void ChangeJournal(DirectoryInfo newJournalDirectory)
         {
-            if (newJournalDirectory == JournalDirectory) { return; }
+            if (newJournalDirectory == JournalDirectory) { }
             else if (Logger != null)
             {
                 JournalDirectory = newJournalDirectory;

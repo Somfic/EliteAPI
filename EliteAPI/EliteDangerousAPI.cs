@@ -326,7 +326,7 @@ namespace EliteAPI
             try
             {
                 //Status.json.
-                if (File.Exists(Path.Combine(JournalDirectory.FullName, "\\Status.json")))
+                if (File.Exists(Path.Combine(JournalDirectory.FullName, "Status.json")))
                 {
                     Logger.Log(Severity.Debug, "Found 'Status.json'.");
                     foundStatus = true;
@@ -338,32 +338,27 @@ namespace EliteAPI
                 }
 
                 //Cargo.json.
-                if (File.Exists(Path.Combine(JournalDirectory.FullName, "\\Cargo.json")))
-                {
-                    Logger.Log(Severity.Debug, "Found 'Cargo.json'.");
-                }
-                else
-                {
-                    Logger.Log(Severity.Warning, "Could not find 'Cargo.json' file.");
-                }
+                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "Cargo.json"))
+                    ? "Found 'Cargo.json'."
+                    : "Could not find 'Cargo.json' file.");
 
                 //Shipyard.json.
-                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "\\Shipyard.json"))
+                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "Shipyard.json"))
                     ? "Found 'Shipyard.json'."
                     : "Could not find 'Shipyard.json' file.");
 
                 //Outfitting.json.
-                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "\\Outfitting.json"))
+                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "Outfitting.json"))
                     ? "Found 'Outfitting.json'."
                     : "Could not find 'Outfitting.json' file.");
 
                 //Market.json.
-                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "\\Market.json"))
+                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "Market.json"))
                     ? "Found 'Market.json'."
                     : "Could not find 'Market.json' file.");
 
                 //ModulesInfo.json.
-                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "\\ModulesInfo.json"))
+                Logger.Log(Severity.Debug, File.Exists(Path.Combine(JournalDirectory.FullName, "ModulesInfo.json"))
                     ? "Found 'ModulesInfo.json'."
                     : "Could not find 'ModulesInfo.json' file.");
             }

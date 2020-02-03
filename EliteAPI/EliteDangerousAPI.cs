@@ -199,28 +199,36 @@ namespace EliteAPI
         {
             Logger.Log(Severity.Debug, "Checking for updates from GitHub.");
 
-            WebClient webClient = new WebClient();
             try
             {
-                WebClient versionChecker = webClient;
-                string latestVersionString = versionChecker.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI/versioncontrol.version").Trim();
+                string latestVersionString;
+
+                using (var webClient = new WebClient())
+                {
+                    latestVersionString = webClient.DownloadString("https://raw.githubusercontent.com/EliteAPI/EliteAPI/master/EliteAPI/versioncontrol.version").Trim();
+                }
 
                 Logger.Log(Severity.Debug, $"Latest version: {latestVersionString} (curr. {Version}).");
 
-                string[] latestVersion = latestVersionString.Split('.');
-                string[] thisVersion = Version.Split('.');
+                var latestVersion = System.Version.Parse(latestVersionString);
+                var currentVersion = System.Version.Parse(Version);
 
-                bool hasBiggerVersion = false;
-                for (int i = 0; i < latestVersion.Length; i++)
+                var hasBiggerVersion = currentVersion < latestVersion;
+
+                if (hasBiggerVersion)
                 {
-                    if (int.Parse(latestVersion[i]) > int.Parse(thisVersion[i])) { hasBiggerVersion = true; }
+                    Logger.Log($"A new update ({latestVersionString}) is available. Visit github.com/EliteAPI/EliteAPI to download the latest version.");
+
+                    return true;
                 }
 
-                if (hasBiggerVersion) { Logger.Log($"A new update ({latestVersionString}) is available. Visit github.com/EliteAPI/EliteAPI to download the latest version."); return true; } else { Logger.Log(Severity.Debug, "EliteAPI is up-to-date with the latest version."); }
+                Logger.Log(Severity.Debug, "EliteAPI is up-to-date with the latest version.");
             }
-            catch (Exception ex) { Logger.Log(Severity.Debug, "Could not check for updates.", ex); }
-            finally { webClient.Dispose(); }
-
+            catch (Exception ex)
+            {
+                Logger.Log(Severity.Debug, "Could not check for updates.", ex);
+            }
+            
             return false;
         }
 

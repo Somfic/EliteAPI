@@ -23,7 +23,7 @@ namespace EliteAPI.Status
         [JsonProperty("Inventory")]
         public List<Item> Inventory { get; internal set; }
         
-        public static ShipCargo Process(string json) => JsonConvert.DeserializeObject<ShipCargo>(json, ShipCargoConverter.Settings);
+        public static ShipCargo Process(string json) => JsonConvert.DeserializeObject<ShipCargo>(json, JsonConverter.Settings);
 
         public static ShipCargo FromFile(FileInfo file, EliteDangerousAPI api)
         {

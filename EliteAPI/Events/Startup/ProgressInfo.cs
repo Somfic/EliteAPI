@@ -16,7 +16,8 @@ namespace EliteAPI.Events.Startup
         /// Goes from 0-100.
         /// </summary>
         [JsonProperty("Combat")]
-        public long Combat { get; internal set; }
+        [Range(0, 100)]
+        public short Combat { get; internal set; }
 
         /// <summary>
         /// The rank process in a percentages within Trade the commander has.
@@ -24,7 +25,7 @@ namespace EliteAPI.Events.Startup
         /// </summary>
         [JsonProperty("Trade")]
         [Range(0, 100)]
-        public long Trade { get; internal set; }
+        public short Trade { get; internal set; }
 
         /// <summary>
         /// The rank process in a percentages within Exploration the commander has.
@@ -32,7 +33,7 @@ namespace EliteAPI.Events.Startup
         /// </summary>
         [JsonProperty("Explore")]
         [Range(0, 100)]
-        public long Explore { get; internal set; }
+        public short Explore { get; internal set; }
 
         /// <summary>
         /// The rank process in a percentages within the Empire the commander has.
@@ -40,7 +41,7 @@ namespace EliteAPI.Events.Startup
         /// </summary>
         [JsonProperty("Empire")]
         [Range(0, 100)]
-        public long Empire { get; internal set; }
+        public short Empire { get; internal set; }
 
         /// <summary>
         /// The rank process in a percentages within the Federation the commander has.
@@ -48,7 +49,7 @@ namespace EliteAPI.Events.Startup
         /// </summary>
         [JsonProperty("Federation")]
         [Range(0, 100)]
-        public long Federation { get; internal set; }
+        public short Federation { get; internal set; }
 
         /// <summary>
         /// The rank process in a percentages within CQC the commander has.
@@ -56,7 +57,7 @@ namespace EliteAPI.Events.Startup
         /// </summary>
         [JsonProperty("CQC")]
         [Range(0, 100)]
-        public long Cqc { get; internal set; }
+        public short Cqc { get; internal set; }
 
         internal static ProgressInfo Process(string json, EliteDangerousAPI api)
         {

@@ -114,14 +114,4 @@ namespace EliteAPI.Events
             return api.Events.InvokeLoadGameEvent(JsonConvert.DeserializeObject<LoadGameInfo>(json, JsonSettings.Settings));
         }
     }
-
-    /// <summary>
-    /// Game mode a commander plays in.
-    /// </summary>
-    public enum GameModeType
-    {
-        Open,
-        Solo,
-        Group
-    }
 }

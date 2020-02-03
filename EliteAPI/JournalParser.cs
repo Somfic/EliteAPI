@@ -21,43 +21,35 @@ namespace EliteAPI
 
         public void ProcessJournal(FileInfo logFile, bool doNotTrigger = true, bool printJson = true, bool triggerOnLoad = false)
         {
-            //Create a stream from the log file.
-            using (var fileStream = logFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            var readAllLines = File.ReadAllLines(logFile.FullName);
+            
+            if (triggerOnLoad)
             {
-                using (var streamReader = new StreamReader(fileStream))
+                
+                totalLines = readAllLines.Length;
+            }
+
+            var i = 0;
+
+            foreach (var line in readAllLines.Where(e=> !processedLogs.Contains(e) ))
+            {
+                string eventName = "";
+
+                if (!doNotTrigger)
                 {
-                    if (triggerOnLoad) totalLines = File.ReadAllLines(logFile.FullName).Length;
-                    var i = 0;
-
-                    //Go through the stream.
-                    while (!streamReader.EndOfStream)
-                    {
-                        //If this string hasn't been processed yet, process it and mark it as processed.
-                        var eventName = "";
-                        var json = streamReader.ReadLine();
-
-                        if (processedLogs.Contains(json))
-                        {
-                            continue;
-                        }
-
-                        if (!doNotTrigger)
-                        {
-                            eventName = ProcessJson(json, printJson);
-                        }
-
-                        processedLogs.Add(json);
-
-                        if (!triggerOnLoad)
-                        {
-                            continue;
-                        }
-
-                        i++;
-
-                        EliteAPI.TriggerOnLoad(eventName, (float) i / totalLines);
-                    }
+                    eventName = ProcessJson(line, printJson);
                 }
+
+                processedLogs.Add(line);
+
+                if (!triggerOnLoad)
+                {
+                    continue;
+                }
+
+                i++;
+
+                EliteAPI.TriggerOnLoad(eventName, (float)i / totalLines);
             }
         }
 
@@ -74,9 +66,13 @@ namespace EliteAPI
                 eventName = obj.@event;
 
                 if (printJson)
+                {
                     EliteAPI.Logger.Log(Severity.Debug, $"Processing event '{eventName}'.", (object) obj);
+                }
                 else
+                {
                     EliteAPI.Logger.Log(Severity.Debug, $"Processing event '{eventName}'.");
+                }
             }
             catch (Exception ex)
             {

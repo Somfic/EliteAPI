@@ -216,11 +216,6 @@
             Returns all the modules installed on the current ship.
             </summary>
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Materials">
-            <summary>
-            Holds the ship's current materials situation.
-            </summary>
-        </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Bindings">
             <summary>
             Holds information on all key bindings in the game set by the user.
@@ -658,6 +653,397 @@
             The label of the modifier.
             </summary>
             <see cref="T:EliteAPI.Events.Startup.LoadOutModifier"/>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.MaterialsInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MaterialsInfo.Raw">
+            <summary>
+            A list of raw materials, grouped by name.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MaterialInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MaterialsInfo.Manufactured">
+            <summary>
+            A list of manufactured materials, grouped by name.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MaterialInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MaterialsInfo.Encoded">
+            <summary>
+            A list of encoded materials, grouped by name.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MaterialInfo"/>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.MaterialInfo">
+            <summary>
+            Contains information about grouped material.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MaterialsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MaterialInfo.Name">
+            <summary>
+            The name of the material.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MaterialInfo.NameLocalised">
+            <summary>
+            The localised name of the material.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MaterialInfo.Count">
+            <summary>
+            The amount of materials in this group.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.MissionsInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionsInfo.Active">
+            <summary>
+            A list of the active missions, if any.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MissionInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionsInfo.Failed">
+            <summary>
+            A list of the failed missions, if any.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MissionInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionsInfo.Complete">
+            <summary>
+            A list of the completed missions, if any.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MissionInfo"/>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.MissionInfo">
+            <summary>
+            Contains information about a mission.
+            </summary>
+            <see cref="T:EliteAPI.Events.Startup.MissionsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionInfo.MissionId">
+            <summary>
+            The id of the mission.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionInfo.Name">
+            <summary>
+            The name of the mission.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionInfo.PassengerMission">
+            <summary>
+            Whether this mission is a passenger mission.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.MissionInfo.Expires">
+            <summary>
+            The amount of seconds left for this mission.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.NewCommanderInfo">
+            <summary>
+            This event is written when creating a new commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.NewCommanderInfo.Name">
+            <summary>
+            The name of the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.NewCommanderInfo.Fid">
+            <summary>
+            The Frontier ID of the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.NewCommanderInfo.Package">
+            <summary>
+            The chosen starter package.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.PassengersInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.PassengersInfo.Manifest">
+            <summary>
+            A list of passenger records.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.Manifest">
+            <summary>
+            A record of a group of passengers.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.Manifest.MissionId">
+            <summary>
+            The id of mission related to these passengers.
+            </summary>
+            <seealso cref="T:EliteAPI.Events.Startup.MissionInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.Manifest.Type">
+            <summary>
+            The type of passengers.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.Manifest.Vip">
+            <summary>
+            Whether these passengers are VIPs.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.Manifest.Wanted">
+            <summary>
+            Whether these passengers are wanted.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.Manifest.Count">
+            <summary>
+            The amount of passengers.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.PowerplayInfo">
+            <summary>
+            This event is written when the game has started.
+            Only triggered when the commander has pledged themselves to a galactic power.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.PowerplayInfo.Power">
+            <summary>
+            The name of the galactic power.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.PowerplayInfo.Rank">
+            <summary>
+            The rank of the commander within the power.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.PowerplayInfo.Merits">
+            <summary>
+            The amount of merits the commander has.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.PowerplayInfo.Votes">
+            <summary>
+            The amount of votes the commander has.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.PowerplayInfo.TimePledged">
+            <summary>
+            The amount of seconds the commander has been pledged to this power.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.ProgressInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+            <seealso cref="T:EliteAPI.Events.Startup.RankInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ProgressInfo.Combat">
+            <summary>
+            The rank process in a percentages within Combat the commander has.
+            Goes from 0-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ProgressInfo.Trade">
+            <summary>
+            The rank process in a percentages within Trade the commander has.
+            Goes from 0-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ProgressInfo.Explore">
+            <summary>
+            The rank process in a percentages within Exploration the commander has.
+            Goes from 0-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ProgressInfo.Empire">
+            <summary>
+            The rank process in a percentages within the Empire the commander has.
+            Goes from 0-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ProgressInfo.Federation">
+            <summary>
+            The rank process in a percentages within the Federation the commander has.
+            Goes from 0-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ProgressInfo.Cqc">
+            <summary>
+            The rank process in a percentages within CQC the commander has.
+            Goes from 0-100.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.Startup.RankInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+            <seealso cref="T:EliteAPI.Events.Startup.ProgressInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.RankInfo.Combat">
+            <summary>
+            The rank within Combat the commander has.
+            Returns a scale from 0-8.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.RankInfo.CombatLocalised">
+            <summary>
+            The rank within Combat the commander has.
+            Returns the localised title.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.RankInfo.Trade">
+            <summary>
+            The rank within Trade the commander has.
+            Returns a scale from 0-8.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.RankInfo.TradeLocalised">
+            <summary>
+            The rank within Trade the commander has.
+            Returns the localised title.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.RankInfo.Exploration">
+            <summary>
+            The rank within Exploration the commander has.
+            Returns a scale from 0-8.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.RankInfo.ExplorationLocalised">
+            <summary>
+            The rank within Explore the commander has.
+            Returns the localised title.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.RankInfo.Empire">
+            <summary>
+            The rank within the Empire the commander has.
+            Returns a scale from 0-14.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.RankInfo.EmpireLocalised">
+            <summary>
+            The rank within the Empire the commander has.
+            Returns the localised title.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.RankInfo.Federation">
+            <summary>
+            The rank within the Federation the commander has.
+            Returns a scale from 0-14.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.RankInfo.FederationLocalised">
+            <summary>
+            The rank within the Federation the commander has.
+            Returns the localised title.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.RankInfo.Cqc">
+            <summary>
+            The rank within the Federation the commander has.
+            Returns a scale from 0-8.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.LoadGameInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.Fid">
+            <summary>
+            The Frontier ID of the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.Commander">
+            <summary>
+            The name of the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.Horizons">
+            <summary>
+            Whether the commander has the Horizons expansion pack installed.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.Ship">
+            <summary>
+            The current type of ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.ShipLocalised">
+            <summary>
+            The localised type of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.ShipId">
+            <summary>
+            The id of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.ShipName">
+            <summary>
+            The user-defined name of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.ShipIdent">
+            <summary>
+            The user-defined id of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.StartLanded">
+            <summary>
+            Whether the commander is landed.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.StartDead">
+            <summary>
+            Whether the commander is dead.
+            </summary>
+            <seealso cref="T:EliteAPI.Events.ResurrectInfo"/>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.GameMode">
+            <summary>
+            The chosen game mode.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.Group">
+            <summary>
+            The name of the private group when playing in group mode.
+            </summary>
+            <see cref="P:EliteAPI.Events.LoadGameInfo.GameMode"/>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.Credits">
+            <summary>
+            The amount of credits the commander has.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.Loan">
+            <summary>
+            The current loan.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.FuelLevel">
+            <summary>
+            The current level of fuel.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.LoadGameInfo.FuelCapacity">
+            <summary>
+            The size of the main fuel tank.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.GameModeType">
+            <summary>
+            Game mode a commander plays in.
+            </summary>
         </member>
         <member name="T:EliteAPI.IEliteDangerousAPI">
             <summary>

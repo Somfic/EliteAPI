@@ -983,6 +983,55 @@
             Returns a scale from 0-8.
             </summary>
         </member>
+        <member name="T:EliteAPI.Events.Startup.ReputationInfo">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ReputationInfo.Empire">
+            <summary>
+            The commander's reputation with the Empire.
+            Goes from -100-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ReputationInfo.EmpireLocalised">
+            <summary>
+            The commander's localised title reputation with the Empire.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ReputationInfo.Federation">
+            <summary>
+            The commander's reputation with the Federation.
+            Goes from -100-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ReputationInfo.FederationLocalised">
+            <summary>
+            The commander's localised title reputation with the Federation.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ReputationInfo.Independent">
+            <summary>
+            The commander's reputation with the Independent.
+            Goes from -100-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ReputationInfo.IndependentLocalised">
+            <summary>
+            The commander's localised title reputation with the Independent.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ReputationInfo.Alliance">
+            <summary>
+            The commander's reputation with the Alliance.
+            Goes from -100-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Startup.ReputationInfo.AllianceLocalised">
+            <summary>
+            The commander's localised title reputation with the Alliance.
+            </summary>
+        </member>
         <member name="T:EliteAPI.Events.LoadGameInfo">
             <summary>
             This event is written when the game has started.

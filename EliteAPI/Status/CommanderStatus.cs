@@ -6,7 +6,7 @@ namespace EliteAPI.Status
         public CommanderStatus(EliteDangerousAPI api)
         {
             api.Events.LoadGameEvent += (sender, e) => { Commander = e.Commander; Credits = e.Credits; };
-            api.Events.RankEvent += (sender, e) => { EmpireRank = e.Empire; FederationRank = e.Federation; CombatRank = e.Combat; TradeRank = e.Trade; ExplorationRank = e.Explore; CqcRank = e.Cqc; };
+            api.Events.RankEvent += (sender, e) => { EmpireRank = e.Empire; FederationRank = e.Federation; CombatRank = e.Combat; TradeRank = e.Trade; ExplorationRank = e.Exploration; CqcRank = e.Cqc; };
             api.Events.ProgressEvent += (sender, e) => { EmpireRankProgress = e.Empire; FederationRankProgress = e.Federation; CombatRankProgress = e.Combat; TradeRankProgress = e.Trade; ExplorationRankProgress = e.Explore; CqcRankProgress = e.Cqc; };
             api.Events.StatisticsEvent += (sender, e) => { Statistics = e; };
         }

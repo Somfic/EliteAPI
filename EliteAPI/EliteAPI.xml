@@ -332,6 +332,36 @@
             Value between 0 and 1.
             </summary>
         </member>
+        <member name="T:EliteAPI.Events.IEvent">
+            <summary>
+            The interface every event implements.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.IEvent.Timestamp">
+            <summary>
+            The timestamp of the event.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.IEvent.Event">
+            <summary>
+            The name of the event.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Events.EventBase">
+            <summary>
+            Wrapper for all events.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.EventBase.Timestamp">
+            <summary>
+            The timestamp of the event.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.EventBase.Event">
+            <summary>
+            The name of the event.
+            </summary>
+        </member>
         <member name="T:EliteAPI.Events.Startup.CargoInfo">
             <summary>
             This event is written when the game has started.

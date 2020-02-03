@@ -249,10 +249,14 @@ namespace EliteAPI.Discord
         /// </summary>
         public RichPresenceClient TurnOff()
         {
-            api.Logger.Log("Terminating rich presence.");   
+            api.Logger.Log("Terminating rich presence.");
             //Remove all presences from queue, and clear it.
-            rpc.DequeueAll();
-            rpc.ClearPresence();
+            try
+            {
+                rpc.DequeueAll();
+                rpc.ClearPresence();
+            }
+            catch (Exception ex) { api.Logger.Log(Severity.Error, "Could not terminate rich presence.", ex); }
             rpc.Dispose();
             //Mark as not running.
             IsRunning = false;

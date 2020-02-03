@@ -27,7 +27,7 @@ namespace EliteAPI.Events.Startup {
         /// <summary>
         /// The value of this modifier as a string.
         /// </summary>
-        [JsonProperty("Value")]
+        [JsonProperty("ValueStr")]
         public string ValueStr { get; internal set; }
 
         /// <summary>
@@ -41,7 +41,6 @@ namespace EliteAPI.Events.Startup {
         /// </summary>
         /// <see cref="Value"/>
         [JsonProperty("LessIsGood")]
-        [JsonConverter(typeof(BooleanConverter))]
         public bool LessIsGood { get; internal set; }
     }
 }

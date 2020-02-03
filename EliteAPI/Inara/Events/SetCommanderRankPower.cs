@@ -13,6 +13,6 @@ namespace EliteAPI.Inara.Events
         public string PowerName { get; internal set; }
         [Range(0, 5)]
         [JsonProperty("rankValue")]
-        public long RankValue { get; internal set; }
+        public short RankValue { get; internal set; }
     }
 }

@@ -19,6 +19,6 @@ namespace EliteAPI.Inara.Events
         public RankStage RankStage { get; internal set; }
         [Range(1, 5)]
         [JsonProperty("rankValue")]
-        public long RankValue { get; internal set; }
+        public short RankValue { get; internal set; }
     }
 }

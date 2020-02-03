@@ -74,9 +74,13 @@ namespace EliteAPI
                 eventName = obj.@event;
 
                 if (printJson)
+                {
                     EliteAPI.Logger.Log(Severity.Debug, $"Processing event '{eventName}'.", (object) obj);
+                }
                 else
+                {
                     EliteAPI.Logger.Log(Severity.Debug, $"Processing event '{eventName}'.");
+                }
             }
             catch (Exception ex)
             {

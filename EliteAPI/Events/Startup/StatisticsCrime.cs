@@ -6,9 +6,9 @@ namespace EliteAPI.Events.Startup
     /// Holds statistics on the commander's crime.
     /// </summary>
     /// <see cref="StatisticsInfo"/>
-    public class StatisticsCrimeInfo
+    public class StatisticsCrime
     {
-        internal StatisticsCrimeInfo() { }
+        internal StatisticsCrime() { }
 
         /// <summary>
         /// Unknown.

@@ -6,9 +6,9 @@ namespace EliteAPI.Events.Startup
     /// Contains statistics on the commander's passenger missions.
     /// </summary>
     /// <see cref="StatisticsInfo"/>
-    public class StatisticsPassengersInfo
+    public class StatisticsPassengers
     {
-        internal StatisticsPassengersInfo() { }
+        internal StatisticsPassengers() { }
 
         /// <summary>
         /// The amount of passenger missions done.

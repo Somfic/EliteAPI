@@ -13,58 +13,58 @@ namespace EliteAPI.Events.Startup
         /// <summary>
         /// Contains statistics on the commander's bank account.
         /// </summary>
-        /// <see cref="StatisticsBankAccountInfo"/>
+        /// <see cref="StatisticsBankAccount"/>
         [JsonProperty("Bank_Account")]
-        public StatisticsBankAccountInfo BankAccount { get; internal set; }
+        public StatisticsBankAccount BankAccount { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's combat.
         /// </summary>
-        /// <see cref="StatisticsCombatInfo"/>
+        /// <see cref="StatisticsCombat"/>
         [JsonProperty("Combat")]
-        public StatisticsCombatInfo Combat { get; internal set; }
+        public StatisticsCombat Combat { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's crimes.
         /// </summary>
-        /// <see cref="StatisticsCrimeInfo"/>
+        /// <see cref="Startup.StatisticsCrime"/>
         [JsonProperty("Crime")]
-        public StatisticsCrimeInfo StatisticsCrime { get; internal set; }
+        public StatisticsCrime StatisticsCrime { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's smuggling.
         /// </summary>
-        /// <see cref="StatisticsSmugglingInfo"/>
+        /// <see cref="StatisticsSmuggling"/>
         [JsonProperty("Smuggling")]
-        public StatisticsSmugglingInfo Smuggling { get; internal set; }
+        public StatisticsSmuggling Smuggling { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's trading.
         /// </summary>
-        /// <see cref="StatisticsTradingInfo"/>
+        /// <see cref="StatisticsTrading"/>
         [JsonProperty("Trading")]
-        public StatisticsTradingInfo Trading { get; internal set; }
+        public StatisticsTrading Trading { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's mining.
         /// </summary>
-        /// <see cref="StatisticsMiningInfo"/>
+        /// <see cref="StatisticsMining"/>
         [JsonProperty("Mining")]
-        public StatisticsMiningInfo Mining { get; internal set; }
+        public StatisticsMining Mining { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's exploration.
         /// </summary>
-        /// <see cref="StatisticsExplorationInfo"/>
+        /// <see cref="StatisticsExploration"/>
         [JsonProperty("Exploration")]
-        public StatisticsExplorationInfo Exploration { get; internal set; }
+        public StatisticsExploration Exploration { get; internal set; }
         
         /// <summary>
         /// Contains statistics on the commander's passenger missions.
         /// </summary>
-        /// <see cref="StatisticsPassengersInfo"/>
+        /// <see cref="StatisticsPassengers"/>
         [JsonProperty("Passengers")]
-        public StatisticsPassengersInfo Passengers { get; internal set; }
+        public StatisticsPassengers Passengers { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's search and rescue.

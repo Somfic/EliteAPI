@@ -1564,12 +1564,6 @@
             </summary>
             <returns>A list of variables</returns>
         </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetRichPresenceSetting">
-            <summary>
-            Returns a value whether the API should automatically start the Discord Rich Presence.
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetEventVariables(System.Object)">
             <summary>
             Gets all the variables to be set from an event.
@@ -1584,29 +1578,23 @@
             <param name="e">The name of the event.</param>
             <returns></returns>
         </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetIni">
-            <summary>
-            Returns the configuration file content.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetJournalFolder">
-            <summary>
-            Gets the journal directory from the configuration file.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetLogFolder">
-            <summary>
-            Gets the log directory from the configuration file.
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.ProcessCall(System.String)">
             <summary>
             Processes third party plugin functions
             </summary>
             <param name="content"></param>
+        </member>
+        <member name="T:EliteAPI.ThirdParty.Variable">
+            <summary>
+            A variable class that contains one variable that is to be used in third party plugins.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.ThirdParty.Variable.#ctor(System.String,System.Object)">
+            <summary>
+            Constructor for a new Variable.
+            </summary>
+            <param name="name">The name of the variable.</param>
+            <param name="value">The value of the variable.</param>
         </member>
     </members>
 </doc>

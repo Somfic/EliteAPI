@@ -6,9 +6,9 @@ namespace EliteAPI.Events.Startup
     /// Holds statistics on the commander's mining.
     /// </summary>
     /// <see cref="StatisticsInfo"/>
-    public class MiningInfo
+    public class StatisticsMiningInfo
     {
-        internal MiningInfo() { }
+        internal StatisticsMiningInfo() { }
 
         /// <summary>
         /// The total amount of profit made while mining.

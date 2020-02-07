@@ -4,14 +4,14 @@ namespace EliteAPI.Events.Startup {
     /// <summary>
     /// A record of a group of passengers.
     /// </summary>
-    public class Manifest
+    public class PassengersManifest
     {
-        internal Manifest() { }
+        internal PassengersManifest() { }
 
         /// <summary>
         /// The id of mission related to these passengers.
         /// </summary>
-        /// <seealso cref="MissionInfo"/>
+        /// <seealso cref="MissionsMissionInfo"/>
         [JsonProperty("MissionID")]
         public long MissionId { get; internal set; }
 

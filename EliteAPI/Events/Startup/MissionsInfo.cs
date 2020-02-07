@@ -13,23 +13,23 @@ namespace EliteAPI.Events.Startup
         /// <summary>
         /// A list of the active missions, if any.
         /// </summary>
-        /// <see cref="MissionInfo"/>
+        /// <see cref="MissionsMissionInfo"/>
         [JsonProperty("Active")]
-        public IReadOnlyList<MissionInfo> Active { get; internal set; }
+        public IReadOnlyList<MissionsMissionInfo> Active { get; internal set; }
 
         /// <summary>
         /// A list of the failed missions, if any.
         /// </summary>
-        /// <see cref="MissionInfo"/>
+        /// <see cref="MissionsMissionInfo"/>
         [JsonProperty("Failed")]
-        public IReadOnlyList<MissionInfo> Failed { get; internal set; }
+        public IReadOnlyList<MissionsMissionInfo> Failed { get; internal set; }
 
         /// <summary>
         /// A list of the completed missions, if any.
         /// </summary>
-        /// <see cref="MissionInfo"/>
+        /// <see cref="MissionsMissionInfo"/>
         [JsonProperty("Complete")]
-        public IReadOnlyList<MissionInfo> Complete { get; internal set; }
+        public IReadOnlyList<MissionsMissionInfo> Complete { get; internal set; }
 
         internal static MissionsInfo Process(string json, EliteDangerousAPI api)
         {

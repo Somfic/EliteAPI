@@ -6,9 +6,9 @@ namespace EliteAPI.Events.Startup {
     /// <summary>
     /// The modifier applied on a modification.
     /// </summary>
-    public class LoadOutModifier
+    public class EngineeringLoadOutModifier
     {
-        internal LoadOutModifier() { }
+        internal EngineeringLoadOutModifier() { }
 
         /// <summary>
         /// The label of this modifier.

@@ -5,9 +5,9 @@ namespace EliteAPI.Events.Startup {
     /// Contains information about a mission.
     /// </summary>
     /// <see cref="MissionsInfo"/>
-    public class MissionInfo
+    public class MissionsMissionInfo
     {
-        internal MissionInfo() { }
+        internal MissionsMissionInfo() { }
 
         /// <summary>
         /// The id of the mission.

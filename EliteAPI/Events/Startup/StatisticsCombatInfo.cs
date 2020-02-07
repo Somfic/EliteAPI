@@ -6,9 +6,9 @@ namespace EliteAPI.Events.Startup
     /// Holds statistics on the commander's combat.
     /// </summary>
     /// <see cref="StatisticsInfo"/>
-    public class CombatInfo
+    public class StatisticsCombatInfo
     {
-        internal CombatInfo() { }
+        internal StatisticsCombatInfo() { }
 
         /// <summary>
         /// The total amount of bounties claimed.

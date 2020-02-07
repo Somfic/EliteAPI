@@ -6,9 +6,9 @@ namespace EliteAPI.Events.Startup
     /// Holds statistics on the commander's bank account.
     /// </summary>
     /// <see cref="StatisticsInfo"/>
-    public class BankAccountInfo
+    public class StatisticsBankAccountInfo
     {
-        internal BankAccountInfo() { }
+        internal StatisticsBankAccountInfo() { }
 
         /// <summary>
         /// The total amount of wealth the commander has.

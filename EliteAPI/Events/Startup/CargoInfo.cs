@@ -28,9 +28,9 @@ namespace EliteAPI.Events.Startup
         /// <summary>
         /// A list of all inventory in the vessel, grouped by name.
         /// </summary>
-        /// <see cref="InventoryInfo"/>
+        /// <see cref="CargoInventoryInfo"/>
         [JsonProperty("Inventory")]
-        public IReadOnlyList<InventoryInfo> Inventory { get; internal set; }
+        public IReadOnlyList<CargoInventoryInfo> Inventory { get; internal set; }
 
         internal static CargoInfo Process(string json, EliteDangerousAPI api)
         {

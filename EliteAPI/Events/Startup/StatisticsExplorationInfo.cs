@@ -6,9 +6,9 @@ namespace EliteAPI.Events.Startup
     /// Holds statistics on the commander's exploration.
     /// </summary>
     /// <see cref="StatisticsInfo"/>
-    public class ExplorationInfo
+    public class StatisticsExplorationInfo
     {
-        internal ExplorationInfo() { }
+        internal StatisticsExplorationInfo() { }
 
         /// <summary>
         /// The total amount of systems visited.

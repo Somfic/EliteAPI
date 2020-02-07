@@ -2,7 +2,7 @@ namespace EliteAPI.Events.Startup {
     /// <summary>
     /// The label of the modifier.
     /// </summary>
-    /// <see cref="LoadOutModifier"/>
+    /// <see cref="EngineeringLoadOutModifier"/>
     public enum ModifierLabel
     {
         Size,

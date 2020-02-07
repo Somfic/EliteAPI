@@ -6,9 +6,9 @@ namespace EliteAPI.Events.Startup
     /// Holds statistics on the commander's trading.
     /// </summary>
     /// <see cref="StatisticsInfo"/>
-    public class TradingInfo
+    public class StatisticsTradingInfo
     {
-        internal TradingInfo() { }
+        internal StatisticsTradingInfo() { }
 
         /// <summary>
         /// The total amount of markets traded with.

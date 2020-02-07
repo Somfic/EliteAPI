@@ -14,7 +14,7 @@ namespace EliteAPI.Events.Startup
         /// A list of passenger records.
         /// </summary>
         [JsonProperty("Manifest")]
-        public List<Manifest> Manifest { get; internal set; }
+        public List<PassengersManifest> Manifest { get; internal set; }
 
         internal static PassengersInfo Process(string json, EliteDangerousAPI api)
         {

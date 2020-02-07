@@ -6,9 +6,9 @@ namespace EliteAPI.Events.Startup
     /// Hold statistics on the commander's smuggling.
     /// </summary>
     /// <see cref="StatisticsInfo"/>
-    public class SmugglingInfo
+    public class StatisticsSmugglingInfo
     {
-        internal SmugglingInfo() { }
+        internal StatisticsSmugglingInfo() { }
 
         /// <summary>
         /// The total amount of black markets interacted with.

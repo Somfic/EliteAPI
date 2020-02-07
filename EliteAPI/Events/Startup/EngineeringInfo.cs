@@ -60,7 +60,8 @@ namespace EliteAPI.Events.Startup {
         /// <summary>
         /// A list of modifiers for this modification, if any.
         /// </summary>
+        /// <see cref="EngineeringLoadOutModifier"/>
         [JsonProperty("Modifiers")]
-        public IReadOnlyList<LoadOutModifier> Modifiers { get; internal set; }
+        public IReadOnlyList<EngineeringLoadOutModifier> Modifiers { get; internal set; }
     }
 }

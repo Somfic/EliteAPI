@@ -13,53 +13,100 @@ namespace EliteAPI.Events.Startup
         /// <summary>
         /// Contains statistics on the commander's bank account.
         /// </summary>
-        /// <see cref="BankAccountInfo"/>
+        /// <see cref="StatisticsBankAccountInfo"/>
         [JsonProperty("Bank_Account")]
-        public BankAccountInfo BankAccount { get; internal set; }
+        public StatisticsBankAccountInfo BankAccount { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's combat.
         /// </summary>
-        /// <see cref="CombatInfo"/>
+        /// <see cref="StatisticsCombatInfo"/>
         [JsonProperty("Combat")]
-        public CombatInfo Combat { get; internal set; }
+        public StatisticsCombatInfo Combat { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's crimes.
         /// </summary>
-        /// <see cref="CrimeInfo"/>
+        /// <see cref="StatisticsCrimeInfo"/>
         [JsonProperty("Crime")]
-        public CrimeInfo Crime { get; internal set; }
+        public StatisticsCrimeInfo StatisticsCrime { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's smuggling.
         /// </summary>
-        /// <see cref="SmugglingInfo"/>
+        /// <see cref="StatisticsSmugglingInfo"/>
         [JsonProperty("Smuggling")]
-        public SmugglingInfo Smuggling { get; internal set; }
+        public StatisticsSmugglingInfo Smuggling { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's trading.
         /// </summary>
-        /// <see cref="TradingInfo"/>
+        /// <see cref="StatisticsTradingInfo"/>
         [JsonProperty("Trading")]
-        public TradingInfo Trading { get; internal set; }
+        public StatisticsTradingInfo Trading { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's mining.
         /// </summary>
-        /// <see cref="MiningInfo"/>
+        /// <see cref="StatisticsMiningInfo"/>
         [JsonProperty("Mining")]
-        public MiningInfo Mining { get; internal set; }
+        public StatisticsMiningInfo Mining { get; internal set; }
 
         /// <summary>
         /// Contains statistics on the commander's exploration.
         /// </summary>
-        /// <see cref="ExplorationInfo"/>
+        /// <see cref="StatisticsExplorationInfo"/>
         [JsonProperty("Exploration")]
-        public ExplorationInfo Exploration { get; internal set; }
+        public StatisticsExplorationInfo Exploration { get; internal set; }
         
-        //todo: continue this event
+        /// <summary>
+        /// Contains statistics on the commander's passenger missions.
+        /// </summary>
+        /// <see cref="StatisticsPassengersInfo"/>
+        [JsonProperty("Passengers")]
+        public StatisticsPassengersInfo Passengers { get; internal set; }
+
+        /// <summary>
+        /// Contains statistics on the commander's search and rescue.
+        /// </summary>
+        /// <see cref="StatisticsSearchAndRescue"/>
+        [JsonProperty("Search_And_Rescue")]
+        public StatisticsSearchAndRescue SearchAndRescue { get; internal set; }
+
+        /// <summary>
+        /// Contains statistics on the commander's thargoid encounters.
+        /// </summary>
+        /// <see cref="StatisticsThargoidEncounters"/>
+        [JsonProperty("TG_ENCOUNTERS")]
+        public StatisticsThargoidEncounters ThargoidEncounters { get; internal set; }
+
+        /// <summary>
+        /// Contains statistics on the commander's crafting with engineers.
+        /// </summary>
+        /// <see cref="StatisticsCrafting"/>
+        [JsonProperty("Crafting")]
+        public StatisticsCrafting Crafting { get; internal set; }
+
+        /// <summary>
+        /// Contains statistics on the commander's NPC crew.
+        /// </summary>
+        /// <see cref="StatisticsCrew"/>
+        [JsonProperty("Crew")]
+        public StatisticsCrew Crew { get; internal set; }
+
+        /// <summary>
+        /// Contains statistics on the commander's multicrew.
+        /// </summary>
+        /// <see cref="StatisticsMultiCrew"/>
+        [JsonProperty("Multicrew")]
+        public StatisticsMultiCrew MultiCrew { get; internal set; }
+
+        /// <summary>
+        /// Contains statistics on the commander's material trades.
+        /// </summary>
+        /// <see cref="StatisticsMaterialTrader"/>
+        [JsonProperty("Material_Trader_Stats")]
+        public StatisticsMaterialTrader MaterialTrader { get; internal set; }
 
         internal static StatisticsInfo Process(string json, EliteDangerousAPI api)
         {

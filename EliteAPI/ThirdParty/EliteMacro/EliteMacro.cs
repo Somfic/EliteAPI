@@ -23,8 +23,8 @@ namespace EliteAPI.ThirdParty.EliteMacro
             //Create new Wrapper.
             Wrapper = new ThirdPartyWrapper(EliteAPI, DisplayName, $@"{vmCommand.GetDataDirectory()}\EliteMacro.ini");
             //Setup EliteAPI.
-            EliteAPI.Logger.LogEvent += Logger_Log;
             EliteAPI.Logger.AddHandler(new LogFileHandler(Directory.GetCurrentDirectory(), "EliteAPI"));
+            EliteAPI.Logger.AddHandler(new VoiceMacroHandler("EliteMacro", ID));
             EliteAPI.ChangeJournal(Wrapper.GetJournalFolder());
             //Start the API.
             EliteAPI.Start(Wrapper.GetRichPresenceSetting());
@@ -51,7 +51,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
                 try
                 {
                     //Check if the variable isn't type unknown.
-                    if (v.Type == Variable.VarType.Unknown) { EliteAPI.Logger.Log(Severity.Debug, $"Could not set VoiceMacro variable 'EliteAPI.{v.Name}_p' to {v.Value}.", new ArgumentException("Type is unknown", v.Name)); continue; }
+                    if (v.Type == VarType.Unknown) { EliteAPI.Logger.Log(Severity.Debug, $"Could not set VoiceMacro variable 'EliteAPI.{v.Name}_p' to {v.Value}.", new ArgumentException("Type is unknown", v.Name)); continue; }
                     //Check if the variable has actually changed.
                     if (vmCommand.GetVariable($"EliteAPI.{v.Name}_p") == v.Value.ToString()) { continue; }
                     //Change variable.
@@ -64,24 +64,7 @@ namespace EliteAPI.ThirdParty.EliteMacro
                 }
             }
         }
-        private void Logger_Log(object sender, LogMessage e)
-        {
-            switch (e.Severity)
-            {
-                case Severity.Error:
-                    vmCommand.AddLogEntry("EliteMacro - " + e.Message, Color.Red, ID);
-                    break;
-                case Severity.Warning:
-                    vmCommand.AddLogEntry("EliteMacro - " + e.Message, Color.Orange, ID);
-                    break;
-                case Severity.Success:
-                    vmCommand.AddLogEntry("EliteMacro - " + e.Message, Color.Green, ID);
-                    break;
-                case Severity.Info:
-                    vmCommand.AddLogEntry("EliteMacro - " + e.Message, Color.Blue, ID);
-                    break;
-            }
-        }
+
         private void Events_AllEvent(object sender, dynamic e)
         {
             if (!EliteAPI.IsReady) { return; }

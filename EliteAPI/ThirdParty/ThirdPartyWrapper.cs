@@ -32,7 +32,7 @@ namespace EliteAPI.ThirdParty
             EliteAPI = api;
             EliteAPI.Logger.Log(Severity.Debug, $"Enabled third party wrapper for {name}.");
             this.iniPath = iniPath;
-            ini = new IniParser(EliteAPI.Logger, iniPath);
+            Ini = new IniParser(EliteAPI.Logger, iniPath);
         }
 
         /// <summary>

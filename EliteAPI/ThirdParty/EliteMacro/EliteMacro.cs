@@ -23,11 +23,11 @@ namespace EliteAPI.ThirdParty.EliteMacro
             //Create new Wrapper.
             Wrapper = new ThirdPartyWrapper(EliteAPI, DisplayName, $@"{vmCommand.GetDataDirectory()}\EliteMacro.ini");
             //Setup EliteAPI.
-            EliteAPI.Logger.AddHandler(new LogFileHandler(Directory.GetCurrentDirectory(), "EliteAPI"));
+            EliteAPI.Logger.AddHandler(new LogFileHandler(Wrapper.Ini.GetLoggingPath(), "EliteAPI"));
             EliteAPI.Logger.AddHandler(new VoiceMacroHandler("EliteMacro", ID));
-            EliteAPI.ChangeJournal(Wrapper.GetJournalFolder());
+            EliteAPI.ChangeJournal(Wrapper.Ini.GetJournalDirectory());
             //Start the API.
-            EliteAPI.Start(Wrapper.GetRichPresenceSetting());
+            EliteAPI.Start(Wrapper.Ini.GetRichPresenceSetting());
             SetVariables(Wrapper.GetVariables());
             //Listen for events.
             EliteAPI.Events.AllEvent += Events_AllEvent;

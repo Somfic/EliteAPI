@@ -19,6 +19,7 @@ namespace EliteAPI.ThirdParty
     {
         private static EliteDangerousAPI EliteAPI;
         private readonly string iniPath;
+        public IniParser Ini;
 
         /// <summary>
         /// Creates a new ThirdPartyWrapper object.
@@ -31,14 +32,7 @@ namespace EliteAPI.ThirdParty
             EliteAPI = api;
             EliteAPI.Logger.Log(Severity.Debug, $"Enabled third party wrapper for {name}.");
             this.iniPath = iniPath;
-            try
-            {
-                if (FileReader.ReadLines(iniPath).ToList()[0] == "//Use this to set a custom path to your Journal directory.")
-                {
-                    File.Delete(iniPath);
-                }
-            }
-            catch { }
+            ini = new IniParser(EliteAPI.Logger, iniPath);
         }
 
         /// <summary>
@@ -86,20 +80,6 @@ namespace EliteAPI.ThirdParty
         }
 
         /// <summary>
-        /// Returns a value whether the API should automatically start the Discord Rich Presence.
-        /// </summary>
-        /// <returns></returns>
-        public bool GetRichPresenceSetting()
-        {
-            try
-            {
-                string value = GetIni()["DISCORD"]["richPresene"].ToLower();
-                return value == "on" || value == "true" || value == "yes";
-            }
-            catch { return true; }
-        }
-
-        /// <summary>
         /// Gets all the variables to be set from an event.
         /// </summary>
         /// <param name="e">A list of variables</param>
@@ -144,68 +124,6 @@ namespace EliteAPI.ThirdParty
             //Get the event name.
             string eventName = e.@event;
             return !string.IsNullOrWhiteSpace(eventName) ? eventName : (string) e.Event;
-        }
-
-        /// <summary>
-        /// Returns the configuration file content.
-        /// </summary>
-        /// <returns></returns>
-        public IniData GetIni()
-        {
-            FileIniDataParser parser = new FileIniDataParser();
-            //If the ini file does not exist, create a new one.
-            if (!File.Exists(iniPath))
-            {
-                IniData ini = new IniData();
-                ini["ELITEAPI"]["path"] = EliteDangerousAPI.StandardDirectory.ToString();
-                ini["LOGGING"]["path"] = Directory.GetCurrentDirectory();
-                ini["DISCORD"]["richPresene"] = "on";
-                parser.WriteFile(iniPath, ini);
-            }
-            else
-            {
-                EliteAPI.Logger.Log(Severity.Debug, $"Reading custom configuration from '{iniPath}'.");
-            }
-            return parser.ReadFile(iniPath);
-        }
-
-        /// <summary>
-        /// Gets the journal directory from the configuration file.
-        /// </summary>
-        /// <returns></returns>
-        public DirectoryInfo GetJournalFolder()
-        {
-            try
-            {
-                string path = GetIni()["ELITEAPI"]["path"];
-                if (path == EliteDangerousAPI.StandardDirectory.FullName) { EliteAPI.Logger.Log(Severity.Debug, $"Using default path."); return EliteDangerousAPI.StandardDirectory; }
-                else if (Directory.Exists(path)) { EliteAPI.Logger.Log($"Found '{path}'."); return new DirectoryInfo(path); }
-                else { EliteAPI.Logger.Log(Severity.Warning, $"Found '{path}', but the path is invalid, using default path."); return EliteDangerousAPI.StandardDirectory; }
-            }
-            catch (Exception ex)
-            {
-                EliteAPI.Logger.Log(Severity.Warning, $"Could not read from '{iniPath}', using default Journal path.", ex);
-                return EliteDangerousAPI.StandardDirectory;
-            }
-        }
-
-        /// <summary>
-        /// Gets the log directory from the configuration file.
-        /// </summary>
-        /// <returns></returns>
-        public DirectoryInfo GetLogFolder()
-        {
-            try
-            {
-                string path = GetIni()["LOGGING"]["path"];
-                if (Directory.Exists(path)) { EliteAPI.Logger.Log($"Using '{path}' for logging."); return new DirectoryInfo(path); }
-                else { EliteAPI.Logger.Log(Severity.Warning, $"Found '{path}' for logging, but the path is invalid, using '{Directory.GetCurrentDirectory()}' instead."); return new DirectoryInfo(Directory.GetCurrentDirectory()); }
-            }
-            catch (Exception ex)
-            {
-                EliteAPI.Logger.Log(Severity.Warning, $"Could not read from '{iniPath}', using '{Directory.GetCurrentDirectory()}' for logging.", ex);
-                return new DirectoryInfo(Directory.GetCurrentDirectory());
-            }
         }
 
         /// <summary>

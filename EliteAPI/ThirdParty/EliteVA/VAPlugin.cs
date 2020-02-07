@@ -27,12 +27,12 @@ namespace EliteAPI.ThirdParty.EliteVA
             //Create new Wrapper.
             Wrapper = new ThirdPartyWrapper(EliteAPI, VA_DisplayName(), $@"{Directory.GetCurrentDirectory()}\EliteVA.ini");
             //Setup EliteAPI.
-            EliteAPI.Logger.AddHandler(new LogFileHandler(Wrapper.GetLogFolder().ToString(), "EliteAPI"));
+            EliteAPI.Logger.AddHandler(new LogFileHandler(Wrapper.Ini.GetLoggingPath(), "EliteAPI"));
             vaHandler = new VoiceAttackHandler("EliteVA");
             EliteAPI.Logger.AddHandler(vaHandler);
-            EliteAPI.ChangeJournal(Wrapper.GetJournalFolder());
+            EliteAPI.ChangeJournal(Wrapper.Ini.GetJournalDirectory());
             //Start the API.
-            EliteAPI.Start(Wrapper.GetRichPresenceSetting());
+            EliteAPI.Start(Wrapper.Ini.GetJournalDirectory());
             SetVariables(Wrapper.GetVariables());
             //Listen for events.
             EliteAPI.Events.AllEvent += Events_AllEvent;

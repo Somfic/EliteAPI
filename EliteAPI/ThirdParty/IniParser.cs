@@ -6,7 +6,7 @@ using System.IO;
 
 namespace EliteAPI.ThirdParty
 {
-    internal class IniParser
+    public class IniParser
     {
         private readonly string iniPath;
         private IniData iniData;

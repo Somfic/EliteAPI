@@ -32,7 +32,7 @@ namespace EliteAPI.ThirdParty.EliteVA
             EliteAPI.Logger.AddHandler(vaHandler);
             EliteAPI.ChangeJournal(Wrapper.Ini.GetJournalDirectory());
             //Start the API.
-            EliteAPI.Start(Wrapper.Ini.GetJournalDirectory());
+            EliteAPI.Start(Wrapper.Ini.GetRichPresenceSetting());
             SetVariables(Wrapper.GetVariables());
             //Listen for events.
             EliteAPI.Events.AllEvent += Events_AllEvent;

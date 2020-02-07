@@ -1,17 +1,26 @@
 ﻿namespace EliteAPI.ThirdParty
 {
+ 
+    /// <summary>
+    /// A variable class that contains one variable that is to be used in third party plugins.
+    /// </summary>
     public class Variable
     {
+        /// <summary>
+        /// Constructor for a new Variable.
+        /// </summary>
+        /// <param name="name">The name of the variable.</param>
+        /// <param name="value">The value of the variable.</param>
         public Variable(string name, object value)
         {
             Name = name;
             Value = value;
         }
-        public enum VarType { String, Bool, Int, Decimal, Unknown }
+
         public string Name { get; }
         public object Value { get; }
         public VarType Type => GetVarType(Value);
-        private VarType GetVarType(object s)
+        private static VarType GetVarType(object s)
         {
             try
             {

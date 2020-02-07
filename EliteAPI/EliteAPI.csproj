@@ -26,7 +26,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
 
   <ItemGroup>
     <PackageReference Include="Costura.Fody" Version="4.1.0" />
-    <PackageReference Include="Fody" Version="6.0.6">
+    <PackageReference Include="Fody" Version="6.1.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -37,7 +37,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Somfic" Version="1.1.4" />
+    <PackageReference Include="Somfic" Version="1.1.7" />
 
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
@@ -55,14 +55,14 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Events\Travel\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\Icons\logo_gradient_small.jpg">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Events\Travel\" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

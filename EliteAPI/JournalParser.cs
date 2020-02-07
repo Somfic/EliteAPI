@@ -17,7 +17,7 @@ namespace EliteAPI
         }
 
         private readonly EliteDangerousAPI EliteAPI;
-        private List<string> processedLogs = new List<string>();
+        internal List<string> processedLogs = new List<string>();
         private int totalLines;
 
         public void ProcessJournal(FileInfo logFile, bool doNotTrigger = true, bool printJson = true, bool triggerOnLoad = false)

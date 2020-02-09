@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Newtonsoft.Json;
 using Somfic.Logging;
 
@@ -33,7 +34,7 @@ namespace EliteAPI.Status
                 return new ShipCargo();
             }
 
-            var json = File.ReadAllText(file.FullName);
+            var json = FileReader.ReadAllText(file.FullName);
 
             try
             {

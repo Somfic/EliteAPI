@@ -21,7 +21,7 @@ namespace EliteAPI.Status
 
             try
             {
-                return Process(File.ReadAllText(file.FullName));
+                return Process(FileReader.ReadAllText(file.FullName));
             }
             catch (Exception e)
             {

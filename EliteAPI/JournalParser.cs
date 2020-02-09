@@ -24,7 +24,7 @@ namespace EliteAPI
         {
             try
             {
-                var readAllLines = FileReader.ReadLines(logFile.FullName);
+                var readAllLines = FileReader.ReadAllLines(logFile.FullName);
 
                 if (triggerOnLoad)
                 {

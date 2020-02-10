@@ -14,7 +14,9 @@ namespace EliteAPI.ThirdParty.EliteVA
 
         public static void VA_Init1(dynamic vaProxy)
         {
-
+            ThirdPartyWrapper.Init();
+            ThirdPartyWrapper.AddHandler(new VoiceAttackHandler("EliteVA"));
+            ThirdPartyWrapper.SetupFromIni($"{Directory.GetCurrentDirectory()}\\EliteVA.ini");
         }
 
         public static void VA_Invoke1(dynamic vaProxy)

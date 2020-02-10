@@ -15,7 +15,9 @@ namespace EliteAPI.ThirdParty.EliteMacro
 
         void vmInterface.Init()
         {
-           
+            ThirdPartyWrapper.Init();
+            ThirdPartyWrapper.AddHandler(new VoiceMacroHandler("EliteVA", ID));
+            ThirdPartyWrapper.SetupFromIni($"{vmCommand.GetDataDirectory()}\\EliteMacro.ini");
         }
 
         void vmInterface.ReceiveParams(string Param1, string Param2, string Param3, bool Synchron)

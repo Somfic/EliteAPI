@@ -64,9 +64,9 @@ namespace EliteAPI.Events.Startup
         /// <summary>
         /// Information on the fuel of the ship.
         /// </summary>
-        /// <see cref="LoadoutFuelInfo"/>
+        /// <see cref="LoadoutFuel"/>
         [JsonProperty("FuelCapacity")]
-        public LoadoutFuelInfo FuelCapacity { get; internal set; }
+        public LoadoutFuel FuelCapacity { get; internal set; }
 
         /// <summary>
         /// The maximum amount of cargo this ship can carry.
@@ -98,9 +98,9 @@ namespace EliteAPI.Events.Startup
         /// <summary>
         /// A list of installed items on the ship.
         /// </summary>
-        /// <see cref="LoadoutModuleInfo"/>
+        /// <see cref="LoadoutModule"/>
         [JsonProperty("Modules")]
-        public IReadOnlyList<LoadoutModuleInfo> Modules { get; internal set; }
+        public IReadOnlyList<LoadoutModule> Modules { get; internal set; }
 
         internal static LoadoutInfo Process(string json, EliteDangerousAPI api)
         {

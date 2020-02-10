@@ -5,9 +5,9 @@ namespace EliteAPI.Events.Startup {
     /// An installed item on the ship.
     /// </summary>
     /// <see cref="LoadoutInfo"/>
-    public class LoadoutModuleInfo
+    public class LoadoutModule
     {
-        internal LoadoutModuleInfo() { }
+        internal LoadoutModule() { }
 
         /// <summary>
         /// The name of the slot.

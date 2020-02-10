@@ -1,5 +1,6 @@
 using System;
 using EliteAPI.Events.Startup;
+using EliteAPI.Events.Travel;
 
 namespace EliteAPI.Events
 {

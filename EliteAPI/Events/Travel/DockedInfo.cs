@@ -1,34 +1,54 @@
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-namespace EliteAPI.Events
+namespace EliteAPI.Events.Travel
 {
+    /// <summary>
+    /// This event is written when landed at a landing pad in a station, output or surface settlement.
+    /// </summary>
     public class DockedInfo : EventBase
     {
-        [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; internal set; }
+        internal DockedInfo() { }
 
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
-
+        /// <summary>
+        /// The name of the station.
+        /// </summary>
         [JsonProperty("StationName")]
         public string StationName { get; internal set; }
 
+        /// <summary>
+        /// The type of station.
+        /// </summary>
         [JsonProperty("StationType")]
-        public string StationType { get; internal set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public StationType StationType { get; internal set; }
 
+        /// <summary>
+        /// The starsystem of the station.
+        /// </summary>
         [JsonProperty("StarSystem")]
         public string StarSystem { get; internal set; }
 
+        /// <summary>
+        /// The address of the system.
+        /// </summary>
         [JsonProperty("SystemAddress")]
         public long SystemAddress { get; internal set; }
 
+        /// <summary>
+        /// The ID of the station market.
+        /// </summary>
         [JsonProperty("MarketID")]
         public long MarketId { get; internal set; }
 
+        /// <summary>
+        /// Holds information on the station's main faction.
+        /// </summary>
+        /// <see cref="StationFaction"/>
         [JsonProperty("StationFaction")]
-        public StationFaction StationFaction { get; internal set; }
+        public DockedStationFaction StationFaction { get; internal set; }
 
         [JsonProperty("StationGovernment")]
         public string StationGovernment { get; internal set; }
@@ -40,16 +60,16 @@ namespace EliteAPI.Events
         public string StationAllegiance { get; internal set; }
 
         [JsonProperty("StationServices")]
-        public List<string> StationServices { get; internal set; }
+        public IReadOnlyList<string> StationServices { get; internal set; }
 
         [JsonProperty("StationEconomy")]
         public string StationEconomy { get; internal set; }
 
         [JsonProperty("StationEconomy_Localised")]
-        public string StationEconomyLocalised { get; internal set; }
+        public string StationEconomyLocalised { get; internal set; }    
 
         [JsonProperty("StationEconomies")]
-        public List<StationEconomy> StationEconomies { get; internal set; }
+        public IReadOnlyList<DockedStationEconomy> StationEconomies { get; internal set; }
 
         [JsonProperty("DistFromStarLS")]
         public float DistFromStarLs { get; internal set; }

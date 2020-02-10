@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    public class StationEconomy
+    public class DockedStationEconomy
     {
         [JsonProperty("Name")]
         public string Name { get; internal set; }

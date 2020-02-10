@@ -20,19 +20,19 @@ namespace EliteAPI.Events.Startup
         /// The rank of the commander within the power.
         /// </summary>
         [JsonProperty("Rank")]
-        public long Rank { get; internal set; }
+        public int Rank { get; internal set; }
 
         /// <summary>
         /// The amount of merits the commander has.
         /// </summary>
         [JsonProperty("Merits")]
-        public long Merits { get; internal set; }
+        public int Merits { get; internal set; }
 
         /// <summary>
         /// The amount of votes the commander has.
         /// </summary>
         [JsonProperty("Votes")]
-        public long Votes { get; internal set; }
+        public int Votes { get; internal set; }
 
         /// <summary>
         /// The amount of seconds the commander has been pledged to this power.

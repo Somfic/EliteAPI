@@ -5,9 +5,9 @@ namespace EliteAPI.Events.Startup {
     /// Contains information about grouped material.
     /// </summary>
     /// <see cref="MaterialsInfo"/>
-    public class MaterialInfo
+    public class MaterialsMaterial
     {
-        internal MaterialInfo() { }
+        internal MaterialsMaterial() { }
 
         /// <summary>
         /// The name of the material.
@@ -25,6 +25,6 @@ namespace EliteAPI.Events.Startup {
         /// The amount of materials in this group.
         /// </summary>
         [JsonProperty("Count")]
-        public long Count { get; internal set; }
+        public int Count { get; internal set; }
     }
 }

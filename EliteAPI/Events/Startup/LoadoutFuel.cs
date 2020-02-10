@@ -3,9 +3,9 @@ namespace EliteAPI.Events.Startup {
     /// Contains information about the fuel of the ship.
     /// </summary>
     /// <see cref="LoadoutInfo"/>
-    public class LoadoutFuelInfo
+    public class LoadoutFuel
     {
-        internal LoadoutFuelInfo() { }
+        internal LoadoutFuel() { }
 
         /// <summary>
         /// The amount of fuel in the main tank.

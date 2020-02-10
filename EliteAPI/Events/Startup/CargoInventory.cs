@@ -5,9 +5,9 @@ namespace EliteAPI.Events.Startup {
     /// Inventory in the vessel, grouped by name.
     /// </summary>
     /// <see cref="CargoInfo"/>
-    public class CargoInventoryInfo
+    public class CargoInventory
     {
-        internal CargoInventoryInfo() { }
+        internal CargoInventory() { }
 
         /// <summary>
         /// The name of the cargo item.

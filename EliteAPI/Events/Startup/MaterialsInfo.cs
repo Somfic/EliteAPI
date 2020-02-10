@@ -13,23 +13,23 @@ namespace EliteAPI.Events.Startup
         /// <summary>
         /// A list of raw materials, grouped by name.
         /// </summary>
-        /// <see cref="MaterialInfo"/>
+        /// <see cref="MaterialsMaterial"/>
         [JsonProperty("Raw")]
-        public IReadOnlyList<MaterialInfo> Raw { get; internal set; }
+        public IReadOnlyList<MaterialsMaterial> Raw { get; internal set; }
 
         /// <summary>
         /// A list of manufactured materials, grouped by name.
         /// </summary>
-        /// <see cref="MaterialInfo"/>
+        /// <see cref="MaterialsMaterial"/>
         [JsonProperty("Manufactured")]
-        public IReadOnlyList<MaterialInfo> Manufactured { get; internal set; }
+        public IReadOnlyList<MaterialsMaterial> Manufactured { get; internal set; }
 
         /// <summary>
         /// A list of encoded materials, grouped by name.
         /// </summary>
-        /// <see cref="MaterialInfo"/>
+        /// <see cref="MaterialsMaterial"/>
         [JsonProperty("Encoded")]
-        public IReadOnlyList<MaterialInfo> Encoded { get; internal set; }
+        public IReadOnlyList<MaterialsMaterial> Encoded { get; internal set; }
 
         internal static MaterialsInfo Process(string json, EliteDangerousAPI api)
         {

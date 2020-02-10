@@ -12,9 +12,9 @@
     <NeutralLanguage>en</NeutralLanguage>
     <Description>A powerful event based API for Elite: Dangerous.
 VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
-    <Copyright>Somfic 2019</Copyright>
+    <Copyright>Somfic 2020</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.3.1.0-alpha</Version>
+    <Version>2.3.1.0-alpha3</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageIcon>logo_gradient_small.jpg</PackageIcon>
   </PropertyGroup>
@@ -52,10 +52,6 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     <Reference Include="vmAPI">
       <HintPath>..\lib\vmAPI.dll</HintPath>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Events\Travel\" />
   </ItemGroup>
 
   <ItemGroup>

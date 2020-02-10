@@ -102,7 +102,7 @@ namespace EliteAPI
             {
                 try
                 {
-                    string wantedFile = File.ReadAllText($@"C:\Users\{Environment.UserName}\AppData\Local\Frontier Developments\Elite Dangerous\Options\Bindings\StartPreset.start") + ".binds";
+                    string wantedFile = FileReader.ReadAllText($@"C:\Users\{Environment.UserName}\AppData\Local\Frontier Developments\Elite Dangerous\Options\Bindings\StartPreset.start") + ".binds";
                     XmlDocument xml = new XmlDocument();
                     xml.LoadXml(wantedFile);
                     return JsonConvert.DeserializeObject<UserBindings>(JsonConvert.SerializeXmlNode(xml));

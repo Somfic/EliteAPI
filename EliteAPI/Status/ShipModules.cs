@@ -15,7 +15,7 @@ namespace EliteAPI.Status
         {
             if (!File.Exists(file.FullName))
             {
-                api.Logger.Log(Severity.Error, "Could not find ModulesInfo.json.", new FileNotFoundException("ModulesInfo.json could not be found.", file.FullName));
+                Logger.Log(Severity.Error, "Could not find ModulesInfo.json.", new FileNotFoundException("ModulesInfo.json could not be found.", file.FullName));
                 return new ShipModules();
             }
 
@@ -25,7 +25,7 @@ namespace EliteAPI.Status
             }
             catch (Exception e)
             {
-                api.Logger.Log(Severity.Warning, "Could not update modules.");
+                Logger.Log(Severity.Warning, "Could not update modules.");
                 return new ShipModules();
             }
             

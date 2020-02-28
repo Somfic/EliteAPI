@@ -53,7 +53,7 @@ namespace EliteAPI.Discord
         public RichPresenceClient WithCustomID(string id)
         {
             clientID = id;
-            api.Logger.Log(Severity.Debug, $"Set custom Discord Rich Presence ID to {id}.");
+            Logger.Log(Severity.Debug, $"Set custom Discord Rich Presence ID to {id}.");
             return this;
         }
         /// <summary>
@@ -64,7 +64,7 @@ namespace EliteAPI.Discord
         {
             //If we're not running, return;
             if(!IsRunning) { return this; }
-            api.Logger.Log(Severity.Debug, $"Updated Discord rich presence.", presence);
+            Logger.Log(Severity.Debug, $"Updated Discord rich presence.", presence);
             DiscordRPC.RichPresence discordPresence = new DiscordRPC.RichPresence
             {
                 Details = presence.Text,
@@ -90,16 +90,16 @@ namespace EliteAPI.Discord
         {
             //Create RPC client.
             rpc = new DiscordRpcClient(clientID, true);
-            api.Logger.Log("Starting rich presence.");
+            Logger.Log("Starting rich presence.");
 
             //Subscribe to events.
-            rpc.OnConnectionEstablished += (sender, e) => api.Logger.Log(Severity.Debug, $"Attempting to connect to Discord ... ");
-            rpc.OnConnectionFailed += (sender, e) => { api.Logger.Log(Severity.Error, $"There was an error while trying to connect to Discord. Make sure Discord is running.", new ExternalException("Discord is unresponsive, or might not be running on this machine.")); TurnOff(); };
-            rpc.OnError += (sender, e) => api.Logger.Log(Severity.Error, $"Discord Rich Presence stumbled upon an error.", new ExternalException(e.Message, (int)e.Code));
-            rpc.OnReady += (sender, e) => { api.Logger.Log(Severity.Success, $"Discord Rich Presence has connected and is running."); IsReady = true; };
-            rpc.OnClose += (sender, e) => { api.Logger.Log($"Discord Rich Presence closed.", new ExternalException(e.Reason, e.Code)); TurnOff(); };
-            rpc.OnJoin += (sender, e) => api.Logger.Log(Severity.Debug, $"Discord Rich Presence joined with secret '{e.Secret}'.");
-            rpc.OnJoinRequested += (sender, e) => api.Logger.Log(Severity.Debug, $"Discord Rich Presence joining with '{e.User.Username}' (ID {e.User.ID})");
+            rpc.OnConnectionEstablished += (sender, e) => Logger.Log(Severity.Debug, $"Attempting to connect to Discord ... ");
+            rpc.OnConnectionFailed += (sender, e) => { Logger.Log(Severity.Error, $"There was an error while trying to connect to Discord. Make sure Discord is running.", new ExternalException("Discord is unresponsive, or might not be running on this machine.")); TurnOff(); };
+            rpc.OnError += (sender, e) => Logger.Log(Severity.Error, $"Discord Rich Presence stumbled upon an error.", new ExternalException(e.Message, (int)e.Code));
+            rpc.OnReady += (sender, e) => { Logger.Log(Severity.Success, $"Discord Rich Presence has connected and is running."); IsReady = true; };
+            rpc.OnClose += (sender, e) => { Logger.Log($"Discord Rich Presence closed.", new ExternalException(e.Reason, e.Code)); TurnOff(); };
+            rpc.OnJoin += (sender, e) => Logger.Log(Severity.Debug, $"Discord Rich Presence joined with secret '{e.Secret}'.");
+            rpc.OnJoinRequested += (sender, e) => Logger.Log(Severity.Debug, $"Discord Rich Presence joining with '{e.User.Username}' (ID {e.User.ID})");
             api.Events.DockedEvent += (sender, e) => { justDocked = true; };
             api.Events.UndockedEvent += (sender, e) => { justDocked = false; };
 
@@ -249,14 +249,14 @@ namespace EliteAPI.Discord
         /// </summary>
         public RichPresenceClient TurnOff()
         {
-            api.Logger.Log("Terminating rich presence.");
+            Logger.Log("Terminating rich presence.");
             //Remove all presences from queue, and clear it.
             try
             {
                 rpc.DequeueAll();
                 rpc.ClearPresence();
             }
-            catch (Exception ex) { api.Logger.Log(Severity.Error, "Could not terminate rich presence.", ex); }
+            catch (Exception ex) { Logger.Log(Severity.Error, "Could not terminate rich presence.", ex); }
             rpc.Dispose();
             //Mark as not running.
             IsRunning = false;

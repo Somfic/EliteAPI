@@ -83,7 +83,7 @@ namespace EliteAPI.Status
         {
             try
             {
-                if (!File.Exists(file.FullName)) /*  api.Logger.Log(Severity.Error, "Could not find Status.json.", new FileNotFoundException("Status.json could not be found.", file.FullName)); */ return new GameStatus();
+                if (!File.Exists(file.FullName)) /*  Logger.Log(Severity.Error, "Could not find Status.json.", new FileNotFoundException("Status.json could not be found.", file.FullName)); */ return new GameStatus();
 
                 //Create a stream from the log file.
                 var fileStream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -112,14 +112,14 @@ namespace EliteAPI.Status
                     }
                     catch (Exception ex)
                     {
-                        api.Logger.Log(Severity.Warning, "Could not update Status.json.", ex);
+                        Logger.Log(Severity.Warning, "Could not update Status.json.", ex);
                     }
 
                 return api.Status;
             }
             catch (Exception ex)
             {
-                api.Logger.Log(Severity.Warning, "Could not update status.", ex);
+                Logger.Log(Severity.Warning, "Could not update status.", ex);
             }
 
             return new GameStatus();

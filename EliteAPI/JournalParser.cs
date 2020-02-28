@@ -54,7 +54,7 @@ namespace EliteAPI
                     EliteAPI.TriggerOnLoad(eventName, (float)i / totalLines);
                 }
             }
-            catch (Exception ex) { EliteAPI.Logger.Log(Severity.Error, "Could not process Journal file.", ex); }
+            catch (Exception ex) { Logger.Log(Severity.Error, "Could not process Journal file.", ex); }
         }
 
         private string ProcessJson(string json, bool printJson)
@@ -71,16 +71,16 @@ namespace EliteAPI
 
                 if (printJson)
                 {
-                    EliteAPI.Logger.Log(Severity.Debug, $"Processing event '{eventName}'.", (object) obj);
+                    Logger.Log(Severity.Debug, $"Processing event '{eventName}'.", (object) obj);
                 }
                 else
                 {
-                    EliteAPI.Logger.Log(Severity.Debug, $"Processing event '{eventName}'.");
+                    Logger.Log(Severity.Debug, $"Processing event '{eventName}'.");
                 }
             }
             catch (Exception ex)
             {
-                EliteAPI.Logger.Log(Severity.Warning, $"Couldn't process {eventName}.", ex);
+                Logger.Log(Severity.Warning, $"Couldn't process {eventName}.", ex);
             }
 
             try
@@ -103,17 +103,17 @@ namespace EliteAPI
                     }
                     catch (Exception ex)
                     {
-                        EliteAPI.Logger.Log(Severity.Error, $"Could not invoke event method '{eventName}Info.Process()'.", (object) obj, ex);
+                        Logger.Log(Severity.Error, $"Could not invoke event method '{eventName}Info.Process()'.", (object) obj, ex);
                     }
                 }
                 catch (Exception ex)
                 {
-                    EliteAPI.Logger.Log(Severity.Debug, $"Could not find event method '{eventName}Info.Process()'.", (object) obj, ex);
+                    Logger.Log(Severity.Debug, $"Could not find event method '{eventName}Info.Process()'.", (object) obj, ex);
                 }
             }
             catch (Exception ex)
             {
-                EliteAPI.Logger.Log(Severity.Debug, $"Could not find event class '{eventName}Info'.", (object) obj, ex);
+                Logger.Log(Severity.Debug, $"Could not find event class '{eventName}Info'.", (object) obj, ex);
             }
 
             //Invoke the AllEvent.
@@ -123,7 +123,7 @@ namespace EliteAPI
             }
             catch (Exception ex)
             {
-                EliteAPI.Logger.Log(Severity.Error, $"Could not invoke AllEvent for '{eventName}'.", ex);
+                Logger.Log(Severity.Error, $"Could not invoke AllEvent for '{eventName}'.", ex);
             }
             //if (amountOfProcessedFields < amountOfFields)
             //{
@@ -131,7 +131,7 @@ namespace EliteAPI
             //    originial.ToList().ForEach(x => missingFields += $"{x.Name}, ");
             //    parsed.ToList().ForEach(x => missingFields.Replace($"{x.Name}, ", ""));
             //    missingFields = missingFields.Substring(0, missingFields.Length - 2) + " were missing";
-            //    EliteAPI.Logger.LogEventEventDebug($"Not all fields were parsed for '{eventName}'.", new Exception(missingFields));
+            //    Logger.LogEventEventDebug($"Not all fields were parsed for '{eventName}'.", new Exception(missingFields));
             //}
 
             return eventName;

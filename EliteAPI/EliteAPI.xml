@@ -1758,6 +1758,42 @@
             The name of the station.
             </summary>
         </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.StationType">
+            <summary>
+            The type of station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.StarSystem">
+            <summary>
+            The starsystem of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.SystemAddress">
+            <summary>
+            The address of the system.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.MarketId">
+            <summary>
+            The ID of the station market.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.StationFaction">
+            <summary>
+            Holds information on the station's main faction.
+            </summary>
+            <see cref="P:EliteAPI.Events.Travel.DockedInfo.StationFaction"/>
+        </member>
+        <member name="P:EliteAPI.Events.DockedStationFaction.Name">
+            <summary>
+            The name of the faction.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.DockedStationFaction.State">
+            <summary>
+            The state of the faction.
+            </summary>
+        </member>
         <member name="T:EliteAPI.IEliteDangerousAPI">
             <summary>
             Interface for the EliteDangerousAPI class.

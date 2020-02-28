@@ -18,7 +18,7 @@ namespace EliteAPI.ThirdParty
 
         public static void AddHandler(LoggerHandler handler)
         {
-            api.Logger.AddHandler(handler);
+            Logger.AddHandler(handler);
         }
 
         public static void SetupFromIni(string path)
@@ -34,7 +34,7 @@ namespace EliteAPI.ThirdParty
             }
             else
             {
-                api.Logger.Log("Creating new ini file.",
+                Logger.Log("Creating new ini file.",
                     new FileNotFoundException("Could not find custom ini configuration.", path));
 
                 data["ELITEAPI"]["path"] = EliteDangerousAPI.StandardDirectory.ToString();
@@ -52,13 +52,13 @@ namespace EliteAPI.ThirdParty
             }
             LogFileHandler logFileHandler = new LogFileHandler(data["LOGGING"]["path"], "EliteAPI");
             AddHandler(logFileHandler);
-            api.Logger.Log(Severity.Info,$"Using '{logFileHandler.LogFile.FullName}' for logging.");
+            Logger.Log(Severity.Info,$"Using '{logFileHandler.LogFile.FullName}' for logging.");
 
             if (!Directory.Exists(data["ELITEAPI"]["path"]))
             {
                 if (!Directory.Exists(path))
                 {
-                    api.Logger.Log(Severity.Warning, $"Custom '{path}' Journal path is invalid, resetting to default Journal path.");
+                    Logger.Log(Severity.Warning, $"Custom '{path}' Journal path is invalid, resetting to default Journal path.");
                     data["ELITEAPI"]["path"] = EliteDangerousAPI.StandardDirectory.FullName;
                     parser.WriteFile(path, data);
                 }
@@ -66,7 +66,7 @@ namespace EliteAPI.ThirdParty
                 {
                     if (data["ELITEAPI"]["path"] != EliteDangerousAPI.StandardDirectory.FullName)
                     {
-                        api.Logger.Log(Severity.Info, $"Using custom Journal path '{data["ELITEAPI"]["path"]}'.");
+                        Logger.Log(Severity.Info, $"Using custom Journal path '{data["ELITEAPI"]["path"]}'.");
                         api.ChangeJournal(new DirectoryInfo(data["ELITEAPI"]["path"]));
                     }
                 }

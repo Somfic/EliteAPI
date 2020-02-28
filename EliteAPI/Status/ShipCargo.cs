@@ -30,7 +30,7 @@ namespace EliteAPI.Status
         {
             if (!File.Exists(file.FullName))
             {
-                api.Logger.Log(Severity.Error, "Could not find Cargo.json.", new FileNotFoundException("Cargo.json could not be found.", file.FullName)); 
+                Logger.Log(Severity.Error, "Could not find Cargo.json.", new FileNotFoundException("Cargo.json could not be found.", file.FullName)); 
                 return new ShipCargo();
             }
 
@@ -42,7 +42,7 @@ namespace EliteAPI.Status
             }
             catch (Exception ex)
             {
-                api.Logger.Log(Severity.Warning, "Could not update Cargo.json.", ex);
+                Logger.Log(Severity.Warning, "Could not update Cargo.json.", ex);
             }
 
             return new ShipCargo();

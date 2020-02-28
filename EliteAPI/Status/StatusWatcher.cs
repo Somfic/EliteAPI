@@ -122,7 +122,7 @@ namespace EliteAPI.Status
                 try
                 {
                     var e = new StatusEvent($"Status.{propA.Name}", B);
-                    api.Logger.Log(Severity.Debug, $"Setting status '{propA.Name}' to {Convert.ToString(B).ToLower()}.", e);
+                    Logger.Log(Severity.Debug, $"Setting status '{propA.Name}' to {Convert.ToString(B).ToLower()}.", e);
                     api.Events.InvokeAllEvent(new StatusEvent($"Status.{propA.Name}", B));
 
                     try
@@ -131,12 +131,12 @@ namespace EliteAPI.Status
                     }
                     catch (Exception ex)
                     {
-                        api.Logger.Log(Severity.Debug, $"Could not invoke status event '{propA.Name}'.", ex);
+                        Logger.Log(Severity.Debug, $"Could not invoke status event '{propA.Name}'.", ex);
                     }
                 }
                 catch (Exception ex)
                 {
-                    api.Logger.Log(Severity.Error, "Could not do status.", ex);
+                    Logger.Log(Severity.Error, "Could not do status.", ex);
                 }
             }
         }

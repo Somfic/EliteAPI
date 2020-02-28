@@ -4,7 +4,6 @@ using Somfic.Logging;
 
 using System.IO;
 using System.Threading;
-using Segment;
 using Somfic.Logging.Handlers;
 
 namespace Example
@@ -15,10 +14,8 @@ namespace Example
 
         private static void Main(string[] args)
         {
-            Analytics.Client.Identify();
-
             EliteAPI = new EliteDangerousAPI();
-            EliteAPI.Logger.AddHandler(new ConsoleHandler());
+            Logger.AddHandler(new ConsoleHandler());
 
             EliteAPI.Start();
 

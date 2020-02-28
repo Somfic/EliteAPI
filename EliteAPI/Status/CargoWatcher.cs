@@ -53,7 +53,7 @@ namespace EliteAPI.Status
                     }
                     catch (Exception ex)
                     {
-                        api.Logger.Log(Severity.Error, $"Could not invoke Cargo event {propA.Name}, it might not have been added yet.", ex);
+                        Logger.Log(Severity.Error, $"Could not invoke Cargo event {propA.Name}, it might not have been added yet.", ex);
                     }
                 }
             }

@@ -144,7 +144,7 @@ namespace EliteAPI
             JournalDirectory = StandardDirectory;
             SkipCatchUp = false;
 
-            //Create the logger.
+            //Create the Logger.
             Logger = new Logger();
         }
 
@@ -158,7 +158,7 @@ namespace EliteAPI
             this.JournalDirectory = JournalDirectory;
             SkipCatchUp = false;
 
-            //Create the logger.
+            //Create the Logger.
             Logger = new Logger();
         }
 
@@ -172,7 +172,7 @@ namespace EliteAPI
             JournalDirectory = StandardDirectory;
             this.SkipCatchUp = SkipCatchUp;
 
-            //Create the logger.
+            //Create the Logger.
             Logger = new Logger();
         }
 
@@ -187,7 +187,7 @@ namespace EliteAPI
             JournalDirectory = journalDirectory;
             SkipCatchUp = skipCatchUp;
 
-            //Create the logger.
+            //Create the Logger.
             Logger = new Logger();
         }
 

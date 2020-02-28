@@ -10,12 +10,12 @@ namespace EliteAPI.ThirdParty
     {
         private readonly string iniPath;
         private IniData iniData;
-        private readonly Logger logger;
+        private readonly Logger Logger;
 
-        public IniParser(Logger logger, string iniPath)
+        public IniParser(Logger Logger, string iniPath)
         {
             this.iniPath = iniPath;
-            this.logger = logger;
+            this.Logger = Logger;
         }
 
         public void UpdateIni()
@@ -30,12 +30,12 @@ namespace EliteAPI.ThirdParty
                 iniData["ELITEAPI"]["path"] = EliteDangerousAPI.StandardDirectory.ToString();
                 iniData["LOGGING"]["path"] = Directory.GetCurrentDirectory();
                 iniData["DISCORD"]["richPresence"] = "on";
-                logger.Log(Severity.Debug, $"Resetting ini configuration file at '{iniPath}'.");
+                Logger.Log(Severity.Debug, $"Resetting ini configuration file at '{iniPath}'.");
                 parser.WriteFile(iniPath, iniData);
             }
             else
             {
-                logger.Log(Severity.Debug, $"Reading ini configuration file from '{iniPath}'.");
+                Logger.Log(Severity.Debug, $"Reading ini configuration file from '{iniPath}'.");
                 iniData = parser.ReadFile(iniPath);
             }
         }
@@ -45,12 +45,12 @@ namespace EliteAPI.ThirdParty
             try
             {
                 string path = iniData["LOGGING"]["path"];
-                if (Directory.Exists(path)) { logger.Log($"Using '{path}' for logging."); return path; }
-                else { logger.Log(Severity.Warning, $"Found '{path}' for logging, but the path is invalid, using '{Directory.GetCurrentDirectory()}' instead."); return Directory.GetCurrentDirectory(); }
+                if (Directory.Exists(path)) { Logger.Log($"Using '{path}' for logging."); return path; }
+                else { Logger.Log(Severity.Warning, $"Found '{path}' for logging, but the path is invalid, using '{Directory.GetCurrentDirectory()}' instead."); return Directory.GetCurrentDirectory(); }
             }
             catch (Exception ex)
             {
-                logger.Log(Severity.Warning, $"Could not read from '{iniPath}', using '{Directory.GetCurrentDirectory()}' for logging.", ex);
+                Logger.Log(Severity.Warning, $"Could not read from '{iniPath}', using '{Directory.GetCurrentDirectory()}' for logging.", ex);
                 return Directory.GetCurrentDirectory();
             }
         }
@@ -62,20 +62,20 @@ namespace EliteAPI.ThirdParty
                 string path = iniData["ELITEAPI"]["path"];
                 if (path == EliteDangerousAPI.StandardDirectory.FullName)
                 {
-                    logger.Log(Severity.Debug, $"Using default path."); return EliteDangerousAPI.StandardDirectory;
+                    Logger.Log(Severity.Debug, $"Using default path."); return EliteDangerousAPI.StandardDirectory;
                 }
 
                 if (Directory.Exists(path))
                 {
-                    logger.Log($"Found '{path}'."); return new DirectoryInfo(path);
+                    Logger.Log($"Found '{path}'."); return new DirectoryInfo(path);
                 }
                 
-                logger.Log(Severity.Warning, $"Found '{path}', but the path is invalid, using default path.");
+                Logger.Log(Severity.Warning, $"Found '{path}', but the path is invalid, using default path.");
                 return EliteDangerousAPI.StandardDirectory;
             }
             catch (Exception ex)
             {
-                logger.Log(Severity.Warning, $"Could not read from '{iniPath}', using default Journal path.", ex);
+                Logger.Log(Severity.Warning, $"Could not read from '{iniPath}', using default Journal path.", ex);
                 return EliteDangerousAPI.StandardDirectory;
             }
         }
@@ -89,7 +89,7 @@ namespace EliteAPI.ThirdParty
             }
             catch (Exception ex)
             {
-                logger.Log(Severity.Warning, $"Could not read from '{iniPath}', rich presence set to true.", ex);
+                Logger.Log(Severity.Warning, $"Could not read from '{iniPath}', rich presence set to true.", ex);
                 return true;
             }
         }

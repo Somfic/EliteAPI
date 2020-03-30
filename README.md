@@ -1,5 +1,5 @@
 
-## Check the [documentation](https://eliteapi.github.io/EliteAPI-docs/) for information on installation, usage and more.
+## Check the [documentation](https://somfic.github.io/docs/EliteAPI/index.html) for information on installation, usage and more.
 
 <img src="https://i.imgur.com/keDXwjY.png" align="right"
      title="EliteAPI by Somfic" width="280" height="280">

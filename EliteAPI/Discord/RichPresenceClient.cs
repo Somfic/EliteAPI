@@ -235,14 +235,22 @@ namespace EliteAPI.Discord
                     }
                 }
             };
-            if (string.IsNullOrWhiteSpace(api.Location.StarSystem))
-            {
-                UpdatePresence(new RichPresence { Text = "Just started playing", Icon = "ed", IconText = "EliteAPI" });
-            }
-            else
-            {
-                UpdatePresence(new RichPresence { Text = "Just started playing", TextTwo = "In " + api.Location.StarSystem, Icon = "ed", IconText = "EliteAPI" });
-            }
+
+            api.Events.StatusIsRunning += (sender, e) => {
+                var status = api.Status.IsRunning ? "started" : "stopped";
+
+                if (string.IsNullOrWhiteSpace(api.Location.StarSystem))
+                {
+                    UpdatePresence(new RichPresence { Text = $"Just {status} playing", Icon = "ed", IconText = "EliteAPI" });
+                }
+                else
+                {
+                    UpdatePresence(new RichPresence { Text = $"Just {status} playing", TextTwo = "In " + api.Location.StarSystem, Icon = "ed", IconText = "EliteAPI" });
+                }
+            };
+            // Fire it off if it is running already
+            if (api.Status.IsRunning) 
+                api.Events.InvokeStatusIsRunning(new Events.StatusEvent("Status.IsRunning", true));
         }
         /// <summary>
         /// Turn the rich presence off.

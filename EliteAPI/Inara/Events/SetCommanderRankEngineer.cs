@@ -14,12 +14,12 @@ namespace EliteAPI.Inara.Events
             EngineerName = engineerName;
         }
         [JsonProperty("engineerName")]
-        public string EngineerName { get; internal set; }
+        public string EngineerName { get; set; }
         [JsonProperty("rankStage")]
-        public RankStage RankStage { get; internal set; }
+        public RankStage RankStage { get; set; }
         [Range(1, 5)]
         [JsonProperty("rankValue")]
-        public long RankValue { get; internal set; }
+        public long RankValue { get; set; }
     }
     public enum RankStage
     {

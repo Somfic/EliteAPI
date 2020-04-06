@@ -9,28 +9,28 @@ namespace EliteAPI.Inara.Events
             MissionGameId = missionGameId;
         }
         [JsonProperty("missionGameID")]
-        public long MissionGameId { get; internal set; }
+        public long MissionGameId { get; set; }
         [JsonProperty("donationCredits")]
-        public long DonationCredits { get; internal set; }
+        public long DonationCredits { get; set; }
         [JsonProperty("rewardCredits")]
-        public long RewardCredits { get; internal set; }
+        public long RewardCredits { get; set; }
         [JsonProperty("rewardPermits")]
-        public List<InaraRewardPermit> RewardPermits { get; internal set; }
+        public List<InaraRewardPermit> RewardPermits { get; set; }
         [JsonProperty("rewardCommodities")]
-        public List<InaraReward> RewardCommodities { get; internal set; }
+        public List<InaraReward> RewardCommodities { get; set; }
         [JsonProperty("rewardMaterials")]
-        public List<InaraReward> RewardMaterials { get; internal set; }
+        public List<InaraReward> RewardMaterials { get; set; }
     }
     public class InaraReward
     {
         [JsonProperty("itemName")]
-        public string ItemName { get; internal set; }
+        public string ItemName { get; set; }
         [JsonProperty("itemCount")]
-        public long ItemCount { get; internal set; }
+        public long ItemCount { get; set; }
     }
     public class InaraRewardPermit
     {
         [JsonProperty("starsystemName")]
-        public string StarsystemName { get; internal set; }
+        public string StarsystemName { get; set; }
     }
 }

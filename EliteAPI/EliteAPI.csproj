@@ -17,6 +17,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     <Version>2.3.1.0-alpha3</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageIcon>logo_gradient_small.jpg</PackageIcon>
+    <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -61,8 +62,12 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     </None>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(IsWindows)'=='true'">
     <Exec Command="copy &quot;$(SolutionDir)lib\vmAPI.dll&quot; &quot;$(TargetDir)vmAPI.dll&quot;&#xD;&#xA;" />
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(IsWindows)'=='true'">
+    <Exec Command="cp &quot;$(SolutionDir)lib/vmAPI.dll&quot; &quot;$(TargetDir)vmAPI.dll&quot;&#xD;&#xA;" />
   </Target>
 
 </Project>

@@ -91,7 +91,7 @@ namespace EliteAPI
         /// <summary>
         /// Returns all the modules installed on the current ship.
         /// </summary>
-        public ShipModules Modules => ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this);
+        public ShipModules Modules => ShipModules.FromFile(new FileInfo(Path.Combine(JournalDirectory.FullName, "ModulesInfo.json")), this);
 
         /// <summary>
         /// Holds information on all key bindings in the game set by the user.
@@ -373,7 +373,7 @@ namespace EliteAPI
             }
             else
             {
-                Logger.Log(Severity.Error, "Could not find Status.json.", new FileNotFoundException("This error usually occurs when Elite: Dangerous hasn't been run on this machine yet.", $"{JournalDirectory.FullName}\\Status.json"));
+                Logger.Log(Severity.Error, "Could not find Status.json.", new FileNotFoundException("This error usually occurs when Elite: Dangerous hasn't been run on this machine yet.", $"{Path.Combine(JournalDirectory.FullName, "Status.json")}"));
                 Logger.Log("Live updates, such as the landing gear & hardpoints, are not supported without access to 'Status.json'. The Status file is only created after the first run of Elite: Dangerous. If this is not the first time you're running Elite: Dangerous on this machine, change the journal directory.");
                 Logger.Log(Severity.Warning, "A critical part of EliteAPI will be offline.", new Exception("PROCEEDING WITH LIMITED FUNCTIONALITY"));
                 Logger.Log("Proceeding in 20 seconds ...");

@@ -237,15 +237,19 @@ namespace EliteAPI.Discord
             };
 
             api.Events.StatusIsRunning += (sender, e) => {
-                var status = api.Status.IsRunning ? "started" : "stopped";
+                if (api.Status.IsRunning)
+                {
+                    rpc.ClearPresence();
+                    return;
+                }
 
                 if (string.IsNullOrWhiteSpace(api.Location.StarSystem))
                 {
-                    UpdatePresence(new RichPresence { Text = $"Just {status} playing", Icon = "ed", IconText = "EliteAPI" });
+                    UpdatePresence(new RichPresence { Text = $"Just started playing", Icon = "ed", IconText = "EliteAPI" });
                 }
                 else
                 {
-                    UpdatePresence(new RichPresence { Text = $"Just {status} playing", TextTwo = "In " + api.Location.StarSystem, Icon = "ed", IconText = "EliteAPI" });
+                    UpdatePresence(new RichPresence { Text = $"Just started playing", TextTwo = "In " + api.Location.StarSystem, Icon = "ed", IconText = "EliteAPI" });
                 }
             };
             // Fire it off if it is running already

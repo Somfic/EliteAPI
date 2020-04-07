@@ -46,7 +46,7 @@ namespace EliteAPI
                 int result = UnsafeNativeMethods.SHGetKnownFolderPath(new Guid("4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4"), 0, new IntPtr(0), out IntPtr path);
                 if (result >= 0)
                 {
-                    try { return new DirectoryInfo(Marshal.PtrToStringUni(path) + $"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}/Saved Games/Frontier Developments/Elite Dangerous"); }
+                    try { return new DirectoryInfo(Marshal.PtrToStringUni(path) + "/Frontier Developments/Elite Dangerous"); }
                     catch { return new DirectoryInfo(Directory.GetCurrentDirectory()); }
                 }
                 else

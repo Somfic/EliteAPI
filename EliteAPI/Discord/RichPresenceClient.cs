@@ -253,8 +253,9 @@ namespace EliteAPI.Discord
                 }
             };
             // Fire it off if it is running already
-            if (api.Status.IsRunning) 
+            if (api.Status.IsRunning) {
                 api.Events.InvokeStatusIsRunning(new Events.StatusEvent("Status.IsRunning", true));
+            }
         }
         /// <summary>
         /// Turn the rich presence off.

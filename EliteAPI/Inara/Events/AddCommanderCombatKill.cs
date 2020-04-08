@@ -9,8 +9,8 @@ namespace EliteAPI.Inara.Events
             OpponentName = opponentName;
         }
         [JsonProperty("starsystemName")]
-        public string StarsystemName { get; internal set; }
+        public string StarsystemName { get; set; }
         [JsonProperty("opponentName")]
-        public string OpponentName { get; internal set; }
+        public string OpponentName { get; set; }
     }
 }

@@ -5,6 +5,6 @@ namespace EliteAPI.Inara.Events
     public class InaraRewardPermit
     {
         [JsonProperty("starsystemName")]
-        public string StarsystemName { get; internal set; }
+        public string StarsystemName { get; set; }
     }
 }

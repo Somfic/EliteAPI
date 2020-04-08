@@ -11,14 +11,14 @@ namespace EliteAPI.Inara.Events
             PercentileBandReward = percentileBandReward;
         }
         [JsonProperty("communitygoalGameID")]
-        public long CommunitygoalGameId { get; internal set; }
+        public long CommunitygoalGameId { get; set; }
         [JsonProperty("contribution")]
-        public long Contribution { get; internal set; }
+        public long Contribution { get; set; }
         [JsonProperty("percentileBand")]
-        public long PercentileBand { get; internal set; }
+        public long PercentileBand { get; set; }
         [JsonProperty("percentileBandReward")]
-        public long PercentileBandReward { get; internal set; }
+        public long PercentileBandReward { get; set; }
         [JsonProperty("isTopRank")]
-        public bool IsTopRank { get; internal set; }
+        public bool IsTopRank { get; set; }
     }
 }

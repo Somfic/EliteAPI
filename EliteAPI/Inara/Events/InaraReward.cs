@@ -5,8 +5,8 @@ namespace EliteAPI.Inara.Events
     public class InaraReward
     {
         [JsonProperty("itemName")]
-        public string ItemName { get; internal set; }
+        public string ItemName { get; set; }
         [JsonProperty("itemCount")]
-        public long ItemCount { get; internal set; }
+        public long ItemCount { get; set; }
     }
 }

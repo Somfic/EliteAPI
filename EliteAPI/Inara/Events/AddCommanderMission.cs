@@ -11,46 +11,46 @@ namespace EliteAPI.Inara.Events
             StarSystemNameOrigin = starSystemNameOrigin;
         }
         [JsonProperty("missionName")]
-        public string MissionName { get; internal set; }
+        public string MissionName { get; set; }
         [JsonProperty("missionGameID")]
-        public string MissionGameID { get; internal set; }
+        public string MissionGameID { get; set; }
         [JsonProperty("missionExpiry")]
-        public DateTime MissionExpiry { get; internal set; }
+        public DateTime MissionExpiry { get; set; }
         [JsonProperty("influenceGain")]
         public string InfluenceGain { get => InfluenceGain.ToString(); }
-        public GainType InfluenceGainAmount { get; internal set; }
+        public GainType InfluenceGainAmount { get; set; }
         [JsonProperty("reputationGain")]
         public string ReputationGain { get => ReputationGain.ToString(); }
-        public GainType ReputationGainAmount { get; internal set; }
+        public GainType ReputationGainAmount { get; set; }
         [JsonProperty("starSystemNameOrigin")]
-        public string StarSystemNameOrigin { get; internal set; }
+        public string StarSystemNameOrigin { get; set; }
         [JsonProperty("stationNameOrigin")]
-        public string StationNameOrigin { get; internal set; }
+        public string StationNameOrigin { get; set; }
         [JsonProperty("minorFactionNameOrigin")]
-        public string MinorFactionNameOrigin { get; internal set; }
+        public string MinorFactionNameOrigin { get; set; }
         [JsonProperty("starSystemNameTarget")]
-        public string StarsystemNameTarget { get; internal set; }
+        public string StarsystemNameTarget { get; set; }
         [JsonProperty("stationNameTarget")]
-        public string StationNameTarget { get; internal set; }
+        public string StationNameTarget { get; set; }
         [JsonProperty("minorFactionNameTarget")]
-        public string MinorFactionNameTarget { get; internal set; }
+        public string MinorFactionNameTarget { get; set; }
         [JsonProperty("commodityName")]
-        public string CommodityName { get; internal set; }
+        public string CommodityName { get; set; }
         [JsonProperty("commodityCount")]
-        public long CommodityCount { get; internal set; }
+        public long CommodityCount { get; set; }
         [JsonProperty("targetName")]
-        public string TargetName { get; internal set; }
+        public string TargetName { get; set; }
         [JsonProperty("targetType")]
-        public string TargetType { get; internal set; }
+        public string TargetType { get; set; }
         [JsonProperty("killCount")]
-        public long KillCount { get; internal set; }
+        public long KillCount { get; set; }
         [JsonProperty("passengerType")]
-        public string PassengerType { get; internal set; }
+        public string PassengerType { get; set; }
         [JsonProperty("passengerCount")]
-        public long PassengerCount { get; internal set; }
+        public long PassengerCount { get; set; }
         [JsonProperty("passengerIsVIP")]
-        public bool? PassengerIsVIP { get; internal set; }
+        public bool? PassengerIsVIP { get; set; }
         [JsonProperty("passengerIsWanted")]
-        public bool? PassengerIsWanted { get; internal set; }
+        public bool? PassengerIsWanted { get; set; }
     }
 }

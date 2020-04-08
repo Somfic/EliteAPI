@@ -8,6 +8,6 @@ namespace EliteAPI.Inara.Events
             MissionGameId = missionGameId;
         }
         [JsonProperty("missionGameID")]
-        public long MissionGameId { get; internal set; }
+        public long MissionGameId { get; set; }
     }
 }

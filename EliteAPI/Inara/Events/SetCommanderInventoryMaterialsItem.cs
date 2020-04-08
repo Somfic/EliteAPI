@@ -14,8 +14,8 @@ namespace EliteAPI.Inara.Events
             ItemCount = itemCount;
         }
         [JsonProperty("itemName")]
-        public string ItemName { get; internal set; }
+        public string ItemName { get; set; }
         [JsonProperty("itemCount")]
-        public long ItemCount { get; internal set; }
+        public long ItemCount { get; set; }
     }
 }

@@ -15,9 +15,9 @@ namespace EliteAPI.Inara.Events
             FactionReputation = factionReputation;
         }
         [JsonProperty("majorFactionName")]
-        public string FactionName { get; internal set; }
+        public string FactionName { get; set; }
         [Range(-1, 1)]
         [JsonProperty("majorFactionReputation")]
-        public decimal FactionReputation { get; internal set; }
+        public decimal FactionReputation { get; set; }
     }
 }

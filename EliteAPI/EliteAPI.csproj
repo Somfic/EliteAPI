@@ -28,7 +28,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
   <ItemGroup>
     <PackageReference Include="Costura.Fody" Version="4.1.0" />
     <PackageReference Include="DiscordRichPresence" Version="1.143.0" />
-    <PackageReference Include="Fody" Version="6.1.0">
+    <PackageReference Include="Fody" Version="6.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -39,7 +39,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Somfic" Version="1.2.0-alpha3" />
+    <PackageReference Include="Somfic" Version="1.2.0-alpha4" />
 
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>

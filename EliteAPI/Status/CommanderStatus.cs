@@ -5,7 +5,7 @@ namespace EliteAPI.Status
 {
     public class CommanderStatus
     {
-        public CommanderStatus(EliteDangerousAPI api)
+        internal CommanderStatus(EliteDangerousAPI api)
         {
             api.Events.LoadGameEvent += (sender, e) =>
             {

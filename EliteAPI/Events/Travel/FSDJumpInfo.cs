@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace EliteAPI.Events.Travel
 {
@@ -23,7 +23,7 @@ namespace EliteAPI.Events.Travel
         /// The position of the destination star system in light years.
         /// </summary>
         [JsonProperty("StarPos")]
-        public List<float> StarPos { get; internal set; }
+        public IReadOnlyList<float> StarPos { get; internal set; }
 
         /// <summary>
         /// The name of the destination star.
@@ -91,7 +91,7 @@ namespace EliteAPI.Events.Travel
         /// </summary>
         [JsonProperty("SystemSecondEconomy_Localised")]
         public string SystemSecondEconomyLocalised { get; internal set; }
-        
+
         /// <summary>
         /// The system's government.
         /// </summary>
@@ -117,11 +117,10 @@ namespace EliteAPI.Events.Travel
         public bool Wanted { get; internal set; }
 
         [JsonProperty("Factions")]
-        public List<FSDJumpFaction> Factions { get; internal set; }
+        public IReadOnlyList<FSDJumpFaction> Factions { get; internal set; }
 
         [JsonProperty("Powers")]
-        public List<string> Powers { get; internal set; }
-
+        public IReadOnlyList<string> Powers { get; internal set; }
 
         [JsonProperty("PowerplayState")]
         public string PowerplayState { get; internal set; }

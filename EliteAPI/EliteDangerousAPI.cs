@@ -250,6 +250,8 @@ namespace EliteAPI
             try { Status = EliteAPI.Status.GameStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'Status'.", ex); }
             try { JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'JournalParser'.", ex); } 
             JournalParser.processedLogs = new List<string>();
+
+            OnReset?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>
@@ -483,6 +485,11 @@ namespace EliteAPI
         /// Gets triggered when EliteAPI is closing.
         /// </summary>
         public event EventHandler OnQuit;
+
+        /// <summary>
+        /// Gets triggered when EliteAPI has been reset.
+        /// </summary>
+        public event EventHandler OnReset;
 
         /// <summary>
         /// Gets triggered when EliteAPI could not successfully load up.

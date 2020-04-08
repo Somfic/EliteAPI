@@ -302,6 +302,11 @@
             Gets triggered when EliteAPI is closing.
             </summary>
         </member>
+        <member name="E:EliteAPI.EliteDangerousAPI.OnReset">
+            <summary>
+            Gets triggered when EliteAPI has been reset.
+            </summary>
+        </member>
         <member name="E:EliteAPI.EliteDangerousAPI.OnError">
             <summary>
             Gets triggered when EliteAPI could not successfully load up.

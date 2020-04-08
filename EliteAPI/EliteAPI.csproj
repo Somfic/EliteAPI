@@ -17,6 +17,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     <Version>2.3.1.0-alpha3</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageIcon>logo_gradient_small.jpg</PackageIcon>
+    <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -26,6 +27,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
 
   <ItemGroup>
     <PackageReference Include="Costura.Fody" Version="4.1.0" />
+    <PackageReference Include="DiscordRichPresence" Version="1.143.0" />
     <PackageReference Include="Fody" Version="6.1.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -43,9 +45,6 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="DiscordRPC">
-      <HintPath>..\lib\DiscordRPC.dll</HintPath>
-    </Reference>
     <Reference Include="Somfic">
       <HintPath>..\..\Somfic\Somfic\bin\Debug\netstandard2.0\Somfic.dll</HintPath>
     </Reference>
@@ -61,8 +60,12 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     </None>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(IsWindows)'=='true'">
     <Exec Command="copy &quot;$(SolutionDir)lib\vmAPI.dll&quot; &quot;$(TargetDir)vmAPI.dll&quot;&#xD;&#xA;" />
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(IsWindows)'=='false'">
+    <Exec Command="cp &quot;$(SolutionDir)lib/vmAPI.dll&quot; &quot;$(TargetDir)vmAPI.dll&quot;&#xD;&#xA;" />
   </Target>
 
 </Project>

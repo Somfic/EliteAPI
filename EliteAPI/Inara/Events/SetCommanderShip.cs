@@ -9,28 +9,28 @@ namespace EliteAPI.Inara.Events
             ShipGameId = shipGameId;
         }
         [JsonProperty("shipType")]
-        public string ShipType { get; internal set; }
+        public string ShipType { get; set; }
         [JsonProperty("shipGameID")]
-        public long ShipGameId { get; internal set; }
+        public long ShipGameId { get; set; }
         [JsonProperty("shipName")]
-        public string ShipName { get; internal set; }
+        public string ShipName { get; set; }
         [JsonProperty("shipIdent")]
-        public string ShipIdent { get; internal set; }
+        public string ShipIdent { get; set; }
         [JsonProperty("isCurrentShip")]
-        public bool IsCurrentShip { get; internal set; }
+        public bool IsCurrentShip { get; set; }
         [JsonProperty("isMainShip")]
-        public bool IsMainShip { get; internal set; }
+        public bool IsMainShip { get; set; }
         [JsonProperty("isHot")]
-        public bool IsHot { get; internal set; }
+        public bool IsHot { get; set; }
         [JsonProperty("shipHullValue")]
-        public long ShipHullValue { get; internal set; }
+        public long ShipHullValue { get; set; }
         [JsonProperty("shipModulesValue")]
-        public long ShipModulesValue { get; internal set; }
+        public long ShipModulesValue { get; set; }
         [JsonProperty("shipRebuyCost")]
-        public long ShipRebuyCost { get; internal set; }
+        public long ShipRebuyCost { get; set; }
         [JsonProperty("starsystemName")]
-        public string StarsystemName { get; internal set; }
+        public string StarsystemName { get; set; }
         [JsonProperty("stationName")]
-        public string StationName { get; internal set; }
+        public string StationName { get; set; }
     }
 }

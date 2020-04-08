@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using EliteAPI.Events.Travel;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Events
@@ -67,7 +68,7 @@ namespace EliteAPI.Events
         public List<Faction> Factions { get; internal set; }
 
         [JsonProperty("SystemFaction")]
-        public SystemFaction SystemFaction { get; internal set; }
+        public FSDJumpSystemFaction FsdJumpSystemFaction { get; internal set; }
 
         internal static LocationInfo Process(string json, EliteDangerousAPI api)
         {

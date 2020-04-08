@@ -9,8 +9,8 @@ namespace EliteAPI.Inara.Events
             ShipGameId = shipGameId;
         }
         [JsonProperty("shipType")]
-        public string ShipType { get; internal set; }
+        public string ShipType { get; set; }
         [JsonProperty("shipGameID")]
-        public long ShipGameId { get; internal set; }
+        public long ShipGameId { get; set; }
     }
 }

@@ -40,10 +40,13 @@ namespace EliteAPI
         {
             get
             {
+                // Don't try to find the special folder if not on Windows
+                if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) return new DirectoryInfo(Directory.GetCurrentDirectory());
+
                 int result = UnsafeNativeMethods.SHGetKnownFolderPath(new Guid("4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4"), 0, new IntPtr(0), out IntPtr path);
                 if (result >= 0)
                 {
-                    try { return new DirectoryInfo(Marshal.PtrToStringUni(path) + @"\Frontier Developments\Elite Dangerous"); }
+                    try { return new DirectoryInfo(Marshal.PtrToStringUni(path) + "/Frontier Developments/Elite Dangerous"); }
                     catch { return new DirectoryInfo(Directory.GetCurrentDirectory()); }
                 }
                 else
@@ -91,7 +94,7 @@ namespace EliteAPI
         /// <summary>
         /// Returns all the modules installed on the current ship.
         /// </summary>
-        public ShipModules Modules => ShipModules.FromFile(new FileInfo(JournalDirectory.FullName + "\\ModulesInfo.json"), this);
+        public ShipModules Modules => ShipModules.FromFile(new FileInfo(Path.Combine(JournalDirectory.FullName, "ModulesInfo.json")), this);
 
         /// <summary>
         /// Holds information on all key bindings in the game set by the user.
@@ -247,6 +250,8 @@ namespace EliteAPI
             try { Status = EliteAPI.Status.GameStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'Status'.", ex); }
             try { JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'JournalParser'.", ex); } 
             JournalParser.processedLogs = new List<string>();
+
+            OnReset?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>
@@ -373,7 +378,7 @@ namespace EliteAPI
             }
             else
             {
-                Logger.Log(Severity.Error, "Could not find Status.json.", new FileNotFoundException("This error usually occurs when Elite: Dangerous hasn't been run on this machine yet.", $"{JournalDirectory.FullName}\\Status.json"));
+                Logger.Log(Severity.Error, "Could not find Status.json.", new FileNotFoundException("This error usually occurs when Elite: Dangerous hasn't been run on this machine yet.", $"{Path.Combine(JournalDirectory.FullName, "Status.json")}"));
                 Logger.Log("Live updates, such as the landing gear & hardpoints, are not supported without access to 'Status.json'. The Status file is only created after the first run of Elite: Dangerous. If this is not the first time you're running Elite: Dangerous on this machine, change the journal directory.");
                 Logger.Log(Severity.Warning, "A critical part of EliteAPI will be offline.", new Exception("PROCEEDING WITH LIMITED FUNCTIONALITY"));
                 Logger.Log("Proceeding in 20 seconds ...");
@@ -480,6 +485,11 @@ namespace EliteAPI
         /// Gets triggered when EliteAPI is closing.
         /// </summary>
         public event EventHandler OnQuit;
+
+        /// <summary>
+        /// Gets triggered when EliteAPI has been reset.
+        /// </summary>
+        public event EventHandler OnReset;
 
         /// <summary>
         /// Gets triggered when EliteAPI could not successfully load up.

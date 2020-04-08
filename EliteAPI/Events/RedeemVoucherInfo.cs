@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using EliteAPI.Events.Travel;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Events
@@ -12,7 +13,7 @@ namespace EliteAPI.Events
         public long Amount { get; internal set; }
 
         [JsonProperty("Factions")]
-        public List<FSDFaction> Factions { get; internal set; }
+        public List<FSDJumpFaction> Factions { get; internal set; }
 
         internal static RedeemVoucherInfo Process(string json, EliteDangerousAPI api)
         {

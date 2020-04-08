@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Events
 {
-    public class IngState
+    public class FSDJumpFactionState
     {
         [JsonProperty("State")]
         public string State { get; internal set; }

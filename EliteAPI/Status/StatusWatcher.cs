@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using Somfic.Logging;
+using EliteAPI.Events.Travel;
 
 namespace EliteAPI.Status
 {
@@ -57,7 +58,7 @@ namespace EliteAPI.Status
             GameMode = e.GameMode;
             Update();
         }
-        private void Events_FSDJumpEvent(object sender, Events.FSDJumpInfo e)
+        private void Events_FSDJumpEvent(object sender, Events.Travel.FSDJumpInfo e)
         {
             InNoFireZone = false;
             if(JumpRange < e.JumpDist) { JumpRange = e.JumpDist; }

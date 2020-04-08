@@ -89,7 +89,7 @@ namespace EliteAPI.Discord
         public RichPresenceClient TurnOn(bool automatic = true)
         {
             //Create RPC client.
-            rpc = new DiscordRpcClient(clientID, true);
+            rpc = new DiscordRpcClient(clientID, autoEvents: true);
             Logger.Log("Starting rich presence.");
 
             //Subscribe to events.
@@ -265,7 +265,8 @@ namespace EliteAPI.Discord
             //Remove all presences from queue, and clear it.
             try
             {
-                rpc.DequeueAll();
+                // Unsure if DequeueAll is still a requirement at this point
+                //rpc.DequeueAll();
                 rpc.ClearPresence();
             }
             catch (Exception ex) { Logger.Log(Severity.Error, "Could not terminate rich presence.", ex); }

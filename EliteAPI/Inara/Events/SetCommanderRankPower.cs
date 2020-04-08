@@ -10,9 +10,9 @@ namespace EliteAPI.Inara.Events
             RankValue = rankValue;
         }
         [JsonProperty("powerName")]
-        public string PowerName { get; internal set; }
+        public string PowerName { get; set; }
         [Range(0, 5)]
         [JsonProperty("rankValue")]
-        public short RankValue { get; internal set; }
+        public short RankValue { get; set; }
     }
 }

@@ -303,6 +303,33 @@ namespace EliteAPI.Events
             return e;
         }
 
+        public event EventHandler<StatusEvent> StatusAltitudeFromRadiusEvent;
+
+        internal StatusEvent InvokeStatusAltitudeFromRadius(StatusEvent e)
+        {
+            StatusAltitudeFromRadiusEvent?.Invoke(this, e);
+
+            return e;
+        }
+
+        public event EventHandler<StatusEvent> StatusFsdJumpEvent;
+
+        internal StatusEvent InvokeStatusFsdJump(StatusEvent e)
+        {
+            StatusFsdJumpEvent?.Invoke(this, e);
+
+            return e;
+        } 
+        
+        public event EventHandler<StatusEvent> StatusSrvHighBeamEvent;
+
+        internal StatusEvent InvokeStatusSrvHighBeam(StatusEvent e)
+        {
+            StatusSrvHighBeamEvent?.Invoke(this, e);
+
+            return e;
+        }   
+
         //AllEvents
         public event EventHandler<dynamic> AllEvent;
 

@@ -6,14 +6,14 @@ namespace EliteAPI.Inara.Events
     public class InaraLoadoutEngineering
     {
         [JsonProperty("blueprintName")]
-        public string BlueprintName { get; internal set; }
+        public string BlueprintName { get; set; }
         [JsonProperty("blueprintLevel")]
-        public long BlueprintLevel { get; internal set; }
+        public long BlueprintLevel { get; set; }
         [JsonProperty("blueprintQuality")]
-        public long BlueprintQuality { get; internal set; }
+        public long BlueprintQuality { get; set; }
         [JsonProperty("experimentalEffect")]
-        public string ExperimentalEffect { get; internal set; }
+        public string ExperimentalEffect { get; set; }
         [JsonProperty("modifiers")]
-        public List<InaraModifier> Modifiers { get; internal set; }
+        public List<InaraModifier> Modifiers { get; set; }
     }
 }

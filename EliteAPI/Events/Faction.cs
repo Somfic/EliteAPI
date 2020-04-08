@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using EliteAPI.Events.Travel;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Events
@@ -30,6 +31,6 @@ namespace EliteAPI.Events
         public float MyReputation { get; internal set; }
 
         [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
-        public List<ActiveState> ActiveStates { get; internal set; }
+        public List<FSDJumpActiveState> ActiveStates { get; internal set; }
     }
 }

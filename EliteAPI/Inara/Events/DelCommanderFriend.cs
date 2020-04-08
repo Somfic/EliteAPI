@@ -8,7 +8,7 @@ namespace EliteAPI.Inara.Events
             CommanderName = commanderName;
         }
         [JsonProperty("commanderName")]
-        public string CommanderName { get; internal set; }
+        public string CommanderName { get; set; }
         [JsonProperty("gamePlatform")]
         public string GamePlatform { get { return "pc"; } }
     }

@@ -95,7 +95,7 @@ namespace EliteAPI
                     {
                         if (eventMethod != null)
                         {
-                            var parsedEvent = eventMethod.Invoke(null, new object[] {json, EliteAPI});
+                            obj = eventMethod.Invoke(null, new object[] {json, EliteAPI});
                         }
 
                         //amountOfProcessedFields = parsedEvent.GetType().GetProperties().Length;

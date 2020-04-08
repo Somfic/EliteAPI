@@ -1,9 +1,11 @@
 using Newtonsoft.Json;
 
-namespace EliteAPI.Events
+namespace EliteAPI.Events.Travel
 {
-    public class ActiveState
+    public class FSDJumpActiveState
     {
+        internal FSDJumpActiveState() { }
+
         [JsonProperty("State")]
         public string State { get; internal set; }
     }

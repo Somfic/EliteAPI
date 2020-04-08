@@ -1,10 +1,10 @@
 using Newtonsoft.Json;
 
-namespace EliteAPI.Events
+namespace EliteAPI.Events.Travel
 {
-    public class DockedStationFaction
+    public class FSDJumpSystemFaction
     {
-        internal DockedStationFaction() { }
+        internal FSDJumpSystemFaction() { }
 
         /// <summary>
         /// The name of the faction.
@@ -16,6 +16,6 @@ namespace EliteAPI.Events
         /// The state of the faction.
         /// </summary>
         [JsonProperty("FactionState")]
-        public string State { get; internal set; } //todo: turn this into enum
+        public string FactionState { get; internal set; } //todo: turn this into an enum
     }
 }

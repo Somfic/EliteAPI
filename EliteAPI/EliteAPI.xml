@@ -302,6 +302,11 @@
             Gets triggered when EliteAPI is closing.
             </summary>
         </member>
+        <member name="E:EliteAPI.EliteDangerousAPI.OnReset">
+            <summary>
+            Gets triggered when EliteAPI has been reset.
+            </summary>
+        </member>
         <member name="E:EliteAPI.EliteDangerousAPI.OnError">
             <summary>
             Gets triggered when EliteAPI could not successfully load up.
@@ -1758,6 +1763,16 @@
             The name of the station.
             </summary>
         </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.MarketId">
+            <summary>
+            The ID of the station market.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.SystemAddress">
+            <summary>
+            The address of the system.
+            </summary>
+        </member>
         <member name="P:EliteAPI.Events.Travel.DockedInfo.StationType">
             <summary>
             The type of station.
@@ -1768,14 +1783,19 @@
             The starsystem of the station.
             </summary>
         </member>
-        <member name="P:EliteAPI.Events.Travel.DockedInfo.SystemAddress">
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.CockpitBreach">
             <summary>
-            The address of the system.
+            Whether the cockpit is breached upon docking.
             </summary>
         </member>
-        <member name="P:EliteAPI.Events.Travel.DockedInfo.MarketId">
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.Wanted">
             <summary>
-            The ID of the station market.
+            Whether the commander is landed upon docking.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.ActiveFine">
+            <summary>
+            Whether the commander has an active fine upon docking.
             </summary>
         </member>
         <member name="P:EliteAPI.Events.Travel.DockedInfo.StationFaction">
@@ -1783,6 +1803,242 @@
             Holds information on the station's main faction.
             </summary>
             <see cref="P:EliteAPI.Events.Travel.DockedInfo.StationFaction"/>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.StationAllegiance">
+            <summary>
+            The station's allegiance.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.StationEconomy">
+            <summary>
+            The station's primary economy.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.StationEconomyLocalised">
+            <summary>
+            The station's primary economy localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.StationEconomies">
+            <summary>
+            A list of station economies.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.StationGovernment">
+            <summary>
+            The station's government.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.StationGovernmentLocalised">
+            <summary>
+            The station's government localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.StationServices">
+            <summary>
+            A list of services this station has.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.Anonymously">
+            <summary>
+            Whether the commander has limited access to the station services.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedInfo.DistFromStarLs">
+            <summary>
+            This station's distance from the primary star in this starsystem.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedStationEconomy.Name">
+            <summary>
+            The type of economy.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedStationEconomy.NameLocalised">
+            <summary>
+            The type of economy localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockedStationEconomy.Proportion">
+            <summary>
+            The proportion of this economy in the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingCancelledInfo.MarketId">
+            <summary>
+            The id of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingCancelledInfo.StationName">
+            <summary>
+            The name of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingCancelledInfo.StationType">
+            <summary>
+            The type of station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingDeniedInfo.Reason">
+            <summary>
+            The reason why the docking request was denied.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingDeniedInfo.MarketId">
+            <summary>
+            The id of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingDeniedInfo.StationName">
+            <summary>
+            The name of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingDeniedInfo.StationType">
+            <summary>
+            The type of station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingGrantedInfo.LandingPad">
+            <summary>
+            The pad number.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingGrantedInfo.MarketId">
+            <summary>
+            The id of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingGrantedInfo.StationName">
+            <summary>
+            The name of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingGrantedInfo.StationType">
+            <summary>
+            The type of station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingRequestedInfo.MarketId">
+            <summary>
+            The id of the market.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingRequestedInfo.StationName">
+            <summary>
+            The name of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingRequestedInfo.StationType">
+            <summary>
+            The type of station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingTimeoutInfo.MarketId">
+            <summary>
+            The id of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingTimeoutInfo.StationName">
+            <summary>
+            The name of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.DockingTimeoutInfo.StationType">
+            <summary>
+            The type of station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.StarSystem">
+            <summary>
+            The name of the destination star system.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.SystemAddress">
+            <summary>
+            The address of the destination star system.aW
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.StarPos">
+            <summary>
+            The position of the destination star system in light years.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.Body">
+            <summary>
+            The name of the destination star.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.JumpDist">
+            <summary>
+            The total distance jumped.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.FuelUsed">
+            <summary>
+            The amount of fuel used.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.FuelLevel">
+            <summary>
+            The total amount of remaining fuel in the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.BoostUsed">
+            <summary>
+            Whether a FSD boost was used.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.FsdJumpSystemFaction">
+            <summary>
+            The faction controlling the destination system.
+            </summary>
+            <see cref="P:EliteAPI.Events.Travel.FSDJumpInfo.FsdJumpSystemFaction"/>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.SystemAllegiance">
+            <summary>
+            The allegiance of the system.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.SystemEconomy">
+            <summary>
+            The system's main economy.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.SystemEconomyLocalised">
+            <summary>
+            The system's main economy localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.SystemSecondEconomy">
+            <summary>
+            The system's secondary economy.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.SystemSecondEconomyLocalised">
+            <summary>
+            The system's secondary economy localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.SystemGovernment">
+            <summary>
+            The system's government.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpInfo.SystemGovernmentLocalised">
+            <summary>
+            The system's government localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpSystemFaction.Name">
+            <summary>
+            The name of the faction.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Travel.FSDJumpSystemFaction.FactionState">
+            <summary>
+            The state of the faction.
+            </summary>
         </member>
         <member name="P:EliteAPI.Events.DockedStationFaction.Name">
             <summary>

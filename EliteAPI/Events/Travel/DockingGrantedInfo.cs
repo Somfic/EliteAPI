@@ -1,20 +1,36 @@
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-namespace EliteAPI.Events
+namespace EliteAPI.Events.Travel
 {
     public class DockingGrantedInfo : EventBase
     {
-        [JsonProperty("LandingPad")]
-        public long LandingPad { get; internal set; }
+        internal DockingGrantedInfo() { }
 
+        /// <summary>
+        /// The pad number.
+        /// </summary>
+        [JsonProperty("LandingPad")]
+        public int LandingPad { get; internal set; }
+
+        /// <summary>
+        /// The id of the station.
+        /// </summary>
         [JsonProperty("MarketID")]
         public long MarketId { get; internal set; }
 
+        /// <summary>
+        /// The name of the station.
+        /// </summary>
         [JsonProperty("StationName")]
         public string StationName { get; internal set; }
 
+        /// <summary>
+        /// The type of station.
+        /// </summary>
         [JsonProperty("StationType")]
-        public string StationType { get; internal set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public StationType StationType { get; internal set; }
 
         internal static DockingGrantedInfo Process(string json, EliteDangerousAPI api)
         {

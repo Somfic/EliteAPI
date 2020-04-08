@@ -11,16 +11,16 @@ namespace EliteAPI.Inara.Events
             StationName = stationName;
         }
         [JsonProperty("shipType")]
-        public string ShipType { get; internal set; }
+        public string ShipType { get; set; }
         [JsonProperty("shipGameID")]
-        public long ShipGameId { get; internal set; }
+        public long ShipGameId { get; set; }
         [JsonProperty("starsystemName")]
-        public string StarsystemName { get; internal set; }
+        public string StarsystemName { get; set; }
         [JsonProperty("stationName")]
-        public string StationName { get; internal set; }
+        public string StationName { get; set; }
         [JsonProperty("marketID")]
-        public long MarketID { get; internal set; }
+        public long MarketID { get; set; }
         [JsonProperty("transferTime")]
-        public long TransferTime { get; internal set; }
+        public long TransferTime { get; set; }
     }
 }

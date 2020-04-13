@@ -196,11 +196,6 @@
             Object that holds all the events.
             </summary>
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Logger">
-            <summary>
-            Objects that holds all logging related functions.
-            </summary>
-        </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Status">
             <summary>
             Holds the ship's current status.
@@ -337,6 +332,49 @@
             Value between 0 and 1.
             </summary>
         </member>
+        <member name="P:EliteAPI.Events.Exploration.ScanInfo.ScanType">
+            <summary>
+            The type of scan.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Exploration.ScanInfo.StarSystem">
+            <summary>
+            The name of the system.
+            </summary>
+            <remarks>Only when the scan is of a star.</remarks>
+        </member>
+        <member name="P:EliteAPI.Events.Exploration.ScanInfo.SystemAddress">
+            <summary>
+            The address of the system.
+            </summary>
+            <remarks>Only when the scan is of a star.</remarks>
+        </member>
+        <member name="P:EliteAPI.Events.Exploration.ScanInfo.BodyName">
+            <summary>
+            The name of the body.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Exploration.ScanInfo.BodyId">
+            <summary>
+            The ID of the body.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Exploration.ScanInfo.DistanceFromArrivalLs">
+            <summary>
+            The distance from the arrival point in light-seconds.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Events.Exploration.ScanInfo.StarType">
+            <summary>
+            The type of the star.
+            </summary>
+            <remarks>Only when the scan is of a star.</remarks>
+        </member>
+        <member name="T:EliteAPI.Events.GameModeType">
+            <summary>
+            Game mode a commander plays in.
+            </summary>
+        </member>
         <member name="T:EliteAPI.Events.IEvent">
             <summary>
             The interface every event implements.
@@ -367,6 +405,17 @@
             The name of the event.
             </summary>
         </member>
+        <member name="T:EliteAPI.Events.ModifierLabel">
+            <summary>
+            The label of the modifier.
+            </summary>
+            <see cref="!:EngineeringLoadOutModifier"/>
+        </member>
+        <member name="T:EliteAPI.Events.ScanType">
+            <summary>
+            The type of scan.
+            </summary>
+        </member>
         <member name="T:EliteAPI.Events.Startup.CargoInfo">
             <summary>
             This event is written when the game has started.
@@ -376,7 +425,7 @@
             <summary>
             The type of vessel, either 'Ship' or 'SRV'.
             </summary>
-            <see cref="T:EliteAPI.Events.Startup.VesselType"/>
+            <see cref="T:EliteAPI.Events.VesselType"/>
         </member>
         <member name="P:EliteAPI.Events.Startup.CargoInfo.Count">
             <summary>
@@ -506,7 +555,7 @@
             <summary>
             The label of this modifier.
             </summary>
-            <see cref="T:EliteAPI.Events.Startup.ModifierLabel"/>
+            <see cref="T:EliteAPI.Events.ModifierLabel"/>
         </member>
         <member name="P:EliteAPI.Events.Startup.EngineeringLoadOutModifier.Value">
             <summary>
@@ -770,12 +819,6 @@
             <summary>
             The amount of seconds left for this mission.
             </summary>
-        </member>
-        <member name="T:EliteAPI.Events.Startup.ModifierLabel">
-            <summary>
-            The label of the modifier.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.EngineeringLoadOutModifier"/>
         </member>
         <member name="T:EliteAPI.Events.Startup.NewCommanderInfo">
             <summary>
@@ -1630,17 +1673,6 @@
             The highest transaction ever made while trading by the commander.
             </summary>
         </member>
-        <member name="T:EliteAPI.Events.Startup.VesselType">
-            <summary>
-            The type of vessel, either 'Ship' or 'SRV'.
-            </summary>
-            <see cref="T:EliteAPI.Events.Startup.CargoInfo"/>
-        </member>
-        <member name="T:EliteAPI.Events.GameModeType">
-            <summary>
-            Game mode a commander plays in.
-            </summary>
-        </member>
         <member name="T:EliteAPI.Events.LoadGameInfo">
             <summary>
             This event is written when the game has started.
@@ -2050,6 +2082,11 @@
             The state of the faction.
             </summary>
         </member>
+        <member name="T:EliteAPI.Events.VesselType">
+            <summary>
+            The type of vessel, either 'Ship' or 'SRV'.
+            </summary>
+        </member>
         <member name="T:EliteAPI.IEliteDangerousAPI">
             <summary>
             Interface for the EliteDangerousAPI class.
@@ -2073,11 +2110,6 @@
         <member name="P:EliteAPI.IEliteDangerousAPI.Events">
             <summary>
             Object that holds all the events.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Logger">
-            <summary>
-            Objects that holds all logging related functions.
             </summary>
         </member>
         <member name="P:EliteAPI.IEliteDangerousAPI.Status">
@@ -2151,6 +2183,77 @@
             Changes the journal directory.
             </summary>
             <param name="newJournalDirectory"></param>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.Flags">
+            <summary>
+            The current flags.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.Pips">
+            <summary>
+            The current energy division.
+            </summary>
+            <remarks>In half pips.</remarks>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.FireGroup">
+            <summary>
+            The currently selected firegroup.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.GuiFocus">
+            <summary>
+            The currently focused GUI screen.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.Fuel">
+            <summary>
+            Holds fuel information.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.LegalState">
+            <summary>
+            The active legal state.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.Cargo">
+            <summary>
+            The total mass of cargo on the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.Latitude">
+            <summary>
+            The latitude of the ship when near a planet.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.Longitude">
+            <summary>
+            The longitude of the ship when near a planet.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.Altitude">
+            <summary>
+            The altitude of the ship when near a planet.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.Heading">
+            <summary>
+            The heading of the ship when near a planet.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.Body">
+            <summary>
+            The name of the body, if applicable.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.GameStatus.PlanetRadius">
+            <summary>
+            The radius of the body, if applicable.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Ship.LegalState">
+            <summary>
+            The commander's legal state.
+            </summary>
         </member>
         <member name="T:EliteAPI.ThirdParty.Variable">
             <summary>

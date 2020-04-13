@@ -42,7 +42,7 @@
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Somfic, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Somfic.1.2.0-alpha3\lib\netstandard2.0\Somfic.dll</HintPath>
+      <HintPath>..\packages\Somfic.1.2.0-alpha6\lib\netstandard2.0\Somfic.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

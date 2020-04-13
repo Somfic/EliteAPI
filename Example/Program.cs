@@ -14,8 +14,8 @@ namespace Example
 
         private static void Main(string[] args)
         {
-            EliteAPI = new EliteDangerousAPI();
             Logger.AddHandler(new ConsoleHandler());
+            EliteAPI = new EliteDangerousAPI(new DirectoryInfo(@"\\DESKTOP-RRQICPT\Users\Lucas\Saved Games\Frontier Developments\Elite Dangerous"));
 
             EliteAPI.Start();
 

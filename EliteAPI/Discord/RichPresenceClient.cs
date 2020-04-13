@@ -13,8 +13,6 @@ namespace EliteAPI.Discord
         private static string clientID = "497862888128512041";
         private DiscordRpcClient rpc;
         private readonly EliteDangerousAPI api;
-        private bool justDocked = false;
-        private DateTime start;
 
         /// <summary>
         /// Whether the rich presence is running.
@@ -31,7 +29,6 @@ namespace EliteAPI.Discord
         public RichPresenceClient(EliteDangerousAPI api)
         {
             this.api = api;
-            start = DateTime.Now;
         }
 
 
@@ -43,7 +40,6 @@ namespace EliteAPI.Discord
         {
             this.api = api;
             clientID = rpcID;
-            start = DateTime.Now;
         }
         /// <summary>
         /// Set a custom ID to be used, for when you have your own RPC registered with Discord.
@@ -100,8 +96,6 @@ namespace EliteAPI.Discord
             rpc.OnClose += (sender, e) => { Logger.Log($"Discord Rich Presence closed.", new ExternalException(e.Reason, e.Code)); TurnOff(); };
             rpc.OnJoin += (sender, e) => Logger.Log(Severity.Debug, $"Discord Rich Presence joined with secret '{e.Secret}'.");
             rpc.OnJoinRequested += (sender, e) => Logger.Log(Severity.Debug, $"Discord Rich Presence joining with '{e.User.Username}' (ID {e.User.ID})");
-            api.Events.DockedEvent += (sender, e) => { justDocked = true; };
-            api.Events.UndockedEvent += (sender, e) => { justDocked = false; };
 
             //Start the RPC.
             //Mark as running.

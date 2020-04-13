@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace EliteAPI.Status
+namespace EliteAPI.Status.Cargo
 {
-    public partial class Item
+    public class Item
     {
         [JsonProperty("Name")]
         public string Name { get; internal set; }

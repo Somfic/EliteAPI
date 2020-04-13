@@ -5,7 +5,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using Somfic.Logging;
 
-namespace EliteAPI.Status
+namespace EliteAPI.Status.Cargo
 {
     public class ShipCargo
     {

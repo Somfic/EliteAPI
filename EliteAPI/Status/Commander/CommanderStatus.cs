@@ -1,7 +1,7 @@
 ﻿using EliteAPI.Events;
 using EliteAPI.Events.Startup;
 
-namespace EliteAPI.Status
+namespace EliteAPI.Status.Commander
 {
     public class CommanderStatus
     {

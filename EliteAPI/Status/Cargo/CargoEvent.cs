@@ -1,4 +1,4 @@
-﻿namespace EliteAPI.Status
+﻿namespace EliteAPI.Status.Cargo
 {
     public class CargoEvent
     {

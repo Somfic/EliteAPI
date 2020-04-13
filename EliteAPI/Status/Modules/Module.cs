@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EliteAPI.Status
+namespace EliteAPI.Status.Modules
 {
     public partial class Module
     {

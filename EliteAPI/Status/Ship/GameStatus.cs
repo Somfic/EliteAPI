@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json.Converters;
 
-namespace EliteAPI.Status
+namespace EliteAPI.Status.Ship
 {
     public class GameStatus
     {

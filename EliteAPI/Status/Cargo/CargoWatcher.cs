@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Somfic.Logging;
 
-namespace EliteAPI.Status
+namespace EliteAPI.Status.Cargo
 {
     public class CargoWatcher
     {

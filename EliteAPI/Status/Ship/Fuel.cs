@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace EliteAPI.Status
+namespace EliteAPI.Status.Ship
 {
-    public partial class Fuel
+    public class Fuel
     {
         [JsonProperty("FuelMain")]
         public float FuelMain { get; internal set; }

@@ -4,7 +4,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Somfic.Logging;
 
-namespace EliteAPI.Status
+namespace EliteAPI.Status.Modules
 {
     public class ShipModules
     {

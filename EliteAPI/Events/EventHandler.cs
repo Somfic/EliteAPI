@@ -332,9 +332,9 @@ namespace EliteAPI.Events
         }   
 
         //AllEvents
-        public event EventHandler<dynamic> AllEvent;
+        public event EventHandler<EventBase> AllEvent;
 
-        internal dynamic InvokeAllEvent(dynamic arg)
+        internal EventBase InvokeAllEvent(EventBase arg)
         {
             AllEvent?.Invoke(null, arg);
 

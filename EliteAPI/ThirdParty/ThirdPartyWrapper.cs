@@ -67,7 +67,7 @@ namespace EliteAPI.ThirdParty
                     if (data["ELITEAPI"]["path"] != EliteDangerousAPI.StandardDirectory.FullName)
                     {
                         Logger.Log(Severity.Info, $"Using custom Journal path '{data["ELITEAPI"]["path"]}'.");
-                        api.ChangeJournal(new DirectoryInfo(data["ELITEAPI"]["path"]));
+                        api.Config.JournalDirectory = new DirectoryInfo(data["ELITEAPI"]["path"]);
                     }
                 }
             }
@@ -84,7 +84,7 @@ namespace EliteAPI.ThirdParty
 
         public static void Start()
         {
-            api.Start(useRichPresence);
+            api.Start();
 
             //todo: Set status events
             //todo: Set event parameters

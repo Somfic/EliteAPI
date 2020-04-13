@@ -13,6 +13,8 @@ namespace EliteAPI.Status.Ship
 
         [JsonProperty("Pips")] 
         private int[] _pips;
+
+        [JsonIgnore]
         public Pips Pips => new Pips(_pips);
 
         [JsonProperty("FireGroup")]

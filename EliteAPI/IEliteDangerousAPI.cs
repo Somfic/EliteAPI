@@ -4,6 +4,11 @@ using EliteAPI.Status;
 using Somfic.Logging;
 using System;
 using System.IO;
+using EliteAPI.Status.Cargo;
+using EliteAPI.Status.Commander;
+using EliteAPI.Status.Location;
+using EliteAPI.Status.Modules;
+using EliteAPI.Status.Ship;
 
 namespace EliteAPI
 {
@@ -31,11 +36,6 @@ namespace EliteAPI
         /// Object that holds all the events.
         /// </summary>
         Events.EventHandler Events { get; }
-
-        /// <summary>
-        /// Objects that holds all logging related functions.
-        /// </summary>
-        Logger Logger { get; }
 
         /// <summary>
         /// Holds the ship's current status.

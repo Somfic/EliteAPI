@@ -9,12 +9,13 @@ namespace EliteAPI.Events
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
             MissingMemberHandling = MissingMemberHandling.Ignore,
-            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
+            MetadataPropertyHandling = MetadataPropertyHandling.Default,
+            DateParseHandling = DateParseHandling.DateTime,
             Converters =
             {
                 new IsoDateTimeConverter {DateTimeStyles = DateTimeStyles.AssumeUniversal}
-            }
+            },
+            CheckAdditionalContent = true
         };
     }
 }

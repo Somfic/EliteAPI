@@ -1,4 +1,5 @@
 using System;
+using EliteAPI.Events.Exploration;
 using EliteAPI.Events.Startup;
 using EliteAPI.Events.Travel;
 

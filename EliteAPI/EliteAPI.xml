@@ -166,11 +166,6 @@
             Main EliteAPI class.
             </summary>
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.IsReady">
-            <summary>
-            Set to true when the API is ready.
-            </summary>
-        </member>
         <member name="P:EliteAPI.EliteDangerousAPI.StandardDirectory">
             <summary>
             The standard Directory of the Player Journal files (C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous).
@@ -179,6 +174,11 @@
         <member name="P:EliteAPI.EliteDangerousAPI.Version">
             <summary>
             The version of EliteAPI.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.EliteDangerousAPI.IsReady">
+            <summary>
+            Whether the API is ready.
             </summary>
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.IsRunning">
@@ -191,39 +191,9 @@
             The Journal directory that is being used by the API.
             </summary>
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Events">
-            <summary>
-            Object that holds all the events.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Status">
-            <summary>
-            Holds the ship's current status.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Cargo">
-            <summary>
-            Holds the ship's current cargo situation.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Modules">
-            <summary>
-            Returns all the modules installed on the current ship.
-            </summary>
-        </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Bindings">
             <summary>
             Holds information on all key bindings in the game set by the user.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Commander">
-            <summary>
-            Holds information about the commander.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Location">
-            <summary>
-            Holds information about the last known location of the commander.
             </summary>
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.DiscordRichPresence">
@@ -2112,34 +2082,9 @@
             Object that holds all the events.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Status">
-            <summary>
-            Holds the ship's current status.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Cargo">
-            <summary>
-            Holds the ship's current cargo situation.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Modules">
-            <summary>
-            Returns all the modules installed on the current ship.
-            </summary>
-        </member>
         <member name="P:EliteAPI.IEliteDangerousAPI.Bindings">
             <summary>
             Holds information on all key bindings in the game set by the user.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Commander">
-            <summary>
-            Holds information about the commander.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Location">
-            <summary>
-            Holds information about the last known location of the commander.
             </summary>
         </member>
         <member name="E:EliteAPI.IEliteDangerousAPI.OnError">
@@ -2184,75 +2129,19 @@
             </summary>
             <param name="newJournalDirectory"></param>
         </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.Flags">
+        <member name="P:EliteAPI.Status.Ship.Pips.Systems">
             <summary>
-            The current flags.
+            Value from 0-1.
             </summary>
         </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.Pips">
+        <member name="P:EliteAPI.Status.Ship.Pips.Engines">
             <summary>
-            The current energy division.
-            </summary>
-            <remarks>In half pips.</remarks>
-        </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.FireGroup">
-            <summary>
-            The currently selected firegroup.
+            Value from 0-1.
             </summary>
         </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.GuiFocus">
+        <member name="P:EliteAPI.Status.Ship.Pips.Weapons">
             <summary>
-            The currently focused GUI screen.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.Fuel">
-            <summary>
-            Holds fuel information.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.LegalState">
-            <summary>
-            The active legal state.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.Cargo">
-            <summary>
-            The total mass of cargo on the ship.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.Latitude">
-            <summary>
-            The latitude of the ship when near a planet.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.Longitude">
-            <summary>
-            The longitude of the ship when near a planet.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.Altitude">
-            <summary>
-            The altitude of the ship when near a planet.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.Heading">
-            <summary>
-            The heading of the ship when near a planet.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.Body">
-            <summary>
-            The name of the body, if applicable.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Ship.GameStatus.PlanetRadius">
-            <summary>
-            The radius of the body, if applicable.
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Status.Ship.LegalState">
-            <summary>
-            The commander's legal state.
+            Value from 0-1.
             </summary>
         </member>
         <member name="T:EliteAPI.ThirdParty.Variable">

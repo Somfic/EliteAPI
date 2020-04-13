@@ -1,10 +1,5 @@
 ﻿using EliteAPI.Bindings;
 using EliteAPI.Discord;
-using EliteAPI.Status.Cargo;
-using EliteAPI.Status.Commander;
-using EliteAPI.Status.Location;
-using EliteAPI.Status.Modules;
-using EliteAPI.Status.Ship;
 using Newtonsoft.Json;
 using Somfic.Logging;
 using Somfic.Version;
@@ -19,26 +14,25 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
+using EliteAPI.Events;
+using EliteAPI.Status;
+using EliteAPI.Status.Cargo;
+using EliteAPI.Status.Market;
+using EliteAPI.Status.Modules;
+using EliteAPI.Status.Outfitting;
+using EliteAPI.Status.Ship;
+using EliteAPI.Status.Shipyard;
+using EventHandler = System.EventHandler;
 
 namespace EliteAPI
 {
+    //Credits to DarkWanderer for this fix.
+
     /// <summary>
     /// Main EliteAPI class.
     /// </summary>
     public class EliteDangerousAPI : IEliteDangerousAPI
     {
-        //Credits to DarkWanderer for this fix.
-        private class UnsafeNativeMethods
-        {
-            [DllImport("Shell32.dll")]
-            public static extern int SHGetKnownFolderPath([MarshalAs(UnmanagedType.LPStruct)]Guid rfid, uint dwFlags, IntPtr hToken, out IntPtr ppszPath);
-        }
-
-        /// <summary>
-        /// Set to true when the API is ready.
-        /// </summary>
-        public bool IsReady { get; internal set; }
-
         /// <summary>
         /// The standard Directory of the Player Journal files (C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous).
         /// </summary>
@@ -71,6 +65,11 @@ namespace EliteAPI
         public static string Version => Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         /// <summary>
+        /// Whether the API is ready.
+        /// </summary>
+        public bool IsReady { get; internal set; }
+
+        /// <summary>
         /// Whether the API is currently running.
         /// </summary>
         public bool IsRunning { get; private set; } = false;
@@ -80,25 +79,19 @@ namespace EliteAPI
         /// </summary>
         public DirectoryInfo JournalDirectory { get; private set; }
 
-        /// <summary>
-        /// Object that holds all the events.
-        /// </summary>
         public Events.EventHandler Events { get; internal set; }
 
-        /// <summary>
-        /// Holds the ship's current status.
-        /// </summary>
-        public GameStatus Status { get; internal set; }
+        public CargoStatus Cargo { get; internal set; }
 
-        /// <summary>
-        /// Holds the ship's current cargo situation.
-        /// </summary>
-        public ShipCargo Cargo { get; internal set; }
+        public MarketStatus Market { get; internal set; }
 
-        /// <summary>
-        /// Returns all the modules installed on the current ship.
-        /// </summary>
-        public ShipModules Modules => ShipModules.FromFile(new FileInfo(Path.Combine(JournalDirectory.FullName, "ModulesInfo.json")), this);
+        public ModulesStatus Modules { get; internal set; }
+
+        public OutfittingStatus Outfitting { get; internal set; }
+
+        public ShipStatus Status { get; internal set; }
+
+        public ShipyardStatus Shipyard { get; internal set; }
 
         /// <summary>
         /// Holds information on all key bindings in the game set by the user.
@@ -119,20 +112,6 @@ namespace EliteAPI
         }
 
         /// <summary>
-        /// Holds information about the commander.
-        /// </summary>
-        public CommanderStatus Commander { get; internal set; }
-
-        /// <summary>
-        /// Holds information about the last known location of the commander.
-        /// </summary>
-        public LocationStatus Location { get; internal set; }
-
-        internal StatusWatcher StatusWatcher { get; set; }
-        internal CargoWatcher CargoWatcher { get; set; }
-        internal JournalParser JournalParser { get; set; }
-
-        /// <summary>
         /// Rich presence service for Discord.
         /// </summary>
         public RichPresenceClient DiscordRichPresence { get; internal set; }
@@ -141,6 +120,8 @@ namespace EliteAPI
         /// Whether the API should skip the processing of previous events before the API was started.
         /// </summary>
         public bool SkipCatchUp { get; internal set; }
+
+        internal JournalParser JournalParser { get; set; }
 
         /// <summary>
         /// Creates a new EliteDangerousAPI object using the standard Journal directory.
@@ -208,11 +189,11 @@ namespace EliteAPI
                     return true;
                 }
 
-                Logger.Log(Severity.Debug, "EliteAPI is up-to-date with the latest version.");
+                Logger.Debug("EliteAPI is up-to-date with the latest version.");
             }
             catch (Exception ex)
             {
-                Logger.Log(Severity.Debug, "Could not check for updates.", ex);
+                Logger.Warning("Could not check for updates.", ex);
             }
 
             return false;
@@ -224,14 +205,11 @@ namespace EliteAPI
         public void Reset()
         {
             //Reset services.
-            try { Events = new Events.EventHandler(); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'Events'.", ex); }
-            try { Commander = new CommanderStatus(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'Commander'.", ex); }
-            try { Location = new LocationStatus(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'Location'.", ex); }
-            try { DiscordRichPresence = new RichPresenceClient(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'DiscordRichPresence'.", ex); }
-            try { StatusWatcher = new StatusWatcher(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'StatusWatcher'.", ex); }
-            try { CargoWatcher = new CargoWatcher(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'CargoWatcher'.", ex); }
-            try { Status = GameStatus.FromFile(new FileInfo(JournalDirectory + "//Status.json"), this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'Status'.", ex); }
-            try { JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.Log(Severity.Warning, "Couldn't instantiate service 'JournalParser'.", ex); }
+            try { StatusReader.Hook<CargoStatus>(Cargo, Path.Combine(JournalDirectory.FullName, "Cargo.json")); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service CargoWatcher.", ex);}
+            try { StatusReader.Hook<ShipStatus>(Status, Path.Combine(JournalDirectory.FullName, "Status.json")); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service CargoWatcher.", ex);}
+            try { Events = new Events.EventHandler(); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service 'Events'.", ex); }
+            try { DiscordRichPresence = new RichPresenceClient(this); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service 'DiscordRichPresence'.", ex); }
+            try { JournalParser = new JournalParser(this); } catch (Exception ex) { Logger.Warning("Couldn't instantiate service 'JournalParser'.", ex); }
             JournalParser.processedLogs = new List<string>();
 
             OnReset?.Invoke(this, EventArgs.Empty);

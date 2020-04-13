@@ -5,10 +5,11 @@ using Somfic.Logging;
 using System;
 using System.IO;
 using EliteAPI.Status.Cargo;
-using EliteAPI.Status.Commander;
-using EliteAPI.Status.Location;
+using EliteAPI.Status.Market;
 using EliteAPI.Status.Modules;
+using EliteAPI.Status.Outfitting;
 using EliteAPI.Status.Ship;
+using EliteAPI.Status.Shipyard;
 
 namespace EliteAPI
 {
@@ -38,34 +39,20 @@ namespace EliteAPI
         Events.EventHandler Events { get; }
 
         /// <summary>
-        /// Holds the ship's current status.
-        /// </summary>
-        GameStatus Status { get; }
-
-        /// <summary>
-        /// Holds the ship's current cargo situation.
-        /// </summary>
-        ShipCargo Cargo { get; }
-
-        /// <summary>
-        /// Returns all the modules installed on the current ship.
-        /// </summary>
-        ShipModules Modules { get; }
-
-        /// <summary>
         /// Holds information on all key bindings in the game set by the user.
         /// </summary>
         UserBindings Bindings { get; }
 
-        /// <summary>
-        /// Holds information about the commander.
-        /// </summary>
-        CommanderStatus Commander { get; }
+        CargoStatus Cargo { get; }
 
-        /// <summary>
-        /// Holds information about the last known location of the commander.
-        /// </summary>
-        LocationStatus Location { get; }
+         MarketStatus Market { get;}
+
+         ModulesStatus Modules { get; }
+         OutfittingStatus Outfitting { get; }
+
+         ShipStatus Status { get; }
+
+         ShipyardStatus Shipyard { get; }
 
         /// <summary>
         /// Gets triggered when EliteAPI could not successfully load up.

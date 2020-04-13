@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Shipyard
 {
-    public class ShipyardStatus : EventBase
+    public class ShipyardStatus : EventBase, IStatus
     {
         internal ShipyardStatus() { }
 

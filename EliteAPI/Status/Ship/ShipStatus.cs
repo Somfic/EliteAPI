@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Ship
 {
-    public class ShipStatus : EventBase
+    public class ShipStatus : EventBase, IStatus
     {
         internal ShipStatus() { }
 
@@ -12,8 +12,8 @@ namespace EliteAPI.Status.Ship
         public Flags Flags { get; internal set;}
 
         [JsonProperty("Pips")] 
-        private int[] pips;
-        public Pips Pips => new Pips(pips);
+        private int[] _pips;
+        public Pips Pips => new Pips(_pips);
 
         [JsonProperty("FireGroup")]
         public int FireGroup { get; internal set;}

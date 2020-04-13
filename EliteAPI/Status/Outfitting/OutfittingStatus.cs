@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Outfitting
 {
-    public class OutfittingStatus : EventBase
+    public class OutfittingStatus : EventBase, IStatus
     {
         internal OutfittingStatus() { }
 

@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Modules
 {
-    public class ModulesStatus : EventBase
+    public class ModulesStatus : EventBase, IStatus
     {
         internal ModulesStatus() { }
 

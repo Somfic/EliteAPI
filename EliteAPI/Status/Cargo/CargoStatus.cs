@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Cargo
 {
-    public class CargoStatus : EventBase
+    public class CargoStatus : EventBase, IStatus
     {
         internal CargoStatus() { }
 

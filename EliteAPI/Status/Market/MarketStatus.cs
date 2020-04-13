@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Market
 {
-    public class MarketStatus : EventBase
+    public class MarketStatus : EventBase, IStatus
     {
         internal MarketStatus() { }
 

@@ -1,4 +1,6 @@
-﻿namespace EliteAPI.Events
+﻿using System;
+
+namespace EliteAPI.Events
 {
     public class StatusEvent : EventBase
     {
@@ -8,6 +10,7 @@
             @event = Event;
             this.Value = Value;
             value = Value;
+            this.Timestamp = DateTime.Now;
         }
 
         public string Event { get; set; }

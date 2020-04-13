@@ -22,6 +22,7 @@ namespace EliteAPI
 
         public void ProcessJournal(FileInfo logFile, bool doNotTrigger = true, bool printJson = true, bool triggerOnLoad = false)
         {
+
             try
             {
                 var readAllLines = FileReader.ReadAllLines(logFile.FullName);
@@ -59,19 +60,21 @@ namespace EliteAPI
 
         private string ProcessJson(string json, bool printJson)
         {
-            dynamic obj = null;
+            dynamic parsed = null;
             var eventName = "";
+
+            PropertyInfo[] properties = null;
 
             try
             {
                 //Turn the JSON into an object to find out which event it is.
-                obj = JsonConvert.DeserializeObject<dynamic>(json);
+                parsed = JsonConvert.DeserializeObject<dynamic>(json);
 
-                eventName = obj.@event;
+                eventName = parsed.@event;
 
                 if (printJson)
                 {
-                    Logger.Log(Severity.Debug, $"Processing event '{eventName}'.", (object) obj);
+                    Logger.Log(Severity.Debug, $"Processing event '{eventName}'.", (object)parsed);
                 }
                 else
                 {
@@ -95,44 +98,35 @@ namespace EliteAPI
                     {
                         if (eventMethod != null)
                         {
-                            obj = eventMethod.Invoke(null, new object[] {json, EliteAPI});
+                            parsed = eventMethod.Invoke(null, new object[] {json, EliteAPI});
                         }
 
-                        //amountOfProcessedFields = parsedEvent.GetType().GetProperties().Length;
-                        //parsed = parsedEvent.GetType().GetProperties();
+                        properties = parsed.GetType().GetProperties();
                     }
                     catch (Exception ex)
                     {
-                        Logger.Log(Severity.Error, $"Could not invoke event method '{eventName}Info.Process()'.", (object) obj, ex);
+                        Logger.Log(Severity.Error, $"Could not invoke event method '{eventName}Info.Process()'.", (object)parsed, ex);
                     }
                 }
                 catch (Exception ex)
                 {
-                    Logger.Log(Severity.Debug, $"Could not find event method '{eventName}Info.Process()'.", (object) obj, ex);
+                    Logger.Log(Severity.Debug, $"Could not find event method '{eventName}Info.Process()'.", (object)parsed, ex);
                 }
             }
             catch (Exception ex)
             {
-                Logger.Log(Severity.Debug, $"Could not find event class '{eventName}Info'.", (object) obj, ex);
+                Logger.Log(Severity.Debug, $"Could not find event class '{eventName}Info'.", (object)parsed, ex);
             }
 
             //Invoke the AllEvent.
             try
             {
-                EliteAPI.Events.InvokeAllEvent(obj);
+                EliteAPI.Events.InvokeAllEvent(parsed);
             }
             catch (Exception ex)
             {
                 Logger.Log(Severity.Error, $"Could not invoke AllEvent for '{eventName}'.", ex);
             }
-            //if (amountOfProcessedFields < amountOfFields)
-            //{
-            //    string missingFields = "";
-            //    originial.ToList().ForEach(x => missingFields += $"{x.Name}, ");
-            //    parsed.ToList().ForEach(x => missingFields.Replace($"{x.Name}, ", ""));
-            //    missingFields = missingFields.Substring(0, missingFields.Length - 2) + " were missing";
-            //    Logger.LogEventEventDebug($"Not all fields were parsed for '{eventName}'.", new Exception(missingFields));
-            //}
 
             return eventName;
         }

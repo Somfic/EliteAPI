@@ -341,6 +341,16 @@ namespace EliteAPI.Events
             return arg;
         }
 
+        //AllEvents
+        public event EventHandler<object> MissingEvent;
+
+        internal object InvokeMissingEvent(object arg)
+        {
+            MissingEvent?.Invoke(null, arg);
+
+            return arg;
+        }
+
         //ReservoirReplenished
         public event EventHandler<ReservoirReplenishedInfo> ReservoirReplenishedEvent;
 

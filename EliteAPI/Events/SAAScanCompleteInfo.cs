@@ -4,6 +4,9 @@ namespace EliteAPI.Events
 {
     public class SAAScanCompleteInfo : EventBase
     {
+        [JsonProperty("SystemAddress")]
+        public long SystemAddress { get; internal set; }
+
         [JsonProperty("BodyName")]
         public string BodyName { get; internal set; }
 

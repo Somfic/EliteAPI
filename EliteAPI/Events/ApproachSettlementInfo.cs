@@ -10,6 +10,15 @@ namespace EliteAPI.Events
         [JsonProperty("Name_Localised")]
         public string NameLocalised { get; internal set; }
 
+        [JsonProperty("BodyID")]
+        public int BodyId { get; internal set; }
+
+        [JsonProperty("BodyName")]
+        public string BodyName { get; internal set; }
+
+        [JsonProperty("SystemAddress")]
+        public long SystemAddress { get; internal set; }
+
         [JsonProperty("MarketID")]
         public long MarketId { get; internal set; }
 

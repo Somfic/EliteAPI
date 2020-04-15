@@ -15,7 +15,7 @@ namespace EliteAPI
         }
 
         public bool UseDiscordRichPresence { get; set; } = true;
-        public bool TriggerFromBeginSession { get; set; }
+        public bool RaiseOnCatchup { get; set; }
 
         public DirectoryInfo JournalDirectory { get; set; }
     }

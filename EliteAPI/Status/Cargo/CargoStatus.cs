@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Cargo
 {
-    public class CargoStatus : EventBase, IStatus
+    public class CargoStatus : StatusBase
     {
         internal CargoStatus() { }
 
@@ -16,5 +16,7 @@ namespace EliteAPI.Status.Cargo
 
         [JsonProperty("Inventory")]
         public IReadOnlyList<Inventory> Inventory { get; internal set; }
+
+        internal override StatusBase Default => new CargoStatus();
     }
 }

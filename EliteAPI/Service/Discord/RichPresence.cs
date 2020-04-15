@@ -1,4 +1,4 @@
-﻿namespace EliteAPI.Discord
+﻿namespace EliteAPI.Service.Discord
 {
     /// <summary>
     /// Class used to update the Rich Presence with.

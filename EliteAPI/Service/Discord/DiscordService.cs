@@ -6,9 +6,9 @@ using DiscordRPC;
 using Newtonsoft.Json;
 using Somfic.Logging;
 
-namespace EliteAPI.Discord
+namespace EliteAPI.Service.Discord
 {
-    public class RichPresenceClient
+    public class DiscordService : IService
     {
         private static string clientID = "497862888128512041";
         private DiscordRpcClient rpc;
@@ -26,7 +26,7 @@ namespace EliteAPI.Discord
         /// Creates a new Discord Rich Presence client based on the EliteDangerousAPI object.
         /// </summary>
         /// <param name="api">EliteDangerousAPI</param>
-        public RichPresenceClient(EliteDangerousAPI api)
+        public DiscordService(EliteDangerousAPI api)
         {
             this.api = api;
         }
@@ -36,7 +36,7 @@ namespace EliteAPI.Discord
         /// Creates a new Discord Rich Presence client based on the EliteDangerousAPI object, with a custom RPC ID, for when you have your own Rich Presence registered with Discord.
         /// </summary>
         /// <param name="api">EliteDangerousAPI</param>
-        public RichPresenceClient(EliteDangerousAPI api, string rpcID)
+        public DiscordService(EliteDangerousAPI api, string rpcID)
         {
             this.api = api;
             clientID = rpcID;
@@ -46,7 +46,7 @@ namespace EliteAPI.Discord
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public RichPresenceClient WithCustomID(string id)
+        public DiscordService WithCustomID(string id)
         {
             clientID = id;
             Logger.Log(Severity.Debug, $"Set custom Discord Rich Presence ID to {id}.");
@@ -56,7 +56,7 @@ namespace EliteAPI.Discord
         /// Update the rich presence.
         /// </summary>
         /// <param name="presence">The custom rich presence to display.</param>
-        public RichPresenceClient UpdatePresence(RichPresence presence)
+        public DiscordService UpdatePresence(RichPresence presence)
         {
             //If we're not running, return;
             if(!IsRunning) { return this; }
@@ -82,7 +82,7 @@ namespace EliteAPI.Discord
         /// Turn the rich presence on.
         /// </summary>
         /// <param name="automatic">Whether to have EliteAPI send events to the presence.</param>
-        public RichPresenceClient TurnOn(bool automatic = true)
+        public DiscordService TurnOn(bool automatic = true)
         {
             //Create RPC client.
             rpc = new DiscordRpcClient(clientID, autoEvents: true);
@@ -254,7 +254,7 @@ namespace EliteAPI.Discord
         /// <summary>
         /// Turn the rich presence off.
         /// </summary>
-        public RichPresenceClient TurnOff()
+        public DiscordService TurnOff()
         {
             Logger.Log("Terminating rich presence.");
             //Remove all presences from queue, and clear it.

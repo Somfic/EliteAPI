@@ -1,66 +1,59 @@
-﻿using EliteAPI.Events;
+﻿using EliteAPI.Status;
 using EliteAPI.Status.Cargo;
 using EliteAPI.Status.Market;
 using EliteAPI.Status.Modules;
 using EliteAPI.Status.Outfitting;
 using EliteAPI.Status.Ship;
 using EliteAPI.Status.Shipyard;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using EliteAPI.Utilities;
 using Somfic.Logging;
-using Somfic.Version;
-using Somfic.Version.Github;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using EventHandler = System.EventHandler;
 
 namespace EliteAPI
 {
-    public class EliteDangerousAPI
+    public partial class EliteDangerousAPI
     {
         public EliteDangerousAPI(EliteConfiguration configuration = null)
         {
             if (configuration == null) { configuration = new EliteConfiguration(); }
 
             Config = configuration;
+            Reset();
         }
 
-        public static string Version => Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public static string Version { get; private set; }
 
-        public static DirectoryInfo StandardDirectory => GetStandardDirectory();
+        public static DirectoryInfo StandardDirectory { get; private set; }
 
-        public EliteConfiguration Config { get; private set; }
+        public EliteConfiguration Config { get; }
 
         public bool IsRunning { get; private set; }
+        private bool _shouldBeRunning;
 
-        public Events.EventHandler Events { get; private set; } = new Events.EventHandler();
+        public bool IsReady { get; private set; }
 
-        public ShipStatus Status { get; private set; } = new ShipStatus();
+        public Events.EventHandler Events { get; private set; }
 
-        public CargoStatus Cargo { get; private set; } = new CargoStatus();
+        public ShipStatus Status { get; private set; }
 
-        public MarketStatus Market { get; private set; } = new MarketStatus();
+        public CargoStatus Cargo { get; private set; }
 
-        public ModulesStatus Modules { get; private set; } = new ModulesStatus();
+        public MarketStatus Market { get; private set; }
 
-        public OutfittingStatus Outfitting { get; private set; } = new OutfittingStatus();
+        public ModulesStatus Modules { get; private set; }
 
-        public ShipyardStatus Shipyard { get; private set; } = new ShipyardStatus();
+        public OutfittingStatus Outfitting { get; private set; }
 
-        private FileInfo JournalFile { get; set; }
+        public ShipyardStatus Shipyard { get; private set; }
 
-        private string[] SupportFiles { get; } = { "Status.json", "Cargo.json", "Market.json", "ModulesInfo.json", "Outfitting.json", "Shipyard.json" };
+        public LocationService Location { get; private set; }
 
-        private readonly ShipStatus oldStatus;
-        private readonly CargoStatus oldCargo;
-        private readonly MarketStatus oldMarket;
-        private readonly ModulesStatus oldModules;
-        private readonly OutfittingStatus oldOutfitting;
-        private readonly ShipyardStatus oldShipyard;
 
         public void Start()
         {
@@ -69,16 +62,19 @@ namespace EliteAPI
             Logger.Debug("By CMDR Somfic and contributors.");
 
             // Check for a newer version.
-            CheckVersion();
+            VersionChecker.CheckVersion();
 
-            bool canContinue = CheckDirectory();
+            bool canContinue = JournalDirectory.CheckDirectory(Config.JournalDirectory);
 
             if (!canContinue && Config.JournalDirectory != StandardDirectory)
             {
                 // Check again with the standard directory.
-                Config.JournalDirectory = StandardDirectory;
-                canContinue = CheckDirectory();
-                if (canContinue) { Logger.Log($"Changed Journal directory to {StandardDirectory.FullName}."); }
+                canContinue = JournalDirectory.CheckDirectory(StandardDirectory);
+                if (canContinue)
+                {
+                    Config.JournalDirectory = StandardDirectory;
+                    Logger.Log($"Changed Journal directory to {StandardDirectory.FullName}.");
+                }
             }
 
             if (!canContinue)
@@ -92,202 +88,93 @@ namespace EliteAPI
             JournalFile = Config.JournalDirectory.GetFiles("Journal.*.log").OrderByDescending(x => x.LastWriteTime).First();
             Logger.Debug($"{JournalFile.Name} selected.");
 
-            // Start processing the files async.
+            // Mark as running.
             IsRunning = true;
+            _shouldBeRunning = true;
+
+            // Catch up with events from this session.
+            Logger.Debug("Catching up on past events.");
+            ProcessFiles(Config.RaiseOnCatchup);
+            Logger.Debug("Catched up on past events.");
+
+            // For as long as we're running, process the files and raise events.
             Task.Run(() =>
             {
-                List<string> processed = new List<string>();
-
-                while (IsRunning)
+                while (_shouldBeRunning)
                 {
-                    try
-                    {
-                        Console.Title = DateTime.Now.Millisecond.ToString();
-
-                        // Process journal
-                        foreach (string json in FileReader.ReadAllLines(JournalFile.FullName))
-                        {
-                            if (!processed.Contains(json))
-                            {
-                                processed.Add(json);
-
-                                JObject parsed;
-                                EventBase parsedInClass = null;
-                                string eventName;
-
-                                // Parse it into dynamic to find the name of the event.
-                                try
-                                {
-                                    parsed = JsonConvert.DeserializeObject<JObject>(json);
-                                    eventName = ((dynamic)parsed).@event;
-                                    Logger.Debug($"Processing event {eventName}.");
-                                }
-                                catch (Exception ex)
-                                {
-                                    Logger.Warning("Could not process event JSON.", json, ex);
-                                    continue;
-                                }
-
-                                // Invoke the [eventName]Info.Process() method to trigger the individual event.
-                                try
-                                {
-                                    Type eventClass;
-
-                                    // Find the class
-                                    try
-                                    {
-                                        eventClass = Assembly.GetExecutingAssembly().GetTypes()
-                                            .First(x => x.Name == $"{eventName}Info");
-                                    }
-                                    catch (InvalidOperationException)
-                                    {
-                                        Logger.Warning($"Event {eventName} has not been implemented.");
-                                        Logger.Debug(json);
-                                        Events.InvokeMissingEvent(JsonConvert.DeserializeObject(json));
-                                        continue;
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        Logger.Warning($"Event {eventName} could not be processed.", ex);
-                                        Events.InvokeMissingEvent(JsonConvert.DeserializeObject(json));
-                                        continue;
-                                    }
-
-
-                                    // Find the method
-                                    MethodInfo eventMethod = eventClass.GetMethod("Process",
-                                        BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public |
-                                        BindingFlags.Static);
-
-                                    // Invoke the method
-                                    parsedInClass = (EventBase)eventMethod.Invoke(null, new object[] { json, this });
-
-                                    IEnumerable<string> parsedProperties = parsedInClass.GetType().GetProperties().Select(x => x.Name.ToUpper());
-                                    IEnumerable<string> parsedAll = parsed.Properties().Select(x => x.Name.ToUpper());
-
-                                    if (parsedProperties.Count() < parsedAll.Count())
-                                    {
-                                        IEnumerable<string> missingProperties = parsedAll.Except(parsedProperties);
-                                        Logger.Warning($"Event {eventName} couldn't populate all fields.");
-                                        Logger.Debug($" Missing fields: '{string.Join(", ", missingProperties)}'.");
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    Logger.Warning($"Could not execute event {eventName}.", ex);
-                                }
-
-                                // Invoke the AllEvent event.
-                                if (parsedInClass != null)
-                                {
-                                    Events.InvokeAllEvent(parsedInClass);
-                                }
-                            }
-                        }
-
-                        // Process Status.json
-                        if (File.Exists(Path.Combine(Config.JournalDirectory.FullName, "Status.json")))
-                        {
-                            string json = FileReader.ReadAllText(Path.Combine(Config.JournalDirectory.FullName, "Status.json"));
-                            if (!string.IsNullOrWhiteSpace(json))
-                            {
-                                ShipStatus newStatus = JsonConvert.DeserializeObject<ShipStatus>(json);
-                                PropertyInfo[] oldProperties = Status.GetType().GetProperties();
-                                PropertyInfo[] newProperties = newStatus.GetType().GetProperties();
-                            }
-                        }
-
-                        // Process support files
-                        foreach (string supportFile in SupportFiles)
-                        {
-                            string path = Path.Combine(Config.JournalDirectory.FullName, supportFile);
-
-                            // Skip if the file doesn't exist.
-                            if (!File.Exists(path)) { continue; }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        Logger.Error("Critical error.", ex);
-                    }
+                    ProcessFiles(true);
                 }
+
+                IsRunning = false;
+                Logger.Log("EliteAPI was stopped.");
+                OnQuit?.Invoke(this, EventArgs.Empty);
             });
+
+            // Mark that we're ready.
+            IsReady = true;
+            OnReady?.Invoke(this, EventArgs.Empty);
         }
 
-        private bool CheckDirectory()
+        public void Stop()
         {
-            Logger.Debug($"Checking Journal directory {Config.JournalDirectory.FullName}.");
+            IsReady = false;
 
-            // Check if exists.
-            if (!Config.JournalDirectory.Exists)
-            {
-                Logger.Warning("The Journal directory does not exist.", new DirectoryNotFoundException($"The directory {Config.JournalDirectory.FullName} could not be found."));
-                return false;
-            }
+            // Send stop signal to the async while loop.
+            _shouldBeRunning = false;
+            Logger.Debug("Stopping EliteAPI.");
 
-            // Check if has Journal files
-            const string filter = "Journal.*.log";
-            if (Config.JournalDirectory.GetFiles(filter).Length == 0)
-            {
-                Logger.Warning("The Journal directory does not contain any Journal log files.", new FileNotFoundException($"No {filter} file could be found.", Path.Combine(Config.JournalDirectory.FullName, filter)));
-                return false;
-            }
-
-            // Check if has Status.json file
-            if (Config.JournalDirectory.GetFiles("Status.json").Length != 1)
-            {
-                Logger.Warning("The Journal directory does not contain a Status.json.", new FileNotFoundException($"No Status.json file could be found.", Path.Combine(Config.JournalDirectory.FullName, "Status.json")));
-                return false;
-            }
-
-            // Check the other support files.
-            foreach (string supportFile in SupportFiles)
-            {
-                if (supportFile == "Status.json") { continue; }
-                if (Config.JournalDirectory.GetFiles(supportFile).Length != 1)
-                {
-                    Logger.Debug($"The Journal directory does not contain a {supportFile}.", new FileNotFoundException($"No {supportFile} file could be found.", Path.Combine(Config.JournalDirectory.FullName, supportFile)));
-                }
-            }
-
-            return true;
+            // Wait until the async while loop has completed.
+            while (IsRunning) { }
         }
 
-        private static DirectoryInfo GetStandardDirectory()
+        public void Reset()
         {
-            DirectoryInfo fallBackDirectory = new DirectoryInfo(Directory.GetCurrentDirectory());
-
-            // Don't try to find the special folder if not on Windows.
-            if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            // Stop first if we're running.
+            if (IsRunning)
             {
-                return fallBackDirectory;
+                Stop();
             }
 
-            int result = UnsafeNativeMethods.SHGetKnownFolderPath(new Guid("4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4"), 0, new IntPtr(0), out IntPtr path);
-            if (result >= 0)
-            {
-                try { return new DirectoryInfo(Marshal.PtrToStringUni(path) + "/Frontier Developments/Elite Dangerous"); }
-                catch { return fallBackDirectory; }
-            }
+            // Reset the properties.
+            Version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            StandardDirectory = JournalDirectory.GetStandardDirectory();
 
-            return fallBackDirectory;
+            // Reset the events.
+            Events = new Events.EventHandler();
+
+            // Reset all the statuses.
+            Status = new ShipStatus();
+            Cargo = new CargoStatus();
+            Market = new MarketStatus();
+            Modules = new ModulesStatus();
+            Outfitting = new OutfittingStatus();
+            Shipyard = new ShipyardStatus();
+
+            // Reset all the services.
+            Location = new LocationService(this);
+
+            // Reset background stuff.
+            processedLogs = new List<string>();
         }
 
-        public bool CheckVersion()
-        {
-            Logger.Debug("Checking for new updates on github.com/EliteAPI/EliteAPI.");
-            VersionController version = new GithubVersionControl("EliteAPI", "EliteAPI");
+        /// <summary>
+        /// Gets triggered when EliteAPI has successfully loaded up.
+        /// </summary>
+        public event EventHandler OnReady;
 
-            Logger.Log($"Latest version: {version.Latest} (current: {version.This}).");
+        /// <summary>
+        /// Gets triggered when EliteAPI is closing.
+        /// </summary>
+        public event EventHandler OnQuit;
 
-            if (version.This < version.Latest)
-            {
-                Logger.Log($"A new update ({version.Latest}) is available. Visit github.com/EliteAPI/EliteAPI to download the latest version.");
+        /// <summary>
+        /// Gets triggered when EliteAPI has been reset.
+        /// </summary>
+        public event EventHandler OnReset;
 
-                return true;
-            }
-
-            return false;
-        }
+        /// <summary>
+        /// Gets triggered when EliteAPI could not successfully load up.
+        /// </summary>
+        public event EventHandler<Tuple<string, Exception>> OnError;
     }
 }

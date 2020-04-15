@@ -4,105 +4,6 @@
         <name>EliteAPI</name>
     </assembly>
     <members>
-        <member name="T:EliteAPI.Discord.RichPresence">
-            <summary>
-            Class used to update the Rich Presence with.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresence.#ctor">
-            <summary>
-            Empty constructor for a rich presence.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresence.#ctor(System.String)">
-            <summary>
-            Basic constructor for a rich presence.
-            </summary>
-            <param name="line1">The first line of text.</param>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresence.#ctor(System.String,System.String)">
-            <summary>
-            Basic constructor for a rich presence.
-            </summary>
-            <param name="line1">The first line of text.</param>
-            <param name="line2">The second line of text.</param>
-        </member>
-        <member name="P:EliteAPI.Discord.RichPresence.Text">
-            <summary>
-            The first line of text.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Discord.RichPresence.TextTwo">
-            <summary>
-            The second line of text.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Discord.RichPresence.Icon">
-            <summary>
-            The main icon ID.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Discord.RichPresence.IconText">
-            <summary>
-            The text that should be displayed when hovering over the main icon.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Discord.RichPresence.IconTwo">
-            <summary>
-            The secondary icon ID.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Discord.RichPresence.IconTextTwo">
-            <summary>
-            The text that should be displayed when hovering over the secondary icon.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Discord.RichPresenceClient.IsRunning">
-            <summary>
-            Whether the rich presence is running.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Discord.RichPresenceClient.IsReady">
-            <summary>
-            Whether the rich presence is connected and ready.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresenceClient.#ctor(EliteAPI.EliteDangerousAPI)">
-            <summary>
-            Creates a new Discord Rich Presence client based on the EliteDangerousAPI object.
-            </summary>
-            <param name="api">EliteDangerousAPI</param>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresenceClient.#ctor(EliteAPI.EliteDangerousAPI,System.String)">
-            <summary>
-            Creates a new Discord Rich Presence client based on the EliteDangerousAPI object, with a custom RPC ID, for when you have your own Rich Presence registered with Discord.
-            </summary>
-            <param name="api">EliteDangerousAPI</param>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresenceClient.WithCustomID(System.String)">
-            <summary>
-            Set a custom ID to be used, for when you have your own RPC registered with Discord.
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresenceClient.UpdatePresence(EliteAPI.Discord.RichPresence)">
-            <summary>
-            Update the rich presence.
-            </summary>
-            <param name="presence">The custom rich presence to display.</param>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresenceClient.TurnOn(System.Boolean)">
-            <summary>
-            Turn the rich presence on.
-            </summary>
-            <param name="automatic">Whether to have EliteAPI send events to the presence.</param>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresenceClient.TurnOff">
-            <summary>
-            Turn the rich presence off.
-            </summary>
-        </member>
         <member name="M:EliteAPI.EDSM.EDSMConnection.Execute(EliteAPI.EDSM.EDSMEntry)">
             <summary>
             Executes an EDSM API request.
@@ -161,102 +62,6 @@
             The value of the parameter.
             </summary>
         </member>
-        <member name="T:EliteAPI.EliteDangerousAPI">
-            <summary>
-            Main EliteAPI class.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.StandardDirectory">
-            <summary>
-            The standard Directory of the Player Journal files (C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous).
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Version">
-            <summary>
-            The version of EliteAPI.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.IsReady">
-            <summary>
-            Whether the API is ready.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.IsRunning">
-            <summary>
-            Whether the API is currently running.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.JournalDirectory">
-            <summary>
-            The Journal directory that is being used by the API.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Bindings">
-            <summary>
-            Holds information on all key bindings in the game set by the user.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.DiscordRichPresence">
-            <summary>
-            Rich presence service for Discord.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.SkipCatchUp">
-            <summary>
-            Whether the API should skip the processing of previous events before the API was started.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.#ctor">
-            <summary>
-            Creates a new EliteDangerousAPI object using the standard Journal directory.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.#ctor(System.IO.DirectoryInfo)">
-            <summary>
-            Creates a new EliteDangerousAPI object.
-            </summary>
-            <param name="JournalDirectory">The directory in which the Player Journals are located.</param>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.#ctor(System.Boolean)">
-            <summary>
-            Creates a new EliteDangerousAPI object using the standard Journal directory.
-            </summary>
-            <param name="SkipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.#ctor(System.IO.DirectoryInfo,System.Boolean)">
-            <summary>
-            Creates a new EliteDangerousAPI object.
-            </summary>
-            <param name="journalDirectory">The directory in which the Player Journals are located.</param>
-            <param name="skipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.CheckForUpdate">
-            <summary>
-            Checks for a new update.
-            </summary>
-            <returns>Returns true if a newer version is available.</returns>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.Reset">
-            <summary>
-            Resets the API.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.Start(System.Boolean)">
-            <summary>
-            Starts the API.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.ChangeJournal(System.IO.DirectoryInfo)">
-            <summary>
-            Changes the journal directory.
-            </summary>
-            <param name="newJournalDirectory">The new journal directory.</param>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.Stop">
-            <summary>
-            Stops the API.
-            </summary>
-        </member>
         <member name="E:EliteAPI.EliteDangerousAPI.OnReady">
             <summary>
             Gets triggered when EliteAPI has successfully loaded up.
@@ -275,11 +80,6 @@
         <member name="E:EliteAPI.EliteDangerousAPI.OnError">
             <summary>
             Gets triggered when EliteAPI could not successfully load up.
-            </summary>
-        </member>
-        <member name="E:EliteAPI.EliteDangerousAPI.OnLoad">
-            <summary>
-            Gets triggered when EliteAPI is starting up.
             </summary>
         </member>
         <member name="P:EliteAPI.Events.AfmuRepairsInfo.Module">
@@ -2057,77 +1857,104 @@
             The type of vessel, either 'Ship' or 'SRV'.
             </summary>
         </member>
-        <member name="T:EliteAPI.IEliteDangerousAPI">
+        <member name="P:EliteAPI.Service.Discord.DiscordService.IsRunning">
             <summary>
-            Interface for the EliteDangerousAPI class.
+            Whether the rich presence is running.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.IsRunning">
+        <member name="P:EliteAPI.Service.Discord.DiscordService.IsReady">
             <summary>
-            Whether the API is currently running.
+            Whether the rich presence is connected and ready.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.JournalDirectory">
+        <member name="M:EliteAPI.Service.Discord.DiscordService.#ctor(EliteAPI.EliteDangerousAPI)">
             <summary>
-            The Journal directory that is being used by the API.
+            Creates a new Discord Rich Presence client based on the EliteDangerousAPI object.
+            </summary>
+            <param name="api">EliteDangerousAPI</param>
+        </member>
+        <member name="M:EliteAPI.Service.Discord.DiscordService.#ctor(EliteAPI.EliteDangerousAPI,System.String)">
+            <summary>
+            Creates a new Discord Rich Presence client based on the EliteDangerousAPI object, with a custom RPC ID, for when you have your own Rich Presence registered with Discord.
+            </summary>
+            <param name="api">EliteDangerousAPI</param>
+        </member>
+        <member name="M:EliteAPI.Service.Discord.DiscordService.WithCustomID(System.String)">
+            <summary>
+            Set a custom ID to be used, for when you have your own RPC registered with Discord.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EliteAPI.Service.Discord.DiscordService.UpdatePresence(EliteAPI.Service.Discord.RichPresence)">
+            <summary>
+            Update the rich presence.
+            </summary>
+            <param name="presence">The custom rich presence to display.</param>
+        </member>
+        <member name="M:EliteAPI.Service.Discord.DiscordService.TurnOn(System.Boolean)">
+            <summary>
+            Turn the rich presence on.
+            </summary>
+            <param name="automatic">Whether to have EliteAPI send events to the presence.</param>
+        </member>
+        <member name="M:EliteAPI.Service.Discord.DiscordService.TurnOff">
+            <summary>
+            Turn the rich presence off.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.SkipCatchUp">
+        <member name="T:EliteAPI.Service.Discord.RichPresence">
             <summary>
-            Whether the API should skip the processing of previous events before the API was started.
+            Class used to update the Rich Presence with.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Events">
+        <member name="M:EliteAPI.Service.Discord.RichPresence.#ctor">
             <summary>
-            Object that holds all the events.
+            Empty constructor for a rich presence.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Bindings">
+        <member name="M:EliteAPI.Service.Discord.RichPresence.#ctor(System.String)">
             <summary>
-            Holds information on all key bindings in the game set by the user.
+            Basic constructor for a rich presence.
+            </summary>
+            <param name="line1">The first line of text.</param>
+        </member>
+        <member name="M:EliteAPI.Service.Discord.RichPresence.#ctor(System.String,System.String)">
+            <summary>
+            Basic constructor for a rich presence.
+            </summary>
+            <param name="line1">The first line of text.</param>
+            <param name="line2">The second line of text.</param>
+        </member>
+        <member name="P:EliteAPI.Service.Discord.RichPresence.Text">
+            <summary>
+            The first line of text.
             </summary>
         </member>
-        <member name="E:EliteAPI.IEliteDangerousAPI.OnError">
+        <member name="P:EliteAPI.Service.Discord.RichPresence.TextTwo">
             <summary>
-            Gets triggered when EliteAPI could not successfully load up.
+            The second line of text.
             </summary>
         </member>
-        <member name="E:EliteAPI.IEliteDangerousAPI.OnQuit">
+        <member name="P:EliteAPI.Service.Discord.RichPresence.Icon">
             <summary>
-            Gets triggered when EliteAPI is closing.
+            The main icon ID.
             </summary>
         </member>
-        <member name="E:EliteAPI.IEliteDangerousAPI.OnReady">
+        <member name="P:EliteAPI.Service.Discord.RichPresence.IconText">
             <summary>
-            Gets triggered when EliteAPI has successfully loaded up.
+            The text that should be displayed when hovering over the main icon.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.DiscordRichPresence">
+        <member name="P:EliteAPI.Service.Discord.RichPresence.IconTwo">
             <summary>
-            Rich presence service for Discord.
+            The secondary icon ID.
             </summary>
         </member>
-        <member name="M:EliteAPI.IEliteDangerousAPI.Reset">
+        <member name="P:EliteAPI.Service.Discord.RichPresence.IconTextTwo">
             <summary>
-            Resets the API.
+            The text that should be displayed when hovering over the secondary icon.
             </summary>
-        </member>
-        <member name="M:EliteAPI.IEliteDangerousAPI.Start(System.Boolean)">
-            <summary>
-            Starts the API.
-            </summary>
-            <param name="runRichPresence"></param>
-        </member>
-        <member name="M:EliteAPI.IEliteDangerousAPI.Stop">
-            <summary>
-            Stops the API.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.IEliteDangerousAPI.ChangeJournal(System.IO.DirectoryInfo)">
-            <summary>
-            Changes the journal directory.
-            </summary>
-            <param name="newJournalDirectory"></param>
         </member>
         <member name="P:EliteAPI.Status.Ship.Pips.Systems">
             <summary>

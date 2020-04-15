@@ -55,7 +55,7 @@ namespace EliteAPI.Events.Startup
         /// <summary>
         /// The total amount of credits spent on insurance.
         /// </summary>
-        [JsonProperty("Spent_On_Insurance ")]
+        [JsonProperty("Spent_On_Insurance")]
         public long SpentOnInsurance { get; internal set; }
 
         /// <summary>

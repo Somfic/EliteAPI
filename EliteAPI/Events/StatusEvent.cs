@@ -4,12 +4,13 @@ namespace EliteAPI.Events
 {
     public class StatusEvent : EventBase
     {
-        public StatusEvent(string Event, dynamic Value)
+        public StatusEvent(string @event, object value)
         {
-            this.Event = Event;
-            @event = Event;
-            this.Value = Value;
-            value = Value;
+            this.Event = @event;
+            this.@event = @event;
+            this.Value = value;
+            this.value = value;
+
             this.Timestamp = DateTime.Now;
         }
 

@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Market
 {
-    public class MarketStatus : EventBase, IStatus
+    public class MarketStatus : StatusBase
     {
         internal MarketStatus() { }
 
@@ -21,5 +21,7 @@ namespace EliteAPI.Status.Market
 
         [JsonProperty("Items")]
         public IReadOnlyList<Item> Items { get; internal set; }
+
+        internal override StatusBase Default => new MarketStatus();
     }
 }

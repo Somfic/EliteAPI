@@ -1,24 +1,14 @@
 ﻿using EliteAPI.Events;
-using EliteAPI.Status.Cargo;
-using EliteAPI.Status.Market;
-using EliteAPI.Status.Modules;
-using EliteAPI.Status.Outfitting;
 using EliteAPI.Status.Ship;
-using EliteAPI.Status.Shipyard;
+using EliteAPI.Utilities;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Somfic.Logging;
-using Somfic.Version;
-using Somfic.Version.Github;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
-using EliteAPI.Status;
-using EliteAPI.Utilities;
 
 namespace EliteAPI
 {
@@ -26,14 +16,8 @@ namespace EliteAPI
     {
         private FileInfo JournalFile { get; set; }
 
-        internal static string[] SupportFiles { get; } = { "Status.json", "Cargo.json", "Market.json", "ModulesInfo.json", "Outfitting.json", "Shipyard.json" };
-
-        private readonly ShipStatus oldStatus;
-        private readonly CargoStatus oldCargo;
-        private readonly MarketStatus oldMarket;
-        private readonly ModulesStatus oldModules;
-        private readonly OutfittingStatus oldOutfitting;
-        private readonly ShipyardStatus oldShipyard;
+        internal static string[] SupportFiles { get; } =
+            {"Status.json", "Cargo.json", "Market.json", "ModulesInfo.json", "Outfitting.json", "Shipyard.json"};
 
         private List<string> processedLogs { get; set; }
 
@@ -42,18 +26,22 @@ namespace EliteAPI
             try
             {
                 // Check if the Journal file hasn't changed.
-                var newFileInfoJournalFile = Config.JournalDirectory.GetFiles("Journal.*.log").OrderByDescending(x => x.LastWriteTime).First();
+                FileInfo newFileInfoJournalFile = Config.JournalDirectory.GetFiles("Journal.*.log")
+                    .OrderByDescending(x => x.LastWriteTime).First();
                 if (JournalFile.FullName != newFileInfoJournalFile.FullName)
                 {
                     Logger.Debug($"Switched to {JournalFile.Name}.");
                     JournalFile = newFileInfoJournalFile;
                 }
-                
+
 
                 // Process journal
                 foreach (string json in FileReader.ReadAllLines(JournalFile.FullName))
                 {
-                    if (processedLogs.Contains(json)) { continue; }
+                    if (processedLogs.Contains(json))
+                    {
+                        continue;
+                    }
 
                     processedLogs.Add(json);
                     JObject parsedFromGame;
@@ -64,7 +52,7 @@ namespace EliteAPI
                     try
                     {
                         parsedFromGame = JsonConvert.DeserializeObject<JObject>(json);
-                        eventName = ((dynamic)parsedFromGame).@event;
+                        eventName = ((dynamic) parsedFromGame).@event;
                         Logger.Debug($"Processing event {eventName}.");
                     }
                     catch (Exception ex)
@@ -73,7 +61,10 @@ namespace EliteAPI
                         continue;
                     }
 
-                    if (!raiseEvents) { continue; }
+                    if (!raiseEvents)
+                    {
+                        continue;
+                    }
 
                     // Invoke the [eventName]Info.Process() method to trigger the individual event.
                     try
@@ -88,7 +79,8 @@ namespace EliteAPI
                         }
                         catch (InvalidOperationException)
                         {
-                            Logger.Warning($"Event {eventName} has not been implemented.", JsonConvert.DeserializeObject(json));
+                            Logger.Warning($"Event {eventName} has not been implemented.",
+                                JsonConvert.DeserializeObject(json));
                             Events.InvokeMissingEvent(JsonConvert.DeserializeObject(json));
                             continue;
                         }
@@ -106,15 +98,18 @@ namespace EliteAPI
                             BindingFlags.Static);
 
                         // Invoke the method
-                        parsedIntoAPI = eventMethod.Invoke(null, new object[] { json, this });
+                        parsedIntoAPI = eventMethod.Invoke(null, new object[] {json, this});
 
-                        var gameProperties = PropertyReader.GetAllChildren(parsedFromGame, eventName);
-                        var apiProperties = PropertyReader.GetAllChildren(JObject.FromObject(parsedIntoAPI), eventName);
-                        var missing = gameProperties.Except(apiProperties);
+                        string[] gameProperties = PropertyReader.GetAllChildren(parsedFromGame, eventName);
+                        string[] apiProperties =
+                            PropertyReader.GetAllChildren(JObject.FromObject(parsedIntoAPI), eventName);
+                        IEnumerable<string> missing = gameProperties.Except(apiProperties);
 
                         if (missing.Any())
                         {
-                            Logger.Warning($"Event {eventName} could not populate all properties.", missing);
+                            Logger.Warning(
+                                $"Event {eventName} could not populate all properties ({string.Join(", ", missing)}).",
+                                JsonConvert.DeserializeObject(json));
                         }
                     }
                     catch (Exception ex)
@@ -125,7 +120,7 @@ namespace EliteAPI
                     // Invoke the AllEvent event.
                     if (parsedIntoAPI != null)
                     {
-                        Events.InvokeAllEvent((EventBase)parsedIntoAPI);
+                        Events.InvokeAllEvent((EventBase) parsedIntoAPI);
                     }
                 }
 
@@ -136,18 +131,60 @@ namespace EliteAPI
                     if (!string.IsNullOrWhiteSpace(json))
                     {
                         ShipStatus newStatus = JsonConvert.DeserializeObject<ShipStatus>(json);
-                        PropertyInfo[] oldProperties = Status.GetType().GetProperties();
-                        PropertyInfo[] newProperties = newStatus.GetType().GetProperties();
+
+                        IEnumerable<PropertyInfo> properties = Status.GetType().GetProperties();
+
+                        foreach (PropertyInfo property in properties)
+                        {
+                            string name = property.Name;
+                            string oldValue;
+                            string newValue;
+
+                            try
+                            {
+                                oldValue = property.GetValue(Status).ToString();
+                                newValue = property.GetValue(newStatus).ToString();
+                            }
+                            catch (Exception ex)
+                            {
+                                Logger.Warning($"Couldn't update status {name}.", ex);
+                                continue;
+                            }
+
+                            // If the values are the same, skip this status property.
+                            if (oldValue == newValue)
+                            {
+                                continue;
+                            }
+
+                            // Get the dynamic value of the new property.
+                            object val = property.GetValue(newStatus);
+
+                            // Execute the event.
+                            try
+                            {
+                                MethodInfo method = Events.GetType().GetMethod($"InvokeStatus{name}",
+                                    BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public |
+                                    BindingFlags.Static);
+
+                                if (method != null)
+                                {
+                                    Logger.Log(Severity.Debug, $"Setting status {name} to {newValue}.");
+                                    StatusEvent e = new StatusEvent($"Status.{name}", val);
+                                    method.Invoke(Events, new object[] {e});
+                                }
+
+                                // Invoke AllEvent.
+                                Events.InvokeAllEvent(new StatusEvent($"Status.{name}", val));
+                            }
+                            catch (Exception ex)
+                            {
+                                Logger.Log(Severity.Debug, $"Could not invoke status event '{name}'.", ex);
+                            }
+                        }
+
+                        Status = newStatus;
                     }
-                }
-
-                // Process support files
-                foreach (string supportFile in SupportFiles)
-                {
-                    string path = Path.Combine(Config.JournalDirectory.FullName, supportFile);
-
-                    // Skip if the file doesn't exist.
-                    if (!File.Exists(path)) { continue; }
                 }
             }
             catch (Exception ex)
@@ -156,4 +193,4 @@ namespace EliteAPI
             }
         }
     }
-} 
+}

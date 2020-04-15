@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Ship
 {
-    public class ShipStatus : EventBase, IStatus
+    public class ShipStatus : StatusBase
     {
         internal ShipStatus() { }
 
@@ -82,11 +82,13 @@ namespace EliteAPI.Status.Ship
         public float JumpRange { get; internal set; }
         public bool IsRunning => Flags != 0;
         public bool InMainMenu { get; internal set; }
-        public string MusicTrack { get; internal set; }
+        public string MusicTrack { get; internal set; } = "NoTrack";
 
         private bool GetFlag(int bit)
         {
             return Flags.HasFlag((Flags)(1 << bit));
         }
+
+        internal override StatusBase Default => new ShipStatus();
     }
 }

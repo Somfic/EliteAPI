@@ -13,6 +13,10 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using EliteAPI.Service.Discord;
+using EliteAPI.Service.Location;
+using EliteAPI.Service.StatusExtension;
+using Newtonsoft.Json;
 using EventHandler = System.EventHandler;
 
 namespace EliteAPI
@@ -42,17 +46,21 @@ namespace EliteAPI
 
         public ShipStatus Status { get; private set; }
 
-        public CargoStatus Cargo { get; private set; }
+        public CargoStatus Cargo { get; internal set; }
 
-        public MarketStatus Market { get; private set; }
+        public MarketStatus Market { get; internal set; }
 
-        public ModulesStatus Modules { get; private set; }
+        public ModulesStatus Modules { get; internal set; }
 
-        public OutfittingStatus Outfitting { get; private set; }
+        public OutfittingStatus Outfitting { get; internal set; }
 
-        public ShipyardStatus Shipyard { get; private set; }
+        public ShipyardStatus Shipyard { get; internal set; }
 
         public LocationService Location { get; private set; }
+
+        public DiscordService Discord { get; private set; }
+
+        private StatusExtensionService StatusExtension { get; set; }
 
 
         public void Start()
@@ -113,11 +121,20 @@ namespace EliteAPI
             // Mark that we're ready.
             IsReady = true;
             OnReady?.Invoke(this, EventArgs.Empty);
+
+            // Start rich presence
+            if(Config.UseDiscordRichPresence)
+            {
+                Discord.TurnOn();
+            }
         }
 
         public void Stop()
         {
             IsReady = false;
+
+            // Stop rich presence.
+            Discord.TurnOff();
 
             // Send stop signal to the async while loop.
             _shouldBeRunning = false;
@@ -138,20 +155,22 @@ namespace EliteAPI
             // Reset the properties.
             Version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
             StandardDirectory = JournalDirectory.GetStandardDirectory();
-
+            
             // Reset the events.
             Events = new Events.EventHandler();
 
             // Reset all the statuses.
-            Status = new ShipStatus();
-            Cargo = new CargoStatus();
-            Market = new MarketStatus();
-            Modules = new ModulesStatus();
-            Outfitting = new OutfittingStatus();
-            Shipyard = new ShipyardStatus();
+            Status = StatusReader.Read<ShipStatus>(Config.JournalDirectory, "Status.json");
+            Cargo = StatusReader.Read<CargoStatus>(Config.JournalDirectory, "Cargo.json");
+            Market = StatusReader.Read<MarketStatus>(Config.JournalDirectory, "Market.json");
+            Modules = StatusReader.Read<ModulesStatus>(Config.JournalDirectory, "ModulesInfo.json");
+            Outfitting = StatusReader.Read<OutfittingStatus>(Config.JournalDirectory, "Outfitting.json");
+            Shipyard = StatusReader.Read<ShipyardStatus>(Config.JournalDirectory, "Shipyard.json");
 
             // Reset all the services.
             Location = new LocationService(this);
+            Discord = new DiscordService(this);
+            StatusExtension = new StatusExtensionService(this);
 
             // Reset background stuff.
             processedLogs = new List<string>();

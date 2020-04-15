@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 using EliteAPI.Events;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Outfitting
 {
-    public class OutfittingStatus : EventBase, IStatus
+    public class OutfittingStatus : StatusBase
     {
         internal OutfittingStatus() { }
 
@@ -24,5 +25,7 @@ namespace EliteAPI.Status.Outfitting
 
         [JsonProperty("Items")]
         public IReadOnlyList<Item> Items { get; internal set; }
+
+        internal override StatusBase Default => new OutfittingStatus();
     }
 }

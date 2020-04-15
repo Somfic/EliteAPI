@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Shipyard
 {
-    public class ShipyardStatus : EventBase, IStatus
+    public class ShipyardStatus : StatusBase
     {
         internal ShipyardStatus() { }
 
@@ -27,5 +27,7 @@ namespace EliteAPI.Status.Shipyard
 
         [JsonProperty("PriceList")]
         public IReadOnlyList<PriceList> PriceList { get; internal set; }
+
+        internal override StatusBase Default => new ShipyardStatus();
     }
 }

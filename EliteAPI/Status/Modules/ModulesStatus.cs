@@ -6,11 +6,13 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Modules
 {
-    public class ModulesStatus : EventBase, IStatus
+    public class ModulesStatus : StatusBase
     {
         internal ModulesStatus() { }
 
         [JsonProperty("Modules")]
         public IReadOnlyList<Module> Modules { get; internal set; }
+
+        internal override StatusBase Default => new ModulesStatus();
     }
 }

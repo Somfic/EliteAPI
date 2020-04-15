@@ -13,7 +13,7 @@ namespace EliteAPI.Utilities
 
             obj.Properties().ToList().ForEach(prop =>
             {
-                string name = prop.Name.Replace("_", "").ToUpper();
+                string name = prop.Name.Replace("_", "");
 
                 switch (prop.Value.Type)
                 {

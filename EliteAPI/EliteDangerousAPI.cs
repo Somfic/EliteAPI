@@ -38,7 +38,6 @@ namespace EliteAPI
         public EliteConfiguration Config { get; }
 
         public bool IsRunning { get; private set; }
-        private bool _shouldBeRunning;
 
         public bool IsReady { get; private set; }
 
@@ -62,6 +61,7 @@ namespace EliteAPI
 
         private StatusExtensionService StatusExtension { get; set; }
 
+        private volatile bool _shouldBeRunning;
 
         public void Start()
         {
@@ -102,18 +102,22 @@ namespace EliteAPI
 
             // Catch up with events from this session.
             Logger.Debug("Catching up on past events.");
-            ProcessFiles(Config.RaiseOnCatchup);
+            PrepareFileProcessing(Config.RaiseOnCatchup);
             Logger.Debug("Catched up on past events.");
 
             // For as long as we're running, process the files and raise events.
             Task.Run(() =>
             {
+                StartFileProcessing();
+
                 while (_shouldBeRunning)
                 {
-                    ProcessFiles(true);
+                    Thread.Sleep(200);
                 }
 
                 IsRunning = false;
+                StopFileProcessing();
+
                 Logger.Log("EliteAPI was stopped.");
                 OnQuit?.Invoke(this, EventArgs.Empty);
             });
@@ -173,7 +177,7 @@ namespace EliteAPI
             StatusExtension = new StatusExtensionService(this);
 
             // Reset background stuff.
-            processedLogs = new List<string>();
+            ResetProcessing();
         }
 
         /// <summary>

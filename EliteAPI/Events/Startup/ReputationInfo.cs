@@ -22,7 +22,7 @@ namespace EliteAPI.Events.Startup
         /// <summary>
         /// The commander's localised title reputation with the Empire.
         /// </summary>
-        public string EmpireLocalised => RankUtil.Repuation(Empire);
+        public string EmpireLocalised => RankUtil.Reputation(Empire);
 
         /// <summary>
         /// The commander's reputation with the Federation.
@@ -35,7 +35,7 @@ namespace EliteAPI.Events.Startup
         /// <summary>
         /// The commander's localised title reputation with the Federation.
         /// </summary>
-        public string FederationLocalised => RankUtil.Repuation(Federation);
+        public string FederationLocalised => RankUtil.Reputation(Federation);
 
         /// <summary>
         /// The commander's reputation with the Independent.
@@ -48,7 +48,7 @@ namespace EliteAPI.Events.Startup
         /// <summary>
         /// The commander's localised title reputation with the Independent.
         /// </summary>
-        public string IndependentLocalised => RankUtil.Repuation(Independent);
+        public string IndependentLocalised => RankUtil.Reputation(Independent);
 
         /// <summary>
         /// The commander's reputation with the Alliance.
@@ -61,7 +61,7 @@ namespace EliteAPI.Events.Startup
         /// <summary>
         /// The commander's localised title reputation with the Alliance.
         /// </summary>
-        public string AllianceLocalised => RankUtil.Repuation(Alliance);
+        public string AllianceLocalised => RankUtil.Reputation(Alliance);
 
         internal static ReputationInfo Process(string json, EliteDangerousAPI api)
         {

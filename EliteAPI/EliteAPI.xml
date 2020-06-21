@@ -62,6 +62,31 @@
             The value of the parameter.
             </summary>
         </member>
+        <member name="P:EliteAPI.EliteConfiguration.UseDiscordRichPresence">
+            <summary>
+            Whether to use Discord's rich presence feature.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.EliteConfiguration.RaiseOnCatchup">
+            <summary>
+            Whether to process and raise previous events from the current game session while catching up.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.EliteConfiguration.WarnOnIncomplete">
+            <summary>
+            Whether to throw an error when not all the event's fields could be filled in.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.EliteConfiguration.WarnOnMissing">
+            <summary>
+            Whether to throw a warning when the event has not been implemented into EliteAPI.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.EliteConfiguration.JournalDirectory">
+            <summary>
+            The directory in which the Journals and status files are located.
+            </summary>
+        </member>
         <member name="E:EliteAPI.EliteDangerousAPI.OnReady">
             <summary>
             Gets triggered when EliteAPI has successfully loaded up.
@@ -1856,6 +1881,78 @@
             <summary>
             The type of vessel, either 'Ship' or 'SRV'.
             </summary>
+        </member>
+        <member name="T:EliteAPI.IEliteDangerousAPI">
+            <summary>
+            Interface for the EliteDangerousAPI class.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.IsRunning">
+            <summary>
+            Whether the API is currently running.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.JournalDirectory">
+            <summary>
+            The Journal directory that is being used by the API.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.SkipCatchUp">
+            <summary>
+            Whether the API should skip the processing of previous events before the API was started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.Events">
+            <summary>
+            Object that holds all the events.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.Bindings">
+            <summary>
+            Holds information on all key bindings in the game set by the user.
+            </summary>
+        </member>
+        <member name="E:EliteAPI.IEliteDangerousAPI.OnError">
+            <summary>
+            Gets triggered when EliteAPI could not successfully load up.
+            </summary>
+        </member>
+        <member name="E:EliteAPI.IEliteDangerousAPI.OnQuit">
+            <summary>
+            Gets triggered when EliteAPI is closing.
+            </summary>
+        </member>
+        <member name="E:EliteAPI.IEliteDangerousAPI.OnReady">
+            <summary>
+            Gets triggered when EliteAPI has successfully loaded up.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.Discord">
+            <summary>
+            Rich presence service for Discord.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.IEliteDangerousAPI.Reset">
+            <summary>
+            Resets the API.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.IEliteDangerousAPI.Start(System.Boolean)">
+            <summary>
+            Starts the API.
+            </summary>
+            <param name="runRichPresence"></param>
+        </member>
+        <member name="M:EliteAPI.IEliteDangerousAPI.Stop">
+            <summary>
+            Stops the API.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.IEliteDangerousAPI.ChangeJournal(System.IO.DirectoryInfo)">
+            <summary>
+            Changes the journal directory.
+            </summary>
+            <param name="newJournalDirectory"></param>
         </member>
         <member name="P:EliteAPI.Service.Discord.DiscordService.IsRunning">
             <summary>

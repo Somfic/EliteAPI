@@ -49,6 +49,9 @@ namespace EliteAPI.Events
         [JsonProperty("SubsystemHealth")]
         public float SubsystemHealth { get; internal set; }
 
+        [JsonProperty("SquadronID")]
+        public int SquadronId { get; internal set; }
+
         internal static ShipTargetedInfo Process(string json, EliteDangerousAPI api)
         {
             return api.Events.InvokeShipTargetedEvent(JsonConvert.DeserializeObject<ShipTargetedInfo>(json, JsonSettings.Settings));

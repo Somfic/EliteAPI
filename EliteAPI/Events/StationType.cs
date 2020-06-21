@@ -4,6 +4,7 @@ namespace EliteAPI.Events
     {
         Outpost,
         Orbis,
-        Coriolis
+        Coriolis,
+        CraterOutpost
     }
 }

@@ -1,17 +1,19 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Linq;
-using Somfic.Logging;
 
 namespace EliteAPI.Utilities
 {
     public static class PropertyReader
     {
-        public static string[] GetAllChildren(JObject obj, string prefix = "")
+        public static IEnumerable<string> GetAllChildren(JObject node, string prefix = "")
         {
+            if(node == null) { return Array.Empty<string>(); }
+
             List<string> items = new List<string>();
 
-            obj.Properties().ToList().ForEach(prop =>
+            node.Properties().ToList().ForEach(prop =>
             {
                 string name = prop.Name.Replace("_", "");
 

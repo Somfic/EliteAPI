@@ -11,8 +11,6 @@ namespace EliteAPI.Events
 
             this.Timestamp = DateTime.Now;
         }
-
-        public string Event { get; set; }
         public dynamic Value { get; set; }
     }
 }

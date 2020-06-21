@@ -5,12 +5,6 @@ namespace EliteAPI.Events
 {
     public class SquadronStartupInfo : EventBase
     {
-        [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; set; }
-
-        [JsonProperty("event")]
-        public string Event { get; set; }
-
         [JsonProperty("SquadronName")]
         public string SquadronName { get; set; }
 

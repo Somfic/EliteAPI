@@ -31,9 +31,9 @@ namespace EliteAPI
             Reset();
         }
 
-        public static string Version { get; private set; }
+        public static string Version { get; private set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
-        public static DirectoryInfo StandardDirectory { get; private set; }
+        public static DirectoryInfo StandardDirectory { get; private set; } = JournalDirectory.GetStandardDirectory();
 
         public EliteConfiguration Config { get; }
 
@@ -41,7 +41,7 @@ namespace EliteAPI
 
         public bool IsReady { get; private set; }
 
-        public Events.EventHandler Events { get; private set; }
+        public Events.EventHandler Events { get; private set; } = new Events.EventHandler();
 
         public ShipStatus Status { get; private set; }
 
@@ -70,7 +70,7 @@ namespace EliteAPI
             Logger.Debug("By CMDR Somfic and contributors.");
 
             // Check for a newer version.
-            VersionChecker.CheckVersion();
+            //VersionChecker.CheckVersion();
 
             bool canContinue = JournalDirectory.CheckDirectory(Config.JournalDirectory);
 
@@ -156,20 +156,13 @@ namespace EliteAPI
                 Stop();
             }
 
-            // Reset the properties.
-            Version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            StandardDirectory = JournalDirectory.GetStandardDirectory();
-            
-            // Reset the events.
-            Events = new Events.EventHandler();
-
             // Reset all the statuses.
-            Status = StatusReader.Read<ShipStatus>(Config.JournalDirectory, "Status.json");
-            Cargo = StatusReader.Read<CargoStatus>(Config.JournalDirectory, "Cargo.json");
-            Market = StatusReader.Read<MarketStatus>(Config.JournalDirectory, "Market.json");
-            Modules = StatusReader.Read<ModulesStatus>(Config.JournalDirectory, "ModulesInfo.json");
-            Outfitting = StatusReader.Read<OutfittingStatus>(Config.JournalDirectory, "Outfitting.json");
-            Shipyard = StatusReader.Read<ShipyardStatus>(Config.JournalDirectory, "Shipyard.json");
+            Status = StatusReader.Read(Config.JournalDirectory, "Status.json", new ShipStatus());
+            Cargo = StatusReader.Read(Config.JournalDirectory, "Cargo.json", new CargoStatus());
+            Market = StatusReader.Read(Config.JournalDirectory, "Market.json", new MarketStatus());
+            Modules = StatusReader.Read(Config.JournalDirectory, "ModulesInfo.json", new ModulesStatus());
+            Outfitting = StatusReader.Read(Config.JournalDirectory, "Outfitting.json", new OutfittingStatus());
+            Shipyard = StatusReader.Read(Config.JournalDirectory, "Shipyard.json", new ShipyardStatus());
 
             // Reset all the services.
             Location = new LocationService(this);

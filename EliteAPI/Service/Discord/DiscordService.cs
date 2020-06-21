@@ -18,10 +18,12 @@ namespace EliteAPI.Service.Discord
         /// Whether the rich presence is running.
         /// </summary>
         public bool IsRunning { get; private set; } = false;
+
         /// <summary>
         /// Whether the rich presence is connected and ready.
         /// </summary>
         public bool IsReady { get; private set; } = false;
+
         /// <summary>
         /// Creates a new Discord Rich Presence client based on the EliteDangerousAPI object.
         /// </summary>
@@ -31,11 +33,11 @@ namespace EliteAPI.Service.Discord
             this.api = api;
         }
 
-
         /// <summary>
         /// Creates a new Discord Rich Presence client based on the EliteDangerousAPI object, with a custom RPC ID, for when you have your own Rich Presence registered with Discord.
         /// </summary>
         /// <param name="api">EliteDangerousAPI</param>
+        /// <param name="rpcID">The ID for the Discord Rich Presence</param>
         public DiscordService(EliteDangerousAPI api, string rpcID)
         {
             this.api = api;
@@ -59,7 +61,7 @@ namespace EliteAPI.Service.Discord
         public DiscordService UpdatePresence(RichPresence presence)
         {
             //If we're not running, return;
-            if(!IsRunning) { return this; }
+            if (!IsRunning) { return this; }
             Logger.Log(Severity.Debug, $"Updated Discord rich presence.", presence);
             DiscordRPC.RichPresence discordPresence = new DiscordRPC.RichPresence
             {
@@ -103,7 +105,7 @@ namespace EliteAPI.Service.Discord
             rpc.SetSubscription(EventType.Join | EventType.JoinRequest | EventType.Spectate);
             rpc.Initialize();
             Task.Run(() => { while (!IsReady) { Thread.Sleep(1000); rpc.Invoke(); } });
-            if(automatic) { DoAutomaticEvents(); }
+            if (automatic) { DoAutomaticEvents(); }
             return this;
         }
         private void DoAutomaticEvents()
@@ -206,7 +208,7 @@ namespace EliteAPI.Service.Discord
                 if (e.MusicTrack == "DockingComputer")
                 {
                     if (api.Status.Docked)
-                    { 
+                    {
                         UpdatePresence(new RichPresence
                         {
                             Text = $"Having autopilot undock",
@@ -230,7 +232,8 @@ namespace EliteAPI.Service.Discord
                 }
             };
 
-            api.Events.StatusIsRunning += (sender, e) => {
+            api.Events.StatusIsRunning += (sender, e) =>
+            {
                 if (api.Status.IsRunning)
                 {
                     rpc.ClearPresence();
@@ -247,7 +250,8 @@ namespace EliteAPI.Service.Discord
                 }
             };
             // Fire it off if it is running already
-            if (api.Status.IsRunning) {
+            if (api.Status.IsRunning)
+            {
                 api.Events.InvokeStatusIsRunning(new Events.StatusEvent("Status.IsRunning", true));
             }
         }

@@ -157,7 +157,7 @@
             }
         }
 
-        public static string Repuation(float alliance)
+        public static string Reputation(float alliance)
         {
             if (alliance <= -90) { return "Hostile"; }
             if (alliance <= -35) { return "Unfriendly"; }

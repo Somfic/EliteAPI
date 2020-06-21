@@ -1,4 +1,5 @@
-namespace EliteAPI.Events {
+namespace EliteAPI.Events
+{
     /// <summary>
     /// The label of the modifier.
     /// </summary>

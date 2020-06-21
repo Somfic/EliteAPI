@@ -6,7 +6,7 @@ using Somfic.Logging.Handlers;
 
 namespace EliteAPI.ThirdParty
 {
-    internal static class ThirdPartyWrapper
+    public static class ThirdPartyWrapper
     {
         private static EliteDangerousAPI api;
         private static bool useRichPresence = false;

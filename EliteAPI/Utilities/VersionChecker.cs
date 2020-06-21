@@ -11,7 +11,7 @@ namespace EliteAPI.Utilities
             Logger.Debug("Checking for new updates on github.com/EliteAPI/EliteAPI.");
             VersionController version = new GithubVersionControl("EliteAPI", "EliteAPI");
 
-            Logger.Log($"Latest version: {version.Latest} (current: {version.This}).");
+            Logger.Debug($"Latest version: {version.Latest} (current: {version.This}).");
 
             if (version.This >= version.Latest)
             {

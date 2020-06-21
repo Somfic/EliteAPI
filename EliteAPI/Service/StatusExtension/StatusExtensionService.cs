@@ -40,11 +40,11 @@ namespace EliteAPI.Service.StatusExtension
             };
 
             // Other status files.
-            api.Events.CargoEvent += (sender, info) => { api.Cargo = StatusReader.Read<CargoStatus>(api.Config.JournalDirectory, "Cargo.json"); };
-            api.Events.MarketEvent += (sender, info) => { api.Market = StatusReader.Read<MarketStatus>(api.Config.JournalDirectory, "Market.json"); };
-            api.Events.ModuleInfoEvent += (sender, info) => { api.Modules = StatusReader.Read<ModulesStatus>(api.Config.JournalDirectory, "ModulesInfo.json"); };
-            api.Events.OutfittingEvent += (sender, info) => { api.Outfitting = StatusReader.Read<OutfittingStatus>(api.Config.JournalDirectory, "Outfitting.json"); };
-            api.Events.ShipyardEvent += (sender, info) => { api.Shipyard = StatusReader.Read<ShipyardStatus>(api.Config.JournalDirectory, "Shipyard.json"); };
+            api.Events.CargoEvent += (sender, info) => { api.Cargo = StatusReader.Read(api.Config.JournalDirectory, "Cargo.json", new CargoStatus()); };
+            api.Events.MarketEvent += (sender, info) => { api.Market = StatusReader.Read(api.Config.JournalDirectory, "Market.json", new MarketStatus()); };
+            api.Events.ModuleInfoEvent += (sender, info) => { api.Modules = StatusReader.Read(api.Config.JournalDirectory, "ModulesInfo.json", new ModulesStatus()); };
+            api.Events.OutfittingEvent += (sender, info) => { api.Outfitting = StatusReader.Read(api.Config.JournalDirectory, "Outfitting.json", new OutfittingStatus()); };
+            api.Events.ShipyardEvent += (sender, info) => { api.Shipyard = StatusReader.Read(api.Config.JournalDirectory, "Shipyard.json", new ShipyardStatus()); };
         }
     }
 }

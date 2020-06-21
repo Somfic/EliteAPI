@@ -15,8 +15,7 @@ namespace EliteAPI
 {
     public partial class EliteDangerousAPI
     {
-        internal static string[] SupportFiles { get; } =
-            {"Status.json", "Cargo.json", "Market.json", "ModulesInfo.json", "Outfitting.json", "Shipyard.json"};
+        internal static IEnumerable<string> SupportFiles { get; } = new[] { "Status.json", "Cargo.json", "Market.json", "ModulesInfo.json", "Outfitting.json", "Shipyard.json" };
 
         private FileInfo JournalFile { get; set; }
 
@@ -252,10 +251,6 @@ namespace EliteAPI
             if (!File.Exists(Path.Combine(Config.JournalDirectory.FullName, "Status.json"))) {
                 return;
             }
-            if (!raiseEvents) {
-                // Status is not stored, only change events are currently raised.
-                return;
-            }
             string json = FileReader.ReadAllText(Path.Combine(Config.JournalDirectory.FullName, "Status.json"));
             if (!string.IsNullOrWhiteSpace(json))
             {
@@ -284,6 +279,10 @@ namespace EliteAPI
                     if (oldValue == newValue)
                     {
                         continue;
+                    }
+                    if (!raiseEvents) {
+                        // Status is not stored, only change events are currently raised.
+                        return;
                     }
 
                     // Get the dynamic value of the new property.

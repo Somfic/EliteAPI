@@ -1,9 +1,9 @@
 ﻿using EliteAPI.Bindings;
-using EliteAPI.Discord;
 using EliteAPI.Status;
 using Somfic.Logging;
 using System;
 using System.IO;
+using EliteAPI.Service.Discord;
 using EliteAPI.Status.Cargo;
 using EliteAPI.Status.Market;
 using EliteAPI.Status.Modules;
@@ -72,7 +72,7 @@ namespace EliteAPI
         /// <summary>
         /// Rich presence service for Discord.
         /// </summary>
-        RichPresenceClient DiscordRichPresence { get; }
+        DiscordService Discord { get; }
 
         /// <summary>
         /// Resets the API.

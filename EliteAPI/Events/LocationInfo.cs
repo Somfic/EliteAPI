@@ -7,12 +7,6 @@ namespace EliteAPI.Events
 {
     public class LocationInfo : EventBase
     {
-        [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; internal set; }
-
-        [JsonProperty("event")]
-        public string Event { get; internal set; }
-
         [JsonProperty("Docked")]
         public bool Docked { get; internal set; }
 

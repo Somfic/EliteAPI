@@ -8,15 +8,11 @@ namespace EliteAPI.Utilities
 {
     internal static class StatusReader
     {
-        public static T Read<T>(DirectoryInfo journal, string file) where T : StatusBase
+        public static T Read<T>(DirectoryInfo journal, string file, T fallback) where T : StatusBase
         {
             string path = Path.Combine(journal.FullName, file);
 
-            if (!File.Exists(path))
-            {
-                Logger.Debug($"{path} doesn't exists.");
-                return null;
-            }
+            if (!File.Exists(path)) { return fallback; }
 
             try
             {
@@ -25,7 +21,7 @@ namespace EliteAPI.Utilities
             catch (Exception ex)
             {
                 Logger.Warning($"Could not process {file}.", ex);
-                return null;
+                return fallback;
             }
         }
     }

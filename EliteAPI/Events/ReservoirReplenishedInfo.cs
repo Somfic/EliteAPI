@@ -5,12 +5,6 @@ namespace EliteAPI.Events
 {
     public class ReservoirReplenishedInfo : EventBase
     {
-        [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; set; }
-
-        [JsonProperty("event")]
-        public string Event { get; set; }
-
         [JsonProperty("FuelMain")]
         public float FuelMain { get; set; }
 

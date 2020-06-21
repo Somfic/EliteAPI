@@ -49,6 +49,11 @@ namespace EliteAPI.Events
         public List<Faction> Factions { get; internal set; }
         [JsonProperty("SystemFaction")]
         public SystemFaction SystemFaction { get; internal set; }
+        [JsonProperty("DistFromStarLS")]
+        public double DistFromStarLS { get; internal set; }
+
+        [JsonProperty("Conflicts")]
+        public List<Conflict> Conflicts { get; internal set; }
     }
     public partial class Faction
     {
@@ -70,6 +75,26 @@ namespace EliteAPI.Events
         public double MyReputation { get; internal set; }
         [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
         public List<ActiveState> ActiveStates { get; internal set; }
+    }
+    public class Conflict
+    {
+        [JsonProperty("WarType")]
+        public string WarType { get; internal set; }
+        [JsonProperty("Status")]
+        public string Status { get; internal set; }
+
+        [JsonProperty("Faction1")]
+        public ConflictFaction Faction1 { get; internal set; }
+        [JsonProperty("Faction2")]
+        public ConflictFaction Faction2 { get; internal set; }
+    }
+    public class ConflictFaction {
+        [JsonProperty("Name")]
+        public string Name { get; internal set; }
+        [JsonProperty("Stake")]
+        public string Stake { get; internal set; }
+        [JsonProperty("WonDays")]
+        public long WonDays { get; internal set; }
     }
     public partial class ActiveState
     {

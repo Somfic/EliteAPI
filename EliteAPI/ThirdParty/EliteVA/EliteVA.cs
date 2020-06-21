@@ -91,16 +91,16 @@ namespace EliteAPI.ThirdParty.EliteVA
             switch (e.Severity)
             {
                 case Somfic.Logging.Severity.Error:
-                    proxy.WriteToLog("EliteVA - " + e.Message, "red");
+                    proxy.WriteToLog("EliteVA - " + e.Content, "red");
                     break;
                 case Somfic.Logging.Severity.Warning:
-                    proxy.WriteToLog("EliteVA - " + e.Message, "orange");
+                    proxy.WriteToLog("EliteVA - " + e.Content, "orange");
                     break;
                 case Somfic.Logging.Severity.Success:
-                    proxy.WriteToLog("EliteVA - " + e.Message, "green");
+                    proxy.WriteToLog("EliteVA - " + e.Content, "green");
                     break;
                 case Somfic.Logging.Severity.Info:
-                    proxy.WriteToLog("EliteVA - " + e.Message, "blue");
+                    proxy.WriteToLog("EliteVA - " + e.Content, "blue");
                     break;
             }
         }

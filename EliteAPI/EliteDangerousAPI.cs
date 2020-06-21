@@ -131,7 +131,9 @@ namespace EliteAPI
         internal CargoWatcher CargoWatcher { get; set; }
         internal JournalParser JournalParser { get; set; }
         internal MaterialWatcher MaterialWatcher { get; set; }
-
+        internal FileInfo journalFile = null;
+        internal FileSystemWatcher watcher = null;
+        
         /// <summary>
         /// Rich presence service for Discord.
         /// </summary>
@@ -258,7 +260,7 @@ namespace EliteAPI
                 Logger.Log(Severity.Error, e.Item1, e.Item2);
                 Logger.Log(Severity.Warning, "EliteAPI stumbled upon a critical error and cannot continue.", new Exception("ELITEAPI TERMINATED"));
             };
-            OnReady += (sender, e) => Logger.Success("EliteAPI is ready.");
+            OnReady += (sender, e) => Logger.Log(Severity.Success, "EliteAPI is ready.");
 
             Stopwatch s = new Stopwatch();
             s.Start();
@@ -290,9 +292,6 @@ namespace EliteAPI
             IsRunning = true;
 
             //We'll process the journal one time first, to catch up.
-            //Select the last edited Journal file.
-            FileInfo journalFile = null;
-
             //Find the last edited Journal file.
             try
             {
@@ -358,28 +357,24 @@ namespace EliteAPI
 
             //Process the journal file.
             if (!SkipCatchUp) { Logger.Log(Severity.Debug, "Catching up with past events from this session."); }
-            JournalParser.ProcessJournal(journalFile, SkipCatchUp, false);
+            JournalParser.ProcessJournal(journalFile, 0, SkipCatchUp, false);
             if (!SkipCatchUp) { Logger.Log(Severity.Debug, "Catchup on past events completed."); }
+
+            // And start watching the filesystem.
+            StartFilesystemWatcher();
 
             //Go async.
             Task.Run(() =>
             {
                 //Run for as long as we're running.
-                while (IsRunning)
-                {
-                    //Select the last edited Journal file.
-                    FileInfo newJournalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
-                    if (journalFile.FullName != newJournalFile.FullName) { Logger.Log(Severity.Debug, $"Switched to '{newJournalFile}'."); JournalParser.processedLogs.Clear(); }
-                    journalFile = newJournalFile;
-
-                    //Process the journal file.
-                    JournalParser.ProcessJournal(journalFile, false);
+                while (IsRunning) {
 
                     //Wait half a second to avoid overusing the CPU.
                     Thread.Sleep(500);
                 }
             });
 
+            watcher.EnableRaisingEvents = false;
             s.Stop();
 
             Logger.Log(Severity.Debug, $"Finished in {s.ElapsedMilliseconds}ms.");
@@ -390,6 +385,46 @@ namespace EliteAPI
             {
                 //Start the Rich Presence.
                 DiscordRichPresence.TurnOn();
+            }
+        }
+
+        /// <summary>
+        /// Start the filesystem watcher on the journal directory.
+        /// </summary>
+        private void StartFilesystemWatcher() {
+            watcher = new FileSystemWatcher();
+            watcher.Path = JournalDirectory.FullName;
+            watcher.NotifyFilter = NotifyFilters.LastWrite
+                                | NotifyFilters.FileName
+                                | NotifyFilters.DirectoryName;
+            watcher.Filter = "Journal.*";
+            watcher.Changed += new FileSystemEventHandler(OnChanged);
+            watcher.Created += new FileSystemEventHandler(OnCreated);
+            watcher.EnableRaisingEvents = true;
+        }
+
+        /// <summary>
+        /// OnCreated indicates that a new journal file was created in the directory.
+        /// </summary>
+        private void OnCreated(object source, FileSystemEventArgs e) {
+            System.IO.FileInfo newJournalFile = JournalDirectory.GetFiles("Journal.*").OrderByDescending(x => x.LastWriteTime).First();
+            if (journalFile.FullName != newJournalFile.FullName) {
+                Logger.Log(Severity.Debug, $"Switched to '{newJournalFile}'."); 
+                JournalParser.processedLogs.Clear();
+            }
+            journalFile = newJournalFile;
+            JournalParser.ProcessJournal(newJournalFile, 0, false);
+        }
+
+        /// <summary>
+        /// OnChanged indicates that an existing journal file was changed, and triggers
+        /// reading the new data from the journal.
+        /// </summary>
+        private void OnChanged(object source, FileSystemEventArgs e) {
+            System.IO.FileInfo newJournalFile = new System.IO.FileInfo(journalFile.FullName);
+            if (newJournalFile.Length > journalFile.Length) {
+                JournalParser.ProcessJournal(newJournalFile, journalFile.Length, false);
+                journalFile = newJournalFile;
             }
         }
 

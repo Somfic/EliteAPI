@@ -21,6 +21,12 @@ namespace EliteAPI.Events
         public double Latitude { get; internal set; }
         [JsonProperty("Longitude")]
         public double Longitude { get; internal set; }
+        [JsonProperty("SystemAddress")]
+        public long SystemAddress { get; internal set; }
+        [JsonProperty("BodyID")]
+        public long BodyID { get; internal set; }
+        [JsonProperty("BodyName")]
+        public string BodyName { get; internal set; }
     }
     public partial class ApproachSettlementInfo
     {

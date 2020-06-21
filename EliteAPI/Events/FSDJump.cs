@@ -53,6 +53,8 @@ namespace EliteAPI.Events
         public SystemFaction SystemFaction { get; internal set; }
         [JsonProperty("FactionState")]
         public string FactionState { get; internal set; }
+        [JsonProperty("Conflicts")]
+        public List<FSDConflict> Conflicts { get; internal set; }
     }
     public partial class FSDFaction
     {
@@ -78,6 +80,25 @@ namespace EliteAPI.Events
         public List<IngState> PendingStates { get; internal set; }
         [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
         public List<ActiveState> ActiveStates { get; internal set; }
+    }
+    public class FSDConflict
+    {
+        [JsonProperty("WarType")]
+        public string WarType { get; internal set; }
+        [JsonProperty("Status")]
+        public string Status { get; internal set; }
+        [JsonProperty("Faction1")]
+        public FSDConflictFaction Faction1 { get; internal set; }
+        [JsonProperty("Faction2")]
+        public FSDConflictFaction Faction2 { get; internal set; }
+    }
+    public class FSDConflictFaction {
+        [JsonProperty("Name")]
+        public string Name { get; internal set; }
+        [JsonProperty("Stake")]
+        public string Stake { get; internal set; }
+        [JsonProperty("WonDays")]
+        public long WonDays { get; internal set; }
     }
     public class FSDActiveState
     {

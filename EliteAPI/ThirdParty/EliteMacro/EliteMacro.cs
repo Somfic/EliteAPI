@@ -69,16 +69,16 @@ namespace EliteAPI.ThirdParty.EliteMacro
             switch (e.Severity)
             {
                 case Severity.Error:
-                    vmCommand.AddLogEntry("EliteMacro - " + e.Message, Color.Red, ID);
+                    vmCommand.AddLogEntry("EliteMacro - " + e.Content, Color.Red, ID);
                     break;
                 case Severity.Warning:
-                    vmCommand.AddLogEntry("EliteMacro - " + e.Message, Color.Orange, ID);
+                    vmCommand.AddLogEntry("EliteMacro - " + e.Content, Color.Orange, ID);
                     break;
                 case Severity.Success:
-                    vmCommand.AddLogEntry("EliteMacro - " + e.Message, Color.Green, ID);
+                    vmCommand.AddLogEntry("EliteMacro - " + e.Content, Color.Green, ID);
                     break;
                 case Severity.Info:
-                    vmCommand.AddLogEntry("EliteMacro - " + e.Message, Color.Blue, ID);
+                    vmCommand.AddLogEntry("EliteMacro - " + e.Content, Color.Blue, ID);
                     break;
             }
         }

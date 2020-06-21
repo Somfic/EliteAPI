@@ -17,10 +17,14 @@ namespace EliteAPI
         }
         private readonly EliteDangerousAPI EliteAPI;
         internal List<string> processedLogs = new List<string>();
-        public void ProcessJournal(FileInfo logFile, bool doNotTrigger = true, bool printJson = true)
+
+        public void ProcessJournal(FileInfo logFile, long startPosition, bool doNotTrigger = true, bool printJson = true)
         {
             //Create a stream from the log file.
             FileStream fileStream = logFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            if (startPosition > 0) {
+                fileStream.Seek(startPosition, SeekOrigin.Begin);
+            }
             //Create a stream from the file stream.
             StreamReader streamReader = new StreamReader(fileStream);
             //Go through the stream.

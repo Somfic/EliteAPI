@@ -31,6 +31,20 @@ namespace EliteAPI.Events
         public long Rebuy { get; internal set; }
         [JsonProperty("Modules")]
         public List<Module> Modules { get; internal set; }
+        [JsonProperty("UnladenMass")]
+        public double UnladenMass { get; internal set; }
+        [JsonProperty("FuelCapacity")]
+        public LoadoutFuelCapacity FuelCapacity { get; internal set; }
+        [JsonProperty("MaxJumpRange")]
+        public double MaxJumpRange { get; internal set; }
+        [JsonProperty("CargoCapacity")]
+        public long CargoCapacity { get; internal set; }
+    }
+    public partial class LoadoutFuelCapacity {
+        [JsonProperty("Main")]
+        public double Main { get; internal set; }
+        [JsonProperty("Reserve")]
+        public double Reserve { get; internal set; }
     }
     public partial class Module
     {

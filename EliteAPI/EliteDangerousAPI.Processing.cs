@@ -15,7 +15,8 @@ namespace EliteAPI
 {
     public partial class EliteDangerousAPI
     {
-        internal static IEnumerable<string> SupportFiles { get; } = new[] { "Status.json", "Cargo.json", "Market.json", "ModulesInfo.json", "Outfitting.json", "Shipyard.json" };
+        internal static IEnumerable<string> SupportFiles { get; } = new[] {
+            {"Status.json", "Cargo.json", "Market.json", "ModulesInfo.json", "Outfitting.json", "Shipyard.json"};
 
         private FileInfo JournalFile { get; set; }
 
@@ -23,11 +24,11 @@ namespace EliteAPI
 
         internal FileSystemWatcher watcher = new FileSystemWatcher();
 
-        private HashSet<string> processedLogs = new HashSet<string>();
+        internal HashSet<string> processedLogs = new HashSet<string>();
 
-        private Dictionary<string,  MethodInfo> eventMethods = new Dictionary<string, MethodInfo>();
+        internal Dictionary<string,  MethodInfo> eventMethods = new Dictionary<string, MethodInfo>();
 
-        private Regex journalPattern = new Regex(@"Journal.*");
+        internal Regex journalPattern = new Regex(@"Journal.*");
 
         private void ResetProcessing() {
             lastReadPosition = 0;
@@ -175,7 +176,7 @@ namespace EliteAPI
                 try
                 {
                     parsedFromGame = JsonConvert.DeserializeObject<JObject>(json);
-                    eventName = ((dynamic) parsedFromGame).@event;
+                    eventName = ((dynamic)parsedFromGame).@event;
                     Logger.Debug($"Processing event {eventName}.");
                 }
                 catch (Exception ex)
@@ -201,14 +202,22 @@ namespace EliteAPI
                     }
                     catch (InvalidOperationException)
                     {
-                        Logger.Warning($"Event {eventName} has not been implemented.",
-                            JsonConvert.DeserializeObject(json));
                         eventMethod = null;
+                        if (Config.WarnOnMissing)
+                        {
+                            Logger.Warning($"Event {eventName} has not been implemented.",
+                                JsonConvert.DeserializeObject(json));
+                        }
                     }
                     catch (Exception ex)
                     {
-                        Logger.Warning($"Event {eventName} could not be processed.", ex);
                         eventMethod = null;
+                        if (Config.WarnOnMissing)
+                        {
+                            Logger.Warning($"Event {eventName} has not been implemented.",
+                                JsonConvert.DeserializeObject(json));
+                        }
+                        Logger.Warning($"Event {eventName} could not be processed.", ex);
                     }
                     if (eventMethod == null) {
                         Events.InvokeMissingEvent(JsonConvert.DeserializeObject(json));
@@ -218,16 +227,18 @@ namespace EliteAPI
                     // Invoke the method
                     parsedIntoAPI = eventMethod.Invoke(null, new object[] {json, this});
 
-                    string[] gameProperties = PropertyReader.GetAllChildren(parsedFromGame, eventName);
-                    string[] apiProperties =
-                        PropertyReader.GetAllChildren(JObject.FromObject(parsedIntoAPI), eventName);
-                    IEnumerable<string> missing = gameProperties.Except(apiProperties);
+                    if (Config.WarnOnMissing) {
+                        IEnumerable<string> gameProperties = PropertyReader.GetAllChildren(parsedFromGame, eventName);
+                        IEnumerable<string> apiProperties =
+                            PropertyReader.GetAllChildren(JObject.FromObject(parsedIntoAPI), eventName);
+                        IEnumerable<string> missing = gameProperties.Except(apiProperties);
 
-                    if (missing.Any())
-                    {
-                        Logger.Warning(
-                            $"Event {eventName} could not populate all properties ({string.Join(", ", missing)}).",
-                            JsonConvert.DeserializeObject(json));
+                        if (missing.Any())
+                        {
+                            Logger.Warning(
+                                $"Event {eventName} could not populate all properties ({string.Join(", ", missing)}).",
+                                JsonConvert.DeserializeObject(json));
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -238,7 +249,7 @@ namespace EliteAPI
                 // Invoke the AllEvent event.
                 if (parsedIntoAPI != null)
                 {
-                    Events.InvokeAllEvent((EventBase) parsedIntoAPI);
+                    Events.InvokeAllEvent((EventBase)parsedIntoAPI);
                 }
             }
         }
@@ -256,7 +267,7 @@ namespace EliteAPI
             {
                 ShipStatus newStatus = JsonConvert.DeserializeObject<ShipStatus>(json);
 
-                IEnumerable<PropertyInfo> properties = Status.GetType().GetProperties();
+                IEnumerable<PropertyInfo> properties = Status.GetType().GetProperties().Where(x => x.PropertyType == typeof(bool));
 
                 foreach (PropertyInfo property in properties)
                 {
@@ -285,7 +296,7 @@ namespace EliteAPI
                         return;
                     }
 
-                    // Get the dynamic value of the new property.
+                    // Get the value of the new property.
                     object val = property.GetValue(newStatus);
 
                     // Execute the event.
@@ -297,7 +308,7 @@ namespace EliteAPI
 
                         if (method != null)
                         {
-                            Logger.Log(Severity.Debug, $"Setting status {name} to {newValue}.");
+                            Logger.Debug($"Setting status {name} to {newValue}.");
                             StatusEvent e = new StatusEvent($"Status.{name}", val);
                             method.Invoke(Events, new object[] {e});
                         }
@@ -307,7 +318,7 @@ namespace EliteAPI
                     }
                     catch (Exception ex)
                     {
-                        Logger.Log(Severity.Debug, $"Could not invoke status event '{name}'.", ex);
+                        Logger.Debug($"Could not invoke status event '{name}'.", ex);
                     }
                 }
 

@@ -107,6 +107,45 @@
             Gets triggered when EliteAPI could not successfully load up.
             </summary>
         </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.PrepareFileProcessing(System.Boolean)">
+            <summary>
+            P
+            </summary>
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.StartFileProcessing">
+            Must be called after PrepareFileProcessing
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.OnCreated(System.Object,System.IO.FileSystemEventArgs)">
+            <summary>
+            OnCreated indicates that a new journal file was created in the directory.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.OnChanged(System.Object,System.IO.FileSystemEventArgs)">
+            <summary>
+            OnChanged indicates that an existing journal file was changed, and triggers
+            reading the new data from the journal.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.MaybeSwitchJournalFile(System.IO.FileInfo)">
+            <summary>
+            Checks to see if the journal file should be switched.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.FindEventInfoProcessMethod(System.String)">
+            <summary>
+            Gets the Process method for the event info.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.ProcessJournalFile(System.Int64,System.Boolean)">
+            <summary>
+            Processes the current 'JournalFile' by reading it line by line.
+            </summary>
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.ProcessStatusFile(System.Boolean)">
+            <summary>
+            Processes the current 'Status' by reading it line by line.
+            </summary>
+        </member>
         <member name="P:EliteAPI.Events.AfmuRepairsInfo.Module">
             <summary>
             The name of the module
@@ -1975,6 +2014,7 @@
             Creates a new Discord Rich Presence client based on the EliteDangerousAPI object, with a custom RPC ID, for when you have your own Rich Presence registered with Discord.
             </summary>
             <param name="api">EliteDangerousAPI</param>
+            <param name="rpcID">The ID for the Discord Rich Presence</param>
         </member>
         <member name="M:EliteAPI.Service.Discord.DiscordService.WithCustomID(System.String)">
             <summary>

@@ -15,7 +15,7 @@ namespace EliteAPI
 {
     public partial class EliteDangerousAPI
     {
-        internal static IEnumerable<string> SupportFiles { get; } = new[] {
+        internal static IEnumerable<string> SupportFiles { get; } = new List<string>()
             {"Status.json", "Cargo.json", "Market.json", "ModulesInfo.json", "Outfitting.json", "Shipyard.json"};
 
         private FileInfo JournalFile { get; set; }
@@ -26,11 +26,12 @@ namespace EliteAPI
 
         internal HashSet<string> processedLogs = new HashSet<string>();
 
-        internal Dictionary<string,  MethodInfo> eventMethods = new Dictionary<string, MethodInfo>();
+        internal Dictionary<string, MethodInfo> eventMethods = new Dictionary<string, MethodInfo>();
 
         internal Regex journalPattern = new Regex(@"Journal.*");
 
-        private void ResetProcessing() {
+        private void ResetProcessing()
+        {
             lastReadPosition = 0;
             processedLogs.Clear();
             eventMethods.Clear();
@@ -40,45 +41,55 @@ namespace EliteAPI
         /// <summary>
         /// P
         /// </summary>
-        private void PrepareFileProcessing(bool raiseEvents) {
+        private void PrepareFileProcessing(bool raiseEvents)
+        {
             watcher.NotifyFilter = NotifyFilters.LastWrite
                                 | NotifyFilters.FileName
                                 | NotifyFilters.DirectoryName;
             watcher.Filter = "*.*";
-            watcher.Changed += new FileSystemEventHandler(OnChanged);
-            watcher.Created += new FileSystemEventHandler(OnCreated);
+            watcher.Changed += OnChanged;
+            watcher.Created += OnCreated;
 
             FileInfo newJournalFile = Config.JournalDirectory.GetFiles("Journal.*.log")
-                .Select(x => x.LastWriteTime).Max();
+                .OrderByDescending(x => x.LastWriteTime).First();
             JournalFile = null;
-            if (MaybeSwitchJournalFile(newJournalFile)) {
+
+            if (MaybeSwitchJournalFile(newJournalFile))
+            {
                 ProcessJournalFile(0, raiseEvents);
             }
             ProcessStatusFile(raiseEvents);
         }
 
         /// Must be called after PrepareFileProcessing
-        private void StartFileProcessing() {
+        private void StartFileProcessing()
+        {
             watcher.Path = Config.JournalDirectory.FullName;
             watcher.EnableRaisingEvents = true;
         }
 
-        private void StopFileProcessing() {
+        private void StopFileProcessing()
+        {
             watcher.EnableRaisingEvents = false;
         }
 
         /// <summary>
         /// OnCreated indicates that a new journal file was created in the directory.
         /// </summary>
-        private void OnCreated(object source, FileSystemEventArgs e) {
-            try {
-                if (!journalPattern.Matches(e.Name)) {
+        private void OnCreated(object source, FileSystemEventArgs e)
+        {
+            try
+            {
+                if (!journalPattern.Match(e.Name).Success)
+                {
                     return;
                 }
-                System.IO.FileInfo newJournalFile = JournalDirectory.GetFiles("Journal.*.log").Select(x => x.LastWriteTime).Max();
-                if (MaybeSwitchJournalFile(newJournalFile)) {
+                FileInfo newJournalFile = Config.JournalDirectory.GetFiles("Journal.*.log")
+                    .OrderByDescending(x => x.LastWriteTime).First();
+                if (MaybeSwitchJournalFile(newJournalFile))
+                {
                     ProcessJournalFile(0, true);
-                } 
+                }
                 ProcessStatusFile(true);
             }
             catch (Exception ex)
@@ -91,16 +102,21 @@ namespace EliteAPI
         /// OnChanged indicates that an existing journal file was changed, and triggers
         /// reading the new data from the journal.
         /// </summary>
-        private void OnChanged(object source, FileSystemEventArgs e) {
-            try {
-                if (e.Name == "Status.json" ) {
+        private void OnChanged(object source, FileSystemEventArgs e)
+        {
+            try
+            {
+                if (e.Name == "Status.json")
+                {
                     ProcessStatusFile(true);
-                } else if (journalPattern.Matches(e.Name)) {
+                }
+                else if (journalPattern.Match(e.Name).Success)
+                {
                     System.IO.FileInfo newJournalFile = new System.IO.FileInfo(JournalFile.FullName);
-                    if (newJournalFile.Length > LastReadPosition) {
-                        JournalFile = newJournalFile;
-                        ProcessJournalFile(lastReadPosition, true);
-                    }
+                    if (newJournalFile.Length <= lastReadPosition) return;
+
+                    JournalFile = newJournalFile;
+                    ProcessJournalFile(lastReadPosition, true);
                 }
             }
             catch (Exception ex)
@@ -112,51 +128,51 @@ namespace EliteAPI
         /// <summary>
         /// Checks to see if the journal file should be switched.
         /// </summary>
-        private bool MaybeSwitchJournalFile(FileInfo newJournalFile) {
-            if (JournalFile == null || JournalFile.FullName != newJournalFile.FullName)
-            {
-                Logger.Debug($"Switched to {JournalFile.Name}.");
-                JournalFile = newJournalFile;
-                LastReadPosition = 0;
-                processedLogs.Clear();
-                return true;
-            }
-            return false;
+        private bool MaybeSwitchJournalFile(FileInfo newJournalFile)
+        {
+            if (JournalFile != null && JournalFile.FullName == newJournalFile.FullName) return false;
+
+            Logger.Debug($"Switched to {newJournalFile.Name}.");
+            JournalFile = newJournalFile;
+            lastReadPosition = 0;
+            processedLogs.Clear();
+            return true;
         }
 
         /// <summary>
         /// Gets the Process method for the event info.
         /// </summary>
-        private MethodInfo FindEventInfoProcessMethod(string eventName) {
-            MethodInfo eventMethod = null;
-            if (!eventMethods.TryGetValue(eventName, out eventMethod))
-            {
-                Type eventClass = Assembly.GetExecutingAssembly().GetTypes()
-                        .First(x => x.Name == $"{eventName}Info");
+        private MethodInfo FindEventInfoProcessMethod(string eventName)
+        {
+            if (eventMethods.TryGetValue(eventName, out MethodInfo eventMethod)) return eventMethod;
 
-                // Find the method
-                eventMethod = eventClass.GetMethod("Process",
-                    BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public |
-                    BindingFlags.Static);            
+            Type eventClass = Assembly.GetExecutingAssembly().GetTypes()
+                .First(x => x.Name == $"{eventName}Info");
 
-                eventMethods.Add(eventName, eventMethod);
-            }
+            // Find the method
+            eventMethod = eventClass.GetMethod("Process",
+                BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public |
+                BindingFlags.Static);
+
+            eventMethods.Add(eventName, eventMethod);
             return eventMethod;
         }
 
         /// <summary>
         /// Processes the current 'JournalFile' by reading it line by line.
         /// </summary>
-        private void ProcessJournalFile(long seekPosition, bool raiseEvents) {
+        private void ProcessJournalFile(long seekPosition, bool raiseEvents)
+        {
             FileStream fileStream = JournalFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-            if (seekPosition > 0) {
+            if (seekPosition > 0)
+            {
                 fileStream.Seek(seekPosition, SeekOrigin.Begin);
             }
             StreamReader streamReader = new StreamReader(fileStream);
 
             // Read all the unread lines.
             string json;
-            while((json = streamReader.ReadLine()) != null)
+            while ((json = streamReader.ReadLine()) != null)
             {
                 // Check whether this line was already processed.
                 // NOTE: Elite Dangerous often emits duplicate lines in the log, and each
@@ -167,7 +183,7 @@ namespace EliteAPI
                     continue;
                 }
                 processedLogs.Add(json);
-                LastReadPosition = streamReader.Position;
+                lastReadPosition = streamReader.BaseStream.Position;
 
                 JObject parsedFromGame;
                 string eventName;
@@ -198,7 +214,7 @@ namespace EliteAPI
                     MethodInfo eventMethod;
                     try
                     {
-                       eventMethod = FindEventInfoProcessMethod(eventName);
+                        eventMethod = FindEventInfoProcessMethod(eventName);
                     }
                     catch (InvalidOperationException)
                     {
@@ -219,15 +235,17 @@ namespace EliteAPI
                         }
                         Logger.Warning($"Event {eventName} could not be processed.", ex);
                     }
-                    if (eventMethod == null) {
+                    if (eventMethod == null)
+                    {
                         Events.InvokeMissingEvent(JsonConvert.DeserializeObject(json));
                         continue;
                     }
 
                     // Invoke the method
-                    parsedIntoAPI = eventMethod.Invoke(null, new object[] {json, this});
+                    parsedIntoAPI = eventMethod.Invoke(null, new object[] { json, this });
 
-                    if (Config.WarnOnMissing) {
+                    if (Config.WarnOnMissing)
+                    {
                         IEnumerable<string> gameProperties = PropertyReader.GetAllChildren(parsedFromGame, eventName);
                         IEnumerable<string> apiProperties =
                             PropertyReader.GetAllChildren(JObject.FromObject(parsedIntoAPI), eventName);
@@ -257,9 +275,11 @@ namespace EliteAPI
         /// <summary>
         /// Processes the current 'Status' by reading it line by line.
         /// </summary>
-        private void ProcessStatusFile(bool raiseEvents) {
+        private void ProcessStatusFile(bool raiseEvents)
+        {
             // Process Status.json
-            if (!File.Exists(Path.Combine(Config.JournalDirectory.FullName, "Status.json"))) {
+            if (!File.Exists(Path.Combine(Config.JournalDirectory.FullName, "Status.json")))
+            {
                 return;
             }
             string json = FileReader.ReadAllText(Path.Combine(Config.JournalDirectory.FullName, "Status.json"));
@@ -291,7 +311,8 @@ namespace EliteAPI
                     {
                         continue;
                     }
-                    if (!raiseEvents) {
+                    if (!raiseEvents)
+                    {
                         // Status is not stored, only change events are currently raised.
                         return;
                     }
@@ -310,7 +331,7 @@ namespace EliteAPI
                         {
                             Logger.Debug($"Setting status {name} to {newValue}.");
                             StatusEvent e = new StatusEvent($"Status.{name}", val);
-                            method.Invoke(Events, new object[] {e});
+                            method.Invoke(Events, new object[] { e });
                         }
 
                         // Invoke AllEvent.

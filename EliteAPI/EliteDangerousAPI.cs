@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 using EliteAPI.Service.Discord;
 using EliteAPI.Service.Location;
@@ -105,9 +106,13 @@ namespace EliteAPI
 
             JournalReader.StartWatching(Config.JournalDirectory, Config.CatchupOnPastEvents);
 
+            // Wait until the JournalReader as catched up.
+            while (!JournalReader.HasCatchedUp) { Thread.Sleep(250); }
+
             // Mark that we're ready.
             IsReady = true;
             OnReady?.Invoke(this, EventArgs.Empty);
+            Logger.Log("EliteAPI is ready.");
 
             // Start rich presence
             if(Config.UseDiscordRichPresence) { Discord.TurnOn(); }

@@ -22,7 +22,7 @@ namespace EliteAPI
         /// <summary>
         /// Whether to process and raise previous events from the current game session while catching up.
         /// </summary>
-        public bool RaiseOnCatchup { get; set; }
+        public bool CatchupOnPastEvents { get; set; }
 
         /// <summary>
         /// Whether to throw an error when not all the event's fields could be filled in.

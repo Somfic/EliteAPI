@@ -24,6 +24,7 @@ namespace EliteAPI.Utilities
                         GetAllChildren(JObject.FromObject(prop.Value), $"{prefix}.{name}").ToList()
                             .ForEach(x => items.Add(x));
                         break;
+
                     case JTokenType.Array:
                         items.Add($"{prefix}.{name}.#");
 
@@ -33,10 +34,10 @@ namespace EliteAPI.Utilities
                             GetAllChildren(JObject.FromObject(prop.Value.First), $"{prefix}.{name}").ToList()
                                 .ForEach(x => items.Add(x));
                         }
-
                         break;
+
                     default:
-                        items.Add($"{prefix}.{name}");
+                        items.Add($"{prefix}.{name} ({prop.Value.Type})");
                         break;
                 }
             });

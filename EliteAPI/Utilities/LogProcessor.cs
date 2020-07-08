@@ -67,7 +67,7 @@ namespace EliteAPI.Utilities
 
             if (!missing.Any()) return false;
 
-            Logger.Warning($"Event {eventName} could not populate all properties ({string.Join(", ", missing)}).");
+            Logger.Warning($"Event {eventName} could not populate all properties ({string.Join(", ", missing)}).", parsedFromGame);
 
             return true;
         }

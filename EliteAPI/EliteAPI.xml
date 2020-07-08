@@ -67,7 +67,7 @@
             Whether to use Discord's rich presence feature.
             </summary>
         </member>
-        <member name="P:EliteAPI.EliteConfiguration.RaiseOnCatchup">
+        <member name="P:EliteAPI.EliteConfiguration.CatchupOnPastEvents">
             <summary>
             Whether to process and raise previous events from the current game session while catching up.
             </summary>
@@ -1975,6 +1975,7 @@
             Creates a new Discord Rich Presence client based on the EliteDangerousAPI object, with a custom RPC ID, for when you have your own Rich Presence registered with Discord.
             </summary>
             <param name="api">EliteDangerousAPI</param>
+            <param name="rpcID">The ID for the Discord Rich Presence</param>
         </member>
         <member name="M:EliteAPI.Service.Discord.DiscordService.WithCustomID(System.String)">
             <summary>

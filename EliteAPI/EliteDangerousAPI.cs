@@ -38,7 +38,6 @@ namespace EliteAPI
         public EliteConfiguration Config { get; }
 
         public bool IsRunning { get; private set; }
-        private bool _shouldBeRunning;
 
         public bool IsReady { get; private set; }
 
@@ -59,6 +58,8 @@ namespace EliteAPI
         public LocationService Location { get; private set; }
 
         public DiscordService Discord { get; private set; }
+
+        internal static IEnumerable<string> SupportFiles { get; } = new[] { "Status.json", "Cargo.json", "Market.json", "ModulesInfo.json", "Outfitting.json", "Shipyard.json" };
 
         private StatusExtensionService StatusExtension { get; set; }
 
@@ -91,41 +92,25 @@ namespace EliteAPI
                 return;
             }
 
-            // Get the last edited Journal file.
-            JournalFile = Config.JournalDirectory.GetFiles("Journal.*.log").OrderByDescending(x => x.LastWriteTime).First();
-            Logger.Debug($"{JournalFile.Name} selected.");
-
             // Mark as running.
             IsRunning = true;
-            _shouldBeRunning = true;
 
-            // Catch up with events from this session.
-            Logger.Debug("Catching up on past events.");
-            ProcessFiles(Config.RaiseOnCatchup);
-            Logger.Debug("Catched up on past events.");
-
-            // For as long as we're running, process the files and raise events.
-            Task.Run(() =>
+            JournalReader.LogEntry += (sender, e) =>
             {
-                while (_shouldBeRunning)
-                {
-                    ProcessFiles(true);
-                }
+                // Don't raise while catching up if the user doesn't want to.
+                if (!JournalReader.HasCatchedUp && !Config.CatchupOnPastEvents) { return; }
 
-                IsRunning = false;
-                Logger.Log("EliteAPI was stopped.");
-                OnQuit?.Invoke(this, EventArgs.Empty);
-            });
+                LogProcessor.TriggerEvents(e, this);
+            };
+
+            JournalReader.StartWatching(Config.JournalDirectory, Config.CatchupOnPastEvents);
 
             // Mark that we're ready.
             IsReady = true;
             OnReady?.Invoke(this, EventArgs.Empty);
 
             // Start rich presence
-            if(Config.UseDiscordRichPresence)
-            {
-                Discord.TurnOn();
-            }
+            if(Config.UseDiscordRichPresence) { Discord.TurnOn(); }
         }
 
         public void Stop()
@@ -136,11 +121,10 @@ namespace EliteAPI
             Discord.TurnOff();
 
             // Send stop signal to the async while loop.
-            _shouldBeRunning = false;
-            Logger.Debug("Stopping EliteAPI.");
+            IsRunning = false;
+            JournalReader.StopWatching();
 
-            // Wait until the async while loop has completed.
-            while (IsRunning) { }
+            Logger.Debug("Stopping EliteAPI.");
         }
 
         public void Reset()
@@ -163,9 +147,6 @@ namespace EliteAPI
             Location = new LocationService(this);
             Discord = new DiscordService(this);
             StatusExtension = new StatusExtensionService(this);
-
-            // Reset background stuff.
-            processedLogs = new List<string>();
         }
 
         /// <summary>

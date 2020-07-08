@@ -1,10 +1,9 @@
-﻿using System;
+﻿using DiscordRPC;
+using Somfic.Logging;
+using System;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
-using DiscordRPC;
-using Newtonsoft.Json;
-using Somfic.Logging;
 
 namespace EliteAPI.Service.Discord
 {
@@ -91,7 +90,7 @@ namespace EliteAPI.Service.Discord
             Logger.Log("Starting rich presence.");
 
             //Subscribe to events.
-            rpc.OnConnectionEstablished += (sender, e) => Logger.Log(Severity.Debug, $"Attempting to connect to Discord ... ");
+            rpc.OnConnectionEstablished += (sender, e) => Logger.Log(Severity.Debug, $"Connecting to Discord.");
             rpc.OnConnectionFailed += (sender, e) => { Logger.Log(Severity.Error, $"There was an error while trying to connect to Discord. Make sure Discord is running.", new ExternalException("Discord is unresponsive, or might not be running on this machine.")); TurnOff(); };
             rpc.OnError += (sender, e) => Logger.Log(Severity.Error, $"Discord Rich Presence stumbled upon an error.", new ExternalException(e.Message, (int)e.Code));
             rpc.OnReady += (sender, e) => { Logger.Log(Severity.Success, $"Discord Rich Presence has connected and is running."); IsReady = true; };

@@ -1,4 +1,6 @@
-﻿using EliteAPI.Status;
+﻿using EliteAPI.Service.Discord;
+using EliteAPI.Service.Location;
+using EliteAPI.Service.StatusExtension;
 using EliteAPI.Status.Cargo;
 using EliteAPI.Status.Market;
 using EliteAPI.Status.Modules;
@@ -13,11 +15,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
-using System.Threading.Tasks;
-using EliteAPI.Service.Discord;
-using EliteAPI.Service.Location;
-using EliteAPI.Service.StatusExtension;
-using Newtonsoft.Json;
 using EventHandler = System.EventHandler;
 
 namespace EliteAPI
@@ -44,7 +41,7 @@ namespace EliteAPI
 
         public Events.EventHandler Events { get; private set; } = new Events.EventHandler();
 
-        public ShipStatus Status { get; private set; }
+        public ShipStatus Status { get; internal set; }
 
         public CargoStatus Cargo { get; internal set; }
 
@@ -60,7 +57,7 @@ namespace EliteAPI
 
         public DiscordService Discord { get; private set; }
 
-        internal static IEnumerable<string> SupportFiles { get; } = new[] { "Status.json", "Cargo.json", "Market.json", "ModulesInfo.json", "Outfitting.json", "Shipyard.json" };
+        internal static IEnumerable<string> SupportFiles => Enum.GetNames(typeof(SupportFile)).Select(x => x.ToString() + ".json");
 
         private StatusExtensionService StatusExtension { get; set; }
 
@@ -96,12 +93,19 @@ namespace EliteAPI
             // Mark as running.
             IsRunning = true;
 
-            JournalReader.LogEntry += (sender, e) =>
+            JournalReader.JournalEntry += (sender, e) =>
             {
                 // Don't raise while catching up if the user doesn't want to.
                 if (!JournalReader.HasCatchedUp && !Config.CatchupOnPastEvents) { return; }
 
-                LogProcessor.TriggerEvents(e, this);
+                JournalProcessor.TriggerEvents(e, this);
+            };
+
+            JournalReader.SupportEntry += (sender, e) =>
+            {
+                (SupportFile supportFile, string json) = e;
+
+                JournalProcessor.TriggerSupportEvents(supportFile, json, this);
             };
 
             JournalReader.StartWatching(Config.JournalDirectory, Config.CatchupOnPastEvents);
@@ -112,10 +116,10 @@ namespace EliteAPI
             // Mark that we're ready.
             IsReady = true;
             OnReady?.Invoke(this, EventArgs.Empty);
-            Logger.Log("EliteAPI is ready.");
+            Logger.Success("EliteAPI is ready.");
 
             // Start rich presence
-            if(Config.UseDiscordRichPresence) { Discord.TurnOn(); }
+            if (Config.UseDiscordRichPresence) { Discord.TurnOn(); }
         }
 
         public void Stop()
@@ -141,12 +145,12 @@ namespace EliteAPI
             }
 
             // Reset all the statuses.
-            Status = StatusReader.Read(Config.JournalDirectory, "Status.json", new ShipStatus());
-            Cargo = StatusReader.Read(Config.JournalDirectory, "Cargo.json", new CargoStatus());
-            Market = StatusReader.Read(Config.JournalDirectory, "Market.json", new MarketStatus());
-            Modules = StatusReader.Read(Config.JournalDirectory, "ModulesInfo.json", new ModulesStatus());
-            Outfitting = StatusReader.Read(Config.JournalDirectory, "Outfitting.json", new OutfittingStatus());
-            Shipyard = StatusReader.Read(Config.JournalDirectory, "Shipyard.json", new ShipyardStatus());
+            Status = new ShipStatus();
+            Cargo = new CargoStatus();
+            Market = new MarketStatus();
+            Modules = new ModulesStatus();
+            Outfitting = new OutfittingStatus();
+            Shipyard = new ShipyardStatus();
 
             // Reset all the services.
             Location = new LocationService(this);
@@ -173,5 +177,10 @@ namespace EliteAPI
         /// Gets triggered when EliteAPI could not successfully load up.
         /// </summary>
         public event EventHandler<Tuple<string, Exception>> OnError;
+    }
+
+    internal enum SupportFile
+    {
+        Status, Cargo, Market, ModulesInfo, Outfitting, Shipyard
     }
 }

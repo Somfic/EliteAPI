@@ -13,6 +13,9 @@ namespace EliteAPI.Events
         [JsonProperty("Message")]
         public string Message { get; internal set; }
 
+        [JsonProperty("Sent")]
+        public bool Sent { get; internal set; }
+
         internal static SendTextInfo Process(string json, EliteDangerousAPI api)
         {
             return api.Events.InvokeSendTextEvent(JsonConvert.DeserializeObject<SendTextInfo>(json, JsonSettings.Settings));

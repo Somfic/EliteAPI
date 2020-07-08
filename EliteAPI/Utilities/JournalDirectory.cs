@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using Somfic.Logging;
@@ -9,6 +10,11 @@ namespace EliteAPI.Utilities
 {
     internal static class JournalDirectory
     {
+        internal static FileInfo GetActiveJournalFile(DirectoryInfo dir)
+        {
+            return dir.GetFiles("Journal.*.log").OrderByDescending(x => x.LastWriteTime).First();
+        }
+
         internal static DirectoryInfo GetStandardDirectory()
         {
             DirectoryInfo fallBackDirectory = new DirectoryInfo(Directory.GetCurrentDirectory());

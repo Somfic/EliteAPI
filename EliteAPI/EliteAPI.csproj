@@ -47,7 +47,6 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Somfic.Logging" Version="1.0.0" />
     <PackageReference Include="Somfic.Logging.Console" Version="1.0.3" />
   </ItemGroup>
 

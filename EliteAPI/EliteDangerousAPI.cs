@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using EliteAPI.Event.Processor;
@@ -28,6 +31,11 @@ namespace EliteAPI
         private readonly ILogger<EliteDangerousAPI> _log;
         private readonly IConfiguration _config;
 
+        public DirectoryInfo JournalDirectory { get; private set; }
+        public FileInfo JournalFile { get; private set; }
+        public FileInfo StatusFile { get; private set; }
+        public IEnumerable<FileInfo> SupportFiles { get; private set; }
+
         public EliteDangerousAPI(IServiceProvider services)
         {
             try
@@ -53,42 +61,99 @@ namespace EliteAPI
             if (InitializationException != null)
             {
                 _log?.LogCritical(InitializationException, "EliteAPI could not be initialized");
-
                 throw InitializationException;
             }
 
-            _log.LogInformation("Starting EliteAPI v{version}", "3.0");
-
-            CheckComputerOperatingSystem();
-
             try
             {
-                DirectoryInfo journalDirectory = await _journalDirectoryProvider.FindJournalDirectory();
-                if (journalDirectory == null)
-                {
-                    _log.LogWarning("Continuing without event and context support");
-                }
-                else
-                {
-                    _log.LogInformation("Journal directory set to {journalDirectory}", journalDirectory.FullName);
-                    FileInfo journalFile = await _journalProvider.FindJournalFile(journalDirectory);
+                _log.LogInformation("Starting EliteAPI v{version}", GetApiVersion());
 
-                    await _eventProcessor.RegisterHandlers();
-                }
+                await CheckComputerOperatingSystem();
+                await SetJournalDirectory();
+                await SetJournalFile();
+                await SetStatusFile();
+                await SetSupportFiles(); // doesn't throw exception when there aren't any support files ??
+
+                _log.LogInformation("EliteAPI is ready");
             }
             catch (Exception ex)
             {
                 _log.LogCritical(ex, "EliteAPI could not be started");
+            }
+        }
+
+        private async Task SetJournalDirectory()
+        {
+            try
+            {
+                var newJournalDirectory = await _journalDirectoryProvider.FindJournalDirectory();
+                if (JournalDirectory?.FullName == newJournalDirectory.FullName) return;
+
+                _log.LogInformation("Setting journal directory to {filePath}", newJournalDirectory.FullName);
+                JournalDirectory = newJournalDirectory;
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex,"Could not find journal directory");
+                throw;
+            }
+            
+        }
+
+        private async Task SetJournalFile()
+        {
+            try
+            {
+                var newJournalFile = await _journalProvider.FindJournalFile(JournalDirectory);
+
+                if (JournalFile?.FullName == newJournalFile.FullName) return;
+
+                _log.LogInformation("Setting journal file to {filePath}", newJournalFile.Name);
+                JournalFile = newJournalFile;
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex, "Could not find the active journal file");
                 throw;
             }
         }
 
-        private void CheckComputerOperatingSystem()
+        private async Task SetStatusFile()
+        {
+            try
+            {
+                StatusFile = await _journalProvider.FindStatusFile(JournalDirectory);
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex, "Could not find the Status.json file");
+                throw;
+            }
+        }
+
+
+        private async Task SetSupportFiles()
+        {
+            try
+            {
+                SupportFiles = await _journalProvider.FindSupportFiles(JournalDirectory);
+            }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not find support files");
+            }
+        }
+
+        private Task CheckComputerOperatingSystem()
         {
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 _log.LogWarning("You are not running on a Windows machine, some features may not work properly");
             }
+
+            return Task.CompletedTask;
         }
+
+        private string GetApiVersion() => Assembly.GetExecutingAssembly().GetName().Version.ToString();
     }
 }

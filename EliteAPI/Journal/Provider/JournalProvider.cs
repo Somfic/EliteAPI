@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.InteropServices;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +15,8 @@ namespace EliteAPI.Journal.Provider
         private readonly IConfiguration _config;
         private readonly ILogger<JournalProvider> _log;
 
+        private readonly string[] _supportFiles = new[] { "Market.json", "Shipyard.json", "Outfitting.json" };
+
         public JournalProvider(IServiceProvider services)
         {
             _config = services.GetRequiredService<IConfiguration>();
@@ -22,15 +24,57 @@ namespace EliteAPI.Journal.Provider
         }
 
         /// <inheritdoc />
-        public async Task<FileInfo> FindJournalFile(DirectoryInfo journalDirectory)
+        public Task<FileInfo> FindJournalFile(DirectoryInfo journalDirectory)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                return Task.FromResult(journalDirectory
+                    .GetFiles("Journal.*.log")
+                    .OrderByDescending(file => file.LastWriteTime)
+                    .First());
+            }
+            catch (Exception ex)
+            {
+                Exception exception = new FileNotFoundException("Could not find journal file", ex);
+                _log.LogTrace(exception, "Could not get active journal file from journal directory");
+                throw exception;
+            }
+            
         }
 
         /// <inheritdoc />
-        public async Task<IEnumerable<FileInfo>> FindSupportFiles(DirectoryInfo journalDirectory)
+        public Task<FileInfo> FindStatusFile(DirectoryInfo journalDirectory)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                return Task.FromResult(GetSupportFile(journalDirectory, "Status.json"));
+            }
+            catch (Exception ex)
+            {
+                Exception exception = new FileNotFoundException("Could not find status file", ex);
+                _log.LogTrace(exception, "Could not get Status.json from journal directory");
+                throw exception;
+            }
+            
+        }
+
+        /// <inheritdoc />
+        public Task<IEnumerable<FileInfo>> FindSupportFiles(DirectoryInfo journalDirectory)
+        {
+            return Task.FromResult(_supportFiles.Select(file => GetSupportFile(journalDirectory, file)));
+        }
+
+        private FileInfo GetSupportFile(DirectoryInfo journalDirectory, string supportFile)
+        {
+            try
+            {
+                return journalDirectory.GetFiles(supportFile).First();
+            }
+            catch (Exception ex)
+            {
+                _log.LogTrace(ex,"Could not get {supportFile} from journal directory", supportFile);
+                throw;
+            }
         }
     }
 }

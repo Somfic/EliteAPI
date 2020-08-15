@@ -10,14 +10,9 @@ namespace EliteAPI.Event.Provider
     public interface IEventProvider
     {
         /// <summary>
-        /// Fired when a new event is detected
+        /// Processes a json event to <see cref="EventBase"/>
         /// </summary>
-        EventHandler<EventBase> JournalEvent { get; }
-
-        /// <summary>
-        /// Processes a JSON event to <see cref="EventBase"/> and invokes the <see cref="JournalEvent"/> handler
-        /// </summary>
-        /// <param name="json"></param>
-        Task ProcessJsonEvent(string json);
+        /// <param name="json">The json event from the journal</param>
+        Task<EventBase> ProcessJsonEvent(string json);
     }
 }

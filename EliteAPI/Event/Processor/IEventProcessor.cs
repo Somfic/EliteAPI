@@ -17,8 +17,7 @@ namespace EliteAPI.Event.Processor
         /// <summary>
         /// Invokes the registered handler for this event
         /// </summary>
-        /// <typeparam name="T">The type of event</typeparam>
-        /// <param name="event">The event to be invoked</param>
-        Task InvokeHandler<T>(EventBase @event) where T : EventBase;
+        /// <param name="eventBase">The event to be invoked</param>
+        Task InvokeHandler(EventBase eventBase);
     }
 }

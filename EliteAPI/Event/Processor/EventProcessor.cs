@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using EliteAPI.Event.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI.Event.Processor
@@ -56,8 +57,8 @@ namespace EliteAPI.Event.Processor
                     else
                     {
                         totalHandlers += validMethods.Count;
-                        _log.LogTrace("Registering {methodCount} methods for {eventName} to cache at {eventNameSpace}",
-                            validMethods.Count, eventType.Name, validMethods.Select(x => $"{x.DeclaringType?.FullName}.{x.Name}"));
+                        _log.LogTrace("Registering {eventName} to {eventNameSpace}",
+                            eventType.Name, validMethods.Select(x => $"{x.DeclaringType?.FullName}.{x.Name}"));
                         _cache.Add(eventType.Name, validMethods);
                     }
                 }
@@ -74,9 +75,26 @@ namespace EliteAPI.Event.Processor
         }
 
         /// <inheritdoc />
-        public Task InvokeHandler<T>(EventBase @event) where T : EventBase
+        public Task InvokeHandler(EventBase eventBase)
         {
             if (_cache == null) { RegisterHandlers(); }
+
+            return Task.CompletedTask;
+
+            try
+            {
+                _log.LogDebug(eventBase.Event);
+
+                IEnumerable<MethodBase> methods = _cache[eventBase.Event];
+                foreach (var method in methods)
+                {
+                    method.Invoke(null, new object[] {eventBase});
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not invoke methods for {eventName}", eventBase.Event);
+            }
 
             return Task.CompletedTask;
         }

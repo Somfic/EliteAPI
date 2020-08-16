@@ -14,5 +14,10 @@ namespace EliteAPI.Event.Provider
         /// </summary>
         /// <param name="json">The json event from the journal</param>
         Task<EventBase> ProcessJsonEvent(string json);
+
+        /// <summary>
+        /// Caches all the event classes
+        /// </summary>
+        Task RegisterEventClasses();
     }
 }

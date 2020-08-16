@@ -17,7 +17,7 @@ namespace EliteAPI.Event.Provider
     public class EventProvider : IEventProvider
     {
         private readonly ILogger<EventProvider> _log;
-        private Assembly _assembly;
+        private readonly Assembly _assembly;
 
         public EventProvider(IServiceProvider service)
         {
@@ -27,15 +27,6 @@ namespace EliteAPI.Event.Provider
 
         private IDictionary<string, Type> _cache;
 
-        void RegisterEventClasses()
-        {
-            _cache = new ConcurrentDictionary<string, Type>();
-
-            foreach (var eventType in GetAllEventTypes(typeof(EventHandler)))
-            {
-                _cache.Add(eventType.Name.Replace("Event", ""), eventType);
-            }
-        }
 
         /// <inheritdoc />
         public Task<EventBase> ProcessJsonEvent(string json)
@@ -62,6 +53,19 @@ namespace EliteAPI.Event.Provider
 
                 throw;
             }
+        }
+
+        /// <inheritdoc />
+        public Task RegisterEventClasses()
+        {
+            _cache = new ConcurrentDictionary<string, Type>();
+
+            foreach (var eventType in GetAllEventTypes(typeof(EventHandler)))
+            {
+                _cache.Add(eventType.Name.Replace("Event", ""), eventType);
+            }
+
+            return Task.CompletedTask;
         }
 
         private IEnumerable<Type> GetAllEventTypes(Type eventHandler)

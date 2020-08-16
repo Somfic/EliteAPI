@@ -13,6 +13,7 @@ using EliteAPI.Journal.Provider;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
 {
@@ -56,6 +57,8 @@ namespace EliteAPI
         private FileInfo StatusFile { get; set; }
         private IEnumerable<FileInfo> SupportFiles { get; set; }
 
+        public EventHandler Events { get; private set; }
+
         public EliteDangerousAPI(IServiceProvider services)
         {
             try
@@ -70,6 +73,8 @@ namespace EliteAPI
                 _journalDirectoryProvider = services.GetRequiredService<IJournalDirectoryProvider>();
 
                 _journalProcessor = services.GetRequiredService<IJournalProcessor>();
+
+                Events = services.GetRequiredService<EventHandler>();
             }
             catch (Exception ex)
             {

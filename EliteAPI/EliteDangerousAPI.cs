@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Processor;
 using EliteAPI.Event.Provider;
 using EliteAPI.Journal.Directory;
+using EliteAPI.Journal.Processor;
 using EliteAPI.Journal.Provider;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,26 +16,45 @@ using Microsoft.Extensions.Logging;
 
 namespace EliteAPI
 {
+    /// <summary>
+    /// EliteDangerousAPI base class
+    /// </summary>
     public interface IEliteDangerousAPI
     {
+
+        /// <summary>
+        /// Whether the api is currently running
+        /// </summary>
+        bool IsRunning { get; }
+
+        /// <summary>
+        /// Initializes the api
+        /// </summary>
+        Task InitializeAsync();
+
+        /// <summary>
+        /// Starts the api
+        /// </summary>
         Task StartAsync();
     }
 
     public class EliteDangerousAPI : IEliteDangerousAPI
     {
-        private readonly IEventProvider _eventProvider;
-        private readonly IEventProcessor _eventProcessor;
-        private readonly IJournalProvider _journalProvider;
-        private readonly IJournalDirectoryProvider _journalDirectoryProvider;
-        //private readonly IJournalProcesser _journalProcessor;
-
         private readonly ILogger<EliteDangerousAPI> _log;
         private readonly IConfiguration _config;
 
-        public DirectoryInfo JournalDirectory { get; private set; }
-        public FileInfo JournalFile { get; private set; }
-        public FileInfo StatusFile { get; private set; }
-        public IEnumerable<FileInfo> SupportFiles { get; private set; }
+        private readonly IEventProvider _eventProvider;
+        private readonly IEventProcessor _eventProcessor;
+
+        private readonly IJournalProvider _journalProvider;
+        private readonly IJournalProcessor _journalProcessor;
+
+        private readonly IJournalDirectoryProvider _journalDirectoryProvider;
+
+        private DirectoryInfo JournalDirectory { get; set; }
+        private FileInfo JournalFile { get; set; }
+        private FileInfo StatusFile { get; set; }
+        private IEnumerable<FileInfo> SupportFiles { get; set; }
 
         public EliteDangerousAPI(IServiceProvider services)
         {
@@ -48,6 +68,8 @@ namespace EliteAPI
 
                 _journalProvider = services.GetRequiredService<IJournalProvider>();
                 _journalDirectoryProvider = services.GetRequiredService<IJournalDirectoryProvider>();
+
+                _journalProcessor = services.GetRequiredService<IJournalProcessor>();
             }
             catch (Exception ex)
             {
@@ -56,7 +78,13 @@ namespace EliteAPI
         }
         private Exception InitializationException { get; }
 
-        public async Task StartAsync()
+        /// <inheritdoc />
+        public bool IsRunning { get; private set; }
+
+        private bool IsInitialized { get; set; }
+
+        /// <inheritdoc />
+        public async Task InitializeAsync()
         {
             if (InitializationException != null)
             {
@@ -66,19 +94,68 @@ namespace EliteAPI
 
             try
             {
-                _log.LogInformation("Starting EliteAPI v{version}", GetApiVersion());
+                _log.LogInformation("Initializing EliteAPI v{version}", GetApiVersion());
 
                 await CheckComputerOperatingSystem();
+                await InitializeEventHandlers();
                 await SetJournalDirectory();
-                await SetJournalFile();
                 await SetStatusFile();
-                await SetSupportFiles(); // doesn't throw exception when there aren't any support files ??
+                await SetSupportFiles();
+                await SetJournalFile();
 
-                _log.LogInformation("EliteAPI is ready");
+                _journalProcessor.NewJournalEntry += async (sender, json) =>
+                {
+                    EventBase eventBase = await _eventProvider.ProcessJsonEvent(json);
+                    await _eventProcessor.InvokeHandler(eventBase);
+                };
+
+                IsInitialized = true;
             }
             catch (Exception ex)
             {
-                _log.LogCritical(ex, "EliteAPI could not be started");
+                _log.LogCritical(ex, "EliteAPI could not be initialized");
+                //throw;
+            }
+        }
+
+        /// <inheritdoc />
+        public async Task StartAsync()
+        {
+            if (!IsInitialized)
+            {
+                await InitializeAsync();
+            }
+
+            IsRunning = true;
+
+            Task task = Task.Run(async () =>
+            {
+                while (IsRunning)
+                {
+                    await SetJournalFile();
+                    await _journalProcessor.ProcessJournalFile(JournalFile);
+                    await _journalProcessor.ProcessSupportFiles(SupportFiles);
+
+                    await Task.Delay(TimeSpan.FromMilliseconds(500));
+                }
+            });
+        }
+
+        public void Stop()
+        {
+
+        }
+
+        private async Task InitializeEventHandlers()
+        {
+            try
+            {
+                await _eventProcessor.RegisterHandlers();
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex, "Could not initialize event handlers");
+                throw;
             }
         }
 
@@ -86,27 +163,33 @@ namespace EliteAPI
         {
             try
             {
-                var newJournalDirectory = await _journalDirectoryProvider.FindJournalDirectory();
-                if (JournalDirectory?.FullName == newJournalDirectory.FullName) return;
+                DirectoryInfo newJournalDirectory = await _journalDirectoryProvider.FindJournalDirectory();
+                if (newJournalDirectory == null || JournalDirectory?.FullName == newJournalDirectory.FullName)
+                {
+                    return;
+                }
 
                 _log.LogInformation("Setting journal directory to {filePath}", newJournalDirectory.FullName);
                 JournalDirectory = newJournalDirectory;
             }
             catch (Exception ex)
             {
-                _log.LogError(ex,"Could not find journal directory");
+                _log.LogError(ex, "Could not find journal directory");
                 throw;
             }
-            
+
         }
 
         private async Task SetJournalFile()
         {
             try
             {
-                var newJournalFile = await _journalProvider.FindJournalFile(JournalDirectory);
+                FileInfo newJournalFile = await _journalProvider.FindJournalFile(JournalDirectory);
 
-                if (JournalFile?.FullName == newJournalFile.FullName) return;
+                if (JournalFile?.FullName == newJournalFile.FullName)
+                {
+                    return;
+                }
 
                 _log.LogInformation("Setting journal file to {filePath}", newJournalFile.Name);
                 JournalFile = newJournalFile;
@@ -122,7 +205,8 @@ namespace EliteAPI
         {
             try
             {
-                StatusFile = await _journalProvider.FindStatusFile(JournalDirectory);
+                var newStatusFile = await _journalProvider.FindStatusFile(JournalDirectory);
+                if (newStatusFile != null) { StatusFile = newStatusFile; }
             }
             catch (Exception ex)
             {
@@ -154,6 +238,9 @@ namespace EliteAPI
             return Task.CompletedTask;
         }
 
-        private string GetApiVersion() => Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        private string GetApiVersion()
+        {
+            return Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        }
     }
 }

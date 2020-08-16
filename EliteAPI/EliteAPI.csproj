@@ -51,10 +51,6 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     <PackageReference Include="Somfic.Logging.Console" Version="1.0.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Journal\Processor\" />
-  </ItemGroup>
-
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(IsWindows)'=='true'">
     <Exec Command="copy &quot;$(SolutionDir)lib\vmAPI.dll&quot; &quot;$(TargetDir)vmAPI.dll&quot;&#xD;&#xA;" />
   </Target>

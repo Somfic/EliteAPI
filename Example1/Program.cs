@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using EliteAPI;
 using EliteAPI.Event.Models;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -18,13 +19,14 @@ namespace Example1
                 .ConfigureLogging((context, logger) =>
                 {
                     logger.ClearProviders();
-                    logger.SetMinimumLevel(LogLevel.Trace);
+                    logger.SetMinimumLevel(LogLevel.Debug);
                     logger.AddPrettyConsole(ConsoleThemes.Code);
                 })
                 .ConfigureServices((context, service) =>
                 {
                     service.AddEliteAPI<EliteDangerousAPI>();
-                }).Build();
+                })
+                .Build();
 
             var api = ActivatorUtilities.CreateInstance<EliteDangerousAPI>(host.Services);
 

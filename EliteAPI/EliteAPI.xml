@@ -4,6 +4,35 @@
         <name>EliteAPI</name>
     </assembly>
     <members>
+        <member name="T:EliteAPI.IEliteDangerousAPI">
+            <summary>
+            EliteDangerousAPI base class
+            </summary>
+        </member>
+        <member name="P:EliteAPI.IEliteDangerousAPI.IsRunning">
+            <summary>
+            Whether the api is currently running
+            </summary>
+        </member>
+        <member name="M:EliteAPI.IEliteDangerousAPI.InitializeAsync">
+            <summary>
+            Initializes the api
+            </summary>
+        </member>
+        <member name="M:EliteAPI.IEliteDangerousAPI.StartAsync">
+            <summary>
+            Starts the api
+            </summary>
+        </member>
+        <member name="P:EliteAPI.EliteDangerousAPI.IsRunning">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.InitializeAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.StartAsync">
+            <inheritdoc />
+        </member>
         <member name="P:EliteAPI.Event.Models.AfmuRepairsEvent.Module">
             <summary>
             The name of the module
@@ -1785,7 +1814,7 @@
         <member name="M:EliteAPI.Event.Processor.EventProcessor.RegisterHandlers">
             <inheritdoc />q
         </member>
-        <member name="M:EliteAPI.Event.Processor.EventProcessor.InvokeHandler``1(EliteAPI.Event.Models.EventBase)">
+        <member name="M:EliteAPI.Event.Processor.EventProcessor.InvokeHandler(EliteAPI.Event.Models.EventBase)">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Event.Processor.IEventProcessor">
@@ -1799,12 +1828,11 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:EliteAPI.Event.Processor.IEventProcessor.InvokeHandler``1(EliteAPI.Event.Models.EventBase)">
+        <member name="M:EliteAPI.Event.Processor.IEventProcessor.InvokeHandler(EliteAPI.Event.Models.EventBase)">
             <summary>
             Invokes the registered handler for this event
             </summary>
-            <typeparam name="T">The type of event</typeparam>
-            <param name="event">The event to be invoked</param>
+            <param name="eventBase">The event to be invoked</param>
         </member>
         <member name="T:EliteAPI.Event.Provider.EventProvider">
             <inheritdoc />
@@ -1837,6 +1865,46 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Journal.Directory.JournalDirectoryProvider.FindJournalDirectory">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Journal.Processor.IJournalProcessor">
+            <summary>
+            Reads the journal and status files
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Journal.Processor.IJournalProcessor.NewJournalEntry">
+            <summary>
+            Triggered when a new json entry is made in the active journal file
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Journal.Processor.IJournalProcessor.NewSupportEntry">
+            <summary>
+            Triggered when a support file is updated
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Journal.Processor.IJournalProcessor.ProcessJournalFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified journal file to <see cref="E:EliteAPI.Journal.Processor.IJournalProcessor.NewJournalEntry"/> and invokes <see cref="E:EliteAPI.Journal.Processor.IJournalProcessor.NewJournalEntry"/> when needed
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Journal.Processor.IJournalProcessor.ProcessSupportFiles(System.Collections.Generic.IEnumerable{System.IO.FileInfo})">
+            <summary>
+            Hooks the specified support files to <see cref="E:EliteAPI.Journal.Processor.IJournalProcessor.NewSupportEntry"/> and invokes <see cref="E:EliteAPI.Journal.Processor.IJournalProcessor.NewSupportEntry"/> when needed
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Journal.Processor.JournalProcessor">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Journal.Processor.JournalProcessor.NewJournalEntry">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Journal.Processor.JournalProcessor.NewSupportEntry">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Journal.Processor.JournalProcessor.ProcessJournalFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Journal.Processor.JournalProcessor.ProcessSupportFiles(System.Collections.Generic.IEnumerable{System.IO.FileInfo})">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Journal.Provider.IJournalProvider">

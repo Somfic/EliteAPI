@@ -2,6 +2,7 @@
 using EliteAPI.Event.Processor;
 using EliteAPI.Event.Provider;
 using EliteAPI.Journal.Directory;
+using EliteAPI.Journal.Processor;
 using EliteAPI.Journal.Provider;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -19,7 +20,7 @@ namespace EliteAPI
             services.AddSingleton<IJournalDirectoryProvider, JournalDirectoryProvider>();
             services.AddSingleton<IJournalProvider, JournalProvider>();
 
-            //services.AddSingleton<IJournalProcessor, JournalProcessor>();
+            services.AddSingleton<IJournalProcessor, JournalProcessor>();
 
             return services;
         }

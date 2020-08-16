@@ -47,7 +47,7 @@ namespace EliteAPI.Journal.Provider
         {
             try
             {
-                return Task.FromResult(GetSupportFile(journalDirectory, "Status.json"));
+                return journalDirectory == null ? null : Task.FromResult(GetSupportFile(journalDirectory, "Status.json"));
             }
             catch (Exception ex)
             {
@@ -61,6 +61,7 @@ namespace EliteAPI.Journal.Provider
         /// <inheritdoc />
         public Task<IEnumerable<FileInfo>> FindSupportFiles(DirectoryInfo journalDirectory)
         {
+            
             return Task.FromResult(_supportFiles.Select(file => GetSupportFile(journalDirectory, file)));
         }
 
@@ -68,7 +69,7 @@ namespace EliteAPI.Journal.Provider
         {
             try
             {
-                return journalDirectory.GetFiles(supportFile).First();
+                return journalDirectory?.GetFiles(supportFile).First();
             }
             catch (Exception ex)
             {

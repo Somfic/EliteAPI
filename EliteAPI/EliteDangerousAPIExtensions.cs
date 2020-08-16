@@ -22,6 +22,8 @@ namespace EliteAPI
 
             services.AddSingleton<IJournalProcessor, JournalProcessor>();
 
+            services.AddSingleton<EventHandler>();
+
             return services;
         }
     }

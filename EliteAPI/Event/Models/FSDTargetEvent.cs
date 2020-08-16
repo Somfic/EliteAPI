@@ -7,6 +7,10 @@ namespace EliteAPI.Event.Models
     public class FSDTargetEvent : EventBase
     {
         internal FSDTargetEvent() { }
+
+        public static FSDTargetEvent FromJson(string json) => JsonConvert.DeserializeObject<FSDTargetEvent>(json);
+
+
         [JsonProperty("Name")]
         public string Name { get; internal set; }
 

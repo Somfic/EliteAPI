@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class CargoDepotEvent : EventBase
     {
         internal CargoDepotEvent() { }
+
+        public static CargoDepotEvent FromJson(string json) => JsonConvert.DeserializeObject<CargoDepotEvent>(json);
+
+
         [JsonProperty("MissionID")]
         public long MissionId { get; internal set; }
 

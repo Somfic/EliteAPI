@@ -9,6 +9,10 @@ namespace EliteAPI.Event.Models.Travel
     {
         internal ApproachBodyEvent() { }
 
+        public static ApproachBodyEvent FromJson(string json) => JsonConvert.DeserializeObject<ApproachBodyEvent>(json);
+
+
+
         /// <summary>
         /// The starsystem of the body.
         /// </summary>

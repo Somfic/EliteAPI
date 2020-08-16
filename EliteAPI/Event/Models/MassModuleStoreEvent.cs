@@ -6,6 +6,10 @@ namespace EliteAPI.Event.Models
     public class MassModuleStoreEvent : EventBase
     {
         internal MassModuleStoreEvent() { }
+
+        public static MassModuleStoreEvent FromJson(string json) => JsonConvert.DeserializeObject<MassModuleStoreEvent>(json);
+
+
         [JsonProperty("MarketID")]
         public long MarketId { get; internal set; }
 

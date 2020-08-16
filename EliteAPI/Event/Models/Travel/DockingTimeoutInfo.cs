@@ -7,6 +7,10 @@ namespace EliteAPI.Event.Models.Travel
     {
         internal DockingTimeoutEvent() { }
 
+        public static DockingTimeoutEvent FromJson(string json) => JsonConvert.DeserializeObject<DockingTimeoutEvent>(json);
+
+
+
         /// <summary>
         /// The id of the station.
         /// </summary>

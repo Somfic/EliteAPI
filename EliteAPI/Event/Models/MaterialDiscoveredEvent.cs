@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class MaterialDiscoveredEvent : EventBase
     {
         internal MaterialDiscoveredEvent() { }
+
+        public static MaterialDiscoveredEvent FromJson(string json) => JsonConvert.DeserializeObject<MaterialDiscoveredEvent>(json);
+
+
         [JsonProperty("Category")]
         public string Category { get; internal set; }
 

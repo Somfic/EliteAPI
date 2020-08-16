@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class CodexEntryEvent : EventBase
     {
         internal CodexEntryEvent() { }
+
+        public static CodexEntryEvent FromJson(string json) => JsonConvert.DeserializeObject<CodexEntryEvent>(json);
+
+
         [JsonProperty("EntryID")]
         public long EntryId { get; internal set; }
 

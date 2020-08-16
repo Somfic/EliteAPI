@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class AfmuRepairsEvent : EventBase
     {
         internal AfmuRepairsEvent() { }
+
+        public static AfmuRepairsEvent FromJson(string json) => JsonConvert.DeserializeObject<AfmuRepairsEvent>(json);
+
+
         /// <summary>
         /// The name of the module
         /// </summary>

@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class ShipyardSwapEvent : EventBase
     {
         internal ShipyardSwapEvent() { }
+
+        public static ShipyardSwapEvent FromJson(string json) => JsonConvert.DeserializeObject<ShipyardSwapEvent>(json);
+
+
         [JsonProperty("ShipType")]
         public string ShipType { get; internal set; }
 

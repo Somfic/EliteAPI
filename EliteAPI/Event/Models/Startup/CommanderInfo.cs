@@ -9,6 +9,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal CommanderEvent() { }
 
+        public static CommanderEvent FromJson(string json) => JsonConvert.DeserializeObject<CommanderEvent>(json);
+
+
+
         /// <summary>
         /// The commander's Frontier ID.
         /// </summary>

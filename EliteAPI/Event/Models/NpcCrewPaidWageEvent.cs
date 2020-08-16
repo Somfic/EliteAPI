@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class NpcCrewPaidWageEvent : EventBase
     {
         internal NpcCrewPaidWageEvent() { }
+
+        public static NpcCrewPaidWageEvent FromJson(string json) => JsonConvert.DeserializeObject<NpcCrewPaidWageEvent>(json);
+
+
         [JsonProperty("NpcCrewName")]
         public string NpcCrewName { get; internal set; }
 

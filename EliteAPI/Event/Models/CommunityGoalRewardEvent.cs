@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class CommunityGoalRewardEvent : EventBase
     {
         internal CommunityGoalRewardEvent() { }
+
+        public static CommunityGoalRewardEvent FromJson(string json) => JsonConvert.DeserializeObject<CommunityGoalRewardEvent>(json);
+
+
         [JsonProperty("Name")]
         public string Name { get; internal set; }
 

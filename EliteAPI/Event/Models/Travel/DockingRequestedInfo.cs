@@ -7,6 +7,10 @@ namespace EliteAPI.Event.Models.Travel
     {
         internal DockingRequestedEvent() { }
 
+        public static DockingRequestedEvent FromJson(string json) => JsonConvert.DeserializeObject<DockingRequestedEvent>(json);
+
+
+
         /// <summary>
         /// The id of the market.
         /// </summary>

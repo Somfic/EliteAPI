@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class FSSAllBodiesFoundEvent : EventBase
     {
         internal FSSAllBodiesFoundEvent() { }
+
+        public static FSSAllBodiesFoundEvent FromJson(string json) => JsonConvert.DeserializeObject<FSSAllBodiesFoundEvent>(json);
+
+
         [JsonProperty("SystemName")]
         public string SystemName { get; internal set; }
 

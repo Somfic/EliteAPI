@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class BuyExplorationDataEvent : EventBase
     {
         internal BuyExplorationDataEvent() { }
+
+        public static BuyExplorationDataEvent FromJson(string json) => JsonConvert.DeserializeObject<BuyExplorationDataEvent>(json);
+
+
         [JsonProperty("System")]
         public string System { get; internal set; }
 

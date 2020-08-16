@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class RestockVehicleEvent : EventBase
     {
         internal RestockVehicleEvent() { }
+
+        public static RestockVehicleEvent FromJson(string json) => JsonConvert.DeserializeObject<RestockVehicleEvent>(json);
+
+
         [JsonProperty("Type")]
         public string Type { get; internal set; }
 

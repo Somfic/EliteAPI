@@ -10,6 +10,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal LoadoutEvent() { }
 
+        public static LoadoutEvent FromJson(string json) => JsonConvert.DeserializeObject<LoadoutEvent>(json);
+
+
+
         /// <summary>
         /// The type of ship.
         /// </summary>

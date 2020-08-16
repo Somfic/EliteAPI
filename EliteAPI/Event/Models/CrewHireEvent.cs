@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class CrewHireEvent : EventBase
     {
         internal CrewHireEvent() { }
+
+        public static CrewHireEvent FromJson(string json) => JsonConvert.DeserializeObject<CrewHireEvent>(json);
+
+
         [JsonProperty("Name")]
         public string Name { get; internal set; }
 

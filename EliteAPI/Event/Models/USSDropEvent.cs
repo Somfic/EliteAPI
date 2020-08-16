@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class USSDropEvent : EventBase
     {
         internal USSDropEvent() { }
+
+        public static USSDropEvent FromJson(string json) => JsonConvert.DeserializeObject<USSDropEvent>(json);
+
+
         [JsonProperty("USSType")]
         public string UssType { get; internal set; }
 

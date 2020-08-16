@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class SendTextEvent : EventBase
     {
         internal SendTextEvent() { }
+
+        public static SendTextEvent FromJson(string json) => JsonConvert.DeserializeObject<SendTextEvent>(json);
+
+
         [JsonProperty("To")]
         public string To { get; internal set; }
 

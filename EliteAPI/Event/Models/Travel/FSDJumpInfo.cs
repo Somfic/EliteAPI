@@ -7,6 +7,10 @@ namespace EliteAPI.Event.Models.Travel
     {
         internal FSDJumpEvent() { }
 
+        public static FSDJumpEvent FromJson(string json) => JsonConvert.DeserializeObject<FSDJumpEvent>(json);
+
+
+
         /// <summary>
         /// The name of the destination star system.
         /// </summary>

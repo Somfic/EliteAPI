@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class OutfittingEvent : EventBase
     {
         internal OutfittingEvent() { }
+
+        public static OutfittingEvent FromJson(string json) => JsonConvert.DeserializeObject<OutfittingEvent>(json);
+
+
         [JsonProperty("MarketID")]
         public long MarketId { get; internal set; }
 

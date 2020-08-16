@@ -10,6 +10,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal MissionsEvent() { }
 
+        public static MissionsEvent FromJson(string json) => JsonConvert.DeserializeObject<MissionsEvent>(json);
+
+
+
         /// <summary>
         /// A list of the active missions, if any.
         /// </summary>

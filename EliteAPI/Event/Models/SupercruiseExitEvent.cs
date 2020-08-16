@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class SupercruiseExitEvent : EventBase
     {
         internal SupercruiseExitEvent() { }
+
+        public static SupercruiseExitEvent FromJson(string json) => JsonConvert.DeserializeObject<SupercruiseExitEvent>(json);
+
+
         [JsonProperty("StarSystem")]
         public string StarSystem { get; internal set; }
 

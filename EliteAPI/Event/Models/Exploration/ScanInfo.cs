@@ -8,6 +8,10 @@ namespace EliteAPI.Event.Models.Exploration
     {
         internal ScanEvent() { }
 
+        public static ScanEvent FromJson(string json) => JsonConvert.DeserializeObject<ScanEvent>(json);
+
+
+
         /// <summary>
         /// The type of scan.
         /// </summary>

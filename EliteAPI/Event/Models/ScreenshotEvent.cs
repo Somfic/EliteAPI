@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class ScreenshotEvent : EventBase
     {
         internal ScreenshotEvent() { }
+
+        public static ScreenshotEvent FromJson(string json) => JsonConvert.DeserializeObject<ScreenshotEvent>(json);
+
+
         [JsonProperty("Filename")]
         public string Filename { get; internal set; }
 

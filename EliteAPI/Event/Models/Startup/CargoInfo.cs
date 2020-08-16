@@ -11,6 +11,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal CargoEvent() { }
 
+        public static CargoEvent FromJson(string json) => JsonConvert.DeserializeObject<CargoEvent>(json);
+
+
+
         /// <summary>
         /// The type of vessel, either 'Ship' or 'SRV'.
         /// </summary>

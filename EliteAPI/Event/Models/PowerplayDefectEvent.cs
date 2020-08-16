@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class PowerplayDefectEvent : EventBase
     {
         internal PowerplayDefectEvent() { }
+
+        public static PowerplayDefectEvent FromJson(string json) => JsonConvert.DeserializeObject<PowerplayDefectEvent>(json);
+
+
         [JsonProperty("FromPower")]
         public string FromPower { get; internal set; }
 

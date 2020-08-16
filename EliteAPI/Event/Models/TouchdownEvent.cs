@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class TouchdownEvent : EventBase
     {
         internal TouchdownEvent() { }
+
+        public static TouchdownEvent FromJson(string json) => JsonConvert.DeserializeObject<TouchdownEvent>(json);
+
+
         [JsonProperty("PlayerControlled")]
         public bool PlayerControlled { get; internal set; }
 

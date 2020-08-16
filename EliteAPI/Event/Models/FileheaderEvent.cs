@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class FileheaderEvent : EventBase
     {
         internal FileheaderEvent() { }
+
+        public static FileheaderEvent FromJson(string json) => JsonConvert.DeserializeObject<FileheaderEvent>(json);
+
+
         [JsonProperty("part")]
         public long Part { get; internal set; }
 

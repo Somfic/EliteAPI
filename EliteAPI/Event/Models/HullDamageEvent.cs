@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class HullDamageEvent : EventBase
     {
         internal HullDamageEvent() { }
+
+        public static HullDamageEvent FromJson(string json) => JsonConvert.DeserializeObject<HullDamageEvent>(json);
+
+
         [JsonProperty("Health")]
         public float Health { get; internal set; }
 

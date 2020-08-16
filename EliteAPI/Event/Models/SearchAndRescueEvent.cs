@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class SearchAndRescueEvent : EventBase
     {
         internal SearchAndRescueEvent() { }
+
+        public static SearchAndRescueEvent FromJson(string json) => JsonConvert.DeserializeObject<SearchAndRescueEvent>(json);
+
+
         [JsonProperty("Name")]
         public string Name { get; internal set; }
 

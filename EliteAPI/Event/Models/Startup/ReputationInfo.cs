@@ -11,6 +11,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal ReputationEvent() { }
 
+        public static ReputationEvent FromJson(string json) => JsonConvert.DeserializeObject<ReputationEvent>(json);
+
+
+
         /// <summary>
         /// The commander's reputation with the Empire.
         /// Goes from -100-100.

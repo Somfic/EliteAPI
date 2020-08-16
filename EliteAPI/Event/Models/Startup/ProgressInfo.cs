@@ -11,6 +11,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal ProgressEvent() { }
 
+        public static ProgressEvent FromJson(string json) => JsonConvert.DeserializeObject<ProgressEvent>(json);
+
+
+
         /// <summary>
         /// The rank process in a percentages within Combat the commander has.
         /// Goes from 0-100.

@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class PowerplayCollectEvent : EventBase
     {
         internal PowerplayCollectEvent() { }
+
+        public static PowerplayCollectEvent FromJson(string json) => JsonConvert.DeserializeObject<PowerplayCollectEvent>(json);
+
+
         [JsonProperty("Power")]
         public string Power { get; internal set; }
 

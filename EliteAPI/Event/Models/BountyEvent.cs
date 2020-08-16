@@ -6,6 +6,10 @@ namespace EliteAPI.Event.Models
     public class BountyEvent : EventBase
     {
         internal BountyEvent() { }
+
+        public static BountyEvent FromJson(string json) => JsonConvert.DeserializeObject<BountyEvent>(json);
+
+
         [JsonProperty("Rewards")]
         public List<Reward> Rewards { get; internal set; }
 

@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class LaunchSRVEvent : EventBase
     {
         internal LaunchSRVEvent() { }
+
+        public static LaunchSRVEvent FromJson(string json) => JsonConvert.DeserializeObject<LaunchSRVEvent>(json);
+
+
         [JsonProperty("Loadout")]
         public string Loadout { get; internal set; }
 

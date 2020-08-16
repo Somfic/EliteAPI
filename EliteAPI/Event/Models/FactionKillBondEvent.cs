@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class FactionKillBondEvent : EventBase
     {
         internal FactionKillBondEvent() { }
+
+        public static FactionKillBondEvent FromJson(string json) => JsonConvert.DeserializeObject<FactionKillBondEvent>(json);
+
+
         [JsonProperty("Reward")]
         public long Reward { get; internal set; }
 

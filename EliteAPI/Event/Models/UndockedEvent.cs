@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class UndockedEvent : EventBase
     {
         internal UndockedEvent() { }
+
+        public static UndockedEvent FromJson(string json) => JsonConvert.DeserializeObject<UndockedEvent>(json);
+
+
         [JsonProperty("StationName")]
         public string StationName { get; internal set; }
 

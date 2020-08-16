@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class LiftoffEvent : EventBase
     {
         internal LiftoffEvent() { }
+
+        public static LiftoffEvent FromJson(string json) => JsonConvert.DeserializeObject<LiftoffEvent>(json);
+
+
         [JsonProperty("PlayerControlled")]
         public bool PlayerControlled { get; internal set; }
 

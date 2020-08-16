@@ -6,6 +6,10 @@ namespace EliteAPI.Event.Models
     public class TechnologyBrokerEvent : EventBase
     {
         internal TechnologyBrokerEvent() { }
+
+        public static TechnologyBrokerEvent FromJson(string json) => JsonConvert.DeserializeObject<TechnologyBrokerEvent>(json);
+
+
         [JsonProperty("BrokerType")]
         public string BrokerType { get; internal set; }
 

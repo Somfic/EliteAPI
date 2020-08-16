@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class ScientificResearchEvent : EventBase
     {
         internal ScientificResearchEvent() { }
+
+        public static ScientificResearchEvent FromJson(string json) => JsonConvert.DeserializeObject<ScientificResearchEvent>(json);
+
+
         [JsonProperty("MarketID")]
         public long MarketId { get; internal set; }
 

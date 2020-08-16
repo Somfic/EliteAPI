@@ -9,6 +9,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal ClearSavedGameEvent() { }
 
+        public static ClearSavedGameEvent FromJson(string json) => JsonConvert.DeserializeObject<ClearSavedGameEvent>(json);
+
+
+
         /// <summary>
         /// The commander's name.
         /// </summary>

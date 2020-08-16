@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class MaterialTradeEvent : EventBase
     {
         internal MaterialTradeEvent() { }
+
+        public static MaterialTradeEvent FromJson(string json) => JsonConvert.DeserializeObject<MaterialTradeEvent>(json);
+
+
         [JsonProperty("MarketID")]
         public long MarketId { get; internal set; }
 

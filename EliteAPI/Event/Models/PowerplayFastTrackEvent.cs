@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class PowerplayFastTrackEvent : EventBase
     {
         internal PowerplayFastTrackEvent() { }
+
+        public static PowerplayFastTrackEvent FromJson(string json) => JsonConvert.DeserializeObject<PowerplayFastTrackEvent>(json);
+
+
         [JsonProperty("Power")]
         public string Power { get; internal set; }
 

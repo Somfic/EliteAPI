@@ -7,6 +7,10 @@ namespace EliteAPI.Event.Models
     public class LocationEvent : EventBase
     {
         internal LocationEvent() { }
+
+        public static LocationEvent FromJson(string json) => JsonConvert.DeserializeObject<LocationEvent>(json);
+
+
         [JsonProperty("Docked")]
         public bool Docked { get; internal set; }
 

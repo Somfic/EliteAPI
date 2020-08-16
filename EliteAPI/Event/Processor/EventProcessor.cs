@@ -20,11 +20,13 @@ namespace EliteAPI.Event.Processor
 
         private IDictionary<string, IEnumerable<MethodBase>> _cache;
         private ILogger<EventProcessor> _log;
+        private EventHandler _eventHandler;
 
         public EventProcessor(IServiceProvider services)
         {
             _assembly = Assembly.GetExecutingAssembly();
             _log = services.GetRequiredService<ILogger<EventProcessor>>();
+            _eventHandler = services.GetRequiredService<EventHandler>();
         }
 
         /// <inheritdoc />q
@@ -79,16 +81,14 @@ namespace EliteAPI.Event.Processor
         {
             if (_cache == null) { RegisterHandlers(); }
 
-            return Task.CompletedTask;
-
             try
             {
-                _log.LogDebug(eventBase.Event);
-
-                IEnumerable<MethodBase> methods = _cache[eventBase.Event];
+                IEnumerable<MethodBase> methods = _cache[eventBase.GetType().Name];
                 foreach (var method in methods)
                 {
-                    method.Invoke(null, new object[] {eventBase});
+                    _log.LogTrace("Invoking {method}", $"{method.DeclaringType.FullName}:{method.Name}");
+
+                    method.Invoke(_eventHandler, new object[] {eventBase});
                 }
             }
             catch (Exception ex)

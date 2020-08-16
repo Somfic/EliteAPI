@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class SAAScanCompleteEvent : EventBase
     {
         internal SAAScanCompleteEvent() { }
+
+        public static SAAScanCompleteEvent FromJson(string json) => JsonConvert.DeserializeObject<SAAScanCompleteEvent>(json);
+
+
         [JsonProperty("SystemAddress")]
         public long SystemAddress { get; internal set; }
 

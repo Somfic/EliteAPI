@@ -12,6 +12,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal RankEvent() { }
 
+        public static RankEvent FromJson(string json) => JsonConvert.DeserializeObject<RankEvent>(json);
+
+
+
         /// <summary>
         /// The rank within Combat the commander has.
         /// Returns a scale from 0-8.

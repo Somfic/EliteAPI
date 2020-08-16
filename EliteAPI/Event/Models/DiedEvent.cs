@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class DiedEvent : EventBase
     {
         internal DiedEvent() { }
+
+        public static DiedEvent FromJson(string json) => JsonConvert.DeserializeObject<DiedEvent>(json);
+
+
         [JsonProperty("KillerName")]
         public string KillerName { get; internal set; }
 

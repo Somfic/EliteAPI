@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class FetchRemoteModuleEvent : EventBase
     {
         internal FetchRemoteModuleEvent() { }
+
+        public static FetchRemoteModuleEvent FromJson(string json) => JsonConvert.DeserializeObject<FetchRemoteModuleEvent>(json);
+
+
         [JsonProperty("StorageSlot")]
         public long StorageSlot { get; internal set; }
 

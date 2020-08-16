@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class ModuleSellEvent : EventBase
     {
         internal ModuleSellEvent() { }
+
+        public static ModuleSellEvent FromJson(string json) => JsonConvert.DeserializeObject<ModuleSellEvent>(json);
+
+
         [JsonProperty("MarketID")]
         public long MarketId { get; internal set; }
 

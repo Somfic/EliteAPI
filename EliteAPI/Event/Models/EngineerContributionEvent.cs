@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class EngineerContributionEvent : EventBase
     {
         internal EngineerContributionEvent() { }
+
+        public static EngineerContributionEvent FromJson(string json) => JsonConvert.DeserializeObject<EngineerContributionEvent>(json);
+
+
         [JsonProperty("Engineer")]
         public string Engineer { get; internal set; }
 

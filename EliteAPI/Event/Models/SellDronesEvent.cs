@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class SellDronesEvent : EventBase
     {
         internal SellDronesEvent() { }
+
+        public static SellDronesEvent FromJson(string json) => JsonConvert.DeserializeObject<SellDronesEvent>(json);
+
+
         [JsonProperty("Type")]
         public string Type { get; internal set; }
 

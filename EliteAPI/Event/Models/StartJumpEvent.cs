@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class StartJumpEvent : EventBase
     {
         internal StartJumpEvent() { }
+
+        public static StartJumpEvent FromJson(string json) => JsonConvert.DeserializeObject<StartJumpEvent>(json);
+
+
         [JsonProperty("JumpType")]
         public string JumpType { get; internal set; }
 

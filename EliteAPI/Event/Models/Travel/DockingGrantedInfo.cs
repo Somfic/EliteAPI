@@ -7,6 +7,10 @@ namespace EliteAPI.Event.Models.Travel
     {
         internal DockingGrantedEvent() { }
 
+        public static DockingGrantedEvent FromJson(string json) => JsonConvert.DeserializeObject<DockingGrantedEvent>(json);
+
+
+
         /// <summary>
         /// The pad number.
         /// </summary>

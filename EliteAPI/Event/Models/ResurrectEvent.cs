@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class ResurrectEvent : EventBase
     {
         internal ResurrectEvent() { }
+
+        public static ResurrectEvent FromJson(string json) => JsonConvert.DeserializeObject<ResurrectEvent>(json);
+
+
         [JsonProperty("Option")]
         public string Option { get; internal set; }
 

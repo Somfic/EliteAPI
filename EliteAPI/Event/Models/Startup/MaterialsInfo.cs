@@ -10,6 +10,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal MaterialsEvent() { }
 
+        public static MaterialsEvent FromJson(string json) => JsonConvert.DeserializeObject<MaterialsEvent>(json);
+
+
+
         /// <summary>
         /// A list of raw materials, grouped by name.
         /// </summary>

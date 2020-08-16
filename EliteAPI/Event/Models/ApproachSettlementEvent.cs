@@ -6,6 +6,10 @@ namespace EliteAPI.Event.Models
     {
         internal ApproachSettlementEvent() { }
 
+        public static ApproachSettlementEvent FromJson(string json) => JsonConvert.DeserializeObject<ApproachSettlementEvent>(json);
+
+
+
         [JsonProperty("Name")]
         public string Name { get; internal set; }
 

@@ -7,6 +7,10 @@ namespace EliteAPI.Event.Models.Travel
     {
         internal DockingCancelledEvent() { }
 
+        public static DockingCancelledEvent FromJson(string json) => JsonConvert.DeserializeObject<DockingCancelledEvent>(json);
+
+
+
         /// <summary>
         /// The id of the station.
         /// </summary>

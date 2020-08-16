@@ -7,6 +7,10 @@ namespace EliteAPI.Event.Models
     public class RedeemVoucherEvent : EventBase
     {
         internal RedeemVoucherEvent() { }
+
+        public static RedeemVoucherEvent FromJson(string json) => JsonConvert.DeserializeObject<RedeemVoucherEvent>(json);
+
+
         [JsonProperty("Type")]
         public string Type { get; internal set; }
 

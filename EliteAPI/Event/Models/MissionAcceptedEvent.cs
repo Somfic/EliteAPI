@@ -6,6 +6,10 @@ namespace EliteAPI.Event.Models
     public class MissionAcceptedEvent : EventBase
     {
         internal MissionAcceptedEvent() { }
+
+        public static MissionAcceptedEvent FromJson(string json) => JsonConvert.DeserializeObject<MissionAcceptedEvent>(json);
+
+
         [JsonProperty("Faction")]
         public string Faction { get; internal set; }
 

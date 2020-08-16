@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class PayBountiesEvent : EventBase
     {
         internal PayBountiesEvent() { }
+
+        public static PayBountiesEvent FromJson(string json) => JsonConvert.DeserializeObject<PayBountiesEvent>(json);
+
+
         [JsonProperty("Amount")]
         public long Amount { get; internal set; }
 

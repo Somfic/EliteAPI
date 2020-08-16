@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class ReceiveTextEvent : EventBase
     {
         internal ReceiveTextEvent() { }
+
+        public static ReceiveTextEvent FromJson(string json) => JsonConvert.DeserializeObject<ReceiveTextEvent>(json);
+
+
         [JsonProperty("From")]
         public string From { get; internal set; }
 

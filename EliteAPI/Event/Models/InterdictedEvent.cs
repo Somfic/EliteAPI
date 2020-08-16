@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class InterdictedEvent : EventBase
     {
         internal InterdictedEvent() { }
+
+        public static InterdictedEvent FromJson(string json) => JsonConvert.DeserializeObject<InterdictedEvent>(json);
+
+
         [JsonProperty("Submitted")]
         public bool Submitted { get; internal set; }
 

@@ -11,6 +11,10 @@ namespace EliteAPI.Event.Models.Travel
     {
         internal DockedEvent() { }
 
+        public static DockedEvent FromJson(string json) => JsonConvert.DeserializeObject<DockedEvent>(json);
+
+
+
         /// <summary>
         /// The name of the station.
         /// </summary>

@@ -10,6 +10,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal LoadGameEvent() { }
 
+        public static LoadGameEvent FromJson(string json) => JsonConvert.DeserializeObject<LoadGameEvent>(json);
+
+
+
         /// <summary>
         /// The Frontier ID of the commander.
         /// </summary>

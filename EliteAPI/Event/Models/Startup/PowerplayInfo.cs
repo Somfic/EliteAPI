@@ -10,6 +10,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal PowerplayEvent() { }
 
+        public static PowerplayEvent FromJson(string json) => JsonConvert.DeserializeObject<PowerplayEvent>(json);
+
+
+
         /// <summary>
         /// The name of the galactic power.
         /// </summary>

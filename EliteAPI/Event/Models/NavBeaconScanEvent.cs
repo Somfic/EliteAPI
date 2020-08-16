@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class NavBeaconScanEvent : EventBase
     {
         internal NavBeaconScanEvent() { }
+
+        public static NavBeaconScanEvent FromJson(string json) => JsonConvert.DeserializeObject<NavBeaconScanEvent>(json);
+
+
         [JsonProperty("SystemAddress")]
         public long SystemAddress { get; internal set; }
 

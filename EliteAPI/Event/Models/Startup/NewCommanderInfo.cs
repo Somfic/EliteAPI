@@ -9,6 +9,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal NewCommanderEvent() { }
 
+        public static NewCommanderEvent FromJson(string json) => JsonConvert.DeserializeObject<NewCommanderEvent>(json);
+
+
+
         /// <summary>
         /// The name of the commander.
         /// </summary>

@@ -6,6 +6,10 @@ namespace EliteAPI.Event.Models
     public class StoredShipsEvent : EventBase
     {
         internal StoredShipsEvent() { }
+
+        public static StoredShipsEvent FromJson(string json) => JsonConvert.DeserializeObject<StoredShipsEvent>(json);
+
+
         [JsonProperty("StationName")]
         public string StationName { get; internal set; }
 

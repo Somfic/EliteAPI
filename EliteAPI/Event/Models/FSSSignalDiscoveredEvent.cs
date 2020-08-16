@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class FSSSignalDiscoveredEvent : EventBase
     {
         internal FSSSignalDiscoveredEvent() { }
+
+        public static FSSSignalDiscoveredEvent FromJson(string json) => JsonConvert.DeserializeObject<FSSSignalDiscoveredEvent>(json);
+
+
         [JsonProperty("SystemAddress")]
         public long SystemAddress { get; internal set; }
 

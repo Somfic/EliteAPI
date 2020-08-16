@@ -9,6 +9,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal StatisticsEvent() { }
 
+        public static StatisticsEvent FromJson(string json) => JsonConvert.DeserializeObject<StatisticsEvent>(json);
+
+
+
         /// <summary>
         /// Contains statistics on the commander's bank account.
         /// </summary>

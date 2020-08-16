@@ -7,6 +7,10 @@ namespace EliteAPI.Event.Models.Travel
     {
         internal DockingDeniedEvent() { }
 
+        public static DockingDeniedEvent FromJson(string json) => JsonConvert.DeserializeObject<DockingDeniedEvent>(json);
+
+
+
         /// <summary>
         /// The reason why the docking request was denied.
         /// </summary>

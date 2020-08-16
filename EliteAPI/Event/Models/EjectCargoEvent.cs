@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class EjectCargoEvent : EventBase
     {
         internal EjectCargoEvent() { }
+
+        public static EjectCargoEvent FromJson(string json) => JsonConvert.DeserializeObject<EjectCargoEvent>(json);
+
+
         [JsonProperty("Type")]
         public string Type { get; internal set; }
 

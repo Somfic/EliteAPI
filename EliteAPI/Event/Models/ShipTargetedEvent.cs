@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class ShipTargetedEvent : EventBase
     {
         internal ShipTargetedEvent() { }
+
+        public static ShipTargetedEvent FromJson(string json) => JsonConvert.DeserializeObject<ShipTargetedEvent>(json);
+
+
         [JsonProperty("TargetLocked")]
         public bool TargetLocked { get; internal set; }
 

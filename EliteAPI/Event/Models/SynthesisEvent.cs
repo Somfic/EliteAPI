@@ -6,6 +6,10 @@ namespace EliteAPI.Event.Models
     public class SynthesisEvent : EventBase
     {
         internal SynthesisEvent() { }
+
+        public static SynthesisEvent FromJson(string json) => JsonConvert.DeserializeObject<SynthesisEvent>(json);
+
+
         [JsonProperty("Name")]
         public string Name { get; internal set; }
 

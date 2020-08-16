@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class DatalinkVoucherEvent : EventBase
     {
         internal DatalinkVoucherEvent() { }
+
+        public static DatalinkVoucherEvent FromJson(string json) => JsonConvert.DeserializeObject<DatalinkVoucherEvent>(json);
+
+
         [JsonProperty("Reward")]
         public long Reward { get; internal set; }
 

@@ -5,6 +5,10 @@ namespace EliteAPI.Event.Models
     public class CommitCrimeEvent : EventBase
     {
         internal CommitCrimeEvent() { }
+
+        public static CommitCrimeEvent FromJson(string json) => JsonConvert.DeserializeObject<CommitCrimeEvent>(json);
+
+
         [JsonProperty("CrimeType")]
         public string CrimeType { get; internal set; }
 

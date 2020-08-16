@@ -6,6 +6,10 @@ namespace EliteAPI.Event.Models
     public class MultiSellExplorationDataEvent : EventBase
     {
         internal MultiSellExplorationDataEvent() { }
+
+        public static MultiSellExplorationDataEvent FromJson(string json) => JsonConvert.DeserializeObject<MultiSellExplorationDataEvent>(json);
+
+
         [JsonProperty("Discovered")]
         public List<Discovered> Discovered { get; internal set; }
 

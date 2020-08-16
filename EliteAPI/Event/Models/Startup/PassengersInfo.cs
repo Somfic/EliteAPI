@@ -10,6 +10,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal PassengersEvent() { }
 
+        public static PassengersEvent FromJson(string json) => JsonConvert.DeserializeObject<PassengersEvent>(json);
+
+
+
         /// <summary>
         /// A list of passenger records.
         /// </summary>

@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using EliteAPI.Event.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace EliteAPI.Event.Provider
 {
@@ -11,18 +17,42 @@ namespace EliteAPI.Event.Provider
     public class EventProvider : IEventProvider
     {
         private readonly ILogger<EventProvider> _log;
+        private Assembly _assembly;
 
         public EventProvider(IServiceProvider service)
         {
             _log = service.GetRequiredService<ILogger<EventProvider>>();
+            _assembly = Assembly.GetExecutingAssembly();
+        }
+
+        private IDictionary<string, Type> _cache;
+
+        void RegisterEventClasses()
+        {
+            _cache = new ConcurrentDictionary<string, Type>();
+
+            foreach (var eventType in GetAllEventTypes(typeof(EventHandler)))
+            {
+                _cache.Add(eventType.Name.Replace("Event", ""), eventType);
+            }
         }
 
         /// <inheritdoc />
         public Task<EventBase> ProcessJsonEvent(string json)
         {
+            if(_cache == null) {RegisterEventClasses();}
+
             try
             {
-                return Task.FromResult(JsonConvert.DeserializeObject<EventBase>(json));
+                JObject parsedFromGame = JsonConvert.DeserializeObject<JObject>(json);
+                string eventName = ((dynamic)parsedFromGame).@event;
+
+                var method = GetFromJsonMethod(eventName);
+                var eventBase = InvokeFromJsonMethod(method, json);
+
+                _log.LogTrace(json);
+
+                return Task.FromResult(eventBase);
             }
             catch (Exception ex)
             {
@@ -32,6 +62,26 @@ namespace EliteAPI.Event.Provider
 
                 throw;
             }
+        }
+
+        private IEnumerable<Type> GetAllEventTypes(Type eventHandler)
+        {
+            var eventTypes = _assembly.GetTypes()
+                .Where(x => x.IsSubclassOf(typeof(EventBase)) && x.IsClass && !x.IsAbstract);
+
+            return eventTypes;
+        }
+
+        private MethodBase GetFromJsonMethod(string eventName)
+        {
+            var type = _cache[eventName];
+
+            return type.GetMethods().First(x => x.Name == "FromJson");
+        }
+
+        private EventBase InvokeFromJsonMethod(MethodBase method, string json)
+        {
+            return method.Invoke(null, new object[]{json}) as EventBase;
         }
     }
 }

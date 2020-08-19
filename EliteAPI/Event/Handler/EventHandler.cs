@@ -162,6 +162,11 @@ namespace EliteAPI.Event.Handler
 
         internal void InvokeMissingEvent(object arg) => MissingEvent?.Invoke(null, arg);
 
+        //NavRoute
+        public event EventHandler<NavRouteEvent> NavRouteEvent;
+
+        internal void InvokeNavRouteEvent(NavRouteEvent arg) => NavRouteEvent?.Invoke(null, arg);
+
         //ReservoirReplenished
         public event EventHandler<ReservoirReplenishedEvent> ReservoirReplenishedEvent;
 

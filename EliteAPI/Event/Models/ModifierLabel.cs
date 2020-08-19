@@ -138,6 +138,7 @@ namespace EliteAPI.Event.Models
         FalloffRange,
         DSS_RangeMult,
         DSS_AngleMult,
-        DSS_RateMult
+        DSS_RateMult,
+        DSS_PatchRadius
     }
 }

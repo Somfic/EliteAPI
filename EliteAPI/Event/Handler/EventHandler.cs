@@ -162,6 +162,11 @@ namespace EliteAPI.Event.Handler
 
         internal void InvokeMissingEvent(object arg) => MissingEvent?.Invoke(null, arg);
 
+        //SAASignalsFoundEvent
+        public event EventHandler<SAASignalsFoundEvent> SAASignalsFoundEvent;
+        internal void InvokeSAASignalsFoundEvent(SAASignalsFoundEvent arg) => SAASignalsFoundEvent?.Invoke(null, arg);
+
+
         //NavRoute
         public event EventHandler<NavRouteEvent> NavRouteEvent;
 

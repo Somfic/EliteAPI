@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using EliteAPI.Status.Models;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI.Abstractions
@@ -18,6 +19,11 @@ namespace EliteAPI.Abstractions
         /// Container for all events
         /// </summary>
         EventHandler Events { get; }
+
+        /// <summary>
+        /// Container for the ship's current status
+        /// </summary>
+        ShipStatus Status { get; }
 
         /// <summary>
         /// Whether the api is currently running

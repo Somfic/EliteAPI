@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Threading.Tasks;
 
-namespace EliteAPI.Status.Provider
+namespace EliteAPI.Status.Provider.Abstractions
 {
     /// <summary>
-    /// Finds the journal and support files 
+    /// Provides status files
     /// </summary>
     public interface IStatusProvider
     {

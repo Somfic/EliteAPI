@@ -54,7 +54,7 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Status\Processor\" />
+    <Folder Include="Event\Models\Status\" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(IsWindows)'=='true'">

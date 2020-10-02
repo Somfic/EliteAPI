@@ -14,6 +14,10 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using EliteAPI.Abstractions;
+using EliteAPI.Status.Models;
+using EliteAPI.Status.Processor.Abstractions;
+using EliteAPI.Status.Provider.Abstractions;
+using Newtonsoft.Json;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
@@ -29,6 +33,9 @@ namespace EliteAPI
 
         /// <inheritdoc />
         public EventHandler Events { get; }
+
+        /// <inheritdoc />
+        public ShipStatus Status { get; private set; }
 
         public EliteDangerousAPI(IServiceProvider services)
         {
@@ -47,7 +54,12 @@ namespace EliteAPI
 
                 _journalProcessor = services.GetRequiredService<IJournalProcessor>();
 
+                _statusProvider = services.GetRequiredService<IStatusProvider>();
+                _statusProcessor = services.GetRequiredService<IStatusProcessor>();
+
                 Events = services.GetRequiredService<EventHandler>();
+
+                Status = new ShipStatus();
             }
             catch (Exception ex)
             {
@@ -65,10 +77,17 @@ namespace EliteAPI
         private readonly IJournalProcessor _journalProcessor;
 
         private readonly IJournalDirectoryProvider _journalDirectoryProvider;
+        private readonly IStatusProvider _statusProvider;
+        private readonly IStatusProcessor _statusProcessor;
 
         private DirectoryInfo JournalDirectory { get; set; }
         private FileInfo JournalFile { get; set; }
         private FileInfo StatusFile { get; set; }
+        private FileInfo CargoFile { get; set; }
+        private FileInfo MarketFile { get; set; }
+        private FileInfo OutfittingFile { get; set; }
+        private FileInfo ShipyardFile { get; set; }
+
         private IEnumerable<FileInfo> SupportFiles { get; set; }
 
         private Exception InitializationException { get; }
@@ -84,6 +103,11 @@ namespace EliteAPI
                 throw InitializationException;
             }
 
+            if (IsInitialized)
+            {
+                return;
+            }
+
             try
             {
                 _log.LogInformation("Initializing EliteAPI v{version}", Version.ToString());
@@ -92,8 +116,18 @@ namespace EliteAPI
                 await InitializeEventHandlers();
                 await SetJournalDirectory();
                 await SetJournalFile();
+                await SetSupportFiles();
 
+                _statusProcessor.StatusUpdated += _statusProcessor_StatusUpdated;
                 _journalProcessor.NewJournalEntry += _journalProcessor_NewJournalEntry;
+
+                if (_config.GetSection("EliteAPI")["StartAtPresent"] == "true")
+                {
+                    //todo: add some way to not invoke third party events, but only invoke api event logic stuff ???
+                    //await DoTick();
+                }
+
+                _log.LogDebug("EliteAPI has initialized");
 
                 IsInitialized = true;
             }
@@ -118,18 +152,41 @@ namespace EliteAPI
             {
                 while (IsRunning)
                 {
-                    await SetJournalFile();
-                    await _journalProcessor.ProcessJournalFile(JournalFile);
-
+                    await DoTick();
                     await Task.Delay(TimeSpan.FromMilliseconds(500));
                 }
             });
+
+            _log.LogInformation("EliteAPI has started");
+        }
+
+        private async Task DoTick()
+        {
+            try
+            {
+                await SetSupportFiles();
+                await _statusProcessor.ProcessStatusFile(StatusFile);
+                await _statusProcessor.ProcessCargoFile(CargoFile);
+                await _statusProcessor.ProcessMarketFile(MarketFile);
+                await _statusProcessor.ProcessOutfittingFile(OutfittingFile);
+                await _statusProcessor.ProcessShipyardFile(ShipyardFile);
+
+                await SetJournalFile();
+                await _journalProcessor.ProcessJournalFile(JournalFile);
+            }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not do tick");
+            }
         }
 
         public void Stop()
         {
             _journalProcessor.NewJournalEntry -= _journalProcessor_NewJournalEntry;
+            _statusProcessor.StatusUpdated -= _statusProcessor_StatusUpdated;
+
             IsRunning = false;
+            IsInitialized = false;
         }
 
         private async Task InitializeEventHandlers()
@@ -151,10 +208,29 @@ namespace EliteAPI
 
         private async void _journalProcessor_NewJournalEntry(object sender, string e)
         {
-            EventBase eventBase = await _eventProvider.ProcessJsonEvent(e);
-            foreach (IEventProcessor eventProcessor in _eventProcessors)
+            try
             {
-                await eventProcessor.InvokeHandler(eventBase);
+                EventBase eventBase = await _eventProvider.ProcessJsonEvent(e);
+                foreach (IEventProcessor eventProcessor in _eventProcessors)
+                {
+                    await eventProcessor.InvokeHandler(eventBase);
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not execute event");
+            }
+        }
+
+        private void _statusProcessor_StatusUpdated(object sender, string e)
+        {
+            try
+            {
+                Status = JsonConvert.DeserializeObject<ShipStatus>(e);
+            }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not read status contents");
             }
         }
 
@@ -197,6 +273,22 @@ namespace EliteAPI
             {
                 _log.LogError(ex, "Could not find the active journal file");
                 throw;
+            }
+        }
+
+        private async Task SetSupportFiles()
+        {
+            try
+            {
+                StatusFile = await _statusProvider.FindStatusFile(JournalDirectory);
+                CargoFile = await _statusProvider.FindCargoFile(JournalDirectory);
+                MarketFile = await _statusProvider.FindMarketFile(JournalDirectory);
+                OutfittingFile = await _statusProvider.FindOutfittingFile(JournalDirectory);
+                ShipyardFile = await _statusProvider.FindShipyardFile(JournalDirectory);
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex, "Could not set support files");
             }
         }
 

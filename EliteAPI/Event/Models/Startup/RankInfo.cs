@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using EliteAPI.Event.Helper;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
@@ -13,7 +12,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal RankEvent() { }
 
-        public static RankEvent FromJson(string json) => JsonConvert.DeserializeObject<RankEvent>(json);
+        public static RankEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<RankEvent>(json);
+        }
 
 
 
@@ -22,7 +24,6 @@ namespace EliteAPI.Event.Models.Startup
         /// Returns a scale from 0-8.
         /// </summary>
         [JsonProperty("Combat")]
-        [Range(0, 8)]
         public short Combat { get; internal set; }
 
         /// <summary>
@@ -36,7 +37,6 @@ namespace EliteAPI.Event.Models.Startup
         /// Returns a scale from 0-8.
         /// </summary>
         [JsonProperty("Trade")]
-        [Range(0, 8)]
         public short Trade { get; internal set; }
 
         /// <summary>
@@ -50,7 +50,6 @@ namespace EliteAPI.Event.Models.Startup
         /// Returns a scale from 0-8.
         /// </summary>
         [JsonProperty("Explore")]
-        [Range(0, 8)]
         public short Exploration { get; internal set; }
 
         /// <summary>
@@ -64,7 +63,6 @@ namespace EliteAPI.Event.Models.Startup
         /// Returns a scale from 0-14.
         /// </summary>
         [JsonProperty("Empire")]
-        [Range(0, 14)]
         public short Empire { get; internal set; }
 
         /// <summary>
@@ -78,7 +76,6 @@ namespace EliteAPI.Event.Models.Startup
         /// Returns a scale from 0-14.
         /// </summary>
         [JsonProperty("Federation")]
-        [Range(0, 14)]
         public short Federation { get; internal set; }
 
         /// <summary>
@@ -92,7 +89,6 @@ namespace EliteAPI.Event.Models.Startup
         /// Returns a scale from 0-8.
         /// </summary>
         [JsonProperty("CQC")]
-        [Range(0, 8)]
         public short Cqc { get; internal set; }
     }
 }

@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using EliteAPI.Event.Helper;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
@@ -12,7 +11,10 @@ namespace EliteAPI.Event.Models.Startup
     {
         internal ReputationEvent() { }
 
-        public static ReputationEvent FromJson(string json) => JsonConvert.DeserializeObject<ReputationEvent>(json);
+        public static ReputationEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ReputationEvent>(json);
+        }
 
 
 
@@ -21,7 +23,6 @@ namespace EliteAPI.Event.Models.Startup
         /// Goes from -100-100.
         /// </summary>
         [JsonProperty("Empire")]
-        [Range(-100f, 100f)]
         public float Empire { get; internal set; }
 
         /// <summary>
@@ -34,7 +35,6 @@ namespace EliteAPI.Event.Models.Startup
         /// Goes from -100-100.
         /// </summary>
         [JsonProperty("Federation")]
-        [Range(-100f, 100f)]
         public float Federation { get; internal set; }
 
         /// <summary>
@@ -47,7 +47,6 @@ namespace EliteAPI.Event.Models.Startup
         /// Goes from -100-100.
         /// </summary>
         [JsonProperty("Independent")]
-        [Range(-100f, 100f)]
         public float Independent { get; internal set; }
 
         /// <summary>
@@ -60,7 +59,6 @@ namespace EliteAPI.Event.Models.Startup
         /// Goes from -100-100.
         /// </summary>
         [JsonProperty("Alliance")]
-        [Range(-100f, 100f)]
         public float Alliance { get; internal set; }
 
         /// <summary>

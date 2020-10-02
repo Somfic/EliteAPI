@@ -1,5 +1,6 @@
 ﻿using System;
 using EliteAPI.Event.Models;
+using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Models.Exploration;
 using EliteAPI.Event.Models.Startup;
 using EliteAPI.Event.Models.Travel;

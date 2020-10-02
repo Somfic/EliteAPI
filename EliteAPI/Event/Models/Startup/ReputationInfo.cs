@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using EliteAPI.Event.Helper;
+using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models.Startup

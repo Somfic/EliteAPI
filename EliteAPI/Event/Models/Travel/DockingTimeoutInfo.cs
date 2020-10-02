@@ -1,3 +1,4 @@
+using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 

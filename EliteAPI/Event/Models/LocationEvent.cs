@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Models.Travel;
 using Newtonsoft.Json;
 

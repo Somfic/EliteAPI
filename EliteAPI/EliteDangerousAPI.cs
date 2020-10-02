@@ -1,73 +1,46 @@
-﻿using System;
+﻿using EliteAPI.Event.Models.Abstractions;
+using EliteAPI.Event.Processor.Abstractions;
+using EliteAPI.Event.Provider.Abstractions;
+using EliteAPI.Journal.Directory.Abstractions;
+using EliteAPI.Journal.Processor.Abstractions;
+using EliteAPI.Journal.Provider.Abstractions;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using EliteAPI.Event.Models;
-using EliteAPI.Event.Processor;
-using EliteAPI.Event.Provider;
-using EliteAPI.Journal.Directory;
-using EliteAPI.Journal.Processor;
-using EliteAPI.Journal.Provider;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+using EliteAPI.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
 {
-    /// <summary>
-    /// EliteDangerousAPI base class
-    /// </summary>
-    public interface IEliteDangerousAPI
-    {
-
-        /// <summary>
-        /// Whether the api is currently running
-        /// </summary>
-        bool IsRunning { get; }
-
-        /// <summary>
-        /// Initializes the api
-        /// </summary>
-        Task InitializeAsync();
-
-        /// <summary>
-        /// Starts the api
-        /// </summary>
-        Task StartAsync();
-    }
-
+    /// <inheritdoc />
     public class EliteDangerousAPI : IEliteDangerousAPI
     {
-        private readonly ILogger<EliteDangerousAPI> _log;
-        private readonly IConfiguration _config;
+        /// <inheritdoc />
+        public bool IsRunning { get; private set; }
 
-        private readonly IEventProvider _eventProvider;
-        private readonly IEventProcessor _eventProcessor;
+        /// <inheritdoc />
+        public Version Version { get; }
 
-        private readonly IJournalProvider _journalProvider;
-        private readonly IJournalProcessor _journalProcessor;
-
-        private readonly IJournalDirectoryProvider _journalDirectoryProvider;
-
-        private DirectoryInfo JournalDirectory { get; set; }
-        private FileInfo JournalFile { get; set; }
-        private FileInfo StatusFile { get; set; }
-        private IEnumerable<FileInfo> SupportFiles { get; set; }
-
-        public EventHandler Events { get; private set; }
+        /// <inheritdoc />
+        public EventHandler Events { get; }
 
         public EliteDangerousAPI(IServiceProvider services)
         {
             try
             {
+                Version = Assembly.GetExecutingAssembly().GetName().Version;
+
                 _log = services.GetRequiredService<ILogger<EliteDangerousAPI>>();
                 _config = services.GetRequiredService<IConfiguration>();
 
                 _eventProvider = services.GetRequiredService<IEventProvider>();
-                _eventProcessor = services.GetRequiredService<IEventProcessor>();
+                _eventProcessors = services.GetRequiredService<IEnumerable<IEventProcessor>>();
 
                 _journalProvider = services.GetRequiredService<IJournalProvider>();
                 _journalDirectoryProvider = services.GetRequiredService<IJournalDirectoryProvider>();
@@ -81,10 +54,24 @@ namespace EliteAPI
                 InitializationException = ex;
             }
         }
-        private Exception InitializationException { get; }
 
-        /// <inheritdoc />
-        public bool IsRunning { get; private set; }
+        private readonly ILogger<EliteDangerousAPI> _log;
+        private readonly IConfiguration _config;
+
+        private readonly IEventProvider _eventProvider;
+        private readonly IEnumerable<IEventProcessor> _eventProcessors;
+
+        private readonly IJournalProvider _journalProvider;
+        private readonly IJournalProcessor _journalProcessor;
+
+        private readonly IJournalDirectoryProvider _journalDirectoryProvider;
+
+        private DirectoryInfo JournalDirectory { get; set; }
+        private FileInfo JournalFile { get; set; }
+        private FileInfo StatusFile { get; set; }
+        private IEnumerable<FileInfo> SupportFiles { get; set; }
+
+        private Exception InitializationException { get; }
 
         private bool IsInitialized { get; set; }
 
@@ -99,20 +86,14 @@ namespace EliteAPI
 
             try
             {
-                _log.LogInformation("Initializing EliteAPI v{version}", GetApiVersion());
+                _log.LogInformation("Initializing EliteAPI v{version}", Version.ToString());
 
                 await CheckComputerOperatingSystem();
                 await InitializeEventHandlers();
                 await SetJournalDirectory();
-                await SetStatusFile();
-                await SetSupportFiles();
                 await SetJournalFile();
 
-                _journalProcessor.NewJournalEntry += async (sender, json) =>
-                {
-                    EventBase eventBase = await _eventProvider.ProcessJsonEvent(json);
-                    await _eventProcessor.InvokeHandler(eventBase);
-                };
+                _journalProcessor.NewJournalEntry += _journalProcessor_NewJournalEntry;
 
                 IsInitialized = true;
             }
@@ -139,7 +120,6 @@ namespace EliteAPI
                 {
                     await SetJournalFile();
                     await _journalProcessor.ProcessJournalFile(JournalFile);
-                    await _journalProcessor.ProcessSupportFiles(SupportFiles);
 
                     await Task.Delay(TimeSpan.FromMilliseconds(500));
                 }
@@ -148,19 +128,33 @@ namespace EliteAPI
 
         public void Stop()
         {
-
+            _journalProcessor.NewJournalEntry -= _journalProcessor_NewJournalEntry;
+            IsRunning = false;
         }
 
         private async Task InitializeEventHandlers()
         {
-            try
+
+            foreach (IEventProcessor eventProcessor in _eventProcessors)
             {
-                await _eventProcessor.RegisterHandlers();
+                try
+                {
+                    await eventProcessor.RegisterHandlers();
+                }
+                catch (Exception ex)
+                {
+                    _log.LogError(ex, "Could not initialize event handler {name}", eventProcessor.GetType().FullName);
+                    throw;
+                }
             }
-            catch (Exception ex)
+        }
+
+        private async void _journalProcessor_NewJournalEntry(object sender, string e)
+        {
+            EventBase eventBase = await _eventProvider.ProcessJsonEvent(e);
+            foreach (IEventProcessor eventProcessor in _eventProcessors)
             {
-                _log.LogError(ex, "Could not initialize event handlers");
-                throw;
+                await eventProcessor.InvokeHandler(eventBase);
             }
         }
 
@@ -206,33 +200,6 @@ namespace EliteAPI
             }
         }
 
-        private async Task SetStatusFile()
-        {
-            try
-            {
-                var newStatusFile = await _journalProvider.FindStatusFile(JournalDirectory);
-                if (newStatusFile != null) { StatusFile = newStatusFile; }
-            }
-            catch (Exception ex)
-            {
-                _log.LogError(ex, "Could not find the Status.json file");
-                throw;
-            }
-        }
-
-
-        private async Task SetSupportFiles()
-        {
-            try
-            {
-                SupportFiles = await _journalProvider.FindSupportFiles(JournalDirectory);
-            }
-            catch (Exception ex)
-            {
-                _log.LogWarning(ex, "Could not find support files");
-            }
-        }
-
         private Task CheckComputerOperatingSystem()
         {
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -241,11 +208,6 @@ namespace EliteAPI
             }
 
             return Task.CompletedTask;
-        }
-
-        private string GetApiVersion()
-        {
-            return Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
     }
 }

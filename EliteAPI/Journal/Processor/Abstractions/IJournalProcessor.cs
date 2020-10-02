@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 namespace EliteAPI.Journal.Processor.Abstractions
 {
     /// <summary>
-    /// Reads the journal and status files
+    /// Processes journal files
     /// </summary>
     public interface IJournalProcessor
     {
@@ -13,11 +13,6 @@ namespace EliteAPI.Journal.Processor.Abstractions
         /// Triggered when a new json entry is made in the active journal file
         /// </summary>
         event EventHandler<string> NewJournalEntry;
-
-        /// <summary>
-        /// Triggered when a support file is updated
-        /// </summary>
-        event EventHandler<(FileInfo, string)> NewSupportEntry;
 
         /// <summary>
         /// Hooks the specified journal file to <see cref="NewJournalEntry"/> and invokes <see cref="NewJournalEntry"/> when needed

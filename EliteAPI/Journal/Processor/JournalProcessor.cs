@@ -13,17 +13,12 @@ namespace EliteAPI.Journal.Processor
         /// <inheritdoc />
         public event EventHandler<string> NewJournalEntry;
 
-        /// <inheritdoc />
-        public event EventHandler<(FileInfo, string)> NewSupportEntry;
-
         public JournalProcessor()
         {
             _cache = new Dictionary<FileInfo, IList<string>>();
         }
 
         private readonly IDictionary<FileInfo, IList<string>> _cache;
-
-        private readonly FileInfo _activeJournal;
 
         /// <inheritdoc />
         public Task ProcessJournalFile(FileInfo journalFile)
@@ -41,39 +36,7 @@ namespace EliteAPI.Journal.Processor
             return Task.CompletedTask;
         }
 
-        /// <inheritdoc />
-        public Task ProcessSupportFiles(IEnumerable<FileInfo> supportFiles)
-        {
-            foreach (FileInfo supportFile in supportFiles)
-            {
-                string fileContent = ReadAllText(supportFile);
-
-                if (IsInCache(supportFile, fileContent))
-                {
-                    continue;
-                }
-
-                SetInCache(supportFile, fileContent);
-
-                NewSupportEntry?.Invoke(this, (supportFile, fileContent));
-            }
-
-            return Task.CompletedTask;
-        }
-
         private void AddToCache(FileInfo file, string content)
-        {
-            if (!_cache.ContainsKey(file))
-            {
-                _cache.Add(file, new List<string>() { content });
-            }
-            else
-            {
-                _cache[file].Add(content);
-            }
-        }
-
-        private void SetInCache(FileInfo file, string content)
         {
             if (!_cache.ContainsKey(file))
             {
@@ -81,7 +44,7 @@ namespace EliteAPI.Journal.Processor
             }
             else
             {
-                _cache[file] = new List<string> { content };
+                _cache[file].Add(content);
             }
         }
 

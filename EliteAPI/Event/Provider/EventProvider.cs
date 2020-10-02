@@ -29,7 +29,6 @@ namespace EliteAPI.Event.Provider
 
         private IDictionary<string, Type> _cache;
 
-
         /// <inheritdoc />
         public Task<EventBase> ProcessJsonEvent(string json)
         {

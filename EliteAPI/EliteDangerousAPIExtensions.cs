@@ -14,6 +14,10 @@ using System;
 using System.Collections.Generic;
 using EliteAPI.Event.Attributes;
 using EliteAPI.Event.Module;
+using EliteAPI.Status.Processor;
+using EliteAPI.Status.Processor.Abstractions;
+using EliteAPI.Status.Provider;
+using EliteAPI.Status.Provider.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
@@ -28,11 +32,12 @@ namespace EliteAPI
             services.AddSingleton<IEliteDangerousAPI, EliteDangerousAPI>();
 
             services.AddSingleton<IEventProvider, EventProvider>();
-
             services.AddTransient<IJournalDirectoryProvider, JournalDirectoryProvider>();
             services.AddTransient<IJournalProvider, JournalProvider>();
+            services.AddTransient<IStatusProvider, StatusProvider>();
 
             services.AddSingleton<IJournalProcessor, JournalProcessor>();
+            services.AddSingleton<IStatusProcessor, StatusProcessor>();
 
             services.AddSingleton<EventHandler>();
 
@@ -46,12 +51,12 @@ namespace EliteAPI
 
     public class EliteDangerousAPIConfiguration
     {
-        private readonly IList<Type> eventModuleimplementations;
+        private readonly IList<Type> eventModuleImplementations;
         private IList<Type> _eventProcessors;
 
         internal EliteDangerousAPIConfiguration()
         {
-            eventModuleimplementations = new List<Type>();
+            eventModuleImplementations = new List<Type>();
             _eventProcessors = new List<Type>()
             {
                 typeof(EventBaseEventProcessor),
@@ -65,7 +70,7 @@ namespace EliteAPI
         /// <typeparam name="T">The event module to be added</typeparam>
         public void AddEventModule<T>() where T : EliteDangerousEventModule
         {
-            eventModuleimplementations.Add(typeof(T));
+            eventModuleImplementations.Add(typeof(T));
         }
 
         /// <summary>
@@ -87,7 +92,7 @@ namespace EliteAPI
 
         internal void AddServices(IServiceCollection services)
         {
-            foreach (Type implementation in eventModuleimplementations)
+            foreach (Type implementation in eventModuleImplementations)
             {
                 services.AddSingleton(implementation);
             }

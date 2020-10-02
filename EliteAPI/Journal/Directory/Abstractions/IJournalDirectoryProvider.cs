@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 namespace EliteAPI.Journal.Directory.Abstractions
 {
     /// <summary>
-    /// Finds the journal directory
+    /// Provides the journal directory
     /// </summary>
     public interface IJournalDirectoryProvider
     {

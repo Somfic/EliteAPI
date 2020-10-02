@@ -19,7 +19,7 @@
          <img alt="GitHub" src="https://img.shields.io/github/license/EliteAPI/EliteAPI?color=%23f2a529&label=LICENSE&style=for-the-badge">
      </a>
 </p>
-<p>When playing Elite: Dangerous, many in-game events are outputted to the Journal log files. EliteAPI makes use of these files to provide live information about in-game events in a .NET environment.
+<p>When playing Elite: Dangerous, many in-game events are outputted to the Journal log files. EliteAPI makes use of these files to provide live information about in-game events in a .NET environment. 
 </div>
 
 ## Installation
@@ -59,6 +59,7 @@ private static async Task Main(string[] args) {
           .ConfigureServices((context, service) =>
           {
                service.AddEliteAPI();
+               service.AddTransient<MyAppService>(); // Example
           })
           .Build();
 
@@ -74,10 +75,11 @@ private static async Task Main(string[] args) {
 ```
 
 ### Hooking into an event
-EliteAPI constantly scans the Journal log files for new in-game events, whenever a new event is detected, the event is invoked in the api. There are multiple ways hook into an event.
+EliteAPI constantly scans the Journal log files for new in-game events. Whenever a new event is detected it is invoked in the api. There are multiple ways to hook into an event.
 
 #### Through events
-EliteAPI has an individual event for every event logged in the Journal files. These events can be found in the `EliteDangerousAPI.Events` property. The event is automatically invoked whenever the specified action is peformed in-game.
+EliteAPI has an individual event for every event logged in the Journal files. These events can be found in the `IEliteDangerousAPI.Events` property. The event is automatically invoked whenever the specified action is peformed in-game.
+
 ```cs
 api.Events.BountyEvent += (sender, e) =>
 {
@@ -89,7 +91,7 @@ api.Events.BountyEvent += (sender, e) =>
 ```
 
 #### Through attributes
-In-game events can be assigned to specific methods using the `EliteDangerousEvent` attribute. The method must be public, in a public class that derives from `EliteDangerousEventModule`. The declaring class must also be added through the EliteAPI configuration. This registeres this class as a service.
+In-game events can be assigned to specific methods using the `EliteDangerousEvent` attribute. The method must be public, in a public class that derives from `EliteDangerousEventModule` and must also be added through the EliteAPI configuration. This registeres this class as a service to your `IServiceCollection`.
 
 ```cs
 service.AddEliteAPI(config => {

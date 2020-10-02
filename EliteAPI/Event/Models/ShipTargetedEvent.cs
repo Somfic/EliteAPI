@@ -56,7 +56,7 @@ namespace EliteAPI.Event.Models
         public float SubsystemHealth { get; internal set; }
 
         [JsonProperty("SquadronID")]
-        public int SquadronId { get; internal set; }
+        public string SquadronId { get; internal set; }
 
         
     }

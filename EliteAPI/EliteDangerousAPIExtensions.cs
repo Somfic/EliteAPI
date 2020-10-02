@@ -23,7 +23,7 @@ namespace EliteAPI
         /// <summary>
         /// Adds all EliteAPI's necessary services to the <seealso cref="IServiceCollection"/>
         /// </summary>
-        public static IServiceCollection AddEliteAPI(this IServiceCollection services, Action<EliteDangerousAPIConfiguration> configuration)
+        public static IServiceCollection AddEliteAPI(this IServiceCollection services, Action<EliteDangerousAPIConfiguration> configuration = null)
         {
             services.AddSingleton<IEliteDangerousAPI, EliteDangerousAPI>();
 
@@ -37,7 +37,7 @@ namespace EliteAPI
             services.AddSingleton<EventHandler>();
 
             EliteDangerousAPIConfiguration configInstance = new EliteDangerousAPIConfiguration();
-            configuration.Invoke(configInstance);
+            configuration?.Invoke(configInstance);
             configInstance.AddServices(services);
 
             return services;
@@ -76,6 +76,10 @@ namespace EliteAPI
             _eventProcessors = new List<Type>();
         }
 
+        /// <summary>
+        /// Adds a event processor
+        /// </summary>
+        /// <typeparam name="T">The event processor to be used</typeparam>
         public void AddProcessor<T>() where T : IEventProcessor
         {
             _eventProcessors.Add(typeof(T));

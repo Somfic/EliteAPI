@@ -79,22 +79,38 @@ EliteAPI constantly scans the Journal log files for new in-game events, whenever
 #### Through events
 EliteAPI has an individual event for every event logged in the Journal files. These events can be found in the `EliteDangerousAPI.Events` property. The event is automatically invoked whenever the specified action is peformed in-game.
 ```cs
-api.Events.ApproachBodyEvent += (sender, e) =>
+api.Events.BountyEvent += (sender, e) =>
 {
-     // Triggered whenever we approach a body in-game
-     Console.WriteLine("Approaching {0} in {1}", e.Body, e.StarSystem);
-     var scoop = api.Ship.LandingGear;
+     // Triggered whenever we collect a bounty
+     Console.WriteLine("Collected {0} from {1}", e.TotalReward, e.Target);
+
+     var gear = api.Ship.LandingGear;
 };
 ```
 
-#### Through attributes (concept, not working yet)
-In-game events can be assigned to specific methods using the `Event` attribute. Since attributes with generic types are not yet supported in C#, the attribute type is passed as the first parameter of the method.
+#### Through attributes
+In-game events can be assigned to specific methods using the `EliteDangerousEvent` attribute. The method must be public, in a public class that derives from `EliteDangerousEventModule`. The declaring class must also be added through the EliteAPI configuration. This registeres this class as a service.
+
 ```cs
-[Event]
-public async Task NewBounty(BountyEvent e) {
-     // Triggered whenever we collect a bounty
-     Console.WriteLine("Collected {0} from {1}", e.TotalReward, e.Target);
-     var gear = Context.Ship.LandingGear;
+service.AddEliteAPI(config => {
+     config.AddEventModule<CombatModule>();
+});
+```
+
+Which in-game event triggers the method is based on the method's first parameter type. 
+
+```cs
+public class CombatModule : EliteDangerousEventModule {
+
+     public CombatModule(IServiceProvider services) : base(services) {  }
+
+     [EliteDangerousEvent]
+     public async Task NewBounty(BountyEvent e) {
+          // Triggered whenever we collect a bounty
+          Console.WriteLine("Collected {0} from {1}", e.TotalReward, e.Target);
+
+          var gear = EliteAPI.Ship.LandingGear;
+     }
 }
 ```
 

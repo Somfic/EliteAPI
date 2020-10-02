@@ -6,6 +6,8 @@ using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using EliteAPI.Event.Models;
+using EliteAPI.Event.Models.Abstractions;
+using EliteAPI.Event.Provider.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;

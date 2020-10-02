@@ -3,7 +3,7 @@
 namespace EliteAPI.Attributes
 {
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
-    public sealed class EventAttribute : Attribute
+    public sealed class EliteDangerousEventAttribute : Attribute
     {
     }
 }

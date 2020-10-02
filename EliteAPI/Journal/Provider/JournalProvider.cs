@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using EliteAPI.Journal.Provider.Abstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -14,8 +15,6 @@ namespace EliteAPI.Journal.Provider
     {
         private readonly IConfiguration _config;
         private readonly ILogger<JournalProvider> _log;
-
-        private readonly string[] _supportFiles = new[] { "Market.json", "Shipyard.json", "Outfitting.json" };
 
         public JournalProvider(IServiceProvider services)
         {
@@ -40,42 +39,6 @@ namespace EliteAPI.Journal.Provider
                 throw exception;
             }
             
-        }
-
-        /// <inheritdoc />
-        public Task<FileInfo> FindStatusFile(DirectoryInfo journalDirectory)
-        {
-            try
-            {
-                return journalDirectory == null ? null : Task.FromResult(GetSupportFile(journalDirectory, "Status.json"));
-            }
-            catch (Exception ex)
-            {
-                Exception exception = new FileNotFoundException("Could not find status file", ex);
-                _log.LogTrace(exception, "Could not get Status.json from journal directory");
-                throw exception;
-            }
-            
-        }
-
-        /// <inheritdoc />
-        public Task<IEnumerable<FileInfo>> FindSupportFiles(DirectoryInfo journalDirectory)
-        {
-            
-            return Task.FromResult(_supportFiles.Select(file => GetSupportFile(journalDirectory, file)));
-        }
-
-        private FileInfo GetSupportFile(DirectoryInfo journalDirectory, string supportFile)
-        {
-            try
-            {
-                return journalDirectory?.GetFiles(supportFile).First();
-            }
-            catch (Exception ex)
-            {
-                _log.LogTrace(ex,"Could not get {supportFile} from journal directory", supportFile);
-                throw;
-            }
         }
     }
 }

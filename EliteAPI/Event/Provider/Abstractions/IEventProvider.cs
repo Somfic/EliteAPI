@@ -1,8 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
-using EliteAPI.Event.Models;
+﻿using System.Threading.Tasks;
+using EliteAPI.Event.Models.Abstractions;
 
-namespace EliteAPI.Event.Provider
+namespace EliteAPI.Event.Provider.Abstractions
 {
     /// <summary>
     /// Converts JSON events to <see cref="EventBase"/> events

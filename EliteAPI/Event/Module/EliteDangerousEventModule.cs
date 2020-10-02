@@ -10,7 +10,7 @@ namespace EliteAPI.Event.Module
         {
             EliteAPI = services.GetRequiredService<IEliteDangerousAPI>();
         }
-
+            
         protected readonly IEliteDangerousAPI EliteAPI;
     }
 }

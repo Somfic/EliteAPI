@@ -33,7 +33,7 @@ namespace EliteAPI.Event.Processor
         }
 
         /// <inheritdoc />q
-        public override Task RegisterHandlers()
+        public override async Task RegisterHandlers()
         {
             try
             {
@@ -63,7 +63,6 @@ namespace EliteAPI.Event.Processor
 
                 s.Stop();
                 _log.LogDebug("{eventCount} event-handlers were registered in {time}ms", totalHandlers, s.ElapsedMilliseconds);
-                return Task.CompletedTask;
             }
             catch (Exception ex)
             {

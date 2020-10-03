@@ -63,7 +63,7 @@ namespace EliteAPI
             }
             catch (Exception ex)
             {
-                InitializationException = ex;
+                PreInitializationException = ex;
             }
         }
 
@@ -90,17 +90,18 @@ namespace EliteAPI
 
         private IEnumerable<FileInfo> SupportFiles { get; set; }
 
-        private Exception InitializationException { get; }
+        private Exception PreInitializationException { get; }
+        private Exception InitializationException { get; set; }
 
         private bool IsInitialized { get; set; }
 
         /// <inheritdoc />
         public async Task InitializeAsync()
         {
-            if (InitializationException != null)
+            if (PreInitializationException != null)
             {
-                _log?.LogCritical(InitializationException, "EliteAPI could not be initialized");
-                throw InitializationException;
+                _log?.LogCritical(PreInitializationException, "EliteAPI could not be initialized");
+                throw PreInitializationException;
             }
 
             if (IsInitialized)
@@ -128,14 +129,14 @@ namespace EliteAPI
                 }
 
                 _log.LogDebug("EliteAPI has initialized");
-
-                IsInitialized = true;
             }
             catch (Exception ex)
             {
-                _log.LogCritical(ex, "EliteAPI could not be initialized");
-                //throw;
+                _log.LogError(ex, "EliteAPI could not be initialized");
+                InitializationException = ex;
             }
+
+            IsInitialized = true;
         }
 
         /// <inheritdoc />
@@ -144,6 +145,13 @@ namespace EliteAPI
             if (!IsInitialized)
             {
                 await InitializeAsync();
+            }
+
+            if (InitializationException != null)
+            {
+                _log.LogCritical(InitializationException, "EliteAPI could not be started");
+                await StopAsync();
+                return;
             }
 
             IsRunning = true;
@@ -180,7 +188,7 @@ namespace EliteAPI
             }
         }
 
-        public void Stop()
+        public async Task StopAsync()
         {
             _journalProcessor.NewJournalEntry -= _journalProcessor_NewJournalEntry;
             _statusProcessor.StatusUpdated -= _statusProcessor_StatusUpdated;
@@ -200,7 +208,7 @@ namespace EliteAPI
                 }
                 catch (Exception ex)
                 {
-                    _log.LogError(ex, "Could not initialize event handler {name}", eventProcessor.GetType().FullName);
+                    _log.LogWarning(ex, "Could not initialize event handler {name}", eventProcessor.GetType().FullName);
                     throw;
                 }
             }
@@ -249,7 +257,7 @@ namespace EliteAPI
             }
             catch (Exception ex)
             {
-                _log.LogError(ex, "Could not find journal directory");
+                _log.LogWarning(ex, "Could not find journal directory");
                 throw;
             }
 
@@ -271,7 +279,7 @@ namespace EliteAPI
             }
             catch (Exception ex)
             {
-                _log.LogError(ex, "Could not find the active journal file");
+                _log.LogWarning(ex, "Could not find the active journal file");
                 throw;
             }
         }
@@ -288,7 +296,7 @@ namespace EliteAPI
             }
             catch (Exception ex)
             {
-                _log.LogError(ex, "Could not set support files");
+                _log.LogWarning(ex, "Could not set support files");
             }
         }
 

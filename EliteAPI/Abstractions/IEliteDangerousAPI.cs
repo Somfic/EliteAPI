@@ -39,5 +39,10 @@ namespace EliteAPI.Abstractions
         /// Starts the api
         /// </summary>
         Task StartAsync();
+
+        /// <summary>
+        /// Stops the api
+        /// </summary>
+        Task StopAsync();
     }
 }

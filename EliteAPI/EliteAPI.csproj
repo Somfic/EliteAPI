@@ -53,10 +53,6 @@ VoiceAttack, VoiceMacro, Discord, C#, VB</Description>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Event\Models\Status\" />
-  </ItemGroup>
-
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(IsWindows)'=='true'">
     <Exec Command="copy &quot;$(SolutionDir)lib\vmAPI.dll&quot; &quot;$(TargetDir)vmAPI.dll&quot;&#xD;&#xA;" />
   </Target>

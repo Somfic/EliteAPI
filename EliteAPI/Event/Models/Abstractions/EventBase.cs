@@ -8,7 +8,7 @@ namespace EliteAPI.Event.Models.Abstractions
     {
         /// <inheritdoc />
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; protected set; }
+        public DateTime Timestamp { get; protected set; } = DateTime.Now;
 
         /// <inheritdoc />
         [JsonProperty("event")]

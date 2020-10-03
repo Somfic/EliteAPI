@@ -68,7 +68,7 @@ namespace EliteAPI.Event.Processor.Abstractions
             }
             catch (InvalidOperationException ex)
             {
-                _log.LogError(ex, "{parentClass} is not registered", method.DeclaringType?.FullName);
+                _log.LogWarning(ex, "{parentClass} is not registered", method.DeclaringType?.FullName);
             }
             catch (Exception ex)
             {

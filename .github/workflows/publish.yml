@@ -11,11 +11,29 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-
-    # Publish to NuGet
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.301
+        
+    - name: Install dependencies
+      run: dotnet restore
+    
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+      
+    - name: Pack
+      run: dotnet pack --configuration Release
+    
     - name: Publish to NuGet
       uses: brandedoutcast/publish-nuget@v2.5.5
       with:
         PROJECT_FILE_PATH: EliteAPI/EliteAPI.csproj
         PACKAGE_NAME: EliteAPI
         NUGET_KEY: ${{ secrets.NUGET_KEY }}
+
+    - name: Publish to Github Packages
+      run: |
+        dotnet nuget add source https://nuget.pkg.github.com/EliteAPI/index.json -n github -u EliteAPI -p ${{ secrets.PUBLISH_KEY }} --store-password-in-clear-text
+        dotnet nuget push "${{ PACKAGE_PATH }}" --source "github"
+        

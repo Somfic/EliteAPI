@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EliteAPI.Event.Processor.Abstractions
 {
-    public abstract class EventProcessor : IEventProcessor
+    public abstract class MethodEventProcessorBase : IEventProcessor
     {
         private readonly ILogger _log;
         private readonly IServiceProvider _services;
@@ -18,7 +18,7 @@ namespace EliteAPI.Event.Processor.Abstractions
         /// </summary>
         protected IDictionary<string, IEnumerable<MethodBase>> Cache { get; set; }
 
-        protected EventProcessor(ILogger log, IServiceProvider services)
+        protected MethodEventProcessorBase(ILogger log, IServiceProvider services)
         {
             _log = log;
             _services = services;
@@ -39,7 +39,10 @@ namespace EliteAPI.Event.Processor.Abstractions
 
                 IEnumerable<MethodBase> methods = Cache[key];
 
-                foreach (MethodBase method in methods) { InvokeMethod(method, eventBase); }
+                foreach (MethodBase method in methods)
+                {
+                    InvokeMethod(method, eventBase);
+                }
             }
             catch (Exception ex)
             {

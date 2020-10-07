@@ -16,7 +16,7 @@ using EliteAPI.Event.Module;
 namespace EliteAPI.Event.Processor
 {
     /// <inheritdoc />
-    public class AttributeEventProcessor : EventProcessor
+    public class AttributeEventProcessor : MethodEventProcessorBase
     {
         private readonly Assembly _assembly;
         private readonly Assembly _thirdPartyAssembly;

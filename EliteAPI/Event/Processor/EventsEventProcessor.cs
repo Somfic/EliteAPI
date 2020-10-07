@@ -16,15 +16,15 @@ using EventHandler = EliteAPI.Event.Handler.EventHandler;
 namespace EliteAPI.Event.Processor
 {
     /// <inheritdoc />
-    public class EventBaseEventProcessor : EventProcessor
+    public class EventsEventProcessor : MethodEventProcessorBase
     {
         private readonly Assembly _assembly; 
 
-        private ILogger<EventBaseEventProcessor> _log;
+        private ILogger<EventsEventProcessor> _log;
         private readonly IServiceProvider _services;
         private EventHandler _eventHandler;
 
-        public EventBaseEventProcessor(ILogger<EventBaseEventProcessor> log, IServiceProvider services) : base(log, services)
+        public EventsEventProcessor(ILogger<EventsEventProcessor> log, IServiceProvider services) : base(log, services)
         {
             _assembly = Assembly.GetExecutingAssembly();
             _log = log;
@@ -32,7 +32,7 @@ namespace EliteAPI.Event.Processor
             _eventHandler = services.GetRequiredService<EventHandler>();
         }
 
-        /// <inheritdoc />q
+        /// <inheritdoc />
         public override async Task RegisterHandlers()
         {
             try

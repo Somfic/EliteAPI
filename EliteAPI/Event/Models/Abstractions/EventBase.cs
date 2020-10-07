@@ -7,11 +7,11 @@ namespace EliteAPI.Event.Models.Abstractions
     public abstract class EventBase : IEvent
     {
         /// <inheritdoc />
-        [JsonProperty("timestamp")]
+        [JsonProperty("Timestamp")]
         public DateTime Timestamp { get; protected set; } = DateTime.Now;
 
         /// <inheritdoc />
-        [JsonProperty("event")]
+        [JsonProperty("Event")]
         public string Event { get; protected set; }
     }
 }

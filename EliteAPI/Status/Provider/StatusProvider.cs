@@ -87,7 +87,7 @@ namespace EliteAPI.Status.Provider
             }
         }
 
-        private async Task<FileInfo> FindFile(DirectoryInfo directory, string name)
+        private Task<FileInfo> FindFile(DirectoryInfo directory, string name)
         {
             if (!directory.Exists)
             {
@@ -101,7 +101,7 @@ namespace EliteAPI.Status.Provider
 
             if (files.Length > 0)
             {
-                return files.First();
+                return Task.FromResult(files.First());
             }
 
             if (name == "Status.json")
@@ -113,7 +113,7 @@ namespace EliteAPI.Status.Provider
                 throw fileException;
             }
 
-            return null;
+            return Task.FromResult<FileInfo>(null);
         }
     }
 }

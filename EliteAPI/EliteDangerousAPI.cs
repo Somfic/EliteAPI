@@ -49,16 +49,15 @@ namespace EliteAPI
                 _eventProvider = services.GetRequiredService<IEventProvider>();
                 _eventProcessors = services.GetRequiredService<IEnumerable<IEventProcessor>>();
 
-                _journalProvider = services.GetRequiredService<IJournalProvider>();
                 _journalDirectoryProvider = services.GetRequiredService<IJournalDirectoryProvider>();
 
+                _journalProvider = services.GetRequiredService<IJournalProvider>();
                 _journalProcessor = services.GetRequiredService<IJournalProcessor>();
 
                 _statusProvider = services.GetRequiredService<IStatusProvider>();
                 _statusProcessor = services.GetRequiredService<IStatusProcessor>();
 
                 Events = services.GetRequiredService<EventHandler>();
-
                 Status = services.GetRequiredService<IShipStatus>();
             }
             catch (Exception ex)
@@ -187,12 +186,14 @@ namespace EliteAPI
             }
         }
 
-        public async Task StopAsync()
+        public Task StopAsync()
         {
             _journalProcessor.NewJournalEntry -= _journalProcessor_NewJournalEntry;
 
             IsRunning = false;
             IsInitialized = false;
+
+            return Task.CompletedTask;
         }
 
         private async Task InitializeEventHandlers()

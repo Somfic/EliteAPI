@@ -23,7 +23,7 @@ namespace EliteAPI.Journal.Directory
         }
 
         /// <inheritdoc />
-        public async Task<DirectoryInfo> FindJournalDirectory()
+        public Task<DirectoryInfo> FindJournalDirectory()
         {
             DirectoryInfo configDirectory = GetConfigDirectory();
             DirectoryInfo defaultDirectory = GetDefaultDirectory();
@@ -31,7 +31,7 @@ namespace EliteAPI.Journal.Directory
             Exception exception = CheckDirectoryValidity(configDirectory);
             if (exception == null)
             {
-                return configDirectory;
+                return Task.FromResult(configDirectory);
             }
 
             if (configDirectory?.FullName != defaultDirectory.FullName)
@@ -48,13 +48,13 @@ namespace EliteAPI.Journal.Directory
                 exception = CheckDirectoryValidity(defaultDirectory);
                 if (exception == null)
                 {
-                    return defaultDirectory;
+                    return Task.FromResult(defaultDirectory);
                 }
             }
 
-            _log.LogError(exception, "No valid journal directory could not be found, please specify the correct journal directory in the configuration. EliteAPI can continue, but no events will be invoked, and no in-game information will be available");
+            _log.LogError(exception, "No valid journal directory could not be found, please specify the correct journal directory in the configuration");
 
-            return null;
+            return Task.FromResult<DirectoryInfo>(null);
         }
 
         private Exception CheckDirectoryValidity(DirectoryInfo directory)

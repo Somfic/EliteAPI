@@ -98,9 +98,9 @@ namespace EliteAPI.Status.Processor
         }
 
         /// <inheritdoc />
-        public async Task ProcessCargoFile(FileInfo cargoFile)
+        public Task ProcessCargoFile(FileInfo cargoFile)
         {
-            if (!cargoFile.Exists) { return; }
+            if (!cargoFile.Exists) { return Task.CompletedTask; }
 
             string content = ReadAllText(cargoFile);
             if (!IsInCache(cargoFile, content))
@@ -108,12 +108,14 @@ namespace EliteAPI.Status.Processor
                 AddToCache(cargoFile, content);
                 CargoUpdated?.Invoke(this, content);
             }
+
+            return Task.CompletedTask;
         }
 
         /// <inheritdoc />
-        public async Task ProcessMarketFile(FileInfo marketFile)
+        public Task ProcessMarketFile(FileInfo marketFile)
         {
-            if (marketFile == null || !marketFile.Exists) { return; }
+            if (marketFile == null || !marketFile.Exists) { return Task.CompletedTask; }
 
             string content = ReadAllText(marketFile);
             if (!IsInCache(marketFile, content))
@@ -121,12 +123,14 @@ namespace EliteAPI.Status.Processor
                 AddToCache(marketFile, content);
                 MarketUpdated?.Invoke(this, content);
             }
+
+            return Task.CompletedTask;
         }
 
         /// <inheritdoc />
-        public async Task ProcessShipyardFile(FileInfo shipyardFile)
+        public Task ProcessShipyardFile(FileInfo shipyardFile)
         {
-            if (shipyardFile == null || !shipyardFile.Exists) { return; }
+            if (shipyardFile == null || !shipyardFile.Exists) { return Task.CompletedTask; }
 
             string content = ReadAllText(shipyardFile);
             if (!IsInCache(shipyardFile, content))
@@ -134,12 +138,14 @@ namespace EliteAPI.Status.Processor
                 AddToCache(shipyardFile, content);
                 ShipyardUpdated?.Invoke(this, content);
             }
+
+            return Task.CompletedTask;
         }
 
         /// <inheritdoc />
-        public async Task ProcessOutfittingFile(FileInfo outfittingFile)
+        public Task ProcessOutfittingFile(FileInfo outfittingFile)
         {
-            if (outfittingFile == null || !outfittingFile.Exists) { return; }
+            if (outfittingFile == null || !outfittingFile.Exists) { return Task.CompletedTask; }
 
             string content = ReadAllText(outfittingFile);
             if (!IsInCache(outfittingFile, content))
@@ -147,6 +153,8 @@ namespace EliteAPI.Status.Processor
                 AddToCache(outfittingFile, content);
                 OutfittingUpdated?.Invoke(this, content);
             }
+
+            return Task.CompletedTask;
         }
 
         private void AddToCache(FileInfo file, string content)

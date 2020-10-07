@@ -4,27 +4,59 @@
         <name>EliteAPI</name>
     </assembly>
     <members>
-        <member name="T:EliteAPI.IEliteDangerousAPI">
+        <member name="T:EliteAPI.Abstractions.IEliteDangerousAPI">
             <summary>
-            EliteDangerousAPI base class
+            EliteAPI
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.IsRunning">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Version">
+            <summary>
+            EliteAPI's version
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Events">
+            <summary>
+            Container for all events
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Status">
+            <summary>
+            Container for the ship's current status
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.IsRunning">
             <summary>
             Whether the api is currently running
             </summary>
         </member>
-        <member name="M:EliteAPI.IEliteDangerousAPI.InitializeAsync">
+        <member name="M:EliteAPI.Abstractions.IEliteDangerousAPI.InitializeAsync">
             <summary>
             Initializes the api
             </summary>
         </member>
-        <member name="M:EliteAPI.IEliteDangerousAPI.StartAsync">
+        <member name="M:EliteAPI.Abstractions.IEliteDangerousAPI.StartAsync">
             <summary>
             Starts the api
             </summary>
         </member>
+        <member name="M:EliteAPI.Abstractions.IEliteDangerousAPI.StopAsync">
+            <summary>
+            Stops the api
+            </summary>
+        </member>
+        <member name="T:EliteAPI.EliteDangerousAPI">
+            <inheritdoc />
+        </member>
         <member name="P:EliteAPI.EliteDangerousAPI.IsRunning">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousAPI.Version">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousAPI.Events">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousAPI.Status">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.EliteDangerousAPI.InitializeAsync">
@@ -32,6 +64,52 @@
         </member>
         <member name="M:EliteAPI.EliteDangerousAPI.StartAsync">
             <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPIExtensions.AddEliteAPI(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{EliteAPI.EliteDangerousAPIConfiguration})">
+            <summary>
+            Adds all EliteAPI's necessary services to the <seealso cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>
+            </summary>
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPIConfiguration.AddEventModule``1">
+            <summary>
+            Add an event module to EliteAPI
+            </summary>
+            <typeparam name="T">The event module to be added</typeparam>
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPIConfiguration.ClearProcessors">
+            <summary>
+            Remove the default event processors
+            </summary>
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPIConfiguration.AddProcessor``1">
+            <summary>
+            Adds a event processor
+            </summary>
+            <typeparam name="T">The event processor to be used</typeparam>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Abstractions.EventBase">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Event.Models.Abstractions.EventBase.Timestamp">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Event.Models.Abstractions.EventBase.Event">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Event.Models.Abstractions.IEvent">
+            <summary>
+            An in-game event
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Abstractions.IEvent.Timestamp">
+            <summary>
+            The timestamp of the event
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Abstractions.IEvent.Event">
+            <summary>
+            The name of the event
+            </summary>
         </member>
         <member name="P:EliteAPI.Event.Models.AfmuRepairsEvent.Module">
             <summary>
@@ -94,36 +172,6 @@
         <member name="T:EliteAPI.Event.Models.GameModeType">
             <summary>
             Game mode a commander plays in.
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Event.Models.IEvent">
-            <summary>
-            The interface every event implements.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Event.Models.IEvent.Timestamp">
-            <summary>
-            The timestamp of the event.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Event.Models.IEvent.Event">
-            <summary>
-            The name of the event.
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Event.Models.EventBase">
-            <summary>
-            Wrapper for all events.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Event.Models.EventBase.Timestamp">
-            <summary>
-            The timestamp of the event.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Event.Models.EventBase.Event">
-            <summary>
-            The name of the event.
             </summary>
         </member>
         <member name="T:EliteAPI.Event.Models.ModifierLabel">
@@ -1808,31 +1856,58 @@
             The type of vessel, either 'Ship' or 'SRV'.
             </summary>
         </member>
-        <member name="T:EliteAPI.Event.Processor.EventProcessor">
-            <inheritdoc />
-        </member>
-        <member name="M:EliteAPI.Event.Processor.EventProcessor.RegisterHandlers">
-            <inheritdoc />q
-        </member>
-        <member name="M:EliteAPI.Event.Processor.EventProcessor.InvokeHandler(EliteAPI.Event.Models.EventBase)">
-            <inheritdoc />
-        </member>
-        <member name="T:EliteAPI.Event.Processor.IEventProcessor">
+        <member name="T:EliteAPI.Event.Processor.Abstractions.IEventProcessor">
             <summary>
             Invokes registered event-handlers
             </summary>
         </member>
-        <member name="M:EliteAPI.Event.Processor.IEventProcessor.RegisterHandlers">
+        <member name="M:EliteAPI.Event.Processor.Abstractions.IEventProcessor.RegisterHandlers">
             <summary>
             Finds, registers, and caches the event-handlers
             </summary>
             <returns></returns>
         </member>
-        <member name="M:EliteAPI.Event.Processor.IEventProcessor.InvokeHandler(EliteAPI.Event.Models.EventBase)">
+        <member name="M:EliteAPI.Event.Processor.Abstractions.IEventProcessor.InvokeHandler(EliteAPI.Event.Models.Abstractions.EventBase)">
             <summary>
             Invokes the registered handler for this event
             </summary>
             <param name="eventBase">The event to be invoked</param>
+        </member>
+        <member name="P:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.Cache">
+            <summary>
+            Methods to invoke, mapped to the name of a event
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.InvokeHandler(EliteAPI.Event.Models.Abstractions.EventBase)">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Event.Processor.AttributeEventProcessor">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Event.Processor.AttributeEventProcessor.RegisterHandlers">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Event.Processor.EventsEventProcessor">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Event.Processor.EventsEventProcessor.RegisterHandlers">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Event.Provider.Abstractions.IEventProvider">
+            <summary>
+            Converts JSON events to <see cref="T:EliteAPI.Event.Models.Abstractions.EventBase"/> events
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Event.Provider.Abstractions.IEventProvider.ProcessJsonEvent(System.String)">
+            <summary>
+            Processes a json event to <see cref="T:EliteAPI.Event.Models.Abstractions.EventBase"/>
+            </summary>
+            <param name="json">The json event from the journal</param>
+        </member>
+        <member name="M:EliteAPI.Event.Provider.Abstractions.IEventProvider.RegisterEventClasses">
+            <summary>
+            Caches all the event classes
+            </summary>
         </member>
         <member name="T:EliteAPI.Event.Provider.EventProvider">
             <inheritdoc />
@@ -1840,23 +1915,15 @@
         <member name="M:EliteAPI.Event.Provider.EventProvider.ProcessJsonEvent(System.String)">
             <inheritdoc />
         </member>
-        <member name="T:EliteAPI.Event.Provider.IEventProvider">
+        <member name="M:EliteAPI.Event.Provider.EventProvider.RegisterEventClasses">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Journal.Directory.Abstractions.IJournalDirectoryProvider">
             <summary>
-            Converts JSON events to <see cref="T:EliteAPI.Event.Models.EventBase"/> events
+            Provides the journal directory
             </summary>
         </member>
-        <member name="M:EliteAPI.Event.Provider.IEventProvider.ProcessJsonEvent(System.String)">
-            <summary>
-            Processes a json event to <see cref="T:EliteAPI.Event.Models.EventBase"/>
-            </summary>
-            <param name="json">The json event from the journal</param>
-        </member>
-        <member name="T:EliteAPI.Journal.Directory.IJournalDirectoryProvider">
-            <summary>
-            Finds the journal directory
-            </summary>
-        </member>
-        <member name="M:EliteAPI.Journal.Directory.IJournalDirectoryProvider.FindJournalDirectory">
+        <member name="M:EliteAPI.Journal.Directory.Abstractions.IJournalDirectoryProvider.FindJournalDirectory">
             <summary>
             Finds the journal directory containing all the journal and support files
             </summary>
@@ -1867,29 +1934,19 @@
         <member name="M:EliteAPI.Journal.Directory.JournalDirectoryProvider.FindJournalDirectory">
             <inheritdoc />
         </member>
-        <member name="T:EliteAPI.Journal.Processor.IJournalProcessor">
+        <member name="T:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor">
             <summary>
-            Reads the journal and status files
+            Processes journal files
             </summary>
         </member>
-        <member name="E:EliteAPI.Journal.Processor.IJournalProcessor.NewJournalEntry">
+        <member name="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry">
             <summary>
             Triggered when a new json entry is made in the active journal file
             </summary>
         </member>
-        <member name="E:EliteAPI.Journal.Processor.IJournalProcessor.NewSupportEntry">
+        <member name="M:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.ProcessJournalFile(System.IO.FileInfo)">
             <summary>
-            Triggered when a support file is updated
-            </summary>
-        </member>
-        <member name="M:EliteAPI.Journal.Processor.IJournalProcessor.ProcessJournalFile(System.IO.FileInfo)">
-            <summary>
-            Hooks the specified journal file to <see cref="E:EliteAPI.Journal.Processor.IJournalProcessor.NewJournalEntry"/> and invokes <see cref="E:EliteAPI.Journal.Processor.IJournalProcessor.NewJournalEntry"/> when needed
-            </summary>
-        </member>
-        <member name="M:EliteAPI.Journal.Processor.IJournalProcessor.ProcessSupportFiles(System.Collections.Generic.IEnumerable{System.IO.FileInfo})">
-            <summary>
-            Hooks the specified support files to <see cref="E:EliteAPI.Journal.Processor.IJournalProcessor.NewSupportEntry"/> and invokes <see cref="E:EliteAPI.Journal.Processor.IJournalProcessor.NewSupportEntry"/> when needed
+            Hooks the specified journal file to <see cref="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry"/> and invokes <see cref="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry"/> when needed
             </summary>
         </member>
         <member name="T:EliteAPI.Journal.Processor.JournalProcessor">
@@ -1898,37 +1955,18 @@
         <member name="E:EliteAPI.Journal.Processor.JournalProcessor.NewJournalEntry">
             <inheritdoc />
         </member>
-        <member name="E:EliteAPI.Journal.Processor.JournalProcessor.NewSupportEntry">
-            <inheritdoc />
-        </member>
         <member name="M:EliteAPI.Journal.Processor.JournalProcessor.ProcessJournalFile(System.IO.FileInfo)">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Journal.Processor.JournalProcessor.ProcessSupportFiles(System.Collections.Generic.IEnumerable{System.IO.FileInfo})">
-            <inheritdoc />
-        </member>
-        <member name="T:EliteAPI.Journal.Provider.IJournalProvider">
+        <member name="T:EliteAPI.Journal.Provider.Abstractions.IJournalProvider">
             <summary>
             Finds the journal and support files
             </summary>
         </member>
-        <member name="M:EliteAPI.Journal.Provider.IJournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
+        <member name="M:EliteAPI.Journal.Provider.Abstractions.IJournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
             <summary>
             Finds the active journal file from the specified journal directory
             </summary>
-            <param name="journalDirectory">The journal directory</param>
-        </member>
-        <member name="M:EliteAPI.Journal.Provider.IJournalProvider.FindStatusFile(System.IO.DirectoryInfo)">
-            <summary>
-            Finds the status.json file from the specified journal directory
-            </summary>
-            <param name="journalDirectory">The journal directory</param>
-        </member>
-        <member name="M:EliteAPI.Journal.Provider.IJournalProvider.FindSupportFiles(System.IO.DirectoryInfo)">
-            <summary>
-            Finds the support files from the specified journal directory
-            </summary>
-            <remarks>These are the Shipyard.json, Outfitting.json and Market.json files</remarks>
             <param name="journalDirectory">The journal directory</param>
         </member>
         <member name="T:EliteAPI.Journal.Provider.JournalProvider">
@@ -1937,10 +1975,145 @@
         <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindStatusFile(System.IO.DirectoryInfo)">
+        <member name="T:EliteAPI.Status.Processor.Abstractions.IStatusProcessor">
+            <summary>
+            Processes status files
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated">
+            <summary>
+            Triggered when the status file is updated
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.CargoUpdated">
+            <summary>
+            Triggered when the cargo file is updated
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.MarketUpdated">
+            <summary>
+            Triggered when the market file is updated
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipyardUpdated">
+            <summary>
+            Triggered when the shipyard file is updated
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated">
+            <summary>
+            Triggered when the outfitting file is updated
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified status file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated"/> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated"/> when needed
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessCargoFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified cargo file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.CargoUpdated"/> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.CargoUpdated"/> when needed
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessMarketFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified market file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.MarketUpdated"/> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.MarketUpdated"/> when needed
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessShipyardFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified shipyard file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipyardUpdated"/> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipyardUpdated"/> when needed
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessOutfittingFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified outfitting file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated"/> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated"/> when needed
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Processor.StatusProcessor">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindSupportFiles(System.IO.DirectoryInfo)">
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.StatusUpdated">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.CargoUpdated">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.MarketUpdated">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.ShipyardUpdated">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.OutfittingUpdated">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessCargoFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessMarketFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessShipyardFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessOutfittingFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.Provider.Abstractions.IStatusProvider">
+            <summary>
+            Provides status files
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindStatusFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the status file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindMarketFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the market file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindCargoFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the cargo file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindShipyardFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the shipyard file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindOutfittingFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the outfitting file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
+        <member name="T:EliteAPI.Status.Provider.StatusProvider">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindStatusFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindMarketFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindCargoFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindShipyardFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindOutfittingFile(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
     </members>

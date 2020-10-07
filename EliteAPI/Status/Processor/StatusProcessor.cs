@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EliteAPI.Status.Models;
 using EliteAPI.Status.Processor.Abstractions;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using EliteAPI.Status.Models.Abstractions;
 
 namespace EliteAPI.Status.Processor
 {
@@ -13,11 +17,13 @@ namespace EliteAPI.Status.Processor
     public class StatusProcessor : IStatusProcessor
     {
         private readonly ILogger<StatusProcessor> _log;
+        private readonly IShipStatus _status;
         private readonly IDictionary<string, string> _cache;
 
-        public StatusProcessor(ILogger<StatusProcessor> log)
+        public StatusProcessor(ILogger<StatusProcessor> log, IShipStatus status)
         {
             _log = log;
+            _status = status;
             _cache = new Dictionary<string, string>();
         }
 
@@ -45,14 +51,56 @@ namespace EliteAPI.Status.Processor
             if (!IsInCache(statusFile, content))
             {
                 AddToCache(statusFile, content);
+                await InvokeStatusMethods(content);
                 StatusUpdated?.Invoke(this, content);
             }
+        }
+
+        private async Task InvokeStatusMethods(string json)
+        {
+            try
+            {
+                RawShipStatus raw = JsonConvert.DeserializeObject<RawShipStatus>(json);
+
+                foreach (string propertyName in _status.GetType().GetProperties().Select(x => x.Name))
+                {
+                    await InvokeStatusUpdateMethod(raw, _status, propertyName);
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not update status");
+            }
+        }
+
+        private Task InvokeStatusUpdateMethod(RawShipStatus raw, IShipStatus status, string propertyName)
+        {
+            try
+            {
+                object rawValue = raw.GetType().GetProperty(propertyName).GetValue(raw);
+                object statusUpdateProperty = _status.GetType().GetProperty(propertyName).GetValue(_status);
+                MethodInfo updateMethod = statusUpdateProperty.GetType().GetMethod("Update", BindingFlags.NonPublic | BindingFlags.Instance);
+                MethodInfo needsUpdateMethod = statusUpdateProperty.GetType().GetMethod("NeedsUpdate", BindingFlags.NonPublic | BindingFlags.Instance);
+
+                var needsUpdate = needsUpdateMethod.Invoke(statusUpdateProperty, new[] {rawValue});
+                if ((bool) needsUpdate)
+                {
+                    _log.LogTrace("Invoking OnChange event for {name} status", propertyName);
+                    updateMethod.Invoke(statusUpdateProperty, new[] { this, rawValue });
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not update status property {name}", propertyName);
+            }
+
+            return Task.CompletedTask;
         }
 
         /// <inheritdoc />
         public async Task ProcessCargoFile(FileInfo cargoFile)
         {
-            if(!cargoFile.Exists) { return; }
+            if (!cargoFile.Exists) { return; }
 
             string content = ReadAllText(cargoFile);
             if (!IsInCache(cargoFile, content))
@@ -78,7 +126,7 @@ namespace EliteAPI.Status.Processor
         /// <inheritdoc />
         public async Task ProcessShipyardFile(FileInfo shipyardFile)
         {
-            if(shipyardFile == null || !shipyardFile.Exists) { return; }
+            if (shipyardFile == null || !shipyardFile.Exists) { return; }
 
             string content = ReadAllText(shipyardFile);
             if (!IsInCache(shipyardFile, content))
@@ -91,7 +139,7 @@ namespace EliteAPI.Status.Processor
         /// <inheritdoc />
         public async Task ProcessOutfittingFile(FileInfo outfittingFile)
         {
-            if(outfittingFile == null || !outfittingFile.Exists) { return; }
+            if (outfittingFile == null || !outfittingFile.Exists) { return; }
 
             string content = ReadAllText(outfittingFile);
             if (!IsInCache(outfittingFile, content))

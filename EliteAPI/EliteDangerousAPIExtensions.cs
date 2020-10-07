@@ -14,6 +14,8 @@ using System;
 using System.Collections.Generic;
 using EliteAPI.Event.Attributes;
 using EliteAPI.Event.Module;
+using EliteAPI.Status.Models;
+using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Processor;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Provider;
@@ -39,6 +41,8 @@ namespace EliteAPI
             services.AddSingleton<IJournalProcessor, JournalProcessor>();
             services.AddSingleton<IStatusProcessor, StatusProcessor>();
 
+            services.AddSingleton<IShipStatus, ShipStatus>();
+
             services.AddSingleton<EventHandler>();
 
             EliteDangerousAPIConfiguration configInstance = new EliteDangerousAPIConfiguration();
@@ -59,8 +63,9 @@ namespace EliteAPI
             eventModuleImplementations = new List<Type>();
             _eventProcessors = new List<Type>()
             {
-                typeof(EventBaseEventProcessor),
-                typeof(AttributeEventProcessor)
+                typeof(EventsEventProcessor),
+                typeof(AttributeEventProcessor),
+                typeof(AllEventProcessor)
             };
         }
 

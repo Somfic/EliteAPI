@@ -1,9 +1,14 @@
-﻿using EliteAPI.Event.Models.Abstractions;
+﻿using EliteAPI.Abstractions;
+using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Processor.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
 using EliteAPI.Journal.Directory.Abstractions;
 using EliteAPI.Journal.Processor.Abstractions;
 using EliteAPI.Journal.Provider.Abstractions;
+using EliteAPI.Status.Models;
+using EliteAPI.Status.Models.Abstractions;
+using EliteAPI.Status.Processor.Abstractions;
+using EliteAPI.Status.Provider.Abstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -13,11 +18,6 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using EliteAPI.Abstractions;
-using EliteAPI.Status.Models;
-using EliteAPI.Status.Processor.Abstractions;
-using EliteAPI.Status.Provider.Abstractions;
-using Newtonsoft.Json;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
@@ -35,7 +35,7 @@ namespace EliteAPI
         public EventHandler Events { get; }
 
         /// <inheritdoc />
-        public ShipStatus Status { get; private set; }
+        public IShipStatus Status { get; private set; }
 
         public EliteDangerousAPI(IServiceProvider services)
         {
@@ -59,7 +59,7 @@ namespace EliteAPI
 
                 Events = services.GetRequiredService<EventHandler>();
 
-                Status = new ShipStatus();
+                Status = services.GetRequiredService<IShipStatus>();
             }
             catch (Exception ex)
             {
@@ -119,7 +119,6 @@ namespace EliteAPI
                 await SetJournalFile();
                 await SetSupportFiles();
 
-                _statusProcessor.StatusUpdated += _statusProcessor_StatusUpdated;
                 _journalProcessor.NewJournalEntry += _journalProcessor_NewJournalEntry;
 
                 if (_config.GetSection("EliteAPI")["StartAtPresent"] == "true")
@@ -191,7 +190,6 @@ namespace EliteAPI
         public async Task StopAsync()
         {
             _journalProcessor.NewJournalEntry -= _journalProcessor_NewJournalEntry;
-            _statusProcessor.StatusUpdated -= _statusProcessor_StatusUpdated;
 
             IsRunning = false;
             IsInitialized = false;
@@ -227,18 +225,6 @@ namespace EliteAPI
             catch (Exception ex)
             {
                 _log.LogWarning(ex, "Could not execute event");
-            }
-        }
-
-        private void _statusProcessor_StatusUpdated(object sender, string e)
-        {
-            try
-            {
-                Status = JsonConvert.DeserializeObject<ShipStatus>(e);
-            }
-            catch (Exception ex)
-            {
-                _log.LogWarning(ex, "Could not read status contents");
             }
         }
 

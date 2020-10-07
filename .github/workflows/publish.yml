@@ -36,5 +36,5 @@ jobs:
     - name: Publish to Github Packages
       run: |
         dotnet nuget add source https://nuget.pkg.github.com/EliteAPI/index.json -n github -u EliteAPI -p ${{ secrets.PUBLISH_KEY }} --store-password-in-clear-text
-        dotnet nuget push "${{ nuget.PACKAGE_PATH }}" --source "github"
+        dotnet nuget push "${{ steps.nuget.PACKAGE_PATH }}" --source "github"
         

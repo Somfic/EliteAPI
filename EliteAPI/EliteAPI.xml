@@ -1975,6 +1975,161 @@
         <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
+        <member name="T:EliteAPI.Status.Models.RawShipStatus">
+            <summary>
+            Only used for deserialization of the raw Status.json file
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Models.ShipFuel">
+            <summary>
+            Container for information about the ship's fuel situation
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Models.ShipFuel.Main">
+            <summary>
+            The amount of fuel left in the main tank, in tonnes
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Models.ShipFuel.Reservoir">
+            <summary>
+            The amount of fuel left in the reservoir tank, in tonnes
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Models.ShipGuiFocus">
+            <summary>
+            Ship GUI focus
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.NoFocus">
+            <summary>
+            There is no focus
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.InternalPanel">
+            <summary>
+            The internal (right) panel
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.ExternalPanel">
+            <summary>
+            The external (left) panel
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.CommsPanel">
+            <summary>
+            The communication panel
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.RolePanel">
+            <summary>
+            The role panel
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.StationServices">
+            <summary>
+            Station services
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.GalaxyMap">
+            <summary>
+            The galaxy map
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.SystemMap">
+            <summary>
+            The system map
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.Orrery">
+            <summary>
+            The orrery
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.FssMode">
+            <summary>
+            Full spectrum scanner mode
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.SaaMode">
+            <summary>
+            Saa mode
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.Codex">
+            <summary>
+            The codex
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Models.ShipLegalState">
+            <summary>
+            Legal ship states
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipLegalState.Clean">
+            <summary>
+            Clean
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipLegalState.IllegalCargo">
+            <summary>
+            Illegal cargo on-board
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipLegalState.Speeding">
+            <summary>
+            Speeding at stations
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipLegalState.Wanted">
+            <summary>
+            Wanted
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipLegalState.Hostile">
+            <summary>
+            Hostile
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipLegalState.PassengerWanted">
+            <summary>
+            Passenger on ship is wanted
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipLegalState.Warrant">
+            <summary>
+            Warrant for arrest
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Models.ShipPips.System">
+            <summary>
+            Amount of half pips set to systems
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Models.ShipPips.Engines">
+            <summary>
+            Amount of half pips set to engines
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Models.ShipPips.Weapons">
+            <summary>
+            Amount of half pips set to weapons
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Models.ShipStatusProperty`1">
+            <summary>
+            Container for status properties
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Models.ShipStatusProperty`1.Value">
+            <summary>
+            The value of this property
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Models.ShipStatusProperty`1.OnChange">
+            <summary>
+            Triggered whenever this property is changed
+            </summary>
+        </member>
         <member name="T:EliteAPI.Status.Processor.Abstractions.IStatusProcessor">
             <summary>
             Processes status files

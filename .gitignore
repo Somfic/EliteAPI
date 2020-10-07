@@ -266,3 +266,6 @@ __pycache__/
 *.rar
 NotAddedEvents.txt
 Test/Program.cs
+gource.mp4
+.vscode/launch.json
+.vscode/tasks.json

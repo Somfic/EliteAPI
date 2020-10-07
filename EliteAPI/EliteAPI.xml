@@ -4,503 +4,2117 @@
         <name>EliteAPI</name>
     </assembly>
     <members>
-        <member name="T:EliteAPI.Discord.RichPresence">
+        <member name="T:EliteAPI.Abstractions.IEliteDangerousAPI">
             <summary>
-            Class used to update the Rich Presence with.
+            EliteAPI
             </summary>
         </member>
-        <member name="M:EliteAPI.Discord.RichPresence.#ctor">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Version">
             <summary>
-            Empty constructor for a rich presence.
+            EliteAPI's version
             </summary>
         </member>
-        <member name="M:EliteAPI.Discord.RichPresence.#ctor(System.String)">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Events">
             <summary>
-            Basic constructor for a rich presence.
-            </summary>
-            <param name="line1">The first line of text.</param>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresence.#ctor(System.String,System.String)">
-            <summary>
-            Basic constructor for a rich presence.
-            </summary>
-            <param name="line1">The first line of text.</param>
-            <param name="line2">The second line of text.</param>
-        </member>
-        <member name="P:EliteAPI.Discord.RichPresence.Text">
-            <summary>
-            The first line of text.
+            Container for all events
             </summary>
         </member>
-        <member name="P:EliteAPI.Discord.RichPresence.TextTwo">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Status">
             <summary>
-            The second line of text.
+            Container for the ship's current status
             </summary>
         </member>
-        <member name="P:EliteAPI.Discord.RichPresence.Icon">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.IsRunning">
             <summary>
-            The main icon ID.
+            Whether the api is currently running
             </summary>
         </member>
-        <member name="P:EliteAPI.Discord.RichPresence.IconText">
+        <member name="M:EliteAPI.Abstractions.IEliteDangerousAPI.InitializeAsync">
             <summary>
-            The text that should be displayed when hovering over the main icon.
+            Initializes the api
             </summary>
         </member>
-        <member name="P:EliteAPI.Discord.RichPresence.IconTwo">
+        <member name="M:EliteAPI.Abstractions.IEliteDangerousAPI.StartAsync">
             <summary>
-            The secondary icon ID.
+            Starts the api
             </summary>
         </member>
-        <member name="P:EliteAPI.Discord.RichPresence.IconTextTwo">
+        <member name="M:EliteAPI.Abstractions.IEliteDangerousAPI.StopAsync">
             <summary>
-            The text that should be displayed when hovering over the secondary icon.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Discord.RichPresenceClient.IsRunning">
-            <summary>
-            Whether the rich presence is running.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Discord.RichPresenceClient.IsReady">
-            <summary>
-            Whether the rich presence is connected and ready.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresenceClient.#ctor(EliteAPI.EliteDangerousAPI)">
-            <summary>
-            Creates a new Discord Rich Presence client based on the EliteDangerousAPI object.
-            </summary>
-            <param name="api">EliteDangerousAPI</param>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresenceClient.#ctor(EliteAPI.EliteDangerousAPI,System.String)">
-            <summary>
-            Creates a new Discord Rich Presence client based on the EliteDangerousAPI object, with a custom RPC ID, for when you have your own Rich Presence registered with Discord.
-            </summary>
-            <param name="api">EliteDangerousAPI</param>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresenceClient.WithCustomID(System.String)">
-            <summary>
-            Set a custom ID to be used, for when you have your own RPC registered with Discord.
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresenceClient.UpdatePresence(EliteAPI.Discord.RichPresence)">
-            <summary>
-            Update the rich presence.
-            </summary>
-            <param name="presence">The custom rich presence to display.</param>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresenceClient.TurnOn(System.Boolean)">
-            <summary>
-            Turn the rich presence on.
-            </summary>
-            <param name="automatic">Whether to have EliteAPI send events to the presence.</param>
-        </member>
-        <member name="M:EliteAPI.Discord.RichPresenceClient.TurnOff">
-            <summary>
-            Turn the rich presence off.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.EDSM.EDSMConnection.Execute(EliteAPI.EDSM.EDSMEntry)">
-            <summary>
-            Executes an EDSM API request.
-            </summary>
-            <param name="entry">The entry to process.</param>
-            <returns></returns>
-        </member>
-        <member name="T:EliteAPI.EDSM.EDSMEntry">
-            <summary>
-            An entry for the EDSM API.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.EDSM.EDSMEntry.#ctor(System.String,EliteAPI.EDSM.EDSMParameter)">
-            <summary>
-            Creates a new EDSM API entry.
-            </summary>
-            <param name="url">The base URL for the API call.</param>
-            <param name="parameter">The parameters for the API call.</param>
-        </member>
-        <member name="M:EliteAPI.EDSM.EDSMEntry.#ctor(System.String,System.Collections.Generic.List{EliteAPI.EDSM.EDSMParameter})">
-            <summary>
-            Creates a new EDSM API entry.
-            </summary>
-            <param name="url">The base URL for the API call.</param>
-            <param name="parameters">A list of parameters for the API call.</param>
-        </member>
-        <member name="P:EliteAPI.EDSM.EDSMEntry.Url">
-            <summary>
-            The base URL of the API call.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EDSM.EDSMEntry.Parameters">
-            <summary>
-            The list of parameters for the API call.
-            </summary>
-        </member>
-        <member name="T:EliteAPI.EDSM.EDSMParameter">
-            <summary>
-            A parameter for an EDSM API call.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.EDSM.EDSMParameter.#ctor(System.String,System.Object)">
-            <summary>
-            Creates a new EDSM parameter.
-            </summary>
-            <param name="name">The name of the parameter.</param>
-            <param name="value">The value of the parameter.</param>
-        </member>
-        <member name="P:EliteAPI.EDSM.EDSMParameter.Name">
-            <summary>
-            The name of the parameter.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EDSM.EDSMParameter.Value">
-            <summary>
-            The value of the parameter.
+            Stops the api
             </summary>
         </member>
         <member name="T:EliteAPI.EliteDangerousAPI">
-            <summary>
-            Main EliteAPI class.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.IsReady">
-            <summary>
-            Set to true when the API is ready.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.StandardDirectory">
-            <summary>
-            The standard Directory of the Player Journal files (C:\Users\%username%\Saved Games\Frontier Developments\Elite Dangerous).
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Version">
-            <summary>
-            The version of EliteAPI.
-            </summary>
+            <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.IsRunning">
-            <summary>
-            Whether the API is currently running.
-            </summary>
+            <inheritdoc />
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.JournalDirectory">
-            <summary>
-            The Journal directory that is being used by the API.
-            </summary>
+        <member name="P:EliteAPI.EliteDangerousAPI.Version">
+            <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Events">
-            <summary>
-            Object that holds all the events.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Logger">
-            <summary>
-            Objects that holds all logging related functions.
-            </summary>
+            <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Status">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.InitializeAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.StartAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPIExtensions.AddEliteAPI(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{EliteAPI.EliteDangerousAPIConfiguration})">
             <summary>
-            Holds the ship's current status.
+            Adds all EliteAPI's necessary services to the <seealso cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>
             </summary>
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Cargo">
+        <member name="M:EliteAPI.EliteDangerousAPIConfiguration.AddEventModule``1">
             <summary>
-            Holds the ship's current cargo situation.
+            Add an event module to EliteAPI
+            </summary>
+            <typeparam name="T">The event module to be added</typeparam>
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPIConfiguration.ClearProcessors">
+            <summary>
+            Remove the default event processors
             </summary>
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Modules">
+        <member name="M:EliteAPI.EliteDangerousAPIConfiguration.AddProcessor``1">
             <summary>
-            Returns all the modules installed on the current ship.
+            Adds a event processor
+            </summary>
+            <typeparam name="T">The event processor to be used</typeparam>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Abstractions.EventBase">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Event.Models.Abstractions.EventBase.Timestamp">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Event.Models.Abstractions.EventBase.Event">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Event.Models.Abstractions.IEvent">
+            <summary>
+            An in-game event
             </summary>
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Materials">
+        <member name="P:EliteAPI.Event.Models.Abstractions.IEvent.Timestamp">
             <summary>
-            Holds the ship's current materials situation.
+            The timestamp of the event
             </summary>
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Bindings">
+        <member name="P:EliteAPI.Event.Models.Abstractions.IEvent.Event">
             <summary>
-            Holds information on all key bindings in the game set by the user.
+            The name of the event
             </summary>
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Commander">
-            <summary>
-            Holds information about the commander.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Location">
-            <summary>
-            Holds information about the last known location of the commander.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.DiscordRichPresence">
-            <summary>
-            Rich presence service for Discord.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.SkipCatchUp">
-            <summary>
-            Whether the API should skip the processing of previous events before the API was started.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.#ctor">
-            <summary>
-            Creates a new EliteDangerousAPI object using the standard Journal directory.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.#ctor(System.IO.DirectoryInfo)">
-            <summary>
-            Creates a new EliteDangerousAPI object.
-            </summary>
-            <param name="JournalDirectory">The directory in which the Player Journals are located.</param>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.#ctor(System.Boolean)">
-            <summary>
-            Creates a new EliteDangerousAPI object using the standard Journal directory.
-            </summary>
-            <param name="SkipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.#ctor(System.IO.DirectoryInfo,System.Boolean)">
-            <summary>
-            Creates a new EliteDangerousAPI object.
-            </summary>
-            <param name="journalDirectory">The directory in which the Player Journals are located.</param>
-            <param name="skipCatchUp">Whether the API should skip the processing of previous events before the API was started.</param>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.CheckForUpdate">
-            <summary>
-            Checks for a new update.
-            </summary>
-            <returns>Returns true if a newer version is available.</returns>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.Reset">
-            <summary>
-            Resets the API.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.Start(System.Boolean)">
-            <summary>
-            Starts the API.
-            </summary>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.ChangeJournal(System.IO.DirectoryInfo)">
-            <summary>
-            Changes the journal directory.
-            </summary>
-            <param name="newJournalDirectory">The new journal directory.</param>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.Stop">
-            <summary>
-            Stops the API.
-            </summary>
-        </member>
-        <member name="E:EliteAPI.EliteDangerousAPI.OnReady">
-            <summary>
-            Gets triggered when EliteAPI has successfully loaded up.
-            </summary>
-        </member>
-        <member name="E:EliteAPI.EliteDangerousAPI.OnQuit">
-            <summary>
-            Gets triggered when EliteAPI is closing.
-            </summary>
-        </member>
-        <member name="E:EliteAPI.EliteDangerousAPI.OnError">
-            <summary>
-            Gets triggered when EliteAPI could not successfully load up.
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Events.AfmuRepairsInfo.Module">
+        <member name="P:EliteAPI.Event.Models.AfmuRepairsEvent.Module">
             <summary>
             The name of the module
             </summary>
         </member>
-        <member name="P:EliteAPI.Events.AfmuRepairsInfo.ModuleLocalised">
+        <member name="P:EliteAPI.Event.Models.AfmuRepairsEvent.ModuleLocalised">
             <summary>
             The local name of the module
             </summary>
         </member>
-        <member name="P:EliteAPI.Events.AfmuRepairsInfo.FullyRepaired">
+        <member name="P:EliteAPI.Event.Models.AfmuRepairsEvent.FullyRepaired">
             <summary>
             Whether modules are now fully repaired
             </summary>
         </member>
-        <member name="P:EliteAPI.Events.AfmuRepairsInfo.Health">
+        <member name="P:EliteAPI.Event.Models.AfmuRepairsEvent.Health">
             <summary>
             Value between 0 and 1.
             </summary>
         </member>
-        <member name="T:EliteAPI.IEliteDangerousAPI">
+        <member name="P:EliteAPI.Event.Models.Exploration.ScanEvent.ScanType">
             <summary>
-            Interface for the EliteDangerousAPI class.
+            The type of scan.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Version">
+        <member name="P:EliteAPI.Event.Models.Exploration.ScanEvent.StarSystem">
             <summary>
-            Set to true when the API is ready.
+            The name of the system.
+            </summary>
+            <remarks>Only when the scan is of a star.</remarks>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Exploration.ScanEvent.SystemAddress">
+            <summary>
+            The address of the system.
+            </summary>
+            <remarks>Only when the scan is of a star.</remarks>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Exploration.ScanEvent.BodyName">
+            <summary>
+            The name of the body.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.IsRunning">
+        <member name="P:EliteAPI.Event.Models.Exploration.ScanEvent.BodyId">
             <summary>
-            Whether the API is currently running.
+            The ID of the body.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.JournalDirectory">
+        <member name="P:EliteAPI.Event.Models.Exploration.ScanEvent.DistanceFromArrivalLs">
             <summary>
-            The Journal directory that is being used by the API.
+            The distance from the arrival point in light-seconds.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.SkipCatchUp">
+        <member name="P:EliteAPI.Event.Models.Exploration.ScanEvent.StarType">
             <summary>
-            Whether the API should skip the processing of previous events before the API was started.
+            The type of the star.
+            </summary>
+            <remarks>Only when the scan is of a star.</remarks>
+        </member>
+        <member name="T:EliteAPI.Event.Models.GameModeType">
+            <summary>
+            Game mode a commander plays in.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Events">
+        <member name="T:EliteAPI.Event.Models.ModifierLabel">
             <summary>
-            Object that holds all the events.
+            The label of the modifier.
+            </summary>
+            <see cref="!:EngineeringLoadOutModifier"/>
+        </member>
+        <member name="T:EliteAPI.Event.Models.ScanType">
+            <summary>
+            The type of scan.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Logger">
+        <member name="T:EliteAPI.Event.Models.Startup.CargoEvent">
             <summary>
-            Objects that holds all logging related functions.
+            This event is written when the game has started.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Status">
+        <member name="P:EliteAPI.Event.Models.Startup.CargoEvent.Vessel">
             <summary>
-            Holds the ship's current status.
+            The type of vessel, either 'Ship' or 'SRV'.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.VesselType"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.CargoEvent.Count">
+            <summary>
+            The total amount of cargo in the vessel.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Cargo">
+        <member name="P:EliteAPI.Event.Models.Startup.CargoEvent.Inventory">
             <summary>
-            Holds the ship's current cargo situation.
+            A list of all inventory in the vessel, grouped by name.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.CargoInventory"/>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.CargoInventory">
+            <summary>
+            Inventory in the vessel, grouped by name.
+            </summary>
+            <see cref="!:CargoInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.CargoInventory.Name">
+            <summary>
+            The name of the cargo item.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Modules">
+        <member name="P:EliteAPI.Event.Models.Startup.CargoInventory.NameLocalised">
             <summary>
-            Returns all the modules installed on the current ship.
+            The localised name of the cargo item.
+            Returns null when the 'Name' property is already localised.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Bindings">
+        <member name="P:EliteAPI.Event.Models.Startup.CargoInventory.Count">
             <summary>
-            Holds information on all key bindings in the game set by the user.
+            The amount of cargo of this type.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Commander">
+        <member name="P:EliteAPI.Event.Models.Startup.CargoInventory.Stolen">
             <summary>
-            Holds information about the commander.
+            The amount of stolen cargo of this type.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.Location">
+        <member name="T:EliteAPI.Event.Models.Startup.ClearSavedGameEvent">
             <summary>
-            Holds information about the last known location of the commander.
+            This event is written when the commander chooses to clear their save.
             </summary>
         </member>
-        <member name="E:EliteAPI.IEliteDangerousAPI.OnError">
+        <member name="P:EliteAPI.Event.Models.Startup.ClearSavedGameEvent.Name">
             <summary>
-            Gets triggered when EliteAPI could not successfully load up.
+            The commander's name.
             </summary>
         </member>
-        <member name="E:EliteAPI.IEliteDangerousAPI.OnQuit">
+        <member name="P:EliteAPI.Event.Models.Startup.ClearSavedGameEvent.FID">
             <summary>
-            Gets triggered when EliteAPI is closing.
+            The commander's Frontier ID.
             </summary>
         </member>
-        <member name="E:EliteAPI.IEliteDangerousAPI.OnReady">
+        <member name="T:EliteAPI.Event.Models.Startup.CommanderEvent">
             <summary>
-            Gets triggered when EliteAPI has successfully loaded up.
+            This event is written when the game has started.
             </summary>
         </member>
-        <member name="P:EliteAPI.IEliteDangerousAPI.DiscordRichPresence">
+        <member name="P:EliteAPI.Event.Models.Startup.CommanderEvent.FID">
             <summary>
-            Rich presence service for Discord.
+            The commander's Frontier ID.
             </summary>
         </member>
-        <member name="M:EliteAPI.IEliteDangerousAPI.Reset">
+        <member name="P:EliteAPI.Event.Models.Startup.CommanderEvent.Name">
             <summary>
-            Resets the API.
+            The commander's name.
             </summary>
         </member>
-        <member name="M:EliteAPI.IEliteDangerousAPI.Start(System.Boolean)">
+        <member name="T:EliteAPI.Event.Models.Startup.EngineeringInfo">
             <summary>
-            Starts the API.
-            </summary>
-            <param name="runRichPresence"></param>
-        </member>
-        <member name="M:EliteAPI.IEliteDangerousAPI.Stop">
-            <summary>
-            Stops the API.
+            The engineering that has been done on a module.
             </summary>
         </member>
-        <member name="M:EliteAPI.IEliteDangerousAPI.ChangeJournal(System.IO.DirectoryInfo)">
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringInfo.Engineer">
             <summary>
-            Changes the journal directory.
-            </summary>
-            <param name="newJournalDirectory"></param>
-        </member>
-        <member name="T:EliteAPI.ThirdParty.ThirdPartyWrapper">
-            <summary>
-            Class that functions as a wrapper for third party plugins.
+            The name of the engineer.
             </summary>
         </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.#ctor(EliteAPI.EliteDangerousAPI,System.String,System.String)">
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringInfo.EngineerId">
             <summary>
-            Creates a new ThirdPartyWrapper object.
+            The id of the engineer.
             </summary>
-            <param name="api">The EliteDangerousAPI api</param>
-            <param name="name">The name of the plugin</param>
-            <param name="iniPath">The path to the configuration file</param>
         </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetVariables">
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringInfo.BlueprintId">
             <summary>
-            Returns all the variables to be set.
+            The id of the blueprint.
             </summary>
-            <returns>A list of variables</returns>
         </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetRichPresenceSetting">
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringInfo.BlueprintName">
             <summary>
-            Returns a value whether the API should automatically start the Discord Rich Presence.
+            The name of the blueprint.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringInfo.Level">
+            <summary>
+            The level of the modification.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringInfo.Quality">
+            <summary>
+            The quality of the modification.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringInfo.ExperimentalEffect">
+            <summary>
+            The experimental effect of the modification, if any.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringInfo.ExperimentalEffectLocalised">
+            <summary>
+            The localised experimental effect of the modification, if any.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringInfo.Modifiers">
+            <summary>
+            A list of modifiers for this modification, if any.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.EngineeringLoadOutModifier"/>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.EngineeringLoadOutModifier">
+            <summary>
+            The modifier applied on a modification.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringLoadOutModifier.Label">
+            <summary>
+            The label of this modifier.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.ModifierLabel"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringLoadOutModifier.Value">
+            <summary>
+            The value of this modifier.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringLoadOutModifier.ValueStr">
+            <summary>
+            The value of this modifier as a string.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringLoadOutModifier.OriginalValue">
+            <summary>
+            The original value before this modifier.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.EngineeringLoadOutModifier.LessIsGood">
+            <summary>
+            Whether a lower value means better.
+            </summary>
+            <see cref="P:EliteAPI.Event.Models.Startup.EngineeringLoadOutModifier.Value"/>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.LoadGameEvent">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.Fid">
+            <summary>
+            The Frontier ID of the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.Commander">
+            <summary>
+            The name of the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.Horizons">
+            <summary>
+            Whether the commander has the Horizons expansion pack installed.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.Ship">
+            <summary>
+            The current type of ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.ShipLocalised">
+            <summary>
+            The localised type of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.ShipId">
+            <summary>
+            The id of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.ShipName">
+            <summary>
+            The user-defined name of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.ShipIdent">
+            <summary>
+            The user-defined id of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.StartLanded">
+            <summary>
+            Whether the commander is landed.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.StartDead">
+            <summary>
+            Whether the commander is dead.
+            </summary>
+            <seealso cref="!:ResurrectInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.GameMode">
+            <summary>
+            The chosen game mode.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.Group">
+            <summary>
+            The name of the private group when playing in group mode.
+            </summary>
+            <see cref="P:EliteAPI.Event.Models.Startup.LoadGameEvent.GameMode"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.Credits">
+            <summary>
+            The amount of credits the commander has.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.Loan">
+            <summary>
+            The current loan.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.FuelLevel">
+            <summary>
+            The current level of fuel.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadGameEvent.FuelCapacity">
+            <summary>
+            The size of the main fuel tank.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.LoadoutFuel">
+            <summary>
+            Contains information about the fuel of the ship.
+            </summary>
+            <see cref="!:LoadoutInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutFuel.Main">
+            <summary>
+            The amount of fuel in the main tank.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutFuel.Reserve">
+            <summary>
+            The amount of fuel in the reserve tank.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.LoadoutEvent">
+            <summary>
+            This event is written when the game has started, after switching ships, after outfitting, and after docking a SRV.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.Ship">
+            <summary>
+            The type of ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.ShipId">
+            <summary>
+            The id of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.ShipName">
+            <summary>
+            The user-defined name of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.ShipIdent">
+            <summary>
+            The user-defined id of the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.HullValue">
+            <summary>
+            The value of the integrity of the hull.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.ModulesValue">
+            <summary>
+            The value of the integrity of the modules.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.HullHealth">
+            <summary>
+            The health of the hull.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.UnladenMass">
+            <summary>
+            The mass of the hull and all modules. Fuel and cargo are not included.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.FuelCapacity">
+            <summary>
+            Information on the fuel of the ship.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.LoadoutFuel"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.CargoCapacity">
+            <summary>
+            The maximum amount of cargo this ship can carry.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.MaxJumpRange">
+            <summary>
+            The maximum jump range of the ship.
+            </summary>
+            <remarks>
+            This value is based on no cargo and limited fuel.
+            </remarks>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.Rebuy">
+            <summary>
+            The cost of rebuy.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.Hot">
+            <summary>
+            Whether the ship is wanted.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutEvent.Modules">
+            <summary>
+            A list of installed items on the ship.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.LoadoutModule"/>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.LoadoutModule">
+            <summary>
+            An installed item on the ship.
+            </summary>
+            <see cref="!:LoadoutInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutModule.Slot">
+            <summary>
+            The name of the slot.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutModule.Item">
+            <summary>
+            The name of the module in this slow in lowercase.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutModule.On">
+            <summary>
+            Whether this module is turned on.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutModule.Priority">
+            <summary>
+            The priority group of power for this module.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutModule.Health">
+            <summary>
+            The health of the module.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutModule.Value">
+            <summary>
+            The value of the module.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutModule.AmmoInClip">
+            <summary>
+            Amount of ammunition in the clip.
+            Can also be amount of places in a passenger cabin.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutModule.AmmoInHopper">
+            <summary>
+            The amount of ammunition in the hopper.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.LoadoutModule.EngineeringInfo">
+            <summary>
+            The engineering that has been done on this module.
+            </summary>
+            <see cref="P:EliteAPI.Event.Models.Startup.LoadoutModule.EngineeringInfo"/>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.MaterialsEvent">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MaterialsEvent.Raw">
+            <summary>
+            A list of raw materials, grouped by name.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.MaterialsMaterial"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MaterialsEvent.Manufactured">
+            <summary>
+            A list of manufactured materials, grouped by name.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.MaterialsMaterial"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MaterialsEvent.Encoded">
+            <summary>
+            A list of encoded materials, grouped by name.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.MaterialsMaterial"/>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.MaterialsMaterial">
+            <summary>
+            Contains information about grouped material.
+            </summary>
+            <see cref="!:MaterialsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MaterialsMaterial.Name">
+            <summary>
+            The name of the material.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MaterialsMaterial.NameLocalised">
+            <summary>
+            The localised name of the material.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MaterialsMaterial.Count">
+            <summary>
+            The amount of materials in this group.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.MissionsEvent">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MissionsEvent.Active">
+            <summary>
+            A list of the active missions, if any.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.MissionsMissionInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MissionsEvent.Failed">
+            <summary>
+            A list of the failed missions, if any.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.MissionsMissionInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MissionsEvent.Complete">
+            <summary>
+            A list of the completed missions, if any.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.MissionsMissionInfo"/>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.MissionsMissionInfo">
+            <summary>
+            Contains information about a mission.
+            </summary>
+            <see cref="!:MissionsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MissionsMissionInfo.MissionId">
+            <summary>
+            The id of the mission.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MissionsMissionInfo.Name">
+            <summary>
+            The name of the mission.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MissionsMissionInfo.PassengerMission">
+            <summary>
+            Whether this mission is a passenger mission.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.MissionsMissionInfo.Expires">
+            <summary>
+            The amount of seconds left for this mission.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.NewCommanderEvent">
+            <summary>
+            This event is written when creating a new commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.NewCommanderEvent.Name">
+            <summary>
+            The name of the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.NewCommanderEvent.Fid">
+            <summary>
+            The Frontier ID of the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.NewCommanderEvent.Package">
+            <summary>
+            The chosen starter package.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.PassengersEvent">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.PassengersEvent.Manifest">
+            <summary>
+            A list of passenger records.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.PassengersManifest">
+            <summary>
+            A record of a group of passengers.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.PassengersManifest.MissionId">
+            <summary>
+            The id of mission related to these passengers.
+            </summary>
+            <seealso cref="T:EliteAPI.Event.Models.Startup.MissionsMissionInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.PassengersManifest.Type">
+            <summary>
+            The type of passengers.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.PassengersManifest.Vip">
+            <summary>
+            Whether these passengers are VIPs.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.PassengersManifest.Wanted">
+            <summary>
+            Whether these passengers are wanted.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.PassengersManifest.Count">
+            <summary>
+            The amount of passengers.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.PowerplayEvent">
+            <summary>
+            This event is written when the game has started.
+            Only triggered when the commander has pledged themselves to a galactic power.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.PowerplayEvent.Power">
+            <summary>
+            The name of the galactic power.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.PowerplayEvent.Rank">
+            <summary>
+            The rank of the commander within the power.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.PowerplayEvent.Merits">
+            <summary>
+            The amount of merits the commander has.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.PowerplayEvent.Votes">
+            <summary>
+            The amount of votes the commander has.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.PowerplayEvent.TimePledged">
+            <summary>
+            The amount of seconds the commander has been pledged to this power.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.ProgressEvent">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+            <seealso cref="!:RankInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ProgressEvent.Combat">
+            <summary>
+            The rank process in a percentages within Combat the commander has.
+            Goes from 0-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ProgressEvent.Trade">
+            <summary>
+            The rank process in a percentages within Trade the commander has.
+            Goes from 0-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ProgressEvent.Explore">
+            <summary>
+            The rank process in a percentages within Exploration the commander has.
+            Goes from 0-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ProgressEvent.Empire">
+            <summary>
+            The rank process in a percentages within the Empire the commander has.
+            Goes from 0-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ProgressEvent.Federation">
+            <summary>
+            The rank process in a percentages within the Federation the commander has.
+            Goes from 0-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ProgressEvent.Cqc">
+            <summary>
+            The rank process in a percentages within CQC the commander has.
+            Goes from 0-100.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.RankEvent">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+            <seealso cref="!:ProgressInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.RankEvent.Combat">
+            <summary>
+            The rank within Combat the commander has.
+            Returns a scale from 0-8.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.RankEvent.CombatLocalised">
+            <summary>
+            The rank within Combat the commander has.
+            Returns the localised title.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.RankEvent.Trade">
+            <summary>
+            The rank within Trade the commander has.
+            Returns a scale from 0-8.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.RankEvent.TradeLocalised">
+            <summary>
+            The rank within Trade the commander has.
+            Returns the localised title.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.RankEvent.Exploration">
+            <summary>
+            The rank within Exploration the commander has.
+            Returns a scale from 0-8.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.RankEvent.ExplorationLocalised">
+            <summary>
+            The rank within Explore the commander has.
+            Returns the localised title.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.RankEvent.Empire">
+            <summary>
+            The rank within the Empire the commander has.
+            Returns a scale from 0-14.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.RankEvent.EmpireLocalised">
+            <summary>
+            The rank within the Empire the commander has.
+            Returns the localised title.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.RankEvent.Federation">
+            <summary>
+            The rank within the Federation the commander has.
+            Returns a scale from 0-14.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.RankEvent.FederationLocalised">
+            <summary>
+            The rank within the Federation the commander has.
+            Returns the localised title.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.RankEvent.Cqc">
+            <summary>
+            The rank within the Federation the commander has.
+            Returns a scale from 0-8.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.ReputationEvent">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ReputationEvent.Empire">
+            <summary>
+            The commander's reputation with the Empire.
+            Goes from -100-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ReputationEvent.EmpireLocalised">
+            <summary>
+            The commander's localised title reputation with the Empire.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ReputationEvent.Federation">
+            <summary>
+            The commander's reputation with the Federation.
+            Goes from -100-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ReputationEvent.FederationLocalised">
+            <summary>
+            The commander's localised title reputation with the Federation.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ReputationEvent.Independent">
+            <summary>
+            The commander's reputation with the Independent.
+            Goes from -100-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ReputationEvent.IndependentLocalised">
+            <summary>
+            The commander's localised title reputation with the Independent.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ReputationEvent.Alliance">
+            <summary>
+            The commander's reputation with the Alliance.
+            Goes from -100-100.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.ReputationEvent.AllianceLocalised">
+            <summary>
+            The commander's localised title reputation with the Alliance.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsBankAccount">
+            <summary>
+            Holds statistics on the commander's bank account.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsBankAccount.CurrentWealth">
+            <summary>
+            The total amount of wealth the commander has.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsBankAccount.SpentOnShips">
+            <summary>
+            The total amount of credits spent on ships.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsBankAccount.SpentOnOutfitting">
+            <summary>
+            The total amount of credits spent on ships.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsBankAccount.SpentOnRepairs">
+            <summary>
+            The total amount of credits spent on ship repairs.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsBankAccount.SpentOnFuel">
+            <summary>
+            The total amount of credits spent on refueling.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsBankAccount.SpentOnAmmoConsumables">
+            <summary>
+            The total amount of credits spent on ammunition.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsBankAccount.InsuranceClaims">
+            <summary>
+            The total amount of times insurance has been used.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsBankAccount.SpentOnInsurance">
+            <summary>
+            The total amount of credits spent on insurance.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsBankAccount.OwnedShipCount">
+            <summary>
+            The total amount of ships the commander has owned.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsCombat">
+            <summary>
+            Holds statistics on the commander's combat.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCombat.BountiesClaimed">
+            <summary>
+            The total amount of bounties claimed.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCombat.BountyHuntingProfit">
+            <summary>
+            The total amount of profit made from bounties.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCombat.CombatBonds">
+            <summary>
+            The total amount of combat bonds claimed.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCombat.CombatBondProfits">
+            <summary>
+            The total amount of profit made from combat bonds.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCombat.Assassinations">
+            <summary>
+            The total amount of assassinations done.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCombat.AssassinationProfits">
+            <summary>
+            The total amount of profit made from assassinations.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCombat.HighestSingleReward">
+            <summary>
+            The highest reward ever rewarded to the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCombat.SkimmersKilled">
+            <summary>
+            The total amount of skimmers destroyed.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsCrafting">
+            <summary>
+            Contains statistics on the commander's crafting with engineers.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrafting.CountOfUsedEngineers">
+            <summary>
+            The amount of unique engineers used.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrafting.RecipesGenerated">
+            <summary>
+            The amount of recipes generated with engineers.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrafting.RecipesGeneratedRank1">
+            <summary>
+            The amount of recipes generated at rank 1.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrafting.RecipesGeneratedRank2">
+            <summary>
+            The amount of recipes generated at rank 2.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrafting.RecipesGeneratedRank3">
+            <summary>
+            The amount of recipes generated at rank 3.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrafting.RecipesGeneratedRank4">
+            <summary>
+            The amount of recipes generated at rank 4.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrafting.RecipesGeneratedRank5">
+            <summary>
+            The amount of recipes generated at rank 5.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsCrew">
+            <summary>
+            Contains statistics on the commander's NPC crew.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrew.TotalWages">
+            <summary>
+            The total amount of wages spent on NPC crew.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrew.Hired">
+            <summary>
+            The total amount of NPC crew hired.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrew.Fired">
+            <summary>
+            The total amount of NPC crew fired.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrew.Died">
+            <summary>
+            The total amount of NPC crew that has died.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsCrime">
+            <summary>
+            Holds statistics on the commander's crime.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrime.Notoriety">
+            <summary>
+            Unknown.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrime.Fines">
+            <summary>
+            The total amount of fines issued to the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrime.TotalFines">
+            <summary>
+            The total amount of fines in credits. 
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrime.BountiesReceived">
+            <summary>
+            The total amount of bounties issued to the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrime.TotalBounties">
+            <summary>
+            The total amount of bounties in credits.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsCrime.HighestBounty">
+            <summary>
+            The highest bounty ever issued to the commander.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsExploration">
+            <summary>
+            Holds statistics on the commander's exploration.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsExploration.SystemsVisited">
+            <summary>
+            The total amount of systems visited.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsExploration.ExplorationProfits">
+            <summary>
+            The total amount of profit gained by exploration.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsExploration.PlanetsScannedToLevel2">
+            <summary>
+            The total amount of planets scanned to level 2.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsExploration.PlanetsScannedToLevel3">
+            <summary>
+            The total amount of planets scanned to level 3.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsExploration.EfficientScans">
+            <summary>
+            The total amount of efficient scans done by.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsExploration.HighestPayout">
+            <summary>
+            The highest payout ever received by the commander.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsExploration.TotalHyperspaceDistance">
+            <summary>
+            The total amount of distance jumped in light-years.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsExploration.TotalHyperspaceJumps">
+            <summary>
+            The total amount of hyperspace jumps made.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsExploration.GreatestDistanceFromStart">
+            <summary>
+            The greatest distance from the starting location in light-years.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsExploration.TimePlayed">
+            <summary>
+            The total amount of seconds played.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsEvent">
+            <summary>
+            This event is written when the game has started.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.BankAccount">
+            <summary>
+            Contains statistics on the commander's bank account.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsBankAccount"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.Combat">
+            <summary>
+            Contains statistics on the commander's combat.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsCombat"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.StatisticsCrime">
+            <summary>
+            Contains statistics on the commander's crimes.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsCrime"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.Smuggling">
+            <summary>
+            Contains statistics on the commander's smuggling.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsSmuggling"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.Trading">
+            <summary>
+            Contains statistics on the commander's trading.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsTrading"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.Mining">
+            <summary>
+            Contains statistics on the commander's mining.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsMining"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.Exploration">
+            <summary>
+            Contains statistics on the commander's exploration.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsExploration"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.Passengers">
+            <summary>
+            Contains statistics on the commander's passenger missions.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsPassengers"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.SearchAndRescue">
+            <summary>
+            Contains statistics on the commander's search and rescue.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsSearchAndRescue"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.ThargoidEncounters">
+            <summary>
+            Contains statistics on the commander's thargoid encounters.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsThargoidEncounters"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.Crafting">
+            <summary>
+            Contains statistics on the commander's crafting with engineers.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsCrafting"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.Crew">
+            <summary>
+            Contains statistics on the commander's NPC crew.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsCrew"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.MultiCrew">
+            <summary>
+            Contains statistics on the commander's multicrew.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsMultiCrew"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsEvent.MaterialTrader">
+            <summary>
+            Contains statistics on the commander's material trades.
+            </summary>
+            <see cref="T:EliteAPI.Event.Models.Startup.StatisticsMaterialTrader"/>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsMaterialTrader">
+            <summary>
+            Contains statistics on the commander's material trades.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMaterialTrader.TradesCompleted">
+            <summary>
+            The total amount of trades.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMaterialTrader.MaterialsTraded">
+            <summary>
+            The total amount of materials traded.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMaterialTrader.EncodedMaterialsTraded">
+            <summary>
+            The total amount of encoded materials traded.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMaterialTrader.RawMaterialsTraded">
+            <summary>
+            The total amount of raw materials traded.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMaterialTrader.Grade1Traded">
+            <summary>
+            The total amount of grade 1 materials traded.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMaterialTrader.Grade2Traded">
+            <summary>
+            The total amount of grade 2 materials traded.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMaterialTrader.Grade3Traded">
+            <summary>
+            The total amount of grade 3 materials traded.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMaterialTrader.Grade4Traded">
+            <summary>
+            The total amount of grade 4 materials traded.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMaterialTrader.Grade5Traded">
+            <summary>
+            The total amount of grade 5 materials traded.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsMining">
+            <summary>
+            Holds statistics on the commander's mining.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMining.MiningProfits">
+            <summary>
+            The total amount of profit made while mining.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMining.QuantityMined">
+            <summary>
+            The total amount of resources mined.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMining.MaterialsCollected">
+            <summary>
+            The total amount of materials collected.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsMultiCrew">
+            <summary>
+            Contains statistics on the commander's multicrew.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMultiCrew.TimeTotal">
+            <summary>
+            The total amount of seconds spent in multicrew.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMultiCrew.GunnerTimeTotal">
+            <summary>
+            The total amount of seconds spent as a multicrew gunner.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMultiCrew.FighterTimeTotal">
+            <summary>
+            The total amount of seconds spent in a multicrew fighter.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMultiCrew.CreditsTotal">
+            <summary>
+            The total amount of profit made.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsMultiCrew.FinesTotal">
+            <summary>
+            The total amount of fines.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsPassengers">
+            <summary>
+            Contains statistics on the commander's passenger missions.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsPassengers.PassengersMissionsAccepted">
+            <summary>
+            The amount of passenger missions done.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsPassengers.PassengersMissionsDisgruntled">
+            <summary>
+            The amount of passenger missions cancelled.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsPassengers.PassengersMissionsBulk">
+            <summary>
+            The about of bulk passenger missions done.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsPassengers.PassengersMissionsVip">
+            <summary>
+            The amount of VIP passenger missions done.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsPassengers.PassengersMissionsDelivered">
+            <summary>
+            The amount of passenger missions completed.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsPassengers.PassengersMissionsEjected">
+            <summary>
+            The amount of passenger missions ejected.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsSearchAndRescue">
+            <summary>
+            Contains statistics on the commander's searches and rescues.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsSearchAndRescue.SearchRescueTraded">
+            <summary>
+            The amount of search and rescues traded.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsSearchAndRescue.SearchRescueProfit">
+            <summary>
+            The total amount of profit made from search and rescue.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsSearchAndRescue.SearchRescueCount">
+            <summary>
+            The total amount of search and rescue.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsSmuggling">
+            <summary>
+            Hold statistics on the commander's smuggling.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsSmuggling.BlackMarketsTradedWith">
+            <summary>
+            The total amount of black markets interacted with.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsSmuggling.BlackMarketsProfits">
+            <summary>
+            The total amount of profit made from black markets.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsSmuggling.ResourcesSmuggled">
+            <summary>
+            The total amount of resources smuggled.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsSmuggling.AverageProfit">
+            <summary>
+            The average amount of profit made from smuggling.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsSmuggling.HighestSingleTransaction">
+            <summary>
+            The highest transaction ever done by the commander while smuggling.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsThargoidEncounters">
+            <summary>
+            Holds statistics on the commander's thargoid encounters.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsThargoidEncounters.Total">
+            <summary>
+            The total amount of thargoids encountered.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsThargoidEncounters.LastSystem">
+            <summary>
+            The last system a thargoid had been encountered.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsThargoidEncounters.LastTimestamp">
+            <summary>
+            The last in-game timestamp a thargoid had been encountered.
+            </summary>
+            <example>3305-05-03 10:01</example>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsThargoidEncounters.LastShip">
+            <summary>
+            The ship in which the last thargoid was encountered.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsThargoidEncounters.ScoutCount">
+            <summary>
+            The amount of thargoids in the scout.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Startup.StatisticsTrading">
+            <summary>
+            Holds statistics on the commander's trading.
+            </summary>
+            <see cref="!:StatisticsInfo"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsTrading.MarketsTradedWith">
+            <summary>
+            The total amount of markets traded with.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsTrading.MarketProfits">
+            <summary>
+            The total amount of profit made from trading.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsTrading.ResourcesTraded">
+            <summary>
+            The total amount of resources traded.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsTrading.AverageProfit">
+            <summary>
+            The average profit made while trading.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Startup.StatisticsTrading.HighestSingleTransaction">
+            <summary>
+            The highest transaction ever made while trading by the commander.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Travel.ApproachBodyEvent">
+            <summary>
+            This event is written when in supercruise when entering a body's Orbital Zone.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.ApproachBodyEvent.StarSystem">
+            <summary>
+            The starsystem of the body.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.ApproachBodyEvent.SystemAddress">
+            <summary>
+            The address of the starsystem.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.ApproachBodyEvent.Body">
+            <summary>
+            The name of the body that is being approached.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.ApproachBodyEvent.BodyId">
+            <summary>
+            The ID of the body that is being approached.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.Travel.DockedEvent">
+            <summary>
+            This event is written when landed at a landing pad in a station, output or surface settlement.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.StationName">
+            <summary>
+            The name of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.MarketId">
+            <summary>
+            The ID of the station market.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.SystemAddress">
+            <summary>
+            The address of the system.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.StationType">
+            <summary>
+            The type of station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.StarSystem">
+            <summary>
+            The starsystem of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.CockpitBreach">
+            <summary>
+            Whether the cockpit is breached upon docking.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.Wanted">
+            <summary>
+            Whether the commander is landed upon docking.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.ActiveFine">
+            <summary>
+            Whether the commander has an active fine upon docking.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.StationFaction">
+            <summary>
+            Holds information on the station's main faction.
+            </summary>
+            <see cref="P:EliteAPI.Event.Models.Travel.DockedEvent.StationFaction"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.StationAllegiance">
+            <summary>
+            The station's allegiance.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.StationEconomy">
+            <summary>
+            The station's primary economy.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.StationEconomyLocalised">
+            <summary>
+            The station's primary economy localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.StationEconomies">
+            <summary>
+            A list of station economies.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.StationGovernment">
+            <summary>
+            The station's government.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.StationGovernmentLocalised">
+            <summary>
+            The station's government localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.StationServices">
+            <summary>
+            A list of services this station has.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.Anonymously">
+            <summary>
+            Whether the commander has limited access to the station services.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedEvent.DistFromStarLs">
+            <summary>
+            This station's distance from the primary star in this starsystem.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedStationEconomy.Name">
+            <summary>
+            The type of economy.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedStationEconomy.NameLocalised">
+            <summary>
+            The type of economy localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedStationEconomy.Proportion">
+            <summary>
+            The proportion of this economy in the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedStationFaction.Name">
+            <summary>
+            The name of the faction.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockedStationFaction.State">
+            <summary>
+            The state of the faction.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingCancelledEvent.MarketId">
+            <summary>
+            The id of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingCancelledEvent.StationName">
+            <summary>
+            The name of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingCancelledEvent.StationType">
+            <summary>
+            The type of station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingDeniedEvent.Reason">
+            <summary>
+            The reason why the docking request was denied.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingDeniedEvent.MarketId">
+            <summary>
+            The id of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingDeniedEvent.StationName">
+            <summary>
+            The name of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingDeniedEvent.StationType">
+            <summary>
+            The type of station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingGrantedEvent.LandingPad">
+            <summary>
+            The pad number.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingGrantedEvent.MarketId">
+            <summary>
+            The id of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingGrantedEvent.StationName">
+            <summary>
+            The name of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingGrantedEvent.StationType">
+            <summary>
+            The type of station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingRequestedEvent.MarketId">
+            <summary>
+            The id of the market.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingRequestedEvent.StationName">
+            <summary>
+            The name of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingRequestedEvent.StationType">
+            <summary>
+            The type of station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingTimeoutEvent.MarketId">
+            <summary>
+            The id of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingTimeoutEvent.StationName">
+            <summary>
+            The name of the station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.DockingTimeoutEvent.StationType">
+            <summary>
+            The type of station.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.StarSystem">
+            <summary>
+            The name of the destination star system.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.SystemAddress">
+            <summary>
+            The address of the destination star system.aW
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.StarPos">
+            <summary>
+            The position of the destination star system in light years.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.Body">
+            <summary>
+            The name of the destination star.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.JumpDist">
+            <summary>
+            The total distance jumped.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.FuelUsed">
+            <summary>
+            The amount of fuel used.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.FuelLevel">
+            <summary>
+            The total amount of remaining fuel in the ship.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.BoostUsed">
+            <summary>
+            Whether a FSD boost was used.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.FsdJumpSystemFaction">
+            <summary>
+            The faction controlling the destination system.
+            </summary>
+            <see cref="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.FsdJumpSystemFaction"/>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.SystemAllegiance">
+            <summary>
+            The allegiance of the system.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.SystemEconomy">
+            <summary>
+            The system's main economy.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.SystemEconomyLocalised">
+            <summary>
+            The system's main economy localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.SystemSecondEconomy">
+            <summary>
+            The system's secondary economy.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.SystemSecondEconomyLocalised">
+            <summary>
+            The system's secondary economy localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.SystemGovernment">
+            <summary>
+            The system's government.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpEvent.SystemGovernmentLocalised">
+            <summary>
+            The system's government localised.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpSystemFaction.Name">
+            <summary>
+            The name of the faction.
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Travel.FSDJumpSystemFaction.FactionState">
+            <summary>
+            The state of the faction.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Models.VesselType">
+            <summary>
+            The type of vessel, either 'Ship' or 'SRV'.
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Processor.Abstractions.IEventProcessor">
+            <summary>
+            Invokes registered event-handlers
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Event.Processor.Abstractions.IEventProcessor.RegisterHandlers">
+            <summary>
+            Finds, registers, and caches the event-handlers
             </summary>
             <returns></returns>
         </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetEventVariables(System.Object)">
+        <member name="M:EliteAPI.Event.Processor.Abstractions.IEventProcessor.InvokeHandler(EliteAPI.Event.Models.Abstractions.EventBase)">
             <summary>
-            Gets all the variables to be set from an event.
+            Invokes the registered handler for this event
             </summary>
-            <param name="e">A list of variables</param>
-            <returns></returns>
+            <param name="eventBase">The event to be invoked</param>
         </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetEventName(System.Object)">
+        <member name="P:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.Cache">
             <summary>
-            Gets the name from an event.
+            Methods to invoke, mapped to the name of a event
             </summary>
-            <param name="e">The name of the event.</param>
-            <returns></returns>
         </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetIni">
-            <summary>
-            Returns the configuration file content.
-            </summary>
-            <returns></returns>
+        <member name="M:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.InvokeHandler(EliteAPI.Event.Models.Abstractions.EventBase)">
+            <inheritdoc />
         </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetJournalFolder">
-            <summary>
-            Gets the journal directory from the configuration file.
-            </summary>
-            <returns></returns>
+        <member name="T:EliteAPI.Event.Processor.AttributeEventProcessor">
+            <inheritdoc />
         </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.GetLogFolder">
-            <summary>
-            Gets the log directory from the configuration file.
-            </summary>
-            <returns></returns>
+        <member name="M:EliteAPI.Event.Processor.AttributeEventProcessor.RegisterHandlers">
+            <inheritdoc />
         </member>
-        <member name="M:EliteAPI.ThirdParty.ThirdPartyWrapper.ProcessCall(System.String)">
+        <member name="T:EliteAPI.Event.Processor.EventsEventProcessor">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Event.Processor.EventsEventProcessor.RegisterHandlers">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Event.Provider.Abstractions.IEventProvider">
             <summary>
-            Processes third party plugin functions
+            Converts JSON events to <see cref="T:EliteAPI.Event.Models.Abstractions.EventBase"/> events
             </summary>
-            <param name="content"></param>
+        </member>
+        <member name="M:EliteAPI.Event.Provider.Abstractions.IEventProvider.ProcessJsonEvent(System.String)">
+            <summary>
+            Processes a json event to <see cref="T:EliteAPI.Event.Models.Abstractions.EventBase"/>
+            </summary>
+            <param name="json">The json event from the journal</param>
+        </member>
+        <member name="M:EliteAPI.Event.Provider.Abstractions.IEventProvider.RegisterEventClasses">
+            <summary>
+            Caches all the event classes
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Provider.EventProvider">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Event.Provider.EventProvider.ProcessJsonEvent(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Event.Provider.EventProvider.RegisterEventClasses">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Journal.Directory.Abstractions.IJournalDirectoryProvider">
+            <summary>
+            Provides the journal directory
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Journal.Directory.Abstractions.IJournalDirectoryProvider.FindJournalDirectory">
+            <summary>
+            Finds the journal directory containing all the journal and support files
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Journal.Directory.JournalDirectoryProvider">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Journal.Directory.JournalDirectoryProvider.FindJournalDirectory">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor">
+            <summary>
+            Processes journal files
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry">
+            <summary>
+            Triggered when a new json entry is made in the active journal file
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.ProcessJournalFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified journal file to <see cref="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry"/> and invokes <see cref="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry"/> when needed
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Journal.Processor.JournalProcessor">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Journal.Processor.JournalProcessor.NewJournalEntry">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Journal.Processor.JournalProcessor.ProcessJournalFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Journal.Provider.Abstractions.IJournalProvider">
+            <summary>
+            Finds the journal and support files
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Journal.Provider.Abstractions.IJournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the active journal file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
+        <member name="T:EliteAPI.Journal.Provider.JournalProvider">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.Processor.Abstractions.IStatusProcessor">
+            <summary>
+            Processes status files
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated">
+            <summary>
+            Triggered when the status file is updated
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.CargoUpdated">
+            <summary>
+            Triggered when the cargo file is updated
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.MarketUpdated">
+            <summary>
+            Triggered when the market file is updated
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipyardUpdated">
+            <summary>
+            Triggered when the shipyard file is updated
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated">
+            <summary>
+            Triggered when the outfitting file is updated
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified status file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated"/> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated"/> when needed
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessCargoFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified cargo file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.CargoUpdated"/> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.CargoUpdated"/> when needed
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessMarketFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified market file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.MarketUpdated"/> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.MarketUpdated"/> when needed
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessShipyardFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified shipyard file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipyardUpdated"/> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipyardUpdated"/> when needed
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessOutfittingFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified outfitting file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated"/> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated"/> when needed
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Processor.StatusProcessor">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.StatusUpdated">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.CargoUpdated">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.MarketUpdated">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.ShipyardUpdated">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.OutfittingUpdated">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessCargoFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessMarketFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessShipyardFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessOutfittingFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.Provider.Abstractions.IStatusProvider">
+            <summary>
+            Provides status files
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindStatusFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the status file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindMarketFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the market file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindCargoFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the cargo file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindShipyardFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the shipyard file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindOutfittingFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the outfitting file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
+        <member name="T:EliteAPI.Status.Provider.StatusProvider">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindStatusFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindMarketFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindCargoFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindShipyardFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindOutfittingFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
         </member>
     </members>
 </doc>

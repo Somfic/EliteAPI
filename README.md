@@ -1,23 +1,120 @@
-
-## Check the [documentation](https://somfic.github.io/docs/EliteAPI/index.html) for information on installation, usage and more.
-
-<img src="https://i.imgur.com/keDXwjY.png" align="right"
+<div text-align="center">
+<img src="https://github.com/EliteAPI/EliteAPI/blob/master/Icons/logo_gradient_shine.jpg?raw=true" align="right"
      title="EliteAPI by Somfic" width="280" height="280">
-# EliteAPI
-A powerful event based API for [Elite: Dangerous](https://www.elitedangerous.com/) that hooks into the [Player Journal](http://edcodex.info/?m=doc) and other log files. Created by CMDR [Somfic](https://github.com/Somfic).
+<h1 align="center">EliteAPI</h1>
+     
+<p align="center"><i>An Elite: Dangerous API library for .NET</i></p>
+     
+<p align="center">
+     <a href="https://www.discord.gg/jwpFUPZ">
+          <img alt="Discord" src="https://img.shields.io/discord/498422961297031168?color=%23f2a529&label=DISCORD&style=for-the-badge">
+     </a>
+     <a href="https://app.codacy.com/gh/EliteAPI/EliteAPI?utm_source=github.com&utm_medium=referral&utm_content=EliteAPI/EliteAPI&utm_campaign=Badge_Grade_Dashboard">
+          <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/cd6364ab2d6a46a18627e6c8454f5672?color=%23f2a529&label=CODE%20QUALITY&style=for-the-badge">
+     </a>
+     <a href="https://github.com/EliteAPI/EliteAPI/releases">
+        <img alt="GitHub release" src="https://img.shields.io/github/v/release/EliteAPI/EliteAPI?color=%23f2a529&label=VERSION&style=for-the-badge">
+     </a>
+     <a href="https://github.com/EliteAPI/EliteAPI/blob/master/LICENSE">
+         <img alt="GitHub" src="https://img.shields.io/github/license/EliteAPI/EliteAPI?color=%23f2a529&label=LICENSE&style=for-the-badge">
+     </a>
+</p>
+<p>When playing Elite: Dangerous, many in-game events are outputted to the Journal log files. EliteAPI makes use of these files to provide live information about in-game events in a .NET environment. 
+</div>
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/480f394b3d044412afb33351120253f9)](https://app.codacy.com/app/EliteAPI/EliteAPI?utm_source=github.com&utm_medium=referral&utm_content=Somfic/EliteAPI&utm_campaign=Badge_Grade_Dashboard) [![Discord](https://img.shields.io/discord/498422961297031168.svg)](https://discord.gg/jwpFUPZ) [![GitHub issues](https://img.shields.io/github/issues/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/issues) [![GitHub forks](https://img.shields.io/github/forks/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/network) [![GitHub stars](https://img.shields.io/github/stars/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/stargazers) [![GitHub license](https://img.shields.io/github/license/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/blob/master/LICENSE)
+## Installation
+EliteAPI is distributed through the NuGet package manager; the recommended way to install this library. Alternatively, the library could also be compiled to retrieve the .dll file.
 
-[![Nuget](https://img.shields.io/nuget/v/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/) [![GitHub tag](https://img.shields.io/github/tag/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/releases) [![GitHub last commit](https://img.shields.io/github/last-commit/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/commits/master) [![GitHub Release Date](https://img.shields.io/github/release-date/EliteAPI/EliteAPI.svg)](https://github.com/EliteAPI/EliteAPI/releases) [![NuGet](https://img.shields.io/nuget/dt/EliteAPI.svg)](https://www.nuget.org/packages/EliteAPI/)
+### .NET Platform
+EliteAPI targets .NET Standard 2.0. Creating applications using the latest version of .NET Core is the most recommended. If needed, .NET Framework 4.6.1 or higher is also supported.
 
-EliteAPI's goal is to greatly reduce the time it takes for programmers to hook into the game by doing all the parsing and deserializing of the Elite: Dangerous log files for you, leaving you to fully focus on your application. 
+### Installation using NuGet
+EliteAPI is listed as `EliteAPI` on NuGet. A reference to the library can be made in a number of different ways through NuGet, here are the most common ones. 
+|Platform|Syntax|
+|---|---|
+|Package manager|`Install-Package EliteAPI`|
+|.NET CLI|`dotnet add package EliteAPI`|
+|Package reference|`<PackageReference Include="EliteAPI"/>`|
+|Paket CLI|`paket add EliteAPI`|
 
-EliteAPI currently supports all *180* possible events, as well as *real time tracking* of items like the landing gear, cargo scoop, night vision, mass lock, etc, which are all available in VoiceAttack and VoiceMacro from the get-go. It also has an *[Inara](https://inara.cz/inara-api/) API* and *[Discord Rich Presence](https://discordapp.com/rich-presence) client* built in. As stated before EliteAPI comes as both a .NET library as a VoiceAttack & VoiceMacro plugin, giving you a lot of possibilities to create tools you otherwise would need months for to create.
 
-The project is completely open-source and is hosted on [GitHub](https://github.com/EliteAPI/EliteAPI). The .NET library currently has more than 2,000 downloads on [NuGet](https://www.nuget.org/packages/EliteAPI/) already!
+## Getting started
 
-- You can download the *.NET library* via [GitHub](https://github.com/EliteAPI/EliteAPI/releases) or [NuGet](https://www.nuget.org/packages/EliteAPI/).
-- You can download the *VoiceAttack plugin* (codename *EliteVA*) via [GitHub](https://github.com/EliteAPI/EliteAPI/releases) (*EliteVA-setup.exe*).
-- You can download the *VoiceMacro plugin* (codename *EliteMacro*) via [GitHub](https://github.com/EliteAPI/EliteAPI/releases) (*EliteMacro-setup.exe*) (***Requires beta version +1.3.x***).
+### Dependency Injection
+EliteAPI is bundeled with Depedency Injection. It is recommended that you use a [host](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/generic-host?view=aspnetcore-3.1) when working with the API. EliteAPI contains an extension method `AddEliteAPI()` that adds all the required services to your `IServiceCollection`. 
 
-If you have any questions / ideas / issues, please do not hesitate to contact me on the *[EliteAPI discord](https://discordapp.com/invite/jwpFUPZ)*.
+Below is an example of how to create a host in a .NET Core environment, and how to set up the API.
+
+```cs
+using EliteAPI;
+using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+```
+```cs
+private static async Task Main(string[] args) {
+
+     // Create a host that uses EliteAPI
+     IHost host = Host.CreateDefaultBuilder()
+          .ConfigureServices((context, service) =>
+          {
+               service.AddEliteAPI();
+               service.AddTransient<MyAppService>(); // Example
+          })
+          .Build();
+
+     // Get the EliteDangerousAPI api object
+     var api = ActivatorUtilities.CreateInstance<EliteDangerousAPI>(host.Services);
+     
+     // Start the api
+     await api.StartAsync();
+     
+     // Run forever
+     await Task.Delay(-1);
+}
+```
+
+### Hooking into an event
+EliteAPI constantly scans the Journal log files for new in-game events. Whenever a new event is detected it is invoked in the api. There are multiple ways to hook into an event.
+
+#### Through events
+EliteAPI has an individual event for every event logged in the Journal files. These events can be found in the `IEliteDangerousAPI.Events` property. The event is automatically invoked whenever the specified action is peformed in-game.
+
+```cs
+api.Events.BountyEvent += (sender, e) =>
+{
+     // Triggered whenever we collect a bounty
+     Console.WriteLine("Collected {0} from {1}", e.TotalReward, e.Target);
+
+     var gear = api.Ship.LandingGear;
+};
+```
+
+#### Through attributes
+In-game events can be assigned to specific methods using the `EliteDangerousEvent` attribute. The method must be public, in a public class that derives from `EliteDangerousEventModule` and must also be added through the EliteAPI configuration. This registeres this class as a service to your `IServiceCollection`.
+
+```cs
+service.AddEliteAPI(config => {
+     config.AddEventModule<CombatModule>();
+});
+```
+
+Which in-game event triggers the method is based on the method's first parameter type. 
+
+```cs
+public class CombatModule : EliteDangerousEventModule {
+
+     public CombatModule(IServiceProvider services) : base(services) {  }
+
+     [EliteDangerousEvent]
+     public async Task NewBounty(BountyEvent e) {
+          // Triggered whenever we collect a bounty
+          Console.WriteLine("Collected {0} from {1}", e.TotalReward, e.Target);
+
+          var gear = EliteAPI.Ship.LandingGear;
+     }
+}
+```
+
+## License
+EliteAPI is distributed under the MIT license.

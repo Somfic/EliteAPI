@@ -32,7 +32,7 @@ namespace EliteAPI.Event.Processor
         {
             try
             {
-                _log.LogDebug("Invoking AllEvent for {event}", eventBase.Event);
+                _log.LogTrace("Invoking AllEvent for {event}", eventBase.Event);
                 _eventHandler.InvokeAllEvent(eventBase);
                 return Task.CompletedTask;
             }

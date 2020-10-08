@@ -86,7 +86,7 @@ api.Events.BountyEvent += (sender, e) =>
      // Triggered whenever we collect a bounty
      Console.WriteLine("Collected {0} from {1}", e.TotalReward, e.Target);
 
-     var gear = api.Ship.LandingGear;
+     var gear = api.Status.Gear;
 };
 ```
 
@@ -111,7 +111,7 @@ public class CombatModule : EliteDangerousEventModule {
           // Triggered whenever we collect a bounty
           Console.WriteLine("Collected {0} from {1}", e.TotalReward, e.Target);
 
-          var gear = EliteAPI.Ship.LandingGear;
+          var gear = EliteAPI.Status.Gear;
      }
 }
 ```

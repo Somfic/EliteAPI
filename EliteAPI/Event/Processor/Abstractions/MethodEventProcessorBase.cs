@@ -65,7 +65,13 @@ namespace EliteAPI.Event.Processor.Abstractions
                 string methodName = $"{parentClass.FullName}:{method.Name}";
                 object parentClassInstance = _services.GetRequiredService(parentClass);
 
-                _log.LogDebug("Invoking {method} for {event} event", methodName, eventBase.Event);
+                if(method.DeclaringType.Namespace.StartsWith("EliteAPI"))
+                {
+                    _log.LogTrace("Invoking {method} for {event} event", methodName, eventBase.Event);
+                } else
+                {
+                    _log.LogDebug("Invoking {method} for {event} event", methodName, eventBase.Event);
+                }
 
                 method.Invoke(parentClassInstance, new object[] {eventBase});
             }

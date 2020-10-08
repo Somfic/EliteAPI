@@ -12,6 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v1.7.2
+    
     - name: Publish to NuGet
       uses: brandedoutcast/publish-nuget@v2.5.5
       with:

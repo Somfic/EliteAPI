@@ -32,12 +32,6 @@
     <Reference Include="Microsoft.CSharp">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Microsoft.CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Somfic">
-      <HintPath>..\..\Somfic\Somfic\bin\Debug\netstandard2.0\Somfic.dll</HintPath>
-    </Reference>
-    <Reference Include="vmAPI">
-      <HintPath>..\lib\vmAPI.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,6 @@
-﻿using EliteAPI.Event.Models.Abstractions;
+﻿using System.Collections.Generic;
+using EliteAPI.Event.Models.Abstractions;
+using EliteAPI.Status.Models.JsonConverters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -49,14 +51,12 @@ namespace EliteAPI.Status.Models
             return Flags.HasFlag((ShipStatusFlags)(1 << bit));
         }
 
-        [JsonProperty("Pips")] 
-        private int[] _pips { get; }
-
-        [JsonIgnore] 
-        public ShipPips Pips => new ShipPips(_pips);
+        [JsonProperty("Pips")]
+        [JsonConverter(typeof(PipsConverter))]
+        public ShipPips Pips { get; private set; }
 
         [JsonProperty("FireGroup")]
-        public int FireGroup { get; }
+        public int FireGroup { get; private set; }
 
         [JsonProperty("GuiFocus")]
         [JsonConverter(typeof(StringEnumConverter))]

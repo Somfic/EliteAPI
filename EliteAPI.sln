@@ -11,11 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EliteAPI.Tests", "EliteAPI.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{C23F0D62-4F1E-42E2-82A5-A1F4E9283363}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example 2 - Event Modules Architecture", "Example 2 - Event Modules Architecture\Example 2 - Event Modules Architecture.csproj", "{BC81948F-E319-4EC9-98D7-7F9AAF0D78D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example 2 - Event Modules Architecture", "Example 2 - Event Modules Architecture\Example 2 - Event Modules Architecture.csproj", "{BC81948F-E319-4EC9-98D7-7F9AAF0D78D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example 1 - Basic Event Processing", "Example 1 - Basic event processing\Example 1 - Basic Event Processing.csproj", "{63C0CAC5-AE05-4205-9870-5271EDDA6F6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example 1 - Basic Event Processing", "Example 1 - Basic event processing\Example 1 - Basic Event Processing.csproj", "{63C0CAC5-AE05-4205-9870-5271EDDA6F6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example 3 - Using Ship Status", "Example 3 - Using Ship Status\Example 3 - Using Ship Status.csproj", "{6AB4BFB5-53E4-4E78-90D9-D72174EC1BA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example 3 - Using Ship Status", "Example 3 - Using Ship Status\Example 3 - Using Ship Status.csproj", "{6AB4BFB5-53E4-4E78-90D9-D72174EC1BA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{38D49A05-792A-487A-BF67-B1A7EE57867B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,14 @@ Global
 		{6AB4BFB5-53E4-4E78-90D9-D72174EC1BA9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6AB4BFB5-53E4-4E78-90D9-D72174EC1BA9}.Release|x86.ActiveCfg = Release|Any CPU
 		{6AB4BFB5-53E4-4E78-90D9-D72174EC1BA9}.Release|x86.Build.0 = Release|Any CPU
+		{38D49A05-792A-487A-BF67-B1A7EE57867B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38D49A05-792A-487A-BF67-B1A7EE57867B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38D49A05-792A-487A-BF67-B1A7EE57867B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{38D49A05-792A-487A-BF67-B1A7EE57867B}.Debug|x86.Build.0 = Debug|Any CPU
+		{38D49A05-792A-487A-BF67-B1A7EE57867B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38D49A05-792A-487A-BF67-B1A7EE57867B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38D49A05-792A-487A-BF67-B1A7EE57867B}.Release|x86.ActiveCfg = Release|Any CPU
+		{38D49A05-792A-487A-BF67-B1A7EE57867B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +84,7 @@ Global
 		{BC81948F-E319-4EC9-98D7-7F9AAF0D78D3} = {C23F0D62-4F1E-42E2-82A5-A1F4E9283363}
 		{63C0CAC5-AE05-4205-9870-5271EDDA6F6C} = {C23F0D62-4F1E-42E2-82A5-A1F4E9283363}
 		{6AB4BFB5-53E4-4E78-90D9-D72174EC1BA9} = {C23F0D62-4F1E-42E2-82A5-A1F4E9283363}
+		{38D49A05-792A-487A-BF67-B1A7EE57867B} = {05E03CDB-6B56-45A5-8C65-87D990B20220}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BCC51F1-912C-4035-9484-7A45F70F1790}

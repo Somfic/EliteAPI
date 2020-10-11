@@ -24,10 +24,11 @@ namespace EliteAPI.Event.Processor.Abstractions
             _services = services;
         }
 
+        /// <inheritdoc />
         public abstract Task RegisterHandlers();
 
         /// <inheritdoc />
-        public async Task InvokeHandler(EventBase eventBase)
+        public async Task InvokeHandler(EventBase eventBase, bool isWhileCatchingUp)
         {
             if (Cache == null) { await RegisterHandlers(); }
 

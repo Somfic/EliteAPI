@@ -116,5 +116,14 @@ public class CombatModule : EliteDangerousEventModule {
 }
 ```
 
+## Configuration
+EliteAPI can be configured using configuration files.
+
+```ini
+[EliteAPI]
+Journalpath = "W:\\"
+```
+
+
 ## License
 EliteAPI is distributed under the MIT license.

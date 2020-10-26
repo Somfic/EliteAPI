@@ -19,6 +19,7 @@ namespace EliteAPI.Event.Processor.Abstractions
         /// Invokes the registered handler for this event
         /// </summary>
         /// <param name="eventBase">The event to be invoked</param>
-        Task InvokeHandler(EventBase eventBase);
+        /// <param name="isWhileCatchingUp">Whether this event was ran before EliteAPI was started</param>
+        Task InvokeHandler(EventBase eventBase, bool isWhileCatchingUp);
     }
 }

@@ -87,8 +87,6 @@ namespace EliteAPI
         private FileInfo OutfittingFile { get; set; }
         private FileInfo ShipyardFile { get; set; }
 
-        private IEnumerable<FileInfo> SupportFiles { get; set; }
-
         private Exception PreInitializationException { get; }
         private Exception InitializationException { get; set; }
 
@@ -99,7 +97,7 @@ namespace EliteAPI
         {
             if (PreInitializationException != null)
             {
-                _log?.LogCritical(PreInitializationException, "EliteAPI could not be initialized");
+                _log?.LogCritical(PreInitializationException, "EliteAPI could not load required services");
                 throw PreInitializationException;
             }
 
@@ -166,6 +164,7 @@ namespace EliteAPI
             _log.LogInformation("EliteAPI has started");
         }
 
+        private bool _isFirstTick = true;
         private async Task DoTick()
         {
             try
@@ -178,7 +177,13 @@ namespace EliteAPI
                 await _statusProcessor.ProcessShipyardFile(ShipyardFile);
 
                 await SetJournalFile();
-                await _journalProcessor.ProcessJournalFile(JournalFile);
+                await _journalProcessor.ProcessJournalFile(JournalFile, _isFirstTick);
+
+                if (_isFirstTick)
+                {
+                    _log.LogInformation("EliteAPI has catched up to current session");
+                    _isFirstTick = false;
+                }
             }
             catch (Exception ex)
             {
@@ -213,14 +218,14 @@ namespace EliteAPI
             }
         }
 
-        private async void _journalProcessor_NewJournalEntry(object sender, string e)
+        private async void _journalProcessor_NewJournalEntry(object sender, JournalEntry e)
         {
             try
             {
-                EventBase eventBase = await _eventProvider.ProcessJsonEvent(e);
+                EventBase eventBase = await _eventProvider.ProcessJsonEvent(e.Json);
                 foreach (IEventProcessor eventProcessor in _eventProcessors)
                 {
-                    await eventProcessor.InvokeHandler(eventBase);
+                    await eventProcessor.InvokeHandler(eventBase, e.IsWhileCatchingUp);
                 }
             }
             catch (Exception ex)

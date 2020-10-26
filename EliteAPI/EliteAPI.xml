@@ -1867,18 +1867,22 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:EliteAPI.Event.Processor.Abstractions.IEventProcessor.InvokeHandler(EliteAPI.Event.Models.Abstractions.EventBase)">
+        <member name="M:EliteAPI.Event.Processor.Abstractions.IEventProcessor.InvokeHandler(EliteAPI.Event.Models.Abstractions.EventBase,System.Boolean)">
             <summary>
             Invokes the registered handler for this event
             </summary>
             <param name="eventBase">The event to be invoked</param>
+            <param name="isWhileCatchingUp">Whether this event was ran before EliteAPI was started</param>
         </member>
         <member name="P:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.Cache">
             <summary>
             Methods to invoke, mapped to the name of a event
             </summary>
         </member>
-        <member name="M:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.InvokeHandler(EliteAPI.Event.Models.Abstractions.EventBase)">
+        <member name="M:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.RegisterHandlers">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.InvokeHandler(EliteAPI.Event.Models.Abstractions.EventBase,System.Boolean)">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Event.Processor.AttributeEventProcessor">
@@ -1944,9 +1948,24 @@
             Triggered when a new json entry is made in the active journal file
             </summary>
         </member>
-        <member name="M:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.ProcessJournalFile(System.IO.FileInfo)">
+        <member name="M:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.ProcessJournalFile(System.IO.FileInfo,System.Boolean)">
             <summary>
             Hooks the specified journal file to <see cref="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry"/> and invokes <see cref="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry"/> when needed
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Journal.Processor.Abstractions.JournalEntry">
+            <summary>
+            A journal entry
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Journal.Processor.Abstractions.JournalEntry.Json">
+            <summary>
+            This entry's Json event
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Journal.Processor.Abstractions.JournalEntry.IsWhileCatchingUp">
+            <summary>
+            Whether this entry was ran before EliteAPI was started
             </summary>
         </member>
         <member name="T:EliteAPI.Journal.Processor.JournalProcessor">
@@ -1955,7 +1974,7 @@
         <member name="E:EliteAPI.Journal.Processor.JournalProcessor.NewJournalEntry">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Journal.Processor.JournalProcessor.ProcessJournalFile(System.IO.FileInfo)">
+        <member name="M:EliteAPI.Journal.Processor.JournalProcessor.ProcessJournalFile(System.IO.FileInfo,System.Boolean)">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Journal.Provider.Abstractions.IJournalProvider">

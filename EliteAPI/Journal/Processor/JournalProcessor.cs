@@ -11,7 +11,7 @@ namespace EliteAPI.Journal.Processor
     public class JournalProcessor : IJournalProcessor
     {
         /// <inheritdoc />
-        public event EventHandler<string> NewJournalEntry;
+        public event EventHandler<JournalEntry> NewJournalEntry;
 
         public JournalProcessor()
         {
@@ -21,16 +21,16 @@ namespace EliteAPI.Journal.Processor
         private readonly IDictionary<FileInfo, IList<string>> _cache;
 
         /// <inheritdoc />
-        public Task ProcessJournalFile(FileInfo journalFile)
+        public Task ProcessJournalFile(FileInfo journalFile, bool isWhileCatchingUp)
         {
             IEnumerable<string> journalContent = ReadAllLines(journalFile);
-            foreach (string journalEntry in journalContent)
+            foreach (string entry in journalContent)
             {
-                if (IsInCache(journalFile, journalEntry)) { continue; }
+                if (IsInCache(journalFile, entry)) { continue; }
 
-                AddToCache(journalFile, journalEntry);
+                AddToCache(journalFile, entry);
 
-                NewJournalEntry?.Invoke(this, journalEntry);
+                NewJournalEntry?.Invoke(this, new JournalEntry(entry, isWhileCatchingUp));
             }
 
             return Task.CompletedTask;

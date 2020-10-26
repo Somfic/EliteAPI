@@ -7,6 +7,7 @@ namespace EliteAPI.Event.Models
         Orbis,
         Coriolis,
         CraterOutpost,
-        FleetCarrier
+        FleetCarrier,
+        MegaShip
     }
 }

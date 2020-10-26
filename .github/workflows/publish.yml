@@ -1,4 +1,4 @@
-name: Publish to package manager
+name: Publish to NuGet
 
 on:
   push:
@@ -11,27 +11,11 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v1.7.2
-    
-    - name: Setup .NET Core CLI
-      uses: baruchiro/github-actions@0.0.1
-    
+
+    # Publish to NuGet
     - name: Publish to NuGet
       uses: brandedoutcast/publish-nuget@v2.5.5
       with:
         PROJECT_FILE_PATH: EliteAPI/EliteAPI.csproj
         PACKAGE_NAME: EliteAPI
         NUGET_KEY: ${{ secrets.NUGET_KEY }}
-      id: nuget
-
-    - name: Publish to Github Packages
-      uses: tanaka-takayoshi/nuget-publish-to-github-packages-action@v2.1
-      with:
-        nupkg-path: ${{ steps.nuget.PACKAGE_PATH }}
-        repo-owner: EliteAPI
-        gh-user: EliteAPI
-        token: ${{ secrets.PUBLISH_KEY }}
-
-        

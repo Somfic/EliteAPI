@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Example_2___Event_Modules_Architecture</RootNamespace>
+    <RootNamespace>Example2</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

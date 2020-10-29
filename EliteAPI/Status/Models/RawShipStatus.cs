@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using EliteAPI.Event.Models.Abstractions;
+﻿using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Status.Models.JsonConverters;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -78,7 +78,7 @@ namespace EliteAPI.Status.Models
 
         [JsonProperty("Heading")] public float Heading { get; private set; }
 
-        [JsonProperty("BodyName")] public string Body { get; private set; }
+        [JsonProperty("BodyName")] public string Body { get; private set; } = string.Empty;
 
         [JsonProperty("PlanetRadius")] public float BodyRadius { get; private set; }
     }

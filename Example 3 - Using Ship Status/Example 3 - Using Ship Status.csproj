@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Example_3___Using_Ship_Status</RootNamespace>
+    <RootNamespace>Example3</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

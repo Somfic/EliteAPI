@@ -13,7 +13,7 @@
     <Description>A powerful event based .NET API for Elite: Dangerous</Description>
     <Copyright>© Somfic 2020</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>3.0.0-alpha3</Version>
+    <Version>3.0.0-alpha4</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageIcon>logo_gradient_small.jpg</PackageIcon>
     <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
@@ -31,6 +31,12 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Somfic">
+      <HintPath>..\..\Somfic\Somfic\bin\Debug\netstandard2.0\Somfic.dll</HintPath>
+    </Reference>
+    <Reference Include="vmAPI">
+      <HintPath>..\lib\vmAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
 

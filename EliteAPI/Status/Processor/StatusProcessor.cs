@@ -48,6 +48,13 @@ namespace EliteAPI.Status.Processor
             if (!statusFile.Exists) { return; }
 
             string content = ReadAllText(statusFile);
+
+            if (string.IsNullOrWhiteSpace(content))
+            {
+                _log.LogTrace("Skipping status processing due to empty Status.json file");
+                return;
+            }
+
             if (!IsInCache(statusFile, content))
             {
                 AddToCache(statusFile, content);

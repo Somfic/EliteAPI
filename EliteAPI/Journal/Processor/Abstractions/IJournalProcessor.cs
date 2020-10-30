@@ -12,11 +12,11 @@ namespace EliteAPI.Journal.Processor.Abstractions
         /// <summary>
         /// Triggered when a new json entry is made in the active journal file
         /// </summary>
-        event EventHandler<string> NewJournalEntry;
+        event EventHandler<JournalEntry> NewJournalEntry;
 
         /// <summary>
         /// Hooks the specified journal file to <see cref="NewJournalEntry"/> and invokes <see cref="NewJournalEntry"/> when needed
         /// </summary>
-        Task ProcessJournalFile(FileInfo journalFile);
+        Task ProcessJournalFile(FileInfo journalFile, bool isWhileCatchingUp);
     }
 }

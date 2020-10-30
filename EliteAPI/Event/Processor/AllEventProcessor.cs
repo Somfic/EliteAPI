@@ -28,7 +28,7 @@ namespace EliteAPI.Event.Processor
             return Task.CompletedTask;
         }
 
-        public Task InvokeHandler(EventBase eventBase)
+        public Task InvokeHandler(EventBase eventBase, bool isWhileCatchingUp)
         {
             try
             {

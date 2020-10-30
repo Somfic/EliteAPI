@@ -1,10 +1,13 @@
-﻿namespace EliteAPI.Status.Models
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace EliteAPI.Status.Models
 {
     public class ShipPips
     {
-        private readonly int[] _pips;
+        private readonly IList<int> _pips;
 
-        internal ShipPips(int[] pips)
+        internal ShipPips(IList<int> pips)
         {
             _pips = pips;
         }

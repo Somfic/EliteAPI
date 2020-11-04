@@ -31,6 +31,11 @@ namespace EliteAPI.Abstractions
         bool IsRunning { get; }
 
         /// <summary>
+        /// Whether the api has catched up on past event in this session
+        /// </summary>
+        bool HasCatchedUp { get; }
+
+        /// <summary>
         /// Initializes the api
         /// </summary>
         Task InitializeAsync();

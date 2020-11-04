@@ -29,6 +29,9 @@ namespace EliteAPI
         public bool IsRunning { get; private set; }
 
         /// <inheritdoc />
+        public bool HasCatchedUp { get; private set; }
+
+        /// <inheritdoc />
         public Version Version { get; }
 
         /// <inheritdoc />
@@ -164,7 +167,6 @@ namespace EliteAPI
             _log.LogInformation("EliteAPI has started");
         }
 
-        private bool _isFirstTick = true;
         private async Task DoTick()
         {
             try
@@ -177,12 +179,12 @@ namespace EliteAPI
                 await _statusProcessor.ProcessShipyardFile(ShipyardFile);
 
                 await SetJournalFile();
-                await _journalProcessor.ProcessJournalFile(JournalFile, _isFirstTick);
+                await _journalProcessor.ProcessJournalFile(JournalFile, !HasCatchedUp);
 
-                if (_isFirstTick)
+                if (!HasCatchedUp)
                 {
                     _log.LogInformation("EliteAPI has catched up to current session");
-                    _isFirstTick = false;
+                    HasCatchedUp = true;
                 }
             }
             catch (Exception ex)

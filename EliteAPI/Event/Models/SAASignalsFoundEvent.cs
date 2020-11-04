@@ -13,7 +13,7 @@ namespace EliteAPI.Event.Models
         public string BodyName { get; set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; set; }
+        public string SystemAddress { get; set; }
 
         [JsonProperty("BodyID")]
         public long BodyId { get; set; }

@@ -41,7 +41,7 @@ namespace EliteAPI.Event.Models
         public string System { get; internal set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; internal set; }
+        public string SystemAddress { get; internal set; }
 
         [JsonProperty("IsNewEntry")]
         public bool IsNewEntry { get; internal set; }

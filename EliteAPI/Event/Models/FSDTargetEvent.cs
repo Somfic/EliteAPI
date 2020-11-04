@@ -16,7 +16,7 @@ namespace EliteAPI.Event.Models
         public string Name { get; internal set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; internal set; }
+        public string SystemAddress { get; internal set; }
 
         [JsonProperty("RemainingJumpsInRoute")]
         public int RemainingJumpsInRoute { get; internal set; }

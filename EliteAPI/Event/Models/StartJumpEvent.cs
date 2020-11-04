@@ -17,7 +17,7 @@ namespace EliteAPI.Event.Models
         public string StarSystem { get; internal set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; internal set; }
+        public string SystemAddress { get; internal set; }
 
         [JsonProperty("StarClass")]
         public string StarClass { get; internal set; }

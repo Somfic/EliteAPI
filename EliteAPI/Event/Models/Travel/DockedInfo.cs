@@ -32,7 +32,7 @@ namespace EliteAPI.Event.Models.Travel
         /// The address of the system.
         /// </summary>
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; internal set; }
+        public string SystemAddress { get; internal set; }
 
         /// <summary>
         /// The type of station.

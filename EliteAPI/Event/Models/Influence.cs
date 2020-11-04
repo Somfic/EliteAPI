@@ -5,7 +5,7 @@ namespace EliteAPI.Event.Models
     public class Influence
     {
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; internal set; }
+        public string SystemAddress { get; internal set; }
 
         [JsonProperty("Trend")]
         public string Trend { get; internal set; }

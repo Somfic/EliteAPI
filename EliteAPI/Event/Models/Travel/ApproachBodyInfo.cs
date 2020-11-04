@@ -24,7 +24,7 @@ namespace EliteAPI.Event.Models.Travel
         /// The address of the starsystem.
         /// </summary>
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; internal set; }
+        public string SystemAddress { get; internal set; }
 
         /// <summary>
         /// The name of the body that is being approached.

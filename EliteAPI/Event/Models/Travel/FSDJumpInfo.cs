@@ -22,7 +22,7 @@ namespace EliteAPI.Event.Models.Travel
         /// The address of the destination star system.aW
         /// </summary>
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; internal set; }
+        public string SystemAddress { get; internal set; }
 
         /// <summary>
         /// The position of the destination star system in light years.

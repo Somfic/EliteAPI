@@ -14,7 +14,7 @@ namespace EliteAPI.Event.Models
         public string SystemName { get; internal set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; internal set; }
+        public string SystemAddress { get; internal set; }
 
         [JsonProperty("Count")]
         public long Count { get; internal set; }

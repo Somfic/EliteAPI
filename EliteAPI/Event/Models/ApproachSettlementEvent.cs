@@ -24,7 +24,7 @@ namespace EliteAPI.Event.Models
         public string BodyName { get; internal set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; internal set; }
+        public string SystemAddress { get; internal set; }
 
         [JsonProperty("MarketID")]
         public long MarketId { get; internal set; }

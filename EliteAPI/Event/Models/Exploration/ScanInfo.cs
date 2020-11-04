@@ -32,7 +32,7 @@ namespace EliteAPI.Event.Models.Exploration
         /// </summary>
         /// <remarks>Only when the scan is of a star.</remarks>
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; internal set; }
+        public string SystemAddress { get; internal set; }
 
         /// <summary>
         /// The name of the body.

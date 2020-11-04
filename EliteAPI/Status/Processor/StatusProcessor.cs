@@ -73,6 +73,8 @@ namespace EliteAPI.Status.Processor
                 {
                     await InvokeStatusUpdateMethod(raw, _status, propertyName);
                 }
+
+                _status.TriggerOnChange();
             }
             catch (Exception ex)
             {

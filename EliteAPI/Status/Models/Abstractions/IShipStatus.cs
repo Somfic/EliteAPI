@@ -1,4 +1,6 @@
-﻿namespace EliteAPI.Status.Models.Abstractions
+﻿using System;
+
+namespace EliteAPI.Status.Models.Abstractions
 {
     public interface IShipStatus
     {
@@ -47,5 +49,9 @@
         ShipStatusProperty<float> Heading { get; }
         ShipStatusProperty<string> Body { get; }
         ShipStatusProperty<float> BodyRadius { get; }
+
+        event EventHandler OnChange;
+
+        internal void TriggerOnChange();
     }
 }

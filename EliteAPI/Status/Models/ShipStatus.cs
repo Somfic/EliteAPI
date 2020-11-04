@@ -1,4 +1,8 @@
-﻿using EliteAPI.Status.Models.Abstractions;
+﻿using System;
+using EliteAPI.Event.Handler;
+using EliteAPI.Event.Models.Abstractions;
+using EliteAPI.Status.Models.Abstractions;
+using EventHandler = System.EventHandler;
 
 namespace EliteAPI.Status.Models
 {
@@ -49,5 +53,8 @@ namespace EliteAPI.Status.Models
         public ShipStatusProperty<float> Heading { get; } = new ShipStatusProperty<float>(0);
         public ShipStatusProperty<string> Body { get; } = new ShipStatusProperty<string>(string.Empty);
         public ShipStatusProperty<float> BodyRadius { get; } = new ShipStatusProperty<float>(0);
+
+        public event EventHandler OnChange;
+        void IShipStatus.TriggerOnChange() => OnChange?.Invoke(this, EventArgs.Empty);
     }
 }

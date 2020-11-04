@@ -29,6 +29,11 @@
             Whether the api is currently running
             </summary>
         </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.HasCatchedUp">
+            <summary>
+            Whether the api has catched up on past event in this session
+            </summary>
+        </member>
         <member name="M:EliteAPI.Abstractions.IEliteDangerousAPI.InitializeAsync">
             <summary>
             Initializes the api
@@ -48,6 +53,9 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.IsRunning">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousAPI.HasCatchedUp">
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Version">

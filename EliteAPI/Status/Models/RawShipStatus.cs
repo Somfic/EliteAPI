@@ -9,7 +9,7 @@ namespace EliteAPI.Status.Models
     /// <summary>
     /// Only used for deserialization of the raw Status.json file
     /// </summary>
-    internal class RawShipStatus : EventBase
+    internal class RawShipStatus
     {
         [JsonProperty("Flags")]
         public ShipStatusFlags Flags { get; private set; }

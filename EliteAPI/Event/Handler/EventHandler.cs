@@ -14,6 +14,11 @@ namespace EliteAPI.Event.Handler
 
         internal void InvokeAllEvent(EventBase arg) => AllEvent?.Invoke(null, arg);
 
+        //CapShipBondEvent
+        public event EventHandler<CapShipBondEvent> CapShipBondEvent;
+        internal void InvokeCapShipBondEvent(CapShipBondEvent arg) => CapShipBondEvent?.Invoke(null, arg);
+
+
         //SAASignalsFoundEvent
         public event EventHandler<SAASignalsFoundEvent> SAASignalsFoundEvent;
         internal void InvokeSAASignalsFoundEvent(SAASignalsFoundEvent arg) => SAASignalsFoundEvent?.Invoke(null, arg);

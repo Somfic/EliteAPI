@@ -87,7 +87,7 @@ namespace EliteAPI
         }
 
         /// <summary>
-        /// Adds a event processor
+        /// Adds an event processor
         /// </summary>
         /// <typeparam name="T">The event processor to be used</typeparam>
         public void AddProcessor<T>() where T : IEventProcessor

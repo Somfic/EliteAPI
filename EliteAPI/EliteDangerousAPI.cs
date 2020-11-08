@@ -121,12 +121,6 @@ namespace EliteAPI
 
                 _journalProcessor.NewJournalEntry += _journalProcessor_NewJournalEntry;
 
-                if (_config.GetSection("EliteAPI")["StartAtPresent"] == "true")
-                {
-                    //todo: add some way to not invoke third party events, but only invoke api event logic stuff ???
-                    //await DoTick();
-                }
-
                 _log.LogDebug("EliteAPI has initialized");
             }
             catch (Exception ex)

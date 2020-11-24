@@ -7,6 +7,11 @@ on:
     branches: [ master, dev ]
 
 jobs:
+  Structure:
+    runs-on: windows-latest
+    steps:
+      - run: cmd //c tree
+     
   Compiles:
     runs-on: windows-latest
 
@@ -38,9 +43,6 @@ jobs:
       
      - name: Build
        run: dotnet build EliteAPI.Tests.Events --configuration Release --no-restore
-     
-     - name: idk
-       run: tree
      
      - name: Test
        run: EliteAPI.Tests.Events.exe EliteAPI.Tests.Events\Journal

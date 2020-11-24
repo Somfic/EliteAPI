@@ -8,7 +8,7 @@ on:
 
 jobs:
   Compiles:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -38,6 +38,9 @@ jobs:
       
      - name: Build
        run: dotnet build EliteAPI.Tests.Events --configuration Release --no-restore
+     
+     - name: idk
+       run: tree
      
      - name: Test
        run: EliteAPI.Tests.Events.exe EliteAPI.Tests.Events\Journal

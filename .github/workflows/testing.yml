@@ -7,7 +7,7 @@ on:
     branches: [ master, dev ]
 
 jobs:     
-  Compiles:
+  Compiling:
     runs-on: windows-latest
 
     steps:
@@ -32,7 +32,7 @@ jobs:
        run: dotnet build EliteAPI.Tests.Events --configuration Release --no-restore
      
      - name: Test
-       run: cmd /c bin\Release\netcoreapp3.1\EliteAPI.Tests.Events.exe Journal
+       run: bin\Release\netcoreapp3.1\EliteAPI.Tests.Events.exe Journal
        working-directory: EliteAPI.Tests.Events
       
      

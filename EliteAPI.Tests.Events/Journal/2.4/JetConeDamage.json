@@ -1,0 +1,66 @@
+{ "timestamp":"2017-11-09T15:49:05Z", "event":"JetConeDamage", "Module":"$int_fuelscoop_size7_class4_name;", "Module_Localised":"Fuel Scoop" }
+{ "timestamp":"2017-11-09T15:49:05Z", "event":"JetConeDamage", "Module":"$hpt_shipdatalinkscanner_name;", "Module_Localised":"Data Link Scanner" }
+{ "timestamp":"2017-11-09T15:49:07Z", "event":"JetConeDamage", "Module":"$int_buggybay_size4_class2_name;", "Module_Localised":"Planetary Vehicle Hangar" }
+{ "timestamp":"2017-11-09T15:49:09Z", "event":"JetConeDamage", "Module":"$int_shieldgenerator_size3_class2_name;", "Module_Localised":"Shield Generator" }
+{ "timestamp":"2017-11-09T15:49:09Z", "event":"JetConeDamage", "Module":"$int_dronecontrol_repair_size5_class2_name;", "Module_Localised":"Repair" }
+{ "timestamp":"2017-11-09T15:49:10Z", "event":"JetConeDamage", "Module":"$modularcargobaydoor_name;", "Module_Localised":"Cargo Hatch" }
+{ "timestamp":"2017-11-09T15:49:10Z", "event":"JetConeDamage", "Module":"$int_buggybay_size4_class2_name;", "Module_Localised":"Planetary Vehicle Hangar" }
+{ "timestamp":"2017-11-09T15:49:13Z", "event":"JetConeDamage", "Module":"$int_shieldgenerator_size3_class2_name;", "Module_Localised":"Shield Generator" }
+{ "timestamp":"2017-11-09T15:49:13Z", "event":"JetConeDamage", "Module":"$int_repairer_size5_class4_name;", "Module_Localised":"AFM Unit" }
+{ "timestamp":"2017-11-09T15:49:13Z", "event":"JetConeDamage", "Module":"$hpt_shipdatalinkscanner_name;", "Module_Localised":"Data Link Scanner" }
+{ "timestamp":"2017-11-09T15:49:15Z", "event":"JetConeDamage", "Module":"$int_powerplant_size5_class2_name;", "Module_Localised":"Power Plant" }
+{ "timestamp":"2017-11-09T15:49:16Z", "event":"JetConeDamage", "Module":"$hpt_heatsinklauncher_turret_tiny_name;", "Module_Localised":"Heat Sink" }
+{ "timestamp":"2017-11-09T15:49:16Z", "event":"JetConeDamage", "Module":"$int_buggybay_size4_class2_name;", "Module_Localised":"Planetary Vehicle Hangar" }
+{ "timestamp":"2017-11-09T15:49:16Z", "event":"JetConeDamage", "Module":"$int_repairer_size6_class2_name;", "Module_Localised":"AFM Unit" }
+{ "timestamp":"2017-11-09T15:49:16Z", "event":"JetConeDamage", "Module":"$int_stellarbodydiscoveryscanner_advanced_name;", "Module_Localised":"D - Scanner" }
+{ "timestamp":"2017-11-09T15:49:17Z", "event":"JetConeDamage", "Module":"$int_sensors_size8_class2_name;", "Module_Localised":"Sensors" }
+{ "timestamp":"2017-11-09T15:49:17Z", "event":"JetConeDamage", "Module":"$anaconda_cockpit_name;", "Module_Localised":"Cockpit" }
+{ "timestamp":"2017-11-09T15:49:17Z", "event":"JetConeDamage", "Module":"$int_fuelscoop_size7_class4_name;", "Module_Localised":"Fuel Scoop" }
+{ "timestamp":"2017-11-09T15:49:17Z", "event":"JetConeDamage", "Module":"$int_fighterbay_size5_class1_name;", "Module_Localised":"Fighter Hangar" }
+{ "timestamp":"2017-11-09T15:49:18Z", "event":"JetConeDamage", "Module":"$int_dronecontrol_repair_size5_class2_name;", "Module_Localised":"Repair" }
+{ "timestamp":"2017-11-09T15:49:19Z", "event":"JetConeDamage", "Module":"$int_powerdistributor_size5_class2_name;", "Module_Localised":"Power Distributor" }
+{ "timestamp":"2017-11-09T15:49:19Z", "event":"JetConeDamage", "Module":"$int_hyperdrive_size6_class5_name;", "Module_Localised":"FSD" }
+{ "timestamp":"2017-11-09T15:49:19Z", "event":"JetConeDamage", "Module":"$hpt_heatsinklauncher_turret_tiny_name;", "Module_Localised":"Heat Sink" }
+{ "timestamp":"2017-11-09T15:49:20Z", "event":"JetConeDamage", "Module":"$int_repairer_size6_class2_name;", "Module_Localised":"AFM Unit" }
+{ "timestamp":"2017-11-09T15:49:20Z", "event":"JetConeDamage", "Module":"$int_engine_size6_class2_name;", "Module_Localised":"Thrusters" }
+{ "timestamp":"2017-11-09T15:49:21Z", "event":"JetConeDamage", "Module":"$modularcargobaydoor_name;", "Module_Localised":"Cargo Hatch" }
+{ "timestamp":"2017-11-09T15:49:21Z", "event":"JetConeDamage", "Module":"$int_shieldgenerator_size3_class2_name;", "Module_Localised":"Shield Generator" }
+{ "timestamp":"2017-11-09T15:49:22Z", "event":"JetConeDamage", "Module":"$int_fighterbay_size5_class1_name;", "Module_Localised":"Fighter Hangar" }
+{ "timestamp":"2017-11-09T15:49:22Z", "event":"JetConeDamage", "Module":"$int_lifesupport_size5_class2_name;", "Module_Localised":"Life Support" }
+{ "timestamp":"2017-11-09T15:49:22Z", "event":"JetConeDamage", "Module":"$hpt_heatsinklauncher_turret_tiny_name;", "Module_Localised":"Heat Sink" }
+{ "timestamp":"2017-11-09T15:49:22Z", "event":"JetConeDamage", "Module":"$int_repairer_size6_class2_name;", "Module_Localised":"AFM Unit" }
+{ "timestamp":"2017-11-09T15:49:23Z", "event":"JetConeDamage", "Module":"$int_powerdistributor_size5_class2_name;", "Module_Localised":"Power Distributor" }
+{ "timestamp":"2017-11-09T15:49:24Z", "event":"JetConeDamage", "Module":"$hpt_shipdatalinkscanner_name;", "Module_Localised":"Data Link Scanner" }
+{ "timestamp":"2017-11-09T15:49:25Z", "event":"JetConeDamage", "Module":"$int_powerplant_size5_class2_name;", "Module_Localised":"Power Plant" }
+{ "timestamp":"2017-11-09T15:49:25Z", "event":"JetConeDamage", "Module":"$int_stellarbodydiscoveryscanner_advanced_name;", "Module_Localised":"D - Scanner" }
+{ "timestamp":"2017-11-09T15:49:26Z", "event":"JetConeDamage", "Module":"$int_hyperdrive_size6_class5_name;", "Module_Localised":"FSD" }
+{ "timestamp":"2017-11-09T15:49:26Z", "event":"JetConeDamage", "Module":"$int_repairer_size5_class4_name;", "Module_Localised":"AFM Unit" }
+{ "timestamp":"2017-11-09T15:49:26Z", "event":"JetConeDamage", "Module":"$int_fuelscoop_size7_class4_name;", "Module_Localised":"Fuel Scoop" }
+{ "timestamp":"2017-11-09T15:49:26Z", "event":"JetConeDamage", "Module":"$int_fighterbay_size5_class1_name;", "Module_Localised":"Fighter Hangar" }
+{ "timestamp":"2017-11-09T15:49:27Z", "event":"JetConeDamage", "Module":"$modularcargobaydoor_name;", "Module_Localised":"Cargo Hatch" }
+{ "timestamp":"2017-11-09T15:49:28Z", "event":"JetConeDamage", "Module":"$int_buggybay_size4_class2_name;", "Module_Localised":"Planetary Vehicle Hangar" }
+{ "timestamp":"2017-11-09T15:49:28Z", "event":"JetConeDamage", "Module":"$int_sensors_size8_class2_name;", "Module_Localised":"Sensors" }
+{ "timestamp":"2017-11-09T15:49:28Z", "event":"JetConeDamage", "Module":"$int_engine_size6_class2_name;", "Module_Localised":"Thrusters" }
+{ "timestamp":"2017-11-09T15:49:28Z", "event":"JetConeDamage", "Module":"$int_dronecontrol_repair_size5_class2_name;", "Module_Localised":"Repair" }
+{ "timestamp":"2017-11-09T15:49:28Z", "event":"JetConeDamage", "Module":"$anaconda_cockpit_name;", "Module_Localised":"Cockpit" }
+{ "timestamp":"2017-11-09T15:49:29Z", "event":"JetConeDamage", "Module":"$int_hyperdrive_size6_class5_name;", "Module_Localised":"FSD" }
+{ "timestamp":"2017-11-09T15:49:31Z", "event":"JetConeDamage", "Module":"$int_dronecontrol_repair_size5_class2_name;", "Module_Localised":"Repair" }
+{ "timestamp":"2017-11-09T15:49:31Z", "event":"JetConeDamage", "Module":"$int_shieldgenerator_size3_class2_name;", "Module_Localised":"Shield Generator" }
+{ "timestamp":"2017-11-09T15:49:31Z", "event":"JetConeDamage", "Module":"$modularcargobaydoor_name;", "Module_Localised":"Cargo Hatch" }
+{ "timestamp":"2017-11-09T15:49:32Z", "event":"JetConeDamage", "Module":"$int_fuelscoop_size7_class4_name;", "Module_Localised":"Fuel Scoop" }
+{ "timestamp":"2017-11-09T15:49:32Z", "event":"JetConeDamage", "Module":"$hpt_heatsinklauncher_turret_tiny_name;", "Module_Localised":"Heat Sink" }
+{ "timestamp":"2017-11-09T15:49:32Z", "event":"JetConeDamage", "Module":"$int_repairer_size5_class4_name;", "Module_Localised":"AFM Unit" }
+{ "timestamp":"2017-11-09T15:49:33Z", "event":"JetConeDamage", "Module":"$int_repairer_size6_class2_name;", "Module_Localised":"AFM Unit" }
+{ "timestamp":"2017-11-09T15:49:33Z", "event":"JetConeDamage", "Module":"$hpt_shipdatalinkscanner_name;", "Module_Localised":"Data Link Scanner" }
+{ "timestamp":"2017-11-09T15:49:33Z", "event":"JetConeDamage", "Module":"$int_lifesupport_size5_class2_name;", "Module_Localised":"Life Support" }
+{ "timestamp":"2017-11-09T15:49:34Z", "event":"JetConeDamage", "Module":"$hpt_heatsinklauncher_turret_tiny_name;", "Module_Localised":"Heat Sink" }
+{ "timestamp":"2017-11-09T15:49:34Z", "event":"JetConeDamage", "Module":"$int_fighterbay_size5_class1_name;", "Module_Localised":"Fighter Hangar" }
+{ "timestamp":"2017-11-09T15:49:34Z", "event":"JetConeDamage", "Module":"$int_powerdistributor_size5_class2_name;", "Module_Localised":"Power Distributor" }
+{ "timestamp":"2017-11-09T15:49:36Z", "event":"JetConeDamage", "Module":"$int_powerplant_size5_class2_name;", "Module_Localised":"Power Plant" }
+{ "timestamp":"2017-11-09T15:49:36Z", "event":"JetConeDamage", "Module":"$int_sensors_size8_class2_name;", "Module_Localised":"Sensors" }
+{ "timestamp":"2017-11-09T15:49:36Z", "event":"JetConeDamage", "Module":"$int_hyperdrive_size6_class5_name;", "Module_Localised":"FSD" }
+{ "timestamp":"2017-11-09T15:49:36Z", "event":"JetConeDamage", "Module":"$int_stellarbodydiscoveryscanner_advanced_name;", "Module_Localised":"D - Scanner" }
+{ "timestamp":"2017-11-09T15:49:37Z", "event":"JetConeDamage", "Module":"$modularcargobaydoor_name;", "Module_Localised":"Cargo Hatch" }
+{ "timestamp":"2017-11-09T15:49:37Z", "event":"JetConeDamage", "Module":"$int_buggybay_size4_class2_name;", "Module_Localised":"Planetary Vehicle Hangar" }
+{ "timestamp":"2017-11-09T15:49:38Z", "event":"JetConeDamage", "Module":"$int_engine_size6_class2_name;", "Module_Localised":"Thrusters" }
+{ "timestamp":"2017-11-09T15:49:39Z", "event":"JetConeDamage", "Module":"$int_lifesupport_size5_class2_name;", "Module_Localised":"Life Support" }

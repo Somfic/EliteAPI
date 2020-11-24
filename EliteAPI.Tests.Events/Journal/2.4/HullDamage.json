@@ -1,0 +1,141 @@
+{ "timestamp":"2017-09-26T18:21:06Z", "event":"HullDamage", "Health":0.782137, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-26T18:21:16Z", "event":"HullDamage", "Health":0.598108, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-26T18:21:23Z", "event":"HullDamage", "Health":0.389612, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-26T18:22:11Z", "event":"HullDamage", "Health":0.199701, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-27T15:09:04Z", "event":"HullDamage", "Health":0.750047, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-27T18:10:54Z", "event":"HullDamage", "Health":0.799428, "PlayerPilot":false, "Fighter":false }
+{ "timestamp":"2017-09-27T18:29:26Z", "event":"HullDamage", "Health":0.798878, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-27T18:47:03Z", "event":"HullDamage", "Health":0.781350, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-27T18:47:13Z", "event":"HullDamage", "Health":0.581307, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-27T18:47:17Z", "event":"HullDamage", "Health":0.387661, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-27T18:47:22Z", "event":"HullDamage", "Health":0.188481, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-28T14:41:41Z", "event":"HullDamage", "Health":0.799852, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-28T14:52:58Z", "event":"HullDamage", "Health":0.757987, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-28T15:28:19Z", "event":"HullDamage", "Health":0.748149, "PlayerPilot":true }
+{ "timestamp":"2017-09-28T15:28:28Z", "event":"HullDamage", "Health":0.598704, "PlayerPilot":true }
+{ "timestamp":"2017-09-28T15:28:41Z", "event":"HullDamage", "Health":0.398875, "PlayerPilot":true }
+{ "timestamp":"2017-09-28T15:29:02Z", "event":"HullDamage", "Health":0.198278, "PlayerPilot":true }
+{ "timestamp":"2017-09-28T15:29:16Z", "event":"HullDamage", "Health":0.787043, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-28T15:29:21Z", "event":"HullDamage", "Health":0.582111, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-28T15:29:23Z", "event":"HullDamage", "Health":0.394207, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-28T15:29:26Z", "event":"HullDamage", "Health":0.183276, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-29T12:40:33Z", "event":"HullDamage", "Health":0.786717, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-29T12:55:45Z", "event":"HullDamage", "Health":0.799991, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-29T12:57:09Z", "event":"HullDamage", "Health":0.599704, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-29T13:25:48Z", "event":"HullDamage", "Health":0.799838, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-29T16:50:24Z", "event":"HullDamage", "Health":0.721852, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-29T16:50:41Z", "event":"HullDamage", "Health":0.276891, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-29T21:32:46Z", "event":"HullDamage", "Health":0.770092, "PlayerPilot":true }
+{ "timestamp":"2017-09-29T21:39:40Z", "event":"HullDamage", "Health":0.791771, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-29T21:39:51Z", "event":"HullDamage", "Health":0.539017, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-29T21:40:00Z", "event":"HullDamage", "Health":0.362426, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-09-29T22:03:34Z", "event":"HullDamage", "Health":0.763243, "PlayerPilot":true }
+{ "timestamp":"2017-09-29T22:12:19Z", "event":"HullDamage", "Health":0.789339, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T11:29:43Z", "event":"HullDamage", "Health":0.564783, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T12:46:37Z", "event":"HullDamage", "Health":0.795693, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T13:16:14Z", "event":"HullDamage", "Health":0.588831, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T14:04:07Z", "event":"HullDamage", "Health":0.797498, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T14:35:40Z", "event":"HullDamage", "Health":0.797748, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T14:35:46Z", "event":"HullDamage", "Health":0.598859, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T14:35:54Z", "event":"HullDamage", "Health":0.399969, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T14:36:05Z", "event":"HullDamage", "Health":0.198632, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T14:36:33Z", "event":"HullDamage", "Health":0.769348, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-01T14:44:12Z", "event":"HullDamage", "Health":0.791884, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T15:23:34Z", "event":"HullDamage", "Health":0.797699, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T20:33:00Z", "event":"HullDamage", "Health":0.799107, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T20:41:49Z", "event":"HullDamage", "Health":0.725447, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T20:54:46Z", "event":"HullDamage", "Health":0.567889, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T21:00:22Z", "event":"HullDamage", "Health":0.578929, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T21:42:04Z", "event":"HullDamage", "Health":0.528524, "PlayerPilot":true }
+{ "timestamp":"2017-10-01T21:42:04Z", "event":"HullDamage", "Health":0.065557, "PlayerPilot":true }
+{ "timestamp":"2017-10-02T14:05:42Z", "event":"HullDamage", "Health":0.696410, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-02T14:10:25Z", "event":"HullDamage", "Health":0.593317, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-02T14:52:39Z", "event":"HullDamage", "Health":0.743034, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-02T14:59:35Z", "event":"HullDamage", "Health":0.555386, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-02T15:23:15Z", "event":"HullDamage", "Health":0.767930, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-02T16:01:53Z", "event":"HullDamage", "Health":0.743039, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-02T16:12:00Z", "event":"HullDamage", "Health":0.794348, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-02T16:32:23Z", "event":"HullDamage", "Health":0.769844, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-03T13:04:50Z", "event":"HullDamage", "Health":0.739586, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-03T13:11:42Z", "event":"HullDamage", "Health":0.740153, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-03T14:03:14Z", "event":"HullDamage", "Health":0.799638, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-03T14:17:35Z", "event":"HullDamage", "Health":0.787349, "PlayerPilot":true }
+{ "timestamp":"2017-10-03T16:08:55Z", "event":"HullDamage", "Health":0.780768, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-03T16:09:13Z", "event":"HullDamage", "Health":0.587346, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-04T15:18:38Z", "event":"HullDamage", "Health":0.710903, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-04T15:18:38Z", "event":"HullDamage", "Health":0.598342, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-04T18:25:54Z", "event":"HullDamage", "Health":0.715272, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-04T18:26:11Z", "event":"HullDamage", "Health":0.539000, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-04T18:26:21Z", "event":"HullDamage", "Health":0.295105, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-04T18:26:24Z", "event":"HullDamage", "Health":0.132975, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-04T19:08:23Z", "event":"HullDamage", "Health":0.792801, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-04T19:08:36Z", "event":"HullDamage", "Health":0.530996, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-05T14:24:04Z", "event":"HullDamage", "Health":0.785950, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-05T15:37:49Z", "event":"HullDamage", "Health":0.796034, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-05T15:37:50Z", "event":"HullDamage", "Health":0.530394, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-05T15:37:50Z", "event":"HullDamage", "Health":0.391873, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-05T15:37:51Z", "event":"HullDamage", "Health":0.112129, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-05T18:56:43Z", "event":"HullDamage", "Health":0.705058, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-06T14:22:08Z", "event":"HullDamage", "Health":0.795413, "PlayerPilot":true }
+{ "timestamp":"2017-10-06T14:22:42Z", "event":"HullDamage", "Health":0.597097, "PlayerPilot":true }
+{ "timestamp":"2017-10-06T14:22:58Z", "event":"HullDamage", "Health":0.399540, "PlayerPilot":true }
+{ "timestamp":"2017-10-06T14:23:12Z", "event":"HullDamage", "Health":0.198538, "PlayerPilot":true }
+{ "timestamp":"2017-10-06T17:49:13Z", "event":"HullDamage", "Health":0.777072, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-06T18:49:57Z", "event":"HullDamage", "Health":0.798527, "PlayerPilot":true }
+{ "timestamp":"2017-10-06T20:01:24Z", "event":"HullDamage", "Health":0.639184, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-06T20:25:14Z", "event":"HullDamage", "Health":0.497919, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-06T20:25:14Z", "event":"HullDamage", "Health":0.385190, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-06T21:17:32Z", "event":"HullDamage", "Health":0.783435, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-07T17:18:54Z", "event":"HullDamage", "Health":0.776443, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-08T11:01:47Z", "event":"HullDamage", "Health":0.798422, "PlayerPilot":true }
+{ "timestamp":"2017-10-08T11:06:59Z", "event":"HullDamage", "Health":0.516460, "PlayerPilot":true }
+{ "timestamp":"2017-10-19T14:40:26Z", "event":"HullDamage", "Health":0.536296, "PlayerPilot":true }
+{ "timestamp":"2017-10-19T14:43:44Z", "event":"HullDamage", "Health":0.785049, "PlayerPilot":true }
+{ "timestamp":"2017-10-19T14:45:51Z", "event":"HullDamage", "Health":0.595676, "PlayerPilot":true }
+{ "timestamp":"2017-10-19T14:53:19Z", "event":"HullDamage", "Health":0.399148, "PlayerPilot":true }
+{ "timestamp":"2017-10-19T14:59:01Z", "event":"HullDamage", "Health":0.796805, "PlayerPilot":true }
+{ "timestamp":"2017-10-19T15:01:12Z", "event":"HullDamage", "Health":0.540938, "PlayerPilot":true }
+{ "timestamp":"2017-10-19T15:06:21Z", "event":"HullDamage", "Health":0.378199, "PlayerPilot":true }
+{ "timestamp":"2017-10-19T15:09:19Z", "event":"HullDamage", "Health":0.789512, "PlayerPilot":true }
+{ "timestamp":"2017-10-19T15:11:38Z", "event":"HullDamage", "Health":0.597416, "PlayerPilot":true }
+{ "timestamp":"2017-10-19T15:12:47Z", "event":"HullDamage", "Health":0.077843, "PlayerPilot":true }
+{ "timestamp":"2017-10-19T19:33:52Z", "event":"HullDamage", "Health":0.795517, "PlayerPilot":true }
+{ "timestamp":"2017-10-20T13:58:16Z", "event":"HullDamage", "Health":0.786933, "PlayerPilot":true }
+{ "timestamp":"2017-10-20T15:45:21Z", "event":"HullDamage", "Health":0.769592, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-20T15:45:31Z", "event":"HullDamage", "Health":0.596307, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-20T15:45:33Z", "event":"HullDamage", "Health":0.399778, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-20T19:06:46Z", "event":"HullDamage", "Health":0.790380, "PlayerPilot":false, "Fighter":true }
+{ "timestamp":"2017-10-20T19:06:47Z", "event":"HullDamage", "Health":0.574517, "PlayerPilot":false, "Fighter":true }
+{ "timestamp":"2017-10-20T19:06:49Z", "event":"HullDamage", "Health":0.395359, "PlayerPilot":false, "Fighter":true }
+{ "timestamp":"2017-10-21T13:13:14Z", "event":"HullDamage", "Health":0.710355, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-21T13:13:14Z", "event":"HullDamage", "Health":0.594959, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-22T13:24:32Z", "event":"HullDamage", "Health":0.752936, "PlayerPilot":true }
+{ "timestamp":"2017-10-22T13:30:43Z", "event":"HullDamage", "Health":0.597980, "PlayerPilot":true }
+{ "timestamp":"2017-10-22T13:43:02Z", "event":"HullDamage", "Health":0.762037, "PlayerPilot":true }
+{ "timestamp":"2017-10-22T13:44:18Z", "event":"HullDamage", "Health":0.598914, "PlayerPilot":true }
+{ "timestamp":"2017-10-22T14:13:48Z", "event":"HullDamage", "Health":0.799169, "PlayerPilot":true }
+{ "timestamp":"2017-10-23T20:34:15Z", "event":"HullDamage", "Health":0.799842, "PlayerPilot":true }
+{ "timestamp":"2017-10-23T20:34:25Z", "event":"HullDamage", "Health":0.599882, "PlayerPilot":true }
+{ "timestamp":"2017-10-23T20:34:37Z", "event":"HullDamage", "Health":0.394096, "PlayerPilot":true }
+{ "timestamp":"2017-10-24T11:38:28Z", "event":"HullDamage", "Health":0.799986, "PlayerPilot":true }
+{ "timestamp":"2017-10-24T11:41:00Z", "event":"HullDamage", "Health":0.585870, "PlayerPilot":true }
+{ "timestamp":"2017-10-24T11:41:10Z", "event":"HullDamage", "Health":0.398139, "PlayerPilot":true }
+{ "timestamp":"2017-10-26T15:20:57Z", "event":"HullDamage", "Health":0.790797, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-26T15:21:15Z", "event":"HullDamage", "Health":0.595071, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-26T15:21:34Z", "event":"HullDamage", "Health":0.399973, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-26T15:21:53Z", "event":"HullDamage", "Health":0.199996, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2017-10-30T13:19:21Z", "event":"HullDamage", "Health":0.799550, "PlayerPilot":true }
+{ "timestamp":"2017-10-30T13:26:57Z", "event":"HullDamage", "Health":0.597556, "PlayerPilot":true }
+{ "timestamp":"2017-10-30T13:31:13Z", "event":"HullDamage", "Health":0.362022, "PlayerPilot":true }
+{ "timestamp":"2017-10-30T13:40:00Z", "event":"HullDamage", "Health":0.782013, "PlayerPilot":true }
+{ "timestamp":"2017-10-30T13:49:58Z", "event":"HullDamage", "Health":0.597301, "PlayerPilot":true }
+{ "timestamp":"2017-11-01T19:40:51Z", "event":"HullDamage", "Health":0.769433, "PlayerPilot":true }
+{ "timestamp":"2017-11-01T19:43:24Z", "event":"HullDamage", "Health":0.564873, "PlayerPilot":true }
+{ "timestamp":"2017-11-01T19:44:22Z", "event":"HullDamage", "Health":0.743855, "PlayerPilot":true }
+{ "timestamp":"2017-11-01T19:44:36Z", "event":"HullDamage", "Health":0.551654, "PlayerPilot":true }
+{ "timestamp":"2017-11-01T19:47:32Z", "event":"HullDamage", "Health":0.784527, "PlayerPilot":true }
+{ "timestamp":"2017-11-01T19:49:11Z", "event":"HullDamage", "Health":0.594202, "PlayerPilot":true }
+{ "timestamp":"2017-11-05T17:53:20Z", "event":"HullDamage", "Health":0.798925, "PlayerPilot":true }
+{ "timestamp":"2017-11-05T17:57:16Z", "event":"HullDamage", "Health":0.592461, "PlayerPilot":true }
+{ "timestamp":"2017-11-05T18:16:12Z", "event":"HullDamage", "Health":0.799901, "PlayerPilot":true }
+{ "timestamp":"2017-11-05T18:23:43Z", "event":"HullDamage", "Health":0.569501, "PlayerPilot":true }

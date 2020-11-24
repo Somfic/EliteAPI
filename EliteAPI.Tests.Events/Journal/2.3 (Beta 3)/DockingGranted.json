@@ -1,0 +1,8 @@
+{ "timestamp":"2017-03-18T12:29:21Z", "event":"DockingGranted", "LandingPad":36, "StationName":"Fraser Orbital" }
+{ "timestamp":"2017-03-18T12:40:59Z", "event":"DockingGranted", "LandingPad":40, "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-03-18T12:58:15Z", "event":"DockingGranted", "LandingPad":17, "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-03-18T14:44:25Z", "event":"DockingGranted", "LandingPad":25, "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-03-18T15:42:51Z", "event":"DockingGranted", "LandingPad":14, "StationName":"Daedalus" }
+{ "timestamp":"2017-03-18T15:51:42Z", "event":"DockingGranted", "LandingPad":1, "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-03-18T15:53:46Z", "event":"DockingGranted", "LandingPad":31, "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-03-18T18:25:19Z", "event":"DockingGranted", "LandingPad":24, "StationName":"Jameson Memorial" }

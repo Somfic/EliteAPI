@@ -1,0 +1,23 @@
+{ "timestamp":"2017-03-18T12:29:10Z", "event":"SupercruiseExit", "StarSystem":"LHS 2936", "Body":"Fraser Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-03-18T12:40:42Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial", "BodyType":"Station" }
+{ "timestamp":"2017-03-18T13:23:30Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Founders World", "BodyType":"Planet" }
+{ "timestamp":"2017-03-18T13:29:03Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-18T13:34:46Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-18T13:49:02Z", "event":"SupercruiseExit", "StarSystem":"Delkar", "Body":"Delkar 7 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-18T14:43:28Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial", "BodyType":"Station" }
+{ "timestamp":"2017-03-18T15:07:26Z", "event":"SupercruiseExit", "StarSystem":"Delkar", "Body":"Delkar 7", "BodyType":"Planet" }
+{ "timestamp":"2017-03-18T15:12:41Z", "event":"SupercruiseExit", "StarSystem":"Delkar", "Body":"Delkar 7 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-18T15:42:28Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Daedalus", "BodyType":"Station" }
+{ "timestamp":"2017-03-18T15:51:31Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial", "BodyType":"Station" }
+{ "timestamp":"2017-03-18T17:26:25Z", "event":"SupercruiseExit", "StarSystem":"LTT 4497", "Body":"LTT 4497", "BodyType":"Star" }
+{ "timestamp":"2017-03-18T17:33:30Z", "event":"SupercruiseExit", "StarSystem":"Delkar", "Body":"Delkar 7 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-18T17:57:36Z", "event":"SupercruiseExit", "StarSystem":"LTT 4497", "Body":"LTT 4497", "BodyType":"Star" }
+{ "timestamp":"2017-03-18T18:17:19Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Shinrarta Dezhra", "BodyType":"Star" }
+{ "timestamp":"2017-03-18T18:23:10Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial", "BodyType":"Station" }
+{ "timestamp":"2017-03-18T18:24:26Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial", "BodyType":"Station" }
+{ "timestamp":"2017-03-18T18:31:58Z", "event":"SupercruiseExit", "StarSystem":"LTT 4487", "Body":"LTT 4487", "BodyType":"Star" }
+{ "timestamp":"2017-03-18T18:53:05Z", "event":"SupercruiseExit", "StarSystem":"LTT 4487", "Body":"LTT 4487 5", "BodyType":"Planet" }
+{ "timestamp":"2017-03-18T18:57:49Z", "event":"SupercruiseExit", "StarSystem":"LTT 4487", "Body":"LTT 4487 5 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-18T19:31:36Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Shinrarta Dezhra A 1", "BodyType":"Planet" }
+{ "timestamp":"2017-03-18T19:39:13Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Shinrarta Dezhra A 1", "BodyType":"Planet" }
+{ "timestamp":"2017-03-19T14:26:55Z", "event":"SupercruiseExit", "StarSystem":"Delkar", "Body":"Delkar 7 A Ring", "BodyType":"PlanetaryRing" }

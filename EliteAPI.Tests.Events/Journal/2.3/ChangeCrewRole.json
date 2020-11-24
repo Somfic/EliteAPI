@@ -1,0 +1,8 @@
+{ "timestamp":"2017-04-13T18:26:33Z", "event":"ChangeCrewRole", "Role":"Idle" }
+{ "timestamp":"2017-04-13T18:27:15Z", "event":"ChangeCrewRole", "Role":"FireCon" }
+{ "timestamp":"2017-04-13T18:28:06Z", "event":"ChangeCrewRole", "Role":"Idle" }
+{ "timestamp":"2017-04-13T18:28:53Z", "event":"ChangeCrewRole", "Role":"FireCon" }
+{ "timestamp":"2017-04-13T18:31:00Z", "event":"ChangeCrewRole", "Role":"Idle" }
+{ "timestamp":"2017-04-13T18:34:22Z", "event":"ChangeCrewRole", "Role":"Idle" }
+{ "timestamp":"2017-04-13T18:34:35Z", "event":"ChangeCrewRole", "Role":"FireCon" }
+{ "timestamp":"2017-04-20T13:15:14Z", "event":"ChangeCrewRole", "Role":"Idle" }

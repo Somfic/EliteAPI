@@ -1,0 +1,1 @@
+{ "timestamp":"2018-12-12T19:03:42Z", "event":"ModuleSwap", "MarketID":128666762, "FromSlot":"Slot03_Size5", "ToSlot":"Slot06_Size3", "FromItem":"$int_shieldgenerator_size3_class2_name;", "FromItem_Localised":"Shield Generator", "ToItem":"$int_cargorack_size3_class1_name;", "ToItem_Localised":"Cargo Rack", "Ship":"krait_light", "ShipID":41 }

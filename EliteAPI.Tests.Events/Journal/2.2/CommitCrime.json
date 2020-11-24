@@ -1,0 +1,199 @@
+{ "timestamp":"2016-10-25T17:56:10Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Chapterhouse of Inquisition", "Fine":800 }
+{ "timestamp":"2016-10-26T12:18:34Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Sol Workers' Party", "Fine":100 }
+{ "timestamp":"2016-10-26T12:18:34Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Sol Workers' Party", "Victim":"Ehrlich City", "Bounty":200 }
+{ "timestamp":"2016-10-26T12:19:21Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Sol Workers' Party", "Fine":100 }
+{ "timestamp":"2016-10-26T15:47:07Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Mother Gaia", "Fine":400 }
+{ "timestamp":"2016-10-28T12:35:01Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Union of G 141-21 for Equality", "Fine":100 }
+{ "timestamp":"2016-11-06T16:32:40Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Tote Republic Party", "Victim":"Föderaler Agent", "Bounty":200 }
+{ "timestamp":"2016-11-06T16:34:07Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Tote Republic Party", "Victim":"Föderaler Agent", "Bounty":6000 }
+{ "timestamp":"2016-11-06T16:36:02Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Tote Republic Party", "Victim":"$ShipName_Police_Federation;", "Victim_Localised":"Föderaler Sicherheitsdienst", "Bounty":200 }
+{ "timestamp":"2016-11-08T18:30:02Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Leaders of Annwn", "Fine":150 }
+{ "timestamp":"2016-11-08T18:58:42Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Swedish Vikings", "Fine":300 }
+{ "timestamp":"2016-11-08T19:34:07Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone_hulldamage", "Faction":"Chapterhouse of Inquisition", "Fine":400 }
+{ "timestamp":"2016-11-08T19:34:27Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Chapterhouse of Inquisition", "Fine":800 }
+{ "timestamp":"2016-11-09T14:19:53Z", "event":"CommitCrime", "CrimeType":"dockingMinorBlockingAirlock", "Faction":"Pirigen Guardians of Tradition", "Fine":400 }
+{ "timestamp":"2016-11-10T12:46:49Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"HR 494 Solutions", "Fine":400 }
+{ "timestamp":"2016-11-10T13:27:54Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Hollos Empire Party", "Fine":400 }
+{ "timestamp":"2016-11-11T14:50:39Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"HIP 15062 General Organisation", "Victim":"$poi_generator_name;", "Victim_Localised":"Generator", "Bounty":400 }
+{ "timestamp":"2016-11-11T14:50:39Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"HIP 15062 General Organisation", "Victim":"$ShipName_Military_Federation;", "Victim_Localised":"Federal Navy Ship", "Bounty":400 }
+{ "timestamp":"2016-11-11T14:50:42Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"HIP 15062 General Organisation", "Victim":"$poi_generator_name;", "Victim_Localised":"Generator", "Bounty":400 }
+{ "timestamp":"2016-11-11T14:50:47Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"HIP 15062 General Organisation", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":400 }
+{ "timestamp":"2016-11-11T16:30:14Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"HIP 15062 General Organisation", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":400 }
+{ "timestamp":"2016-11-11T16:31:27Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"HIP 15062 General Organisation", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":400 }
+{ "timestamp":"2016-11-11T16:31:37Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"HIP 15062 General Organisation", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":400 }
+{ "timestamp":"2016-11-11T16:31:39Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"HIP 15062 General Organisation", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":400 }
+{ "timestamp":"2016-11-11T16:32:03Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"HIP 15062 General Organisation", "Victim":"$ShipName_Military_Federation;", "Victim_Localised":"Federal Navy Ship", "Bounty":400 }
+{ "timestamp":"2016-11-16T14:50:23Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Los Chupacabras", "Fine":400 }
+{ "timestamp":"2016-11-20T12:31:47Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"The Brotherhood of the Dark Circle", "Fine":100 }
+{ "timestamp":"2016-12-02T17:28:37Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"The Brotherhood of the Dark Circle", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Wach-Schöpfdrohne", "Bounty":540 }
+{ "timestamp":"2016-12-07T14:38:52Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"Federation Unite!", "Fine":150 }
+{ "timestamp":"2016-12-07T20:22:11Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Omagatae Liberals", "Fine":100 }
+{ "timestamp":"2016-12-07T20:58:07Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Omagatae Liberals", "Fine":100 }
+{ "timestamp":"2016-12-08T17:31:09Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone_hulldamage", "Faction":"Federation Unite!", "Fine":200 }
+{ "timestamp":"2016-12-08T18:40:58Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Federation Unite!", "Fine":100 }
+{ "timestamp":"2016-12-09T17:25:25Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Warnates Corp.", "Fine":200 }
+{ "timestamp":"2016-12-10T16:14:15Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Fehu Organisation", "Fine":200 }
+{ "timestamp":"2016-12-10T16:14:20Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Fehu Organisation", "Fine":200 }
+{ "timestamp":"2016-12-10T19:59:43Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"The Brotherhood of the Dark Circle", "Fine":305 }
+{ "timestamp":"2016-12-12T14:07:02Z", "event":"CommitCrime", "CrimeType":"interdiction", "Faction":"The Brotherhood of the Dark Circle", "Fine":410 }
+{ "timestamp":"2016-12-14T14:50:02Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Badbadzist Empire Party", "Fine":400 }
+{ "timestamp":"2016-12-15T15:31:37Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Gliese 58 Inc", "Fine":200 }
+{ "timestamp":"2016-12-15T16:59:35Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"LP 940-115 Citizens' Forum", "Victim":"Josh Hallam", "Bounty":200 }
+{ "timestamp":"2016-12-15T17:16:28Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"LP 940-115 Citizens' Forum", "Victim":"$ShipName_Police_Empire;", "Victim_Localised":"Internal Security Service", "Bounty":200 }
+{ "timestamp":"2016-12-16T14:24:08Z", "event":"CommitCrime", "CrimeType":"dockingMinorBlockingAirlock", "Faction":"Hutton Orbital Truckers Co-Operative", "Fine":300 }
+{ "timestamp":"2016-12-17T12:58:02Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"Imperial Cartographic Cooperative", "Fine":250 }
+{ "timestamp":"2016-12-17T12:58:03Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"Imperial Cartographic Cooperative", "Fine":250 }
+{ "timestamp":"2016-12-17T12:58:04Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"Imperial Cartographic Cooperative", "Fine":250 }
+{ "timestamp":"2016-12-17T12:58:05Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"Imperial Cartographic Cooperative", "Fine":250 }
+{ "timestamp":"2016-12-28T11:39:55Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"The Stumblingtroop", "Fine":90 }
+{ "timestamp":"2016-12-28T13:18:28Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"The Stumblingtroop", "Victim":"Torstein", "Bounty":185 }
+{ "timestamp":"2016-12-28T13:29:14Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"The Stumblingtroop", "Fine":200 }
+{ "timestamp":"2016-12-28T14:01:24Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"LP 940-115 Citizens' Forum", "Fine":100 }
+{ "timestamp":"2016-12-30T19:31:47Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"b Herculis Fortune PLC", "Victim":"Nick Murgatroyd", "Bounty":400 }
+{ "timestamp":"2016-12-30T19:32:02Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"b Herculis Fortune PLC", "Victim":"Nick Murgatroyd", "Bounty":6000 }
+{ "timestamp":"2017-01-01T17:25:27Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Union of G 141-21 for Equality", "Victim":"Federal Agent", "Bounty":200 }
+{ "timestamp":"2017-01-01T18:07:20Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Ross 730 Silver Energy Services", "Victim":"Federal Agent", "Bounty":400 }
+{ "timestamp":"2017-01-01T18:09:41Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Ross 730 Silver Energy Services", "Victim":"Alliance Enforcer", "Bounty":400 }
+{ "timestamp":"2017-01-01T20:51:37Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"New 17 Draconis Alliance", "Fine":400 }
+{ "timestamp":"2017-01-07T12:32:06Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Jurokkju Imperial Society", "Fine":100 }
+{ "timestamp":"2017-01-07T12:32:30Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Jurokkju Imperial Society", "Fine":400 }
+{ "timestamp":"2017-01-07T12:32:34Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Jurokkju Imperial Society", "Fine":100 }
+{ "timestamp":"2017-01-07T12:46:41Z", "event":"CommitCrime", "CrimeType":"dockingMinorBlockingLandingPad", "Faction":"Jurokkju Imperial Society", "Fine":400 }
+{ "timestamp":"2017-01-07T12:47:01Z", "event":"CommitCrime", "CrimeType":"dockingMajorBlockingLandingPad", "Faction":"Jurokkju Imperial Society", "Bounty":600 }
+{ "timestamp":"2017-01-07T16:15:36Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Tatapai Empire Assembly", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":200 }
+{ "timestamp":"2017-01-07T16:15:40Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Tatapai Empire Assembly", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":200 }
+{ "timestamp":"2017-01-07T16:16:00Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Tatapai Empire Assembly", "Victim":"$missileskimmer_name;", "Victim_Localised":"Guardian", "Bounty":200 }
+{ "timestamp":"2017-01-07T16:16:00Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Tatapai Empire Assembly", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":200 }
+{ "timestamp":"2017-01-11T16:18:33Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"People's Procyon Values Party", "Fine":400 }
+{ "timestamp":"2017-01-11T19:02:40Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"YZ Ceti Blue Galactic & Co", "Victim":"$missileskimmer_name;", "Victim_Localised":"Guardian", "Bounty":400 }
+{ "timestamp":"2017-01-11T19:03:18Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"YZ Ceti Blue Galactic & Co", "Victim":"$missileskimmer_name;", "Victim_Localised":"Guardian", "Bounty":400 }
+{ "timestamp":"2017-01-11T19:04:22Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"YZ Ceti Blue Galactic & Co", "Victim":"$missileskimmer_name;", "Victim_Localised":"Guardian", "Bounty":400 }
+{ "timestamp":"2017-01-11T19:19:41Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"YZ Ceti Blue Galactic & Co", "Victim":"$missileskimmer_name;", "Victim_Localised":"Guardian", "Bounty":400 }
+{ "timestamp":"2017-01-11T19:19:46Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"YZ Ceti Blue Galactic & Co", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":400 }
+{ "timestamp":"2017-01-11T19:19:46Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"YZ Ceti Blue Galactic & Co", "Victim":"$missileskimmer_name;", "Victim_Localised":"Guardian", "Bounty":400 }
+{ "timestamp":"2017-01-25T19:20:38Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Federal Defense League", "Fine":100 }
+{ "timestamp":"2017-01-25T19:20:56Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Federal Defense League", "Fine":100 }
+{ "timestamp":"2017-01-25T19:21:42Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Federal Defense League", "Fine":100 }
+{ "timestamp":"2017-01-25T19:21:53Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Federal Defense League", "Fine":100 }
+{ "timestamp":"2017-01-25T19:22:02Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Federal Defense League", "Victim":"$ShipName_Police_Federation;", "Victim_Localised":"Federal Security Service", "Bounty":200 }
+{ "timestamp":"2017-01-25T19:22:04Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Federal Defense League", "Fine":100 }
+{ "timestamp":"2017-01-25T19:40:35Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Herci Bridge Limited", "Victim":"Craig Humphries", "Bounty":400 }
+{ "timestamp":"2017-01-25T20:00:48Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Rureri Network", "Victim":"Arana Walker", "Bounty":400 }
+{ "timestamp":"2017-01-27T15:03:16Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Verner Imperial Society", "Victim":"Kirania", "Bounty":200 }
+{ "timestamp":"2017-01-27T15:32:42Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Verner Imperial Society", "Victim":"$ShipName_Police_Empire;", "Victim_Localised":"Internal Security Service", "Bounty":200 }
+{ "timestamp":"2017-01-27T15:35:30Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Verner Imperial Society", "Victim":"$ShipName_Police_Empire;", "Victim_Localised":"Internal Security Service", "Bounty":5000 }
+{ "timestamp":"2017-01-29T15:21:44Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Labour of Walmiri", "Fine":400 }
+{ "timestamp":"2017-01-29T15:21:54Z", "event":"CommitCrime", "CrimeType":"dockingMajorTresspass", "Faction":"Labour of Walmiri", "Bounty":600 }
+{ "timestamp":"2017-01-29T15:22:14Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Labour of Walmiri", "Victim":"$ShipName_MilitaryFighter_Federation;", "Victim_Localised":"Federal Navy Fighter", "Bounty":200 }
+{ "timestamp":"2017-01-29T20:25:36Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Fedmich Electronics Partners", "Victim":"Bruce Levy", "Bounty":200 }
+{ "timestamp":"2017-02-03T14:59:28Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Fedmich Electronics Partners", "Fine":100 }
+{ "timestamp":"2017-02-03T15:22:16Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Maljenni Inc", "Fine":400 }
+{ "timestamp":"2017-02-04T15:47:00Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"United HIP 115181 Dominion", "Fine":175 }
+{ "timestamp":"2017-02-05T12:51:19Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Hernir Left Party", "Fine":300 }
+{ "timestamp":"2017-02-05T16:59:58Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Aseveljet", "Victim":"$ShipName_Military_Independent;", "Victim_Localised":"System Defence Force", "Bounty":185 }
+{ "timestamp":"2017-02-06T15:25:56Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"New Ross 835 Future", "Fine":400 }
+{ "timestamp":"2017-02-09T14:05:06Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Fedmich Electronics Partners", "Fine":100 }
+{ "timestamp":"2017-02-09T19:40:07Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:11Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:12Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:13Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:14Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:15Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:16Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:17Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:18Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:19Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:20Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:21Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:22Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:23Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:24Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:25Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:26Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:27Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:28Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:29Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:30Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:31Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:32Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:33Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:34Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:35Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-09T19:40:36Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"The Emperor's Will", "Fine":150 }
+{ "timestamp":"2017-02-16T14:50:30Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Workers of Krinda Future", "Fine":400 }
+{ "timestamp":"2017-02-18T18:33:58Z", "event":"CommitCrime", "CrimeType":"dockingMinorBlockingLandingPad", "Faction":"Metzili Empire League", "Fine":400 }
+{ "timestamp":"2017-02-18T18:34:26Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Metzili Empire League", "Fine":100 }
+{ "timestamp":"2017-02-18T18:37:15Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Metzili Empire League", "Fine":100 }
+{ "timestamp":"2017-02-18T18:47:58Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Metzili Empire League", "Fine":100 }
+{ "timestamp":"2017-02-18T20:03:02Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Tod 'The Blaster' McQuinn", "Fine":100 }
+{ "timestamp":"2017-02-19T14:24:36Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Fehu Organisation", "Fine":200 }
+{ "timestamp":"2017-02-20T13:39:46Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"New 17 Draconis Alliance", "Fine":400 }
+{ "timestamp":"2017-02-20T15:24:03Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Green Party of Torno", "Fine":200 }
+{ "timestamp":"2017-02-20T15:24:13Z", "event":"CommitCrime", "CrimeType":"dockingMajorTresspass", "Faction":"Green Party of Torno", "Bounty":400 }
+{ "timestamp":"2017-02-20T15:29:37Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:29:41Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:30:23Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:30:30Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:31:47Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:33:39Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:35:09Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:35:16Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$bombskimmerdrone_name;", "Victim_Localised":"Stinger", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:35:33Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:36:30Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_generator_name;", "Victim_Localised":"Generator", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:37:03Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:37:13Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:39:00Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:40:03Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:40:24Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:40:45Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:41:20Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_generator_name;", "Victim_Localised":"Generator", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:42:08Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:42:24Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_generator_name;", "Victim_Localised":"Generator", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:42:43Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:43:03Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_generator_name;", "Victim_Localised":"Generator", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:43:20Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:43:31Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:44:30Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_generator_name;", "Victim_Localised":"Generator", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:53:14Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_generator_name;", "Victim_Localised":"Generator", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:56:02Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_generator_name;", "Victim_Localised":"Generator", "Bounty":180 }
+{ "timestamp":"2017-02-20T15:56:32Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_generator_name;", "Victim_Localised":"Generator", "Bounty":180 }
+{ "timestamp":"2017-02-20T16:00:27Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_turretbasea_name;", "Victim_Localised":"Defence Turret", "Bounty":180 }
+{ "timestamp":"2017-02-20T16:01:12Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$missileskimmer_name;", "Victim_Localised":"Guardian", "Bounty":180 }
+{ "timestamp":"2017-02-20T16:01:29Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Green Party of Torno", "Victim":"$poi_generator_name;", "Victim_Localised":"Generator", "Bounty":180 }
+{ "timestamp":"2017-02-22T13:55:26Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"He Bo Pro-Alliance Party", "Fine":100 }
+{ "timestamp":"2017-02-22T14:08:10Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"LHS 2789 Creative Commodities", "Fine":150 }
+{ "timestamp":"2017-02-22T14:09:41Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"LHS 2789 Creative Commodities", "Fine":150 }
+{ "timestamp":"2017-02-22T14:13:57Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"LHS 2789 Creative Commodities", "Fine":150 }
+{ "timestamp":"2017-03-02T15:42:57Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"The Emperor's Will", "Fine":100 }
+{ "timestamp":"2017-03-02T16:30:19Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"The Emperor's Will", "Fine":400 }
+{ "timestamp":"2017-03-02T18:45:25Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Harm Services", "Fine":200 }
+{ "timestamp":"2017-03-04T14:47:36Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Mandill Autocracy", "Fine":500 }
+{ "timestamp":"2017-03-11T14:04:52Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Independent Deciat Green Party", "Fine":100 }
+{ "timestamp":"2017-03-12T13:09:38Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"HR 6565 Triad", "Fine":400 }
+{ "timestamp":"2017-03-12T14:21:40Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Theta Pavonis Patron's Principles", "Victim":"Luke Lieb", "Bounty":200 }
+{ "timestamp":"2017-03-12T17:25:47Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Independent Deciat Green Party", "Fine":400 }
+{ "timestamp":"2017-03-13T15:29:59Z", "event":"CommitCrime", "CrimeType":"fireInStation", "Faction":"Gubian Crimson State Services", "Bounty":100 }
+{ "timestamp":"2017-03-13T15:30:09Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Gubian Crimson State Services", "Fine":400 }
+{ "timestamp":"2017-03-14T15:54:42Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone_hulldamage", "Faction":"BPM 62891 Transport Prtnrs", "Fine":400 }
+{ "timestamp":"2017-03-16T18:48:44Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"The Dweller", "Fine":100 }
+{ "timestamp":"2017-03-17T15:08:51Z", "event":"CommitCrime", "CrimeType":"dockingMajorTresspass", "Faction":"Mother Gaia", "Bounty":600 }
+{ "timestamp":"2017-03-24T16:46:19Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Explorer on Tour", "Fine":200 }
+{ "timestamp":"2017-03-28T14:48:35Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Adle's Armada", "Fine":200 }
+{ "timestamp":"2017-03-28T14:48:46Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Adle's Armada", "Fine":100 }
+{ "timestamp":"2017-03-28T14:48:46Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Adle's Armada", "Victim":"TheRuddy", "Bounty":400 }
+{ "timestamp":"2017-03-28T14:48:55Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Adle's Armada", "Victim":"TheRuddy", "Bounty":6000 }
+{ "timestamp":"2017-03-28T14:58:41Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Adle's Armada", "Victim":"Richard Newman", "Bounty":400 }
+{ "timestamp":"2017-04-01T19:06:11Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"New 70 Ophiuchi League", "Fine":500 }
+{ "timestamp":"2017-04-01T19:06:47Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"New 70 Ophiuchi League", "Fine":500 }
+{ "timestamp":"2017-04-01T19:08:45Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"New 70 Ophiuchi League", "Fine":500 }
+{ "timestamp":"2017-04-01T19:09:51Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"New 70 Ophiuchi League", "Fine":500 }
+{ "timestamp":"2017-04-01T19:10:01Z", "event":"CommitCrime", "CrimeType":"dockingMajorTresspass", "Faction":"New 70 Ophiuchi League", "Bounty":1000 }
+{ "timestamp":"2017-04-01T19:50:01Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"New 70 Ophiuchi League", "Fine":500 }
+{ "timestamp":"2017-04-03T14:12:07Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Indjigan Corp.", "Victim":"Glover", "Bounty":400 }
+{ "timestamp":"2017-04-04T16:02:45Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Citizen Party of Grabil", "Victim":"EGP Operative", "Bounty":275 }
+{ "timestamp":"2017-04-06T14:43:34Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Left Party of Cai", "Fine":300 }
+{ "timestamp":"2017-04-06T14:43:44Z", "event":"CommitCrime", "CrimeType":"dockingMajorTresspass", "Faction":"Left Party of Cai", "Bounty":500 }
+{ "timestamp":"2017-04-06T14:46:00Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Left Party of Cai", "Victim":"$ShipName_Military_Independent;", "Victim_Localised":"System Defence Force", "Bounty":200 }
+{ "timestamp":"2017-04-07T16:04:24Z", "event":"CommitCrime", "CrimeType":"dockingMajorTresspass", "Faction":"Quince Creative Holdings", "Bounty":500 }
+{ "timestamp":"2017-04-10T12:48:21Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Wolf 397 Independents", "Fine":400 }
+{ "timestamp":"2017-04-10T20:30:19Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Kamitra Empire Pact", "Fine":400 }

@@ -1,0 +1,15 @@
+{ "timestamp":"2018-12-12T16:43:31Z", "event":"ApproachBody", "StarSystem":"Shinrarta Dezhra", "SystemAddress":3932277478106, "Body":"Shinrarta Dezhra A 1", "BodyID":11 }
+{ "timestamp":"2018-12-12T16:54:34Z", "event":"ApproachBody", "StarSystem":"Deciat", "SystemAddress":6681123623626, "Body":"Deciat 6 a", "BodyID":25 }
+{ "timestamp":"2018-12-12T19:47:10Z", "event":"ApproachBody", "StarSystem":"Praea Euq BN-W c1-15", "SystemAddress":4208229094162, "Body":"Praea Euq BN-W c1-15 AB 1 c a", "BodyID":17 }
+{ "timestamp":"2018-12-13T16:32:10Z", "event":"ApproachBody", "StarSystem":"Wredguia OC-J b23-1", "SystemAddress":2860045968585, "Body":"Wredguia OC-J b23-1 4 b", "BodyID":30 }
+{ "timestamp":"2018-12-13T16:43:47Z", "event":"ApproachBody", "StarSystem":"Wredguia OC-J b23-1", "SystemAddress":2860045968585, "Body":"Wredguia OC-J b23-1 4 b", "BodyID":30 }
+{ "timestamp":"2018-12-14T19:11:00Z", "event":"ApproachBody", "StarSystem":"Col 359 Sector GJ-H b24-3", "SystemAddress":7266949605033, "Body":"Col 359 Sector GJ-H b24-3 A 3 a", "BodyID":19 }
+{ "timestamp":"2018-12-14T19:49:06Z", "event":"ApproachBody", "StarSystem":"Col 359 Sector PR-D c12-11", "SystemAddress":3107307950930, "Body":"Col 359 Sector PR-D c12-11 1 b", "BodyID":15 }
+{ "timestamp":"2018-12-14T20:19:08Z", "event":"ApproachBody", "StarSystem":"Col 359 Sector LW-N d6-37", "SystemAddress":1281770850731, "Body":"Col 359 Sector LW-N d6-37 CD 1", "BodyID":7 }
+{ "timestamp":"2018-12-14T20:28:49Z", "event":"ApproachBody", "StarSystem":"Col 359 Sector LW-N d6-37", "SystemAddress":1281770850731, "Body":"Col 359 Sector LW-N d6-37 CD 1", "BodyID":7 }
+{ "timestamp":"2018-12-14T20:30:48Z", "event":"ApproachBody", "StarSystem":"Col 359 Sector LW-N d6-37", "SystemAddress":1281770850731, "Body":"Col 359 Sector LW-N d6-37 CD 1", "BodyID":7 }
+{ "timestamp":"2018-12-14T21:06:15Z", "event":"ApproachBody", "StarSystem":"Col 359 Sector OC-M d7-18", "SystemAddress":628919044531, "Body":"Col 359 Sector OC-M d7-18 6 a", "BodyID":14 }
+{ "timestamp":"2018-12-15T11:15:43Z", "event":"ApproachBody", "StarSystem":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163, "Body":"Vela Dark Region ZE-A d64 1", "BodyID":13 }
+{ "timestamp":"2018-12-15T11:27:18Z", "event":"ApproachBody", "StarSystem":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163, "Body":"Vela Dark Region ZE-A d64 1", "BodyID":13 }
+{ "timestamp":"2018-12-15T11:38:20Z", "event":"ApproachBody", "StarSystem":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163, "Body":"Vela Dark Region ZE-A d64 1", "BodyID":13 }
+{ "timestamp":"2018-12-15T11:43:26Z", "event":"ApproachBody", "StarSystem":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163, "Body":"Vela Dark Region ZE-A d64 1", "BodyID":13 }

@@ -1,0 +1,3 @@
+{ "timestamp":"2017-06-27T19:02:00Z", "event":"DockingRequested", "StationName":"Ziegel Dock" }
+{ "timestamp":"2017-07-01T11:03:08Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-07-01T18:03:52Z", "event":"DockingRequested", "StationName":"Attenborough's Watch" }

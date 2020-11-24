@@ -1,0 +1,10 @@
+{ "timestamp":"2017-04-14T12:31:42Z", "event":"BuyExplorationData", "System":"Katta", "Cost":434 }
+{ "timestamp":"2017-04-19T17:08:51Z", "event":"BuyExplorationData", "System":"LP 131-66", "Cost":376 }
+{ "timestamp":"2017-04-19T17:49:32Z", "event":"BuyExplorationData", "System":"Doris", "Cost":539 }
+{ "timestamp":"2017-04-19T18:59:11Z", "event":"BuyExplorationData", "System":"Tiethay", "Cost":527 }
+{ "timestamp":"2017-04-19T19:11:33Z", "event":"BuyExplorationData", "System":"Alcor", "Cost":1459 }
+{ "timestamp":"2017-04-19T19:23:28Z", "event":"BuyExplorationData", "System":"G 123-49", "Cost":596 }
+{ "timestamp":"2017-04-20T09:52:07Z", "event":"BuyExplorationData", "System":"Amber", "Cost":960 }
+{ "timestamp":"2017-04-20T11:12:07Z", "event":"BuyExplorationData", "System":"Kaal", "Cost":838 }
+{ "timestamp":"2017-04-20T11:24:14Z", "event":"BuyExplorationData", "System":"Sobek", "Cost":88 }
+{ "timestamp":"2017-04-20T14:02:01Z", "event":"BuyExplorationData", "System":"HR 4867", "Cost":121 }

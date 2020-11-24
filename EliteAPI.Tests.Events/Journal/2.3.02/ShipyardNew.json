@@ -1,0 +1,13 @@
+{ "timestamp":"2017-05-08T18:24:44Z", "event":"ShipyardNew", "ShipType":"dolphin", "NewShipID":93 }
+{ "timestamp":"2017-05-16T18:30:03Z", "event":"ShipyardNew", "ShipType":"type6", "NewShipID":100 }
+{ "timestamp":"2017-05-19T17:20:27Z", "event":"ShipyardNew", "ShipType":"asp_scout", "NewShipID":101 }
+{ "timestamp":"2017-06-05T15:43:22Z", "event":"ShipyardNew", "ShipType":"federation_dropship_mkii", "NewShipID":104 }
+{ "timestamp":"2017-06-10T08:40:54Z", "event":"ShipyardNew", "ShipType":"empire_courier", "NewShipID":105 }
+{ "timestamp":"2017-06-10T16:24:50Z", "event":"ShipyardNew", "ShipType":"python", "NewShipID":106 }
+{ "timestamp":"2017-06-13T13:51:54Z", "event":"ShipyardNew", "ShipType":"sidewinder", "NewShipID":109 }
+{ "timestamp":"2017-06-15T16:29:35Z", "event":"ShipyardNew", "ShipType":"dolphin", "NewShipID":112 }
+{ "timestamp":"2017-06-15T16:31:22Z", "event":"ShipyardNew", "ShipType":"federation_dropship", "NewShipID":113 }
+{ "timestamp":"2017-06-15T17:58:17Z", "event":"ShipyardNew", "ShipType":"sidewinder", "NewShipID":114 }
+{ "timestamp":"2017-06-15T18:01:00Z", "event":"ShipyardNew", "ShipType":"empire_eagle", "NewShipID":115 }
+{ "timestamp":"2017-06-20T13:27:17Z", "event":"ShipyardNew", "ShipType":"independant_trader", "NewShipID":118 }
+{ "timestamp":"2017-06-25T13:28:59Z", "event":"ShipyardNew", "ShipType":"hauler", "NewShipID":120 }

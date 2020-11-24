@@ -1,0 +1,9 @@
+{ "timestamp":"2016-10-25T17:25:43Z", "event":"CrewHire", "Name":"Carson Reid", "Faction":"The Brotherhood of the Dark Circle", "Cost":15000, "CombatRank":0 }
+{ "timestamp":"2016-10-26T16:28:04Z", "event":"CrewHire", "Name":"Virgilio Higgins", "Faction":"Workers of Ross 730 Green Party", "Cost":15000, "CombatRank":0 }
+{ "timestamp":"2016-10-26T16:28:08Z", "event":"CrewHire", "Name":"Emelyn Hale", "Faction":"Ross 145 PLC", "Cost":15000, "CombatRank":0 }
+{ "timestamp":"2016-10-26T16:28:12Z", "event":"CrewHire", "Name":"Laila Rios", "Faction":"Revolutionary Party of Ross 145", "Cost":15000, "CombatRank":0 }
+{ "timestamp":"2016-10-28T12:33:48Z", "event":"CrewHire", "Name":"Tracy Weiss", "Faction":"Union of G 141-21 for Equality", "Cost":15000, "CombatRank":0 }
+{ "timestamp":"2016-10-28T12:33:51Z", "event":"CrewHire", "Name":"Amilia Keith", "Faction":"Union of G 141-21 for Equality", "Cost":15000, "CombatRank":0 }
+{ "timestamp":"2016-11-06T15:44:12Z", "event":"CrewHire", "Name":"Gladys Schmidt", "Faction":"The Brotherhood of the Dark Circle", "Cost":150000, "CombatRank":4 }
+{ "timestamp":"2016-12-15T15:29:28Z", "event":"CrewHire", "Name":"Belle Caldwell", "Faction":"Gliese 58 Inc", "Cost":15000, "CombatRank":0 }
+{ "timestamp":"2016-12-15T20:49:28Z", "event":"CrewHire", "Name":"Zaya Mckee", "Faction":"6 Andromedae Creative Partners", "Cost":15000, "CombatRank":0 }

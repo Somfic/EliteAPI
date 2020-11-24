@@ -1,0 +1,2 @@
+{ "timestamp":"2017-09-27T14:36:25Z", "event":"SellDrones", "Type":"Drones", "Count":56, "SellPrice":101, "TotalSale":5656 }
+{ "timestamp":"2017-09-27T15:10:06Z", "event":"SellDrones", "Type":"Drones", "Count":4, "SellPrice":101, "TotalSale":404 }

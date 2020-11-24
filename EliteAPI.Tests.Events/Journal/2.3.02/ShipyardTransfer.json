@@ -1,0 +1,14 @@
+{ "timestamp":"2017-05-08T18:30:55Z", "event":"ShipyardTransfer", "ShipType":"Empire_Courier", "ShipID":67, "System":"78 Ursae Majoris", "Distance":116.066849, "TransferPrice":72325 }
+{ "timestamp":"2017-05-09T16:12:56Z", "event":"ShipyardTransfer", "ShipType":"Empire_Courier", "ShipID":67, "System":"Shinrarta Dezhra", "Distance":108.173370, "TransferPrice":67610 }
+{ "timestamp":"2017-05-09T16:13:19Z", "event":"ShipyardTransfer", "ShipType":"Orca", "ShipID":70, "System":"Shinrarta Dezhra", "Distance":108.173370, "TransferPrice":421613 }
+{ "timestamp":"2017-05-11T13:16:48Z", "event":"ShipyardTransfer", "ShipType":"Empire_Courier", "ShipID":67, "System":"BD+49 1280", "Distance":108.173370, "TransferPrice":68286 }
+{ "timestamp":"2017-05-11T13:17:14Z", "event":"ShipyardTransfer", "ShipType":"Orca", "ShipID":70, "System":"BD+49 1280", "Distance":108.173370, "TransferPrice":421613 }
+{ "timestamp":"2017-05-12T15:59:22Z", "event":"ShipyardTransfer", "ShipType":"Anaconda", "ShipID":32, "System":"He Bo", "Distance":112.091644, "TransferPrice":1186871 }
+{ "timestamp":"2017-06-13T13:38:10Z", "event":"ShipyardTransfer", "ShipType":"Federation_Dropship_MkII", "ShipID":104, "System":"Shinrarta Dezhra", "Distance":109.824806, "TransferPrice":404109 }
+{ "timestamp":"2017-06-13T13:39:34Z", "event":"ShipyardTransfer", "ShipType":"DiamondBackXL", "ShipID":66, "System":"Shinrarta Dezhra", "Distance":109.824806, "TransferPrice":71193 }
+{ "timestamp":"2017-06-20T19:44:57Z", "event":"ShipyardTransfer", "ShipType":"Empire_Eagle", "ShipID":115, "System":"Shinrarta Dezhra", "Distance":63.624893, "TransferPrice":23289 }
+{ "timestamp":"2017-06-20T19:45:06Z", "event":"ShipyardTransfer", "ShipType":"Empire_Courier", "ShipID":67, "System":"Shinrarta Dezhra", "Distance":63.624893, "TransferPrice":21437 }
+{ "timestamp":"2017-06-20T19:46:42Z", "event":"ShipyardTransfer", "ShipType":"Dolphin", "ShipID":93, "System":"Shinrarta Dezhra", "Distance":63.624893, "TransferPrice":41680 }
+{ "timestamp":"2017-06-25T12:59:28Z", "event":"ShipyardTransfer", "ShipType":"FerDeLance", "ShipID":56, "System":"Shinrarta Dezhra", "Distance":157.857132, "TransferPrice":1335514 }
+{ "timestamp":"2017-06-25T13:56:27Z", "event":"ShipyardTransfer", "ShipType":"Empire_Courier", "ShipID":67, "System":"Luyten's Star", "Distance":244.114624, "TransferPrice":76526 }
+{ "timestamp":"2017-06-25T13:56:43Z", "event":"ShipyardTransfer", "ShipType":"Empire_Eagle", "ShipID":115, "System":"Luyten's Star", "Distance":244.114624, "TransferPrice":83372 }

@@ -1,0 +1,3 @@
+{ "timestamp":"2018-12-13T16:43:35Z", "event":"LeaveBody", "StarSystem":"Wredguia OC-J b23-1", "SystemAddress":2860045968585, "Body":"Wredguia OC-J b23-1 4 b", "BodyID":30 }
+{ "timestamp":"2018-12-13T16:43:52Z", "event":"LeaveBody", "StarSystem":"Wredguia OC-J b23-1", "SystemAddress":2860045968585, "Body":"Wredguia OC-J b23-1 4 b", "BodyID":30 }
+{ "timestamp":"2018-12-15T11:42:38Z", "event":"LeaveBody", "StarSystem":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163, "Body":"Vela Dark Region ZE-A d64 1", "BodyID":13 }

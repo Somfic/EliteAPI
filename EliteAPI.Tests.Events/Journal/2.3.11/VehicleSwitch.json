@@ -1,0 +1,14 @@
+{ "timestamp":"2017-07-12T19:19:16Z", "event":"VehicleSwitch" }
+{ "timestamp":"2017-08-21T15:48:05Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2017-08-22T14:46:34Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2017-09-08T18:32:57Z", "event":"VehicleSwitch", "To":"Fighter" }
+{ "timestamp":"2017-09-08T18:34:11Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2017-09-10T10:52:54Z", "event":"VehicleSwitch" }
+{ "timestamp":"2017-09-10T10:55:46Z", "event":"VehicleSwitch" }
+{ "timestamp":"2017-09-10T10:58:00Z", "event":"VehicleSwitch" }
+{ "timestamp":"2017-09-10T10:58:44Z", "event":"VehicleSwitch" }
+{ "timestamp":"2017-09-10T11:46:50Z", "event":"VehicleSwitch" }
+{ "timestamp":"2017-09-25T13:39:30Z", "event":"VehicleSwitch" }
+{ "timestamp":"2017-09-25T14:36:51Z", "event":"VehicleSwitch" }
+{ "timestamp":"2017-09-25T16:52:30Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2017-09-25T19:15:48Z", "event":"VehicleSwitch", "To":"Mothership" }

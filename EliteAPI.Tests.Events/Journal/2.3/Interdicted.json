@@ -1,0 +1,8 @@
+{ "timestamp":"2017-04-12T21:10:48Z", "event":"Interdicted", "Submitted":true, "Interdictor":"$ShipName_Police_Empire;", "Interdictor_Localised":"Internal Security Service", "IsPlayer":false, "Faction":"Allied Apsu Freedom Party" }
+{ "timestamp":"2017-04-13T12:33:28Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Whiteshark", "IsPlayer":false, "Faction":"Tau Sagittarii Ltd" }
+{ "timestamp":"2017-04-13T13:55:46Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Tofflan", "IsPlayer":false, "Faction":"Changai Progressive Party" }
+{ "timestamp":"2017-04-13T14:12:35Z", "event":"Interdicted", "Submitted":false, "Interdictor":"Jacky Littl", "IsPlayer":false, "Faction":"Changai Progressive Party" }
+{ "timestamp":"2017-04-13T15:25:37Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Egil Töllner", "IsPlayer":false, "Faction":"UBV 15076 First" }
+{ "timestamp":"2017-04-19T15:34:53Z", "event":"Interdicted", "Submitted":false, "Interdictor":"Leifur Eiriksson", "IsPlayer":false, "Faction":"Megrez Alliance Mandate" }
+{ "timestamp":"2017-04-19T15:58:24Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Annie Burdess", "IsPlayer":false, "Faction":"Sons of Icarus" }
+{ "timestamp":"2017-04-20T12:09:00Z", "event":"Interdicted", "Submitted":false, "Interdictor":"Kevneedham", "IsPlayer":false, "Faction":"Alchita Focus" }

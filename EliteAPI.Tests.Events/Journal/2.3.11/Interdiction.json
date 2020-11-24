@@ -1,0 +1,18 @@
+{ "timestamp":"2017-07-15T11:17:46Z", "event":"Interdiction", "Success":true, "IsPlayer":false, "Faction":"Bunda Crimson Organisation" }
+{ "timestamp":"2017-07-15T12:00:30Z", "event":"Interdiction", "Success":true, "IsPlayer":false, "Faction":"Cao Guatun Empire Consulate" }
+{ "timestamp":"2017-07-15T12:03:34Z", "event":"Interdiction", "Success":true, "IsPlayer":false, "Faction":"Cao Guatun Empire Consulate" }
+{ "timestamp":"2017-07-15T17:25:19Z", "event":"Interdiction", "Success":true, "IsPlayer":false, "Faction":"CD-51 9202 for Equality" }
+{ "timestamp":"2017-07-17T16:01:22Z", "event":"Interdiction", "Success":false, "IsPlayer":false, "Interdicted":"Pit Thomsen", "Faction":"Bunda Crimson Organisation" }
+{ "timestamp":"2017-07-17T16:05:44Z", "event":"Interdiction", "Success":true, "IsPlayer":false, "Faction":"Bunda Bridge & Co" }
+{ "timestamp":"2017-07-17T16:11:42Z", "event":"Interdiction", "Success":true, "IsPlayer":false, "Faction":"The Pilots Federation" }
+{ "timestamp":"2017-09-09T11:59:58Z", "event":"Interdiction", "Success":true, "IsPlayer":true, "Interdicted":"LE GRAND BAGUETTE", "CombatRank":4 }
+{ "timestamp":"2017-09-09T14:28:19Z", "event":"Interdiction", "Success":true, "IsPlayer":false, "Faction":"Runo Interstellar" }
+{ "timestamp":"2017-09-09T14:37:58Z", "event":"Interdiction", "Success":true, "IsPlayer":false, "Faction":"Runo Empire Group" }
+{ "timestamp":"2017-09-09T14:45:12Z", "event":"Interdiction", "Success":true, "IsPlayer":false, "Faction":"Runo Patron's Principles" }
+{ "timestamp":"2017-09-09T14:47:17Z", "event":"Interdiction", "Success":true, "IsPlayer":false, "Faction":"Hand Gang of Runo" }
+{ "timestamp":"2017-09-12T18:53:36Z", "event":"Interdiction", "Success":true, "IsPlayer":true, "Interdicted":"Kataleya Le Morte", "CombatRank":0 }
+{ "timestamp":"2017-09-14T19:31:02Z", "event":"Interdiction", "Success":true, "IsPlayer":true, "Interdicted":"LION80", "CombatRank":1 }
+{ "timestamp":"2017-09-14T19:44:18Z", "event":"Interdiction", "Success":true, "IsPlayer":true, "Interdicted":"Yeray812", "CombatRank":0 }
+{ "timestamp":"2017-09-14T19:47:40Z", "event":"Interdiction", "Success":true, "IsPlayer":true, "Interdicted":"Spacyfrogger", "CombatRank":0 }
+{ "timestamp":"2017-09-23T20:00:49Z", "event":"Interdiction", "Success":true, "IsPlayer":false, "Faction":"Crom Silver Boys" }
+{ "timestamp":"2017-09-23T20:11:34Z", "event":"Interdiction", "Success":true, "IsPlayer":false, "Faction":"Natural 69 G. Carinae Movement" }

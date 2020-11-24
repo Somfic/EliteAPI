@@ -1,0 +1,11 @@
+{ "timestamp":"2017-05-16T16:18:22Z", "event":"MarketBuy", "Type":"lavianbrandy", "Count":24, "BuyPrice":3707, "TotalCost":88968 }
+{ "timestamp":"2017-05-16T16:30:29Z", "event":"MarketBuy", "Type":"lavianbrandy", "Count":24, "BuyPrice":3707, "TotalCost":88968 }
+{ "timestamp":"2017-05-16T16:40:20Z", "event":"MarketBuy", "Type":"lavianbrandy", "Count":24, "BuyPrice":3707, "TotalCost":88968 }
+{ "timestamp":"2017-05-16T16:40:29Z", "event":"MarketBuy", "Type":"tobacco", "Count":99, "BuyPrice":4868, "TotalCost":481932 }
+{ "timestamp":"2017-05-16T16:40:53Z", "event":"MarketBuy", "Type":"coffee", "Count":5, "BuyPrice":1374, "TotalCost":6870 }
+{ "timestamp":"2017-05-16T16:52:34Z", "event":"MarketBuy", "Type":"lavianbrandy", "Count":24, "BuyPrice":3707, "TotalCost":88968 }
+{ "timestamp":"2017-05-16T16:52:41Z", "event":"MarketBuy", "Type":"tobacco", "Count":2, "BuyPrice":4868, "TotalCost":9736 }
+{ "timestamp":"2017-05-16T16:52:52Z", "event":"MarketBuy", "Type":"coffee", "Count":102, "BuyPrice":1374, "TotalCost":140148 }
+{ "timestamp":"2017-05-19T17:43:27Z", "event":"MarketBuy", "Type":"galactictravelguide", "Count":5, "BuyPrice":267, "TotalCost":1335 }
+{ "timestamp":"2017-05-19T19:08:39Z", "event":"MarketBuy", "Type":"xihecompanions", "Count":10, "BuyPrice":1345, "TotalCost":13450 }
+{ "timestamp":"2017-05-19T19:32:38Z", "event":"MarketBuy", "Type":"xihecompanions", "Count":10, "BuyPrice":1345, "TotalCost":13450 }

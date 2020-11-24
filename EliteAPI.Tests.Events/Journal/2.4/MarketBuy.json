@@ -1,0 +1,17 @@
+{ "timestamp":"2017-10-06T19:59:50Z", "event":"MarketBuy", "Type":"buildingfabricators", "Count":792, "BuyPrice":801, "TotalCost":634392 }
+{ "timestamp":"2017-10-06T20:23:35Z", "event":"MarketBuy", "Type":"cropharvesters", "Count":792, "BuyPrice":2119, "TotalCost":1678248 }
+{ "timestamp":"2017-10-06T20:50:00Z", "event":"MarketBuy", "Type":"cropharvesters", "Count":792, "BuyPrice":2119, "TotalCost":1678248 }
+{ "timestamp":"2017-10-06T21:16:33Z", "event":"MarketBuy", "Type":"cropharvesters", "Count":792, "BuyPrice":2119, "TotalCost":1678248 }
+{ "timestamp":"2017-10-06T21:37:32Z", "event":"MarketBuy", "Type":"cropharvesters", "Count":792, "BuyPrice":2119, "TotalCost":1678248 }
+{ "timestamp":"2017-10-06T22:00:09Z", "event":"MarketBuy", "Type":"cropharvesters", "Count":792, "BuyPrice":2119, "TotalCost":1678248 }
+{ "timestamp":"2017-10-07T11:06:50Z", "event":"MarketBuy", "Type":"cropharvesters", "Count":792, "BuyPrice":2119, "TotalCost":1678248 }
+{ "timestamp":"2017-10-07T11:18:53Z", "event":"MarketBuy", "Type":"clothing", "Count":792, "BuyPrice":179, "TotalCost":141768 }
+{ "timestamp":"2017-10-07T11:40:29Z", "event":"MarketBuy", "Type":"beryllium", "Count":792, "BuyPrice":7746, "TotalCost":6134832 }
+{ "timestamp":"2017-10-07T11:49:57Z", "event":"MarketBuy", "Type":"imperialslaves", "Count":792, "BuyPrice":12790, "TotalCost":10129680 }
+{ "timestamp":"2017-10-07T12:00:59Z", "event":"MarketBuy", "Type":"beryllium", "Count":792, "BuyPrice":7751, "TotalCost":6138792 }
+{ "timestamp":"2017-10-07T12:09:10Z", "event":"MarketBuy", "Type":"imperialslaves", "Count":792, "BuyPrice":12792, "TotalCost":10131264 }
+{ "timestamp":"2017-10-25T16:29:48Z", "event":"MarketBuy", "Type":"watersofshintara", "Count":12, "BuyPrice":7421, "TotalCost":89052 }
+{ "timestamp":"2017-10-25T16:39:57Z", "event":"MarketBuy", "Type":"konggaale", "Count":16, "BuyPrice":585, "TotalCost":9360 }
+{ "timestamp":"2017-11-12T14:26:17Z", "event":"MarketBuy", "Type":"algae", "Count":27, "BuyPrice":20, "TotalCost":540 }
+{ "timestamp":"2017-11-12T14:26:53Z", "event":"MarketBuy", "Type":"fruitandvegetables", "Count":18, "BuyPrice":147, "TotalCost":2646 }
+{ "timestamp":"2017-11-12T14:26:59Z", "event":"MarketBuy", "Type":"animalmeat", "Count":15, "BuyPrice":925, "TotalCost":13875 }

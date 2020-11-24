@@ -1,0 +1,10 @@
+{ "timestamp":"2017-05-08T19:04:37Z", "event":"EjectCargo", "Type":"drones", "Count":310, "Abandoned":false }
+{ "timestamp":"2017-05-10T13:43:49Z", "event":"EjectCargo", "Type":"occupiedcryopod", "Count":1, "Abandoned":false }
+{ "timestamp":"2017-05-19T17:44:28Z", "event":"EjectCargo", "Type":"galactictravelguide", "Count":5, "Abandoned":false }
+{ "timestamp":"2017-05-26T13:50:16Z", "event":"EjectCargo", "Type":"drones", "Count":15, "Abandoned":true }
+{ "timestamp":"2017-06-24T12:37:37Z", "event":"EjectCargo", "Type":"telemetrysuite", "Count":8, "Abandoned":false }
+{ "timestamp":"2017-06-24T12:37:39Z", "event":"EjectCargo", "Type":"hnshockmount", "Count":4, "Abandoned":false }
+{ "timestamp":"2017-06-25T13:32:01Z", "event":"EjectCargo", "Type":"clothing", "Count":4, "Abandoned":false }
+{ "timestamp":"2017-06-25T16:10:58Z", "event":"EjectCargo", "Type":"neofabricinsulation", "Count":4, "Abandoned":false }
+{ "timestamp":"2017-06-25T16:11:02Z", "event":"EjectCargo", "Type":"nanobreakers", "Count":4, "Abandoned":false }
+{ "timestamp":"2017-06-25T16:11:05Z", "event":"EjectCargo", "Type":"modularterminals", "Count":4, "Abandoned":false }

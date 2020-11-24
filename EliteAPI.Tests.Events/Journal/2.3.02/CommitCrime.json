@@ -1,0 +1,29 @@
+{ "timestamp":"2017-05-10T13:21:20Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"BD+49 1280 Free", "Fine":100 }
+{ "timestamp":"2017-05-11T14:00:34Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"The Pilots Federation", "Victim":"$skimmerdrone_name;", "Victim_Localised":"Sentry Skimmer", "Bounty":240 }
+{ "timestamp":"2017-05-11T16:58:53Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"The Pilots Federation", "Victim":"$ShipName_Military_Independent;", "Victim_Localised":"System Defence Force", "Bounty":240 }
+{ "timestamp":"2017-05-12T18:12:48Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"LTT 377 Allied Co", "Fine":500 }
+{ "timestamp":"2017-05-12T18:55:16Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"LTT 377 Allied Co", "Victim":"Torval's Shield", "Bounty":305 }
+{ "timestamp":"2017-05-14T18:44:35Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"LTT 377 Allied Co", "Victim":"Nikolay Sibirtsev", "Bounty":305 }
+{ "timestamp":"2017-05-15T19:24:37Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"LTT 377 Allied Co", "Victim":"Torval's Shield", "Bounty":305 }
+{ "timestamp":"2017-05-16T12:49:00Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"LTT 377 Allied Co", "Victim":"Hedonism Bot Omega", "Bounty":305 }
+{ "timestamp":"2017-05-19T17:44:29Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"LHS 3447 Dynamic & Co", "Fine":250 }
+{ "timestamp":"2017-05-19T17:44:30Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"LHS 3447 Dynamic & Co", "Fine":250 }
+{ "timestamp":"2017-06-05T15:38:51Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"The Pilots Federation", "Fine":200 }
+{ "timestamp":"2017-06-05T15:39:52Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"The Pilots Federation", "Fine":200 }
+{ "timestamp":"2017-06-12T14:06:40Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Mundii Holdings", "Fine":200 }
+{ "timestamp":"2017-06-15T17:40:47Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"The Pilots Federation", "Fine":50 }
+{ "timestamp":"2017-06-15T18:07:06Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"The Pilots Federation", "Fine":75 }
+{ "timestamp":"2017-06-15T18:10:04Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"The Pilots Federation", "Fine":75 }
+{ "timestamp":"2017-06-15T18:10:45Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"The Pilots Federation", "Fine":75 }
+{ "timestamp":"2017-06-20T13:25:05Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"The Pilots Federation", "Fine":75 }
+{ "timestamp":"2017-06-20T17:56:21Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Revolutionary Party of LTT 3572", "Victim":"$ShipName_Police_Federation;", "Victim_Localised":"Federal Security Service", "Bounty":200 }
+{ "timestamp":"2017-06-20T17:56:57Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Revolutionary Party of LTT 3572", "Victim":"$ShipName_Police_Federation;", "Victim_Localised":"Federal Security Service", "Bounty":6000 }
+{ "timestamp":"2017-06-20T17:57:11Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Revolutionary Party of LTT 3572", "Victim":"$ShipName_Police_Federation;", "Victim_Localised":"Federal Security Service", "Bounty":200 }
+{ "timestamp":"2017-06-20T18:24:51Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Red Squadron", "Victim":"Parker", "Bounty":200 }
+{ "timestamp":"2017-06-24T14:59:08Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Independent Kiliwatsuki Free", "Victim":"FNV Formidable", "Bounty":200 }
+{ "timestamp":"2017-06-24T16:18:55Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Iman Caber Industry", "Victim":"Funeral Ship", "Bounty":6000 }
+{ "timestamp":"2017-06-24T19:56:33Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Workers of Raurici Worker's Party", "Fine":300 }
+{ "timestamp":"2017-06-24T19:56:43Z", "event":"CommitCrime", "CrimeType":"dockingMajorTresspass", "Faction":"Workers of Raurici Worker's Party", "Bounty":500 }
+{ "timestamp":"2017-06-24T20:18:37Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Baal Partners", "Fine":400 }
+{ "timestamp":"2017-06-24T20:18:47Z", "event":"CommitCrime", "CrimeType":"dockingMajorTresspass", "Faction":"Baal Partners", "Bounty":500 }
+{ "timestamp":"2017-06-25T15:33:50Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Wu Guinagi Crimson Creative Corp", "Fine":200 }

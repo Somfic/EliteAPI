@@ -1,0 +1,508 @@
+{ "timestamp":"2016-12-01T18:27:48Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"FSD_LongRange", "Level":1, "Ingredients":{"disruptedwakeechoes":1 } }
+{ "timestamp":"2016-12-01T18:30:06Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-01T18:30:23Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-01T18:30:46Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-01T19:05:13Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityEngines", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:06:04Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityEngines", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:06:55Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityEngines", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:08:25Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityEngines", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:09:08Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityEngines", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:10:17Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PrioritySystems", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:10:46Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PrioritySystems", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:11:09Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PrioritySystems", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:11:39Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PrioritySystems", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:12:04Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PrioritySystems", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:12:20Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PrioritySystems", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:12:41Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PrioritySystems", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:13:03Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PrioritySystems", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:13:26Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PrioritySystems", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T19:14:06Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_Shielded", "Level":1, "Ingredients":{"wornshieldemitters":1 } }
+{ "timestamp":"2016-12-01T20:22:13Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"PowerPlant_Armoured", "Level":1, "Ingredients":{"wornshieldemitters":1 } }
+{ "timestamp":"2016-12-01T20:23:03Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-01T20:23:22Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-01T20:24:34Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-01T20:25:28Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Dirty", "Level":1, "Ingredients":{"legacyfirmware":1 } }
+{ "timestamp":"2016-12-01T20:25:59Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Dirty", "Level":1, "Ingredients":{"legacyfirmware":1 } }
+{ "timestamp":"2016-12-02T15:46:09Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-02T15:46:57Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-02T15:47:21Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-02T15:47:42Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-02T15:48:07Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-02T15:48:42Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-02T15:49:03Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-02T15:49:52Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-02T15:50:18Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-02T15:50:55Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-02T15:51:15Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-02T15:51:30Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-02T15:51:47Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-02T15:52:06Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-02T15:52:32Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-02T15:52:48Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-02T15:53:10Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-02T15:53:32Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-02T15:53:50Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-02T15:54:14Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-02T15:54:34Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-02T15:54:54Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-03T14:43:28Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"FSD_LongRange", "Level":3, "Ingredients":{"modularterminals":1, "phosphorus":1, "chemicalprocessors":1, "wakesolutions":1 } }
+{ "timestamp":"2016-12-03T14:44:07Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"FSD_LongRange", "Level":3, "Ingredients":{"modularterminals":1, "phosphorus":1, "chemicalprocessors":1, "wakesolutions":1 } }
+{ "timestamp":"2016-12-07T20:04:25Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-07T20:05:34Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-07T20:05:57Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-07T20:06:44Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-07T21:06:36Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"FSD_LongRange", "Level":4, "Ingredients":{"powergridassembly":1, "manganese":1, "chemicaldistillery":1, "hyperspacetrajectories":1 } }
+{ "timestamp":"2016-12-07T21:07:22Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"FSD_LongRange", "Level":4, "Ingredients":{"powergridassembly":1, "manganese":1, "chemicaldistillery":1, "hyperspacetrajectories":1 } }
+{ "timestamp":"2016-12-07T21:07:50Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"FSD_LongRange", "Level":4, "Ingredients":{"powergridassembly":1, "manganese":1, "chemicaldistillery":1, "hyperspacetrajectories":1 } }
+{ "timestamp":"2016-12-07T21:09:34Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-07T21:09:57Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-07T21:10:19Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-07T21:10:38Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-13T18:06:54Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":2, "Ingredients":{"samarium":1, "legacyfirmware":1, "conductivecomponents":1 } }
+{ "timestamp":"2016-12-13T18:07:18Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":2, "Ingredients":{"samarium":1, "legacyfirmware":1, "conductivecomponents":1 } }
+{ "timestamp":"2016-12-13T18:07:51Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":2, "Ingredients":{"samarium":1, "legacyfirmware":1, "conductivecomponents":1 } }
+{ "timestamp":"2016-12-13T18:08:41Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:09:00Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:25:09Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:25:48Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:26:09Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:26:52Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:27:24Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:27:49Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:28:38Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:29:02Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:29:28Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:29:49Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:30:34Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:31:37Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityEngines", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:32:09Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityEngines", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-13T18:33:09Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityEngines", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-14T13:44:46Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-14T13:45:59Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-14T13:46:28Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-15T21:27:01Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"magneticemittercoil":1, "arsenic":1, "chemicalmanipulators":1, "dataminedwake":1 } }
+{ "timestamp":"2016-12-15T21:27:51Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"magneticemittercoil":1, "arsenic":1, "chemicalmanipulators":1, "dataminedwake":1 } }
+{ "timestamp":"2016-12-15T21:28:34Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"magneticemittercoil":1, "arsenic":1, "chemicalmanipulators":1, "dataminedwake":1 } }
+{ "timestamp":"2016-12-15T21:29:18Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-15T21:29:34Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-15T21:29:53Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-15T21:30:12Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-15T21:30:32Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2016-12-15T21:31:48Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:32:07Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:32:30Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:32:52Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:33:14Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:33:32Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:33:55Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:34:14Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:34:30Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:34:50Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:35:06Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:35:25Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:35:44Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:36:03Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:36:23Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:36:43Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-15T21:37:01Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Reinforced", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2016-12-30T17:01:26Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityEngines", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-30T17:02:11Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-30T17:02:33Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2016-12-30T17:54:43Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2016-12-30T17:55:31Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2016-12-30T17:56:27Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2016-12-30T17:56:54Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2016-12-30T17:57:25Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2016-12-30T18:16:26Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2016-12-30T18:17:09Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2016-12-30T18:17:46Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2016-12-30T18:18:20Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2016-12-30T18:18:52Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2016-12-30T18:19:27Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2016-12-30T18:20:56Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2016-12-30T18:21:58Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2017-01-01T16:38:11Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2017-01-01T16:38:38Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2017-01-01T16:39:13Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2017-01-01T16:40:03Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":1, "Ingredients":{"mechanicalscrap":1 } }
+{ "timestamp":"2017-01-01T16:40:39Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":1, "Ingredients":{"mechanicalscrap":1 } }
+{ "timestamp":"2017-01-01T16:41:25Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":1, "Ingredients":{"mechanicalscrap":1 } }
+{ "timestamp":"2017-01-01T16:42:21Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Efficient", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-01T16:43:09Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LongRange", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-01T16:43:47Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LongRange", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-01T16:44:14Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LongRange", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-01T16:44:43Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LongRange", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-01T16:45:11Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LongRange", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-01T16:45:42Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LongRange", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-01T16:46:44Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LightWeight", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-01-01T16:47:46Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":1, "Ingredients":{"mechanicalscrap":1 } }
+{ "timestamp":"2017-01-01T16:48:54Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":1, "Ingredients":{"mechanicalscrap":1 } }
+{ "timestamp":"2017-01-01T16:50:09Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LongRange", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-01T16:50:38Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LongRange", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-01T16:51:08Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LongRange", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-01T16:51:34Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LongRange", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-01T16:52:20Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":1, "Ingredients":{"mechanicalscrap":1 } }
+{ "timestamp":"2017-01-01T16:52:50Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":1, "Ingredients":{"mechanicalscrap":1 } }
+{ "timestamp":"2017-01-01T16:53:16Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":1, "Ingredients":{"mechanicalscrap":1 } }
+{ "timestamp":"2017-01-06T15:05:24Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Dirty", "Level":1, "Ingredients":{"legacyfirmware":1 } }
+{ "timestamp":"2017-01-06T15:06:55Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-06T15:08:35Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-06T15:09:04Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-06T15:09:23Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-06T15:10:35Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-06T15:11:16Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":1, "Ingredients":{"disruptedwakeechoes":1 } }
+{ "timestamp":"2017-01-06T15:11:36Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":1, "Ingredients":{"disruptedwakeechoes":1 } }
+{ "timestamp":"2017-01-06T15:11:57Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":1, "Ingredients":{"disruptedwakeechoes":1 } }
+{ "timestamp":"2017-01-10T15:40:21Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-10T15:41:30Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2017-01-10T15:41:57Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2017-01-10T15:42:32Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2017-01-10T15:42:48Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2017-01-10T15:43:06Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2017-01-10T15:43:21Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2017-01-10T15:43:45Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2017-01-10T15:44:01Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":1, "Ingredients":{"shieldcyclerecordings":1 } }
+{ "timestamp":"2017-01-11T15:18:34Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":3, "Ingredients":{"shieldcyclerecordings":1, "germanium":1, "precipitatedalloys":1 } }
+{ "timestamp":"2017-01-12T18:36:33Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-12T18:38:12Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Stealth", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-01-12T18:38:38Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Stealth", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-01-12T18:39:44Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Armoured", "Level":2, "Ingredients":{"carbon":1, "shieldemitters":1 } }
+{ "timestamp":"2017-01-12T18:40:24Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_PriorityEngines", "Level":2, "Ingredients":{"sulphur":1, "conductivecomponents":1 } }
+{ "timestamp":"2017-01-12T18:41:21Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_Shielded", "Level":2, "Ingredients":{"carbon":1, "shieldemitters":1 } }
+{ "timestamp":"2017-01-12T18:42:26Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":3, "Ingredients":{"heatconductionwiring":1, "conductivecomponents":1, "selenium":1 } }
+{ "timestamp":"2017-01-12T18:42:46Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":3, "Ingredients":{"heatconductionwiring":1, "conductivecomponents":1, "selenium":1 } }
+{ "timestamp":"2017-01-12T18:43:14Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":3, "Ingredients":{"heatconductionwiring":1, "conductivecomponents":1, "selenium":1 } }
+{ "timestamp":"2017-01-12T18:55:06Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":4, "Ingredients":{"heatdispersionplate":1, "conductiveceramics":1, "cadmium":1 } }
+{ "timestamp":"2017-01-12T18:57:26Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_HighCapacity", "Level":3, "Ingredients":{"legacyfirmware":1, "chromium":1, "highdensitycomposites":1 } }
+{ "timestamp":"2017-01-12T18:58:24Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":2, "Ingredients":{"sulphur":1, "conductivecomponents":1 } }
+{ "timestamp":"2017-01-23T20:11:53Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Reinforced", "Level":3, "Ingredients":{"phosphorus":1, "conductivecomponents":1, "mechanicalcomponents":1 } }
+{ "timestamp":"2017-01-23T20:44:17Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-23T20:44:35Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-23T20:49:51Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-23T20:50:24Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-23T20:50:50Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-01-23T20:51:44Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_PriorityEngines", "Level":3, "Ingredients":{"bulkscandata":1, "chromium":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-02-05T18:20:03Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"FSD_LongRange", "Level":4, "Ingredients":{"manganese":1, "chemicaldistillery":1, "hyperspacetrajectories":1 } }
+{ "timestamp":"2017-02-05T18:20:47Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"FSD_LongRange", "Level":4, "Ingredients":{"manganese":1, "chemicaldistillery":1, "hyperspacetrajectories":1 } }
+{ "timestamp":"2017-02-05T18:21:14Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"FSD_LongRange", "Level":4, "Ingredients":{"manganese":1, "chemicaldistillery":1, "hyperspacetrajectories":1 } }
+{ "timestamp":"2017-02-05T18:21:56Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":3, "Ingredients":{"shieldcyclerecordings":1, "germanium":1, "precipitatedalloys":1 } }
+{ "timestamp":"2017-02-05T18:22:26Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Dirty", "Level":2, "Ingredients":{"legacyfirmware":1, "mechanicalequipment":1 } }
+{ "timestamp":"2017-02-05T18:22:43Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Dirty", "Level":2, "Ingredients":{"legacyfirmware":1, "mechanicalequipment":1 } }
+{ "timestamp":"2017-02-05T18:23:28Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Optimised", "Level":3, "Ingredients":{"shieldcyclerecordings":1, "germanium":1, "precipitatedalloys":1 } }
+{ "timestamp":"2017-02-05T18:39:58Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-02-05T18:40:14Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-02-05T18:41:01Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_PriorityEngines", "Level":3, "Ingredients":{"bulkscandata":1, "chromium":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-02-06T13:12:05Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LightWeight", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-02-06T13:13:55Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LongRange", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-02-06T13:15:30Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LightWeight", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-02-06T13:17:04Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":2, "Ingredients":{"mechanicalscrap":1, "vanadium":1 } }
+{ "timestamp":"2017-02-06T13:17:34Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":2, "Ingredients":{"mechanicalscrap":1, "vanadium":1 } }
+{ "timestamp":"2017-02-06T13:17:55Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":2, "Ingredients":{"mechanicalscrap":1, "vanadium":1 } }
+{ "timestamp":"2017-02-06T13:18:52Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":3, "Ingredients":{"nickel":1, "shieldemitters":1, "tungsten":1 } }
+{ "timestamp":"2017-02-12T16:29:30Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":3, "Ingredients":{"bulkscandata":1, "hybridcapacitors":1, "selenium":1 } }
+{ "timestamp":"2017-02-12T16:31:05Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_RapidFire", "Level":4, "Ingredients":{"consumerfirmware":1, "mechanicalcomponents":1, "thermicalloys":1 } }
+{ "timestamp":"2017-02-12T16:34:36Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-02-12T16:35:02Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-02-12T16:35:32Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-02-12T16:47:21Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Efficient", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-02-12T16:48:24Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":3, "Ingredients":{"mechanicalscrap":1, "vanadium":1, "niobium":1 } }
+{ "timestamp":"2017-02-12T16:49:00Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":3, "Ingredients":{"mechanicalscrap":1, "vanadium":1, "niobium":1 } }
+{ "timestamp":"2017-02-12T16:49:47Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_RapidFire", "Level":4, "Ingredients":{"consumerfirmware":1, "mechanicalcomponents":1, "thermicalloys":1 } }
+{ "timestamp":"2017-02-12T17:04:16Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-02-12T17:05:28Z", "event":"EngineerCraft", "Engineer":"Elvira Martuuk", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-02-18T19:23:22Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighFrequency", "Level":4, "Ingredients":{"hybridcapacitors":1, "industrialfirmware":1, "chemicalmanipulators":1 } }
+{ "timestamp":"2017-02-18T19:38:50Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":2, "Ingredients":{"mechanicalscrap":1, "vanadium":1 } }
+{ "timestamp":"2017-02-18T19:41:06Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LightWeight", "Level":2, "Ingredients":{"salvagedalloys":1, "manganese":1 } }
+{ "timestamp":"2017-02-18T19:41:33Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LightWeight", "Level":2, "Ingredients":{"salvagedalloys":1, "manganese":1 } }
+{ "timestamp":"2017-02-18T19:41:48Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LightWeight", "Level":2, "Ingredients":{"salvagedalloys":1, "manganese":1 } }
+{ "timestamp":"2017-02-18T19:42:25Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":3, "Ingredients":{"nickel":1, "shieldemitters":1, "tungsten":1 } }
+{ "timestamp":"2017-02-18T19:42:46Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":3, "Ingredients":{"nickel":1, "shieldemitters":1, "tungsten":1 } }
+{ "timestamp":"2017-02-18T19:43:00Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":3, "Ingredients":{"nickel":1, "shieldemitters":1, "tungsten":1 } }
+{ "timestamp":"2017-02-18T19:43:27Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-02-18T19:44:36Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-02-18T19:44:41Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-02-18T19:45:19Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_ShortRange", "Level":5, "Ingredients":{"industrialfirmware":1, "configurablecomponents":1, "biotechconductors":1 } }
+{ "timestamp":"2017-02-18T19:47:03Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_ShortRange", "Level":5, "Ingredients":{"industrialfirmware":1, "configurablecomponents":1, "biotechconductors":1 } }
+{ "timestamp":"2017-02-18T19:47:12Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_ShortRange", "Level":5, "Ingredients":{"industrialfirmware":1, "configurablecomponents":1, "biotechconductors":1 } }
+{ "timestamp":"2017-02-18T19:48:11Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-02-18T19:48:22Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-02-18T19:48:26Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-02-18T19:48:30Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-02-18T19:48:33Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-03-03T19:28:27Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-03T19:29:03Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Reinforced", "Level":3, "Ingredients":{"heatconductionwiring":1, "vanadium":1, "shieldingsensors":1 } }
+{ "timestamp":"2017-03-03T19:30:30Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_FastBoot", "Level":4, "Ingredients":{"hybridcapacitors":1, "heatexchangers":1, "cadmium":1 } }
+{ "timestamp":"2017-03-12T17:38:43Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-12T17:40:00Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":4, "Ingredients":{"manganese":1, "chemicaldistillery":1, "hyperspacetrajectories":1 } }
+{ "timestamp":"2017-03-12T17:40:33Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":4, "Ingredients":{"manganese":1, "chemicaldistillery":1, "hyperspacetrajectories":1 } }
+{ "timestamp":"2017-03-12T17:41:07Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-12T18:56:48Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"arsenic":1, "chemicalmanipulators":1, "dataminedwake":1 } }
+{ "timestamp":"2017-03-12T18:57:25Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"arsenic":1, "chemicalmanipulators":1, "dataminedwake":1 } }
+{ "timestamp":"2017-03-12T19:09:48Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityEngines", "Level":3, "Ingredients":{"bulkscandata":1, "chromium":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-03-12T19:10:33Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityEngines", "Level":3, "Ingredients":{"bulkscandata":1, "chromium":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-03-13T16:21:55Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-13T16:22:31Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-13T16:22:57Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-13T16:23:41Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-13T16:24:06Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-13T16:24:36Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-13T16:25:46Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-13T16:26:10Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-13T16:27:03Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-13T16:27:35Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-14T18:17:00Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_HeavyDuty", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2017-03-14T18:17:33Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_Advanced", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-03-14T18:18:01Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_Advanced", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-03-14T18:18:26Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_HeavyDuty", "Level":2, "Ingredients":{"carbon":1, "shieldemitters":1 } }
+{ "timestamp":"2017-03-14T18:19:08Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_Kinetic", "Level":2, "Ingredients":{"nickel":1, "vanadium":1 } }
+{ "timestamp":"2017-03-14T18:19:15Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_Kinetic", "Level":2, "Ingredients":{"nickel":1, "vanadium":1 } }
+{ "timestamp":"2017-03-14T18:19:35Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_Explosive", "Level":3, "Ingredients":{"salvagedalloys":1, "vanadium":1, "zirconium":1 } }
+{ "timestamp":"2017-03-15T19:28:59Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:29:34Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:30:01Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:30:37Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Reinforced", "Level":2, "Ingredients":{"heatconductionwiring":1, "vanadium":1 } }
+{ "timestamp":"2017-03-15T19:30:50Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Reinforced", "Level":2, "Ingredients":{"heatconductionwiring":1, "vanadium":1 } }
+{ "timestamp":"2017-03-15T19:30:54Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Reinforced", "Level":2, "Ingredients":{"heatconductionwiring":1, "vanadium":1 } }
+{ "timestamp":"2017-03-15T19:31:15Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:31:32Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:31:34Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:31:39Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:31:42Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:31:44Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:31:46Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:31:48Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:31:50Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:31:52Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:31:54Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:31:56Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:31:59Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:03Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:05Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:08Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:11Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:13Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:15Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:17Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:20Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:22Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:24Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:26Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:28Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:31Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:34Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:36Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:39Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:41Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:43Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:45Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:49Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:51Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:53Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:55Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:57Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:32:59Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:33:06Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:33:09Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:33:11Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:33:13Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:33:19Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:33:28Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:33:30Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:33:35Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:33:39Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:33:41Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:33:43Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:33:51Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-15T19:34:18Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":4, "Ingredients":{"consumerfirmware":1, "conductiveceramics":1, "decodedemissiondata":1 } }
+{ "timestamp":"2017-03-15T19:34:24Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":4, "Ingredients":{"consumerfirmware":1, "conductiveceramics":1, "decodedemissiondata":1 } }
+{ "timestamp":"2017-03-15T19:34:48Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"FSD_LongRange", "Level":3, "Ingredients":{"phosphorus":1, "chemicalprocessors":1, "wakesolutions":1 } }
+{ "timestamp":"2017-03-15T19:34:52Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"FSD_LongRange", "Level":3, "Ingredients":{"phosphorus":1, "chemicalprocessors":1, "wakesolutions":1 } }
+{ "timestamp":"2017-03-15T19:34:57Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"FSD_LongRange", "Level":3, "Ingredients":{"phosphorus":1, "chemicalprocessors":1, "wakesolutions":1 } }
+{ "timestamp":"2017-03-15T19:35:10Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"FSD_LongRange", "Level":3, "Ingredients":{"phosphorus":1, "chemicalprocessors":1, "wakesolutions":1 } }
+{ "timestamp":"2017-03-15T19:35:13Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"FSD_LongRange", "Level":3, "Ingredients":{"phosphorus":1, "chemicalprocessors":1, "wakesolutions":1 } }
+{ "timestamp":"2017-03-15T19:35:17Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"FSD_LongRange", "Level":3, "Ingredients":{"phosphorus":1, "chemicalprocessors":1, "wakesolutions":1 } }
+{ "timestamp":"2017-03-15T19:35:20Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"FSD_LongRange", "Level":3, "Ingredients":{"phosphorus":1, "chemicalprocessors":1, "wakesolutions":1 } }
+{ "timestamp":"2017-03-15T19:36:13Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":5, "Ingredients":{"conductiveceramics":1, "tin":1, "compactemissionsdata":1 } }
+{ "timestamp":"2017-03-15T19:36:26Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":5, "Ingredients":{"conductiveceramics":1, "tin":1, "compactemissionsdata":1 } }
+{ "timestamp":"2017-03-15T19:36:54Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Tuned", "Level":5, "Ingredients":{"conductiveceramics":1, "tin":1, "compactemissionsdata":1 } }
+{ "timestamp":"2017-03-16T16:56:05Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Thermic", "Level":3, "Ingredients":{"shieldcyclerecordings":1, "germanium":1, "selenium":1 } }
+{ "timestamp":"2017-03-16T16:56:35Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Thermic", "Level":3, "Ingredients":{"shieldcyclerecordings":1, "germanium":1, "selenium":1 } }
+{ "timestamp":"2017-03-16T16:56:51Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Thermic", "Level":3, "Ingredients":{"shieldcyclerecordings":1, "germanium":1, "selenium":1 } }
+{ "timestamp":"2017-03-16T16:57:33Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-16T16:57:39Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-16T16:57:43Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-16T16:57:47Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-16T16:57:52Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-16T16:57:56Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-16T16:57:59Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-16T16:58:03Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Optimised", "Level":2, "Ingredients":{"shieldcyclerecordings":1, "germanium":1 } }
+{ "timestamp":"2017-03-16T16:58:30Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:58:34Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:58:36Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:58:38Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:58:40Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:58:42Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:58:45Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:58:47Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:58:49Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:58:51Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:58:53Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:09Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:11Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:14Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:16Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:18Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:20Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:23Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:25Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:27Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:29Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:32Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:34Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:36Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:38Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T16:59:41Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:08Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:13Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:15Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:18Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:20Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:22Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:24Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:27Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:29Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:34Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:38Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:41Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:45Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:50Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:54Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:56Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:01:59Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:01Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:04Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:06Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:08Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:11Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:13Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:16Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:19Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:21Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:23Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:35Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:37Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:02:42Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":1, "Ingredients":{"phosphorus":1 } }
+{ "timestamp":"2017-03-16T17:23:53Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Kinetic", "Level":3, "Ingredients":{"salvagedalloys":1, "hybridcapacitors":1, "focuscrystals":1 } }
+{ "timestamp":"2017-03-16T17:24:18Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Kinetic", "Level":3, "Ingredients":{"salvagedalloys":1, "hybridcapacitors":1, "focuscrystals":1 } }
+{ "timestamp":"2017-03-16T17:25:16Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Thermic", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-03-16T17:25:36Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Thermic", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-03-16T18:30:05Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-16T18:30:44Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-16T18:30:49Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-16T18:31:55Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_HighCapacity", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-16T18:45:17Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighFrequency", "Level":4, "Ingredients":{"hybridcapacitors":1, "industrialfirmware":1, "chemicalmanipulators":1 } }
+{ "timestamp":"2017-03-16T18:45:23Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_HighFrequency", "Level":4, "Ingredients":{"hybridcapacitors":1, "industrialfirmware":1, "chemicalmanipulators":1 } }
+{ "timestamp":"2017-03-16T18:46:18Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2017-03-16T18:46:50Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2017-03-16T19:01:41Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"HullReinforcement_Kinetic", "Level":2, "Ingredients":{"nickel":1, "vanadium":1 } }
+{ "timestamp":"2017-03-16T19:02:08Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"HullReinforcement_Kinetic", "Level":2, "Ingredients":{"nickel":1, "vanadium":1 } }
+{ "timestamp":"2017-03-16T19:02:12Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"HullReinforcement_Kinetic", "Level":2, "Ingredients":{"nickel":1, "vanadium":1 } }
+{ "timestamp":"2017-03-16T19:02:17Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"HullReinforcement_Kinetic", "Level":2, "Ingredients":{"nickel":1, "vanadium":1 } }
+{ "timestamp":"2017-03-16T19:02:23Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"HullReinforcement_Kinetic", "Level":2, "Ingredients":{"nickel":1, "vanadium":1 } }
+{ "timestamp":"2017-03-16T19:02:42Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"HullReinforcement_Explosive", "Level":3, "Ingredients":{"salvagedalloys":1, "vanadium":1, "zirconium":1 } }
+{ "timestamp":"2017-03-16T19:03:16Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"HullReinforcement_HeavyDuty", "Level":2, "Ingredients":{"carbon":1, "shieldemitters":1 } }
+{ "timestamp":"2017-03-16T19:03:58Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_Thermic", "Level":4, "Ingredients":{"galvanisingalloys":1, "tungsten":1, "heatvanes":1 } }
+{ "timestamp":"2017-03-16T19:04:03Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_Thermic", "Level":4, "Ingredients":{"galvanisingalloys":1, "tungsten":1, "heatvanes":1 } }
+{ "timestamp":"2017-03-16T19:04:07Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_Thermic", "Level":4, "Ingredients":{"galvanisingalloys":1, "tungsten":1, "heatvanes":1 } }
+{ "timestamp":"2017-03-16T19:04:35Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_Explosive", "Level":5, "Ingredients":{"phasealloys":1, "molybdenum":1, "ruthenium":1 } }
+{ "timestamp":"2017-03-16T19:05:04Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_Thermic", "Level":4, "Ingredients":{"galvanisingalloys":1, "tungsten":1, "heatvanes":1 } }
+{ "timestamp":"2017-03-16T19:05:23Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_Thermic", "Level":4, "Ingredients":{"galvanisingalloys":1, "tungsten":1, "heatvanes":1 } }
+{ "timestamp":"2017-03-16T19:05:28Z", "event":"EngineerCraft", "Engineer":"Selene Jean", "Blueprint":"Armour_Thermic", "Level":4, "Ingredients":{"galvanisingalloys":1, "tungsten":1, "heatvanes":1 } }
+{ "timestamp":"2017-03-16T19:17:41Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-03-27T18:10:56Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-27T18:11:00Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-27T18:11:24Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-27T18:11:54Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-27T18:11:59Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-03-27T18:12:06Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-01T20:33:12Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_Shielded", "Level":3, "Ingredients":{"carbon":1, "shieldemitters":1, "highdensitycomposites":1 } }
+{ "timestamp":"2017-04-01T20:33:15Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_Shielded", "Level":3, "Ingredients":{"carbon":1, "shieldemitters":1, "highdensitycomposites":1 } }
+{ "timestamp":"2017-04-01T20:33:22Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_Shielded", "Level":3, "Ingredients":{"carbon":1, "shieldemitters":1, "highdensitycomposites":1 } }
+{ "timestamp":"2017-04-01T20:33:47Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":4, "Ingredients":{"zinc":1, "conductiveceramics":1, "polymercapacitors":1 } }
+{ "timestamp":"2017-04-01T20:35:22Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_RapidFire", "Level":2, "Ingredients":{"mechanicalscrap":1, "heatdispersionplate":1 } }
+{ "timestamp":"2017-04-01T20:35:27Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_RapidFire", "Level":2, "Ingredients":{"mechanicalscrap":1, "heatdispersionplate":1 } }
+{ "timestamp":"2017-04-01T20:35:32Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_RapidFire", "Level":2, "Ingredients":{"mechanicalscrap":1, "heatdispersionplate":1 } }
+{ "timestamp":"2017-04-01T20:35:44Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":3, "Ingredients":{"nickel":1, "conductivecomponents":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-04-01T20:35:51Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":3, "Ingredients":{"nickel":1, "conductivecomponents":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-04-01T20:35:56Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":3, "Ingredients":{"nickel":1, "conductivecomponents":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-04-01T20:38:13Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":3, "Ingredients":{"nickel":1, "conductivecomponents":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-04-01T20:40:02Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"Weapon_Overcharged", "Level":3, "Ingredients":{"nickel":1, "conductivecomponents":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-04-02T17:23:31Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":2, "Ingredients":{"sulphur":1, "conductivecomponents":1 } }
+{ "timestamp":"2017-04-02T17:23:47Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":2, "Ingredients":{"sulphur":1, "conductivecomponents":1 } }
+{ "timestamp":"2017-04-02T17:23:51Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":2, "Ingredients":{"sulphur":1, "conductivecomponents":1 } }
+{ "timestamp":"2017-04-02T17:24:10Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":2, "Ingredients":{"sulphur":1, "conductivecomponents":1 } }
+{ "timestamp":"2017-04-02T17:24:15Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":2, "Ingredients":{"sulphur":1, "conductivecomponents":1 } }
+{ "timestamp":"2017-04-02T17:24:19Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":2, "Ingredients":{"sulphur":1, "conductivecomponents":1 } }
+{ "timestamp":"2017-04-02T17:24:23Z", "event":"EngineerCraft", "Engineer":"The Dweller", "Blueprint":"PowerDistributor_PriorityWeapons", "Level":2, "Ingredients":{"sulphur":1, "conductivecomponents":1 } }
+{ "timestamp":"2017-04-02T17:59:08Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Overcharged", "Level":3, "Ingredients":{"nickel":1, "conductivecomponents":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-04-02T17:59:12Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Overcharged", "Level":3, "Ingredients":{"nickel":1, "conductivecomponents":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-04-02T18:44:48Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":3, "Ingredients":{"phosphorus":1, "conductivecomponents":1, "mechanicalcomponents":1 } }
+{ "timestamp":"2017-04-02T18:45:09Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Thermic", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-04-02T18:45:35Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_HeavyDuty", "Level":3, "Ingredients":{"shieldcyclerecordings":1, "hybridcapacitors":1, "niobium":1 } }
+{ "timestamp":"2017-04-02T18:45:50Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_HeavyDuty", "Level":3, "Ingredients":{"shieldcyclerecordings":1, "hybridcapacitors":1, "niobium":1 } }
+{ "timestamp":"2017-04-02T18:46:00Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_HeavyDuty", "Level":3, "Ingredients":{"shieldcyclerecordings":1, "hybridcapacitors":1, "niobium":1 } }
+{ "timestamp":"2017-04-02T18:46:11Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Thermic", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-04-02T18:46:15Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Thermic", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-04-02T18:46:19Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Thermic", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-04-02T18:46:23Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Thermic", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-04-02T18:46:35Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Thermic", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-04-02T18:46:40Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Thermic", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-04-02T18:46:50Z", "event":"EngineerCraft", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Thermic", "Level":1, "Ingredients":{"iron":1 } }
+{ "timestamp":"2017-04-06T13:35:09Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-06T13:35:14Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-06T13:35:19Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-06T13:35:55Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-06T13:36:00Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-06T13:36:03Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-06T13:36:14Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-06T13:36:18Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-06T13:36:23Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-06T13:36:26Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-06T13:36:29Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-06T13:36:34Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-06T13:36:56Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":4, "Ingredients":{"manganese":1, "chemicaldistillery":1, "hyperspacetrajectories":1 } }
+{ "timestamp":"2017-04-08T16:51:40Z", "event":"EngineerCraft", "Engineer":"Professor Palin", "Blueprint":"Engine_Dirty", "Level":5, "Ingredients":{"industrialfirmware":1, "cadmium":1, "pharmaceuticalisolators":1 } }
+{ "timestamp":"2017-04-08T17:21:11Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerPlant_Boosted", "Level":4, "Ingredients":{"heatdispersionplate":1, "conductiveceramics":1, "cadmium":1 } }
+{ "timestamp":"2017-04-08T17:21:33Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_PriorityEngines", "Level":3, "Ingredients":{"bulkscandata":1, "chromium":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-04-08T17:21:50Z", "event":"EngineerCraft", "Engineer":"Marco Qwent", "Blueprint":"PowerDistributor_PriorityEngines", "Level":3, "Ingredients":{"bulkscandata":1, "chromium":1, "electrochemicalarrays":1 } }
+{ "timestamp":"2017-04-10T13:24:12Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2017-04-10T13:24:20Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Overcharged", "Level":1, "Ingredients":{"nickel":1 } }
+{ "timestamp":"2017-04-10T13:24:36Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LightWeight", "Level":2, "Ingredients":{"salvagedalloys":1, "manganese":1 } }
+{ "timestamp":"2017-04-10T13:24:40Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LightWeight", "Level":2, "Ingredients":{"salvagedalloys":1, "manganese":1 } }
+{ "timestamp":"2017-04-10T13:24:47Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LightWeight", "Level":2, "Ingredients":{"salvagedalloys":1, "manganese":1 } }
+{ "timestamp":"2017-04-10T13:25:08Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":3, "Ingredients":{"mechanicalscrap":1, "vanadium":1, "niobium":1 } }
+{ "timestamp":"2017-04-10T13:25:22Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_LightWeight", "Level":3, "Ingredients":{"salvagedalloys":1, "manganese":1, "conductiveceramics":1 } }
+{ "timestamp":"2017-04-10T13:25:33Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":3, "Ingredients":{"nickel":1, "shieldemitters":1, "tungsten":1 } }
+{ "timestamp":"2017-04-10T13:25:43Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-04-10T13:25:47Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Sturdy", "Level":4, "Ingredients":{"zinc":1, "tungsten":1, "molybdenum":1 } }
+{ "timestamp":"2017-04-10T13:26:02Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_HighCapacity", "Level":4, "Ingredients":{"mechanicalequipment":1, "highdensitycomposites":1, "tin":1 } }
+{ "timestamp":"2017-04-10T13:26:14Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Overcharged", "Level":5, "Ingredients":{"zirconium":1, "conductivepolymers":1, "embeddedfirmware":1 } }
+{ "timestamp":"2017-04-10T13:26:26Z", "event":"EngineerCraft", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Overcharged", "Level":5, "Ingredients":{"zirconium":1, "conductivepolymers":1, "embeddedfirmware":1 } }
+{ "timestamp":"2017-04-10T17:55:13Z", "event":"EngineerCraft", "Engineer":"Liz Ryder", "Blueprint":"Armour_HeavyDuty", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2017-04-10T17:55:20Z", "event":"EngineerCraft", "Engineer":"Liz Ryder", "Blueprint":"Armour_HeavyDuty", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2017-04-10T17:55:30Z", "event":"EngineerCraft", "Engineer":"Liz Ryder", "Blueprint":"Armour_HeavyDuty", "Level":1, "Ingredients":{"carbon":1 } }
+{ "timestamp":"2017-04-10T17:55:52Z", "event":"EngineerCraft", "Engineer":"Liz Ryder", "Blueprint":"Weapon_Sturdy", "Level":2, "Ingredients":{"nickel":1, "shieldemitters":1 } }
+{ "timestamp":"2017-04-10T17:56:39Z", "event":"EngineerCraft", "Engineer":"Liz Ryder", "Blueprint":"Weapon_Sturdy", "Level":2, "Ingredients":{"nickel":1, "shieldemitters":1 } }
+{ "timestamp":"2017-04-10T17:56:42Z", "event":"EngineerCraft", "Engineer":"Liz Ryder", "Blueprint":"Weapon_Sturdy", "Level":2, "Ingredients":{"nickel":1, "shieldemitters":1 } }
+{ "timestamp":"2017-04-10T17:57:09Z", "event":"EngineerCraft", "Engineer":"Liz Ryder", "Blueprint":"Weapon_LightWeight", "Level":2, "Ingredients":{"salvagedalloys":1, "manganese":1 } }
+{ "timestamp":"2017-04-10T17:57:13Z", "event":"EngineerCraft", "Engineer":"Liz Ryder", "Blueprint":"Weapon_LightWeight", "Level":2, "Ingredients":{"salvagedalloys":1, "manganese":1 } }
+{ "timestamp":"2017-04-10T17:57:17Z", "event":"EngineerCraft", "Engineer":"Liz Ryder", "Blueprint":"Weapon_LightWeight", "Level":2, "Ingredients":{"salvagedalloys":1, "manganese":1 } }
+{ "timestamp":"2017-04-10T17:57:40Z", "event":"EngineerCraft", "Engineer":"Liz Ryder", "Blueprint":"Weapon_Sturdy", "Level":2, "Ingredients":{"nickel":1, "shieldemitters":1 } }
+{ "timestamp":"2017-04-10T21:12:18Z", "event":"EngineerCraft", "Engineer":"Hera Tani", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-10T21:12:31Z", "event":"EngineerCraft", "Engineer":"Hera Tani", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-10T21:12:35Z", "event":"EngineerCraft", "Engineer":"Hera Tani", "Blueprint":"PowerPlant_Boosted", "Level":1, "Ingredients":{"sulphur":1 } }
+{ "timestamp":"2017-04-10T21:12:55Z", "event":"EngineerCraft", "Engineer":"Hera Tani", "Blueprint":"PowerPlant_Boosted", "Level":2, "Ingredients":{"heatconductionwiring":1, "conductivecomponents":1 } }
+{ "timestamp":"2017-04-10T21:13:02Z", "event":"EngineerCraft", "Engineer":"Hera Tani", "Blueprint":"PowerPlant_Boosted", "Level":2, "Ingredients":{"heatconductionwiring":1, "conductivecomponents":1 } }
+{ "timestamp":"2017-04-10T21:13:26Z", "event":"EngineerCraft", "Engineer":"Hera Tani", "Blueprint":"PowerDistributor_HighCapacity", "Level":2, "Ingredients":{"legacyfirmware":1, "chromium":1 } }
+{ "timestamp":"2017-04-10T21:13:51Z", "event":"EngineerCraft", "Engineer":"Hera Tani", "Blueprint":"PowerDistributor_HighFrequency", "Level":3, "Ingredients":{"gridresistors":1, "consumerfirmware":1, "chemicaldistillery":1 } }
+{ "timestamp":"2017-04-10T21:13:56Z", "event":"EngineerCraft", "Engineer":"Hera Tani", "Blueprint":"PowerDistributor_HighFrequency", "Level":3, "Ingredients":{"gridresistors":1, "consumerfirmware":1, "chemicaldistillery":1 } }

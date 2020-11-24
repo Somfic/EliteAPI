@@ -1,0 +1,13 @@
+{ "timestamp":"2018-12-12T16:43:06Z", "event":"ApproachSettlement", "Name":"Jameson Base", "MarketID":128679815, "Latitude":2.963404, "Longitude":83.301514 }
+{ "timestamp":"2018-12-12T16:43:06Z", "event":"ApproachSettlement", "Name":"Burke Beacon ++", "MarketID":3534249728, "Latitude":-35.125889, "Longitude":59.098835 }
+{ "timestamp":"2018-12-12T16:43:10Z", "event":"ApproachSettlement", "Name":"Pilots Federation Origins", "MarketID":2952790016, "Latitude":70.934013, "Longitude":92.882584 }
+{ "timestamp":"2018-12-12T16:43:12Z", "event":"ApproachSettlement", "Name":"Wolfe Reach", "MarketID":3534250496, "Latitude":78.612289, "Longitude":113.975082 }
+{ "timestamp":"2018-12-12T16:43:24Z", "event":"ApproachSettlement", "Name":"Nixon Enterprise", "MarketID":3534249216, "Latitude":-12.036039, "Longitude":163.127304 }
+{ "timestamp":"2018-12-12T16:43:28Z", "event":"ApproachSettlement", "Name":"Wandrei Base +", "MarketID":3534250240, "Latitude":-14.295306, "Longitude":171.107590 }
+{ "timestamp":"2018-12-12T16:44:20Z", "event":"ApproachSettlement", "Name":"Jameson Base", "MarketID":128679815, "Latitude":2.963406, "Longitude":83.301514 }
+{ "timestamp":"2018-12-12T16:54:16Z", "event":"ApproachSettlement", "Name":"Farseer Inc", "MarketID":128676487, "Latitude":0.026853, "Longitude":145.438721 }
+{ "timestamp":"2018-12-12T16:54:53Z", "event":"ApproachSettlement", "Name":"Farseer Inc", "MarketID":128676487, "Latitude":23.756458, "Longitude":152.984848 }
+{ "timestamp":"2018-12-13T11:45:43Z", "event":"ApproachSettlement", "Name":"Willis Landing", "MarketID":3534956288, "Latitude":17.655310, "Longitude":75.790192 }
+{ "timestamp":"2018-12-13T11:45:50Z", "event":"ApproachSettlement", "Name":"Nikitin Silo", "MarketID":3534956544, "Latitude":-83.800682, "Longitude":49.729519 }
+{ "timestamp":"2018-12-13T18:25:56Z", "event":"ApproachSettlement", "Name":"Darnielle's Progress", "MarketID":3500000000, "Latitude":-0.004878, "Longitude":-15.964315 }
+{ "timestamp":"2018-12-13T18:27:13Z", "event":"ApproachSettlement", "Name":"Darnielle's Progress", "MarketID":3500000000, "Latitude":-0.004891, "Longitude":-16.623457 }

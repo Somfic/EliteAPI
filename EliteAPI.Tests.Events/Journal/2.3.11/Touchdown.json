@@ -1,0 +1,39 @@
+{ "timestamp":"2017-07-11T15:11:15Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-1.738487, "Longitude":-43.032825 }
+{ "timestamp":"2017-07-11T15:25:08Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2017-08-12T01:10:40Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":35.070274, "Longitude":132.844025 }
+{ "timestamp":"2017-08-21T14:58:09Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-22.310928, "Longitude":-162.416962 }
+{ "timestamp":"2017-08-21T15:56:36Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2017-08-22T19:54:52Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-32.044571, "Longitude":177.102005 }
+{ "timestamp":"2017-08-23T16:14:20Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-7.824468, "Longitude":124.185753 }
+{ "timestamp":"2017-08-24T11:32:04Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-15.403805, "Longitude":-170.825394 }
+{ "timestamp":"2017-08-24T12:10:00Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2017-08-24T14:44:48Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-15.125873, "Longitude":-172.391525 }
+{ "timestamp":"2017-08-24T16:23:36Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2017-08-24T19:59:00Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-32.041676, "Longitude":-169.618286 }
+{ "timestamp":"2017-08-25T11:29:59Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2017-08-25T11:56:26Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-37.572926, "Longitude":137.947739 }
+{ "timestamp":"2017-08-25T12:04:56Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2017-08-25T12:57:33Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-62.083885, "Longitude":-162.656601 }
+{ "timestamp":"2017-08-26T17:42:38Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":53.533657, "Longitude":54.173588 }
+{ "timestamp":"2017-08-26T17:45:18Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":53.522507, "Longitude":54.202747 }
+{ "timestamp":"2017-08-26T17:53:31Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2017-08-28T14:36:48Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-52.633030, "Longitude":-135.261642 }
+{ "timestamp":"2017-08-28T15:15:19Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2017-09-09T13:36:28Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":50.793858, "Longitude":42.128712 }
+{ "timestamp":"2017-09-09T14:02:58Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2017-09-10T12:31:28Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-42.693165, "Longitude":43.165230 }
+{ "timestamp":"2017-09-15T14:35:10Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":4.286530, "Longitude":148.571182 }
+{ "timestamp":"2017-09-15T14:45:40Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-3.902633, "Longitude":152.863586 }
+{ "timestamp":"2017-09-17T15:44:55Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":4.598982, "Longitude":148.439499 }
+{ "timestamp":"2017-09-17T17:55:50Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2017-09-18T16:57:13Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-1.259336, "Longitude":147.162521 }
+{ "timestamp":"2017-09-22T20:03:38Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":22.474171, "Longitude":151.190231 }
+{ "timestamp":"2017-09-22T20:22:35Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2017-09-23T21:37:03Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":4.606529, "Longitude":128.538895 }
+{ "timestamp":"2017-09-24T13:56:17Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-21.606363, "Longitude":146.636826 }
+{ "timestamp":"2017-09-24T14:24:53Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2017-09-24T16:17:09Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":4.592672, "Longitude":128.486221 }
+{ "timestamp":"2017-09-25T13:19:17Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":6.500712, "Longitude":-85.218224 }
+{ "timestamp":"2017-09-25T14:10:30Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":6.479493, "Longitude":-85.203964 }
+{ "timestamp":"2017-09-25T14:17:12Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":6.500457, "Longitude":-85.218376 }
+{ "timestamp":"2017-09-25T14:34:43Z", "event":"Touchdown", "PlayerControlled":false }

@@ -1,0 +1,28 @@
+{ "timestamp":"2018-12-12T19:12:39Z", "event":"SAAScanComplete", "BodyName":"HIP 43487 6", "BodyID":9, "ProbesUsed":5, "EfficiencyTarget":7 }
+{ "timestamp":"2018-12-12T19:45:38Z", "event":"SAAScanComplete", "BodyName":"Praea Euq BN-W c1-15 AB 1 c a", "BodyID":17, "ProbesUsed":2, "EfficiencyTarget":2 }
+{ "timestamp":"2018-12-13T16:29:42Z", "event":"SAAScanComplete", "BodyName":"Wredguia OC-J b23-1 4", "BodyID":28, "ProbesUsed":21, "EfficiencyTarget":22 }
+{ "timestamp":"2018-12-13T16:31:31Z", "event":"SAAScanComplete", "BodyName":"Wredguia OC-J b23-1 4 b", "BodyID":30, "ProbesUsed":5, "EfficiencyTarget":4 }
+{ "timestamp":"2018-12-13T17:25:07Z", "event":"SAAScanComplete", "BodyName":"Synuefai PQ-Q c7-3 A 2", "BodyID":4, "ProbesUsed":5, "EfficiencyTarget":6 }
+{ "timestamp":"2018-12-13T17:38:18Z", "event":"SAAScanComplete", "BodyName":"HD 8180 16", "BodyID":25, "ProbesUsed":9, "EfficiencyTarget":10 }
+{ "timestamp":"2018-12-13T17:50:47Z", "event":"SAAScanComplete", "BodyName":"Synuefai BR-T d4-11 A 7", "BodyID":10, "ProbesUsed":5, "EfficiencyTarget":6 }
+{ "timestamp":"2018-12-14T10:49:59Z", "event":"SAAScanComplete", "BodyName":"X-2488", "BodyID":2, "ProbesUsed":7, "EfficiencyTarget":7 }
+{ "timestamp":"2018-12-14T10:51:19Z", "event":"SAAScanComplete", "BodyName":"X-2487", "BodyID":1, "ProbesUsed":7, "EfficiencyTarget":7 }
+{ "timestamp":"2018-12-14T11:04:05Z", "event":"SAAScanComplete", "BodyName":"HIP 15310 2", "BodyID":3, "ProbesUsed":7, "EfficiencyTarget":7 }
+{ "timestamp":"2018-12-14T18:34:27Z", "event":"SAAScanComplete", "BodyName":"Corona Austr. Dark Region KS-T c3-11 3", "BodyID":3, "ProbesUsed":5, "EfficiencyTarget":6 }
+{ "timestamp":"2018-12-14T18:57:58Z", "event":"SAAScanComplete", "BodyName":"Col 359 Sector OW-D c12-13 1", "BodyID":2, "ProbesUsed":5, "EfficiencyTarget":6 }
+{ "timestamp":"2018-12-14T19:03:42Z", "event":"SAAScanComplete", "BodyName":"Col 359 Sector JB-O d6-9 A 4", "BodyID":10, "ProbesUsed":5, "EfficiencyTarget":6 }
+{ "timestamp":"2018-12-14T19:09:51Z", "event":"SAAScanComplete", "BodyName":"Col 359 Sector GJ-H b24-3 A 3 a", "BodyID":19, "ProbesUsed":2, "EfficiencyTarget":2 }
+{ "timestamp":"2018-12-14T19:48:44Z", "event":"SAAScanComplete", "BodyName":"Col 359 Sector PR-D c12-11 1 b", "BodyID":15, "ProbesUsed":2, "EfficiencyTarget":2 }
+{ "timestamp":"2018-12-14T20:18:05Z", "event":"SAAScanComplete", "BodyName":"Col 359 Sector LW-N d6-37 CD 1", "BodyID":7, "ProbesUsed":5, "EfficiencyTarget":6 }
+{ "timestamp":"2018-12-14T21:05:48Z", "event":"SAAScanComplete", "BodyName":"Col 359 Sector OC-M d7-18 6 a", "BodyID":14, "ProbesUsed":2, "EfficiencyTarget":2 }
+{ "timestamp":"2018-12-14T22:02:55Z", "event":"SAAScanComplete", "BodyName":"Swoiwns LT-E b30-1 A 1", "BodyID":3, "ProbesUsed":6, "EfficiencyTarget":7 }
+{ "timestamp":"2018-12-14T22:34:40Z", "event":"SAAScanComplete", "BodyName":"Swoiwns ZV-Y c16-5 A 2", "BodyID":4, "ProbesUsed":7, "EfficiencyTarget":7 }
+{ "timestamp":"2018-12-14T22:59:58Z", "event":"SAAScanComplete", "BodyName":"Swoiwns UE-C c15-6 2", "BodyID":2, "ProbesUsed":7, "EfficiencyTarget":6 }
+{ "timestamp":"2018-12-15T10:55:58Z", "event":"SAAScanComplete", "BodyName":"Vela Dark Region NC-V b2-0 4", "BodyID":12, "ProbesUsed":6, "EfficiencyTarget":6 }
+{ "timestamp":"2018-12-15T11:14:52Z", "event":"SAAScanComplete", "BodyName":"Vela Dark Region ZE-A d64 1", "BodyID":13, "ProbesUsed":7, "EfficiencyTarget":7 }
+{ "timestamp":"2018-12-15T11:58:25Z", "event":"SAAScanComplete", "BodyName":"Col 173 Sector PZ-O d6-110 4 a", "BodyID":17, "ProbesUsed":5, "EfficiencyTarget":6 }
+{ "timestamp":"2018-12-15T12:16:36Z", "event":"SAAScanComplete", "BodyName":"Col 173 Sector UK-N b23-3 5", "BodyID":9, "ProbesUsed":6, "EfficiencyTarget":7 }
+{ "timestamp":"2018-12-15T12:25:24Z", "event":"SAAScanComplete", "BodyName":"Col 173 Sector WM-H c11-20 A 1", "BodyID":4, "ProbesUsed":5, "EfficiencyTarget":6 }
+{ "timestamp":"2018-12-15T12:33:28Z", "event":"SAAScanComplete", "BodyName":"Col 173 Sector LT-Q d5-13 5", "BodyID":5, "ProbesUsed":5, "EfficiencyTarget":6 }
+{ "timestamp":"2018-12-15T13:06:54Z", "event":"SAAScanComplete", "BodyName":"Synuefe AO-S c20-11 1", "BodyID":1, "ProbesUsed":5, "EfficiencyTarget":6 }
+{ "timestamp":"2018-12-15T13:16:26Z", "event":"SAAScanComplete", "BodyName":"Synuefe SD-R c21-2 BC 1", "BodyID":29, "ProbesUsed":5, "EfficiencyTarget":6 }

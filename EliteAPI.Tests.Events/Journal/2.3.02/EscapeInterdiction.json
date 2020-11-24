@@ -1,0 +1,14 @@
+{ "timestamp":"2017-05-11T13:24:44Z", "event":"EscapeInterdiction", "Interdictor":"MiiC", "IsPlayer":true }
+{ "timestamp":"2017-05-11T13:26:46Z", "event":"EscapeInterdiction", "Interdictor":"METRALLA87", "IsPlayer":true }
+{ "timestamp":"2017-05-11T13:27:57Z", "event":"EscapeInterdiction", "Interdictor":"Faye-Valentine", "IsPlayer":true }
+{ "timestamp":"2017-05-11T14:22:57Z", "event":"EscapeInterdiction", "Interdictor":"$ShipName_Police_Independent;", "Interdictor_Localised":"System Authority Vessel", "IsPlayer":false }
+{ "timestamp":"2017-05-11T17:50:55Z", "event":"EscapeInterdiction", "Interdictor":"METRALLA87", "IsPlayer":true }
+{ "timestamp":"2017-05-11T18:18:34Z", "event":"EscapeInterdiction", "Interdictor":"Federal Agent", "IsPlayer":false }
+{ "timestamp":"2017-06-12T14:33:21Z", "event":"EscapeInterdiction", "Interdictor":"Reme St Pao", "IsPlayer":false }
+{ "timestamp":"2017-06-13T12:45:22Z", "event":"EscapeInterdiction", "Interdictor":"gassendi", "IsPlayer":false }
+{ "timestamp":"2017-06-13T12:46:57Z", "event":"EscapeInterdiction", "Interdictor":"Kevin Miller", "IsPlayer":false }
+{ "timestamp":"2017-06-15T15:23:03Z", "event":"EscapeInterdiction", "Interdictor":"David Fubes", "IsPlayer":false }
+{ "timestamp":"2017-06-20T15:28:42Z", "event":"EscapeInterdiction", "Interdictor":"Federal Agent", "IsPlayer":false }
+{ "timestamp":"2017-06-23T16:10:22Z", "event":"EscapeInterdiction", "Interdictor":"$ShipName_Military_Independent;", "Interdictor_Localised":"System Defence Force", "IsPlayer":false }
+{ "timestamp":"2017-06-24T15:21:17Z", "event":"EscapeInterdiction", "Interdictor":"$ShipName_Police_Federation;", "Interdictor_Localised":"Federal Security Service", "IsPlayer":false }
+{ "timestamp":"2017-06-24T19:46:04Z", "event":"EscapeInterdiction", "Interdictor":"Jim Jubble", "IsPlayer":false }

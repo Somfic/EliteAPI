@@ -1,0 +1,381 @@
+{ "timestamp":"2016-12-02T13:24:30Z", "event":"MarketSell", "Type":"metaalloys", "Count":10, "SellPrice":88198, "TotalSale":881980, "AvgPricePaid":115801 }
+{ "timestamp":"2016-12-02T16:33:40Z", "event":"MarketSell", "Type":"occupiedcryopod", "Count":1, "SellPrice":2976, "TotalSale":2976, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-02T16:33:47Z", "event":"MarketSell", "Type":"palladium", "Count":1, "SellPrice":13873, "TotalSale":13873, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-02T16:34:13Z", "event":"MarketSell", "Type":"moissanite", "Count":2, "SellPrice":4947, "TotalSale":9894, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-02T16:34:19Z", "event":"MarketSell", "Type":"resonatingseparators", "Count":1, "SellPrice":6409, "TotalSale":6409, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-02T17:07:25Z", "event":"MarketSell", "Type":"syntheticreagents", "Count":1, "SellPrice":7504, "TotalSale":7504, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-03T19:26:27Z", "event":"MarketSell", "Type":"coolinghoses", "Count":12, "SellPrice":58, "TotalSale":696, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-03T19:26:32Z", "event":"MarketSell", "Type":"neofabricinsulation", "Count":4, "SellPrice":1354, "TotalSale":5416, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-03T19:26:38Z", "event":"MarketSell", "Type":"articulationmotors", "Count":10, "SellPrice":2824, "TotalSale":28240, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-03T19:26:46Z", "event":"MarketSell", "Type":"modularterminals", "Count":18, "SellPrice":189, "TotalSale":3402, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-03T19:26:53Z", "event":"MarketSell", "Type":"nanobreakers", "Count":4, "SellPrice":165, "TotalSale":660, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-03T19:27:00Z", "event":"MarketSell", "Type":"telemetrysuite", "Count":8, "SellPrice":936, "TotalSale":7488, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-06T18:37:19Z", "event":"MarketSell", "Type":"largeexplorationdatacash", "Count":1, "SellPrice":89033, "TotalSale":89033, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2016-12-06T18:37:23Z", "event":"MarketSell", "Type":"smallexplorationdatacash", "Count":2, "SellPrice":1772, "TotalSale":3544, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2016-12-06T19:27:14Z", "event":"MarketSell", "Type":"slaves", "Count":54, "SellPrice":7488, "TotalSale":404352, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2016-12-07T15:35:39Z", "event":"MarketSell", "Type":"modularterminals", "Count":1, "SellPrice":155, "TotalSale":155, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-08T17:27:00Z", "event":"MarketSell", "Type":"combatstabilisers", "Count":32, "SellPrice":3129, "TotalSale":100128, "AvgPricePaid":0, "IllegalGoods":true, "BlackMarket":true }
+{ "timestamp":"2016-12-08T17:39:51Z", "event":"MarketSell", "Type":"telemetrysuite", "Count":8, "SellPrice":910, "TotalSale":7280, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-10T13:57:17Z", "event":"MarketSell", "Type":"coolinghoses", "Count":4, "SellPrice":32, "TotalSale":128, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-10T13:57:27Z", "event":"MarketSell", "Type":"neofabricinsulation", "Count":16, "SellPrice":1281, "TotalSale":20496, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-10T13:57:32Z", "event":"MarketSell", "Type":"articulationmotors", "Count":4, "SellPrice":2730, "TotalSale":10920, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-10T13:57:36Z", "event":"MarketSell", "Type":"modularterminals", "Count":4, "SellPrice":151, "TotalSale":604, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-10T13:57:50Z", "event":"MarketSell", "Type":"sothiscrystallinegold", "Count":4, "SellPrice":18039, "TotalSale":72156, "AvgPricePaid":1591 }
+{ "timestamp":"2016-12-10T13:58:05Z", "event":"MarketSell", "Type":"nanobreakers", "Count":4, "SellPrice":127, "TotalSale":508, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-10T13:58:09Z", "event":"MarketSell", "Type":"telemetrysuite", "Count":4, "SellPrice":873, "TotalSale":3492, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-10T18:01:56Z", "event":"MarketSell", "Type":"nanobreakers", "Count":4, "SellPrice":156, "TotalSale":624, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-13T17:25:46Z", "event":"MarketSell", "Type":"osmium", "Count":2, "SellPrice":9733, "TotalSale":19466, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-13T17:25:58Z", "event":"MarketSell", "Type":"bertrandite", "Count":7, "SellPrice":2257, "TotalSale":15799, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-13T17:26:04Z", "event":"MarketSell", "Type":"coltan", "Count":1, "SellPrice":1229, "TotalSale":1229, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-13T17:26:11Z", "event":"MarketSell", "Type":"indite", "Count":2, "SellPrice":2000, "TotalSale":4000, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-13T17:26:16Z", "event":"MarketSell", "Type":"lepidolite", "Count":7, "SellPrice":760, "TotalSale":5320, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-13T17:26:23Z", "event":"MarketSell", "Type":"uraninite", "Count":5, "SellPrice":775, "TotalSale":3875, "AvgPricePaid":0 }
+{ "timestamp":"2016-12-26T13:39:51Z", "event":"MarketSell", "Type":"largeexplorationdatacash", "Count":1, "SellPrice":89033, "TotalSale":89033, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2016-12-27T13:19:57Z", "event":"MarketSell", "Type":"personalgifts", "Count":14, "SellPrice":33186, "TotalSale":464604, "AvgPricePaid":12348 }
+{ "timestamp":"2016-12-30T12:40:31Z", "event":"MarketSell", "Type":"palladium", "Count":320, "SellPrice":15214, "TotalSale":4868480, "AvgPricePaid":12762 }
+{ "timestamp":"2016-12-30T18:35:20Z", "event":"MarketSell", "Type":"terrainenrichmentsystems", "Count":320, "SellPrice":4720, "TotalSale":1510400, "AvgPricePaid":4464 }
+{ "timestamp":"2017-01-12T18:54:13Z", "event":"MarketSell", "Type":"modularterminals", "Count":3, "SellPrice":2136, "TotalSale":6408, "AvgPricePaid":0 }
+{ "timestamp":"2017-01-12T18:54:21Z", "event":"MarketSell", "Type":"ancientcasket", "Count":1, "SellPrice":4595, "TotalSale":4595, "AvgPricePaid":0 }
+{ "timestamp":"2017-01-12T18:54:26Z", "event":"MarketSell", "Type":"ancienturn", "Count":1, "SellPrice":3298, "TotalSale":3298, "AvgPricePaid":0 }
+{ "timestamp":"2017-01-24T14:06:55Z", "event":"MarketSell", "Type":"slaves", "Count":208, "SellPrice":10533, "TotalSale":2190864, "AvgPricePaid":9900, "IllegalGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-03T16:09:26Z", "event":"MarketSell", "Type":"palladium", "Count":116, "SellPrice":15286, "TotalSale":1773176, "AvgPricePaid":11432 }
+{ "timestamp":"2017-02-04T16:32:17Z", "event":"MarketSell", "Type":"slaves", "Count":112, "SellPrice":7602, "TotalSale":851424, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:34:55Z", "event":"MarketSell", "Type":"slaves", "Count":276, "SellPrice":7602, "TotalSale":2098152, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:35:58Z", "event":"MarketSell", "Type":"slaves", "Count":258, "SellPrice":7602, "TotalSale":1961316, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:36:36Z", "event":"MarketSell", "Type":"slaves", "Count":72, "SellPrice":7602, "TotalSale":547344, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:39:30Z", "event":"MarketSell", "Type":"slaves", "Count":300, "SellPrice":7602, "TotalSale":2280600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:40:26Z", "event":"MarketSell", "Type":"slaves", "Count":304, "SellPrice":7602, "TotalSale":2311008, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:41:33Z", "event":"MarketSell", "Type":"slaves", "Count":264, "SellPrice":7602, "TotalSale":2006928, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:42:47Z", "event":"MarketSell", "Type":"slaves", "Count":224, "SellPrice":7602, "TotalSale":1702848, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:44:44Z", "event":"MarketSell", "Type":"slaves", "Count":296, "SellPrice":7602, "TotalSale":2250192, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:45:30Z", "event":"MarketSell", "Type":"slaves", "Count":280, "SellPrice":7602, "TotalSale":2128560, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:46:07Z", "event":"MarketSell", "Type":"slaves", "Count":304, "SellPrice":7602, "TotalSale":2311008, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:48:32Z", "event":"MarketSell", "Type":"slaves", "Count":304, "SellPrice":7602, "TotalSale":2311008, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:49:36Z", "event":"MarketSell", "Type":"slaves", "Count":296, "SellPrice":7602, "TotalSale":2250192, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:51:21Z", "event":"MarketSell", "Type":"slaves", "Count":300, "SellPrice":7602, "TotalSale":2280600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:52:46Z", "event":"MarketSell", "Type":"slaves", "Count":300, "SellPrice":7602, "TotalSale":2280600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:55:47Z", "event":"MarketSell", "Type":"slaves", "Count":300, "SellPrice":7602, "TotalSale":2280600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:57:06Z", "event":"MarketSell", "Type":"slaves", "Count":304, "SellPrice":7602, "TotalSale":2311008, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:58:00Z", "event":"MarketSell", "Type":"slaves", "Count":300, "SellPrice":7602, "TotalSale":2280600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T16:59:13Z", "event":"MarketSell", "Type":"slaves", "Count":276, "SellPrice":7602, "TotalSale":2098152, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:00:09Z", "event":"MarketSell", "Type":"slaves", "Count":212, "SellPrice":7602, "TotalSale":1611624, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:01:54Z", "event":"MarketSell", "Type":"slaves", "Count":300, "SellPrice":7602, "TotalSale":2280600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:02:54Z", "event":"MarketSell", "Type":"slaves", "Count":304, "SellPrice":7602, "TotalSale":2311008, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:03:37Z", "event":"MarketSell", "Type":"slaves", "Count":288, "SellPrice":7602, "TotalSale":2189376, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:07:45Z", "event":"MarketSell", "Type":"slaves", "Count":300, "SellPrice":7602, "TotalSale":2280600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:08:30Z", "event":"MarketSell", "Type":"slaves", "Count":304, "SellPrice":7602, "TotalSale":2311008, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:09:22Z", "event":"MarketSell", "Type":"slaves", "Count":300, "SellPrice":7602, "TotalSale":2280600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:10:59Z", "event":"MarketSell", "Type":"slaves", "Count":288, "SellPrice":7602, "TotalSale":2189376, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:13:28Z", "event":"MarketSell", "Type":"slaves", "Count":296, "SellPrice":7602, "TotalSale":2250192, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:21:13Z", "event":"MarketSell", "Type":"slaves", "Count":260, "SellPrice":7602, "TotalSale":1976520, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:24:50Z", "event":"MarketSell", "Type":"slaves", "Count":300, "SellPrice":7602, "TotalSale":2280600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:25:36Z", "event":"MarketSell", "Type":"slaves", "Count":300, "SellPrice":7602, "TotalSale":2280600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:26:41Z", "event":"MarketSell", "Type":"slaves", "Count":284, "SellPrice":7602, "TotalSale":2158968, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:28:47Z", "event":"MarketSell", "Type":"slaves", "Count":304, "SellPrice":7602, "TotalSale":2311008, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:29:36Z", "event":"MarketSell", "Type":"slaves", "Count":288, "SellPrice":7602, "TotalSale":2189376, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:30:33Z", "event":"MarketSell", "Type":"slaves", "Count":284, "SellPrice":7602, "TotalSale":2158968, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-04T17:31:19Z", "event":"MarketSell", "Type":"slaves", "Count":284, "SellPrice":7602, "TotalSale":2158968, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-05T13:17:40Z", "event":"MarketSell", "Type":"battleweapons", "Count":201, "SellPrice":7381, "TotalSale":1483581, "AvgPricePaid":6329, "IllegalGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-05T13:17:55Z", "event":"MarketSell", "Type":"personalweapons", "Count":183, "SellPrice":5399, "TotalSale":988017, "AvgPricePaid":3864, "IllegalGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-06T15:27:47Z", "event":"MarketSell", "Type":"platinum", "Count":14, "SellPrice":19549, "TotalSale":273686, "AvgPricePaid":0 }
+{ "timestamp":"2017-02-06T15:27:52Z", "event":"MarketSell", "Type":"osmium", "Count":1, "SellPrice":9008, "TotalSale":9008, "AvgPricePaid":0 }
+{ "timestamp":"2017-02-06T15:27:57Z", "event":"MarketSell", "Type":"praseodymium", "Count":12, "SellPrice":8454, "TotalSale":101448, "AvgPricePaid":0 }
+{ "timestamp":"2017-02-06T15:28:03Z", "event":"MarketSell", "Type":"samarium", "Count":6, "SellPrice":7937, "TotalSale":47622, "AvgPricePaid":0 }
+{ "timestamp":"2017-02-06T15:28:44Z", "event":"MarketSell", "Type":"gold", "Count":4, "SellPrice":10079, "TotalSale":40316, "AvgPricePaid":0 }
+{ "timestamp":"2017-02-06T15:28:52Z", "event":"MarketSell", "Type":"silver", "Count":8, "SellPrice":5470, "TotalSale":43760, "AvgPricePaid":0 }
+{ "timestamp":"2017-02-06T15:28:57Z", "event":"MarketSell", "Type":"bertrandite", "Count":1, "SellPrice":2967, "TotalSale":2967, "AvgPricePaid":0 }
+{ "timestamp":"2017-02-06T15:29:04Z", "event":"MarketSell", "Type":"gallite", "Count":4, "SellPrice":2332, "TotalSale":9328, "AvgPricePaid":0 }
+{ "timestamp":"2017-02-06T15:29:10Z", "event":"MarketSell", "Type":"indite", "Count":12, "SellPrice":2630, "TotalSale":31560, "AvgPricePaid":0 }
+{ "timestamp":"2017-02-06T15:29:18Z", "event":"MarketSell", "Type":"painite", "Count":4, "SellPrice":20503, "TotalSale":82012, "AvgPricePaid":0 }
+{ "timestamp":"2017-02-06T16:03:36Z", "event":"MarketSell", "Type":"slaves", "Count":80, "SellPrice":8127, "TotalSale":650160, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-06T16:14:07Z", "event":"MarketSell", "Type":"slaves", "Count":252, "SellPrice":8127, "TotalSale":2048004, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-09T13:53:40Z", "event":"MarketSell", "Type":"hydrogenfuel", "Count":3, "SellPrice":60, "TotalSale":180, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-09T13:53:44Z", "event":"MarketSell", "Type":"foodcartridges", "Count":3, "SellPrice":19, "TotalSale":57, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-09T13:53:49Z", "event":"MarketSell", "Type":"wreckagecomponents", "Count":1, "SellPrice":546, "TotalSale":546, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-09T13:53:56Z", "event":"MarketSell", "Type":"personaleffects", "Count":3, "SellPrice":87, "TotalSale":261, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-09T13:54:02Z", "event":"MarketSell", "Type":"encripteddatastorage", "Count":2, "SellPrice":239, "TotalSale":478, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-09T13:54:52Z", "event":"MarketSell", "Type":"occupiedcryopod", "Count":2, "SellPrice":7698, "TotalSale":15396, "AvgPricePaid":0 }
+{ "timestamp":"2017-02-18T19:04:39Z", "event":"MarketSell", "Type":"modularterminals", "Count":4, "SellPrice":1991, "TotalSale":7964, "AvgPricePaid":0 }
+{ "timestamp":"2017-02-19T14:50:08Z", "event":"MarketSell", "Type":"slaves", "Count":381, "SellPrice":8208, "TotalSale":3127248, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T14:51:02Z", "event":"MarketSell", "Type":"slaves", "Count":360, "SellPrice":8208, "TotalSale":2954880, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T14:51:59Z", "event":"MarketSell", "Type":"slaves", "Count":336, "SellPrice":8208, "TotalSale":2757888, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T14:52:44Z", "event":"MarketSell", "Type":"slaves", "Count":152, "SellPrice":8208, "TotalSale":1247616, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T14:54:19Z", "event":"MarketSell", "Type":"slaves", "Count":356, "SellPrice":8208, "TotalSale":2922048, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T14:55:40Z", "event":"MarketSell", "Type":"slaves", "Count":352, "SellPrice":8208, "TotalSale":2889216, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T14:57:01Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":8208, "TotalSale":3151872, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T14:58:11Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":8208, "TotalSale":3151872, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T14:58:50Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":8208, "TotalSale":3151872, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:01:32Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":8208, "TotalSale":3119040, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:02:19Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":8208, "TotalSale":3151872, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:03:11Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":8208, "TotalSale":3151872, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:04:51Z", "event":"MarketSell", "Type":"slaves", "Count":348, "SellPrice":8208, "TotalSale":2856384, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:05:40Z", "event":"MarketSell", "Type":"slaves", "Count":144, "SellPrice":8208, "TotalSale":1181952, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:07:26Z", "event":"MarketSell", "Type":"slaves", "Count":328, "SellPrice":8208, "TotalSale":2692224, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:08:15Z", "event":"MarketSell", "Type":"slaves", "Count":348, "SellPrice":8208, "TotalSale":2856384, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:08:58Z", "event":"MarketSell", "Type":"slaves", "Count":356, "SellPrice":8208, "TotalSale":2922048, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:11:27Z", "event":"MarketSell", "Type":"slaves", "Count":32, "SellPrice":8208, "TotalSale":262656, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:12:41Z", "event":"MarketSell", "Type":"slaves", "Count":240, "SellPrice":8208, "TotalSale":1969920, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:14:36Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":8208, "TotalSale":3151872, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:15:28Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":8208, "TotalSale":3151872, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:16:21Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":8208, "TotalSale":3119040, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:18:29Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":8208, "TotalSale":3119040, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:20:19Z", "event":"MarketSell", "Type":"slaves", "Count":372, "SellPrice":8208, "TotalSale":3053376, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:21:19Z", "event":"MarketSell", "Type":"slaves", "Count":376, "SellPrice":8208, "TotalSale":3086208, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:23:30Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":8208, "TotalSale":3151872, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:24:09Z", "event":"MarketSell", "Type":"slaves", "Count":352, "SellPrice":8208, "TotalSale":2889216, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:25:02Z", "event":"MarketSell", "Type":"slaves", "Count":144, "SellPrice":8208, "TotalSale":1181952, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:27:56Z", "event":"MarketSell", "Type":"slaves", "Count":376, "SellPrice":8208, "TotalSale":3086208, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:29:24Z", "event":"MarketSell", "Type":"slaves", "Count":336, "SellPrice":8208, "TotalSale":2757888, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:30:18Z", "event":"MarketSell", "Type":"slaves", "Count":340, "SellPrice":8208, "TotalSale":2790720, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:31:06Z", "event":"MarketSell", "Type":"slaves", "Count":368, "SellPrice":8208, "TotalSale":3020544, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:31:49Z", "event":"MarketSell", "Type":"slaves", "Count":272, "SellPrice":8208, "TotalSale":2232576, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:35:30Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":8208, "TotalSale":3119040, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:37:36Z", "event":"MarketSell", "Type":"slaves", "Count":368, "SellPrice":8208, "TotalSale":3020544, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:39:07Z", "event":"MarketSell", "Type":"slaves", "Count":352, "SellPrice":8208, "TotalSale":2889216, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:40:41Z", "event":"MarketSell", "Type":"slaves", "Count":356, "SellPrice":8208, "TotalSale":2922048, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:41:42Z", "event":"MarketSell", "Type":"slaves", "Count":308, "SellPrice":8208, "TotalSale":2528064, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:44:27Z", "event":"MarketSell", "Type":"slaves", "Count":376, "SellPrice":8208, "TotalSale":3086208, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:45:25Z", "event":"MarketSell", "Type":"slaves", "Count":372, "SellPrice":8208, "TotalSale":3053376, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:46:02Z", "event":"MarketSell", "Type":"slaves", "Count":192, "SellPrice":8208, "TotalSale":1575936, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:47:36Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":8208, "TotalSale":3119040, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:48:50Z", "event":"MarketSell", "Type":"slaves", "Count":360, "SellPrice":8208, "TotalSale":2954880, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:49:27Z", "event":"MarketSell", "Type":"slaves", "Count":328, "SellPrice":8208, "TotalSale":2692224, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:49:56Z", "event":"MarketSell", "Type":"slaves", "Count":224, "SellPrice":8208, "TotalSale":1838592, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:54:48Z", "event":"MarketSell", "Type":"slaves", "Count":372, "SellPrice":8208, "TotalSale":3053376, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:55:33Z", "event":"MarketSell", "Type":"slaves", "Count":372, "SellPrice":8208, "TotalSale":3053376, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:56:18Z", "event":"MarketSell", "Type":"slaves", "Count":368, "SellPrice":8208, "TotalSale":3020544, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:57:21Z", "event":"MarketSell", "Type":"slaves", "Count":368, "SellPrice":8208, "TotalSale":3020544, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T15:58:45Z", "event":"MarketSell", "Type":"slaves", "Count":364, "SellPrice":8208, "TotalSale":2987712, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T16:10:06Z", "event":"MarketSell", "Type":"slaves", "Count":240, "SellPrice":8208, "TotalSale":1969920, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T16:13:40Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":8208, "TotalSale":3119040, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T16:14:16Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":8208, "TotalSale":3119040, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T16:14:59Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":8208, "TotalSale":3119040, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T16:15:42Z", "event":"MarketSell", "Type":"slaves", "Count":324, "SellPrice":8208, "TotalSale":2659392, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-02-19T16:16:09Z", "event":"MarketSell", "Type":"slaves", "Count":324, "SellPrice":8208, "TotalSale":2659392, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T15:34:00Z", "event":"MarketSell", "Type":"slaves", "Count":424, "SellPrice":8073, "TotalSale":3422952, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T15:35:58Z", "event":"MarketSell", "Type":"slaves", "Count":416, "SellPrice":8073, "TotalSale":3358368, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T15:38:05Z", "event":"MarketSell", "Type":"slaves", "Count":444, "SellPrice":8073, "TotalSale":3584412, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T15:47:00Z", "event":"MarketSell", "Type":"slaves", "Count":432, "SellPrice":8069, "TotalSale":3485808, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T15:48:16Z", "event":"MarketSell", "Type":"slaves", "Count":444, "SellPrice":8069, "TotalSale":3582636, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T15:50:13Z", "event":"MarketSell", "Type":"slaves", "Count":440, "SellPrice":8069, "TotalSale":3550360, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T15:52:28Z", "event":"MarketSell", "Type":"slaves", "Count":448, "SellPrice":8069, "TotalSale":3614912, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T15:53:10Z", "event":"MarketSell", "Type":"slaves", "Count":396, "SellPrice":8069, "TotalSale":3195324, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T16:30:12Z", "event":"MarketSell", "Type":"slaves", "Count":428, "SellPrice":8067, "TotalSale":3452676, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T16:32:39Z", "event":"MarketSell", "Type":"slaves", "Count":448, "SellPrice":8067, "TotalSale":3614016, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T16:35:31Z", "event":"MarketSell", "Type":"slaves", "Count":444, "SellPrice":8067, "TotalSale":3581748, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T16:38:34Z", "event":"MarketSell", "Type":"slaves", "Count":448, "SellPrice":8067, "TotalSale":3614016, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T16:41:38Z", "event":"MarketSell", "Type":"slaves", "Count":436, "SellPrice":8066, "TotalSale":3516776, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T16:42:24Z", "event":"MarketSell", "Type":"slaves", "Count":252, "SellPrice":8066, "TotalSale":2032632, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T16:46:40Z", "event":"MarketSell", "Type":"slaves", "Count":444, "SellPrice":8066, "TotalSale":3581304, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T16:48:52Z", "event":"MarketSell", "Type":"slaves", "Count":448, "SellPrice":8066, "TotalSale":3613568, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T16:51:34Z", "event":"MarketSell", "Type":"slaves", "Count":336, "SellPrice":8075, "TotalSale":2713200, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:01:44Z", "event":"MarketSell", "Type":"slaves", "Count":332, "SellPrice":8067, "TotalSale":2678244, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:02:35Z", "event":"MarketSell", "Type":"slaves", "Count":404, "SellPrice":8067, "TotalSale":3259068, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:04:15Z", "event":"MarketSell", "Type":"slaves", "Count":448, "SellPrice":8067, "TotalSale":3614016, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:05:07Z", "event":"MarketSell", "Type":"slaves", "Count":304, "SellPrice":8067, "TotalSale":2452368, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:07:00Z", "event":"MarketSell", "Type":"slaves", "Count":416, "SellPrice":8067, "TotalSale":3355872, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:09:37Z", "event":"MarketSell", "Type":"slaves", "Count":444, "SellPrice":8067, "TotalSale":3581748, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:10:43Z", "event":"MarketSell", "Type":"slaves", "Count":292, "SellPrice":8067, "TotalSale":2355564, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:12:59Z", "event":"MarketSell", "Type":"slaves", "Count":436, "SellPrice":8055, "TotalSale":3511980, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:13:41Z", "event":"MarketSell", "Type":"slaves", "Count":432, "SellPrice":8055, "TotalSale":3479760, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:14:33Z", "event":"MarketSell", "Type":"slaves", "Count":408, "SellPrice":8055, "TotalSale":3286440, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:15:11Z", "event":"MarketSell", "Type":"slaves", "Count":356, "SellPrice":8055, "TotalSale":2867580, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:17:16Z", "event":"MarketSell", "Type":"slaves", "Count":420, "SellPrice":8055, "TotalSale":3383100, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:18:03Z", "event":"MarketSell", "Type":"slaves", "Count":360, "SellPrice":8055, "TotalSale":2899800, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:21:38Z", "event":"MarketSell", "Type":"slaves", "Count":448, "SellPrice":8055, "TotalSale":3608640, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:22:26Z", "event":"MarketSell", "Type":"slaves", "Count":340, "SellPrice":8055, "TotalSale":2738700, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:24:01Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":8064, "TotalSale":3064320, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:25:40Z", "event":"MarketSell", "Type":"slaves", "Count":364, "SellPrice":8064, "TotalSale":2935296, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:27:17Z", "event":"MarketSell", "Type":"slaves", "Count":444, "SellPrice":8064, "TotalSale":3580416, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:27:59Z", "event":"MarketSell", "Type":"slaves", "Count":244, "SellPrice":8064, "TotalSale":1967616, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:34:05Z", "event":"MarketSell", "Type":"slaves", "Count":1, "SellPrice":8052, "TotalSale":8052, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:34:17Z", "event":"MarketSell", "Type":"slaves", "Count":60, "SellPrice":8052, "TotalSale":483120, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:35:14Z", "event":"MarketSell", "Type":"slaves", "Count":51, "SellPrice":8052, "TotalSale":410652, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:35:52Z", "event":"MarketSell", "Type":"slaves", "Count":364, "SellPrice":8052, "TotalSale":2930928, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-03T18:38:34Z", "event":"MarketSell", "Type":"slaves", "Count":112, "SellPrice":8052, "TotalSale":901824, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-06T16:04:16Z", "event":"MarketSell", "Type":"slaves", "Count":240, "SellPrice":8122, "TotalSale":1949280, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-06T16:08:00Z", "event":"MarketSell", "Type":"slaves", "Count":120, "SellPrice":8122, "TotalSale":974640, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-09T13:54:03Z", "event":"MarketSell", "Type":"slaves", "Count":352, "SellPrice":8048, "TotalSale":2832896, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-09T13:56:43Z", "event":"MarketSell", "Type":"slaves", "Count":352, "SellPrice":8048, "TotalSale":2832896, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-09T13:59:30Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":8048, "TotalSale":3058240, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-09T14:02:33Z", "event":"MarketSell", "Type":"slaves", "Count":448, "SellPrice":8048, "TotalSale":3605504, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-09T14:06:29Z", "event":"MarketSell", "Type":"slaves", "Count":440, "SellPrice":8043, "TotalSale":3538920, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-09T14:13:57Z", "event":"MarketSell", "Type":"slaves", "Count":432, "SellPrice":8043, "TotalSale":3474576, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-09T14:17:38Z", "event":"MarketSell", "Type":"slaves", "Count":436, "SellPrice":8043, "TotalSale":3506748, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-09T14:21:33Z", "event":"MarketSell", "Type":"slaves", "Count":424, "SellPrice":8043, "TotalSale":3410232, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-09T14:26:08Z", "event":"MarketSell", "Type":"slaves", "Count":448, "SellPrice":8043, "TotalSale":3603264, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-09T14:35:18Z", "event":"MarketSell", "Type":"slaves", "Count":456, "SellPrice":8042, "TotalSale":3667152, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-09T14:35:51Z", "event":"MarketSell", "Type":"biowaste", "Count":464, "SellPrice":14, "TotalSale":6496, "AvgPricePaid":18 }
+{ "timestamp":"2017-03-09T14:36:34Z", "event":"MarketSell", "Type":"hydrogenfuel", "Count":464, "SellPrice":131, "TotalSale":60784, "AvgPricePaid":137 }
+{ "timestamp":"2017-03-09T14:37:07Z", "event":"MarketSell", "Type":"biowaste", "Count":158, "SellPrice":14, "TotalSale":2212, "AvgPricePaid":18 }
+{ "timestamp":"2017-03-09T14:37:25Z", "event":"MarketSell", "Type":"hydrogenfuel", "Count":464, "SellPrice":131, "TotalSale":60784, "AvgPricePaid":137 }
+{ "timestamp":"2017-03-09T14:37:40Z", "event":"MarketSell", "Type":"hydrogenfuel", "Count":464, "SellPrice":131, "TotalSale":60784, "AvgPricePaid":137 }
+{ "timestamp":"2017-03-09T15:42:50Z", "event":"MarketSell", "Type":"biowaste", "Count":96, "SellPrice":20, "TotalSale":1920, "AvgPricePaid":27 }
+{ "timestamp":"2017-03-09T15:43:52Z", "event":"MarketSell", "Type":"slaves", "Count":96, "SellPrice":10944, "TotalSale":1050624, "AvgPricePaid":10945 }
+{ "timestamp":"2017-03-09T16:13:57Z", "event":"MarketSell", "Type":"sothiscrystallinegold", "Count":30, "SellPrice":16225, "TotalSale":486750, "AvgPricePaid":15937 }
+{ "timestamp":"2017-03-09T16:14:06Z", "event":"MarketSell", "Type":"hydrogenfuel", "Count":98, "SellPrice":131, "TotalSale":12838, "AvgPricePaid":82 }
+{ "timestamp":"2017-03-11T15:07:14Z", "event":"MarketSell", "Type":"cobalt", "Count":11, "SellPrice":701, "TotalSale":7711, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T15:07:22Z", "event":"MarketSell", "Type":"samarium", "Count":7, "SellPrice":8059, "TotalSale":56413, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T15:07:27Z", "event":"MarketSell", "Type":"bauxite", "Count":5, "SellPrice":21, "TotalSale":105, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T15:07:31Z", "event":"MarketSell", "Type":"coltan", "Count":4, "SellPrice":755, "TotalSale":3020, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T15:07:35Z", "event":"MarketSell", "Type":"gallite", "Count":6, "SellPrice":1104, "TotalSale":6624, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T15:07:49Z", "event":"MarketSell", "Type":"uraninite", "Count":1, "SellPrice":447, "TotalSale":447, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T16:31:23Z", "event":"MarketSell", "Type":"hydrogenperoxide", "Count":2, "SellPrice":917, "TotalSale":1834, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T16:31:28Z", "event":"MarketSell", "Type":"liquidoxygen", "Count":13, "SellPrice":107, "TotalSale":1391, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T16:31:32Z", "event":"MarketSell", "Type":"water", "Count":6, "SellPrice":190, "TotalSale":1140, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T16:31:40Z", "event":"MarketSell", "Type":"bromellite", "Count":3, "SellPrice":5366, "TotalSale":16098, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T16:31:44Z", "event":"MarketSell", "Type":"lithiumhydroxide", "Count":6, "SellPrice":5664, "TotalSale":33984, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T16:31:48Z", "event":"MarketSell", "Type":"lowtemperaturediamond", "Count":2, "SellPrice":56965, "TotalSale":113930, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T16:31:52Z", "event":"MarketSell", "Type":"methaneclathrate", "Count":7, "SellPrice":624, "TotalSale":4368, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-11T16:32:02Z", "event":"MarketSell", "Type":"methanolmonohydratecrystals", "Count":9, "SellPrice":1018, "TotalSale":9162, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T15:43:55Z", "event":"MarketSell", "Type":"gold", "Count":14, "SellPrice":10256, "TotalSale":143584, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T15:44:01Z", "event":"MarketSell", "Type":"osmium", "Count":39, "SellPrice":9272, "TotalSale":361608, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T15:44:08Z", "event":"MarketSell", "Type":"praseodymium", "Count":20, "SellPrice":8715, "TotalSale":174300, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T15:44:14Z", "event":"MarketSell", "Type":"samarium", "Count":29, "SellPrice":8194, "TotalSale":237626, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T15:44:19Z", "event":"MarketSell", "Type":"silver", "Count":28, "SellPrice":5695, "TotalSale":159460, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T15:44:25Z", "event":"MarketSell", "Type":"bertrandite", "Count":7, "SellPrice":1420, "TotalSale":9940, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T15:44:31Z", "event":"MarketSell", "Type":"coltan", "Count":20, "SellPrice":701, "TotalSale":14020, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T15:44:36Z", "event":"MarketSell", "Type":"gallite", "Count":5, "SellPrice":1041, "TotalSale":5205, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T15:44:41Z", "event":"MarketSell", "Type":"indite", "Count":14, "SellPrice":1215, "TotalSale":17010, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T15:44:48Z", "event":"MarketSell", "Type":"lepidolite", "Count":54, "SellPrice":222, "TotalSale":11988, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T16:38:34Z", "event":"MarketSell", "Type":"liquidoxygen", "Count":7, "SellPrice":201, "TotalSale":1407, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T16:38:45Z", "event":"MarketSell", "Type":"bromellite", "Count":8, "SellPrice":5431, "TotalSale":43448, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T16:38:52Z", "event":"MarketSell", "Type":"lithiumhydroxide", "Count":6, "SellPrice":5459, "TotalSale":32754, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T16:38:55Z", "event":"MarketSell", "Type":"lowtemperaturediamond", "Count":1, "SellPrice":57685, "TotalSale":57685, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T16:38:59Z", "event":"MarketSell", "Type":"methanolmonohydratecrystals", "Count":5, "SellPrice":1049, "TotalSale":5245, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T18:35:13Z", "event":"MarketSell", "Type":"painite", "Count":4, "SellPrice":39091, "TotalSale":156364, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-14T18:37:39Z", "event":"MarketSell", "Type":"lavianbrandy", "Count":12, "SellPrice":1750, "TotalSale":21000, "AvgPricePaid":1750 }
+{ "timestamp":"2017-03-16T17:23:27Z", "event":"MarketSell", "Type":"beryllium", "Count":232, "SellPrice":8017, "TotalSale":1859944, "AvgPricePaid":7688 }
+{ "timestamp":"2017-03-21T11:25:36Z", "event":"MarketSell", "Type":"hydrogenfuel", "Count":284, "SellPrice":131, "TotalSale":37204, "AvgPricePaid":83 }
+{ "timestamp":"2017-03-21T17:53:15Z", "event":"MarketSell", "Type":"slaves", "Count":332, "SellPrice":8107, "TotalSale":2691524, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-21T17:58:26Z", "event":"MarketSell", "Type":"slaves", "Count":300, "SellPrice":8107, "TotalSale":2432100, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-21T18:03:27Z", "event":"MarketSell", "Type":"slaves", "Count":236, "SellPrice":8112, "TotalSale":1914432, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-03-22T18:08:34Z", "event":"MarketSell", "Type":"gold", "Count":21, "SellPrice":9984, "TotalSale":209664, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-22T18:08:43Z", "event":"MarketSell", "Type":"osmium", "Count":15, "SellPrice":11553, "TotalSale":173295, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-22T18:08:49Z", "event":"MarketSell", "Type":"palladium", "Count":17, "SellPrice":13805, "TotalSale":234685, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-22T18:08:58Z", "event":"MarketSell", "Type":"platinum", "Count":23, "SellPrice":23471, "TotalSale":539833, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-22T18:09:03Z", "event":"MarketSell", "Type":"praseodymium", "Count":20, "SellPrice":8342, "TotalSale":166840, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-22T18:09:08Z", "event":"MarketSell", "Type":"samarium", "Count":36, "SellPrice":7833, "TotalSale":281988, "AvgPricePaid":0 }
+{ "timestamp":"2017-03-22T18:09:12Z", "event":"MarketSell", "Type":"silver", "Count":29, "SellPrice":5190, "TotalSale":150510, "AvgPricePaid":0 }
+{ "timestamp":"2017-04-04T17:47:14Z", "event":"MarketSell", "Type":"slaves", "Count":364, "SellPrice":7538, "TotalSale":2743832, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T17:50:43Z", "event":"MarketSell", "Type":"slaves", "Count":364, "SellPrice":7538, "TotalSale":2743832, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T17:53:13Z", "event":"MarketSell", "Type":"slaves", "Count":368, "SellPrice":7538, "TotalSale":2773984, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T17:54:04Z", "event":"MarketSell", "Type":"slaves", "Count":396, "SellPrice":7538, "TotalSale":2985048, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T17:55:03Z", "event":"MarketSell", "Type":"slaves", "Count":372, "SellPrice":7538, "TotalSale":2804136, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T17:55:43Z", "event":"MarketSell", "Type":"slaves", "Count":356, "SellPrice":7538, "TotalSale":2683528, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T17:59:19Z", "event":"MarketSell", "Type":"slaves", "Count":376, "SellPrice":7533, "TotalSale":2832408, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:04:10Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":7533, "TotalSale":2952936, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:05:23Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":7533, "TotalSale":2862540, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:06:43Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7533, "TotalSale":3013200, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:11:01Z", "event":"MarketSell", "Type":"slaves", "Count":389, "SellPrice":7533, "TotalSale":2930337, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:11:49Z", "event":"MarketSell", "Type":"slaves", "Count":352, "SellPrice":7533, "TotalSale":2651616, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:12:51Z", "event":"MarketSell", "Type":"slaves", "Count":368, "SellPrice":7533, "TotalSale":2772144, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:14:52Z", "event":"MarketSell", "Type":"slaves", "Count":388, "SellPrice":7533, "TotalSale":2922804, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:15:38Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":7533, "TotalSale":2892672, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:17:19Z", "event":"MarketSell", "Type":"slaves", "Count":396, "SellPrice":7533, "TotalSale":2983068, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:18:27Z", "event":"MarketSell", "Type":"slaves", "Count":388, "SellPrice":7533, "TotalSale":2922804, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:24:31Z", "event":"MarketSell", "Type":"slaves", "Count":372, "SellPrice":7531, "TotalSale":2801532, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:25:04Z", "event":"MarketSell", "Type":"slaves", "Count":336, "SellPrice":7531, "TotalSale":2530416, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:38:41Z", "event":"MarketSell", "Type":"slaves", "Count":388, "SellPrice":7530, "TotalSale":2921640, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:39:45Z", "event":"MarketSell", "Type":"slaves", "Count":372, "SellPrice":7530, "TotalSale":2801160, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:40:24Z", "event":"MarketSell", "Type":"slaves", "Count":256, "SellPrice":7530, "TotalSale":1927680, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:45:12Z", "event":"MarketSell", "Type":"slaves", "Count":396, "SellPrice":7530, "TotalSale":2981880, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-04T18:46:22Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7530, "TotalSale":3012000, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:33:31Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":7541, "TotalSale":2956072, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:34:23Z", "event":"MarketSell", "Type":"slaves", "Count":388, "SellPrice":7541, "TotalSale":2925908, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:35:00Z", "event":"MarketSell", "Type":"slaves", "Count":336, "SellPrice":7541, "TotalSale":2533776, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:37:41Z", "event":"MarketSell", "Type":"slaves", "Count":388, "SellPrice":7541, "TotalSale":2925908, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:39:01Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":7541, "TotalSale":2956072, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:40:05Z", "event":"MarketSell", "Type":"slaves", "Count":376, "SellPrice":7541, "TotalSale":2835416, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:41:23Z", "event":"MarketSell", "Type":"slaves", "Count":376, "SellPrice":7541, "TotalSale":2835416, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:42:22Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":7541, "TotalSale":2956072, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:43:14Z", "event":"MarketSell", "Type":"slaves", "Count":348, "SellPrice":7544, "TotalSale":2625312, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:45:39Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":7544, "TotalSale":2957248, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:46:42Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7544, "TotalSale":3017600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:47:40Z", "event":"MarketSell", "Type":"slaves", "Count":292, "SellPrice":7544, "TotalSale":2202848, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:50:08Z", "event":"MarketSell", "Type":"slaves", "Count":388, "SellPrice":7544, "TotalSale":2927072, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:51:15Z", "event":"MarketSell", "Type":"slaves", "Count":388, "SellPrice":7544, "TotalSale":2927072, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:52:50Z", "event":"MarketSell", "Type":"slaves", "Count":360, "SellPrice":7543, "TotalSale":2715480, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:54:42Z", "event":"MarketSell", "Type":"slaves", "Count":372, "SellPrice":7543, "TotalSale":2805996, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:55:50Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7543, "TotalSale":3017200, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T15:56:38Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":7543, "TotalSale":2956856, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:17:22Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7536, "TotalSale":3014400, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:18:23Z", "event":"MarketSell", "Type":"slaves", "Count":388, "SellPrice":7536, "TotalSale":2923968, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:22:27Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":7536, "TotalSale":2893824, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:25:05Z", "event":"MarketSell", "Type":"slaves", "Count":208, "SellPrice":7536, "TotalSale":1567488, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:28:25Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7533, "TotalSale":3013200, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:30:30Z", "event":"MarketSell", "Type":"slaves", "Count":396, "SellPrice":7533, "TotalSale":2983068, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:32:27Z", "event":"MarketSell", "Type":"slaves", "Count":376, "SellPrice":7533, "TotalSale":2832408, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:33:30Z", "event":"MarketSell", "Type":"slaves", "Count":368, "SellPrice":7533, "TotalSale":2772144, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:34:43Z", "event":"MarketSell", "Type":"slaves", "Count":376, "SellPrice":7533, "TotalSale":2832408, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:35:38Z", "event":"MarketSell", "Type":"slaves", "Count":352, "SellPrice":7533, "TotalSale":2651616, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:38:28Z", "event":"MarketSell", "Type":"slaves", "Count":396, "SellPrice":7533, "TotalSale":2983068, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:39:17Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":7533, "TotalSale":2952936, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:40:23Z", "event":"MarketSell", "Type":"slaves", "Count":368, "SellPrice":7533, "TotalSale":2772144, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:43:40Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7533, "TotalSale":3013200, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:44:30Z", "event":"MarketSell", "Type":"slaves", "Count":356, "SellPrice":7533, "TotalSale":2681748, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:45:35Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":7533, "TotalSale":2892672, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:46:22Z", "event":"MarketSell", "Type":"slaves", "Count":396, "SellPrice":7533, "TotalSale":2983068, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:48:07Z", "event":"MarketSell", "Type":"slaves", "Count":336, "SellPrice":7538, "TotalSale":2532768, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:48:39Z", "event":"MarketSell", "Type":"slaves", "Count":184, "SellPrice":7538, "TotalSale":1386992, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:52:31Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":7538, "TotalSale":2954896, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T16:54:11Z", "event":"MarketSell", "Type":"slaves", "Count":356, "SellPrice":7538, "TotalSale":2683528, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T17:31:02Z", "event":"MarketSell", "Type":"slaves", "Count":160, "SellPrice":7546, "TotalSale":1207360, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T17:44:29Z", "event":"MarketSell", "Type":"slaves", "Count":372, "SellPrice":7530, "TotalSale":2801160, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T17:45:10Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":7530, "TotalSale":2891520, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T17:45:45Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":7530, "TotalSale":2891520, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T17:46:14Z", "event":"MarketSell", "Type":"slaves", "Count":224, "SellPrice":7530, "TotalSale":1686720, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:31:33Z", "event":"MarketSell", "Type":"slaves", "Count":376, "SellPrice":7522, "TotalSale":2828272, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:33:06Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7522, "TotalSale":3008800, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:33:57Z", "event":"MarketSell", "Type":"slaves", "Count":284, "SellPrice":7522, "TotalSale":2136248, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:36:54Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":7522, "TotalSale":2858360, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:37:49Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":7522, "TotalSale":2888448, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:39:05Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":7522, "TotalSale":2948624, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:40:00Z", "event":"MarketSell", "Type":"slaves", "Count":276, "SellPrice":7522, "TotalSale":2076072, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:41:59Z", "event":"MarketSell", "Type":"slaves", "Count":368, "SellPrice":7523, "TotalSale":2768464, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:43:08Z", "event":"MarketSell", "Type":"slaves", "Count":264, "SellPrice":7523, "TotalSale":1986072, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:45:59Z", "event":"MarketSell", "Type":"slaves", "Count":352, "SellPrice":7523, "TotalSale":2648096, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:49:05Z", "event":"MarketSell", "Type":"slaves", "Count":368, "SellPrice":7523, "TotalSale":2768464, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:51:20Z", "event":"MarketSell", "Type":"slaves", "Count":356, "SellPrice":7521, "TotalSale":2677476, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:52:10Z", "event":"MarketSell", "Type":"slaves", "Count":356, "SellPrice":7521, "TotalSale":2677476, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T18:54:55Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":7521, "TotalSale":2888064, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T19:11:36Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7518, "TotalSale":3007200, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T19:12:11Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7518, "TotalSale":3007200, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T19:13:20Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":7518, "TotalSale":2947056, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T19:14:41Z", "event":"MarketSell", "Type":"slaves", "Count":388, "SellPrice":7518, "TotalSale":2916984, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T19:16:25Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7518, "TotalSale":3007200, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T19:18:32Z", "event":"MarketSell", "Type":"slaves", "Count":296, "SellPrice":7518, "TotalSale":2225328, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-05T19:23:30Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7517, "TotalSale":3006800, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:07:03Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":7824, "TotalSale":3067008, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:07:58Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7824, "TotalSale":3129600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:08:42Z", "event":"MarketSell", "Type":"slaves", "Count":396, "SellPrice":7824, "TotalSale":3098304, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:11:22Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":7824, "TotalSale":2973120, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:13:21Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7824, "TotalSale":3129600, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:14:07Z", "event":"MarketSell", "Type":"slaves", "Count":348, "SellPrice":7824, "TotalSale":2722752, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:15:06Z", "event":"MarketSell", "Type":"slaves", "Count":308, "SellPrice":7824, "TotalSale":2409792, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:19:02Z", "event":"MarketSell", "Type":"slaves", "Count":400, "SellPrice":7823, "TotalSale":3129200, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:20:09Z", "event":"MarketSell", "Type":"slaves", "Count":396, "SellPrice":7823, "TotalSale":3097908, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:20:52Z", "event":"MarketSell", "Type":"slaves", "Count":260, "SellPrice":7823, "TotalSale":2033980, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:22:25Z", "event":"MarketSell", "Type":"slaves", "Count":348, "SellPrice":7823, "TotalSale":2722404, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:24:26Z", "event":"MarketSell", "Type":"slaves", "Count":396, "SellPrice":7823, "TotalSale":3097908, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:25:45Z", "event":"MarketSell", "Type":"slaves", "Count":340, "SellPrice":7823, "TotalSale":2659820, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:27:38Z", "event":"MarketSell", "Type":"slaves", "Count":384, "SellPrice":7823, "TotalSale":3004032, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:28:37Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":7821, "TotalSale":3065832, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:29:31Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":7821, "TotalSale":2971980, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:31:31Z", "event":"MarketSell", "Type":"slaves", "Count":372, "SellPrice":7821, "TotalSale":2909412, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:32:20Z", "event":"MarketSell", "Type":"slaves", "Count":380, "SellPrice":7821, "TotalSale":2971980, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-06T12:33:26Z", "event":"MarketSell", "Type":"slaves", "Count":168, "SellPrice":7821, "TotalSale":1313928, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-07T15:34:35Z", "event":"MarketSell", "Type":"modularterminals", "Count":2, "SellPrice":1084, "TotalSale":2168, "AvgPricePaid":0 }
+{ "timestamp":"2017-04-07T15:34:41Z", "event":"MarketSell", "Type":"nanobreakers", "Count":4, "SellPrice":1015, "TotalSale":4060, "AvgPricePaid":0 }
+{ "timestamp":"2017-04-07T16:08:13Z", "event":"MarketSell", "Type":"modularterminals", "Count":4, "SellPrice":1084, "TotalSale":4336, "AvgPricePaid":0 }
+{ "timestamp":"2017-04-07T16:08:17Z", "event":"MarketSell", "Type":"telemetrysuite", "Count":2, "SellPrice":1570, "TotalSale":3140, "AvgPricePaid":0 }
+{ "timestamp":"2017-04-07T18:46:20Z", "event":"MarketSell", "Type":"coolinghoses", "Count":2, "SellPrice":703, "TotalSale":1406, "AvgPricePaid":0 }
+{ "timestamp":"2017-04-07T18:46:27Z", "event":"MarketSell", "Type":"telemetrysuite", "Count":4, "SellPrice":1570, "TotalSale":6280, "AvgPricePaid":0 }
+{ "timestamp":"2017-04-09T11:39:15Z", "event":"MarketSell", "Type":"slaves", "Count":428, "SellPrice":8208, "TotalSale":3513024, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-09T11:45:39Z", "event":"MarketSell", "Type":"slaves", "Count":456, "SellPrice":8208, "TotalSale":3742848, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-09T11:53:10Z", "event":"MarketSell", "Type":"slaves", "Count":392, "SellPrice":8208, "TotalSale":3217536, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-10T15:07:10Z", "event":"MarketSell", "Type":"marinesupplies", "Count":352, "SellPrice":2881, "TotalSale":1014112, "AvgPricePaid":3632 }
+{ "timestamp":"2017-04-10T18:44:45Z", "event":"MarketSell", "Type":"kamitracigars", "Count":8, "SellPrice":1555, "TotalSale":12440, "AvgPricePaid":1555 }
+{ "timestamp":"2017-04-10T18:45:31Z", "event":"MarketSell", "Type":"coolinghoses", "Count":8, "SellPrice":421, "TotalSale":3368, "AvgPricePaid":0 }
+{ "timestamp":"2017-04-10T21:11:46Z", "event":"MarketSell", "Type":"kamitracigars", "Count":6, "SellPrice":23569, "TotalSale":141414, "AvgPricePaid":1555 }
+{ "timestamp":"2017-04-10T21:11:55Z", "event":"MarketSell", "Type":"wine", "Count":300, "SellPrice":310, "TotalSale":93000, "AvgPricePaid":136 }

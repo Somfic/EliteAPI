@@ -1,0 +1,14 @@
+{ "timestamp":"2017-09-26T18:13:36Z", "event":"CollectCargo", "Type":"UnknownArtifact", "Stolen":true }
+{ "timestamp":"2017-09-27T18:13:57Z", "event":"CollectCargo", "Type":"MetaAlloys", "Stolen":false }
+{ "timestamp":"2017-10-01T20:50:30Z", "event":"CollectCargo", "Type":"Goslarite", "Stolen":false }
+{ "timestamp":"2017-10-01T20:51:32Z", "event":"CollectCargo", "Type":"Pyrophyllite", "Stolen":false }
+{ "timestamp":"2017-10-08T11:03:04Z", "event":"CollectCargo", "Type":"occupiedcryopod", "Stolen":false }
+{ "timestamp":"2017-10-15T11:35:09Z", "event":"CollectCargo", "Type":"resonatingseparators", "Stolen":false }
+{ "timestamp":"2017-10-15T11:35:21Z", "event":"CollectCargo", "Type":"structuralregulators", "Stolen":false }
+{ "timestamp":"2017-10-19T19:39:55Z", "event":"CollectCargo", "Type":"occupiedcryopod", "Stolen":false }
+{ "timestamp":"2017-10-19T19:39:57Z", "event":"CollectCargo", "Type":"occupiedcryopod", "Stolen":false }
+{ "timestamp":"2017-10-26T16:01:28Z", "event":"CollectCargo", "Type":"lowtemperaturediamond", "Stolen":true }
+{ "timestamp":"2017-10-26T16:02:05Z", "event":"CollectCargo", "Type":"lowtemperaturediamond", "Stolen":true }
+{ "timestamp":"2017-10-26T16:02:32Z", "event":"CollectCargo", "Type":"lowtemperaturediamond", "Stolen":true }
+{ "timestamp":"2017-10-26T16:07:55Z", "event":"CollectCargo", "Type":"lowtemperaturediamond", "Stolen":true }
+{ "timestamp":"2017-11-11T13:33:16Z", "event":"CollectCargo", "Type":"SmallExplorationDataCash", "Stolen":false }

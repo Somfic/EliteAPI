@@ -1,0 +1,14 @@
+{ "timestamp":"2018-12-12T17:22:10Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-12T19:17:39Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-12T23:11:20Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-12T23:15:03Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-12T23:21:11Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-12T23:57:20Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-13T11:46:58Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-13T12:17:52Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-13T20:00:35Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-13T22:07:18Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-13T22:25:51Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-14T13:41:00Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-15T19:18:38Z", "event":"Scanned", "ScanType":"Cargo" }
+{ "timestamp":"2018-12-15T19:42:47Z", "event":"Scanned", "ScanType":"Cargo" }

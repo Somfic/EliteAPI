@@ -1,0 +1,5 @@
+{ "timestamp":"2020-09-29T18:22:47Z", "event":"HullDamage", "Health":0.737030, "PlayerPilot":false, "Fighter":true }
+{ "timestamp":"2020-10-02T16:30:46Z", "event":"HullDamage", "Health":0.782751, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2020-10-02T16:30:46Z", "event":"HullDamage", "Health":0.515776, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2020-10-02T16:30:46Z", "event":"HullDamage", "Health":0.293296, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2020-10-02T16:30:46Z", "event":"HullDamage", "Health":0.176494, "PlayerPilot":true, "Fighter":false }

@@ -1,0 +1,6 @@
+{ "timestamp":"2017-06-27T19:42:46Z", "event":"Liftoff", "PlayerControlled":false }
+{ "timestamp":"2017-06-27T19:58:03Z", "event":"Liftoff", "PlayerControlled":true, "Latitude":-17.949308, "Longitude":-152.717987 }
+{ "timestamp":"2017-06-28T12:49:51Z", "event":"Liftoff", "PlayerControlled":false }
+{ "timestamp":"2017-06-28T12:53:37Z", "event":"Liftoff", "PlayerControlled":true, "Latitude":-18.059250, "Longitude":-152.666000 }
+{ "timestamp":"2017-06-28T13:29:28Z", "event":"Liftoff", "PlayerControlled":false }
+{ "timestamp":"2017-07-06T14:44:09Z", "event":"Liftoff", "PlayerControlled":true, "Latitude":72.221695, "Longitude":-171.185623 }

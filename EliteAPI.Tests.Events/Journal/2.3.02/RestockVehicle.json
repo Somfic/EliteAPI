@@ -1,0 +1,16 @@
+{ "timestamp":"2017-05-11T14:17:25Z", "event":"RestockVehicle", "Type":"testbuggy", "Loadout":"starter", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-05-12T19:04:22Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":2060, "Count":2 }
+{ "timestamp":"2017-05-12T19:04:22Z", "event":"RestockVehicle", "Type":"federation_fighter", "Loadout":"two", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-05-14T13:54:53Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-05-14T13:54:53Z", "event":"RestockVehicle", "Type":"federation_fighter", "Loadout":"two", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-05-14T18:29:01Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":4120, "Count":4 }
+{ "timestamp":"2017-05-14T18:29:01Z", "event":"RestockVehicle", "Type":"federation_fighter", "Loadout":"two", "Cost":3090, "Count":3 }
+{ "timestamp":"2017-05-15T18:13:09Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":3090, "Count":3 }
+{ "timestamp":"2017-05-15T18:13:09Z", "event":"RestockVehicle", "Type":"federation_fighter", "Loadout":"two", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-05-15T20:17:23Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":3090, "Count":3 }
+{ "timestamp":"2017-05-15T20:17:23Z", "event":"RestockVehicle", "Type":"federation_fighter", "Loadout":"two", "Cost":3090, "Count":3 }
+{ "timestamp":"2017-05-16T12:22:03Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":4120, "Count":4 }
+{ "timestamp":"2017-05-16T12:22:03Z", "event":"RestockVehicle", "Type":"federation_fighter", "Loadout":"two", "Cost":2060, "Count":2 }
+{ "timestamp":"2017-05-16T14:13:38Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-05-16T14:13:38Z", "event":"RestockVehicle", "Type":"federation_fighter", "Loadout":"two", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-06-16T16:47:44Z", "event":"RestockVehicle", "Type":"testbuggy", "Loadout":"starter", "Cost":1030, "Count":1 }

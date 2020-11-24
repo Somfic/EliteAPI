@@ -1,0 +1,117 @@
+{ "timestamp":"2017-09-27T18:21:37Z", "event":"CrewMemberRoleChange", "Crew":"MLGMarel", "Role":"Idle" }
+{ "timestamp":"2017-09-28T19:44:36Z", "event":"CrewMemberRoleChange", "Crew":"Othyar Scott", "Role":"Idle" }
+{ "timestamp":"2017-10-06T19:21:38Z", "event":"CrewMemberRoleChange", "Crew":"Rellian", "Role":"Idle" }
+{ "timestamp":"2017-10-06T19:24:38Z", "event":"CrewMemberRoleChange", "Crew":"Rellian", "Role":"Idle" }
+{ "timestamp":"2017-10-06T19:26:59Z", "event":"CrewMemberRoleChange", "Crew":"Rellian", "Role":"FireCon" }
+{ "timestamp":"2017-10-06T19:49:58Z", "event":"CrewMemberRoleChange", "Crew":"Rellian", "Role":"Idle" }
+{ "timestamp":"2017-10-06T19:50:18Z", "event":"CrewMemberRoleChange", "Crew":"Rellian", "Role":"FireCon" }
+{ "timestamp":"2017-10-07T11:37:42Z", "event":"CrewMemberRoleChange", "Crew":"Othyar Scott", "Role":"Idle" }
+{ "timestamp":"2017-10-07T11:40:12Z", "event":"CrewMemberRoleChange", "Crew":"Othyar Scott", "Role":"FireCon" }
+{ "timestamp":"2017-10-07T11:40:21Z", "event":"CrewMemberRoleChange", "Crew":"Othyar Scott", "Role":"Idle" }
+{ "timestamp":"2017-10-07T11:54:30Z", "event":"CrewMemberRoleChange", "Crew":"commander zander", "Role":"Idle" }
+{ "timestamp":"2017-10-07T11:56:56Z", "event":"CrewMemberRoleChange", "Crew":"commander zander", "Role":"Idle" }
+{ "timestamp":"2017-10-07T11:57:00Z", "event":"CrewMemberRoleChange", "Crew":"Othyar Scott", "Role":"Idle" }
+{ "timestamp":"2017-10-07T12:28:38Z", "event":"CrewMemberRoleChange", "Crew":"Holy Hitman", "Role":"Idle" }
+{ "timestamp":"2017-10-07T12:30:30Z", "event":"CrewMemberRoleChange", "Crew":"Holy Hitman", "Role":"FighterCon" }
+{ "timestamp":"2017-10-07T12:31:18Z", "event":"CrewMemberRoleChange", "Crew":"Holy Hitman", "Role":"Idle" }
+{ "timestamp":"2017-10-07T13:13:23Z", "event":"CrewMemberRoleChange", "Crew":"Mlat Hromovlad", "Role":"Idle" }
+{ "timestamp":"2017-10-07T13:17:59Z", "event":"CrewMemberRoleChange", "Crew":"Mlat Hromovlad", "Role":"FireCon" }
+{ "timestamp":"2017-10-07T13:18:13Z", "event":"CrewMemberRoleChange", "Crew":"Mlat Hromovlad", "Role":"Idle" }
+{ "timestamp":"2017-10-07T13:36:25Z", "event":"CrewMemberRoleChange", "Crew":"Mlat Hromovlad", "Role":"Idle" }
+{ "timestamp":"2017-10-07T17:32:29Z", "event":"CrewMemberRoleChange", "Crew":"Shmuckalina", "Role":"Idle" }
+{ "timestamp":"2017-10-21T15:09:23Z", "event":"CrewMemberRoleChange", "Crew":"Sheenster", "Role":"Idle" }
+{ "timestamp":"2017-10-21T15:10:31Z", "event":"CrewMemberRoleChange", "Crew":"salvagar", "Role":"Idle" }
+{ "timestamp":"2017-10-21T15:14:21Z", "event":"CrewMemberRoleChange", "Crew":"KaptainSims", "Role":"Idle" }
+{ "timestamp":"2017-10-21T15:14:52Z", "event":"CrewMemberRoleChange", "Crew":"KaptainSims", "Role":"FireCon" }
+{ "timestamp":"2017-10-21T15:18:29Z", "event":"CrewMemberRoleChange", "Crew":"Sheenster", "Role":"FireCon" }
+{ "timestamp":"2017-10-21T17:42:18Z", "event":"CrewMemberRoleChange", "Crew":"Olli77", "Role":"Idle" }
+{ "timestamp":"2017-10-21T17:44:13Z", "event":"CrewMemberRoleChange", "Crew":"Max Greger", "Role":"Idle" }
+{ "timestamp":"2017-10-21T17:46:25Z", "event":"CrewMemberRoleChange", "Crew":"Max Greger", "Role":"FighterCon" }
+{ "timestamp":"2017-10-21T17:49:40Z", "event":"CrewMemberRoleChange", "Crew":"MAIMINASE", "Role":"Idle" }
+{ "timestamp":"2017-10-21T17:50:41Z", "event":"CrewMemberRoleChange", "Crew":"MAIMINASE", "Role":"FighterCon" }
+{ "timestamp":"2017-10-21T17:54:06Z", "event":"CrewMemberRoleChange", "Crew":"Max Greger", "Role":"Idle" }
+{ "timestamp":"2017-10-21T17:55:02Z", "event":"CrewMemberRoleChange", "Crew":"MAIMINASE", "Role":"Idle" }
+{ "timestamp":"2017-10-21T18:00:43Z", "event":"CrewMemberRoleChange", "Crew":"MAIMINASE", "Role":"FighterCon" }
+{ "timestamp":"2017-10-21T18:01:06Z", "event":"CrewMemberRoleChange", "Crew":"Max Greger", "Role":"FighterCon" }
+{ "timestamp":"2017-10-21T18:05:14Z", "event":"CrewMemberRoleChange", "Crew":"Max Greger", "Role":"Idle" }
+{ "timestamp":"2017-10-21T18:06:45Z", "event":"CrewMemberRoleChange", "Crew":"Max Greger", "Role":"FighterCon" }
+{ "timestamp":"2017-10-21T18:34:10Z", "event":"CrewMemberRoleChange", "Crew":"MAIMINASE", "Role":"Idle" }
+{ "timestamp":"2017-10-21T18:34:27Z", "event":"CrewMemberRoleChange", "Crew":"Max Greger", "Role":"Idle" }
+{ "timestamp":"2017-10-21T18:34:39Z", "event":"CrewMemberRoleChange", "Crew":"MAIMINASE", "Role":"FighterCon" }
+{ "timestamp":"2017-10-21T18:35:53Z", "event":"CrewMemberRoleChange", "Crew":"Max Greger", "Role":"FighterCon" }
+{ "timestamp":"2017-10-21T20:35:10Z", "event":"CrewMemberRoleChange", "Crew":"Micael Ferreira", "Role":"Idle" }
+{ "timestamp":"2017-10-21T20:36:56Z", "event":"CrewMemberRoleChange", "Crew":"Siscatolas", "Role":"Idle" }
+{ "timestamp":"2017-10-22T09:17:12Z", "event":"CrewMemberRoleChange", "Crew":"Chonor", "Role":"Idle" }
+{ "timestamp":"2017-10-22T09:20:43Z", "event":"CrewMemberRoleChange", "Crew":"Chonor", "Role":"FighterCon" }
+{ "timestamp":"2017-10-22T09:24:49Z", "event":"CrewMemberRoleChange", "Crew":"Turgalon", "Role":"Idle" }
+{ "timestamp":"2017-10-22T09:26:29Z", "event":"CrewMemberRoleChange", "Crew":"Chonor", "Role":"Idle" }
+{ "timestamp":"2017-10-22T09:26:41Z", "event":"CrewMemberRoleChange", "Crew":"Turgalon", "Role":"FighterCon" }
+{ "timestamp":"2017-10-22T09:28:32Z", "event":"CrewMemberRoleChange", "Crew":"Chonor", "Role":"FighterCon" }
+{ "timestamp":"2017-10-22T09:31:25Z", "event":"CrewMemberRoleChange", "Crew":"Chonor", "Role":"Idle" }
+{ "timestamp":"2017-10-22T09:33:31Z", "event":"CrewMemberRoleChange", "Crew":"Chonor", "Role":"FighterCon" }
+{ "timestamp":"2017-10-22T09:42:26Z", "event":"CrewMemberRoleChange", "Crew":"Chonor", "Role":"Idle" }
+{ "timestamp":"2017-10-22T09:43:25Z", "event":"CrewMemberRoleChange", "Crew":"Turgalon", "Role":"Idle" }
+{ "timestamp":"2017-10-22T09:43:41Z", "event":"CrewMemberRoleChange", "Crew":"Turgalon", "Role":"FireCon" }
+{ "timestamp":"2017-10-22T09:44:39Z", "event":"CrewMemberRoleChange", "Crew":"Turgalon", "Role":"Idle" }
+{ "timestamp":"2017-10-22T09:47:40Z", "event":"CrewMemberRoleChange", "Crew":"Turgalon", "Role":"FighterCon" }
+{ "timestamp":"2017-10-22T09:48:02Z", "event":"CrewMemberRoleChange", "Crew":"Chonor", "Role":"FighterCon" }
+{ "timestamp":"2017-10-22T09:48:54Z", "event":"CrewMemberRoleChange", "Crew":"Chonor", "Role":"Idle" }
+{ "timestamp":"2017-10-22T09:48:54Z", "event":"CrewMemberRoleChange", "Crew":"Turgalon", "Role":"Idle" }
+{ "timestamp":"2017-10-22T09:48:54Z", "event":"CrewMemberRoleChange", "Crew":"Turgalon", "Role":"FighterCon" }
+{ "timestamp":"2017-10-22T09:50:33Z", "event":"CrewMemberRoleChange", "Crew":"Turgalon", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:06:49Z", "event":"CrewMemberRoleChange", "Crew":"Simod", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:07:28Z", "event":"CrewMemberRoleChange", "Crew":"Simod", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T13:09:15Z", "event":"CrewMemberRoleChange", "Crew":"Cince", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:13:19Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:14:38Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:14:49Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T13:19:29Z", "event":"CrewMemberRoleChange", "Crew":"Simod", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:19:59Z", "event":"CrewMemberRoleChange", "Crew":"Simod", "Role":"FireCon" }
+{ "timestamp":"2017-10-24T13:20:08Z", "event":"CrewMemberRoleChange", "Crew":"Simod", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:20:32Z", "event":"CrewMemberRoleChange", "Crew":"Simod", "Role":"FireCon" }
+{ "timestamp":"2017-10-24T13:22:13Z", "event":"CrewMemberRoleChange", "Crew":"Simod", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T13:25:12Z", "event":"CrewMemberRoleChange", "Crew":"2Dev", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:27:54Z", "event":"CrewMemberRoleChange", "Crew":"2Dev", "Role":"FireCon" }
+{ "timestamp":"2017-10-24T13:29:51Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:31:35Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:32:06Z", "event":"CrewMemberRoleChange", "Crew":"Vorox97", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:33:58Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:34:27Z", "event":"CrewMemberRoleChange", "Crew":"Vorox97", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T13:35:17Z", "event":"CrewMemberRoleChange", "Crew":"Vorox97", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:36:54Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:37:06Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T13:39:14Z", "event":"CrewMemberRoleChange", "Crew":"Vorox97", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:41:53Z", "event":"CrewMemberRoleChange", "Crew":"Vorox97", "Role":"FireCon" }
+{ "timestamp":"2017-10-24T13:44:32Z", "event":"CrewMemberRoleChange", "Crew":"KiKisLoL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:49:29Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T13:50:44Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T13:58:02Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T14:00:08Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T14:09:14Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T14:11:49Z", "event":"CrewMemberRoleChange", "Crew":"OblivionM", "Role":"Idle" }
+{ "timestamp":"2017-10-24T14:25:18Z", "event":"CrewMemberRoleChange", "Crew":"OblivionM", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T14:25:36Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T14:29:30Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T14:29:41Z", "event":"CrewMemberRoleChange", "Crew":"OblivionM", "Role":"Idle" }
+{ "timestamp":"2017-10-24T14:30:49Z", "event":"CrewMemberRoleChange", "Crew":"OblivionM", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T14:31:16Z", "event":"CrewMemberRoleChange", "Crew":"OblivionM", "Role":"Idle" }
+{ "timestamp":"2017-10-24T14:31:47Z", "event":"CrewMemberRoleChange", "Crew":"OblivionM", "Role":"FireCon" }
+{ "timestamp":"2017-10-24T14:32:24Z", "event":"CrewMemberRoleChange", "Crew":"OblivionM", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T14:32:44Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T14:35:31Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T14:35:37Z", "event":"CrewMemberRoleChange", "Crew":"OblivionM", "Role":"Idle" }
+{ "timestamp":"2017-10-24T14:36:38Z", "event":"CrewMemberRoleChange", "Crew":"OblivionM", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T14:36:55Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"FighterCon" }
+{ "timestamp":"2017-10-24T14:41:04Z", "event":"CrewMemberRoleChange", "Crew":"TheSuspectPL", "Role":"Idle" }
+{ "timestamp":"2017-10-24T14:41:06Z", "event":"CrewMemberRoleChange", "Crew":"OblivionM", "Role":"Idle" }
+{ "timestamp":"2017-10-26T11:23:19Z", "event":"CrewMemberRoleChange", "Crew":"Lucifer Ash", "Role":"Idle" }
+{ "timestamp":"2017-10-26T11:24:06Z", "event":"CrewMemberRoleChange", "Crew":"Lucifer Ash", "Role":"FireCon" }
+{ "timestamp":"2017-10-29T13:39:47Z", "event":"CrewMemberRoleChange", "Crew":"Chriz Hanna", "Role":"Idle" }
+{ "timestamp":"2017-10-29T14:31:14Z", "event":"CrewMemberRoleChange", "Crew":"Will Duarturian", "Role":"Idle" }
+{ "timestamp":"2017-10-29T20:53:54Z", "event":"CrewMemberRoleChange", "Crew":"MLGMarel", "Role":"Idle" }
+{ "timestamp":"2017-11-01T14:16:26Z", "event":"CrewMemberRoleChange", "Crew":"MLGMarel", "Role":"Idle" }
+{ "timestamp":"2017-11-02T22:07:22Z", "event":"CrewMemberRoleChange", "Crew":".AdrenaL", "Role":"Idle" }
+{ "timestamp":"2017-11-02T22:08:48Z", "event":"CrewMemberRoleChange", "Crew":".AdrenaL", "Role":"FireCon" }
+{ "timestamp":"2017-11-02T22:09:14Z", "event":"CrewMemberRoleChange", "Crew":".AdrenaL", "Role":"Idle" }
+{ "timestamp":"2017-11-02T22:09:26Z", "event":"CrewMemberRoleChange", "Crew":"-Darkstalker-", "Role":"Idle" }
+{ "timestamp":"2017-11-02T22:28:44Z", "event":"CrewMemberRoleChange", "Crew":"OnkelHarms", "Role":"Idle" }

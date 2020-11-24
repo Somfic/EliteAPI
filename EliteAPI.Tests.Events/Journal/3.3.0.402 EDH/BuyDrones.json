@@ -1,0 +1,9 @@
+{ "timestamp":"2018-12-12T16:20:35Z", "event":"BuyDrones", "Type":"Drones", "Count":50, "BuyPrice":91, "TotalCost":4550 }
+{ "timestamp":"2018-12-12T17:47:27Z", "event":"BuyDrones", "Type":"Drones", "Count":50, "BuyPrice":91, "TotalCost":4550 }
+{ "timestamp":"2018-12-12T17:47:43Z", "event":"BuyDrones", "Type":"Drones", "Count":10, "BuyPrice":91, "TotalCost":910 }
+{ "timestamp":"2018-12-12T22:09:53Z", "event":"BuyDrones", "Type":"Drones", "Count":50, "BuyPrice":91, "TotalCost":4550 }
+{ "timestamp":"2018-12-13T11:38:03Z", "event":"BuyDrones", "Type":"Drones", "Count":63, "BuyPrice":101, "TotalCost":6363 }
+{ "timestamp":"2018-12-13T20:59:28Z", "event":"BuyDrones", "Type":"Drones", "Count":64, "BuyPrice":101, "TotalCost":6464 }
+{ "timestamp":"2018-12-13T21:48:07Z", "event":"BuyDrones", "Type":"Drones", "Count":64, "BuyPrice":101, "TotalCost":6464 }
+{ "timestamp":"2018-12-14T13:31:09Z", "event":"BuyDrones", "Type":"Drones", "Count":64, "BuyPrice":101, "TotalCost":6464 }
+{ "timestamp":"2018-12-15T19:12:28Z", "event":"BuyDrones", "Type":"Drones", "Count":64, "BuyPrice":101, "TotalCost":6464 }

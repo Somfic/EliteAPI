@@ -1,0 +1,3 @@
+{ "timestamp":"2017-04-18T16:19:09Z", "event":"PayFines", "Amount":5500, "BrokerPercentage":25.000000 }
+{ "timestamp":"2017-04-20T09:40:28Z", "event":"PayFines", "Amount":400 }
+{ "timestamp":"2017-04-20T10:59:14Z", "event":"PayFines", "Amount":7059 }

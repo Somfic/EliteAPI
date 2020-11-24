@@ -1,0 +1,6 @@
+{ "timestamp":"2017-10-02T16:05:16Z", "event":"MissionFailed", "Name":"Mission_PassengerVIP_name", "MissionID":218471411 }
+{ "timestamp":"2017-10-03T13:12:15Z", "event":"MissionFailed", "Name":"Mission_PassengerVIP_name", "MissionID":218532537 }
+{ "timestamp":"2017-11-14T13:13:24Z", "event":"MissionFailed", "Name":"Mission_PassengerBulk_REBEL_ARRIVING_name", "MissionID":245496866 }
+{ "timestamp":"2017-11-14T13:13:26Z", "event":"MissionFailed", "Name":"Mission_PassengerBulk_REBEL_ARRIVING_name", "MissionID":245496866 }
+{ "timestamp":"2017-11-14T13:13:28Z", "event":"MissionFailed", "Name":"Mission_PassengerBulk_REFUGEE_LEAVING_name", "MissionID":245487816 }
+{ "timestamp":"2017-11-14T13:15:47Z", "event":"MissionFailed", "Name":"Mission_PassengerBulk_REBEL_ARRIVING_name", "MissionID":245496866 }

@@ -1,0 +1,10 @@
+{ "timestamp":"2018-12-12T22:08:00Z", "event":"RepairAll", "Cost":15466 }
+{ "timestamp":"2018-12-13T18:28:34Z", "event":"RepairAll", "Cost":10 }
+{ "timestamp":"2018-12-13T20:45:12Z", "event":"RepairAll", "Cost":30172 }
+{ "timestamp":"2018-12-13T22:47:06Z", "event":"RepairAll", "Cost":3251 }
+{ "timestamp":"2018-12-14T11:21:35Z", "event":"RepairAll", "Cost":25089 }
+{ "timestamp":"2018-12-14T15:08:37Z", "event":"RepairAll", "Cost":1467 }
+{ "timestamp":"2018-12-14T23:28:14Z", "event":"RepairAll", "Cost":4666 }
+{ "timestamp":"2018-12-15T10:15:42Z", "event":"RepairAll", "Cost":13960 }
+{ "timestamp":"2018-12-15T13:33:53Z", "event":"RepairAll", "Cost":893 }
+{ "timestamp":"2018-12-15T19:09:54Z", "event":"RepairAll", "Cost":263 }

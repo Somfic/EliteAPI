@@ -1,0 +1,73 @@
+{ "timestamp":"2016-12-02T15:29:00Z", "event":"Synthesis", "Name":"FSD Premium", "Materials":{ "arsenic":1, "niobium":3, "yttrium":1, "polonium":1 } }
+{ "timestamp":"2017-01-10T16:27:40Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-01-10T16:48:29Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-01-10T16:49:30Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-01-11T15:05:44Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-01-12T17:02:05Z", "event":"Synthesis", "Name":"Repair Standard", "Materials":{ "nickel":3, "manganese":1, "vanadium":2, "molybdenum":1 } }
+{ "timestamp":"2017-01-23T19:25:10Z", "event":"Synthesis", "Name":"Ammo Standard", "Materials":{ "iron":2, "zinc":2, "phosphorus":2, "selenium":2, "zirconium":2 } }
+{ "timestamp":"2017-01-28T16:00:37Z", "event":"Synthesis", "Name":"Ammo Standard", "Materials":{ "iron":2, "zinc":2, "phosphorus":2, "selenium":2, "zirconium":2 } }
+{ "timestamp":"2017-02-05T16:32:34Z", "event":"Synthesis", "Name":"Repair Standard", "Materials":{ "nickel":3, "manganese":1, "vanadium":2, "molybdenum":1 } }
+{ "timestamp":"2017-02-06T13:02:19Z", "event":"Synthesis", "Name":"FSD Premium", "Materials":{ "arsenic":1, "niobium":3, "yttrium":1, "polonium":1 } }
+{ "timestamp":"2017-02-08T19:22:09Z", "event":"Synthesis", "Name":"FSD Premium", "Materials":{ "arsenic":1, "niobium":3, "yttrium":1, "polonium":1 } }
+{ "timestamp":"2017-02-13T13:06:15Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-02-15T18:55:15Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-02-18T18:43:35Z", "event":"Synthesis", "Name":"Repair Standard", "Materials":{ "nickel":3, "manganese":1, "vanadium":2, "molybdenum":1 } }
+{ "timestamp":"2017-02-20T15:38:20Z", "event":"Synthesis", "Name":"Repair Standard", "Materials":{ "nickel":3, "manganese":1, "vanadium":2, "molybdenum":1 } }
+{ "timestamp":"2017-02-20T15:38:26Z", "event":"Synthesis", "Name":"Ammo Standard", "Materials":{ "phosphorus":1, "manganese":1, "selenium":1, "molybdenum":1 } }
+{ "timestamp":"2017-02-20T15:59:04Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-03-03T18:42:02Z", "event":"Synthesis", "Name":"FSD Premium", "Materials":{ "arsenic":1, "niobium":3, "yttrium":1, "polonium":1 } }
+{ "timestamp":"2017-03-04T15:50:36Z", "event":"Synthesis", "Name":"FSD Basic", "Materials":{ "vanadium":2, "germanium":1 } }
+{ "timestamp":"2017-03-10T15:41:58Z", "event":"Synthesis", "Name":"FSD Premium", "Materials":{ "arsenic":1, "niobium":3, "yttrium":1, "polonium":1 } }
+{ "timestamp":"2017-03-10T15:50:01Z", "event":"Synthesis", "Name":"FSD Premium", "Materials":{ "arsenic":1, "niobium":3, "yttrium":1, "polonium":1 } }
+{ "timestamp":"2017-03-11T17:56:02Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-03-11T18:46:22Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-03-11T20:50:29Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-03-11T21:03:29Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-03-11T21:41:51Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-03-11T21:53:57Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-03-12T13:59:39Z", "event":"Synthesis", "Name":"Repair Standard", "Materials":{ "nickel":3, "manganese":1, "vanadium":2, "molybdenum":1 } }
+{ "timestamp":"2017-03-12T18:43:13Z", "event":"Synthesis", "Name":"Repair Standard", "Materials":{ "nickel":3, "manganese":1, "vanadium":2, "molybdenum":1 } }
+{ "timestamp":"2017-03-16T19:22:33Z", "event":"Synthesis", "Name":"FSD Basic", "Materials":{ "vanadium":2, "germanium":1 } }
+{ "timestamp":"2017-03-24T19:26:13Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-03-25T17:59:41Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-03-25T18:42:50Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-04-01T16:17:17Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "sulphur":2, "phosphorus":1 } }
+{ "timestamp":"2017-04-01T16:17:55Z", "event":"Synthesis", "Name":"Repair Standard", "Materials":{ "nickel":3, "manganese":1, "vanadium":2, "molybdenum":1 } }
+{ "timestamp":"2017-04-01T16:21:26Z", "event":"Synthesis", "Name":"Repair Standard", "Materials":{ "nickel":3, "manganese":1, "vanadium":2, "molybdenum":1 } }
+{ "timestamp":"2017-04-01T16:24:05Z", "event":"Synthesis", "Name":"Repair Standard", "Materials":{ "nickel":3, "manganese":1, "vanadium":2, "molybdenum":1 } }
+{ "timestamp":"2017-04-01T16:25:00Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T16:28:43Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T16:29:20Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T16:29:50Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T16:31:48Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T16:32:22Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T16:33:21Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T19:10:52Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T19:16:24Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T19:25:03Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T19:33:05Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T19:37:26Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T19:45:36Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-01T19:50:44Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-03T13:23:00Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-04-03T13:56:02Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-04-03T14:14:54Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-04-03T14:27:46Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-04-03T14:27:48Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-04-06T14:33:41Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T14:44:08Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T14:44:54Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T14:45:40Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T14:46:10Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T14:46:32Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T14:47:03Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T14:47:12Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T15:26:38Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T15:27:48Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T15:28:53Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T15:43:52Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T17:28:35Z", "event":"Synthesis", "Name":"Fuel Basic", "Materials":{ "sulphur":1, "phosphorus":1 } }
+{ "timestamp":"2017-04-06T18:06:44Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-06T18:37:25Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":{ "iron":2, "nickel":1 } }
+{ "timestamp":"2017-04-08T19:12:26Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":{ "iron":2, "nickel":1, "sulphur":2 } }
+{ "timestamp":"2017-04-10T15:58:55Z", "event":"Synthesis", "Name":"FSD Premium", "Materials":{ "arsenic":1, "niobium":3, "yttrium":1, "polonium":1 } }

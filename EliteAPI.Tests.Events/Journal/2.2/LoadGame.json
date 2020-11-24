@@ -1,0 +1,936 @@
+{ "timestamp":"2016-10-25T16:32:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":36950996, "Loan":0 }
+{ "timestamp":"2016-10-25T16:44:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":36950996, "Loan":0 }
+{ "timestamp":"2016-10-25T17:06:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":36869473, "Loan":0 }
+{ "timestamp":"2016-10-25T17:24:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":36869473, "Loan":0 }
+{ "timestamp":"2016-10-26T11:54:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":34305797, "Loan":0 }
+{ "timestamp":"2016-10-26T12:41:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":26707574, "Loan":0 }
+{ "timestamp":"2016-10-26T13:33:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Credits":26707574, "Loan":0 }
+{ "timestamp":"2016-10-26T15:38:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":26707574, "Loan":0 }
+{ "timestamp":"2016-10-26T16:18:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":26706506, "Loan":0 }
+{ "timestamp":"2016-10-27T15:36:11Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":30031165, "Loan":0 }
+{ "timestamp":"2016-10-28T12:25:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":30031165, "Loan":0 }
+{ "timestamp":"2016-10-28T12:41:14Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":32426551, "Loan":0 }
+{ "timestamp":"2016-10-28T12:57:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":32426551, "Loan":0 }
+{ "timestamp":"2016-11-03T19:16:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":32426551, "Loan":0 }
+{ "timestamp":"2016-11-05T16:08:42Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":32426551, "Loan":0 }
+{ "timestamp":"2016-11-05T20:09:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":31572710, "Loan":0 }
+{ "timestamp":"2016-11-05T21:16:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":31341896, "Loan":0 }
+{ "timestamp":"2016-11-05T21:26:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":31341896, "Loan":0 }
+{ "timestamp":"2016-11-05T21:47:42Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":31389817, "Loan":0 }
+{ "timestamp":"2016-11-05T22:28:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":31389817, "Loan":0 }
+{ "timestamp":"2016-11-06T14:00:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":32154217, "Loan":0 }
+{ "timestamp":"2016-11-06T14:16:57Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":32154193, "Loan":0 }
+{ "timestamp":"2016-11-06T14:31:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":32154193, "Loan":0 }
+{ "timestamp":"2016-11-06T14:47:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Asp", "ShipID":15, "GameMode":"Solo", "Credits":26495952, "Loan":0 }
+{ "timestamp":"2016-11-06T15:57:42Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":9300580, "Loan":0 }
+{ "timestamp":"2016-11-06T16:13:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":9297128, "Loan":0 }
+{ "timestamp":"2016-11-06T16:40:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":8420528, "Loan":0 }
+{ "timestamp":"2016-11-06T17:23:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":8420528, "Loan":0 }
+{ "timestamp":"2016-11-06T17:57:57Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":8420528, "Loan":0 }
+{ "timestamp":"2016-11-06T18:21:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":8354467, "Loan":0 }
+{ "timestamp":"2016-11-07T15:22:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":8769767, "Loan":0 }
+{ "timestamp":"2016-11-07T16:16:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":15100625, "Loan":0 }
+{ "timestamp":"2016-11-08T16:09:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":15100625, "Loan":0 }
+{ "timestamp":"2016-11-08T17:02:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15339407, "Loan":0 }
+{ "timestamp":"2016-11-08T17:10:05Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":15289407, "Loan":0 }
+{ "timestamp":"2016-11-08T17:43:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":14089407, "Loan":0 }
+{ "timestamp":"2016-11-08T17:56:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":13960893, "Loan":0 }
+{ "timestamp":"2016-11-08T17:59:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":13960893, "Loan":0 }
+{ "timestamp":"2016-11-08T18:12:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":12964976, "Loan":0 }
+{ "timestamp":"2016-11-08T18:15:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":12964966, "Loan":0 }
+{ "timestamp":"2016-11-08T18:39:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":12612236, "Loan":0 }
+{ "timestamp":"2016-11-08T19:05:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":12612226, "Loan":0 }
+{ "timestamp":"2016-11-08T19:31:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":12612226, "Loan":0 }
+{ "timestamp":"2016-11-09T13:26:26Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":11458421, "Loan":0 }
+{ "timestamp":"2016-11-09T14:43:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":11501294, "Loan":0 }
+{ "timestamp":"2016-11-09T15:18:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":10545521, "Loan":0 }
+{ "timestamp":"2016-11-09T15:33:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":10555682, "Loan":0 }
+{ "timestamp":"2016-11-09T18:49:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":10544362, "Loan":0 }
+{ "timestamp":"2016-11-10T12:26:14Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":10673933, "Loan":0 }
+{ "timestamp":"2016-11-10T17:16:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":10167856, "Loan":0 }
+{ "timestamp":"2016-11-11T13:18:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":10167856, "Loan":0 }
+{ "timestamp":"2016-11-11T14:32:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":20046763, "Loan":0 }
+{ "timestamp":"2016-11-11T16:26:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":19846745, "Loan":0 }
+{ "timestamp":"2016-11-11T16:36:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":19846745, "Loan":0 }
+{ "timestamp":"2016-11-11T17:23:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":22208675, "Loan":0 }
+{ "timestamp":"2016-11-11T17:34:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":22208675, "Loan":0 }
+{ "timestamp":"2016-11-13T10:45:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":23652697, "Loan":0 }
+{ "timestamp":"2016-11-13T11:03:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":23652697, "Loan":0 }
+{ "timestamp":"2016-11-16T13:27:06Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Credits":16344792, "Loan":0 }
+{ "timestamp":"2016-11-16T13:27:32Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":16344792, "Loan":0 }
+{ "timestamp":"2016-11-16T14:31:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":17850426, "Loan":0 }
+{ "timestamp":"2016-11-16T14:33:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":17850426, "Loan":0 }
+{ "timestamp":"2016-11-16T14:45:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":17850426, "Loan":0 }
+{ "timestamp":"2016-11-16T15:12:13Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":16154126, "Loan":0 }
+{ "timestamp":"2016-11-18T07:26:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Eagle", "ShipID":18, "GameMode":"Solo", "Credits":13933918, "Loan":0 }
+{ "timestamp":"2016-11-18T08:00:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":13883918, "Loan":0 }
+{ "timestamp":"2016-11-20T11:48:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Asp", "ShipID":19, "GameMode":"Solo", "Credits":9574318, "Loan":0 }
+{ "timestamp":"2016-11-29T13:37:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":7641893, "Loan":0 }
+{ "timestamp":"2016-12-01T16:36:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":10087985, "Loan":0 }
+{ "timestamp":"2016-12-01T16:59:42Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":11593295, "Loan":0 }
+{ "timestamp":"2016-12-01T18:14:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":11591790, "Loan":0 }
+{ "timestamp":"2016-12-01T19:00:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":11591790, "Loan":0 }
+{ "timestamp":"2016-12-01T19:54:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":10256031, "Loan":0 }
+{ "timestamp":"2016-12-01T20:11:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":10256031, "Loan":0 }
+{ "timestamp":"2016-12-01T20:35:05Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":10254105, "Loan":0 }
+{ "timestamp":"2016-12-02T13:06:26Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":10409018, "Loan":0 }
+{ "timestamp":"2016-12-02T13:19:18Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":10409018, "Loan":0 }
+{ "timestamp":"2016-12-02T16:08:11Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":9485548, "Loan":0 }
+{ "timestamp":"2016-12-02T16:27:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":9476411, "Loan":0 }
+{ "timestamp":"2016-12-02T16:30:42Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":9476411, "Loan":0 }
+{ "timestamp":"2016-12-02T16:34:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":9509563, "Loan":0 }
+{ "timestamp":"2016-12-02T16:39:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":9509563, "Loan":0 }
+{ "timestamp":"2016-12-02T16:46:18Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":9509563, "Loan":0 }
+{ "timestamp":"2016-12-02T17:04:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":9540123, "Loan":0 }
+{ "timestamp":"2016-12-02T20:05:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"DiamondBack", "ShipID":22, "GameMode":"Solo", "Credits":7506225, "Loan":0 }
+{ "timestamp":"2016-12-03T13:51:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"DiamondBack", "ShipID":22, "GameMode":"Solo", "Credits":7403800, "Loan":0 }
+{ "timestamp":"2016-12-03T14:34:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":15709346, "Loan":0 }
+{ "timestamp":"2016-12-03T15:05:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":15709314, "Loan":0 }
+{ "timestamp":"2016-12-03T15:08:11Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15709314, "Loan":0 }
+{ "timestamp":"2016-12-03T15:12:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":15259314, "Loan":0 }
+{ "timestamp":"2016-12-03T15:23:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":15756242, "Loan":0 }
+{ "timestamp":"2016-12-03T15:25:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15731242, "Loan":0 }
+{ "timestamp":"2016-12-03T15:27:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":15731242, "Loan":0 }
+{ "timestamp":"2016-12-03T15:29:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":15731228, "Loan":0 }
+{ "timestamp":"2016-12-03T15:31:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15706228, "Loan":0 }
+{ "timestamp":"2016-12-03T15:48:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":16573858, "Loan":0 }
+{ "timestamp":"2016-12-03T15:50:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":16573858, "Loan":0 }
+{ "timestamp":"2016-12-03T15:52:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":16573858, "Loan":0 }
+{ "timestamp":"2016-12-03T15:53:57Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":16273858, "Loan":0 }
+{ "timestamp":"2016-12-03T15:55:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":16273858, "Loan":0 }
+{ "timestamp":"2016-12-03T15:57:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":16273858, "Loan":0 }
+{ "timestamp":"2016-12-03T16:11:23Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":16273858, "Loan":0 }
+{ "timestamp":"2016-12-03T16:57:24Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":16785184, "Loan":0 }
+{ "timestamp":"2016-12-03T16:58:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":16785184, "Loan":0 }
+{ "timestamp":"2016-12-03T17:00:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":16760184, "Loan":0 }
+{ "timestamp":"2016-12-03T17:29:06Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":16760184, "Loan":0 }
+{ "timestamp":"2016-12-03T17:31:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":16460184, "Loan":0 }
+{ "timestamp":"2016-12-03T17:33:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":15460184, "Loan":0 }
+{ "timestamp":"2016-12-03T17:35:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15435184, "Loan":0 }
+{ "timestamp":"2016-12-03T17:56:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":15435184, "Loan":0 }
+{ "timestamp":"2016-12-03T17:58:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":15410184, "Loan":0 }
+{ "timestamp":"2016-12-03T18:05:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":14960184, "Loan":0 }
+{ "timestamp":"2016-12-03T18:07:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":14960184, "Loan":0 }
+{ "timestamp":"2016-12-03T18:45:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":16791281, "Loan":0 }
+{ "timestamp":"2016-12-03T18:55:42Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":16791281, "Loan":0 }
+{ "timestamp":"2016-12-03T19:15:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":16791281, "Loan":0 }
+{ "timestamp":"2016-12-03T19:58:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":15351145, "Loan":0 }
+{ "timestamp":"2016-12-03T20:01:11Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15351145, "Loan":0 }
+{ "timestamp":"2016-12-03T20:03:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-03T20:11:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-03T20:36:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T12:58:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T14:24:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T14:25:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T15:23:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T15:39:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T17:14:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T18:19:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T18:40:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T19:01:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T19:09:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T19:17:18Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T19:54:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T20:07:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T20:28:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T20:43:11Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T21:05:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-04T21:08:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-05T15:54:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-05T16:06:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-05T20:16:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-06T15:24:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-06T15:24:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-06T16:14:05Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":15026145, "Loan":0 }
+{ "timestamp":"2016-12-06T18:01:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":36641833, "Loan":0 }
+{ "timestamp":"2016-12-06T18:29:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":36641833, "Loan":0 }
+{ "timestamp":"2016-12-06T18:31:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":36641833, "Loan":0 }
+{ "timestamp":"2016-12-06T18:34:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":36641833, "Loan":0 }
+{ "timestamp":"2016-12-06T18:36:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":36641833, "Loan":0 }
+{ "timestamp":"2016-12-06T18:40:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":36734210, "Loan":0 }
+{ "timestamp":"2016-12-06T18:41:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":36734210, "Loan":0 }
+{ "timestamp":"2016-12-06T18:55:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":36243900, "Loan":0 }
+{ "timestamp":"2016-12-06T18:58:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":36243900, "Loan":0 }
+{ "timestamp":"2016-12-06T19:56:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":36642030, "Loan":0 }
+{ "timestamp":"2016-12-07T13:16:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":36642030, "Loan":0 }
+{ "timestamp":"2016-12-07T14:21:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":41236319, "Loan":0 }
+{ "timestamp":"2016-12-07T14:36:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Open", "Credits":41356375, "Loan":0 }
+{ "timestamp":"2016-12-07T14:48:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":6, "GameMode":"Solo", "Credits":41356375, "Loan":0 }
+{ "timestamp":"2016-12-07T15:54:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":869941, "Loan":0 }
+{ "timestamp":"2016-12-07T17:32:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Federation_Dropship_MkII", "ShipID":19, "GameMode":"Solo", "Credits":14533633, "Loan":0 }
+{ "timestamp":"2016-12-07T18:00:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Federation_Dropship_MkII", "ShipID":19, "GameMode":"Solo", "Credits":14533633, "Loan":0 }
+{ "timestamp":"2016-12-07T18:07:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Federation_Dropship_MkII", "ShipID":19, "GameMode":"Solo", "Credits":14533633, "Loan":0 }
+{ "timestamp":"2016-12-07T18:46:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Federation_Dropship_MkII", "ShipID":19, "GameMode":"Solo", "Credits":12326328, "Loan":0 }
+{ "timestamp":"2016-12-07T18:59:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":12317640, "Loan":0 }
+{ "timestamp":"2016-12-07T20:56:14Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Viper", "ShipID":20, "GameMode":"Solo", "Credits":10275019, "Loan":0 }
+{ "timestamp":"2016-12-08T13:02:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "StartLanded":true, "GameMode":"Solo", "Credits":10274071, "Loan":0 }
+{ "timestamp":"2016-12-08T13:26:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":10335585, "Loan":0 }
+{ "timestamp":"2016-12-08T13:29:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":10335585, "Loan":0 }
+{ "timestamp":"2016-12-08T14:45:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":10135585, "Loan":0 }
+{ "timestamp":"2016-12-08T14:47:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":10135585, "Loan":0 }
+{ "timestamp":"2016-12-08T15:00:54Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":11192629, "Loan":0 }
+{ "timestamp":"2016-12-08T16:56:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Viper", "ShipID":20, "GameMode":"Solo", "Credits":11237012, "Loan":0 }
+{ "timestamp":"2016-12-08T17:03:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Viper", "ShipID":20, "GameMode":"Open", "Credits":11229619, "Loan":0 }
+{ "timestamp":"2016-12-08T17:05:05Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":11229619, "Loan":0 }
+{ "timestamp":"2016-12-08T17:07:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":11229619, "Loan":0 }
+{ "timestamp":"2016-12-08T17:09:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":11229619, "Loan":0 }
+{ "timestamp":"2016-12-08T17:10:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":11229619, "Loan":0 }
+{ "timestamp":"2016-12-08T17:12:30Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":11229619, "Loan":0 }
+{ "timestamp":"2016-12-08T17:17:11Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":11229619, "Loan":0 }
+{ "timestamp":"2016-12-08T17:28:24Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":12460071, "Loan":0 }
+{ "timestamp":"2016-12-08T18:19:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":13147471, "Loan":0 }
+{ "timestamp":"2016-12-08T18:21:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":13147471, "Loan":0 }
+{ "timestamp":"2016-12-08T18:23:18Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":13147471, "Loan":0 }
+{ "timestamp":"2016-12-08T19:03:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":14986828, "Loan":0 }
+{ "timestamp":"2016-12-08T19:24:13Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":14986828, "Loan":0 }
+{ "timestamp":"2016-12-08T19:46:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":14986828, "Loan":0 }
+{ "timestamp":"2016-12-08T19:49:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":14986828, "Loan":0 }
+{ "timestamp":"2016-12-08T19:52:57Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":14926958, "Loan":0 }
+{ "timestamp":"2016-12-09T17:22:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":15664674, "Loan":0 }
+{ "timestamp":"2016-12-09T18:06:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":15664017, "Loan":0 }
+{ "timestamp":"2016-12-10T13:52:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":15702241, "Loan":0 }
+{ "timestamp":"2016-12-10T14:42:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":62220361, "Loan":0 }
+{ "timestamp":"2016-12-10T15:37:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":62494924, "Loan":0 }
+{ "timestamp":"2016-12-10T15:40:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":61419924, "Loan":0 }
+{ "timestamp":"2016-12-10T15:43:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":61527323, "Loan":0 }
+{ "timestamp":"2016-12-10T15:45:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":61527323, "Loan":0 }
+{ "timestamp":"2016-12-10T15:47:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":61077323, "Loan":0 }
+{ "timestamp":"2016-12-10T15:50:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":60852323, "Loan":0 }
+{ "timestamp":"2016-12-10T15:52:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":60002323, "Loan":0 }
+{ "timestamp":"2016-12-10T15:55:23Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":59652323, "Loan":0 }
+{ "timestamp":"2016-12-10T15:57:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":59227323, "Loan":0 }
+{ "timestamp":"2016-12-10T15:59:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":58677323, "Loan":0 }
+{ "timestamp":"2016-12-10T16:01:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":58427323, "Loan":0 }
+{ "timestamp":"2016-12-10T16:03:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":58352323, "Loan":0 }
+{ "timestamp":"2016-12-10T16:05:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":58352323, "Loan":0 }
+{ "timestamp":"2016-12-10T16:07:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":58277323, "Loan":0 }
+{ "timestamp":"2016-12-10T16:09:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":58127323, "Loan":0 }
+{ "timestamp":"2016-12-10T16:11:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":57752323, "Loan":0 }
+{ "timestamp":"2016-12-10T16:33:14Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":57677323, "Loan":0 }
+{ "timestamp":"2016-12-10T17:28:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":57831535, "Loan":0 }
+{ "timestamp":"2016-12-10T17:59:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":57494701, "Loan":0 }
+{ "timestamp":"2016-12-10T18:03:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":57148526, "Loan":0 }
+{ "timestamp":"2016-12-10T18:07:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":56823526, "Loan":0 }
+{ "timestamp":"2016-12-10T18:09:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":56523526, "Loan":0 }
+{ "timestamp":"2016-12-10T18:21:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":55948516, "Loan":0 }
+{ "timestamp":"2016-12-10T18:25:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":55948516, "Loan":0 }
+{ "timestamp":"2016-12-10T18:51:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Open", "Credits":55573506, "Loan":0 }
+{ "timestamp":"2016-12-10T19:02:13Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":55273506, "Loan":0 }
+{ "timestamp":"2016-12-10T19:45:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":54948506, "Loan":0 }
+{ "timestamp":"2016-12-10T20:14:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":19, "GameMode":"Solo", "Credits":47856665, "Loan":0 }
+{ "timestamp":"2016-12-10T20:33:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":19, "GameMode":"Open", "Credits":44035378, "Loan":0 }
+{ "timestamp":"2016-12-10T21:14:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":19, "GameMode":"Solo", "Credits":35864046, "Loan":0 }
+{ "timestamp":"2016-12-11T14:18:57Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":19, "GameMode":"Solo", "Credits":35863665, "Loan":0 }
+{ "timestamp":"2016-12-12T13:58:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":19, "GameMode":"Solo", "Credits":34817525, "Loan":0 }
+{ "timestamp":"2016-12-13T16:12:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":25596813, "Loan":0 }
+{ "timestamp":"2016-12-13T17:49:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":25511142, "Loan":0 }
+{ "timestamp":"2016-12-14T13:41:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":29444754, "Loan":0 }
+{ "timestamp":"2016-12-14T14:04:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"BelugaLiner", "ShipID":17, "GameMode":"Solo", "Credits":29473969, "Loan":0 }
+{ "timestamp":"2016-12-14T14:38:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Python", "ShipID":19, "GameMode":"Solo", "Credits":51889920, "Loan":0 }
+{ "timestamp":"2016-12-14T15:38:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Python", "ShipID":19, "GameMode":"Solo", "Credits":13358361, "Loan":0 }
+{ "timestamp":"2016-12-15T14:13:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Python", "ShipID":19, "GameMode":"Solo", "Credits":8795756, "Loan":0 }
+{ "timestamp":"2016-12-15T14:22:21Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Eagle", "ShipID":20, "GameMode":"Solo", "Credits":6741481, "Loan":0 }
+{ "timestamp":"2016-12-15T17:02:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":22, "GameMode":"Solo", "Credits":65459086, "Loan":0 }
+{ "timestamp":"2016-12-15T17:08:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":22, "GameMode":"Open", "Credits":65708942, "Loan":0 }
+{ "timestamp":"2016-12-15T18:34:54Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":22, "GameMode":"Solo", "Credits":66183393, "Loan":0 }
+{ "timestamp":"2016-12-15T19:31:18Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":23, "StartLanded":true, "GameMode":"Solo", "Credits":66183393, "Loan":0 }
+{ "timestamp":"2016-12-15T19:58:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":22, "GameMode":"Solo", "Credits":66182675, "Loan":0 }
+{ "timestamp":"2016-12-15T20:42:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":10629971, "Loan":0 }
+{ "timestamp":"2016-12-16T13:24:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":17935200, "Loan":0 }
+{ "timestamp":"2016-12-16T13:53:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":16141872, "Loan":0 }
+{ "timestamp":"2016-12-16T14:35:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":10624794, "Loan":0 }
+{ "timestamp":"2016-12-16T15:40:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":8104222, "Loan":0 }
+{ "timestamp":"2016-12-17T12:33:05Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":8096665, "Loan":0 }
+{ "timestamp":"2016-12-17T14:26:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T14:28:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T14:32:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T14:35:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T14:36:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T14:38:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T14:40:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T14:42:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T14:43:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T14:46:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T14:50:30Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T14:54:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T14:57:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T15:44:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-17T19:18:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-18T14:30:32Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-18T15:05:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-18T15:40:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-18T16:12:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-18T16:17:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-18T16:57:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-18T17:19:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-18T18:17:30Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-18T18:35:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-18T18:36:54Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-18T19:29:21Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Credits":13235852, "Loan":0 }
+{ "timestamp":"2016-12-20T20:00:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-21T18:08:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":24, "StartLanded":true, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-21T18:15:26Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":24, "StartLanded":true, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-21T18:47:26Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-21T19:37:05Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-21T19:44:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-21T20:30:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-21T20:51:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-21T20:57:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-22T11:07:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-22T14:57:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-22T19:22:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-26T13:20:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13236700, "Loan":0 }
+{ "timestamp":"2016-12-27T12:08:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":63781199, "Loan":0 }
+{ "timestamp":"2016-12-27T12:22:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":63781199, "Loan":0 }
+{ "timestamp":"2016-12-27T13:01:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Hauler", "ShipID":24, "GameMode":"Solo", "Credits":62813455, "Loan":0 }
+{ "timestamp":"2016-12-27T15:34:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Eagle", "ShipID":24, "GameMode":"Solo", "Credits":61592625, "Loan":0 }
+{ "timestamp":"2016-12-27T15:55:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":18225662, "Loan":0 }
+{ "timestamp":"2016-12-27T16:09:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":13320638, "Loan":0 }
+{ "timestamp":"2016-12-27T16:47:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":16837458, "Loan":0 }
+{ "timestamp":"2016-12-28T11:16:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":16837458, "Loan":0 }
+{ "timestamp":"2016-12-28T11:34:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":17263331, "Loan":0 }
+{ "timestamp":"2016-12-28T11:42:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":17262319, "Loan":0 }
+{ "timestamp":"2016-12-28T13:00:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":17262319, "Loan":0 }
+{ "timestamp":"2016-12-28T13:04:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":17262319, "Loan":0 }
+{ "timestamp":"2016-12-28T13:12:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":17262319, "Loan":0 }
+{ "timestamp":"2016-12-28T13:31:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":17262319, "Loan":0 }
+{ "timestamp":"2016-12-28T13:58:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":25, "GameMode":"Solo", "Credits":50560651, "Loan":0 }
+{ "timestamp":"2016-12-28T14:31:24Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":25, "GameMode":"Solo", "Credits":33740918, "Loan":0 }
+{ "timestamp":"2016-12-28T15:00:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":25, "GameMode":"Solo", "Credits":33740918, "Loan":0 }
+{ "timestamp":"2016-12-30T11:52:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":25, "GameMode":"Solo", "Credits":33740918, "Loan":0 }
+{ "timestamp":"2016-12-30T12:33:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":34912742, "Loan":0 }
+{ "timestamp":"2016-12-30T15:56:14Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":39468906, "Loan":0 }
+{ "timestamp":"2016-12-30T16:21:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":39468906, "Loan":0 }
+{ "timestamp":"2016-12-30T16:29:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":39401753, "Loan":0 }
+{ "timestamp":"2016-12-30T16:31:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":39201753, "Loan":0 }
+{ "timestamp":"2016-12-30T16:32:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":39201753, "Loan":0 }
+{ "timestamp":"2016-12-30T16:48:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":39201753, "Loan":0 }
+{ "timestamp":"2016-12-30T17:43:30Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":39180654, "Loan":0 }
+{ "timestamp":"2016-12-30T17:51:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":39180654, "Loan":0 }
+{ "timestamp":"2016-12-31T13:39:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":29, "GameMode":"Solo", "Credits":24936487, "Loan":0 }
+{ "timestamp":"2017-01-01T14:48:30Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":29, "GameMode":"Solo", "Credits":24936487, "Loan":0 }
+{ "timestamp":"2017-01-01T17:33:54Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":29, "GameMode":"Solo", "Credits":21351363, "Loan":0 }
+{ "timestamp":"2017-01-01T20:14:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":29, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":20018691, "Loan":0 }
+{ "timestamp":"2017-01-01T20:55:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":44378106, "Loan":0 }
+{ "timestamp":"2017-01-01T20:58:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":44378106, "Loan":0 }
+{ "timestamp":"2017-01-01T21:00:23Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":43639196, "Loan":0 }
+{ "timestamp":"2017-01-03T13:35:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "StartLanded":true, "GameMode":"Solo", "Credits":43177291, "Loan":0 }
+{ "timestamp":"2017-01-05T20:06:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "StartLanded":true, "GameMode":"Solo", "Credits":43177291, "Loan":0 }
+{ "timestamp":"2017-01-06T13:08:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":43165771, "Loan":0 }
+{ "timestamp":"2017-01-06T13:48:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":43125109, "Loan":0 }
+{ "timestamp":"2017-01-06T14:28:42Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":43125109, "Loan":0 }
+{ "timestamp":"2017-01-06T15:40:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Eagle", "ShipID":31, "GameMode":"Solo", "Credits":38175403, "Loan":0 }
+{ "timestamp":"2017-01-07T12:11:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Eagle", "ShipID":32, "GameMode":"Solo", "Credits":39006662, "Loan":0 }
+{ "timestamp":"2017-01-07T12:30:23Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Eagle", "ShipID":32, "GameMode":"Open", "Credits":38978290, "Loan":0 }
+{ "timestamp":"2017-01-07T15:08:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":37142400, "Loan":0 }
+{ "timestamp":"2017-01-07T15:59:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":33, "GameMode":"Open", "Credits":34316790, "Loan":0 }
+{ "timestamp":"2017-01-07T16:01:30Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":33, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":34316790, "Loan":0 }
+{ "timestamp":"2017-01-10T15:19:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Adder", "ShipID":34, "GameMode":"Solo", "Credits":34389987, "Loan":0 }
+{ "timestamp":"2017-01-10T16:31:06Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":35, "StartLanded":true, "GameMode":"Solo", "Credits":34206477, "Loan":0 }
+{ "timestamp":"2017-01-10T16:48:57Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":35, "StartLanded":true, "GameMode":"Open", "Credits":34206477, "Loan":0 }
+{ "timestamp":"2017-01-11T14:38:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":35, "StartLanded":true, "GameMode":"Solo", "Credits":34206477, "Loan":0 }
+{ "timestamp":"2017-01-11T15:33:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":33934072, "Loan":0 }
+{ "timestamp":"2017-01-11T15:52:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":33668425, "Loan":0 }
+{ "timestamp":"2017-01-11T15:54:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":33668425, "Loan":0 }
+{ "timestamp":"2017-01-11T16:05:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":33668425, "Loan":0 }
+{ "timestamp":"2017-01-11T16:08:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":33668425, "Loan":0 }
+{ "timestamp":"2017-01-11T17:08:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":33649012, "Loan":0 }
+{ "timestamp":"2017-01-11T17:13:14Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":33649012, "Loan":0 }
+{ "timestamp":"2017-01-11T17:17:54Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":35, "GameMode":"Open", "Credits":33463032, "Loan":0 }
+{ "timestamp":"2017-01-11T17:53:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":35, "GameMode":"Open", "Credits":33463032, "Loan":0 }
+{ "timestamp":"2017-01-11T18:22:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type6", "ShipID":35, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":30799040, "Loan":0 }
+{ "timestamp":"2017-01-11T18:24:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type6", "ShipID":35, "GameMode":"Solo", "Credits":30799040, "Loan":0 }
+{ "timestamp":"2017-01-11T18:26:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type6", "ShipID":35, "GameMode":"Open", "Credits":30799040, "Loan":0 }
+{ "timestamp":"2017-01-11T18:29:05Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type6", "ShipID":35, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":30814360, "Loan":0 }
+{ "timestamp":"2017-01-11T18:31:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type6", "ShipID":35, "GameMode":"Solo", "Credits":30814360, "Loan":0 }
+{ "timestamp":"2017-01-11T18:33:13Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type6", "ShipID":35, "GameMode":"Open", "Credits":30814360, "Loan":0 }
+{ "timestamp":"2017-01-11T18:34:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type6", "ShipID":35, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":30814360, "Loan":0 }
+{ "timestamp":"2017-01-11T20:31:42Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":30702340, "Loan":0 }
+{ "timestamp":"2017-01-12T14:43:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":30633828, "Loan":0 }
+{ "timestamp":"2017-01-12T15:01:30Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":30633828, "Loan":0 }
+{ "timestamp":"2017-01-12T15:12:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":36, "StartLanded":true, "GameMode":"Solo", "Credits":30633828, "Loan":0 }
+{ "timestamp":"2017-01-12T15:25:23Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":36, "StartLanded":true, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":30633828, "Loan":0 }
+{ "timestamp":"2017-01-12T16:09:23Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":36, "StartLanded":true, "GameMode":"Open", "Credits":30633828, "Loan":0 }
+{ "timestamp":"2017-01-12T16:28:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":36, "StartLanded":true, "GameMode":"Solo", "Credits":30633828, "Loan":0 }
+{ "timestamp":"2017-01-12T17:25:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":36, "StartLanded":true, "GameMode":"Solo", "Credits":30633828, "Loan":0 }
+{ "timestamp":"2017-01-12T17:59:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":30633828, "Loan":0 }
+{ "timestamp":"2017-01-12T18:03:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Open", "Credits":30633828, "Loan":0 }
+{ "timestamp":"2017-01-12T18:20:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":30633828, "Loan":0 }
+{ "timestamp":"2017-01-12T18:53:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":30609506, "Loan":0 }
+{ "timestamp":"2017-01-12T20:10:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":40, "GameMode":"Open", "Credits":6491501, "Loan":0 }
+{ "timestamp":"2017-01-22T16:13:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":40, "GameMode":"Solo", "Credits":6491027, "Loan":0 }
+{ "timestamp":"2017-01-23T16:44:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":40, "GameMode":"Solo", "Credits":7001448, "Loan":0 }
+{ "timestamp":"2017-01-23T17:23:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":40, "GameMode":"Solo", "Credits":7001448, "Loan":0 }
+{ "timestamp":"2017-01-23T18:57:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":40, "GameMode":"Open", "Credits":7558356, "Loan":0 }
+{ "timestamp":"2017-01-23T19:09:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":40, "GameMode":"Solo", "Credits":7558356, "Loan":0 }
+{ "timestamp":"2017-01-23T20:48:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":6048278, "Loan":0 }
+{ "timestamp":"2017-01-24T13:31:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Solo", "Credits":6043428, "Loan":0 }
+{ "timestamp":"2017-01-24T13:43:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":17, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":6043428, "Loan":0 }
+{ "timestamp":"2017-01-24T16:41:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":40, "GameMode":"Solo", "Credits":28385489, "Loan":0 }
+{ "timestamp":"2017-01-24T17:58:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":131305028, "Loan":0 }
+{ "timestamp":"2017-01-24T20:30:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":109053755, "Loan":0 }
+{ "timestamp":"2017-01-25T15:02:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":109053745, "Loan":0 }
+{ "timestamp":"2017-01-25T19:07:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":109391521, "Loan":0 }
+{ "timestamp":"2017-01-25T19:42:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":106984362, "Loan":0 }
+{ "timestamp":"2017-01-26T13:40:57Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":107533415, "Loan":0 }
+{ "timestamp":"2017-01-27T14:22:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":107533415, "Loan":0 }
+{ "timestamp":"2017-01-27T14:47:13Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":107533415, "Loan":0 }
+{ "timestamp":"2017-01-27T15:18:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":107533415, "Loan":0 }
+{ "timestamp":"2017-01-27T16:11:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":103164208, "Loan":0 }
+{ "timestamp":"2017-01-27T19:02:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":103164208, "Loan":0 }
+{ "timestamp":"2017-01-28T12:46:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":102224992, "Loan":0 }
+{ "timestamp":"2017-01-28T13:15:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":102276540, "Loan":0 }
+{ "timestamp":"2017-01-28T13:48:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":102276540, "Loan":0 }
+{ "timestamp":"2017-01-28T13:55:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":103098405, "Loan":0 }
+{ "timestamp":"2017-01-28T14:35:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":103098405, "Loan":0 }
+{ "timestamp":"2017-01-28T14:37:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":103098405, "Loan":0 }
+{ "timestamp":"2017-01-28T15:12:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":58869314, "Loan":0 }
+{ "timestamp":"2017-01-28T15:17:23Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":58869314, "Loan":0 }
+{ "timestamp":"2017-01-28T16:12:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":58869314, "Loan":0 }
+{ "timestamp":"2017-01-28T16:24:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":58869314, "Loan":0 }
+{ "timestamp":"2017-01-28T16:31:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":58869314, "Loan":0 }
+{ "timestamp":"2017-01-28T16:43:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":60803731, "Loan":0 }
+{ "timestamp":"2017-01-28T17:02:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":60803731, "Loan":0 }
+{ "timestamp":"2017-01-29T15:13:54Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":60730903, "Loan":0 }
+{ "timestamp":"2017-01-29T19:11:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":60507524, "Loan":0 }
+{ "timestamp":"2017-01-29T19:25:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Open", "Credits":60357524, "Loan":0 }
+{ "timestamp":"2017-01-29T19:46:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":53902201, "Loan":0 }
+{ "timestamp":"2017-01-29T20:05:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":53902201, "Loan":0 }
+{ "timestamp":"2017-01-29T20:30:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":53902201, "Loan":0 }
+{ "timestamp":"2017-01-29T20:37:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":53902201, "Loan":0 }
+{ "timestamp":"2017-01-29T20:48:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":53902201, "Loan":0 }
+{ "timestamp":"2017-01-30T14:05:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":53902201, "Loan":0 }
+{ "timestamp":"2017-01-30T14:41:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":35681585, "Loan":0 }
+{ "timestamp":"2017-01-31T16:54:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Independent_Fighter", "ShipID":28, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":35358011, "Loan":0 }
+{ "timestamp":"2017-01-31T17:51:23Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Independent_Fighter", "ShipID":28, "GameMode":"Solo", "Credits":35358011, "Loan":0 }
+{ "timestamp":"2017-01-31T18:18:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Adder", "ShipID":27, "GameMode":"Solo", "Credits":54894755, "Loan":0 }
+{ "timestamp":"2017-02-02T14:58:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Asp", "ShipID":28, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":39743702, "Loan":0 }
+{ "timestamp":"2017-02-02T15:53:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":39741812, "Loan":0 }
+{ "timestamp":"2017-02-03T14:50:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":24, "GameMode":"Solo", "Credits":33286489, "Loan":0 }
+{ "timestamp":"2017-02-03T14:56:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Asp", "ShipID":28, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":157996058, "Loan":0 }
+{ "timestamp":"2017-02-03T15:53:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Asp", "ShipID":28, "GameMode":"Solo", "Credits":158175174, "Loan":0 }
+{ "timestamp":"2017-02-03T16:50:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Asp", "ShipID":28, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":158619118, "Loan":0 }
+{ "timestamp":"2017-02-03T18:18:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"DiamondBackXL", "ShipID":29, "GameMode":"Solo", "Credits":146762683, "Loan":0 }
+{ "timestamp":"2017-02-03T18:33:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"DiamondBackXL", "ShipID":29, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":146762683, "Loan":0 }
+{ "timestamp":"2017-02-03T18:49:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"DiamondBackXL", "ShipID":29, "GameMode":"Solo", "Credits":146697919, "Loan":0 }
+{ "timestamp":"2017-02-03T18:52:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"DiamondBackXL", "ShipID":29, "GameMode":"Open", "Credits":147016451, "Loan":0 }
+{ "timestamp":"2017-02-03T18:59:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"DiamondBackXL", "ShipID":29, "GameMode":"Solo", "Credits":147016451, "Loan":0 }
+{ "timestamp":"2017-02-03T20:52:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"DiamondBackXL", "ShipID":29, "GameMode":"Solo", "Credits":147016451, "Loan":0 }
+{ "timestamp":"2017-02-04T13:40:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"DiamondBackXL", "ShipID":29, "GameMode":"Solo", "Credits":147016451, "Loan":0 }
+{ "timestamp":"2017-02-04T14:53:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"DiamondBackXL", "ShipID":29, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":147016451, "Loan":0 }
+{ "timestamp":"2017-02-04T16:10:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Asp", "ShipID":28, "GameMode":"Solo", "Credits":146996119, "Loan":0 }
+{ "timestamp":"2017-02-04T16:37:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Open", "Credits":133937434, "Loan":0 }
+{ "timestamp":"2017-02-04T16:43:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":142238818, "Loan":0 }
+{ "timestamp":"2017-02-04T16:47:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Solo", "Credits":148928578, "Loan":0 }
+{ "timestamp":"2017-02-04T16:53:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Open", "Credits":158050978, "Loan":0 }
+{ "timestamp":"2017-02-04T17:00:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":168632962, "Loan":0 }
+{ "timestamp":"2017-02-04T17:04:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Solo", "Credits":175213946, "Loan":0 }
+{ "timestamp":"2017-02-04T17:06:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Open", "Credits":175213946, "Loan":0 }
+{ "timestamp":"2017-02-04T17:12:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":184275530, "Loan":0 }
+{ "timestamp":"2017-02-04T17:13:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Solo", "Credits":186525722, "Loan":0 }
+{ "timestamp":"2017-02-04T17:15:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Credits":186525722, "Loan":0 }
+{ "timestamp":"2017-02-04T17:16:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Open", "Credits":186525722, "Loan":0 }
+{ "timestamp":"2017-02-04T17:19:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Solo", "Credits":186525722, "Loan":0 }
+{ "timestamp":"2017-02-04T17:22:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Solo", "Credits":188502242, "Loan":0 }
+{ "timestamp":"2017-02-04T17:27:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Open", "Credits":195222410, "Loan":0 }
+{ "timestamp":"2017-02-04T17:33:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type7", "ShipID":32, "GameMode":"Solo", "Credits":204040730, "Loan":0 }
+{ "timestamp":"2017-02-04T18:36:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":15329688, "Loan":0 }
+{ "timestamp":"2017-02-05T12:46:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":15329688, "Loan":0 }
+{ "timestamp":"2017-02-05T14:33:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Viper", "ShipID":35, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":64986020, "Loan":0 }
+{ "timestamp":"2017-02-05T14:59:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Viper", "ShipID":35, "GameMode":"Solo", "Credits":64986020, "Loan":0 }
+{ "timestamp":"2017-02-05T16:06:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"DiamondBack", "ShipID":36, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":62662301, "Loan":0 }
+{ "timestamp":"2017-02-05T16:53:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":37, "StartLanded":true, "GameMode":"Solo", "Credits":62662301, "Loan":0 }
+{ "timestamp":"2017-02-05T17:28:30Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"DiamondBack", "ShipID":36, "GameMode":"Solo", "Credits":62662301, "Loan":0 }
+{ "timestamp":"2017-02-05T18:18:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":62655791, "Loan":0 }
+{ "timestamp":"2017-02-06T12:54:32Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":62678588, "Loan":0 }
+{ "timestamp":"2017-02-06T13:45:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":62604243, "Loan":0 }
+{ "timestamp":"2017-02-06T14:13:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":55589244, "Loan":0 }
+{ "timestamp":"2017-02-06T15:34:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Federation_Dropship", "ShipID":38, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":7195459, "Loan":0 }
+{ "timestamp":"2017-02-06T15:55:24Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":61485744, "Loan":0 }
+{ "timestamp":"2017-02-06T15:58:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":61485744, "Loan":0 }
+{ "timestamp":"2017-02-06T16:04:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":61812406, "Loan":0 }
+{ "timestamp":"2017-02-06T16:06:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":61812406, "Loan":0 }
+{ "timestamp":"2017-02-06T16:12:06Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":38, "GameMode":"Open", "Credits":58220702, "Loan":0 }
+{ "timestamp":"2017-02-06T16:15:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":38, "GameMode":"Solo", "Credits":56754818, "Loan":0 }
+{ "timestamp":"2017-02-06T16:16:18Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":38, "GameMode":"Open", "Credits":56754818, "Loan":0 }
+{ "timestamp":"2017-02-06T16:17:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":38, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":56754818, "Loan":0 }
+{ "timestamp":"2017-02-06T16:18:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":38, "GameMode":"Solo", "Credits":56754818, "Loan":0 }
+{ "timestamp":"2017-02-06T16:20:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":38, "GameMode":"Open", "Credits":56754818, "Loan":0 }
+{ "timestamp":"2017-02-06T16:21:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":38, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":56754818, "Loan":0 }
+{ "timestamp":"2017-02-06T16:23:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":38, "GameMode":"Solo", "Credits":56915490, "Loan":0 }
+{ "timestamp":"2017-02-06T16:24:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":38, "GameMode":"Open", "Credits":56915490, "Loan":0 }
+{ "timestamp":"2017-02-06T16:25:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":38, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":56915490, "Loan":0 }
+{ "timestamp":"2017-02-06T16:26:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Credits":56915490, "Loan":0 }
+{ "timestamp":"2017-02-06T16:27:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":38, "GameMode":"Solo", "Credits":56915490, "Loan":0 }
+{ "timestamp":"2017-02-08T19:08:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":38, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":56915490, "Loan":0 }
+{ "timestamp":"2017-02-09T13:47:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":43259891, "Loan":0 }
+{ "timestamp":"2017-02-09T17:56:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":55282439, "Loan":0 }
+{ "timestamp":"2017-02-09T18:49:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":55282439, "Loan":0 }
+{ "timestamp":"2017-02-09T19:20:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":55282439, "Loan":0 }
+{ "timestamp":"2017-02-10T13:35:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":55619304, "Loan":0 }
+{ "timestamp":"2017-02-10T14:29:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":56278057, "Loan":0 }
+{ "timestamp":"2017-02-10T14:43:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "StartDead":true, "GameMode":"Solo", "Credits":56278057, "Loan":0 }
+{ "timestamp":"2017-02-12T15:19:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":47943256, "Loan":0 }
+{ "timestamp":"2017-02-12T16:09:21Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":45954277, "Loan":0 }
+{ "timestamp":"2017-02-12T17:37:11Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":42, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":48420095, "Loan":0 }
+{ "timestamp":"2017-02-13T12:55:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":42, "GameMode":"Solo", "Credits":48420095, "Loan":0 }
+{ "timestamp":"2017-02-13T13:08:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":42, "GameMode":"Solo", "Credits":48420095, "Loan":0 }
+{ "timestamp":"2017-02-15T18:51:14Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":42, "GameMode":"Solo", "Credits":48420095, "Loan":0 }
+{ "timestamp":"2017-02-16T14:41:42Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":42, "StartDead":true, "GameMode":"Solo", "Credits":48420095, "Loan":0 }
+{ "timestamp":"2017-02-17T14:55:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":60742419, "Loan":0 }
+{ "timestamp":"2017-02-18T17:06:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":60742419, "Loan":0 }
+{ "timestamp":"2017-02-18T17:49:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":60742419, "Loan":0 }
+{ "timestamp":"2017-02-18T17:52:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":60742419, "Loan":0 }
+{ "timestamp":"2017-02-18T19:39:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Viper_MkIV", "ShipID":43, "GameMode":"Solo", "Credits":53960327, "Loan":0 }
+{ "timestamp":"2017-02-19T13:36:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Viper_MkIV", "ShipID":43, "GameMode":"Solo", "Credits":53952127, "Loan":0 }
+{ "timestamp":"2017-02-19T14:14:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":54704734, "Loan":0 }
+{ "timestamp":"2017-02-19T14:22:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":54796561, "Loan":0 }
+{ "timestamp":"2017-02-19T14:53:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":63771578, "Loan":0 }
+{ "timestamp":"2017-02-19T15:00:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":78922228, "Loan":0 }
+{ "timestamp":"2017-02-19T15:03:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":88345012, "Loan":0 }
+{ "timestamp":"2017-02-19T15:06:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":92383348, "Loan":0 }
+{ "timestamp":"2017-02-19T15:13:13Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":102611580, "Loan":0 }
+{ "timestamp":"2017-02-19T15:16:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":112034364, "Loan":0 }
+{ "timestamp":"2017-02-19T15:25:21Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":128516028, "Loan":0 }
+{ "timestamp":"2017-02-19T15:33:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":142403964, "Loan":0 }
+{ "timestamp":"2017-02-19T15:42:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":156882876, "Loan":0 }
+{ "timestamp":"2017-02-19T15:46:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":164598396, "Loan":0 }
+{ "timestamp":"2017-02-19T15:50:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":175203132, "Loan":0 }
+{ "timestamp":"2017-02-19T15:59:06Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":190338684, "Loan":0 }
+{ "timestamp":"2017-02-19T16:07:14Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":190338684, "Loan":0 }
+{ "timestamp":"2017-02-19T16:08:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":190338684, "Loan":0 }
+{ "timestamp":"2017-02-19T16:11:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":192308604, "Loan":0 }
+{ "timestamp":"2017-02-19T19:07:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":200432137, "Loan":0 }
+{ "timestamp":"2017-02-20T13:33:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":200432137, "Loan":0 }
+{ "timestamp":"2017-02-20T13:41:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":199792542, "Loan":0 }
+{ "timestamp":"2017-02-20T13:44:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":197742542, "Loan":0 }
+{ "timestamp":"2017-02-20T13:49:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":196793065, "Loan":0 }
+{ "timestamp":"2017-02-20T13:51:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":195207316, "Loan":0 }
+{ "timestamp":"2017-02-20T13:53:32Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":193181916, "Loan":0 }
+{ "timestamp":"2017-02-20T13:57:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":192481916, "Loan":0 }
+{ "timestamp":"2017-02-20T14:01:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":192431916, "Loan":0 }
+{ "timestamp":"2017-02-20T14:03:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":191131916, "Loan":0 }
+{ "timestamp":"2017-02-20T14:04:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":190381916, "Loan":0 }
+{ "timestamp":"2017-02-20T14:06:26Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":190381916, "Loan":0 }
+{ "timestamp":"2017-02-20T14:08:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":190381916, "Loan":0 }
+{ "timestamp":"2017-02-20T14:09:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":188881916, "Loan":0 }
+{ "timestamp":"2017-02-20T14:11:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":187881916, "Loan":0 }
+{ "timestamp":"2017-02-20T14:15:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":186531916, "Loan":0 }
+{ "timestamp":"2017-02-20T14:17:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":186506916, "Loan":0 }
+{ "timestamp":"2017-02-20T14:20:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":186506916, "Loan":0 }
+{ "timestamp":"2017-02-20T14:26:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":185431916, "Loan":0 }
+{ "timestamp":"2017-02-20T14:47:18Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Federation_Dropship", "ShipID":44, "GameMode":"Solo", "Credits":171114715, "Loan":0 }
+{ "timestamp":"2017-02-20T19:18:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Python", "ShipID":45, "GameMode":"Solo", "Credits":30270927, "Loan":0 }
+{ "timestamp":"2017-02-20T20:09:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":111652229, "Loan":0 }
+{ "timestamp":"2017-02-21T15:13:32Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":111579920, "Loan":0 }
+{ "timestamp":"2017-02-21T15:28:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":111579920, "Loan":0 }
+{ "timestamp":"2017-02-21T15:56:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":106612212, "Loan":0 }
+{ "timestamp":"2017-02-21T15:58:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":106612212, "Loan":0 }
+{ "timestamp":"2017-02-21T16:00:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":106612212, "Loan":0 }
+{ "timestamp":"2017-02-21T16:03:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":106612212, "Loan":0 }
+{ "timestamp":"2017-02-21T16:05:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":106612212, "Loan":0 }
+{ "timestamp":"2017-02-21T16:07:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":106612212, "Loan":0 }
+{ "timestamp":"2017-02-21T16:17:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":106037212, "Loan":0 }
+{ "timestamp":"2017-02-21T17:24:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":106672591, "Loan":0 }
+{ "timestamp":"2017-02-22T13:18:24Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIV", "ShipID":45, "GameMode":"Solo", "Credits":103843840, "Loan":0 }
+{ "timestamp":"2017-02-22T13:32:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":103803337, "Loan":0 }
+{ "timestamp":"2017-02-22T13:34:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":103803337, "Loan":0 }
+{ "timestamp":"2017-02-22T13:36:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":103803337, "Loan":0 }
+{ "timestamp":"2017-02-22T13:38:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":102803337, "Loan":0 }
+{ "timestamp":"2017-02-22T13:40:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":102803337, "Loan":0 }
+{ "timestamp":"2017-02-22T13:41:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":102803337, "Loan":0 }
+{ "timestamp":"2017-02-22T13:43:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":102803337, "Loan":0 }
+{ "timestamp":"2017-02-23T14:17:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":101429458, "Loan":0 }
+{ "timestamp":"2017-02-23T14:35:54Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":101429458, "Loan":0 }
+{ "timestamp":"2017-02-23T14:37:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":101429458, "Loan":0 }
+{ "timestamp":"2017-02-24T10:42:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":101429458, "Loan":0 }
+{ "timestamp":"2017-02-24T10:51:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":101354422, "Loan":0 }
+{ "timestamp":"2017-02-24T10:53:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":100055422, "Loan":0 }
+{ "timestamp":"2017-02-24T10:56:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":100131970, "Loan":0 }
+{ "timestamp":"2017-02-24T10:58:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":99106970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:01:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":97381970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:03:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":95431970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:05:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":93381970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:07:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":91656970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:09:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":91656970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:11:26Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":89181970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:13:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":87256970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:15:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":86256970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:16:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":85956970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:19:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":84031970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:21:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":83031970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:23:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":82956970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:24:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":81031970, "Loan":0 }
+{ "timestamp":"2017-02-24T11:33:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":81031970, "Loan":0 }
+{ "timestamp":"2017-03-02T14:21:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":81026562, "Loan":0 }
+{ "timestamp":"2017-03-02T14:47:18Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":79853285, "Loan":0 }
+{ "timestamp":"2017-03-02T14:50:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":73078285, "Loan":0 }
+{ "timestamp":"2017-03-02T14:54:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":69253285, "Loan":0 }
+{ "timestamp":"2017-03-02T14:58:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":65453285, "Loan":0 }
+{ "timestamp":"2017-03-02T15:00:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":63253285, "Loan":0 }
+{ "timestamp":"2017-03-02T15:03:54Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":61804085, "Loan":0 }
+{ "timestamp":"2017-03-02T15:06:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":61179085, "Loan":0 }
+{ "timestamp":"2017-03-02T15:08:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":58979085, "Loan":0 }
+{ "timestamp":"2017-03-02T15:11:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":55854085, "Loan":0 }
+{ "timestamp":"2017-03-02T15:13:23Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":53604085, "Loan":0 }
+{ "timestamp":"2017-03-02T15:27:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":47388805, "Loan":0 }
+{ "timestamp":"2017-03-02T15:35:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":42713795, "Loan":0 }
+{ "timestamp":"2017-03-02T15:37:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":40288785, "Loan":0 }
+{ "timestamp":"2017-03-02T15:40:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":38538785, "Loan":0 }
+{ "timestamp":"2017-03-02T16:15:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":145165063, "Loan":0 }
+{ "timestamp":"2017-03-02T16:17:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":142990063, "Loan":0 }
+{ "timestamp":"2017-03-02T16:19:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":141865063, "Loan":0 }
+{ "timestamp":"2017-03-02T16:22:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":140240063, "Loan":0 }
+{ "timestamp":"2017-03-02T16:23:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":138065063, "Loan":0 }
+{ "timestamp":"2017-03-02T16:26:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":134915063, "Loan":0 }
+{ "timestamp":"2017-03-02T17:32:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":132925951, "Loan":0 }
+{ "timestamp":"2017-03-02T17:51:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":132400587, "Loan":0 }
+{ "timestamp":"2017-03-02T17:53:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":132275587, "Loan":0 }
+{ "timestamp":"2017-03-02T17:56:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":128925587, "Loan":0 }
+{ "timestamp":"2017-03-02T17:58:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":126575587, "Loan":0 }
+{ "timestamp":"2017-03-02T18:00:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":119950587, "Loan":0 }
+{ "timestamp":"2017-03-02T18:11:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":115825587, "Loan":0 }
+{ "timestamp":"2017-03-03T14:27:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Solo", "Credits":66056106, "Loan":0 }
+{ "timestamp":"2017-03-03T15:34:32Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":33642300, "Loan":0 }
+{ "timestamp":"2017-03-03T15:36:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":37000668, "Loan":0 }
+{ "timestamp":"2017-03-03T15:48:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":47653524, "Loan":0 }
+{ "timestamp":"2017-03-03T15:50:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":51203884, "Loan":0 }
+{ "timestamp":"2017-03-03T16:31:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":61466796, "Loan":0 }
+{ "timestamp":"2017-03-03T16:33:14Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":65080812, "Loan":0 }
+{ "timestamp":"2017-03-03T16:40:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":72276576, "Loan":0 }
+{ "timestamp":"2017-03-03T16:42:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":77825984, "Loan":0 }
+{ "timestamp":"2017-03-03T16:47:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":81332288, "Loan":0 }
+{ "timestamp":"2017-03-03T16:49:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":84945856, "Loan":0 }
+{ "timestamp":"2017-03-03T16:51:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":87659056, "Loan":0 }
+{ "timestamp":"2017-03-03T18:02:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":93596368, "Loan":0 }
+{ "timestamp":"2017-03-03T18:05:23Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":99662752, "Loan":0 }
+{ "timestamp":"2017-03-03T18:07:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":103018624, "Loan":0 }
+{ "timestamp":"2017-03-03T18:11:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":108955936, "Loan":0 }
+{ "timestamp":"2017-03-03T18:15:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":122101696, "Loan":0 }
+{ "timestamp":"2017-03-03T18:18:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":128384596, "Loan":0 }
+{ "timestamp":"2017-03-03T18:19:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":128384596, "Loan":0 }
+{ "timestamp":"2017-03-03T18:22:42Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":134731936, "Loan":0 }
+{ "timestamp":"2017-03-03T18:24:26Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":137796256, "Loan":0 }
+{ "timestamp":"2017-03-03T18:26:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":140731552, "Loan":0 }
+{ "timestamp":"2017-03-03T18:28:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":146279584, "Loan":0 }
+{ "timestamp":"2017-03-03T18:30:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":146279584, "Loan":0 }
+{ "timestamp":"2017-03-03T18:32:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":146279584, "Loan":0 }
+{ "timestamp":"2017-03-03T18:36:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":150112336, "Loan":0 }
+{ "timestamp":"2017-03-03T18:37:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":150112336, "Loan":0 }
+{ "timestamp":"2017-03-03T18:51:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":151014160, "Loan":0 }
+{ "timestamp":"2017-03-03T19:03:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":144184450, "Loan":0 }
+{ "timestamp":"2017-03-03T20:00:06Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":141232442, "Loan":0 }
+{ "timestamp":"2017-03-03T20:01:54Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":139157424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:03:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":136882424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:05:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":134707424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:07:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":132832424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:09:05Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":130557424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:10:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":127282424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:12:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":125207424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:14:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":124132424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:18:24Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":122057424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:19:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":121132424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:22:26Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":118507424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:24:18Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":116432424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:25:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":115507424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:28:24Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":114507424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:30:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":111307424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:32:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":108982424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:35:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":107182424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:37:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":104107424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:38:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":101782424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:40:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":97557424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:43:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":94557424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:45:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":92157424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:47:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":90107424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:48:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":85707424, "Loan":0 }
+{ "timestamp":"2017-03-03T20:50:06Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":83307424, "Loan":0 }
+{ "timestamp":"2017-03-03T21:01:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":80557424, "Loan":0 }
+{ "timestamp":"2017-03-03T21:04:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":76407424, "Loan":0 }
+{ "timestamp":"2017-03-03T21:07:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":75207424, "Loan":0 }
+{ "timestamp":"2017-03-03T21:09:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":73232424, "Loan":0 }
+{ "timestamp":"2017-03-03T21:10:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":70707424, "Loan":0 }
+{ "timestamp":"2017-03-03T21:12:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":68107424, "Loan":0 }
+{ "timestamp":"2017-03-03T21:14:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":67307424, "Loan":0 }
+{ "timestamp":"2017-03-03T21:16:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":63332424, "Loan":0 }
+{ "timestamp":"2017-03-03T21:18:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":60257424, "Loan":0 }
+{ "timestamp":"2017-03-03T21:21:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":57932424, "Loan":0 }
+{ "timestamp":"2017-03-03T21:24:24Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":53532424, "Loan":0 }
+{ "timestamp":"2017-03-03T21:26:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":47232424, "Loan":0 }
+{ "timestamp":"2017-03-04T14:09:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":41632424, "Loan":0 }
+{ "timestamp":"2017-03-04T14:51:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Hauler", "ShipID":47, "GameMode":"Open", "Credits":38272724, "Loan":0 }
+{ "timestamp":"2017-03-04T14:59:11Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Hauler", "ShipID":47, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":38272714, "Loan":0 }
+{ "timestamp":"2017-03-04T15:18:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Viper", "ShipID":49, "GameMode":"Solo", "Credits":32448445, "Loan":0 }
+{ "timestamp":"2017-03-04T15:20:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Viper", "ShipID":49, "GameMode":"Open", "Credits":32293445, "Loan":0 }
+{ "timestamp":"2017-03-04T15:21:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Viper", "ShipID":49, "GameMode":"Solo", "Credits":30993445, "Loan":0 }
+{ "timestamp":"2017-03-04T15:56:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Viper", "ShipID":49, "GameMode":"Open", "Credits":33648231, "Loan":0 }
+{ "timestamp":"2017-03-05T15:17:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type6", "ShipID":50, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":30064074, "Loan":0 }
+{ "timestamp":"2017-03-05T15:48:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":30063822, "Loan":0 }
+{ "timestamp":"2017-03-06T15:57:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":30063609, "Loan":0 }
+{ "timestamp":"2017-03-06T15:59:13Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":30099197, "Loan":0 }
+{ "timestamp":"2017-03-06T16:00:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":30099197, "Loan":0 }
+{ "timestamp":"2017-03-06T16:01:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":30099197, "Loan":0 }
+{ "timestamp":"2017-03-06T16:02:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":30099197, "Loan":0 }
+{ "timestamp":"2017-03-06T16:04:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":32048477, "Loan":0 }
+{ "timestamp":"2017-03-06T16:05:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":32048477, "Loan":0 }
+{ "timestamp":"2017-03-06T16:06:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":32048477, "Loan":0 }
+{ "timestamp":"2017-03-06T18:45:23Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":33023117, "Loan":0 }
+{ "timestamp":"2017-03-07T14:02:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":33023117, "Loan":0 }
+{ "timestamp":"2017-03-07T15:51:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":33023117, "Loan":0 }
+{ "timestamp":"2017-03-07T15:54:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":33023117, "Loan":0 }
+{ "timestamp":"2017-03-07T15:55:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":33023117, "Loan":0 }
+{ "timestamp":"2017-03-07T15:57:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":33023117, "Loan":0 }
+{ "timestamp":"2017-03-07T15:58:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":33023117, "Loan":0 }
+{ "timestamp":"2017-03-07T16:03:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":33023117, "Loan":0 }
+{ "timestamp":"2017-03-07T17:26:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Credits":33023117, "Loan":0 }
+{ "timestamp":"2017-03-08T13:17:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":33023117, "Loan":0 }
+{ "timestamp":"2017-03-09T13:52:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":33023117, "Loan":0 }
+{ "timestamp":"2017-03-09T13:54:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":35856013, "Loan":0 }
+{ "timestamp":"2017-03-09T13:55:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":35856013, "Loan":0 }
+{ "timestamp":"2017-03-09T13:57:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":38688909, "Loan":0 }
+{ "timestamp":"2017-03-09T13:58:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":38688909, "Loan":0 }
+{ "timestamp":"2017-03-09T14:00:21Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":41350230, "Loan":0 }
+{ "timestamp":"2017-03-09T14:01:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":41350230, "Loan":0 }
+{ "timestamp":"2017-03-09T14:03:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":44905734, "Loan":0 }
+{ "timestamp":"2017-03-09T14:04:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":44905734, "Loan":0 }
+{ "timestamp":"2017-03-09T14:05:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":44905734, "Loan":0 }
+{ "timestamp":"2017-03-09T14:06:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":48444654, "Loan":0 }
+{ "timestamp":"2017-03-09T14:08:57Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":48444654, "Loan":0 }
+{ "timestamp":"2017-03-09T14:11:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":48444654, "Loan":0 }
+{ "timestamp":"2017-03-09T14:12:21Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":48444654, "Loan":0 }
+{ "timestamp":"2017-03-09T14:14:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":51919230, "Loan":0 }
+{ "timestamp":"2017-03-09T14:15:21Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":51919230, "Loan":0 }
+{ "timestamp":"2017-03-09T14:16:23Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":51919230, "Loan":0 }
+{ "timestamp":"2017-03-09T14:18:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":55425978, "Loan":0 }
+{ "timestamp":"2017-03-09T14:20:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":55425978, "Loan":0 }
+{ "timestamp":"2017-03-09T14:21:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":58836210, "Loan":0 }
+{ "timestamp":"2017-03-09T14:23:18Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":58836210, "Loan":0 }
+{ "timestamp":"2017-03-09T14:24:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":58836210, "Loan":0 }
+{ "timestamp":"2017-03-09T14:26:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":62439474, "Loan":0 }
+{ "timestamp":"2017-03-09T14:28:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":62439474, "Loan":0 }
+{ "timestamp":"2017-03-09T14:30:21Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":62439474, "Loan":0 }
+{ "timestamp":"2017-03-09T14:32:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":62439474, "Loan":0 }
+{ "timestamp":"2017-03-09T14:33:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":62439474, "Loan":0 }
+{ "timestamp":"2017-03-09T14:34:05Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":62439474, "Loan":0 }
+{ "timestamp":"2017-03-09T14:38:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":66095786, "Loan":0 }
+{ "timestamp":"2017-03-09T14:39:11Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":66095786, "Loan":0 }
+{ "timestamp":"2017-03-09T14:40:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":66095786, "Loan":0 }
+{ "timestamp":"2017-03-09T14:41:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":66095786, "Loan":0 }
+{ "timestamp":"2017-03-09T14:42:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":66095786, "Loan":0 }
+{ "timestamp":"2017-03-09T16:40:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Asp", "ShipID":51, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":53927087, "Loan":0 }
+{ "timestamp":"2017-03-10T15:11:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Asp", "ShipID":51, "GameMode":"Solo", "Credits":53927087, "Loan":0 }
+{ "timestamp":"2017-03-10T15:37:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Viper", "ShipID":53, "StartDead":true, "GameMode":"Solo", "Credits":49833163, "Loan":0 }
+{ "timestamp":"2017-03-11T13:20:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIII", "ShipID":54, "GameMode":"Solo", "Credits":55376960, "Loan":0 }
+{ "timestamp":"2017-03-11T15:02:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Open", "Credits":76809039, "Loan":0 }
+{ "timestamp":"2017-03-11T15:03:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":76809039, "Loan":0 }
+{ "timestamp":"2017-03-11T15:21:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Solo", "Credits":78549597, "Loan":0 }
+{ "timestamp":"2017-03-11T16:03:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Solo", "Credits":78549597, "Loan":0 }
+{ "timestamp":"2017-03-11T17:57:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":48009875, "Loan":0 }
+{ "timestamp":"2017-03-11T18:00:30Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":48009875, "Loan":0 }
+{ "timestamp":"2017-03-11T18:05:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":48009875, "Loan":0 }
+{ "timestamp":"2017-03-11T18:08:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":48009875, "Loan":0 }
+{ "timestamp":"2017-03-11T18:13:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":48009875, "Loan":0 }
+{ "timestamp":"2017-03-11T18:16:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":48009875, "Loan":0 }
+{ "timestamp":"2017-03-11T18:44:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":48009875, "Loan":0 }
+{ "timestamp":"2017-03-11T19:07:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":47982279, "Loan":0 }
+{ "timestamp":"2017-03-11T19:20:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":47982279, "Loan":0 }
+{ "timestamp":"2017-03-11T19:37:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":47982279, "Loan":0 }
+{ "timestamp":"2017-03-11T20:23:26Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":48022620, "Loan":0 }
+{ "timestamp":"2017-03-11T20:31:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":48022620, "Loan":0 }
+{ "timestamp":"2017-03-11T20:36:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":48022620, "Loan":0 }
+{ "timestamp":"2017-03-11T20:40:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":48022620, "Loan":0 }
+{ "timestamp":"2017-03-11T20:45:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":48022620, "Loan":0 }
+{ "timestamp":"2017-03-11T20:47:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":48022620, "Loan":0 }
+{ "timestamp":"2017-03-11T20:50:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":48022620, "Loan":0 }
+{ "timestamp":"2017-03-11T20:55:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":48022620, "Loan":0 }
+{ "timestamp":"2017-03-11T20:58:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":48022620, "Loan":0 }
+{ "timestamp":"2017-03-11T21:20:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":48002711, "Loan":0 }
+{ "timestamp":"2017-03-11T21:24:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":48002711, "Loan":0 }
+{ "timestamp":"2017-03-11T21:29:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":48002711, "Loan":0 }
+{ "timestamp":"2017-03-11T21:36:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":48002711, "Loan":0 }
+{ "timestamp":"2017-03-11T21:38:57Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":48002711, "Loan":0 }
+{ "timestamp":"2017-03-11T21:44:13Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":48002711, "Loan":0 }
+{ "timestamp":"2017-03-11T21:47:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":48002711, "Loan":0 }
+{ "timestamp":"2017-03-11T21:51:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":48002711, "Loan":0 }
+{ "timestamp":"2017-03-11T21:56:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":48002711, "Loan":0 }
+{ "timestamp":"2017-03-12T12:20:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":47979893, "Loan":0 }
+{ "timestamp":"2017-03-12T12:28:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":47979769, "Loan":0 }
+{ "timestamp":"2017-03-12T12:31:24Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":47979769, "Loan":0 }
+{ "timestamp":"2017-03-12T12:37:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":47979769, "Loan":0 }
+{ "timestamp":"2017-03-12T12:42:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":47979769, "Loan":0 }
+{ "timestamp":"2017-03-12T14:09:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":56, "StartLanded":true, "GameMode":"Open", "Credits":41977527, "Loan":0 }
+{ "timestamp":"2017-03-12T16:22:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":41977527, "Loan":0 }
+{ "timestamp":"2017-03-12T17:10:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Open", "Credits":20338628, "Loan":0 }
+{ "timestamp":"2017-03-12T17:18:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Solo", "Credits":20338628, "Loan":0 }
+{ "timestamp":"2017-03-13T14:48:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Solo", "Credits":20413899, "Loan":0 }
+{ "timestamp":"2017-03-13T15:54:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":43376485, "Loan":0 }
+{ "timestamp":"2017-03-13T16:10:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":43376485, "Loan":0 }
+{ "timestamp":"2017-03-13T17:45:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":43369317, "Loan":0 }
+{ "timestamp":"2017-03-13T18:36:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":43369317, "Loan":0 }
+{ "timestamp":"2017-03-13T18:36:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":43369317, "Loan":0 }
+{ "timestamp":"2017-03-14T14:59:52Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":43369317, "Loan":0 }
+{ "timestamp":"2017-03-14T16:48:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":44572079, "Loan":0 }
+{ "timestamp":"2017-03-14T17:28:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":44572079, "Loan":0 }
+{ "timestamp":"2017-03-14T17:30:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":44572079, "Loan":0 }
+{ "timestamp":"2017-03-14T18:34:21Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":44448081, "Loan":0 }
+{ "timestamp":"2017-03-15T11:01:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":44301458, "Loan":0 }
+{ "timestamp":"2017-03-15T17:31:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Solo", "Credits":20993983, "Loan":0 }
+{ "timestamp":"2017-03-15T18:36:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Solo", "Credits":20993983, "Loan":0 }
+{ "timestamp":"2017-03-16T16:13:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":60, "StartLanded":true, "GameMode":"Solo", "Credits":20937488, "Loan":0 }
+{ "timestamp":"2017-03-16T18:14:12Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":58021058, "Loan":0 }
+{ "timestamp":"2017-03-17T11:38:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":58256118, "Loan":0 }
+{ "timestamp":"2017-03-17T11:46:30Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":58256118, "Loan":0 }
+{ "timestamp":"2017-03-17T14:21:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"CobraMkIII", "ShipID":61, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":57550269, "Loan":0 }
+{ "timestamp":"2017-03-19T17:18:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Open", "Credits":46000762, "Loan":0 }
+{ "timestamp":"2017-03-21T09:45:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Solo", "Credits":46000762, "Loan":0 }
+{ "timestamp":"2017-03-21T10:22:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Python", "ShipID":62, "GameMode":"Solo", "Credits":19889848, "Loan":0 }
+{ "timestamp":"2017-03-21T10:55:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Python", "ShipID":62, "GameMode":"Solo", "Credits":19889848, "Loan":0 }
+{ "timestamp":"2017-03-21T11:01:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Python", "ShipID":62, "GameMode":"Solo", "Credits":19889848, "Loan":0 }
+{ "timestamp":"2017-03-21T16:40:06Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Python", "ShipID":62, "GameMode":"Solo", "Credits":19386429, "Loan":0 }
+{ "timestamp":"2017-03-21T17:25:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":49455744, "Loan":0 }
+{ "timestamp":"2017-03-21T17:51:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":53935729, "Loan":0 }
+{ "timestamp":"2017-03-21T17:53:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":56627253, "Loan":0 }
+{ "timestamp":"2017-03-21T17:55:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":56627253, "Loan":0 }
+{ "timestamp":"2017-03-21T17:57:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":56627253, "Loan":0 }
+{ "timestamp":"2017-03-21T17:58:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":59059353, "Loan":0 }
+{ "timestamp":"2017-03-21T17:59:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":59059353, "Loan":0 }
+{ "timestamp":"2017-03-21T18:01:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":59059353, "Loan":0 }
+{ "timestamp":"2017-03-21T18:02:14Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":59059353, "Loan":0 }
+{ "timestamp":"2017-03-21T18:04:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":60973785, "Loan":0 }
+{ "timestamp":"2017-03-22T14:58:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":56337604, "Loan":0 }
+{ "timestamp":"2017-03-22T17:59:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":50758475, "Loan":0 }
+{ "timestamp":"2017-03-22T18:17:57Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Open", "Credits":31237558, "Loan":0 }
+{ "timestamp":"2017-03-24T16:40:04Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Trader", "ShipID":46, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":31203769, "Loan":0 }
+{ "timestamp":"2017-03-24T19:15:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":66470928, "Loan":0 }
+{ "timestamp":"2017-03-24T19:20:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":66470928, "Loan":0 }
+{ "timestamp":"2017-03-24T19:24:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":66470928, "Loan":0 }
+{ "timestamp":"2017-03-24T19:27:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":66470928, "Loan":0 }
+{ "timestamp":"2017-03-24T19:30:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":66470928, "Loan":0 }
+{ "timestamp":"2017-03-24T19:36:58Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":66470928, "Loan":0 }
+{ "timestamp":"2017-03-24T19:40:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":66470928, "Loan":0 }
+{ "timestamp":"2017-03-25T17:50:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":66470928, "Loan":0 }
+{ "timestamp":"2017-03-25T18:28:56Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":66470152, "Loan":0 }
+{ "timestamp":"2017-03-25T18:34:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":66470152, "Loan":0 }
+{ "timestamp":"2017-03-25T18:39:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Open", "Credits":66470152, "Loan":0 }
+{ "timestamp":"2017-03-27T16:10:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":66470152, "Loan":0 }
+{ "timestamp":"2017-03-27T16:46:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":66470152, "Loan":0 }
+{ "timestamp":"2017-03-27T16:55:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Vulture", "ShipID":55, "GameMode":"Solo", "Credits":66470152, "Loan":0 }
+{ "timestamp":"2017-03-27T18:28:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Open", "Credits":17166892, "Loan":0 }
+{ "timestamp":"2017-03-28T14:26:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Solo", "Credits":14789606, "Loan":0 }
+{ "timestamp":"2017-03-28T14:45:57Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Open", "Credits":11199941, "Loan":0 }
+{ "timestamp":"2017-03-30T13:21:59Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Solo", "Credits":11199941, "Loan":0 }
+{ "timestamp":"2017-03-31T19:36:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":11199941, "Loan":0 }
+{ "timestamp":"2017-03-31T20:00:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":11199941, "Loan":0 }
+{ "timestamp":"2017-04-01T13:50:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Solo", "Credits":9662465, "Loan":0 }
+{ "timestamp":"2017-04-01T13:56:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Solo", "Credits":10162465, "Loan":0 }
+{ "timestamp":"2017-04-01T15:59:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Solo", "Credits":10160652, "Loan":0 }
+{ "timestamp":"2017-04-01T16:48:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":57, "StartLanded":true, "GameMode":"Solo", "Credits":10160652, "Loan":0 }
+{ "timestamp":"2017-04-01T16:52:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":57, "StartLanded":true, "GameMode":"Solo", "Credits":10160652, "Loan":0 }
+{ "timestamp":"2017-04-01T17:08:13Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":57, "StartLanded":true, "GameMode":"Open", "Credits":10160652, "Loan":0 }
+{ "timestamp":"2017-04-01T17:21:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "StartLanded":true, "GameMode":"Solo", "Credits":10087357, "Loan":0 }
+{ "timestamp":"2017-04-01T17:43:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Solo", "Credits":10087357, "Loan":0 }
+{ "timestamp":"2017-04-01T18:55:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":10086304, "Loan":0 }
+{ "timestamp":"2017-04-01T19:11:28Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"TestBuggy", "ShipID":57, "StartLanded":true, "GameMode":"Solo", "Credits":10086304, "Loan":0 }
+{ "timestamp":"2017-04-02T17:21:24Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":10036937, "Loan":0 }
+{ "timestamp":"2017-04-02T17:38:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Solo", "Credits":10036937, "Loan":0 }
+{ "timestamp":"2017-04-02T18:12:35Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Solo", "Credits":10036405, "Loan":0 }
+{ "timestamp":"2017-04-02T18:32:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Solo", "Credits":10036405, "Loan":0 }
+{ "timestamp":"2017-04-03T12:24:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Solo", "Credits":10036306, "Loan":0 }
+{ "timestamp":"2017-04-03T13:13:06Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Solo", "Credits":10036306, "Loan":0 }
+{ "timestamp":"2017-04-03T13:29:55Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Open", "Credits":10036306, "Loan":0 }
+{ "timestamp":"2017-04-03T13:39:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Solo", "Credits":10036306, "Loan":0 }
+{ "timestamp":"2017-04-03T15:14:26Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Open", "Credits":15345139, "Loan":0 }
+{ "timestamp":"2017-04-04T15:27:54Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":15345139, "Loan":0 }
+{ "timestamp":"2017-04-04T17:06:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":11065994, "Loan":0 }
+{ "timestamp":"2017-04-04T17:47:33Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":12542087, "Loan":0 }
+{ "timestamp":"2017-04-04T17:49:00Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":12542087, "Loan":0 }
+{ "timestamp":"2017-04-04T17:51:39Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":15285919, "Loan":0 }
+{ "timestamp":"2017-04-04T17:58:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":26577588, "Loan":0 }
+{ "timestamp":"2017-04-04T17:59:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":29409996, "Loan":0 }
+{ "timestamp":"2017-04-04T18:01:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":29409996, "Loan":0 }
+{ "timestamp":"2017-04-04T18:03:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":29409996, "Loan":0 }
+{ "timestamp":"2017-04-04T18:07:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":38238672, "Loan":0 }
+{ "timestamp":"2017-04-04T18:08:41Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":38238672, "Loan":0 }
+{ "timestamp":"2017-04-04T18:13:30Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":46592769, "Loan":0 }
+{ "timestamp":"2017-04-04T18:16:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":52408245, "Loan":0 }
+{ "timestamp":"2017-04-04T18:26:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":63646065, "Loan":0 }
+{ "timestamp":"2017-04-04T18:31:36Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":63646065, "Loan":0 }
+{ "timestamp":"2017-04-04T18:42:14Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":71296545, "Loan":0 }
+{ "timestamp":"2017-04-05T15:31:06Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":77290425, "Loan":0 }
+{ "timestamp":"2017-04-05T15:35:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":85706181, "Loan":0 }
+{ "timestamp":"2017-04-05T15:44:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":102840377, "Loan":0 }
+{ "timestamp":"2017-04-05T15:48:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":111018073, "Loan":0 }
+{ "timestamp":"2017-04-05T15:54:01Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":119587697, "Loan":0 }
+{ "timestamp":"2017-04-05T16:23:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":137199941, "Loan":0 }
+{ "timestamp":"2017-04-05T16:25:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":138767429, "Loan":0 }
+{ "timestamp":"2017-04-05T16:36:02Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":155852273, "Loan":0 }
+{ "timestamp":"2017-04-05T16:41:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":164560421, "Loan":0 }
+{ "timestamp":"2017-04-05T16:50:46Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":180050869, "Loan":0 }
+{ "timestamp":"2017-04-05T17:31:38Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":186896653, "Loan":0 }
+{ "timestamp":"2017-04-05T18:27:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":197167573, "Loan":0 }
+{ "timestamp":"2017-04-05T18:29:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":197167573, "Loan":0 }
+{ "timestamp":"2017-04-05T18:34:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":205140893, "Loan":0 }
+{ "timestamp":"2017-04-05T18:40:32Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":215912397, "Loan":0 }
+{ "timestamp":"2017-04-05T18:43:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":220666933, "Loan":0 }
+{ "timestamp":"2017-04-05T18:44:21Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":220666933, "Loan":0 }
+{ "timestamp":"2017-04-05T18:46:22Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":223315029, "Loan":0 }
+{ "timestamp":"2017-04-05T18:49:57Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":226083493, "Loan":0 }
+{ "timestamp":"2017-04-05T18:52:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":231438445, "Loan":0 }
+{ "timestamp":"2017-04-05T19:19:14Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":251437477, "Loan":0 }
+{ "timestamp":"2017-04-06T12:04:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":254444277, "Loan":0 }
+{ "timestamp":"2017-04-06T12:09:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":263789189, "Loan":0 }
+{ "timestamp":"2017-04-06T12:15:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":275024453, "Loan":0 }
+{ "timestamp":"2017-04-06T12:17:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":275024453, "Loan":0 }
+{ "timestamp":"2017-04-06T12:21:11Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":283285541, "Loan":0 }
+{ "timestamp":"2017-04-06T12:22:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":286007945, "Loan":0 }
+{ "timestamp":"2017-04-06T12:26:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":291765673, "Loan":0 }
+{ "timestamp":"2017-04-06T12:30:07Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":300807517, "Loan":0 }
+{ "timestamp":"2017-04-06T16:08:31Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Courier", "ShipID":67, "GameMode":"Open", "Credits":92891320, "Loan":0 }
+{ "timestamp":"2017-04-07T14:18:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Courier", "ShipID":67, "GameMode":"Open", "Credits":92971267, "Loan":0 }
+{ "timestamp":"2017-04-07T15:10:21Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":93272297, "Loan":0 }
+{ "timestamp":"2017-04-07T15:12:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Solo", "Credits":93266785, "Loan":0 }
+{ "timestamp":"2017-04-07T15:15:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Open", "Credits":93265810, "Loan":0 }
+{ "timestamp":"2017-04-07T15:17:24Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Solo", "Credits":93265810, "Loan":0 }
+{ "timestamp":"2017-04-07T15:31:18Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Open", "Credits":95467019, "Loan":0 }
+{ "timestamp":"2017-04-07T15:32:45Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":94567019, "Loan":0 }
+{ "timestamp":"2017-04-07T15:35:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Solo", "Credits":94573247, "Loan":0 }
+{ "timestamp":"2017-04-07T15:36:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Open", "Credits":94573247, "Loan":0 }
+{ "timestamp":"2017-04-07T15:47:40Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Solo", "Credits":101068053, "Loan":0 }
+{ "timestamp":"2017-04-07T15:49:19Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Open", "Credits":101068053, "Loan":0 }
+{ "timestamp":"2017-04-07T15:51:15Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":101068053, "Loan":0 }
+{ "timestamp":"2017-04-07T15:52:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Solo", "Credits":100418053, "Loan":0 }
+{ "timestamp":"2017-04-07T15:54:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Open", "Credits":100293053, "Loan":0 }
+{ "timestamp":"2017-04-07T15:57:51Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Open", "Credits":100293053, "Loan":0 }
+{ "timestamp":"2017-04-07T16:09:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":99539587, "Loan":0 }
+{ "timestamp":"2017-04-07T16:10:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Solo", "Credits":98414587, "Loan":0 }
+{ "timestamp":"2017-04-07T17:49:17Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":98364587, "Loan":0 }
+{ "timestamp":"2017-04-07T18:42:16Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":106136336, "Loan":0 }
+{ "timestamp":"2017-04-07T18:44:25Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Open", "Credits":106136336, "Loan":0 }
+{ "timestamp":"2017-04-07T18:47:24Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Solo", "Credits":106144022, "Loan":0 }
+{ "timestamp":"2017-04-07T18:50:10Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":106144022, "Loan":0 }
+{ "timestamp":"2017-04-08T15:32:32Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"SideWinder", "ShipID":77, "GameMode":"Open", "Credits":106144022, "Loan":0 }
+{ "timestamp":"2017-04-08T16:43:32Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Courier", "ShipID":67, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":106144005, "Loan":0 }
+{ "timestamp":"2017-04-08T17:42:42Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Courier", "ShipID":67, "GameMode":"Solo", "Credits":106240253, "Loan":0 }
+{ "timestamp":"2017-04-08T17:49:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Empire_Courier", "ShipID":67, "GameMode":"Open", "Credits":104646790, "Loan":0 }
+{ "timestamp":"2017-04-08T18:46:47Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":103085641, "Loan":0 }
+{ "timestamp":"2017-04-09T10:13:53Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"FerDeLance", "ShipID":56, "GameMode":"Open", "Credits":96114562, "Loan":0 }
+{ "timestamp":"2017-04-09T11:39:44Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":95926429, "Loan":0 }
+{ "timestamp":"2017-04-09T11:41:34Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":95926429, "Loan":0 }
+{ "timestamp":"2017-04-09T11:43:27Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":95926429, "Loan":0 }
+{ "timestamp":"2017-04-09T11:46:09Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":99669277, "Loan":0 }
+{ "timestamp":"2017-04-09T11:47:48Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":99723812, "Loan":0 }
+{ "timestamp":"2017-04-09T11:49:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":99723812, "Loan":0 }
+{ "timestamp":"2017-04-09T11:51:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":99723812, "Loan":0 }
+{ "timestamp":"2017-04-10T12:32:26Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":102941348, "Loan":0 }
+{ "timestamp":"2017-04-10T13:20:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":94302811, "Loan":0 }
+{ "timestamp":"2017-04-10T15:21:43Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":94141007, "Loan":0 }
+{ "timestamp":"2017-04-10T15:23:03Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":94141007, "Loan":0 }
+{ "timestamp":"2017-04-10T15:31:37Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":94140997, "Loan":0 }
+{ "timestamp":"2017-04-10T15:33:32Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Solo", "Credits":94140997, "Loan":0 }
+{ "timestamp":"2017-04-10T15:37:32Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Type6", "ShipID":81, "GameMode":"Open", "Credits":92919960, "Loan":0 }
+{ "timestamp":"2017-04-10T15:56:29Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":93007281, "Loan":0 }
+{ "timestamp":"2017-04-10T17:22:06Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":92088768, "Loan":0 }
+{ "timestamp":"2017-04-10T17:51:49Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":92080602, "Loan":0 }
+{ "timestamp":"2017-04-10T18:12:20Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Group", "Group":"ERICBOL0703", "Credits":90890826, "Loan":0 }
+{ "timestamp":"2017-04-10T18:14:08Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":90890826, "Loan":0 }
+{ "timestamp":"2017-04-10T21:10:50Z", "event":"LoadGame", "Commander":"ERICBOL0703", "Ship":"Anaconda", "ShipID":32, "GameMode":"Open", "Credits":89789693, "Loan":0 }

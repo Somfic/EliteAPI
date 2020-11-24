@@ -1,0 +1,9 @@
+{ "timestamp":"2018-12-12T16:09:36Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":2020082, "Factions":[ { "Faction":"", "Amount":63112 }, { "Faction":"", "Amount":124522 }, { "Faction":"", "Amount":276850 }, { "Faction":"", "Amount":691121 }, { "Faction":"", "Amount":55822 }, { "Faction":"", "Amount":27270 }, { "Faction":"", "Amount":6000 }, { "Faction":"", "Amount":75150 }, { "Faction":"", "Amount":148335 }, { "Faction":"", "Amount":327370 }, { "Faction":"", "Amount":207250 }, { "Faction":"", "Amount":17280 } ] }
+{ "timestamp":"2018-12-13T11:36:59Z", "event":"RedeemVoucher", "Type":"", "Amount":50000, "Faction":"" }
+{ "timestamp":"2018-12-13T20:48:15Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":351539, "Factions":[ { "Faction":"", "Amount":351539 } ] }
+{ "timestamp":"2018-12-14T11:21:32Z", "event":"RedeemVoucher", "Type":"", "Amount":100000, "Faction":"" }
+{ "timestamp":"2018-12-14T15:09:12Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":261017, "Factions":[ { "Faction":"", "Amount":261017 } ] }
+{ "timestamp":"2018-12-14T15:34:15Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":275670, "Factions":[ { "Faction":"", "Amount":275670 } ] }
+{ "timestamp":"2018-12-14T23:31:03Z", "event":"RedeemVoucher", "Type":"", "Amount":257500, "Faction":"" }
+{ "timestamp":"2018-12-15T13:33:11Z", "event":"RedeemVoucher", "Type":"", "Amount":50000, "Faction":"" }
+{ "timestamp":"2018-12-15T19:09:41Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":282487, "Factions":[ { "Faction":"", "Amount":282487 } ] }

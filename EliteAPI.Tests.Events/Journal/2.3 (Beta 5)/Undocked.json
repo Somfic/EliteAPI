@@ -1,0 +1,5 @@
+{ "timestamp":"2017-04-11T10:43:34Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-04-11T10:53:47Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-04-11T14:26:39Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-04-11T16:24:39Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-04-11T16:33:43Z", "event":"Undocked", "StationName":"Warinus", "StationType":"AsteroidBase" }

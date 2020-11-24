@@ -1,0 +1,4 @@
+{ "timestamp":"2017-07-14T19:53:15Z", "event":"EngineerContribution", "Engineer":"Colonel Bris Dekker", "Type":"Bond", "Quantity":1000000, "TotalQuantity":1000000 }
+{ "timestamp":"2017-09-22T17:28:43Z", "event":"EngineerContribution", "Engineer":"The Sarge", "Type":"Materials", "Material":"shieldpatternanalysis", "Quantity":50, "TotalQuantity":50 }
+{ "timestamp":"2017-09-23T14:20:55Z", "event":"EngineerContribution", "Engineer":"Lori Jameson", "Type":"Commodity", "Commodity":"konggaale", "Quantity":18, "TotalQuantity":18 }
+{ "timestamp":"2017-09-23T14:49:27Z", "event":"EngineerContribution", "Engineer":"Lori Jameson", "Type":"Commodity", "Commodity":"konggaale", "Quantity":7, "TotalQuantity":25 }

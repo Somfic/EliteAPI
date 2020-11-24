@@ -1,0 +1,6 @@
+{ "timestamp":"2017-09-27T15:39:29Z", "event":"RepairDrone", "HullRepaired":59.999756 }
+{ "timestamp":"2017-09-27T18:24:50Z", "event":"RepairDrone", "HullRepaired":59.999748 }
+{ "timestamp":"2017-09-27T18:30:57Z", "event":"RepairDrone", "HullRepaired":59.999763 }
+{ "timestamp":"2017-09-27T18:31:27Z", "event":"RepairDrone", "HullRepaired":21.949860 }
+{ "timestamp":"2017-10-30T14:21:14Z", "event":"RepairDrone", "HullRepaired":51.019543 }
+{ "timestamp":"2017-11-03T14:34:49Z", "event":"RepairDrone", "HullRepaired":68.322449, "CockpitRepaired":1.943370 }

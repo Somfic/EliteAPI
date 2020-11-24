@@ -1,0 +1,6 @@
+{ "timestamp":"2018-12-13T20:32:03Z", "event":"Bounty", "Rewards":[ { "Faction":"YZ Canis Minoris Systems", "Reward":183595 } ], "Target":"ferdelance", "TotalReward":183595, "VictimFaction":"Clan of G 89-32" }
+{ "timestamp":"2018-12-13T20:33:39Z", "event":"Bounty", "Rewards":[ { "Faction":"YZ Canis Minoris Systems", "Reward":56784 } ], "Target":"vulture", "TotalReward":56784, "VictimFaction":"Clan of G 89-32" }
+{ "timestamp":"2018-12-13T20:35:43Z", "event":"Bounty", "Rewards":[ { "Faction":"YZ Canis Minoris Systems", "Reward":111160 } ], "Target":"vulture", "TotalReward":111160, "VictimFaction":"Clan of G 89-32" }
+{ "timestamp":"2018-12-14T15:03:44Z", "event":"Bounty", "Rewards":[ { "Faction":"Earth Defense Fleet", "Reward":261017 } ], "Target":"federation_corvette", "TotalReward":261017, "VictimFaction":"Ross 47 Purple Society" }
+{ "timestamp":"2018-12-14T15:26:27Z", "event":"Bounty", "Rewards":[ { "Faction":"Earth Defense Fleet", "Reward":275670 } ], "Target":"federation_corvette", "TotalReward":275670, "VictimFaction":"Wolf 1453 Clan" }
+{ "timestamp":"2018-12-15T18:48:18Z", "event":"Bounty", "Rewards":[ { "Faction":"Earth Defense Fleet", "Reward":282487 } ], "Target":"federation_corvette", "TotalReward":282487, "VictimFaction":"Wolf 1453 Clan" }

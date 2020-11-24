@@ -1,0 +1,9 @@
+{ "timestamp":"2017-03-18T11:11:26Z", "event":"ShipyardBuy", "ShipType":"federation_corvette", "ShipPrice":18796945, "StoreOldShip":"CobraMkIV", "StoreShipID":45 }
+{ "timestamp":"2017-03-18T12:20:56Z", "event":"ShipyardBuy", "ShipType":"hauler", "ShipPrice":5272, "SellOldShip":"Federation_Corvette", "SellShipID":46, "SellPrice":17262292 }
+{ "timestamp":"2017-03-18T12:30:52Z", "event":"ShipyardBuy", "ShipType":"anaconda", "ShipPrice":14696945, "StoreOldShip":"Hauler", "StoreShipID":46 }
+{ "timestamp":"2017-03-18T12:42:51Z", "event":"ShipyardBuy", "ShipType":"cutter", "ShipPrice":18807251, "StoreOldShip":"Anaconda", "StoreShipID":47 }
+{ "timestamp":"2017-03-18T13:05:29Z", "event":"ShipyardBuy", "ShipType":"federation_corvette", "ShipPrice":16917251, "SellOldShip":"Cutter", "SellShipID":48, "SellPrice":38351635 }
+{ "timestamp":"2017-03-18T14:57:25Z", "event":"ShipyardBuy", "ShipType":"dolphin", "ShipPrice":120359, "StoreOldShip":"Federation_Corvette", "StoreShipID":48 }
+{ "timestamp":"2017-03-18T15:55:19Z", "event":"ShipyardBuy", "ShipType":"cutter", "ShipPrice":18807251, "StoreOldShip":"Dolphin", "StoreShipID":51 }
+{ "timestamp":"2017-03-19T13:43:22Z", "event":"ShipyardBuy", "ShipType":"federation_gunship", "ShipPrice":3223279, "StoreOldShip":"Federation_Corvette", "StoreShipID":48 }
+{ "timestamp":"2017-03-19T14:11:49Z", "event":"ShipyardBuy", "ShipType":"cutter", "ShipPrice":18807251, "StoreOldShip":"Federation_Gunship", "StoreShipID":63 }

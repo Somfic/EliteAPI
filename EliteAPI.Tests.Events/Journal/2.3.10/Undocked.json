@@ -1,0 +1,4 @@
+{ "timestamp":"2017-06-27T19:04:43Z", "event":"Undocked", "StationName":"Ziegel Dock", "StationType":"Coriolis" }
+{ "timestamp":"2017-07-01T10:53:10Z", "event":"Undocked", "StationName":"Ziegel Dock", "StationType":"Coriolis" }
+{ "timestamp":"2017-07-01T11:30:13Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-07-01T18:10:16Z", "event":"Undocked", "StationName":"Attenborough's Watch", "StationType":"AsteroidBase" }

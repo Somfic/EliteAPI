@@ -1,0 +1,31 @@
+{ "timestamp":"2017-04-11T18:21:39Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Fujin Gold General Organisation", "Fine":200 }
+{ "timestamp":"2017-04-12T12:33:53Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Segoveduwa Blue Electronics", "Fine":200 }
+{ "timestamp":"2017-04-12T20:26:55Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Allied Apsu Freedom Party", "Victim":"$ShipName_Police_Empire;", "Victim_Localised":"Internal Security Service", "Bounty":300 }
+{ "timestamp":"2017-04-12T20:27:19Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Allied Apsu Freedom Party", "Victim":"$ShipName_Police_Empire;", "Victim_Localised":"Internal Security Service", "Bounty":6000 }
+{ "timestamp":"2017-04-12T20:27:32Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Allied Apsu Freedom Party", "Victim":"$ShipName_Police_Empire;", "Victim_Localised":"Internal Security Service", "Bounty":300 }
+{ "timestamp":"2017-04-12T20:28:49Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Allied Apsu Freedom Party", "Victim":"$ShipName_Police_Empire;", "Victim_Localised":"Internal Security Service", "Bounty":6000 }
+{ "timestamp":"2017-04-12T20:29:00Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Allied Apsu Freedom Party", "Victim":"$ShipName_Police_Empire;", "Victim_Localised":"Internal Security Service", "Bounty":300 }
+{ "timestamp":"2017-04-12T21:11:41Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Allied Apsu Freedom Party", "Victim":"$ShipName_Police_Empire;", "Victim_Localised":"Internal Security Service", "Bounty":300 }
+{ "timestamp":"2017-04-14T12:46:56Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"LTT 4487 Industry", "Victim":"Edwin Rosling", "Bounty":400 }
+{ "timestamp":"2017-04-14T13:13:21Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"Adle's Armada", "Fine":250 }
+{ "timestamp":"2017-04-14T13:13:22Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"Adle's Armada", "Fine":250 }
+{ "timestamp":"2017-04-14T13:30:59Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"Independent Eravate Free", "Fine":150 }
+{ "timestamp":"2017-04-14T13:31:00Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"Independent Eravate Free", "Fine":150 }
+{ "timestamp":"2017-04-14T13:38:53Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"Independent Eravate Free", "Fine":150 }
+{ "timestamp":"2017-04-14T13:38:54Z", "event":"CommitCrime", "CrimeType":"dumpingNearStation", "Faction":"Independent Eravate Free", "Fine":150 }
+{ "timestamp":"2017-04-18T16:20:48Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone_hulldamage", "Faction":"Qi Lisu Interstellar", "Fine":400 }
+{ "timestamp":"2017-04-18T16:35:35Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Orishpucho Crimson Legal Int", "Victim":"Philomena Hamilton", "Bounty":400 }
+{ "timestamp":"2017-04-18T16:42:00Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Orishpucho Crimson Legal Int", "Victim":"Federal Agent", "Bounty":400 }
+{ "timestamp":"2017-04-18T16:42:32Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Orishpucho Crimson Legal Int", "Victim":"Federal Agent", "Bounty":6000 }
+{ "timestamp":"2017-04-18T16:43:42Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Orishpucho Crimson Legal Int", "Victim":"Federal Agent", "Bounty":400 }
+{ "timestamp":"2017-04-18T16:44:02Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Orishpucho Crimson Legal Int", "Victim":"Federal Agent", "Bounty":6000 }
+{ "timestamp":"2017-04-18T17:52:55Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Orishpucho Crimson Legal Int", "Fine":400 }
+{ "timestamp":"2017-04-19T17:31:51Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Alioth Independents", "Fine":400 }
+{ "timestamp":"2017-04-20T11:01:10Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"78 Ursae Majoris for Equality", "Fine":100 }
+{ "timestamp":"2017-04-20T11:01:13Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone_hulldamage", "Faction":"78 Ursae Majoris for Equality", "Fine":200 }
+{ "timestamp":"2017-04-20T11:04:54Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"LHS 331 Pro-Alliance Group", "Fine":400 }
+{ "timestamp":"2017-04-20T13:33:35Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone_hulldamage", "Faction":"Workers of Lave Liberals", "Fine":200 }
+{ "timestamp":"2017-04-21T17:13:36Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"The Pilots Federation", "Fine":75 }
+{ "timestamp":"2017-04-21T21:05:20Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"He Bo Pro-Alliance Party", "Victim":"Ambrose John", "Bounty":6000 }
+{ "timestamp":"2017-04-21T21:19:09Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"He Bo Pro-Alliance Party", "Victim":"Alliance Enforcer", "Bounty":200 }
+{ "timestamp":"2017-04-21T21:26:40Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"He Bo Pro-Alliance Party", "Fine":100 }

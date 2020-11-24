@@ -1,0 +1,7 @@
+{ "timestamp":"2017-03-18T16:04:54Z", "event":"VehicleSwitch" }
+{ "timestamp":"2017-03-18T18:13:02Z", "event":"VehicleSwitch" }
+{ "timestamp":"2017-03-18T19:48:03Z", "event":"VehicleSwitch" }
+{ "timestamp":"2017-03-19T13:57:49Z", "event":"VehicleSwitch", "To":"Fighter" }
+{ "timestamp":"2017-03-19T13:59:38Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2017-03-19T14:36:15Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2017-03-19T17:12:13Z", "event":"VehicleSwitch" }

@@ -1,22 +1,15 @@
-﻿using EliteAPI.Event.Models.Abstractions;
+﻿
+using EliteAPI.Event.Provider.Abstractions;
 
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-using Somfic.Logging.Console;
-using Somfic.Logging.Console.Themes;
-
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
-using EliteAPI.Event.Processor.Abstractions;
-using EliteAPI.Event.Provider.Abstractions;
-using Newtonsoft.Json;
-using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI.Tests.Events
 {
@@ -28,9 +21,7 @@ namespace EliteAPI.Tests.Events
             IHost host = Host.CreateDefaultBuilder()
                 .ConfigureLogging((context, logger) =>
                 {
-                    logger.ClearProviders();
                     logger.SetMinimumLevel(LogLevel.Debug);
-                    logger.AddPrettyConsole(ConsoleThemes.Code);
                 })
                 .ConfigureServices((context, service) =>
                 {
@@ -50,7 +41,7 @@ namespace EliteAPI.Tests.Events
     public class Core
     {
         private readonly ILogger<Core> _log;
-        private IEventProvider _eventProvider;
+        private readonly IEventProvider _eventProvider;
 
         public Core(IServiceProvider services)
         {
@@ -63,24 +54,24 @@ namespace EliteAPI.Tests.Events
         {
             if (!Directory.Exists(path))
             {
-                _log.LogError(new DirectoryNotFoundException(path),"Directory does not exist");
+                _log.LogError(new DirectoryNotFoundException(path), "Directory does not exist");
                 Environment.Exit(-1);
                 return;
             }
 
             DirectoryInfo directory = new DirectoryInfo(path);
 
-            var versions = directory.GetDirectories();
+            DirectoryInfo[] versions = directory.GetDirectories();
 
             //         event              version json
             Dictionary<string, Dictionary<string, string[]>> allEvents = new Dictionary<string, Dictionary<string, string[]>>();
 
-            foreach (var versionDirectory in versions)
+            foreach (DirectoryInfo versionDirectory in versions)
             {
                 string version = versionDirectory.Name;
-                var files = versionDirectory.GetFiles();
+                FileInfo[] files = versionDirectory.GetFiles();
 
-                foreach (var fileInfo in files)
+                foreach (FileInfo fileInfo in files)
                 {
                     string eventName = fileInfo.Name;
                     string[] jsonEvents = await File.ReadAllLinesAsync(fileInfo.FullName);
@@ -91,29 +82,31 @@ namespace EliteAPI.Tests.Events
                     }
                     else
                     {
-                        var x = new Dictionary<string, string[]>();
-                        x.Add(version, jsonEvents);
+                        Dictionary<string, string[]> x = new Dictionary<string, string[]>
+                        {
+                            { version, jsonEvents }
+                        };
                         allEvents.Add(eventName, x);
                     }
-                }   
+                }
             }
 
             _log.LogInformation("Found {amount} unique json events", allEvents.Count);
 
 
-            var errors = new List<ErrorEntry>();
+            List<ErrorEntry> errors = new List<ErrorEntry>();
             int totalErrors = 0;
 
-            foreach (var testCase in allEvents)
+            foreach (KeyValuePair<string, Dictionary<string, string[]>> testCase in allEvents)
             {
                 string eventName = testCase.Key;
 
                 _log.LogInformation("Testing {event}", eventName);
 
-                foreach (var jsonPair in testCase.Value)
+                foreach (KeyValuePair<string, string[]> jsonPair in testCase.Value)
                 {
                     string version = jsonPair.Key;
-                    foreach (var json in jsonPair.Value)
+                    foreach (string json in jsonPair.Value)
                     {
                         try
                         {
@@ -124,7 +117,7 @@ namespace EliteAPI.Tests.Events
                             totalErrors++;
                             if (!errors.Any(x => x.Exception.Message == ex.Message && x.Version == version && x.EventName == eventName))
                             {
-                                if(!ex.Data.Contains("Json")) { ex.Data.Add("Json", json); }
+                                if (!ex.Data.Contains("Json")) { ex.Data.Add("Json", json); }
 
                                 errors.Add(new ErrorEntry(version, ex, eventName));
                             }

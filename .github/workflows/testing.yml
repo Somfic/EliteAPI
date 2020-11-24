@@ -6,13 +6,7 @@ on:
   pull_request:
     branches: [ master, dev ]
 
-jobs:
-  Structure:
-    runs-on: windows-latest
-    steps:
-      - run: cmd /c tree
-      - run: cmd /c dir
-     
+jobs:     
   Compiles:
     runs-on: windows-latest
 
@@ -46,7 +40,7 @@ jobs:
        run: dotnet build EliteAPI.Tests.Events --configuration Release --no-restore
      
      - name: Test
-       run: EliteAPI.Tests.Events.exe EliteAPI.Tests.Events\Journal
+       run: EliteAPI.Tests.Events.exe ..\..\..\EliteAPI.Tests.Events\Journal
        working-directory: EliteAPI.Tests.Events\bin\Release\netcoreapp3.1
       
      

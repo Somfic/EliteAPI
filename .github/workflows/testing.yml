@@ -12,10 +12,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.301
         
     - name: Install dependencies
       run: dotnet restore
@@ -28,16 +24,16 @@ jobs:
 
      steps:
      - uses: actions/checkout@v2
-     - name: Setup .NET Core
-       uses: actions/setup-dotnet@v1
-       with:
-         dotnet-version: 3.1.301
         
      - name: Install dependencies
        run: dotnet restore EliteAPI.Tests.Events
       
      - name: Build
        run: dotnet build EliteAPI.Tests.Events --configuration Release --no-restore
+     
+     - name: Directory
+       run: cmd /c dir
+       working-directory: EliteAPI.Tests.Events
      
      - name: Test
        run: /bin/Release/netcoreapp3.1/EliteAPI.Tests.Events.exe /Journal

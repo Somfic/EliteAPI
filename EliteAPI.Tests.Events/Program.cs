@@ -101,8 +101,6 @@ namespace EliteAPI.Tests.Events
             {
                 string eventName = testCase.Key;
 
-                _log.LogInformation("Testing {event}", eventName);
-
                 foreach (KeyValuePair<string, string[]> jsonPair in testCase.Value)
                 {
                     string version = jsonPair.Key;
@@ -128,12 +126,13 @@ namespace EliteAPI.Tests.Events
 
             if (errors.Any())
             {
+                _log.LogError("{amount} errors found", errors.Count);
+
                 errors.ForEach(x =>
                 {
                     _log.LogWarning(x.Exception, "{event} ({version})", x.EventName, x.Version);
                 });
 
-                _log.LogError("{amount} errors found", errors.Count);
                 Environment.Exit(-1);
             }
             else

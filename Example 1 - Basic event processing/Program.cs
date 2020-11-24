@@ -22,7 +22,7 @@ namespace Example1
                 .ConfigureLogging((context, logger) =>
                 {
                     logger.ClearProviders();
-                    logger.SetMinimumLevel(LogLevel.Debug);
+                    logger.SetMinimumLevel(LogLevel.Trace);
                     logger.AddPrettyConsole(ConsoleThemes.Code);
                 })
                 .ConfigureServices((context, service) =>

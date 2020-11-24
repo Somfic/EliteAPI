@@ -91,12 +91,14 @@
         </member>
         <member name="M:EliteAPI.EliteDangerousAPIConfiguration.AddProcessor``1">
             <summary>
-            Adds a event processor
+            Adds an event processor
             </summary>
             <typeparam name="T">The event processor to be used</typeparam>
         </member>
         <member name="T:EliteAPI.Event.Models.Abstractions.EventBase">
-            <inheritdoc />
+            <summary>
+            An in-game event
+            </summary>
         </member>
         <member name="P:EliteAPI.Event.Models.Abstractions.EventBase.Timestamp">
             <inheritdoc />

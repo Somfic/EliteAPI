@@ -10,7 +10,8 @@ jobs:
   Structure:
     runs-on: windows-latest
     steps:
-      - run: cmd //c tree
+      - run: cmd /c tree
+      - run: cmd /c dir
      
   Compiles:
     runs-on: windows-latest

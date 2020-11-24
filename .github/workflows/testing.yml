@@ -40,7 +40,7 @@ jobs:
        run: dotnet build EliteAPI.Tests.Events --configuration Release --no-restore
      
      - name: Test
-       run: ./bin/Release/netcoreapp3.1/EliteAPI.Tests.Events.exe ./Journal
+       run: /bin/Release/netcoreapp3.1/EliteAPI.Tests.Events.exe /Journal
        working-directory: EliteAPI.Tests.Events
       
      

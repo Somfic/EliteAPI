@@ -135,12 +135,17 @@ namespace EliteAPI.Tests.Events
 
             if (errors.Any())
             {
-                _log.LogError("{amount} errors found, {unique} unique", totalErrors, errors.Count);
-
                 errors.ForEach(x =>
                 {
                     _log.LogWarning(x.Exception, "{event} ({version})", x.EventName, x.Version);
                 });
+
+                _log.LogError("{amount} errors found", errors.Count);
+                Environment.Exit(-1);
+            }
+            else
+            {
+                Environment.Exit(0);
             }
         }
 

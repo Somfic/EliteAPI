@@ -31,12 +31,8 @@ jobs:
      - name: Build
        run: dotnet build EliteAPI.Tests.Events --configuration Release --no-restore
      
-     - name: Directory
-       run: cmd /c dir
-       working-directory: EliteAPI.Tests.Events
-     
      - name: Test
-       run: /bin/Release/netcoreapp3.1/EliteAPI.Tests.Events.exe /Journal
+       run: cmd /c bin/Release/netcoreapp3.1/EliteAPI.Tests.Events.exe Journal
        working-directory: EliteAPI.Tests.Events
       
      

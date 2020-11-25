@@ -1,0 +1,17 @@
+name: Coding-Standards
+
+on:
+  pull_request:
+    branches: [ master, dev ]
+
+jobs:
+  Coding Standards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      
+      - name: resharper
+        uses: glassechidna/resharper-action@master
+        with:
+          solution: EliteAPI.sln

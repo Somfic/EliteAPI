@@ -147,7 +147,7 @@ namespace EliteAPI.Tests.Events
 
             var file = new FileInfo("annotations.json");
 
-            _log.LogInformation(file.FullName);
+            _log.LogInformation($"Written {results.Count} annotations to {file.FullName}");
         }
     }
 }

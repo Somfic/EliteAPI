@@ -7,7 +7,8 @@ on:
     branches: [ master, dev ]
 
 jobs:
-  Coding Standards:
+  resharper:
+    name: Coding standards
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -18,7 +19,8 @@ jobs:
         with:
           solution: EliteAPI.sln
     
-  Coding Analysis:
+  codeql:
+    name: Code analysis
     runs-on: ubuntu-latest
 
     strategy:

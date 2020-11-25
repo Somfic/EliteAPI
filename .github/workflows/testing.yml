@@ -43,9 +43,8 @@ jobs:
      - name: Annotations
        uses: Attest/annotations-action@v1.0.7
        with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        input: '.bin/Release/netcoreapp3.1/annotations.json'
+        secret: ${{ secrets.GITHUB_TOKEN }}
+        path: 'EliteAPI.Tests.Events/bin/Release/netcoreapp3.1/annotations.json'
         title: 'Annotate Files'
-        working-directory: EliteAPI.Tests.Events
       
      

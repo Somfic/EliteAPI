@@ -87,7 +87,7 @@ namespace EliteAPI.Tests.Events
                     {
                         _log.LogDebug($"Processing {fileInfo.Name}");
 
-                        string eventName = fileInfo.Name;
+                        string eventName = fileInfo.Name.Replace(".json", " event");
                         IList<string> allEvents = (await File.ReadAllLinesAsync(fileInfo.FullName)).ToList();
                         IList<string> testEvents = allEvents.ToList().OrderBy(x => Guid.NewGuid()).Take(Math.Min(allEvents.Count, 50)).ToList();
 

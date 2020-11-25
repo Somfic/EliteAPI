@@ -89,7 +89,7 @@ namespace EliteAPI.Tests.Events
 
                         string eventName = fileInfo.Name.Replace(".json", " event");
                         IList<string> allEvents = (await File.ReadAllLinesAsync(fileInfo.FullName)).ToList();
-                        IList<string> testEvents = allEvents.ToList().OrderBy(x => Guid.NewGuid()).Take(Math.Min(allEvents.Count, 50)).ToList();
+                        IList<string> testEvents = allEvents.ToList().OrderBy(x => Guid.NewGuid()).Take(Math.Min(allEvents.Count, 250)).ToList();
 
                         total += testEvents.Count();
                         bool hasHadError = false;

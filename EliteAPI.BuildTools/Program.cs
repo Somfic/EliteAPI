@@ -1,47 +1,56 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Reflection.Emit;
+using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 
 namespace EliteAPI.BuildTools
 {
-    class Program
+    internal class Program
     {
-        static async Task Main(string[] args)
+        private static async Task Main(string[] args)
         {
-            if (args != null)
+            while (true)
             {
-                string command = args[0].ToLower();
-                string argument = string.Join(' ', args.Skip(1));
+                counter = 0;
 
-                switch (command)
+                Console.Write(" > ");
+                string[] arg = Console.ReadLine()?.Split(' ');
+
+                if (arg != null)
                 {
-                    case "json":
-                        string json = await FromJson(argument);
-                        Console.WriteLine(json);
-                        break;
+                    string command = arg[0].ToLower();
+                    string argument = string.Join(' ', arg.Skip(1));
 
-                    case "sort":
-                        await Sort(argument);
-                        break;
+                    switch (command)
+                    {
+                        case "json":
+                            string generated = await FromJson(argument);
+                            await File.WriteAllTextAsync("generated.cs", generated);
+                            break;
 
-                    case "test":
-                        await Tests();
-                        break;
+                        case "sort":
+                            await Sort(argument);
+                            break;
+
+                        case "test":
+                            await Tests();
+                            break;
+                    }
                 }
+                Console.WriteLine();
             }
         }
 
         private static async Task Tests()
         {
-            
+
 
         }
 
@@ -49,7 +58,7 @@ namespace EliteAPI.BuildTools
         {
             if (Directory.Exists(path))
             {
-                foreach (var file in new DirectoryInfo(path).GetFiles())
+                foreach (FileInfo file in new DirectoryInfo(path).GetFiles())
                 {
                     await Sort(file.FullName);
                 }
@@ -62,7 +71,7 @@ namespace EliteAPI.BuildTools
                 Directory.CreateDirectory($"Journal/{version}");
 
                 string[] entries = await File.ReadAllLinesAsync(path);
-                foreach (var entry in entries)
+                foreach (string entry in entries)
                 {
                     try
                     {
@@ -76,87 +85,184 @@ namespace EliteAPI.BuildTools
                     {
 
                     }
-                    
+
                 }
             }
         }
 
-        private static async Task<string> FromJson(string input)
+        private static Task<string> GetEventName(string type)
+        {
+            return Task.FromResult(Regex.Match(type, "public partial class (.*)\n").Groups[1].Value.Trim());
+        }
+
+        private static Task<string> GetEventNameFromJson(string json)
+        {
+            return Task.FromResult((string)JsonConvert.DeserializeObject<dynamic>(json).@event + "Event");
+        }
+
+        private static async Task WriteInputFile(string json)
+        {
+            // Remove weird " and '
+            json = json.Replace('\u2018', '\'').Replace('\u2019', '\'').Replace('\u201c', '\"').Replace('\u201d', '\"');
+            
+            // Remove event attribute
+            json = Regex.Replace(json, "(\"event\":.*?,)", string.Empty);
+
+            // Remove timestamp attribute
+            json = Regex.Replace(json, "(\"timestamp\":.*?,)", string.Empty);
+
+            await File.WriteAllTextAsync("input", json);
+        }
+
+        private static async Task<string> ConvertToQuickType(string json)
+        {
+            await WriteInputFile(json);
+
+            string eventName = await GetEventNameFromJson(json);
+
+            Process proc = new Process
+            {
+                StartInfo = new ProcessStartInfo()
+                {
+                    FileName = "cmd",
+                    Arguments = $"/c quicktype --lang cs input --namespace EliteAPI.Event.Models --array-type list --features complete --no-maps --top-level {eventName}",
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    CreateNoWindow = true,
+                    WorkingDirectory = Directory.GetCurrentDirectory()
+                }
+            };
+
+            proc.Start();
+
+            return await proc.StandardOutput.ReadToEndAsync();
+        }
+
+        private static async Task<string> FromJson(string json)
         {
             try
             {
-                string eventName = JsonConvert.DeserializeObject<dynamic>(input).@event + "Event";
+                string type = await ConvertToQuickType(json);
+                string eventName = await GetEventName(type);
 
-                input = input.Replace('\u2018', '\'').Replace('\u2019', '\'').Replace('\u201c', '\"')
-                    .Replace('\u201d', '\"');
-                input = Regex.Replace(input, "(\"event\":.*?,)", string.Empty);
-                input = Regex.Replace(input, "(\"timestamp\":.*?,)", string.Empty);
+                // Remove all comments
+                type = Regex.Replace(type, "//.*\n", string.Empty);
 
-                await File.WriteAllTextAsync("input", input);
+                // Remove second parameter in FromJson method
+                type = Regex.Replace(type, "json, EliteAPI.Event.Models.Converter.Settings", "json");
 
-                var processStartInfo = new ProcessStartInfo
+                // Remove Serialize and Converter classes
+                type = Regex.Replace(type, "public static class Serialize.*\\}", "\n}", RegexOptions.Singleline);
+
+                // Add internal constructor to main class
+                type = Regex.Replace(type, "public partial class (.*)\n    {", "$&\n        internal $1() { }\n");
+
+                // Remove constructor on second half of partial main class
+                type = Regex.Replace(type, $"internal {eventName}.*\n.*\n.*(public static)", "$1");
+
+                // Add EventBase inheritance
+                type = Regex.Replace(type, $"using.*?public partial class {eventName}", "$0 : EventBase", RegexOptions.Singleline);
+
+                // Add using Abstractions statement
+                type = Regex.Replace(type, "using Newtonsoft.Json.Converters;\n", "$0    using Abstractions;\n\n");
+
+                // Change all setters to private setters
+                type = Regex.Replace(type, "set;", "private set;");
+
+                // Change all lists to readonly lists
+                type = Regex.Replace(type, "List", "IReadOnlyList");
+
+                // Check if we have any subclasses
+                if (Regex.Matches(type, "public partial class.*?public partial class.*?", RegexOptions.Singleline).Count > 1)
                 {
-                    FileName = "cmd",
-                    RedirectStandardInput = true,
-                    RedirectStandardOutput = true,
-                    WorkingDirectory = Directory.GetCurrentDirectory()
-                };
+                    // Rename *Class types to just *
+                    type = Regex.Replace(type, " (.*?)Class", " $1");
 
-                var process = Process.Start(processStartInfo);
-                await process.StandardInput.WriteLineAsync(
-                    $"quicktype --lang cs --out output input --namespace EliteAPI.Event.Models --array-type list --features complete --top-level {eventName}");
-                process.WaitForExit(500);
+                    // Remove closing tag in main class, making all subclasses actual subclasses
+                    type = Regex.Replace(type, "(EventBase\n.*?}\n    )}", "$1", RegexOptions.Singleline);
+                    
+                    // idk
+                    type = Regex.Replace(type, $"}}\n\n    public partial class {eventName}", "}\n\n$&", RegexOptions.Singleline);
 
-                Thread.Sleep(500);
-
-                string output = await File.ReadAllTextAsync("output");
-
-                output = Regex.Replace(output, "//.*\n", string.Empty);
-                output = Regex.Replace(output, "self, EliteAPI.Event.Models.Converter.Settings", "self");
-                output = Regex.Replace(output, "json, EliteAPI.Event.Models.Converter.Settings", "json");
-                output = Regex.Replace(output, "public static class Serialize.*\\}", "\n}", RegexOptions.Singleline);
-                output = Regex.Replace(output, "public partial class ([^ ]*)\n    {", "$&\n        internal $1() { }\n");
-                output = Regex.Replace(output, "internal EventHandler() \\{\\}", string.Empty);
-                output = Regex.Replace(output, ";\n\n    public partial class " + eventName, "$& : EventBase");
-                output = Regex.Replace(output, "using Newtonsoft.Json.Converters;\n", "$&    using Abstractions;\n\n");
-                output = Regex.Replace(output, "set;", "private set;");
-
-                output = Regex.Replace(output, "List", "IReadOnlyList");
-                output = Regex.Replace(output, "internal " + eventName + ".*\n(\n        public static)", "$1");
-
-                if (Regex.Matches(output, "public partial class.*?public partial class.*?", RegexOptions.Singleline).Count > 1)
-                {
-                    output = Regex.Replace(output, "(EventBase\n.*?}\n    )}", "$1", RegexOptions.Singleline);
-                    output = Regex.Replace(output, "}\n\n    public partial class " + eventName, "}\n\n$&", RegexOptions.Singleline);
-
-                    var subClasses = Regex.Matches(output, "\\b(\\w+)\\s+\\1\\b").ToList().Select(x => x.Groups[1].Value);
-                    foreach (var subClass in subClasses)
+                    // Get all subclass names
+                    IEnumerable<string> subClasses = Regex.Matches(type, "public partial class (.*?)\n").ToList().Select(x => x.Groups[1].Value);
+                    foreach (string subClass in subClasses)
                     {
-                        output = Regex.Replace(output, $"{subClass} {subClass}", $"{subClass}Info {subClass}");
-                        output = Regex.Replace(output, $"public partial class {subClass}", $"public class {subClass}Info");
-                        output = Regex.Replace(output, $"internal {subClass}", $"internal {subClass}Info");
+                        if (subClass.Trim() == eventName || subClass.Trim() == "EventBase") { continue; }
+
+                        Console.WriteLine(subClass);
+
+                        // Rename subclasses to *Info
+                        type = Regex.Replace(type, $"{subClass}", $"{subClass.Trim()}Info");
+
+                        // Rename properties back from *Info to just *
+                        type = Regex.Replace(type, $"{subClass}Info {{ get", $"{subClass.Trim()} {{ get");
                     }
+
+                    // Remove accidental double Info's
+                    type = Regex.Replace(type, "InfoInfo", "Info");
+
+                    // Make sure EventBaseInfo does not exist
+                    type = Regex.Replace(type, "EventBaseInfo", "EventBase");
                 }
 
-                output += "\nnamespace EliteAPI.Event.Handler\n";
-                output += "{\n";
-                output += "    using System;\n";
-                output += "    using Models;\n\n";
-                output += "    public partial class EventHandler\n";
-                output += "    {\n";
-                output += $"        public event EventHandler<{eventName}> {eventName};\n";
-                output +=
-                    $"        internal void Invoke{eventName}({eventName} arg) => {eventName}?.Invoke(this, arg);\n";
-                output += "    }\n";
-                output += "}";
+                StringBuilder eventHandler = new StringBuilder();
+                eventHandler.AppendLine();
+                eventHandler.AppendLine("namespace EliteAPI.Event.Handler");
+                eventHandler.AppendLine("{");
+                eventHandler.AppendLine("    using System;");
+                eventHandler.AppendLine("    using Models;");
+                eventHandler.AppendLine();
+                eventHandler.AppendLine("    public partial class EventHandler");
+                eventHandler.AppendLine("    {");
+                eventHandler.AppendLine($"        public event EventHandler<{eventName}> {eventName};");
+                eventHandler.AppendLine($"        internal void Invoke{eventName}({eventName} arg) => {eventName}?.Invoke(this, arg);");
+                eventHandler.AppendLine("    }");
+                eventHandler.AppendLine("}");
 
-                return output;
+                type += eventHandler;
+
+                return type;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
                 return "";
             }
+        }
+
+        private static IEnumerable<string> ReadAllLines(FileInfo file)
+        {
+            using FileStream fs = new FileStream(file.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 0x1000, FileOptions.RandomAccess);
+            using StreamReader stream = new StreamReader(fs, Encoding.UTF8);
+
+            string line;
+            while ((line = stream.ReadLine()) != null)
+            {
+                yield return line;
+            }
+        }
+
+        private static string ReadAllText(FileInfo file)
+        {
+            return string.Join(Environment.NewLine, ReadAllLines(file));
+        }
+
+        private static int counter = 0;
+        private static void Debug(string json)
+        {
+            string text = $"#{counter}\n{json}\n\n";
+
+            if (counter == 0)
+            {
+                File.WriteAllText("debug.txt", text);
+            }
+            else
+            {
+                File.AppendAllText("debug.txt", text);
+            }
+
+            counter++;
         }
     }
 }

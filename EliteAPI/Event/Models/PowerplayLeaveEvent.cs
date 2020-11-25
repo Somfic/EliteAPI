@@ -1,18 +1,39 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class PowerplayLeaveEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class PowerplayLeaveEvent : EventBase
     {
         internal PowerplayLeaveEvent() { }
 
-        public static PowerplayLeaveEvent FromJson(string json) => JsonConvert.DeserializeObject<PowerplayLeaveEvent>(json);
-
-
         [JsonProperty("Power")]
-        public string Power { get; internal set; }
+        public string Power { get; private set; }
+    }
 
-        
+    public partial class PowerplayLeaveEvent
+    {
+        public static PowerplayLeaveEvent FromJson(string json) => JsonConvert.DeserializeObject<PowerplayLeaveEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<PowerplayLeaveEvent> PowerplayLeaveEvent;
+        internal void InvokePowerplayLeaveEvent(PowerplayLeaveEvent arg) => PowerplayLeaveEvent?.Invoke(this, arg);
     }
 }

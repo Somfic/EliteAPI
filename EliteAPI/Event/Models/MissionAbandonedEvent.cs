@@ -1,21 +1,42 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class MissionAbandonedEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class MissionAbandonedEvent : EventBase
     {
         internal MissionAbandonedEvent() { }
 
-        public static MissionAbandonedEvent FromJson(string json) => JsonConvert.DeserializeObject<MissionAbandonedEvent>(json);
-
-
         [JsonProperty("Name")]
-        public string Name { get; internal set; }
+        public string Name { get; private set; }
 
         [JsonProperty("MissionID")]
-        public long MissionId { get; internal set; }
+        public long MissionId { get; private set; }
+    }
 
-        
+    public partial class MissionAbandonedEvent
+    {
+        public static MissionAbandonedEvent FromJson(string json) => JsonConvert.DeserializeObject<MissionAbandonedEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<MissionAbandonedEvent> MissionAbandonedEvent;
+        internal void InvokeMissionAbandonedEvent(MissionAbandonedEvent arg) => MissionAbandonedEvent?.Invoke(this, arg);
     }
 }

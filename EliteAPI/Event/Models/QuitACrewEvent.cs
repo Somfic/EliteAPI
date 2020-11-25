@@ -1,18 +1,39 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class QuitACrewEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class QuitACrewEvent : EventBase
     {
         internal QuitACrewEvent() { }
 
-        public static QuitACrewEvent FromJson(string json) => JsonConvert.DeserializeObject<QuitACrewEvent>(json);
-
-
         [JsonProperty("Captain")]
-        public string Captain { get; internal set; }
+        public string Captain { get; private set; }
+    }
 
-        
+    public partial class QuitACrewEvent
+    {
+        public static QuitACrewEvent FromJson(string json) => JsonConvert.DeserializeObject<QuitACrewEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<QuitACrewEvent> QuitACrewEvent;
+        internal void InvokeQuitACrewEvent(QuitACrewEvent arg) => QuitACrewEvent?.Invoke(this, arg);
     }
 }

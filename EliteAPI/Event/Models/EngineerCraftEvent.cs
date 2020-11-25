@@ -1,55 +1,99 @@
-using System.Collections.Generic;
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class EngineerCraftEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class EngineerCraftEvent : EventBase
     {
         internal EngineerCraftEvent() { }
 
-        public static EngineerCraftEvent FromJson(string json) => JsonConvert.DeserializeObject<EngineerCraftEvent>(json);
-
-
         [JsonProperty("Slot")]
-        public string Slot { get; internal set; }
+        public string Slot { get; private set; }
 
         [JsonProperty("Module")]
-        public string Module { get; internal set; }
+        public string Module { get; private set; }
 
-        [JsonProperty("ApplyExperimentalEffect")]
-        public string ApplyExperimentalEffect { get; internal set; }
-
-        [JsonProperty("Ingredients")]
-        public List<Ingredient> Ingredients { get; internal set; }
+        [JsonProperty("IngredientInfos")]
+        public IReadOnlyList<IngredientInfo> IngredientInfos { get; private set; }
 
         [JsonProperty("Engineer")]
-        public string Engineer { get; internal set; }
+        public string Engineer { get; private set; }
 
         [JsonProperty("EngineerID")]
-        public long EngineerId { get; internal set; }
+        public long EngineerId { get; private set; }
 
         [JsonProperty("BlueprintID")]
-        public long BlueprintId { get; internal set; }
+        public long BlueprintId { get; private set; }
 
         [JsonProperty("BlueprintName")]
-        public string BlueprintName { get; internal set; }
+        public string BlueprintName { get; private set; }
 
         [JsonProperty("Level")]
-        public long Level { get; internal set; }
+        public long Level { get; private set; }
 
         [JsonProperty("Quality")]
-        public float Quality { get; internal set; }
+        public double Quality { get; private set; }
 
-        [JsonProperty("ExperimentalEffect")]
-        public string ExperimentalEffect { get; internal set; }
+        [JsonProperty("ModifierInfos")]
+        public IReadOnlyList<ModifierInfo> ModifierInfos { get; private set; }
+    
 
-        [JsonProperty("ExperimentalEffect_Localised")]
-        public string ExperimentalEffectLocalised { get; internal set; }
+    public partial class IngredientInfo
+    {
+        internal IngredientInfo() { }
 
-        [JsonProperty("Modifiers")]
-        public List<Modifier> Modifiers { get; internal set; }
+        [JsonProperty("Name")]
+        public string Name { get; private set; }
 
-        
+        [JsonProperty("Count")]
+        public long Count { get; private set; }
+
+        [JsonProperty("Name_Localised", NullValueHandling = NullValueHandling.Ignore)]
+        public string NameLocalised { get; private set; }
+    }
+
+    public partial class ModifierInfo
+    {
+        internal ModifierInfo() { }
+
+        [JsonProperty("Label")]
+        public string Label { get; private set; }
+
+        [JsonProperty("Value")]
+        public double Value { get; private set; }
+
+        [JsonProperty("OriginalValue")]
+        public double OriginalValue { get; private set; }
+
+        [JsonProperty("LessIsGood")]
+        public long LessIsGood { get; private set; }
+    }
+
+}
+
+    public partial class EngineerCraftEvent
+    {
+        public static EngineerCraftEvent FromJson(string json) => JsonConvert.DeserializeObject<EngineerCraftEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<EngineerCraftEvent> EngineerCraftEvent;
+        internal void InvokeEngineerCraftEvent(EngineerCraftEvent arg) => EngineerCraftEvent?.Invoke(this, arg);
     }
 }

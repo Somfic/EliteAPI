@@ -1,39 +1,48 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class AfmuRepairsEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class AfmuRepairsEvent : EventBase
     {
         internal AfmuRepairsEvent() { }
 
-        public static AfmuRepairsEvent FromJson(string json) => JsonConvert.DeserializeObject<AfmuRepairsEvent>(json);
-
-
-        /// <summary>
-        /// The name of the module
-        /// </summary>
         [JsonProperty("Module")]
-        public string Module { get; internal set; }
+        public string Module { get; private set; }
 
-        /// <summary>
-        /// The local name of the module
-        /// </summary>
         [JsonProperty("Module_Localised")]
-        public string ModuleLocalised { get; internal set; }
+        public string ModuleLocalised { get; private set; }
 
-        /// <summary>
-        /// Whether modules are now fully repaired
-        /// </summary>
         [JsonProperty("FullyRepaired")]
-        public bool FullyRepaired { get; internal set; }
+        public bool FullyRepaired { get; private set; }
 
-        /// <summary>
-        /// Value between 0 and 1.
-        /// </summary>
         [JsonProperty("Health")]
-        public float Health { get; internal set; }
+        public double Health { get; private set; }
+    }
 
+    public partial class AfmuRepairsEvent
+    {
+        public static AfmuRepairsEvent FromJson(string json) => JsonConvert.DeserializeObject<AfmuRepairsEvent>(json);
+    }
 
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<AfmuRepairsEvent> AfmuRepairsEvent;
+        internal void InvokeAfmuRepairsEvent(AfmuRepairsEvent arg) => AfmuRepairsEvent?.Invoke(this, arg);
     }
 }

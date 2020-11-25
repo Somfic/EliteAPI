@@ -1,18 +1,42 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class FighterRebuiltEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class FighterRebuiltEvent : EventBase
     {
         internal FighterRebuiltEvent() { }
 
-        public static FighterRebuiltEvent FromJson(string json) => JsonConvert.DeserializeObject<FighterRebuiltEvent>(json);
-
-
         [JsonProperty("Loadout")]
-        public string Loadout { get; internal set; }
+        public string Loadout { get; private set; }
 
-        
+        [JsonProperty("ID")]
+        public long Id { get; private set; }
+    }
+
+    public partial class FighterRebuiltEvent
+    {
+        public static FighterRebuiltEvent FromJson(string json) => JsonConvert.DeserializeObject<FighterRebuiltEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<FighterRebuiltEvent> FighterRebuiltEvent;
+        internal void InvokeFighterRebuiltEvent(FighterRebuiltEvent arg) => FighterRebuiltEvent?.Invoke(this, arg);
     }
 }

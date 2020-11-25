@@ -1,24 +1,45 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class CrewAssignEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class CrewAssignEvent : EventBase
     {
         internal CrewAssignEvent() { }
 
-        public static CrewAssignEvent FromJson(string json) => JsonConvert.DeserializeObject<CrewAssignEvent>(json);
-
-
         [JsonProperty("Name")]
-        public string Name { get; internal set; }
+        public string Name { get; private set; }
 
         [JsonProperty("CrewID")]
-        public long CrewId { get; internal set; }
+        public long CrewId { get; private set; }
 
         [JsonProperty("Role")]
-        public string Role { get; internal set; }
+        public string Role { get; private set; }
+    }
 
-        
+    public partial class CrewAssignEvent
+    {
+        public static CrewAssignEvent FromJson(string json) => JsonConvert.DeserializeObject<CrewAssignEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<CrewAssignEvent> CrewAssignEvent;
+        internal void InvokeCrewAssignEvent(CrewAssignEvent arg) => CrewAssignEvent?.Invoke(this, arg);
     }
 }

@@ -1,45 +1,42 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class FSSSignalDiscoveredEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class FssSignalDiscoveredEvent : EventBase
     {
-        internal FSSSignalDiscoveredEvent() { }
-
-        public static FSSSignalDiscoveredEvent FromJson(string json) => JsonConvert.DeserializeObject<FSSSignalDiscoveredEvent>(json);
-
+        internal FssSignalDiscoveredEvent() { }
 
         [JsonProperty("SystemAddress")]
-        public string SystemAddress { get; internal set; }
+        public long SystemAddress { get; private set; }
 
         [JsonProperty("SignalName")]
-        public string SignalName { get; internal set; }
+        public string SignalName { get; private set; }
+    }
 
-        [JsonProperty("SignalName_Localised")]
-        public string SignalNameLocalised { get; internal set; }
+    public partial class FssSignalDiscoveredEvent
+    {
+        public static FssSignalDiscoveredEvent FromJson(string json) => JsonConvert.DeserializeObject<FssSignalDiscoveredEvent>(json);
+    }
 
-        [JsonProperty("USSType")]
-        public string UssType { get; internal set; }
+    
+}
 
-        [JsonProperty("USSType_Localised")]
-        public string UssTypeLocalised { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
 
-        [JsonProperty("SpawningState")]
-        public string SpawningState { get; internal set; }
-
-        [JsonProperty("SpawningState_Localised")]
-        public string SpawningStateLocalised { get; internal set; }
-
-        [JsonProperty("SpawningFaction")]
-        public string SpawningFaction { get; internal set; }
-
-        [JsonProperty("ThreatLevel")]
-        public long ThreatLevel { get; internal set; }
-
-        [JsonProperty("TimeRemaining")]
-        public float TimeRemaining { get; internal set; }
-
-        
+    public partial class EventHandler
+    {
+        public event EventHandler<FssSignalDiscoveredEvent> FssSignalDiscoveredEvent;
+        internal void InvokeFssSignalDiscoveredEvent(FssSignalDiscoveredEvent arg) => FssSignalDiscoveredEvent?.Invoke(this, arg);
     }
 }

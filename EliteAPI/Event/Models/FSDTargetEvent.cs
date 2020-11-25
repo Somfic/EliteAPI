@@ -1,26 +1,45 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    //{ "timestamp":"2019-10-15T17:50:50Z", "event":"FSDTarget", "Name":"Crucis Sector JC-V b2-5", "SystemAddress":11666607580601, "RemainingJumpsInRoute":2 }
+    using System;
+    using System.Collections.Generic;
 
-    public class FSDTargetEvent : EventBase
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class FsdTargetEvent : EventBase
     {
-        internal FSDTargetEvent() { }
-
-        public static FSDTargetEvent FromJson(string json) => JsonConvert.DeserializeObject<FSDTargetEvent>(json);
-
+        internal FsdTargetEvent() { }
 
         [JsonProperty("Name")]
-        public string Name { get; internal set; }
+        public string Name { get; private set; }
 
         [JsonProperty("SystemAddress")]
-        public string SystemAddress { get; internal set; }
+        public long SystemAddress { get; private set; }
 
-        [JsonProperty("RemainingJumpsInRoute")]
-        public int RemainingJumpsInRoute { get; internal set; }
+        [JsonProperty("StarClass")]
+        public string StarClass { get; private set; }
+    }
 
-        
+    public partial class FsdTargetEvent
+    {
+        public static FsdTargetEvent FromJson(string json) => JsonConvert.DeserializeObject<FsdTargetEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<FsdTargetEvent> FsdTargetEvent;
+        internal void InvokeFsdTargetEvent(FsdTargetEvent arg) => FsdTargetEvent?.Invoke(this, arg);
     }
 }

@@ -1,16 +1,14 @@
-﻿using EliteAPI.Abstractions;
-
+﻿using System.Threading.Tasks;
+using EliteAPI.Abstractions;
 using Microsoft.Extensions.Logging;
-
-using System.Threading.Tasks;
 
 namespace Example1
 {
     // Core class of our application
     public class Core
     {
-        private readonly ILogger<Core> _log;
         private readonly IEliteDangerousAPI _api;
+        private readonly ILogger<Core> _log;
 
         public Core(ILogger<Core> log, IEliteDangerousAPI api)
         {
@@ -24,8 +22,8 @@ namespace Example1
             // Log to the logging system whenever we obtain a bounty
             _api.Events.BountyEvent += (sender, e) =>
             {
-                string target = e.Target;
-                long amount = e.TotalReward;
+                var target = e.Target;
+                var amount = e.TotalReward;
 
                 _log.LogInformation("New bounty obtained: CR{amount} for killing {target}", amount, target);
             };

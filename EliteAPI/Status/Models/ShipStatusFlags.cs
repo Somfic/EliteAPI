@@ -34,6 +34,6 @@ namespace EliteAPI.Status.Models
         InFighter = 1 << 25,
         InSrv = 1 << 26,
         AnalysisMode = 1 << 27,
-        NightVision = 1 << 28,
+        NightVision = 1 << 28
     }
 }

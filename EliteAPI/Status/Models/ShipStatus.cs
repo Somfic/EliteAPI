@@ -1,14 +1,13 @@
 ﻿using System;
-using EliteAPI.Event.Handler;
-using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Status.Models.Abstractions;
-using EventHandler = System.EventHandler;
 
 namespace EliteAPI.Status.Models
 {
     public class ShipStatus : IShipStatus
     {
-        public ShipStatusProperty<ShipStatusFlags> Flags { get; } = new ShipStatusProperty<ShipStatusFlags>(ShipStatusFlags.None);
+        public ShipStatusProperty<ShipStatusFlags> Flags { get; } =
+            new ShipStatusProperty<ShipStatusFlags>(ShipStatusFlags.None);
+
         public ShipStatusProperty<bool> Docked { get; } = new ShipStatusProperty<bool>(false);
         public ShipStatusProperty<bool> Landed { get; } = new ShipStatusProperty<bool>(false);
         public ShipStatusProperty<bool> Gear { get; } = new ShipStatusProperty<bool>(false);
@@ -41,12 +40,21 @@ namespace EliteAPI.Status.Models
         public ShipStatusProperty<bool> AltitudeFromAverageRadius { get; } = new ShipStatusProperty<bool>(false);
         public ShipStatusProperty<bool> FsdJump { get; } = new ShipStatusProperty<bool>(false);
         public ShipStatusProperty<bool> SrvHighBeam { get; } = new ShipStatusProperty<bool>(false);
-        public ShipStatusProperty<ShipPips> Pips { get; } = new ShipStatusProperty<ShipPips>(new ShipPips(new[] { 0, 0, 0 }));
+
+        public ShipStatusProperty<ShipPips> Pips { get; } =
+            new ShipStatusProperty<ShipPips>(new ShipPips(new[] {0, 0, 0}));
+
         public ShipStatusProperty<int> FireGroup { get; } = new ShipStatusProperty<int>(0);
-        public ShipStatusProperty<ShipGuiFocus> GuiFocus { get; } = new ShipStatusProperty<ShipGuiFocus>(ShipGuiFocus.NoFocus);
+
+        public ShipStatusProperty<ShipGuiFocus> GuiFocus { get; } =
+            new ShipStatusProperty<ShipGuiFocus>(ShipGuiFocus.NoFocus);
+
         public ShipStatusProperty<ShipFuel> Fuel { get; } = new ShipStatusProperty<ShipFuel>(new ShipFuel());
         public ShipStatusProperty<float> Cargo { get; } = new ShipStatusProperty<float>(0);
-        public ShipStatusProperty<ShipLegalState> LegalState { get; } = new ShipStatusProperty<ShipLegalState>(ShipLegalState.Clean);
+
+        public ShipStatusProperty<ShipLegalState> LegalState { get; } =
+            new ShipStatusProperty<ShipLegalState>(ShipLegalState.Clean);
+
         public ShipStatusProperty<float> Latitude { get; } = new ShipStatusProperty<float>(0);
         public ShipStatusProperty<float> Altitude { get; } = new ShipStatusProperty<float>(0);
         public ShipStatusProperty<float> Longitude { get; } = new ShipStatusProperty<float>(0);
@@ -55,6 +63,10 @@ namespace EliteAPI.Status.Models
         public ShipStatusProperty<float> BodyRadius { get; } = new ShipStatusProperty<float>(0);
 
         public event EventHandler OnChange;
-        void IShipStatus.TriggerOnChange() => OnChange?.Invoke(this, EventArgs.Empty);
+
+        void IShipStatus.TriggerOnChange()
+        {
+            OnChange?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

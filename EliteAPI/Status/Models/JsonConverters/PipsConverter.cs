@@ -9,7 +9,7 @@ namespace EliteAPI.Status.Models.JsonConverters
     {
         public override void WriteJson(JsonWriter writer, object? value, JsonSerializer serializer)
         {
-            ShipPips pips = (ShipPips) value;
+            var pips = (ShipPips) value;
 
             writer.WriteStartArray();
             writer.WriteValue(pips.System);
@@ -18,15 +18,16 @@ namespace EliteAPI.Status.Models.JsonConverters
             writer.WriteEndArray();
         }
 
-        public override object? ReadJson(JsonReader reader, Type objectType, object? existingValue, JsonSerializer serializer)
+        public override object? ReadJson(JsonReader reader, Type objectType, object? existingValue,
+            JsonSerializer serializer)
         {
-            int systems = reader.ReadAsInt32().Value;
-            int engines = reader.ReadAsInt32().Value;
-            int weapons = reader.ReadAsInt32().Value;
+            var systems = reader.ReadAsInt32().Value;
+            var engines = reader.ReadAsInt32().Value;
+            var weapons = reader.ReadAsInt32().Value;
 
             reader.Read();
 
-            return new ShipPips(new [] {systems, engines, weapons});
+            return new ShipPips(new[] {systems, engines, weapons});
         }
 
         public override bool CanConvert(Type objectType)

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Processor.Abstractions;
@@ -11,11 +9,11 @@ using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI.Event.Processor
 {
-    class AllEventProcessor : IEventProcessor
+    internal class AllEventProcessor : IEventProcessor
     {
         private readonly ILogger<AllEventProcessor> _log;
+        private readonly EventHandler _eventHandler;
         private MethodBase _invokeMethod;
-        private EventHandler _eventHandler;
 
         public AllEventProcessor(ILogger<AllEventProcessor> log, IServiceProvider services)
         {

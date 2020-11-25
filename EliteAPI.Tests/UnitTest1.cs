@@ -1,5 +1,3 @@
-using System;
-
 using Xunit;
 
 namespace EliteAPI.Tests
@@ -9,7 +7,6 @@ namespace EliteAPI.Tests
         [Fact]
         public void Test1()
         {
-
         }
     }
 }

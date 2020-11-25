@@ -5,12 +5,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Processor.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI.Event.Processor
@@ -18,11 +16,11 @@ namespace EliteAPI.Event.Processor
     /// <inheritdoc />
     public class EventsEventProcessor : MethodEventProcessorBase
     {
-        private readonly Assembly _assembly; 
-
-        private ILogger<EventsEventProcessor> _log;
+        private readonly Assembly _assembly;
         private readonly IServiceProvider _services;
         private EventHandler _eventHandler;
+
+        private readonly ILogger<EventsEventProcessor> _log;
 
         public EventsEventProcessor(ILogger<EventsEventProcessor> log, IServiceProvider services) : base(log, services)
         {
@@ -38,7 +36,7 @@ namespace EliteAPI.Event.Processor
             try
             {
                 _log.LogDebug("Detecting event handlers");
-                Stopwatch s = Stopwatch.StartNew();
+                var s = Stopwatch.StartNew();
 
                 Cache = new ConcurrentDictionary<string, IEnumerable<MethodBase>>();
 
@@ -46,7 +44,7 @@ namespace EliteAPI.Event.Processor
 
                 var eventTypes = GetAllEventTypes().ToList();
                 var invokeMethods = GetAllInvokeMethods(eventHandler).ToList();
-                int totalHandlers = 0;
+                var totalHandlers = 0;
 
                 foreach (var eventType in eventTypes)
                 {
@@ -62,7 +60,8 @@ namespace EliteAPI.Event.Processor
                 }
 
                 s.Stop();
-                _log.LogDebug("{eventCount} event-handlers were registered in {time}ms", totalHandlers, s.ElapsedMilliseconds);
+                _log.LogDebug("{eventCount} event-handlers were registered in {time}ms", totalHandlers,
+                    s.ElapsedMilliseconds);
             }
             catch (Exception ex)
             {
@@ -81,9 +80,9 @@ namespace EliteAPI.Event.Processor
 
         private IEnumerable<MethodBase> GetAllInvokeMethods(Type eventHandler)
         {
-            return eventHandler.GetMethods(BindingFlags.Instance 
-                                           | BindingFlags.NonPublic 
-                                           | BindingFlags.Public 
+            return eventHandler.GetMethods(BindingFlags.Instance
+                                           | BindingFlags.NonPublic
+                                           | BindingFlags.Public
                                            | BindingFlags.Static)
                 .Where(MethodIsValidInvokeMethod);
         }

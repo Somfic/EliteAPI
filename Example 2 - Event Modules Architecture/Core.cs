@@ -1,8 +1,5 @@
-﻿using EliteAPI.Abstractions;
-
-using Microsoft.Extensions.Logging;
-
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using EliteAPI.Abstractions;
 
 namespace Example2
 {

@@ -1,8 +1,8 @@
 ﻿using System;
 using EliteAPI.Event.Attributes;
 using EliteAPI.Event.Models;
-using Microsoft.Extensions.Logging;
 using EliteAPI.Event.Module;
+using Microsoft.Extensions.Logging;
 
 namespace Example2.Modules
 {
@@ -21,7 +21,7 @@ namespace Example2.Modules
         [EliteDangerousEvent]
         public void OnChat(SendTextEvent e)
         {
-            string content = e.Message;
+            var content = e.Message;
 
             _log.LogInformation("Sent text: '{content}'", content);
         }
@@ -30,8 +30,8 @@ namespace Example2.Modules
         [EliteDangerousEvent]
         public void OnChatReceived(ReceiveTextEvent e)
         {
-            string author = e.From;
-            string content = e.Message;
+            var author = e.From;
+            var content = e.Message;
 
             _log.LogInformation("Received text: '{content}' from {author}", content, author);
         }

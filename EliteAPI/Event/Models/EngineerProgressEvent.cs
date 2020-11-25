@@ -1,35 +1,31 @@
+using System;
+using System.Collections.Generic;
+using EliteAPI.Event.Models;
+using EliteAPI.Event.Models.Abstractions;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-    using Abstractions;
-
-
     public partial class EngineerProgressEvent : EventBase
     {
-        internal EngineerProgressEvent() { }
+        internal EngineerProgressEvent()
+        {
+        }
 
-        [JsonProperty("Engineers")]
-        public IReadOnlyList<Engineer> Engineers { get; private set; }
+        [JsonProperty("Engineers")] public IReadOnlyList<Engineer> Engineers { get; private set; }
     }
 
-    public partial class Engineer
+    public class Engineer
     {
-        internal Engineer() { }
+        internal Engineer()
+        {
+        }
 
-        [JsonProperty("Engineer")]
-        public string EngineerEngineer { get; private set; }
+        [JsonProperty("Engineer")] public string EngineerEngineer { get; private set; }
 
-        [JsonProperty("EngineerID")]
-        public long EngineerId { get; private set; }
+        [JsonProperty("EngineerID")] public long EngineerId { get; private set; }
 
-        [JsonProperty("Progress")]
-        public string Progress { get; private set; }
+        [JsonProperty("Progress")] public string Progress { get; private set; }
 
         [JsonProperty("RankProgress", NullValueHandling = NullValueHandling.Ignore)]
         public long? RankProgress { get; private set; }
@@ -40,20 +36,22 @@ namespace EliteAPI.Event.Models
 
     public partial class EngineerProgressEvent
     {
-        public static EngineerProgressEvent FromJson(string json) => JsonConvert.DeserializeObject<EngineerProgressEvent>(json);
+        public static EngineerProgressEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<EngineerProgressEvent>(json);
+        }
     }
-
-    
 }
 
 namespace EliteAPI.Event.Handler
 {
-    using System;
-    using Models;
-
     public partial class EventHandler
     {
         public event EventHandler<EngineerProgressEvent> EngineerProgressEvent;
-        internal void InvokeEngineerProgressEvent(EngineerProgressEvent arg) => EngineerProgressEvent?.Invoke(this, arg);
+
+        internal void InvokeEngineerProgressEvent(EngineerProgressEvent arg)
+        {
+            EngineerProgressEvent?.Invoke(this, arg);
+        }
     }
 }

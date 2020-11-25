@@ -3,9 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
-using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,8 +16,10 @@ namespace EliteAPI.Event.Provider
     /// <inheritdoc />
     public class EventProvider : IEventProvider
     {
-        private readonly ILogger<EventProvider> _log;
         private readonly Assembly _assembly;
+        private readonly ILogger<EventProvider> _log;
+
+        private IDictionary<string, Type> _cache;
 
         public EventProvider(IServiceProvider service)
         {
@@ -27,17 +27,15 @@ namespace EliteAPI.Event.Provider
             _assembly = Assembly.GetExecutingAssembly();
         }
 
-        private IDictionary<string, Type> _cache;
-
         /// <inheritdoc />
         public Task<EventBase> ProcessJsonEvent(string json)
         {
-            if(_cache == null) {RegisterEventClasses();}
+            if (_cache == null) RegisterEventClasses();
 
             try
             {
-                JObject parsedFromGame = JsonConvert.DeserializeObject<JObject>(json);
-                string eventName = ((dynamic)parsedFromGame).@event;
+                var parsedFromGame = JsonConvert.DeserializeObject<JObject>(json);
+                string eventName = ((dynamic) parsedFromGame).@event;
 
                 var method = GetFromJsonMethod(eventName);
                 var eventBase = InvokeFromJsonMethod(method, json);
@@ -50,7 +48,7 @@ namespace EliteAPI.Event.Provider
             {
                 ex.Data.Add("Json", json);
 
-                _log.LogTrace(ex,"Could not convert json to EventBase");
+                _log.LogTrace(ex, "Could not convert json to EventBase");
 
                 throw;
             }
@@ -62,9 +60,7 @@ namespace EliteAPI.Event.Provider
             _cache = new ConcurrentDictionary<string, Type>();
 
             foreach (var eventType in GetAllEventTypes(typeof(EventHandler)))
-            {
                 _cache.Add(eventType.Name.Replace("Event", ""), eventType);
-            }
 
             return Task.CompletedTask;
         }
@@ -86,7 +82,7 @@ namespace EliteAPI.Event.Provider
 
         private EventBase InvokeFromJsonMethod(MethodBase method, string json)
         {
-            return method.Invoke(null, new object[]{json}) as EventBase;
+            return method.Invoke(null, new object[] {json}) as EventBase;
         }
     }
 }

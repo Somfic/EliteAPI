@@ -1,17 +1,14 @@
-﻿
-using EliteAPI.Event.Provider.Abstractions;
-
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using EliteAPI.Event.Provider.Abstractions;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Tests.Events
@@ -21,11 +18,8 @@ namespace EliteAPI.Tests.Events
         private static async Task Main(string[] args)
         {
             // Build the host for dependency injection
-            IHost host = Host.CreateDefaultBuilder()
-                .ConfigureLogging((context, logger) =>
-                {
-                    logger.SetMinimumLevel(LogLevel.Debug);
-                })
+            var host = Host.CreateDefaultBuilder()
+                .ConfigureLogging((context, logger) => { logger.SetMinimumLevel(LogLevel.Debug); })
                 .ConfigureServices((context, service) =>
                 {
                     // Add EliteAPI's services to the depdency injection system
@@ -34,7 +28,7 @@ namespace EliteAPI.Tests.Events
                 .Build();
 
             // Create an instance of our Core class
-            Core core = ActivatorUtilities.CreateInstance<Core>(host.Services);
+            var core = ActivatorUtilities.CreateInstance<Core>(host.Services);
 
             // Execute the Run method inside our Core class
             await core.Run(string.Join(' ', args));
@@ -43,8 +37,8 @@ namespace EliteAPI.Tests.Events
 
     public class Core
     {
-        private readonly ILogger<Core> _log;
         private readonly IEventProvider _eventProvider;
+        private readonly ILogger<Core> _log;
 
         public Core(IServiceProvider services)
         {
@@ -55,7 +49,7 @@ namespace EliteAPI.Tests.Events
 
         internal async Task Run(string path)
         {
-            if(string.IsNullOrWhiteSpace(path)) { path = "../../../Journal"; }
+            if (string.IsNullOrWhiteSpace(path)) path = "../../../Journal";
 
             if (!Directory.Exists(path))
             {
@@ -64,39 +58,39 @@ namespace EliteAPI.Tests.Events
                 return;
             }
 
-            DirectoryInfo directory = new DirectoryInfo(path);
+            var directory = new DirectoryInfo(path);
 
-            DirectoryInfo[] versions = directory.GetDirectories();
+            var versions = directory.GetDirectories();
 
             IList<Result> results = new List<Result>();
 
-            foreach (DirectoryInfo versionDirectory in versions)
+            foreach (var versionDirectory in versions)
             {
-                string version = versionDirectory.Name;
-                FileInfo[] files = versionDirectory.GetFiles();
+                var version = versionDirectory.Name;
+                var files = versionDirectory.GetFiles();
 
                 _log.LogInformation($"Processing v{version}");
 
                 IList<Task> tasks = new List<Task>();
-                int finished = 0;
-                int total = files.Length;
+                var finished = 0;
+                var total = files.Length;
 
-                foreach (FileInfo fileInfo in files)
-                {
+                foreach (var fileInfo in files)
                     tasks.Add(Task.Run(async () =>
                     {
                         _log.LogDebug($"Processing {fileInfo.Name}");
 
-                        string eventName = fileInfo.Name.Replace(".json", " event");
+                        var eventName = fileInfo.Name.Replace(".json", " event");
                         IList<string> allEvents = (await File.ReadAllLinesAsync(fileInfo.FullName)).ToList();
-                        IList<string> testEvents = allEvents.ToList().OrderBy(x => Guid.NewGuid()).Take(Math.Min(allEvents.Count, 250)).ToList();
+                        IList<string> testEvents = allEvents.ToList().OrderBy(x => Guid.NewGuid())
+                            .Take(Math.Min(allEvents.Count, 250)).ToList();
 
                         total += testEvents.Count();
-                        bool hasHadError = false;
+                        var hasHadError = false;
 
-                        for (int i = 1; i < testEvents.Count() + 1; i++)
+                        for (var i = 1; i < testEvents.Count() + 1; i++)
                         {
-                            string json = testEvents[i - 1];
+                            var json = testEvents[i - 1];
 
                             try
                             {
@@ -111,12 +105,12 @@ namespace EliteAPI.Tests.Events
                                 if (ex is TargetInvocationException)
                                 {
                                     ex = ex.InnerException;
-                                    if(ex == null) { continue; }
+                                    if (ex == null) continue;
 
-                                    StringBuilder message = new StringBuilder();
+                                    var message = new StringBuilder();
                                     message.AppendLine(ex.Message);
 
-                                    Exception innerException = ex.InnerException;
+                                    var innerException = ex.InnerException;
                                     while (innerException != null)
                                     {
                                         message.AppendLine();
@@ -124,9 +118,9 @@ namespace EliteAPI.Tests.Events
                                         innerException = innerException.InnerException;
                                     }
 
-                                    results.Add(new Result()
+                                    results.Add(new Result
                                     {
-                                        Title = $"{eventName} (v{ version})",
+                                        Title = $"{eventName} (v{version})",
                                         Message = message.ToString(),
                                         Path = Path.Combine(fileInfo.Directory.Name, fileInfo.Name),
                                         Line = allEvents.IndexOf(json) + 1,
@@ -138,7 +132,6 @@ namespace EliteAPI.Tests.Events
                             finished++;
                         }
                     }));
-                }
 
                 Task.WaitAll(tasks.ToArray());
             }

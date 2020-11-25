@@ -1,39 +1,37 @@
+using System;
+using EliteAPI.Event.Models;
+using EliteAPI.Event.Models.Abstractions;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-    using Abstractions;
-
-
     public partial class ShutdownEvent : EventBase
     {
-        internal ShutdownEvent() { }
+        internal ShutdownEvent()
+        {
+        }
 
-        [JsonProperty("event")]
-        public string Event { get; private set; }
+        [JsonProperty("event")] public string Event { get; private set; }
     }
 
     public partial class ShutdownEvent
     {
-        public static ShutdownEvent FromJson(string json) => JsonConvert.DeserializeObject<ShutdownEvent>(json);
+        public static ShutdownEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ShutdownEvent>(json);
+        }
     }
-
-    
 }
 
 namespace EliteAPI.Event.Handler
 {
-    using System;
-    using Models;
-
     public partial class EventHandler
     {
         public event EventHandler<ShutdownEvent> ShutdownEvent;
-        internal void InvokeShutdownEvent(ShutdownEvent arg) => ShutdownEvent?.Invoke(this, arg);
+
+        internal void InvokeShutdownEvent(ShutdownEvent arg)
+        {
+            ShutdownEvent?.Invoke(this, arg);
+        }
     }
 }

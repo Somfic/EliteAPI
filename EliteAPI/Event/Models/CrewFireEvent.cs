@@ -1,39 +1,37 @@
+using System;
+using EliteAPI.Event.Models;
+using EliteAPI.Event.Models.Abstractions;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-    using Abstractions;
-
-
     public partial class CrewFireEvent : EventBase
     {
-        internal CrewFireEvent() { }
+        internal CrewFireEvent()
+        {
+        }
 
-        [JsonProperty("Name")]
-        public string Name { get; private set; }
+        [JsonProperty("Name")] public string Name { get; private set; }
     }
 
     public partial class CrewFireEvent
     {
-        public static CrewFireEvent FromJson(string json) => JsonConvert.DeserializeObject<CrewFireEvent>(json);
+        public static CrewFireEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<CrewFireEvent>(json);
+        }
     }
-
-    
 }
 
 namespace EliteAPI.Event.Handler
 {
-    using System;
-    using Models;
-
     public partial class EventHandler
     {
         public event EventHandler<CrewFireEvent> CrewFireEvent;
-        internal void InvokeCrewFireEvent(CrewFireEvent arg) => CrewFireEvent?.Invoke(this, arg);
+
+        internal void InvokeCrewFireEvent(CrewFireEvent arg)
+        {
+            CrewFireEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace EliteAPI.Event.Models.Abstractions
 {
     /// <summary>
-    /// An in-game event
+    ///     An in-game event
     /// </summary>
     public abstract class EventBase : IEvent
     {

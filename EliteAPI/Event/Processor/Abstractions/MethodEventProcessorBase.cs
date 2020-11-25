@@ -1,10 +1,10 @@
-﻿using EliteAPI.Event.Models.Abstractions;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
+using EliteAPI.Event.Models.Abstractions;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace EliteAPI.Event.Processor.Abstractions
 {
@@ -13,16 +13,16 @@ namespace EliteAPI.Event.Processor.Abstractions
         private readonly ILogger _log;
         private readonly IServiceProvider _services;
 
-        /// <summary>
-        /// Methods to invoke, mapped to the name of a event
-        /// </summary>
-        protected IDictionary<string, IEnumerable<MethodBase>> Cache { get; set; }
-
         protected MethodEventProcessorBase(ILogger log, IServiceProvider services)
         {
             _log = log;
             _services = services;
         }
+
+        /// <summary>
+        ///     Methods to invoke, mapped to the name of a event
+        /// </summary>
+        protected IDictionary<string, IEnumerable<MethodBase>> Cache { get; set; }
 
         /// <inheritdoc />
         public abstract Task RegisterHandlers();
@@ -30,20 +30,17 @@ namespace EliteAPI.Event.Processor.Abstractions
         /// <inheritdoc />
         public async Task InvokeHandler(EventBase eventBase, bool isWhileCatchingUp)
         {
-            if (Cache == null) { await RegisterHandlers(); }
+            if (Cache == null) await RegisterHandlers();
 
             try
             {
-                string key = eventBase.GetType().Name;
+                var key = eventBase.GetType().Name;
 
-                if (!Cache.ContainsKey(key)) { return; }
+                if (!Cache.ContainsKey(key)) return;
 
-                IEnumerable<MethodBase> methods = Cache[key];
+                var methods = Cache[key];
 
-                foreach (MethodBase method in methods)
-                {
-                    InvokeMethod(method, eventBase);
-                }
+                foreach (var method in methods) InvokeMethod(method, eventBase);
             }
             catch (Exception ex)
             {
@@ -55,24 +52,21 @@ namespace EliteAPI.Event.Processor.Abstractions
         {
             try
             {
-                Type parentClass = method.DeclaringType;
+                var parentClass = method.DeclaringType;
                 if (parentClass == null)
                 {
-                    ArgumentNullException ex = new ArgumentNullException(nameof(method.DeclaringType));
+                    var ex = new ArgumentNullException(nameof(method.DeclaringType));
                     _log.LogTrace(ex, "Could not invoke for {event} event, DeclaringType was null");
                     return;
                 }
 
-                string methodName = $"{parentClass.FullName}:{method.Name}";
-                object parentClassInstance = _services.GetRequiredService(parentClass);
+                var methodName = $"{parentClass.FullName}:{method.Name}";
+                var parentClassInstance = _services.GetRequiredService(parentClass);
 
-                if(method.DeclaringType.Namespace.StartsWith("EliteAPI"))
-                {
+                if (method.DeclaringType.Namespace.StartsWith("EliteAPI"))
                     _log.LogTrace("Invoking {method} for {event} event", methodName, eventBase.Event);
-                } else
-                {
+                else
                     _log.LogDebug("Invoking {method} for {event} event", methodName, eventBase.Event);
-                }
 
                 method.Invoke(parentClassInstance, new object[] {eventBase});
             }

@@ -1,39 +1,37 @@
+using System;
+using EliteAPI.Event.Models;
+using EliteAPI.Event.Models.Abstractions;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-    using Abstractions;
-
-
     public partial class CockpitBreachedEvent : EventBase
     {
-        internal CockpitBreachedEvent() { }
+        internal CockpitBreachedEvent()
+        {
+        }
 
-        [JsonProperty("event")]
-        public string Event { get; private set; }
+        [JsonProperty("event")] public string Event { get; private set; }
     }
 
     public partial class CockpitBreachedEvent
     {
-        public static CockpitBreachedEvent FromJson(string json) => JsonConvert.DeserializeObject<CockpitBreachedEvent>(json);
+        public static CockpitBreachedEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<CockpitBreachedEvent>(json);
+        }
     }
-
-    
 }
 
 namespace EliteAPI.Event.Handler
 {
-    using System;
-    using Models;
-
     public partial class EventHandler
     {
         public event EventHandler<CockpitBreachedEvent> CockpitBreachedEvent;
-        internal void InvokeCockpitBreachedEvent(CockpitBreachedEvent arg) => CockpitBreachedEvent?.Invoke(this, arg);
+
+        internal void InvokeCockpitBreachedEvent(CockpitBreachedEvent arg)
+        {
+            CockpitBreachedEvent?.Invoke(this, arg);
+        }
     }
 }

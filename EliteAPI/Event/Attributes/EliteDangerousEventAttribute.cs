@@ -6,7 +6,7 @@ namespace EliteAPI.Event.Attributes
     public sealed class EliteDangerousEventAttribute : Attribute
     {
         public EliteDangerousEventAttribute(bool runOnCatchup = false)
-        { 
+        {
             RunOnCatchup = runOnCatchup;
         }
 

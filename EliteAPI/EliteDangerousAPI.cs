@@ -1,23 +1,21 @@
-﻿using EliteAPI.Abstractions;
-using EliteAPI.Event.Models.Abstractions;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using EliteAPI.Abstractions;
 using EliteAPI.Event.Processor.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
 using EliteAPI.Journal.Directory.Abstractions;
 using EliteAPI.Journal.Processor.Abstractions;
 using EliteAPI.Journal.Provider.Abstractions;
-using EliteAPI.Status.Models;
 using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Provider.Abstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
@@ -25,20 +23,21 @@ namespace EliteAPI
     /// <inheritdoc />
     public class EliteDangerousAPI : IEliteDangerousAPI
     {
-        /// <inheritdoc />
-        public bool IsRunning { get; private set; }
+        private readonly IConfiguration _config;
+        private readonly IEnumerable<IEventProcessor> _eventProcessors;
 
-        /// <inheritdoc />
-        public bool HasCatchedUp { get; private set; }
+        private readonly IEventProvider _eventProvider;
 
-        /// <inheritdoc />
-        public Version Version { get; }
+        private readonly IJournalDirectoryProvider _journalDirectoryProvider;
+        private readonly IJournalProcessor _journalProcessor;
 
-        /// <inheritdoc />
-        public EventHandler Events { get; }
+        private readonly IJournalProvider _journalProvider;
 
-        /// <inheritdoc />
-        public IShipStatus Status { get; private set; }
+        private readonly ILogger<EliteDangerousAPI> _log;
+        private readonly IStatusProcessor _statusProcessor;
+        private readonly IStatusProvider _statusProvider;
+
+        private bool _isFirstTick = true;
 
         public EliteDangerousAPI(IServiceProvider services)
         {
@@ -69,19 +68,6 @@ namespace EliteAPI
             }
         }
 
-        private readonly ILogger<EliteDangerousAPI> _log;
-        private readonly IConfiguration _config;
-
-        private readonly IEventProvider _eventProvider;
-        private readonly IEnumerable<IEventProcessor> _eventProcessors;
-
-        private readonly IJournalProvider _journalProvider;
-        private readonly IJournalProcessor _journalProcessor;
-
-        private readonly IJournalDirectoryProvider _journalDirectoryProvider;
-        private readonly IStatusProvider _statusProvider;
-        private readonly IStatusProcessor _statusProcessor;
-
         private DirectoryInfo JournalDirectory { get; set; }
         private FileInfo JournalFile { get; set; }
         private FileInfo StatusFile { get; set; }
@@ -96,6 +82,21 @@ namespace EliteAPI
         private bool IsInitialized { get; set; }
 
         /// <inheritdoc />
+        public bool IsRunning { get; private set; }
+
+        /// <inheritdoc />
+        public bool HasCatchedUp { get; private set; }
+
+        /// <inheritdoc />
+        public Version Version { get; }
+
+        /// <inheritdoc />
+        public EventHandler Events { get; }
+
+        /// <inheritdoc />
+        public IShipStatus Status { get; }
+
+        /// <inheritdoc />
         public async Task InitializeAsync()
         {
             if (PreInitializationException != null)
@@ -104,10 +105,7 @@ namespace EliteAPI
                 throw PreInitializationException;
             }
 
-            if (IsInitialized)
-            {
-                return;
-            }
+            if (IsInitialized) return;
 
             try
             {
@@ -135,10 +133,7 @@ namespace EliteAPI
         /// <inheritdoc />
         public async Task StartAsync()
         {
-            if (!IsInitialized)
-            {
-                await InitializeAsync();
-            }
+            if (!IsInitialized) await InitializeAsync();
 
             if (InitializationException != null)
             {
@@ -149,7 +144,7 @@ namespace EliteAPI
 
             IsRunning = true;
 
-            Task task = Task.Run(async () =>
+            var task = Task.Run(async () =>
             {
                 while (IsRunning)
                 {
@@ -161,7 +156,16 @@ namespace EliteAPI
             _log.LogInformation("EliteAPI has started");
         }
 
-        private bool _isFirstTick = true;
+        public Task StopAsync()
+        {
+            _journalProcessor.NewJournalEntry -= _journalProcessor_NewJournalEntry;
+
+            IsRunning = false;
+            IsInitialized = false;
+
+            return Task.CompletedTask;
+        }
+
         private async Task DoTick()
         {
             try
@@ -188,21 +192,9 @@ namespace EliteAPI
             }
         }
 
-        public Task StopAsync()
-        {
-            _journalProcessor.NewJournalEntry -= _journalProcessor_NewJournalEntry;
-
-            IsRunning = false;
-            IsInitialized = false;
-
-            return Task.CompletedTask;
-        }
-
         private async Task InitializeEventHandlers()
         {
-
-            foreach (IEventProcessor eventProcessor in _eventProcessors)
-            {
+            foreach (var eventProcessor in _eventProcessors)
                 try
                 {
                     await eventProcessor.RegisterHandlers();
@@ -212,18 +204,15 @@ namespace EliteAPI
                     _log.LogWarning(ex, "Could not initialize event handler {name}", eventProcessor.GetType().FullName);
                     throw;
                 }
-            }
         }
 
         private async void _journalProcessor_NewJournalEntry(object sender, JournalEntry e)
         {
             try
             {
-                EventBase eventBase = await _eventProvider.ProcessJsonEvent(e.Json);
-                foreach (IEventProcessor eventProcessor in _eventProcessors)
-                {
+                var eventBase = await _eventProvider.ProcessJsonEvent(e.Json);
+                foreach (var eventProcessor in _eventProcessors)
                     await eventProcessor.InvokeHandler(eventBase, e.IsWhileCatchingUp);
-                }
             }
             catch (Exception ex)
             {
@@ -235,11 +224,8 @@ namespace EliteAPI
         {
             try
             {
-                DirectoryInfo newJournalDirectory = await _journalDirectoryProvider.FindJournalDirectory();
-                if (newJournalDirectory == null || JournalDirectory?.FullName == newJournalDirectory.FullName)
-                {
-                    return;
-                }
+                var newJournalDirectory = await _journalDirectoryProvider.FindJournalDirectory();
+                if (newJournalDirectory == null || JournalDirectory?.FullName == newJournalDirectory.FullName) return;
 
                 _log.LogInformation("Setting journal directory to {filePath}", newJournalDirectory.FullName);
                 JournalDirectory = newJournalDirectory;
@@ -249,19 +235,15 @@ namespace EliteAPI
                 _log.LogWarning(ex, "Could not find journal directory");
                 throw;
             }
-
         }
 
         private async Task SetJournalFile()
         {
             try
             {
-                FileInfo newJournalFile = await _journalProvider.FindJournalFile(JournalDirectory);
+                var newJournalFile = await _journalProvider.FindJournalFile(JournalDirectory);
 
-                if (JournalFile?.FullName == newJournalFile.FullName)
-                {
-                    return;
-                }
+                if (JournalFile?.FullName == newJournalFile.FullName) return;
 
                 _log.LogInformation("Setting journal file to {filePath}", newJournalFile.Name);
                 JournalFile = newJournalFile;
@@ -292,9 +274,7 @@ namespace EliteAPI
         private Task CheckComputerOperatingSystem()
         {
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            {
                 _log.LogWarning("You are not running on a Windows machine, some features may not work properly");
-            }
 
             return Task.CompletedTask;
         }

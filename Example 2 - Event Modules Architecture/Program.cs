@@ -1,15 +1,11 @@
-﻿using EliteAPI;
-
+﻿using System.Threading.Tasks;
+using EliteAPI;
 using Example2.Modules;
-
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-
-using Somfic.Logging.Console.Themes;
 using Somfic.Logging.Console;
-
-using System.Threading.Tasks;
+using Somfic.Logging.Console.Themes;
 
 namespace Example2
 {
@@ -20,7 +16,7 @@ namespace Example2
         private static async Task Main(string[] args)
         {
             // Build the host for dependency injection
-            IHost host = Host.CreateDefaultBuilder()
+            var host = Host.CreateDefaultBuilder()
                 .ConfigureLogging((context, logger) =>
                 {
                     logger.ClearProviders();
@@ -39,7 +35,7 @@ namespace Example2
                 .Build();
 
             // Create an instance of our Core class
-            Core core = ActivatorUtilities.CreateInstance<Core>(host.Services);
+            var core = ActivatorUtilities.CreateInstance<Core>(host.Services);
 
             // Execute the Run method inside our Core class
             await core.Run();

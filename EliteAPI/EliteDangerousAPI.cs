@@ -37,8 +37,6 @@ namespace EliteAPI
         private readonly IStatusProcessor _statusProcessor;
         private readonly IStatusProvider _statusProvider;
 
-        private bool _isFirstTick = true;
-
         public EliteDangerousAPI(IServiceProvider services)
         {
             try
@@ -156,6 +154,8 @@ namespace EliteAPI
             _log.LogInformation("EliteAPI has started");
         }
 
+
+        /// <inheritdoc />
         public Task StopAsync()
         {
             _journalProcessor.NewJournalEntry -= _journalProcessor_NewJournalEntry;

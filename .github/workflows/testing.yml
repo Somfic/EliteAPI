@@ -40,11 +40,11 @@ jobs:
        run: bin\Release\netcoreapp3.1\EliteAPI.Tests.Events.exe Journal
        working-directory: EliteAPI.Tests.Events
     
-     - name: Annotations
-       uses: Attest/annotations-action@v1.0.7
+     - name: Annotation
+       uses: yuzutech/annotations-action@v0.1.0
        with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        path: 'EliteAPI.Tests.Events/bin/Release/netcoreapp3.1/annotations.json'
-        title: 'Annotate Files'
+         repo-token: "${{ secrets.GITHUB_TOKEN }}"
+         title: Events check
+         input: 'bin\Release\netcoreapp3.1\annotations.json'
       
      

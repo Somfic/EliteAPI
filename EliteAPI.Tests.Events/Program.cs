@@ -114,9 +114,6 @@ namespace EliteAPI.Tests.Events
                                     if(ex == null) { continue; }
 
                                     StringBuilder message = new StringBuilder();
-                                    message.AppendLine($"{eventName} failed (v{version})");
-                                    message.AppendLine();
-
                                     message.AppendLine(ex.Message);
 
                                     Exception innerException = ex.InnerException;
@@ -129,9 +126,10 @@ namespace EliteAPI.Tests.Events
 
                                     results.Add(new Result()
                                     {
+                                        Title = $"{eventName} (v{ version})",
                                         Message = message.ToString(),
                                         Path = Path.Combine(fileInfo.DirectoryName, fileInfo.Name),
-                                        Line = new Line(allEvents.IndexOf(json) + 1),
+                                        Line = allEvents.IndexOf(json) + 1,
                                         Level = "warning"
                                     });
                                 }

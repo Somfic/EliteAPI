@@ -8,10 +8,14 @@ on:
 
 jobs:     
   Compiling:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1.7.2
         
     - name: Install dependencies
       run: dotnet restore
@@ -23,7 +27,8 @@ jobs:
      runs-on: windows-latest
 
      steps:
-     - uses: actions/checkout@v2
+     - name: Checkout code
+       uses: actions/checkout@v2
         
      - name: Install dependencies
        run: dotnet restore EliteAPI.Tests.Events
@@ -31,7 +36,7 @@ jobs:
      - name: Build
        run: dotnet build EliteAPI.Tests.Events --configuration Release --no-restore
      
-     - name: Test
+     - name: Test events
        run: bin\Release\netcoreapp3.1\EliteAPI.Tests.Events.exe Journal
        working-directory: EliteAPI.Tests.Events
     

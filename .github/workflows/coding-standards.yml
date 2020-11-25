@@ -3,6 +3,8 @@ name: Coding standards
 on:
   pull_request:
     branches: [ master, dev ]
+  push:
+    branches: [ master, dev ]
 
 jobs:
   resharper:

@@ -28,30 +28,58 @@ namespace EliteAPI.BuildTools
                     string command = arg[0].ToLower();
                     string argument = string.Join(' ', arg.Skip(1));
 
-                    switch (command)
+                    try
                     {
-                        case "json":
-                            string generated = await FromJson(argument);
-                            await File.WriteAllTextAsync("generated.cs", generated);
-                            break;
+                        switch (command)
+                        {
+                            case "json":
+                                Json(argument);
+                                break;
 
-                        case "sort":
-                            await Sort(argument);
-                            break;
+                            case "sort":
+                                await Sort(argument);
+                                break;
 
-                        case "test":
-                            await Tests();
-                            break;
+                            case "generate":
+                                await Generate(argument);
+                                break;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error: {ex.Message}");
                     }
                 }
                 Console.WriteLine();
             }
         }
 
-        private static async Task Tests()
+        private static async Task Json(string json)
         {
 
+            string generated = await FromJson(json);
 
+            string eventName = await GetEventNameFromJson(json);
+            Directory.CreateDirectory("generated");
+            await File.WriteAllTextAsync($"generated/{eventName}.cs", generated);
+        
+    }
+
+        private static async Task Generate(string version)
+        {
+            DirectoryInfo dir = new DirectoryInfo($"../../../../Journal catalog/{version}");
+            if (!dir.Exists)
+            {
+                Console.WriteLine("Error: Directory not found");
+                return;
+            }
+
+            foreach (var file in dir.GetFiles())
+            {
+                string json = (await File.ReadAllLinesAsync(file.FullName)).OrderBy(x => Guid.NewGuid()).First();
+                Console.WriteLine(await GetEventNameFromJson(json));
+                await Json(json);
+            }
         }
 
         private static async Task Sort(string path)
@@ -189,8 +217,6 @@ namespace EliteAPI.BuildTools
                     foreach (string subClass in subClasses)
                     {
                         if (subClass.Trim() == eventName || subClass.Trim() == "EventBase") { continue; }
-
-                        Console.WriteLine(subClass);
 
                         // Rename subclasses to *Info
                         type = Regex.Replace(type, $"{subClass}", $"{subClass.Trim()}Info");

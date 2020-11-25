@@ -37,14 +37,12 @@ jobs:
        run: dotnet build EliteAPI.Tests.Events --configuration Release --no-restore
      
      - name: Test events
-       run: bin\Release\netcoreapp3.1\EliteAPI.Tests.Events.exe Journal
-       working-directory: EliteAPI.Tests.Events
+       run: EliteAPI.Tests.Events\bin\Release\netcoreapp3.1\EliteAPI.Tests.Events.exe Journal
     
-     - name: Annotation
+     - name: Annotations
        uses: yuzutech/annotations-action@v0.1.0
        with:
          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-         title: Events check
-         input: 'EliteAPI.Tests.Events\bin\Release\netcoreapp3.1\annotations.json'
+         input: '.\EliteAPI.Tests.Events\bin\Release\netcoreapp3.1\annotations.json'
       
      

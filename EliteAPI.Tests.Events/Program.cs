@@ -145,11 +145,9 @@ namespace EliteAPI.Tests.Events
 
             await File.WriteAllTextAsync("annotations.json", JsonConvert.SerializeObject(results));
 
-            await Task.Delay(1000);
-
             var file = new FileInfo("annotations.json");
 
-            _log.LogCritical(file.FullName);
+            _log.LogInformation(file.FullName);
         }
     }
 }

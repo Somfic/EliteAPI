@@ -45,6 +45,6 @@ jobs:
        with:
          repo-token: "${{ secrets.GITHUB_TOKEN }}"
          title: Events check
-         input: 'bin\Release\netcoreapp3.1\annotations.json'
+         input: 'EliteAPI.Tests.Events\bin\Release\netcoreapp3.1\annotations.json'
       
      

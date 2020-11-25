@@ -43,6 +43,6 @@ jobs:
        uses: yuzutech/annotations-action@v0.1.0
        with:
          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-         input: '.\EliteAPI.Tests.Events\bin\Release\netcoreapp3.1\annotations.json'
+         input: EliteAPI.Tests.Events\bin\Release\netcoreapp3.1\annotations.json
       
      

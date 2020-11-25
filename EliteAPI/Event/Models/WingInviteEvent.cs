@@ -1,18 +1,39 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class WingInviteEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class WingInviteEvent : EventBase
     {
         internal WingInviteEvent() { }
 
-        public static WingInviteEvent FromJson(string json) => JsonConvert.DeserializeObject<WingInviteEvent>(json);
-
-
         [JsonProperty("Name")]
-        public string Name { get; internal set; }
+        public string Name { get; private set; }
+    }
 
-        
+    public partial class WingInviteEvent
+    {
+        public static WingInviteEvent FromJson(string json) => JsonConvert.DeserializeObject<WingInviteEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<WingInviteEvent> WingInviteEvent;
+        internal void InvokeWingInviteEvent(WingInviteEvent arg) => WingInviteEvent?.Invoke(this, arg);
     }
 }

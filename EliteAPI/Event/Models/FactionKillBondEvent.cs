@@ -1,30 +1,45 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class FactionKillBondEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class FactionKillBondEvent : EventBase
     {
         internal FactionKillBondEvent() { }
 
-        public static FactionKillBondEvent FromJson(string json) => JsonConvert.DeserializeObject<FactionKillBondEvent>(json);
-
-
         [JsonProperty("Reward")]
-        public long Reward { get; internal set; }
+        public long Reward { get; private set; }
 
         [JsonProperty("AwardingFaction")]
-        public string AwardingFaction { get; internal set; }
-
-        [JsonProperty("AwardingFaction_Localised")]
-        public string AwardingFactionLocalised { get; internal set; }
+        public string AwardingFaction { get; private set; }
 
         [JsonProperty("VictimFaction")]
-        public string VictimFaction { get; internal set; }
+        public string VictimFaction { get; private set; }
+    }
 
-        [JsonProperty("VictimFaction_Localised")]
-        public string VictimFactionLocalised { get; internal set; }
+    public partial class FactionKillBondEvent
+    {
+        public static FactionKillBondEvent FromJson(string json) => JsonConvert.DeserializeObject<FactionKillBondEvent>(json);
+    }
 
-        
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<FactionKillBondEvent> FactionKillBondEvent;
+        internal void InvokeFactionKillBondEvent(FactionKillBondEvent arg) => FactionKillBondEvent?.Invoke(this, arg);
     }
 }

@@ -1,24 +1,45 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class FSSDiscoveryScanEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class FssDiscoveryScanEvent : EventBase
     {
-        internal FSSDiscoveryScanEvent() { }
-
-        public static FSSDiscoveryScanEvent FromJson(string json) => JsonConvert.DeserializeObject<FSSDiscoveryScanEvent>(json);
-
+        internal FssDiscoveryScanEvent() { }
 
         [JsonProperty("Progress")]
-        public float Progress { get; internal set; }
+        public double Progress { get; private set; }
 
         [JsonProperty("BodyCount")]
-        public long BodyCount { get; internal set; }
+        public long BodyCount { get; private set; }
 
         [JsonProperty("NonBodyCount")]
-        public long NonBodyCount { get; internal set; }
+        public long NonBodyCount { get; private set; }
+    }
 
-        
+    public partial class FssDiscoveryScanEvent
+    {
+        public static FssDiscoveryScanEvent FromJson(string json) => JsonConvert.DeserializeObject<FssDiscoveryScanEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<FssDiscoveryScanEvent> FssDiscoveryScanEvent;
+        internal void InvokeFssDiscoveryScanEvent(FssDiscoveryScanEvent arg) => FssDiscoveryScanEvent?.Invoke(this, arg);
     }
 }

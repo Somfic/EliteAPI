@@ -1,64 +1,81 @@
-using System;
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class MissionAcceptedEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class MissionAcceptedEvent : EventBase
     {
         internal MissionAcceptedEvent() { }
 
-        public static MissionAcceptedEvent FromJson(string json) => JsonConvert.DeserializeObject<MissionAcceptedEvent>(json);
-
-
         [JsonProperty("Faction")]
-        public string Faction { get; internal set; }
+        public string Faction { get; private set; }
 
         [JsonProperty("Name")]
-        public string Name { get; internal set; }
+        public string Name { get; private set; }
 
         [JsonProperty("LocalisedName")]
-        public string LocalisedName { get; internal set; }
+        public string LocalisedName { get; private set; }
 
-        [JsonProperty("Commodity")]
-        public string Commodity { get; internal set; }
+        [JsonProperty("TargetType")]
+        public string TargetType { get; private set; }
 
-        [JsonProperty("Commodity_Localised")]
-        public string CommodityLocalised { get; internal set; }
+        [JsonProperty("TargetType_Localised")]
+        public string TargetTypeLocalised { get; private set; }
 
-        [JsonProperty("Count")]
-        public long Count { get; internal set; }
+        [JsonProperty("TargetFaction")]
+        public string TargetFaction { get; private set; }
 
         [JsonProperty("DestinationSystem")]
-        public string DestinationSystem { get; internal set; }
+        public string DestinationSystem { get; private set; }
+
+        [JsonProperty("DestinationStation")]
+        public string DestinationStation { get; private set; }
+
+        [JsonProperty("Target")]
+        public string Target { get; private set; }
 
         [JsonProperty("Expiry")]
-        public DateTime Expiry { get; internal set; }
+        public DateTimeOffset Expiry { get; private set; }
+
+        [JsonProperty("Wing")]
+        public bool Wing { get; private set; }
 
         [JsonProperty("Influence")]
-        public string Influence { get; internal set; }
+        public string Influence { get; private set; }
 
         [JsonProperty("Reputation")]
-        public string Reputation { get; internal set; }
+        public string Reputation { get; private set; }
 
         [JsonProperty("Reward")]
-        public long Reward { get; internal set; }
-
-        [JsonProperty("PassengerCount")]
-        public long PassengerCount { get; internal set; }
-
-        [JsonProperty("PassengerVIPs")]
-        public bool PassengerViPs { get; internal set; }
-
-        [JsonProperty("PassengerWanted")]
-        public bool PassengerWanted { get; internal set; }
-
-        [JsonProperty("PassengerType")]
-        public string PassengerType { get; internal set; }
+        public long Reward { get; private set; }
 
         [JsonProperty("MissionID")]
-        public long MissionId { get; internal set; }
+        public long MissionId { get; private set; }
+    }
 
-        
+    public partial class MissionAcceptedEvent
+    {
+        public static MissionAcceptedEvent FromJson(string json) => JsonConvert.DeserializeObject<MissionAcceptedEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<MissionAcceptedEvent> MissionAcceptedEvent;
+        internal void InvokeMissionAcceptedEvent(MissionAcceptedEvent arg) => MissionAcceptedEvent?.Invoke(this, arg);
     }
 }

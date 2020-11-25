@@ -1,21 +1,39 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class RepairDroneEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class RepairDroneEvent : EventBase
     {
         internal RepairDroneEvent() { }
 
-        public static RepairDroneEvent FromJson(string json) => JsonConvert.DeserializeObject<RepairDroneEvent>(json);
-
-
         [JsonProperty("HullRepaired")]
-        public float HullRepaired { get; internal set; }
+        public double HullRepaired { get; private set; }
+    }
 
-        [JsonProperty("CockpitRepaired")]
-        public float CockpitRepaired { get; internal set; }
+    public partial class RepairDroneEvent
+    {
+        public static RepairDroneEvent FromJson(string json) => JsonConvert.DeserializeObject<RepairDroneEvent>(json);
+    }
 
-        
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<RepairDroneEvent> RepairDroneEvent;
+        internal void InvokeRepairDroneEvent(RepairDroneEvent arg) => RepairDroneEvent?.Invoke(this, arg);
     }
 }

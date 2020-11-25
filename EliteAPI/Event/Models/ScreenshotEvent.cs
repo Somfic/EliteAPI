@@ -1,42 +1,51 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ScreenshotEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class ScreenshotEvent : EventBase
     {
         internal ScreenshotEvent() { }
 
-        public static ScreenshotEvent FromJson(string json) => JsonConvert.DeserializeObject<ScreenshotEvent>(json);
-
-
         [JsonProperty("Filename")]
-        public string Filename { get; internal set; }
+        public string Filename { get; private set; }
 
         [JsonProperty("Width")]
-        public long Width { get; internal set; }
+        public long Width { get; private set; }
 
         [JsonProperty("Height")]
-        public long Height { get; internal set; }
+        public long Height { get; private set; }
 
         [JsonProperty("System")]
-        public string System { get; internal set; }
+        public string System { get; private set; }
 
         [JsonProperty("Body")]
-        public string Body { get; internal set; }
+        public string Body { get; private set; }
+    }
 
-        [JsonProperty("Latitude")]
-        public float Latitude { get; internal set; }
+    public partial class ScreenshotEvent
+    {
+        public static ScreenshotEvent FromJson(string json) => JsonConvert.DeserializeObject<ScreenshotEvent>(json);
+    }
 
-        [JsonProperty("Longitude")]
-        public float Longitude { get; internal set; }
+    
+}
 
-        [JsonProperty("Heading")]
-        public long Heading { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
 
-        [JsonProperty("Altitude")]
-        public float Altitude { get; internal set; }
-
-        
+    public partial class EventHandler
+    {
+        public event EventHandler<ScreenshotEvent> ScreenshotEvent;
+        internal void InvokeScreenshotEvent(ScreenshotEvent arg) => ScreenshotEvent?.Invoke(this, arg);
     }
 }

@@ -1,21 +1,42 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class BuyExplorationDataEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class BuyExplorationDataEvent : EventBase
     {
         internal BuyExplorationDataEvent() { }
 
-        public static BuyExplorationDataEvent FromJson(string json) => JsonConvert.DeserializeObject<BuyExplorationDataEvent>(json);
-
-
         [JsonProperty("System")]
-        public string System { get; internal set; }
+        public string System { get; private set; }
 
         [JsonProperty("Cost")]
-        public long Cost { get; internal set; }
+        public long Cost { get; private set; }
+    }
 
-        
+    public partial class BuyExplorationDataEvent
+    {
+        public static BuyExplorationDataEvent FromJson(string json) => JsonConvert.DeserializeObject<BuyExplorationDataEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<BuyExplorationDataEvent> BuyExplorationDataEvent;
+        internal void InvokeBuyExplorationDataEvent(BuyExplorationDataEvent arg) => BuyExplorationDataEvent?.Invoke(this, arg);
     }
 }

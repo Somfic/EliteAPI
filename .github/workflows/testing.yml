@@ -37,7 +37,7 @@ jobs:
        run: dotnet build EliteAPI.Tests.Events --configuration Release --no-restore
      
      - name: Test events
-       run: EliteAPI.Tests.Events\bin\Release\netcoreapp3.1\EliteAPI.Tests.Events.exe EliteAPI.Tests.Events\Journal
+       run: EliteAPI.Tests.Events\bin\Release\netcoreapp3.1\EliteAPI.Tests.Events.exe Journal catalog
     
      - name: Annotations
        uses: yuzutech/annotations-action@v0.1.0

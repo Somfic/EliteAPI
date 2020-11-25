@@ -1,33 +1,48 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class MarketBuyEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class MarketBuyEvent : EventBase
     {
         internal MarketBuyEvent() { }
 
-        public static MarketBuyEvent FromJson(string json) => JsonConvert.DeserializeObject<MarketBuyEvent>(json);
-
-
-        [JsonProperty("MarketID")]
-        public long MarketId { get; internal set; }
-
         [JsonProperty("Type")]
-        public string Type { get; internal set; }
-
-        [JsonProperty("Type_Localised")]
-        public string TypeLocalised { get; internal set; }
+        public string Type { get; private set; }
 
         [JsonProperty("Count")]
-        public long Count { get; internal set; }
+        public long Count { get; private set; }
 
         [JsonProperty("BuyPrice")]
-        public long BuyPrice { get; internal set; }
+        public long BuyPrice { get; private set; }
 
         [JsonProperty("TotalCost")]
-        public long TotalCost { get; internal set; }
+        public long TotalCost { get; private set; }
+    }
 
-        
+    public partial class MarketBuyEvent
+    {
+        public static MarketBuyEvent FromJson(string json) => JsonConvert.DeserializeObject<MarketBuyEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<MarketBuyEvent> MarketBuyEvent;
+        internal void InvokeMarketBuyEvent(MarketBuyEvent arg) => MarketBuyEvent?.Invoke(this, arg);
     }
 }

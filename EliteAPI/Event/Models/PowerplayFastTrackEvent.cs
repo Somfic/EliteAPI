@@ -1,21 +1,42 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class PowerplayFastTrackEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class PowerplayFastTrackEvent : EventBase
     {
         internal PowerplayFastTrackEvent() { }
 
-        public static PowerplayFastTrackEvent FromJson(string json) => JsonConvert.DeserializeObject<PowerplayFastTrackEvent>(json);
-
-
         [JsonProperty("Power")]
-        public string Power { get; internal set; }
+        public string Power { get; private set; }
 
         [JsonProperty("Cost")]
-        public long Cost { get; internal set; }
+        public long Cost { get; private set; }
+    }
 
-        
+    public partial class PowerplayFastTrackEvent
+    {
+        public static PowerplayFastTrackEvent FromJson(string json) => JsonConvert.DeserializeObject<PowerplayFastTrackEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<PowerplayFastTrackEvent> PowerplayFastTrackEvent;
+        internal void InvokePowerplayFastTrackEvent(PowerplayFastTrackEvent arg) => PowerplayFastTrackEvent?.Invoke(this, arg);
     }
 }

@@ -1,24 +1,45 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class FSSAllBodiesFoundEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class FssAllBodiesFoundEvent : EventBase
     {
-        internal FSSAllBodiesFoundEvent() { }
-
-        public static FSSAllBodiesFoundEvent FromJson(string json) => JsonConvert.DeserializeObject<FSSAllBodiesFoundEvent>(json);
-
+        internal FssAllBodiesFoundEvent() { }
 
         [JsonProperty("SystemName")]
-        public string SystemName { get; internal set; }
+        public string SystemName { get; private set; }
 
         [JsonProperty("SystemAddress")]
-        public string SystemAddress { get; internal set; }
+        public long SystemAddress { get; private set; }
 
         [JsonProperty("Count")]
-        public long Count { get; internal set; }
+        public long Count { get; private set; }
+    }
 
-        
+    public partial class FssAllBodiesFoundEvent
+    {
+        public static FssAllBodiesFoundEvent FromJson(string json) => JsonConvert.DeserializeObject<FssAllBodiesFoundEvent>(json);
+    }
+
+    
+}
+
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<FssAllBodiesFoundEvent> FssAllBodiesFoundEvent;
+        internal void InvokeFssAllBodiesFoundEvent(FssAllBodiesFoundEvent arg) => FssAllBodiesFoundEvent?.Invoke(this, arg);
     }
 }

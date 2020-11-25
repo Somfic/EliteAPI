@@ -1,45 +1,54 @@
-using EliteAPI.Event.Models.Abstractions;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ModuleStoreEvent : EventBase
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using Abstractions;
+
+
+    public partial class ModuleStoreEvent : EventBase
     {
         internal ModuleStoreEvent() { }
 
-        public static ModuleStoreEvent FromJson(string json) => JsonConvert.DeserializeObject<ModuleStoreEvent>(json);
-
-
-        [JsonProperty("MarketID")]
-        public long MarketId { get; internal set; }
-
         [JsonProperty("Slot")]
-        public string Slot { get; internal set; }
+        public string Slot { get; private set; }
 
         [JsonProperty("StoredItem")]
-        public string StoredItem { get; internal set; }
+        public string StoredItem { get; private set; }
 
         [JsonProperty("StoredItem_Localised")]
-        public string StoredItemLocalised { get; internal set; }
+        public string StoredItemLocalised { get; private set; }
 
         [JsonProperty("Ship")]
-        public string Ship { get; internal set; }
+        public string Ship { get; private set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; internal set; }
-
-        [JsonProperty("Hot")]
-        public bool Hot { get; internal set; }
+        public long ShipId { get; private set; }
 
         [JsonProperty("EngineerModifications")]
-        public string EngineerModifications { get; internal set; }
+        public string EngineerModifications { get; private set; }
+    }
 
-        [JsonProperty("Level")]
-        public long Level { get; internal set; }
+    public partial class ModuleStoreEvent
+    {
+        public static ModuleStoreEvent FromJson(string json) => JsonConvert.DeserializeObject<ModuleStoreEvent>(json);
+    }
 
-        [JsonProperty("Quality")]
-        public float Quality { get; internal set; }
+    
+}
 
-        
+namespace EliteAPI.Event.Handler
+{
+    using System;
+    using Models;
+
+    public partial class EventHandler
+    {
+        public event EventHandler<ModuleStoreEvent> ModuleStoreEvent;
+        internal void InvokeModuleStoreEvent(ModuleStoreEvent arg) => ModuleStoreEvent?.Invoke(this, arg);
     }
 }

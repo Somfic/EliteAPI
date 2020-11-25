@@ -128,7 +128,7 @@ namespace EliteAPI.Tests.Events
                                     {
                                         Title = $"{eventName} (v{ version})",
                                         Message = message.ToString(),
-                                        Path = Path.Combine(fileInfo.DirectoryName, fileInfo.Name),
+                                        Path = Path.Combine(fileInfo.Directory.Name, fileInfo.Name),
                                         Line = allEvents.IndexOf(json) + 1,
                                         Level = "warning"
                                     });

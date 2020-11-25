@@ -9,7 +9,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Tests.Events
 {
@@ -52,6 +55,8 @@ namespace EliteAPI.Tests.Events
 
         internal async Task Run(string path)
         {
+            if(string.IsNullOrWhiteSpace(path)) { path = "../../../Journal"; }
+
             if (!Directory.Exists(path))
             {
                 _log.LogError(new DirectoryNotFoundException(path), "Directory does not exist");
@@ -63,96 +68,84 @@ namespace EliteAPI.Tests.Events
 
             DirectoryInfo[] versions = directory.GetDirectories();
 
-            //         event              version json
-            Dictionary<string, Dictionary<string, string[]>> allEvents = new Dictionary<string, Dictionary<string, string[]>>();
+            IList<Result> results = new List<Result>();
 
             foreach (DirectoryInfo versionDirectory in versions)
             {
                 string version = versionDirectory.Name;
                 FileInfo[] files = versionDirectory.GetFiles();
 
+                _log.LogInformation($"Processing v{version}");
+
+                IList<Task> tasks = new List<Task>();
+                int finished = 0;
+                int total = files.Length;
+
                 foreach (FileInfo fileInfo in files)
                 {
-                    string eventName = fileInfo.Name;
-                    string[] jsonEvents = await File.ReadAllLinesAsync(fileInfo.FullName);
-
-                    if (allEvents.ContainsKey(eventName))
+                    tasks.Add(Task.Run(async () =>
                     {
-                        allEvents[eventName].Add(version, jsonEvents);
-                    }
-                    else
-                    {
-                        Dictionary<string, string[]> x = new Dictionary<string, string[]>
+                        _log.LogDebug($"Processing {fileInfo.Name}");
+
+                        string eventName = fileInfo.Name;
+                        IList<string> allEvents = (await File.ReadAllLinesAsync(fileInfo.FullName)).ToList();
+                        IList<string> testEvents = allEvents.ToList().OrderBy(x => Guid.NewGuid()).Take(Math.Min(allEvents.Count, 50)).ToList();
+
+                        total += testEvents.Count();
+                        bool hasHadError = false;
+
+                        for (int i = 1; i < testEvents.Count() + 1; i++)
                         {
-                            { version, jsonEvents }
-                        };
-                        allEvents.Add(eventName, x);
-                    }
-                }
-            }
+                            string json = testEvents[i - 1];
 
-            _log.LogInformation("Found {amount} unique json events", allEvents.Count);
-
-
-            List<ErrorEntry> errors = new List<ErrorEntry>();
-            int totalErrors = 0;
-
-            foreach (KeyValuePair<string, Dictionary<string, string[]>> testCase in allEvents)
-            {
-                string eventName = testCase.Key;
-
-                foreach (KeyValuePair<string, string[]> jsonPair in testCase.Value)
-                {
-                    string version = jsonPair.Key;
-                    foreach (string json in jsonPair.Value)
-                    {
-                        try
-                        {
-                            await _eventProvider.ProcessJsonEvent(json);
-                        }
-                        catch (Exception ex)
-                        {
-                            totalErrors++;
-                            if (!errors.Any(x => x.Exception.Message == ex.Message && x.Version == version && x.EventName == eventName))
+                            try
                             {
-                                if (!ex.Data.Contains("Json")) { ex.Data.Add("Json", json); }
-
-                                errors.Add(new ErrorEntry(version, ex, eventName));
+                                await _eventProvider.ProcessJsonEvent(json);
                             }
+                            catch (Exception ex)
+                            {
+                                if (hasHadError) continue;
+
+                                hasHadError = true;
+
+                                if (ex is TargetInvocationException)
+                                {
+                                    ex = ex.InnerException;
+                                    if(ex == null) { continue; }
+
+                                    StringBuilder message = new StringBuilder();
+                                    message.AppendLine($"{eventName} failed (v{version})");
+                                    message.AppendLine();
+
+                                    message.AppendLine(ex.Message);
+
+                                    Exception innerException = ex.InnerException;
+                                    while (innerException != null)
+                                    {
+                                        message.AppendLine();
+                                        message.AppendLine(innerException.Message);
+                                        innerException = innerException.InnerException;
+                                    }
+
+                                    results.Add(new Result()
+                                    {
+                                        Message = message.ToString(),
+                                        Path = Path.Combine(fileInfo.DirectoryName, fileInfo.Name),
+                                        Line = new Line(allEvents.IndexOf(json) + 1),
+                                        Level = "warning"
+                                    });
+                                }
+                            }
+
+                            finished++;
                         }
-                    }
+                    }));
                 }
+
+                Task.WaitAll(tasks.ToArray());
             }
 
-            if (errors.Any())
-            {
-                _log.LogError("{amount} errors found", errors.Count);
-
-                errors.ForEach(x =>
-                {
-                    _log.LogWarning(x.Exception, "{event} ({version})", x.EventName, x.Version);
-                });
-
-                Environment.Exit(-1);
-            }
-            else
-            {
-                Environment.Exit(0);
-            }
-        }
-
-        public class ErrorEntry
-        {
-            public ErrorEntry(string version, Exception exception, string eventName)
-            {
-                Version = version;
-                Exception = exception;
-                EventName = eventName;
-            }
-
-            public string Version { get; }
-            public string EventName { get; }
-            public Exception Exception { get; }
+            await File.WriteAllTextAsync("annotations.json", JsonConvert.SerializeObject(results));
         }
     }
 }

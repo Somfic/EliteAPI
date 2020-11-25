@@ -30,8 +30,8 @@ namespace Example2.Modules
         [EliteDangerousEvent]
         public void OnChatReceived(ReceiveTextEvent e)
         {
-            string author = e.FromLocalised ?? e.From;
-            string content = e.MessageLocalised ?? e.Message;
+            string author = e.From;
+            string content = e.Message;
 
             _log.LogInformation("Received text: '{content}' from {author}", content, author);
         }

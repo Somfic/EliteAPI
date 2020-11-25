@@ -1,8 +1,6 @@
-name: Coding Standards
+name: Coding standards
 
 on:
-  push:
-    branches: [ master, dev ]
   pull_request:
     branches: [ master, dev ]
 

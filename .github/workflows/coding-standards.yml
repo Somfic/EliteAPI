@@ -1,0 +1,43 @@
+name: Coding Standards
+
+on:
+  pull_request:
+    branches: [ master, dev ]
+  
+  push:
+    branches: [ master, dev ]
+
+jobs:
+  Coding Standards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Resharper analysis
+        uses: glassechidna/resharper-action@master
+        with:
+          solution: EliteAPI.sln
+    
+  Coding Analysis:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'csharp' ]
+        
+    steps:
+    - name: Checkout coode
+      uses: actions/checkout@v2
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v1
+      with:
+        languages: ${{ matrix.language }}
+
+    - name: Build
+      uses: github/codeql-action/autobuild@v1
+
+    - name: CodeQL Analysis
+      uses: github/codeql-action/analyze@v1

@@ -1,0 +1,8 @@
+{ "timestamp":"2019-02-23T02:21:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tollan", "SystemAddress":18262872171937, "StarClass":"M" }
+{ "timestamp":"2019-02-23T02:31:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nanomam", "SystemAddress":4752121268587, "StarClass":"K" }
+{ "timestamp":"2019-02-23T02:45:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Xi Ursae Majoris", "SystemAddress":4133645977963, "StarClass":"G" }
+{ "timestamp":"2019-02-23T02:50:00Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-02-23T03:02:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 316", "SystemAddress":33656034960801, "StarClass":"M" }
+{ "timestamp":"2019-02-23T03:04:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nanomam", "SystemAddress":4752121268587, "StarClass":"K" }
+{ "timestamp":"2019-02-23T03:21:27Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-02-23T03:22:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }

@@ -1,0 +1,8 @@
+{ "timestamp":"2019-02-23T02:48:32Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"sidewinder", "ScanStage":0 }
+{ "timestamp":"2019-02-23T02:48:33Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"sidewinder", "ScanStage":1, "PilotName":"$npc_name_decorate:#name=Konrad Marburg;", "PilotName_Localised":"Konrad Marburg", "PilotRank":"Competent" }
+{ "timestamp":"2019-02-23T02:48:35Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"sidewinder", "ScanStage":2, "PilotName":"$npc_name_decorate:#name=Konrad Marburg;", "PilotName_Localised":"Konrad Marburg", "PilotRank":"Competent", "ShieldHealth":100.000000, "HullHealth":100.000000 }
+{ "timestamp":"2019-02-23T02:48:38Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"sidewinder", "ScanStage":3, "PilotName":"$npc_name_decorate:#name=Konrad Marburg;", "PilotName_Localised":"Konrad Marburg", "PilotRank":"Competent", "ShieldHealth":100.000000, "HullHealth":100.000000, "Faction":"Party of Xi Ursae Majoris", "LegalStatus":"Clean" }
+{ "timestamp":"2019-02-23T02:48:39Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"sidewinder", "ScanStage":0 }
+{ "timestamp":"2019-02-23T02:48:40Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"sidewinder", "ScanStage":1, "PilotName":"$npc_name_decorate:#name=Christopher Holmes;", "PilotName_Localised":"Christopher Holmes", "PilotRank":"Novice" }
+{ "timestamp":"2019-02-23T02:48:42Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"sidewinder", "ScanStage":2, "PilotName":"$npc_name_decorate:#name=Christopher Holmes;", "PilotName_Localised":"Christopher Holmes", "PilotRank":"Novice", "ShieldHealth":0.000000, "HullHealth":100.000000 }
+{ "timestamp":"2019-02-23T02:48:42Z", "event":"ShipTargeted", "TargetLocked":false }

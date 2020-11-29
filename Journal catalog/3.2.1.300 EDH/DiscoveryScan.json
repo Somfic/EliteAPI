@@ -1,0 +1,10 @@
+{ "timestamp":"2018-12-09T19:16:56Z", "event":"DiscoveryScan", "SystemAddress":7269634811281, "Bodies":1 }
+{ "timestamp":"2018-12-09T19:17:04Z", "event":"DiscoveryScan", "SystemAddress":7269634811281, "Bodies":7 }
+{ "timestamp":"2018-12-10T02:31:28Z", "event":"DiscoveryScan", "SystemAddress":8330391065290, "Bodies":1 }
+{ "timestamp":"2018-12-10T02:31:44Z", "event":"DiscoveryScan", "SystemAddress":8330391065290, "Bodies":13 }
+{ "timestamp":"2018-12-10T02:32:39Z", "event":"DiscoveryScan", "SystemAddress":5581544886986, "Bodies":1 }
+{ "timestamp":"2018-12-10T04:22:37Z", "event":"DiscoveryScan", "SystemAddress":594609703267, "Bodies":1 }
+{ "timestamp":"2018-12-10T04:22:43Z", "event":"DiscoveryScan", "SystemAddress":594609703267, "Bodies":1 }
+{ "timestamp":"2018-12-11T04:09:01Z", "event":"DiscoveryScan", "SystemAddress":11667144451481, "Bodies":1 }
+{ "timestamp":"2018-12-11T04:31:49Z", "event":"DiscoveryScan", "SystemAddress":2870783059353, "Bodies":1 }
+{ "timestamp":"2018-12-11T04:31:56Z", "event":"DiscoveryScan", "SystemAddress":2870783059353, "Bodies":1 }

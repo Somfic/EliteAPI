@@ -1109,3 +1109,4 @@
 { "timestamp":"2020-11-06T20:33:53Z", "event":"ReceiveText", "From":"Bolt lee", "Message":"ahaha", "Channel":"squadron" }
 { "timestamp":"2020-11-09T21:11:13Z", "event":"ReceiveText", "From":"", "Message":"$COMMS_entered:#name=Shinrarta Dezhra;", "Message_Localised":"Entered Channel: Shinrarta Dezhra", "Channel":"npc" }
 { "timestamp":"2020-11-09T21:16:20Z", "event":"ReceiveText", "From":"Jameson Memorial", "Message":"$STATION_NoFireZone_exited;", "Message_Localised":"No fire zone left.", "Channel":"npc" }
+{ "timestamp":"2020-11-17T21:59:06Z", "event":"ReceiveText", "From":"", "Message":"$COMMS_entered:#name=Sol;", "Message_Localised":"Entered Channel: Sol", "Channel":"npc" }

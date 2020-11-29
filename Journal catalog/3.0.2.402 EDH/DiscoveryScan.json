@@ -1,0 +1,14 @@
+{ "timestamp":"2018-03-06T23:48:01Z", "event":"DiscoveryScan", "SystemAddress":2381299321195, "Bodies":1 }
+{ "timestamp":"2018-03-06T23:49:04Z", "event":"DiscoveryScan", "SystemAddress":2381299321195, "Bodies":1 }
+{ "timestamp":"2018-03-07T20:50:55Z", "event":"DiscoveryScan", "SystemAddress":2869440882105, "Bodies":1 }
+{ "timestamp":"2018-03-07T20:51:01Z", "event":"DiscoveryScan", "SystemAddress":2869440882105, "Bodies":4 }
+{ "timestamp":"2018-03-07T21:12:19Z", "event":"DiscoveryScan", "SystemAddress":9466510648769, "Bodies":1 }
+{ "timestamp":"2018-03-07T21:14:03Z", "event":"DiscoveryScan", "SystemAddress":9466510648769, "Bodies":1 }
+{ "timestamp":"2018-03-07T21:14:39Z", "event":"DiscoveryScan", "SystemAddress":9466510648769, "Bodies":6 }
+{ "timestamp":"2018-03-08T20:56:47Z", "event":"DiscoveryScan", "SystemAddress":5068464072129, "Bodies":1 }
+{ "timestamp":"2018-03-08T20:58:45Z", "event":"DiscoveryScan", "SystemAddress":5068464072129, "Bodies":10 }
+{ "timestamp":"2018-03-08T21:19:01Z", "event":"DiscoveryScan", "SystemAddress":3932143227618, "Bodies":1 }
+{ "timestamp":"2018-03-08T21:19:53Z", "event":"DiscoveryScan", "SystemAddress":16063848916417, "Bodies":1 }
+{ "timestamp":"2018-03-08T21:20:00Z", "event":"DiscoveryScan", "SystemAddress":16063848916417, "Bodies":1 }
+{ "timestamp":"2018-03-08T21:20:44Z", "event":"DiscoveryScan", "SystemAddress":3382387446490, "Bodies":1 }
+{ "timestamp":"2018-03-08T21:20:49Z", "event":"DiscoveryScan", "SystemAddress":3382387446490, "Bodies":8 }

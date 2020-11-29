@@ -1,0 +1,50 @@
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$Warzone_PointRace_Med;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$Warzone_PointRace_Low;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$Warzone_PointRace_High;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"MacLean Horizons" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Pythagoras Landing" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO14_TITLE;", "SignalName_Localised":"Resource Extraction Site" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Zion Protection Chapter" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Lafayette Villas" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Naphtha Class Tanker FKS-981" }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Gordon Plant", "IsStation":true }
+{ "timestamp":"2019-02-23T02:22:10Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Scarlet Pulsar Manufacturing" }
+{ "timestamp":"2019-02-23T02:32:13Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Secret Titanium Drilling" }
+{ "timestamp":"2019-02-23T02:32:13Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Hahn Gateway", "IsStation":true }
+{ "timestamp":"2019-02-23T02:32:13Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Gresley Dock", "IsStation":true }
+{ "timestamp":"2019-02-23T02:32:13Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Beta Brigade Barracks" }
+{ "timestamp":"2019-02-23T02:32:13Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Associated Software Laboratories" }
+{ "timestamp":"2019-02-23T02:32:13Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"$Warzone_PointRace_Med;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"$Warzone_PointRace_High;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"$Warzone_PointRace_Low;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"$MULTIPLAYER_SCENARIO14_TITLE;", "SignalName_Localised":"Resource Extraction Site" }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"Durrance Dock", "IsStation":true }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"Delphi Mobile Guard Services" }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"Conjunct Clarity Hub" }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"Hidden River General Hospital" }
+{ "timestamp":"2019-02-23T02:46:06Z", "event":"FSSSignalDiscovered", "SystemAddress":4133645977963, "SignalName":"Primary Energy Bureau" }
+{ "timestamp":"2019-02-23T03:04:38Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Secret Titanium Drilling" }
+{ "timestamp":"2019-02-23T03:04:38Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Associated Software Laboratories" }
+{ "timestamp":"2019-02-23T03:04:38Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Beta Brigade Barracks" }
+{ "timestamp":"2019-02-23T03:04:38Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-02-23T03:04:38Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Hahn Gateway", "IsStation":true }
+{ "timestamp":"2019-02-23T03:04:38Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Gresley Dock", "IsStation":true }
+{ "timestamp":"2019-02-23T03:23:11Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-02-23T03:23:11Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-02-23T03:23:11Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-02-23T03:23:11Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-02-23T03:23:11Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-02-23T03:23:11Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-02-23T03:23:11Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-02-23T03:23:11Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-02-23T03:23:11Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"KRU-759 Bowman-class Researcher" }
+{ "timestamp":"2019-02-23T03:23:11Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }

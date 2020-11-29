@@ -49,3 +49,16 @@
 { "timestamp":"2018-12-15T10:10:14Z", "event":"Rank", "Combat":6, "Trade":8, "Explore":8, "Empire":4, "Federation":12, "CQC":0 }
 { "timestamp":"2018-12-15T18:27:41Z", "event":"Rank", "Combat":6, "Trade":8, "Explore":8, "Empire":4, "Federation":12, "CQC":0 }
 { "timestamp":"2018-12-15T19:39:53Z", "event":"Rank", "Combat":6, "Trade":8, "Explore":8, "Empire":4, "Federation":12, "CQC":0 }
+{ "timestamp":"2018-12-11T18:13:58Z", "event":"Rank", "Combat":0, "Trade":3, "Explore":2, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2018-12-11T18:17:23Z", "event":"Rank", "Combat":0, "Trade":3, "Explore":2, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2018-12-11T18:18:36Z", "event":"Rank", "Combat":0, "Trade":3, "Explore":2, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2018-12-11T21:33:40Z", "event":"Rank", "Combat":0, "Trade":3, "Explore":2, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2018-12-12T00:00:18Z", "event":"Rank", "Combat":0, "Trade":3, "Explore":2, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2018-12-12T03:41:30Z", "event":"Rank", "Combat":0, "Trade":3, "Explore":2, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2018-12-12T04:05:27Z", "event":"Rank", "Combat":0, "Trade":3, "Explore":2, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2018-12-12T05:07:11Z", "event":"Rank", "Combat":0, "Trade":3, "Explore":2, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2018-12-13T20:28:12Z", "event":"Rank", "Combat":1, "Trade":3, "Explore":3, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2018-12-17T16:39:58Z", "event":"Rank", "Combat":1, "Trade":4, "Explore":3, "Empire":0, "Federation":1, "CQC":0 }
+{ "timestamp":"2018-12-17T18:55:27Z", "event":"Rank", "Combat":1, "Trade":4, "Explore":3, "Empire":0, "Federation":1, "CQC":0 }
+{ "timestamp":"2018-12-18T01:50:34Z", "event":"Rank", "Combat":1, "Trade":4, "Explore":3, "Empire":0, "Federation":2, "CQC":0 }
+{ "timestamp":"2018-12-18T16:38:21Z", "event":"Rank", "Combat":1, "Trade":4, "Explore":3, "Empire":0, "Federation":3, "CQC":0 }

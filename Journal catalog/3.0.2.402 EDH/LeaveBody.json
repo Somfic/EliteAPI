@@ -1,0 +1,13 @@
+{ "timestamp":"2018-03-06T23:55:50Z", "event":"LeaveBody", "StarSystem":"110 Herculis", "SystemAddress":2381299321195, "Body":"110 Herculis 3 a", "BodyID":6 }
+{ "timestamp":"2018-03-07T00:12:10Z", "event":"LeaveBody", "StarSystem":"Liu Baja", "SystemAddress":9466242213305, "Body":"Liu Baja A 3", "BodyID":5 }
+{ "timestamp":"2018-03-07T00:12:24Z", "event":"LeaveBody", "StarSystem":"Liu Baja", "SystemAddress":9466242213305, "Body":"Liu Baja A 3", "BodyID":5 }
+{ "timestamp":"2018-03-07T00:18:15Z", "event":"LeaveBody", "StarSystem":"110 Herculis", "SystemAddress":2381299321195, "Body":"110 Herculis 2", "BodyID":2 }
+{ "timestamp":"2018-03-07T00:35:53Z", "event":"LeaveBody", "StarSystem":"Ross 733", "SystemAddress":670149191097, "Body":"Ross 733 4 b", "BodyID":37 }
+{ "timestamp":"2018-03-07T00:41:39Z", "event":"LeaveBody", "StarSystem":"Ross 733", "SystemAddress":670149191097, "Body":"Ross 733 6 b", "BodyID":63 }
+{ "timestamp":"2018-03-07T00:42:05Z", "event":"LeaveBody", "StarSystem":"Ross 733", "SystemAddress":670149191097, "Body":"Ross 733 6 b", "BodyID":63 }
+{ "timestamp":"2018-03-07T00:51:12Z", "event":"LeaveBody", "StarSystem":"Ross 733", "SystemAddress":670149191097, "Body":"Ross 733 5 a", "BodyID":46 }
+{ "timestamp":"2018-03-07T00:51:28Z", "event":"LeaveBody", "StarSystem":"Ross 733", "SystemAddress":670149191097, "Body":"Ross 733 5 a", "BodyID":46 }
+{ "timestamp":"2018-03-07T00:51:59Z", "event":"LeaveBody", "StarSystem":"Ross 733", "SystemAddress":670149191097, "Body":"Ross 733 5 a", "BodyID":46 }
+{ "timestamp":"2018-03-07T00:53:50Z", "event":"LeaveBody", "StarSystem":"Ross 733", "SystemAddress":670149191097, "Body":"Ross 733 5 a", "BodyID":46 }
+{ "timestamp":"2018-03-08T03:10:52Z", "event":"LeaveBody", "StarSystem":"LHS 3447", "SystemAddress":5306465653474, "Body":"LHS 3447 A 1", "BodyID":10 }
+{ "timestamp":"2018-03-08T20:14:40Z", "event":"LeaveBody", "StarSystem":"LTT 7421", "SystemAddress":2518738274675, "Body":"LTT 7421 A 7 c", "BodyID":30 }

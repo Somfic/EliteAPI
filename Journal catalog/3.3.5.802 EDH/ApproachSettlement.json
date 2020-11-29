@@ -1,0 +1,14 @@
+{ "timestamp":"2019-02-23T02:35:13Z", "event":"ApproachSettlement", "Name":"Carver Prospect", "MarketID":3534643456, "Latitude":51.056000, "Longitude":17.012976 }
+{ "timestamp":"2019-02-23T02:35:13Z", "event":"ApproachSettlement", "Name":"Savitskaya Bastion", "MarketID":3534643200, "Latitude":67.870453, "Longitude":-133.615005 }
+{ "timestamp":"2019-02-23T02:35:14Z", "event":"ApproachSettlement", "Name":"Davis Enterprise", "MarketID":3534642688, "Latitude":-4.217896, "Longitude":37.783878 }
+{ "timestamp":"2019-02-23T02:35:17Z", "event":"ApproachSettlement", "Name":"Hodgkin Enterprise", "MarketID":3534642944, "Latitude":-29.325657, "Longitude":-117.020760 }
+{ "timestamp":"2019-02-23T02:36:09Z", "event":"ApproachSettlement", "Name":"Savitskaya Bastion", "MarketID":3534643200, "Latitude":67.870453, "Longitude":-133.615005 }
+{ "timestamp":"2019-02-23T03:07:15Z", "event":"ApproachSettlement", "Name":"Carver Prospect", "MarketID":3534643456, "Latitude":51.056000, "Longitude":17.012981 }
+{ "timestamp":"2019-02-23T03:07:16Z", "event":"ApproachSettlement", "Name":"Savitskaya Bastion", "MarketID":3534643200, "Latitude":67.870453, "Longitude":-133.614975 }
+{ "timestamp":"2019-02-23T03:07:16Z", "event":"ApproachSettlement", "Name":"Davis Enterprise", "MarketID":3534642688, "Latitude":-4.217902, "Longitude":37.783897 }
+{ "timestamp":"2019-02-23T03:07:17Z", "event":"ApproachSettlement", "Name":"Hodgkin Enterprise", "MarketID":3534642944, "Latitude":-29.325657, "Longitude":-117.020744 }
+{ "timestamp":"2019-02-23T03:07:45Z", "event":"ApproachSettlement", "Name":"Carver Prospect", "MarketID":3534643456, "Latitude":51.056000, "Longitude":17.012968 }
+{ "timestamp":"2019-02-23T03:21:27Z", "event":"ApproachSettlement", "Name":"Davis Enterprise", "MarketID":3534642688, "Latitude":-4.217897, "Longitude":37.783882 }
+{ "timestamp":"2019-02-23T03:21:27Z", "event":"ApproachSettlement", "Name":"Hodgkin Enterprise", "MarketID":3534642944, "Latitude":-29.325663, "Longitude":-117.020744 }
+{ "timestamp":"2019-02-23T03:21:27Z", "event":"ApproachSettlement", "Name":"Savitskaya Bastion", "MarketID":3534643200, "Latitude":67.870453, "Longitude":-133.615005 }
+{ "timestamp":"2019-02-23T03:21:27Z", "event":"ApproachSettlement", "Name":"Carver Prospect", "MarketID":3534643456, "Latitude":51.056000, "Longitude":17.012968 }

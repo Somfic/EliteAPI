@@ -1,0 +1,2 @@
+{ "timestamp":"2019-05-03T19:19:00Z", "event":"DockingRequested", "MarketID":3228862208, "StationName":"Diesel Orbital", "StationType":"Outpost" }
+{ "timestamp":"2019-05-12T16:38:50Z", "event":"DockingRequested", "MarketID":3534642688, "StationName":"Davis Enterprise", "StationType":"CraterOutpost" }

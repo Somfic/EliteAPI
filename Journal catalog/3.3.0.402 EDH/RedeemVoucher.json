@@ -7,3 +7,11 @@
 { "timestamp":"2018-12-14T23:31:03Z", "event":"RedeemVoucher", "Type":"", "Amount":257500, "Faction":"" }
 { "timestamp":"2018-12-15T13:33:11Z", "event":"RedeemVoucher", "Type":"", "Amount":50000, "Faction":"" }
 { "timestamp":"2018-12-15T19:09:41Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":282487, "Factions":[ { "Faction":"", "Amount":282487 } ] }
+{ "timestamp":"2018-12-13T21:42:35Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":71470, "Factions":[ { "Faction":"Tollan Free", "Amount":71470 } ] }
+{ "timestamp":"2018-12-17T17:03:31Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":7175, "Factions":[ { "Faction":"Tollan Free", "Amount":7175 } ] }
+{ "timestamp":"2018-12-17T17:25:33Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":55600, "Factions":[ { "Faction":"Tollan Free", "Amount":55600 } ] }
+{ "timestamp":"2018-12-17T19:11:52Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":21265, "Factions":[ { "Faction":"Nanomam Ltd", "Amount":21265 } ] }
+{ "timestamp":"2018-12-17T19:29:27Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":82250, "Factions":[ { "Faction":"Nanomam Ltd", "Amount":82250 } ] }
+{ "timestamp":"2018-12-18T17:31:58Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":110771, "Factions":[ { "Faction":"Unified Ross 318", "Amount":110771 } ] }
+{ "timestamp":"2018-12-18T18:33:00Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":182555, "Factions":[ { "Faction":"Tollan Free", "Amount":182555 } ] }
+{ "timestamp":"2018-12-18T20:05:12Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":264092, "Factions":[ { "Faction":"Tollan Free", "Amount":264092 } ] }

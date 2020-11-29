@@ -1,0 +1,12 @@
+{ "timestamp":"2018-03-21T03:41:25Z", "event":"DockingGranted", "LandingPad":27, "MarketID":3228920832, "StationName":"Adamson Terminal", "StationType":"Orbis" }
+{ "timestamp":"2018-03-21T04:07:16Z", "event":"DockingGranted", "LandingPad":12, "MarketID":3229014272, "StationName":"Lovelace Terminal", "StationType":"Coriolis" }
+{ "timestamp":"2018-03-21T04:14:01Z", "event":"DockingGranted", "LandingPad":2, "MarketID":3229014528, "StationName":"Foale Orbital", "StationType":"Outpost" }
+{ "timestamp":"2018-03-21T22:41:08Z", "event":"DockingGranted", "LandingPad":4, "MarketID":3229014528, "StationName":"Foale Orbital", "StationType":"Outpost" }
+{ "timestamp":"2018-03-21T23:06:04Z", "event":"DockingGranted", "LandingPad":1, "MarketID":3531117056, "StationName":"Stross Camp", "StationType":"SurfaceStation" }
+{ "timestamp":"2018-03-21T23:18:54Z", "event":"DockingGranted", "LandingPad":43, "MarketID":3227921664, "StationName":"Agassiz Orbital", "StationType":"Coriolis" }
+{ "timestamp":"2018-03-23T03:01:50Z", "event":"DockingGranted", "LandingPad":3, "MarketID":3228175360, "StationName":"Reynolds Terminal", "StationType":"Outpost" }
+{ "timestamp":"2018-03-23T03:15:22Z", "event":"DockingGranted", "LandingPad":28, "MarketID":3228174848, "StationName":"Schiltberger Port", "StationType":"Coriolis" }
+{ "timestamp":"2018-03-23T03:37:30Z", "event":"DockingGranted", "LandingPad":1, "MarketID":3228318208, "StationName":"McCulley Terminal", "StationType":"Coriolis" }
+{ "timestamp":"2018-03-23T04:02:11Z", "event":"DockingGranted", "LandingPad":5, "MarketID":3504531712, "StationName":"Knight Installation", "StationType":"SurfaceStation" }
+{ "timestamp":"2018-03-23T04:11:34Z", "event":"DockingGranted", "LandingPad":5, "MarketID":3504531712, "StationName":"Knight Installation", "StationType":"SurfaceStation" }
+{ "timestamp":"2018-03-23T04:30:37Z", "event":"DockingGranted", "LandingPad":16, "MarketID":3221980416, "StationName":"Holden Horizons", "StationType":"Coriolis" }

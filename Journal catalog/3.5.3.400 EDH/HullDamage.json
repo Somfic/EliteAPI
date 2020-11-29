@@ -1,0 +1,10 @@
+{ "timestamp":"2019-11-01T22:55:50Z", "event":"HullDamage", "Health":0.798365, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2019-11-01T23:42:59Z", "event":"HullDamage", "Health":0.798863, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2019-11-01T23:43:11Z", "event":"HullDamage", "Health":0.598350, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2019-11-18T02:20:29Z", "event":"HullDamage", "Health":0.799477, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2019-11-18T02:20:33Z", "event":"HullDamage", "Health":0.593466, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2019-11-18T02:20:39Z", "event":"HullDamage", "Health":0.399885, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2019-11-18T02:20:47Z", "event":"HullDamage", "Health":0.199357, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2020-01-03T23:20:12Z", "event":"HullDamage", "Health":0.799419, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2020-01-03T23:20:19Z", "event":"HullDamage", "Health":0.588835, "PlayerPilot":true, "Fighter":false }
+{ "timestamp":"2020-01-03T23:20:36Z", "event":"HullDamage", "Health":0.384447, "PlayerPilot":true, "Fighter":false }

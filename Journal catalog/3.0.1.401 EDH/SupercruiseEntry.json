@@ -1,0 +1,16 @@
+{ "timestamp":"2018-02-28T19:31:43Z", "event":"SupercruiseEntry", "StarSystem":"Eravate", "SystemAddress":5856221467362 }
+{ "timestamp":"2018-02-28T21:00:43Z", "event":"SupercruiseEntry", "StarSystem":"LTT 18486", "SystemAddress":3657198211810 }
+{ "timestamp":"2018-02-28T21:19:30Z", "event":"SupercruiseEntry", "StarSystem":"Kini", "SystemAddress":11665265468865 }
+{ "timestamp":"2018-03-01T01:20:19Z", "event":"SupercruiseEntry", "StarSystem":"Eravate", "SystemAddress":5856221467362 }
+{ "timestamp":"2018-03-01T02:04:40Z", "event":"SupercruiseEntry", "StarSystem":"V775 Herculis", "SystemAddress":3932076118746 }
+{ "timestamp":"2018-03-01T02:18:40Z", "event":"SupercruiseEntry", "StarSystem":"Venetic", "SystemAddress":2827959142763 }
+{ "timestamp":"2018-03-01T02:25:00Z", "event":"SupercruiseEntry", "StarSystem":"Venetic", "SystemAddress":2827959142763 }
+{ "timestamp":"2018-03-01T02:57:34Z", "event":"SupercruiseEntry", "StarSystem":"110 Herculis", "SystemAddress":2381299321195 }
+{ "timestamp":"2018-03-01T03:02:50Z", "event":"SupercruiseEntry", "StarSystem":"110 Herculis", "SystemAddress":2381299321195 }
+{ "timestamp":"2018-03-01T18:54:45Z", "event":"SupercruiseEntry", "StarSystem":"Venetic", "SystemAddress":2827959142763 }
+{ "timestamp":"2018-03-01T19:57:48Z", "event":"SupercruiseEntry", "StarSystem":"V774 Herculis", "SystemAddress":2282808709850 }
+{ "timestamp":"2018-03-01T20:01:37Z", "event":"SupercruiseEntry", "StarSystem":"V774 Herculis", "SystemAddress":2282808709850 }
+{ "timestamp":"2018-03-01T20:04:02Z", "event":"SupercruiseEntry", "StarSystem":"V774 Herculis", "SystemAddress":2282808709850 }
+{ "timestamp":"2018-03-01T20:06:34Z", "event":"SupercruiseEntry", "StarSystem":"V774 Herculis", "SystemAddress":2282808709850 }
+{ "timestamp":"2018-03-05T03:35:49Z", "event":"SupercruiseEntry", "StarSystem":"GD 219", "SystemAddress":5068195702201 }
+{ "timestamp":"2018-03-05T03:39:03Z", "event":"SupercruiseEntry", "StarSystem":"GD 219", "SystemAddress":5068195702201 }

@@ -1,0 +1,2 @@
+{ "timestamp":"2020-05-22T22:33:28Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"decodedemissiondata", "Name_Localised":"Decoded Emission Data", "Count":3 }
+{ "timestamp":"2020-05-22T22:33:29Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"shielddensityreports", "Name_Localised":"Untypical Shield Scans ", "Count":3 }

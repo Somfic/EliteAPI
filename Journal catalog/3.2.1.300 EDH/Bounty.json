@@ -1,0 +1,2 @@
+{ "timestamp":"2018-12-10T03:02:29Z", "event":"Bounty", "Rewards":[ { "Faction":"Sanos Services", "Reward":13730 } ], "Target":"viper_mkiv", "TotalReward":13730, "VictimFaction":"Brotherhood of CD-24 5005" }
+{ "timestamp":"2018-12-11T03:41:33Z", "event":"Bounty", "Rewards":[ { "Faction":"Sanos Services", "Reward":10232 } ], "Target":"viper_mkiv", "TotalReward":10232, "VictimFaction":"Sanos Silver Partnership" }

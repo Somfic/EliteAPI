@@ -1,0 +1,1 @@
+{ "timestamp":"2019-06-22T18:43:47Z", "event":"ModuleSwap", "MarketID":3228861696, "FromSlot":"Slot06_Size2", "ToSlot":"Slot07_Size2", "FromItem":"$int_cargorack_size1_class1_name;", "FromItem_Localised":"Cargo Rack", "ToItem":"$int_cargorack_size2_class1_name;", "ToItem_Localised":"Cargo Rack", "Ship":"asp", "ShipID":1 }

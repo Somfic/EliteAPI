@@ -1,0 +1,12 @@
+{ "timestamp":"2018-03-21T03:41:24Z", "event":"DockingRequested", "MarketID":3228920832, "StationName":"Adamson Terminal", "StationType":"Orbis" }
+{ "timestamp":"2018-03-21T04:07:14Z", "event":"DockingRequested", "MarketID":3229014272, "StationName":"Lovelace Terminal", "StationType":"Coriolis" }
+{ "timestamp":"2018-03-21T04:13:59Z", "event":"DockingRequested", "MarketID":3229014528, "StationName":"Foale Orbital", "StationType":"Outpost" }
+{ "timestamp":"2018-03-21T22:41:07Z", "event":"DockingRequested", "MarketID":3229014528, "StationName":"Foale Orbital", "StationType":"Outpost" }
+{ "timestamp":"2018-03-21T23:06:02Z", "event":"DockingRequested", "MarketID":3531117056, "StationName":"Stross Camp", "StationType":"SurfaceStation" }
+{ "timestamp":"2018-03-21T23:18:53Z", "event":"DockingRequested", "MarketID":3227921664, "StationName":"Agassiz Orbital", "StationType":"Coriolis" }
+{ "timestamp":"2018-03-23T03:01:48Z", "event":"DockingRequested", "MarketID":3228175360, "StationName":"Reynolds Terminal", "StationType":"Outpost" }
+{ "timestamp":"2018-03-23T03:15:21Z", "event":"DockingRequested", "MarketID":3228174848, "StationName":"Schiltberger Port", "StationType":"Coriolis" }
+{ "timestamp":"2018-03-23T03:37:29Z", "event":"DockingRequested", "MarketID":3228318208, "StationName":"McCulley Terminal", "StationType":"Coriolis" }
+{ "timestamp":"2018-03-23T04:02:09Z", "event":"DockingRequested", "MarketID":3504531712, "StationName":"Knight Installation", "StationType":"SurfaceStation" }
+{ "timestamp":"2018-03-23T04:11:33Z", "event":"DockingRequested", "MarketID":3504531712, "StationName":"Knight Installation", "StationType":"SurfaceStation" }
+{ "timestamp":"2018-03-23T04:30:36Z", "event":"DockingRequested", "MarketID":3221980416, "StationName":"Holden Horizons", "StationType":"Coriolis" }

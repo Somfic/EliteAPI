@@ -1,0 +1,3 @@
+{ "timestamp":"2020-05-14T20:04:00Z", "event":"SupercruiseEntry", "StarSystem":"LHS 450", "SystemAddress":11665802339753 }
+{ "timestamp":"2020-05-14T20:05:08Z", "event":"SupercruiseEntry", "StarSystem":"LHS 450", "SystemAddress":11665802339753 }
+{ "timestamp":"2020-05-14T20:50:02Z", "event":"SupercruiseEntry", "StarSystem":"V1581 Cygni", "SystemAddress":22958211091280 }

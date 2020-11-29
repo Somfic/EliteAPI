@@ -1,0 +1,8 @@
+{ "timestamp":"2018-04-01T03:20:09Z", "event":"Repair", "Item":"Paint", "Cost":4 }
+{ "timestamp":"2018-04-01T03:20:10Z", "event":"Repair", "Item":"Wear", "Cost":110 }
+{ "timestamp":"2018-04-04T00:33:27Z", "event":"Repair", "Item":"Paint", "Cost":1 }
+{ "timestamp":"2018-04-04T00:33:28Z", "event":"Repair", "Item":"Wear", "Cost":24 }
+{ "timestamp":"2018-04-04T00:49:12Z", "event":"Repair", "Item":"Paint", "Cost":1 }
+{ "timestamp":"2018-04-04T00:49:13Z", "event":"Repair", "Item":"Wear", "Cost":10 }
+{ "timestamp":"2018-04-04T01:06:20Z", "event":"Repair", "Item":"Paint", "Cost":1 }
+{ "timestamp":"2018-04-04T01:06:21Z", "event":"Repair", "Item":"Wear", "Cost":10 }

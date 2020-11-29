@@ -1,0 +1,1 @@
+{ "timestamp":"2019-10-27T00:00:43Z", "event":"MultiSellExplorationData", "Discovered":[ { "SystemName":"", "NumBodies":5 }, { "SystemName":"", "NumBodies":11 }, { "SystemName":"LHS 224", "NumBodies":1 } ], "BaseValue":110752, "Bonus":0, "TotalEarnings":110752 }

@@ -1,0 +1,22 @@
+{ "timestamp":"2019-10-27T00:48:53Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Federal Privateers", "Fine":400 }
+{ "timestamp":"2019-10-27T00:49:51Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Federal Privateers", "Fine":400 }
+{ "timestamp":"2019-11-01T23:42:47Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Lalande 18115 Natural Network", "Victim":"Jeremy Linter", "Bounty":400 }
+{ "timestamp":"2019-11-18T02:20:14Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Coalition of Bodedi", "Victim":"Apples", "Bounty":100 }
+{ "timestamp":"2019-12-07T21:38:00Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Federal Privateers", "Fine":400 }
+{ "timestamp":"2019-12-11T03:03:25Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Nanomam Ltd", "Victim":"Nick Johnson", "Bounty":400 }
+{ "timestamp":"2019-12-11T03:04:11Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Nanomam Ltd", "Victim":"AnVbis", "Bounty":400 }
+{ "timestamp":"2019-12-11T03:05:19Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Nanomam Ltd", "Victim":"Wytze Keuning", "Bounty":400 }
+{ "timestamp":"2019-12-11T03:05:26Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Nanomam Ltd", "Victim":"Wytze Keuning", "Bounty":5000 }
+{ "timestamp":"2019-12-11T03:08:34Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Nanomam Ltd", "Victim":"Neil Steedman", "Bounty":400 }
+{ "timestamp":"2019-12-11T03:08:41Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Nanomam Ltd", "Victim":"Neil Steedman", "Bounty":5000 }
+{ "timestamp":"2019-12-11T03:08:53Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Nanomam Ltd", "Victim":"Isaac Seldon", "Bounty":400 }
+{ "timestamp":"2019-12-11T03:09:47Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Nanomam Ltd", "Victim":"Razor", "Bounty":400 }
+{ "timestamp":"2019-12-11T03:10:52Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Nanomam Ltd", "Victim":"Lily James", "Bounty":400 }
+{ "timestamp":"2019-12-11T03:11:03Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Nanomam Ltd", "Victim":"Lily James", "Bounty":5000 }
+{ "timestamp":"2019-12-11T03:14:24Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Nanomam Ltd", "Victim":"Mash Ragtag", "Bounty":400 }
+{ "timestamp":"2019-12-11T03:14:39Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Nanomam Ltd", "Victim":"Mash Ragtag", "Bounty":5000 }
+{ "timestamp":"2019-12-11T03:15:14Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Nanomam Ltd", "Victim":"Jack Dorkings", "Bounty":400 }
+{ "timestamp":"2019-12-11T03:16:07Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Nanomam Ltd", "Victim":"Christian Dannie Storgaard", "Bounty":400 }
+{ "timestamp":"2019-12-11T03:16:36Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Nanomam Ltd", "Victim":"Christian Dannie Storgaard", "Bounty":5000 }
+{ "timestamp":"2019-12-11T03:20:23Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Nanomam Ltd", "Victim":"Si Bri", "Bounty":400 }
+{ "timestamp":"2019-12-11T03:20:33Z", "event":"CommitCrime", "CrimeType":"murder", "Faction":"Nanomam Ltd", "Victim":"Si Bri", "Bounty":5000 }

@@ -49,3 +49,16 @@
 { "timestamp":"2018-12-15T10:10:14Z", "event":"Reputation", "Empire":75.000000, "Federation":99.910004, "Alliance":77.790199 }
 { "timestamp":"2018-12-15T18:27:41Z", "event":"Reputation", "Empire":75.000000, "Federation":100.000000, "Alliance":77.315498 }
 { "timestamp":"2018-12-15T19:39:53Z", "event":"Reputation", "Empire":75.000000, "Federation":100.000000, "Alliance":77.092903 }
+{ "timestamp":"2018-12-11T18:13:58Z", "event":"Reputation", "Empire":2.178000, "Federation":13.486000 }
+{ "timestamp":"2018-12-11T18:17:23Z", "event":"Reputation", "Empire":2.178000, "Federation":13.486000 }
+{ "timestamp":"2018-12-11T18:18:36Z", "event":"Reputation", "Empire":2.178000, "Federation":13.486000 }
+{ "timestamp":"2018-12-11T21:33:40Z", "event":"Reputation", "Empire":2.178000, "Federation":13.486000 }
+{ "timestamp":"2018-12-12T00:00:18Z", "event":"Reputation", "Empire":2.178000, "Federation":13.486000 }
+{ "timestamp":"2018-12-12T03:41:30Z", "event":"Reputation", "Empire":2.178000, "Federation":13.486000 }
+{ "timestamp":"2018-12-12T04:05:27Z", "event":"Reputation", "Empire":2.178000, "Federation":13.486000 }
+{ "timestamp":"2018-12-12T05:07:11Z", "event":"Reputation", "Empire":2.178000, "Federation":13.486000 }
+{ "timestamp":"2018-12-13T20:28:12Z", "event":"Reputation", "Empire":2.178000, "Federation":17.691401 }
+{ "timestamp":"2018-12-17T16:39:58Z", "event":"Reputation", "Empire":2.178000, "Federation":22.231701, "Alliance":1.188000 }
+{ "timestamp":"2018-12-17T18:55:27Z", "event":"Reputation", "Empire":2.178000, "Federation":23.767300, "Alliance":1.188000 }
+{ "timestamp":"2018-12-18T01:50:34Z", "event":"Reputation", "Empire":2.178000, "Federation":33.532600, "Alliance":1.188000 }
+{ "timestamp":"2018-12-18T16:38:21Z", "event":"Reputation", "Empire":2.178000, "Federation":43.630600, "Alliance":1.782000 }

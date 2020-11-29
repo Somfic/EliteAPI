@@ -1,0 +1,10 @@
+{ "timestamp":"2020-06-21T23:21:09Z", "event":"Music", "MusicTrack":"NoTrack" }
+{ "timestamp":"2020-06-21T23:21:09Z", "event":"Music", "MusicTrack":"MainMenu" }
+{ "timestamp":"2020-06-21T23:24:53Z", "event":"Music", "MusicTrack":"NoTrack" }
+{ "timestamp":"2020-06-21T23:24:53Z", "event":"Music", "MusicTrack":"MainMenu" }
+{ "timestamp":"2020-06-21T23:28:05Z", "event":"Music", "MusicTrack":"NoTrack" }
+{ "timestamp":"2020-06-21T23:28:06Z", "event":"Music", "MusicTrack":"MainMenu" }
+{ "timestamp":"2020-06-21T23:30:55Z", "event":"Music", "MusicTrack":"NoTrack" }
+{ "timestamp":"2020-06-21T23:30:55Z", "event":"Music", "MusicTrack":"Exploration" }
+{ "timestamp":"2020-06-21T23:30:55Z", "event":"Music", "MusicTrack":"Starport" }
+{ "timestamp":"2020-06-21T23:32:23Z", "event":"Music", "MusicTrack":"Exploration" }

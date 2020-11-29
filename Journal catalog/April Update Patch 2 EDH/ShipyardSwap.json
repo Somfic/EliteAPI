@@ -1,0 +1,3 @@
+{ "timestamp":"2019-06-22T18:29:14Z", "event":"ShipyardSwap", "ShipType":"cobramkiii", "ShipType_Localised":"Cobra Mk III", "ShipID":0, "StoreOldShip":"Independant_Trader", "StoreShipID":1, "MarketID":3228861696 }
+{ "timestamp":"2019-06-22T18:29:42Z", "event":"ShipyardSwap", "ShipType":"independant_trader", "ShipType_Localised":"Keelback", "ShipID":1, "StoreOldShip":"CobraMkIII", "StoreShipID":0, "MarketID":3228861696 }
+{ "timestamp":"2019-06-22T18:33:42Z", "event":"ShipyardSwap", "ShipType":"cobramkiii", "ShipType_Localised":"Cobra Mk III", "ShipID":0, "StoreOldShip":"Independant_Trader", "StoreShipID":1, "MarketID":3228861696 }

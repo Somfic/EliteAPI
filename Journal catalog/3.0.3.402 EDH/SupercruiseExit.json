@@ -1,0 +1,18 @@
+{ "timestamp":"2018-03-21T03:39:58Z", "event":"SupercruiseExit", "StarSystem":"39 Serpentis", "SystemAddress":1556665600363, "Body":"Adamson Terminal", "BodyID":22, "BodyType":"Station" }
+{ "timestamp":"2018-03-21T04:06:26Z", "event":"SupercruiseExit", "StarSystem":"LFT 1209", "SystemAddress":5068732704185, "Body":"Lovelace Terminal", "BodyID":68, "BodyType":"Station" }
+{ "timestamp":"2018-03-21T04:13:31Z", "event":"SupercruiseExit", "StarSystem":"LFT 1209", "SystemAddress":5068732704185, "Body":"Foale Orbital", "BodyID":69, "BodyType":"Station" }
+{ "timestamp":"2018-03-21T22:13:33Z", "event":"SupercruiseExit", "StarSystem":"BAG 7", "SystemAddress":5581410702042, "Body":"BAG 7", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2018-03-21T22:17:47Z", "event":"SupercruiseExit", "StarSystem":"BAG 7", "SystemAddress":5581410702042, "Body":"BAG 7 6 e", "BodyID":29, "BodyType":"Planet" }
+{ "timestamp":"2018-03-21T22:40:38Z", "event":"SupercruiseExit", "StarSystem":"LFT 1209", "SystemAddress":5068732704185, "Body":"Foale Orbital", "BodyID":69, "BodyType":"Station" }
+{ "timestamp":"2018-03-21T23:00:51Z", "event":"SupercruiseExit", "StarSystem":"Thunderbird", "SystemAddress":327728235700, "Body":"Thunderbird C", "BodyID":4, "BodyType":"Star" }
+{ "timestamp":"2018-03-21T23:04:50Z", "event":"SupercruiseExit", "StarSystem":"Thunderbird", "SystemAddress":327728235700, "Body":"Thunderbird C 2 a", "BodyID":23, "BodyType":"Planet" }
+{ "timestamp":"2018-03-21T23:18:01Z", "event":"SupercruiseExit", "StarSystem":"Thunderbird", "SystemAddress":327728235700, "Body":"Agassiz Orbital", "BodyID":37, "BodyType":"Station" }
+{ "timestamp":"2018-03-23T03:01:29Z", "event":"SupercruiseExit", "StarSystem":"LHS 221", "SystemAddress":7267755828633, "Body":"Reynolds Terminal", "BodyID":60, "BodyType":"Station" }
+{ "timestamp":"2018-03-23T03:14:39Z", "event":"SupercruiseExit", "StarSystem":"LHS 221", "SystemAddress":7267755828633, "Body":"Schiltberger Port", "BodyID":61, "BodyType":"Station" }
+{ "timestamp":"2018-03-23T03:36:43Z", "event":"SupercruiseExit", "StarSystem":"LP 840-15", "SystemAddress":671491302809, "Body":"McCulley Terminal", "BodyID":74, "BodyType":"Station" }
+{ "timestamp":"2018-03-23T03:48:51Z", "event":"SupercruiseExit", "StarSystem":"Trianguli Sector ZA-W a2-3", "SystemAddress":58145804012288, "Body":"Trianguli Sector ZA-W a2-3", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2018-03-23T03:54:50Z", "event":"SupercruiseExit", "StarSystem":"Gliese 182.1", "SystemAddress":7230678078138, "Body":"Gliese 182.1", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2018-03-23T03:55:22Z", "event":"SupercruiseExit", "StarSystem":"Gliese 182.1", "SystemAddress":7230678078138, "Body":"Gliese 182.1", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2018-03-23T03:59:41Z", "event":"SupercruiseExit", "StarSystem":"Gliese 182.1", "SystemAddress":7230678078138, "Body":"Gliese 182.1 5 a", "BodyID":31, "BodyType":"Planet" }
+{ "timestamp":"2018-03-23T04:01:44Z", "event":"SupercruiseExit", "StarSystem":"Gliese 182.1", "SystemAddress":7230678078138, "Body":"Gliese 182.1 5 a", "BodyID":31, "BodyType":"Planet" }
+{ "timestamp":"2018-03-23T04:29:52Z", "event":"SupercruiseExit", "StarSystem":"HIP 22566", "SystemAddress":2587457735003, "Body":"Holden Horizons", "BodyID":84, "BodyType":"Station" }

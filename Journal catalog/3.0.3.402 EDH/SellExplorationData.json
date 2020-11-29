@@ -1,0 +1,4 @@
+{ "timestamp":"2018-03-21T23:11:31Z", "event":"SellExplorationData", "Systems":[ "LP 571-80", "Dagr", "Alrai Sector JR-W c1-14", "Ngaliba", "Ekonir", "LP 687-31" ], "Discovered":[  ], "BaseValue":33927, "Bonus":0, "TotalEarnings":33927 }
+{ "timestamp":"2018-03-23T03:38:43Z", "event":"SellExplorationData", "Systems":[ "LHS 2211", "G 113-20", "Wong Ten", "DG Canum Venaticorum", "LHS 362", "CU Cancri", "LP 561-68", "LHS 316" ], "Discovered":[  ], "BaseValue":21514, "Bonus":0, "TotalEarnings":21514 }
+{ "timestamp":"2018-03-23T04:04:28Z", "event":"SellExplorationData", "Systems":[ "Olurung", "Ralu", "Tascheter Sector LH-V b2-7", "Kaupolock", "Trianguli Sector ZA-W a2-3" ], "Discovered":[  ], "BaseValue":12385, "Bonus":0, "TotalEarnings":12385 }
+{ "timestamp":"2018-03-23T04:32:19Z", "event":"SellExplorationData", "Systems":[ "HIP 22422", "Hyades Sector SP-C a14-2", "Hyades Sector OJ-E a13-3" ], "Discovered":[  ], "BaseValue":3207, "Bonus":0, "TotalEarnings":3207 }

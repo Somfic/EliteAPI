@@ -1,0 +1,12 @@
+{ "timestamp":"2018-12-09T19:21:05Z", "event":"SupercruiseEntry", "StarSystem":"Velli", "SystemAddress":7269634811281 }
+{ "timestamp":"2018-12-09T19:36:02Z", "event":"SupercruiseEntry", "StarSystem":"Velli", "SystemAddress":7269634811281 }
+{ "timestamp":"2018-12-10T03:03:09Z", "event":"SupercruiseEntry", "StarSystem":"Sanos", "SystemAddress":3932277445322 }
+{ "timestamp":"2018-12-10T03:36:38Z", "event":"SupercruiseEntry", "StarSystem":"Mehudi", "SystemAddress":18263945782681 }
+{ "timestamp":"2018-12-10T03:40:24Z", "event":"SupercruiseEntry", "StarSystem":"Mehudi", "SystemAddress":18263945782681 }
+{ "timestamp":"2018-12-10T03:50:37Z", "event":"SupercruiseEntry", "StarSystem":"Mehudi", "SystemAddress":18263945782681 }
+{ "timestamp":"2018-12-10T03:56:10Z", "event":"SupercruiseEntry", "StarSystem":"Mehudi", "SystemAddress":18263945782681 }
+{ "timestamp":"2018-12-10T04:02:25Z", "event":"SupercruiseEntry", "StarSystem":"Mehudi", "SystemAddress":18263945782681 }
+{ "timestamp":"2018-12-11T03:23:41Z", "event":"SupercruiseEntry", "StarSystem":"Sanos", "SystemAddress":3932277445322 }
+{ "timestamp":"2018-12-11T03:30:39Z", "event":"SupercruiseEntry", "StarSystem":"Sanos", "SystemAddress":3932277445322 }
+{ "timestamp":"2018-12-11T03:42:18Z", "event":"SupercruiseEntry", "StarSystem":"Sanos", "SystemAddress":3932277445322 }
+{ "timestamp":"2018-12-11T04:29:36Z", "event":"SupercruiseEntry", "StarSystem":"Neritus", "SystemAddress":1350523947363 }

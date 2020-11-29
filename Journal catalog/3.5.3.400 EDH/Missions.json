@@ -1,0 +1,9 @@
+{ "timestamp":"2019-10-26T23:20:55Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2019-11-01T13:03:21Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2019-11-01T21:32:21Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2019-11-01T23:53:58Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2019-11-18T01:25:12Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2019-11-18T02:21:59Z", "event":"Missions", "Active":[ { "MissionID":523437656, "Name":"MISSION_assassinate_Illegal_BLOPS_CivilLiberty_name", "PassengerMission":false, "Expires":83116 }, { "MissionID":523437664, "Name":"Mission_Assassinate_Legal_War_name", "PassengerMission":false, "Expires":0 } ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2019-12-07T20:21:09Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2019-12-11T02:37:48Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2020-01-03T22:26:59Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }

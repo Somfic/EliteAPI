@@ -1,0 +1,6 @@
+{ "timestamp":"2018-02-28T20:59:51Z", "event":"NavBeaconScan", "SystemAddress":3657198211810, "NumBodies":11 }
+{ "timestamp":"2018-03-01T02:17:57Z", "event":"NavBeaconScan", "SystemAddress":2827959142763, "NumBodies":16 }
+{ "timestamp":"2018-03-01T02:56:41Z", "event":"NavBeaconScan", "SystemAddress":2381299321195, "NumBodies":34 }
+{ "timestamp":"2018-03-01T18:54:07Z", "event":"NavBeaconScan", "SystemAddress":2827959142763, "NumBodies":16 }
+{ "timestamp":"2018-03-01T19:48:53Z", "event":"NavBeaconScan", "SystemAddress":2282808709850, "NumBodies":37 }
+{ "timestamp":"2018-03-05T03:38:11Z", "event":"NavBeaconScan", "SystemAddress":5068195702201, "NumBodies":7 }

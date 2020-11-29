@@ -1,0 +1,45 @@
+{ "timestamp":"2018-03-21T03:36:39Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-21T03:37:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"39 Serpentis", "SystemAddress":1556665600363, "StarClass":"G" }
+{ "timestamp":"2018-03-21T03:49:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LFT 1209", "SystemAddress":5068732704185, "StarClass":"M" }
+{ "timestamp":"2018-03-21T04:11:34Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-21T22:11:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"BAG 7", "SystemAddress":5581410702042, "StarClass":"K" }
+{ "timestamp":"2018-03-21T22:14:24Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-21T22:23:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LFT 1209", "SystemAddress":5068732704185, "StarClass":"M" }
+{ "timestamp":"2018-03-21T22:49:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Thunderbird", "SystemAddress":327728235700, "StarClass":"B" }
+{ "timestamp":"2018-03-21T23:02:28Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-21T23:14:20Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-23T02:51:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 561-68", "SystemAddress":31457280206257, "StarClass":"M" }
+{ "timestamp":"2018-03-23T02:52:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ross 130", "SystemAddress":5069001139633, "StarClass":"M" }
+{ "timestamp":"2018-03-23T02:54:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 362", "SystemAddress":22661187184041, "StarClass":"M" }
+{ "timestamp":"2018-03-23T02:55:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"DG Canum Venaticorum", "SystemAddress":9467047585193, "StarClass":"M" }
+{ "timestamp":"2018-03-23T02:56:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 316", "SystemAddress":33656034960801, "StarClass":"M" }
+{ "timestamp":"2018-03-23T02:57:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2211", "SystemAddress":670686127521, "StarClass":"M" }
+{ "timestamp":"2018-03-23T02:58:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 221", "SystemAddress":7267755828633, "StarClass":"M" }
+{ "timestamp":"2018-03-23T03:06:28Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-23T03:23:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 1963", "SystemAddress":11666070775201, "StarClass":"M" }
+{ "timestamp":"2018-03-23T03:25:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"CU Cancri", "SystemAddress":27059233564065, "StarClass":"M" }
+{ "timestamp":"2018-03-23T03:26:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"G 113-20", "SystemAddress":2870246188449, "StarClass":"M" }
+{ "timestamp":"2018-03-23T03:27:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blatrimpe", "SystemAddress":7505623126738, "StarClass":"G" }
+{ "timestamp":"2018-03-23T03:28:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wong Ten", "SystemAddress":3893144586603, "StarClass":"G" }
+{ "timestamp":"2018-03-23T03:29:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Varayah", "SystemAddress":3927504324971, "StarClass":"F" }
+{ "timestamp":"2018-03-23T03:31:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LFT 625", "SystemAddress":13865630901665, "StarClass":"M" }
+{ "timestamp":"2018-03-23T03:33:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ralu", "SystemAddress":8605134754514, "StarClass":"G" }
+{ "timestamp":"2018-03-23T03:34:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"V372 Puppis", "SystemAddress":2870514558369, "StarClass":"M" }
+{ "timestamp":"2018-03-23T03:34:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 840-15", "SystemAddress":671491302809, "StarClass":"M" }
+{ "timestamp":"2018-03-23T03:43:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Kaupolock", "SystemAddress":16064654091673, "StarClass":"M" }
+{ "timestamp":"2018-03-23T03:44:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tascheter Sector LH-V b2-7", "SystemAddress":16064654091665, "StarClass":"M" }
+{ "timestamp":"2018-03-23T03:45:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nox", "SystemAddress":1900279761251, "StarClass":"G" }
+{ "timestamp":"2018-03-23T03:46:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Olurung", "SystemAddress":3932210303682, "StarClass":"M" }
+{ "timestamp":"2018-03-23T03:47:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Excessis", "SystemAddress":1178725239139, "StarClass":"G" }
+{ "timestamp":"2018-03-23T03:48:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Trianguli Sector ZA-W a2-3", "SystemAddress":58145804012288, "StarClass":"Y" }
+{ "timestamp":"2018-03-23T03:50:19Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-23T03:51:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tascheter Sector CA-Z a4", "SystemAddress":75736916314880, "StarClass":"Y" }
+{ "timestamp":"2018-03-23T03:52:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Gliese 182.1", "SystemAddress":7230678078138, "StarClass":"G" }
+{ "timestamp":"2018-03-23T03:55:08Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-23T03:56:34Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-23T04:00:36Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-23T04:17:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Hyades Sector SP-C a14-2", "SystemAddress":40553617836776, "StarClass":"T" }
+{ "timestamp":"2018-03-23T04:18:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Hyades Sector OJ-E a13-3", "SystemAddress":58145803881184, "StarClass":"T" }
+{ "timestamp":"2018-03-23T04:19:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 22422", "SystemAddress":2484378519899, "StarClass":"F" }
+{ "timestamp":"2018-03-23T04:22:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Hyades Sector NN-S b4-3", "SystemAddress":7268024067425, "StarClass":"M" }
+{ "timestamp":"2018-03-23T04:23:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 22566", "SystemAddress":2587457735003, "StarClass":"F" }

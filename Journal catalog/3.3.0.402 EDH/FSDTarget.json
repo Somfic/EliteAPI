@@ -462,3 +462,40 @@
 { "timestamp":"2018-12-15T13:23:10Z", "event":"FSDTarget", "Name":"Luyten's Star", "SystemAddress":7268024264097 }
 { "timestamp":"2018-12-15T18:40:49Z", "event":"FSDTarget", "Name":"Wolf 1453", "SystemAddress":670954431905 }
 { "timestamp":"2018-12-15T18:50:58Z", "event":"FSDTarget", "Name":"Luyten's Star", "SystemAddress":7268024264097 }
+{ "timestamp":"2018-12-12T06:14:36Z", "event":"FSDTarget", "Name":"Puppis Sector HW-W b1-5", "SystemAddress":11666876081561 }
+{ "timestamp":"2018-12-12T06:19:48Z", "event":"FSDTarget", "Name":"LFT 572", "SystemAddress":2870514623897 }
+{ "timestamp":"2018-12-12T06:29:21Z", "event":"FSDTarget", "Name":"Fasti", "SystemAddress":2832698741458 }
+{ "timestamp":"2018-12-12T06:40:40Z", "event":"FSDTarget", "Name":"LHS 2149", "SystemAddress":671222998433 }
+{ "timestamp":"2018-12-12T06:41:44Z", "event":"FSDTarget", "Name":"Teng Yeh", "SystemAddress":5301877082475 }
+{ "timestamp":"2018-12-12T06:44:06Z", "event":"FSDTarget", "Name":"Ross 1003", "SystemAddress":9467047585185 }
+{ "timestamp":"2018-12-12T07:02:40Z", "event":"FSDTarget", "Name":"Ross 1003", "SystemAddress":9467047585185 }
+{ "timestamp":"2018-12-12T07:03:02Z", "event":"FSDTarget", "Name":"Chara", "SystemAddress":869470833003 }
+{ "timestamp":"2018-12-12T07:03:39Z", "event":"FSDTarget", "Name":"BD+47 2112", "SystemAddress":22660918683049 }
+{ "timestamp":"2018-12-12T07:05:14Z", "event":"FSDTarget", "Name":"Eranin", "SystemAddress":2832631632594 }
+{ "timestamp":"2018-12-13T20:42:25Z", "event":"FSDTarget", "Name":"G 239-25", "SystemAddress":5068732638625 }
+{ "timestamp":"2018-12-13T20:55:10Z", "event":"FSDTarget", "Name":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-13T20:59:09Z", "event":"FSDTarget", "Name":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-13T21:13:53Z", "event":"FSDTarget", "Name":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-13T21:45:18Z", "event":"FSDTarget", "Name":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-13T22:14:10Z", "event":"FSDTarget", "Name":"G 175-42", "SystemAddress":908486251210 }
+{ "timestamp":"2018-12-13T22:24:02Z", "event":"FSDTarget", "Name":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-17T16:51:18Z", "event":"FSDTarget", "Name":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-17T17:26:32Z", "event":"FSDTarget", "Name":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-17T18:59:47Z", "event":"FSDTarget", "Name":"Nanomam", "SystemAddress":4752121268587 }
+{ "timestamp":"2018-12-17T19:22:58Z", "event":"FSDTarget", "Name":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-17T19:24:00Z", "event":"FSDTarget", "Name":"Nanomam", "SystemAddress":4752121268587 }
+{ "timestamp":"2018-12-17T19:32:37Z", "event":"FSDTarget", "Name":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-17T19:46:43Z", "event":"FSDTarget", "Name":"Wolf 46", "SystemAddress":5068464137633 }
+{ "timestamp":"2018-12-17T19:55:57Z", "event":"FSDTarget", "Name":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-17T20:07:36Z", "event":"FSDTarget", "Name":"Lushertha", "SystemAddress":4442883623275 }
+{ "timestamp":"2018-12-17T20:45:44Z", "event":"FSDTarget", "Name":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-18T02:57:13Z", "event":"FSDTarget", "Name":"LFT 671", "SystemAddress":9466779149729 }
+{ "timestamp":"2018-12-18T03:00:24Z", "event":"FSDTarget", "Name":"LP 64-194", "SystemAddress":13864825660833 }
+{ "timestamp":"2018-12-18T03:18:55Z", "event":"FSDTarget", "Name":"Eranin", "SystemAddress":2832631632594 }
+{ "timestamp":"2018-12-18T03:20:30Z", "event":"FSDTarget", "Name":"Eranin", "SystemAddress":2832631632594 }
+{ "timestamp":"2018-12-18T03:27:16Z", "event":"FSDTarget", "Name":"DP Draconis", "SystemAddress":2869709383073 }
+{ "timestamp":"2018-12-18T03:29:20Z", "event":"FSDTarget", "Name":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-18T16:55:18Z", "event":"FSDTarget", "Name":"Ross 318", "SystemAddress":670686061985 }
+{ "timestamp":"2018-12-18T17:32:17Z", "event":"FSDTarget", "Name":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-18T18:04:11Z", "event":"FSDTarget", "Name":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-18T20:05:32Z", "event":"FSDTarget", "Name":"LHS 215", "SystemAddress":2869709317537 }

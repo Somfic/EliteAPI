@@ -7,3 +7,4 @@
 { "timestamp":"2018-12-13T21:48:07Z", "event":"BuyDrones", "Type":"Drones", "Count":64, "BuyPrice":101, "TotalCost":6464 }
 { "timestamp":"2018-12-14T13:31:09Z", "event":"BuyDrones", "Type":"Drones", "Count":64, "BuyPrice":101, "TotalCost":6464 }
 { "timestamp":"2018-12-15T19:12:28Z", "event":"BuyDrones", "Type":"Drones", "Count":64, "BuyPrice":101, "TotalCost":6464 }
+{ "timestamp":"2018-12-18T17:08:24Z", "event":"BuyDrones", "Type":"Drones", "Count":10, "BuyPrice":101, "TotalCost":1010 }

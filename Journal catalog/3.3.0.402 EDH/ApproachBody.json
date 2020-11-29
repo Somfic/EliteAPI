@@ -13,3 +13,11 @@
 { "timestamp":"2018-12-15T11:27:18Z", "event":"ApproachBody", "StarSystem":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163, "Body":"Vela Dark Region ZE-A d64 1", "BodyID":13 }
 { "timestamp":"2018-12-15T11:38:20Z", "event":"ApproachBody", "StarSystem":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163, "Body":"Vela Dark Region ZE-A d64 1", "BodyID":13 }
 { "timestamp":"2018-12-15T11:43:26Z", "event":"ApproachBody", "StarSystem":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163, "Body":"Vela Dark Region ZE-A d64 1", "BodyID":13 }
+{ "timestamp":"2018-12-13T20:47:40Z", "event":"ApproachBody", "StarSystem":"G 239-25", "SystemAddress":5068732638625, "Body":"Buyukkale", "BodyID":1 }
+{ "timestamp":"2018-12-17T17:00:27Z", "event":"ApproachBody", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Tollan 3 a", "BodyID":17 }
+{ "timestamp":"2018-12-17T20:22:35Z", "event":"ApproachBody", "StarSystem":"Lushertha", "SystemAddress":4442883623275, "Body":"Lushertha B 7 a", "BodyID":28 }
+{ "timestamp":"2018-12-17T20:40:21Z", "event":"ApproachBody", "StarSystem":"Lushertha", "SystemAddress":4442883623275, "Body":"Lushertha B 1", "BodyID":20 }
+{ "timestamp":"2018-12-18T01:52:51Z", "event":"ApproachBody", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"LHS 215 5 c", "BodyID":57 }
+{ "timestamp":"2018-12-18T03:11:32Z", "event":"ApproachBody", "StarSystem":"LP 64-194", "SystemAddress":13864825660833, "Body":"Gargarii", "BodyID":1 }
+{ "timestamp":"2018-12-18T03:12:25Z", "event":"ApproachBody", "StarSystem":"LP 64-194", "SystemAddress":13864825660833, "Body":"Gargarii", "BodyID":1 }
+{ "timestamp":"2018-12-18T18:26:01Z", "event":"ApproachBody", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Tollan 3 a", "BodyID":17 }

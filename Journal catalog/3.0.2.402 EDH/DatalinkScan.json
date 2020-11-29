@@ -1,0 +1,2 @@
+{ "timestamp":"2018-03-08T02:59:17Z", "event":"DatalinkScan", "Message":"$DATAPOINT_GAMEPLAY_complete;", "Message_Localised":"Alert: All Data Point telemetry links established, Intel package created." }
+{ "timestamp":"2018-03-08T03:01:22Z", "event":"DatalinkScan", "Message":"$DataLink_ScannedInfo_Operations;", "Message_Localised":"Op-Net accessed" }

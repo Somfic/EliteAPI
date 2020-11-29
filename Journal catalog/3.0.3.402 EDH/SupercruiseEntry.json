@@ -1,0 +1,10 @@
+{ "timestamp":"2018-03-21T03:36:44Z", "event":"SupercruiseEntry", "StarSystem":"G 138-40", "SystemAddress":7267755894201 }
+{ "timestamp":"2018-03-21T04:11:39Z", "event":"SupercruiseEntry", "StarSystem":"LFT 1209", "SystemAddress":5068732704185 }
+{ "timestamp":"2018-03-21T22:14:29Z", "event":"SupercruiseEntry", "StarSystem":"BAG 7", "SystemAddress":5581410702042 }
+{ "timestamp":"2018-03-21T23:02:33Z", "event":"SupercruiseEntry", "StarSystem":"Thunderbird", "SystemAddress":327728235700 }
+{ "timestamp":"2018-03-21T23:14:25Z", "event":"SupercruiseEntry", "StarSystem":"Thunderbird", "SystemAddress":327728235700 }
+{ "timestamp":"2018-03-23T03:06:33Z", "event":"SupercruiseEntry", "StarSystem":"LHS 221", "SystemAddress":7267755828633 }
+{ "timestamp":"2018-03-23T03:50:24Z", "event":"SupercruiseEntry", "StarSystem":"Trianguli Sector ZA-W a2-3", "SystemAddress":58145804012288 }
+{ "timestamp":"2018-03-23T03:55:13Z", "event":"SupercruiseEntry", "StarSystem":"Gliese 182.1", "SystemAddress":7230678078138 }
+{ "timestamp":"2018-03-23T03:56:39Z", "event":"SupercruiseEntry", "StarSystem":"Gliese 182.1", "SystemAddress":7230678078138 }
+{ "timestamp":"2018-03-23T04:00:41Z", "event":"SupercruiseEntry", "StarSystem":"Gliese 182.1", "SystemAddress":7230678078138 }

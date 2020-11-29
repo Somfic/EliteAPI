@@ -1,0 +1,7 @@
+{ "timestamp":"2018-12-19T16:07:24Z", "event":"FSSDiscoveryScan", "Progress":0.275721, "BodyCount":13, "NonBodyCount":22 }
+{ "timestamp":"2018-12-19T16:12:00Z", "event":"FSSDiscoveryScan", "Progress":0.500254, "BodyCount":13, "NonBodyCount":22 }
+{ "timestamp":"2018-12-19T16:13:49Z", "event":"FSSDiscoveryScan", "Progress":0.500254, "BodyCount":13, "NonBodyCount":22 }
+{ "timestamp":"2018-12-19T16:17:01Z", "event":"FSSDiscoveryScan", "Progress":0.500254, "BodyCount":13, "NonBodyCount":22 }
+{ "timestamp":"2018-12-20T16:10:21Z", "event":"FSSDiscoveryScan", "Progress":1.000000, "BodyCount":1, "NonBodyCount":0 }
+{ "timestamp":"2018-12-20T16:11:29Z", "event":"FSSDiscoveryScan", "Progress":1.000000, "BodyCount":2, "NonBodyCount":8 }
+{ "timestamp":"2019-01-16T19:34:34Z", "event":"FSSDiscoveryScan", "Progress":0.223039, "BodyCount":9, "NonBodyCount":4 }

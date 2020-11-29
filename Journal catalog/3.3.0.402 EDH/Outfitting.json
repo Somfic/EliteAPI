@@ -12,3 +12,24 @@
 { "timestamp":"2018-12-13T11:35:31Z", "event":"Outfitting", "MarketID":3228922112, "StationName":"Ashby City", "StarSystem":"Luyten's Star" }
 { "timestamp":"2018-12-13T11:36:38Z", "event":"Outfitting", "MarketID":3228922112, "StationName":"Ashby City", "StarSystem":"Luyten's Star" }
 { "timestamp":"2018-12-15T10:16:17Z", "event":"Outfitting", "MarketID":3228922112, "StationName":"Ashby City", "StarSystem":"Luyten's Star" }
+{ "timestamp":"2018-12-12T04:16:08Z", "event":"Outfitting", "MarketID":3228282112, "StationName":"Hoshi Port", "StarSystem":"CD-24 5005" }
+{ "timestamp":"2018-12-12T04:17:05Z", "event":"Outfitting", "MarketID":3228282112, "StationName":"Hoshi Port", "StarSystem":"CD-24 5005" }
+{ "timestamp":"2018-12-13T20:31:15Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-13T20:56:01Z", "event":"Outfitting", "MarketID":3535333120, "StationName":"Moore Forum", "StarSystem":"G 239-25" }
+{ "timestamp":"2018-12-13T21:05:57Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-13T22:04:51Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-13T22:05:37Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-17T16:46:37Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-17T17:03:42Z", "event":"Outfitting", "MarketID":3535335424, "StationName":"Waldeck Keep", "StarSystem":"Tollan" }
+{ "timestamp":"2018-12-17T18:58:28Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-17T19:38:57Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-17T19:44:53Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T02:12:09Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T02:29:00Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T02:45:24Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T02:53:21Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T03:36:07Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T16:40:00Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T16:46:53Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T16:47:12Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T17:59:11Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }

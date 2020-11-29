@@ -1,0 +1,31 @@
+{ "timestamp":"2018-02-28T19:02:47Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "SystemAddress":5856221467362, "Body":"Sylvester City", "BodyID":52, "BodyType":"Station" }
+{ "timestamp":"2018-02-28T19:37:16Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "SystemAddress":5856221467362, "Body":"Russell Ring", "BodyID":49, "BodyType":"Station" }
+{ "timestamp":"2018-02-28T20:38:59Z", "event":"SupercruiseExit", "StarSystem":"Kini", "SystemAddress":11665265468865, "Body":"Kadenyuk Orbital", "BodyID":4, "BodyType":"Station" }
+{ "timestamp":"2018-02-28T20:55:10Z", "event":"SupercruiseExit", "StarSystem":"LTT 18486", "SystemAddress":3657198211810, "Body":"LTT 18486 A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2018-02-28T21:10:03Z", "event":"SupercruiseExit", "StarSystem":"LTT 18486", "SystemAddress":3657198211810, "Body":"LTT 18486 B 3 a", "BodyID":19, "BodyType":"Planet" }
+{ "timestamp":"2018-02-28T21:18:06Z", "event":"SupercruiseExit", "StarSystem":"Kini", "SystemAddress":11665265468865, "Body":"Kadenyuk Orbital", "BodyID":4, "BodyType":"Station" }
+{ "timestamp":"2018-02-28T21:19:35Z", "event":"SupercruiseExit", "StarSystem":"Kini", "SystemAddress":11665265468865, "Body":"Kadenyuk Orbital", "BodyID":4, "BodyType":"Station" }
+{ "timestamp":"2018-03-01T01:19:18Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "SystemAddress":5856221467362, "Body":"Eravate", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2018-03-01T01:22:13Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "SystemAddress":5856221467362, "Body":"Cleve Hub", "BodyID":48, "BodyType":"Station" }
+{ "timestamp":"2018-03-01T01:35:38Z", "event":"SupercruiseExit", "StarSystem":"GD 219", "SystemAddress":5068195702201, "Body":"McKee Ring", "BodyID":9, "BodyType":"Station" }
+{ "timestamp":"2018-03-01T02:00:36Z", "event":"SupercruiseExit", "StarSystem":"V775 Herculis", "SystemAddress":3932076118746, "Body":"Beatty Port", "BodyID":70, "BodyType":"Station" }
+{ "timestamp":"2018-03-01T02:08:28Z", "event":"SupercruiseExit", "StarSystem":"V775 Herculis", "SystemAddress":3932076118746, "Body":"Vonarburg Enterprise", "BodyID":69, "BodyType":"Station" }
+{ "timestamp":"2018-03-01T02:17:44Z", "event":"SupercruiseExit", "StarSystem":"Venetic", "SystemAddress":2827959142763, "Body":"Venetic A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2018-03-01T02:21:33Z", "event":"SupercruiseExit", "StarSystem":"Venetic", "SystemAddress":2827959142763, "Body":"Venetic A 1", "BodyID":5, "BodyType":"Planet" }
+{ "timestamp":"2018-03-01T02:25:54Z", "event":"SupercruiseExit", "StarSystem":"Venetic", "SystemAddress":2827959142763, "Body":"Venetic A 1", "BodyID":5, "BodyType":"Planet" }
+{ "timestamp":"2018-03-01T02:39:34Z", "event":"SupercruiseExit", "StarSystem":"V775 Herculis", "SystemAddress":3932076118746, "Body":"Vonarburg Enterprise", "BodyID":69, "BodyType":"Station" }
+{ "timestamp":"2018-03-01T02:56:17Z", "event":"SupercruiseExit", "StarSystem":"110 Herculis", "SystemAddress":2381299321195, "Body":"110 Herculis", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2018-03-01T03:01:16Z", "event":"SupercruiseExit", "StarSystem":"110 Herculis", "SystemAddress":2381299321195, "Body":"110 Herculis 3 a", "BodyID":6, "BodyType":"Planet" }
+{ "timestamp":"2018-03-01T03:11:24Z", "event":"SupercruiseExit", "StarSystem":"110 Herculis", "SystemAddress":2381299321195, "Body":"110 Herculis 4 b", "BodyID":24, "BodyType":"Planet" }
+{ "timestamp":"2018-03-01T18:53:53Z", "event":"SupercruiseExit", "StarSystem":"Venetic", "SystemAddress":2827959142763, "Body":"Venetic A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2018-03-01T19:10:12Z", "event":"SupercruiseExit", "StarSystem":"Venetic", "SystemAddress":2827959142763, "Body":"Venetic B 4 a", "BodyID":15, "BodyType":"Planet" }
+{ "timestamp":"2018-03-01T19:24:12Z", "event":"SupercruiseExit", "StarSystem":"V775 Herculis", "SystemAddress":3932076118746, "Body":"Vonarburg Enterprise", "BodyID":69, "BodyType":"Station" }
+{ "timestamp":"2018-03-01T19:48:39Z", "event":"SupercruiseExit", "StarSystem":"V774 Herculis", "SystemAddress":2282808709850, "Body":"V774 Herculis A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2018-03-01T19:59:38Z", "event":"SupercruiseExit", "StarSystem":"V774 Herculis", "SystemAddress":2282808709850, "Body":"V774 Herculis A 2 A Ring", "BodyID":21, "BodyType":"PlanetaryRing" }
+{ "timestamp":"2018-03-01T20:03:24Z", "event":"SupercruiseExit", "StarSystem":"V774 Herculis", "SystemAddress":2282808709850, "Body":"V774 Herculis A 2 A Ring", "BodyID":21, "BodyType":"PlanetaryRing" }
+{ "timestamp":"2018-03-01T20:06:06Z", "event":"SupercruiseExit", "StarSystem":"V774 Herculis", "SystemAddress":2282808709850, "Body":"V774 Herculis A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2018-03-01T20:09:12Z", "event":"SupercruiseExit", "StarSystem":"V774 Herculis", "SystemAddress":2282808709850, "Body":"V774 Herculis A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2018-03-05T03:34:39Z", "event":"SupercruiseExit", "StarSystem":"GD 219", "SystemAddress":5068195702201, "Body":"GD 219 A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2018-03-05T03:37:34Z", "event":"SupercruiseExit", "StarSystem":"GD 219", "SystemAddress":5068195702201, "Body":"GD 219 A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2018-03-05T03:45:36Z", "event":"SupercruiseExit", "StarSystem":"GD 219", "SystemAddress":5068195702201, "Body":"GD 219 B", "BodyID":2, "BodyType":"Star" }
+{ "timestamp":"2018-03-05T03:58:48Z", "event":"SupercruiseExit", "StarSystem":"V775 Herculis", "SystemAddress":3932076118746, "Body":"Vonarburg Enterprise", "BodyID":69, "BodyType":"Station" }

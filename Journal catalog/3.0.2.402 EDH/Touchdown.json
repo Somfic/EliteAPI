@@ -1,0 +1,4 @@
+{ "timestamp":"2018-03-08T02:49:59Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-54.555855, "Longitude":-99.348366 }
+{ "timestamp":"2018-03-08T03:07:32Z", "event":"Touchdown", "PlayerControlled":false }
+{ "timestamp":"2018-03-08T19:49:04Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":5.259388, "Longitude":-47.386833 }
+{ "timestamp":"2018-03-08T20:05:00Z", "event":"Touchdown", "PlayerControlled":false }

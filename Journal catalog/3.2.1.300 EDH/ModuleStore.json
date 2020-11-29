@@ -1,0 +1,2 @@
+{ "timestamp":"2018-12-10T02:42:57Z", "event":"ModuleStore", "MarketID":3228282112, "Slot":"Slot04_Size2", "StoredItem":"$int_fuelscoop_size2_class3_name;", "StoredItem_Localised":"Fuel Scoop", "Ship":"cobramkiii", "ShipID":0, "Hot":false }
+{ "timestamp":"2018-12-10T02:44:52Z", "event":"ModuleStore", "MarketID":3228282112, "Slot":"Slot02_Size4", "StoredItem":"$int_buggybay_size2_class2_name;", "StoredItem_Localised":"Planetary Vehicle Hangar", "Ship":"cobramkiii", "ShipID":0, "Hot":false }

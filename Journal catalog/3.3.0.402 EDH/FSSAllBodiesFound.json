@@ -120,3 +120,4 @@
 { "timestamp":"2018-12-15T13:03:33Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefe ZV-M b40-5", "SystemAddress":11676807603545, "Count":10 }
 { "timestamp":"2018-12-15T13:05:16Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefe AO-S c20-11", "SystemAddress":3108784444082, "Count":10 }
 { "timestamp":"2018-12-15T13:20:38Z", "event":"FSSAllBodiesFound", "SystemName":"Col 285 Sector OR-B b14-9", "SystemAddress":20464579519889, "Count":6 }
+{ "timestamp":"2018-12-12T06:29:46Z", "event":"FSSAllBodiesFound", "SystemName":"LFT 572", "SystemAddress":2870514623897, "Count":2 }

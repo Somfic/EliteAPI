@@ -1,0 +1,17 @@
+{ "timestamp":"2018-12-09T19:36:45Z", "event":"LeaveBody", "StarSystem":"Velli", "SystemAddress":7269634811281, "Body":"Velli 6 d", "BodyID":17 }
+{ "timestamp":"2018-12-10T03:04:31Z", "event":"LeaveBody", "StarSystem":"Sanos", "SystemAddress":3932277445322, "Body":"Sanos B 5", "BodyID":21 }
+{ "timestamp":"2018-12-10T03:43:18Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 1", "BodyID":13 }
+{ "timestamp":"2018-12-10T03:43:44Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 1", "BodyID":13 }
+{ "timestamp":"2018-12-10T03:54:54Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 6 a", "BodyID":37 }
+{ "timestamp":"2018-12-10T03:56:49Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 6 a", "BodyID":37 }
+{ "timestamp":"2018-12-10T04:02:38Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 6 a", "BodyID":37 }
+{ "timestamp":"2018-12-10T04:09:12Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 9 c", "BodyID":52 }
+{ "timestamp":"2018-12-10T04:10:54Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 9 c", "BodyID":52 }
+{ "timestamp":"2018-12-10T04:11:08Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 9 c", "BodyID":52 }
+{ "timestamp":"2018-12-10T04:14:24Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 9 c", "BodyID":52 }
+{ "timestamp":"2018-12-10T04:15:30Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 9 c", "BodyID":52 }
+{ "timestamp":"2018-12-10T04:15:49Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 9 c", "BodyID":52 }
+{ "timestamp":"2018-12-10T04:18:23Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 9 c", "BodyID":52 }
+{ "timestamp":"2018-12-10T04:19:44Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 9 c", "BodyID":52 }
+{ "timestamp":"2018-12-10T04:20:14Z", "event":"LeaveBody", "StarSystem":"Mehudi", "SystemAddress":18263945782681, "Body":"Mehudi 9 c", "BodyID":52 }
+{ "timestamp":"2018-12-11T04:30:43Z", "event":"LeaveBody", "StarSystem":"Neritus", "SystemAddress":1350523947363, "Body":"Neritus A 6 a", "BodyID":10 }

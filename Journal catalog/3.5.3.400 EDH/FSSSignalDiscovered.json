@@ -1,0 +1,323 @@
+{ "timestamp":"2019-10-26T23:47:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2278220106091, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-10-26T23:56:31Z", "event":"FSSSignalDiscovered", "SystemAddress":2278220106091, "SignalName":"Steinmuller City" }
+{ "timestamp":"2019-10-26T23:56:31Z", "event":"FSSSignalDiscovered", "SystemAddress":2278220106091, "SignalName":"LUS-232 Banner-class Hauler" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"$Warzone_PointRace_Low:#index=1;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"$Warzone_PointRace_High:#index=1;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"$Warzone_PointRace_Med:#index=1;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"UPS-248 Banner-class Hauler" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"Birthright Final Act" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"Suri Park", "IsStation":true }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"$MULTIPLAYER_SCENARIO14_TITLE;", "SignalName_Localised":"Resource Extraction Site" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"United Medical Technologies" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"Quiet Stallion" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"Regional Fortification Force" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"Bain Dock" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"White Ridge Range" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"Hogg City", "IsStation":true }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"Brunton Gateway" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"V1581 CYGNI Dionysus-class Cropper" }
+{ "timestamp":"2019-10-27T00:32:46Z", "event":"FSSSignalDiscovered", "SystemAddress":2557686584018, "SignalName":"Kobayashi City", "IsStation":true }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"KRU-759 Bowman-class Researcher" }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_High:#index=1;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Med:#index=1;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Low:#index=1;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-10-27T00:43:45Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"$Warzone_PointRace_High:#index=1;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"$Warzone_PointRace_Med:#index=1;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Natural Digital Services" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Robinson Hub", "IsStation":true }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"$Warzone_PointRace_Low:#index=1;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Lawhead Gateway" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"McMullen Hub" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"ROS-101 Riker-class Reformatory" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"ROS-400 Freedom-class Surveyor" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Ziemkiewicz Hub", "IsStation":true }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Gunn Station" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Preuss Orbital", "IsStation":true }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Karlsefni Gateway" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Guin Dock" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Public Food Commission" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Ecumenical Reflection Relay" }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Waldeck Terminal", "IsStation":true }
+{ "timestamp":"2019-10-27T00:59:11Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Einstein Plaza" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Med:#index=1;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_High:#index=1;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Low:#index=1;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"KRU-759 Bowman-class Researcher" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-10-27T02:15:59Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-10-27T02:27:10Z", "event":"FSSSignalDiscovered", "SystemAddress":13864825595297, "SignalName":"Sherrington Orbital" }
+{ "timestamp":"2019-10-27T02:27:10Z", "event":"FSSSignalDiscovered", "SystemAddress":13864825595297, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-10-27T02:27:10Z", "event":"FSSSignalDiscovered", "SystemAddress":13864825595297, "SignalName":"Misty Vines Farms" }
+{ "timestamp":"2019-10-27T02:27:10Z", "event":"FSSSignalDiscovered", "SystemAddress":13864825595297, "SignalName":"V538 AURIGAE I  Amaethon-class Cropper" }
+{ "timestamp":"2019-11-01T13:10:30Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-11-01T13:10:30Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-11-01T13:10:30Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-11-01T13:10:30Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-11-01T13:10:30Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"KRU-759 Bowman-class Researcher" }
+{ "timestamp":"2019-11-01T13:10:30Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-11-01T13:10:30Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-11-01T13:10:30Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-11-01T13:10:30Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-11-01T13:10:30Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-01T13:25:05Z", "event":"FSSSignalDiscovered", "SystemAddress":5068732573089, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-01T13:29:22Z", "event":"FSSSignalDiscovered", "SystemAddress":5068732573089, "SignalName":"Robinson Prospect" }
+{ "timestamp":"2019-11-01T13:29:22Z", "event":"FSSSignalDiscovered", "SystemAddress":5068732573089, "SignalName":"WOL-301 Riker-class Reformatory" }
+{ "timestamp":"2019-11-01T13:34:49Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-11-01T13:34:49Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-11-01T13:34:49Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-11-01T13:34:49Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-11-01T13:34:49Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-11-01T13:34:49Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"KRU-759 Bowman-class Researcher" }
+{ "timestamp":"2019-11-01T13:34:49Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-11-01T13:34:49Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-11-01T13:34:49Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-11-01T13:34:49Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-01T13:41:35Z", "event":"FSSSignalDiscovered", "SystemAddress":5068732573089, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-01T13:41:35Z", "event":"FSSSignalDiscovered", "SystemAddress":5068732573089, "SignalName":"Robinson Prospect" }
+{ "timestamp":"2019-11-01T13:41:35Z", "event":"FSSSignalDiscovered", "SystemAddress":5068732573089, "SignalName":"WOL-301 Riker-class Reformatory" }
+{ "timestamp":"2019-11-01T13:49:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-11-01T13:49:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-11-01T13:49:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-11-01T13:49:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-11-01T13:49:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"KRU-759 Bowman-class Researcher" }
+{ "timestamp":"2019-11-01T13:49:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-11-01T13:49:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-11-01T13:49:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-11-01T13:49:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-11-01T13:49:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-01T21:37:02Z", "event":"FSSSignalDiscovered", "SystemAddress":7267755959705, "SignalName":"V538 AURIGAE II  Thomas-class Hauler" }
+{ "timestamp":"2019-11-01T21:37:02Z", "event":"FSSSignalDiscovered", "SystemAddress":7267755959705, "SignalName":"Steiner City", "IsStation":true }
+{ "timestamp":"2019-11-01T21:37:02Z", "event":"FSSSignalDiscovered", "SystemAddress":7267755959705, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-01T21:37:02Z", "event":"FSSSignalDiscovered", "SystemAddress":7267755959705, "SignalName":"Intermutual Intelligence Network" }
+{ "timestamp":"2019-11-01T21:37:02Z", "event":"FSSSignalDiscovered", "SystemAddress":7267755959705, "SignalName":"GLI-062 Gordon-class Hauler" }
+{ "timestamp":"2019-11-01T21:37:02Z", "event":"FSSSignalDiscovered", "SystemAddress":7267755959705, "SignalName":"Berezin Dock" }
+{ "timestamp":"2019-11-01T21:37:02Z", "event":"FSSSignalDiscovered", "SystemAddress":7267755959705, "SignalName":"Scarlet Spring Produce" }
+{ "timestamp":"2019-11-01T21:37:02Z", "event":"FSSSignalDiscovered", "SystemAddress":7267755959705, "SignalName":"Silver Creek Plantation" }
+{ "timestamp":"2019-11-01T22:19:47Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-11-01T22:19:47Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-11-01T22:19:47Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-11-01T22:19:47Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"KRU-759 Bowman-class Researcher" }
+{ "timestamp":"2019-11-01T22:19:47Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-01T22:19:47Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-11-01T22:19:47Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-11-01T22:19:47Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-11-01T22:19:47Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-11-01T22:19:47Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$Warzone_PointRace_Low:#index=1;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"MacLean Horizons" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Pythagoras Landing" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO14_TITLE;", "SignalName_Localised":"Resource Extraction Site" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Lafayette Villas" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Naphtha Class Tanker FKS-981" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$Warzone_PointRace_Med:#index=1;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Zion Protection Chapter" }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Gordon Plant", "IsStation":true }
+{ "timestamp":"2019-11-01T22:32:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Scarlet Pulsar Manufacturing" }
+{ "timestamp":"2019-11-01T23:23:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-01T23:23:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-11-01T23:23:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-11-01T23:23:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-11-01T23:23:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-11-01T23:23:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-11-01T23:23:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-11-01T23:23:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-11-01T23:23:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"KRU-759 Bowman-class Researcher" }
+{ "timestamp":"2019-11-01T23:23:01Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"$Warzone_PointRace_Med:#index=1;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"$Warzone_PointRace_High:#index=1;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Guin Dock" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"$Warzone_PointRace_Low:#index=1;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Karlsefni Gateway" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Ecumenical Reflection Relay" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Public Food Commission" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"ROS-400 Freedom-class Surveyor" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Lawhead Gateway" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"ROS-101 Riker-class Reformatory" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"McMullen Hub" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Natural Digital Services" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Preuss Orbital", "IsStation":true }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Waldeck Terminal", "IsStation":true }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Gunn Station" }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Ziemkiewicz Hub", "IsStation":true }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Robinson Hub", "IsStation":true }
+{ "timestamp":"2019-11-01T23:37:16Z", "event":"FSSSignalDiscovered", "SystemAddress":4207021134546, "SignalName":"Einstein Plaza" }
+{ "timestamp":"2019-11-01T23:44:48Z", "event":"FSSSignalDiscovered", "SystemAddress":13864825595297, "SignalName":"Sherrington Orbital" }
+{ "timestamp":"2019-11-01T23:44:48Z", "event":"FSSSignalDiscovered", "SystemAddress":13864825595297, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-01T23:44:48Z", "event":"FSSSignalDiscovered", "SystemAddress":13864825595297, "SignalName":"Misty Vines Farms" }
+{ "timestamp":"2019-11-01T23:44:48Z", "event":"FSSSignalDiscovered", "SystemAddress":13864825595297, "SignalName":"V538 AURIGAE I  Amaethon-class Cropper" }
+{ "timestamp":"2019-11-01T23:48:58Z", "event":"FSSSignalDiscovered", "SystemAddress":7267487393185, "SignalName":"$MULTIPLAYER_SCENARIO80_TITLE;", "SignalName_Localised":"Compromised Navigation Beacon" }
+{ "timestamp":"2019-11-01T23:48:58Z", "event":"FSSSignalDiscovered", "SystemAddress":7267487393185, "SignalName":"Crown Platform" }
+{ "timestamp":"2019-11-01T23:59:39Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-01T23:59:39Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-11-01T23:59:39Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-11-01T23:59:39Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-11-01T23:59:39Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"KRU-759 Bowman-class Researcher" }
+{ "timestamp":"2019-11-01T23:59:39Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-11-01T23:59:39Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-11-01T23:59:39Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-11-01T23:59:39Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-11-01T23:59:39Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Med:#index=1;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Low:#index=1;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_High:#index=1;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"LHS 215 Lowell-class Researcher" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-11-18T01:34:14Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-11-18T01:55:17Z", "event":"FSSSignalDiscovered", "SystemAddress":8879945552594, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-18T01:55:17Z", "event":"FSSSignalDiscovered", "SystemAddress":8879945552594, "SignalName":"Omega Artillery Staging Post" }
+{ "timestamp":"2019-11-18T02:14:09Z", "event":"FSSSignalDiscovered", "SystemAddress":4923919960427, "SignalName":"Yellow Loch Harvests" }
+{ "timestamp":"2019-11-18T02:14:09Z", "event":"FSSSignalDiscovered", "SystemAddress":4923919960427, "SignalName":"$MULTIPLAYER_SCENARIO80_TITLE;", "SignalName_Localised":"Compromised Navigation Beacon" }
+{ "timestamp":"2019-11-18T02:14:09Z", "event":"FSSSignalDiscovered", "SystemAddress":4923919960427, "SignalName":"Chwedyk Station", "IsStation":true }
+{ "timestamp":"2019-11-18T02:14:09Z", "event":"FSSSignalDiscovered", "SystemAddress":4923919960427, "SignalName":"BOD-232 Aquarius-class Tanker" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Low:#index=1;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"LHS 215 Lowell-class Researcher" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_High:#index=1;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Med:#index=1;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-11-18T02:28:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-12-07T20:30:06Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO14_TITLE;", "SignalName_Localised":"Resource Extraction Site" }
+{ "timestamp":"2019-12-07T20:30:06Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-12-07T20:30:06Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Gordon Plant", "IsStation":true }
+{ "timestamp":"2019-12-07T20:30:06Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-12-07T20:30:06Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"MacLean Horizons" }
+{ "timestamp":"2019-12-07T20:30:06Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"LFT 424 Alcatraz-class Reformatory" }
+{ "timestamp":"2019-12-07T20:30:06Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Scarlet Pulsar Manufacturing" }
+{ "timestamp":"2019-12-07T20:30:06Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-12-07T20:30:06Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Zion Protection Chapter" }
+{ "timestamp":"2019-12-07T20:30:06Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-12-07T20:30:06Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Lafayette Villas" }
+{ "timestamp":"2019-12-07T20:30:06Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Pythagoras Landing" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_High:#index=1;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Low:#index=1;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Med:#index=1;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Low:#index=2;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-12-07T21:15:15Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-12-07T21:25:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-12-07T21:25:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-12-07T21:25:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"MacLean Horizons" }
+{ "timestamp":"2019-12-07T21:25:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-12-07T21:25:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-12-07T21:25:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Zion Protection Chapter" }
+{ "timestamp":"2019-12-07T21:25:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Lafayette Villas" }
+{ "timestamp":"2019-12-07T21:25:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO14_TITLE;", "SignalName_Localised":"Resource Extraction Site" }
+{ "timestamp":"2019-12-07T21:25:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Pythagoras Landing" }
+{ "timestamp":"2019-12-07T21:25:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Gordon Plant", "IsStation":true }
+{ "timestamp":"2019-12-07T21:25:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"LFT 424 Alcatraz-class Reformatory" }
+{ "timestamp":"2019-12-07T21:25:48Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Scarlet Pulsar Manufacturing" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Med:#index=1;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Low:#index=2;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Low:#index=1;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_High:#index=1;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2019-12-07T21:33:33Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-12-11T02:45:35Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"V538 AURIGAE I  Amaethon-class Cropper" }
+{ "timestamp":"2019-12-11T02:45:35Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Associated Software Laboratories" }
+{ "timestamp":"2019-12-11T02:45:35Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-12-11T02:45:35Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Secret Titanium Drilling" }
+{ "timestamp":"2019-12-11T02:45:35Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Beta Brigade Barracks" }
+{ "timestamp":"2019-12-11T02:45:35Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Gresley Dock", "IsStation":true }
+{ "timestamp":"2019-12-11T02:45:35Z", "event":"FSSSignalDiscovered", "SystemAddress":4752121268587, "SignalName":"Hahn Gateway", "IsStation":true }
+{ "timestamp":"2019-12-11T03:38:42Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2019-12-11T03:38:42Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2019-12-11T03:38:42Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2019-12-11T03:38:42Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2019-12-11T03:38:42Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2019-12-11T03:38:42Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2019-12-11T03:38:42Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2019-12-11T03:38:42Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2019-12-11T03:38:42Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2020-01-03T22:35:26Z", "event":"FSSSignalDiscovered", "SystemAddress":7267487393185, "SignalName":"Crown Platform" }
+{ "timestamp":"2020-01-03T22:35:26Z", "event":"FSSSignalDiscovered", "SystemAddress":7267487393185, "SignalName":"$MULTIPLAYER_SCENARIO80_TITLE;", "SignalName_Localised":"Compromised Navigation Beacon" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Low:#index=1;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"ATH-542 Lowell-class Researcher" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_High:#index=1;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2020-01-03T22:49:10Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Med:#index=1;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }
+{ "timestamp":"2020-01-03T23:39:00Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2020-01-03T23:39:00Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2020-01-03T23:39:00Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO14_TITLE;", "SignalName_Localised":"Resource Extraction Site" }
+{ "timestamp":"2020-01-03T23:39:00Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Gordon Plant", "IsStation":true }
+{ "timestamp":"2020-01-03T23:39:00Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"XI URSAE MAJORIS I  Bellmarsh-class Reformatory" }
+{ "timestamp":"2020-01-03T23:39:00Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Lafayette Villas" }
+{ "timestamp":"2020-01-03T23:39:00Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2020-01-03T23:39:00Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Zion Protection Chapter" }
+{ "timestamp":"2020-01-03T23:39:00Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2020-01-03T23:39:00Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Pythagoras Landing" }
+{ "timestamp":"2020-01-03T23:39:00Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"MacLean Horizons" }
+{ "timestamp":"2020-01-03T23:39:00Z", "event":"FSSSignalDiscovered", "SystemAddress":18262872171937, "SignalName":"Scarlet Pulsar Manufacturing" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO77_TITLE;", "SignalName_Localised":"Resource Extraction Site [Low]" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Grand Blossom Farms" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Heath Villas" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"ATH-542 Lowell-class Researcher" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Cosmic Transmittal Communications" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Low:#index=1;", "SignalName_Localised":"Conflict Zone [Low Intensity]" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO42_TITLE;", "SignalName_Localised":"Nav Beacon" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Feynman Gateway" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO78_TITLE;", "SignalName_Localised":"Resource Extraction Site [High]" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$MULTIPLAYER_SCENARIO79_TITLE;", "SignalName_Localised":"Resource Extraction Site [Hazardous]" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_High:#index=1;", "SignalName_Localised":"Conflict Zone [High Intensity]" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"Diesel Orbital" }
+{ "timestamp":"2020-01-03T23:53:35Z", "event":"FSSSignalDiscovered", "SystemAddress":2869709317537, "SignalName":"$Warzone_PointRace_Med:#index=1;", "SignalName_Localised":"Conflict Zone [Medium Intensity]" }

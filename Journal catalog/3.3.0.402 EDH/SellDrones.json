@@ -1,3 +1,4 @@
 { "timestamp":"2018-12-12T16:26:10Z", "event":"SellDrones", "Type":"Drones", "Count":50, "SellPrice":90, "TotalSale":4500 }
 { "timestamp":"2018-12-12T19:02:11Z", "event":"SellDrones", "Type":"Drones", "Count":60, "SellPrice":90, "TotalSale":5400 }
 { "timestamp":"2018-12-14T10:26:16Z", "event":"SellDrones", "Type":"Drones", "Count":41, "SellPrice":100, "TotalSale":4100 }
+{ "timestamp":"2018-12-18T17:31:39Z", "event":"SellDrones", "Type":"Drones", "Count":8, "SellPrice":100, "TotalSale":800 }

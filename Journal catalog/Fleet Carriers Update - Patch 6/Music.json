@@ -76,3 +76,9 @@
 { "timestamp":"2020-11-09T21:15:49Z", "event":"Music", "MusicTrack":"NoTrack" }
 { "timestamp":"2020-11-09T21:17:10Z", "event":"Music", "MusicTrack":"Exploration" }
 { "timestamp":"2020-11-09T21:18:39Z", "event":"Music", "MusicTrack":"Supercruise" }
+{ "timestamp":"2020-11-17T21:56:40Z", "event":"Music", "MusicTrack":"NoTrack" }
+{ "timestamp":"2020-11-17T21:56:40Z", "event":"Music", "MusicTrack":"MainMenu" }
+{ "timestamp":"2020-11-17T21:59:06Z", "event":"Music", "MusicTrack":"NoTrack" }
+{ "timestamp":"2020-11-17T21:59:06Z", "event":"Music", "MusicTrack":"Exploration" }
+{ "timestamp":"2020-11-17T21:59:06Z", "event":"Music", "MusicTrack":"Starport" }
+{ "timestamp":"2020-11-17T22:03:15Z", "event":"Music", "MusicTrack":"Exploration" }

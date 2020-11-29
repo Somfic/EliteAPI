@@ -1,0 +1,2 @@
+{ "timestamp":"2018-12-09T19:34:59Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Gandza Gold Vision Services", "Fine":400 }
+{ "timestamp":"2018-12-09T19:35:09Z", "event":"CommitCrime", "CrimeType":"dockingMajorTresspass", "Faction":"Gandza Gold Vision Services", "Bounty":500 }

@@ -1,0 +1,75 @@
+{ "timestamp":"2019-10-26T23:45:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"44 chi Draconis", "SystemAddress":2278220106091, "StarClass":"F" }
+{ "timestamp":"2019-10-26T23:49:57Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-10-26T23:51:42Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-10-27T00:31:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Anlave", "SystemAddress":2557686584018, "StarClass":"G" }
+{ "timestamp":"2019-10-27T00:33:43Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-10-27T00:43:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-10-27T00:57:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lalande 18115", "SystemAddress":4207021134546, "StarClass":"K" }
+{ "timestamp":"2019-10-27T00:59:58Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-10-27T01:19:26Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-10-27T01:53:34Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-10-27T02:15:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-10-27T02:26:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 1885", "SystemAddress":13864825595297, "StarClass":"M" }
+{ "timestamp":"2019-11-01T13:07:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-11-01T13:23:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2459", "SystemAddress":5068732573089, "StarClass":"M" }
+{ "timestamp":"2019-11-01T13:26:31Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-01T13:34:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-11-01T13:41:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2459", "SystemAddress":5068732573089, "StarClass":"M" }
+{ "timestamp":"2019-11-01T13:48:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-11-01T21:35:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Huokang", "SystemAddress":7267755959705, "StarClass":"K" }
+{ "timestamp":"2019-11-01T21:37:39Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-01T22:18:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LFT 671", "SystemAddress":9466779149729, "StarClass":"M" }
+{ "timestamp":"2019-11-01T22:19:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-11-01T22:30:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tollan", "SystemAddress":18262872171937, "StarClass":"M" }
+{ "timestamp":"2019-11-01T22:50:23Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-01T22:56:22Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-01T23:04:09Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-01T23:07:34Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-01T23:10:04Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-01T23:22:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-11-01T23:36:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 1885", "SystemAddress":13864825595297, "StarClass":"M" }
+{ "timestamp":"2019-11-01T23:36:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lalande 18115", "SystemAddress":4207021134546, "StarClass":"K" }
+{ "timestamp":"2019-11-01T23:39:30Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-01T23:43:26Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-01T23:44:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 1885", "SystemAddress":13864825595297, "StarClass":"M" }
+{ "timestamp":"2019-11-01T23:45:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"WISE 0313+7807", "SystemAddress":5364951436096, "StarClass":"T" }
+{ "timestamp":"2019-11-01T23:46:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "StarClass":"M" }
+{ "timestamp":"2019-11-01T23:56:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-11-18T01:34:09Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-18T01:40:42Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-18T01:50:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"DX 799", "SystemAddress":8879945552594, "StarClass":"L" }
+{ "timestamp":"2019-11-18T02:07:47Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-18T02:13:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nanomam", "SystemAddress":4752121268587, "StarClass":"K" }
+{ "timestamp":"2019-11-18T02:13:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bodedi", "SystemAddress":4923919960427, "StarClass":"F" }
+{ "timestamp":"2019-11-18T02:16:06Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-18T02:19:11Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-11-18T02:24:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2459", "SystemAddress":5068732573089, "StarClass":"M" }
+{ "timestamp":"2019-11-18T02:25:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-12-07T20:28:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tollan", "SystemAddress":18262872171937, "StarClass":"M" }
+{ "timestamp":"2019-12-07T20:35:52Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-07T20:45:30Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-07T20:55:00Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-07T21:06:03Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-07T21:14:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-12-07T21:25:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tollan", "SystemAddress":18262872171937, "StarClass":"M" }
+{ "timestamp":"2019-12-07T21:28:08Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-07T21:33:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-12-11T02:43:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nanomam", "SystemAddress":4752121268587, "StarClass":"K" }
+{ "timestamp":"2019-12-11T02:49:25Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-11T02:54:13Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-11T02:58:22Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-11T03:01:48Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-11T03:06:06Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-11T03:11:17Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-11T03:17:08Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-11T03:21:12Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-11T03:29:29Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-12-11T03:38:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2020-01-03T22:32:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "StarClass":"M" }
+{ "timestamp":"2020-01-03T22:48:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2020-01-03T22:54:32Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2020-01-03T23:12:42Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2020-01-03T23:20:39Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2020-01-03T23:37:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tollan", "SystemAddress":18262872171937, "StarClass":"M" }
+{ "timestamp":"2020-01-03T23:40:34Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2020-01-03T23:53:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }

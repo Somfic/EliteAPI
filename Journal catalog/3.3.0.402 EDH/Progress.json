@@ -49,3 +49,16 @@
 { "timestamp":"2018-12-15T10:10:14Z", "event":"Progress", "Combat":22, "Trade":100, "Explore":100, "Empire":76, "Federation":59, "CQC":0 }
 { "timestamp":"2018-12-15T18:27:41Z", "event":"Progress", "Combat":22, "Trade":100, "Explore":100, "Empire":76, "Federation":59, "CQC":0 }
 { "timestamp":"2018-12-15T19:39:53Z", "event":"Progress", "Combat":22, "Trade":100, "Explore":100, "Empire":76, "Federation":60, "CQC":0 }
+{ "timestamp":"2018-12-11T18:13:58Z", "event":"Progress", "Combat":56, "Trade":58, "Explore":99, "Empire":29, "Federation":100, "CQC":0 }
+{ "timestamp":"2018-12-11T18:17:23Z", "event":"Progress", "Combat":56, "Trade":58, "Explore":99, "Empire":29, "Federation":100, "CQC":0 }
+{ "timestamp":"2018-12-11T18:18:36Z", "event":"Progress", "Combat":56, "Trade":58, "Explore":99, "Empire":29, "Federation":100, "CQC":0 }
+{ "timestamp":"2018-12-11T21:33:40Z", "event":"Progress", "Combat":56, "Trade":58, "Explore":99, "Empire":29, "Federation":100, "CQC":0 }
+{ "timestamp":"2018-12-12T00:00:18Z", "event":"Progress", "Combat":56, "Trade":58, "Explore":99, "Empire":29, "Federation":100, "CQC":0 }
+{ "timestamp":"2018-12-12T03:41:30Z", "event":"Progress", "Combat":56, "Trade":58, "Explore":99, "Empire":29, "Federation":100, "CQC":0 }
+{ "timestamp":"2018-12-12T04:05:27Z", "event":"Progress", "Combat":56, "Trade":58, "Explore":99, "Empire":29, "Federation":100, "CQC":0 }
+{ "timestamp":"2018-12-12T05:07:11Z", "event":"Progress", "Combat":56, "Trade":58, "Explore":99, "Empire":29, "Federation":100, "CQC":0 }
+{ "timestamp":"2018-12-13T20:28:12Z", "event":"Progress", "Combat":11, "Trade":58, "Explore":0, "Empire":29, "Federation":100, "CQC":0 }
+{ "timestamp":"2018-12-17T16:39:58Z", "event":"Progress", "Combat":29, "Trade":2, "Explore":0, "Empire":29, "Federation":100, "CQC":0 }
+{ "timestamp":"2018-12-17T18:55:27Z", "event":"Progress", "Combat":30, "Trade":2, "Explore":0, "Empire":29, "Federation":100, "CQC":0 }
+{ "timestamp":"2018-12-18T01:50:34Z", "event":"Progress", "Combat":32, "Trade":11, "Explore":1, "Empire":29, "Federation":74, "CQC":0 }
+{ "timestamp":"2018-12-18T16:38:21Z", "event":"Progress", "Combat":32, "Trade":23, "Explore":1, "Empire":29, "Federation":15, "CQC":0 }

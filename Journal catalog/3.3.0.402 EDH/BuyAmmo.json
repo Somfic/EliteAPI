@@ -17,3 +17,12 @@
 { "timestamp":"2018-12-15T10:15:42Z", "event":"BuyAmmo", "Cost":658 }
 { "timestamp":"2018-12-15T13:33:53Z", "event":"BuyAmmo", "Cost":25 }
 { "timestamp":"2018-12-15T19:09:53Z", "event":"BuyAmmo", "Cost":5545 }
+{ "timestamp":"2018-12-13T21:42:14Z", "event":"BuyAmmo", "Cost":7700 }
+{ "timestamp":"2018-12-13T22:31:35Z", "event":"BuyAmmo", "Cost":24000 }
+{ "timestamp":"2018-12-17T17:03:20Z", "event":"BuyAmmo", "Cost":600 }
+{ "timestamp":"2018-12-17T17:25:17Z", "event":"BuyAmmo", "Cost":500 }
+{ "timestamp":"2018-12-17T19:11:24Z", "event":"BuyAmmo", "Cost":600 }
+{ "timestamp":"2018-12-17T19:29:10Z", "event":"BuyAmmo", "Cost":600 }
+{ "timestamp":"2018-12-18T17:31:28Z", "event":"BuyAmmo", "Cost":2800 }
+{ "timestamp":"2018-12-18T18:32:51Z", "event":"BuyAmmo", "Cost":3500 }
+{ "timestamp":"2018-12-18T20:05:05Z", "event":"BuyAmmo", "Cost":6300 }

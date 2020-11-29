@@ -1,0 +1,2 @@
+{ "timestamp":"2018-12-10T04:01:53Z", "event":"MissionRedirected", "MissionID":439558346, "Name":"MISSION_Salvage_Refinery_name", "NewDestinationStation":"Hoshi Port", "NewDestinationSystem":"CD-24 5005", "OldDestinationStation":"", "OldDestinationSystem":"Mehudi" }
+{ "timestamp":"2018-12-11T03:41:35Z", "event":"MissionRedirected", "MissionID":439805454, "Name":"Mission_Assassinate_name", "NewDestinationStation":"Hoshi Port", "NewDestinationSystem":"CD-24 5005", "OldDestinationStation":"", "OldDestinationSystem":"Sanos" }

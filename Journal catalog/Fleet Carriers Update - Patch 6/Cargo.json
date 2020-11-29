@@ -6,3 +6,4 @@
 { "timestamp":"2020-11-05T19:33:29Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
 { "timestamp":"2020-11-06T19:26:17Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
 { "timestamp":"2020-11-09T21:11:15Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
+{ "timestamp":"2020-11-17T21:59:08Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }

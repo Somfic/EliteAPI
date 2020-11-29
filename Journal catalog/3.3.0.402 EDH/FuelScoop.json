@@ -356,3 +356,4 @@
 { "timestamp":"2018-12-15T13:24:22Z", "event":"FuelScoop", "Scooped":4.350004, "Total":29.058540 }
 { "timestamp":"2018-12-15T18:42:18Z", "event":"FuelScoop", "Scooped":0.227706, "Total":16.000000 }
 { "timestamp":"2018-12-15T19:02:08Z", "event":"FuelScoop", "Scooped":1.047958, "Total":15.281009 }
+{ "timestamp":"2018-12-18T16:58:33Z", "event":"FuelScoop", "Scooped":0.319359, "Total":15.798871 }

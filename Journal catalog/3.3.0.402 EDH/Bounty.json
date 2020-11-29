@@ -4,3 +4,31 @@
 { "timestamp":"2018-12-14T15:03:44Z", "event":"Bounty", "Rewards":[ { "Faction":"Earth Defense Fleet", "Reward":261017 } ], "Target":"federation_corvette", "TotalReward":261017, "VictimFaction":"Ross 47 Purple Society" }
 { "timestamp":"2018-12-14T15:26:27Z", "event":"Bounty", "Rewards":[ { "Faction":"Earth Defense Fleet", "Reward":275670 } ], "Target":"federation_corvette", "TotalReward":275670, "VictimFaction":"Wolf 1453 Clan" }
 { "timestamp":"2018-12-15T18:48:18Z", "event":"Bounty", "Rewards":[ { "Faction":"Earth Defense Fleet", "Reward":282487 } ], "Target":"federation_corvette", "TotalReward":282487, "VictimFaction":"Wolf 1453 Clan" }
+{ "timestamp":"2018-12-13T21:25:01Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":12365 } ], "Target":"cobramkiii", "TotalReward":12365, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-13T21:29:19Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":46875 } ], "Target":"eagle", "TotalReward":46875, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-13T21:35:15Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":12230 } ], "Target":"cobramkiii", "TotalReward":12230, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-17T16:56:18Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":7175 } ], "Target":"cobramkiii", "TotalReward":7175, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-17T17:17:41Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":25100 } ], "Target":"eagle", "TotalReward":25100, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-17T17:21:06Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":30500 } ], "Target":"eagle", "TotalReward":30500, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-17T19:05:27Z", "event":"Bounty", "Rewards":[ { "Faction":"Nanomam Ltd", "Reward":10330 } ], "Target":"cobramkiii", "TotalReward":10330, "VictimFaction":"Nanomam Crimson Clan" }
+{ "timestamp":"2018-12-17T19:06:06Z", "event":"Bounty", "Rewards":[ { "Faction":"Nanomam Ltd", "Reward":10935 } ], "Target":"viper_mkiv", "TotalReward":10935, "VictimFaction":"Nanomam Crimson Clan" }
+{ "timestamp":"2018-12-17T19:18:43Z", "event":"Bounty", "Rewards":[ { "Faction":"Nanomam Ltd", "Reward":43600 } ], "Target":"adder", "TotalReward":43600, "VictimFaction":"Nanomam Crimson Clan" }
+{ "timestamp":"2018-12-17T19:22:04Z", "event":"Bounty", "Rewards":[ { "Faction":"Nanomam Ltd", "Reward":38650 } ], "Target":"eagle", "TotalReward":38650, "VictimFaction":"Nanomam Crimson Clan" }
+{ "timestamp":"2018-12-18T17:13:48Z", "event":"Bounty", "Rewards":[ { "Faction":"Unified Ross 318", "Reward":42635 } ], "Target":"ferdelance", "TotalReward":42635, "VictimFaction":"Ross 318 Silver Society" }
+{ "timestamp":"2018-12-18T17:24:39Z", "event":"Bounty", "Rewards":[ { "Faction":"Unified Ross 318", "Reward":10292 } ], "Target":"cobramkiii", "TotalReward":10292, "VictimFaction":"Ross 318 Silver Society" }
+{ "timestamp":"2018-12-18T17:25:01Z", "event":"Bounty", "Rewards":[ { "Faction":"Unified Ross 318", "Reward":20002 } ], "Target":"viper", "TotalReward":20002, "VictimFaction":"Ross 318 Silver Society" }
+{ "timestamp":"2018-12-18T17:25:19Z", "event":"Bounty", "Rewards":[ { "Faction":"Unified Ross 318", "Reward":20935 } ], "Target":"viper", "TotalReward":20935, "VictimFaction":"Ross 318 Silver Society" }
+{ "timestamp":"2018-12-18T17:25:40Z", "event":"Bounty", "Rewards":[ { "Faction":"Unified Ross 318", "Reward":16907 } ], "Target":"cobramkiii", "TotalReward":16907, "VictimFaction":"Ross 318 Silver Society" }
+{ "timestamp":"2018-12-18T18:17:17Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":53120 } ], "Target":"vulture", "TotalReward":53120, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-18T18:17:48Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":22800 } ], "Target":"cobramkiv", "TotalReward":22800, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-18T18:18:24Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":25050 } ], "Target":"viper", "TotalReward":25050, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-18T18:18:57Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":30690 } ], "Target":"cobramkiv", "TotalReward":30690, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-18T18:19:50Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":27180 } ], "Target":"cobramkiv", "TotalReward":27180, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-18T18:20:40Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":23715 } ], "Target":"cobramkiv", "TotalReward":23715, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-18T19:50:21Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":12450 } ], "Target":"cobramkiii", "TotalReward":12450, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-18T19:51:14Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":53110 } ], "Target":"ferdelance", "TotalReward":53110, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-18T19:52:13Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":53412 } ], "Target":"typex", "TotalReward":53412, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-18T19:53:15Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":70520 } ], "Target":"python", "TotalReward":70520, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-18T19:54:07Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":23900 } ], "Target":"viper", "TotalReward":23900, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-18T19:54:33Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":33060 } ], "Target":"vulture", "TotalReward":33060, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2018-12-18T19:59:16Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":17640 } ], "Target":"asp_scout", "TotalReward":17640, "VictimFaction":"Tollan Hand Gang" }

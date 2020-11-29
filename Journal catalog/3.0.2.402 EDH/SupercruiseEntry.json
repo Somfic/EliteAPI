@@ -1,0 +1,20 @@
+{ "timestamp":"2018-03-06T23:55:38Z", "event":"SupercruiseEntry", "StarSystem":"110 Herculis", "SystemAddress":2381299321195 }
+{ "timestamp":"2018-03-07T00:06:50Z", "event":"SupercruiseEntry", "StarSystem":"110 Herculis", "SystemAddress":2381299321195 }
+{ "timestamp":"2018-03-07T00:18:05Z", "event":"SupercruiseEntry", "StarSystem":"110 Herculis", "SystemAddress":2381299321195 }
+{ "timestamp":"2018-03-07T00:28:43Z", "event":"SupercruiseEntry", "StarSystem":"110 Herculis", "SystemAddress":2381299321195 }
+{ "timestamp":"2018-03-07T00:32:38Z", "event":"SupercruiseEntry", "StarSystem":"Ross 733", "SystemAddress":670149191097 }
+{ "timestamp":"2018-03-07T00:37:23Z", "event":"SupercruiseEntry", "StarSystem":"Ross 733", "SystemAddress":670149191097 }
+{ "timestamp":"2018-03-07T00:43:29Z", "event":"SupercruiseEntry", "StarSystem":"Ross 733", "SystemAddress":670149191097 }
+{ "timestamp":"2018-03-07T00:46:58Z", "event":"SupercruiseEntry", "StarSystem":"Ross 733", "SystemAddress":670149191097 }
+{ "timestamp":"2018-03-07T21:21:05Z", "event":"SupercruiseEntry", "StarSystem":"Ekonir", "SystemAddress":9466510648769 }
+{ "timestamp":"2018-03-07T21:24:51Z", "event":"SupercruiseEntry", "StarSystem":"Ekonir", "SystemAddress":9466510648769 }
+{ "timestamp":"2018-03-08T02:42:51Z", "event":"SupercruiseEntry", "StarSystem":"LHS 3447", "SystemAddress":5306465653474 }
+{ "timestamp":"2018-03-08T03:09:30Z", "event":"SupercruiseEntry", "StarSystem":"LHS 3447", "SystemAddress":5306465653474 }
+{ "timestamp":"2018-03-08T19:36:50Z", "event":"SupercruiseEntry", "StarSystem":"LTT 7421", "SystemAddress":2518738274675 }
+{ "timestamp":"2018-03-08T19:39:09Z", "event":"SupercruiseEntry", "StarSystem":"LTT 7421", "SystemAddress":2518738274675 }
+{ "timestamp":"2018-03-08T19:40:32Z", "event":"SupercruiseEntry", "StarSystem":"LTT 7421", "SystemAddress":2518738274675 }
+{ "timestamp":"2018-03-08T20:14:00Z", "event":"SupercruiseEntry", "StarSystem":"LTT 7421", "SystemAddress":2518738274675 }
+{ "timestamp":"2018-03-08T20:40:57Z", "event":"SupercruiseEntry", "StarSystem":"Ekonir", "SystemAddress":9466510648769 }
+{ "timestamp":"2018-03-08T20:59:43Z", "event":"SupercruiseEntry", "StarSystem":"Ngaliba", "SystemAddress":5068464072129 }
+{ "timestamp":"2018-03-08T21:23:15Z", "event":"SupercruiseEntry", "StarSystem":"Dagr", "SystemAddress":3382387446490 }
+{ "timestamp":"2018-03-08T21:26:18Z", "event":"SupercruiseEntry", "StarSystem":"Dagr", "SystemAddress":3382387446490 }

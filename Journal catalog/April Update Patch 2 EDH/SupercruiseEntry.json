@@ -1,0 +1,20 @@
+{ "timestamp":"2019-06-22T17:30:04Z", "event":"SupercruiseEntry", "StarSystem":"Nanomam", "SystemAddress":4752121268587 }
+{ "timestamp":"2019-06-22T20:37:24Z", "event":"SupercruiseEntry", "StarSystem":"Struve 1321", "SystemAddress":18262872106401 }
+{ "timestamp":"2019-06-22T21:15:53Z", "event":"SupercruiseEntry", "StarSystem":"Lushertha", "SystemAddress":4442883623275 }
+{ "timestamp":"2019-06-22T21:23:41Z", "event":"SupercruiseEntry", "StarSystem":"LHS 6128", "SystemAddress":2869709383065 }
+{ "timestamp":"2019-06-22T21:35:36Z", "event":"SupercruiseEntry", "StarSystem":"LHS 1446", "SystemAddress":2621817489763 }
+{ "timestamp":"2019-06-22T22:09:14Z", "event":"SupercruiseEntry", "StarSystem":"Lushertha", "SystemAddress":4442883623275 }
+{ "timestamp":"2019-06-28T23:17:45Z", "event":"SupercruiseEntry", "StarSystem":"Lushertha", "SystemAddress":4442883623275 }
+{ "timestamp":"2019-06-28T23:39:54Z", "event":"SupercruiseEntry", "StarSystem":"Nang Ta-khian", "SystemAddress":2007997911762 }
+{ "timestamp":"2019-06-28T23:53:03Z", "event":"SupercruiseEntry", "StarSystem":"Bodedi", "SystemAddress":4923919960427 }
+{ "timestamp":"2019-06-29T00:04:18Z", "event":"SupercruiseEntry", "StarSystem":"LHS 224", "SystemAddress":13864825595289 }
+{ "timestamp":"2019-08-05T16:31:33Z", "event":"SupercruiseEntry", "StarSystem":"Zeessze", "SystemAddress":2282875785938 }
+{ "timestamp":"2019-08-05T16:43:43Z", "event":"SupercruiseEntry", "StarSystem":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2019-08-18T01:35:57Z", "event":"SupercruiseEntry", "StarSystem":"LP 30-55", "SystemAddress":7267487393185 }
+{ "timestamp":"2019-08-18T02:09:54Z", "event":"SupercruiseEntry", "StarSystem":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2019-08-18T02:28:28Z", "event":"SupercruiseEntry", "StarSystem":"DX 799", "SystemAddress":8879945552594 }
+{ "timestamp":"2019-08-18T02:45:03Z", "event":"SupercruiseEntry", "StarSystem":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2019-08-18T02:50:27Z", "event":"SupercruiseEntry", "StarSystem":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2019-08-27T02:06:22Z", "event":"SupercruiseEntry", "StarSystem":"Eta Cassiopeiae", "SystemAddress":663312402795 }
+{ "timestamp":"2019-08-27T02:10:58Z", "event":"SupercruiseEntry", "StarSystem":"Eta Cassiopeiae", "SystemAddress":663312402795 }
+{ "timestamp":"2019-08-27T02:35:06Z", "event":"SupercruiseEntry", "StarSystem":"LHS 3595", "SystemAddress":20461895361961 }

@@ -381,3 +381,48 @@
 { "timestamp":"2018-12-15T20:14:16Z", "event":"Cargo", "Vessel":"Ship", "Count":58 }
 { "timestamp":"2018-12-15T20:15:50Z", "event":"Cargo", "Vessel":"Ship", "Count":57 }
 { "timestamp":"2018-12-15T20:15:59Z", "event":"Cargo", "Vessel":"Ship", "Count":56 }
+{ "timestamp":"2018-12-12T00:00:36Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
+{ "timestamp":"2018-12-12T03:41:40Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
+{ "timestamp":"2018-12-12T04:05:34Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
+{ "timestamp":"2018-12-12T05:07:17Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
+{ "timestamp":"2018-12-13T20:28:38Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
+{ "timestamp":"2018-12-13T20:41:10Z", "event":"Cargo", "Vessel":"Ship", "Count":36 }
+{ "timestamp":"2018-12-13T20:53:58Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }
+{ "timestamp":"2018-12-13T21:44:09Z", "event":"Cargo", "Vessel":"Ship", "Count":27 }
+{ "timestamp":"2018-12-13T21:53:45Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }
+{ "timestamp":"2018-12-13T22:11:22Z", "event":"Cargo", "Vessel":"Ship", "Count":22 }
+{ "timestamp":"2018-12-13T22:12:50Z", "event":"Cargo", "Vessel":"Ship", "Count":32 }
+{ "timestamp":"2018-12-13T22:22:57Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
+{ "timestamp":"2018-12-17T16:40:19Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
+{ "timestamp":"2018-12-17T18:55:41Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
+{ "timestamp":"2018-12-17T19:46:13Z", "event":"Cargo", "Vessel":"Ship", "Count":72 }
+{ "timestamp":"2018-12-17T19:54:26Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }
+{ "timestamp":"2018-12-17T20:04:54Z", "event":"Cargo", "Vessel":"Ship", "Count":2 }
+{ "timestamp":"2018-12-17T20:05:58Z", "event":"Cargo", "Vessel":"Ship", "Count":5 }
+{ "timestamp":"2018-12-17T20:06:14Z", "event":"Cargo", "Vessel":"Ship", "Count":19 }
+{ "timestamp":"2018-12-17T20:27:17Z", "event":"Cargo", "Vessel":"Ship", "Count":5 }
+{ "timestamp":"2018-12-17T20:27:48Z", "event":"Cargo", "Vessel":"Ship", "Count":2 }
+{ "timestamp":"2018-12-17T20:29:01Z", "event":"Cargo", "Vessel":"Ship", "Count":12 }
+{ "timestamp":"2018-12-17T20:32:12Z", "event":"Cargo", "Vessel":"Ship", "Count":57 }
+{ "timestamp":"2018-12-17T20:43:33Z", "event":"Cargo", "Vessel":"Ship", "Count":55 }
+{ "timestamp":"2018-12-18T01:50:54Z", "event":"Cargo", "Vessel":"Ship", "Count":55, "Inventory":[ { "Name":"reactivearmour", "Name_Localised":"Reactive Armour", "MissionID":441734805, "Count":10, "Stolen":0 }, { "Name":"nonlethalweapons", "Name_Localised":"Non-Lethal Weapons", "MissionID":441736116, "Count":45, "Stolen":0 } ] }
+{ "timestamp":"2018-12-18T01:55:54Z", "event":"Cargo", "Vessel":"Ship", "Count":45 }
+{ "timestamp":"2018-12-18T01:56:12Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }
+{ "timestamp":"2018-12-18T02:30:32Z", "event":"Cargo", "Vessel":"Ship", "Count":90 }
+{ "timestamp":"2018-12-18T02:38:02Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }
+{ "timestamp":"2018-12-18T02:50:47Z", "event":"Cargo", "Vessel":"Ship", "Count":72 }
+{ "timestamp":"2018-12-18T02:52:19Z", "event":"Cargo", "Vessel":"Ship", "Count":84 }
+{ "timestamp":"2018-12-18T03:08:23Z", "event":"Cargo", "Vessel":"Ship", "Count":12 }
+{ "timestamp":"2018-12-18T03:15:24Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }
+{ "timestamp":"2018-12-18T03:16:28Z", "event":"Cargo", "Vessel":"Ship", "Count":12 }
+{ "timestamp":"2018-12-18T03:17:44Z", "event":"Cargo", "Vessel":"Ship", "Count":18 }
+{ "timestamp":"2018-12-18T03:26:16Z", "event":"Cargo", "Vessel":"Ship", "Count":12 }
+{ "timestamp":"2018-12-18T03:26:29Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }
+{ "timestamp":"2018-12-18T16:38:48Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
+{ "timestamp":"2018-12-18T17:08:26Z", "event":"Cargo", "Vessel":"Ship", "Count":10 }
+{ "timestamp":"2018-12-18T17:16:59Z", "event":"Cargo", "Vessel":"Ship", "Count":9 }
+{ "timestamp":"2018-12-18T17:17:19Z", "event":"Cargo", "Vessel":"Ship", "Count":10 }
+{ "timestamp":"2018-12-18T17:18:51Z", "event":"Cargo", "Vessel":"Ship", "Count":9 }
+{ "timestamp":"2018-12-18T17:19:11Z", "event":"Cargo", "Vessel":"Ship", "Count":10 }
+{ "timestamp":"2018-12-18T17:31:41Z", "event":"Cargo", "Vessel":"Ship", "Count":2 }
+{ "timestamp":"2018-12-18T17:39:44Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }

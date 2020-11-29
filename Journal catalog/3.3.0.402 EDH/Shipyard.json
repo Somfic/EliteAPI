@@ -29,3 +29,12 @@
 { "timestamp":"2018-12-15T10:24:55Z", "event":"Shipyard", "MarketID":3228922112, "StationName":"Ashby City", "StarSystem":"Luyten's Star" }
 { "timestamp":"2018-12-15T18:34:24Z", "event":"Shipyard", "MarketID":3228922112, "StationName":"Ashby City", "StarSystem":"Luyten's Star" }
 { "timestamp":"2018-12-15T19:10:09Z", "event":"Shipyard", "MarketID":3228922112, "StationName":"Ashby City", "StarSystem":"Luyten's Star" }
+{ "timestamp":"2018-12-12T04:18:42Z", "event":"Shipyard", "MarketID":3228282112, "StationName":"Hoshi Port", "StarSystem":"CD-24 5005" }
+{ "timestamp":"2018-12-12T07:27:42Z", "event":"Shipyard", "MarketID":128001536, "StationName":"Azeban City", "StarSystem":"Eranin" }
+{ "timestamp":"2018-12-13T20:53:33Z", "event":"Shipyard", "MarketID":3535333120, "StationName":"Moore Forum", "StarSystem":"G 239-25" }
+{ "timestamp":"2018-12-13T21:05:35Z", "event":"Shipyard", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-13T21:05:50Z", "event":"Shipyard", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T02:23:57Z", "event":"Shipyard", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T02:25:14Z", "event":"Shipyard", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T02:26:02Z", "event":"Shipyard", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2018-12-18T16:39:27Z", "event":"Shipyard", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }

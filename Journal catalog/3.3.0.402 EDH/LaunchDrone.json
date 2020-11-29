@@ -215,3 +215,5 @@
 { "timestamp":"2018-12-15T20:14:13Z", "event":"LaunchDrone", "Type":"Prospector" }
 { "timestamp":"2018-12-15T20:15:47Z", "event":"LaunchDrone", "Type":"Collection" }
 { "timestamp":"2018-12-15T20:15:56Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2018-12-18T17:16:56Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2018-12-18T17:18:47Z", "event":"LaunchDrone", "Type":"Collection" }

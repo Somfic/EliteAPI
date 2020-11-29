@@ -30,3 +30,13 @@
 { "timestamp":"2018-12-15T10:10:36Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
 { "timestamp":"2018-12-15T18:28:18Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
 { "timestamp":"2018-12-15T19:40:11Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2018-12-12T00:00:35Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2018-12-12T03:41:38Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2018-12-12T04:05:32Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2018-12-12T05:07:15Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2018-12-13T20:28:36Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2018-12-13T22:22:55Z", "event":"Missions", "Active":[ { "MissionID":440315400, "Name":"Mission_Delivery_War_name", "PassengerMission":false, "Expires":85218 }, { "MissionID":440315807, "Name":"Mission_Delivery_War_name", "PassengerMission":false, "Expires":85218 } ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2018-12-17T16:40:17Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2018-12-17T18:55:39Z", "event":"Missions", "Active":[ { "MissionID":441668006, "Name":"Mission_Assassinate_RankFed_name", "PassengerMission":false, "Expires":81538 } ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2018-12-18T01:50:51Z", "event":"Missions", "Active":[ { "MissionID":441734805, "Name":"Mission_Delivery_CivilWar_name", "PassengerMission":false, "Expires":66958 }, { "MissionID":441736116, "Name":"Mission_Delivery_War_name", "PassengerMission":false, "Expires":66958 } ], "Failed":[  ], "Complete":[  ] }
+{ "timestamp":"2018-12-18T16:38:46Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }

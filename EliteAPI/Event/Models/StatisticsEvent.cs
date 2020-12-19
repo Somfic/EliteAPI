@@ -42,6 +42,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("FLEETCARRIER")] public FleetcarrierInfo Fleetcarrier { get; private set; }
 
+        [JsonProperty("TG_ENCOUNTERS")] public TgEncountersInfo TgEncounters { get; private set; }
 
         public class BankAccountInfo
         {
@@ -112,6 +113,27 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("CQC_WL")] public double CqcInfoWl { get; private set; }
         }
+
+        public class TgEncountersInfo
+        {
+            internal TgEncountersInfo()
+            {
+            }
+
+            [JsonProperty("TG_ENCOUNTER_TOTAL")] public long TgEncounterTotal { get; private set; }
+
+            [JsonProperty("TG_ENCOUNTER_TOTAL_LAST_SYSTEM")]
+            public string TgEncounterTotalLastSystem { get; private set; }
+
+            [JsonProperty("TG_ENCOUNTER_TOTAL_LAST_TIMESTAMP")]
+            public string TgEncounterTotalLastTimestamp { get; private set; }
+
+            [JsonProperty("TG_ENCOUNTER_TOTAL_LAST_SHIP")]
+            public string TgEncounterTotalLastShip { get; private set; }
+
+            [JsonProperty("TG_SCOUT_COUNT")] public long TgScoutCount { get; private set; }
+        }
+
 
         public class CraftingInfo
         {

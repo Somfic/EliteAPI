@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
@@ -14,6 +15,8 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Vessel")] public string Vessel { get; private set; }
 
         [JsonProperty("Count")] public long Count { get; private set; }
+
+        [JsonProperty("Inventory")] public IReadOnlyList<object> Inventory { get; private set; }
     }
 
     public partial class CargoEvent

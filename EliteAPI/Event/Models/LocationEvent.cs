@@ -134,6 +134,9 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("MyReputation")] public double MyReputation { get; private set; }
 
+            [JsonProperty("PendingStateInfos", NullValueHandling = NullValueHandling.Ignore)]
+            public IReadOnlyList<PendingStateInfo> PendingStateInfos { get; private set; }
+
             [JsonProperty("ActiveStateInfos", NullValueHandling = NullValueHandling.Ignore)]
             public IReadOnlyList<ActiveStateInfo> ActiveStateInfos { get; private set; }
 
@@ -153,6 +156,17 @@ namespace EliteAPI.Event.Models
         public class RecoveringStateInfo
         {
             internal RecoveringStateInfo()
+            {
+            }
+
+            [JsonProperty("State")] public string State { get; private set; }
+
+            [JsonProperty("Trend")] public long Trend { get; private set; }
+        }
+
+        public class PendingStateInfo
+        {
+            internal PendingStateInfo()
             {
             }
 

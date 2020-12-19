@@ -11,8 +11,8 @@ namespace EliteAPI.Event.Processor
 {
     internal class AllEventProcessor : IEventProcessor
     {
-        private readonly ILogger<AllEventProcessor> _log;
         private readonly EventHandler _eventHandler;
+        private readonly ILogger<AllEventProcessor> _log;
         private MethodBase _invokeMethod;
 
         public AllEventProcessor(ILogger<AllEventProcessor> log, IServiceProvider services)

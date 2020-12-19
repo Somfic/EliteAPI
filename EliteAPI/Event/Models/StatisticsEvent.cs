@@ -29,8 +29,6 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Search_And_Rescue")] public SearchAndRescueInfo SearchAndRescue { get; private set; }
 
-        [JsonProperty("TG_ENCOUNTERS")] public TgEncountersInfo TgEncounters { get; private set; }
-
         [JsonProperty("CraftingInfo")] public CraftingInfo Crafting { get; private set; }
 
         [JsonProperty("CrewInfo")] public CrewInfo Crew { get; private set; }
@@ -39,6 +37,10 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Material_Trader_Stats")]
         public MaterialTraderStatsInfo MaterialTraderStats { get; private set; }
+
+        [JsonProperty("CQC")] public CqcInfo Cqc { get; private set; }
+
+        [JsonProperty("FLEETCARRIER")] public FleetcarrierInfo Fleetcarrier { get; private set; }
 
 
         public class BankAccountInfo
@@ -92,6 +94,23 @@ namespace EliteAPI.Event.Models
             public long HighestSingleReward { get; private set; }
 
             [JsonProperty("Skimmers_Killed")] public long SkimmersKilled { get; private set; }
+        }
+
+        public class CqcInfo
+        {
+            internal CqcInfo()
+            {
+            }
+
+            [JsonProperty("CQC_Credits_Earned")] public long CqcInfoCreditsEarned { get; private set; }
+
+            [JsonProperty("CQC_Time_Played")] public long CqcInfoTimePlayed { get; private set; }
+
+            [JsonProperty("CQC_KD")] public double CqcInfoKd { get; private set; }
+
+            [JsonProperty("CQC_Kills")] public long CqcInfoKills { get; private set; }
+
+            [JsonProperty("CQC_WL")] public double CqcInfoWl { get; private set; }
         }
 
         public class CraftingInfo
@@ -189,6 +208,67 @@ namespace EliteAPI.Event.Models
             [JsonProperty("Time_Played")] public long TimePlayed { get; private set; }
         }
 
+        public class FleetcarrierInfo
+        {
+            internal FleetcarrierInfo()
+            {
+            }
+
+            [JsonProperty("FLEETCARRIER_EXPORT_TOTAL")]
+            public long FleetcarrierInfoExportTotal { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_IMPORT_TOTAL")]
+            public long FleetcarrierInfoImportTotal { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_TRADEPROFIT_TOTAL")]
+            public long FleetcarrierInfoTradeprofitTotal { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_TRADESPEND_TOTAL")]
+            public long FleetcarrierInfoTradespendTotal { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_STOLENPROFIT_TOTAL")]
+            public long FleetcarrierInfoStolenprofitTotal { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_STOLENSPEND_TOTAL")]
+            public long FleetcarrierInfoStolenspendTotal { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_DISTANCE_TRAVELLED")]
+            public string FleetcarrierInfoDistanceTravelled { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_TOTAL_JUMPS")]
+            public long FleetcarrierInfoTotalJumps { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_SHIPYARD_SOLD")]
+            public long FleetcarrierInfoShipyardSold { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_SHIPYARD_PROFIT")]
+            public long FleetcarrierInfoShipyardProfit { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_OUTFITTING_SOLD")]
+            public long FleetcarrierInfoOutfittingSold { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_OUTFITTING_PROFIT")]
+            public long FleetcarrierInfoOutfittingProfit { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_REARM_TOTAL")]
+            public long FleetcarrierInfoRearmTotal { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_REFUEL_TOTAL")]
+            public long FleetcarrierInfoRefuelTotal { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_REFUEL_PROFIT")]
+            public long FleetcarrierInfoRefuelProfit { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_REPAIRS_TOTAL")]
+            public long FleetcarrierInfoRepairsTotal { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_VOUCHERS_REDEEMED")]
+            public long FleetcarrierInfoVouchersRedeemed { get; private set; }
+
+            [JsonProperty("FLEETCARRIER_VOUCHERS_PROFIT")]
+            public long FleetcarrierInfoVouchersProfit { get; private set; }
+        }
+
         public class MaterialTraderStatsInfo
         {
             internal MaterialTraderStatsInfo()
@@ -203,6 +283,9 @@ namespace EliteAPI.Event.Models
             public long EncodedMaterialsTraded { get; private set; }
 
             [JsonProperty("Raw_Materials_Traded")] public long RawMaterialsTraded { get; private set; }
+
+            [JsonProperty("Grade_1_Materials_Traded")]
+            public long Grade1_MaterialsTraded { get; private set; }
 
             [JsonProperty("Grade_2_Materials_Traded")]
             public long Grade2_MaterialsTraded { get; private set; }
@@ -304,30 +387,10 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Resources_Smuggled")] public long ResourcesSmuggled { get; private set; }
 
-            [JsonProperty("Average_Profit")] public long AverageProfit { get; private set; }
+            [JsonProperty("Average_Profit")] public double AverageProfit { get; private set; }
 
             [JsonProperty("Highest_Single_Transaction")]
             public long HighestSingleTransaction { get; private set; }
-        }
-
-        public class TgEncountersInfo
-        {
-            internal TgEncountersInfo()
-            {
-            }
-
-            [JsonProperty("TG_ENCOUNTER_TOTAL")] public long TgEncounterTotal { get; private set; }
-
-            [JsonProperty("TG_ENCOUNTER_TOTAL_LAST_SYSTEM")]
-            public string TgEncounterTotalLastSystem { get; private set; }
-
-            [JsonProperty("TG_ENCOUNTER_TOTAL_LAST_TIMESTAMP")]
-            public string TgEncounterTotalLastTimestamp { get; private set; }
-
-            [JsonProperty("TG_ENCOUNTER_TOTAL_LAST_SHIP")]
-            public string TgEncounterTotalLastShip { get; private set; }
-
-            [JsonProperty("TG_SCOUT_COUNT")] public long TgScoutCount { get; private set; }
         }
 
         public class TradingInfo

@@ -15,6 +15,8 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Federation")] public double Federation { get; private set; }
 
+        [JsonProperty("Independent")] public double Independent { get; private set; }
+
         [JsonProperty("Alliance")] public double Alliance { get; private set; }
     }
 

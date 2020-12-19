@@ -29,8 +29,6 @@ namespace EliteAPI.Event.Models
         [JsonProperty("StationGovernment_Localised")]
         public string StationGovernmentLocalised { get; private set; }
 
-        [JsonProperty("StationAllegiance")] public string StationAllegiance { get; private set; }
-
         [JsonProperty("StationServices")] public IReadOnlyList<string> StationServices { get; private set; }
 
         [JsonProperty("StationEconomyInfo")] public string StationEconomy { get; private set; }

@@ -17,10 +17,10 @@ namespace EliteAPI.Event.Processor
     public class EventsEventProcessor : MethodEventProcessorBase
     {
         private readonly Assembly _assembly;
-        private readonly IServiceProvider _services;
-        private EventHandler _eventHandler;
 
         private readonly ILogger<EventsEventProcessor> _log;
+        private readonly IServiceProvider _services;
+        private EventHandler _eventHandler;
 
         public EventsEventProcessor(ILogger<EventsEventProcessor> log, IServiceProvider services) : base(log, services)
         {

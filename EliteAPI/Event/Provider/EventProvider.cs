@@ -60,7 +60,7 @@ namespace EliteAPI.Event.Provider
             _cache = new ConcurrentDictionary<string, Type>();
 
             foreach (var eventType in GetAllEventTypes(typeof(EventHandler)))
-                _cache.Add(eventType.Name.Replace("Event", ""), eventType);
+                _cache.Add(eventType.Name.Replace("Event", "").ToUpper(), eventType);
 
             return Task.CompletedTask;
         }
@@ -75,7 +75,7 @@ namespace EliteAPI.Event.Provider
 
         private MethodBase GetFromJsonMethod(string eventName)
         {
-            var type = _cache[eventName];
+            var type = _cache[eventName.ToUpper()];
 
             return type.GetMethods().First(x => x.Name == "FromJson");
         }

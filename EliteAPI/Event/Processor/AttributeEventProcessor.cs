@@ -53,7 +53,7 @@ namespace EliteAPI.Event.Processor
                         totalHandlers += validMethods.Count;
                         _log.LogTrace("Registering {eventName} to {eventNameSpace}",
                             eventType.Name, validMethods.Select(x => $"{x.DeclaringType?.FullName}.{x.Name}"));
-                        Cache.Add(eventType.Name.ToUpper(), validMethods);
+                        Cache.Add(eventType.Name, validMethods);
                     }
                 }
 

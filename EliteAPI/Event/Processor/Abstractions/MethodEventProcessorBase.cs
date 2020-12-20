@@ -36,7 +36,7 @@ namespace EliteAPI.Event.Processor.Abstractions
             {
                 var key = eventBase.GetType().Name;
 
-                if (!Cache.ContainsKey(key)) return;
+                if (!Cache.ContainsKey(key.ToUpper())) return;
 
                 var methods = Cache[key];
 

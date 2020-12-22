@@ -2,7 +2,7 @@ name: Code standards
 
 on:
   pull_request:
-    branches: [ master, dev ]
+    branches: [ none ]
 
 jobs:
   resharper:

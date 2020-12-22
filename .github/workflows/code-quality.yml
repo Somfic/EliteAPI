@@ -1,4 +1,4 @@
-name: Coding standards
+name: Code quality
 
 on:
   push:

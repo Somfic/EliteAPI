@@ -1,9 +1,6 @@
-name: Coding Standards
+name: Coding quality
 
 on:
-  pull_request:
-    branches: [ master, dev ]
-  
   push:
     branches: [ master, dev ]
 

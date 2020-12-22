@@ -1,4 +1,4 @@
-name: Publish to NuGet
+name: Publishing
 
 on:
   push:
@@ -6,11 +6,12 @@ on:
 
 jobs:
   publish:
+    name: NuGet (Publishing)
     runs-on: ubuntu-latest
-    name: Build, Pack, Publish
     
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
     # Publish to NuGet
     - name: Publish to NuGet

@@ -6,7 +6,7 @@ on:
 
 jobs:
   resharper:
-    name: Resharper
+    name: Resharper (Code quality)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -18,7 +18,7 @@ jobs:
           solution: EliteAPI.sln
     
   codeql:
-    name: CodeQL
+    name: CodeQL (Code quality)
     runs-on: ubuntu-latest
 
     strategy:

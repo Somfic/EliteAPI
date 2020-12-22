@@ -1,4 +1,4 @@
-name: Coding standards
+name: Code standards
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   resharper:
-    name: Resharper
+    name: Resharper (Code standards)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -22,3 +22,5 @@ jobs:
         with:
           add: EliteAPI
           message: Applied coding standards (automated)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

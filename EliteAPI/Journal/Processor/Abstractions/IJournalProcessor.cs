@@ -1,8 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-
-namespace EliteAPI.Journal.Processor.Abstractions
+﻿namespace EliteAPI.Journal.Processor.Abstractions
 {
     /// <summary>
     ///     Processes journal files

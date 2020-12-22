@@ -1,11 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using EliteAPI.Journal.Provider.Abstractions;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+﻿using EliteAPI.Journal.Provider.Abstractions;
 
 namespace EliteAPI.Journal.Provider
 {

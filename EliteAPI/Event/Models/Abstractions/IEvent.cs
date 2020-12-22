@@ -1,5 +1,3 @@
-using System;
-
 namespace EliteAPI.Event.Models.Abstractions
 {
     /// <summary>

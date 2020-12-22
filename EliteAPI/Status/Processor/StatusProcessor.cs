@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using EliteAPI.Status.Models;
+﻿using EliteAPI.Status.Models;
 using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Processor.Abstractions;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Processor
 {

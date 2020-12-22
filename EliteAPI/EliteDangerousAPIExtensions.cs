@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using EliteAPI.Abstractions;
+﻿using EliteAPI.Abstractions;
+using EliteAPI.Event.Handler;
 using EliteAPI.Event.Module;
 using EliteAPI.Event.Processor;
 using EliteAPI.Event.Processor.Abstractions;
@@ -18,8 +17,6 @@ using EliteAPI.Status.Processor;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Provider;
 using EliteAPI.Status.Provider.Abstractions;
-using Microsoft.Extensions.DependencyInjection;
-using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
 {

@@ -1,7 +1,4 @@
-﻿using System.IO;
-using System.Threading.Tasks;
-
-namespace EliteAPI.Journal.Provider.Abstractions
+﻿namespace EliteAPI.Journal.Provider.Abstractions
 {
     /// <summary>
     ///     Finds the journal and support files

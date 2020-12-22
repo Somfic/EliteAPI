@@ -1,7 +1,4 @@
-﻿using System.IO;
-using System.Threading.Tasks;
-
-namespace EliteAPI.Status.Provider.Abstractions
+﻿namespace EliteAPI.Status.Provider.Abstractions
 {
     /// <summary>
     ///     Provides status files

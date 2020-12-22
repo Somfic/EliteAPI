@@ -3,6 +3,8 @@ name: Code quality
 on:
   push:
     branches: [ master, dev ]
+  pull_request:
+    branches: [ master, dev ]
 
 jobs:
   resharper:
@@ -23,6 +25,8 @@ jobs:
 
     strategy:
       fail-fast: false
+      matrix:
+        language: [ 'csharp' ]
         
     steps:
     - name: Checkout coode
@@ -31,7 +35,7 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
       with:
-        languages: c-sharp
+        languages: ${{ matrix.language }}
 
     - name: Build
       uses: github/codeql-action/autobuild@v1

@@ -23,8 +23,6 @@ jobs:
 
     strategy:
       fail-fast: false
-      matrix:
-        language: [ 'csharp' ]
         
     steps:
     - name: Checkout coode
@@ -33,7 +31,7 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
       with:
-        languages: ${{ matrix.language }}
+        languages: c-sharp
 
     - name: Build
       uses: github/codeql-action/autobuild@v1

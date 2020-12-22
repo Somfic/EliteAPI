@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
-using EliteAPI.Abstractions;
+﻿using EliteAPI.Abstractions;
+using EliteAPI.Event.Handler;
 using EliteAPI.Event.Processor.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
 using EliteAPI.Journal.Directory.Abstractions;
@@ -13,10 +8,6 @@ using EliteAPI.Journal.Provider.Abstractions;
 using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Provider.Abstractions;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
 {

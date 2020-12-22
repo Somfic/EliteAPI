@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using EliteAPI.Event.Models.Abstractions;
+﻿using EliteAPI.Event.Models.Abstractions;
 
 namespace EliteAPI.Event.Processor.Abstractions
 {

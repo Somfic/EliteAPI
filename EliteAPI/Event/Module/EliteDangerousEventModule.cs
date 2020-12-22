@@ -1,6 +1,4 @@
-﻿using System;
-using EliteAPI.Abstractions;
-using Microsoft.Extensions.DependencyInjection;
+﻿using EliteAPI.Abstractions;
 
 namespace EliteAPI.Event.Module
 {

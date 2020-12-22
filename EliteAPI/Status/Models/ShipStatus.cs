@@ -1,5 +1,4 @@
-﻿using System;
-using EliteAPI.Status.Models.Abstractions;
+﻿using EliteAPI.Status.Models.Abstractions;
 
 namespace EliteAPI.Status.Models
 {

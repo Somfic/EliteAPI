@@ -1,15 +1,7 @@
-using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
 using EliteAPI.Event.Attributes;
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Module;
 using EliteAPI.Event.Processor.Abstractions;
-using Microsoft.Extensions.Logging;
 
 namespace EliteAPI.Event.Processor
 {

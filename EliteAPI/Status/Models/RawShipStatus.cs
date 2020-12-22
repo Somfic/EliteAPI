@@ -1,6 +1,4 @@
 ﻿using EliteAPI.Status.Models.JsonConverters;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 
 namespace EliteAPI.Status.Models
 {

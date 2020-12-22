@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
-using EliteAPI.Journal.Processor.Abstractions;
+﻿using EliteAPI.Journal.Processor.Abstractions;
 
 namespace EliteAPI.Journal.Processor
 {

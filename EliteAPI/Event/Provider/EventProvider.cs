@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-using EliteAPI.Event.Models.Abstractions;
+﻿using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace EliteAPI.Event.Provider
 {

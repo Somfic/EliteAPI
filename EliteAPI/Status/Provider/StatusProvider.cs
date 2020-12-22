@@ -1,9 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using EliteAPI.Status.Provider.Abstractions;
-using Microsoft.Extensions.Logging;
+﻿using EliteAPI.Status.Provider.Abstractions;
 
 namespace EliteAPI.Status.Provider
 {

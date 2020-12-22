@@ -1,5 +1,12 @@
-﻿using EliteAPI.Journal.Directory.Abstractions;
+﻿using System;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using EliteAPI.Journal.Directory.Abstractions;
 using EliteAPI.Journal.Provider;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace EliteAPI.Journal.Directory
 {

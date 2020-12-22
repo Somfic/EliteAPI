@@ -1,4 +1,6 @@
-﻿namespace EliteAPI.Status.Models.Abstractions
+﻿using System;
+
+namespace EliteAPI.Status.Models.Abstractions
 {
     public interface IShipStatus
     {

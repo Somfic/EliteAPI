@@ -1,4 +1,7 @@
-﻿namespace EliteAPI.Status.Models
+﻿using System;
+using Newtonsoft.Json;
+
+namespace EliteAPI.Status.Models
 {
     /// <summary>
     ///     Container for status properties

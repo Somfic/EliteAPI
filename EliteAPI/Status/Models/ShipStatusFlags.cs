@@ -1,4 +1,6 @@
-﻿namespace EliteAPI.Status.Models
+﻿using System;
+
+namespace EliteAPI.Status.Models
 {
     [Flags]
     public enum ShipStatusFlags

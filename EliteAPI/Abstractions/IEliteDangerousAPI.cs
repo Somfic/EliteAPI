@@ -1,5 +1,7 @@
-﻿using EliteAPI.Event.Handler;
+﻿using System;
+using System.Threading.Tasks;
 using EliteAPI.Status.Models.Abstractions;
+using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI.Abstractions
 {

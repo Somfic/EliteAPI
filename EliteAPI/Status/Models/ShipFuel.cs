@@ -1,4 +1,6 @@
-﻿namespace EliteAPI.Status.Models
+﻿using Newtonsoft.Json;
+
+namespace EliteAPI.Status.Models
 {
     /// <summary>
     ///     Container for information about the ship's fuel situation

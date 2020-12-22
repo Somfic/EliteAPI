@@ -1,4 +1,7 @@
-﻿namespace EliteAPI.Journal.Directory.Abstractions
+﻿using System.IO;
+using System.Threading.Tasks;
+
+namespace EliteAPI.Journal.Directory.Abstractions
 {
     /// <summary>
     ///     Provides the journal directory

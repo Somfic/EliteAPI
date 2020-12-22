@@ -1,8 +1,8 @@
 name: Coding standards
 
 on:
-  push:
-    pull-request: [ master, dev ]
+  pull_request:
+    branches: [ master, dev ]
 
 jobs:
   resharper:

@@ -1,6 +1,11 @@
-﻿using EliteAPI.Event.Handler;
+﻿using System;
+using System.Reflection;
+using System.Threading.Tasks;
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Processor.Abstractions;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI.Event.Processor
 {

@@ -1,4 +1,6 @@
-﻿namespace EliteAPI.Status.Models
+﻿using System.Collections.Generic;
+
+namespace EliteAPI.Status.Models
 {
     public class ShipPips
     {

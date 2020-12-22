@@ -1,4 +1,8 @@
-﻿namespace EliteAPI.Status.Processor.Abstractions
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
+
+namespace EliteAPI.Status.Processor.Abstractions
 {
     /// <summary>
     ///     Processes status files

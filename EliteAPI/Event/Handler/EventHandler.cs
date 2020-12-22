@@ -1,4 +1,5 @@
-﻿using EliteAPI.Event.Models.Abstractions;
+﻿using System;
+using EliteAPI.Event.Models.Abstractions;
 
 namespace EliteAPI.Event.Handler
 {

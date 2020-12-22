@@ -1,4 +1,9 @@
-﻿namespace EliteAPI.Status.Models.JsonConverters
+﻿using System;
+using System.Collections;
+using System.Linq;
+using Newtonsoft.Json;
+
+namespace EliteAPI.Status.Models.JsonConverters
 {
     internal class PipsConverter : JsonConverter
     {

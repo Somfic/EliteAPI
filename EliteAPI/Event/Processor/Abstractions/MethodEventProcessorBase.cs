@@ -1,4 +1,10 @@
-﻿using EliteAPI.Event.Models.Abstractions;
+﻿using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Threading.Tasks;
+using EliteAPI.Event.Models.Abstractions;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace EliteAPI.Event.Processor.Abstractions
 {
@@ -67,6 +73,10 @@ namespace EliteAPI.Event.Processor.Abstractions
             catch (InvalidOperationException ex)
             {
                 _log.LogWarning(ex, "{parentClass} is not registered", method.DeclaringType?.FullName);
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex, "Could not invoke method for {event}", eventBase.Event);
             }
         }
     }

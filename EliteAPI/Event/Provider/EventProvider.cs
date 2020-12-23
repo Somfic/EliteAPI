@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
+using EliteAPI.Exceptions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -75,9 +76,17 @@ namespace EliteAPI.Event.Provider
 
         private MethodBase GetFromJsonMethod(string eventName)
         {
-            var type = _cache[eventName.ToUpper()];
+            try
+            {
+                var type = _cache[eventName.ToUpper()];
 
-            return type.GetMethods().First(x => x.Name == "FromJson");
+                return type.GetMethods().First(x => x.Name == "FromJson");
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedEventException($"The {eventName} is not implemented", ex);
+            }
+           
         }
 
         private EventBase InvokeFromJsonMethod(MethodBase method, string json)

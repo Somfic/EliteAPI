@@ -11,7 +11,6 @@ namespace EliteAPI.Event.Models
         {
         }
 
-        [JsonProperty("event")] public string Event { get; private set; }
     }
 
     public partial class ModuleInfoEvent

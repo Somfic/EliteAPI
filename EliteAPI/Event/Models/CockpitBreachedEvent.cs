@@ -10,8 +10,6 @@ namespace EliteAPI.Event.Models
         internal CockpitBreachedEvent()
         {
         }
-
-        [JsonProperty("event")] public string Event { get; private set; }
     }
 
     public partial class CockpitBreachedEvent

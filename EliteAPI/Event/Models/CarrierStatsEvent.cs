@@ -49,15 +49,15 @@ namespace EliteAPI.Event.Models
             {
             }
 
-            [JsonProperty("CrewInfoRole")] public string CrewInfoRole { get; private set; }
+            [JsonProperty("CrewRole")] public string CrewRole { get; private set; }
 
             [JsonProperty("Activated")] public bool Activated { get; private set; }
 
             [JsonProperty("Enabled", NullValueHandling = NullValueHandling.Ignore)]
             public bool? Enabled { get; private set; }
 
-            [JsonProperty("CrewInfoName", NullValueHandling = NullValueHandling.Ignore)]
-            public string CrewInfoName { get; private set; }
+            [JsonProperty("CrewName", NullValueHandling = NullValueHandling.Ignore)]
+            public string CrewName { get; private set; }
         }
 
         public class FinanceInfo
@@ -85,7 +85,7 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("TotalCapacity")] public long TotalCapacity { get; private set; }
 
-            [JsonProperty("CrewInfo")] public long Crew { get; private set; }
+            [JsonProperty("Crew")] public long Crew { get; private set; }
 
             [JsonProperty("Cargo")] public long Cargo { get; private set; }
 

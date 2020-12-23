@@ -123,7 +123,16 @@ EliteAPI can be configured using configuration files.
 [EliteAPI]
 Journalpath = "W:\\"
 ```
-
+## Visual Studio Code
+If you run through vs code, you must change the parameter Console from internal to external in launch.json.
+From.
+```json
+"console": "internalConsole"
+```
+To.
+```json
+"console": "externalTerminal"
+```
 
 ## License
 EliteAPI is distributed under the MIT license.

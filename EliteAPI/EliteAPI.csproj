@@ -29,12 +29,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Microsoft.CSharp.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="..\Icons\logo_gradient_small.jpg">
       <Pack>True</Pack>
       <PackagePath></PackagePath>

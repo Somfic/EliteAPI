@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using EliteAPI.Abstractions;
 
-namespace Example2
+namespace Example
 {
     // Core class of our application
     public class Core

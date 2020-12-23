@@ -61,7 +61,7 @@ namespace EliteAPI.BuildTools
 
             var eventName = await GetEventNameFromJson(json);
             Directory.CreateDirectory("generated");
-            await File.WriteAllTextAsync($"generated/{eventName}.cs", generated);
+            await File.WriteAllTextAsync($"../../../../EliteAPI/Event/Models/{eventName}.cs", generated);
         }
 
         private static async Task Generate(string version)

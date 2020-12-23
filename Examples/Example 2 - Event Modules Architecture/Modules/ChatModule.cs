@@ -4,7 +4,7 @@ using EliteAPI.Event.Models;
 using EliteAPI.Event.Module;
 using Microsoft.Extensions.Logging;
 
-namespace Example2.Modules
+namespace Example.Modules
 {
     // Logs all text messages to the logging system
     public class ChatModule : EliteDangerousEventModule

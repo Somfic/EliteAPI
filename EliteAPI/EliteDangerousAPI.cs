@@ -37,6 +37,10 @@ namespace EliteAPI
         private readonly IStatusProcessor _statusProcessor;
         private readonly IStatusProvider _statusProvider;
 
+        /// <summary>
+        /// Creates a new EliteDangerousAPI class
+        /// </summary>
+        /// <param name="services">ServiceProvider</param>
         public EliteDangerousAPI(IServiceProvider services)
         {
             try

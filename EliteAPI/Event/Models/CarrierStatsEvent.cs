@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
@@ -30,11 +32,11 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("PendingDecommission")] public bool PendingDecommission { get; private set; }
 
-        [JsonProperty("SpaceUsageInfo")] public SpaceUsageInfo SpaceUsage { get; private set; }
+        [JsonProperty("SpaceUsage")] public SpaceUsageInfo SpaceUsage { get; private set; }
 
-        [JsonProperty("FinanceInfo")] public FinanceInfo Finance { get; private set; }
+        [JsonProperty("Finance")] public FinanceInfo Finance { get; private set; }
 
-        [JsonProperty("CrewInfo")] public IReadOnlyList<CrewInfo> Crew { get; private set; }
+        [JsonProperty("Crew")] public IReadOnlyList<CrewInfo> Crew { get; private set; }
 
         [JsonProperty("ShipPacks")] public IReadOnlyList<object> ShipPacks { get; private set; }
 

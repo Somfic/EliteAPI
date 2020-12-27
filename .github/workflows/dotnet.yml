@@ -31,25 +31,26 @@ jobs:
         uses: kkak10/pr-number-action@v1.3
       
       - name: Set test title
+        id: TEST
         run: | 
             if ${{ github.event_name == 'pull_request' }}
             then
-              echo "::set-env name=title::Test run for Pull Request #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})"
-              echo "::set-env name=file_name::TestReport.${{steps.PRNUMBER.outputs.pr}}.${{github.run_number}}.md"
+              echo "::set-output name=title::Test run for Pull Request #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})"
+              echo "::set-output name=file_name::TestReport.${{steps.PRNUMBER.outputs.pr}}.${{github.run_number}}.md"
             else
-              echo "::set-env name=title::Test run ${{github.run_number}}"
-              echo "::set-env name=file_name::TestReport.${{github.run_number}}.md"
+              echo "::set-output name=title::Test run ${{github.run_number}}"
+              echo "::set-output name=file_name::TestReport.${{github.run_number}}.md"
             fi
       
       - name: Test 
-        run: dotnet test --no-restore --no-build --configuration $config --logger:"liquid.md;LogFileName=${{github.workspace}}/${{env.file_name}};Title=${{env.title}};"
+        run: dotnet test --no-restore --no-build --configuration $config --logger:"liquid.md;LogFileName=${{github.workspace}}/${{steps.TEST.outputs.file_name}};Title=${{steps.TEST.outputs.title}};"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         if: ${{always()}}
         with:
          name: 'Build (dotnet v${{ matrix.dotnet-version }})'
-         path: ${{github.workspace}}/${{env.file_name}}
+         path: ${{github.workspace}}/${{steps.TEST.outputs.file_name}}
       
       - name: Comment on Pull Request
         uses: machine-learning-apps/pr-comment@master
@@ -57,4 +58,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          path: ${{env.file_name}}
+          path: ${{steps.TEST.outputs.file_name}}

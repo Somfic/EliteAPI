@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         dotnet-version: [5.0.x]
-        os: [windows-latest, ubunut-latest, macos-latest]
+        os: [windows-latest, ubunutu-latest, macos-latest]
 
     steps:
       - name: Checkout code
@@ -32,7 +32,7 @@ jobs:
     strategy:
       matrix:
         dotnet-version: [5.0.x]
-        os: [windows-latest, ubunut-latest, macos-latest]
+        os: [windows-latest, ubunutu-latest, macos-latest]
 
     steps:
       - name: Checkout code

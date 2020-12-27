@@ -83,3 +83,79 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path: ${{steps.TEST.outputs.file_name}}
+
+  get-version:
+    needs: [build, test]
+    name: Get version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup GitVersion
+        uses: gittools/actions/gitversion/setup@v0.9.7
+        with:
+          versionSpec: "5.x"
+
+      - name: Fetch tags and master for GitVersion
+        run: |
+          git fetch --tags --unshallow
+          git branch --create-reflog master origin/master
+          
+      - name: Determine version
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v0.9.7
+
+      - name: Save version information
+        uses: schdck/create-env-json@v2
+        with:
+          file-name: version.json
+          nuget: ${{steps.gitversion.outputs.NuGetVersionV2}}
+          major: ${{steps.gitversion.outputs.Major}}
+          minor: ${{steps.gitversion.outputs.Minor}}
+          patch: ${{steps.gitversion.outputs.Patch}}
+          mmp: ${{steps.gitversion.outputs.MajorMinorPatch}}
+          assembly: ${{steps.gitversion.outputs.AssemblySemVer}}
+          informational: ${{steps.gitversion.outputs.InformationalVersion}}
+
+      - name: Upload version artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Version
+          path: "version.json"
+          if-no-files-found: error
+
+  sync-version:
+    needs: [get-version]
+    name: Sync version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Download version artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: Version
+
+      - name: Read version information
+        id: get
+        run: |
+          content=`cat version.json`
+          echo "::set-output name=versioning::$content"
+
+      - name: Update project version
+        uses: roryprimrose/set-vs-sdk-project-version@v1
+        with:
+          version: ${{fromJson(steps.get.outputs.versioning).NUGET }}
+          assemblyVersion: ${{fromJson(steps.get.outputs.versioning).ASSEMBLY }}
+          fileVersion: ${{fromJson(steps.get.outputs.versioning).MMP }}
+          informationalVersion: ${{fromJson(steps.get.outputs.versioning).INFORMATIONAL }}
+
+      - name: Apply changes
+        uses: EndBug/add-and-commit@v6.2.0
+        with:
+          author_name: Somfic
+          author_email: somfic@gmail.com
+          message: "Automated versioning"
+          branch: master

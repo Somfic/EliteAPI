@@ -77,8 +77,8 @@ jobs:
           path: ${{github.workspace}}/${{steps.TEST.outputs.file_name}}
 
       - name: Comment on Pull Request
+        if: ${{ github.event_name == 'pull_request' }} && ${{ matrix.os == 'ubuntu-latest'}}
         uses: machine-learning-apps/pr-comment@master
-        if: (${{ github.event_name == 'pull_request' }} && ${{ matrix.os }} == 'ubuntu-latest') # only do it once ( on windows )
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

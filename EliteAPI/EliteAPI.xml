@@ -49,22 +49,14 @@
                 Stops the api
             </summary>
         </member>
-        <member name="T:EliteAPI.Bindings.Provider.Abstractions.IBindingsProvider">
-            <summary>
-            Finds the active keybindings schema file
-            </summary>
-        </member>
-        <member name="M:EliteAPI.Bindings.Provider.Abstractions.IBindingsProvider.FindBindingsFile(System.IO.DirectoryInfo)">
-            <summary>
-            Finds the active keybindings file
-            </summary>
-            <param name="bindingsDirectory">The keybindings directory</param>
-        </member>
-        <member name="M:EliteAPI.Bindings.Provider.BindingsProvider.FindBindingsFile(System.IO.DirectoryInfo)">
-            <inheritdoc />
-        </member>
         <member name="T:EliteAPI.EliteDangerousAPI">
             <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.EliteDangerousAPI.#ctor(System.IServiceProvider)">
+            <summary>
+            Creates a new EliteDangerousAPI class
+            </summary>
+            <param name="services">ServiceProvider</param>
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.IsRunning">
             <inheritdoc />

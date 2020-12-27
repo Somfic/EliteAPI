@@ -7,7 +7,7 @@
     <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
     <PackageIconUrl>https://github.com/EliteAPI/EliteAPI/blob/master/Icons/logo_gradient_shine.jpg?raw=true</PackageIconUrl>
-    <RepositoryType></RepositoryType>
+    <RepositoryType>git</RepositoryType>
     <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <Description>A powerful event based .NET API for Elite: Dangerous</Description>

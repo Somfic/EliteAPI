@@ -6,7 +6,7 @@
     <FileVersion>3.0.0.0</FileVersion>
     <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
-    <PackageIconUrl>https://github.com/EliteAPI/EliteAPI/blob/master/Icons/logo_gradient_shine.jpg?raw=true</PackageIconUrl>
+    <PackageIconUrl></PackageIconUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
@@ -29,18 +29,18 @@
   </PropertyGroup>  
 
   <ItemGroup>
-    <None Include="..\Icons\logo_gradient_small.jpg">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>  
+
+  <ItemGroup>
+    <None Include="logo_gradient_small.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

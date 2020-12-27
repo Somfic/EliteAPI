@@ -8,19 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet-version: [5.0.x, 3.1.x, 2.1.x]
+        dotnet-version: [5.0.x, 3.1.x]
       
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
         
-      - name: Setup .NET Core
+      - name: Setup .NET ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
       
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore EliteAPI
       
       - name: Build
         run: dotnet build --configuration Release --no-restore

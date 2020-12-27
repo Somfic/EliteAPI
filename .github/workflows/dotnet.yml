@@ -43,7 +43,7 @@ jobs:
             fi
       
       - name: Test 
-        run: dotnet test --no-restore --no-build --configuration $config --logger:"liquid.md;LogFileName=${{github.workspace}}/${{steps.TEST.outputs.file_name}};Title=${{steps.TEST.outputs.title}};"
+        run: dotnet test --no-restore --no-build --configuration Release --logger:"liquid.md;LogFileName=${{github.workspace}}/${{steps.TEST.outputs.file_name}};Title=${{steps.TEST.outputs.title}};"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v2

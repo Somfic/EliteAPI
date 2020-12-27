@@ -1,19 +1,83 @@
-on: release
-name: 'Release'
+on:
+  release:
+    types: [released]
+name: "Publish & Release"
 
 jobs:
+  get-version:
+    name: Get version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup GitVersion
+        uses: gittools/actions/gitversion/setup@v0.9.7
+        with:
+          versionSpec: "5.x"
+
+      - name: Fetch tags and master for GitVersion
+        run: |
+          git fetch --tags --unshallow
+          git branch --create-reflog master origin/master
+          
+      - name: Determine version
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v0.9.7
+
+      - name: Save version information
+        uses: schdck/create-env-json@v2
+        with:
+          file-name: version.json
+          nuget: ${{steps.gitversion.outputs.NuGetVersionV2}}
+          major: ${{steps.gitversion.outputs.Major}}
+          minor: ${{steps.gitversion.outputs.Minor}}
+          patch: ${{steps.gitversion.outputs.Patch}}
+          mmp: ${{steps.gitversion.outputs.MajorMinorPatch}}
+          assembly: ${{steps.gitversion.outputs.AssemblySemVer}}
+          informational: ${{steps.gitversion.outputs.InformationalVersion}}
+
+      - name: Upload version artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Version
+          path: "version.json"
+          if-no-files-found: error
+
   sync-version:
+    needs: get-version
     name: Sync version
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Download version artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: Version
+
+      - name: Read version information
+        id: get
+        run: |
+          content=`cat version.json`
+          echo "::set-output name=versioning::$content"
+
       - name: Update project version
-        uses: roryprimrose/set-vs-sdk-project-version@v1.0.3
-        with: 
-          version: ${{ github.event.release.tag_name }}
-          projectFilter: 'EliteAPI.csproj'
+        uses: roryprimrose/set-vs-sdk-project-version@v1
+        with:
+          version: ${{fromJson(steps.get.outputs.versioning).NUGET }}
+          assemblyVersion: ${{fromJson(steps.get.outputs.versioning).ASSEMBLY }}
+          fileVersion: ${{fromJson(steps.get.outputs.versioning).MMP }}
+          informationalVersion: ${{fromJson(steps.get.outputs.versioning).INFORMATIONAL }}
+
+      - name: Apply changes
+        uses: EndBug/add-and-commit@v6.2.0
+        with:
+          author_name: Somfic
+          author_email: somfic@gmail.com
+          message: "Automated versioning"
+          branch: master
 
   setup-dotnet:
     name: Setup .NET
@@ -22,52 +86,75 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '5.0.x'
-  
-  setup-nuget:
-    name: Setup NuGet
-    runs-on: ubuntu-latest
-    steps:
-      - name: Setup NuGet
-        uses: NuGet/setup-nuget@v1.0.5
-        with:
-          nuget-api-key: ${{ secrets.NUGET_KEY }}
-          nuget-version: 'latest'
+          dotnet-version: "5.0.x"
 
   build:
-    needs: [ sync-version, setup-dotnet ]
+    needs: [sync-version, setup-dotnet]
     name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          ref: master
 
       - name: Build
-        run: dotnet publish
-  
+        run: |
+          dotnet clean
+          dotnet publish
+        working-directory: EliteAPI
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Build
+          path: "/home/runner/work/EliteAPI/EliteAPI/EliteAPI/bin/Debug"
+          if-no-files-found: error
+
   add-to-release:
-    needs: [ build ]
-    name: Add asset to release
+    needs: [build]
+    name: Add assets to release
     runs-on: ubuntu-latest
     steps:
-    - name: Upload a Release Asset
-      uses: actions/upload-release-asset@v1.0.2
-      with:
-        upload_url: ${{ github.event.release.upload_url }}
-        asset_path: '.\EliteAPI\bin\Debug\netstandard2.0\publish\EliteAPI.dll'
-      
-  pack-nuget:
-    needs: [ setup-nuget, build ]
-    name: Pack project
-    runs-on: ubuntu-latest
-    steps:
-      - name: Pack project
-        run: nuget pack .\EliteAPI\
-  
+      - name: Download build artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: Build
+
+      - name: Zip release assets
+        uses: TheDoctor0/zip-release@0.4.1
+        with:
+          filename: release.zip
+          path: "./netstandard2.0/publish"
+
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: "release.zip"
+          asset_name: "EliteAPI"
+          asset_content_type: application/zip
+
   publish-nuget:
-    needs: [ pack-nuget ]
+    needs: [build, get-version]
     name: Publish to NuGet
     runs-on: ubuntu-latest
     steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: Build
+
+      - name: Download version artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: Version
+
+      - name: Read version information
+        id: get
+        run: |
+          content=`cat version.json`
+          echo "::set-output name=versioning::$content"
+       
       - name: Publish project
-        run: nuget push .\EliteAPI\EliteAPI.${{ github.event.release.tag_name }}.nupkg
+        run: dotnet nuget push 'EliteAPI.${{fromJson(steps.get.outputs.versioning).NUGET }}.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json

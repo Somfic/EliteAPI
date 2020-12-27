@@ -4,7 +4,7 @@ on: [ push, pull_request ]
 
 jobs:
   test:
-    name: Testing (${{ matrix.dotnet-version }})
+    name: Testing (dotnet v${{ matrix.dotnet-version }})
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-artifact@v2
         if: ${{always()}}
         with:
-         name: 'Build'
+         name: 'Build (dotnet v${{ matrix.dotnet-version }})'
          path: ${{github.workspace}}/${{env.file_name}}
       
       - name: Comment on Pull Request

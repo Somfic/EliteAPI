@@ -78,7 +78,7 @@ jobs:
 
       - name: Comment on Pull Request
         uses: machine-learning-apps/pr-comment@master
-        if: (${{ github.event_name == 'pull_request' }} && ${{ matrix.os }} == 'windows-latest') # only do it once ( on windows )
+        if: (${{ github.event_name == 'pull_request' }} && ${{ matrix.os }} == 'ubuntu-latest') # only do it once ( on windows )
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

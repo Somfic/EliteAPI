@@ -7,14 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EliteAPI", "EliteAPI\EliteA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{05E03CDB-6B56-45A5-8C65-87D990B20220}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{C23F0D62-4F1E-42E2-82A5-A1F4E9283363}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example 2 - Event Modules Architecture", "Examples\Example 2 - Event Modules Architecture\Example 2 - Event Modules Architecture.csproj", "{BC81948F-E319-4EC9-98D7-7F9AAF0D78D3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example 1 - Basic Event Processing", "Examples\Example 1 - Basic event processing\Example 1 - Basic Event Processing.csproj", "{63C0CAC5-AE05-4205-9870-5271EDDA6F6C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example 3 - Using Ship Status", "Examples\Example 3 - Using Ship Status\Example 3 - Using Ship Status.csproj", "{6AB4BFB5-53E4-4E78-90D9-D72174EC1BA9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildTools", "BuildTools", "{A8CF2133-0290-4719-8901-378264B396A9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EliteAPI.BuildTools", "BuildTools\EliteAPI.BuildTools\EliteAPI.BuildTools.csproj", "{5A3FDDF9-4607-4E75-AB68-487D5FC36D7D}"

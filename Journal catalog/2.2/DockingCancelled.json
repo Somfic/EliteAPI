@@ -1,0 +1,6 @@
+{ "timestamp":"2016-11-08T18:34:40Z", "event":"DockingCancelled", "StationName":"Baliunas Hub" }
+{ "timestamp":"2016-11-16T15:35:32Z", "event":"DockingCancelled", "StationName":"Henry Vision" }
+{ "timestamp":"2017-02-06T13:48:28Z", "event":"DockingCancelled", "StationName":"Litke Dock" }
+{ "timestamp":"2017-02-19T14:20:20Z", "event":"DockingCancelled", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2017-02-19T16:34:32Z", "event":"DockingCancelled", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-04-10T12:47:50Z", "event":"DockingCancelled", "StationName":"Cregglezone" }

@@ -1,24 +1,41 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class UndockedEvent : EventBase
+    public partial class UndockedEvent : EventBase
     {
-        internal UndockedEvent() { }
+        internal UndockedEvent()
+        {
+        }
 
-        public static UndockedEvent FromJson(string json) => JsonConvert.DeserializeObject<UndockedEvent>(json);
+        [JsonProperty("StationName")] public string StationName { get; private set; }
 
+        [JsonProperty("StationType")] public string StationType { get; private set; }
 
-        [JsonProperty("StationName")]
-        public string StationName { get; internal set; }
+        [JsonProperty("MarketID")] public long MarketId { get; private set; }
+    }
 
-        [JsonProperty("StationType")]
-        public string StationType { get; internal set; }
+    public partial class UndockedEvent
+    {
+        public static UndockedEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<UndockedEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("MarketID")]
-        public long MarketId { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<UndockedEvent> UndockedEvent;
 
-        
+        internal void InvokeUndockedEvent(UndockedEvent arg)
+        {
+            UndockedEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -1,19 +1,37 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class BuyAmmoEvent : EventBase
+    public partial class BuyAmmoEvent : EventBase
     {
-        internal BuyAmmoEvent() { }
+        internal BuyAmmoEvent()
+        {
+        }
 
-        public static BuyAmmoEvent FromJson(string json) => JsonConvert.DeserializeObject<BuyAmmoEvent>(json);
+        [JsonProperty("Cost")] public long Cost { get; private set; }
+    }
 
+    public partial class BuyAmmoEvent
+    {
+        public static BuyAmmoEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<BuyAmmoEvent>(json);
+        }
+    }
+}
 
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<BuyAmmoEvent> BuyAmmoEvent;
 
-        [JsonProperty("Cost")]
-        public long Cost { get; internal set; }
-
-        
+        internal void InvokeBuyAmmoEvent(BuyAmmoEvent arg)
+        {
+            BuyAmmoEvent?.Invoke(this, arg);
+        }
     }
 }

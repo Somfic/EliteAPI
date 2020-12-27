@@ -1,0 +1,8 @@
+{ "timestamp":"2018-03-06T23:53:37Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":1 }
+{ "timestamp":"2018-03-07T00:12:39Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":1 }
+{ "timestamp":"2018-03-07T00:35:53Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2018-03-07T00:42:10Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2018-03-07T00:45:33Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2018-03-07T00:53:59Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2018-03-08T20:41:24Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":2 }
+{ "timestamp":"2018-03-08T21:03:48Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }

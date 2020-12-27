@@ -4,24 +4,24 @@ using Newtonsoft.Json;
 namespace EliteAPI.Status.Models
 {
     /// <summary>
-    /// Container for status properties
+    ///     Container for status properties
     /// </summary>
     public class ShipStatusProperty<T>
     {
+        /// <summary>
+        ///     Triggered whenever this property is changed
+        /// </summary>
+        public EventHandler<T> OnChange;
+
         internal ShipStatusProperty(T initValue)
         {
             Value = initValue;
         }
 
         /// <summary>
-        /// The value of this property
+        ///     The value of this property
         /// </summary>
         public T Value { get; private set; }
-
-        /// <summary>
-        /// Triggered whenever this property is changed
-        /// </summary>
-        public EventHandler<T> OnChange;
 
         internal bool NeedsUpdate(object rawValue)
         {
@@ -31,7 +31,7 @@ namespace EliteAPI.Status.Models
 
         internal void Update(object sender, object rawValue)
         {
-            T value = (T)rawValue;
+            var value = (T) rawValue;
             Value = value;
             InvokeEvent(sender, value);
         }

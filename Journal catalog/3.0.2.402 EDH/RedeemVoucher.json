@@ -1,0 +1,4 @@
+{ "timestamp":"2018-03-07T00:21:51Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":5505, "Factions":[ { "Faction":"Federation", "Amount":5505 } ] }
+{ "timestamp":"2018-03-08T03:16:48Z", "event":"RedeemVoucher", "Type":"scannable", "Amount":1616, "Faction":"" }
+{ "timestamp":"2018-03-08T20:49:55Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":30810, "Factions":[ { "Faction":"Ekonir Legal Inc", "Amount":30810 } ] }
+{ "timestamp":"2018-03-08T21:29:23Z", "event":"RedeemVoucher", "Type":"settlement", "Amount":5686, "Faction":"" }

@@ -1,0 +1,86 @@
+{ "timestamp":"2017-09-26T18:11:44Z", "event":"USSDrop", "USSType":"$USS_Type_NonHuman;", "USSType_Localised":"Non-Human signal source", "USSThreat":5 }
+{ "timestamp":"2017-09-26T18:15:21Z", "event":"USSDrop", "USSType":"$USS_Type_NonHuman;", "USSType_Localised":"Non-Human signal source", "USSThreat":5 }
+{ "timestamp":"2017-09-26T18:19:23Z", "event":"USSDrop", "USSType":"$USS_Type_NonHuman;", "USSType_Localised":"Non-Human signal source", "USSThreat":5 }
+{ "timestamp":"2017-09-26T19:36:33Z", "event":"USSDrop", "USSType":"$USS_Type_NonHuman;", "USSType_Localised":"Non-Human signal source", "USSThreat":5 }
+{ "timestamp":"2017-09-27T14:24:43Z", "event":"USSDrop", "USSType":"$USS_Type_NonHuman;", "USSType_Localised":"Non-Human signal source", "USSThreat":5 }
+{ "timestamp":"2017-09-27T18:45:19Z", "event":"USSDrop", "USSType":"$USS_Type_NonHuman;", "USSType_Localised":"Non-Human signal source", "USSThreat":5 }
+{ "timestamp":"2017-09-28T12:21:01Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T12:25:46Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T12:27:39Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T12:32:55Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T12:34:57Z", "event":"USSDrop", "USSType":"$USS_Type_DistressSignal;", "USSType_Localised":"Distress call", "USSThreat":4 }
+{ "timestamp":"2017-09-28T12:45:01Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T12:47:16Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":3 }
+{ "timestamp":"2017-09-28T12:49:17Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T12:53:02Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T12:56:20Z", "event":"USSDrop", "USSType":"$USS_Type_Aftermath;", "USSType_Localised":"Combat aftermath detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T12:58:37Z", "event":"USSDrop", "USSType":"$USS_Type_Aftermath;", "USSType_Localised":"Combat aftermath detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:01:10Z", "event":"USSDrop", "USSType":"$USS_Type_Aftermath;", "USSType_Localised":"Combat aftermath detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:05:07Z", "event":"USSDrop", "USSType":"$USS_Type_Aftermath;", "USSType_Localised":"Combat aftermath detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:10:48Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:13:50Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":3 }
+{ "timestamp":"2017-09-28T13:16:31Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:19:41Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":3 }
+{ "timestamp":"2017-09-28T13:22:51Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:27:54Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:30:31Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:33:14Z", "event":"USSDrop", "USSType":"$USS_Type_Aftermath;", "USSType_Localised":"Combat aftermath detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:35:31Z", "event":"USSDrop", "USSType":"$USS_Type_Aftermath;", "USSType_Localised":"Combat aftermath detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:49:28Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:52:15Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:55:49Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T13:59:39Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T14:01:54Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T14:04:20Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T14:06:30Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T14:11:58Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T14:15:57Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T14:20:53Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T14:23:41Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T14:26:15Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T14:28:26Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-28T14:31:23Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-09-29T12:52:20Z", "event":"USSDrop", "USSType":"$USS_Type_NonHuman;", "USSType_Localised":"Non-Human signal source", "USSThreat":5 }
+{ "timestamp":"2017-09-29T13:22:39Z", "event":"USSDrop", "USSType":"$USS_Type_NonHuman;", "USSType_Localised":"Non-Human signal source", "USSThreat":5 }
+{ "timestamp":"2017-10-01T15:31:59Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-09T13:48:48Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-10T19:38:45Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-20T18:28:58Z", "event":"USSDrop", "USSType":"$USS_Type_Convoy;", "USSType_Localised":"Convoy dispersal pattern detected", "USSThreat":0 }
+{ "timestamp":"2017-10-20T18:31:10Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-20T18:43:12Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-20T18:49:57Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-20T18:52:17Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-20T18:59:12Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-20T19:23:54Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-21T12:31:28Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-21T12:34:17Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-21T12:37:49Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-21T12:46:19Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-21T12:56:46Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-22T09:47:19Z", "event":"USSDrop", "USSType":"$USS_Type_WeaponsFire;", "USSType_Localised":"Weapons fire detected", "USSThreat":4 }
+{ "timestamp":"2017-10-23T13:34:50Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-24T12:12:34Z", "event":"USSDrop", "USSType":"$USS_Type_WeaponsFire;", "USSType_Localised":"Weapons fire detected", "USSThreat":2 }
+{ "timestamp":"2017-10-24T12:35:05Z", "event":"USSDrop", "USSType":"$USS_Type_Aftermath;", "USSType_Localised":"Combat aftermath detected", "USSThreat":0 }
+{ "timestamp":"2017-10-26T14:21:21Z", "event":"USSDrop", "USSType":"$USS_Type_Convoy;", "USSType_Localised":"Convoy dispersal pattern detected", "USSThreat":4 }
+{ "timestamp":"2017-10-26T15:48:14Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-10-26T16:51:45Z", "event":"USSDrop", "USSType":"$USS_Type_Convoy;", "USSType_Localised":"Convoy dispersal pattern detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T13:32:50Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T17:52:51Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T18:08:42Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T19:43:26Z", "event":"USSDrop", "USSType":"$USS_Type_Aftermath;", "USSType_Localised":"Combat aftermath detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T20:04:56Z", "event":"USSDrop", "USSType":"$USS_Type_Convoy;", "USSType_Localised":"Convoy dispersal pattern detected", "USSThreat":1 }
+{ "timestamp":"2017-11-11T20:23:53Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T20:42:18Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T20:49:38Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T20:53:40Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T20:58:03Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T21:02:00Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T21:11:06Z", "event":"USSDrop", "USSType":"$USS_Type_DistressSignal;", "USSType_Localised":"Distress call", "USSThreat":3 }
+{ "timestamp":"2017-11-11T21:15:59Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T21:20:12Z", "event":"USSDrop", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T21:23:38Z", "event":"USSDrop", "USSType":"$USS_Type_Convoy;", "USSType_Localised":"Convoy dispersal pattern detected", "USSThreat":1 }
+{ "timestamp":"2017-11-11T21:27:09Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T21:29:33Z", "event":"USSDrop", "USSType":"$USS_Type_VeryValuableSalvage;", "USSType_Localised":"High grade emissions detected", "USSThreat":0 }
+{ "timestamp":"2017-11-11T21:32:10Z", "event":"USSDrop", "USSType":"$USS_Type_Convoy;", "USSType_Localised":"Convoy dispersal pattern detected", "USSThreat":1 }
+{ "timestamp":"2017-11-12T11:30:45Z", "event":"USSDrop", "USSType":"$USS_Type_Aftermath;", "USSType_Localised":"Combat aftermath detected", "USSThreat":0 }
+{ "timestamp":"2017-11-12T12:15:22Z", "event":"USSDrop", "USSType":"$USS_Type_Convoy;", "USSType_Localised":"Convoy dispersal pattern detected", "USSThreat":2 }

@@ -1,30 +1,43 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ReceiveTextEvent : EventBase
+    public partial class ReceiveTextEvent : EventBase
     {
-        internal ReceiveTextEvent() { }
+        internal ReceiveTextEvent()
+        {
+        }
 
-        public static ReceiveTextEvent FromJson(string json) => JsonConvert.DeserializeObject<ReceiveTextEvent>(json);
+        [JsonProperty("From")] public string From { get; private set; }
 
+        [JsonProperty("Message")] public string Message { get; private set; }
 
-        [JsonProperty("From")]
-        public string From { get; internal set; }
+        [JsonProperty("Message_Localised")] public string MessageLocalised { get; private set; }
 
-        [JsonProperty("From_Localised")]
-        public string FromLocalised { get; internal set; }
+        [JsonProperty("Channel")] public string Channel { get; private set; }
+    }
 
-        [JsonProperty("Message")]
-        public string Message { get; internal set; }
+    public partial class ReceiveTextEvent
+    {
+        public static ReceiveTextEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ReceiveTextEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Message_Localised")]
-        public string MessageLocalised { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<ReceiveTextEvent> ReceiveTextEvent;
 
-        [JsonProperty("Channel")]
-        public string Channel { get; internal set; }
-
-        
+        internal void InvokeReceiveTextEvent(ReceiveTextEvent arg)
+        {
+            ReceiveTextEvent?.Invoke(this, arg);
+        }
     }
 }

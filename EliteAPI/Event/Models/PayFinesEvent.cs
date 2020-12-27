@@ -1,27 +1,43 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class PayFinesEvent : EventBase
+    public partial class PayFinesEvent : EventBase
     {
-        internal PayFinesEvent() { }
+        internal PayFinesEvent()
+        {
+        }
 
-        public static PayFinesEvent FromJson(string json) => JsonConvert.DeserializeObject<PayFinesEvent>(json);
+        [JsonProperty("Amount")] public long Amount { get; private set; }
 
+        [JsonProperty("AllFines")] public bool AllFines { get; private set; }
 
-        [JsonProperty("Amount")]
-        public long Amount { get; internal set; }
+        [JsonProperty("Faction")] public string Faction { get; private set; }
 
-        [JsonProperty("AllFines")]
-        public bool AllFines { get; internal set; }
+        [JsonProperty("ShipID")] public long ShipId { get; private set; }
+    }
 
-        [JsonProperty("Faction")]
-        public string Faction { get; internal set; }
+    public partial class PayFinesEvent
+    {
+        public static PayFinesEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<PayFinesEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("ShipID")]
-        public long ShipId { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<PayFinesEvent> PayFinesEvent;
 
-        
+        internal void InvokePayFinesEvent(PayFinesEvent arg)
+        {
+            PayFinesEvent?.Invoke(this, arg);
+        }
     }
 }

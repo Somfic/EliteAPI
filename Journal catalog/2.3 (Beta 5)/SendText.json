@@ -1,0 +1,9 @@
+{ "timestamp":"2017-04-11T10:54:15Z", "event":"SendText", "To":"$cmdr_decorate:#name=Clunmore Thantrop;", "To_Localised":"CMDR Clunmore Thantrop", "Message":"hey" }
+{ "timestamp":"2017-04-11T10:54:28Z", "event":"SendText", "To":"$cmdr_decorate:#name=Clunmore Thantrop;", "To_Localised":"CMDR Clunmore Thantrop", "Message":"can i join your crew" }
+{ "timestamp":"2017-04-11T11:09:47Z", "event":"SendText", "To":"local", "Message":"hey" }
+{ "timestamp":"2017-04-11T11:10:11Z", "event":"SendText", "To":"local", "Message":"im gunner" }
+{ "timestamp":"2017-04-11T11:10:46Z", "event":"SendText", "To":"local", "Message":"i think we will die" }
+{ "timestamp":"2017-04-11T11:13:23Z", "event":"SendText", "To":"local", "Message":"ok" }
+{ "timestamp":"2017-04-11T14:32:45Z", "event":"SendText", "To":"$cmdr_decorate:#name=DOODLE RANGER;", "To_Localised":"CMDR DOODLE RANGER", "Message":"hey" }
+{ "timestamp":"2017-04-11T14:35:35Z", "event":"SendText", "To":"$cmdr_decorate:#name=DOODLE RANGER;", "To_Localised":"CMDR DOODLE RANGER", "Message":"noon" }
+{ "timestamp":"2017-04-11T14:35:40Z", "event":"SendText", "To":"$cmdr_decorate:#name=DOODLE RANGER;", "To_Localised":"CMDR DOODLE RANGER", "Message":"noob" }

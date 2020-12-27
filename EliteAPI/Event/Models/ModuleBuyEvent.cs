@@ -1,45 +1,49 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ModuleBuyEvent : EventBase
+    public partial class ModuleBuyEvent : EventBase
     {
-        internal ModuleBuyEvent() { }
+        internal ModuleBuyEvent()
+        {
+        }
 
-        public static ModuleBuyEvent FromJson(string json) => JsonConvert.DeserializeObject<ModuleBuyEvent>(json);
+        [JsonProperty("Slot")] public string Slot { get; private set; }
 
+        [JsonProperty("BuyItem")] public string BuyItem { get; private set; }
 
-        [JsonProperty("Slot")]
-        public string Slot { get; internal set; }
+        [JsonProperty("BuyItem_Localised")] public string BuyItemLocalised { get; private set; }
 
-        [JsonProperty("SellItem")]
-        public string SellItem { get; internal set; }
+        [JsonProperty("MarketID")] public long MarketId { get; private set; }
 
-        [JsonProperty("SellItem_Localised")]
-        public string SellItemLocalised { get; internal set; }
+        [JsonProperty("BuyPrice")] public long BuyPrice { get; private set; }
 
-        [JsonProperty("SellPrice")]
-        public long SellPrice { get; internal set; }
+        [JsonProperty("Ship")] public string Ship { get; private set; }
 
-        [JsonProperty("BuyItem")]
-        public string BuyItem { get; internal set; }
+        [JsonProperty("ShipID")] public long ShipId { get; private set; }
+    }
 
-        [JsonProperty("BuyItem_Localised")]
-        public string BuyItemLocalised { get; internal set; }
+    public partial class ModuleBuyEvent
+    {
+        public static ModuleBuyEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ModuleBuyEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("MarketID")]
-        public long MarketId { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<ModuleBuyEvent> ModuleBuyEvent;
 
-        [JsonProperty("BuyPrice")]
-        public long BuyPrice { get; internal set; }
-
-        [JsonProperty("Ship")]
-        public string Ship { get; internal set; }
-
-        [JsonProperty("ShipID")]
-        public long ShipId { get; internal set; }
-
-        
+        internal void InvokeModuleBuyEvent(ModuleBuyEvent arg)
+        {
+            ModuleBuyEvent?.Invoke(this, arg);
+        }
     }
 }

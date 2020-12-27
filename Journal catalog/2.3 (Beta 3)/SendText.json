@@ -1,0 +1,323 @@
+{ "timestamp":"2017-03-18T13:24:00Z", "event":"SendText", "To":"wing", "Message":"hey" }
+{ "timestamp":"2017-03-18T13:24:23Z", "event":"SendText", "To":"wing", "Message":"where are you from?" }
+{ "timestamp":"2017-03-18T13:24:36Z", "event":"SendText", "To":"wing", "Message":"oh hi" }
+{ "timestamp":"2017-03-18T13:24:43Z", "event":"SendText", "To":"wing", "Message":"ich auch" }
+{ "timestamp":"2017-03-18T13:25:20Z", "event":"SendText", "To":"wing", "Message":"lass mal nen paar schiffe abknallen gehen" }
+{ "timestamp":"2017-03-18T13:25:55Z", "event":"SendText", "To":"wing", "Message":"ach stimmt" }
+{ "timestamp":"2017-03-18T13:26:10Z", "event":"SendText", "To":"wing", "Message":"sollen wir noch welche einbauen?" }
+{ "timestamp":"2017-03-18T13:26:14Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-03-18T13:26:31Z", "event":"SendText", "To":"wing", "Message":"egal klappt schon irgentwie" }
+{ "timestamp":"2017-03-18T13:27:30Z", "event":"SendText", "To":"wing", "Message":"was kannst du alles sehen?" }
+{ "timestamp":"2017-03-18T13:28:30Z", "event":"SendText", "To":"wing", "Message":"guck du mal ich besorge uns ein opfer auf gut glück" }
+{ "timestamp":"2017-03-18T13:31:27Z", "event":"SendText", "To":"wing", "Message":"hat doch gut geklappt aber würde auch gerne mal die turrets in action sehen" }
+{ "timestamp":"2017-03-18T13:32:00Z", "event":"SendText", "To":"wing", "Message":"aber 2 fighter is schon geil" }
+{ "timestamp":"2017-03-18T13:32:03Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-03-18T13:32:21Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-03-18T13:33:21Z", "event":"SendText", "To":"wing", "Message":"kannst du das ziel sehen , welches ich angewählt habe?" }
+{ "timestamp":"2017-03-18T13:34:00Z", "event":"SendText", "To":"wing", "Message":"achso lol ich glaube das kann nur der pilot" }
+{ "timestamp":"2017-03-18T13:34:14Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-03-18T13:36:06Z", "event":"SendText", "To":"local", "Message":"kann ich den iwi meine position ändern?" }
+{ "timestamp":"2017-03-18T13:36:51Z", "event":"SendText", "To":"Vortex-XIII", "Message":"achso ok" }
+{ "timestamp":"2017-03-18T13:37:16Z", "event":"SendText", "To":"Vortex-XIII", "Message":"kannst du eigentlich irgentwie den piloten einnehmen" }
+{ "timestamp":"2017-03-18T13:37:17Z", "event":"SendText", "To":"Vortex-XIII", "Message":"?" }
+{ "timestamp":"2017-03-18T13:37:43Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok schade" }
+{ "timestamp":"2017-03-18T13:37:45Z", "event":"SendText", "To":"wing", "Message":"ne" }
+{ "timestamp":"2017-03-18T13:37:54Z", "event":"SendText", "To":"wing", "Message":"kann nur nen piloten rein setzen" }
+{ "timestamp":"2017-03-18T13:38:28Z", "event":"SendText", "To":"wing", "Message":"ja gut vielleicht wenn kein pilot dabei ist" }
+{ "timestamp":"2017-03-18T13:38:40Z", "event":"SendText", "To":"wing", "Message":"aber dann ist das schiff nutzlos" }
+{ "timestamp":"2017-03-18T13:39:31Z", "event":"SendText", "To":"wing", "Message":"wohin als nächstes?" }
+{ "timestamp":"2017-03-18T13:39:43Z", "event":"SendText", "To":"wing", "Message":"kampfzone oder so?" }
+{ "timestamp":"2017-03-18T13:40:05Z", "event":"SendText", "To":"wing", "Message":"ok ich gucke ob ich eine finde" }
+{ "timestamp":"2017-03-18T13:42:01Z", "event":"SendText", "To":"wing", "Message":"das is doof" }
+{ "timestamp":"2017-03-18T13:42:17Z", "event":"SendText", "To":"wing", "Message":"hab nen system mit ner haz res" }
+{ "timestamp":"2017-03-18T13:44:27Z", "event":"SendText", "To":"wing", "Message":"und ich muss jedes mal das nächste ziel manuell auswählen" }
+{ "timestamp":"2017-03-18T13:44:41Z", "event":"SendText", "To":"wing", "Message":"oh jetzt aufeinmal nicht" }
+{ "timestamp":"2017-03-18T13:45:25Z", "event":"SendText", "To":"wing", "Message":"genau wird hoffentlich alles noch gefixt" }
+{ "timestamp":"2017-03-18T13:46:30Z", "event":"SendText", "To":"wing", "Message":"du siehst nich die entfernung ode?" }
+{ "timestamp":"2017-03-18T13:47:04Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-03-18T13:47:11Z", "event":"SendText", "To":"wing", "Message":"noch 500 ls" }
+{ "timestamp":"2017-03-18T13:48:01Z", "event":"SendText", "To":"wing", "Message":"wie bist du auf das spiel gekommen?" }
+{ "timestamp":"2017-03-18T13:48:35Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-03-18T13:50:31Z", "event":"SendText", "To":"wing", "Message":"den clipper?" }
+{ "timestamp":"2017-03-18T13:50:53Z", "event":"SendText", "To":"wing", "Message":"go" }
+{ "timestamp":"2017-03-18T13:51:26Z", "event":"SendText", "To":"wing", "Message":"hier ist nur kleinscheiß" }
+{ "timestamp":"2017-03-18T13:54:09Z", "event":"SendText", "To":"wing", "Message":"vor mir 3er wing wanted" }
+{ "timestamp":"2017-03-18T13:55:21Z", "event":"SendText", "To":"wing", "Message":"GS" }
+{ "timestamp":"2017-03-18T13:55:30Z", "event":"SendText", "To":"wing", "Message":"gogo" }
+{ "timestamp":"2017-03-18T13:56:31Z", "event":"SendText", "To":"wing", "Message":"haste ne idee wo wir noch mehr schiffe her kriegen?" }
+{ "timestamp":"2017-03-18T13:57:05Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-03-18T13:57:20Z", "event":"SendText", "To":"wing", "Message":"die nächste kampfzone is viel zu weit weg" }
+{ "timestamp":"2017-03-18T13:58:39Z", "event":"SendText", "To":"wing", "Message":"lass einfach auf alles schießen was sich bewegt und gucken wie lange wir durchhalten" }
+{ "timestamp":"2017-03-18T14:00:02Z", "event":"SendText", "To":"wing", "Message":"nen tödlichewr t7" }
+{ "timestamp":"2017-03-18T14:02:13Z", "event":"SendText", "To":"wing", "Message":"ne hiers ne fdl" }
+{ "timestamp":"2017-03-18T14:03:40Z", "event":"SendText", "To":"wing", "Message":"wieso hatn der gedockt" }
+{ "timestamp":"2017-03-18T14:04:12Z", "event":"SendText", "To":"wing", "Message":"ok sofort" }
+{ "timestamp":"2017-03-18T14:05:02Z", "event":"SendText", "To":"wing", "Message":"ou die is nen miner" }
+{ "timestamp":"2017-03-18T14:05:14Z", "event":"SendText", "To":"wing", "Message":"jo" }
+{ "timestamp":"2017-03-18T14:06:27Z", "event":"SendText", "To":"wing", "Message":"clipper" }
+{ "timestamp":"2017-03-18T14:06:46Z", "event":"SendText", "To":"wing", "Message":"ne" }
+{ "timestamp":"2017-03-18T14:06:52Z", "event":"SendText", "To":"wing", "Message":"go?" }
+{ "timestamp":"2017-03-18T14:08:12Z", "event":"SendText", "To":"wing", "Message":"fdl gogo" }
+{ "timestamp":"2017-03-18T14:09:27Z", "event":"SendText", "To":"wing", "Message":"python?" }
+{ "timestamp":"2017-03-18T14:10:38Z", "event":"SendText", "To":"wing", "Message":"jo" }
+{ "timestamp":"2017-03-18T14:11:20Z", "event":"SendText", "To":"wing", "Message":"jo sind 3" }
+{ "timestamp":"2017-03-18T14:11:25Z", "event":"SendText", "To":"wing", "Message":"gogo" }
+{ "timestamp":"2017-03-18T14:14:21Z", "event":"SendText", "To":"wing", "Message":"ok nice" }
+{ "timestamp":"2017-03-18T14:14:28Z", "event":"SendText", "To":"wing", "Message":"ancaonda" }
+{ "timestamp":"2017-03-18T14:14:52Z", "event":"SendText", "To":"wing", "Message":"gogo" }
+{ "timestamp":"2017-03-18T14:16:04Z", "event":"SendText", "To":"wing", "Message":"ooooooooooops meine scheibe hat nen bissel geknackt" }
+{ "timestamp":"2017-03-18T14:17:07Z", "event":"SendText", "To":"wing", "Message":"fgs" }
+{ "timestamp":"2017-03-18T14:17:48Z", "event":"SendText", "To":"wing", "Message":"db" }
+{ "timestamp":"2017-03-18T14:18:22Z", "event":"SendText", "To":"wing", "Message":"oh lol" }
+{ "timestamp":"2017-03-18T14:18:27Z", "event":"SendText", "To":"wing", "Message":"clipper" }
+{ "timestamp":"2017-03-18T14:19:33Z", "event":"SendText", "To":"wing", "Message":"lol wir haben 40k kopfgeld" }
+{ "timestamp":"2017-03-18T14:19:49Z", "event":"SendText", "To":"wing", "Message":"ana" }
+{ "timestamp":"2017-03-18T14:22:00Z", "event":"SendText", "To":"wing", "Message":"3er wing vor mir" }
+{ "timestamp":"2017-03-18T14:23:29Z", "event":"SendText", "To":"wing", "Message":"fdl" }
+{ "timestamp":"2017-03-18T14:24:28Z", "event":"SendText", "To":"wing", "Message":"wir haben schon 1.4 millionen verdient" }
+{ "timestamp":"2017-03-18T14:24:43Z", "event":"SendText", "To":"wing", "Message":":D" }
+{ "timestamp":"2017-03-18T14:24:57Z", "event":"SendText", "To":"wing", "Message":"müsste ich eig auch mal üben" }
+{ "timestamp":"2017-03-18T14:25:04Z", "event":"SendText", "To":"wing", "Message":"t6" }
+{ "timestamp":"2017-03-18T14:29:00Z", "event":"SendText", "To":"wing", "Message":"clipper 2er wing" }
+{ "timestamp":"2017-03-18T14:29:20Z", "event":"SendText", "To":"wing", "Message":"gute frage testen?" }
+{ "timestamp":"2017-03-18T14:30:34Z", "event":"SendText", "To":"wing", "Message":"ja kann ich" }
+{ "timestamp":"2017-03-18T14:30:57Z", "event":"SendText", "To":"wing", "Message":"hab ihn abgefrufen" }
+{ "timestamp":"2017-03-18T14:31:16Z", "event":"SendText", "To":"wing", "Message":"wtf wieso geht das" }
+{ "timestamp":"2017-03-18T14:33:04Z", "event":"SendText", "To":"wing", "Message":"erstmal mitten im kampf mfgs nachladen" }
+{ "timestamp":"2017-03-18T14:33:45Z", "event":"SendText", "To":"wing", "Message":"is doch ganz nett" }
+{ "timestamp":"2017-03-18T14:34:06Z", "event":"SendText", "To":"wing", "Message":"sollen wir zurück zur station dann kannst du mal captain sein" }
+{ "timestamp":"2017-03-18T14:34:17Z", "event":"SendText", "To":"wing", "Message":"also wir nehmen dein schiff" }
+{ "timestamp":"2017-03-18T14:35:15Z", "event":"SendText", "To":"wing", "Message":"wie viel cr haste denn" }
+{ "timestamp":"2017-03-18T14:36:26Z", "event":"SendText", "To":"wing", "Message":"wir sind in der beta wir brauchen keinen rang und alles kostet nur 10% vom original preis" }
+{ "timestamp":"2017-03-18T14:36:39Z", "event":"SendText", "To":"wing", "Message":"also corvette 17 m" }
+{ "timestamp":"2017-03-18T14:37:18Z", "event":"SendText", "To":"wing", "Message":"ne bin kurz vor cutter" }
+{ "timestamp":"2017-03-18T14:37:22Z", "event":"SendText", "To":"wing", "Message":"ein rang" }
+{ "timestamp":"2017-03-18T14:37:48Z", "event":"SendText", "To":"wing", "Message":"jo" }
+{ "timestamp":"2017-03-18T14:38:14Z", "event":"SendText", "To":"wing", "Message":"zum kämpfen nehme ich sonsne v" }
+{ "timestamp":"2017-03-18T14:38:21Z", "event":"SendText", "To":"wing", "Message":"vulture" }
+{ "timestamp":"2017-03-18T14:38:39Z", "event":"SendText", "To":"wing", "Message":"die is aber voll gemoddet" }
+{ "timestamp":"2017-03-18T14:39:03Z", "event":"SendText", "To":"wing", "Message":"hält ohne probleme gegen 2 anas" }
+{ "timestamp":"2017-03-18T14:39:20Z", "event":"SendText", "To":"wing", "Message":"vorallem wegen der hülle" }
+{ "timestamp":"2017-03-18T14:40:24Z", "event":"SendText", "To":"wing", "Message":"joa stimmt schon ist gewöhnungsbedürftig" }
+{ "timestamp":"2017-03-18T14:41:03Z", "event":"SendText", "To":"wing", "Message":"wird doch lustig xD" }
+{ "timestamp":"2017-03-18T14:42:01Z", "event":"SendText", "To":"wing", "Message":"was war bis jetzt das weiteste was du von der bubble weg warst" }
+{ "timestamp":"2017-03-18T14:42:52Z", "event":"SendText", "To":"wing", "Message":"mein rekord liegt bei 12k wegen touristen" }
+{ "timestamp":"2017-03-18T14:43:09Z", "event":"SendText", "To":"wing", "Message":"das ist cool hab ich auch überlegt" }
+{ "timestamp":"2017-03-18T14:44:16Z", "event":"SendText", "To":"wing", "Message":"ja das ist so mein problem abwechslung muss manchmal einfach sein" }
+{ "timestamp":"2017-03-18T14:45:42Z", "event":"SendText", "To":"wing", "Message":"nice wie weit kann die springen" }
+{ "timestamp":"2017-03-18T14:46:06Z", "event":"SendText", "To":"wing", "Message":"ok " }
+{ "timestamp":"2017-03-18T14:46:22Z", "event":"SendText", "To":"wing", "Message":"hab meine auf 53" }
+{ "timestamp":"2017-03-18T14:46:34Z", "event":"SendText", "To":"wing", "Message":"is schon geil" }
+{ "timestamp":"2017-03-18T14:46:57Z", "event":"SendText", "To":"wing", "Message":"dann hol mal nen schiffchen mit turrets raus" }
+{ "timestamp":"2017-03-18T14:47:13Z", "event":"SendText", "To":"wing", "Message":"joa dann sieht man auch nen bischen mehr von der galaxie" }
+{ "timestamp":"2017-03-18T14:48:17Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa oder soll ich das baby umrüsten?" }
+{ "timestamp":"2017-03-18T14:49:12Z", "event":"SendText", "To":"Vortex-XIII", "Message":"?" }
+{ "timestamp":"2017-03-18T14:49:59Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok noice" }
+{ "timestamp":"2017-03-18T14:50:19Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja klar los gehts" }
+{ "timestamp":"2017-03-18T14:50:51Z", "event":"SendText", "To":"Vortex-XIII", "Message":"gucke eben nach" }
+{ "timestamp":"2017-03-18T14:51:10Z", "event":"SendText", "To":"Vortex-XIII", "Message":"delkar planet 7" }
+{ "timestamp":"2017-03-18T14:51:27Z", "event":"SendText", "To":"Vortex-XIII", "Message":"is mir schon 100 mal passiert" }
+{ "timestamp":"2017-03-18T14:52:32Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jo" }
+{ "timestamp":"2017-03-18T14:52:47Z", "event":"SendText", "To":"Vortex-XIII", "Message":"die corvette aber noch mehr glaub ich" }
+{ "timestamp":"2017-03-18T14:53:07Z", "event":"SendText", "To":"Vortex-XIII", "Message":"fühl" }
+{ "timestamp":"2017-03-18T14:53:24Z", "event":"SendText", "To":"Vortex-XIII", "Message":"t sich komisch an keine kontrolle zu haben" }
+{ "timestamp":"2017-03-18T14:53:27Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jo" }
+{ "timestamp":"2017-03-18T14:53:35Z", "event":"SendText", "To":"Vortex-XIII", "Message":"sind wir schon da?" }
+{ "timestamp":"2017-03-18T14:54:18Z", "event":"SendText", "To":"Vortex-XIII", "Message":"die corvette brauchte 4 xD" }
+{ "timestamp":"2017-03-18T14:54:58Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wie meinste das mit den gunnern" }
+{ "timestamp":"2017-03-18T14:55:41Z", "event":"SendText", "To":"Vortex-XIII", "Message":"schinbar" }
+{ "timestamp":"2017-03-18T14:56:12Z", "event":"SendText", "To":"Vortex-XIII", "Message":"schick mal einladung" }
+{ "timestamp":"2017-03-18T14:58:10Z", "event":"SendText", "To":"Vortex-XIII", "Message":"obwohl ich komme mit der corvette doppelt hält besser" }
+{ "timestamp":"2017-03-18T15:00:29Z", "event":"SendText", "To":"Vortex-XIII", "Message":"lol" }
+{ "timestamp":"2017-03-18T15:00:35Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok" }
+{ "timestamp":"2017-03-18T15:02:28Z", "event":"SendText", "To":"Vortex-XIII", "Message":"was genau" }
+{ "timestamp":"2017-03-18T15:02:37Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok" }
+{ "timestamp":"2017-03-18T15:02:47Z", "event":"SendText", "To":"Vortex-XIII", "Message":"komme in das system" }
+{ "timestamp":"2017-03-18T15:07:36Z", "event":"SendText", "To":"Phil Bassett", "Message":"fighter" }
+{ "timestamp":"2017-03-18T15:09:30Z", "event":"SendText", "To":"Vortex-XIII", "Message":"komme in die haz res" }
+{ "timestamp":"2017-03-18T15:12:23Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hop rein" }
+{ "timestamp":"2017-03-18T15:13:20Z", "event":"SendText", "To":"Vortex-XIII", "Message":"keine schilde?" }
+{ "timestamp":"2017-03-18T15:14:33Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hilfe" }
+{ "timestamp":"2017-03-18T15:18:00Z", "event":"SendText", "To":"Vortex-XIII", "Message":"kannst du mich eigentlich auch jetzt einladen?" }
+{ "timestamp":"2017-03-18T15:18:57Z", "event":"SendText", "To":"Vortex-XIII", "Message":"?" }
+{ "timestamp":"2017-03-18T15:19:08Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh sorry" }
+{ "timestamp":"2017-03-18T15:19:17Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ahhhhhhhhh" }
+{ "timestamp":"2017-03-18T15:22:57Z", "event":"SendText", "To":"Vortex-XIII", "Message":"konntest du meine nachichten sehen?" }
+{ "timestamp":"2017-03-18T15:23:09Z", "event":"SendText", "To":"Vortex-XIII", "Message":"keine ahnung" }
+{ "timestamp":"2017-03-18T15:23:20Z", "event":"SendText", "To":"Vortex-XIII", "Message":"eig nicht" }
+{ "timestamp":"2017-03-18T15:23:43Z", "event":"SendText", "To":"Vortex-XIII", "Message":"kannst du fighter absetzen" }
+{ "timestamp":"2017-03-18T15:26:40Z", "event":"SendText", "To":"Vortex-XIII", "Message":"haste die einladung gekriegt" }
+{ "timestamp":"2017-03-18T15:27:50Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh hey" }
+{ "timestamp":"2017-03-18T15:48:03Z", "event":"SendText", "To":"Vortex-XIII", "Message":"klappts noch immer nicht?" }
+{ "timestamp":"2017-03-18T16:00:07Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hey" }
+{ "timestamp":"2017-03-18T16:00:34Z", "event":"SendText", "To":"Roen Soul", "Message":"hey" }
+{ "timestamp":"2017-03-18T16:00:42Z", "event":"SendText", "To":"Roen Soul", "Message":"yes" }
+{ "timestamp":"2017-03-18T16:01:10Z", "event":"SendText", "To":"Roen Soul", "Message":"yes this happend to me several times to day" }
+{ "timestamp":"2017-03-18T16:01:41Z", "event":"SendText", "To":"Roen Soul", "Message":"nice" }
+{ "timestamp":"2017-03-18T16:02:03Z", "event":"SendText", "To":"Roen Soul", "Message":"ok" }
+{ "timestamp":"2017-03-18T16:02:55Z", "event":"SendText", "To":"Roen Soul", "Message":"im going with fighter" }
+{ "timestamp":"2017-03-18T16:04:05Z", "event":"SendText", "To":"Roen Soul", "Message":"sadly i only can go 20 km from you" }
+{ "timestamp":"2017-03-18T16:04:35Z", "event":"SendText", "To":"Roen Soul", "Message":"oh they chaned it to 30" }
+{ "timestamp":"2017-03-18T16:05:13Z", "event":"SendText", "To":"local", "Message":"wtf" }
+{ "timestamp":"2017-03-18T16:05:27Z", "event":"SendText", "To":"local", "Message":"i teleported about 10 km forward" }
+{ "timestamp":"2017-03-18T16:05:42Z", "event":"SendText", "To":"local", "Message":"i know" }
+{ "timestamp":"2017-03-18T16:05:48Z", "event":"SendText", "To":"local", "Message":"yes" }
+{ "timestamp":"2017-03-18T16:06:55Z", "event":"SendText", "To":"local", "Message":"yes" }
+{ "timestamp":"2017-03-18T16:07:09Z", "event":"SendText", "To":"local", "Message":"hey" }
+{ "timestamp":"2017-03-18T16:07:32Z", "event":"SendText", "To":"local", "Message":"teleporting" }
+{ "timestamp":"2017-03-18T16:08:52Z", "event":"SendText", "To":"local", "Message":"HOW many landable planets" }
+{ "timestamp":"2017-03-18T16:09:21Z", "event":"SendText", "To":"local", "Message":"holy shit" }
+{ "timestamp":"2017-03-18T16:09:29Z", "event":"SendText", "To":"local", "Message":"this will take for ever" }
+{ "timestamp":"2017-03-18T16:09:53Z", "event":"SendText", "To":"local", "Message":"thats right xD" }
+{ "timestamp":"2017-03-18T16:10:56Z", "event":"SendText", "To":"local", "Message":"how far can you see the ruins" }
+{ "timestamp":"2017-03-18T16:11:12Z", "event":"SendText", "To":"local", "Message":"ok" }
+{ "timestamp":"2017-03-18T16:12:05Z", "event":"SendText", "To":"local", "Message":"hopefully this system will not have super high-g planets" }
+{ "timestamp":"2017-03-18T16:12:19Z", "event":"SendText", "To":"local", "Message":"yep" }
+{ "timestamp":"2017-03-18T16:13:53Z", "event":"SendText", "To":"local", "Message":"I think Im going to try to fly 10 km above you" }
+{ "timestamp":"2017-03-18T16:14:02Z", "event":"SendText", "To":"local", "Message":"maybe its a better vieww" }
+{ "timestamp":"2017-03-18T16:15:59Z", "event":"SendText", "To":"local", "Message":"maybe this is why they are locked" }
+{ "timestamp":"2017-03-18T16:16:36Z", "event":"SendText", "To":"local", "Message":"I cant see anything " }
+{ "timestamp":"2017-03-18T16:16:43Z", "event":"SendText", "To":"local", "Message":"going to dock" }
+{ "timestamp":"2017-03-18T16:18:52Z", "event":"SendText", "To":"local", "Message":"maybe i will get my clipper here and search for the ruins too" }
+{ "timestamp":"2017-03-18T16:20:28Z", "event":"SendText", "To":"local", "Message":"yes but it has no fighter only a boostspeed of 510 m/S" }
+{ "timestamp":"2017-03-18T16:21:10Z", "event":"SendText", "To":"local", "Message":"what " }
+{ "timestamp":"2017-03-18T16:21:32Z", "event":"SendText", "To":"local", "Message":"who are they" }
+{ "timestamp":"2017-03-18T16:22:14Z", "event":"SendText", "To":"local", "Message":"I think that may be a good signs" }
+{ "timestamp":"2017-03-18T16:24:19Z", "event":"SendText", "To":"local", "Message":"upside down?" }
+{ "timestamp":"2017-03-18T16:29:26Z", "event":"SendText", "To":"local", "Message":"could only see some mountains" }
+{ "timestamp":"2017-03-18T16:31:04Z", "event":"SendText", "To":"local", "Message":"i never noticed that the anaconda has such a big cockpit" }
+{ "timestamp":"2017-03-18T16:32:14Z", "event":"SendText", "To":"local", "Message":"I think I have to look at them with the new camera later" }
+{ "timestamp":"2017-03-18T16:34:39Z", "event":"SendText", "To":"local", "Message":"I've to eat louwelyn take my role" }
+{ "timestamp":"2017-03-18T16:35:19Z", "event":"SendText", "To":"local", "Message":"i'll be back in 20-30 minutes" }
+{ "timestamp":"2017-03-18T16:36:19Z", "event":"SendText", "To":"local", "Message":"Should I stay in the ship" }
+{ "timestamp":"2017-03-18T17:12:40Z", "event":"SendText", "To":"Roen Soul", "Message":"invite me to your crew" }
+{ "timestamp":"2017-03-18T17:14:02Z", "event":"SendText", "To":"Roen Soul", "Message":"hey there" }
+{ "timestamp":"2017-03-18T17:17:49Z", "event":"SendText", "To":"Roen Soul", "Message":"ok" }
+{ "timestamp":"2017-03-18T17:19:24Z", "event":"SendText", "To":"$cmdr_decorate:#name=nomo50 [BBfA);", "To_Localised":"KDT. nomo50 [BBfA)", "Message":"hey" }
+{ "timestamp":"2017-03-18T17:21:15Z", "event":"SendText", "To":"wing", "Message":"hey" }
+{ "timestamp":"2017-03-18T17:23:06Z", "event":"SendText", "To":"wing", "Message":"Im started playing 30 mins ago still have to make experience" }
+{ "timestamp":"2017-03-18T17:23:21Z", "event":"SendText", "To":"wing", "Message":"lets do some combat" }
+{ "timestamp":"2017-03-18T17:23:32Z", "event":"SendText", "To":"wing", "Message":"4 jumps" }
+{ "timestamp":"2017-03-18T17:24:58Z", "event":"SendText", "To":"wing", "Message":"put the energy into the systems when we arive" }
+{ "timestamp":"2017-03-18T17:25:39Z", "event":"SendText", "To":"wing", "Message":"you are my fighter crew" }
+{ "timestamp":"2017-03-18T17:26:29Z", "event":"SendText", "To":"wing", "Message":"lets go" }
+{ "timestamp":"2017-03-18T17:28:12Z", "event":"SendText", "To":"wing", "Message":"nice" }
+{ "timestamp":"2017-03-18T17:28:23Z", "event":"SendText", "To":"wing", "Message":"lol" }
+{ "timestamp":"2017-03-18T17:28:44Z", "event":"SendText", "To":"wing", "Message":"cant you steer a fighter" }
+{ "timestamp":"2017-03-18T17:29:27Z", "event":"SendText", "To":"wing", "Message":"sorry" }
+{ "timestamp":"2017-03-18T17:30:20Z", "event":"SendText", "To":"wing", "Message":"yep" }
+{ "timestamp":"2017-03-18T17:30:31Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-03-18T17:31:08Z", "event":"SendText", "To":"wing", "Message":"we dont have turrets" }
+{ "timestamp":"2017-03-18T17:31:15Z", "event":"SendText", "To":"wing", "Message":"hi" }
+{ "timestamp":"2017-03-18T17:31:45Z", "event":"SendText", "To":"wing", "Message":"you have to fly a fighter ok?" }
+{ "timestamp":"2017-03-18T17:32:22Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-03-18T17:32:50Z", "event":"SendText", "To":"wing", "Message":"dropping in a haz res" }
+{ "timestamp":"2017-03-18T17:32:53Z", "event":"SendText", "To":"wing", "Message":"hey" }
+{ "timestamp":"2017-03-18T17:33:19Z", "event":"SendText", "To":"wing", "Message":"mine too" }
+{ "timestamp":"2017-03-18T17:33:36Z", "event":"SendText", "To":"wing", "Message":"that was close" }
+{ "timestamp":"2017-03-18T17:34:55Z", "event":"SendText", "To":"wing", "Message":"searching for something bigger than a cobra" }
+{ "timestamp":"2017-03-18T17:35:45Z", "event":"SendText", "To":"wing", "Message":"fas" }
+{ "timestamp":"2017-03-18T17:36:06Z", "event":"SendText", "To":"wing", "Message":"3" }
+{ "timestamp":"2017-03-18T17:36:08Z", "event":"SendText", "To":"wing", "Message":"2" }
+{ "timestamp":"2017-03-18T17:36:10Z", "event":"SendText", "To":"wing", "Message":"1" }
+{ "timestamp":"2017-03-18T17:36:12Z", "event":"SendText", "To":"wing", "Message":"go" }
+{ "timestamp":"2017-03-18T17:36:54Z", "event":"SendText", "To":"wing", "Message":"fgs" }
+{ "timestamp":"2017-03-18T17:37:05Z", "event":"SendText", "To":"wing", "Message":"gogo" }
+{ "timestamp":"2017-03-18T17:38:22Z", "event":"SendText", "To":"wing", "Message":"does someone know a good place for bounty hunting?" }
+{ "timestamp":"2017-03-18T17:38:33Z", "event":"SendText", "To":"wing", "Message":"ic" }
+{ "timestamp":"2017-03-18T17:40:06Z", "event":"SendText", "To":"wing", "Message":":D" }
+{ "timestamp":"2017-03-18T17:43:16Z", "event":"SendText", "To":"wing", "Message":"dont know" }
+{ "timestamp":"2017-03-18T17:43:20Z", "event":"SendText", "To":"wing", "Message":"lets try" }
+{ "timestamp":"2017-03-18T17:44:55Z", "event":"SendText", "To":"wing", "Message":"nice to know" }
+{ "timestamp":"2017-03-18T17:44:58Z", "event":"SendText", "To":"wing", "Message":"fdl" }
+{ "timestamp":"2017-03-18T17:45:13Z", "event":"SendText", "To":"wing", "Message":"gogo" }
+{ "timestamp":"2017-03-18T17:49:11Z", "event":"SendText", "To":"wing", "Message":"got a vulture" }
+{ "timestamp":"2017-03-18T17:50:17Z", "event":"SendText", "To":"wing", "Message":":D" }
+{ "timestamp":"2017-03-18T17:51:22Z", "event":"SendText", "To":"wing", "Message":"jep" }
+{ "timestamp":"2017-03-18T17:53:10Z", "event":"SendText", "To":"wing", "Message":"should we go to a compromised nav beacon" }
+{ "timestamp":"2017-03-18T17:53:28Z", "event":"SendText", "To":"wing", "Message":"yep" }
+{ "timestamp":"2017-03-18T17:55:04Z", "event":"SendText", "To":"wing", "Message":"sorry" }
+{ "timestamp":"2017-03-18T17:55:49Z", "event":"SendText", "To":"wing", "Message":"found a system" }
+{ "timestamp":"2017-03-18T17:56:50Z", "event":"SendText", "To":"wing", "Message":"yep" }
+{ "timestamp":"2017-03-18T17:57:21Z", "event":"SendText", "To":"wing", "Message":"just a beta" }
+{ "timestamp":"2017-03-18T18:03:15Z", "event":"SendText", "To":"wing", "Message":"i thin we gonna die" }
+{ "timestamp":"2017-03-18T18:09:51Z", "event":"SendText", "To":"wing", "Message":"hey" }
+{ "timestamp":"2017-03-18T18:11:09Z", "event":"SendText", "To":"wing", "Message":"what do you mean" }
+{ "timestamp":"2017-03-18T18:12:02Z", "event":"SendText", "To":"wing", "Message":"the other ones can fly the fighters" }
+{ "timestamp":"2017-03-18T18:12:22Z", "event":"SendText", "To":"wing", "Message":"or use turrets and rocketlaunchers" }
+{ "timestamp":"2017-03-18T18:13:19Z", "event":"SendText", "To":"wing", "Message":"who tf attacked ss" }
+{ "timestamp":"2017-03-18T18:17:32Z", "event":"SendText", "To":"wing", "Message":"you have to be a fighter pilot" }
+{ "timestamp":"2017-03-18T18:20:41Z", "event":"SendText", "To":"wing", "Message":"just going to dock jm for repairs" }
+{ "timestamp":"2017-03-18T18:21:00Z", "event":"SendText", "To":"wing", "Message":"after that we can do what ever you want" }
+{ "timestamp":"2017-03-18T18:22:26Z", "event":"SendText", "To":"wing", "Message":"this is the ultimate sys you can buy every ship and outfitting part here" }
+{ "timestamp":"2017-03-18T18:22:34Z", "event":"SendText", "To":"wing", "Message":"only with turrets" }
+{ "timestamp":"2017-03-18T18:23:13Z", "event":"SendText", "To":"wing", "Message":"shit" }
+{ "timestamp":"2017-03-18T18:27:38Z", "event":"SendText", "To":"wing", "Message":"oooooops" }
+{ "timestamp":"2017-03-18T18:27:53Z", "event":"SendText", "To":"wing", "Message":"didn't saw him xD" }
+{ "timestamp":"2017-03-18T18:28:20Z", "event":"SendText", "To":"wing", "Message":"lets do some piracy" }
+{ "timestamp":"2017-03-18T18:28:35Z", "event":"SendText", "To":"wing", "Message":"fuck" }
+{ "timestamp":"2017-03-18T18:28:40Z", "event":"SendText", "To":"wing", "Message":"youre right" }
+{ "timestamp":"2017-03-18T18:28:48Z", "event":"SendText", "To":"wing", "Message":"lets do some bounty hunting" }
+{ "timestamp":"2017-03-18T18:30:28Z", "event":"SendText", "To":"wing", "Message":"yep" }
+{ "timestamp":"2017-03-18T18:31:14Z", "event":"SendText", "To":"wing", "Message":"res or comp nav beacon" }
+{ "timestamp":"2017-03-18T18:31:24Z", "event":"SendText", "To":"wing", "Message":"then lets go there" }
+{ "timestamp":"2017-03-18T18:31:39Z", "event":"SendText", "To":"wing", "Message":"many ships with high bounties" }
+{ "timestamp":"2017-03-18T18:32:06Z", "event":"SendText", "To":"wing", "Message":"get the fighters out" }
+{ "timestamp":"2017-03-18T18:32:36Z", "event":"SendText", "To":"wing", "Message":"yep" }
+{ "timestamp":"2017-03-18T18:34:31Z", "event":"SendText", "To":"wing", "Message":"get the fighter out" }
+{ "timestamp":"2017-03-18T18:37:23Z", "event":"SendText", "To":"wing", "Message":"Im from germany" }
+{ "timestamp":"2017-03-18T18:37:27Z", "event":"SendText", "To":"wing", "Message":"yep" }
+{ "timestamp":"2017-03-18T18:41:42Z", "event":"SendText", "To":"wing", "Message":"elite fgs" }
+{ "timestamp":"2017-03-18T18:43:31Z", "event":"SendText", "To":"wing", "Message":"next we go to a res" }
+{ "timestamp":"2017-03-18T18:48:34Z", "event":"SendText", "To":"wing", "Message":"why" }
+{ "timestamp":"2017-03-18T18:49:08Z", "event":"SendText", "To":"wing", "Message":"now you can but we are going to a res" }
+{ "timestamp":"2017-03-18T18:49:47Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-03-18T18:50:50Z", "event":"SendText", "To":"wing", "Message":"or conflict zone?" }
+{ "timestamp":"2017-03-18T18:51:17Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-03-18T18:53:13Z", "event":"SendText", "To":"wing", "Message":"get out" }
+{ "timestamp":"2017-03-18T18:53:53Z", "event":"SendText", "To":"wing", "Message":"more dangerous" }
+{ "timestamp":"2017-03-18T18:57:15Z", "event":"SendText", "To":"wing", "Message":"we're going to res" }
+{ "timestamp":"2017-03-18T18:58:03Z", "event":"SendText", "To":"wing", "Message":"this should work out better" }
+{ "timestamp":"2017-03-18T18:59:08Z", "event":"SendText", "To":"wing", "Message":"why" }
+{ "timestamp":"2017-03-18T19:23:16Z", "event":"SendText", "To":"local", "Message":"who wants to land on a planet with me and do s9ome srv fights or so?" }
+{ "timestamp":"2017-03-18T19:24:28Z", "event":"SendText", "To":"wing", "Message":"where should we go" }
+{ "timestamp":"2017-03-18T19:25:03Z", "event":"SendText", "To":"wing", "Message":" ok" }
+{ "timestamp":"2017-03-18T19:25:43Z", "event":"SendText", "To":"wing", "Message":"i dont fly it normaly" }
+{ "timestamp":"2017-03-18T19:25:50Z", "event":"SendText", "To":"wing", "Message":"I prefer clipper" }
+{ "timestamp":"2017-03-18T19:26:10Z", "event":"SendText", "To":"wing", "Message":"Me too but I dont fly it much" }
+{ "timestamp":"2017-03-18T19:28:00Z", "event":"SendText", "To":"$cmdr_decorate:#name=TheRoaringLion;", "To_Localised":"KDT. TheRoaringLion", "Message":"aisling duval too?" }
+{ "timestamp":"2017-03-18T19:28:12Z", "event":"SendText", "To":"$cmdr_decorate:#name=TheRoaringLion;", "To_Localised":"KDT. TheRoaringLion", "Message":"already got prismatics?" }
+{ "timestamp":"2017-03-18T19:28:36Z", "event":"SendText", "To":"$cmdr_decorate:#name=TheRoaringLion;", "To_Localised":"KDT. TheRoaringLion", "Message":"I use them on my vulture xD" }
+{ "timestamp":"2017-03-18T19:30:09Z", "event":"SendText", "To":"wing", "Message":"nope" }
+{ "timestamp":"2017-03-18T19:30:51Z", "event":"SendText", "To":"wing", "Message":"xxxim there" }
+{ "timestamp":"2017-03-18T19:31:49Z", "event":"SendText", "To":"$cmdr_decorate:#name=TheRoaringLion;", "To_Localised":"KDT. TheRoaringLion", "Message":"hey there :D" }
+{ "timestamp":"2017-03-18T19:33:02Z", "event":"SendText", "To":"wing", "Message":"well that happens whenn youn dont care about gforce" }
+{ "timestamp":"2017-03-18T19:33:47Z", "event":"SendText", "To":"wing", "Message":"now I take a ship which I dont normaly own" }
+{ "timestamp":"2017-03-18T19:34:53Z", "event":"SendText", "To":"wing", "Message":"corvette should do it easly" }
+{ "timestamp":"2017-03-18T19:35:40Z", "event":"SendText", "To":"wing", "Message":"yep" }
+{ "timestamp":"2017-03-18T19:35:56Z", "event":"SendText", "To":"wing", "Message":"on my way" }
+{ "timestamp":"2017-03-18T19:39:21Z", "event":"SendText", "To":"wing", "Message":"Im there" }
+{ "timestamp":"2017-03-18T19:41:47Z", "event":"SendText", "To":"$cmdr_decorate:#name=TheRoaringLion;", "To_Localised":"KDT. TheRoaringLion", "Message":"hate the steering of these" }
+{ "timestamp":"2017-03-18T19:44:26Z", "event":"SendText", "To":"wing", "Message":"haha" }
+{ "timestamp":"2017-03-18T19:44:43Z", "event":"SendText", "To":"$cmdr_decorate:#name=TheRoaringLion;", "To_Localised":"KDT. TheRoaringLion", "Message":"i know" }
+{ "timestamp":"2017-03-19T13:52:14Z", "event":"SendText", "To":"$cmdr_decorate:#name=chris swift;", "To_Localised":"KDT. chris swift", "Message":"hey#" }
+{ "timestamp":"2017-03-19T13:54:49Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh hey" }
+{ "timestamp":"2017-03-19T14:08:55Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa is ja nich schlimm" }
+{ "timestamp":"2017-03-19T14:15:24Z", "event":"SendText", "To":"Vortex-XIII", "Message":"lust heute mal mit ner cutter?" }
+{ "timestamp":"2017-03-19T14:16:26Z", "event":"SendText", "To":"local", "Message":"ok komme in so 10-15 min" }
+{ "timestamp":"2017-03-19T14:20:38Z", "event":"SendText", "To":"Vortex-XIII", "Message":"komme" }
+{ "timestamp":"2017-03-19T14:22:01Z", "event":"SendText", "To":"wing", "Message":"muss eben headset anmachen" }
+{ "timestamp":"2017-03-19T14:24:31Z", "event":"SendText", "To":"wing", "Message":"muss nur noch zum planeten fliegen" }
+{ "timestamp":"2017-03-19T14:26:49Z", "event":"SendText", "To":"wing", "Message":"bin in 5 sec da" }
+{ "timestamp":"2017-03-19T14:27:06Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"KDT. Vortex-XIII", "Message":"hey" }
+{ "timestamp":"2017-03-19T14:27:57Z", "event":"SendText", "To":"wing", "Message":"ab zur ann" }
+{ "timestamp":"2017-03-19T14:28:04Z", "event":"SendText", "To":"wing", "Message":"a" }
+{ "timestamp":"2017-03-19T14:28:52Z", "event":"SendText", "To":"wing", "Message":"clipper" }
+{ "timestamp":"2017-03-19T14:29:30Z", "event":"SendText", "To":"wing", "Message":"ciod" }
+{ "timestamp":"2017-03-19T14:30:05Z", "event":"SendText", "To":"wing", "Message":"ich muiss ja sagen die cutter verteilt mehr als gedacht" }
+{ "timestamp":"2017-03-19T14:30:48Z", "event":"SendText", "To":"wing", "Message":"auch gut" }
+{ "timestamp":"2017-03-19T14:30:57Z", "event":"SendText", "To":"wing", "Message":"fas" }
+{ "timestamp":"2017-03-19T14:33:19Z", "event":"SendText", "To":"wing", "Message":"verdammt ich hab nen piloten vergessen" }
+{ "timestamp":"2017-03-19T14:34:42Z", "event":"SendText", "To":"wing", "Message":"sonst lad mich mal in ne crew win" }
+{ "timestamp":"2017-03-19T14:38:23Z", "event":"SendText", "To":"wing", "Message":"haste noch turrets?" }
+{ "timestamp":"2017-03-19T14:39:21Z", "event":"SendText", "To":"wing", "Message":"dann lad mich mal in ne crew ein die kann ich dann ja abschießen" }

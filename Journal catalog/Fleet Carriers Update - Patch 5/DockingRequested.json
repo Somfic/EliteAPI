@@ -1,0 +1,3 @@
+{ "timestamp":"2020-09-29T17:48:25Z", "event":"DockingRequested", "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2020-10-05T15:43:02Z", "event":"DockingRequested", "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2020-10-06T16:29:15Z", "event":"DockingRequested", "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }

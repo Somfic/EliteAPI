@@ -1,0 +1,15 @@
+{ "timestamp":"2018-12-19T16:04:13Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2018-12-19T17:01:19Z", "event":"Undocked", "StationName":"Olivas Mines", "StationType":"Outpost", "MarketID":3228152576 }
+{ "timestamp":"2018-12-19T17:18:41Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2018-12-19T17:22:58Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2018-12-19T17:47:36Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2018-12-20T16:08:17Z", "event":"Undocked", "StationName":"Crown Platform", "StationType":"Outpost", "MarketID":3228831744 }
+{ "timestamp":"2018-12-20T16:20:09Z", "event":"Undocked", "StationName":"Longyear Survey", "StationType":"Coriolis", "MarketID":128003584 }
+{ "timestamp":"2018-12-20T16:30:37Z", "event":"Undocked", "StationName":"Nehsi Prospect", "StationType":"CraterOutpost", "MarketID":3535334144 }
+{ "timestamp":"2018-12-20T22:37:29Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2019-01-03T17:04:37Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2019-01-03T18:20:30Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2019-01-03T18:30:56Z", "event":"Undocked", "StationName":"Crown Platform", "StationType":"Outpost", "MarketID":3228831744 }
+{ "timestamp":"2019-01-03T18:46:45Z", "event":"Undocked", "StationName":"Hahn Gateway", "StationType":"Orbis", "MarketID":3228793344 }
+{ "timestamp":"2019-01-16T19:32:18Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2019-01-16T19:40:49Z", "event":"Undocked", "StationName":"Blaha Station", "StationType":"Outpost", "MarketID":3228786176 }

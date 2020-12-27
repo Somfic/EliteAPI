@@ -1,24 +1,41 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class LiftoffEvent : EventBase
+    public partial class LiftoffEvent : EventBase
     {
-        internal LiftoffEvent() { }
+        internal LiftoffEvent()
+        {
+        }
 
-        public static LiftoffEvent FromJson(string json) => JsonConvert.DeserializeObject<LiftoffEvent>(json);
+        [JsonProperty("PlayerControlled")] public bool PlayerControlled { get; private set; }
 
+        [JsonProperty("Latitude")] public double Latitude { get; private set; }
 
-        [JsonProperty("PlayerControlled")]
-        public bool PlayerControlled { get; internal set; }
+        [JsonProperty("Longitude")] public double Longitude { get; private set; }
+    }
 
-        [JsonProperty("Latitude")]
-        public float Latitude { get; internal set; }
+    public partial class LiftoffEvent
+    {
+        public static LiftoffEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<LiftoffEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Longitude")]
-        public float Longitude { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<LiftoffEvent> LiftoffEvent;
 
-        
+        internal void InvokeLiftoffEvent(LiftoffEvent arg)
+        {
+            LiftoffEvent?.Invoke(this, arg);
+        }
     }
 }

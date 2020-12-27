@@ -10,23 +10,23 @@ namespace EliteAPI.Journal.Processor
     /// <inheritdoc />
     public class JournalProcessor : IJournalProcessor
     {
-        /// <inheritdoc />
-        public event EventHandler<JournalEntry> NewJournalEntry;
+        private readonly IDictionary<FileInfo, IList<string>> _cache;
 
         public JournalProcessor()
         {
             _cache = new Dictionary<FileInfo, IList<string>>();
         }
 
-        private readonly IDictionary<FileInfo, IList<string>> _cache;
+        /// <inheritdoc />
+        public event EventHandler<JournalEntry> NewJournalEntry;
 
         /// <inheritdoc />
         public Task ProcessJournalFile(FileInfo journalFile, bool isWhileCatchingUp)
         {
-            IEnumerable<string> journalContent = ReadAllLines(journalFile);
-            foreach (string entry in journalContent)
+            var journalContent = ReadAllLines(journalFile);
+            foreach (var entry in journalContent)
             {
-                if (IsInCache(journalFile, entry)) { continue; }
+                if (IsInCache(journalFile, entry)) continue;
 
                 AddToCache(journalFile, entry);
 
@@ -39,13 +39,9 @@ namespace EliteAPI.Journal.Processor
         private void AddToCache(FileInfo file, string content)
         {
             if (!_cache.ContainsKey(file))
-            {
-                _cache.Add(file, new List<string> { content });
-            }
+                _cache.Add(file, new List<string> {content});
             else
-            {
                 _cache[file].Add(content);
-            }
         }
 
         private bool IsInCache(FileInfo file, string content)
@@ -55,16 +51,17 @@ namespace EliteAPI.Journal.Processor
 
         private IEnumerable<string> ReadAllLines(FileInfo file)
         {
-            using FileStream fs = new FileStream(file.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 0x1000, FileOptions.RandomAccess);
-            using StreamReader stream = new StreamReader(fs, Encoding.UTF8);
+            using var fs = new FileStream(file.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 0x1000,
+                FileOptions.RandomAccess);
+            using var stream = new StreamReader(fs, Encoding.UTF8);
 
             string line;
-            while ((line = stream.ReadLine()) != null)
-            {
-                yield return line;
-            }
+            while ((line = stream.ReadLine()) != null) yield return line;
         }
 
-        private string ReadAllText(FileInfo file) => string.Join(Environment.NewLine, ReadAllLines(file));
+        private string ReadAllText(FileInfo file)
+        {
+            return string.Join(Environment.NewLine, ReadAllLines(file));
+        }
     }
 }

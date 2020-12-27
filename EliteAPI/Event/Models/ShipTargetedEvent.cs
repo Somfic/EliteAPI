@@ -1,63 +1,51 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ShipTargetedEvent : EventBase
+    public partial class ShipTargetedEvent : EventBase
     {
-        internal ShipTargetedEvent() { }
+        internal ShipTargetedEvent()
+        {
+        }
 
-        public static ShipTargetedEvent FromJson(string json) => JsonConvert.DeserializeObject<ShipTargetedEvent>(json);
+        [JsonProperty("TargetLocked")] public bool TargetLocked { get; private set; }
 
+        [JsonProperty("Ship")] public string Ship { get; private set; }
 
-        [JsonProperty("TargetLocked")]
-        public bool TargetLocked { get; internal set; }
+        [JsonProperty("ScanStage")] public long ScanStage { get; private set; }
 
-        [JsonProperty("Ship")]
-        public string Ship { get; internal set; }
+        [JsonProperty("PilotName")] public string PilotName { get; private set; }
 
-        [JsonProperty("Ship_Localised")]
-        public string ShipLocalised { get; internal set; }
+        [JsonProperty("PilotName_Localised")] public string PilotNameLocalised { get; private set; }
 
-        [JsonProperty("ScanStage")]
-        public long ScanStage { get; internal set; }
+        [JsonProperty("PilotRank")] public string PilotRank { get; private set; }
 
-        [JsonProperty("PilotName")]
-        public string PilotName { get; internal set; }
+        [JsonProperty("ShieldHealth")] public double ShieldHealth { get; private set; }
 
-        [JsonProperty("PilotName_Localised")]
-        public string PilotNameLocalised { get; internal set; }
+        [JsonProperty("HullHealth")] public double HullHealth { get; private set; }
+    }
 
-        [JsonProperty("PilotRank")]
-        public string PilotRank { get; internal set; }
+    public partial class ShipTargetedEvent
+    {
+        public static ShipTargetedEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ShipTargetedEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("ShieldHealth")]
-        public float ShieldHealth { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<ShipTargetedEvent> ShipTargetedEvent;
 
-        [JsonProperty("HullHealth")]
-        public float HullHealth { get; internal set; }
-
-        [JsonProperty("Faction")]
-        public string Faction { get; internal set; }
-
-        [JsonProperty("LegalStatus")]
-        public string LegalStatus { get; internal set; }
-
-        [JsonProperty("Bounty")]
-        public long Bounty { get; internal set; }
-
-        [JsonProperty("Subsystem")]
-        public string Subsystem { get; internal set; }
-
-        [JsonProperty("Subsystem_Localised")]
-        public string SubsystemLocalised { get; internal set; }
-
-        [JsonProperty("SubsystemHealth")]
-        public float SubsystemHealth { get; internal set; }
-
-        [JsonProperty("SquadronID")]
-        public string SquadronId { get; internal set; }
-
-        
+        internal void InvokeShipTargetedEvent(ShipTargetedEvent arg)
+        {
+            ShipTargetedEvent?.Invoke(this, arg);
+        }
     }
 }

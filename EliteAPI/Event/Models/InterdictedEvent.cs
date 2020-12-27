@@ -1,30 +1,43 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class InterdictedEvent : EventBase
+    public partial class InterdictedEvent : EventBase
     {
-        internal InterdictedEvent() { }
+        internal InterdictedEvent()
+        {
+        }
 
-        public static InterdictedEvent FromJson(string json) => JsonConvert.DeserializeObject<InterdictedEvent>(json);
+        [JsonProperty("Submitted")] public bool Submitted { get; private set; }
 
+        [JsonProperty("Interdictor")] public string Interdictor { get; private set; }
 
-        [JsonProperty("Submitted")]
-        public bool Submitted { get; internal set; }
+        [JsonProperty("IsPlayer")] public bool IsPlayer { get; private set; }
 
-        [JsonProperty("Interdictor")]
-        public string Interdictor { get; internal set; }
+        [JsonProperty("Faction")] public string Faction { get; private set; }
+    }
 
-        [JsonProperty("Interdictor_Localised")]
-        public string InterdictorLocalised { get; internal set; }
+    public partial class InterdictedEvent
+    {
+        public static InterdictedEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<InterdictedEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("IsPlayer")]
-        public bool IsPlayer { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<InterdictedEvent> InterdictedEvent;
 
-        [JsonProperty("Faction")]
-        public string Faction { get; internal set; }
-
-        
+        internal void InvokeInterdictedEvent(InterdictedEvent arg)
+        {
+            InterdictedEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -1,18 +1,37 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class JoinACrewEvent : EventBase
+    public partial class JoinACrewEvent : EventBase
     {
-        internal JoinACrewEvent() { }
+        internal JoinACrewEvent()
+        {
+        }
 
-        public static JoinACrewEvent FromJson(string json) => JsonConvert.DeserializeObject<JoinACrewEvent>(json);
+        [JsonProperty("Captain")] public string Captain { get; private set; }
+    }
 
+    public partial class JoinACrewEvent
+    {
+        public static JoinACrewEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<JoinACrewEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Captain")]
-        public string Captain { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<JoinACrewEvent> JoinACrewEvent;
 
-        
+        internal void InvokeJoinACrewEvent(JoinACrewEvent arg)
+        {
+            JoinACrewEvent?.Invoke(this, arg);
+        }
     }
 }

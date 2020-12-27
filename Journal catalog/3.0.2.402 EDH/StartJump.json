@@ -1,0 +1,41 @@
+{ "timestamp":"2018-03-06T23:47:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"110 Herculis", "SystemAddress":2381299321195, "StarClass":"F" }
+{ "timestamp":"2018-03-06T23:55:33Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-07T00:06:45Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-07T00:08:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Liu Baja", "SystemAddress":9466242213305, "StarClass":"M" }
+{ "timestamp":"2018-03-07T00:14:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"110 Herculis", "SystemAddress":2381299321195, "StarClass":"F" }
+{ "timestamp":"2018-03-07T00:18:00Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-07T00:28:38Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-07T00:29:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ross 733", "SystemAddress":670149191097, "StarClass":"M" }
+{ "timestamp":"2018-03-07T00:32:33Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-07T00:37:18Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-07T00:43:24Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-07T00:46:53Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-07T00:55:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"110 Herculis", "SystemAddress":2381299321195, "StarClass":"F" }
+{ "timestamp":"2018-03-07T20:49:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Genetrix", "SystemAddress":2484378536299, "StarClass":"G" }
+{ "timestamp":"2018-03-07T20:50:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 571-80", "SystemAddress":2869440882105, "StarClass":"M" }
+{ "timestamp":"2018-03-07T20:52:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Eravate", "SystemAddress":5856221467362, "StarClass":"K" }
+{ "timestamp":"2018-03-07T21:11:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ekonir", "SystemAddress":9466510648769, "StarClass":"M" }
+{ "timestamp":"2018-03-07T21:21:00Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-07T21:24:46Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-07T21:53:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 3447", "SystemAddress":5306465653474, "StarClass":"K" }
+{ "timestamp":"2018-03-08T02:42:46Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-08T03:09:25Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-08T19:20:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Apoyota", "SystemAddress":7780366815970, "StarClass":"M" }
+{ "timestamp":"2018-03-08T19:35:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 7421", "SystemAddress":2518738274675, "StarClass":"DA" }
+{ "timestamp":"2018-03-08T19:36:45Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-08T19:39:03Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-08T19:40:27Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-08T20:13:55Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-08T20:15:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Apoyota", "SystemAddress":7780366815970, "StarClass":"M" }
+{ "timestamp":"2018-03-08T20:25:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ekonir", "SystemAddress":9466510648769, "StarClass":"M" }
+{ "timestamp":"2018-03-08T20:40:52Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-08T20:44:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Apoyota", "SystemAddress":7780366815970, "StarClass":"M" }
+{ "timestamp":"2018-03-08T20:56:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ngaliba", "SystemAddress":5068464072129, "StarClass":"M" }
+{ "timestamp":"2018-03-08T20:59:38Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-08T21:05:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Apoyota", "SystemAddress":7780366815970, "StarClass":"M" }
+{ "timestamp":"2018-03-08T21:18:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alrai Sector JR-W c1-14", "SystemAddress":3932143227618, "StarClass":"M" }
+{ "timestamp":"2018-03-08T21:19:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 687-31", "SystemAddress":16063848916417, "StarClass":"M" }
+{ "timestamp":"2018-03-08T21:20:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Dagr", "SystemAddress":3382387446490, "StarClass":"G" }
+{ "timestamp":"2018-03-08T21:23:10Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-08T21:26:13Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-08T21:33:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"G 138-40", "SystemAddress":7267755894201, "StarClass":"M" }

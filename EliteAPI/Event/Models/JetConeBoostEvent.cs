@@ -1,18 +1,37 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class JetConeBoostEvent : EventBase
+    public partial class JetConeBoostEvent : EventBase
     {
-        internal JetConeBoostEvent() { }
+        internal JetConeBoostEvent()
+        {
+        }
 
-        public static JetConeBoostEvent FromJson(string json) => JsonConvert.DeserializeObject<JetConeBoostEvent>(json);
+        [JsonProperty("BoostValue")] public double BoostValue { get; private set; }
+    }
 
+    public partial class JetConeBoostEvent
+    {
+        public static JetConeBoostEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<JetConeBoostEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("BoostValue")]
-        public float BoostValue { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<JetConeBoostEvent> JetConeBoostEvent;
 
-        
+        internal void InvokeJetConeBoostEvent(JetConeBoostEvent arg)
+        {
+            JetConeBoostEvent?.Invoke(this, arg);
+        }
     }
 }

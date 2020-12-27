@@ -1,45 +1,48 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ModuleStoreEvent : EventBase
+    public partial class ModuleStoreEvent : EventBase
     {
-        internal ModuleStoreEvent() { }
+        internal ModuleStoreEvent()
+        {
+        }
 
-        public static ModuleStoreEvent FromJson(string json) => JsonConvert.DeserializeObject<ModuleStoreEvent>(json);
+        [JsonProperty("Slot")] public string Slot { get; private set; }
 
+        [JsonProperty("StoredItem")] public string StoredItem { get; private set; }
 
-        [JsonProperty("MarketID")]
-        public long MarketId { get; internal set; }
+        [JsonProperty("StoredItem_Localised")] public string StoredItemLocalised { get; private set; }
 
-        [JsonProperty("Slot")]
-        public string Slot { get; internal set; }
+        [JsonProperty("Ship")] public string Ship { get; private set; }
 
-        [JsonProperty("StoredItem")]
-        public string StoredItem { get; internal set; }
-
-        [JsonProperty("StoredItem_Localised")]
-        public string StoredItemLocalised { get; internal set; }
-
-        [JsonProperty("Ship")]
-        public string Ship { get; internal set; }
-
-        [JsonProperty("ShipID")]
-        public long ShipId { get; internal set; }
-
-        [JsonProperty("Hot")]
-        public bool Hot { get; internal set; }
+        [JsonProperty("ShipID")] public long ShipId { get; private set; }
 
         [JsonProperty("EngineerModifications")]
-        public string EngineerModifications { get; internal set; }
+        public string EngineerModifications { get; private set; }
+    }
 
-        [JsonProperty("Level")]
-        public long Level { get; internal set; }
+    public partial class ModuleStoreEvent
+    {
+        public static ModuleStoreEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ModuleStoreEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Quality")]
-        public float Quality { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<ModuleStoreEvent> ModuleStoreEvent;
 
-        
+        internal void InvokeModuleStoreEvent(ModuleStoreEvent arg)
+        {
+            ModuleStoreEvent?.Invoke(this, arg);
+        }
     }
 }

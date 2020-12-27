@@ -1,27 +1,43 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class RestockVehicleEvent : EventBase
+    public partial class RestockVehicleEvent : EventBase
     {
-        internal RestockVehicleEvent() { }
+        internal RestockVehicleEvent()
+        {
+        }
 
-        public static RestockVehicleEvent FromJson(string json) => JsonConvert.DeserializeObject<RestockVehicleEvent>(json);
+        [JsonProperty("Type")] public string Type { get; private set; }
 
+        [JsonProperty("Loadout")] public string Loadout { get; private set; }
 
-        [JsonProperty("Type")]
-        public string Type { get; internal set; }
+        [JsonProperty("Cost")] public long Cost { get; private set; }
 
-        [JsonProperty("Loadout")]
-        public string Loadout { get; internal set; }
+        [JsonProperty("Count")] public long Count { get; private set; }
+    }
 
-        [JsonProperty("Cost")]
-        public long Cost { get; internal set; }
+    public partial class RestockVehicleEvent
+    {
+        public static RestockVehicleEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<RestockVehicleEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Count")]
-        public long Count { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<RestockVehicleEvent> RestockVehicleEvent;
 
-        
+        internal void InvokeRestockVehicleEvent(RestockVehicleEvent arg)
+        {
+            RestockVehicleEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -1,28 +1,55 @@
+using System;
 using System.Collections.Generic;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class MultiSellExplorationDataEvent : EventBase
+    public partial class MultiSellExplorationDataEvent : EventBase
     {
-        internal MultiSellExplorationDataEvent() { }
+        internal MultiSellExplorationDataEvent()
+        {
+        }
 
-        public static MultiSellExplorationDataEvent FromJson(string json) => JsonConvert.DeserializeObject<MultiSellExplorationDataEvent>(json);
+        [JsonProperty("Discovered")] public IReadOnlyList<Discovered> Discovered { get; private set; }
 
+        [JsonProperty("BaseValue")] public long BaseValue { get; private set; }
 
-        [JsonProperty("Discovered")]
-        public List<Discovered> Discovered { get; internal set; }
+        [JsonProperty("Bonus")] public long Bonus { get; private set; }
 
-        [JsonProperty("BaseValue")]
-        public long BaseValue { get; internal set; }
+        [JsonProperty("TotalEarnings")] public long TotalEarnings { get; private set; }
+    }
 
-        [JsonProperty("Bonus")]
-        public long Bonus { get; internal set; }
+    public class Discovered
+    {
+        internal Discovered()
+        {
+        }
 
-        [JsonProperty("TotalEarnings")]
-        public long TotalEarnings { get; internal set; }
+        [JsonProperty("SystemName")] public string SystemName { get; private set; }
 
-        
+        [JsonProperty("NumBodies")] public long NumBodies { get; private set; }
+    }
+
+    public partial class MultiSellExplorationDataEvent
+    {
+        public static MultiSellExplorationDataEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<MultiSellExplorationDataEvent>(json);
+        }
+    }
+}
+
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<MultiSellExplorationDataEvent> MultiSellExplorationDataEvent;
+
+        internal void InvokeMultiSellExplorationDataEvent(MultiSellExplorationDataEvent arg)
+        {
+            MultiSellExplorationDataEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -1,21 +1,39 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class RepairEvent : EventBase
+    public partial class RepairEvent : EventBase
     {
-        internal RepairEvent() { }
+        internal RepairEvent()
+        {
+        }
 
-        public static RepairEvent FromJson(string json) => JsonConvert.DeserializeObject<RepairEvent>(json);
+        [JsonProperty("Item")] public string Item { get; private set; }
 
+        [JsonProperty("Cost")] public long Cost { get; private set; }
+    }
 
-        [JsonProperty("Item")]
-        public string Item { get; internal set; }
+    public partial class RepairEvent
+    {
+        public static RepairEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<RepairEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Cost")]
-        public long Cost { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<RepairEvent> RepairEvent;
 
-        
+        internal void InvokeRepairEvent(RepairEvent arg)
+        {
+            RepairEvent?.Invoke(this, arg);
+        }
     }
 }

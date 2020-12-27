@@ -1,0 +1,8 @@
+{ "timestamp":"2017-09-27T14:36:54Z", "event":"ShipyardBuy", "ShipType":"cobramkiii", "ShipPrice":340976, "StoreOldShip":"Federation_Corvette", "StoreShipID":138 }
+{ "timestamp":"2017-09-27T18:55:34Z", "event":"ShipyardBuy", "ShipType":"adder", "ShipPrice":85613, "StoreOldShip":"SideWinder", "StoreShipID":149 }
+{ "timestamp":"2017-10-05T19:14:58Z", "event":"ShipyardBuy", "ShipType":"sidewinder", "ShipPrice":31200, "StoreOldShip":"DiamondBackXL", "StoreShipID":66 }
+{ "timestamp":"2017-10-06T17:51:35Z", "event":"ShipyardBuy", "ShipType":"cutter", "ShipPrice":173183434, "SellOldShip":"BelugaLiner", "SellShipID":126, "SellPrice":64086503 }
+{ "timestamp":"2017-10-18T19:07:40Z", "event":"ShipyardBuy", "ShipType":"anaconda", "ShipPrice":121800934, "StoreOldShip":"Cutter", "StoreShipID":126 }
+{ "timestamp":"2017-10-20T15:43:30Z", "event":"ShipyardBuy", "ShipType":"hauler", "ShipPrice":51402, "StoreOldShip":"FerDeLance", "StoreShipID":56 }
+{ "timestamp":"2017-10-22T09:57:58Z", "event":"ShipyardBuy", "ShipType":"cobramkiii", "ShipPrice":340976, "StoreOldShip":"Federation_Corvette", "StoreShipID":138 }
+{ "timestamp":"2017-11-12T14:02:10Z", "event":"ShipyardBuy", "ShipType":"asp_scout", "ShipPrice":3862126, "StoreOldShip":"Federation_Corvette", "StoreShipID":138 }

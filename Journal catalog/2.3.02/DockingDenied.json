@@ -1,0 +1,19 @@
+{ "timestamp":"2017-05-09T15:57:49Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Hale City" }
+{ "timestamp":"2017-05-12T16:10:35Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"" }
+{ "timestamp":"2017-05-12T16:21:32Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-05-12T19:03:20Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Zoline Port" }
+{ "timestamp":"2017-05-16T16:51:46Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Lave Station" }
+{ "timestamp":"2017-05-16T18:41:10Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Bingzhen Hub" }
+{ "timestamp":"2017-05-16T18:52:14Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Foden Orbital" }
+{ "timestamp":"2017-05-19T17:26:06Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Caidin Reach" }
+{ "timestamp":"2017-05-19T17:31:10Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Smoot Station" }
+{ "timestamp":"2017-05-27T19:34:14Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Pratchett's Disc" }
+{ "timestamp":"2017-06-13T13:36:12Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Engle Hub" }
+{ "timestamp":"2017-06-13T14:34:21Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"New Dawn Station" }
+{ "timestamp":"2017-06-15T13:45:27Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-06-15T15:16:11Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-06-15T15:16:15Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-06-15T16:56:53Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-06-16T14:58:25Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-06-20T13:38:08Z", "event":"DockingDenied", "Reason":"ActiveFighter", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-06-23T18:49:46Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Tun's Wart" }

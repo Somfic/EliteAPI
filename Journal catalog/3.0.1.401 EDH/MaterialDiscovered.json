@@ -1,0 +1,4 @@
+{ "timestamp":"2018-03-01T02:26:21Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"shielddensityreports", "Name_Localised":"Untypical Shield Scans ", "DiscoveryNumber":1 }
+{ "timestamp":"2018-03-01T19:10:31Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"bulkscandata", "Name_Localised":"Anomalous Bulk Scan Data", "DiscoveryNumber":2 }
+{ "timestamp":"2018-03-01T19:55:30Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"shieldpatternanalysis", "Name_Localised":"Aberrant Shield Pattern Analysis", "DiscoveryNumber":3 }
+{ "timestamp":"2018-03-01T19:55:31Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"decodedemissiondata", "Name_Localised":"Decoded Emission Data", "DiscoveryNumber":4 }

@@ -1,27 +1,43 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class FileheaderEvent : EventBase
+    public partial class FileheaderEvent : EventBase
     {
-        internal FileheaderEvent() { }
+        internal FileheaderEvent()
+        {
+        }
 
-        public static FileheaderEvent FromJson(string json) => JsonConvert.DeserializeObject<FileheaderEvent>(json);
+        [JsonProperty("part")] public long Part { get; private set; }
 
+        [JsonProperty("language")] public string Language { get; private set; }
 
-        [JsonProperty("part")]
-        public long Part { get; internal set; }
+        [JsonProperty("gameversion")] public string Gameversion { get; private set; }
 
-        [JsonProperty("language")]
-        public string Language { get; internal set; }
+        [JsonProperty("build")] public string Build { get; private set; }
+    }
 
-        [JsonProperty("gameversion")]
-        public string Gameversion { get; internal set; }
+    public partial class FileheaderEvent
+    {
+        public static FileheaderEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<FileheaderEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("build")]
-        public string Build { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<FileheaderEvent> FileheaderEvent;
 
-        
+        internal void InvokeFileheaderEvent(FileheaderEvent arg)
+        {
+            FileheaderEvent?.Invoke(this, arg);
+        }
     }
 }

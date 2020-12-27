@@ -1,0 +1,49 @@
+{ "timestamp":"2019-06-22T17:37:38Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-06-22T18:00:40Z", "event":"SupercruiseExit", "StarSystem":"Struve 1321", "SystemAddress":18262872106401, "Body":"Levi-Strauss City", "BodyID":47, "BodyType":"Station" }
+{ "timestamp":"2019-06-22T18:10:51Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-06-22T18:59:09Z", "event":"SupercruiseExit", "StarSystem":"Lushertha", "SystemAddress":4442883623275, "Body":"Laumer Hub", "BodyID":33, "BodyType":"Station" }
+{ "timestamp":"2019-06-22T20:07:53Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-06-22T20:31:07Z", "event":"SupercruiseExit", "StarSystem":"Struve 1321", "SystemAddress":18262872106401, "Body":"Struve 1321 A 1", "BodyID":9, "BodyType":"Planet" }
+{ "timestamp":"2019-06-22T20:42:06Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-06-22T21:05:09Z", "event":"SupercruiseExit", "StarSystem":"Lushertha", "SystemAddress":4442883623275, "Body":"Lushertha B 7 a", "BodyID":28, "BodyType":"Planet" }
+{ "timestamp":"2019-06-22T21:19:39Z", "event":"SupercruiseExit", "StarSystem":"LHS 6128", "SystemAddress":2869709383065, "Body":"LHS 6128 1", "BodyID":5, "BodyType":"Planet" }
+{ "timestamp":"2019-06-22T21:29:40Z", "event":"SupercruiseExit", "StarSystem":"LHS 6128", "SystemAddress":2869709383065, "Body":"Lyakhov Depot", "BodyID":56, "BodyType":"Station" }
+{ "timestamp":"2019-06-22T21:34:25Z", "event":"SupercruiseExit", "StarSystem":"LHS 1446", "SystemAddress":2621817489763, "Body":"LHS 1446", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2019-06-22T21:39:51Z", "event":"SupercruiseExit", "StarSystem":"LHS 1446", "SystemAddress":2621817489763, "Body":"LHS 1446 6 g", "BodyID":58, "BodyType":"Planet" }
+{ "timestamp":"2019-06-22T21:44:55Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-06-22T21:55:17Z", "event":"SupercruiseExit", "StarSystem":"LHS 1446", "SystemAddress":2621817489763, "Body":"LHS 1446 6 g", "BodyID":58, "BodyType":"Planet" }
+{ "timestamp":"2019-06-22T22:00:15Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-06-22T22:08:11Z", "event":"SupercruiseExit", "StarSystem":"Lushertha", "SystemAddress":4442883623275, "Body":"Lushertha A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2019-06-22T22:19:52Z", "event":"SupercruiseExit", "StarSystem":"Lushertha", "SystemAddress":4442883623275, "Body":"Lushertha B 7 a", "BodyID":28, "BodyType":"Planet" }
+{ "timestamp":"2019-06-28T23:22:27Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-06-28T23:39:09Z", "event":"SupercruiseExit", "StarSystem":"Nang Ta-khian", "SystemAddress":2007997911762, "Body":"Nang Ta-khian", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2019-06-28T23:43:29Z", "event":"SupercruiseExit", "StarSystem":"Nang Ta-khian", "SystemAddress":2007997911762, "Body":"Nisa", "BodyID":6, "BodyType":"Planet" }
+{ "timestamp":"2019-06-28T23:51:09Z", "event":"SupercruiseExit", "StarSystem":"Bodedi", "SystemAddress":4923919960427, "Body":"Bodedi A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2019-06-28T23:55:56Z", "event":"SupercruiseExit", "StarSystem":"Bodedi", "SystemAddress":4923919960427, "Body":"Chwedyk Station", "BodyID":4, "BodyType":"Station" }
+{ "timestamp":"2019-06-29T00:03:37Z", "event":"SupercruiseExit", "StarSystem":"LHS 224", "SystemAddress":13864825595289, "Body":"LHS 224 A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2019-06-29T00:08:29Z", "event":"SupercruiseExit", "StarSystem":"LHS 224", "SystemAddress":13864825595289, "Body":"Bowersox Relay", "BodyID":28, "BodyType":"Station" }
+{ "timestamp":"2019-06-29T00:17:30Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-08-05T16:02:26Z", "event":"SupercruiseExit", "StarSystem":"LHS 221", "SystemAddress":7267755828633, "Body":"Schiltberger Port", "BodyID":61, "BodyType":"Station" }
+{ "timestamp":"2019-08-05T16:13:16Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-08-05T16:30:57Z", "event":"SupercruiseExit", "StarSystem":"Zeessze", "SystemAddress":2282875785938, "Body":"Zeessze", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2019-08-05T16:34:38Z", "event":"SupercruiseExit", "StarSystem":"Zeessze", "SystemAddress":2282875785938, "Body":"Rosseland Gateway", "BodyID":6, "BodyType":"Station" }
+{ "timestamp":"2019-08-05T16:41:13Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"LHS 215", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2019-08-05T16:46:01Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-08-18T01:35:16Z", "event":"SupercruiseExit", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "Body":"LP 30-55 A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2019-08-18T01:40:53Z", "event":"SupercruiseExit", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "Body":"LP 30-55 A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2019-08-18T01:46:26Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-08-18T02:11:38Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Diesel Orbital", "BodyID":65, "BodyType":"Station" }
+{ "timestamp":"2019-08-18T02:22:58Z", "event":"SupercruiseExit", "StarSystem":"DX 799", "SystemAddress":8879945552594, "Body":"DX 799 ABC 1 e", "BodyID":34, "BodyType":"Planet" }
+{ "timestamp":"2019-08-18T02:32:11Z", "event":"SupercruiseExit", "StarSystem":"LHS 140", "SystemAddress":7267487458721, "Body":"Mondeh Station", "BodyID":52, "BodyType":"Station" }
+{ "timestamp":"2019-08-18T02:41:26Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Feynman Gateway", "BodyID":64, "BodyType":"Station" }
+{ "timestamp":"2019-08-18T02:47:03Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Diesel Orbital", "BodyID":65, "BodyType":"Station" }
+{ "timestamp":"2019-08-18T02:52:59Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-08-27T02:04:20Z", "event":"SupercruiseExit", "StarSystem":"Eta Cassiopeiae", "SystemAddress":663312402795, "Body":"Eta Cassiopeiae", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2019-08-27T02:10:02Z", "event":"SupercruiseExit", "StarSystem":"Eta Cassiopeiae", "SystemAddress":663312402795, "Body":"Eta Cassiopeiae", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2019-08-27T02:18:51Z", "event":"SupercruiseExit", "StarSystem":"Eta Cassiopeiae", "SystemAddress":663312402795, "Body":"Eta Cassiopeiae B", "BodyID":2, "BodyType":"Star" }
+{ "timestamp":"2019-08-27T02:25:33Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-08-27T02:34:19Z", "event":"SupercruiseExit", "StarSystem":"LHS 3595", "SystemAddress":20461895361961, "Body":"LHS 3595 ABC", "BodyID":2, "BodyType":"Null" }
+{ "timestamp":"2019-08-27T02:43:58Z", "event":"SupercruiseExit", "StarSystem":"LHS 3595", "SystemAddress":20461895361961, "Body":"Chaudhary Hub", "BodyID":17, "BodyType":"Station" }
+{ "timestamp":"2019-08-27T02:52:15Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-09-03T21:26:23Z", "event":"SupercruiseExit", "StarSystem":"Lushertha", "SystemAddress":4442883623275, "Body":"Lushertha B 7 a", "BodyID":28, "BodyType":"Planet" }
+{ "timestamp":"2019-09-03T21:53:57Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }

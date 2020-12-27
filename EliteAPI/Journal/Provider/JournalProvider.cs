@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -38,7 +37,6 @@ namespace EliteAPI.Journal.Provider
                 _log.LogTrace(exception, "Could not get active journal file from journal directory");
                 throw exception;
             }
-            
         }
     }
 }

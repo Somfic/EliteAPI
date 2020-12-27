@@ -1,0 +1,5 @@
+{ "timestamp":"2018-03-27T00:23:28Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector CL-X b1-3", "SystemAddress":7267218629961, "Body":"Hyades Sector CL-X b1-3 A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2018-03-27T00:50:03Z", "event":"SupercruiseExit", "StarSystem":"Pleiades Sector IH-V c2-5", "SystemAddress":1458107749010, "Body":"Pleiades Sector IH-V c2-5", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2018-03-27T00:56:14Z", "event":"SupercruiseExit", "StarSystem":"Pleiades Sector IH-V c2-5", "SystemAddress":1458107749010, "Body":"Rix Depot", "BodyID":63, "BodyType":"Station" }
+{ "timestamp":"2018-03-27T01:20:13Z", "event":"SupercruiseExit", "StarSystem":"Maia", "SystemAddress":8216113749, "Body":"Maia A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2018-03-27T01:23:55Z", "event":"SupercruiseExit", "StarSystem":"Maia", "SystemAddress":8216113749, "Body":"Maia A 2 a", "BodyID":6, "BodyType":"Planet" }

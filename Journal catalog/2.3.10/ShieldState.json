@@ -1,0 +1,11 @@
+{ "timestamp":"2017-06-28T12:57:47Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2017-06-28T12:58:42Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2017-06-28T13:57:20Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2017-07-01T11:19:44Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2017-07-01T11:19:48Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2017-07-01T11:23:23Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2017-07-01T11:23:28Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2017-07-01T14:20:18Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2017-07-05T19:43:50Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2017-07-06T14:37:49Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2017-07-06T15:41:20Z", "event":"ShieldState", "ShieldsUp":true }

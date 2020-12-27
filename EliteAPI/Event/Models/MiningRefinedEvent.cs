@@ -1,21 +1,39 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class MiningRefinedEvent : EventBase
+    public partial class MiningRefinedEvent : EventBase
     {
-        internal MiningRefinedEvent() { }
+        internal MiningRefinedEvent()
+        {
+        }
 
-        public static MiningRefinedEvent FromJson(string json) => JsonConvert.DeserializeObject<MiningRefinedEvent>(json);
+        [JsonProperty("Type")] public string Type { get; private set; }
 
+        [JsonProperty("Type_Localised")] public string TypeLocalised { get; private set; }
+    }
 
-        [JsonProperty("Type")]
-        public string Type { get; internal set; }
+    public partial class MiningRefinedEvent
+    {
+        public static MiningRefinedEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<MiningRefinedEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Type_Localised")]
-        public string TypeLocalised { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<MiningRefinedEvent> MiningRefinedEvent;
 
-        
+        internal void InvokeMiningRefinedEvent(MiningRefinedEvent arg)
+        {
+            MiningRefinedEvent?.Invoke(this, arg);
+        }
     }
 }

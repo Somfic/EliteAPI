@@ -1,0 +1,159 @@
+{ "timestamp":"2017-05-08T14:34:37Z", "event":"Undocked", "StationName":"Attenborough's Watch", "StationType":"AsteroidBase" }
+{ "timestamp":"2017-05-08T18:13:18Z", "event":"Undocked", "StationName":"Foden Orbital", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-08T18:34:25Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-05-08T18:52:40Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-05-08T19:17:23Z", "event":"Undocked", "StationName":"Krylov Ring", "StationType":"Orbis" }
+{ "timestamp":"2017-05-09T16:08:19Z", "event":"Undocked", "StationName":"Hale City", "StationType":"Outpost" }
+{ "timestamp":"2017-05-09T16:45:39Z", "event":"Undocked", "StationName":"Laplace Orbital", "StationType":"Orbis" }
+{ "timestamp":"2017-05-10T13:12:24Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-05-10T13:21:11Z", "event":"Undocked", "StationName":"Laplace Orbital", "StationType":"Orbis" }
+{ "timestamp":"2017-05-11T12:25:57Z", "event":"Undocked", "StationName":"Faraday Ring", "StationType":"Orbis" }
+{ "timestamp":"2017-05-11T13:23:14Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-05-11T13:31:29Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-05-11T14:20:34Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-05-11T18:31:20Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-05-11T18:48:06Z", "event":"Undocked", "StationName":"Turner Metallics Inc", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-05-12T14:24:55Z", "event":"Undocked", "StationName":"Turner Metallics Inc", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-05-12T14:35:58Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-05-12T15:41:35Z", "event":"Undocked", "StationName":"Zoline Port", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-12T16:02:49Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-05-12T16:15:03Z", "event":"Undocked", "StationName":"Farseer Inc", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-05-12T16:49:14Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-05-12T17:07:58Z", "event":"Undocked", "StationName":"Trader's Rest", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-05-12T17:19:46Z", "event":"Undocked", "StationName":"Hedley Orbital", "StationType":"Orbis" }
+{ "timestamp":"2017-05-12T17:34:13Z", "event":"Undocked", "StationName":"Broo's Legacy", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-05-12T18:15:12Z", "event":"Undocked", "StationName":"Zoline Port", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-14T13:12:43Z", "event":"Undocked", "StationName":"Zoline Port", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-14T13:55:41Z", "event":"Undocked", "StationName":"Vishweswarayya Orbital", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-14T18:30:17Z", "event":"Undocked", "StationName":"Zoline Port", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-15T18:46:07Z", "event":"Undocked", "StationName":"Zoline Port", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-15T20:17:52Z", "event":"Undocked", "StationName":"Zoline Port", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-16T12:04:30Z", "event":"Undocked", "StationName":"Chango Dock", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-16T12:23:51Z", "event":"Undocked", "StationName":"Zoline Port", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-16T15:46:24Z", "event":"Undocked", "StationName":"Zoline Port", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-16T16:04:21Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-05-16T16:18:51Z", "event":"Undocked", "StationName":"Lave Station", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-16T16:26:20Z", "event":"Undocked", "StationName":"Vatermann LLC", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-05-16T16:30:47Z", "event":"Undocked", "StationName":"Lave Station", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-16T16:35:42Z", "event":"Undocked", "StationName":"Vatermann LLC", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-05-16T16:41:18Z", "event":"Undocked", "StationName":"Lave Station", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-16T16:47:18Z", "event":"Undocked", "StationName":"Lave Station", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-16T16:53:09Z", "event":"Undocked", "StationName":"Lave Station", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-16T17:04:18Z", "event":"Undocked", "StationName":"Vatermann LLC", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-05-16T18:30:46Z", "event":"Undocked", "StationName":"Bingzhen Hub", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-16T18:37:29Z", "event":"Undocked", "StationName":"Caidin Reach", "StationType":"Outpost" }
+{ "timestamp":"2017-05-16T18:43:46Z", "event":"Undocked", "StationName":"Bingzhen Hub", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-16T18:58:33Z", "event":"Undocked", "StationName":"Foden Orbital", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-17T18:47:07Z", "event":"Undocked", "StationName":"Paradiso Outpost", "StationType":"Orbis" }
+{ "timestamp":"2017-05-19T17:02:44Z", "event":"Undocked", "StationName":"Paradiso Outpost", "StationType":"Orbis" }
+{ "timestamp":"2017-05-19T17:22:37Z", "event":"Undocked", "StationName":"Smoot Station", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-19T17:29:08Z", "event":"Undocked", "StationName":"Caidin Reach", "StationType":"Outpost" }
+{ "timestamp":"2017-05-19T17:33:27Z", "event":"Undocked", "StationName":"Smoot Station", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-19T17:43:58Z", "event":"Undocked", "StationName":"Bluford Orbital", "StationType":"Orbis" }
+{ "timestamp":"2017-05-19T18:30:30Z", "event":"Undocked", "StationName":"Zoline Port", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-19T18:40:05Z", "event":"Undocked", "StationName":"Lounge Port", "StationType":"Orbis" }
+{ "timestamp":"2017-05-19T18:53:54Z", "event":"Undocked", "StationName":"Fan Gateway", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-19T18:59:49Z", "event":"Undocked", "StationName":"Nemo Cyber Party Base", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-05-19T19:11:23Z", "event":"Undocked", "StationName":"Zhen Dock", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-19T19:22:25Z", "event":"Undocked", "StationName":"Nemo Cyber Party Base", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-05-19T19:33:16Z", "event":"Undocked", "StationName":"Zhen Dock", "StationType":"Coriolis" }
+{ "timestamp":"2017-05-20T12:11:01Z", "event":"Undocked", "StationName":"Nemo Cyber Party Base", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-05-21T12:30:12Z", "event":"Undocked", "StationName":"Farseer Inc", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-05-26T14:05:17Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-05-27T19:31:47Z", "event":"Undocked", "StationName":"Pratchett's Disc", "StationType":"Orbis" }
+{ "timestamp":"2017-06-05T15:25:14Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-05T15:53:29Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-10T08:20:49Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-10T08:48:54Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-10T16:33:00Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-12T13:36:51Z", "event":"Undocked", "StationName":"Invergary", "StationType":"Coriolis" }
+{ "timestamp":"2017-06-12T13:41:22Z", "event":"Undocked", "StationName":"Invergary", "StationType":"Coriolis" }
+{ "timestamp":"2017-06-12T13:56:10Z", "event":"Undocked", "StationName":"Farseer Inc", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-12T14:06:25Z", "event":"Undocked", "StationName":"Heck Reserve", "StationType":"Coriolis" }
+{ "timestamp":"2017-06-12T17:30:50Z", "event":"Undocked", "StationName":"Brooks Hold", "StationType":"Coriolis" }
+{ "timestamp":"2017-06-12T17:43:30Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-13T12:40:02Z", "event":"Undocked", "StationName":"Obsidian Orbital", "StationType":"Bernal" }
+{ "timestamp":"2017-06-13T13:13:46Z", "event":"Undocked", "StationName":"Laplace Ring", "StationType":"Coriolis" }
+{ "timestamp":"2017-06-13T13:24:55Z", "event":"Undocked", "StationName":"Deb Vision", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-13T13:55:07Z", "event":"Undocked", "StationName":"Engle Hub", "StationType":"Orbis" }
+{ "timestamp":"2017-06-13T14:06:36Z", "event":"Undocked", "StationName":"Engle Hub", "StationType":"Orbis" }
+{ "timestamp":"2017-06-13T14:30:13Z", "event":"Undocked", "StationName":"Newholm Station", "StationType":"Orbis" }
+{ "timestamp":"2017-06-13T15:11:31Z", "event":"Undocked", "StationName":"New Dawn Station", "StationType":"Orbis" }
+{ "timestamp":"2017-06-13T15:20:45Z", "event":"Undocked", "StationName":"Newholm Station", "StationType":"Orbis" }
+{ "timestamp":"2017-06-13T18:09:55Z", "event":"Undocked", "StationName":"Paradiso Outpost", "StationType":"Orbis" }
+{ "timestamp":"2017-06-13T18:43:32Z", "event":"Undocked", "StationName":"Tun's Wart", "StationType":"Orbis" }
+{ "timestamp":"2017-06-14T12:57:13Z", "event":"Undocked", "StationName":"Thompson-Keen Asylum", "StationType":"Orbis" }
+{ "timestamp":"2017-06-14T13:08:23Z", "event":"Undocked", "StationName":"PEW-1901", "StationType":"Orbis" }
+{ "timestamp":"2017-06-14T13:24:09Z", "event":"Undocked", "StationName":"Couper Dock", "StationType":"Outpost" }
+{ "timestamp":"2017-06-14T13:38:39Z", "event":"Undocked", "StationName":"Phillips Landing", "StationType":"Outpost" }
+{ "timestamp":"2017-06-14T13:46:01Z", "event":"Undocked", "StationName":"Michalitsianos Hub", "StationType":"Bernal" }
+{ "timestamp":"2017-06-14T14:03:34Z", "event":"Undocked", "StationName":"Knapp Platform", "StationType":"Outpost" }
+{ "timestamp":"2017-06-15T13:49:54Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-15T14:08:47Z", "event":"Undocked", "StationName":"Farseer Inc", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-15T14:10:49Z", "event":"Undocked", "StationName":"Farseer Inc", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-15T14:16:52Z", "event":"Undocked", "StationName":"Farseer Inc", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-15T14:24:10Z", "event":"Undocked", "StationName":"Stross Hub", "StationType":"Orbis" }
+{ "timestamp":"2017-06-15T15:03:57Z", "event":"Undocked", "StationName":"Farseer Inc", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-15T15:15:32Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-15T15:19:05Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-15T15:28:49Z", "event":"Undocked", "StationName":"Engle Hub", "StationType":"Orbis" }
+{ "timestamp":"2017-06-15T16:36:59Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-15T17:39:53Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-15T18:04:15Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-15T18:11:27Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-15T18:17:10Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-15T19:00:46Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-15T19:06:23Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-16T15:02:19Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-16T15:25:53Z", "event":"Undocked", "StationName":"Ehrlich City", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-17T12:00:01Z", "event":"Undocked", "StationName":"Columbus", "StationType":"Bernal" }
+{ "timestamp":"2017-06-17T12:28:16Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-17T13:25:27Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-17T14:56:24Z", "event":"Undocked", "StationName":"Invergary", "StationType":"Coriolis" }
+{ "timestamp":"2017-06-17T15:28:22Z", "event":"Undocked", "StationName":"Invergary", "StationType":"Coriolis" }
+{ "timestamp":"2017-06-20T13:33:21Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-20T15:24:57Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-20T15:37:42Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-20T16:03:13Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-20T16:18:29Z", "event":"Undocked", "StationName":"Broo's Legacy", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-20T17:15:35Z", "event":"Undocked", "StationName":"Trophy Camp", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-20T17:23:40Z", "event":"Undocked", "StationName":"Trophy Camp", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-20T17:37:22Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-20T18:09:24Z", "event":"Undocked", "StationName":"Polyakov Station", "StationType":"Orbis" }
+{ "timestamp":"2017-06-20T19:52:27Z", "event":"Undocked", "StationName":"Ashby City", "StationType":"Bernal" }
+{ "timestamp":"2017-06-22T11:44:15Z", "event":"Undocked", "StationName":"Payson Installation", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-22T11:57:05Z", "event":"Undocked", "StationName":"Haber City", "StationType":"Bernal" }
+{ "timestamp":"2017-06-22T12:20:48Z", "event":"Undocked", "StationName":"Lee Port", "StationType":"Bernal" }
+{ "timestamp":"2017-06-22T13:08:44Z", "event":"Undocked", "StationName":"Lee Port", "StationType":"Bernal" }
+{ "timestamp":"2017-06-22T14:10:44Z", "event":"Undocked", "StationName":"Lee Port", "StationType":"Bernal" }
+{ "timestamp":"2017-06-22T18:37:58Z", "event":"Undocked", "StationName":"Lee Port", "StationType":"Bernal" }
+{ "timestamp":"2017-06-22T19:00:02Z", "event":"Undocked", "StationName":"Peters Terminal", "StationType":"Orbis" }
+{ "timestamp":"2017-06-22T19:41:19Z", "event":"Undocked", "StationName":"Peters Terminal", "StationType":"Orbis" }
+{ "timestamp":"2017-06-23T12:08:27Z", "event":"Undocked", "StationName":"Peters Terminal", "StationType":"Orbis" }
+{ "timestamp":"2017-06-23T16:06:47Z", "event":"Undocked", "StationName":"Peters Terminal", "StationType":"Orbis" }
+{ "timestamp":"2017-06-23T17:06:49Z", "event":"Undocked", "StationName":"Peters Terminal", "StationType":"Orbis" }
+{ "timestamp":"2017-06-23T18:23:36Z", "event":"Undocked", "StationName":"Peters Terminal", "StationType":"Orbis" }
+{ "timestamp":"2017-06-23T18:34:21Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-24T12:18:34Z", "event":"Undocked", "StationName":"Tun's Wart", "StationType":"Orbis" }
+{ "timestamp":"2017-06-24T12:27:40Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-24T13:50:13Z", "event":"Undocked", "StationName":"Leavitt City", "StationType":"Coriolis" }
+{ "timestamp":"2017-06-24T14:06:44Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-24T14:09:28Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-24T14:25:12Z", "event":"Undocked", "StationName":"Pater's Memorial", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-24T15:50:50Z", "event":"Undocked", "StationName":"Pater's Memorial", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-24T16:00:38Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-24T17:22:36Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2017-06-24T18:58:05Z", "event":"Undocked", "StationName":"Fortune's Loss", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-24T19:13:17Z", "event":"Undocked", "StationName":"Aitken Orbital", "StationType":"Orbis" }
+{ "timestamp":"2017-06-24T20:40:46Z", "event":"Undocked", "StationName":"Aitken Orbital", "StationType":"Orbis" }
+{ "timestamp":"2017-06-25T12:59:57Z", "event":"Undocked", "StationName":"Felice Dock", "StationType":"Bernal" }
+{ "timestamp":"2017-06-25T13:16:48Z", "event":"Undocked", "StationName":"Phoenix Base", "StationType":"SurfaceStation" }
+{ "timestamp":"2017-06-25T13:38:31Z", "event":"Undocked", "StationName":"Ziegel Dock", "StationType":"Coriolis" }
+{ "timestamp":"2017-06-25T13:51:54Z", "event":"Undocked", "StationName":"van Royen Vision", "StationType":"Outpost" }
+{ "timestamp":"2017-06-25T14:09:05Z", "event":"Undocked", "StationName":"Ziegel Dock", "StationType":"Coriolis" }
+{ "timestamp":"2017-06-25T14:42:59Z", "event":"Undocked", "StationName":"Bode Hub", "StationType":"Outpost" }
+{ "timestamp":"2017-06-25T15:00:19Z", "event":"Undocked", "StationName":"van Royen Vision", "StationType":"Outpost" }
+{ "timestamp":"2017-06-25T15:33:34Z", "event":"Undocked", "StationName":"Ziegel Dock", "StationType":"Coriolis" }
+{ "timestamp":"2017-06-25T15:36:49Z", "event":"Undocked", "StationName":"Ziegel Dock", "StationType":"Coriolis" }
+{ "timestamp":"2017-06-25T15:45:26Z", "event":"Undocked", "StationName":"van Royen Vision", "StationType":"Outpost" }
+{ "timestamp":"2017-06-25T15:51:47Z", "event":"Undocked", "StationName":"Ziegel Dock", "StationType":"Coriolis" }

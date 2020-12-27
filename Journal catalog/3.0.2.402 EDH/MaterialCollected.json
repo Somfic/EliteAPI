@@ -1,0 +1,4 @@
+{ "timestamp":"2018-03-08T02:59:17Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"legacyfirmware", "Name_Localised":"Specialised Legacy Firmware", "Count":1 }
+{ "timestamp":"2018-03-08T20:02:50Z", "event":"MaterialCollected", "Category":"Raw", "Name":"manganese", "Count":3 }
+{ "timestamp":"2018-03-08T20:03:13Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Count":3 }
+{ "timestamp":"2018-03-08T20:03:23Z", "event":"MaterialCollected", "Category":"Raw", "Name":"phosphorus", "Count":3 }

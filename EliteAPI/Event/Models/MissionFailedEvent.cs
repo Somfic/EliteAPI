@@ -1,21 +1,39 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class MissionFailedEvent : EventBase
+    public partial class MissionFailedEvent : EventBase
     {
-        internal MissionFailedEvent() { }
+        internal MissionFailedEvent()
+        {
+        }
 
-        public static MissionFailedEvent FromJson(string json) => JsonConvert.DeserializeObject<MissionFailedEvent>(json);
+        [JsonProperty("Name")] public string Name { get; private set; }
 
+        [JsonProperty("MissionID")] public long MissionId { get; private set; }
+    }
 
-        [JsonProperty("Name")]
-        public string Name { get; internal set; }
+    public partial class MissionFailedEvent
+    {
+        public static MissionFailedEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<MissionFailedEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("MissionID")]
-        public long MissionId { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<MissionFailedEvent> MissionFailedEvent;
 
-        
+        internal void InvokeMissionFailedEvent(MissionFailedEvent arg)
+        {
+            MissionFailedEvent?.Invoke(this, arg);
+        }
     }
 }

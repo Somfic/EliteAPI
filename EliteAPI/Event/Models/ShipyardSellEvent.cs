@@ -1,30 +1,43 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ShipyardSellEvent : EventBase
+    public partial class ShipyardSellEvent : EventBase
     {
-        internal ShipyardSellEvent() { }
+        internal ShipyardSellEvent()
+        {
+        }
 
-        public static ShipyardSellEvent FromJson(string json) => JsonConvert.DeserializeObject<ShipyardSellEvent>(json);
+        [JsonProperty("ShipType")] public string ShipType { get; private set; }
 
+        [JsonProperty("SellShipID")] public long SellShipId { get; private set; }
 
-        [JsonProperty("ShipType")]
-        public string ShipType { get; internal set; }
+        [JsonProperty("ShipPrice")] public long ShipPrice { get; private set; }
 
-        [JsonProperty("ShipType_Localised")]
-        public string ShipTypeLocalised { get; internal set; }
+        [JsonProperty("System")] public string System { get; private set; }
+    }
 
-        [JsonProperty("SellShipID")]
-        public long SellShipId { get; internal set; }
+    public partial class ShipyardSellEvent
+    {
+        public static ShipyardSellEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ShipyardSellEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("ShipPrice")]
-        public long ShipPrice { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<ShipyardSellEvent> ShipyardSellEvent;
 
-        [JsonProperty("MarketID")]
-        public long MarketId { get; internal set; }
-
-        
+        internal void InvokeShipyardSellEvent(ShipyardSellEvent arg)
+        {
+            ShipyardSellEvent?.Invoke(this, arg);
+        }
     }
 }

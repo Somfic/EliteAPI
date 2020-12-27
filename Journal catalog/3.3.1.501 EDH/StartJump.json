@@ -1,0 +1,33 @@
+{ "timestamp":"2018-12-19T16:06:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 6128", "SystemAddress":2869709383065, "StarClass":"M" }
+{ "timestamp":"2018-12-19T16:08:52Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-12-19T16:18:54Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-12-19T16:39:50Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-12-19T17:03:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2018-12-19T17:24:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "StarClass":"M" }
+{ "timestamp":"2018-12-19T17:29:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tollan", "SystemAddress":18262872171937, "StarClass":"M" }
+{ "timestamp":"2018-12-19T17:35:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2018-12-19T17:49:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "StarClass":"M" }
+{ "timestamp":"2018-12-20T16:09:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2126", "SystemAddress":20461895427489, "StarClass":"M" }
+{ "timestamp":"2018-12-20T16:11:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 64-194", "SystemAddress":13864825660833, "StarClass":"M" }
+{ "timestamp":"2018-12-20T16:13:47Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-12-20T16:21:17Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-12-20T16:31:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2018-12-20T22:39:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "StarClass":"M" }
+{ "timestamp":"2018-12-20T22:42:24Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-12-20T22:54:06Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-12-20T23:03:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-01-03T17:06:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tollan", "SystemAddress":18262872171937, "StarClass":"M" }
+{ "timestamp":"2019-01-03T17:13:53Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-01-03T17:28:25Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-01-03T17:34:38Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-01-03T17:45:56Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-01-03T17:48:39Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-01-03T17:58:45Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-01-03T18:06:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-01-03T18:22:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "StarClass":"M" }
+{ "timestamp":"2019-01-03T18:32:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nanomam", "SystemAddress":4752121268587, "StarClass":"K" }
+{ "timestamp":"2019-01-03T18:35:26Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-01-03T18:42:57Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2019-01-03T18:47:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2019-01-16T19:33:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Guangul", "SystemAddress":4958279698795, "StarClass":"G" }
+{ "timestamp":"2019-01-16T19:41:48Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }

@@ -1,42 +1,53 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ShipyardTransferEvent : EventBase
+    public partial class ShipyardTransferEvent : EventBase
     {
-        internal ShipyardTransferEvent() { }
+        internal ShipyardTransferEvent()
+        {
+        }
 
-        public static ShipyardTransferEvent FromJson(string json) => JsonConvert.DeserializeObject<ShipyardTransferEvent>(json);
+        [JsonProperty("ShipType")] public string ShipType { get; private set; }
 
+        [JsonProperty("ShipType_Localised")] public string ShipTypeLocalised { get; private set; }
 
-        [JsonProperty("ShipType")]
-        public string ShipType { get; internal set; }
+        [JsonProperty("ShipID")] public long ShipId { get; private set; }
 
-        [JsonProperty("ShipType_Localised")]
-        public string ShipTypeLocalised { get; internal set; }
+        [JsonProperty("System")] public string System { get; private set; }
 
-        [JsonProperty("ShipID")]
-        public long ShipId { get; internal set; }
+        [JsonProperty("ShipMarketID")] public long ShipMarketId { get; private set; }
 
-        [JsonProperty("System")]
-        public string System { get; internal set; }
+        [JsonProperty("Distance")] public double Distance { get; private set; }
 
-        [JsonProperty("ShipMarketID")]
-        public long ShipMarketId { get; internal set; }
+        [JsonProperty("TransferPrice")] public long TransferPrice { get; private set; }
 
-        [JsonProperty("Distance")]
-        public float Distance { get; internal set; }
+        [JsonProperty("TransferTime")] public long TransferTime { get; private set; }
 
-        [JsonProperty("TransferPrice")]
-        public long TransferPrice { get; internal set; }
+        [JsonProperty("MarketID")] public long MarketId { get; private set; }
+    }
 
-        [JsonProperty("TransferTime")]
-        public long TransferTime { get; internal set; }
+    public partial class ShipyardTransferEvent
+    {
+        public static ShipyardTransferEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ShipyardTransferEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("MarketID")]
-        public long MarketId { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<ShipyardTransferEvent> ShipyardTransferEvent;
 
-        
+        internal void InvokeShipyardTransferEvent(ShipyardTransferEvent arg)
+        {
+            ShipyardTransferEvent?.Invoke(this, arg);
+        }
     }
 }

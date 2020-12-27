@@ -1,0 +1,20 @@
+{ "timestamp":"2020-05-14T20:00:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"44 chi Draconis", "SystemAddress":2278220106091, "StarClass":"F" }
+{ "timestamp":"2020-05-14T20:02:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 450", "SystemAddress":11665802339753, "StarClass":"M" }
+{ "timestamp":"2020-05-14T20:03:55Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2020-05-14T20:05:03Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2020-05-14T20:24:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"44 chi Draconis", "SystemAddress":2278220106091, "StarClass":"F" }
+{ "timestamp":"2020-05-14T20:25:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2020-05-14T20:35:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2459", "SystemAddress":5068732573089, "StarClass":"M" }
+{ "timestamp":"2020-05-14T20:36:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 450", "SystemAddress":11665802339753, "StarClass":"M" }
+{ "timestamp":"2020-05-14T20:45:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"V1581 Cygni", "SystemAddress":22958211091280, "StarClass":"M" }
+{ "timestamp":"2020-05-14T20:49:57Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2020-05-14T20:57:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 450", "SystemAddress":11665802339753, "StarClass":"M" }
+{ "timestamp":"2020-05-14T21:05:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"44 chi Draconis", "SystemAddress":2278220106091, "StarClass":"F" }
+{ "timestamp":"2020-05-14T21:06:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2020-05-15T22:04:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ross 318", "SystemAddress":670686061985, "StarClass":"M" }
+{ "timestamp":"2020-05-15T22:09:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "StarClass":"M" }
+{ "timestamp":"2020-05-22T22:12:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2459", "SystemAddress":5068732573089, "StarClass":"M" }
+{ "timestamp":"2020-05-22T22:13:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lalande 21185", "SystemAddress":9467047519657, "StarClass":"M" }
+{ "timestamp":"2020-05-22T22:14:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Sol", "SystemAddress":10477373803, "StarClass":"G" }
+{ "timestamp":"2020-05-22T22:30:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Barnard's Star", "SystemAddress":18263140541865, "StarClass":"M" }
+{ "timestamp":"2020-05-22T22:36:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Sol", "SystemAddress":10477373803, "StarClass":"G" }

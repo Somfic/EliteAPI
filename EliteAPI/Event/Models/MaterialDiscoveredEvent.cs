@@ -1,27 +1,41 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class MaterialDiscoveredEvent : EventBase
+    public partial class MaterialDiscoveredEvent : EventBase
     {
-        internal MaterialDiscoveredEvent() { }
+        internal MaterialDiscoveredEvent()
+        {
+        }
 
-        public static MaterialDiscoveredEvent FromJson(string json) => JsonConvert.DeserializeObject<MaterialDiscoveredEvent>(json);
+        [JsonProperty("Category")] public string Category { get; private set; }
 
+        [JsonProperty("Name")] public string Name { get; private set; }
 
-        [JsonProperty("Category")]
-        public string Category { get; internal set; }
+        [JsonProperty("DiscoveryNumber")] public long DiscoveryNumber { get; private set; }
+    }
 
-        [JsonProperty("Name")]
-        public string Name { get; internal set; }
+    public partial class MaterialDiscoveredEvent
+    {
+        public static MaterialDiscoveredEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<MaterialDiscoveredEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<MaterialDiscoveredEvent> MaterialDiscoveredEvent;
 
-        [JsonProperty("DiscoveryNumber")]
-        public long DiscoveryNumber { get; internal set; }
-
-        
+        internal void InvokeMaterialDiscoveredEvent(MaterialDiscoveredEvent arg)
+        {
+            MaterialDiscoveredEvent?.Invoke(this, arg);
+        }
     }
 }

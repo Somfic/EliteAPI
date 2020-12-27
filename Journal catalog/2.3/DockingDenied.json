@@ -1,0 +1,4 @@
+{ "timestamp":"2017-04-14T12:59:09Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-04-14T13:25:27Z", "event":"DockingDenied", "Reason":"TooLarge", "StationName":"McMahon Dock" }
+{ "timestamp":"2017-04-18T17:52:44Z", "event":"DockingDenied", "Reason":"Hostile", "StationName":"Beregovoi Colony" }
+{ "timestamp":"2017-04-20T11:03:46Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Dyr Enterprise" }

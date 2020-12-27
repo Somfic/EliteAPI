@@ -1,0 +1,2 @@
+{ "timestamp":"2018-03-21T23:23:53Z", "event":"ModuleRetrieve", "MarketID":3227921664, "Slot":"MediumHardpoint2", "RetrievedItem":"$hpt_basicmissilerack_fixed_medium_name;", "RetrievedItem_Localised":"Seeker Missile Rack", "Ship":"cobramkiii", "ShipID":0, "Hot":false }
+{ "timestamp":"2018-03-21T23:23:59Z", "event":"ModuleRetrieve", "MarketID":3227921664, "Slot":"MediumHardpoint1", "RetrievedItem":"$hpt_basicmissilerack_fixed_medium_name;", "RetrievedItem_Localised":"Seeker Missile Rack", "Ship":"cobramkiii", "ShipID":0, "Hot":false }

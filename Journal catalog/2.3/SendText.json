@@ -1,0 +1,975 @@
+{ "timestamp":"2017-04-11T18:12:23Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hay" }
+{ "timestamp":"2017-04-11T18:13:31Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich gehe jetzt erstaml tee einkaufen" }
+{ "timestamp":"2017-04-11T18:15:40Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa mache ich auch wenn ich daa lande" }
+{ "timestamp":"2017-04-11T18:16:30Z", "event":"SendText", "To":"Vortex-XIII", "Message":"warum ist dieses system als home system?" }
+{ "timestamp":"2017-04-11T18:18:20Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja guuut ich muss mir eigentlich auch mal sowas wie nen homesystem zulgen" }
+{ "timestamp":"2017-04-11T18:19:01Z", "event":"SendText", "To":"Vortex-XIII", "Message":"das is is immer geil" }
+{ "timestamp":"2017-04-11T18:19:18Z", "event":"SendText", "To":"local", "Message":"vorallem bei den großen pötten" }
+{ "timestamp":"2017-04-11T18:19:33Z", "event":"SendText", "To":"Vortex-XIII", "Message":"viel spaß!" }
+{ "timestamp":"2017-04-11T18:21:21Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh und was hältst du eigentlich vom dolphin?" }
+{ "timestamp":"2017-04-11T18:23:15Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jedes mal 9 tonnen tee" }
+{ "timestamp":"2017-04-11T18:29:50Z", "event":"SendText", "To":"$cmdr_decorate:#name=arhiDavid;", "To_Localised":"CMDR arhiDavid", "Message":"hey" }
+{ "timestamp":"2017-04-11T18:31:39Z", "event":"SendText", "To":"$cmdr_decorate:#name=arhiDavid;", "To_Localised":"CMDR arhiDavid", "Message":"thx would you help me with fujin tea" }
+{ "timestamp":"2017-04-11T18:32:40Z", "event":"SendText", "To":"$cmdr_decorate:#name=arhiDavid;", "To_Localised":"CMDR arhiDavid", "Message":"ok thy" }
+{ "timestamp":"2017-04-11T18:32:50Z", "event":"SendText", "To":"$cmdr_decorate:#name=arhiDavid;", "To_Localised":"CMDR arhiDavid", "Message":"im on my first run" }
+{ "timestamp":"2017-04-11T18:33:31Z", "event":"SendText", "To":"$cmdr_decorate:#name=arhiDavid;", "To_Localised":"CMDR arhiDavid", "Message":"im out" }
+{ "timestamp":"2017-04-11T18:34:55Z", "event":"SendText", "To":"$cmdr_decorate:#name=arhiDavid;", "To_Localised":"CMDR arhiDavid", "Message":"ok" }
+{ "timestamp":"2017-04-11T18:35:06Z", "event":"SendText", "To":"$cmdr_decorate:#name=arhiDavid;", "To_Localised":"CMDR arhiDavid", "Message":"oh nice" }
+{ "timestamp":"2017-04-11T18:36:29Z", "event":"SendText", "To":"$cmdr_decorate:#name=arhiDavid;", "To_Localised":"CMDR arhiDavid", "Message":"thank you" }
+{ "timestamp":"2017-04-11T18:47:16Z", "event":"SendText", "To":"Vortex-XIII", "Message":"und wie findeste holo-me" }
+{ "timestamp":"2017-04-11T19:00:44Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh jetzt wo du es sagst" }
+{ "timestamp":"2017-04-11T19:01:41Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab 'schon' 22 tonnen tee" }
+{ "timestamp":"2017-04-11T19:03:41Z", "event":"SendText", "To":"$cmdr_decorate:#name=iBOMB;", "To_Localised":"CMDR iBOMB", "Message":"hey" }
+{ "timestamp":"2017-04-11T19:07:12Z", "event":"SendText", "To":"Vortex-XIII", "Message":"kannste mir später bei einem ru helfen sonst muss ich für eine tonne tee nochmal fliegen" }
+{ "timestamp":"2017-04-11T19:13:19Z", "event":"SendText", "To":"Bartolbi", "Message":"still collecting tea?" }
+{ "timestamp":"2017-04-11T19:15:40Z", "event":"SendText", "To":"$cmdr_decorate:#name=Nasenwombat;", "To_Localised":"CMDR Nasenwombat", "Message":"hey could you drop me some tea?" }
+{ "timestamp":"2017-04-11T19:17:38Z", "event":"SendText", "To":"$cmdr_decorate:#name=Nasenwombat;", "To_Localised":"CMDR Nasenwombat", "Message":"please" }
+{ "timestamp":"2017-04-11T19:19:44Z", "event":"SendText", "To":"$cmdr_decorate:#name=Roshak Fain;", "To_Localised":"CMDR Roshak Fain", "Message":"could you give me some fujin tea?" }
+{ "timestamp":"2017-04-11T19:20:57Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok danke ja ich mache einfach solange weiter" }
+{ "timestamp":"2017-04-11T19:22:06Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich finds iwi doof, dass nachichten von spielern nicht mehr gelb sind" }
+{ "timestamp":"2017-04-11T19:32:45Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wow ich brauche noch 19 tonnen und es sind immer 9 da" }
+{ "timestamp":"2017-04-11T19:32:56Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hoffenlich hilft mir noch jemand" }
+{ "timestamp":"2017-04-11T19:34:53Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa lass dir zeit" }
+{ "timestamp":"2017-04-11T19:53:06Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wann hätteset du denn zeit?" }
+{ "timestamp":"2017-04-11T19:53:55Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh bin unterwegs" }
+{ "timestamp":"2017-04-11T19:54:38Z", "event":"SendText", "To":"Vortex-XIII", "Message":"was wollte ich überhaupt bei broo" }
+{ "timestamp":"2017-04-11T19:55:35Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ach ja wollte ja beam laser für fdl testen" }
+{ "timestamp":"2017-04-11T19:56:15Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja für die mats muss ich glaub ich auch noch gucken" }
+{ "timestamp":"2017-04-11T19:59:21Z", "event":"SendText", "To":"wing", "Message":"mir fehlen nur proto heat absorber" }
+{ "timestamp":"2017-04-11T19:59:40Z", "event":"SendText", "To":"wing", "Message":"ne *radiators" }
+{ "timestamp":"2017-04-11T20:01:33Z", "event":"SendText", "To":"wing", "Message":"angeblich findet m,an die in uss encoded emissions" }
+{ "timestamp":"2017-04-11T20:02:21Z", "event":"SendText", "To":"wing", "Message":"oh un communism and boom state" }
+{ "timestamp":"2017-04-11T20:03:13Z", "event":"SendText", "To":"wing", "Message":"bin da" }
+{ "timestamp":"2017-04-11T20:04:04Z", "event":"SendText", "To":"wing", "Message":"sehe dich draussen" }
+{ "timestamp":"2017-04-11T20:05:02Z", "event":"SendText", "To":"wing", "Message":"man sollte die sogar in muang selber finden können" }
+{ "timestamp":"2017-04-11T20:05:29Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-11T20:06:08Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-11T20:06:33Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"gehe die dann auch direkt suchen " }
+{ "timestamp":"2017-04-11T20:07:02Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"ok" }
+{ "timestamp":"2017-04-11T20:07:11Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"ich stehe still" }
+{ "timestamp":"2017-04-11T20:07:35Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"wie schnell wird deine cobra?" }
+{ "timestamp":"2017-04-11T20:07:54Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"ja hab ich auch schon gedacht" }
+{ "timestamp":"2017-04-11T20:08:00Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"oh nett " }
+{ "timestamp":"2017-04-11T20:08:08Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"mein courier schafft 668" }
+{ "timestamp":"2017-04-11T20:08:43Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"joa verständlich" }
+{ "timestamp":"2017-04-11T20:08:54Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"kann ich später dazu kommen?" }
+{ "timestamp":"2017-04-11T20:09:01Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"brauche auch noch welche" }
+{ "timestamp":"2017-04-11T20:09:40Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"joa schreibe dir wenn ich fertig bin" }
+{ "timestamp":"2017-04-11T20:09:46Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"danke aufjedenfall" }
+{ "timestamp":"2017-04-11T20:09:52Z", "event":"SendText", "To":"$cmdr_decorate:#name=Vortex-XIII;", "To_Localised":"CMDR Vortex-XIII", "Message":"bis später!" }
+{ "timestamp":"2017-04-11T20:30:36Z", "event":"SendText", "To":"wing", "Message":"ich gucke jetzt das ich meinen courier einsammle und in deine richtiung komme" }
+{ "timestamp":"2017-04-11T20:30:50Z", "event":"SendText", "To":"wing", "Message":"kann aber sein, dass ich gleich aufhöre" }
+{ "timestamp":"2017-04-11T20:31:08Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-04-11T20:38:49Z", "event":"SendText", "To":"Vortex-XIII", "Message":"?" }
+{ "timestamp":"2017-04-11T20:39:44Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jop" }
+{ "timestamp":"2017-04-11T20:41:23Z", "event":"SendText", "To":"Vortex-XIII", "Message":"bin aufem weg" }
+{ "timestamp":"2017-04-11T20:42:09Z", "event":"SendText", "To":"Vortex-XIII", "Message":"6 sprünge" }
+{ "timestamp":"2017-04-11T20:43:45Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wurden bei dir auch alle feuergruppen zurückgesetzt?" }
+{ "timestamp":"2017-04-11T20:44:53Z", "event":"SendText", "To":"Vortex-XIII", "Message":"dieser courier hat durch die mods echt hitze probleme" }
+{ "timestamp":"2017-04-11T20:46:53Z", "event":"SendText", "To":"Vortex-XIII", "Message":"bin da" }
+{ "timestamp":"2017-04-11T20:47:46Z", "event":"SendText", "To":"Vortex-XIII", "Message":"haste die base schon gemacht?" }
+{ "timestamp":"2017-04-11T20:48:08Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok" }
+{ "timestamp":"2017-04-11T20:48:21Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich schon sollte eig gehen" }
+{ "timestamp":"2017-04-11T20:49:39Z", "event":"SendText", "To":"Vortex-XIII", "Message":"schade nach der base muss ich ausmachen" }
+{ "timestamp":"2017-04-11T20:50:26Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok" }
+{ "timestamp":"2017-04-11T20:50:47Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh ok" }
+{ "timestamp":"2017-04-11T20:51:13Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich werde deine liste benutzen" }
+{ "timestamp":"2017-04-11T20:51:25Z", "event":"SendText", "To":"Vortex-XIII", "Message":"kann ich mir vorstellen" }
+{ "timestamp":"2017-04-11T20:51:46Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wieviel punkte hat das ding?" }
+{ "timestamp":"2017-04-11T20:52:02Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok" }
+{ "timestamp":"2017-04-11T20:52:10Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich mache mal auf gut glück" }
+{ "timestamp":"2017-04-11T20:54:25Z", "event":"SendText", "To":"Vortex-XIII", "Message":"schade keine mefs" }
+{ "timestamp":"2017-04-11T20:54:37Z", "event":"SendText", "To":"Vortex-XIII", "Message":"trotzdem danke" }
+{ "timestamp":"2017-04-11T20:55:30Z", "event":"SendText", "To":"Vortex-XIII", "Message":"security firmware patch, classified scan databanks" }
+{ "timestamp":"2017-04-11T20:55:56Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ne leider ncih nächstes mal! " }
+{ "timestamp":"2017-04-11T20:56:09Z", "event":"SendText", "To":"Vortex-XIII", "Message":"viel spaß noch" }
+{ "timestamp":"2017-04-11T20:56:23Z", "event":"SendText", "To":"Vortex-XIII", "Message":"bis demnächst :-)" }
+{ "timestamp":"2017-04-12T12:29:57Z", "event":"SendText", "To":"$cmdr_decorate:#name=Spike Spiekel;", "To_Localised":"CMDR Spike Spiekel", "Message":"hey" }
+{ "timestamp":"2017-04-12T17:49:55Z", "event":"SendText", "To":"Lurion", "Message":"HEY" }
+{ "timestamp":"2017-04-12T18:23:25Z", "event":"SendText", "To":"$cmdr_decorate:#name=Badpupuce;", "To_Localised":"CMDR Badpupuce", "Message":"hey" }
+{ "timestamp":"2017-04-12T18:44:20Z", "event":"SendText", "To":"$cmdr_decorate:#name=Gwallt;", "To_Localised":"CMDR Gwallt", "Message":"HEY THERE" }
+{ "timestamp":"2017-04-12T18:48:42Z", "event":"SendText", "To":"$cmdr_decorate:#name=Gwallt;", "To_Localised":"CMDR Gwallt", "Message":"allready unlocked ;-)" }
+{ "timestamp":"2017-04-12T18:48:57Z", "event":"SendText", "To":"$cmdr_decorate:#name=Gwallt;", "To_Localised":"CMDR Gwallt", "Message":"only wanted to take my fdl wich was stored here" }
+{ "timestamp":"2017-04-12T18:51:41Z", "event":"SendText", "To":"$cmdr_decorate:#name=Gwallt;", "To_Localised":"CMDR Gwallt", "Message":"do you have an idea how to name my fdl?" }
+{ "timestamp":"2017-04-12T18:56:15Z", "event":"SendText", "To":"$cmdr_decorate:#name=Gwallt;", "To_Localised":"CMDR Gwallt", "Message":"good luck :-)" }
+{ "timestamp":"2017-04-12T18:56:24Z", "event":"SendText", "To":"$cmdr_decorate:#name=Gwallt;", "To_Localised":"CMDR Gwallt", "Message":"i also unlocked broo" }
+{ "timestamp":"2017-04-12T18:57:08Z", "event":"SendText", "To":"$cmdr_decorate:#name=Gwallt;", "To_Localised":"CMDR Gwallt", "Message":"the only thing left i have to mod are shield gen and schield booster" }
+{ "timestamp":"2017-04-12T18:57:28Z", "event":"SendText", "To":"Gwallt", "Message":"broo is a bit easier" }
+{ "timestamp":"2017-04-12T18:57:39Z", "event":"SendText", "To":"Gwallt", "Message":"they offer 9 tons a run" }
+{ "timestamp":"2017-04-12T18:58:13Z", "event":"SendText", "To":"Gwallt", "Message":"lei i got too but didi ive still to unlock" }
+{ "timestamp":"2017-04-12T18:58:54Z", "event":"SendText", "To":"Gwallt", "Message":"you get him after hera tani" }
+{ "timestamp":"2017-04-12T18:58:59Z", "event":"SendText", "To":"Gwallt", "Message":"yep" }
+{ "timestamp":"2017-04-12T18:59:05Z", "event":"SendText", "To":"Gwallt", "Message":"broo too" }
+{ "timestamp":"2017-04-12T19:00:37Z", "event":"SendText", "To":"Gwallt", "Message":"yep with 50 tons of fuji tea" }
+{ "timestamp":"2017-04-12T19:00:55Z", "event":"SendText", "To":"Gwallt", "Message":"took me like 2,5 hours" }
+{ "timestamp":"2017-04-12T19:02:24Z", "event":"SendText", "To":"Gwallt", "Message":"which ship are you flying?" }
+{ "timestamp":"2017-04-12T19:03:14Z", "event":"SendText", "To":"Gwallt", "Message":"its a nice ship" }
+{ "timestamp":"2017-04-12T19:03:33Z", "event":"SendText", "To":"Gwallt", "Message":"i got a courier with a speed of 720 m/s" }
+{ "timestamp":"2017-04-12T19:06:12Z", "event":"SendText", "To":"Gwallt", "Message":"i think the only ship which can break the 800m/s is the imp eagle" }
+{ "timestamp":"2017-04-12T19:06:32Z", "event":"SendText", "To":"Gwallt", "Message":"haha 14 jumps with fdl" }
+{ "timestamp":"2017-04-12T19:22:34Z", "event":"SendText", "To":"Gwallt", "Message":"ok nice" }
+{ "timestamp":"2017-04-12T19:22:57Z", "event":"SendText", "To":"Gwallt", "Message":"i think mine would be much faster witout shield gen and so on" }
+{ "timestamp":"2017-04-12T19:30:29Z", "event":"SendText", "To":"Randall Flagg", "Message":"Guten Abend :-)" }
+{ "timestamp":"2017-04-12T19:32:20Z", "event":"SendText", "To":"Gwallt", "Message":"ok this would be nice" }
+{ "timestamp":"2017-04-12T19:32:45Z", "event":"SendText", "To":"Gwallt", "Message":"i think ive to mod my modules on lightweight" }
+{ "timestamp":"2017-04-12T19:33:43Z", "event":"SendText", "To":"Gwallt", "Message":"ok this may be possible " }
+{ "timestamp":"2017-04-12T19:34:08Z", "event":"SendText", "To":"Gwallt", "Message":"but mine produces heat like a star so it isnt that good for exploring" }
+{ "timestamp":"2017-04-12T20:47:28Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hay" }
+{ "timestamp":"2017-04-12T20:49:28Z", "event":"SendText", "To":"Vortex-XIII", "Message":"haste tips wie ich an improvised components komme?" }
+{ "timestamp":"2017-04-12T20:49:47Z", "event":"SendText", "To":"Vortex-XIII", "Message":"das was im forum steht versuche ich schon seid ner stunde" }
+{ "timestamp":"2017-04-12T20:52:10Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab ich ja versucht" }
+{ "timestamp":"2017-04-12T20:52:19Z", "event":"SendText", "To":"Vortex-XIII", "Message":"naja werd ichn wohl weiter machen" }
+{ "timestamp":"2017-04-12T20:53:08Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ne mache alle booster auf thermo " }
+{ "timestamp":"2017-04-12T20:54:51Z", "event":"SendText", "To":"Vortex-XIII", "Message":"macht das nen großen unterschied im endeffekt?" }
+{ "timestamp":"2017-04-12T20:54:57Z", "event":"SendText", "To":"Vortex-XIII", "Message":"einfach rebooten" }
+{ "timestamp":"2017-04-12T20:55:07Z", "event":"SendText", "To":"Vortex-XIII", "Message":"dann haste wieder 1.5 balken" }
+{ "timestamp":"2017-04-12T20:55:54Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja guuut aber ich schffe im normalfall ohne probleme anas " }
+{ "timestamp":"2017-04-12T20:56:28Z", "event":"SendText", "To":"Vortex-XIII", "Message":"fdl" }
+{ "timestamp":"2017-04-12T20:56:45Z", "event":"SendText", "To":"Vortex-XIII", "Message":"die hat jetzt prisma generator 4 beams und ne multi" }
+{ "timestamp":"2017-04-12T20:57:40Z", "event":"SendText", "To":"Vortex-XIII", "Message":"bei den meisten schiffen sind die schilde weg bevor die mich überhaupt treffen" }
+{ "timestamp":"2017-04-12T20:57:42Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-12T20:57:59Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ausserdem laden die sowieso schon langsamer" }
+{ "timestamp":"2017-04-12T20:58:39Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-12T20:59:18Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wenn ich dann mit den schilden und boostern fertig bin kommen hülle und verstärkungen dran" }
+{ "timestamp":"2017-04-12T21:00:18Z", "event":"SendText", "To":"Vortex-XIII", "Message":"für welches rezept?" }
+{ "timestamp":"2017-04-12T21:01:09Z", "event":"SendText", "To":"Vortex-XIII", "Message":"achso ja gut" }
+{ "timestamp":"2017-04-12T21:01:16Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wo kriegt man die denn" }
+{ "timestamp":"2017-04-12T21:02:04Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja gut das geht ja noch" }
+{ "timestamp":"2017-04-12T21:02:54Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich hab bis jetzt auch alle uss mitgenommen aber keine gesehen" }
+{ "timestamp":"2017-04-12T21:04:08Z", "event":"SendText", "To":"Vortex-XIII", "Message":"nah die hatte ich beim ersten versuch und gleich 4 stück" }
+{ "timestamp":"2017-04-12T21:05:08Z", "event":"SendText", "To":"Vortex-XIII", "Message":"und wie immer alles nur glück" }
+{ "timestamp":"2017-04-12T21:05:38Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich finde auch kaum uss in letzter zeit" }
+{ "timestamp":"2017-04-12T21:05:47Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok" }
+{ "timestamp":"2017-04-12T21:06:03Z", "event":"SendText", "To":"Vortex-XIII", "Message":":-)" }
+{ "timestamp":"2017-04-12T21:06:22Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oha" }
+{ "timestamp":"2017-04-12T21:06:32Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab alles auf ultra xD" }
+{ "timestamp":"2017-04-12T21:07:18Z", "event":"SendText", "To":"Vortex-XIII", "Message":"achso" }
+{ "timestamp":"2017-04-12T21:08:33Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich finde nichtmal die richtige signalquelle" }
+{ "timestamp":"2017-04-12T21:09:42Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab ich auch schon probiert die dinger sind einfach verflucht" }
+{ "timestamp":"2017-04-12T21:10:35Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich habe praktisch nur grad 5 mats in den uss aber nicht das, was ich brauche" }
+{ "timestamp":"2017-04-12T21:13:29Z", "event":"SendText", "To":"Vortex-XIII", "Message":"haste ne idee wie ich meine fdl nennen soll?" }
+{ "timestamp":"2017-04-12T21:14:42Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich muss 11 schiffe bennen..." }
+{ "timestamp":"2017-04-12T21:18:18Z", "event":"SendText", "To":"Vortex-XIII", "Message":"connection error..." }
+{ "timestamp":"2017-04-12T21:21:16Z", "event":"SendText", "To":"Vortex-XIII", "Message":"versuche mal nen anderes unrest system" }
+{ "timestamp":"2017-04-12T21:22:12Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok bis dann dir auch!" }
+{ "timestamp":"2017-04-13T12:40:16Z", "event":"SendText", "To":"$cmdr_decorate:#name=Bazfire;", "To_Localised":"CMDR Bazfire", "Message":"hey" }
+{ "timestamp":"2017-04-13T12:40:47Z", "event":"SendText", "To":"$cmdr_decorate:#name=Bazfire;", "To_Localised":"CMDR Bazfire", "Message":"modding your anaconda?" }
+{ "timestamp":"2017-04-13T12:41:09Z", "event":"SendText", "To":"$cmdr_decorate:#name=Bazfire;", "To_Localised":"CMDR Bazfire", "Message":"oh ok" }
+{ "timestamp":"2017-04-13T12:41:24Z", "event":"SendText", "To":"$cmdr_decorate:#name=Bazfire;", "To_Localised":"CMDR Bazfire", "Message":"dont know" }
+{ "timestamp":"2017-04-13T12:42:29Z", "event":"SendText", "To":"$cmdr_decorate:#name=Bazfire;", "To_Localised":"CMDR Bazfire", "Message":"whoaaa" }
+{ "timestamp":"2017-04-13T12:43:50Z", "event":"SendText", "To":"$cmdr_decorate:#name=Bazfire;", "To_Localised":"CMDR Bazfire", "Message":"my shield saved me :D" }
+{ "timestamp":"2017-04-13T12:52:32Z", "event":"SendText", "To":"$cmdr_decorate:#name=Bazfire;", "To_Localised":"CMDR Bazfire", "Message":"bye" }
+{ "timestamp":"2017-04-13T12:58:54Z", "event":"SendText", "To":"$cmdr_decorate:#name=Maylis;", "To_Localised":"CMDR Maylis", "Message":"hey" }
+{ "timestamp":"2017-04-13T15:22:59Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hey" }
+{ "timestamp":"2017-04-13T15:23:47Z", "event":"SendText", "To":"local", "Message":"kann ich davon ausgehen, dass du Deutscher bist?" }
+{ "timestamp":"2017-04-13T17:59:57Z", "event":"SendText", "To":"$cmdr_decorate:#name=Arconen;", "To_Localised":"CMDR Arconen", "Message":"hey" }
+{ "timestamp":"2017-04-13T18:00:17Z", "event":"SendText", "To":"Captain Pain", "Message":"modding your ship?" }
+{ "timestamp":"2017-04-13T18:01:18Z", "event":"SendText", "To":"Captain Pain", "Message":"which one?" }
+{ "timestamp":"2017-04-13T18:02:10Z", "event":"SendText", "To":"local", "Message":"hey guys :D" }
+{ "timestamp":"2017-04-13T18:10:33Z", "event":"SendText", "To":"local", "Message":"see ya guys" }
+{ "timestamp":"2017-04-13T18:27:03Z", "event":"SendText", "To":"local", "Message":"hey" }
+{ "timestamp":"2017-04-13T18:28:28Z", "event":"SendText", "To":"local", "Message":"hey" }
+{ "timestamp":"2017-04-13T18:31:25Z", "event":"SendText", "To":"local", "Message":"hey" }
+{ "timestamp":"2017-04-13T18:31:53Z", "event":"SendText", "To":"local", "Message":"i love this stastions" }
+{ "timestamp":"2017-04-13T18:32:03Z", "event":"SendText", "To":"$cmdr_decorate:#name=Thatchinho;", "To_Localised":"CMDR Thatchinho", "Message":"hey" }
+{ "timestamp":"2017-04-13T18:34:48Z", "event":"SendText", "To":"wing", "Message":"hey" }
+{ "timestamp":"2017-04-14T12:17:37Z", "event":"SendText", "To":"wing", "Message":"hey" }
+{ "timestamp":"2017-04-14T12:18:47Z", "event":"SendText", "To":"local", "Message":"di you know how to write?" }
+{ "timestamp":"2017-04-14T12:19:14Z", "event":"SendText", "To":"wing", "Message":"oh ok" }
+{ "timestamp":"2017-04-14T12:19:27Z", "event":"SendText", "To":"wing", "Message":"its not my real ship" }
+{ "timestamp":"2017-04-14T12:19:56Z", "event":"SendText", "To":"wing", "Message":"oh lol" }
+{ "timestamp":"2017-04-14T12:20:19Z", "event":"SendText", "To":"wing", "Message":"ill quick change my ship and invite you" }
+{ "timestamp":"2017-04-14T12:20:38Z", "event":"SendText", "To":"wing", "Message":"what do you want to do?" }
+{ "timestamp":"2017-04-14T12:21:15Z", "event":"SendText", "To":"wing", "Message":"how many hours did you play?" }
+{ "timestamp":"2017-04-14T12:21:50Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-04-14T12:22:18Z", "event":"SendText", "To":"Codaki", "Message":"which ship i own nearly all " }
+{ "timestamp":"2017-04-14T12:22:32Z", "event":"SendText", "To":"Codaki", "Message":"only cutter and corvette are missing" }
+{ "timestamp":"2017-04-14T12:23:36Z", "event":"SendText", "To":"Codaki", "Message":"ok lets go bounty hunting" }
+{ "timestamp":"2017-04-14T12:23:46Z", "event":"SendText", "To":"Codaki", "Message":"do you only want to watch or do you wqant to fight?" }
+{ "timestamp":"2017-04-14T12:24:36Z", "event":"SendText", "To":"Codaki", "Message":"i dont know if ive a ship with fighter only one with turrets" }
+{ "timestamp":"2017-04-14T12:25:38Z", "event":"SendText", "To":"Codaki", "Message":"ok" }
+{ "timestamp":"2017-04-14T12:29:42Z", "event":"SendText", "To":"Codaki", "Message":"you have to get in open play before i can invite you" }
+{ "timestamp":"2017-04-14T12:30:58Z", "event":"SendText", "To":"Codaki", "Message":"did you bind the steering for the gunner position" }
+{ "timestamp":"2017-04-14T12:31:27Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-04-14T12:33:23Z", "event":"SendText", "To":"wing", "Message":"there must be a butoon to switch into the gunners sigth" }
+{ "timestamp":"2017-04-14T12:34:34Z", "event":"SendText", "To":"wing", "Message":"got to controlls and scroll down all the way until multi crew stands there" }
+{ "timestamp":"2017-04-14T12:34:53Z", "event":"SendText", "To":"wing", "Message":"there are the controlls for the gunner position" }
+{ "timestamp":"2017-04-14T12:35:24Z", "event":"SendText", "To":"wing", "Message":"fire them" }
+{ "timestamp":"2017-04-14T12:35:46Z", "event":"SendText", "To":"wing", "Message":"ok lets go" }
+{ "timestamp":"2017-04-14T12:36:11Z", "event":"SendText", "To":"wing", "Message":"waht is your current ship?" }
+{ "timestamp":"2017-04-14T12:36:50Z", "event":"SendText", "To":"wing", "Message":"i fire the primary you can only fire turrets" }
+{ "timestamp":"2017-04-14T12:37:07Z", "event":"SendText", "To":"wing", "Message":"ok lets get you a cobra with the bountys" }
+{ "timestamp":"2017-04-14T12:38:40Z", "event":"SendText", "To":"wing", "Message":"but you have to tell me after the first ship if you got a reward" }
+{ "timestamp":"2017-04-14T12:39:03Z", "event":"SendText", "To":"wing", "Message":"and only fire the ships i fire" }
+{ "timestamp":"2017-04-14T12:40:57Z", "event":"SendText", "To":"wing", "Message":"fire the drrop ship" }
+{ "timestamp":"2017-04-14T12:41:10Z", "event":"SendText", "To":"wing", "Message":"davek" }
+{ "timestamp":"2017-04-14T12:42:35Z", "event":"SendText", "To":"wing", "Message":"look up the controlls" }
+{ "timestamp":"2017-04-14T12:44:50Z", "event":"SendText", "To":"wing", "Message":"did you get the bountys?" }
+{ "timestamp":"2017-04-14T12:45:07Z", "event":"SendText", "To":"wing", "Message":"how much" }
+{ "timestamp":"2017-04-14T12:46:15Z", "event":"SendText", "To":"wing", "Message":"look at the left panel" }
+{ "timestamp":"2017-04-14T12:46:50Z", "event":"SendText", "To":"wing", "Message":"ok i got 250k" }
+{ "timestamp":"2017-04-14T12:48:25Z", "event":"SendText", "To":"wing", "Message":"oops he wasnt wanted" }
+{ "timestamp":"2017-04-14T12:48:59Z", "event":"SendText", "To":"wing", "Message":"nio prblem just dont go to this systems the next 7 days" }
+{ "timestamp":"2017-04-14T12:52:06Z", "event":"SendText", "To":"Codaki", "Message":"you attacked system sec" }
+{ "timestamp":"2017-04-14T12:53:21Z", "event":"SendText", "To":"Codaki", "Message":"i dont know but the ki did think you attacked them" }
+{ "timestamp":"2017-04-14T12:54:22Z", "event":"SendText", "To":"Codaki", "Message":"ok may be possible" }
+{ "timestamp":"2017-04-14T12:54:31Z", "event":"SendText", "To":"Codaki", "Message":"how much did you get in total" }
+{ "timestamp":"2017-04-14T12:55:28Z", "event":"SendText", "To":"Codaki", "Message":"you dont have to pay the fines" }
+{ "timestamp":"2017-04-14T12:56:42Z", "event":"SendText", "To":"Codaki", "Message":"the wont follow you only if you enter the system in the next 7 days" }
+{ "timestamp":"2017-04-14T12:57:19Z", "event":"SendText", "To":"Codaki", "Message":"yep otherwise i wont have any money " }
+{ "timestamp":"2017-04-14T12:57:30Z", "event":"SendText", "To":"Codaki", "Message":"my total fines are over 1 billion" }
+{ "timestamp":"2017-04-14T12:58:13Z", "event":"SendText", "To":"Codaki", "Message":"what do you have on the bank" }
+{ "timestamp":"2017-04-14T13:00:01Z", "event":"SendText", "To":"Codaki", "Message":"wait a sec ive to look something up" }
+{ "timestamp":"2017-04-14T13:01:12Z", "event":"SendText", "To":"Codaki", "Message":"where are you from?" }
+{ "timestamp":"2017-04-14T13:01:50Z", "event":"SendText", "To":"Codaki", "Message":"germany" }
+{ "timestamp":"2017-04-14T13:02:14Z", "event":"SendText", "To":"Codaki", "Message":"ok buy a hauler and outfit it only with cargo racks" }
+{ "timestamp":"2017-04-14T13:02:21Z", "event":"SendText", "To":"Codaki", "Message":"ill give you some gold" }
+{ "timestamp":"2017-04-14T13:02:52Z", "event":"SendText", "To":"Codaki", "Message":"the cargo cap should be 22" }
+{ "timestamp":"2017-04-14T13:03:51Z", "event":"SendText", "To":"Codaki", "Message":"ill come to you" }
+{ "timestamp":"2017-04-14T13:04:33Z", "event":"SendText", "To":"Codaki", "Message":"you have to outfit it in outfittin" }
+{ "timestamp":"2017-04-14T13:04:55Z", "event":"SendText", "To":"Codaki", "Message":"in the cathegory 'Internals'" }
+{ "timestamp":"2017-04-14T13:08:48Z", "event":"SendText", "To":"Codaki", "Message":"ok i can first give you 8 tons then you sell them, buy the upgrades and get the other tons" }
+{ "timestamp":"2017-04-14T13:08:56Z", "event":"SendText", "To":"Codaki", "Message":"i brought 32" }
+{ "timestamp":"2017-04-14T13:09:13Z", "event":"SendText", "To":"Codaki", "Message":"cleve hub?" }
+{ "timestamp":"2017-04-14T13:09:27Z", "event":"SendText", "To":"Codaki", "Message":"get out the station" }
+{ "timestamp":"2017-04-14T13:10:21Z", "event":"SendText", "To":"Codaki", "Message":"ok" }
+{ "timestamp":"2017-04-14T13:10:40Z", "event":"SendText", "To":"Codaki", "Message":"im sitting in a anaconda" }
+{ "timestamp":"2017-04-14T13:11:03Z", "event":"SendText", "To":"Codaki", "Message":"open up your cargo scoop" }
+{ "timestamp":"2017-04-14T13:11:32Z", "event":"SendText", "To":"Codaki", "Message":"its huuuuuuuuuuuuge" }
+{ "timestamp":"2017-04-14T13:12:02Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"you can see me" }
+{ "timestamp":"2017-04-14T13:12:43Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"opened your scoop?" }
+{ "timestamp":"2017-04-14T13:13:09Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"you have to slow down to 40 m/s to pick up stuff" }
+{ "timestamp":"2017-04-14T13:14:31Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"theres a window which should help you" }
+{ "timestamp":"2017-04-14T13:14:58Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"7 left" }
+{ "timestamp":"2017-04-14T13:16:31Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"ok go sell them" }
+{ "timestamp":"2017-04-14T13:18:25Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"where are you?" }
+{ "timestamp":"2017-04-14T13:19:41Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"cant you sell them on commodity market?" }
+{ "timestamp":"2017-04-14T13:20:00Z", "event":"SendText", "To":"$cmdr_decorate:#name=NoTLoVe;", "To_Localised":"CMDR NoTLoVe", "Message":"hey" }
+{ "timestamp":"2017-04-14T13:20:04Z", "event":"SendText", "To":"$cmdr_decorate:#name=NoTLoVe;", "To_Localised":"CMDR NoTLoVe", "Message":"nice ship" }
+{ "timestamp":"2017-04-14T13:20:33Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"ok look under contacts" }
+{ "timestamp":"2017-04-14T13:21:25Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"oh they dont have a black market here" }
+{ "timestamp":"2017-04-14T13:21:46Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"we have to go to mcmahon dock" }
+{ "timestamp":"2017-04-14T13:22:01Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"see yo there" }
+{ "timestamp":"2017-04-14T13:23:10Z", "event":"SendText", "To":"Codaki", "Message":"i sent you a wing invite" }
+{ "timestamp":"2017-04-14T13:24:07Z", "event":"SendText", "To":"Codaki", "Message":"now?" }
+{ "timestamp":"2017-04-14T13:24:48Z", "event":"SendText", "To":"Codaki", "Message":"do you have horizons?" }
+{ "timestamp":"2017-04-14T13:25:17Z", "event":"SendText", "To":"Codaki", "Message":"ok lets land on a planet later on" }
+{ "timestamp":"2017-04-14T13:26:55Z", "event":"SendText", "To":"Codaki", "Message":"ok you only have to buy a planetary vehicle hangar when we are done with this" }
+{ "timestamp":"2017-04-14T13:27:52Z", "event":"SendText", "To":"Codaki", "Message":"ok go and dock then look under contacts everything else is self explaining" }
+{ "timestamp":"2017-04-14T13:29:28Z", "event":"SendText", "To":"Codaki", "Message":"how much did gave you?" }
+{ "timestamp":"2017-04-14T13:29:51Z", "event":"SendText", "To":"Codaki", "Message":"nice i got 28 tons left" }
+{ "timestamp":"2017-04-14T13:29:55Z", "event":"SendText", "To":"Codaki", "Message":"lets do this" }
+{ "timestamp":"2017-04-14T13:30:11Z", "event":"SendText", "To":"Codaki", "Message":"you got 8 tons cap?" }
+{ "timestamp":"2017-04-14T13:30:43Z", "event":"SendText", "To":"Codaki", "Message":"ok ill drop them" }
+{ "timestamp":"2017-04-14T13:37:46Z", "event":"SendText", "To":"Codaki", "Message":"ok nice" }
+{ "timestamp":"2017-04-14T13:38:05Z", "event":"SendText", "To":"Codaki", "Message":"i got 20 tons left" }
+{ "timestamp":"2017-04-14T13:38:20Z", "event":"SendText", "To":"Codaki", "Message":"i dont know if they sell cargo racks here" }
+{ "timestamp":"2017-04-14T13:38:54Z", "event":"SendText", "To":"Codaki", "Message":"they are out" }
+{ "timestamp":"2017-04-14T13:40:35Z", "event":"SendText", "To":"Codaki", "Message":"when we are ready i think you can buy a cobra " }
+{ "timestamp":"2017-04-14T13:41:21Z", "event":"SendText", "To":"$cmdr_decorate:#name=Angel87;", "To_Localised":"CMDR Angel87", "Message":"new player?" }
+{ "timestamp":"2017-04-14T13:43:28Z", "event":"SendText", "To":"$cmdr_decorate:#name=Codaki;", "To_Localised":"CMDR Codaki", "Message":"ive to quit see ya later" }
+{ "timestamp":"2017-04-14T13:43:50Z", "event":"SendText", "To":"Codaki", "Message":"no problem see you soon" }
+{ "timestamp":"2017-04-17T14:07:48Z", "event":"SendText", "To":"Codaki", "Message":"hey" }
+{ "timestamp":"2017-04-17T14:08:40Z", "event":"SendText", "To":"Codaki", "Message":"how far did you get?" }
+{ "timestamp":"2017-04-17T14:10:40Z", "event":"SendText", "To":"Codaki", "Message":"which ship do you fly?" }
+{ "timestamp":"2017-04-17T14:10:48Z", "event":"SendText", "To":"Codaki", "Message":"oh ok" }
+{ "timestamp":"2017-04-17T14:11:17Z", "event":"SendText", "To":"Codaki", "Message":"jep" }
+{ "timestamp":"2017-04-17T14:11:34Z", "event":"SendText", "To":"Codaki", "Message":"the pilot gets 100%" }
+{ "timestamp":"2017-04-17T14:11:45Z", "event":"SendText", "To":"Codaki", "Message":"Elite Players too" }
+{ "timestamp":"2017-04-17T14:12:07Z", "event":"SendText", "To":"Codaki", "Message":"im only expert" }
+{ "timestamp":"2017-04-17T14:12:37Z", "event":"SendText", "To":"Codaki", "Message":"you got like 10% of what I did get" }
+{ "timestamp":"2017-04-17T14:13:16Z", "event":"SendText", "To":"Codaki", "Message":"oh nice" }
+{ "timestamp":"2017-04-17T14:13:44Z", "event":"SendText", "To":"Codaki", "Message":"my fighting rank is the lowest" }
+{ "timestamp":"2017-04-17T14:14:04Z", "event":"SendText", "To":"Codaki", "Message":"of all my ranks" }
+{ "timestamp":"2017-04-17T14:14:21Z", "event":"SendText", "To":"Codaki", "Message":"the other two are elite" }
+{ "timestamp":"2017-04-17T14:15:08Z", "event":"SendText", "To":"Codaki", "Message":"vombat rank takes so much time" }
+{ "timestamp":"2017-04-17T14:15:36Z", "event":"SendText", "To":"Codaki", "Message":"you get like 1% for every ship with a higher rank than yours" }
+{ "timestamp":"2017-04-17T14:17:00Z", "event":"SendText", "To":"Codaki", "Message":"yes its very nice but there are other things in the game that make much fun too" }
+{ "timestamp":"2017-04-17T14:17:58Z", "event":"SendText", "To":"Codaki", "Message":"do you know how to outfit ships in the best way?" }
+{ "timestamp":"2017-04-17T14:19:22Z", "event":"SendText", "To":"Codaki", "Message":"you hev to look at every thing" }
+{ "timestamp":"2017-04-17T14:21:10Z", "event":"SendText", "To":"Codaki", "Message":"a rated modules do have the best performance" }
+{ "timestamp":"2017-04-17T14:21:24Z", "event":"SendText", "To":"Codaki", "Message":"d are the lightest" }
+{ "timestamp":"2017-04-17T14:21:31Z", "event":"SendText", "To":"Codaki", "Message":"good for explorers" }
+{ "timestamp":"2017-04-17T14:26:06Z", "event":"SendText", "To":"Codaki", "Message":"to get into orbital cruise you have to slow down to 200 km/s and to get in glide mode you have to slow down to 2,5 km/s and not steep or gentle" }
+{ "timestamp":"2017-04-17T14:26:40Z", "event":"SendText", "To":"Codaki", "Message":"and always look at the gforce " }
+{ "timestamp":"2017-04-17T14:27:09Z", "event":"SendText", "To":"Codaki", "Message":"and only planets with a blue ring in the system map are landable" }
+{ "timestamp":"2017-04-17T14:27:30Z", "event":"SendText", "To":"Codaki", "Message":"so no atmospheric landings" }
+{ "timestamp":"2017-04-17T14:28:45Z", "event":"SendText", "To":"Codaki", "Message":"ok" }
+{ "timestamp":"2017-04-17T14:30:00Z", "event":"SendText", "To":"Codaki", "Message":"and another tip:" }
+{ "timestamp":"2017-04-17T14:30:11Z", "event":"SendText", "To":"Codaki", "Message":"never fly a ship which you cant afford" }
+{ "timestamp":"2017-04-17T14:30:19Z", "event":"SendText", "To":"local", "Message":"*t" }
+{ "timestamp":"2017-04-17T14:31:28Z", "event":"SendText", "To":"Codaki", "Message":"jep " }
+{ "timestamp":"2017-04-17T14:33:24Z", "event":"SendText", "To":"Codaki", "Message":"did it work" }
+{ "timestamp":"2017-04-17T14:34:21Z", "event":"SendText", "To":"Codaki", "Message":"jep  now just fly to the ground and deploy landing gear" }
+{ "timestamp":"2017-04-17T14:34:48Z", "event":"SendText", "To":"Codaki", "Message":"your radar will change to a map " }
+{ "timestamp":"2017-04-17T14:35:01Z", "event":"SendText", "To":"Codaki", "Message":"you can land when the ship is blue" }
+{ "timestamp":"2017-04-17T14:37:30Z", "event":"SendText", "To":"Codaki", "Message":"jep" }
+{ "timestamp":"2017-04-17T14:37:40Z", "event":"SendText", "To":"Codaki", "Message":"they are quite funny" }
+{ "timestamp":"2017-04-17T14:39:02Z", "event":"SendText", "To":"Codaki", "Message":"ok ive never played VR#" }
+{ "timestamp":"2017-04-17T14:41:18Z", "event":"SendText", "To":"Codaki", "Message":"im going to do some bounty hunting now" }
+{ "timestamp":"2017-04-17T14:43:21Z", "event":"SendText", "To":"Codaki", "Message":"nope sadly the fdl cant fit a fighter" }
+{ "timestamp":"2017-04-17T14:43:41Z", "event":"SendText", "To":"Codaki", "Message":"the only thing you could do is watching" }
+{ "timestamp":"2017-04-17T14:53:32Z", "event":"SendText", "To":"Codaki", "Message":"dont know too" }
+{ "timestamp":"2017-04-17T14:55:06Z", "event":"SendText", "To":"Codaki", "Message":"ok diidnt knew may be nice for ingame events" }
+{ "timestamp":"2017-04-17T14:57:00Z", "event":"SendText", "To":"Codaki", "Message":"the profit from fighting is so low" }
+{ "timestamp":"2017-04-17T15:21:21Z", "event":"SendText", "To":"Codaki", "Message":"Now I made 2 mil in bounties" }
+{ "timestamp":"2017-04-17T15:22:58Z", "event":"SendText", "To":"Codaki", "Message":"why still in the same system?" }
+{ "timestamp":"2017-04-17T15:26:06Z", "event":"SendText", "To":"Codaki", "Message":"the rank doesnt matter when you arent in multicrew" }
+{ "timestamp":"2017-04-17T15:26:52Z", "event":"SendText", "To":"Codaki", "Message":"jep" }
+{ "timestamp":"2017-04-17T15:27:11Z", "event":"SendText", "To":"Codaki", "Message":" i think ill try assination missions" }
+{ "timestamp":"2017-04-17T15:27:31Z", "event":"SendText", "To":"Codaki", "Message":"the can pay out very high" }
+{ "timestamp":"2017-04-17T15:31:03Z", "event":"SendText", "To":"Captain Pain", "Message":"hay" }
+{ "timestamp":"2017-04-17T16:13:17Z", "event":"SendText", "To":"Codaki", "Message":"i think my fdl yould need a engine modding" }
+{ "timestamp":"2017-04-17T16:13:42Z", "event":"SendText", "To":"Codaki", "Message":"do you have any engieneers unlocked?" }
+{ "timestamp":"2017-04-17T16:15:08Z", "event":"SendText", "To":"Codaki", "Message":"ok" }
+{ "timestamp":"2017-04-17T16:15:34Z", "event":"SendText", "To":"Codaki", "Message":"they are very nice but some of them are very hard to unlock" }
+{ "timestamp":"2017-04-17T16:24:13Z", "event":"SendText", "To":"Codaki", "Message":"with them you can get ships like the imperial eagle to almost 800 m/s" }
+{ "timestamp":"2017-04-17T16:30:07Z", "event":"SendText", "To":"Captain Pain", "Message":"hey" }
+{ "timestamp":"2017-04-18T16:12:07Z", "event":"SendText", "To":"Captain Pain", "Message":"WHERE TF ARE YOUß" }
+{ "timestamp":"2017-04-18T16:12:18Z", "event":"SendText", "To":"Captain Pain", "Message":"sorry caps" }
+{ "timestamp":"2017-04-18T18:07:12Z", "event":"SendText", "To":"local", "Message":"HEY GUYS" }
+{ "timestamp":"2017-04-18T18:18:51Z", "event":"SendText", "To":"wing", "Message":"hey" }
+{ "timestamp":"2017-04-18T18:19:41Z", "event":"SendText", "To":"wing", "Message":"im searching for a nice ring" }
+{ "timestamp":"2017-04-18T18:20:29Z", "event":"SendText", "To":"wing", "Message":"hey" }
+{ "timestamp":"2017-04-18T18:21:25Z", "event":"SendText", "To":"wing", "Message":"icy or metall" }
+{ "timestamp":"2017-04-18T18:21:43Z", "event":"SendText", "To":"wing", "Message":"im starting right now" }
+{ "timestamp":"2017-04-18T18:22:01Z", "event":"SendText", "To":"wing", "Message":"bromellite" }
+{ "timestamp":"2017-04-18T18:22:05Z", "event":"SendText", "To":"wing", "Message":"ok icy" }
+{ "timestamp":"2017-04-18T18:22:27Z", "event":"SendText", "To":"wing", "Message":"me too" }
+{ "timestamp":"2017-04-18T18:23:03Z", "event":"SendText", "To":"wing", "Message":"i found a icy ring with major reserves" }
+{ "timestamp":"2017-04-18T18:23:27Z", "event":"SendText", "To":"wing", "Message":"i got 3 turreted mining lasers" }
+{ "timestamp":"2017-04-18T18:24:17Z", "event":"SendText", "To":"wing", "Message":"its not even around a gas giant" }
+{ "timestamp":"2017-04-18T18:24:27Z", "event":"SendText", "To":"wing", "Message":"just a little moon" }
+{ "timestamp":"2017-04-18T18:24:47Z", "event":"SendText", "To":"wing", "Message":"nope" }
+{ "timestamp":"2017-04-18T18:25:26Z", "event":"SendText", "To":"wing", "Message":"i hate that i can only carry one refinery" }
+{ "timestamp":"2017-04-18T18:25:57Z", "event":"SendText", "To":"wing", "Message":"fuck we've to land forgot limpets" }
+{ "timestamp":"2017-04-18T18:26:22Z", "event":"SendText", "To":"wing", "Message":"jep" }
+{ "timestamp":"2017-04-18T18:26:56Z", "event":"SendText", "To":"wing", "Message":"just keep bromellite and low-temp diamonds" }
+{ "timestamp":"2017-04-18T18:28:10Z", "event":"SendText", "To":"wing", "Message":"the other ones arent worth it#" }
+{ "timestamp":"2017-04-18T18:28:41Z", "event":"SendText", "To":"wing", "Message":"what is your current ship" }
+{ "timestamp":"2017-04-18T18:30:27Z", "event":"SendText", "To":"wing", "Message":"oh me too" }
+{ "timestamp":"2017-04-18T18:30:44Z", "event":"SendText", "To":"wing", "Message":"never invested that much efford to get them" }
+{ "timestamp":"2017-04-18T18:31:46Z", "event":"SendText", "To":"wing", "Message":"ooooops never write while flying" }
+{ "timestamp":"2017-04-18T18:32:02Z", "event":"SendText", "To":"wing", "Message":"yep for combat i use the fdl" }
+{ "timestamp":"2017-04-18T18:33:20Z", "event":"SendText", "To":"wing", "Message":"if a pirate drops in we have to run ive only equipped 4d shields and no weapons or utilities" }
+{ "timestamp":"2017-04-18T18:34:14Z", "event":"SendText", "To":"wing", "Message":"nope" }
+{ "timestamp":"2017-04-18T18:35:18Z", "event":"SendText", "To":"wing", "Message":"jep maybe we get enough for both fo us" }
+{ "timestamp":"2017-04-18T18:36:23Z", "event":"SendText", "To":"wing", "Message":"holy shit" }
+{ "timestamp":"2017-04-18T18:37:29Z", "event":"SendText", "To":"wing", "Message":"drop the prospector" }
+{ "timestamp":"2017-04-18T18:38:23Z", "event":"SendText", "To":"wing", "Message":"switch fire group" }
+{ "timestamp":"2017-04-18T18:38:33Z", "event":"SendText", "To":"wing", "Message":"press n" }
+{ "timestamp":"2017-04-18T18:39:16Z", "event":"SendText", "To":"wing", "Message":"stop this" }
+{ "timestamp":"2017-04-18T18:49:03Z", "event":"SendText", "To":"Randall Flagg", "Message":"Guten Abend, hast du irgentwelche tips, wie ich am besten an Bromellite komme?" }
+{ "timestamp":"2017-04-19T16:58:26Z", "event":"SendText", "To":"$cmdr_decorate:#name=Matz Inger;", "To_Localised":"CMDR Matz Inger", "Message":"hey" }
+{ "timestamp":"2017-04-19T16:59:05Z", "event":"SendText", "To":"$cmdr_decorate:#name=Mistycica;", "To_Localised":"CMDR Mistycica", "Message":"hey" }
+{ "timestamp":"2017-04-19T18:04:40Z", "event":"SendText", "To":"$cmdr_decorate:#name=Imo;", "To_Localised":"CMDR Imo", "Message":"hey" }
+{ "timestamp":"2017-04-19T18:10:28Z", "event":"SendText", "To":"$cmdr_decorate:#name=Yori Vulpes;", "To_Localised":"CMDR Yori Vulpes", "Message":"hey" }
+{ "timestamp":"2017-04-19T18:13:43Z", "event":"SendText", "To":"Lurion", "Message":"hey" }
+{ "timestamp":"2017-04-19T18:17:40Z", "event":"SendText", "To":"Lurion", "Message":"I'm grinding for alioth permit" }
+{ "timestamp":"2017-04-19T18:18:29Z", "event":"SendText", "To":"Lurion", "Message":"i wanted to unlock the engieneer when i noticed that i dont have the permit" }
+{ "timestamp":"2017-04-19T18:18:55Z", "event":"SendText", "To":"Lurion", "Message":"my fdl is fully modded only the fsd isnt" }
+{ "timestamp":"2017-04-19T18:19:21Z", "event":"SendText", "To":"Lurion", "Message":"its bill turner" }
+{ "timestamp":"2017-04-19T18:19:31Z", "event":"SendText", "To":"Lurion", "Message":"you nedd 50 tons bromellite" }
+{ "timestamp":"2017-04-19T18:20:24Z", "event":"SendText", "To":"Lurion", "Message":"the permit isnt the problem it took me like 4 houres of mining for the 50 tons" }
+{ "timestamp":"2017-04-19T18:20:29Z", "event":"SendText", "To":"Lurion", "Message":"yep" }
+{ "timestamp":"2017-04-19T18:22:36Z", "event":"SendText", "To":"Lurion", "Message":"thx yours too" }
+{ "timestamp":"2017-04-19T18:30:29Z", "event":"SendText", "To":"Lurion", "Message":"is bill the only engieneer with plasmas?" }
+{ "timestamp":"2017-04-19T18:31:45Z", "event":"SendText", "To":"Lurion", "Message":"of all engieneers ive unlocked hes the only one" }
+{ "timestamp":"2017-04-19T18:33:50Z", "event":"SendText", "To":"Lurion", "Message":"my courier now gets to nearly 700 m/s :D" }
+{ "timestamp":"2017-04-19T18:35:07Z", "event":"SendText", "To":"Lurion", "Message":"took me a while to get him to maia because it overheats at every jump" }
+{ "timestamp":"2017-04-19T18:44:05Z", "event":"SendText", "To":"Lurion", "Message":"oh i never got that problem" }
+{ "timestamp":"2017-04-19T18:44:54Z", "event":"SendText", "To":"Lurion", "Message":"im friendly with alioth independents i need to be allied" }
+{ "timestamp":"2017-04-19T18:45:59Z", "event":"SendText", "To":"Lurion", "Message":"i only meet 1-3 cmdrs at the bases most of the time" }
+{ "timestamp":"2017-04-19T18:47:06Z", "event":"SendText", "To":"Lurion", "Message":"the only place where I ever got this problem was in shinratha " }
+{ "timestamp":"2017-04-19T18:47:48Z", "event":"SendText", "To":"Lurion", "Message":"im elite explorer and trader xD" }
+{ "timestamp":"2017-04-19T18:47:51Z", "event":"SendText", "To":"Lurion", "Message":"jep" }
+{ "timestamp":"2017-04-19T18:48:07Z", "event":"SendText", "To":"Lurion", "Message":"I used it many hours" }
+{ "timestamp":"2017-04-19T18:48:49Z", "event":"SendText", "To":"Lurion", "Message":"Explorer is easier since 2.3" }
+{ "timestamp":"2017-04-19T18:49:35Z", "event":"SendText", "To":"Lurion", "Message":"ever visited the core?" }
+{ "timestamp":"2017-04-19T18:49:41Z", "event":"SendText", "To":"Lurion", "Message":"jep me too" }
+{ "timestamp":"2017-04-19T18:50:20Z", "event":"SendText", "To":"Lurion", "Message":"you get like 0.5 % for every ship you shoot down?" }
+{ "timestamp":"2017-04-19T18:50:35Z", "event":"SendText", "To":"Lurion", "Message":"jep me too" }
+{ "timestamp":"2017-04-19T18:50:46Z", "event":"SendText", "To":"Lurion", "Message":"it more or less on the way" }
+{ "timestamp":"2017-04-19T18:51:54Z", "event":"SendText", "To":"Lurion", "Message":"I like going out 6-10k ly " }
+{ "timestamp":"2017-04-19T18:52:06Z", "event":"SendText", "To":"Lurion", "Message":"this gives 2-6 mil" }
+{ "timestamp":"2017-04-19T18:52:14Z", "event":"SendText", "To":"Lurion", "Message":"since 2.3 i dont know" }
+{ "timestamp":"2017-04-19T18:54:01Z", "event":"SendText", "To":"Lurion", "Message":"ok would be nice" }
+{ "timestamp":"2017-04-19T18:55:37Z", "event":"SendText", "To":"Lurion", "Message":"i think on the way back ill take a long brake in the 'Colonia Bubble' and wor for the factions out there" }
+{ "timestamp":"2017-04-19T19:02:42Z", "event":"SendText", "To":"Lurion", "Message":"jep luckily all my ships allready got engieneerd fsd" }
+{ "timestamp":"2017-04-19T19:04:35Z", "event":"SendText", "To":"Lurion", "Message":"how many ships do you own?" }
+{ "timestamp":"2017-04-19T19:08:05Z", "event":"SendText", "To":"Lurion", "Message":"ok i think i exaggerated a bit" }
+{ "timestamp":"2017-04-19T19:08:32Z", "event":"SendText", "To":"Lurion", "Message":"if i only count the fully fitted ones..." }
+{ "timestamp":"2017-04-19T19:10:06Z", "event":"SendText", "To":"Lurion", "Message":"fdl,anaconda,orca,beluga,dolphin,courier,clipper,dbx, and everything below" }
+{ "timestamp":"2017-04-19T19:12:57Z", "event":"SendText", "To":"Lurion", "Message":"i think i should sell some of them" }
+{ "timestamp":"2017-04-20T09:45:58Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hey " }
+{ "timestamp":"2017-04-20T09:47:13Z", "event":"SendText", "To":"Vortex-XIII", "Message":"haste schon die alioth permit?" }
+{ "timestamp":"2017-04-20T09:49:24Z", "event":"SendText", "To":"Vortex-XIII", "Message":"haste irgentwelche tips, wie ich schneller an die  dran komme?" }
+{ "timestamp":"2017-04-20T09:50:29Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja super da hab ich mich gestern ausgeloggt und jetzt ist hier aufeinmal lockdown" }
+{ "timestamp":"2017-04-20T09:50:41Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja gut dann mache ich ja alles richtig" }
+{ "timestamp":"2017-04-20T09:53:45Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja gut es gibt teilweise noch missionen sind aber immer nur 1-2" }
+{ "timestamp":"2017-04-20T09:54:39Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hatte gestern die 50 bromellite gesammelt als mir aufgefallen is, dass ich die permit noch garnicht habe" }
+{ "timestamp":"2017-04-20T09:56:50Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep die gammeln die ganze zeit im frachtraum und ich kann nicht mal auf nen schnelleres schiff wechseln" }
+{ "timestamp":"2017-04-20T09:58:33Z", "event":"SendText", "To":"Vortex-XIII", "Message":"aber mir fällt grade auf, dass der markt garnicht geschlossen ist" }
+{ "timestamp":"2017-04-20T09:59:11Z", "event":"SendText", "To":"Vortex-XIII", "Message":"anaconda" }
+{ "timestamp":"2017-04-20T09:59:41Z", "event":"SendText", "To":"Vortex-XIII", "Message":"die geht bis auf 300 m/s" }
+{ "timestamp":"2017-04-20T09:59:53Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab schiffe die sind mehr als doppelt so schnell" }
+{ "timestamp":"2017-04-20T10:00:33Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-20T10:01:08Z", "event":"SendText", "To":"Vortex-XIII", "Message":"mache aber die ganze scanning missions " }
+{ "timestamp":"2017-04-20T10:01:25Z", "event":"SendText", "To":"Vortex-XIII", "Message":"die bezahlen hier noch halbwegs gut" }
+{ "timestamp":"2017-04-20T10:03:04Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hast du jemals nen beluga ausgerüstet?" }
+{ "timestamp":"2017-04-20T10:04:05Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab beide :D" }
+{ "timestamp":"2017-04-20T10:04:22Z", "event":"SendText", "To":"Vortex-XIII", "Message":"beluga ist so kacken teuer" }
+{ "timestamp":"2017-04-20T10:04:33Z", "event":"SendText", "To":"Vortex-XIII", "Message":"allein schon der grad 7 fsd" }
+{ "timestamp":"2017-04-20T10:04:37Z", "event":"SendText", "To":"Vortex-XIII", "Message":"52 mio" }
+{ "timestamp":"2017-04-20T10:05:06Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh nett" }
+{ "timestamp":"2017-04-20T10:05:17Z", "event":"SendText", "To":"Vortex-XIII", "Message":"orca is auch relativ schnell" }
+{ "timestamp":"2017-04-20T10:06:08Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja gut is ja auch das teuerste schiff" }
+{ "timestamp":"2017-04-20T10:06:30Z", "event":"SendText", "To":"Vortex-XIII", "Message":"der fsd kostet fast soviel wie das schiff selber" }
+{ "timestamp":"2017-04-20T10:07:11Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep teure geschichte" }
+{ "timestamp":"2017-04-20T10:08:27Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich mein meine anconda hat nen 5c gemoddetes pp" }
+{ "timestamp":"2017-04-20T10:09:55Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja gut is trader/explorer" }
+{ "timestamp":"2017-04-20T10:10:21Z", "event":"SendText", "To":"Vortex-XIII", "Message":"habe 64% power usage" }
+{ "timestamp":"2017-04-20T10:11:04Z", "event":"SendText", "To":"Vortex-XIII", "Message":"nen 3c könnte gemoddet auch reichen xD" }
+{ "timestamp":"2017-04-20T10:11:20Z", "event":"SendText", "To":"Vortex-XIII", "Message":"aber bnutze die oft zu waffentransport" }
+{ "timestamp":"2017-04-20T10:11:32Z", "event":"SendText", "To":"Vortex-XIII", "Message":"bzw modden" }
+{ "timestamp":"2017-04-20T10:11:42Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa" }
+{ "timestamp":"2017-04-20T10:11:59Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich glaube ich versuch mal nen 3 oder 4a" }
+{ "timestamp":"2017-04-20T10:12:45Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wieß sowieso nicht wieso das ding c und nicht d hat" }
+{ "timestamp":"2017-04-20T10:12:48Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-20T10:14:23Z", "event":"SendText", "To":"Vortex-XIII", "Message":"die anaconda is im moment bei mir nen wandelnes ersatzteillager" }
+{ "timestamp":"2017-04-20T10:16:48Z", "event":"SendText", "To":"Vortex-XIII", "Message":"die war ne gute hilfe beim modden meiner fdl und clipper" }
+{ "timestamp":"2017-04-20T10:18:14Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab zum beispiel hier drinne nen weapon focused energieverteiler " }
+{ "timestamp":"2017-04-20T10:18:37Z", "event":"SendText", "To":"Vortex-XIII", "Message":"obwohl das ding nie wffen hatte" }
+{ "timestamp":"2017-04-20T10:19:31Z", "event":"SendText", "To":"Vortex-XIII", "Message":"seit wwann gibt es piraten auf planeten?" }
+{ "timestamp":"2017-04-20T10:19:47Z", "event":"SendText", "To":"Vortex-XIII", "Message":":D" }
+{ "timestamp":"2017-04-20T10:22:59Z", "event":"SendText", "To":"Vortex-XIII", "Message":"finde aber das neue piraten system ist gut gelungen" }
+{ "timestamp":"2017-04-20T10:23:38Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja der wollte grade mein bromellite habenm 16t" }
+{ "timestamp":"2017-04-20T10:25:04Z", "event":"SendText", "To":"Vortex-XIII", "Message":"war zum glück nur ne eagle trotzdem 16% hülle verloren..." }
+{ "timestamp":"2017-04-20T10:26:44Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-20T10:30:00Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wow hab ausvershen ne mission angenommen für die ich ne uss brauche" }
+{ "timestamp":"2017-04-20T10:30:12Z", "event":"SendText", "To":"Vortex-XIII", "Message":"rate ma lwas ich nicht finde" }
+{ "timestamp":"2017-04-20T10:39:04Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa hatte jetzt eine gfunden mir is aber fast bei dem versuch die container aufzusammeln fast so nen ding kaputt gegangen, weil ich keine limpets dabei hatte" }
+{ "timestamp":"2017-04-20T10:41:58Z", "event":"SendText", "To":"Vortex-XIII", "Message":"das is so scheiße mit bounty hunting hätte ich den ruf schon lange aber die fdl hat nur 16t frachtraum" }
+{ "timestamp":"2017-04-20T10:46:19Z", "event":"SendText", "To":"Vortex-XIII", "Message":"kennste achenar 3?" }
+{ "timestamp":"2017-04-20T10:46:51Z", "event":"SendText", "To":"Vortex-XIII", "Message":"#jep" }
+{ "timestamp":"2017-04-20T10:47:18Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hatte mir in der beta nen t9 geschnappt und das versucht" }
+{ "timestamp":"2017-04-20T10:47:28Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hatte noch 4% hülle" }
+{ "timestamp":"2017-04-20T10:48:43Z", "event":"SendText", "To":"Vortex-XIII", "Message":"muss da mal mit dem courier versuchen" }
+{ "timestamp":"2017-04-20T10:51:28Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich werde halt den courier nehem, weil der mit seinen 700 m/S die besten chancen haben wird" }
+{ "timestamp":"2017-04-20T11:32:16Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich hasse mein leben" }
+{ "timestamp":"2017-04-20T11:32:22Z", "event":"SendText", "To":"Vortex-XIII", "Message":"das dauert so lange" }
+{ "timestamp":"2017-04-20T11:35:19Z", "event":"SendText", "To":"Vortex-XIII", "Message":"früher habe ich von da die missonen gemacht in nem type-7" }
+{ "timestamp":"2017-04-20T11:35:24Z", "event":"SendText", "To":"Vortex-XIII", "Message":"18lj" }
+{ "timestamp":"2017-04-20T11:35:51Z", "event":"SendText", "To":"Vortex-XIII", "Message":"SPAAAAAAAAAAAAAAAAAAAßßß" }
+{ "timestamp":"2017-04-20T11:35:54Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja" }
+{ "timestamp":"2017-04-20T11:36:37Z", "event":"SendText", "To":"Vortex-XIII", "Message":"#manchmal ist der weg sehr schwer langweilig und nutzlos *husthust*" }
+{ "timestamp":"2017-04-20T11:36:48Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jap" }
+{ "timestamp":"2017-04-20T11:37:38Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich versuche den rang jetzt durch trading zu bekommen" }
+{ "timestamp":"2017-04-20T11:38:11Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ohhhhhhhh stimmt" }
+{ "timestamp":"2017-04-20T11:38:28Z", "event":"SendText", "To":"Vortex-XIII", "Message":"flieg gleich mal nen paar systeme ab" }
+{ "timestamp":"2017-04-20T11:38:40Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa" }
+{ "timestamp":"2017-04-20T11:38:50Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich nehme dezrah und lave" }
+{ "timestamp":"2017-04-20T11:39:04Z", "event":"SendText", "To":"Vortex-XIII", "Message":"die sollten nicht zu weit sein" }
+{ "timestamp":"2017-04-20T11:39:28Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab grade mein glück mit gold versucht" }
+{ "timestamp":"2017-04-20T11:40:40Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa ich weiß nur, dass das maximum 400 ist" }
+{ "timestamp":"2017-04-20T11:42:32Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hoffentlich haben die boom" }
+{ "timestamp":"2017-04-20T11:45:55Z", "event":"SendText", "To":"Vortex-XIII", "Message":"8 sprünge rare trade route" }
+{ "timestamp":"2017-04-20T11:50:29Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hat das eigentlich einen grund, dass die sirius corp in sothis vertreten ist?" }
+{ "timestamp":"2017-04-20T11:51:20Z", "event":"SendText", "To":"Vortex-XIII", "Message":"schonmal ne asteroid base oder nen megaship gefunden?" }
+{ "timestamp":"2017-04-20T11:52:12Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-20T11:52:32Z", "event":"SendText", "To":"Vortex-XIII", "Message":"könnte fast schon von nem spieler geleitet sein" }
+{ "timestamp":"2017-04-20T11:52:43Z", "event":"SendText", "To":"Vortex-XIII", "Message":"base ist hier in lave " }
+{ "timestamp":"2017-04-20T11:52:59Z", "event":"SendText", "To":"Vortex-XIII", "Message":"und megaship noch nie gesehen" }
+{ "timestamp":"2017-04-20T11:53:05Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok bis dann" }
+{ "timestamp":"2017-04-20T11:57:57Z", "event":"SendText", "To":"$cmdr_decorate:#name=Flowroots;", "To_Localised":"CMDR Flowroots", "Message":"hey" }
+{ "timestamp":"2017-04-20T12:01:26Z", "event":"SendText", "To":"local", "Message":"hey guys" }
+{ "timestamp":"2017-04-20T12:03:01Z", "event":"SendText", "To":"local", "Message":"hey guys" }
+{ "timestamp":"2017-04-20T12:03:16Z", "event":"SendText", "To":"local", "Message":"any tips for getting alioth permit?" }
+{ "timestamp":"2017-04-20T12:06:50Z", "event":"SendText", "To":"local", "Message":"?" }
+{ "timestamp":"2017-04-20T12:07:17Z", "event":"SendText", "To":"local", "Message":"see ya" }
+{ "timestamp":"2017-04-20T13:05:44Z", "event":"SendText", "To":"$cmdr_decorate:#name=JFK;", "To_Localised":"CMDR JFK", "Message":"hey" }
+{ "timestamp":"2017-04-20T13:06:00Z", "event":"SendText", "To":"Vortex-XIII", "Message":"gebe jetzt meine erste ladung ab" }
+{ "timestamp":"2017-04-20T13:08:32Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ohne witz ich hab verkackt" }
+{ "timestamp":"2017-04-20T13:08:59Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich habs an die einzige station verkauft, die nicht von alioth independents ist" }
+{ "timestamp":"2017-04-20T13:10:00Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich bin so durch" }
+{ "timestamp":"2017-04-20T13:11:36Z", "event":"SendText", "To":"Vortex-XIII", "Message":"frag nicht wieso aber ich kann auch keine route plotten" }
+{ "timestamp":"2017-04-20T13:11:45Z", "event":"SendText", "To":"local", "Message":"das spiel hasst mich" }
+{ "timestamp":"2017-04-20T13:12:03Z", "event":"SendText", "To":"Vortex-XIII", "Message":"das spiel hasst mich" }
+{ "timestamp":"2017-04-20T13:14:16Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh ja wäre cool mal was anderes xD" }
+{ "timestamp":"2017-04-20T13:15:25Z", "event":"SendText", "To":"local", "Message":"hey" }
+{ "timestamp":"2017-04-20T13:15:48Z", "event":"SendText", "To":"local", "Message":"mir fällt grade ein in maia kann man doch meta-alloys kaufen" }
+{ "timestamp":"2017-04-20T13:16:09Z", "event":"SendText", "To":"local", "Message":"hat" }
+{ "timestamp":"2017-04-20T13:16:29Z", "event":"SendText", "To":"local", "Message":"man damit nicht irgentwie 100k profit gemacht" }
+{ "timestamp":"2017-04-20T13:17:51Z", "event":"SendText", "To":"local", "Message":"joa" }
+{ "timestamp":"2017-04-20T13:18:00Z", "event":"SendText", "To":"local", "Message":"ich glaube ich versuchs einfach mal" }
+{ "timestamp":"2017-04-20T13:18:20Z", "event":"SendText", "To":"local", "Message":"dind so 370ly" }
+{ "timestamp":"2017-04-20T13:18:47Z", "event":"SendText", "To":"local", "Message":"vorallem haben die grade boom" }
+{ "timestamp":"2017-04-20T13:19:51Z", "event":"SendText", "To":"Vortex-XIII", "Message":"diene python hat 'nur' 732 schildstärke?" }
+{ "timestamp":"2017-04-20T13:20:09Z", "event":"SendText", "To":"Vortex-XIII", "Message":"haben die nur 9" }
+{ "timestamp":"2017-04-20T13:20:24Z", "event":"SendText", "To":"Vortex-XIII", "Message":"meine fdl hat knapp 2200 " }
+{ "timestamp":"2017-04-20T13:20:27Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja ok" }
+{ "timestamp":"2017-04-20T13:20:51Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab prismas und 6 booster xD" }
+{ "timestamp":"2017-04-20T13:20:59Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok" }
+{ "timestamp":"2017-04-20T13:21:17Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja ok meine haben überall 50%" }
+{ "timestamp":"2017-04-20T13:21:40Z", "event":"SendText", "To":"Vortex-XIII", "Message":"suser thermal da nur 33%" }
+{ "timestamp":"2017-04-20T13:21:45Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-20T13:21:53Z", "event":"SendText", "To":"Vortex-XIII", "Message":"die ziehen ordentlich" }
+{ "timestamp":"2017-04-20T13:22:12Z", "event":"SendText", "To":"Vortex-XIII", "Message":"also bei meiner fdl" }
+{ "timestamp":"2017-04-20T13:22:26Z", "event":"SendText", "To":"Vortex-XIII", "Message":"arbeite noch dran" }
+{ "timestamp":"2017-04-20T13:22:55Z", "event":"SendText", "To":"Vortex-XIII", "Message":"was ist denn das größte internal bei dir" }
+{ "timestamp":"2017-04-20T13:23:15Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa hab halt heavy" }
+{ "timestamp":"2017-04-20T13:23:18Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok" }
+{ "timestamp":"2017-04-20T13:24:15Z", "event":"SendText", "To":"Vortex-XIII", "Message":":D" }
+{ "timestamp":"2017-04-20T13:24:24Z", "event":"SendText", "To":"Vortex-XIII", "Message":"komme sofort nach maia" }
+{ "timestamp":"2017-04-20T13:25:13Z", "event":"SendText", "To":"Vortex-XIII", "Message":"6er Prisma zieht 6.5 MW und kostet 24 mio" }
+{ "timestamp":"2017-04-20T13:29:03Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa " }
+{ "timestamp":"2017-04-20T13:29:48Z", "event":"SendText", "To":"Vortex-XIII", "Message":"meine fdl is auf 99%" }
+{ "timestamp":"2017-04-20T13:29:57Z", "event":"SendText", "To":"Vortex-XIII", "Message":"grad 3 overcharged" }
+{ "timestamp":"2017-04-20T13:32:00Z", "event":"SendText", "To":"Vortex-XIII", "Message":"was willste für waffen?" }
+{ "timestamp":"2017-04-20T13:32:33Z", "event":"SendText", "To":"Vortex-XIII", "Message":"nur oder auch noch anderes" }
+{ "timestamp":"2017-04-20T13:33:12Z", "event":"SendText", "To":"Vortex-XIII", "Message":"4 beam + huge multi gefällt mir ziemlich gut" }
+{ "timestamp":"2017-04-20T13:38:12Z", "event":"SendText", "To":"Vortex-XIII", "Message":"muss halt gemoddet werden" }
+{ "timestamp":"2017-04-20T13:53:46Z", "event":"SendText", "To":"Vortex-XIII", "Message":"liefer jetzt sofort ab" }
+{ "timestamp":"2017-04-20T14:00:47Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja klar jetzt is der warenmarkt wieder dicht" }
+{ "timestamp":"2017-04-20T14:00:55Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich kriege nen anfall" }
+{ "timestamp":"2017-04-20T14:08:34Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ursa" }
+{ "timestamp":"2017-04-20T14:08:39Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab nachgeguckt" }
+{ "timestamp":"2017-04-20T14:08:57Z", "event":"SendText", "To":"Vortex-XIII", "Message":"meta-alloy sollen nen minusgeschäfft sein" }
+{ "timestamp":"2017-04-20T14:09:13Z", "event":"SendText", "To":"Vortex-XIII", "Message":"bis zu 80k verlust pro tonne" }
+{ "timestamp":"2017-04-20T14:09:53Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wie lange hält so nen lockdown an?" }
+{ "timestamp":"2017-04-20T14:10:37Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok" }
+{ "timestamp":"2017-04-20T14:10:48Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich geh mal googlen" }
+{ "timestamp":"2017-04-20T14:13:41Z", "event":"SendText", "To":"Vortex-XIII", "Message":"soweit ich sehen kann nur der typ" }
+{ "timestamp":"2017-04-20T14:16:47Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja geil nen lockdown kann bis zu 14 tage dauern" }
+{ "timestamp":"2017-04-20T14:16:55Z", "event":"SendText", "To":"Vortex-XIII", "Message":"mindestens einer" }
+{ "timestamp":"2017-04-20T14:17:57Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wäre ja alles halb so schlimm, wenn man das bromellite lagern könnte..." }
+{ "timestamp":"2017-04-20T14:19:11Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jaaaaaaaaaaaaaaaaaaaaaaaaaaaaa Schwarzmarkt funktioniert" }
+{ "timestamp":"2017-04-20T14:19:23Z", "event":"SendText", "To":"Vortex-XIII", "Message":"erstmal gucken wo es sklaven gibt" }
+{ "timestamp":"2017-04-20T14:21:40Z", "event":"SendText", "To":"Vortex-XIII", "Message":"normal schon" }
+{ "timestamp":"2017-04-20T14:22:14Z", "event":"SendText", "To":"Vortex-XIII", "Message":"so funktioniert mein ich auch robigo" }
+{ "timestamp":"2017-04-20T14:23:14Z", "event":"SendText", "To":"Vortex-XIII", "Message":"probieren geht über studieren" }
+{ "timestamp":"2017-04-20T14:23:21Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oder so" }
+{ "timestamp":"2017-04-20T14:24:24Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich hab aber auch rep durch den lavian brandy bekommen" }
+{ "timestamp":"2017-04-20T14:24:30Z", "event":"SendText", "To":"Vortex-XIII", "Message":"aufem schwarzmarkt" }
+{ "timestamp":"2017-04-20T14:24:36Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-20T14:25:10Z", "event":"SendText", "To":"Vortex-XIII", "Message":"war die hölle ohne solche sachen geld zu verdienen" }
+{ "timestamp":"2017-04-20T14:25:40Z", "event":"SendText", "To":"Vortex-XIII", "Message":"so erstmal 380t sklaven einladen" }
+{ "timestamp":"2017-04-20T14:28:10Z", "event":"SendText", "To":"Vortex-XIII", "Message":"findest du eigentlich diese momentane hate welle berechtigt?" }
+{ "timestamp":"2017-04-20T14:29:33Z", "event":"SendText", "To":"Vortex-XIII", "Message":"also wenn man sich die bewertungen durch ließt beschweren sich viele über so kleine bugs oder darüber, dass manche graftiken schlechter gemacht wurden" }
+{ "timestamp":"2017-04-20T14:29:45Z", "event":"SendText", "To":"Vortex-XIII", "Message":"also jetzt auf 2.3 bezogen" }
+{ "timestamp":"2017-04-20T14:31:39Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja ok aber man muss auch überlegen sie haben das ja suzusagen geopfert,damit die sprungzeit eingekürzt wird" }
+{ "timestamp":"2017-04-20T14:31:44Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-20T14:32:02Z", "event":"SendText", "To":"Vortex-XIII", "Message":"kennste schon den neuen quince bug" }
+{ "timestamp":"2017-04-20T14:32:56Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich find das einzige wo man nen unterschied merkt ist bei stationen und planeten" }
+{ "timestamp":"2017-04-20T14:32:59Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-20T14:33:07Z", "event":"SendText", "To":"Vortex-XIII", "Message":"aber auch nur manchmal" }
+{ "timestamp":"2017-04-20T14:34:42Z", "event":"SendText", "To":"Vortex-XIII", "Message":"die haben einen bug entfernt und nen neuen eingebaut" }
+{ "timestamp":"2017-04-20T14:34:55Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok da kann ich nicht mitreden" }
+{ "timestamp":"2017-04-20T14:35:18Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hatte mal 1200 mio hab aber viel gespendet für fed und imp rang" }
+{ "timestamp":"2017-04-20T14:35:44Z", "event":"SendText", "To":"Vortex-XIII", "Message":"'klein'" }
+{ "timestamp":"2017-04-20T14:36:38Z", "event":"SendText", "To":"Vortex-XIII", "Message":"nin bei 700 mio" }
+{ "timestamp":"2017-04-20T14:36:50Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-20T14:37:06Z", "event":"SendText", "To":"Vortex-XIII", "Message":"die hat bei mir glaub ich 7 mio rebuy" }
+{ "timestamp":"2017-04-20T14:37:36Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wir müssen auch mal kämpfen nur damit du mich fertig machen kannst" }
+{ "timestamp":"2017-04-20T14:37:57Z", "event":"SendText", "To":"Vortex-XIII", "Message":"am besten mit nem kleinem schiff" }
+{ "timestamp":"2017-04-20T14:39:00Z", "event":"SendText", "To":"Vortex-XIII", "Message":"haste jemals cqc gespielt" }
+{ "timestamp":"2017-04-20T14:39:47Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-20T14:40:02Z", "event":"SendText", "To":"Vortex-XIII", "Message":"konnte das nur spielen als es rausgekommen ist" }
+{ "timestamp":"2017-04-20T14:40:08Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab 2 stunden" }
+{ "timestamp":"2017-04-20T14:41:08Z", "event":"SendText", "To":"Vortex-XIII", "Message":"you have to go to a station in the system where you were bounty hunting " }
+{ "timestamp":"2017-04-20T14:41:24Z", "event":"SendText", "To":"Vortex-XIII", "Message":"there you find your rewards under contacts" }
+{ "timestamp":"2017-04-20T14:41:59Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ups" }
+{ "timestamp":"2017-04-20T14:42:09Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab so nen anfänger" }
+{ "timestamp":"2017-04-20T14:42:57Z", "event":"SendText", "To":"Codaki", "Message":"you need to get to a station in the system where you were bountyhunting and your rewards are under contacts" }
+{ "timestamp":"2017-04-20T14:43:49Z", "event":"SendText", "To":"Codaki", "Message":"im back in 10 min" }
+{ "timestamp":"2017-04-20T14:58:03Z", "event":"SendText", "To":"Vortex-XIII", "Message":"was machste jetzt so?" }
+{ "timestamp":"2017-04-20T14:59:11Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh wenn man sachen amm schwarzmarkt verkauft, ist das nur positiv, wenn es ein arnachie system ist" }
+{ "timestamp":"2017-04-20T14:59:59Z", "event":"SendText", "To":"Vortex-XIII", "Message":"is nen tolles xhiff man muss nur beim docken aufpassen" }
+{ "timestamp":"2017-04-20T15:01:31Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich glaube ich gehe meinen orca modden solange die hier lockdown haben das ding hat zum glück frachtgestelle" }
+{ "timestamp":"2017-04-20T15:02:21Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep vllt sehen wir uns ja noch" }
+{ "timestamp":"2017-04-20T15:02:28Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh nett" }
+{ "timestamp":"2017-04-20T15:03:31Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hehe" }
+{ "timestamp":"2017-04-20T15:05:09Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja" }
+{ "timestamp":"2017-04-20T15:05:37Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep" }
+{ "timestamp":"2017-04-20T15:05:50Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich würde kampf nehemn geht dann ganz flott" }
+{ "timestamp":"2017-04-20T15:06:33Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hat glaub ich 2 stunden gedauert bis einstufung 3" }
+{ "timestamp":"2017-04-20T15:07:06Z", "event":"SendText", "To":"Vortex-XIII", "Message":"man muss halt erst mal in nen richtiges system" }
+{ "timestamp":"2017-04-20T15:07:56Z", "event":"SendText", "To":"Vortex-XIII", "Message":"du kannst doch jetzt schon anfangen zu farmen du verlierst aber jede woch die hälfte" }
+{ "timestamp":"2017-04-20T15:08:12Z", "event":"SendText", "To":"Vortex-XIII", "Message":"gibt aber gut geld, wenn man das 4 rating erreicht" }
+{ "timestamp":"2017-04-20T15:08:18Z", "event":"SendText", "To":"Vortex-XIII", "Message":"50mio" }
+{ "timestamp":"2017-04-20T15:08:51Z", "event":"SendText", "To":"Vortex-XIII", "Message":"und ich bin grade durch nen planeten geflogen" }
+{ "timestamp":"2017-04-20T15:09:19Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok ja dann " }
+{ "timestamp":"2017-04-20T15:10:23Z", "event":"SendText", "To":"Vortex-XIII", "Message":"als mich jemand abfangen wollte bin ich mitten durch die founders world geflogen" }
+{ "timestamp":"2017-04-20T15:10:25Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok" }
+{ "timestamp":"2017-04-20T15:11:25Z", "event":"SendText", "To":"Codaki", "Message":"which ship do you fly?" }
+{ "timestamp":"2017-04-20T15:13:17Z", "event":"SendText", "To":"Codaki", "Message":"still cobra?" }
+{ "timestamp":"2017-04-20T15:14:00Z", "event":"SendText", "To":"Codaki", "Message":"oh nice but only for combat" }
+{ "timestamp":"2017-04-20T15:14:08Z", "event":"SendText", "To":"Codaki", "Message":"whats your balance" }
+{ "timestamp":"2017-04-20T15:15:23Z", "event":"SendText", "To":"Codaki", "Message":"which will be your next ship?" }
+{ "timestamp":"2017-04-20T15:16:53Z", "event":"SendText", "To":"Codaki", "Message":"then i would say vulture is a good choice" }
+{ "timestamp":"2017-04-20T15:17:10Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hehe viel spaß" }
+{ "timestamp":"2017-04-20T15:17:13Z", "event":"SendText", "To":"Vortex-XIII", "Message":"bis später" }
+{ "timestamp":"2017-04-20T15:17:55Z", "event":"SendText", "To":"Codaki", "Message":"4.4 mil" }
+{ "timestamp":"2017-04-20T15:18:24Z", "event":"SendText", "To":"Codaki", "Message":"but you also have to outfit it" }
+{ "timestamp":"2017-04-20T15:18:37Z", "event":"SendText", "To":"Codaki", "Message":"I would say min 10-15 mil" }
+{ "timestamp":"2017-04-20T15:19:11Z", "event":"SendText", "To":"Codaki", "Message":"my fully fitted with everything on board had a price tag of 40 mil" }
+{ "timestamp":"2017-04-20T15:19:37Z", "event":"SendText", "To":"Codaki", "Message":"my fdl about 140 mil" }
+{ "timestamp":"2017-04-20T15:19:42Z", "event":"SendText", "To":"Codaki", "Message":"my anaconda too" }
+{ "timestamp":"2017-04-20T15:20:07Z", "event":"SendText", "To":"Codaki", "Message":"i own 17 ships" }
+{ "timestamp":"2017-04-20T15:20:10Z", "event":"SendText", "To":"Codaki", "Message":"lol" }
+{ "timestamp":"2017-04-20T15:20:22Z", "event":"SendText", "To":"Codaki", "Message":"with duplicats 41" }
+{ "timestamp":"2017-04-20T15:21:00Z", "event":"SendText", "To":"Codaki", "Message":"but im down to only 52 mil" }
+{ "timestamp":"2017-04-20T15:21:04Z", "event":"SendText", "To":"Codaki", "Message":"ok see ya+" }
+{ "timestamp":"2017-04-20T15:21:27Z", "event":"SendText", "To":"Benenantor", "Message":"hey" }
+{ "timestamp":"2017-04-20T15:25:38Z", "event":"SendText", "To":"$cmdr_decorate:#name=Dr.TOM;", "To_Localised":"CMDR Dr.TOM", "Message":"hey" }
+{ "timestamp":"2017-04-20T15:30:49Z", "event":"SendText", "To":"Benenantor", "Message":"doing the pessenger bug?" }
+{ "timestamp":"2017-04-20T15:33:40Z", "event":"SendText", "To":"Benenantor", "Message":"nope" }
+{ "timestamp":"2017-04-20T15:34:03Z", "event":"SendText", "To":"Benenantor", "Message":"but should be the same in sothis too" }
+{ "timestamp":"2017-04-20T15:34:10Z", "event":"SendText", "To":"Benenantor", "Message":"but i dont know" }
+{ "timestamp":"2017-04-20T16:09:48Z", "event":"SendText", "To":"$cmdr_decorate:#name=Stern Winter;", "To_Localised":"CMDR Stern Winter", "Message":"hey" }
+{ "timestamp":"2017-04-20T16:10:10Z", "event":"SendText", "To":"$cmdr_decorate:#name=Stern Winter;", "To_Localised":"CMDR Stern Winter", "Message":"here for meta-alloys?" }
+{ "timestamp":"2017-04-20T16:28:53Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh hey" }
+{ "timestamp":"2017-04-20T16:42:26Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab mich grade entschlossen, da ich ja schon in maia bin ne kleine spritztour mit dem orca zu machen" }
+{ "timestamp":"2017-04-20T16:42:33Z", "event":"SendText", "To":"Vortex-XIII", "Message":"mit 50t fracht..." }
+{ "timestamp":"2017-04-20T16:43:40Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh ja da war ja was" }
+{ "timestamp":"2017-04-20T16:44:32Z", "event":"SendText", "To":"Vortex-XIII", "Message":"der orca hat ungeladen 42 ly" }
+{ "timestamp":"2017-04-20T16:44:44Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok nice" }
+{ "timestamp":"2017-04-20T16:45:01Z", "event":"SendText", "To":"Vortex-XIII", "Message":"besuche ich aufem rückweg" }
+{ "timestamp":"2017-04-20T16:45:52Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ja dann viel spaß :D" }
+{ "timestamp":"2017-04-20T16:46:12Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab grade nen planeten mit 9,7 g gefunden" }
+{ "timestamp":"2017-04-20T16:58:59Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab nen binäres schwarzes loch gefunden" }
+{ "timestamp":"2017-04-20T20:19:07Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hey" }
+{ "timestamp":"2017-04-20T20:19:27Z", "event":"SendText", "To":"refreshfr", "Message":"where are you going?" }
+{ "timestamp":"2017-04-20T20:29:25Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"bist du jetzt eig Deutscher?" }
+{ "timestamp":"2017-04-20T20:30:11Z", "event":"SendText", "To":"Ryan (Ger)", "Message":":D" }
+{ "timestamp":"2017-04-20T20:30:37Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"was haste gemacht?" }
+{ "timestamp":"2017-04-20T20:31:26Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"uh die sind cool" }
+{ "timestamp":"2017-04-20T20:31:59Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hehe" }
+{ "timestamp":"2017-04-20T20:32:11Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ich fliege nach vy canis majoris" }
+{ "timestamp":"2017-04-20T20:32:41Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"sollte der größte bekannte stern sein" }
+{ "timestamp":"2017-04-20T20:34:21Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"das is doch auch so nen hyper gigant oder?" }
+{ "timestamp":"2017-04-20T20:35:21Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"jep" }
+{ "timestamp":"2017-04-20T20:35:32Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"fliege grade inner orca" }
+{ "timestamp":"2017-04-20T20:35:36Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"du so?" }
+{ "timestamp":"2017-04-20T20:37:05Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"uh meine orca hat grade 37 ly" }
+{ "timestamp":"2017-04-20T20:37:29Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hab aber 59t fracht dabei, weil ich eigentlich was anderes vor hatte" }
+{ "timestamp":"2017-04-20T20:38:50Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"den engieneer in alioth war grade am permit dafür hab halt die 50t bromellite schon" }
+{ "timestamp":"2017-04-20T20:39:28Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"aber dann haben die sich entschlossen einfach mal nen lockdown zu machen" }
+{ "timestamp":"2017-04-20T20:40:17Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ich hab anaconda, beluga, fdl, clipper, courier und alles darunter" }
+{ "timestamp":"2017-04-20T20:40:34Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"und natürlich orca" }
+{ "timestamp":"2017-04-20T20:41:07Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"jep ich hab für alles schiffe" }
+{ "timestamp":"2017-04-20T20:41:39Z", "event":"SendText", "To":"Ryan (Ger)", "Message":" meine sollten eig auch fast alle gepimt sein" }
+{ "timestamp":"2017-04-20T20:41:56Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hab halt viel schiffe unter der 3 mil marke " }
+{ "timestamp":"2017-04-20T20:42:07Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"insgesamt hab ich 37 schiffe" }
+{ "timestamp":"2017-04-20T20:42:51Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"mit ship naming gehts mittlerweile" }
+{ "timestamp":"2017-04-20T20:43:00Z", "event":"SendText", "To":"local", "Message":"früher wars die hölle" }
+{ "timestamp":"2017-04-20T20:43:12Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"früher wars die hölle" }
+{ "timestamp":"2017-04-20T20:44:20Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hehe" }
+{ "timestamp":"2017-04-20T20:44:57Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ich hab noch 210 bis dahin" }
+{ "timestamp":"2017-04-20T20:45:07Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"danach guck ich wos hingeht" }
+{ "timestamp":"2017-04-20T20:46:51Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ich bin grade eiskalt durch ne sonne geflogen" }
+{ "timestamp":"2017-04-20T20:52:14Z", "event":"SendText", "To":"Benenantor", "Message":"?" }
+{ "timestamp":"2017-04-20T20:52:57Z", "event":"SendText", "To":"Benenantor", "Message":"had no problems today" }
+{ "timestamp":"2017-04-20T20:53:17Z", "event":"SendText", "To":"Benenantor", "Message":"tried restarting?" }
+{ "timestamp":"2017-04-20T20:54:10Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"jep" }
+{ "timestamp":"2017-04-20T20:54:28Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"war schon heiß" }
+{ "timestamp":"2017-04-20T20:54:47Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"letzter sprung" }
+{ "timestamp":"2017-04-20T20:56:09Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"schonmal nen gutes zeichen, dass man 6000 ls vorm stern rausgeworfen wird" }
+{ "timestamp":"2017-04-20T20:56:17Z", "event":"SendText", "To":"local", "Message":"hey" }
+{ "timestamp":"2017-04-20T20:56:39Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"jep" }
+{ "timestamp":"2017-04-20T20:56:45Z", "event":"SendText", "To":"local", "Message":"jep" }
+{ "timestamp":"2017-04-20T20:56:59Z", "event":"SendText", "To":"local", "Message":"got ideas where to go next?" }
+{ "timestamp":"2017-04-20T20:57:21Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"man merkt garnicht, dass man sich bewerkt" }
+{ "timestamp":"2017-04-20T20:57:28Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"*bewegt" }
+{ "timestamp":"2017-04-20T20:58:27Z", "event":"SendText", "To":"$cmdr_decorate:#name=Risingstudios;", "To_Localised":"CMDR Risingstudios", "Message":"ok thank you" }
+{ "timestamp":"2017-04-20T20:58:36Z", "event":"SendText", "To":"$cmdr_decorate:#name=Risingstudios;", "To_Localised":"CMDR Risingstudios", "Message":"see you maybe there" }
+{ "timestamp":"2017-04-20T20:59:13Z", "event":"SendText", "To":"$cmdr_decorate:#name=Risingstudios;", "To_Localised":"CMDR Risingstudios", "Message":"fly save o7" }
+{ "timestamp":"2017-04-20T21:00:07Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"mit hundertfacher lichtgeschwindigkeit brauche ich 20 sec um dran vorbei zu kommen" }
+{ "timestamp":"2017-04-20T21:00:55Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hab hier aber auch 2 leute getroffen" }
+{ "timestamp":"2017-04-20T21:01:12Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"mach ich aufem nächsten planeten :D" }
+{ "timestamp":"2017-04-20T21:01:42Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hier ist sonst nur nen brauner zwerg" }
+{ "timestamp":"2017-04-20T21:02:40Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"nope" }
+{ "timestamp":"2017-04-20T21:02:56Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"suche mir jetzt mein nächstes ziel" }
+{ "timestamp":"2017-04-20T21:03:46Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hehe den hab ich schon" }
+{ "timestamp":"2017-04-20T21:03:58Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"von ihm aus bin ich gestartet" }
+{ "timestamp":"2017-04-20T21:06:57Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hehe hab knapp 2000" }
+{ "timestamp":"2017-04-20T21:08:07Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"jep hab ich auch schon abgezogen" }
+{ "timestamp":"2017-04-20T21:08:27Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ich hab einen in meiner freundesliste der hat heute 12k ly gemacht" }
+{ "timestamp":"2017-04-20T21:08:54Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"er ist jetzt kurz vor jaques" }
+{ "timestamp":"2017-04-20T21:09:26Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"gibt es nen tool mit dem man die nächste station finden kann?" }
+{ "timestamp":"2017-04-20T21:09:29Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"jep" }
+{ "timestamp":"2017-04-20T21:10:11Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ok schade" }
+{ "timestamp":"2017-04-20T21:10:37Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"würde gerne so ne asteroid base im deepspace anfliegen" }
+{ "timestamp":"2017-04-20T21:11:26Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ja gut gibt es ja jetzt glaub ich 27 von" }
+{ "timestamp":"2017-04-20T21:11:41Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"+ nen paar megaschiffe" }
+{ "timestamp":"2017-04-20T21:11:46Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hey" }
+{ "timestamp":"2017-04-20T21:13:22Z", "event":"SendText", "To":"Vortex-XIII", "Message":"bin an meinem ziel angekommen ;D" }
+{ "timestamp":"2017-04-20T21:14:08Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"nen paar sind unbekannt 2 sind irgentwelche touristenschiffe kein ahnung wo und ein forschungsshiff im fomidine rift" }
+{ "timestamp":"2017-04-20T21:14:54Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ne leider nich bin auf ne kurze tour gegangen solange die lockdown haben" }
+{ "timestamp":"2017-04-20T21:15:08Z", "event":"SendText", "To":"Vortex-XIII", "Message":"bin am größten bekannten stern" }
+{ "timestamp":"2017-04-20T21:15:50Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wurde nach dem sprung 6000 ls vor demstern rausegeworfen" }
+{ "timestamp":"2017-04-20T21:15:58Z", "event":"SendText", "To":"Vortex-XIII", "Message":"muss weg bis irgentwann" }
+{ "timestamp":"2017-04-20T21:16:21Z", "event":"SendText", "To":"Vortex-XIII", "Message":"o7" }
+{ "timestamp":"2017-04-21T12:34:10Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hey" }
+{ "timestamp":"2017-04-21T14:29:40Z", "event":"SendText", "To":"Codaki", "Message":"hey" }
+{ "timestamp":"2017-04-21T14:30:27Z", "event":"SendText", "To":"Codaki", "Message":"look up vy canis majoris on your gal map" }
+{ "timestamp":"2017-04-21T14:31:47Z", "event":"SendText", "To":"Codaki", "Message":"how far?" }
+{ "timestamp":"2017-04-21T14:34:55Z", "event":"SendText", "To":"Codaki", "Message":"i went there  its the biggest star in this galaxy" }
+{ "timestamp":"2017-04-21T14:35:25Z", "event":"SendText", "To":"Codaki", "Message":"it took me 2 min to fly around it" }
+{ "timestamp":"2017-04-21T14:35:55Z", "event":"SendText", "To":"Codaki", "Message":"with a speed of 100c" }
+{ "timestamp":"2017-04-21T14:37:11Z", "event":"SendText", "To":"Codaki", "Message":"wanna see a red gas giant" }
+{ "timestamp":"2017-04-21T15:21:52Z", "event":"SendText", "To":"local", "Message":"hey guys" }
+{ "timestamp":"2017-04-21T15:22:33Z", "event":"SendText", "To":"local", "Message":"sorry" }
+{ "timestamp":"2017-04-21T16:22:14Z", "event":"SendText", "To":"local", "Message":"hey guys" }
+{ "timestamp":"2017-04-21T18:14:11Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hey" }
+{ "timestamp":"2017-04-21T18:15:14Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"Die haben die belohnung fürs erkunden ja ordentlich angehoben" }
+{ "timestamp":"2017-04-21T18:15:28Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hab für ein system 1.3 mil gekriegt" }
+{ "timestamp":"2017-04-21T18:16:31Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"nur den basisscan und 2 wasserwelten eine war terraformierbar" }
+{ "timestamp":"2017-04-21T18:16:46Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"sonst nur langweilige stein planteten" }
+{ "timestamp":"2017-04-21T18:17:21Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"bin so ca 3,5k ly geflogen hat so 9 mil credits gebracht" }
+{ "timestamp":"2017-04-21T18:20:17Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"das hat mich schon ne bischen motiviert mal wieder ne richtige tour zu machen" }
+{ "timestamp":"2017-04-21T18:21:08Z", "event":"SendText", "To":"$cmdr_decorate:#name=De Mae;", "To_Localised":"CMDR De Mae", "Message":"hey" }
+{ "timestamp":"2017-04-21T19:33:52Z", "event":"SendText", "To":"Vortex-XIII", "Message":"HEY" }
+{ "timestamp":"2017-04-21T19:35:45Z", "event":"SendText", "To":"Vortex-XIII", "Message":"mein kleiner tzrip gestern hat 9 mil credits gebracht " }
+{ "timestamp":"2017-04-21T19:36:36Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa man merkt, die haben was geändert" }
+{ "timestamp":"2017-04-21T19:36:48Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ein system hat 1.2 mil gebracht" }
+{ "timestamp":"2017-04-21T19:36:56Z", "event":"SendText", "To":"Vortex-XIII", "Message":"cool" }
+{ "timestamp":"2017-04-21T19:37:07Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab meinen jetzt auch zu ende gemoddet" }
+{ "timestamp":"2017-04-21T19:37:52Z", "event":"SendText", "To":"Vortex-XIII", "Message":"sitze grade in meinem beluga und modde teile für meine fdl" }
+{ "timestamp":"2017-04-21T19:38:04Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa meine is so 20 m/S langsamer" }
+{ "timestamp":"2017-04-21T19:38:46Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa hatte grade keinen bock auf conda" }
+{ "timestamp":"2017-04-21T19:39:24Z", "event":"SendText", "To":"Vortex-XIII", "Message":"haste schon fsd von der orca gemacht?" }
+{ "timestamp":"2017-04-21T19:41:19Z", "event":"SendText", "To":"Vortex-XIII", "Message":"echt" }
+{ "timestamp":"2017-04-21T19:41:23Z", "event":"SendText", "To":"Vortex-XIII", "Message":"grad 5?" }
+{ "timestamp":"2017-04-21T19:41:39Z", "event":"SendText", "To":"Vortex-XIII", "Message":"achso" }
+{ "timestamp":"2017-04-21T19:41:45Z", "event":"SendText", "To":"Vortex-XIII", "Message":"dann kommts hin" }
+{ "timestamp":"2017-04-21T19:42:09Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab nur grad vier, weil kannste dir ja vorstellen" }
+{ "timestamp":"2017-04-21T19:43:29Z", "event":"SendText", "To":"Vortex-XIII", "Message":"kenn ich" }
+{ "timestamp":"2017-04-21T19:43:52Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hab aber grade grad 5 powerplant 37% bekommen" }
+{ "timestamp":"2017-04-21T19:44:49Z", "event":"SendText", "To":"Vortex-XIII", "Message":"und hab jetzt endlich alioth permit durch die exploration data" }
+{ "timestamp":"2017-04-21T19:45:13Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa is gar nicht so schlimm nur die häfte vom maximum" }
+{ "timestamp":"2017-04-21T19:46:23Z", "event":"SendText", "To":"Vortex-XIII", "Message":"wollte halt mal plasma beschleuniger ausprobieren und die ziehen halt noch mehr als beams" }
+{ "timestamp":"2017-04-21T19:47:08Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep hab ich bei meinen 4 beams gemacht" }
+{ "timestamp":"2017-04-21T19:48:06Z", "event":"SendText", "To":"Vortex-XIII", "Message":"oh cool sollen wir vllt danach nen bischen bounty hunten?" }
+{ "timestamp":"2017-04-21T19:48:53Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok schade" }
+{ "timestamp":"2017-04-21T19:49:30Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ok " }
+{ "timestamp":"2017-04-21T19:49:35Z", "event":"SendText", "To":"Vortex-XIII", "Message":"nächstes mal :D" }
+{ "timestamp":"2017-04-21T19:50:23Z", "event":"SendText", "To":"Vortex-XIII", "Message":"joa wollte sowieso mal nen bischen exploren gehen" }
+{ "timestamp":"2017-04-21T20:20:41Z", "event":"SendText", "To":"$cmdr_decorate:#name=PureCrystal;", "To_Localised":"CMDR PureCrystal", "Message":"hey" }
+{ "timestamp":"2017-04-21T20:22:16Z", "event":"SendText", "To":"$cmdr_decorate:#name=Imo;", "To_Localised":"CMDR Imo", "Message":"hey" }
+{ "timestamp":"2017-04-21T21:06:00Z", "event":"SendText", "To":"Vortex-XIII", "Message":"kennst du diesen moment, wenn man ausversehen den falschen angreift?" }
+{ "timestamp":"2017-04-21T21:07:59Z", "event":"SendText", "To":"Vortex-XIII", "Message":"schön nen 6000er bounty gekriegt" }
+{ "timestamp":"2017-04-21T21:08:55Z", "event":"SendText", "To":"Vortex-XIII", "Message":"könnte lustig werden an mein geld zu kommen" }
+{ "timestamp":"2017-04-21T21:11:15Z", "event":"SendText", "To":"Vortex-XIII", "Message":"jep einfach im silent running rein fliegen" }
+{ "timestamp":"2017-04-21T21:20:07Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ich hasse alliance enforcer" }
+{ "timestamp":"2017-04-21T21:22:51Z", "event":"SendText", "To":"$cmdr_decorate:#name=Haydn Shaw;", "To_Localised":"CMDR Haydn Shaw", "Message":"heys" }
+{ "timestamp":"2017-04-21T21:23:37Z", "event":"SendText", "To":"Vortex-XIII", "Message":"haha hab beim docken mehr schaden genommen als im kampf" }
+{ "timestamp":"2017-04-21T21:24:32Z", "event":"SendText", "To":"Vortex-XIII", "Message":"cool jetzt mag mich die allianz :D" }
+{ "timestamp":"2017-04-21T21:33:54Z", "event":"SendText", "To":"Vortex-XIII", "Message":"fliege in shinratha mit nem beluga ohne schilde und 65% hülle rum" }
+{ "timestamp":"2017-04-21T21:40:15Z", "event":"SendText", "To":"Vortex-XIII", "Message":"muss weg " }
+{ "timestamp":"2017-04-21T21:40:26Z", "event":"SendText", "To":"Vortex-XIII", "Message":"bis bald" }
+{ "timestamp":"2017-04-21T21:40:33Z", "event":"SendText", "To":"Vortex-XIII", "Message":"o/" }
+{ "timestamp":"2017-04-22T11:54:31Z", "event":"SendText", "To":"local", "Message":"hey guys" }
+{ "timestamp":"2017-04-22T12:33:34Z", "event":"SendText", "To":"Codaki", "Message":"hey" }
+{ "timestamp":"2017-04-22T12:35:03Z", "event":"SendText", "To":"Codaki", "Message":"still doing combat?" }
+{ "timestamp":"2017-04-22T12:35:55Z", "event":"SendText", "To":"Codaki", "Message":"ok i dont know maybe ill try later" }
+{ "timestamp":"2017-04-22T12:36:53Z", "event":"SendText", "To":"Codaki", "Message":"ok " }
+{ "timestamp":"2017-04-22T12:37:06Z", "event":"SendText", "To":"Codaki", "Message":"still in your viper mk IV" }
+{ "timestamp":"2017-04-22T12:37:07Z", "event":"SendText", "To":"Codaki", "Message":"?" }
+{ "timestamp":"2017-04-22T12:38:01Z", "event":"SendText", "To":"Codaki", "Message":"do you know anything about engieneers?" }
+{ "timestamp":"2017-04-22T12:43:10Z", "event":"SendText", "To":"Codaki", "Message":"if not try to get into it because theyre very helpful" }
+{ "timestamp":"2017-04-22T12:54:00Z", "event":"SendText", "To":"Codaki", "Message":"i dont realy know but i think its the fuel you use while flying normal" }
+{ "timestamp":"2017-04-22T12:54:28Z", "event":"SendText", "To":"Codaki", "Message":"but it dosent go empty until the main tank has fuel" }
+{ "timestamp":"2017-04-22T12:55:06Z", "event":"SendText", "To":"Codaki", "Message":"how far can your viper jump?" }
+{ "timestamp":"2017-04-22T12:55:37Z", "event":"SendText", "To":"Codaki", "Message":"oh ok" }
+{ "timestamp":"2017-04-22T12:56:08Z", "event":"SendText", "To":"Codaki", "Message":"i could not live with this xD" }
+{ "timestamp":"2017-04-22T12:56:20Z", "event":"SendText", "To":"Codaki", "Message":"my orca has a 42 ly jump range" }
+{ "timestamp":"2017-04-22T12:58:31Z", "event":"SendText", "To":"Codaki", "Message":"ok the orca isnt a combat ship and fully modded " }
+{ "timestamp":"2017-04-22T12:58:57Z", "event":"SendText", "To":"Codaki", "Message":"your ship can get with mods i think up to 15 ly" }
+{ "timestamp":"2017-04-22T13:00:04Z", "event":"SendText", "To":"Codaki", "Message":"im going on a exploring tour" }
+{ "timestamp":"2017-04-22T13:00:35Z", "event":"SendText", "To":"Codaki", "Message":"if you want something for pessenger missions try out the dolphin" }
+{ "timestamp":"2017-04-22T13:01:20Z", "event":"SendText", "To":"Codaki", "Message":"how many credits do you have?" }
+{ "timestamp":"2017-04-22T13:02:03Z", "event":"SendText", "To":"Codaki", "Message":"whats your ship worth?" }
+{ "timestamp":"2017-04-22T13:02:38Z", "event":"SendText", "To":"Codaki", "Message":"in the right panel" }
+{ "timestamp":"2017-04-22T13:03:26Z", "event":"SendText", "To":"Codaki", "Message":"one page more you have to scroll down" }
+{ "timestamp":"2017-04-22T13:03:42Z", "event":"SendText", "To":"Codaki", "Message":"total assets is everything you own" }
+{ "timestamp":"2017-04-22T13:04:28Z", "event":"SendText", "To":"Codaki", "Message":"oh ok" }
+{ "timestamp":"2017-04-22T13:04:57Z", "event":"SendText", "To":"Codaki", "Message":"you could buy a vulture but wait until you have 10 mil to upgrade it" }
+{ "timestamp":"2017-04-22T13:05:49Z", "event":"SendText", "To":"Codaki", "Message":"what weapons do you use?" }
+{ "timestamp":"2017-04-22T13:07:15Z", "event":"SendText", "To":"Codaki", "Message":"pulse and multi are nice" }
+{ "timestamp":"2017-04-22T13:07:21Z", "event":"SendText", "To":"Codaki", "Message":"i use them too" }
+{ "timestamp":"2017-04-22T13:07:48Z", "event":"SendText", "To":"Codaki", "Message":"which type of weapon fixed, gimbaled or turreted" }
+{ "timestamp":"2017-04-22T13:08:33Z", "event":"SendText", "To":"Codaki", "Message":"maybe sometimes they are damaged from fighting" }
+{ "timestamp":"2017-04-22T13:09:41Z", "event":"SendText", "To":"Codaki", "Message":"ok then i dont know" }
+{ "timestamp":"2017-04-22T13:10:27Z", "event":"SendText", "To":"Codaki", "Message":"waht do you think about exploring" }
+{ "timestamp":"2017-04-22T13:10:30Z", "event":"SendText", "To":"Codaki", "Message":"?" }
+{ "timestamp":"2017-04-22T13:11:22Z", "event":"SendText", "To":"Codaki", "Message":"this  may be possible ive the same problem with fdl sometimes" }
+{ "timestamp":"2017-04-22T13:12:21Z", "event":"SendText", "To":"Codaki", "Message":"its a special tab at every station 'Universal Cathographics'" }
+{ "timestamp":"2017-04-22T13:12:51Z", "event":"SendText", "To":"Codaki", "Message":":D" }
+{ "timestamp":"2017-04-22T13:13:14Z", "event":"SendText", "To":"Codaki", "Message":"they payout is much better since 2.3" }
+{ "timestamp":"2017-04-22T13:13:34Z", "event":"SendText", "To":"Codaki", "Message":"sometimes it feels like they are ten times as high" }
+{ "timestamp":"2017-04-22T13:14:24Z", "event":"SendText", "To":"Codaki", "Message":"if you want to go exploring some day you have to try out the asp explorer" }
+{ "timestamp":"2017-04-22T13:14:38Z", "event":"SendText", "To":"Codaki", "Message":"it has the third best jumprange" }
+{ "timestamp":"2017-04-22T13:15:17Z", "event":"SendText", "To":"Codaki", "Message":"or the diamondback explorer it has the second best and costs only around 1.8 mil" }
+{ "timestamp":"2017-04-22T13:16:43Z", "event":"SendText", "To":"Codaki", "Message":"oh and always take the best exploration scanner with you i know it might be expensive for you but ist worth it" }
+{ "timestamp":"2017-04-22T13:17:32Z", "event":"SendText", "To":"Codaki", "Message":"nope but the best one has a unlimeted range the other ones not" }
+{ "timestamp":"2017-04-22T13:23:06Z", "event":"SendText", "To":"Codaki", "Message":"jep and belive me finding planets without the best scanner is almost impossible" }
+{ "timestamp":"2017-04-22T13:25:22Z", "event":"SendText", "To":"Codaki", "Message":"normally not" }
+{ "timestamp":"2017-04-22T13:25:25Z", "event":"SendText", "To":"Codaki", "Message":"why?" }
+{ "timestamp":"2017-04-22T13:26:38Z", "event":"SendText", "To":"Codaki", "Message":"they only attack you if you attck them" }
+{ "timestamp":"2017-04-22T13:27:44Z", "event":"SendText", "To":"Codaki", "Message":"jep its the best for beginners" }
+{ "timestamp":"2017-04-22T13:28:06Z", "event":"SendText", "To":"Codaki", "Message":"my record for the most big ships were 4 anacondas" }
+{ "timestamp":"2017-04-22T13:28:42Z", "event":"SendText", "To":"Codaki", "Message":"wanna see a nebula?" }
+{ "timestamp":"2017-04-22T13:28:49Z", "event":"SendText", "To":"Codaki", "Message":"im in it right now" }
+{ "timestamp":"2017-04-22T13:29:57Z", "event":"SendText", "To":"Codaki", "Message":"ooops wrong button" }
+{ "timestamp":"2017-04-22T13:39:44Z", "event":"SendText", "To":"Codaki", "Message":"which one?" }
+{ "timestamp":"2017-04-22T13:40:07Z", "event":"SendText", "To":"Codaki", "Message":"yep" }
+{ "timestamp":"2017-04-22T13:40:37Z", "event":"SendText", "To":"Codaki", "Message":"they have one big hardpoint its pretty powerfull" }
+{ "timestamp":"2017-04-22T13:40:49Z", "event":"SendText", "To":"Codaki", "Message":"its a combat-explorer" }
+{ "timestamp":"2017-04-22T13:46:19Z", "event":"SendText", "To":"Codaki", "Message":"i think ill go out 20k ly" }
+{ "timestamp":"2017-04-22T13:47:26Z", "event":"SendText", "To":"Codaki", "Message":"ok see ya" }
+{ "timestamp":"2017-04-23T13:32:51Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hey" }
+{ "timestamp":"2017-04-23T13:33:36Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"haste vor nen trip zu machen?" }
+{ "timestamp":"2017-04-23T13:34:18Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ok ich wollte mal bei colonia vorbeischauen" }
+{ "timestamp":"2017-04-23T13:34:55Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"mit ner 42 ly orca :D" }
+{ "timestamp":"2017-04-23T13:36:18Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ah endlich mal wieder ne wasserwelt" }
+{ "timestamp":"2017-04-23T13:42:46Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"klingt doch braucbar" }
+{ "timestamp":"2017-04-23T13:43:44Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"raider pack?" }
+{ "timestamp":"2017-04-23T13:44:04Z", "event":"SendText", "To":"Ryan (Ger)", "Message":":D" }
+{ "timestamp":"2017-04-23T13:44:24Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ich will das auch aber die gibts noch nich für schiffe die ich benutze" }
+{ "timestamp":"2017-04-23T13:44:55Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"jep" }
+{ "timestamp":"2017-04-23T13:45:39Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hoffentlich kommen die auch für anacondas" }
+{ "timestamp":"2017-04-23T13:46:13Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"joa gut oder fdl wäre auch geil" }
+{ "timestamp":"2017-04-23T13:47:44Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"warste schonmal in colonia?" }
+{ "timestamp":"2017-04-23T13:48:33Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"sag a ?" }
+{ "timestamp":"2017-04-23T13:49:37Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"was bringen die daten von da überhaupt?" }
+{ "timestamp":"2017-04-23T13:53:21Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"was war denn deine weiteste entfernung?" }
+{ "timestamp":"2017-04-23T13:54:31Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ok cool da flieg ich aufem rückweg vorbei" }
+{ "timestamp":"2017-04-23T13:55:18Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"bin schon 5000 ly geflogen und keine ahnung xD" }
+{ "timestamp":"2017-04-23T13:55:38Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"einfach mal in der colonia blase nen bischen gucken" }
+{ "timestamp":"2017-04-23T13:56:10Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"das sind ja schon mehrere bewohnte systeme" }
+{ "timestamp":"2017-04-23T13:57:12Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"das sind schon fast 20" }
+{ "timestamp":"2017-04-23T13:58:38Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"sogar high tec bin mal gespannt, was man da alles kriegen kann" }
+{ "timestamp":"2017-04-23T16:31:02Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"und was machste so?" }
+{ "timestamp":"2017-04-23T16:34:54Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ich hab noch 13k ly vor mir" }
+{ "timestamp":"2017-04-23T16:57:53Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"einfach nur in ein outbreak system fliegn und in alle uss springen" }
+{ "timestamp":"2017-04-23T16:58:06Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hatte nacxh 20 min 15 stück" }
+{ "timestamp":"2017-04-23T17:25:05Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"und klappts?" }
+{ "timestamp":"2017-04-23T17:29:46Z", "event":"SendText", "To":"Lurion", "Message":"hey" }
+{ "timestamp":"2017-04-23T17:32:17Z", "event":"SendText", "To":"Lurion", "Message":"on my way to colonia" }
+{ "timestamp":"2017-04-23T17:33:19Z", "event":"SendText", "To":"Lurion", "Message":"thx almost half way done" }
+{ "timestamp":"2017-04-23T17:34:07Z", "event":"SendText", "To":"Lurion", "Message":"ohh system with two waterworlds" }
+{ "timestamp":"2017-04-23T17:34:24Z", "event":"SendText", "To":"Lurion", "Message":"yesterday the first 3500 ly" }
+{ "timestamp":"2017-04-23T17:35:08Z", "event":"SendText", "To":"Lurion", "Message":"two hours ago i got double earthlike + waterworld" }
+{ "timestamp":"2017-04-23T17:35:25Z", "event":"SendText", "To":"Lurion", "Message":"but only found one ammonia worls" }
+{ "timestamp":"2017-04-23T17:35:48Z", "event":"SendText", "To":"Lurion", "Message":"yep im out here with may 42 ly orca" }
+{ "timestamp":"2017-04-23T17:36:45Z", "event":"SendText", "To":"Lurion", "Message":"oh it was a earthlike lol" }
+{ "timestamp":"2017-04-23T17:37:24Z", "event":"SendText", "To":"Lurion", "Message":"i know a system like 1000 ly out the bubble worth 1.3 mil" }
+{ "timestamp":"2017-04-23T17:38:32Z", "event":"SendText", "To":"Lurion", "Message":"what do you think should i sell my exploration data in colonia or the bubble" }
+{ "timestamp":"2017-04-23T17:39:05Z", "event":"SendText", "To":"Lurion", "Message":"i want to spend some time over there" }
+{ "timestamp":"2017-04-23T17:39:20Z", "event":"SendText", "To":"Lurion", "Message":"dont know" }
+{ "timestamp":"2017-04-23T17:39:51Z", "event":"SendText", "To":"Lurion", "Message":"but there are many other systems there maybe ill just go to another" }
+{ "timestamp":"2017-04-23T17:40:50Z", "event":"SendText", "To":"Lurion", "Message":"i found a waterworld but it is 300k ls from its main star" }
+{ "timestamp":"2017-04-23T17:42:00Z", "event":"SendText", "To":"Lurion", "Message":"in my orca im a easy victim for griefers" }
+{ "timestamp":"2017-04-23T17:42:37Z", "event":"SendText", "To":"Lurion", "Message":"another waterworld" }
+{ "timestamp":"2017-04-23T17:42:50Z", "event":"SendText", "To":"Lurion", "Message":"wtf is up with this space sector" }
+{ "timestamp":"2017-04-23T17:44:32Z", "event":"SendText", "To":"Lurion", "Message":"where did your longest journy go" }
+{ "timestamp":"2017-04-23T17:44:54Z", "event":"SendText", "To":"Lurion", "Message":":D" }
+{ "timestamp":"2017-04-23T17:45:10Z", "event":"SendText", "To":"Lurion", "Message":"there was my explorer trip" }
+{ "timestamp":"2017-04-23T17:45:34Z", "event":"SendText", "To":"Lurion", "Message":":D" }
+{ "timestamp":"2017-04-23T17:45:57Z", "event":"SendText", "To":"Lurion", "Message":"my longest exploration trip is the one where im on 9500 ly" }
+{ "timestamp":"2017-04-23T17:46:33Z", "event":"SendText", "To":"Lurion", "Message":"oh i just passed 6000 visited systems" }
+{ "timestamp":"2017-04-23T17:46:48Z", "event":"SendText", "To":"Lurion", "Message":":D" }
+{ "timestamp":"2017-04-23T17:48:54Z", "event":"SendText", "To":"Lurion", "Message":"I love the sky out here" }
+{ "timestamp":"2017-04-23T17:49:17Z", "event":"SendText", "To":"Lurion", "Message":"so many nebulas and stars" }
+{ "timestamp":"2017-04-23T17:50:06Z", "event":"SendText", "To":"Lurion", "Message":"what are you doing?" }
+{ "timestamp":"2017-04-23T17:52:48Z", "event":"SendText", "To":"Lurion", "Message":"id did before my journy started" }
+{ "timestamp":"2017-04-23T18:00:58Z", "event":"SendText", "To":"Lurion", "Message":"i can see lik 10-15 nebulas at once" }
+{ "timestamp":"2017-04-23T18:01:59Z", "event":"SendText", "To":"Lurion", "Message":"yep the view over here is awesome but the view in the core must be legendary" }
+{ "timestamp":"2017-04-23T18:02:28Z", "event":"SendText", "To":"Randall Flagg", "Message":"Hallo Stream :-)" }
+{ "timestamp":"2017-04-23T18:11:52Z", "event":"SendText", "To":"Lurion", "Message":"again double waterworld" }
+{ "timestamp":"2017-04-23T18:27:48Z", "event":"SendText", "To":"Lurion", "Message":"i know this" }
+{ "timestamp":"2017-04-23T18:28:54Z", "event":"SendText", "To":"Lurion", "Message":"11299 ly until colonia" }
+{ "timestamp":"2017-04-23T18:29:31Z", "event":"SendText", "To":"Lurion", "Message":"yep 11 k ly from starting point" }
+{ "timestamp":"2017-04-23T18:30:12Z", "event":"SendText", "To":"Lurion", "Message":"i think i found 21 waterworlds and 8 earthlikes" }
+{ "timestamp":"2017-04-23T18:30:30Z", "event":"SendText", "To":"Lurion", "Message":"im looking forward to the payout" }
+{ "timestamp":"2017-04-23T18:32:00Z", "event":"SendText", "To":"Lurion", "Message":"the paint of my orca is already getting scratches" }
+{ "timestamp":"2017-04-23T18:49:46Z", "event":"SendText", "To":"Gwallt", "Message":"hey" }
+{ "timestamp":"2017-04-23T18:51:33Z", "event":"SendText", "To":"Gwallt", "Message":"what are you doing?" }
+{ "timestamp":"2017-04-23T18:52:10Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hey" }
+{ "timestamp":"2017-04-23T18:52:56Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ich war noch nie so weit von der bubble entfernt" }
+{ "timestamp":"2017-04-23T18:53:06Z", "event":"SendText", "To":"Ryan (Ger)", "Message":" voll ungewohnt" }
+{ "timestamp":"2017-04-23T18:53:19Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ca 11k ly" }
+{ "timestamp":"2017-04-23T18:53:52Z", "event":"SendText", "To":"Gwallt", "Message":"sounds like fund :D" }
+{ "timestamp":"2017-04-23T18:54:02Z", "event":"SendText", "To":"Gwallt", "Message":"fun*" }
+{ "timestamp":"2017-04-23T18:54:26Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"bis jetzt nur nen paar mehr sterne und sau viele nebel" }
+{ "timestamp":"2017-04-23T18:55:17Z", "event":"SendText", "To":"Gwallt", "Message":" i know one day i took my 10 ly vulture there" }
+{ "timestamp":"2017-04-23T18:55:39Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"kannst ja später mal reingucken" }
+{ "timestamp":"2017-04-23T18:56:07Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ich bin ja nicht in deiner gruppe" }
+{ "timestamp":"2017-04-23T18:56:47Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ok" }
+{ "timestamp":"2017-04-23T18:57:38Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hab ne anfrage gesendet" }
+{ "timestamp":"2017-04-23T18:57:52Z", "event":"SendText", "To":"Gwallt", "Message":":D" }
+{ "timestamp":"2017-04-23T18:59:08Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"der schöne weiße lack meiner orca wird ganz schön in mitleidenschaft gezogen" }
+{ "timestamp":"2017-04-23T18:59:50Z", "event":"SendText", "To":"Ryan (Ger)", "Message":" bin jetzt überm skaudai nebel" }
+{ "timestamp":"2017-04-23T19:00:37Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ok komme rein" }
+{ "timestamp":"2017-04-23T19:02:34Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"bin drin kann dich aber nicht einladen" }
+{ "timestamp":"2017-04-23T19:03:12Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ok" }
+{ "timestamp":"2017-04-23T19:03:24Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"warte ich gucke eben nach dem ts" }
+{ "timestamp":"2017-04-23T19:09:36Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ok hab mich grade angemeldet" }
+{ "timestamp":"2017-04-23T19:10:58Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ne" }
+{ "timestamp":"2017-04-23T19:11:25Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ok" }
+{ "timestamp":"2017-04-23T19:11:47Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ich hab heute aber leider nicht mehr soviel zeit" }
+{ "timestamp":"2017-04-23T19:11:52Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"15" }
+{ "timestamp":"2017-04-23T19:15:29Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"mache jetzt noch 8 sprünge dann muss ich aufhören" }
+{ "timestamp":"2017-04-23T19:15:43Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ok" }
+{ "timestamp":"2017-04-23T19:16:01Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"ok" }
+{ "timestamp":"2017-04-23T19:23:48Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"joa is doch ganz nett" }
+{ "timestamp":"2017-04-23T19:24:57Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"wir sind genau 12500 ly auseinander" }
+{ "timestamp":"2017-04-23T19:25:13Z", "event":"SendText", "To":"wing", "Message":"hey" }
+{ "timestamp":"2017-04-23T19:25:54Z", "event":"SendText", "To":"wing", "Message":"hehe" }
+{ "timestamp":"2017-04-23T19:26:03Z", "event":"SendText", "To":"wing", "Message":"ich mache im moment nebel hoping" }
+{ "timestamp":"2017-04-23T19:26:18Z", "event":"SendText", "To":"wing", "Message":"bächstes ziel siehste ja" }
+{ "timestamp":"2017-04-23T19:26:48Z", "event":"SendText", "To":"wing", "Message":"von dem nebel hinter uns komme ich" }
+{ "timestamp":"2017-04-23T19:28:09Z", "event":"SendText", "To":"wing", "Message":"schön hier" }
+{ "timestamp":"2017-04-23T19:28:37Z", "event":"SendText", "To":"wing", "Message":"nach colonia fliege ich definitiv noch zum zentrum" }
+{ "timestamp":"2017-04-23T19:28:46Z", "event":"SendText", "To":"wing", "Message":"jep der is mein nächstes ziel" }
+{ "timestamp":"2017-04-23T19:28:54Z", "event":"SendText", "To":"wing", "Message":"8 sprünge" }
+{ "timestamp":"2017-04-23T19:29:10Z", "event":"SendText", "To":"wing", "Message":"ok" }
+{ "timestamp":"2017-04-23T19:29:25Z", "event":"SendText", "To":"wing", "Message":"ich mache noch bis zu dem nebel" }
+{ "timestamp":"2017-04-23T19:31:40Z", "event":"SendText", "To":"wing", "Message":"so endlich" }
+{ "timestamp":"2017-04-23T19:33:23Z", "event":"SendText", "To":"wing", "Message":"hab seid 6000 ly keinen neutronenstern mehr gesehen" }
+{ "timestamp":"2017-04-23T19:33:44Z", "event":"SendText", "To":"wing", "Message":"oh muss jetzt weg" }
+{ "timestamp":"2017-04-23T19:33:55Z", "event":"SendText", "To":"wing", "Message":"bis bald o/" }
+{ "timestamp":"2017-04-24T15:03:07Z", "event":"SendText", "To":"Vortex-XIII", "Message":"hey" }
+{ "timestamp":"2017-04-24T15:04:40Z", "event":"SendText", "To":"Vortex-XIII", "Message":"du musst dir mald ie sterne hier darussen angucken" }
+{ "timestamp":"2017-04-24T15:06:14Z", "event":"SendText", "To":"Vortex-XIII", "Message":"ah generation ship" }
+{ "timestamp":"2017-04-24T16:00:01Z", "event":"SendText", "To":"Vortex-XIII", "Message":"und wie wars am generation ship?" }
+{ "timestamp":"2017-04-24T16:02:46Z", "event":"SendText", "To":"Vortex-XIII", "Message":"kanns leider erst in 1-2 wochen besuchen" }
+{ "timestamp":"2017-04-24T17:58:17Z", "event":"SendText", "To":"Lurion", "Message":"hey" }
+{ "timestamp":"2017-04-24T17:58:42Z", "event":"SendText", "To":"Lurion", "Message":"jep" }
+{ "timestamp":"2017-04-24T17:58:52Z", "event":"SendText", "To":"Lurion", "Message":"like 6000 ly left" }
+{ "timestamp":"2017-04-24T17:59:55Z", "event":"SendText", "To":"Lurion", "Message":"i found over 30 water worlds until now" }
+{ "timestamp":"2017-04-24T18:00:21Z", "event":"SendText", "To":"Lurion", "Message":"and 12 earth likes" }
+{ "timestamp":"2017-04-24T18:00:49Z", "event":"SendText", "To":"Lurion", "Message":"why?" }
+{ "timestamp":"2017-04-24T18:01:16Z", "event":"SendText", "To":"Lurion", "Message":"which mats?" }
+{ "timestamp":"2017-04-24T18:02:32Z", "event":"SendText", "To":"Lurion", "Message":"cant you get them from settelments?" }
+{ "timestamp":"2017-04-24T18:03:45Z", "event":"SendText", "To":"Lurion", "Message":"im doing the last 1000 ly for today" }
+{ "timestamp":"2017-04-24T18:04:11Z", "event":"SendText", "To":"Lurion", "Message":"i got a few of them from the really small saettlements" }
+{ "timestamp":"2017-04-24T18:04:28Z", "event":"SendText", "To":"Lurion", "Message":"jep tommorow maybe 30-60 mins" }
+{ "timestamp":"2017-04-24T18:05:03Z", "event":"SendText", "To":"Lurion", "Message":"where do you want to go?" }
+{ "timestamp":"2017-04-24T18:05:30Z", "event":"SendText", "To":"Lurion", "Message":"oh me too after colonia" }
+{ "timestamp":"2017-04-24T18:05:45Z", "event":"SendText", "To":"Lurion", "Message":"tell me when you start the trip" }
+{ "timestamp":"2017-04-24T18:05:58Z", "event":"SendText", "To":"Lurion", "Message":"we could jump in together" }
+{ "timestamp":"2017-04-24T18:06:23Z", "event":"SendText", "To":"Lurion", "Message":"im gonna explore a while around colonia" }
+{ "timestamp":"2017-04-24T18:06:48Z", "event":"SendText", "To":"Lurion", "Message":"and doing some missions for jaques" }
+{ "timestamp":"2017-04-24T18:07:51Z", "event":"SendText", "To":"Lurion", "Message":"my little orca is getting scratches" }
+{ "timestamp":"2017-04-24T18:08:43Z", "event":"SendText", "To":"Lurion", "Message":"jep looks weird on the orca because of its color" }
+{ "timestamp":"2017-04-24T18:09:55Z", "event":"SendText", "To":"Lurion", "Message":"next time i take a ship with a better jump range" }
+{ "timestamp":"2017-04-24T18:10:39Z", "event":"SendText", "To":"Lurion", "Message":"i know for the conda is possible around 60ly" }
+{ "timestamp":"2017-04-24T18:11:24Z", "event":"SendText", "To":"Lurion", "Message":"jep ive only srv" }
+{ "timestamp":"2017-04-24T18:11:51Z", "event":"SendText", "To":"Lurion", "Message":"ok i got 42" }
+{ "timestamp":"2017-04-24T18:11:58Z", "event":"SendText", "To":"local", "Message":"on my orca" }
+{ "timestamp":"2017-04-24T18:12:06Z", "event":"SendText", "To":"Lurion", "Message":"on my orca" }
+{ "timestamp":"2017-04-24T18:13:13Z", "event":"SendText", "To":"Lurion", "Message":"almost 17 k ly away from you" }
+{ "timestamp":"2017-04-24T18:13:52Z", "event":"SendText", "To":"Lurion", "Message":"wanna see the stars out here?" }
+{ "timestamp":"2017-04-24T18:14:57Z", "event":"SendText", "To":"Lurion", "Message":"ok ty see you o/" }

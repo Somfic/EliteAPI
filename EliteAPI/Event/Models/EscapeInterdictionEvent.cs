@@ -1,24 +1,39 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class EscapeInterdictionEvent : EventBase
+    public partial class EscapeInterdictionEvent : EventBase
     {
-        internal EscapeInterdictionEvent() { }
+        internal EscapeInterdictionEvent()
+        {
+        }
 
-        public static EscapeInterdictionEvent FromJson(string json) => JsonConvert.DeserializeObject<EscapeInterdictionEvent>(json);
+        [JsonProperty("Interdictor")] public string Interdictor { get; private set; }
 
+        [JsonProperty("IsPlayer")] public bool IsPlayer { get; private set; }
+    }
 
-        [JsonProperty("Interdictor")]
-        public string Interdictor { get; internal set; }
+    public partial class EscapeInterdictionEvent
+    {
+        public static EscapeInterdictionEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<EscapeInterdictionEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Interdictor_Localised")]
-        public string InterdictorLocalised { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<EscapeInterdictionEvent> EscapeInterdictionEvent;
 
-        [JsonProperty("IsPlayer")]
-        public bool IsPlayer { get; internal set; }
-
-        
+        internal void InvokeEscapeInterdictionEvent(EscapeInterdictionEvent arg)
+        {
+            EscapeInterdictionEvent?.Invoke(this, arg);
+        }
     }
 }

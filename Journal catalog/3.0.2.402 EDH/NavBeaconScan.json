@@ -1,0 +1,4 @@
+{ "timestamp":"2018-03-07T00:31:44Z", "event":"NavBeaconScan", "SystemAddress":670149191097, "NumBodies":40 }
+{ "timestamp":"2018-03-07T21:24:00Z", "event":"NavBeaconScan", "SystemAddress":9466510648769, "NumBodies":26 }
+{ "timestamp":"2018-03-08T20:59:17Z", "event":"NavBeaconScan", "SystemAddress":5068464072129, "NumBodies":23 }
+{ "timestamp":"2018-03-08T21:22:18Z", "event":"NavBeaconScan", "SystemAddress":3382387446490, "NumBodies":38 }

@@ -1,0 +1,20 @@
+{ "timestamp":"2018-12-19T16:34:55Z", "event":"Bounty", "Faction":"LHS 250 Industry", "Target":"Skimmer", "Reward":1000, "VictimFaction":"LHS 250 Industry" }
+{ "timestamp":"2018-12-19T16:34:58Z", "event":"Bounty", "Faction":"LHS 250 Industry", "Target":"Skimmer", "Reward":1000, "VictimFaction":"LHS 250 Industry" }
+{ "timestamp":"2018-12-19T17:28:24Z", "event":"Bounty", "Rewards":[ { "Faction":"C.O.N.T.R.A.I.L", "Reward":19980 } ], "Target":"viper_mkiv", "TotalReward":19980, "VictimFaction":"LP 30-55 Silver Cartel" }
+{ "timestamp":"2018-12-20T22:53:13Z", "event":"Bounty", "Rewards":[ { "Faction":"C.O.N.T.R.A.I.L", "Reward":10575 } ], "Target":"cobramkiii", "TotalReward":10575, "VictimFaction":"LP 30-55 Silver Cartel" }
+{ "timestamp":"2018-12-20T23:00:26Z", "event":"Bounty", "Rewards":[ { "Faction":"C.O.N.T.R.A.I.L", "Reward":12600 } ], "Target":"cobramkiii", "TotalReward":12600, "VictimFaction":"LP 30-55 Silver Cartel" }
+{ "timestamp":"2019-01-03T17:11:00Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":6815 } ], "Target":"cobramkiii", "TotalReward":6815, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2019-01-03T17:21:01Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":34920 } ], "Target":"typex", "TotalReward":34920, "VictimFaction":"Tollan Hand Gang", "SharedWithOthers":1 }
+{ "timestamp":"2019-01-03T17:21:49Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":40350 } ], "Target":"python", "TotalReward":40350, "VictimFaction":"Tollan Hand Gang", "SharedWithOthers":1 }
+{ "timestamp":"2019-01-03T17:22:48Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":13830 } ], "Target":"viper", "TotalReward":13830, "VictimFaction":"Tollan Hand Gang", "SharedWithOthers":1 }
+{ "timestamp":"2019-01-03T17:41:06Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":45150 } ], "Target":"ferdelance", "TotalReward":45150, "VictimFaction":"Tollan Hand Gang", "SharedWithOthers":1 }
+{ "timestamp":"2019-01-03T17:43:36Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":24830 } ], "Target":"vulture", "TotalReward":24830, "VictimFaction":"Tollan Hand Gang", "SharedWithOthers":1 }
+{ "timestamp":"2019-01-03T17:47:55Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":5460 } ], "Target":"cobramkiii", "TotalReward":5460, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2019-01-03T17:53:48Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":11985 } ], "Target":"cobramkiii", "TotalReward":11985, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2019-01-03T17:54:55Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":43170 } ], "Target":"ferdelance", "TotalReward":43170, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2019-01-03T17:55:53Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":12285 } ], "Target":"viper", "TotalReward":12285, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2019-01-03T17:57:12Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":28575 } ], "Target":"vulture", "TotalReward":28575, "VictimFaction":"Tollan Hand Gang" }
+{ "timestamp":"2019-01-03T18:02:35Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":14475 } ], "Target":"cobramkiv", "TotalReward":14475, "VictimFaction":"Tollan Hand Gang", "SharedWithOthers":1 }
+{ "timestamp":"2019-01-03T18:03:38Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":28985 } ], "Target":"typex", "TotalReward":28985, "VictimFaction":"Tollan Hand Gang", "SharedWithOthers":1 }
+{ "timestamp":"2019-01-03T18:04:27Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":7005 } ], "Target":"cobramkiii", "TotalReward":7005, "VictimFaction":"Tollan Hand Gang", "SharedWithOthers":1 }
+{ "timestamp":"2019-01-03T18:05:01Z", "event":"Bounty", "Rewards":[ { "Faction":"Tollan Free", "Reward":10200 } ], "Target":"cobramkiii", "TotalReward":10200, "VictimFaction":"Tollan Hand Gang", "SharedWithOthers":1 }

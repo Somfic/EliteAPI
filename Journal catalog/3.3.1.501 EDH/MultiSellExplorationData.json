@@ -1,0 +1,2 @@
+{ "timestamp":"2018-12-19T16:47:40Z", "event":"MultiSellExplorationData", "Discovered":[ { "SystemName":"Ross 318", "NumBodies":14 } ], "BaseValue":13414, "Bonus":0, "TotalEarnings":11805 }
+{ "timestamp":"2018-12-20T16:27:20Z", "event":"MultiSellExplorationData", "Discovered":[ { "SystemName":"LHS 6128", "NumBodies":19 }, { "SystemName":"Lushertha", "NumBodies":2 }, { "SystemName":"LP 30-55", "NumBodies":3 } ], "BaseValue":172179, "Bonus":0, "TotalEarnings":151518 }

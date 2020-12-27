@@ -1,24 +1,41 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class CommunityGoalRewardEvent : EventBase
+    public partial class CommunityGoalRewardEvent : EventBase
     {
-        internal CommunityGoalRewardEvent() { }
+        internal CommunityGoalRewardEvent()
+        {
+        }
 
-        public static CommunityGoalRewardEvent FromJson(string json) => JsonConvert.DeserializeObject<CommunityGoalRewardEvent>(json);
+        [JsonProperty("Name")] public string Name { get; private set; }
 
+        [JsonProperty("System")] public string System { get; private set; }
 
-        [JsonProperty("Name")]
-        public string Name { get; internal set; }
+        [JsonProperty("Reward")] public long Reward { get; private set; }
+    }
 
-        [JsonProperty("System")]
-        public string System { get; internal set; }
+    public partial class CommunityGoalRewardEvent
+    {
+        public static CommunityGoalRewardEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<CommunityGoalRewardEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Reward")]
-        public long Reward { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<CommunityGoalRewardEvent> CommunityGoalRewardEvent;
 
-        
+        internal void InvokeCommunityGoalRewardEvent(CommunityGoalRewardEvent arg)
+        {
+            CommunityGoalRewardEvent?.Invoke(this, arg);
+        }
     }
 }

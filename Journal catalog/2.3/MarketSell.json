@@ -1,0 +1,21 @@
+{ "timestamp":"2017-04-11T20:40:35Z", "event":"MarketSell", "Type":"fujintea", "Count":8, "SellPrice":12998, "TotalSale":103984, "AvgPricePaid":496 }
+{ "timestamp":"2017-04-19T15:04:05Z", "event":"MarketSell", "Type":"lowtemperaturediamond", "Count":1, "SellPrice":57505, "TotalSale":57505, "AvgPricePaid":0 }
+{ "timestamp":"2017-04-19T19:10:38Z", "event":"MarketSell", "Type":"neofabricinsulation", "Count":12, "SellPrice":3531, "TotalSale":42372, "AvgPricePaid":0 }
+{ "timestamp":"2017-04-19T19:10:49Z", "event":"MarketSell", "Type":"gold", "Count":306, "SellPrice":8895, "TotalSale":2721870, "AvgPricePaid":9090 }
+{ "timestamp":"2017-04-20T11:11:34Z", "event":"MarketSell", "Type":"articulationmotors", "Count":8, "SellPrice":4811, "TotalSale":38488, "AvgPricePaid":0 }
+{ "timestamp":"2017-04-20T11:31:24Z", "event":"MarketSell", "Type":"gold", "Count":293, "SellPrice":9948, "TotalSale":2914764, "AvgPricePaid":9464 }
+{ "timestamp":"2017-04-20T11:31:32Z", "event":"MarketSell", "Type":"palladium", "Count":89, "SellPrice":13720, "TotalSale":1221080, "AvgPricePaid":13147 }
+{ "timestamp":"2017-04-20T11:44:23Z", "event":"MarketSell", "Type":"hnshockmount", "Count":382, "SellPrice":1766, "TotalSale":674612, "AvgPricePaid":1531 }
+{ "timestamp":"2017-04-20T13:06:57Z", "event":"MarketSell", "Type":"consumertechnology", "Count":358, "SellPrice":6561, "TotalSale":2348838, "AvgPricePaid":6112 }
+{ "timestamp":"2017-04-20T13:07:08Z", "event":"MarketSell", "Type":"lavianbrandy", "Count":18, "SellPrice":19837, "TotalSale":357066, "AvgPricePaid":3500 }
+{ "timestamp":"2017-04-20T13:07:14Z", "event":"MarketSell", "Type":"watersofshintara", "Count":6, "SellPrice":17968, "TotalSale":107808, "AvgPricePaid":743 }
+{ "timestamp":"2017-04-20T13:36:13Z", "event":"MarketSell", "Type":"marinesupplies", "Count":182, "SellPrice":4591, "TotalSale":835562, "AvgPricePaid":3955 }
+{ "timestamp":"2017-04-20T13:47:02Z", "event":"MarketSell", "Type":"liquor", "Count":9, "SellPrice":868, "TotalSale":7812, "AvgPricePaid":491 }
+{ "timestamp":"2017-04-20T13:47:08Z", "event":"MarketSell", "Type":"tobacco", "Count":229, "SellPrice":4874, "TotalSale":1116146, "AvgPricePaid":4789 }
+{ "timestamp":"2017-04-20T13:47:16Z", "event":"MarketSell", "Type":"wine", "Count":126, "SellPrice":248, "TotalSale":31248, "AvgPricePaid":136 }
+{ "timestamp":"2017-04-20T14:18:52Z", "event":"MarketSell", "Type":"lavianbrandy", "Count":18, "SellPrice":20531, "TotalSale":369558, "AvgPricePaid":3500, "IllegalGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-20T14:30:01Z", "event":"MarketSell", "Type":"watersofshintara", "Count":6, "SellPrice":10673, "TotalSale":64038, "AvgPricePaid":743 }
+{ "timestamp":"2017-04-20T14:30:08Z", "event":"MarketSell", "Type":"terrainenrichmentsystems", "Count":358, "SellPrice":5272, "TotalSale":1887376, "AvgPricePaid":4338 }
+{ "timestamp":"2017-04-20T14:43:18Z", "event":"MarketSell", "Type":"imperialslaves", "Count":382, "SellPrice":16958, "TotalSale":6477956, "AvgPricePaid":15384, "IllegalGoods":true, "BlackMarket":true }
+{ "timestamp":"2017-04-20T16:07:49Z", "event":"MarketSell", "Type":"structuralregulators", "Count":86, "SellPrice":1907, "TotalSale":164002, "AvgPricePaid":1288 }
+{ "timestamp":"2017-04-21T16:13:15Z", "event":"MarketSell", "Type":"metaalloys", "Count":9, "SellPrice":82960, "TotalSale":746640, "AvgPricePaid":115801 }

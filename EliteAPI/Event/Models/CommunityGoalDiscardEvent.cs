@@ -1,21 +1,39 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class CommunityGoalDiscardEvent : EventBase
+    public partial class CommunityGoalDiscardEvent : EventBase
     {
-        internal CommunityGoalDiscardEvent() { }
+        internal CommunityGoalDiscardEvent()
+        {
+        }
 
-        public static CommunityGoalDiscardEvent FromJson(string json) => JsonConvert.DeserializeObject<CommunityGoalDiscardEvent>(json);
+        [JsonProperty("Name")] public string Name { get; private set; }
 
+        [JsonProperty("System")] public string System { get; private set; }
+    }
 
-        [JsonProperty("Name")]
-        public string Name { get; internal set; }
+    public partial class CommunityGoalDiscardEvent
+    {
+        public static CommunityGoalDiscardEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<CommunityGoalDiscardEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("System")]
-        public string System { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<CommunityGoalDiscardEvent> CommunityGoalDiscardEvent;
 
-        
+        internal void InvokeCommunityGoalDiscardEvent(CommunityGoalDiscardEvent arg)
+        {
+            CommunityGoalDiscardEvent?.Invoke(this, arg);
+        }
     }
 }

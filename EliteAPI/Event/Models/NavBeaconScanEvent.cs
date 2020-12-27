@@ -1,21 +1,37 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class NavBeaconScanEvent : EventBase
+    public partial class NavBeaconScanEvent : EventBase
     {
-        internal NavBeaconScanEvent() { }
+        internal NavBeaconScanEvent()
+        {
+        }
 
-        public static NavBeaconScanEvent FromJson(string json) => JsonConvert.DeserializeObject<NavBeaconScanEvent>(json);
+        [JsonProperty("NumBodies")] public long NumBodies { get; private set; }
+    }
 
+    public partial class NavBeaconScanEvent
+    {
+        public static NavBeaconScanEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<NavBeaconScanEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("SystemAddress")]
-        public string SystemAddress { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<NavBeaconScanEvent> NavBeaconScanEvent;
 
-        [JsonProperty("NumBodies")]
-        public long NumBodies { get; internal set; }
-
-        
+        internal void InvokeNavBeaconScanEvent(NavBeaconScanEvent arg)
+        {
+            NavBeaconScanEvent?.Invoke(this, arg);
+        }
     }
 }

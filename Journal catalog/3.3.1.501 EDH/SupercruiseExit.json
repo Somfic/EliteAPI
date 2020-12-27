@@ -1,0 +1,32 @@
+{ "timestamp":"2018-12-19T16:08:11Z", "event":"SupercruiseExit", "StarSystem":"LHS 6128", "SystemAddress":2869709383065, "Body":"LHS 6128", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2018-12-19T16:16:07Z", "event":"SupercruiseExit", "StarSystem":"LHS 6128", "SystemAddress":2869709383065, "Body":"LHS 6128 4 b", "BodyID":30, "BodyType":"Planet" }
+{ "timestamp":"2018-12-19T16:19:35Z", "event":"SupercruiseExit", "StarSystem":"LHS 6128", "SystemAddress":2869709383065, "Body":"LHS 6128 4 b", "BodyID":30, "BodyType":"Planet" }
+{ "timestamp":"2018-12-19T16:44:06Z", "event":"SupercruiseExit", "StarSystem":"LHS 6128", "SystemAddress":2869709383065, "Body":"Olivas Mines", "BodyID":55, "BodyType":"Station" }
+{ "timestamp":"2018-12-19T17:06:27Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2018-12-19T17:27:23Z", "event":"SupercruiseExit", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "Body":"LP 30-55 A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2018-12-19T17:33:08Z", "event":"SupercruiseExit", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Tollan 3", "BodyID":14, "BodyType":"Planet" }
+{ "timestamp":"2018-12-19T17:38:19Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2018-12-19T17:51:39Z", "event":"SupercruiseExit", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "Body":"Crown Platform", "BodyID":24, "BodyType":"Station" }
+{ "timestamp":"2018-12-20T16:13:01Z", "event":"SupercruiseExit", "StarSystem":"LP 64-194", "SystemAddress":13864825660833, "Body":"LP 64-194", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2018-12-20T16:17:00Z", "event":"SupercruiseExit", "StarSystem":"LP 64-194", "SystemAddress":13864825660833, "Body":"Longyear Survey", "BodyID":2, "BodyType":"Station" }
+{ "timestamp":"2018-12-20T16:22:44Z", "event":"SupercruiseExit", "StarSystem":"LP 64-194", "SystemAddress":13864825660833, "Body":"Gargarii", "BodyID":1, "BodyType":"Planet" }
+{ "timestamp":"2018-12-20T16:35:00Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2018-12-20T22:41:05Z", "event":"SupercruiseExit", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "Body":"LP 30-55 A", "BodyID":1, "BodyType":"Star" }
+{ "timestamp":"2018-12-20T22:52:06Z", "event":"SupercruiseExit", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "Body":"LP 30-55 B 6", "BodyID":20, "BodyType":"Planet" }
+{ "timestamp":"2018-12-20T22:59:05Z", "event":"SupercruiseExit", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "Body":"LP 30-55 B", "BodyID":2, "BodyType":"Star" }
+{ "timestamp":"2018-12-20T23:06:21Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-01-03T17:08:56Z", "event":"SupercruiseExit", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Tollan", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2019-01-03T17:20:05Z", "event":"SupercruiseExit", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Tollan", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2019-01-03T17:32:47Z", "event":"SupercruiseExit", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Tollan 7", "BodyID":70, "BodyType":"Planet" }
+{ "timestamp":"2019-01-03T17:38:27Z", "event":"SupercruiseExit", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Tollan", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2019-01-03T17:47:17Z", "event":"SupercruiseExit", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Tollan", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2019-01-03T17:52:51Z", "event":"SupercruiseExit", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Tollan", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2019-01-03T18:00:46Z", "event":"SupercruiseExit", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Tollan", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2019-01-03T18:09:27Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-01-03T18:25:31Z", "event":"SupercruiseExit", "StarSystem":"LP 30-55", "SystemAddress":7267487393185, "Body":"Crown Platform", "BodyID":24, "BodyType":"Station" }
+{ "timestamp":"2019-01-03T18:33:56Z", "event":"SupercruiseExit", "StarSystem":"Nanomam", "SystemAddress":4752121268587, "Body":"Nanomam", "BodyID":0, "BodyType":"Star" }
+{ "timestamp":"2019-01-03T18:42:02Z", "event":"SupercruiseExit", "StarSystem":"Nanomam", "SystemAddress":4752121268587, "Body":"Nanomam 2", "BodyID":3, "BodyType":"Planet" }
+{ "timestamp":"2019-01-03T18:43:46Z", "event":"SupercruiseExit", "StarSystem":"Nanomam", "SystemAddress":4752121268587, "Body":"Hahn Gateway", "BodyID":22, "BodyType":"Station" }
+{ "timestamp":"2019-01-03T18:51:39Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }
+{ "timestamp":"2019-01-16T19:37:03Z", "event":"SupercruiseExit", "StarSystem":"Guangul", "SystemAddress":4958279698795, "Body":"Guangul 2", "BodyID":2, "BodyType":"Planet" }
+{ "timestamp":"2019-01-16T19:44:52Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }

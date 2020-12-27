@@ -1,7 +1,3 @@
-using EliteAPI.Event.Models;
-using EliteAPI.Event.Processor.Abstractions;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -12,6 +8,8 @@ using System.Threading.Tasks;
 using EliteAPI.Event.Attributes;
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Module;
+using EliteAPI.Event.Processor.Abstractions;
+using Microsoft.Extensions.Logging;
 
 namespace EliteAPI.Event.Processor
 {
@@ -19,11 +17,12 @@ namespace EliteAPI.Event.Processor
     public class AttributeEventProcessor : MethodEventProcessorBase
     {
         private readonly Assembly _assembly;
-        private readonly Assembly _thirdPartyAssembly;
 
         private readonly ILogger<AttributeEventProcessor> _log;
+        private readonly Assembly _thirdPartyAssembly;
 
-        public AttributeEventProcessor(ILogger<AttributeEventProcessor> log, IServiceProvider services) : base(log, services)
+        public AttributeEventProcessor(ILogger<AttributeEventProcessor> log, IServiceProvider services) : base(log,
+            services)
         {
             _assembly = Assembly.GetExecutingAssembly();
             _thirdPartyAssembly = Assembly.GetEntryAssembly();
@@ -36,18 +35,18 @@ namespace EliteAPI.Event.Processor
             try
             {
                 _log.LogDebug("Detecting event handlers");
-                Stopwatch s = Stopwatch.StartNew();
+                var s = Stopwatch.StartNew();
 
                 Cache = new ConcurrentDictionary<string, IEnumerable<MethodBase>>();
-                IEnumerable<Type> allEvents = GetAllEventTypes();
-                IEnumerable<MethodBase> allMethods = GetAllValidMethods();
+                var allEvents = GetAllEventTypes();
+                var allMethods = GetAllValidMethods();
 
 
-                int totalHandlers = 0;
+                var totalHandlers = 0;
 
-                foreach (Type eventType in allEvents)
+                foreach (var eventType in allEvents)
                 {
-                    List<MethodBase> validMethods = GetAllValidMethodsForEvent(allMethods, eventType).ToList();
+                    var validMethods = GetAllValidMethodsForEvent(allMethods, eventType).ToList();
 
                     if (validMethods.Any())
                     {
@@ -59,7 +58,8 @@ namespace EliteAPI.Event.Processor
                 }
 
                 s.Stop();
-                _log.LogDebug("{eventCount} event-handlers were registered in {time}ms", totalHandlers, s.ElapsedMilliseconds);
+                _log.LogDebug("{eventCount} event-handlers were registered in {time}ms", totalHandlers,
+                    s.ElapsedMilliseconds);
             }
             catch (Exception ex)
             {
@@ -72,7 +72,7 @@ namespace EliteAPI.Event.Processor
 
         private IEnumerable<Type> GetAllEventTypes()
         {
-            IEnumerable<Type> eventTypes = _assembly.GetTypes()
+            var eventTypes = _assembly.GetTypes()
                 .Where(x => x.IsSubclassOf(typeof(EventBase)) && x.IsClass && !x.IsAbstract);
 
             return eventTypes;
@@ -89,7 +89,6 @@ namespace EliteAPI.Event.Processor
                         && y.GetParameters().Length == 1
                         && y.GetParameters()[0].ParameterType.IsSubclassOf(typeof(EventBase))
                     ));
-
         }
 
         private IEnumerable<MethodBase> GetAllValidMethodsForEvent(IEnumerable<MethodBase> methods, Type eventToCompare)

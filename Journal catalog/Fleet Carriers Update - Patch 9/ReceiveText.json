@@ -1,0 +1,6 @@
+{ "timestamp":"2020-12-19T20:10:45Z", "event":"ReceiveText", "From":"", "Message":"$COMMS_entered:#name=Theta Indi;", "Message_Localised":"Entered Channel: Theta Indi", "Channel":"npc" }
+{ "timestamp":"2020-12-19T20:15:52Z", "event":"ReceiveText", "From":"BHUbaaCKczeCH", "Message":"07", "Channel":"squadron" }
+{ "timestamp":"2020-12-19T20:16:08Z", "event":"ReceiveText", "From":"BHUbaaCKczeCH", "Message":"mam na sestrel 90 piratu ", "Channel":"squadron" }
+{ "timestamp":"2020-12-19T20:16:33Z", "event":"ReceiveText", "From":"BHUbaaCKczeCH", "Message":"system sumar", "Channel":"squadron" }
+{ "timestamp":"2020-12-19T20:17:06Z", "event":"ReceiveText", "From":"BHUbaaCKczeCH", "Message":"summar", "Channel":"squadron" }
+{ "timestamp":"2020-12-19T20:29:20Z", "event":"ReceiveText", "From":"", "Message":"$COMMS_entered:#name=Col 285 Sector GX-Q b19-7;", "Message_Localised":"Entered Channel: Col 285 Sector GX-Q b19-7", "Channel":"npc" }

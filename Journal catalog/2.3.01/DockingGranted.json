@@ -1,0 +1,3 @@
+{ "timestamp":"2017-04-25T18:21:34Z", "event":"DockingGranted", "LandingPad":9, "StationName":"Jaques Station" }
+{ "timestamp":"2017-04-25T18:23:10Z", "event":"DockingGranted", "LandingPad":2, "StationName":"Jaques Station" }
+{ "timestamp":"2017-04-25T18:49:25Z", "event":"DockingGranted", "LandingPad":12, "StationName":"Colonia Hub" }

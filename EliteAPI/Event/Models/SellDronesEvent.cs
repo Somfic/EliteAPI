@@ -1,27 +1,43 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class SellDronesEvent : EventBase
+    public partial class SellDronesEvent : EventBase
     {
-        internal SellDronesEvent() { }
+        internal SellDronesEvent()
+        {
+        }
 
-        public static SellDronesEvent FromJson(string json) => JsonConvert.DeserializeObject<SellDronesEvent>(json);
+        [JsonProperty("Type")] public string Type { get; private set; }
 
+        [JsonProperty("Count")] public long Count { get; private set; }
 
-        [JsonProperty("Type")]
-        public string Type { get; internal set; }
+        [JsonProperty("SellPrice")] public long SellPrice { get; private set; }
 
-        [JsonProperty("Count")]
-        public long Count { get; internal set; }
+        [JsonProperty("TotalSale")] public long TotalSale { get; private set; }
+    }
 
-        [JsonProperty("SellPrice")]
-        public long SellPrice { get; internal set; }
+    public partial class SellDronesEvent
+    {
+        public static SellDronesEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<SellDronesEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("TotalSale")]
-        public long TotalSale { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<SellDronesEvent> SellDronesEvent;
 
-        
+        internal void InvokeSellDronesEvent(SellDronesEvent arg)
+        {
+            SellDronesEvent?.Invoke(this, arg);
+        }
     }
 }

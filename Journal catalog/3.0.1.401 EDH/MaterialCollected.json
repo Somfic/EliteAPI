@@ -1,0 +1,7 @@
+{ "timestamp":"2018-03-01T02:26:21Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"shielddensityreports", "Name_Localised":"Untypical Shield Scans ", "Count":3 }
+{ "timestamp":"2018-03-01T19:10:31Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"bulkscandata", "Name_Localised":"Anomalous Bulk Scan Data", "Count":3 }
+{ "timestamp":"2018-03-01T19:55:30Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"shieldpatternanalysis", "Name_Localised":"Aberrant Shield Pattern Analysis", "Count":3 }
+{ "timestamp":"2018-03-01T19:55:31Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"decodedemissiondata", "Name_Localised":"Decoded Emission Data", "Count":3 }
+{ "timestamp":"2018-03-01T19:55:32Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"shielddensityreports", "Name_Localised":"Untypical Shield Scans ", "Count":3 }
+{ "timestamp":"2018-03-01T20:06:50Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"decodedemissiondata", "Name_Localised":"Decoded Emission Data", "Count":3 }
+{ "timestamp":"2018-03-01T20:09:25Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"bulkscandata", "Name_Localised":"Anomalous Bulk Scan Data", "Count":3 }

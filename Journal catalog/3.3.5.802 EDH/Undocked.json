@@ -1,0 +1,5 @@
+{ "timestamp":"2019-02-23T02:20:20Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2019-02-23T02:30:20Z", "event":"Undocked", "StationName":"Gordon Plant", "StationType":"Coriolis", "MarketID":3228957440 }
+{ "timestamp":"2019-02-23T02:41:51Z", "event":"Undocked", "StationName":"Savitskaya Bastion", "StationType":"CraterOutpost", "MarketID":3534643200 }
+{ "timestamp":"2019-02-23T03:00:38Z", "event":"Undocked", "StationName":"Durrance Dock", "StationType":"Coriolis", "MarketID":3228879616 }
+{ "timestamp":"2019-02-23T03:14:08Z", "event":"Undocked", "StationName":"Carver Prospect", "StationType":"CraterOutpost", "MarketID":3534643456 }

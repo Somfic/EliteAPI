@@ -1,0 +1,2 @@
+{ "timestamp":"2018-03-07T21:38:24Z", "event":"DockingDenied", "Reason":"Distance", "MarketID":3542148608, "StationName":"Wiley Vision", "StationType":"SurfaceStation" }
+{ "timestamp":"2018-03-08T21:39:28Z", "event":"DockingDenied", "Reason":"Distance", "MarketID":3535495168, "StationName":"Kuipers Arsenal", "StationType":"SurfaceStation" }

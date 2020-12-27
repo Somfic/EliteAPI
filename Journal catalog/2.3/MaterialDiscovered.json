@@ -1,0 +1,4 @@
+{ "timestamp":"2017-04-12T12:21:16Z", "event":"MaterialDiscovered", "Category":"Manufactured", "Name":"protoheatradiators", "DiscoveryNumber":42 }
+{ "timestamp":"2017-04-12T17:34:57Z", "event":"MaterialDiscovered", "Category":"Manufactured", "Name":"militarysupercapacitors", "DiscoveryNumber":43 }
+{ "timestamp":"2017-04-12T21:32:57Z", "event":"MaterialDiscovered", "Category":"Manufactured", "Name":"improvisedcomponents", "DiscoveryNumber":44 }
+{ "timestamp":"2017-04-21T17:40:25Z", "event":"MaterialDiscovered", "Category":"Raw", "Name":"tellurium", "DiscoveryNumber":22 }

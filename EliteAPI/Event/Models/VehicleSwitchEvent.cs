@@ -1,18 +1,37 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class VehicleSwitchEvent : EventBase
+    public partial class VehicleSwitchEvent : EventBase
     {
-        internal VehicleSwitchEvent() { }
+        internal VehicleSwitchEvent()
+        {
+        }
 
-        public static VehicleSwitchEvent FromJson(string json) => JsonConvert.DeserializeObject<VehicleSwitchEvent>(json);
+        [JsonProperty("event")] public string Event { get; private set; }
+    }
 
+    public partial class VehicleSwitchEvent
+    {
+        public static VehicleSwitchEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<VehicleSwitchEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("To")]
-        public string To { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<VehicleSwitchEvent> VehicleSwitchEvent;
 
-        
+        internal void InvokeVehicleSwitchEvent(VehicleSwitchEvent arg)
+        {
+            VehicleSwitchEvent?.Invoke(this, arg);
+        }
     }
 }

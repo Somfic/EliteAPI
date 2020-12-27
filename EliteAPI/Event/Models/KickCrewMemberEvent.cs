@@ -1,21 +1,39 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class KickCrewMemberEvent : EventBase
+    public partial class KickCrewMemberEvent : EventBase
     {
-        internal KickCrewMemberEvent() { }
+        internal KickCrewMemberEvent()
+        {
+        }
 
-        public static KickCrewMemberEvent FromJson(string json) => JsonConvert.DeserializeObject<KickCrewMemberEvent>(json);
+        [JsonProperty("Crew")] public string Crew { get; private set; }
 
+        [JsonProperty("OnCrime")] public bool OnCrime { get; private set; }
+    }
 
-        [JsonProperty("Crew")]
-        public string Crew { get; internal set; }
+    public partial class KickCrewMemberEvent
+    {
+        public static KickCrewMemberEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<KickCrewMemberEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("OnCrime")]
-        public bool OnCrime { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<KickCrewMemberEvent> KickCrewMemberEvent;
 
-        
+        internal void InvokeKickCrewMemberEvent(KickCrewMemberEvent arg)
+        {
+            KickCrewMemberEvent?.Invoke(this, arg);
+        }
     }
 }

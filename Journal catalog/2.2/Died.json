@@ -1,0 +1,38 @@
+{ "timestamp":"2016-10-26T12:26:14Z", "event":"Died" }
+{ "timestamp":"2016-11-10T14:06:48Z", "event":"Died" }
+{ "timestamp":"2016-11-13T11:17:44Z", "event":"Died" }
+{ "timestamp":"2016-12-02T20:08:50Z", "event":"Died" }
+{ "timestamp":"2016-12-07T18:18:37Z", "event":"Died", "KillerName":"Sirius Security", "KillerShip":"viper_mkiv", "KillerRank":"Competent" }
+{ "timestamp":"2016-12-11T15:08:53Z", "event":"Died", "KillerName":"$ShipName_Military_Independent;", "KillerName_Localised":"System Defence Force", "KillerShip":"asp", "KillerRank":"Expert" }
+{ "timestamp":"2016-12-14T15:48:58Z", "event":"Died", "KillerName":"$ShipName_Military_Empire;", "KillerName_Localised":"Imperial Navy Vessel", "KillerShip":"python", "KillerRank":"Expert" }
+{ "timestamp":"2016-12-15T15:37:29Z", "event":"Died", "KillerName":"Falkirk Bairn", "KillerShip":"vulture", "KillerRank":"Expert" }
+{ "timestamp":"2016-12-15T16:12:06Z", "event":"Died", "KillerName":"Heidi", "KillerShip":"federation_gunship", "KillerRank":"Deadly" }
+{ "timestamp":"2016-12-15T16:48:19Z", "event":"Died", "KillerName":"Ian 'Rabbitmasher' Slade", "KillerShip":"federation_dropship_mkii", "KillerRank":"Master" }
+{ "timestamp":"2016-12-28T14:22:20Z", "event":"Died", "KillerName":"$ShipName_Military_Independent;", "KillerName_Localised":"System Defence Force", "KillerShip":"python", "KillerRank":"Elite" }
+{ "timestamp":"2016-12-28T14:26:53Z", "event":"Died", "KillerName":"$ShipName_Military_Independent;", "KillerName_Localised":"System Defence Force", "KillerShip":"asp_scout", "KillerRank":"Dangerous" }
+{ "timestamp":"2016-12-30T19:32:04Z", "event":"Died" }
+{ "timestamp":"2017-01-01T17:26:22Z", "event":"Died", "KillerName":"Federal Agent", "KillerShip":"viper", "KillerRank":"Competent" }
+{ "timestamp":"2017-01-01T17:58:41Z", "event":"Died", "KillerName":"$ShipName_Military_Independent;", "KillerName_Localised":"System Defence Force", "KillerShip":"viper", "KillerRank":"Expert" }
+{ "timestamp":"2017-01-01T20:17:25Z", "event":"Died", "KillerName":"Federal Agent", "KillerShip":"python", "KillerRank":"Competent" }
+{ "timestamp":"2017-01-07T12:32:33Z", "event":"Died" }
+{ "timestamp":"2017-01-07T12:40:52Z", "event":"Died" }
+{ "timestamp":"2017-01-07T12:47:39Z", "event":"Died" }
+{ "timestamp":"2017-01-23T19:32:26Z", "event":"Died", "KillerName":"Christoph Lipka", "KillerShip":"viper", "KillerRank":"Deadly" }
+{ "timestamp":"2017-01-25T19:22:05Z", "event":"Died" }
+{ "timestamp":"2017-01-27T15:59:44Z", "event":"Died", "KillerName":"hoonyan", "KillerShip":"federation_dropship_mkii", "KillerRank":"Dangerous" }
+{ "timestamp":"2017-01-29T19:44:49Z", "event":"Died", "KillerName":"Cmdr Kinmob", "KillerShip":"empire_trader", "KillerRank":"Deadly" }
+{ "timestamp":"2017-02-02T16:18:44Z", "event":"Died", "KillerName":"HobNail", "KillerShip":"anaconda", "KillerRank":"Master" }
+{ "timestamp":"2017-02-05T14:06:38Z", "event":"Died", "KillerName":"Vanir", "KillerShip":"type7", "KillerRank":"Expert" }
+{ "timestamp":"2017-02-10T14:41:42Z", "event":"Died" }
+{ "timestamp":"2017-02-15T18:56:13Z", "event":"Died", "KillerName":"Ben Cross", "KillerShip":"anaconda", "KillerRank":"Dangerous" }
+{ "timestamp":"2017-03-10T15:35:47Z", "event":"Died", "KillerName":"$ShipName_Police_Independent;", "KillerName_Localised":"System Authority Vessel", "KillerShip":"viper_mkiv", "KillerRank":"Dangerous" }
+{ "timestamp":"2017-03-10T17:36:02Z", "event":"Died" }
+{ "timestamp":"2017-03-13T15:30:08Z", "event":"Died" }
+{ "timestamp":"2017-03-17T15:19:30Z", "event":"Died" }
+{ "timestamp":"2017-04-06T13:38:29Z", "event":"Died" }
+{ "timestamp":"2017-04-07T15:28:27Z", "event":"Died" }
+{ "timestamp":"2017-04-07T15:45:22Z", "event":"Died" }
+{ "timestamp":"2017-04-07T16:05:57Z", "event":"Died" }
+{ "timestamp":"2017-04-07T17:56:14Z", "event":"Died" }
+{ "timestamp":"2017-04-08T18:20:32Z", "event":"Died", "KillerName":"Cmdr Gauth", "KillerShip":"diamondback", "KillerRank":"Dangerous" }
+{ "timestamp":"2017-04-08T19:22:06Z", "event":"Died", "KillerName":"$ShipName_Military_Independent;", "KillerName_Localised":"System Defence Force", "KillerShip":"anaconda", "KillerRank":"Deadly" }

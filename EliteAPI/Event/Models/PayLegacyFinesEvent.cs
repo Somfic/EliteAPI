@@ -1,21 +1,39 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class PayLegacyFinesEvent : EventBase
+    public partial class PayLegacyFinesEvent : EventBase
     {
-        internal PayLegacyFinesEvent() { }
+        internal PayLegacyFinesEvent()
+        {
+        }
 
-        public static PayLegacyFinesEvent FromJson(string json) => JsonConvert.DeserializeObject<PayLegacyFinesEvent>(json);
+        [JsonProperty("Amount")] public long Amount { get; private set; }
 
+        [JsonProperty("BrokerPercentage")] public double BrokerPercentage { get; private set; }
+    }
 
-        [JsonProperty("Amount")]
-        public long Amount { get; internal set; }
+    public partial class PayLegacyFinesEvent
+    {
+        public static PayLegacyFinesEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<PayLegacyFinesEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("BrokerPercentage")]
-        public float BrokerPercentage { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<PayLegacyFinesEvent> PayLegacyFinesEvent;
 
-        
+        internal void InvokePayLegacyFinesEvent(PayLegacyFinesEvent arg)
+        {
+            PayLegacyFinesEvent?.Invoke(this, arg);
+        }
     }
 }

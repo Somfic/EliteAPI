@@ -1,68 +1,67 @@
 ﻿namespace EliteAPI.Status.Models
 {
-
     /// <summary>
-    /// Ship GUI focus
+    ///     Ship GUI focus
     /// </summary>
     public enum ShipGuiFocus
     {
         /// <summary>
-        /// There is no focus
+        ///     There is no focus
         /// </summary>
         NoFocus,
-        
+
         /// <summary>
-        /// The internal (right) panel
+        ///     The internal (right) panel
         /// </summary>
         InternalPanel,
 
         /// <summary>
-        /// The external (left) panel
+        ///     The external (left) panel
         /// </summary>
         ExternalPanel,
 
         /// <summary>
-        /// The communication panel
+        ///     The communication panel
         /// </summary>
         CommsPanel,
 
         /// <summary>
-        /// The role panel
+        ///     The role panel
         /// </summary>
         RolePanel,
 
         /// <summary>
-        /// Station services
+        ///     Station services
         /// </summary>
         StationServices,
 
         /// <summary>
-        /// The galaxy map
+        ///     The galaxy map
         /// </summary>
         GalaxyMap,
 
         /// <summary>
-        /// The system map
+        ///     The system map
         /// </summary>
         SystemMap,
 
         /// <summary>
-        /// The orrery
+        ///     The orrery
         /// </summary>
         Orrery,
 
         /// <summary>
-        /// Full spectrum scanner mode
+        ///     Full spectrum scanner mode
         /// </summary>
         FssMode,
 
         /// <summary>
-        /// Saa mode
+        ///     Saa mode
         /// </summary>
         SaaMode,
 
         /// <summary>
-        /// The codex
+        ///     The codex
         /// </summary>
         Codex
     }

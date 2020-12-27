@@ -1,0 +1,14 @@
+{ "timestamp":"2018-12-19T16:45:38Z", "event":"RefuelAll", "Cost":82, "Amount":1.627563 }
+{ "timestamp":"2018-12-19T17:08:30Z", "event":"RefuelAll", "Cost":59, "Amount":1.164213 }
+{ "timestamp":"2018-12-19T17:21:59Z", "event":"RefuelAll", "Cost":10, "Amount":0.051654 }
+{ "timestamp":"2018-12-19T17:40:22Z", "event":"RefuelAll", "Cost":185, "Amount":3.669760 }
+{ "timestamp":"2018-12-19T17:52:59Z", "event":"RefuelAll", "Cost":41, "Amount":0.783019 }
+{ "timestamp":"2018-12-20T16:18:53Z", "event":"RefuelAll", "Cost":221, "Amount":4.388504 }
+{ "timestamp":"2018-12-20T16:25:33Z", "event":"RefuelAll", "Cost":10, "Amount":0.094493 }
+{ "timestamp":"2018-12-20T16:36:51Z", "event":"RefuelAll", "Cost":107, "Amount":2.108729 }
+{ "timestamp":"2018-12-20T23:09:03Z", "event":"RefuelAll", "Cost":82, "Amount":1.612583 }
+{ "timestamp":"2019-01-03T18:11:42Z", "event":"RefuelAll", "Cost":97, "Amount":1.921964 }
+{ "timestamp":"2019-01-03T18:27:33Z", "event":"RefuelAll", "Cost":31, "Amount":0.614806 }
+{ "timestamp":"2019-01-03T18:45:59Z", "event":"RefuelAll", "Cost":98, "Amount":1.936378 }
+{ "timestamp":"2019-01-03T18:53:54Z", "event":"RefuelAll", "Cost":12, "Amount":0.221931 }
+{ "timestamp":"2019-01-16T19:46:53Z", "event":"RefuelAll", "Cost":90, "Amount":1.774575 }

@@ -1,0 +1,11 @@
+{ "timestamp":"2018-12-12T17:47:38Z", "event":"Repair", "Item":"Wear", "Cost":74 }
+{ "timestamp":"2018-12-13T21:47:59Z", "event":"Repair", "Item":"Wear", "Cost":86 }
+{ "timestamp":"2018-12-14T10:26:09Z", "event":"Repair", "Item":"Wear", "Cost":28 }
+{ "timestamp":"2018-12-15T19:12:20Z", "event":"Repair", "Item":"Wear", "Cost":22 }
+{ "timestamp":"2018-12-13T22:32:03Z", "event":"Repair", "Item":"Paint", "Cost":1 }
+{ "timestamp":"2018-12-13T22:32:04Z", "event":"Repair", "Item":"Wear", "Cost":16 }
+{ "timestamp":"2018-12-18T02:27:27Z", "event":"Repair", "Item":"Paint", "Cost":3 }
+{ "timestamp":"2018-12-18T02:27:29Z", "event":"Repair", "Item":"Wear", "Cost":644 }
+{ "timestamp":"2018-12-18T17:08:06Z", "event":"Repair", "Item":"Paint", "Cost":1 }
+{ "timestamp":"2018-12-18T20:12:23Z", "event":"Repair", "Item":"Wear", "Cost":169 }
+{ "timestamp":"2018-12-18T20:12:25Z", "event":"Repair", "Item":"Paint", "Cost":1 }

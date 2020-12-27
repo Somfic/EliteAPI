@@ -1,24 +1,41 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class USSDropEvent : EventBase
+    public partial class UssDropEvent : EventBase
     {
-        internal USSDropEvent() { }
+        internal UssDropEvent()
+        {
+        }
 
-        public static USSDropEvent FromJson(string json) => JsonConvert.DeserializeObject<USSDropEvent>(json);
+        [JsonProperty("USSType")] public string UssType { get; private set; }
 
+        [JsonProperty("USSType_Localised")] public string UssTypeLocalised { get; private set; }
 
-        [JsonProperty("USSType")]
-        public string UssType { get; internal set; }
+        [JsonProperty("USSThreat")] public long UssThreat { get; private set; }
+    }
 
-        [JsonProperty("USSType_Localised")]
-        public string UssTypeLocalised { get; internal set; }
+    public partial class UssDropEvent
+    {
+        public static UssDropEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<UssDropEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("USSThreat")]
-        public long UssThreat { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<UssDropEvent> UssDropEvent;
 
-        
+        internal void InvokeUssDropEvent(UssDropEvent arg)
+        {
+            UssDropEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -1,0 +1,4 @@
+{ "timestamp":"2019-06-22T21:39:50Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions", "USSThreat":0 }
+{ "timestamp":"2019-06-22T21:55:16Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions", "USSThreat":0 }
+{ "timestamp":"2019-08-18T01:40:52Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions", "USSThreat":0 }
+{ "timestamp":"2019-08-27T02:18:50Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions", "USSThreat":0 }

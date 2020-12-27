@@ -1,0 +1,30 @@
+{ "timestamp":"2017-05-12T16:12:04Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5 }
+{ "timestamp":"2017-05-12T16:12:20Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5 }
+{ "timestamp":"2017-05-12T16:12:35Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5 }
+{ "timestamp":"2017-05-12T16:13:23Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"PowerPlant_Boosted", "Level":1 }
+{ "timestamp":"2017-05-12T17:03:14Z", "event":"EngineerApply", "Engineer":"Lei Cheung", "Blueprint":"ShieldGenerator_Reinforced", "Level":5 }
+{ "timestamp":"2017-05-12T17:03:34Z", "event":"EngineerApply", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Thermic", "Level":2 }
+{ "timestamp":"2017-05-12T17:03:53Z", "event":"EngineerApply", "Engineer":"Lei Cheung", "Blueprint":"ShieldBooster_Thermic", "Level":2 }
+{ "timestamp":"2017-05-12T17:04:09Z", "event":"EngineerApply", "Engineer":"Lei Cheung", "Blueprint":"Sensor_Sensor_WideAngle", "Level":4 }
+{ "timestamp":"2017-05-12T17:33:00Z", "event":"EngineerApply", "Engineer":"Broo Tarquin", "Blueprint":"Weapon_Efficient", "Level":5 }
+{ "timestamp":"2017-05-12T17:33:14Z", "event":"EngineerApply", "Engineer":"Broo Tarquin", "Blueprint":"Weapon_Overcharged", "Level":5 }
+{ "timestamp":"2017-05-12T17:33:32Z", "event":"EngineerApply", "Engineer":"Broo Tarquin", "Blueprint":"Weapon_Overcharged", "Level":5 }
+{ "timestamp":"2017-05-20T12:05:22Z", "event":"EngineerApply", "Engineer":"Zacariah Nemo", "Blueprint":"Weapon_DoubleShot", "Level":1 }
+{ "timestamp":"2017-06-12T13:54:21Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":4 }
+{ "timestamp":"2017-06-12T13:54:45Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":4 }
+{ "timestamp":"2017-06-12T13:55:21Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":1 }
+{ "timestamp":"2017-06-12T13:55:34Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"PowerPlant_Boosted", "Level":1 }
+{ "timestamp":"2017-06-15T14:06:59Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":2 }
+{ "timestamp":"2017-06-15T15:02:09Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"PowerPlant_Stealth", "Level":1 }
+{ "timestamp":"2017-06-15T15:02:28Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"Sensor_Sensor_LightWeight", "Level":1 }
+{ "timestamp":"2017-06-20T16:16:01Z", "event":"EngineerApply", "Engineer":"Broo Tarquin", "Blueprint":"Weapon_Efficient", "Level":5 }
+{ "timestamp":"2017-06-20T16:18:02Z", "event":"EngineerApply", "Engineer":"Broo Tarquin", "Blueprint":"Weapon_Efficient", "Level":5, "Override":"special_thermalshock" }
+{ "timestamp":"2017-06-20T17:14:43Z", "event":"EngineerApply", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Efficient", "Level":3 }
+{ "timestamp":"2017-06-20T17:15:02Z", "event":"EngineerApply", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Efficient", "Level":3, "Override":"special_corrosive_shell" }
+{ "timestamp":"2017-06-20T17:20:57Z", "event":"EngineerApply", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Efficient", "Level":3 }
+{ "timestamp":"2017-06-20T17:22:09Z", "event":"EngineerApply", "Engineer":"Tod 'The Blaster' McQuinn", "Blueprint":"Weapon_Efficient", "Level":1 }
+{ "timestamp":"2017-06-24T14:20:25Z", "event":"EngineerApply", "Engineer":"Juri Ishmaak", "Blueprint":"WakeScanner_LightWeight", "Level":1 }
+{ "timestamp":"2017-06-24T14:21:27Z", "event":"EngineerApply", "Engineer":"Juri Ishmaak", "Blueprint":"Sensor_WakeScanner_LongRange", "Level":1 }
+{ "timestamp":"2017-06-24T15:45:05Z", "event":"EngineerApply", "Engineer":"Juri Ishmaak", "Blueprint":"Weapon_HighCapacity", "Level":3 }
+{ "timestamp":"2017-06-24T15:45:48Z", "event":"EngineerApply", "Engineer":"Juri Ishmaak", "Blueprint":"Weapon_Sturdy", "Level":4 }
+{ "timestamp":"2017-06-24T15:46:20Z", "event":"EngineerApply", "Engineer":"Juri Ishmaak", "Blueprint":"Sensor_Sensor_WideAngle", "Level":5 }

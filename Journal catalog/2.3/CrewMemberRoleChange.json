@@ -1,0 +1,8 @@
+{ "timestamp":"2017-04-14T12:17:31Z", "event":"CrewMemberRoleChange", "Crew":"Codaki", "Role":"Idle" }
+{ "timestamp":"2017-04-14T12:30:38Z", "event":"CrewMemberRoleChange", "Crew":"Codaki", "Role":"Idle" }
+{ "timestamp":"2017-04-14T12:31:01Z", "event":"CrewMemberRoleChange", "Crew":"Codaki", "Role":"FireCon" }
+{ "timestamp":"2017-04-18T18:18:43Z", "event":"CrewMemberRoleChange", "Crew":"ABudda", "Role":"Idle" }
+{ "timestamp":"2017-04-18T18:20:21Z", "event":"CrewMemberRoleChange", "Crew":"Jeremie", "Role":"Idle" }
+{ "timestamp":"2017-04-18T18:23:01Z", "event":"CrewMemberRoleChange", "Crew":"ABudda", "Role":"FireCon" }
+{ "timestamp":"2017-04-18T18:35:34Z", "event":"CrewMemberRoleChange", "Crew":"Your Local Dealer", "Role":"Idle" }
+{ "timestamp":"2017-04-23T19:25:08Z", "event":"CrewMemberRoleChange", "Crew":"Ryan (Ger)", "Role":"Idle" }

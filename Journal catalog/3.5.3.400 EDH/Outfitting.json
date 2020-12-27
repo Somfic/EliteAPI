@@ -1,0 +1,14 @@
+{ "timestamp":"2019-10-27T01:42:02Z", "event":"Outfitting", "MarketID":3534849536, "StationName":"Steiner Installation", "StarSystem":"Lalande 18115" }
+{ "timestamp":"2019-10-27T02:21:31Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2019-11-01T13:03:43Z", "event":"Outfitting", "MarketID":3228848128, "StationName":"Sherrington Orbital", "StarSystem":"LHS 1885" }
+{ "timestamp":"2019-11-01T13:13:50Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2019-11-01T21:42:28Z", "event":"Outfitting", "MarketID":3228165376, "StationName":"Steiner City", "StarSystem":"Huokang" }
+{ "timestamp":"2019-11-01T21:47:52Z", "event":"Outfitting", "MarketID":3228165376, "StationName":"Steiner City", "StarSystem":"Huokang" }
+{ "timestamp":"2019-11-01T21:57:20Z", "event":"Outfitting", "MarketID":3228165376, "StationName":"Steiner City", "StarSystem":"Huokang" }
+{ "timestamp":"2019-11-01T22:26:27Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2019-11-01T23:28:14Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2019-11-01T23:29:37Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2019-11-18T01:29:32Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2019-12-11T03:46:00Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2020-01-03T23:27:01Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }
+{ "timestamp":"2020-01-03T23:59:21Z", "event":"Outfitting", "MarketID":3228861696, "StationName":"Spring Gateway", "StarSystem":"LHS 215" }

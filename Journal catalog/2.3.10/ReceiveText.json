@@ -1,0 +1,625 @@
+{ "timestamp":"2017-06-27T19:02:00Z", "event":"ReceiveText", "From":"Ziegel Dock", "Message":"$DockingChatter_Friendly;", "Message_Localised":"It's great to see you again, Commander.", "Channel":"npc" }
+{ "timestamp":"2017-06-27T19:02:02Z", "event":"ReceiveText", "From":"Ziegel Dock", "Message":"$STATION_docking_granted;", "Message_Localised":"Docking request granted.", "Channel":"npc" }
+{ "timestamp":"2017-06-27T19:02:06Z", "event":"ReceiveText", "From":"Ziegel Dock", "Message":"$STATION_NoFireZone_entered;", "Message_Localised":"No fire zone entered.", "Channel":"npc" }
+{ "timestamp":"2017-06-27T19:05:02Z", "event":"ReceiveText", "From":"Ziegel Dock", "Message":"$STATION_NoFireZone_exited;", "Message_Localised":"No fire zone left.", "Channel":"npc" }
+{ "timestamp":"2017-06-27T19:35:43Z", "event":"ReceiveText", "From":"$ShipName_Police_Independent;", "From_Localised":"System Authority Vessel", "Message":"$Police_AnnounceStopAndSearch06;", "Message_Localised":"Prepare to be scanned for criminal activity, pilot.", "Channel":"npc" }
+{ "timestamp":"2017-06-27T19:35:45Z", "event":"ReceiveText", "From":"$ShipName_Police_Independent;", "From_Localised":"System Authority Vessel", "Message":"$Police_AnnounceStopAndSearch03;", "Message_Localised":"I am authorised to perform a ship scan, pilot.", "Channel":"npc" }
+{ "timestamp":"2017-06-27T19:35:47Z", "event":"ReceiveText", "From":"$ShipName_Police_Independent;", "From_Localised":"System Authority Vessel", "Message":"$Police_AnnounceStopAndSearch10;", "Message_Localised":"This authority scan won't take long, Commander.", "Channel":"npc" }
+{ "timestamp":"2017-06-27T19:35:59Z", "event":"ReceiveText", "From":"$ShipName_Police_Independent;", "From_Localised":"System Authority Vessel", "Message":"$Police_ThankYouPassedStopAndSearch10;", "Message_Localised":"Everything looks fine, Commander. Have a good day.", "Channel":"npc" }
+{ "timestamp":"2017-06-28T13:07:55Z", "event":"ReceiveText", "From":"$npc_name_decorate:#name=Richard Pearson;", "From_Localised":"Richard Pearson", "Message":"$Pirate_HunterHostileSC_Relevant05;", "Message_Localised":"The rumour was right... good job I found you first.", "Channel":"npc" }
+{ "timestamp":"2017-06-28T13:08:00Z", "event":"ReceiveText", "From":"$npc_name_decorate:#name=Richard Pearson;", "From_Localised":"Richard Pearson", "Message":"$Pirate_StartInterdiction06;", "Message_Localised":"Make it easy on yourself and submit.", "Channel":"npc" }
+{ "timestamp":"2017-06-28T13:51:08Z", "event":"ReceiveText", "From":"$npc_name_decorate:#name=Boo Meister Cork;", "From_Localised":"Boo Meister Cork", "Message":"$Pirate_HunterHostileSC_Relevant05;", "Message_Localised":"The rumour was right... good job I found you first.", "Channel":"npc" }
+{ "timestamp":"2017-07-01T10:53:42Z", "event":"ReceiveText", "From":"Ziegel Dock", "Message":"$STATION_NoFireZone_exited;", "Message_Localised":"No fire zone left.", "Channel":"npc" }
+{ "timestamp":"2017-07-01T11:02:58Z", "event":"ReceiveText", "From":"Jameson Memorial", "Message":"$STATION_NoFireZone_entered;", "Message_Localised":"No fire zone entered.", "Channel":"npc" }
+{ "timestamp":"2017-07-01T11:03:08Z", "event":"ReceiveText", "From":"Jameson Memorial", "Message":"$DockingChatter_Neutral;", "Message_Localised":"Ensure to observe starport protocol during your visit, pilot.", "Channel":"npc" }
+{ "timestamp":"2017-07-01T11:03:11Z", "event":"ReceiveText", "From":"Jameson Memorial", "Message":"$STATION_docking_granted;", "Message_Localised":"Docking request granted.", "Channel":"npc" }
+{ "timestamp":"2017-07-01T11:26:03Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"Servus", "Channel":"player" }
+{ "timestamp":"2017-07-01T11:30:43Z", "event":"ReceiveText", "From":"Jameson Memorial", "Message":"$STATION_NoFireZone_exited;", "Message_Localised":"No fire zone left.", "Channel":"npc" }
+{ "timestamp":"2017-07-01T11:33:17Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"mahlzeit", "Channel":"player" }
+{ "timestamp":"2017-07-01T11:34:33Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"drucke mir gerade eine relativ große fdl aus", "Channel":"player" }
+{ "timestamp":"2017-07-01T11:34:36Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"in 3d", "Channel":"player" }
+{ "timestamp":"2017-07-01T11:35:14Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"hab einen eigenen", "Channel":"player" }
+{ "timestamp":"2017-07-01T11:36:50Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"wohin gehts", "Channel":"player" }
+{ "timestamp":"2017-07-01T11:37:18Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"oha", "Channel":"player" }
+{ "timestamp":"2017-07-01T11:37:23Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"da haste ja was vor dir", "Channel":"player" }
+{ "timestamp":"2017-07-01T11:39:23Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"kann ja dann mal zusteigen, wenn du dort bist", "Channel":"player" }
+{ "timestamp":"2017-07-01T11:40:27Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"die gedruckte fdl sollte mindesten 12cm lang werden. ggf. auch noch größer", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:34:39Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"hi", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:34:49Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"hello", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:36:49Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"nope.  gestern abend erst vonner Reise zurückgekommen", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:37:00Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"werde heut abend hinfliegen, mit dem ZenCast", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:37:11Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"CMDR Plater und Paroxsym (youtube)", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:37:42Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"Flugzeit war 2x 7 stunden", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:38:10Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"plus warten am flughafen, und am ende 4 stunden auf der Autobahn für ne strecke die sonst 90min braucht", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:38:28Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"drecks Baustellen, bzw. drecks Gaffer bei Unfällen", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:39:00Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":".... nen Truck mitm Schneepflug fahren :-D", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:39:14Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"ala Mythbusters", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:40:15Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"Abflug in China, Pilot: \"tscha, wir würden ja gerne Starten, aber unser Tug ist nicht da, und hinter uns stehen noch n paar Gepäckanhänger die keiner weggefahren hat\"", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:40:24Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"90min. verspäteter start", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:40:53Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"yikes", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:41:32Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"Flug selbst war ganz angenehm....  bis auf das der A380 diesmal auf der Strekce keine Dusche hatte :-/", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:41:38Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":";-D", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:42:11Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"und beim Stopover gabs kein kaltes wasser in der Dusche", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:42:27Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"haben in Dubai wohl kein Geld für WasserKühler :-D", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:42:40Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"#firstworldproblems", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:43:47Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"nun gut, erst mal gucken wo die Schiffchen sind.... und wo ich die korrosionsresistenten CargoUnits gelagert habe", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:44:27Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"nur bei Palin", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:44:50Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"und nur grösse 1 (2 versionen, eine mit 1t und eine mit 2t)", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:46:08Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"jap. bis auf das es so einen zusätzlichen slot kostet, wenn du noch anderes transportieren willst (relics oder so)", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:47:25Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"5 CGs aktv....", "Channel":"player" }
+{ "timestamp":"2017-07-01T13:47:33Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"für PS4, nehme ich an", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:23:52Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"Hey ! o7", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:24:09Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"Heading back to the bubble", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:25:19Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"What happened?", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:26:20Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"Ow.. :/", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:26:35Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"Yeah, neutrons are dangerous", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:35:00Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"Went to a random place 60% of the way to Saggitarius, for a passenger", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:35:08Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"And then to Colonia, for another passenger", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:38:22Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"70-80mil for both", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:38:29Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"+ exploration data :p", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:41:02Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"I'm 14% pioneer, don't know if I'll get enough to hit Elite, don't think so ^^'", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:42:08Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"I'm mainly just honking", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:42:26Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"And right now I'm on a Neutron Highway, so I just scan the neutrons", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:43:59Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"Well, you can do Colonia - Sol using 99% neutrons ;p", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:44:20Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"Hence the Highway name", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:45:02Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"Yeah, I only use it when I just want to get back as fast as possible", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:45:27Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"I'm supposed to play with a friend this weekend, we're gonna try to do the thargoids stuff", "Channel":"player" }
+{ "timestamp":"2017-07-01T14:48:44Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"Have fun :D", "Channel":"player" }
+{ "timestamp":"2017-07-01T15:16:38Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"I'm on a Beluga right now :", "Channel":"player" }
+{ "timestamp":"2017-07-01T15:17:59Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"Wanted to change from only using an Anaconda", "Channel":"player" }
+{ "timestamp":"2017-07-01T15:29:12Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"36ly with full tank", "Channel":"player" }
+{ "timestamp":"2017-07-01T15:29:53Z", "event":"ReceiveText", "From":"&refreshfr", "Message":"Yeah, and with 128t of fuel, you can chain neutrons for quite some time before making a refuel stop", "Channel":"player" }
+{ "timestamp":"2017-07-01T18:03:52Z", "event":"ReceiveText", "From":"Attenborough's Watch", "Message":"$DockingChatter_Neutral;", "Message_Localised":"Ensure to observe starport protocol during your visit, pilot.", "Channel":"npc" }
+{ "timestamp":"2017-07-01T18:03:54Z", "event":"ReceiveText", "From":"Attenborough's Watch", "Message":"$STATION_docking_granted;", "Message_Localised":"Docking request granted.", "Channel":"npc" }
+{ "timestamp":"2017-07-01T18:03:59Z", "event":"ReceiveText", "From":"Attenborough's Watch", "Message":"$STATION_NoFireZone_entered;", "Message_Localised":"No fire zone entered.", "Channel":"npc" }
+{ "timestamp":"2017-07-01T18:10:38Z", "event":"ReceiveText", "From":"Attenborough's Watch", "Message":"$STATION_NoFireZone_exited;", "Message_Localised":"No fire zone left.", "Channel":"npc" }
+{ "timestamp":"2017-07-01T18:17:25Z", "event":"ReceiveText", "From":"&HappyDoomsday", "Message":"hi", "Channel":"wing" }
+{ "timestamp":"2017-07-01T18:22:28Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Higarian;", "From_Localised":"CMDR Higarian", "Message":"hi", "Channel":"local" }
+{ "timestamp":"2017-07-01T18:22:33Z", "event":"ReceiveText", "From":"&Higarian", "Message":"hi", "Channel":"wing" }
+{ "timestamp":"2017-07-01T18:23:25Z", "event":"ReceiveText", "From":"&Higarian", "Message":"where u going?", "Channel":"wing" }
+{ "timestamp":"2017-07-01T18:29:01Z", "event":"ReceiveText", "From":"&dug the starlord", "Message":"hi", "Channel":"wing" }
+{ "timestamp":"2017-07-01T18:30:20Z", "event":"ReceiveText", "From":"&dug the starlord", "Message":"where are we going next", "Channel":"wing" }
+{ "timestamp":"2017-07-01T18:30:47Z", "event":"ReceiveText", "From":"&dug the starlord", "Message":"ok", "Channel":"wing" }
+{ "timestamp":"2017-07-01T18:49:41Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ey up your a ways out lol", "Channel":"player" }
+{ "timestamp":"2017-07-01T18:50:46Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"have you noticed a fps drop since the update?", "Channel":"player" }
+{ "timestamp":"2017-07-01T18:53:20Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"its dropped mine from 50-60 down to about 30 and i was on ultra settings with shaders and turning shaders off no difference ", "Channel":"player" }
+{ "timestamp":"2017-07-01T18:56:42Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"mmm intresting ive even replaced my graphics card and got latest driver as i was suspecting my old card was on its way out was getting ocassional wierd artifacts i may do a complete reinstall tomoz may help as win10 is a ball ache with drivers", "Channel":"player" }
+{ "timestamp":"2017-07-01T18:58:10Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah hope so ", "Channel":"player" }
+{ "timestamp":"2017-07-01T19:01:03Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah prob but id prob just come across most things while out and about i mean i came across a giant water world that looked like a gas giant on the system map about 1.2k out while on a pass mission", "Channel":"player" }
+{ "timestamp":"2017-07-01T19:03:49Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ok will do gonna check for missions to rank feds managed to get to ensign this week and am bout 50%ish to next one first and see if i can sort out my frame rate issue aswell", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:26:54Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ey up ", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:28:38Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice im havin major probs my fps is makin it nearly unplayable ", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:30:04Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah pretty much though a few people are havin same probs acording to the forums", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:31:49Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"hope so seems to be those using amd graphics cards ", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:33:22Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"im hopin to change to a 1080 but need to save up for it ", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:34:33Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool decent cards ", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:35:19Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"wantin the 1080 so i can go vr lol for true imersion", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:38:33Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah i could aswell with running rehade too until this update dropped then all went pear shaped only getting 26fps with shaders off lol you sound like your in the middle of nowhere", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:39:20Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool where you headin", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:42:17Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool just had a look in the map ", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:44:28Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ive got the seagul nebula marked for my next trip when i can get it running good enough lol would love to but  game not runnig well at all so need to investigate further", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:45:17Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"its bloody annoying lol ", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:46:41Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah seems to make not much difference and ive even reinstalled the game", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:48:00Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"no me niether ", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:50:25Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:55:18Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool", "Channel":"player" }
+{ "timestamp":"2017-07-02T11:56:21Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool would love to", "Channel":"player" }
+{ "timestamp":"2017-07-02T12:02:27Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice brb i hope gonna try some ideas", "Channel":"player" }
+{ "timestamp":"2017-07-02T12:02:54Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cheers", "Channel":"player" }
+{ "timestamp":"2017-07-03T14:04:50Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"hello", "Channel":"player" }
+{ "timestamp":"2017-07-03T14:05:07Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"how's it going?", "Channel":"player" }
+{ "timestamp":"2017-07-03T14:05:29Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"nice", "Channel":"player" }
+{ "timestamp":"2017-07-03T16:34:10Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"hy", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:34:12Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"hi", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:34:59Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"first time in this mode", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:35:25Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"about 60 hours single", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:35:34Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"only flight", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:36:01Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"beatyfull view", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:37:29Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"english only&", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:37:32Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"?", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:38:04Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"russian", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:38:22Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"))", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:40:00Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"time to switch back/ ", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:40:03Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"))", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:40:23Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"my ship without pilot)", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:40:40Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=win2slayer;", "From_Localised":"CMDR win2slayer", "Message":"see you", "Channel":"local" }
+{ "timestamp":"2017-07-03T16:43:49Z", "event":"ReceiveText", "From":"&SDR95", "Message":"hi", "Channel":"wing" }
+{ "timestamp":"2017-07-03T16:44:11Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"nabend", "Channel":"player" }
+{ "timestamp":"2017-07-03T16:45:32Z", "event":"ReceiveText", "From":"&SDR95", "Message":"so, what we do?", "Channel":"wing" }
+{ "timestamp":"2017-07-03T16:46:56Z", "event":"ReceiveText", "From":"&SDR95", "Message":"wow", "Channel":"wing" }
+{ "timestamp":"2017-07-03T17:13:37Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"dort ist mein clanhauptsystem", "Channel":"player" }
+{ "timestamp":"2017-07-03T17:13:49Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"bin doch zu den jungs der bbfa gegangen", "Channel":"player" }
+{ "timestamp":"2017-07-03T17:14:47Z", "event":"ReceiveText", "From":"&Ryan (Ger)", "Message":"von deren fraktion. ich meine aber deren clan", "Channel":"player" }
+{ "timestamp":"2017-07-03T17:35:23Z", "event":"ReceiveText", "From":"&Matsura", "Message":"o7 cmdr", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:19:51Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yo  cool having plotting issues yet lol", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:21:38Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool think ive sorted my issues holding at 45fps ish now looks like bad driver install and game no like crossfire lol", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:22:33Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah at last lol  sure ", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:24:01Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice ", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:26:13Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"wow they fastes spinning stars ive seen yet", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:28:24Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep thought as much but the galaxy is big so there must be some not found yet", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:30:54Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"not tried neutron charging yet dont fancy breakin my ship lol", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:31:06Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:32:39Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice ", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:34:23Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah hard find", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:34:43Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"man thats a big star", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:36:07Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"this makes me wanna go out again lol", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:37:54Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah sounds like a plan", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:40:59Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol i get the fuel scoop message while still in wichspace", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:43:13Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah ", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:44:55Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"no never been yet on the list", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:50:07Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol my client crashed would love to see sag a ", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:50:52Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool thanks ", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:51:19Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"awsome ", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:52:41Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"with any luck if i can get my cature card up and running hoping to do some vids on a trip and your welcome to come along", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:53:10Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"man thats high insta crush lol", "Channel":"player" }
+{ "timestamp":"2017-07-04T17:57:41Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice thier worth a bit", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:02:29Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol you never know", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:03:40Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:05:15Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"i think so", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:10:28Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"hi there :)", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:11:04Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"just tried what the multicrew is )", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:12:36Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"not realy but playing most time for my self. im on the way to tra-x1 at now. 15k ly away from sol :D", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:13:49Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"wow nice one. is a passanger mission?", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:13:51Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol like waiting for a bus none for ages then 3 come at once", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:14:38Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"its a tradership type7", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:14:59Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"17 range", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:15:14Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"whats your max ?", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:15:25Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"^^ ", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:15:34Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"great! ", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:15:43Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ist a nice one", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:16:00Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"its my first try fligts so far", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:16:54Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol yeah i always get the purple systems", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:17:15Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"yep, i got 25 mill if i come back ", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:18:24Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"the space looks great", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:19:03Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"so i wish you good flight so long.", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:19:11Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"how far?", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:19:40Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ho ho  :D", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:20:03Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"how many time?", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:20:30Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"thats good ", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:20:39Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"no the ones were all the planets are purple on the system map all icy bodies i think", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:20:43Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ok :)", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:21:34Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"where is my ship so long i flight here with you arround?", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:22:15Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ah ok :)", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:22:20Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"thx", "Channel":"wing" }
+{ "timestamp":"2017-07-04T18:23:52Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah had  few on way to eta carina nebula ", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:25:50Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol the old instance issue back again", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:26:28Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol ", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:29:13Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah defo will be awsome", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:34:19Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah cool not been there yet got it bookmarked was heading there but cut short to get back for the alien stuff", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:36:48Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"no probs theres no rush whenever we have time ", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:38:53Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep no probs i ment to ask where you from?", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:40:10Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool im in the uk so were only bout an hour difference ", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:42:50Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"might need to restart the game and maybe your network nice find", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:44:56Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice screenshot opertunity lol", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:46:15Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool i just signed up to site earlier", "Channel":"player" }
+{ "timestamp":"2017-07-04T18:47:37Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool no probs o7 ", "Channel":"player" }
+{ "timestamp":"2017-07-05T14:39:24Z", "event":"ReceiveText", "From":"&Ryan [BBfA]", "Message":"mahlzeit", "Channel":"player" }
+{ "timestamp":"2017-07-05T15:56:56Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"hi soz was just dockin", "Channel":"player" }
+{ "timestamp":"2017-07-05T16:01:44Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"7% needed to rank up fron ensign now", "Channel":"player" }
+{ "timestamp":"2017-07-05T16:03:38Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol how does that work ww with no atmosphere and nice", "Channel":"player" }
+{ "timestamp":"2017-07-05T16:04:46Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah should be frozen solid lol that far out", "Channel":"player" }
+{ "timestamp":"2017-07-05T17:31:16Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool", "Channel":"player" }
+{ "timestamp":"2017-07-05T17:55:05Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"awsome nearly there", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:05:50Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool ", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:07:36Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:09:12Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ouch ", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:11:38Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"no", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:16:15Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol yeah sure i just had to do the loop of shame", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:25:07Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice find hope you get first discovered", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:32:57Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"sure", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:33:26Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:34:02Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ho", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:34:58Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:42:38Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"bloody thing crashed on me again lol just as the fsd count began", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:43:52Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah hope so was hopin to grab some screenies lol proper tourist", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:45:07Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool cheers ", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:48:22Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"any and all lol need to get practice with the camara suite", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:49:07Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:52:09Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah ill have a look then im gonna finish my missions hit 100% so lookin for the promotion", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:53:46Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"oh ok no probs ", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:56:34Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool ", "Channel":"player" }
+{ "timestamp":"2017-07-05T18:58:55Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"bloody noob pilots stopping in the mail slot nearly ran up his back end lol", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:00:53Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"i was lol and had perfect line to boost out lucky i didnt", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:03:14Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol mines was boosting into back wall when i wanted landing gear", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:05:36Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"hi cmdr", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:05:57Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"sorry I missed your message last time. I was afk", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:06:19Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I did go to the alien crash site it is soo cool!!", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:06:22Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"did you?", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:06:51Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I was also a little scared", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:07:12Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"hehe", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:08:05Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I am going to be on in about 30mins. thinking of doing the gauridians mission. I found a guide in the forums", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:08:14Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"oh ok you are going out", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:09:13Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"waow! That did not take you long!", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:09:21Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"What direction you go in?", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:37:35Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool what you found?", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:38:01Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:39:18Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"got an error think the servers are actin up again", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:42:51Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah sure just failed again ill try and rember to reset my network before comming on tomoz", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:43:05Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"it might help", "Channel":"player" }
+{ "timestamp":"2017-07-05T19:44:01Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"no probs o7 fly safe", "Channel":"player" }
+{ "timestamp":"2017-07-06T13:39:18Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"o7", "Channel":"player" }
+{ "timestamp":"2017-07-06T13:39:20Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"hi", "Channel":"player" }
+{ "timestamp":"2017-07-06T13:39:52Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"you get any first discoveries. ", "Channel":"player" }
+{ "timestamp":"2017-07-06T13:39:59Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"messages cut off last time", "Channel":"player" }
+{ "timestamp":"2017-07-06T13:40:33Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I am doing the Ram Tah mission", "Channel":"player" }
+{ "timestamp":"2017-07-06T13:40:58Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"are you still at the ammoia world?", "Channel":"player" }
+{ "timestamp":"2017-07-06T13:42:06Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"invite me for a min if you like?", "Channel":"player" }
+{ "timestamp":"2017-07-06T13:42:48Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"in open now", "Channel":"player" }
+{ "timestamp":"2017-07-06T13:44:52Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"waow!", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:45:06Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"its is awesome", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:45:27Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"rings are huge too", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:46:15Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"heard problems with network", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:46:23Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"in the forums", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:46:40Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"is this an orca?", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:46:53Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"first time being in one!", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:47:03Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"its soo fast. what speed was that when you boosted?", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:48:46Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"nice jump range too", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:48:55Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"you meeting someone here?", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:49:23Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"for a passanger mission?", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:51:01Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"thats an earthlike?", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:51:56Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"oh, thought I saw green on the system map", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:52:29Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"there was no first discovery on it in the system map", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:53:50Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"haha. Star field is so dense", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:54:10Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"its makes it look awesome too with all the starts", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:54:21Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"stars", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:55:00Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"thats like a binary system 0.5ly hehe", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:55:36Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"another ringed amonnoa wolrd on that system", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:56:20Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"oh lol", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:56:33Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"ok I'll go back to my mission now.", "Channel":"wing" }
+{ "timestamp":"2017-07-06T13:56:54Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"maybe I come back later", "Channel":"wing" }
+{ "timestamp":"2017-07-06T14:01:29Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"cool, its looks so different to the starfield here!", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:09:50Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"since you started playing?", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:11:56Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"looking in system panel can't find mine yet", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:12:08Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"but Ive done 1.1Mm in an SRV ", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:22:28Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"what happened?", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:23:32Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I have traveled total 99000lys", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:24:15Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"99876", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:24:32Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"i should have a party on my annaconda lol", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:25:22Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"want to invite me when you get to the ringed ammonia worlds", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:26:16Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"oh ok", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:26:42Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"oh that would look nice", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:29:51Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I've never spent as long on a planet. its cool watching he sun set and then a moon came up and now bearnard loop is rising", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:30:03Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"yes please. going to open now", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:30:53Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"ready", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:32:16Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I have not see this before", "Channel":"wing" }
+{ "timestamp":"2017-07-06T14:34:18Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"this is cool!", "Channel":"wing" }
+{ "timestamp":"2017-07-06T14:35:28Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"would be cool if you could see both ringed worlds at once", "Channel":"wing" }
+{ "timestamp":"2017-07-06T14:36:00Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"yeah not possible", "Channel":"wing" }
+{ "timestamp":"2017-07-06T14:37:54Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"what happened? power out cause of hanger?", "Channel":"wing" }
+{ "timestamp":"2017-07-06T14:40:19Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"beutiful place", "Channel":"wing" }
+{ "timestamp":"2017-07-06T14:40:37Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I'll go finish that site. back soon if you have another spot like this", "Channel":"wing" }
+{ "timestamp":"2017-07-06T14:40:44Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I took nice pictures", "Channel":"wing" }
+{ "timestamp":"2017-07-06T14:42:28Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"ah", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:42:29Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"ok", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:44:39Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"lols", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:44:54Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"did you activate the crashed alien ship?", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:45:06Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"with it", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:45:40Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"you need an UA, UProbe and ULink", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:45:46Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"to activate it", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:46:26Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I did, means maybe I am on thier hit list now hehe", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:46:35Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"hope not", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:48:41Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"no, just scans I think", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:49:00Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"but I didn't kill any of the wee scavagers", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:49:33Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":":)", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:49:40Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"i didn't want to kill them", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:50:23Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"Just scanned and reading about the gaurdians.....apparently humans could live in their atmosphere", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:50:57Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"oh yeah I drove over an egg by accident and the acid got my srv!", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:51:09Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"not yet no", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:51:30Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"season 3 maybe", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:51:34Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"yip", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:57:45Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"hey up ", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:59:45Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"ahoj", "Channel":"player" }
+{ "timestamp":"2017-07-06T14:59:51Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"aye waitin for the right promotion mission to appear lol did a bit of bounty huntin  and was lookin at the captains log app surer", "Channel":"player" }
+{ "timestamp":"2017-07-06T15:01:01Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"fingers crossed the network holds out lol", "Channel":"player" }
+{ "timestamp":"2017-07-06T15:02:07Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool", "Channel":"player" }
+{ "timestamp":"2017-07-06T15:05:57Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"damn must be frontiers servers ive rebooted my network and when it happens i have to restart the game fully", "Channel":"player" }
+{ "timestamp":"2017-07-06T15:07:55Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah completly freezes out and no controls work have to quit via task manager", "Channel":"player" }
+{ "timestamp":"2017-07-06T15:09:21Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah wouldnt mind ill just start the game in main menu at the mo", "Channel":"player" }
+{ "timestamp":"2017-07-06T15:10:42Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"awsome", "Channel":"player" }
+{ "timestamp":"2017-07-06T15:12:09Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah looks awsome on my screen got a couple of screenies lol", "Channel":"player" }
+{ "timestamp":"2017-07-06T15:13:53Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ok and cheers for the look", "Channel":"player" }
+{ "timestamp":"2017-07-06T15:15:00Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ok back in my ship now", "Channel":"player" }
+{ "timestamp":"2017-07-06T15:17:48Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"all 18 scans done on the first site", "Channel":"player" }
+{ "timestamp":"2017-07-06T15:18:13Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"some interesting things about the gaurdians", "Channel":"player" }
+{ "timestamp":"2017-07-06T15:18:26Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"18Mill", "Channel":"player" }
+{ "timestamp":"2017-07-06T16:03:59Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"2nd one done.27mill. Laungage info on them", "Channel":"player" }
+{ "timestamp":"2017-07-06T16:04:08Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"you meet your tourist ok?", "Channel":"player" }
+{ "timestamp":"2017-07-06T17:39:35Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"Hai", "Channel":"player" }
+{ "timestamp":"2017-07-06T17:40:53Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"gucken, wo man merits für Li Yong-Rui grinden kann....", "Channel":"player" }
+{ "timestamp":"2017-07-06T17:41:36Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"wie weit von der bubble bist du?", "Channel":"player" }
+{ "timestamp":"2017-07-06T17:42:08Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"bin in PG, da nicht in verfassung für open (Fiebervirus auskurieren....)", "Channel":"player" }
+{ "timestamp":"2017-07-06T17:42:40Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"gut, dann brauch ich dir nicht die UP und UA anbieten, die ich noch dabei habe :-)", "Channel":"player" }
+{ "timestamp":"2017-07-06T17:45:10Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"noice", "Channel":"player" }
+{ "timestamp":"2017-07-06T17:51:39Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"just a bit of bounty huntin 96% competent now 4% short of next rank", "Channel":"player" }
+{ "timestamp":"2017-07-06T17:52:36Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"just on way to restock etc", "Channel":"player" }
+{ "timestamp":"2017-07-06T17:58:34Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"not to bad 1.6 mil ", "Channel":"player" }
+{ "timestamp":"2017-07-06T18:00:07Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah i think their worth quite a bit as they are reasonably rare", "Channel":"player" }
+{ "timestamp":"2017-07-06T18:01:50Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool i dont think ive ever found one lots of water based ones though", "Channel":"player" }
+{ "timestamp":"2017-07-06T18:04:33Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"back in a bit just gonna watch a livestream", "Channel":"player" }
+{ "timestamp":"2017-07-06T18:12:14Z", "event":"ReceiveText", "From":"&Fullereno", "Message":"si?", "Channel":"player" }
+{ "timestamp":"2017-07-06T18:20:37Z", "event":"ReceiveText", "From":"&Ryan [BBfA]", "Message":"hi", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:04:38Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"yes looks good so far, you too :) 3-4K and than back. i saw a video today how to overcharge your FSA. now im looking for a neutron star nearly.", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:05:46Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"i try it with the filte but for now withiut positiv reason :)", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:11:46Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"i think not, but thank you for the offer. i planing to flight there by my self an dont want to ruine the surprise :)", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:12:46Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"it is not your first time there right?", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:13:00Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ok :)", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:13:22Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"rgr", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:14:33Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"with the right ship :)", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:15:08Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"yep :) i need to come back first and to buy one  ", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:15:34Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"i think next week im back again :D", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:16:58Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"thats crasy and nice at same time. so long time for one mission....", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:17:53Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ok :D", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:25:15Z", "event":"ReceiveText", "From":"&Ryan [BBfA]", "Message":"ja, mit inet", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:27:43Z", "event":"ReceiveText", "From":"&Ryan [BBfA]", "Message":"gw", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:28:58Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cheers and yep", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:29:21Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ok", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:30:52Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"bugger it errored lol", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:30:54Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"found my first :)=", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:32:34Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"no bummed out again", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:33:49Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ok cool no probs", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:37:04Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"thats a long wait in supercruise lol", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:39:03Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"stil not connecting must be busy", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:39:49Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"no one sec ill restart the game", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:44:56Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ok im in", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:46:22Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"still no joy and ok no probs we'll try again tomoz", "Channel":"player" }
+{ "timestamp":"2017-07-06T19:46:50Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ok o7 ", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:18:08Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"Greetings cmdr :)", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:20:17Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"hi", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:20:42Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"cool, ha another freind just told me there are there too!", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:21:15Z", "event":"ReceiveText", "From":"$npc_name_decorate:#name=DG Space Tours;", "From_Localised":"DG Space Tours", "Message":"$PassengerLiner_Passthrough03;", "Message_Localised":"Passengers are advised that the gymnasium is currently closed due to equipment malfunction.", "Channel":"npc" }
+{ "timestamp":"2017-07-08T14:21:20Z", "event":"ReceiveText", "From":"$npc_name_decorate:#name=ABW Galactic Travel Agency;", "From_Localised":"ABW Galactic Travel Agency", "Message":"$PassengerLiner_Passthrough02;", "Message_Localised":"The promenade areas are now open, passengers are advised that we will be jumping out of normal space shortly.", "Channel":"npc" }
+{ "timestamp":"2017-07-08T14:21:31Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"you are both in open", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:22:17Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"coincidence!", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:23:16Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"from sag a? ", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:23:18Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"Colonia?", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:25:03Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"hey", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:26:06Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"tscha.... das habe ich mich vor ner halben stunde auch gefragt....", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:26:34Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"there is a beutiful blue nebula inbetween Colnia and sag A", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:26:36Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"hmm....", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:28:57Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"colonia soll n paar neue stationen haben", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:29:06Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"ansonsten: Nebel gucken?", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:29:18Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I don't know much about exploring that far out", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:29:20Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"shrogaae aa-a h78  und dann auf der seite zurück?", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:30:04Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"keine ahnung ob der was ist, nur mal kurz auf die galmap geschaut", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:32:51Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"kein Thema", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:33:26Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"but i seen that nebula from that other persons ship. was amazin", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:33:50Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I plan to take the trip to Sag A myself. Just not yet.", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:37:42Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I put that into the galaxy map", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:37:58Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"red nebula, looks like it could be really cool", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:38:37Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"you can't really see it in the galaxy map", "Channel":"player" }
+{ "timestamp":"2017-07-08T14:39:48Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"for sure! I enjoyed the heart and and calfornia nebulas", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:03:38Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"cool, invite me if you have time. Would be nice to see it", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:03:46Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"on my way to the next gaurdians site", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:08:47Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"ok cool. I'm in open now", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:10:37Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"waow!", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:11:02Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"sooo coool", "Channel":"wing" }
+{ "timestamp":"2017-07-08T15:13:11Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"for sure. its is amazing. I took a picture of it and your ship :)", "Channel":"wing" }
+{ "timestamp":"2017-07-08T15:13:43Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"lol", "Channel":"wing" }
+{ "timestamp":"2017-07-08T15:20:06Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"The game crashed and it booted me out", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:20:21Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"multicrew still not quite working properly", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:21:20Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"you find MC disconnects or crashes quite often too?", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:21:55Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"the red nebula was great. ", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:38:52Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"cool. you get your name on it!", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:42:54Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"awesome!", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:42:58Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"afk for a bit", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:43:02Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"chat soon", "Channel":"player" }
+{ "timestamp":"2017-07-08T15:43:29Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I wana have my name on a black hole and and earthlike", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:48:41Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"Hallöchen^^", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:48:46Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"Sorry, war am Essen^^", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:49:04Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"alles klärchen bei dir?", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:49:18Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"bin unsicher", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:50:05Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"weis nicht, ob sich das Plasmaschild wirklich lohnt, es zu holen", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:50:33Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"ja, das von der Aisling Duval", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:50:57Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"also ich hab aktuell ein Normalschild... mit 5572 Stärke... ", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:51:03Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"des reicht doch normal auch", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:51:26Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"und des plasmaschild verbraucht auch mehr Strom", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:52:02Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"aktuell KW: 52,25MW und Verbrauch 47,06MW", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:52:29Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"ich hab KEINE Ahnung^^", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:52:43Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"ok", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:54:06Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"der prisma verlangt 18% und den den ich grad drin habe 9% Strom", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:54:12Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"also doppelt soviel", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:54:24Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"ich weis ned... ", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:54:36Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"kann mich ned entscheiden", "Channel":"player" }
+{ "timestamp":"2017-07-08T16:59:11Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"306 mille", "Channel":"player" }
+{ "timestamp":"2017-07-08T17:15:35Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"^^", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:20:45Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"was willst denn machenß", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:20:48Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"?", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:20:58Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"flieg halt zum Aliendingends", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:23:33Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"weis grad nicht, was du mir sagen willst", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:26:21Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"greetings ", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:27:12Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"schau mal in youtube rein... duche nach MisterFlagg.... in seinem Kanal suchste Elite-folge #508... dann weist, wo Du hinfliegst^^", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:27:20Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"suche", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:27:37Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"jap^^", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:27:42Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"und auch ALP", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:27:47Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"des sind meine 2 ", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:28:00Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"gerne", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:28:08Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"dann wirds zeit", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:28:10Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"^^", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:28:23Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"me too :) was not easy to find the way with 17 range. ", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:28:54Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"sountds good. wish you save flight back home", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:29:11Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"oh.,.. jetz seh ich erst, wo Du steckst... sag das doch gleich^^", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:29:32Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"tell me if you found some interresting. thank you :)", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:29:55Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"kannst dir zwar das Video trotzdem anschauen.. aber dann fällt mir in deiner Nähe leider nix ein, wo Du hinfliegen könntest", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:31:27Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"FSA  34% health :D", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:31:55Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"hope they dont brocke :D", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:32:19Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ah some collisions with the stars :D", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:32:45Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"an no repair tool", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:33:12Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"thats good, stay save :)", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:33:28Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ok", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:33:40Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"i think they need ammo", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:34:30Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"14-15k", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:34:43Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"think a week again", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:37:20Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"yes you are faster than me. maybe thats work. give a call if you nearby.", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:37:39Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"what is it? aliens?", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:38:58Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"can i visit you on your ship?", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:40:31Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"hypia ... ", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:41:40Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"yep saw it. here are so much many stars ", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:41:51Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"arround", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:42:09Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ah a pulsar :)", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:42:48Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"you know how to overchanrge your FSA ?", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:43:40Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"kk :) yep is little dangerous", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:44:36Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"hope there is a", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:45:03Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"way later to land on this planets", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:45:48Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"no i just scanning some planets and su", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:46:14Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ns. and the area with the A-Scanner", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:46:46Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"i like y", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:47:15Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"your ship. if i come back i will got this too:)", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:48:08Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"3 mill and the type 7 trader at now", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:48:51Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ca. 37 mill togehter. but if i finish the mission i got 25 mill more", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:49:30Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"and some for the scanned space", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:49:49Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"but dont know how much this will be", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:51:55Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"wow ok, sounds good ", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:53:25Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"rgr, thank you :)=", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:55:04Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"looks like a ice planet ", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:58:20Z", "event":"ReceiveText", "From":"&Yoshio", "Message":":) tyni ", "Channel":"player" }
+{ "timestamp":"2017-07-08T18:59:40Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ey up", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:00:24Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ok. so im jump back to my seet. need to trave", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:00:35Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"too :)", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:01:28Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool i finally made lutenent and also made expert in combat ", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:01:54Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"yep. thanks for the view :)", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:02:21Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep still long way to go lol", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:06:15Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool i havn't decided what to do next wether to carry on grinding or go on a small trip", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:07:54Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ok no probs i'll do some more grinding with some small pass missions round the bubble", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:10:57Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"maybe a couple of thou ly some thing i can prob do over a couple of days tho i dont rush when jumping oh cool ", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:14:18Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool just looked on the map and its only 1.5k ly from sol to west i'll look", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:18:05Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool east is bout 2k ly away those sound like good choices ive been to the california nebula but didnt do too much lookin round", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:19:55Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yeah i called in at one of them was surprised to find one that far out thought it was only colonia that was way outside the bubble", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:22:34Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool i havnt been to an astroid base yet", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:24:20Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool lol ive been toying with going to lave for a better look round as ive only passed through without really stopping", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:25:45Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice thats where ill go till you get back ", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:27:03Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"only 4 jumps in the orca", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:27:45Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool will do", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:29:42Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"35.74 current and just over 37 if i light my ship more", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:31:47Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool i could prob get that if i change out some modules as i have some pass ones and 32 cargo rack prety much every thing is a rated ", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:35:14Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool my shield gen is a 4b mainly have it set to running away lol ", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:36:39Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"thats a lot of stars watchout for the sunburn lol", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:37:59Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:39:22Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"i just got some for mine wait till you see it lol", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:41:30Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"prob i cant remember what i had that day but ive changed it since and got some engine colours aswell", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:43:46Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool i wish they would do a ship kit for it would be awesome ", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:44:45Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep i agree", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:46:16Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"same here ", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:48:20Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice only tried the orca up to now ", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:49:26Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep it sure is ", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:49:58Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool ", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:50:44Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice", "Channel":"player" }
+{ "timestamp":"2017-07-08T19:58:45Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep was just dockin at the asteroid port looks very cool and that must be fun explorin in a type 7 lol", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:02:03Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep thats a lot of jumps to go anywhere", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:09:53Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"wow hope it goes well for him", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:11:19Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"i take it he didnt take an afmu module ", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:13:37Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"thats gonna take some concentration to not lose his fsd ", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:15:35Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"i havnt tried the afmu either yet but do try and remember the heat sinks spec after i came out of whichspace in between a binary star system ", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:16:50Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"talk about panic lol ", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:18:22Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"wow thats nasty and nice find on the black hole", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:19:43Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"that dosnt surprise me with the amount of systems in the core", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:21:08Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep worth a small fortune and a good way to gain elite in exploration", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:24:20Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice im currently 40% pioneer", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:27:17Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice whoa thats a big star droppin in at that range", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:29:28Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"thats huge will take some time fly round lol", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:32:29Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep i wonder if you can see it from sol its that big and bright", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:36:17Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol know what you mean i have been round there via rigel gets a bit awkward to navigate with all the locked systems wanna go back as i have a feeling some of the alien stuff may be in that area", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:39:03Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool i want to visit the epsilon orionis system which is one of the stars of orions belt that hasnt had its proper name assigned to it hence my theory bout the aliens", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:40:20Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"which is near the barnarnds loop region and lookin on the map may need fsd injections to get to it as not many other stars around", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:40:35Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool what you got?", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:41:49Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool ", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:42:45Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yes please if the network dosnt bum out lol", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:44:23Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yay it worked lol", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:48:00Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"man that skys awesome with all those stars", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:48:07Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:50:18Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:50:43Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep c u soon", "Channel":"player" }
+{ "timestamp":"2017-07-08T20:51:53Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool back in my ship without crashing yay no probs", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:00:23Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"hi", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:00:34Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"you find any more black holes?", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:06:09Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool what you got?", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:06:42Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:07:34Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"ok", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:09:05Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:11:10Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"sorry back again. router problem", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:11:52Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"intreasting a black hole nebula that must be the remains of the star that colapsed into the black hole", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:12:19Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yes please", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:14:23Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool love the lensing effect", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:15:12Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"lol your paintwork is rather chipped", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:17:25Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep ", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:17:35Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"that where you heading", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:17:41Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"cool", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:20:18Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep lol ", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:22:33Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"yep its a pain", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:28:14Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"whats your text target then?", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:28:20Z", "event":"ReceiveText", "From":"&Oceanbend", "Message":"nice phew i nearly flew into a station without askin for permission lol", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:30:43Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"nice :) do you use the newtron highway?", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:37:24Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"what job? THe newtron highway?", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:37:58Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"I used the newtron highway on the way back from Formidine rift", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:39:09Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"in my asp. allthought thats is only like 5000 light years", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:40:33Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"not that is far", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:40:44Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"now that is far", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:43:12Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"maybe need the hull repair limits for that one!", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:44:35Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"guess it would be essential for that far", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:46:00Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"why if you get stuck at a star?", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:47:09Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"oh yeah. in 2.4 you can get hull repeair limpits", "Channel":"player" }
+{ "timestamp":"2017-07-08T21:47:21Z", "event":"ReceiveText", "From":"&Chriz Hanna", "Message":"ok chat later nite :)", "Channel":"player" }
+{ "timestamp":"2017-07-09T13:23:39Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"hi", "Channel":"player" }
+{ "timestamp":"2017-07-09T13:23:51Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"wollte grad zu einer Power gehn, aber des lass ich doch lieber", "Channel":"player" }
+{ "timestamp":"2017-07-09T13:24:08Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"wenn ich da Missionen mach, krieg ich ja Bounty auf mich selber... NEEEEEEE.. des mag i ned .(", "Channel":"player" }
+{ "timestamp":"2017-07-09T13:24:57Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"ja", "Channel":"player" }
+{ "timestamp":"2017-07-09T13:25:06Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"des is ja scheiße", "Channel":"player" }
+{ "timestamp":"2017-07-09T13:25:30Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"na ich weis nich", "Channel":"player" }
+{ "timestamp":"2017-07-09T13:29:37Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"hi", "Channel":"player" }
+{ "timestamp":"2017-07-09T13:39:43Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"inwiefern Glück?", "Channel":"player" }
+{ "timestamp":"2017-07-09T13:40:11Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"aso", "Channel":"player" }
+{ "timestamp":"2017-07-09T13:40:28Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"naja.. ich lass des erstmal mit der politik.. scheiss drauf", "Channel":"player" }
+{ "timestamp":"2017-07-09T13:40:48Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"ich hasse einfach, wenn ich Bounty auf mir selber hab.. des gibt mir dann nie Ruhe", "Channel":"player" }
+{ "timestamp":"2017-07-09T13:44:25Z", "event":"ReceiveText", "From":"&Whoogie", "Message":"ja", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:01:36Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"zur abwechslung mal wieder in Quince.  hatte mich gestern 'ner gruppe in nem Discord-channel angeschlossen, die n paar Massacre machen wollten", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:03:16Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"ist seit 2.3.10 aber etwas anderst.  wenn du schon 3 missionen hast, gibt's keine neuen.", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:03:44Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"also nun im prinzip 2 stacken und dann reloggen bis du ein volles board findest", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:03:55Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"ah, ok", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:04:50Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"sitze gerade auf 60 (96ships) - und keiner mehr hier", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:05:03Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"überlege, ob ich die Vette hochhole", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:06:02Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"joa. aber 50 jumps hin und zurück....", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:06:19Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"21 Mil", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:07:07Z", "event":"ReceiveText", "From":"&Vortex-XIII", "Message":"ach, ich mach's erst mal mit meinem Python. kanns mir immer noch anders überlegen", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:09:58Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"well. my target is BP, yes", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:11:10Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"you are on expl. trip too, i see", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:13:36Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"you are not too far from it than", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:16:57Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"WW are pretty common, ammonia not so much", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:17:23Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"few weeks ago i found 4 terraformable WW as moons of a gas giant, that was cool", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:19:45Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"supergiants are pretty hard to find too", "Channel":"player" }
+{ "timestamp":"2017-07-09T14:21:32Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"Brookes once said, that there are WW, that are completely frozen, they look like big blue balls", "Channel":"player" }
+{ "timestamp":"2017-07-10T12:16:30Z", "event":"ReceiveText", "From":"&Mlat Hromovlad", "Message":"hi", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:34:43Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"greetings :) im on the way to NGS 6188. there is a base. need to repair my ship. looks like its the nearest base. ", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:39:05Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"90% but the FSA just 29", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:40:33Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"i got every jump problems, the dont charge, and i need wayt some white to try again", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:40:49Z", "event":"ReceiveText", "From":"&Yoshio", "Message":" :)", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:42:46Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"still have 2 weeks and 5 days to come back. i think its possible ", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:45:33Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"how many time you have`? ", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:45:42Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"or its free run?", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:45:53Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ok ", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:46:09Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"thats possible for sure :)", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:47:23Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"rgr", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:50:01Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"the space still there after hollidays too i think :)", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:51:32Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"rgr :) ", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:53:01Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"never heard about this", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:53:38Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"kk", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:55:16Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"owww. more than 60 k away :D", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:55:47Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"and less starsystems, you need good jupm range ", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:56:20Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"you wanna be in the 65k Club ?", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:56:33Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ah ok. rgr", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:56:43Z", "event":"ReceiveText", "From":"&Yoshio", "Message":":)=", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:58:10Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"i follow with my T-7  :D", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:59:02Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"meet there a half year later :", "Channel":"player" }
+{ "timestamp":"2017-07-10T14:59:52Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"yep look like this", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:01:04Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"nope", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:01:38Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"i dont play longer time, so the enginiers and all the other stuff is new for me", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:01:59Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"need to explor this all if im back home", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:03:29Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"will see, if there some time. thanks", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:06:14Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"^^ if my fuiltank empty a can reach 21-22 ly :D", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:06:42Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"kk ", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:07:20Z", "event":"ReceiveText", "From":"&Yoshio", "Message":" i will got a new one if i come back", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:08:12Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"but with 17 i can visit many more systems as with 30", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:08:16Z", "event":"ReceiveText", "From":"&Yoshio", "Message":":=", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:08:22Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"ship", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:09:58Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"i got the orca and pimp them too like you, than i can jump arround :)", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:15:03Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"kick with the feet against that :D", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:17:46Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"but you have the repairtool on board. just need too google for that how its to use", "Channel":"player" }
+{ "timestamp":"2017-07-10T15:18:38Z", "event":"ReceiveText", "From":"&Yoshio", "Message":"good day ", "Channel":"player" }

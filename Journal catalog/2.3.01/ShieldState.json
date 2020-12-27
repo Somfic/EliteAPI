@@ -1,0 +1,7 @@
+{ "timestamp":"2017-04-25T16:39:56Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2017-04-25T17:02:39Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2017-04-25T18:53:30Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2017-04-25T18:53:34Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2017-04-25T18:58:36Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2017-04-25T18:58:40Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2017-04-26T12:18:20Z", "event":"ShieldState", "ShieldsUp":false }

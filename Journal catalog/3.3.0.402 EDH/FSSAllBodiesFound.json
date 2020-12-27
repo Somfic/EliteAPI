@@ -1,0 +1,123 @@
+{ "timestamp":"2018-12-13T16:19:53Z", "event":"FSSAllBodiesFound", "SystemName":"Wredguia OC-M d7-5", "SystemAddress":182175418691, "Count":2 }
+{ "timestamp":"2018-12-13T16:25:34Z", "event":"FSSAllBodiesFound", "SystemName":"Wredguia OC-J b23-1", "SystemAddress":2860045968585, "Count":12 }
+{ "timestamp":"2018-12-13T16:45:30Z", "event":"FSSAllBodiesFound", "SystemName":"Wredguia ZE-H c10-5", "SystemAddress":1456899986010, "Count":9 }
+{ "timestamp":"2018-12-13T16:47:03Z", "event":"FSSAllBodiesFound", "SystemName":"Wredguia UO-O b20-1", "SystemAddress":2858435421361, "Count":2 }
+{ "timestamp":"2018-12-13T16:48:53Z", "event":"FSSAllBodiesFound", "SystemName":"Wredguia SD-T d3-7", "SystemAddress":250794232099, "Count":2 }
+{ "timestamp":"2018-12-13T16:50:31Z", "event":"FSSAllBodiesFound", "SystemName":"Wredguia UU-V b16-0", "SystemAddress":657264747665, "Count":7 }
+{ "timestamp":"2018-12-13T16:52:32Z", "event":"FSSAllBodiesFound", "SystemName":"Wredguia HN-Z b14-0", "SystemAddress":656459506817, "Count":13 }
+{ "timestamp":"2018-12-13T16:54:12Z", "event":"FSSAllBodiesFound", "SystemName":"Wredguia AH-B b14-0", "SystemAddress":655654200441, "Count":8 }
+{ "timestamp":"2018-12-13T16:55:43Z", "event":"FSSAllBodiesFound", "SystemName":"Wredguia UA-D b13-0", "SystemAddress":655117329521, "Count":2 }
+{ "timestamp":"2018-12-13T17:01:31Z", "event":"FSSAllBodiesFound", "SystemName":"Wredguia QK-E b12-0", "SystemAddress":654043456617, "Count":28 }
+{ "timestamp":"2018-12-13T17:05:20Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai ZI-S b10-1", "SystemAddress":2852260815961, "Count":8 }
+{ "timestamp":"2018-12-13T17:08:10Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai FU-R b10-1", "SystemAddress":2852260619353, "Count":11 }
+{ "timestamp":"2018-12-13T17:08:57Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai QM-W c4-0", "SystemAddress":81637806634, "Count":2 }
+{ "timestamp":"2018-12-13T17:09:51Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefue SG-U b8-0", "SystemAddress":652431664201, "Count":2 }
+{ "timestamp":"2018-12-13T17:11:39Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefue UL-V b7-0", "SystemAddress":652431467585, "Count":6 }
+{ "timestamp":"2018-12-13T17:12:29Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefue ZJ-Z e3", "SystemAddress":14157857932, "Count":4 }
+{ "timestamp":"2018-12-13T17:14:29Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai UM-X c3-1", "SystemAddress":356515582498, "Count":7 }
+{ "timestamp":"2018-12-13T17:15:58Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai AC-Q b10-0", "SystemAddress":654042080345, "Count":9 }
+{ "timestamp":"2018-12-13T17:17:42Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai JD-O b11-0", "SystemAddress":654847321185, "Count":9 }
+{ "timestamp":"2018-12-13T17:19:24Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai QJ-M b12-0", "SystemAddress":655652627561, "Count":7 }
+{ "timestamp":"2018-12-13T17:23:08Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai PQ-Q c7-3", "SystemAddress":906741191234, "Count":22 }
+{ "timestamp":"2018-12-13T17:26:36Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai IH-H b15-0", "SystemAddress":657800176769, "Count":6 }
+{ "timestamp":"2018-12-13T17:27:58Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai PD-E b17-0", "SystemAddress":658605614225, "Count":7 }
+{ "timestamp":"2018-12-13T17:40:52Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai BR-T d4-11", "SystemAddress":388283451691, "Count":18 }
+{ "timestamp":"2018-12-13T17:52:55Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai QS-V b21-0", "SystemAddress":661558535353, "Count":10 }
+{ "timestamp":"2018-12-13T17:53:43Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai WY-T b22-1", "SystemAddress":2861118661825, "Count":2 }
+{ "timestamp":"2018-12-13T17:56:22Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai EF-S b23-0", "SystemAddress":663169148105, "Count":19 }
+{ "timestamp":"2018-12-13T18:07:06Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai SF-I c12-2", "SystemAddress":632735765098, "Count":2 }
+{ "timestamp":"2018-12-13T18:10:19Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai NB-P b25-1", "SystemAddress":2863534712025, "Count":23 }
+{ "timestamp":"2018-12-13T18:14:49Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai MI-Q d6-50", "SystemAddress":1728397150523, "Count":21 }
+{ "timestamp":"2018-12-13T18:16:03Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefai NA-I b29-0", "SystemAddress":667195811065, "Count":2 }
+{ "timestamp":"2018-12-13T21:42:17Z", "event":"FSSAllBodiesFound", "SystemName":"LFT 65", "SystemAddress":3102853810539, "Count":23 }
+{ "timestamp":"2018-12-14T17:58:55Z", "event":"FSSAllBodiesFound", "SystemName":"R CrA Sector NY-R b4-2", "SystemAddress":5067926742601, "Count":2 }
+{ "timestamp":"2018-12-14T18:24:43Z", "event":"FSSAllBodiesFound", "SystemName":"Corona Austr. Dark Region IH-V c2-19", "SystemAddress":5306465522490, "Count":5 }
+{ "timestamp":"2018-12-14T18:25:49Z", "event":"FSSAllBodiesFound", "SystemName":"Corona Austr. Dark Region UU-O b6-1", "SystemAddress":2869440358009, "Count":2 }
+{ "timestamp":"2018-12-14T18:30:54Z", "event":"FSSAllBodiesFound", "SystemName":"HR 7105", "SystemAddress":74325157076, "Count":2 }
+{ "timestamp":"2018-12-14T18:36:17Z", "event":"FSSAllBodiesFound", "SystemName":"Corona Austr. Dark Region MN-T c3-2", "SystemAddress":633541104450, "Count":2 }
+{ "timestamp":"2018-12-14T18:37:29Z", "event":"FSSAllBodiesFound", "SystemName":"Corona Austr. Dark Region BH-L b8-4", "SystemAddress":9466241689225, "Count":2 }
+{ "timestamp":"2018-12-14T18:39:23Z", "event":"FSSAllBodiesFound", "SystemName":"Corona Austr. Dark Region DC-L b8-0", "SystemAddress":670148601481, "Count":2 }
+{ "timestamp":"2018-12-14T18:40:13Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector GJ-P b20-1", "SystemAddress":2868903421577, "Count":2 }
+{ "timestamp":"2018-12-14T18:46:04Z", "event":"FSSAllBodiesFound", "SystemName":"HIP 95416", "SystemAddress":83718148938, "Count":2 }
+{ "timestamp":"2018-12-14T18:49:37Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector OF-N b21-0", "SystemAddress":669880034961, "Count":12 }
+{ "timestamp":"2018-12-14T18:51:20Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector FV-P d5-17", "SystemAddress":594576099747, "Count":2 }
+{ "timestamp":"2018-12-14T18:54:41Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector KQ-F c11-8", "SystemAddress":2282741371722, "Count":2 }
+{ "timestamp":"2018-12-14T19:07:37Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector GJ-H b24-3", "SystemAddress":7266949605033, "Count":22 }
+{ "timestamp":"2018-12-14T19:30:44Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector GJ-H b24-2", "SystemAddress":5067926349481, "Count":12 }
+{ "timestamp":"2018-12-14T19:43:46Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector PR-D c12-11", "SystemAddress":3107307950930, "Count":13 }
+{ "timestamp":"2018-12-14T20:15:52Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector LW-N d6-37", "SystemAddress":1281770850731, "Count":24 }
+{ "timestamp":"2018-12-14T20:44:26Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector LW-N d6-26", "SystemAddress":903813728683, "Count":2 }
+{ "timestamp":"2018-12-14T20:46:48Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector LF-F b25-1", "SystemAddress":2868097656497, "Count":10 }
+{ "timestamp":"2018-12-14T20:47:43Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector PL-D b26-1", "SystemAddress":2868097656505, "Count":2 }
+{ "timestamp":"2018-12-14T20:48:52Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector PL-D b26-0", "SystemAddress":669074400953, "Count":9 }
+{ "timestamp":"2018-12-14T20:49:58Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector VS-B c13-6", "SystemAddress":1732918383450, "Count":2 }
+{ "timestamp":"2018-12-14T20:50:40Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector VM-B b27-2", "SystemAddress":5067120846529, "Count":2 }
+{ "timestamp":"2018-12-14T20:54:33Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector YS-Z b27-2", "SystemAddress":5066852411081, "Count":13 }
+{ "timestamp":"2018-12-14T20:58:47Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector YY-Z c13-7", "SystemAddress":2007729181538, "Count":10 }
+{ "timestamp":"2018-12-14T20:59:51Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector AE-Y b28-1", "SystemAddress":2867829221073, "Count":4 }
+{ "timestamp":"2018-12-14T21:02:37Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector OC-M d7-18", "SystemAddress":628919044531, "Count":20 }
+{ "timestamp":"2018-12-14T21:13:55Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector EK-W b29-0", "SystemAddress":668805965529, "Count":13 }
+{ "timestamp":"2018-12-14T21:38:12Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector GL-W c15-5", "SystemAddress":1457973367666, "Count":10 }
+{ "timestamp":"2018-12-14T21:40:20Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector NR-S b31-0", "SystemAddress":668537464553, "Count":9 }
+{ "timestamp":"2018-12-14T21:42:36Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector NR-S b31-1", "SystemAddress":2867560720105, "Count":9 }
+{ "timestamp":"2018-12-14T21:43:20Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns ZA-K b27-1", "SystemAddress":2867292284649, "Count":2 }
+{ "timestamp":"2018-12-14T21:44:46Z", "event":"FSSAllBodiesFound", "SystemName":"Col 359 Sector QX-Q b32-2", "SystemAddress":5066315540209, "Count":11 }
+{ "timestamp":"2018-12-14T21:49:27Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns QY-D c14-3", "SystemAddress":908150412154, "Count":19 }
+{ "timestamp":"2018-12-14T21:51:22Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns HN-G b29-2", "SystemAddress":5066315540217, "Count":11 }
+{ "timestamp":"2018-12-14T21:53:54Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns LT-E b30-1", "SystemAddress":2867292284673, "Count":14 }
+{ "timestamp":"2018-12-14T22:06:17Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns KT-E b30-0", "SystemAddress":668000593665, "Count":32 }
+{ "timestamp":"2018-12-14T22:09:01Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns OZ-C b31-1", "SystemAddress":2867023849225, "Count":20 }
+{ "timestamp":"2018-12-14T22:09:43Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns UE-C c15-8", "SystemAddress":2282539946882, "Count":2 }
+{ "timestamp":"2018-12-14T22:12:51Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns SF-B b32-1", "SystemAddress":2867023849233, "Count":31 }
+{ "timestamp":"2018-12-14T22:23:40Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns WP-A c16-8", "SystemAddress":2282539979658, "Count":33 }
+{ "timestamp":"2018-12-14T22:24:41Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns WL-Z b32-0", "SystemAddress":668000593689, "Count":3 }
+{ "timestamp":"2018-12-14T22:28:32Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns VL-Z b32-1", "SystemAddress":2866755413785, "Count":9 }
+{ "timestamp":"2018-12-14T22:30:14Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns VL-Z b32-0", "SystemAddress":667732158233, "Count":13 }
+{ "timestamp":"2018-12-14T22:32:56Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns ZV-Y c16-5", "SystemAddress":1457839149970, "Count":20 }
+{ "timestamp":"2018-12-14T22:37:49Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns ZK-M d8-43", "SystemAddress":1487895726539, "Count":25 }
+{ "timestamp":"2018-12-14T22:40:10Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns BR-Y c16-0", "SystemAddress":83449582482, "Count":2 }
+{ "timestamp":"2018-12-14T22:43:57Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns BG-M d8-23", "SystemAddress":800700942795, "Count":27 }
+{ "timestamp":"2018-12-14T22:51:49Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns YG-Z b32-0", "SystemAddress":668000528153, "Count":45 }
+{ "timestamp":"2018-12-14T22:54:20Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns UE-C c15-6", "SystemAddress":1732784132994, "Count":10 }
+{ "timestamp":"2018-12-14T23:00:53Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns UT-P d6-10", "SystemAddress":354041121211, "Count":2 }
+{ "timestamp":"2018-12-14T23:05:57Z", "event":"FSSAllBodiesFound", "SystemName":"Swoiwns KM-H c12-1", "SystemAddress":358528815978, "Count":18 }
+{ "timestamp":"2018-12-14T23:11:08Z", "event":"FSSAllBodiesFound", "SystemName":"Swoilz SH-O c8-7", "SystemAddress":2007930442570, "Count":25 }
+{ "timestamp":"2018-12-14T23:15:10Z", "event":"FSSAllBodiesFound", "SystemName":"Swoilz KT-Y d1-38", "SystemAddress":1316147366291, "Count":2 }
+{ "timestamp":"2018-12-14T23:18:28Z", "event":"FSSAllBodiesFound", "SystemName":"Swoilz DC-H b2-5", "SystemAddress":11666070185489, "Count":2 }
+{ "timestamp":"2018-12-15T10:37:14Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefe GF-P c22-2", "SystemAddress":634883314370, "Count":2 }
+{ "timestamp":"2018-12-15T10:38:06Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefe SF-E b45-5", "SystemAddress":11677076104577, "Count":2 }
+{ "timestamp":"2018-12-15T10:38:56Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector OZ-O d6-76", "SystemAddress":2622002006363, "Count":2 }
+{ "timestamp":"2018-12-15T10:42:44Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region IW-W b1-2", "SystemAddress":5081885320569, "Count":19 }
+{ "timestamp":"2018-12-15T10:45:04Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region IW-W b1-1", "SystemAddress":2882862065017, "Count":10 }
+{ "timestamp":"2018-12-15T10:46:16Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region EL-Y c14", "SystemAddress":3933753709242, "Count":8 }
+{ "timestamp":"2018-12-15T10:50:27Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region IW-W b1-4", "SystemAddress":9479931831673, "Count":31 }
+{ "timestamp":"2018-12-15T10:53:49Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region NC-V b2-0", "SystemAddress":684107244929, "Count":14 }
+{ "timestamp":"2018-12-15T10:59:39Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region MC-V b2-5", "SystemAddress":11678955087233, "Count":9 }
+{ "timestamp":"2018-12-15T11:00:24Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region DL-Y d98", "SystemAddress":3377933027683, "Count":2 }
+{ "timestamp":"2018-12-15T11:03:20Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region EL-Y c17", "SystemAddress":4758387430074, "Count":6 }
+{ "timestamp":"2018-12-15T11:04:56Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region GB-X b1-7", "SystemAddress":16077001663865, "Count":11 }
+{ "timestamp":"2018-12-15T11:06:16Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region GB-X b1-6", "SystemAddress":13877978408313, "Count":11 }
+{ "timestamp":"2018-12-15T11:11:23Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163, "Count":17 }
+{ "timestamp":"2018-12-15T11:50:26Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region ZZ-Y b7", "SystemAddress":16076733293937, "Count":2 }
+{ "timestamp":"2018-12-15T11:51:52Z", "event":"FSSAllBodiesFound", "SystemName":"Vela Dark Region ZZ-Y b5", "SystemAddress":11678686782833, "Count":9 }
+{ "timestamp":"2018-12-15T11:55:23Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector PZ-O d6-110", "SystemAddress":3790249888091, "Count":25 }
+{ "timestamp":"2018-12-15T12:01:46Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector BT-F c12-4", "SystemAddress":1184974672562, "Count":16 }
+{ "timestamp":"2018-12-15T12:04:58Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector PZ-O d6-36", "SystemAddress":1247629248859, "Count":2 }
+{ "timestamp":"2018-12-15T12:05:43Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector YQ-L b24-3", "SystemAddress":7280371901793, "Count":2 }
+{ "timestamp":"2018-12-15T12:09:39Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector AM-L b24-5", "SystemAddress":11678418347361, "Count":2 }
+{ "timestamp":"2018-12-15T12:11:40Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector UK-N b23-2", "SystemAddress":5081348646233, "Count":15 }
+{ "timestamp":"2018-12-15T12:14:35Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector UK-N b23-3", "SystemAddress":7280371901785, "Count":26 }
+{ "timestamp":"2018-12-15T12:20:53Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector WM-H c11-6", "SystemAddress":1734663377578, "Count":14 }
+{ "timestamp":"2018-12-15T12:27:02Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector WM-H c11-18", "SystemAddress":5033198260906, "Count":11 }
+{ "timestamp":"2018-12-15T12:31:01Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector LT-Q d5-13", "SystemAddress":457355266387, "Count":9 }
+{ "timestamp":"2018-12-15T12:34:18Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector VU-O b22-3", "SystemAddress":7280640206161, "Count":2 }
+{ "timestamp":"2018-12-15T12:38:35Z", "event":"FSSAllBodiesFound", "SystemName":"Col 135 Sector VL-B b14-2", "SystemAddress":5081348515153, "Count":2 }
+{ "timestamp":"2018-12-15T12:41:07Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector UU-O b22-0", "SystemAddress":683302004049, "Count":9 }
+{ "timestamp":"2018-12-15T12:44:09Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector YH-H c11-9", "SystemAddress":2559297065642, "Count":11 }
+{ "timestamp":"2018-12-15T12:55:27Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector VP-O b22-4", "SystemAddress":9479126525265, "Count":36 }
+{ "timestamp":"2018-12-15T13:00:58Z", "event":"FSSAllBodiesFound", "SystemName":"Col 173 Sector ZC-H c11-14", "SystemAddress":3933619458730, "Count":2 }
+{ "timestamp":"2018-12-15T13:01:40Z", "event":"FSSAllBodiesFound", "SystemName":"HIP 36298", "SystemAddress":39986381996, "Count":2 }
+{ "timestamp":"2018-12-15T13:03:33Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefe ZV-M b40-5", "SystemAddress":11676807603545, "Count":10 }
+{ "timestamp":"2018-12-15T13:05:16Z", "event":"FSSAllBodiesFound", "SystemName":"Synuefe AO-S c20-11", "SystemAddress":3108784444082, "Count":10 }
+{ "timestamp":"2018-12-15T13:20:38Z", "event":"FSSAllBodiesFound", "SystemName":"Col 285 Sector OR-B b14-9", "SystemAddress":20464579519889, "Count":6 }
+{ "timestamp":"2018-12-12T06:29:46Z", "event":"FSSAllBodiesFound", "SystemName":"LFT 572", "SystemAddress":2870514623897, "Count":2 }

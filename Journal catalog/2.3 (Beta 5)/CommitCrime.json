@@ -1,0 +1,2 @@
+{ "timestamp":"2017-04-11T10:54:09Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"The Pilots Federation", "Fine":75 }
+{ "timestamp":"2017-04-11T11:11:48Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Ronin Inc", "Victim":"Dan Greywolf", "Bounty":400 }

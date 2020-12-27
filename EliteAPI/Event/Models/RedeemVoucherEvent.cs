@@ -1,26 +1,41 @@
-using System.Collections.Generic;
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
-using EliteAPI.Event.Models.Travel;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class RedeemVoucherEvent : EventBase
+    public partial class RedeemVoucherEvent : EventBase
     {
-        internal RedeemVoucherEvent() { }
+        internal RedeemVoucherEvent()
+        {
+        }
 
-        public static RedeemVoucherEvent FromJson(string json) => JsonConvert.DeserializeObject<RedeemVoucherEvent>(json);
+        [JsonProperty("Type")] public string Type { get; private set; }
 
+        [JsonProperty("Amount")] public long Amount { get; private set; }
 
-        [JsonProperty("Type")]
-        public string Type { get; internal set; }
+        [JsonProperty("Faction")] public string Faction { get; private set; }
+    }
 
-        [JsonProperty("Amount")]
-        public long Amount { get; internal set; }
+    public partial class RedeemVoucherEvent
+    {
+        public static RedeemVoucherEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<RedeemVoucherEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Factions")]
-        public List<FSDJumpFaction> Factions { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<RedeemVoucherEvent> RedeemVoucherEvent;
 
-        
+        internal void InvokeRedeemVoucherEvent(RedeemVoucherEvent arg)
+        {
+            RedeemVoucherEvent?.Invoke(this, arg);
+        }
     }
 }

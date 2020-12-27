@@ -1,27 +1,43 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class SetUserShipNameEvent : EventBase
+    public partial class SetUserShipNameEvent : EventBase
     {
-        internal SetUserShipNameEvent() { }
+        internal SetUserShipNameEvent()
+        {
+        }
 
-        public static SetUserShipNameEvent FromJson(string json) => JsonConvert.DeserializeObject<SetUserShipNameEvent>(json);
+        [JsonProperty("Ship")] public string Ship { get; private set; }
 
+        [JsonProperty("ShipID")] public long ShipId { get; private set; }
 
-        [JsonProperty("Ship")]
-        public string Ship { get; internal set; }
+        [JsonProperty("UserShipName")] public string UserShipName { get; private set; }
 
-        [JsonProperty("ShipID")]
-        public long ShipId { get; internal set; }
+        [JsonProperty("UserShipId")] public string UserShipId { get; private set; }
+    }
 
-        [JsonProperty("UserShipName")]
-        public string UserShipName { get; internal set; }
+    public partial class SetUserShipNameEvent
+    {
+        public static SetUserShipNameEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<SetUserShipNameEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("UserShipId")]
-        public string UserShipId { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<SetUserShipNameEvent> SetUserShipNameEvent;
 
-        
+        internal void InvokeSetUserShipNameEvent(SetUserShipNameEvent arg)
+        {
+            SetUserShipNameEvent?.Invoke(this, arg);
+        }
     }
 }

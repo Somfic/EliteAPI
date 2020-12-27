@@ -1,0 +1,2 @@
+{ "timestamp":"2017-06-14T16:25:03Z", "event":"ShipyardNew", "ShipType":"cutter", "NewShipID":32 }
+{ "timestamp":"2017-06-14T17:12:04Z", "event":"ShipyardNew", "ShipType":"empire_eagle", "NewShipID":106 }

@@ -1,0 +1,9 @@
+{ "timestamp":"2020-05-14T19:58:46Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2020-05-14T20:22:48Z", "event":"Undocked", "StationName":"Stevenson Relay", "StationType":"Coriolis", "MarketID":128158712 }
+{ "timestamp":"2020-05-14T20:34:27Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2020-05-14T20:43:50Z", "event":"Undocked", "StationName":"Stevenson Relay", "StationType":"Coriolis", "MarketID":128158712 }
+{ "timestamp":"2020-05-14T21:04:22Z", "event":"Undocked", "StationName":"Stevenson Relay", "StationType":"Coriolis", "MarketID":128158712 }
+{ "timestamp":"2020-05-15T21:57:34Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2020-05-15T22:02:33Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2020-05-22T22:09:02Z", "event":"Undocked", "StationName":"Spring Gateway", "StationType":"Coriolis", "MarketID":3228861696 }
+{ "timestamp":"2020-05-22T22:29:22Z", "event":"Undocked", "StationName":"Abraham Lincoln", "StationType":"Orbis", "MarketID":128016896 }

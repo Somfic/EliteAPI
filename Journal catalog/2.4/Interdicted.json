@@ -1,0 +1,16 @@
+{ "timestamp":"2017-09-26T17:49:53Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Thomas Edwards", "IsPlayer":false, "Faction":"Katta Galactic Systems" }
+{ "timestamp":"2017-09-26T19:41:41Z", "event":"Interdicted", "Submitted":true, "Interdictor":"lolt", "IsPlayer":false, "Faction":"I.P.S.A.L Project" }
+{ "timestamp":"2017-10-02T14:02:07Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Harvey Maya Dinkits", "IsPlayer":false, "Faction":"Rhea Crimson Drug Empire" }
+{ "timestamp":"2017-10-23T13:24:57Z", "event":"Interdicted", "Submitted":true, "Interdictor":"David Mathews", "IsPlayer":false, "Faction":"L.Y.S Corp." }
+{ "timestamp":"2017-10-25T13:37:52Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Lord Peter McLoughlin", "IsPlayer":false, "Faction":"Beta-3 Tucani Pirates" }
+{ "timestamp":"2017-10-25T13:41:30Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Torsten Christiansen", "IsPlayer":false, "Faction":"EG Union" }
+{ "timestamp":"2017-10-25T14:21:24Z", "event":"Interdicted", "Submitted":false, "Interdictor":"$ShipName_Military_Federation;", "Interdictor_Localised":"Federal Navy Ship", "IsPlayer":false, "Faction":"Beta-3 Tucani Silver Allied Net" }
+{ "timestamp":"2017-10-26T15:16:13Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Rune Mindresunde", "IsPlayer":false, "Faction":"Democrats of LHS 278" }
+{ "timestamp":"2017-10-26T16:25:20Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Marzipan Bassoon", "IsPlayer":false, "Faction":"LHS 278 Silver Mob" }
+{ "timestamp":"2017-11-03T19:29:12Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Luca Rees", "IsPlayer":false, "Faction":"Colonia Council" }
+{ "timestamp":"2017-11-11T20:12:14Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Pinkus Xtreme", "IsPlayer":false, "Faction":"Kabiak State Organisation" }
+{ "timestamp":"2017-11-12T11:35:25Z", "event":"Interdicted", "Submitted":false, "Interdictor":"Logan Crawford", "IsPlayer":false, "Faction":"Drug Empire of Baroo" }
+{ "timestamp":"2017-11-12T12:34:23Z", "event":"Interdicted", "Submitted":true, "Interdictor":"$ShipName_Police_Empire;", "Interdictor_Localised":"Internal Security Service", "IsPlayer":false, "Faction":"Grabrakan Travel Services" }
+{ "timestamp":"2017-11-12T14:59:56Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Captain Cockroach", "IsPlayer":false, "Faction":"BFNF Solutions" }
+{ "timestamp":"2017-11-12T16:13:29Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Mythodea Eldaria", "IsPlayer":false, "Faction":"Ugrivirii Life Inc" }
+{ "timestamp":"2017-11-13T15:45:27Z", "event":"Interdicted", "Submitted":true, "Interdictor":"William Marshal", "IsPlayer":false, "Faction":"People's Huichi Resistance" }

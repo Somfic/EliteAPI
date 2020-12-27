@@ -1,21 +1,39 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class PVPKillEvent : EventBase
+    public partial class PvpKillEvent : EventBase
     {
-        internal PVPKillEvent() { }
+        internal PvpKillEvent()
+        {
+        }
 
-        public static PVPKillEvent FromJson(string json) => JsonConvert.DeserializeObject<PVPKillEvent>(json);
+        [JsonProperty("Victim")] public string Victim { get; private set; }
 
+        [JsonProperty("CombatRank")] public long CombatRank { get; private set; }
+    }
 
-        [JsonProperty("Victim")]
-        public string Victim { get; internal set; }
+    public partial class PvpKillEvent
+    {
+        public static PvpKillEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<PvpKillEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("CombatRank")]
-        public long CombatRank { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<PvpKillEvent> PvpKillEvent;
 
-        
+        internal void InvokePvpKillEvent(PvpKillEvent arg)
+        {
+            PvpKillEvent?.Invoke(this, arg);
+        }
     }
 }

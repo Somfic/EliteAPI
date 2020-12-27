@@ -1,0 +1,3 @@
+{ "timestamp":"2017-04-17T14:23:15Z", "event":"PayLegacyFines", "Amount":400 }
+{ "timestamp":"2017-04-19T15:11:16Z", "event":"PayLegacyFines", "Amount":450 }
+{ "timestamp":"2017-04-21T21:23:59Z", "event":"PayLegacyFines", "Amount":100 }

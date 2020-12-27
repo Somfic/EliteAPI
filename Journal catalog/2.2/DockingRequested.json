@@ -1,0 +1,545 @@
+{ "timestamp":"2016-10-25T16:53:13Z", "event":"DockingRequested", "StationName":"Obsidian Orbital" }
+{ "timestamp":"2016-10-25T17:15:28Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-10-25T17:47:33Z", "event":"DockingRequested", "StationName":"Shajn Market" }
+{ "timestamp":"2016-10-26T12:12:05Z", "event":"DockingRequested", "StationName":"Ehrlich City" }
+{ "timestamp":"2016-10-26T13:05:02Z", "event":"DockingRequested", "StationName":"Azeban City" }
+{ "timestamp":"2016-10-26T15:47:39Z", "event":"DockingRequested", "StationName":"M.Gorbachev" }
+{ "timestamp":"2016-10-26T16:00:05Z", "event":"DockingRequested", "StationName":"Taylor City" }
+{ "timestamp":"2016-10-26T16:13:50Z", "event":"DockingRequested", "StationName":"Levchenko City" }
+{ "timestamp":"2016-10-26T16:34:39Z", "event":"DockingRequested", "StationName":"Aldiss Vision" }
+{ "timestamp":"2016-11-05T16:32:18Z", "event":"DockingRequested", "StationName":"Mrkos Vision" }
+{ "timestamp":"2016-11-05T20:20:35Z", "event":"DockingRequested", "StationName":"Shajn Market" }
+{ "timestamp":"2016-11-05T20:35:29Z", "event":"DockingRequested", "StationName":"Henry Orbital" }
+{ "timestamp":"2016-11-05T21:43:50Z", "event":"DockingRequested", "StationName":"Obsidian Orbital" }
+{ "timestamp":"2016-11-05T22:31:59Z", "event":"DockingRequested", "StationName":"PRE Laboratory" }
+{ "timestamp":"2016-11-05T22:40:55Z", "event":"DockingRequested", "StationName":"TII Research Facility" }
+{ "timestamp":"2016-11-06T14:36:40Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-11-06T15:19:04Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-11-06T15:39:47Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-11-06T16:07:57Z", "event":"DockingRequested", "StationName":"Swanwick Enterprise" }
+{ "timestamp":"2016-11-06T18:03:21Z", "event":"DockingRequested", "StationName":"MacLean Gateway" }
+{ "timestamp":"2016-11-06T18:46:51Z", "event":"DockingRequested", "StationName":"MacLean Gateway" }
+{ "timestamp":"2016-11-07T15:31:34Z", "event":"DockingRequested", "StationName":"Wilhelm Vision" }
+{ "timestamp":"2016-11-07T16:04:42Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-11-08T16:25:00Z", "event":"DockingRequested", "StationName":"Shajn Market" }
+{ "timestamp":"2016-11-08T16:56:52Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2016-11-08T17:50:06Z", "event":"DockingRequested", "StationName":"Gould Port" }
+{ "timestamp":"2016-11-08T18:08:47Z", "event":"DockingRequested", "StationName":"Gallimaufry" }
+{ "timestamp":"2016-11-08T18:21:31Z", "event":"DockingRequested", "StationName":"Baade Enterprise" }
+{ "timestamp":"2016-11-08T18:26:09Z", "event":"DockingRequested", "StationName":"Gallimaufry" }
+{ "timestamp":"2016-11-08T18:34:38Z", "event":"DockingRequested", "StationName":"Baliunas Hub" }
+{ "timestamp":"2016-11-08T18:34:44Z", "event":"DockingRequested", "StationName":"Baliunas Hub" }
+{ "timestamp":"2016-11-08T19:03:00Z", "event":"DockingRequested", "StationName":"Shajn Market" }
+{ "timestamp":"2016-11-08T19:40:41Z", "event":"DockingRequested", "StationName":"Couper Hub" }
+{ "timestamp":"2016-11-08T19:52:01Z", "event":"DockingRequested", "StationName":"Dubyago Port" }
+{ "timestamp":"2016-11-08T20:01:59Z", "event":"DockingRequested", "StationName":"Suzuki Station" }
+{ "timestamp":"2016-11-09T13:34:59Z", "event":"DockingRequested", "StationName":"Roed Odegaard Port" }
+{ "timestamp":"2016-11-09T14:00:51Z", "event":"DockingRequested", "StationName":"Urata City" }
+{ "timestamp":"2016-11-09T14:09:57Z", "event":"DockingRequested", "StationName":"Suzuki Station" }
+{ "timestamp":"2016-11-09T14:18:47Z", "event":"DockingRequested", "StationName":"Iben Dock" }
+{ "timestamp":"2016-11-09T14:31:47Z", "event":"DockingRequested", "StationName":"Thollon Station" }
+{ "timestamp":"2016-11-09T14:58:51Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2016-11-09T15:03:58Z", "event":"DockingRequested", "StationName":"Frigschneck's Resort" }
+{ "timestamp":"2016-11-09T15:24:41Z", "event":"DockingRequested", "StationName":"Seares Ring" }
+{ "timestamp":"2016-11-09T19:10:13Z", "event":"DockingRequested", "StationName":"Frigschneck's Resort" }
+{ "timestamp":"2016-11-10T12:47:23Z", "event":"DockingRequested", "StationName":"Leckie Port" }
+{ "timestamp":"2016-11-10T12:58:09Z", "event":"DockingRequested", "StationName":"Happis" }
+{ "timestamp":"2016-11-10T13:11:36Z", "event":"DockingRequested", "StationName":"Bauman Station" }
+{ "timestamp":"2016-11-10T13:28:09Z", "event":"DockingRequested", "StationName":"Bharadwaj Hub" }
+{ "timestamp":"2016-11-10T13:35:55Z", "event":"DockingRequested", "StationName":"Tietjen Ring" }
+{ "timestamp":"2016-11-10T13:59:01Z", "event":"DockingRequested", "StationName":"Parkinson Terminal" }
+{ "timestamp":"2016-11-10T14:08:58Z", "event":"DockingRequested", "StationName":"Parkinson Terminal" }
+{ "timestamp":"2016-11-10T14:21:40Z", "event":"DockingRequested", "StationName":"Tietjen Ring" }
+{ "timestamp":"2016-11-11T13:23:03Z", "event":"DockingRequested", "StationName":"Cannon Vision" }
+{ "timestamp":"2016-11-11T13:39:46Z", "event":"DockingRequested", "StationName":"Humason Orbital" }
+{ "timestamp":"2016-11-11T13:49:32Z", "event":"DockingRequested", "StationName":"Shen Terminal" }
+{ "timestamp":"2016-11-11T14:39:10Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-11-11T16:41:57Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-11-11T17:55:25Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-11-13T11:05:58Z", "event":"DockingRequested", "StationName":"Burgess Hub" }
+{ "timestamp":"2016-11-13T11:15:43Z", "event":"DockingRequested", "StationName":"Williams Dock" }
+{ "timestamp":"2016-11-16T14:50:41Z", "event":"DockingRequested", "StationName":"Meredith City" }
+{ "timestamp":"2016-11-16T15:08:16Z", "event":"DockingRequested", "StationName":"Karachkina City" }
+{ "timestamp":"2016-11-16T15:18:55Z", "event":"DockingRequested", "StationName":"Fuller Vision" }
+{ "timestamp":"2016-11-16T15:27:37Z", "event":"DockingRequested", "StationName":"Henry Vision" }
+{ "timestamp":"2016-11-16T15:35:31Z", "event":"DockingRequested", "StationName":"Henry Vision" }
+{ "timestamp":"2016-11-16T15:35:36Z", "event":"DockingRequested", "StationName":"Henry Vision" }
+{ "timestamp":"2016-11-18T07:59:03Z", "event":"DockingRequested", "StationName":"Binney Dock" }
+{ "timestamp":"2016-11-18T08:01:09Z", "event":"DockingRequested", "StationName":"Binney Dock" }
+{ "timestamp":"2016-11-18T08:15:55Z", "event":"DockingRequested", "StationName":"Norman - Mavis's Bingo Palace" }
+{ "timestamp":"2016-11-18T08:27:03Z", "event":"DockingRequested", "StationName":"Ortiz Moreno Base" }
+{ "timestamp":"2016-11-20T11:59:12Z", "event":"DockingRequested", "StationName":"Binney Dock" }
+{ "timestamp":"2016-11-20T12:17:21Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-11-20T12:32:00Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-11-29T13:40:51Z", "event":"DockingRequested", "StationName":"Shaw Port" }
+{ "timestamp":"2016-11-29T14:12:14Z", "event":"DockingRequested", "StationName":"Lave Station" }
+{ "timestamp":"2016-12-01T16:44:35Z", "event":"DockingRequested", "StationName":"George Lucas" }
+{ "timestamp":"2016-12-01T16:57:37Z", "event":"DockingRequested", "StationName":"Janes Horizons" }
+{ "timestamp":"2016-12-01T17:01:44Z", "event":"DockingRequested", "StationName":"Janes Horizons" }
+{ "timestamp":"2016-12-01T18:22:38Z", "event":"DockingRequested", "StationName":"Long Sight Base" }
+{ "timestamp":"2016-12-01T19:02:03Z", "event":"DockingRequested", "StationName":"Black Hide" }
+{ "timestamp":"2016-12-01T19:38:12Z", "event":"DockingRequested", "StationName":"Darnielle's Progress" }
+{ "timestamp":"2016-12-01T19:40:12Z", "event":"DockingRequested", "StationName":"Darnielle's Progress" }
+{ "timestamp":"2016-12-01T20:20:25Z", "event":"DockingRequested", "StationName":"Farseer Inc" }
+{ "timestamp":"2016-12-02T13:22:13Z", "event":"DockingRequested", "StationName":"Vinci Station" }
+{ "timestamp":"2016-12-02T15:43:02Z", "event":"DockingRequested", "StationName":"Long Sight Base" }
+{ "timestamp":"2016-12-02T16:23:37Z", "event":"DockingRequested", "StationName":"Lobachevsky Station" }
+{ "timestamp":"2016-12-02T16:59:47Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-12-03T14:05:19Z", "event":"DockingRequested", "StationName":"Montrose Silo" }
+{ "timestamp":"2016-12-03T14:42:01Z", "event":"DockingRequested", "StationName":"Long Sight Base" }
+{ "timestamp":"2016-12-03T15:01:53Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-03T15:19:38Z", "event":"DockingRequested", "StationName":"New Dawn Station" }
+{ "timestamp":"2016-12-03T15:38:57Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-03T16:12:15Z", "event":"DockingRequested", "StationName":"New Dawn Station" }
+{ "timestamp":"2016-12-03T18:40:19Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-03T19:19:08Z", "event":"DockingRequested", "StationName":"Ashby City" }
+{ "timestamp":"2016-12-03T19:55:25Z", "event":"DockingRequested", "StationName":"Paradiso Outpost" }
+{ "timestamp":"2016-12-06T17:11:17Z", "event":"DockingRequested", "StationName":"Ashby City" }
+{ "timestamp":"2016-12-06T17:50:28Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-06T18:50:27Z", "event":"DockingRequested", "StationName":"New Dawn Station" }
+{ "timestamp":"2016-12-06T19:18:16Z", "event":"DockingRequested", "StationName":"Obsidian Orbital" }
+{ "timestamp":"2016-12-06T19:23:45Z", "event":"DockingRequested", "StationName":"Darnielle's Progress" }
+{ "timestamp":"2016-12-06T19:44:44Z", "event":"DockingRequested", "StationName":"Ashby City" }
+{ "timestamp":"2016-12-06T19:53:33Z", "event":"DockingRequested", "StationName":"Patterson Enterprise" }
+{ "timestamp":"2016-12-07T14:07:13Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-07T14:30:07Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-07T15:04:39Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-12-07T15:21:34Z", "event":"DockingRequested", "StationName":"Proteus Orbital" }
+{ "timestamp":"2016-12-07T15:32:26Z", "event":"DockingRequested", "StationName":"Thurston Ring" }
+{ "timestamp":"2016-12-07T15:58:49Z", "event":"DockingRequested", "StationName":"Galilei Ring" }
+{ "timestamp":"2016-12-07T16:26:37Z", "event":"DockingRequested", "StationName":"Daedalus" }
+{ "timestamp":"2016-12-07T16:59:26Z", "event":"DockingRequested", "StationName":"Fujimori Orbital" }
+{ "timestamp":"2016-12-07T17:08:52Z", "event":"DockingRequested", "StationName":"Wafer Terminal" }
+{ "timestamp":"2016-12-07T18:51:15Z", "event":"DockingRequested", "StationName":"Fujimori Orbital" }
+{ "timestamp":"2016-12-07T19:08:59Z", "event":"DockingRequested", "StationName":"Long Sight Base" }
+{ "timestamp":"2016-12-07T20:13:06Z", "event":"DockingRequested", "StationName":"Hiroyuki Vision" }
+{ "timestamp":"2016-12-07T20:54:28Z", "event":"DockingRequested", "StationName":"Hiroyuki Vision" }
+{ "timestamp":"2016-12-07T21:04:52Z", "event":"DockingRequested", "StationName":"Long Sight Base" }
+{ "timestamp":"2016-12-08T13:21:15Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-08T14:50:43Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-08T14:56:51Z", "event":"DockingRequested", "StationName":"New Dawn Station" }
+{ "timestamp":"2016-12-08T15:09:04Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-08T17:00:44Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-08T17:24:31Z", "event":"DockingRequested", "StationName":"New Dawn Station" }
+{ "timestamp":"2016-12-08T17:35:14Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-08T18:29:48Z", "event":"DockingRequested", "StationName":"New Dawn Station" }
+{ "timestamp":"2016-12-08T18:37:39Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-08T19:00:15Z", "event":"DockingRequested", "StationName":"Smirnova Relay" }
+{ "timestamp":"2016-12-08T19:38:37Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-08T19:39:07Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-08T19:50:45Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-08T20:14:50Z", "event":"DockingRequested", "StationName":"Bursch Terminal" }
+{ "timestamp":"2016-12-09T17:31:07Z", "event":"DockingRequested", "StationName":"Warren Prison Mine" }
+{ "timestamp":"2016-12-09T17:46:20Z", "event":"DockingRequested", "StationName":"Patterson Enterprise" }
+{ "timestamp":"2016-12-09T18:04:36Z", "event":"DockingRequested", "StationName":"Tull Station" }
+{ "timestamp":"2016-12-10T13:55:31Z", "event":"DockingRequested", "StationName":"Tull Station" }
+{ "timestamp":"2016-12-10T14:20:28Z", "event":"DockingRequested", "StationName":"Fujimori Orbital" }
+{ "timestamp":"2016-12-10T14:36:56Z", "event":"DockingRequested", "StationName":"Gentil Hub" }
+{ "timestamp":"2016-12-10T14:48:50Z", "event":"DockingRequested", "StationName":"Pimi Dock" }
+{ "timestamp":"2016-12-10T15:03:52Z", "event":"DockingRequested", "StationName":"Medupe City" }
+{ "timestamp":"2016-12-10T15:35:21Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2016-12-10T16:30:06Z", "event":"DockingRequested", "StationName":"Tietjen City" }
+{ "timestamp":"2016-12-10T16:34:44Z", "event":"DockingRequested", "StationName":"Tietjen City" }
+{ "timestamp":"2016-12-10T17:36:17Z", "event":"DockingRequested", "StationName":"McCrea Estate" }
+{ "timestamp":"2016-12-10T17:55:39Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2016-12-10T18:18:55Z", "event":"DockingRequested", "StationName":"Frigschneck's Resort" }
+{ "timestamp":"2016-12-10T18:28:22Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2016-12-10T19:52:13Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-12-10T20:04:43Z", "event":"DockingRequested", "StationName":"Goldstein Port" }
+{ "timestamp":"2016-12-10T20:20:04Z", "event":"DockingRequested", "StationName":"Frobisher Terminal" }
+{ "timestamp":"2016-12-10T20:30:42Z", "event":"DockingRequested", "StationName":"Ralphus" }
+{ "timestamp":"2016-12-10T20:40:15Z", "event":"DockingRequested", "StationName":"Britnev Hub" }
+{ "timestamp":"2016-12-10T21:30:51Z", "event":"DockingRequested", "StationName":"Thomas Vision" }
+{ "timestamp":"2016-12-11T14:27:16Z", "event":"DockingRequested", "StationName":"Resnik Dock" }
+{ "timestamp":"2016-12-11T14:30:13Z", "event":"DockingRequested", "StationName":"Resnik Dock" }
+{ "timestamp":"2016-12-11T14:53:16Z", "event":"DockingRequested", "StationName":"Chadwick Ring" }
+{ "timestamp":"2016-12-11T15:03:31Z", "event":"DockingRequested", "StationName":"Chadwick Ring" }
+{ "timestamp":"2016-12-12T14:09:27Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-12-12T14:10:38Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-12-13T17:23:47Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-12-13T18:02:06Z", "event":"DockingRequested", "StationName":"Long Sight Base" }
+{ "timestamp":"2016-12-13T18:21:09Z", "event":"DockingRequested", "StationName":"Black Hide" }
+{ "timestamp":"2016-12-14T13:54:18Z", "event":"DockingRequested", "StationName":"Vonarburg Co-operative" }
+{ "timestamp":"2016-12-14T14:08:05Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-12-14T14:34:45Z", "event":"DockingRequested", "StationName":"Fabian Terminal" }
+{ "timestamp":"2016-12-14T14:50:42Z", "event":"DockingRequested", "StationName":"Fabian Terminal" }
+{ "timestamp":"2016-12-15T14:30:24Z", "event":"DockingRequested", "StationName":"Fischer Point" }
+{ "timestamp":"2016-12-15T14:40:43Z", "event":"DockingRequested", "StationName":"Jean Terminal" }
+{ "timestamp":"2016-12-15T15:09:40Z", "event":"DockingRequested", "StationName":"Miyasaka Port" }
+{ "timestamp":"2016-12-15T15:20:44Z", "event":"DockingRequested", "StationName":"Roth Station" }
+{ "timestamp":"2016-12-15T15:54:17Z", "event":"DockingRequested", "StationName":"May City" }
+{ "timestamp":"2016-12-15T16:34:29Z", "event":"DockingRequested", "StationName":"May City" }
+{ "timestamp":"2016-12-15T17:06:34Z", "event":"DockingRequested", "StationName":"May City" }
+{ "timestamp":"2016-12-15T17:09:57Z", "event":"DockingRequested", "StationName":"May City" }
+{ "timestamp":"2016-12-15T17:29:46Z", "event":"DockingRequested", "StationName":"May City" }
+{ "timestamp":"2016-12-15T17:47:42Z", "event":"DockingRequested", "StationName":"Graham Vision" }
+{ "timestamp":"2016-12-15T19:40:51Z", "event":"DockingRequested", "StationName":"Tietjen City" }
+{ "timestamp":"2016-12-15T20:00:38Z", "event":"DockingRequested", "StationName":"Abetti Vision" }
+{ "timestamp":"2016-12-15T20:13:37Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-12-15T20:45:05Z", "event":"DockingRequested", "StationName":"Galilei Ring" }
+{ "timestamp":"2016-12-15T20:57:15Z", "event":"DockingRequested", "StationName":"Fraser Orbital" }
+{ "timestamp":"2016-12-15T21:07:41Z", "event":"DockingRequested", "StationName":"Steiner Platform" }
+{ "timestamp":"2016-12-15T21:24:59Z", "event":"DockingRequested", "StationName":"Long Sight Base" }
+{ "timestamp":"2016-12-16T13:40:39Z", "event":"DockingRequested", "StationName":"Coney Enterprise" }
+{ "timestamp":"2016-12-16T14:01:58Z", "event":"DockingRequested", "StationName":"Sinclair Port" }
+{ "timestamp":"2016-12-16T14:10:14Z", "event":"DockingRequested", "StationName":"Patterson Enterprise" }
+{ "timestamp":"2016-12-16T14:22:53Z", "event":"DockingRequested", "StationName":"Lomas Orbiter" }
+{ "timestamp":"2016-12-16T14:36:52Z", "event":"DockingRequested", "StationName":"Hopkins Port" }
+{ "timestamp":"2016-12-16T16:05:29Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2016-12-17T12:51:00Z", "event":"DockingRequested", "StationName":"PEW-1901" }
+{ "timestamp":"2016-12-17T13:15:17Z", "event":"DockingRequested", "StationName":"Obsidian Orbital" }
+{ "timestamp":"2016-12-17T13:29:24Z", "event":"DockingRequested", "StationName":"Fernao do Po Orbital" }
+{ "timestamp":"2016-12-17T13:42:22Z", "event":"DockingRequested", "StationName":"Gentil Hub" }
+{ "timestamp":"2016-12-17T14:09:53Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-26T13:34:43Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-27T12:37:17Z", "event":"DockingRequested", "StationName":"Brorsen Port" }
+{ "timestamp":"2016-12-27T12:52:03Z", "event":"DockingRequested", "StationName":"Frost Dock" }
+{ "timestamp":"2016-12-27T13:18:20Z", "event":"DockingRequested", "StationName":"Clauss Port" }
+{ "timestamp":"2016-12-27T13:24:35Z", "event":"DockingRequested", "StationName":"George Lucas" }
+{ "timestamp":"2016-12-27T15:50:03Z", "event":"DockingRequested", "StationName":"Gurragchaa Orbital" }
+{ "timestamp":"2016-12-27T16:26:01Z", "event":"DockingRequested", "StationName":"Gurragchaa Orbital" }
+{ "timestamp":"2016-12-28T11:23:04Z", "event":"DockingRequested", "StationName":"Gurragchaa Orbital" }
+{ "timestamp":"2016-12-28T11:38:22Z", "event":"DockingRequested", "StationName":"Noguchi Enterprise" }
+{ "timestamp":"2016-12-28T13:28:23Z", "event":"DockingRequested", "StationName":"Noguchi Enterprise" }
+{ "timestamp":"2016-12-28T13:41:57Z", "event":"DockingRequested", "StationName":"May City" }
+{ "timestamp":"2016-12-28T14:05:38Z", "event":"DockingRequested", "StationName":"Bartini Enterprise" }
+{ "timestamp":"2016-12-30T12:02:27Z", "event":"DockingRequested", "StationName":"May City" }
+{ "timestamp":"2016-12-30T12:25:04Z", "event":"DockingRequested", "StationName":"Bisnovatyi-Kogan Landing" }
+{ "timestamp":"2016-12-30T12:38:09Z", "event":"DockingRequested", "StationName":"Medupe City" }
+{ "timestamp":"2016-12-30T12:49:26Z", "event":"DockingRequested", "StationName":"Bolton Orbital" }
+{ "timestamp":"2016-12-30T16:26:25Z", "event":"DockingRequested", "StationName":"Patterson Enterprise" }
+{ "timestamp":"2016-12-30T16:59:48Z", "event":"DockingRequested", "StationName":"Black Hide" }
+{ "timestamp":"2016-12-30T18:03:40Z", "event":"DockingRequested", "StationName":"Fraser Orbital" }
+{ "timestamp":"2016-12-30T18:14:28Z", "event":"DockingRequested", "StationName":"Black Hide" }
+{ "timestamp":"2016-12-30T18:32:16Z", "event":"DockingRequested", "StationName":"Taylor City" }
+{ "timestamp":"2016-12-30T18:41:15Z", "event":"DockingRequested", "StationName":"Budrys Terminal" }
+{ "timestamp":"2016-12-30T18:51:30Z", "event":"DockingRequested", "StationName":"Levchenko City" }
+{ "timestamp":"2016-12-30T19:19:16Z", "event":"DockingRequested", "StationName":"Smith Station" }
+{ "timestamp":"2017-01-01T14:53:12Z", "event":"DockingRequested", "StationName":"Levchenko City" }
+{ "timestamp":"2017-01-01T15:30:33Z", "event":"DockingRequested", "StationName":"Bolotov City" }
+{ "timestamp":"2017-01-01T15:48:07Z", "event":"DockingRequested", "StationName":"Bolotov City" }
+{ "timestamp":"2017-01-01T16:23:53Z", "event":"DockingRequested", "StationName":"Levchenko City" }
+{ "timestamp":"2017-01-01T16:35:24Z", "event":"DockingRequested", "StationName":"Trophy Camp" }
+{ "timestamp":"2017-01-01T17:03:23Z", "event":"DockingRequested", "StationName":"Levchenko City" }
+{ "timestamp":"2017-01-01T17:51:49Z", "event":"DockingRequested", "StationName":"Pavlov Settlement" }
+{ "timestamp":"2017-01-01T20:24:51Z", "event":"DockingRequested", "StationName":"Levchenko City" }
+{ "timestamp":"2017-01-01T20:52:02Z", "event":"DockingRequested", "StationName":"Paradiso Outpost" }
+{ "timestamp":"2017-01-05T20:16:17Z", "event":"DockingRequested", "StationName":"Paradiso Outpost" }
+{ "timestamp":"2017-01-06T13:36:34Z", "event":"DockingRequested", "StationName":"Chargaff Orbital" }
+{ "timestamp":"2017-01-06T14:44:10Z", "event":"DockingRequested", "StationName":"Garay Terminal" }
+{ "timestamp":"2017-01-06T15:02:20Z", "event":"DockingRequested", "StationName":"Farseer Inc" }
+{ "timestamp":"2017-01-06T15:28:18Z", "event":"DockingRequested", "StationName":"Zudov Hub" }
+{ "timestamp":"2017-01-06T16:01:09Z", "event":"DockingRequested", "StationName":"Cuffey Orbital" }
+{ "timestamp":"2017-01-06T16:45:30Z", "event":"DockingRequested", "StationName":"Doctorow Prospect" }
+{ "timestamp":"2017-01-07T12:28:27Z", "event":"DockingRequested", "StationName":"Nakamura Port" }
+{ "timestamp":"2017-01-07T15:45:00Z", "event":"DockingRequested", "StationName":"Wollheim Vision" }
+{ "timestamp":"2017-01-07T16:07:41Z", "event":"DockingRequested", "StationName":"Shirazi Estate" }
+{ "timestamp":"2017-01-07T16:20:02Z", "event":"DockingRequested", "StationName":"Wollheim Vision" }
+{ "timestamp":"2017-01-10T15:37:15Z", "event":"DockingRequested", "StationName":"Long Sight Base" }
+{ "timestamp":"2017-01-10T15:55:59Z", "event":"DockingRequested", "StationName":"Gardner Dock" }
+{ "timestamp":"2017-01-11T15:15:05Z", "event":"DockingRequested", "StationName":"Long Sight Base" }
+{ "timestamp":"2017-01-11T15:45:06Z", "event":"DockingRequested", "StationName":"Patterson Enterprise" }
+{ "timestamp":"2017-01-11T16:19:01Z", "event":"DockingRequested", "StationName":"Pontes Gateway" }
+{ "timestamp":"2017-01-11T16:26:17Z", "event":"DockingRequested", "StationName":"Cormack Hub" }
+{ "timestamp":"2017-01-11T16:34:11Z", "event":"DockingRequested", "StationName":"Davis Terminal" }
+{ "timestamp":"2017-01-11T16:41:51Z", "event":"DockingRequested", "StationName":"Hurston Arsenal" }
+{ "timestamp":"2017-01-11T16:53:24Z", "event":"DockingRequested", "StationName":"Qwent Research Base" }
+{ "timestamp":"2017-01-11T17:03:56Z", "event":"DockingRequested", "StationName":"Daedalus" }
+{ "timestamp":"2017-01-11T17:55:01Z", "event":"DockingRequested", "StationName":"Yamazaki Landing" }
+{ "timestamp":"2017-01-11T18:02:41Z", "event":"DockingRequested", "StationName":"Pontes Terminal" }
+{ "timestamp":"2017-01-11T18:08:31Z", "event":"DockingRequested", "StationName":"Wilson Relay" }
+{ "timestamp":"2017-01-11T18:20:10Z", "event":"DockingRequested", "StationName":"Daedalus" }
+{ "timestamp":"2017-01-11T18:41:39Z", "event":"DockingRequested", "StationName":"Powell High" }
+{ "timestamp":"2017-01-11T18:52:04Z", "event":"DockingRequested", "StationName":"Snyder Enterprise" }
+{ "timestamp":"2017-01-11T19:11:14Z", "event":"DockingRequested", "StationName":"Schmitt's Progress" }
+{ "timestamp":"2017-01-11T19:24:18Z", "event":"DockingRequested", "StationName":"Snyder Enterprise" }
+{ "timestamp":"2017-01-11T19:31:51Z", "event":"DockingRequested", "StationName":"Rushd Terminal" }
+{ "timestamp":"2017-01-11T19:38:39Z", "event":"DockingRequested", "StationName":"Daedalus" }
+{ "timestamp":"2017-01-11T20:44:05Z", "event":"DockingRequested", "StationName":"Felice Dock" }
+{ "timestamp":"2017-01-12T18:33:26Z", "event":"DockingRequested", "StationName":"Qwent Research Base" }
+{ "timestamp":"2017-01-12T19:06:03Z", "event":"DockingRequested", "StationName":"Gurragchaa Orbital" }
+{ "timestamp":"2017-01-12T19:15:11Z", "event":"DockingRequested", "StationName":"Curie Gateway" }
+{ "timestamp":"2017-01-12T19:21:08Z", "event":"DockingRequested", "StationName":"Reilly Terminal" }
+{ "timestamp":"2017-01-12T19:34:45Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-01-12T19:46:52Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-01-12T20:22:37Z", "event":"DockingRequested", "StationName":"Shaw Port" }
+{ "timestamp":"2017-01-22T16:37:18Z", "event":"DockingRequested", "StationName":"Williams Dock" }
+{ "timestamp":"2017-01-22T16:56:07Z", "event":"DockingRequested", "StationName":"Wylie Settlement" }
+{ "timestamp":"2017-01-23T17:39:55Z", "event":"DockingRequested", "StationName":"Wylie Settlement" }
+{ "timestamp":"2017-01-23T19:49:53Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-01-23T20:09:15Z", "event":"DockingRequested", "StationName":"Long Sight Base" }
+{ "timestamp":"2017-01-23T20:42:53Z", "event":"DockingRequested", "StationName":"Qwent Research Base" }
+{ "timestamp":"2017-01-24T13:41:52Z", "event":"DockingRequested", "StationName":"Felice Dock" }
+{ "timestamp":"2017-01-24T13:45:57Z", "event":"DockingRequested", "StationName":"Felice Dock" }
+{ "timestamp":"2017-01-24T14:04:12Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-01-24T16:49:52Z", "event":"DockingRequested", "StationName":"Vinge Dock" }
+{ "timestamp":"2017-01-24T17:02:56Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-01-24T17:30:31Z", "event":"DockingRequested", "StationName":"Bobko Hub" }
+{ "timestamp":"2017-01-24T18:07:48Z", "event":"DockingRequested", "StationName":"Brand City" }
+{ "timestamp":"2017-01-24T18:30:17Z", "event":"DockingRequested", "StationName":"Voss Dock" }
+{ "timestamp":"2017-01-24T19:34:50Z", "event":"DockingRequested", "StationName":"Stanier Gateway" }
+{ "timestamp":"2017-01-25T15:08:44Z", "event":"DockingRequested", "StationName":"Heyerdahl Hub" }
+{ "timestamp":"2017-01-25T19:13:11Z", "event":"DockingRequested", "StationName":"Pudwill Gorie Dock" }
+{ "timestamp":"2017-01-25T20:02:46Z", "event":"DockingRequested", "StationName":"Deutsch Terminal" }
+{ "timestamp":"2017-01-27T15:38:53Z", "event":"DockingRequested", "StationName":"Vaucanson Station" }
+{ "timestamp":"2017-01-27T19:09:14Z", "event":"DockingRequested", "StationName":"Evans Orbital" }
+{ "timestamp":"2017-01-27T19:18:26Z", "event":"DockingRequested", "StationName":"Lawson Survey" }
+{ "timestamp":"2017-01-28T13:00:08Z", "event":"DockingRequested", "StationName":"Roberts Port" }
+{ "timestamp":"2017-01-28T13:53:13Z", "event":"DockingRequested", "StationName":"Roberts Port" }
+{ "timestamp":"2017-01-28T15:05:48Z", "event":"DockingRequested", "StationName":"Roberts Port" }
+{ "timestamp":"2017-01-28T16:36:45Z", "event":"DockingRequested", "StationName":"Roberts Port" }
+{ "timestamp":"2017-01-28T17:07:05Z", "event":"DockingRequested", "StationName":"Ron Hubbard Dock" }
+{ "timestamp":"2017-01-29T15:26:45Z", "event":"DockingRequested", "StationName":"Effinger Port" }
+{ "timestamp":"2017-01-29T15:28:21Z", "event":"DockingRequested", "StationName":"Effinger Port" }
+{ "timestamp":"2017-01-30T14:14:06Z", "event":"DockingRequested", "StationName":"Virtanen Hub" }
+{ "timestamp":"2017-01-30T14:39:30Z", "event":"DockingRequested", "StationName":"Roberts Port" }
+{ "timestamp":"2017-01-31T17:58:00Z", "event":"DockingRequested", "StationName":"Roberts Port" }
+{ "timestamp":"2017-01-31T19:01:28Z", "event":"DockingRequested", "StationName":"Wilson Station" }
+{ "timestamp":"2017-02-02T15:03:56Z", "event":"DockingRequested", "StationName":"Roberts Port" }
+{ "timestamp":"2017-02-03T15:03:21Z", "event":"DockingRequested", "StationName":"Frobac's Folly" }
+{ "timestamp":"2017-02-03T15:12:33Z", "event":"DockingRequested", "StationName":"Wilson Station" }
+{ "timestamp":"2017-02-03T15:22:29Z", "event":"DockingRequested", "StationName":"Bowersox Enterprise" }
+{ "timestamp":"2017-02-03T15:57:47Z", "event":"DockingRequested", "StationName":"Mueller Orbital" }
+{ "timestamp":"2017-02-03T16:07:33Z", "event":"DockingRequested", "StationName":"Zenbei Port" }
+{ "timestamp":"2017-02-03T16:54:51Z", "event":"DockingRequested", "StationName":"Biermann Terminal" }
+{ "timestamp":"2017-02-03T17:06:41Z", "event":"DockingRequested", "StationName":"William Sargent Hub" }
+{ "timestamp":"2017-02-03T17:33:32Z", "event":"DockingRequested", "StationName":"Bolton Gateway" }
+{ "timestamp":"2017-02-03T18:43:49Z", "event":"DockingRequested", "StationName":"Mic Turner Base" }
+{ "timestamp":"2017-02-04T15:32:39Z", "event":"DockingRequested", "StationName":"Biermann Terminal" }
+{ "timestamp":"2017-02-04T16:16:17Z", "event":"DockingRequested", "StationName":"Ilyushin Enterprise" }
+{ "timestamp":"2017-02-04T16:28:19Z", "event":"DockingRequested", "StationName":"Pratchett's Disc" }
+{ "timestamp":"2017-02-04T18:02:27Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-02-05T12:51:42Z", "event":"DockingRequested", "StationName":"Gunn Ring" }
+{ "timestamp":"2017-02-05T13:13:36Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-02-05T13:34:01Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-02-05T15:32:35Z", "event":"DockingRequested", "StationName":"Williams Dock" }
+{ "timestamp":"2017-02-05T17:53:10Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-02-05T18:02:50Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-02-05T18:17:04Z", "event":"DockingRequested", "StationName":"Long Sight Base" }
+{ "timestamp":"2017-02-05T18:37:44Z", "event":"DockingRequested", "StationName":"Qwent Research Base" }
+{ "timestamp":"2017-02-06T13:07:40Z", "event":"DockingRequested", "StationName":"Trophy Camp" }
+{ "timestamp":"2017-02-06T13:48:16Z", "event":"DockingRequested", "StationName":"Litke Dock" }
+{ "timestamp":"2017-02-06T13:48:31Z", "event":"DockingRequested", "StationName":"Litke Dock" }
+{ "timestamp":"2017-02-06T14:16:17Z", "event":"DockingRequested", "StationName":"Kirk Ring" }
+{ "timestamp":"2017-02-06T15:26:11Z", "event":"DockingRequested", "StationName":"Dobrovolskiy City" }
+{ "timestamp":"2017-02-06T16:01:54Z", "event":"DockingRequested", "StationName":"Pratchett's Disc" }
+{ "timestamp":"2017-02-08T19:14:08Z", "event":"DockingRequested", "StationName":"Pratchett's Disc" }
+{ "timestamp":"2017-02-08T19:31:29Z", "event":"DockingRequested", "StationName":"Tucker Orbital" }
+{ "timestamp":"2017-02-08T19:42:41Z", "event":"DockingRequested", "StationName":"Roberts Port" }
+{ "timestamp":"2017-02-09T13:52:33Z", "event":"DockingRequested", "StationName":"Roberts Port" }
+{ "timestamp":"2017-02-09T19:36:36Z", "event":"DockingRequested", "StationName":"Frigschneck's Resort" }
+{ "timestamp":"2017-02-10T13:46:04Z", "event":"DockingRequested", "StationName":"Roberts Port" }
+{ "timestamp":"2017-02-10T14:07:41Z", "event":"DockingRequested", "StationName":"Shukor Hub" }
+{ "timestamp":"2017-02-10T14:39:57Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-02-12T15:49:41Z", "event":"DockingRequested", "StationName":"Bernoulli Vision" }
+{ "timestamp":"2017-02-12T16:00:54Z", "event":"DockingRequested", "StationName":"Anthony Enterprise" }
+{ "timestamp":"2017-02-12T16:16:36Z", "event":"DockingRequested", "StationName":"Coney Gateway" }
+{ "timestamp":"2017-02-12T16:27:40Z", "event":"DockingRequested", "StationName":"Black Hide" }
+{ "timestamp":"2017-02-12T16:45:47Z", "event":"DockingRequested", "StationName":"Trophy Camp" }
+{ "timestamp":"2017-02-12T17:02:01Z", "event":"DockingRequested", "StationName":"Long Sight Base" }
+{ "timestamp":"2017-02-12T17:14:34Z", "event":"DockingRequested", "StationName":"Xiaoguan Station" }
+{ "timestamp":"2017-02-18T18:02:25Z", "event":"DockingRequested", "StationName":"Obsidian Orbital" }
+{ "timestamp":"2017-02-18T18:23:37Z", "event":"DockingRequested", "StationName":"Foster Depot" }
+{ "timestamp":"2017-02-18T19:02:55Z", "event":"DockingRequested", "StationName":"Kaku Horizons" }
+{ "timestamp":"2017-02-18T19:21:31Z", "event":"DockingRequested", "StationName":"Black Hide" }
+{ "timestamp":"2017-02-18T19:37:08Z", "event":"DockingRequested", "StationName":"Trophy Camp" }
+{ "timestamp":"2017-02-19T13:52:34Z", "event":"DockingRequested", "StationName":"Kaku Horizons" }
+{ "timestamp":"2017-02-19T14:20:04Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2017-02-19T14:20:25Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2017-02-19T14:45:51Z", "event":"DockingRequested", "StationName":"Pratchett's Disc" }
+{ "timestamp":"2017-02-19T16:34:11Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-02-19T16:34:33Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-02-19T16:44:06Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-02-20T13:40:07Z", "event":"DockingRequested", "StationName":"Paradiso Outpost" }
+{ "timestamp":"2017-02-20T14:37:47Z", "event":"DockingRequested", "StationName":"Xiaoguan Station" }
+{ "timestamp":"2017-02-20T15:09:12Z", "event":"DockingRequested", "StationName":"Young Dock" }
+{ "timestamp":"2017-02-20T16:15:56Z", "event":"DockingRequested", "StationName":"Gardner Port" }
+{ "timestamp":"2017-02-20T16:17:22Z", "event":"DockingRequested", "StationName":"Gardner Port" }
+{ "timestamp":"2017-02-20T19:30:28Z", "event":"DockingRequested", "StationName":"Xiaoguan Station" }
+{ "timestamp":"2017-02-20T19:52:32Z", "event":"DockingRequested", "StationName":"Hildebrandt Terminal" }
+{ "timestamp":"2017-02-20T20:06:55Z", "event":"DockingRequested", "StationName":"Morgan Depot" }
+{ "timestamp":"2017-02-21T15:24:27Z", "event":"DockingRequested", "StationName":"Berkey Terminal" }
+{ "timestamp":"2017-02-21T15:29:32Z", "event":"DockingRequested", "StationName":"Berkey Terminal" }
+{ "timestamp":"2017-02-21T15:51:16Z", "event":"DockingRequested", "StationName":"Vasilyev Vision" }
+{ "timestamp":"2017-02-21T16:23:27Z", "event":"DockingRequested", "StationName":"Schweickart Dock" }
+{ "timestamp":"2017-02-21T16:33:42Z", "event":"DockingRequested", "StationName":"McMullen Beacon" }
+{ "timestamp":"2017-02-21T16:42:11Z", "event":"DockingRequested", "StationName":"Froude Ring" }
+{ "timestamp":"2017-02-21T16:50:38Z", "event":"DockingRequested", "StationName":"Perez Ring" }
+{ "timestamp":"2017-02-21T17:06:21Z", "event":"DockingRequested", "StationName":"Berners-Lee City" }
+{ "timestamp":"2017-02-21T17:30:28Z", "event":"DockingRequested", "StationName":"Townshend Hub" }
+{ "timestamp":"2017-02-22T13:30:23Z", "event":"DockingRequested", "StationName":"Macdonald Settlement" }
+{ "timestamp":"2017-02-22T13:52:46Z", "event":"DockingRequested", "StationName":"Krylov Ring" }
+{ "timestamp":"2017-02-22T14:03:49Z", "event":"DockingRequested", "StationName":"Krupkat Relay" }
+{ "timestamp":"2017-02-22T14:22:30Z", "event":"DockingRequested", "StationName":"H. G. Wells Terminal" }
+{ "timestamp":"2017-02-24T10:49:17Z", "event":"DockingRequested", "StationName":"Paradiso Outpost" }
+{ "timestamp":"2017-02-24T11:53:46Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2017-03-02T14:44:25Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2017-03-02T15:20:50Z", "event":"DockingRequested", "StationName":"Frigschneck's Resort" }
+{ "timestamp":"2017-03-02T15:32:03Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2017-03-02T15:55:08Z", "event":"DockingRequested", "StationName":"Rechtin Vision" }
+{ "timestamp":"2017-03-02T16:12:41Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2017-03-02T16:43:36Z", "event":"DockingRequested", "StationName":"Seares Ring" }
+{ "timestamp":"2017-03-02T17:50:19Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2017-03-02T18:26:57Z", "event":"DockingRequested", "StationName":"de Kamp City" }
+{ "timestamp":"2017-03-02T18:36:21Z", "event":"DockingRequested", "StationName":"Gentil Hub" }
+{ "timestamp":"2017-03-02T18:49:34Z", "event":"DockingRequested", "StationName":"Fabian Terminal" }
+{ "timestamp":"2017-03-03T14:40:40Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-03-03T14:45:46Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-03-03T15:09:35Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-03-03T15:29:22Z", "event":"DockingRequested", "StationName":"Pratchett's Disc" }
+{ "timestamp":"2017-03-03T18:55:03Z", "event":"DockingRequested", "StationName":"Hermaszewski Station" }
+{ "timestamp":"2017-03-03T19:12:25Z", "event":"DockingRequested", "StationName":"Garay Terminal" }
+{ "timestamp":"2017-03-03T19:25:58Z", "event":"DockingRequested", "StationName":"Farseer Inc" }
+{ "timestamp":"2017-03-03T19:38:25Z", "event":"DockingRequested", "StationName":"Garay Terminal" }
+{ "timestamp":"2017-03-03T19:56:37Z", "event":"DockingRequested", "StationName":"Thompson-Keen Asylum" }
+{ "timestamp":"2017-03-04T14:14:08Z", "event":"DockingRequested", "StationName":"Frigschneck's Resort" }
+{ "timestamp":"2017-03-04T14:29:41Z", "event":"DockingRequested", "StationName":"Ziegel Dock" }
+{ "timestamp":"2017-03-04T14:38:08Z", "event":"DockingRequested", "StationName":"Tisserand Hub" }
+{ "timestamp":"2017-03-04T14:47:03Z", "event":"DockingRequested", "StationName":"Cassini Terminal" }
+{ "timestamp":"2017-03-04T14:56:54Z", "event":"DockingRequested", "StationName":"Reichelt Camp" }
+{ "timestamp":"2017-03-04T15:04:06Z", "event":"DockingRequested", "StationName":"Haack's Claim" }
+{ "timestamp":"2017-03-04T15:12:02Z", "event":"DockingRequested", "StationName":"Borrego Station" }
+{ "timestamp":"2017-03-04T15:46:22Z", "event":"DockingRequested", "StationName":"Dilworth Laboratory" }
+{ "timestamp":"2017-03-04T15:55:32Z", "event":"DockingRequested", "StationName":"Borrego Station" }
+{ "timestamp":"2017-03-04T16:06:20Z", "event":"DockingRequested", "StationName":"Thome Vision" }
+{ "timestamp":"2017-03-05T15:24:09Z", "event":"DockingRequested", "StationName":"Tisserand Hub" }
+{ "timestamp":"2017-03-05T15:54:47Z", "event":"DockingRequested", "StationName":"Pratchett's Disc" }
+{ "timestamp":"2017-03-09T14:56:31Z", "event":"DockingRequested", "StationName":"Finlay-Freundlich Port" }
+{ "timestamp":"2017-03-09T15:04:19Z", "event":"DockingRequested", "StationName":"Naubakht Station" }
+{ "timestamp":"2017-03-09T15:17:07Z", "event":"DockingRequested", "StationName":"Virts Orbital" }
+{ "timestamp":"2017-03-09T15:40:36Z", "event":"DockingRequested", "StationName":"Robigo Mines" }
+{ "timestamp":"2017-03-09T15:59:44Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2017-03-09T16:05:08Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2017-03-09T16:12:45Z", "event":"DockingRequested", "StationName":"Robigo Mines" }
+{ "timestamp":"2017-03-09T16:20:38Z", "event":"DockingRequested", "StationName":"Newholm Station" }
+{ "timestamp":"2017-03-10T15:18:36Z", "event":"DockingRequested", "StationName":"Sirius Reach" }
+{ "timestamp":"2017-03-10T15:54:40Z", "event":"DockingRequested", "StationName":"Cook Gateway" }
+{ "timestamp":"2017-03-11T13:35:33Z", "event":"DockingRequested", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-03-11T13:52:41Z", "event":"DockingRequested", "StationName":"Garay Terminal" }
+{ "timestamp":"2017-03-11T14:04:57Z", "event":"DockingRequested", "StationName":"Garay Terminal" }
+{ "timestamp":"2017-03-11T14:59:09Z", "event":"DockingRequested", "StationName":"Erikson Port" }
+{ "timestamp":"2017-03-11T16:28:52Z", "event":"DockingRequested", "StationName":"Mies van der Rohe Vision" }
+{ "timestamp":"2017-03-11T16:45:45Z", "event":"DockingRequested", "StationName":"Austin Station" }
+{ "timestamp":"2017-03-11T17:00:16Z", "event":"DockingRequested", "StationName":"Kohoutek Ring" }
+{ "timestamp":"2017-03-11T18:54:57Z", "event":"DockingRequested", "StationName":"Faraday Ring" }
+{ "timestamp":"2017-03-11T19:42:01Z", "event":"DockingRequested", "StationName":"Wellman Dock" }
+{ "timestamp":"2017-03-11T20:06:44Z", "event":"DockingRequested", "StationName":"Herreshoff Prospect" }
+{ "timestamp":"2017-03-11T21:08:25Z", "event":"DockingRequested", "StationName":"Faraday Ring" }
+{ "timestamp":"2017-03-11T21:59:11Z", "event":"DockingRequested", "StationName":"Faraday Ring" }
+{ "timestamp":"2017-03-12T12:52:48Z", "event":"DockingRequested", "StationName":"Herreshoff Prospect" }
+{ "timestamp":"2017-03-12T13:04:24Z", "event":"DockingRequested", "StationName":"Naubakht Station" }
+{ "timestamp":"2017-03-12T13:20:06Z", "event":"DockingRequested", "StationName":"Pratchett's Disc" }
+{ "timestamp":"2017-03-12T13:43:05Z", "event":"DockingRequested", "StationName":"Marsden City" }
+{ "timestamp":"2017-03-12T16:32:27Z", "event":"DockingRequested", "StationName":"Austin Station" }
+{ "timestamp":"2017-03-12T17:36:24Z", "event":"DockingRequested", "StationName":"Farseer Inc" }
+{ "timestamp":"2017-03-12T18:55:31Z", "event":"DockingRequested", "StationName":"Farseer Inc" }
+{ "timestamp":"2017-03-12T19:08:16Z", "event":"DockingRequested", "StationName":"Black Hide" }
+{ "timestamp":"2017-03-13T15:00:11Z", "event":"DockingRequested", "StationName":"Austin Station" }
+{ "timestamp":"2017-03-13T15:21:08Z", "event":"DockingRequested", "StationName":"Cowling Dock" }
+{ "timestamp":"2017-03-13T15:29:16Z", "event":"DockingRequested", "StationName":"Crossfield Terminal" }
+{ "timestamp":"2017-03-13T15:36:05Z", "event":"DockingRequested", "StationName":"Helin Dock" }
+{ "timestamp":"2017-03-13T15:48:20Z", "event":"DockingRequested", "StationName":"Bisnovatyi-Kogan Landing" }
+{ "timestamp":"2017-03-13T16:19:34Z", "event":"DockingRequested", "StationName":"Trader's Rest" }
+{ "timestamp":"2017-03-13T16:34:40Z", "event":"DockingRequested", "StationName":"Stjepan Seljan Hub" }
+{ "timestamp":"2017-03-14T15:42:08Z", "event":"DockingRequested", "StationName":"Womack Hub" }
+{ "timestamp":"2017-03-14T16:36:35Z", "event":"DockingRequested", "StationName":"Reynolds Ring" }
+{ "timestamp":"2017-03-14T18:15:14Z", "event":"DockingRequested", "StationName":"Prospector's Rest" }
+{ "timestamp":"2017-03-14T18:32:45Z", "event":"DockingRequested", "StationName":"Lave Station" }
+{ "timestamp":"2017-03-15T11:13:34Z", "event":"DockingRequested", "StationName":"Battani Landing" }
+{ "timestamp":"2017-03-15T19:27:19Z", "event":"DockingRequested", "StationName":"Palin Research Centre" }
+{ "timestamp":"2017-03-16T16:46:06Z", "event":"DockingRequested", "StationName":"Stjepan Seljan Hub" }
+{ "timestamp":"2017-03-16T16:53:54Z", "event":"DockingRequested", "StationName":"Trader's Rest" }
+{ "timestamp":"2017-03-16T17:07:10Z", "event":"DockingRequested", "StationName":"Stjepan Seljan Hub" }
+{ "timestamp":"2017-03-16T17:21:36Z", "event":"DockingRequested", "StationName":"Trader's Rest" }
+{ "timestamp":"2017-03-16T17:31:16Z", "event":"DockingRequested", "StationName":"Stjepan Seljan Hub" }
+{ "timestamp":"2017-03-16T18:28:55Z", "event":"DockingRequested", "StationName":"Qwent Research Base" }
+{ "timestamp":"2017-03-16T18:43:39Z", "event":"DockingRequested", "StationName":"Black Hide" }
+{ "timestamp":"2017-03-16T19:00:31Z", "event":"DockingRequested", "StationName":"Prospector's Rest" }
+{ "timestamp":"2017-03-16T19:16:18Z", "event":"DockingRequested", "StationName":"Trophy Camp" }
+{ "timestamp":"2017-03-17T11:48:43Z", "event":"DockingRequested", "StationName":"Shaw Station" }
+{ "timestamp":"2017-03-17T11:57:46Z", "event":"DockingRequested", "StationName":"Ciferri Gateway" }
+{ "timestamp":"2017-03-17T14:33:08Z", "event":"DockingRequested", "StationName":"Stjepan Seljan Hub" }
+{ "timestamp":"2017-03-17T14:49:08Z", "event":"DockingRequested", "StationName":"de Sousa Ring" }
+{ "timestamp":"2017-03-21T10:00:46Z", "event":"DockingRequested", "StationName":"Ejeta Station" }
+{ "timestamp":"2017-03-21T11:07:09Z", "event":"DockingRequested", "StationName":"Robigo Mines" }
+{ "timestamp":"2017-03-21T11:13:58Z", "event":"DockingRequested", "StationName":"New Dawn Station" }
+{ "timestamp":"2017-03-21T11:23:58Z", "event":"DockingRequested", "StationName":"Robigo Mines" }
+{ "timestamp":"2017-03-21T16:57:22Z", "event":"DockingRequested", "StationName":"Ejeta Station" }
+{ "timestamp":"2017-03-21T17:19:22Z", "event":"DockingRequested", "StationName":"Battani Landing" }
+{ "timestamp":"2017-03-21T17:35:11Z", "event":"DockingRequested", "StationName":"Penzias Dock" }
+{ "timestamp":"2017-03-21T17:49:54Z", "event":"DockingRequested", "StationName":"Pratchett's Disc" }
+{ "timestamp":"2017-03-21T18:18:41Z", "event":"DockingRequested", "StationName":"Foden Orbital" }
+{ "timestamp":"2017-03-22T15:08:08Z", "event":"DockingRequested", "StationName":"Barth Prison" }
+{ "timestamp":"2017-03-22T15:17:13Z", "event":"DockingRequested", "StationName":"Foden Orbital" }
+{ "timestamp":"2017-03-22T18:06:29Z", "event":"DockingRequested", "StationName":"Foden Orbital" }
+{ "timestamp":"2017-03-22T18:19:56Z", "event":"DockingRequested", "StationName":"Foden Orbital" }
+{ "timestamp":"2017-03-24T16:47:03Z", "event":"DockingRequested", "StationName":"Foden Orbital" }
+{ "timestamp":"2017-03-24T17:19:12Z", "event":"DockingRequested", "StationName":"Schwann Hub" }
+{ "timestamp":"2017-03-25T17:54:52Z", "event":"DockingRequested", "StationName":"Birdseye Dock" }
+{ "timestamp":"2017-03-27T16:57:59Z", "event":"DockingRequested", "StationName":"Birdseye Dock" }
+{ "timestamp":"2017-03-27T17:10:19Z", "event":"DockingRequested", "StationName":"Naddoddur Terminal" }
+{ "timestamp":"2017-03-27T17:38:36Z", "event":"DockingRequested", "StationName":"Garcia Station" }
+{ "timestamp":"2017-03-27T18:09:28Z", "event":"DockingRequested", "StationName":"Qwent Research Base" }
+{ "timestamp":"2017-03-27T18:33:16Z", "event":"DockingRequested", "StationName":"Crook Hub" }
+{ "timestamp":"2017-03-27T18:51:04Z", "event":"DockingRequested", "StationName":"Gupta City" }
+{ "timestamp":"2017-03-28T14:41:57Z", "event":"DockingRequested", "StationName":"Cleve Hub" }
+{ "timestamp":"2017-03-31T20:07:08Z", "event":"DockingRequested", "StationName":"Filipchenko City" }
+{ "timestamp":"2017-04-01T15:39:02Z", "event":"DockingRequested", "StationName":"Cameron Gateway" }
+{ "timestamp":"2017-04-01T15:50:19Z", "event":"DockingRequested", "StationName":"Solo Orbiter" }
+{ "timestamp":"2017-04-01T17:14:06Z", "event":"DockingRequested", "StationName":"Grandin Gateway" }
+{ "timestamp":"2017-04-01T17:44:51Z", "event":"DockingRequested", "StationName":"Broglie Terminal" }
+{ "timestamp":"2017-04-01T20:21:46Z", "event":"DockingRequested", "StationName":"Schirra Dock" }
+{ "timestamp":"2017-04-01T20:31:11Z", "event":"DockingRequested", "StationName":"Black Hide" }
+{ "timestamp":"2017-04-02T17:57:35Z", "event":"DockingRequested", "StationName":"Trophy Camp" }
+{ "timestamp":"2017-04-02T18:04:51Z", "event":"DockingRequested", "StationName":"Chelbin Service Station" }
+{ "timestamp":"2017-04-02T18:43:14Z", "event":"DockingRequested", "StationName":"Trader's Rest" }
+{ "timestamp":"2017-04-03T15:11:06Z", "event":"DockingRequested", "StationName":"Nicollier Vision" }
+{ "timestamp":"2017-04-04T15:53:18Z", "event":"DockingRequested", "StationName":"Nicollier Vision" }
+{ "timestamp":"2017-04-04T16:04:16Z", "event":"DockingRequested", "StationName":"Klimuk Terminal" }
+{ "timestamp":"2017-04-04T16:32:30Z", "event":"DockingRequested", "StationName":"Naddoddur Terminal" }
+{ "timestamp":"2017-04-04T17:23:22Z", "event":"DockingRequested", "StationName":"George Lucas" }
+{ "timestamp":"2017-04-04T17:41:02Z", "event":"DockingRequested", "StationName":"Pratchett's Disc" }
+{ "timestamp":"2017-04-06T12:50:22Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-04-06T13:31:38Z", "event":"DockingRequested", "StationName":"Farseer Inc" }
+{ "timestamp":"2017-04-06T18:56:23Z", "event":"DockingRequested", "StationName":"Pannekoek Dock" }
+{ "timestamp":"2017-04-07T14:49:18Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-04-07T15:06:01Z", "event":"DockingRequested", "StationName":"Millerport" }
+{ "timestamp":"2017-04-08T15:50:20Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-04-08T16:50:03Z", "event":"DockingRequested", "StationName":"Palin Research Centre" }
+{ "timestamp":"2017-04-08T17:19:39Z", "event":"DockingRequested", "StationName":"Qwent Research Base" }
+{ "timestamp":"2017-04-08T17:47:32Z", "event":"DockingRequested", "StationName":"Lu Hub" }
+{ "timestamp":"2017-04-08T17:53:36Z", "event":"DockingRequested", "StationName":"Lu Hub" }
+{ "timestamp":"2017-04-08T18:11:03Z", "event":"DockingRequested", "StationName":"Lu Hub" }
+{ "timestamp":"2017-04-08T18:18:53Z", "event":"DockingRequested", "StationName":"Lu Hub" }
+{ "timestamp":"2017-04-09T11:16:25Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-04-09T11:34:33Z", "event":"DockingRequested", "StationName":"Pratchett's Disc" }
+{ "timestamp":"2017-04-10T12:47:33Z", "event":"DockingRequested", "StationName":"Cregglezone" }
+{ "timestamp":"2017-04-10T12:48:51Z", "event":"DockingRequested", "StationName":"Cregglezone" }
+{ "timestamp":"2017-04-10T12:55:50Z", "event":"DockingRequested", "StationName":"Trophy Camp" }
+{ "timestamp":"2017-04-10T13:04:29Z", "event":"DockingRequested", "StationName":"Bluford Station" }
+{ "timestamp":"2017-04-10T13:22:36Z", "event":"DockingRequested", "StationName":"Trophy Camp" }
+{ "timestamp":"2017-04-10T14:48:36Z", "event":"DockingRequested", "StationName":"Chris & Silvia's Paradise Hideout" }
+{ "timestamp":"2017-04-10T14:57:36Z", "event":"DockingRequested", "StationName":"Northrop Orbital" }
+{ "timestamp":"2017-04-10T15:05:27Z", "event":"DockingRequested", "StationName":"Chris & Silvia's Paradise Hideout" }
+{ "timestamp":"2017-04-10T15:19:51Z", "event":"DockingRequested", "StationName":"Arnold Bastion" }
+{ "timestamp":"2017-04-10T15:30:05Z", "event":"DockingRequested", "StationName":"Chris & Silvia's Paradise Hideout" }
+{ "timestamp":"2017-04-10T15:46:40Z", "event":"DockingRequested", "StationName":"Arnold Bastion" }
+{ "timestamp":"2017-04-10T15:52:40Z", "event":"DockingRequested", "StationName":"Chris & Silvia's Paradise Hideout" }
+{ "timestamp":"2017-04-10T16:03:23Z", "event":"DockingRequested", "StationName":"Gantt Enterprise" }
+{ "timestamp":"2017-04-10T16:09:55Z", "event":"DockingRequested", "StationName":"Chris & Silvia's Paradise Hideout" }
+{ "timestamp":"2017-04-10T16:30:00Z", "event":"DockingRequested", "StationName":"Rucker Depot" }
+{ "timestamp":"2017-04-10T17:25:56Z", "event":"DockingRequested", "StationName":"Boe Dock" }
+{ "timestamp":"2017-04-10T17:53:31Z", "event":"DockingRequested", "StationName":"Demolition Unlimited" }
+{ "timestamp":"2017-04-10T18:07:46Z", "event":"DockingRequested", "StationName":"Hammel Terminal" }
+{ "timestamp":"2017-04-10T18:29:49Z", "event":"DockingRequested", "StationName":"The Jet's Hole" }
+{ "timestamp":"2017-04-10T18:42:53Z", "event":"DockingRequested", "StationName":"Hammel Terminal" }
+{ "timestamp":"2017-04-10T18:56:22Z", "event":"DockingRequested", "StationName":"Fan Horizons" }
+{ "timestamp":"2017-04-10T19:13:21Z", "event":"DockingRequested", "StationName":"Hammel Terminal" }
+{ "timestamp":"2017-04-10T19:25:01Z", "event":"DockingRequested", "StationName":"The Jet's Hole" }
+{ "timestamp":"2017-04-10T19:41:26Z", "event":"DockingRequested", "StationName":"Hammel Terminal" }
+{ "timestamp":"2017-04-10T20:04:08Z", "event":"DockingRequested", "StationName":"The Jet's Hole" }
+{ "timestamp":"2017-04-10T20:16:39Z", "event":"DockingRequested", "StationName":"Hammel Terminal" }
+{ "timestamp":"2017-04-10T20:31:01Z", "event":"DockingRequested", "StationName":"Hammel Terminal" }
+{ "timestamp":"2017-04-10T20:41:46Z", "event":"DockingRequested", "StationName":"The Jet's Hole" }
+{ "timestamp":"2017-04-10T20:54:04Z", "event":"DockingRequested", "StationName":"Hammel Terminal" }
+{ "timestamp":"2017-04-10T21:09:20Z", "event":"DockingRequested", "StationName":"The Jet's Hole" }

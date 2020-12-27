@@ -1,0 +1,15 @@
+{ "timestamp":"2019-10-26T23:50:38Z", "event":"NavBeaconScan", "SystemAddress":2278220106091, "NumBodies":5 }
+{ "timestamp":"2019-10-27T00:32:58Z", "event":"NavBeaconScan", "SystemAddress":2557686584018, "NumBodies":23 }
+{ "timestamp":"2019-10-27T00:59:25Z", "event":"NavBeaconScan", "SystemAddress":4207021134546, "NumBodies":35 }
+{ "timestamp":"2019-11-01T13:25:47Z", "event":"NavBeaconScan", "SystemAddress":5068732573089, "NumBodies":4 }
+{ "timestamp":"2019-11-01T21:37:18Z", "event":"NavBeaconScan", "SystemAddress":7267755959705, "NumBodies":13 }
+{ "timestamp":"2019-11-01T22:33:01Z", "event":"NavBeaconScan", "SystemAddress":18262872171937, "NumBodies":34 }
+{ "timestamp":"2019-11-01T23:02:03Z", "event":"NavBeaconScan", "SystemAddress":18262872171937, "NumBodies":34 }
+{ "timestamp":"2019-11-01T23:38:52Z", "event":"NavBeaconScan", "SystemAddress":4207021134546, "NumBodies":35 }
+{ "timestamp":"2019-11-18T02:07:09Z", "event":"NavBeaconScan", "SystemAddress":8879945552594, "NumBodies":28 }
+{ "timestamp":"2019-11-18T02:15:40Z", "event":"NavBeaconScan", "SystemAddress":4923919960427, "NumBodies":3 }
+{ "timestamp":"2019-12-07T20:32:40Z", "event":"NavBeaconScan", "SystemAddress":18262872171937, "NumBodies":34 }
+{ "timestamp":"2019-12-07T21:27:31Z", "event":"NavBeaconScan", "SystemAddress":18262872171937, "NumBodies":34 }
+{ "timestamp":"2019-12-11T02:51:26Z", "event":"NavBeaconScan", "SystemAddress":4752121268587, "NumBodies":9 }
+{ "timestamp":"2020-01-03T22:51:42Z", "event":"NavBeaconScan", "SystemAddress":2869709317537, "NumBodies":27 }
+{ "timestamp":"2020-01-03T23:39:17Z", "event":"NavBeaconScan", "SystemAddress":18262872171937, "NumBodies":34 }

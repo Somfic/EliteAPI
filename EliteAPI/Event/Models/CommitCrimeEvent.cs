@@ -1,30 +1,41 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class CommitCrimeEvent : EventBase
+    public partial class CommitCrimeEvent : EventBase
     {
-        internal CommitCrimeEvent() { }
+        internal CommitCrimeEvent()
+        {
+        }
 
-        public static CommitCrimeEvent FromJson(string json) => JsonConvert.DeserializeObject<CommitCrimeEvent>(json);
+        [JsonProperty("CrimeType")] public string CrimeType { get; private set; }
 
+        [JsonProperty("Faction")] public string Faction { get; private set; }
 
-        [JsonProperty("CrimeType")]
-        public string CrimeType { get; internal set; }
+        [JsonProperty("Fine")] public long Fine { get; private set; }
+    }
 
-        [JsonProperty("Faction")]
-        public string Faction { get; internal set; }
+    public partial class CommitCrimeEvent
+    {
+        public static CommitCrimeEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<CommitCrimeEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Victim")]
-        public string Victim { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<CommitCrimeEvent> CommitCrimeEvent;
 
-        [JsonProperty("Victim_Localised")]
-        public string VictimLocalised { get; internal set; }
-
-        [JsonProperty("Bounty")]
-        public long Bounty { get; internal set; }
-
-        
+        internal void InvokeCommitCrimeEvent(CommitCrimeEvent arg)
+        {
+            CommitCrimeEvent?.Invoke(this, arg);
+        }
     }
 }

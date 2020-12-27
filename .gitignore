@@ -264,12 +264,8 @@ __pycache__/
 *.nuspec
 *.exe
 *.rar
-NotAddedEvents.txt
-Test/Program.cs
-gource.mp4
-.vscode/launch.json
-.vscode/tasks.json
-Testing/appsettings.json
-Testing/Core.cs
-Testing/Program.cs
-Testing/Testing.csproj
+
+
+.vscode/
+Testing/
+act/

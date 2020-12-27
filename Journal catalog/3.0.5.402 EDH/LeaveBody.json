@@ -1,0 +1,2 @@
+{ "timestamp":"2018-04-04T00:59:15Z", "event":"LeaveBody", "StarSystem":"Deciat", "SystemAddress":6681123623626, "Body":"Deciat 6 a", "BodyID":25 }
+{ "timestamp":"2018-04-04T01:24:03Z", "event":"LeaveBody", "StarSystem":"Xinca", "SystemAddress":4408557439331, "Body":"Xinca 2 a", "BodyID":4 }

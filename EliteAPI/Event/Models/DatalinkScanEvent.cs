@@ -1,21 +1,39 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class DatalinkScanEvent : EventBase
+    public partial class DatalinkScanEvent : EventBase
     {
-        internal DatalinkScanEvent() { }
+        internal DatalinkScanEvent()
+        {
+        }
 
-        public static DatalinkScanEvent FromJson(string json) => JsonConvert.DeserializeObject<DatalinkScanEvent>(json);
+        [JsonProperty("Message")] public string Message { get; private set; }
 
+        [JsonProperty("Message_Localised")] public string MessageLocalised { get; private set; }
+    }
 
-        [JsonProperty("Message")]
-        public string Message { get; internal set; }
+    public partial class DatalinkScanEvent
+    {
+        public static DatalinkScanEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<DatalinkScanEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Message_Localised")]
-        public string MessageLocalised { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<DatalinkScanEvent> DatalinkScanEvent;
 
-        
+        internal void InvokeDatalinkScanEvent(DatalinkScanEvent arg)
+        {
+            DatalinkScanEvent?.Invoke(this, arg);
+        }
     }
 }

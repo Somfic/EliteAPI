@@ -64,7 +64,7 @@ private static async Task Main(string[] args) {
           .Build();
 
      // Get the EliteDangerousAPI api object
-     var api = ActivatorUtilities.CreateInstance<EliteDangerousAPI>(host.Services);
+     var api = Host.Services.GetService<IEliteDangerousAPI>();
      
      // Start the api
      await api.StartAsync();

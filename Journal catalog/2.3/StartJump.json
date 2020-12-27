@@ -1,0 +1,1122 @@
+{ "timestamp":"2017-04-11T18:13:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector GG-X b1-1", "StarClass":"M" }
+{ "timestamp":"2017-04-11T18:14:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector BQ-X b1-4", "StarClass":"M" }
+{ "timestamp":"2017-04-11T18:15:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 1594", "StarClass":"M" }
+{ "timestamp":"2017-04-11T18:16:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Fujin", "StarClass":"G" }
+{ "timestamp":"2017-04-11T18:37:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tascheter Sector PS-U b2-6", "StarClass":"M" }
+{ "timestamp":"2017-04-11T18:38:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lani", "StarClass":"K" }
+{ "timestamp":"2017-04-11T18:39:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector ON-T b3-4", "StarClass":"M" }
+{ "timestamp":"2017-04-11T18:40:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Muang", "StarClass":"K" }
+{ "timestamp":"2017-04-11T18:46:34Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-11T18:47:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector ON-T b3-2", "StarClass":"TTS" }
+{ "timestamp":"2017-04-11T18:48:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector GR-V b2-1", "StarClass":"M" }
+{ "timestamp":"2017-04-11T18:49:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 1442", "StarClass":"DA" }
+{ "timestamp":"2017-04-11T18:50:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Fujin", "StarClass":"G" }
+{ "timestamp":"2017-04-11T18:57:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tascheter Sector PS-U b2-6", "StarClass":"M" }
+{ "timestamp":"2017-04-11T18:58:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lani", "StarClass":"K" }
+{ "timestamp":"2017-04-11T18:59:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector ON-T b3-4", "StarClass":"M" }
+{ "timestamp":"2017-04-11T19:01:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Muang", "StarClass":"K" }
+{ "timestamp":"2017-04-11T19:08:27Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-11T19:09:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector ON-T b3-2", "StarClass":"TTS" }
+{ "timestamp":"2017-04-11T19:10:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector GR-V b2-1", "StarClass":"M" }
+{ "timestamp":"2017-04-11T19:11:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 1442", "StarClass":"DA" }
+{ "timestamp":"2017-04-11T19:12:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Fujin", "StarClass":"G" }
+{ "timestamp":"2017-04-11T19:21:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tascheter Sector PS-U b2-6", "StarClass":"M" }
+{ "timestamp":"2017-04-11T19:22:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lani", "StarClass":"K" }
+{ "timestamp":"2017-04-11T19:23:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector ON-T b3-4", "StarClass":"M" }
+{ "timestamp":"2017-04-11T19:24:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Muang", "StarClass":"K" }
+{ "timestamp":"2017-04-11T19:31:40Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-11T19:33:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector ON-T b3-2", "StarClass":"TTS" }
+{ "timestamp":"2017-04-11T19:34:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector GR-V b2-1", "StarClass":"M" }
+{ "timestamp":"2017-04-11T19:35:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 1442", "StarClass":"DA" }
+{ "timestamp":"2017-04-11T19:35:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Fujin", "StarClass":"G" }
+{ "timestamp":"2017-04-11T19:44:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tascheter Sector PS-U b2-6", "StarClass":"M" }
+{ "timestamp":"2017-04-11T19:45:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lani", "StarClass":"K" }
+{ "timestamp":"2017-04-11T19:46:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector ON-T b3-4", "StarClass":"M" }
+{ "timestamp":"2017-04-11T19:47:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Muang", "StarClass":"K" }
+{ "timestamp":"2017-04-11T19:54:03Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-11T19:54:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector ON-T b3-2", "StarClass":"TTS" }
+{ "timestamp":"2017-04-11T19:55:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector GR-V b2-1", "StarClass":"M" }
+{ "timestamp":"2017-04-11T19:56:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 1442", "StarClass":"DA" }
+{ "timestamp":"2017-04-11T19:57:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Fujin", "StarClass":"G" }
+{ "timestamp":"2017-04-11T20:10:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tascheter Sector PS-U b2-6", "StarClass":"M" }
+{ "timestamp":"2017-04-11T20:11:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 1015", "StarClass":"K" }
+{ "timestamp":"2017-04-11T20:12:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 6744", "StarClass":"G" }
+{ "timestamp":"2017-04-11T20:13:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Muang", "StarClass":"K" }
+{ "timestamp":"2017-04-11T20:17:04Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-11T20:29:57Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-11T20:31:09Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-11T20:31:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Hemaskas", "StarClass":"M" }
+{ "timestamp":"2017-04-11T20:32:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Kui Hsien", "StarClass":"M" }
+{ "timestamp":"2017-04-11T20:33:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shui Wei Sector FH-U b3-5", "StarClass":"M" }
+{ "timestamp":"2017-04-11T20:34:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alpha Chamaelontis", "StarClass":"F" }
+{ "timestamp":"2017-04-11T20:35:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-11T20:42:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 4846", "StarClass":"M" }
+{ "timestamp":"2017-04-11T20:43:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Monoto", "StarClass":"M" }
+{ "timestamp":"2017-04-11T20:44:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shui Wei Sector KN-S b4-0", "StarClass":"M" }
+{ "timestamp":"2017-04-11T20:45:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Jeterait", "StarClass":"M" }
+{ "timestamp":"2017-04-11T20:46:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Rho Tucanae", "StarClass":"F" }
+{ "timestamp":"2017-04-11T20:47:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"CT Tucanae", "StarClass":"M" }
+{ "timestamp":"2017-04-12T11:54:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Atlantis", "StarClass":"K" }
+{ "timestamp":"2017-04-12T12:01:03Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T12:03:30Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T12:05:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Cegreeth", "StarClass":"F" }
+{ "timestamp":"2017-04-12T12:07:02Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T12:09:17Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T12:12:28Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T12:16:43Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T12:19:42Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T12:23:22Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T12:27:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Segoveduwa", "StarClass":"M" }
+{ "timestamp":"2017-04-12T15:48:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Karadjari", "StarClass":"K" }
+{ "timestamp":"2017-04-12T15:50:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"ICZ IM-V b2-2", "StarClass":"M" }
+{ "timestamp":"2017-04-12T15:51:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Idung Yin", "StarClass":"M" }
+{ "timestamp":"2017-04-12T15:55:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"ICZ FB-X b1-1", "StarClass":"M" }
+{ "timestamp":"2017-04-12T15:56:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Muang", "StarClass":"K" }
+{ "timestamp":"2017-04-12T16:47:04Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T16:50:46Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T17:13:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Cemplangpa", "StarClass":"G" }
+{ "timestamp":"2017-04-12T17:27:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Karelitakas", "StarClass":"K" }
+{ "timestamp":"2017-04-12T17:28:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector LH-V b2-5", "StarClass":"M" }
+{ "timestamp":"2017-04-12T17:29:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Khonsa", "StarClass":"M" }
+{ "timestamp":"2017-04-12T17:30:58Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T17:33:14Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T17:36:00Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T17:45:34Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T17:50:04Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T17:54:06Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T17:55:57Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T17:58:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 11131", "StarClass":"G" }
+{ "timestamp":"2017-04-12T18:01:51Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T18:20:04Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T18:20:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ceti Sector PN-T b3-1", "StarClass":"TTS" }
+{ "timestamp":"2017-04-12T18:21:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 6551", "StarClass":"F" }
+{ "timestamp":"2017-04-12T18:22:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Muang", "StarClass":"K" }
+{ "timestamp":"2017-04-12T18:25:13Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T18:36:29Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T18:37:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"ICZ IR-W c1-18", "StarClass":"G" }
+{ "timestamp":"2017-04-12T18:38:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"ICZ OI-T b3-0", "StarClass":"M" }
+{ "timestamp":"2017-04-12T18:39:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Kamitra", "StarClass":"M" }
+{ "timestamp":"2017-04-12T19:07:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector PY-P b19-0", "StarClass":"M" }
+{ "timestamp":"2017-04-12T19:23:19Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T19:23:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 116293", "StarClass":"F" }
+{ "timestamp":"2017-04-12T19:25:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector ND-Q b19-3", "StarClass":"M" }
+{ "timestamp":"2017-04-12T19:26:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Iado", "StarClass":"M" }
+{ "timestamp":"2017-04-12T19:26:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"G 275-50", "StarClass":"F" }
+{ "timestamp":"2017-04-12T19:28:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"ICZ KS-T b3-1", "StarClass":"M" }
+{ "timestamp":"2017-04-12T19:29:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Marian Nungari", "StarClass":"M" }
+{ "timestamp":"2017-04-12T19:29:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 116492", "StarClass":"K" }
+{ "timestamp":"2017-04-12T19:31:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Zhuala", "StarClass":"M" }
+{ "timestamp":"2017-04-12T19:33:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Kitche", "StarClass":"M" }
+{ "timestamp":"2017-04-12T19:34:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 9573", "StarClass":"G" }
+{ "timestamp":"2017-04-12T19:35:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"ICZ GC-U b3-2", "StarClass":"M" }
+{ "timestamp":"2017-04-12T19:37:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HR 8814", "StarClass":"F" }
+{ "timestamp":"2017-04-12T19:37:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Apsu", "StarClass":"G" }
+{ "timestamp":"2017-04-12T19:42:46Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T19:56:27Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T20:03:51Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T20:08:58Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T20:16:33Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T20:18:40Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T20:22:58Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T20:29:43Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T20:30:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 9141", "StarClass":"K" }
+{ "timestamp":"2017-04-12T20:33:46Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T20:43:53Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T20:48:51Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T20:52:51Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T20:53:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Apsu", "StarClass":"G" }
+{ "timestamp":"2017-04-12T20:59:26Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T21:01:40Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T21:08:42Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T21:13:00Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T21:18:27Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T21:20:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"ICZ EH-U b3-3", "StarClass":"M" }
+{ "timestamp":"2017-04-12T21:21:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Sifjar", "StarClass":"K" }
+{ "timestamp":"2017-04-12T21:22:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Fyrly", "StarClass":"K" }
+{ "timestamp":"2017-04-12T21:23:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Coquim", "StarClass":"M" }
+{ "timestamp":"2017-04-12T21:25:57Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T21:31:11Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-12T21:35:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Fyrly", "StarClass":"K" }
+{ "timestamp":"2017-04-13T12:17:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Sifjar", "StarClass":"K" }
+{ "timestamp":"2017-04-13T12:18:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"ICZ EH-U b3-3", "StarClass":"M" }
+{ "timestamp":"2017-04-13T12:19:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Smethells 97", "StarClass":"M" }
+{ "timestamp":"2017-04-13T12:20:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector FX-Q b19-4", "StarClass":"M" }
+{ "timestamp":"2017-04-13T12:21:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Anayali", "StarClass":"M" }
+{ "timestamp":"2017-04-13T12:22:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wen Chayuse", "StarClass":"M" }
+{ "timestamp":"2017-04-13T12:24:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pell", "StarClass":"M" }
+{ "timestamp":"2017-04-13T12:25:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector GI-P b20-1", "StarClass":"M" }
+{ "timestamp":"2017-04-13T12:26:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shou Xing", "StarClass":"F" }
+{ "timestamp":"2017-04-13T12:26:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 7701", "StarClass":"G" }
+{ "timestamp":"2017-04-13T12:29:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector OB-D a42-1", "StarClass":"M" }
+{ "timestamp":"2017-04-13T12:31:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tau Sagittarii", "StarClass":"K" }
+{ "timestamp":"2017-04-13T12:34:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alrai Sector ZU-P b5-0", "StarClass":"M" }
+{ "timestamp":"2017-04-13T12:35:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alrai Sector NX-U c2-22", "StarClass":"K" }
+{ "timestamp":"2017-04-13T12:37:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Laksak", "StarClass":"F" }
+{ "timestamp":"2017-04-13T12:55:08Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T12:57:00Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T12:58:23Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T13:00:57Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T13:01:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Scorpii Sector IC-V b2-8", "StarClass":"M" }
+{ "timestamp":"2017-04-13T13:02:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Scorpii Sector GH-V b2-3", "StarClass":"M" }
+{ "timestamp":"2017-04-13T13:03:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Moko Oh", "StarClass":"M" }
+{ "timestamp":"2017-04-13T13:20:32Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T13:23:01Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T13:30:02Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T13:44:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Scorpii Sector GH-V b2-6", "StarClass":"M" }
+{ "timestamp":"2017-04-13T13:48:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Imen", "StarClass":"K" }
+{ "timestamp":"2017-04-13T13:49:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alrai Sector VE-Q b5-7", "StarClass":"M" }
+{ "timestamp":"2017-04-13T13:50:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HR 6496", "StarClass":"F" }
+{ "timestamp":"2017-04-13T13:54:28Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T13:57:12Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T13:59:40Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T14:01:59Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T14:06:25Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T14:09:06Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T14:51:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Gama", "StarClass":"M" }
+{ "timestamp":"2017-04-13T14:52:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alrai Sector VE-Q b5-1", "StarClass":"M" }
+{ "timestamp":"2017-04-13T14:53:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Vanawa", "StarClass":"M" }
+{ "timestamp":"2017-04-13T14:59:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Vanawa", "StarClass":"M" }
+{ "timestamp":"2017-04-13T15:00:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"UBV 15076", "StarClass":"M" }
+{ "timestamp":"2017-04-13T15:23:22Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T15:26:46Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T15:38:25Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T15:45:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Icovit", "StarClass":"M" }
+{ "timestamp":"2017-04-13T15:45:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alrai Sector NS-T b3-4", "StarClass":"M" }
+{ "timestamp":"2017-04-13T15:46:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ba Po", "StarClass":"M" }
+{ "timestamp":"2017-04-13T15:47:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alrai Sector DL-Y d81", "StarClass":"F" }
+{ "timestamp":"2017-04-13T15:49:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 6883", "StarClass":"M" }
+{ "timestamp":"2017-04-13T15:50:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Gunnovale", "StarClass":"K" }
+{ "timestamp":"2017-04-13T15:50:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alrai Sector DL-Y d108", "StarClass":"F" }
+{ "timestamp":"2017-04-13T15:51:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ross 854", "StarClass":"M" }
+{ "timestamp":"2017-04-13T15:53:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alrai Sector HG-X b1-4", "StarClass":"M" }
+{ "timestamp":"2017-04-13T15:53:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ao", "StarClass":"K" }
+{ "timestamp":"2017-04-13T15:55:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Agni", "StarClass":"M" }
+{ "timestamp":"2017-04-13T15:56:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 911-13", "StarClass":"M" }
+{ "timestamp":"2017-04-13T15:57:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 346", "StarClass":"M" }
+{ "timestamp":"2017-04-13T15:58:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nuenets", "StarClass":"G" }
+{ "timestamp":"2017-04-13T15:59:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-13T16:30:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Sosong", "StarClass":"K" }
+{ "timestamp":"2017-04-13T16:31:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Mundii", "StarClass":"M" }
+{ "timestamp":"2017-04-13T16:33:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector SY-R d4-117", "StarClass":"M" }
+{ "timestamp":"2017-04-13T16:34:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector JM-A b15-5", "StarClass":"M" }
+{ "timestamp":"2017-04-13T16:35:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Deciat", "StarClass":"K" }
+{ "timestamp":"2017-04-13T17:44:42Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T17:46:31Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T17:54:41Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-13T17:56:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Qi Lisu", "StarClass":"G" }
+{ "timestamp":"2017-04-13T17:57:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Puppis Sector MC-V b2-7", "StarClass":"M" }
+{ "timestamp":"2017-04-13T17:58:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Timbalderis", "StarClass":"K" }
+{ "timestamp":"2017-04-13T17:59:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-13T18:10:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Crucis Sector IH-V b2-0", "StarClass":"M" }
+{ "timestamp":"2017-04-13T18:11:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Gaula", "StarClass":"K" }
+{ "timestamp":"2017-04-13T18:12:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 70098", "StarClass":"K" }
+{ "timestamp":"2017-04-13T18:13:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector RE-M b22-7", "StarClass":"M" }
+{ "timestamp":"2017-04-13T18:14:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector AR-I b24-6", "StarClass":"M" }
+{ "timestamp":"2017-04-13T18:15:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector FX-G b25-8", "StarClass":"M" }
+{ "timestamp":"2017-04-13T18:16:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe EY-S b58-9", "StarClass":"M" }
+{ "timestamp":"2017-04-13T18:17:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Praea Euq RG-Y b0", "StarClass":"M" }
+{ "timestamp":"2017-04-13T18:18:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 74511", "StarClass":"F" }
+{ "timestamp":"2017-04-13T18:19:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Swoilz BD-E c1-23", "StarClass":"G" }
+{ "timestamp":"2017-04-13T18:20:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 74290", "StarClass":"F" }
+{ "timestamp":"2017-04-14T12:05:32Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-14T12:12:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"BD-01 3500", "StarClass":"K" }
+{ "timestamp":"2017-04-14T12:13:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Dumnona", "StarClass":"K" }
+{ "timestamp":"2017-04-14T12:14:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alrai Sector DL-Y d108", "StarClass":"F" }
+{ "timestamp":"2017-04-14T12:15:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 917-1", "StarClass":"M" }
+{ "timestamp":"2017-04-14T12:16:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Miribusha", "StarClass":"K" }
+{ "timestamp":"2017-04-14T12:17:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Crucis Sector CL-Y c20", "StarClass":"K" }
+{ "timestamp":"2017-04-14T12:18:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Crucis Sector FM-V b2-4", "StarClass":"M" }
+{ "timestamp":"2017-04-14T12:19:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-14T12:35:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bunda", "StarClass":"K" }
+{ "timestamp":"2017-04-14T12:37:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Katta", "StarClass":"M" }
+{ "timestamp":"2017-04-14T12:38:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 4487", "StarClass":"M" }
+{ "timestamp":"2017-04-14T12:51:14Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-14T12:52:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Katta", "StarClass":"M" }
+{ "timestamp":"2017-04-14T12:53:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2435", "StarClass":"M" }
+{ "timestamp":"2017-04-14T12:54:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-14T13:05:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Corycia", "StarClass":"K" }
+{ "timestamp":"2017-04-14T13:06:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Hanggardi", "StarClass":"K" }
+{ "timestamp":"2017-04-14T13:08:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Eravate", "StarClass":"K" }
+{ "timestamp":"2017-04-14T13:22:15Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-17T14:09:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Xi Ophiuchi", "StarClass":"F" }
+{ "timestamp":"2017-04-17T14:10:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nagnatae", "StarClass":"K" }
+{ "timestamp":"2017-04-17T14:12:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-17T14:31:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nuenets", "StarClass":"G" }
+{ "timestamp":"2017-04-17T14:32:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 346", "StarClass":"M" }
+{ "timestamp":"2017-04-17T14:33:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Erlaza", "StarClass":"K" }
+{ "timestamp":"2017-04-17T14:35:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 855-10", "StarClass":"M" }
+{ "timestamp":"2017-04-17T14:36:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 798-25", "StarClass":"M" }
+{ "timestamp":"2017-04-17T14:37:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 353", "StarClass":"M" }
+{ "timestamp":"2017-04-17T14:38:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Brahma", "StarClass":"G" }
+{ "timestamp":"2017-04-17T14:39:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"59 Virginis", "StarClass":"G" }
+{ "timestamp":"2017-04-17T15:22:24Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-17T15:28:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Brahma", "StarClass":"G" }
+{ "timestamp":"2017-04-17T15:30:51Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-17T15:38:17Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-17T15:40:28Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-17T15:48:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"59 Virginis", "StarClass":"G" }
+{ "timestamp":"2017-04-17T16:13:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2661", "StarClass":"DA" }
+{ "timestamp":"2017-04-17T16:14:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 675-76", "StarClass":"M" }
+{ "timestamp":"2017-04-17T16:15:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 734-11", "StarClass":"M" }
+{ "timestamp":"2017-04-17T16:17:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Antevorta", "StarClass":"K" }
+{ "timestamp":"2017-04-17T16:18:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 289", "StarClass":"M" }
+{ "timestamp":"2017-04-17T16:20:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Venne", "StarClass":"G" }
+{ "timestamp":"2017-04-17T16:21:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Samkyha", "StarClass":"G" }
+{ "timestamp":"2017-04-17T16:22:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Puppis Sector JH-V b2-3", "StarClass":"M" }
+{ "timestamp":"2017-04-17T16:23:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"NLTT 21088", "StarClass":"K" }
+{ "timestamp":"2017-04-17T16:24:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Xingga", "StarClass":"M" }
+{ "timestamp":"2017-04-17T16:25:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Namte", "StarClass":"M" }
+{ "timestamp":"2017-04-17T16:26:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Grendel", "StarClass":"G" }
+{ "timestamp":"2017-04-17T16:27:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Herfang", "StarClass":"G" }
+{ "timestamp":"2017-04-17T16:28:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Puppis Sector FL-Y c7", "StarClass":"K" }
+{ "timestamp":"2017-04-17T16:29:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector KH-A b15-4", "StarClass":"M" }
+{ "timestamp":"2017-04-17T16:30:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector EG-N c7-26", "StarClass":"M" }
+{ "timestamp":"2017-04-17T16:31:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector EG-N c7-23", "StarClass":"K" }
+{ "timestamp":"2017-04-17T16:32:48Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Deciat", "StarClass":"K" }
+{ "timestamp":"2017-04-17T16:42:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Xinca", "StarClass":"F" }
+{ "timestamp":"2017-04-17T16:46:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Djiwal", "StarClass":"K" }
+{ "timestamp":"2017-04-17T16:51:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Smei Ti", "StarClass":"M" }
+{ "timestamp":"2017-04-17T16:52:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Qi Lisu", "StarClass":"G" }
+{ "timestamp":"2017-04-18T16:11:28Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-18T16:16:58Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-18T16:21:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lie Yupik", "StarClass":"G" }
+{ "timestamp":"2017-04-18T16:22:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 3290", "StarClass":"K" }
+{ "timestamp":"2017-04-18T16:26:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Puppis Sector GB-X b1-5", "StarClass":"M" }
+{ "timestamp":"2017-04-18T16:27:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Puppis Sector HW-W b1-6", "StarClass":"M" }
+{ "timestamp":"2017-04-18T16:27:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Orishpucho", "StarClass":"M" }
+{ "timestamp":"2017-04-18T16:31:40Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-18T17:50:18Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-18T17:51:55Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-18T17:53:21Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-18T17:58:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Zibel", "StarClass":"G" }
+{ "timestamp":"2017-04-18T18:00:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Neche", "StarClass":"M" }
+{ "timestamp":"2017-04-18T18:01:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Puppis Sector PI-T b3-5", "StarClass":"M" }
+{ "timestamp":"2017-04-18T18:02:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Puppis Sector OI-T b3-6", "StarClass":"M" }
+{ "timestamp":"2017-04-18T18:02:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2435", "StarClass":"M" }
+{ "timestamp":"2017-04-18T18:03:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-18T18:23:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Sosong", "StarClass":"K" }
+{ "timestamp":"2017-04-18T18:32:09Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-19T14:43:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2335", "StarClass":"M" }
+{ "timestamp":"2017-04-19T14:44:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 4730", "StarClass":"M" }
+{ "timestamp":"2017-04-19T14:47:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"78 Ursae Majoris", "StarClass":"F" }
+{ "timestamp":"2017-04-19T15:24:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 331", "StarClass":"M" }
+{ "timestamp":"2017-04-19T15:33:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Megrez", "StarClass":"A" }
+{ "timestamp":"2017-04-19T15:35:48Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-19T15:47:30Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-19T15:54:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"He Bo", "StarClass":"A" }
+{ "timestamp":"2017-04-19T15:58:52Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-19T16:07:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 14019", "StarClass":"DA" }
+{ "timestamp":"2017-04-19T16:08:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Khernidjal", "StarClass":"F" }
+{ "timestamp":"2017-04-19T16:39:18Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-19T16:44:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"STF 1774", "StarClass":"F" }
+{ "timestamp":"2017-04-19T16:52:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"78 Ursae Majoris", "StarClass":"F" }
+{ "timestamp":"2017-04-19T16:57:06Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-19T17:10:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 131-66", "StarClass":"DC" }
+{ "timestamp":"2017-04-19T17:34:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ethgreze", "StarClass":"K" }
+{ "timestamp":"2017-04-19T17:40:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"78 Ursae Majoris", "StarClass":"F" }
+{ "timestamp":"2017-04-19T17:53:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"He Bo", "StarClass":"A" }
+{ "timestamp":"2017-04-19T18:03:14Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-19T18:12:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Doris", "StarClass":"K" }
+{ "timestamp":"2017-04-19T18:36:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"STF 1774", "StarClass":"F" }
+{ "timestamp":"2017-04-19T18:46:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"78 Ursae Majoris", "StarClass":"F" }
+{ "timestamp":"2017-04-19T19:01:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"STF 1774", "StarClass":"F" }
+{ "timestamp":"2017-04-19T19:13:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 331", "StarClass":"M" }
+{ "timestamp":"2017-04-19T19:15:50Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-19T19:30:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"G 123-49", "StarClass":"M" }
+{ "timestamp":"2017-04-19T19:31:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"78 Ursae Majoris", "StarClass":"F" }
+{ "timestamp":"2017-04-20T10:07:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tiethay", "StarClass":"K" }
+{ "timestamp":"2017-04-20T10:21:46Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T10:28:59Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T10:32:51Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T10:33:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Amber", "StarClass":"K" }
+{ "timestamp":"2017-04-20T10:42:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Hera", "StarClass":"G" }
+{ "timestamp":"2017-04-20T10:54:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"78 Ursae Majoris", "StarClass":"F" }
+{ "timestamp":"2017-04-20T10:57:15Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T11:01:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 331", "StarClass":"M" }
+{ "timestamp":"2017-04-20T11:13:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Kaal", "StarClass":"M" }
+{ "timestamp":"2017-04-20T11:26:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"78 Ursae Majoris", "StarClass":"F" }
+{ "timestamp":"2017-04-20T11:36:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Khernidjal", "StarClass":"F" }
+{ "timestamp":"2017-04-20T11:47:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 379-51", "StarClass":"M" }
+{ "timestamp":"2017-04-20T11:48:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"NLTT 34755", "StarClass":"M" }
+{ "timestamp":"2017-04-20T11:49:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Xucuri", "StarClass":"K" }
+{ "timestamp":"2017-04-20T11:50:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lave", "StarClass":"K" }
+{ "timestamp":"2017-04-20T11:59:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Chuelchs", "StarClass":"M" }
+{ "timestamp":"2017-04-20T11:59:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-20T12:07:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alchita", "StarClass":"F" }
+{ "timestamp":"2017-04-20T12:10:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wolf 414", "StarClass":"M" }
+{ "timestamp":"2017-04-20T12:11:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2764a", "StarClass":"M" }
+{ "timestamp":"2017-04-20T12:11:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ross 991", "StarClass":"M" }
+{ "timestamp":"2017-04-20T12:12:48Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"78 Ursae Majoris", "StarClass":"F" }
+{ "timestamp":"2017-04-20T13:04:14Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T13:13:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"G 123-8", "StarClass":"K" }
+{ "timestamp":"2017-04-20T13:26:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Diadem", "StarClass":"F" }
+{ "timestamp":"2017-04-20T13:27:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Cybele", "StarClass":"G" }
+{ "timestamp":"2017-04-20T13:28:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Crucis Sector YE-A d104", "StarClass":"G" }
+{ "timestamp":"2017-04-20T13:29:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lave", "StarClass":"K" }
+{ "timestamp":"2017-04-20T13:39:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Turdetani", "StarClass":"M" }
+{ "timestamp":"2017-04-20T13:40:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Panopi", "StarClass":"M" }
+{ "timestamp":"2017-04-20T13:41:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-20T13:50:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alchita", "StarClass":"F" }
+{ "timestamp":"2017-04-20T13:51:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wolf 414", "StarClass":"M" }
+{ "timestamp":"2017-04-20T13:52:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2764a", "StarClass":"M" }
+{ "timestamp":"2017-04-20T13:53:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ross 991", "StarClass":"M" }
+{ "timestamp":"2017-04-20T13:54:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"78 Ursae Majoris", "StarClass":"F" }
+{ "timestamp":"2017-04-20T13:57:48Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T14:05:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 131-66", "StarClass":"DC" }
+{ "timestamp":"2017-04-20T14:23:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Kaha'i", "StarClass":"K" }
+{ "timestamp":"2017-04-20T14:24:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 278", "StarClass":"M" }
+{ "timestamp":"2017-04-20T14:33:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2522", "StarClass":"DA" }
+{ "timestamp":"2017-04-20T14:35:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 131-66", "StarClass":"DC" }
+{ "timestamp":"2017-04-20T15:02:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 320-359", "StarClass":"M" }
+{ "timestamp":"2017-04-20T15:03:48Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Puppis Sector FW-W c1-22", "StarClass":"K" }
+{ "timestamp":"2017-04-20T15:04:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-20T15:08:32Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T15:14:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"CPD-51 3323", "StarClass":"K" }
+{ "timestamp":"2017-04-20T15:15:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Puppis Sector MC-V b2-7", "StarClass":"M" }
+{ "timestamp":"2017-04-20T15:16:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Cofalyawa", "StarClass":"M" }
+{ "timestamp":"2017-04-20T15:17:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector KH-A b15-4", "StarClass":"M" }
+{ "timestamp":"2017-04-20T15:19:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Deciat", "StarClass":"K" }
+{ "timestamp":"2017-04-20T15:32:20Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T15:33:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Hyades Sector QD-S c4-14", "StarClass":"M" }
+{ "timestamp":"2017-04-20T15:34:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Trianguli Sector FB-W a2-1", "StarClass":"T" }
+{ "timestamp":"2017-04-20T15:35:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Trianguli Sector TD-B a3", "StarClass":"T" }
+{ "timestamp":"2017-04-20T15:36:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Hyades Sector TT-Q b5-5", "StarClass":"M" }
+{ "timestamp":"2017-04-20T15:37:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Hyades Sector KH-U b3-6", "StarClass":"M" }
+{ "timestamp":"2017-04-20T15:38:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Hyades Sector HW-V b2-5", "StarClass":"M" }
+{ "timestamp":"2017-04-20T15:39:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Hyades Sector BV-Y c17", "StarClass":"K" }
+{ "timestamp":"2017-04-20T15:40:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Aries Dark Region IM-V c2-9", "StarClass":"M" }
+{ "timestamp":"2017-04-20T15:41:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 17837", "StarClass":"F" }
+{ "timestamp":"2017-04-20T15:43:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 17704", "StarClass":"A" }
+{ "timestamp":"2017-04-20T15:44:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Maia", "StarClass":"B" }
+{ "timestamp":"2017-04-20T15:55:41Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T16:04:19Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T16:14:46Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 17225", "StarClass":"F" }
+{ "timestamp":"2017-04-20T16:18:04Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T16:19:57Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T16:29:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pleiades Sector DL-X b1-1", "StarClass":"M" }
+{ "timestamp":"2017-04-20T16:30:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pleiades Sector YJ-Z b0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T16:31:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Taurus Dark Region EL-Y d44", "StarClass":"F" }
+{ "timestamp":"2017-04-20T16:33:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Taurus Dark Region JM-V b2-2", "StarClass":"M" }
+{ "timestamp":"2017-04-20T16:42:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Taurus Dark Region BA-Z b0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T16:44:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 22409", "StarClass":"F" }
+{ "timestamp":"2017-04-20T16:47:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe DB-V b22-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T16:48:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe KH-M c10-6", "StarClass":"K" }
+{ "timestamp":"2017-04-20T16:49:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe GB-O c9-4", "StarClass":"M" }
+{ "timestamp":"2017-04-20T16:50:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe DV-P c8-3", "StarClass":"K" }
+{ "timestamp":"2017-04-20T16:51:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe ZO-R c7-9", "StarClass":"K" }
+{ "timestamp":"2017-04-20T16:52:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe UN-J b15-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T16:53:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe IO-X d2-22", "StarClass":"F" }
+{ "timestamp":"2017-04-20T16:54:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe EP-Q b11-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T16:55:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe BJ-S b10-1", "StarClass":"M" }
+{ "timestamp":"2017-04-20T16:56:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe SJ-I b9-1", "StarClass":"M" }
+{ "timestamp":"2017-04-20T16:57:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 26566", "StarClass":"O" }
+{ "timestamp":"2017-04-20T17:06:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe XE-R c4-0", "StarClass":"K" }
+{ "timestamp":"2017-04-20T17:07:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe TO-I b9-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T17:08:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe KM-W d1-35", "StarClass":"G" }
+{ "timestamp":"2017-04-20T17:09:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe WO-I b9-2", "StarClass":"M" }
+{ "timestamp":"2017-04-20T17:10:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe AA-H b10-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T17:11:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe DQ-P c5-9", "StarClass":"M" }
+{ "timestamp":"2017-04-20T17:12:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe FL-F b11-1", "StarClass":"M" }
+{ "timestamp":"2017-04-20T17:13:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe EQ-P c5-4", "StarClass":"G" }
+{ "timestamp":"2017-04-20T17:16:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe MR-D b12-1", "StarClass":"M" }
+{ "timestamp":"2017-04-20T17:17:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe MW-D b12-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T17:17:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe EV-P c5-2", "StarClass":"K" }
+{ "timestamp":"2017-04-20T17:19:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe LG-E b12-1", "StarClass":"M" }
+{ "timestamp":"2017-04-20T17:20:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe QM-C b13-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T17:21:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe JG-O c6-3", "StarClass":"K" }
+{ "timestamp":"2017-04-20T17:22:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe QG-E b12-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T17:23:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe GA-Q c5-4", "StarClass":"K" }
+{ "timestamp":"2017-04-20T17:24:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe RL-E b12-1", "StarClass":"M" }
+{ "timestamp":"2017-04-20T17:25:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HD 58384", "StarClass":"B" }
+{ "timestamp":"2017-04-20T17:46:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe SQ-E b12-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T17:47:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe UQ-E b12-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T19:44:26Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-20T19:45:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe RK-G b11-1", "StarClass":"M" }
+{ "timestamp":"2017-04-20T19:46:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe RP-G b11-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T19:47:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe SP-G b11-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T19:48:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe AR-E b12-1", "StarClass":"M" }
+{ "timestamp":"2017-04-20T19:49:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe MF-Q c5-4", "StarClass":"K" }
+{ "timestamp":"2017-04-20T19:50:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe IZ-R c4-6", "StarClass":"K" }
+{ "timestamp":"2017-04-20T19:51:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe TO-I b10-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T19:52:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe GT-T c3-3", "StarClass":"K" }
+{ "timestamp":"2017-04-20T19:53:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe LZ-R c4-1", "StarClass":"G" }
+{ "timestamp":"2017-04-20T19:55:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe PC-M b8-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T19:56:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe RC-M b8-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T19:57:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe OW-N b7-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T19:58:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe OB-O b7-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T19:59:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe LV-P b6-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:00:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe LA-Q b6-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:01:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe OV-P b6-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:02:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe PQ-Y d25", "StarClass":"A" }
+{ "timestamp":"2017-04-20T20:08:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe PQ-Y d1", "StarClass":"F" }
+{ "timestamp":"2017-04-20T20:11:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Plio Eurl JE-O b7-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:12:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Plio Eurl BW-V c2-3", "StarClass":"K" }
+{ "timestamp":"2017-04-20T20:13:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Plio Eurl DB-X d1-0", "StarClass":"F" }
+{ "timestamp":"2017-04-20T20:14:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Plio Eurl SK-M b8-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:15:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Plio Eurl RP-M b8-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:18:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Plio Eurl RU-M b8-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:18:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Plio Eurl EB-X d1-0", "StarClass":"A" }
+{ "timestamp":"2017-04-20T20:29:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Plio Eurl SJ-O b7-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:32:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Plio Eurl MX-T c3-4", "StarClass":"G" }
+{ "timestamp":"2017-04-20T20:33:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Plio Eurl DQ-Y d3", "StarClass":"A" }
+{ "timestamp":"2017-04-20T20:35:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Plio Eurl DQ-Y d17", "StarClass":"F" }
+{ "timestamp":"2017-04-20T20:37:46Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Plio Eurl GG-N b7-1", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:42:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector WK-P b9-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:43:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector BL-U c4-5", "StarClass":"K" }
+{ "timestamp":"2017-04-20T20:45:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector ZZ-X d1-43", "StarClass":"F" }
+{ "timestamp":"2017-04-20T20:49:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector GM-O b9-1", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:50:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector WU-A a20-0", "StarClass":"Y" }
+{ "timestamp":"2017-04-20T20:51:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector KR-P b8-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:52:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector MM-P b8-0", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:53:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector UI-N b9-1", "StarClass":"M" }
+{ "timestamp":"2017-04-20T20:55:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"VY Canis Majoris", "StarClass":"M" }
+{ "timestamp":"2017-04-21T12:34:35Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T12:35:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector QS-R c5-5", "StarClass":"K" }
+{ "timestamp":"2017-04-21T12:37:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector CQ-J b11-2", "StarClass":"M" }
+{ "timestamp":"2017-04-21T12:37:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector DB-I b12-0", "StarClass":"TTS" }
+{ "timestamp":"2017-04-21T12:38:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector GH-G b13-2", "StarClass":"M" }
+{ "timestamp":"2017-04-21T12:39:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector NT-C b15-1", "StarClass":"M" }
+{ "timestamp":"2017-04-21T12:40:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector XP-M c8-10", "StarClass":"K" }
+{ "timestamp":"2017-04-21T12:42:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector BW-K c9-1", "StarClass":"G" }
+{ "timestamp":"2017-04-21T12:43:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector ZR-V b18-3", "StarClass":"M" }
+{ "timestamp":"2017-04-21T12:44:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector CY-T b19-1", "StarClass":"M" }
+{ "timestamp":"2017-04-21T12:45:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector EE-S b20-2", "StarClass":"M" }
+{ "timestamp":"2017-04-21T12:51:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector GI-H c11-2", "StarClass":"K" }
+{ "timestamp":"2017-04-21T12:51:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 140 Sector JW-U b3-2", "StarClass":"M" }
+{ "timestamp":"2017-04-21T12:53:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 140 Sector KH-T b4-2", "StarClass":"M" }
+{ "timestamp":"2017-04-21T12:54:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 140 Sector RT-P b6-2", "StarClass":"M" }
+{ "timestamp":"2017-04-21T12:55:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 140 Sector FB-X d1-56", "StarClass":"F" }
+{ "timestamp":"2017-04-21T13:20:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 140 Sector TP-M b8-3", "StarClass":"M" }
+{ "timestamp":"2017-04-21T13:21:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 140 Sector EB-X d1-17", "StarClass":"A" }
+{ "timestamp":"2017-04-21T13:30:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 140 Sector EB-X d1-45", "StarClass":"A" }
+{ "timestamp":"2017-04-21T13:31:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 38064", "StarClass":"O" }
+{ "timestamp":"2017-04-21T13:39:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector EN-Z b30-1", "StarClass":"M" }
+{ "timestamp":"2017-04-21T13:40:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector UF-N d7-31", "StarClass":"A" }
+{ "timestamp":"2017-04-21T13:44:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector SR-Y c15-0", "StarClass":"K" }
+{ "timestamp":"2017-04-21T13:47:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 132 Sector YL-L d8-24", "StarClass":"A" }
+{ "timestamp":"2017-04-21T13:52:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 173 Sector CS-Q c6-12", "StarClass":"K" }
+{ "timestamp":"2017-04-21T13:53:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 173 Sector BR-U d3-88", "StarClass":"K" }
+{ "timestamp":"2017-04-21T13:55:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 173 Sector ED-P c7-17", "StarClass":"K" }
+{ "timestamp":"2017-04-21T13:55:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 173 Sector CI-P c7-7", "StarClass":"K" }
+{ "timestamp":"2017-04-21T13:56:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 173 Sector ET-N c8-21", "StarClass":"K" }
+{ "timestamp":"2017-04-21T13:57:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 173 Sector CY-N c8-4", "StarClass":"K" }
+{ "timestamp":"2017-04-21T13:58:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HD 73457", "StarClass":"B" }
+{ "timestamp":"2017-04-21T14:00:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 173 Sector AB-C b17-5", "StarClass":"M" }
+{ "timestamp":"2017-04-21T14:02:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 173 Sector AW-B b17-3", "StarClass":"M" }
+{ "timestamp":"2017-04-21T14:03:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 173 Sector BC-T d4-72", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:04:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe PR-U c16-16", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:05:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe DJ-P b33-6", "StarClass":"M" }
+{ "timestamp":"2017-04-21T14:06:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe BJ-P b33-3", "StarClass":"M" }
+{ "timestamp":"2017-04-21T14:07:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe VD-K d8-101", "StarClass":"F" }
+{ "timestamp":"2017-04-21T14:08:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe AE-P b33-6", "StarClass":"M" }
+{ "timestamp":"2017-04-21T14:09:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe UD-K d8-46", "StarClass":"G" }
+{ "timestamp":"2017-04-21T14:10:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe MM-U c16-8", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:11:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe NH-U c16-19", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:12:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 38716", "StarClass":"O" }
+{ "timestamp":"2017-04-21T14:20:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe MH-U c16-31", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:21:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe QN-S c17-30", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:22:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe PN-S c17-32", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:23:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe ST-Q c18-18", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:24:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe RT-Q c18-33", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:25:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe VZ-O c19-15", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:25:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe UZ-O c19-21", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:27:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe XF-N c20-35", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:28:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe XF-N c20-5", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:28:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe WF-N c20-19", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:30:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe VF-N c20-32", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:32:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe OI-R c21-14", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:35:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe XL-L c21-19", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:36:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe NI-R c21-7", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:39:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe WL-L c21-10", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:40:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 36897", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:41:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector CA-P c6-25", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:42:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector BA-P c6-17", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:44:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Tolun", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:45:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector EG-C b14-3", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:46:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Andel", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:47:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ross 623", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:48:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"DX Leonis", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:49:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Kaha'i", "StarClass":"K" }
+{ "timestamp":"2017-04-21T14:50:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 131-66", "StarClass":"DC" }
+{ "timestamp":"2017-04-21T15:04:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"78 Ursae Majoris", "StarClass":"F" }
+{ "timestamp":"2017-04-21T15:11:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ethgreze", "StarClass":"K" }
+{ "timestamp":"2017-04-21T15:23:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Alioth", "StarClass":"A" }
+{ "timestamp":"2017-04-21T15:52:38Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T15:57:03Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T16:14:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"BD+29 2405", "StarClass":"K" }
+{ "timestamp":"2017-04-21T16:15:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wolf 485a", "StarClass":"DA" }
+{ "timestamp":"2017-04-21T16:17:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LDS 413", "StarClass":"K" }
+{ "timestamp":"2017-04-21T16:19:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-21T16:32:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bunda", "StarClass":"K" }
+{ "timestamp":"2017-04-21T16:36:38Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T16:38:54Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T16:41:23Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T16:44:42Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T16:46:25Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T16:54:59Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T16:56:49Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T16:58:41Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T17:08:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-21T17:15:37Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T18:14:18Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T18:15:48Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T18:25:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bhil Mina", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:26:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Chipiapoos", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:27:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Djapati", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:28:46Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LAWD 13", "StarClass":"DA" }
+{ "timestamp":"2017-04-21T18:29:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Iah Lanitei", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:31:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Jimavi", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:32:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Azrael", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:33:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ngun", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:33:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"ICZ DQ-Y c10", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:34:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Chira", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:36:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Chuquiar", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:37:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Gliese 9084", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:38:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Kao Guojiu", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:39:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Cerrodi", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:40:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Belung", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:41:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Kuwemaki", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:52:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Oicornga", "StarClass":"K" }
+{ "timestamp":"2017-04-21T18:53:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 14788", "StarClass":"G" }
+{ "timestamp":"2017-04-21T18:54:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector IL-V b16-2", "StarClass":"M" }
+{ "timestamp":"2017-04-21T18:55:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lwena", "StarClass":"M" }
+{ "timestamp":"2017-04-21T19:03:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector GA-X b15-2", "StarClass":"TTS" }
+{ "timestamp":"2017-04-21T19:03:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 14257", "StarClass":"F" }
+{ "timestamp":"2017-04-21T19:05:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe DH-L c24-15", "StarClass":"G" }
+{ "timestamp":"2017-04-21T19:05:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Kuwemaki", "StarClass":"K" }
+{ "timestamp":"2017-04-21T19:18:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Cerrodi", "StarClass":"K" }
+{ "timestamp":"2017-04-21T19:20:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector GV-W b15-2", "StarClass":"M" }
+{ "timestamp":"2017-04-21T19:21:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shui Wei Sector MR-W b1-3", "StarClass":"M" }
+{ "timestamp":"2017-04-21T19:22:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 14527", "StarClass":"F" }
+{ "timestamp":"2017-04-21T19:24:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 1593", "StarClass":"M" }
+{ "timestamp":"2017-04-21T19:24:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"CD-47 990", "StarClass":"F" }
+{ "timestamp":"2017-04-21T19:26:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shui Wei Sector AQ-X b1-3", "StarClass":"M" }
+{ "timestamp":"2017-04-21T19:26:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"NLTT 11599", "StarClass":"K" }
+{ "timestamp":"2017-04-21T19:27:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Puppis Sector FR-N a6-1", "StarClass":"TTS" }
+{ "timestamp":"2017-04-21T19:28:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Puppis Sector BW-N a6-0", "StarClass":"Y" }
+{ "timestamp":"2017-04-21T19:29:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wolf 1453", "StarClass":"M" }
+{ "timestamp":"2017-04-21T19:30:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lalande 18115", "StarClass":"K" }
+{ "timestamp":"2017-04-21T19:31:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 64-194", "StarClass":"M" }
+{ "timestamp":"2017-04-21T19:33:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LB 2449", "StarClass":"DA" }
+{ "timestamp":"2017-04-21T19:33:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"He Bo", "StarClass":"A" }
+{ "timestamp":"2017-04-21T19:52:27Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T21:19:50Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-21T21:27:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Danu", "StarClass":"M" }
+{ "timestamp":"2017-04-21T21:28:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Diadem", "StarClass":"F" }
+{ "timestamp":"2017-04-21T21:29:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 675-76", "StarClass":"M" }
+{ "timestamp":"2017-04-21T21:30:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 317", "StarClass":"M" }
+{ "timestamp":"2017-04-21T21:31:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-04-22T12:12:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LFT 926", "StarClass":"M" }
+{ "timestamp":"2017-04-22T12:42:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Puppis Sector ON-T b3-5", "StarClass":"M" }
+{ "timestamp":"2017-04-22T12:43:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Qi Lisu", "StarClass":"G" }
+{ "timestamp":"2017-04-22T12:44:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Deciat", "StarClass":"K" }
+{ "timestamp":"2017-04-22T12:57:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Har Ibori", "StarClass":"M" }
+{ "timestamp":"2017-04-22T12:59:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Hu Jini", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:00:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector BG-T b18-3", "StarClass":"M" }
+{ "timestamp":"2017-04-22T13:01:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Karaikda", "StarClass":"M" }
+{ "timestamp":"2017-04-22T13:03:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector NO-M b22-0", "StarClass":"M" }
+{ "timestamp":"2017-04-22T13:05:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector RU-K b23-0", "StarClass":"M" }
+{ "timestamp":"2017-04-22T13:06:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector XL-H b25-5", "StarClass":"M" }
+{ "timestamp":"2017-04-22T13:08:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 285 Sector CH-B c14-1", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:10:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 76797", "StarClass":"A" }
+{ "timestamp":"2017-04-22T13:11:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Praea Euq HW-W c1-23", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:13:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Praea Euq VJ-Q b5-5", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:14:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lupus Dark Region AQ-Y c8", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:15:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 79364", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:17:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lupus Dark Region IC-V c2-7", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:23:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"IC 4604 Sector ZJ-A c10", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:24:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"IC 4604 Sector DQ-Y c0", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:25:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"IC 4604 Sector HW-W c1-6", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:26:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"IC 4604 Sector FB-X c1-16", "StarClass":"M" }
+{ "timestamp":"2017-04-22T13:31:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"IC 4604 Sector FB-X c1-19", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:33:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"IC 4604 Sector WZ-P b5-4", "StarClass":"M" }
+{ "timestamp":"2017-04-22T13:34:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"IC 4604 Sector DM-M b7-3", "StarClass":"M" }
+{ "timestamp":"2017-04-22T13:36:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Snake Sector IM-V c2-6", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:37:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Snake Sector ON-T c3-9", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:38:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 359 Sector IW-B c14-18", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:39:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 359 Sector OX-Z c14-25", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:41:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Col 359 Sector OX-Z c14-18", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:45:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"M7 Sector KI-Z b1-8", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:46:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"M7 Sector XU-X c1-4", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:47:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"M7 Sector ZP-X c1-2", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:49:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"M7 Sector DW-V c2-18", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:50:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"M7 Sector PZ-N b7-6", "StarClass":"M" }
+{ "timestamp":"2017-04-22T13:50:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"M7 Sector KC-V d2-87", "StarClass":"F" }
+{ "timestamp":"2017-04-22T13:52:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"M7 Sector PY-R c4-5", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:52:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"M7 Sector PZ-F b11-3", "StarClass":"M" }
+{ "timestamp":"2017-04-22T13:53:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"M7 Sector ZF-O c6-0", "StarClass":"M" }
+{ "timestamp":"2017-04-22T13:54:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"M7 Sector BB-O c6-14", "StarClass":"K" }
+{ "timestamp":"2017-04-22T13:55:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Swoilz GX-T c19-12", "StarClass":"M" }
+{ "timestamp":"2017-04-22T13:56:46Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HD 173770", "StarClass":"B" }
+{ "timestamp":"2017-04-22T14:05:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Swoiwns OO-F d12-29", "StarClass":"G" }
+{ "timestamp":"2017-04-22T14:08:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Swoiwns DD-L c24-2", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:13:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Swoiwns EO-J c25-6", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:14:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Swoiwns IU-H c26-3", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:17:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Swoiwns HU-H c26-10", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:17:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Swoiwns KA-G c27-6", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:18:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Swoiwns OG-E c28-4", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:19:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Swoiwns LL-E c28-4", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:20:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Swoiwns OR-C c29-23", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:21:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleia Eohn UI-F c23", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:22:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleia Eohn YO-D c1-12", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:23:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleia Eohn BV-B c2-2", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:26:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleia Eohn DG-A c3-0", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:27:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleia Eohn NX-A d1-56", "StarClass":"A" }
+{ "timestamp":"2017-04-22T14:28:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleia Eohn FM-Y c3-11", "StarClass":"K" }
+{ "timestamp":"2017-04-22T14:29:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HD 170604", "StarClass":"B" }
+{ "timestamp":"2017-04-22T16:11:02Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-22T16:12:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleia Eohn HX-W c4-4", "StarClass":"K" }
+{ "timestamp":"2017-04-22T16:13:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleia Eohn II-V c5-8", "StarClass":"K" }
+{ "timestamp":"2017-04-22T16:15:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleia Eohn RO-X d2-60", "StarClass":"A" }
+{ "timestamp":"2017-04-22T21:17:47Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-22T21:18:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleia Eohn LO-T c6-6", "StarClass":"K" }
+{ "timestamp":"2017-04-22T21:19:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua ZX-L c7-13", "StarClass":"K" }
+{ "timestamp":"2017-04-22T21:20:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua DE-K c8-30", "StarClass":"K" }
+{ "timestamp":"2017-04-22T21:21:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua GK-I c9-31", "StarClass":"K" }
+{ "timestamp":"2017-04-22T21:22:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua KQ-G c10-12", "StarClass":"K" }
+{ "timestamp":"2017-04-22T21:23:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua JQ-G c10-31", "StarClass":"K" }
+{ "timestamp":"2017-04-22T21:24:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua LB-F c11-10", "StarClass":"K" }
+{ "timestamp":"2017-04-22T21:25:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua OH-D c12-9", "StarClass":"K" }
+{ "timestamp":"2017-04-22T21:26:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HD 167971", "StarClass":"O" }
+{ "timestamp":"2017-04-23T11:38:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua OH-B b27-8", "StarClass":"M" }
+{ "timestamp":"2017-04-23T11:39:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua TY-X b28-0", "StarClass":"M" }
+{ "timestamp":"2017-04-23T11:40:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua AL-U b30-3", "StarClass":"M" }
+{ "timestamp":"2017-04-23T11:41:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua CG-W c15-18", "StarClass":"K" }
+{ "timestamp":"2017-04-23T11:42:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua BG-W c15-25", "StarClass":"K" }
+{ "timestamp":"2017-04-23T11:43:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua FM-U c16-24", "StarClass":"K" }
+{ "timestamp":"2017-04-23T11:44:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua IS-S c17-4", "StarClass":"K" }
+{ "timestamp":"2017-04-23T11:45:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua MY-Q c18-16", "StarClass":"K" }
+{ "timestamp":"2017-04-23T11:46:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua QE-P c19-6", "StarClass":"K" }
+{ "timestamp":"2017-04-23T11:47:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua XP-G d10-30", "StarClass":"A" }
+{ "timestamp":"2017-04-23T11:48:46Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua XQ-L c21-20", "StarClass":"K" }
+{ "timestamp":"2017-04-23T11:49:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua AX-J c22-10", "StarClass":"K" }
+{ "timestamp":"2017-04-23T11:50:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua ED-I c23-7", "StarClass":"K" }
+{ "timestamp":"2017-04-23T11:51:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua IJ-G c24-7", "StarClass":"K" }
+{ "timestamp":"2017-04-23T11:52:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua FC-D d12-40", "StarClass":"A" }
+{ "timestamp":"2017-04-23T11:55:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua LP-E c25-24", "StarClass":"K" }
+{ "timestamp":"2017-04-23T11:56:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua II-B d13-38", "StarClass":"A" }
+{ "timestamp":"2017-04-23T11:57:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bleae Thua II-B d13-77", "StarClass":"N" }
+{ "timestamp":"2017-04-23T11:59:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Smojue CK-A c6", "StarClass":"K" }
+{ "timestamp":"2017-04-23T12:02:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Smojue LG-X b1-3", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:03:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Smojue OM-V b2-3", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:04:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Smojue SN-T b3-3", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:05:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Smojue UT-R b4-3", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:06:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Smojue ZK-O b6-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:07:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Smojue BR-M b7-5", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:11:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Smojue GR-W d1-56", "StarClass":"A" }
+{ "timestamp":"2017-04-23T12:12:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Smojue QO-R c4-0", "StarClass":"K" }
+{ "timestamp":"2017-04-23T12:14:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa WG-H b10-5", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:15:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa AR-P c5-0", "StarClass":"G" }
+{ "timestamp":"2017-04-23T12:17:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa AT-U d2-92", "StarClass":"F" }
+{ "timestamp":"2017-04-23T12:18:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa DZ-B b13-4", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:22:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa KL-Y b14-2", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:23:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa MR-W b15-0", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:24:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa NR-W b15-4", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:26:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa PX-U b16-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:27:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa PI-T b17-3", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:28:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa IU-I c9-19", "StarClass":"K" }
+{ "timestamp":"2017-04-23T12:29:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa UU-P b19-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:30:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa DK-R d4-82", "StarClass":"F" }
+{ "timestamp":"2017-04-23T12:32:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa UA-O b20-4", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:33:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa WG-M b21-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:34:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa MG-F c11-20", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:35:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa BA-A g2", "StarClass":"O" }
+{ "timestamp":"2017-04-23T12:37:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa FQ-P d5-30", "StarClass":"A" }
+{ "timestamp":"2017-04-23T12:42:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa EZ-G b24-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:43:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa TS-B c13-3", "StarClass":"G" }
+{ "timestamp":"2017-04-23T12:45:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa SC-A b28-4", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:46:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa ZJ-Y c14-2", "StarClass":"K" }
+{ "timestamp":"2017-04-23T12:47:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa DL-T b31-2", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:48:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa EB-V c16-12", "StarClass":"K" }
+{ "timestamp":"2017-04-23T12:49:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa MI-O b34-0", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:50:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa IH-T c17-11", "StarClass":"K" }
+{ "timestamp":"2017-04-23T12:53:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa KS-R c18-8", "StarClass":"K" }
+{ "timestamp":"2017-04-23T12:54:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa DI-E b40-2", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:55:46Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa LU-A b42-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:57:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa SG-X b43-3", "StarClass":"M" }
+{ "timestamp":"2017-04-23T12:58:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa XV-K c22-2", "StarClass":"K" }
+{ "timestamp":"2017-04-23T12:59:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa YK-F d11-1", "StarClass":"A" }
+{ "timestamp":"2017-04-23T13:02:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa HV-O b48-2", "StarClass":"M" }
+{ "timestamp":"2017-04-23T13:08:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa MR-L b50-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T13:09:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa GX-B d13-10", "StarClass":"A" }
+{ "timestamp":"2017-04-23T13:11:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa IE-E c26-5", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:12:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa BG-D b55-0", "StarClass":"M" }
+{ "timestamp":"2017-04-23T13:13:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa NV-A c28-8", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:15:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Thaa HI-A d14-22", "StarClass":"F" }
+{ "timestamp":"2017-04-23T13:16:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa RV-D b1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T13:18:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa YH-A b2-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T13:19:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa ZJ-A e3", "StarClass":"B" }
+{ "timestamp":"2017-04-23T13:22:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa DK-Y c1-3", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:23:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa HQ-W c2-1", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:24:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa LW-U c3-0", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:25:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa KW-U c3-0", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:26:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa HG-X d1-17", "StarClass":"A" }
+{ "timestamp":"2017-04-23T13:30:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa TD-R c5-8", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:31:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa XJ-P c6-3", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:32:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa OS-T d3-33", "StarClass":"A" }
+{ "timestamp":"2017-04-23T13:33:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa OS-T d3-38", "StarClass":"F" }
+{ "timestamp":"2017-04-23T13:35:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa CB-M c8-7", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:40:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa RP-S b19-0", "StarClass":"M" }
+{ "timestamp":"2017-04-23T13:41:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa UV-Q b20-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T13:43:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa PO-G c11-8", "StarClass":"M" }
+{ "timestamp":"2017-04-23T13:44:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa KU-J b24-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T13:45:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa TB-G b26-0", "StarClass":"M" }
+{ "timestamp":"2017-04-23T13:46:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa ZS-C b28-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T13:48:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa CR-M d7-44", "StarClass":"F" }
+{ "timestamp":"2017-04-23T13:51:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa HT-X c15-9", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:52:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa LZ-V c16-9", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:53:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa KZ-V c16-13", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:56:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa GX-K d8-14", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:57:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa SL-S c18-7", "StarClass":"K" }
+{ "timestamp":"2017-04-23T13:59:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa EG-Y g6", "StarClass":"O" }
+{ "timestamp":"2017-04-23T14:04:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa AY-O c20-3", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:05:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa BT-O c20-2", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:06:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa FZ-M c21-1", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:07:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa GU-M c21-4", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:08:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa KA-L c22-16", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:09:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa NG-J c23-16", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:10:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa TH-H c24-21", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:11:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa SH-H c24-14", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:12:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa YL-D d12-56", "StarClass":"A" }
+{ "timestamp":"2017-04-23T14:16:28Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa BP-D c26-20", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:17:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa FV-B c27-13", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:18:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa EV-B c27-16", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:19:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa KW-Z c27-28", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:20:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Traikoa EY-Z d13-113", "StarClass":"A" }
+{ "timestamp":"2017-04-23T14:21:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Eurk VO-A c22", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:22:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Eurk UO-A c21", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:23:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byeia Eurk AQ-Y c28", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:24:48Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byua Eurk JX-W c1-28", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:25:46Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byua Eurk ND-V c2-15", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:26:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byua Eurk OY-U c2-3", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:27:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byua Eurk UZ-S c3-2", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:28:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byua Eurk XF-R c4-42", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:30:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byua Eurk BM-P c5-25", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:31:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Byua Eurk BA-A g1", "StarClass":"B" }
+{ "timestamp":"2017-04-23T14:33:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau EX-Y a27-1", "StarClass":"Y" }
+{ "timestamp":"2017-04-23T14:34:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau YU-R c7-45", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:35:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau CB-Q c8-14", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:36:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau IC-O c9-68", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:37:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau HC-O c9-48", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:38:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau ND-M c10-45", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:39:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau RJ-K c11-21", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:40:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau UP-I c12-50", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:41:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau BR-G c13-15", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:42:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau NI-Q d6-46", "StarClass":"A" }
+{ "timestamp":"2017-04-23T14:44:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau ID-D c15-1", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:48:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau NJ-B c16-25", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:49:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau QP-Z c16-25", "StarClass":"K" }
+{ "timestamp":"2017-04-23T14:50:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau XP-M d8-123", "StarClass":"A" }
+{ "timestamp":"2017-04-23T14:52:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau DL-Y g2", "StarClass":"H" }
+{ "timestamp":"2017-04-23T14:56:50Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-23T15:05:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau YY-R b37-10", "StarClass":"M" }
+{ "timestamp":"2017-04-23T15:07:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau AF-Q b38-4", "StarClass":"M" }
+{ "timestamp":"2017-04-23T15:08:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau CL-O b39-12", "StarClass":"M" }
+{ "timestamp":"2017-04-23T15:10:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau XA-L d9-136", "StarClass":"F" }
+{ "timestamp":"2017-04-23T15:16:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau BH-J d10-35", "StarClass":"K" }
+{ "timestamp":"2017-04-23T15:18:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau QU-F b44-10", "StarClass":"M" }
+{ "timestamp":"2017-04-23T15:19:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau OU-F b44-14", "StarClass":"K" }
+{ "timestamp":"2017-04-23T15:21:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau IA-P c22-30", "StarClass":"K" }
+{ "timestamp":"2017-04-23T15:24:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau EN-H d11-210", "StarClass":"G" }
+{ "timestamp":"2017-04-23T15:25:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau DN-H d11-228", "StarClass":"F" }
+{ "timestamp":"2017-04-23T15:26:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau HT-F d12-90", "StarClass":"G" }
+{ "timestamp":"2017-04-23T15:27:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau RS-J c25-15", "StarClass":"K" }
+{ "timestamp":"2017-04-23T15:28:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau GT-F d12-23", "StarClass":"F" }
+{ "timestamp":"2017-04-23T15:29:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau KZ-D d13-3", "StarClass":"F" }
+{ "timestamp":"2017-04-23T15:31:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau JZ-D d13-232", "StarClass":"F" }
+{ "timestamp":"2017-04-23T15:32:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau UJ-G c27-4", "StarClass":"G" }
+{ "timestamp":"2017-04-23T15:33:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau YP-E c28-26", "StarClass":"K" }
+{ "timestamp":"2017-04-23T15:34:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau BW-C c29-50", "StarClass":"K" }
+{ "timestamp":"2017-04-23T15:38:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Pyraleau AW-C c29-59", "StarClass":"G" }
+{ "timestamp":"2017-04-23T15:39:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae BW-C d105", "StarClass":"A" }
+{ "timestamp":"2017-04-23T15:58:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae BW-C d80", "StarClass":"F" }
+{ "timestamp":"2017-04-23T15:59:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae KE-C c2-25", "StarClass":"K" }
+{ "timestamp":"2017-04-23T16:00:48Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae FC-B d1-150", "StarClass":"F" }
+{ "timestamp":"2017-04-23T16:01:48Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae ZZ-A b6-16", "StarClass":"M" }
+{ "timestamp":"2017-04-23T16:03:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae EC-B d1-237", "StarClass":"F" }
+{ "timestamp":"2017-04-23T16:04:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae II-Z d1-238", "StarClass":"A" }
+{ "timestamp":"2017-04-23T16:05:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae II-Z d1-139", "StarClass":"A" }
+{ "timestamp":"2017-04-23T16:07:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae XC-V c5-59", "StarClass":"K" }
+{ "timestamp":"2017-04-23T16:08:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae BJ-T c6-52", "StarClass":"K" }
+{ "timestamp":"2017-04-23T16:09:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae EP-R c7-45", "StarClass":"G" }
+{ "timestamp":"2017-04-23T16:10:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae IV-P c8-42", "StarClass":"G" }
+{ "timestamp":"2017-04-23T16:11:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae HV-P c8-83", "StarClass":"K" }
+{ "timestamp":"2017-04-23T16:12:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae SA-U d4-164", "StarClass":"F" }
+{ "timestamp":"2017-04-23T16:15:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae OH-M c10-32", "StarClass":"K" }
+{ "timestamp":"2017-04-23T16:16:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae QS-K c11-21", "StarClass":"K" }
+{ "timestamp":"2017-04-23T16:17:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae VT-I c12-62", "StarClass":"K" }
+{ "timestamp":"2017-04-23T16:18:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae ZM-Q d6-219", "StarClass":"A" }
+{ "timestamp":"2017-04-23T16:19:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae ZM-Q d6-134", "StarClass":"G" }
+{ "timestamp":"2017-04-23T16:20:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae DT-O d7-114", "StarClass":"F" }
+{ "timestamp":"2017-04-23T16:21:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae DT-O d7-237", "StarClass":"F" }
+{ "timestamp":"2017-04-23T16:24:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae HX-B c16-17", "StarClass":"K" }
+{ "timestamp":"2017-04-23T16:26:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae GZ-M d8-269", "StarClass":"G" }
+{ "timestamp":"2017-04-23T16:27:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae GZ-M d8-247", "StarClass":"F" }
+{ "timestamp":"2017-04-23T16:28:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nyeajaae SP-W c18-50", "StarClass":"K" }
+{ "timestamp":"2017-04-23T16:29:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof LA-P c19-27", "StarClass":"K" }
+{ "timestamp":"2017-04-23T16:31:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof DK-I d9-95", "StarClass":"G" }
+{ "timestamp":"2017-04-23T16:32:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof FG-Y g9", "StarClass":"B" }
+{ "timestamp":"2017-04-23T16:35:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof SM-L c21-93", "StarClass":"K" }
+{ "timestamp":"2017-04-23T16:36:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof RM-L c21-69", "StarClass":"K" }
+{ "timestamp":"2017-04-23T16:37:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof KW-E d11-54", "StarClass":"A" }
+{ "timestamp":"2017-04-23T16:58:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof FL-P e5-32", "StarClass":"B" }
+{ "timestamp":"2017-04-23T16:59:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof OC-D d12-371", "StarClass":"F" }
+{ "timestamp":"2017-04-23T17:00:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof OC-D d12-203", "StarClass":"G" }
+{ "timestamp":"2017-04-23T17:01:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof HW-C c26-56", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:02:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof LC-B c27-54", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:03:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof PI-Z c27-22", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:04:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Lysoof SO-X c28-21", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:05:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy NA-A d193", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:06:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy BM-Y c46", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:06:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy QG-Y d279", "StarClass":"A" }
+{ "timestamp":"2017-04-23T17:07:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy IY-U c2-36", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:08:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy QG-Y d22", "StarClass":"A" }
+{ "timestamp":"2017-04-23T17:10:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy LE-T c3-44", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:25:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy PK-R c4-65", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:26:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy XS-U d2-383", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:27:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy QY-B b13-21", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:28:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy YH-M c7-62", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:29:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy BA-A g6", "StarClass":"O" }
+{ "timestamp":"2017-04-23T17:31:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy CJ-K c8-48", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:32:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy EF-R d4-126", "StarClass":"A" }
+{ "timestamp":"2017-04-23T17:38:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy JV-G c10-21", "StarClass":"K" }
+{ "timestamp":"2017-04-23T17:40:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy HL-P d5-340", "StarClass":"F" }
+{ "timestamp":"2017-04-23T17:43:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy HP-G b24-13", "StarClass":"M" }
+{ "timestamp":"2017-04-23T17:44:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy LR-N d6-431", "StarClass":"A" }
+{ "timestamp":"2017-04-23T17:45:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy KR-N d6-310", "StarClass":"F" }
+{ "timestamp":"2017-04-23T17:47:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy OX-L d7-144", "StarClass":"G" }
+{ "timestamp":"2017-04-23T17:48:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy VD-M a62-31", "StarClass":"L" }
+{ "timestamp":"2017-04-23T17:49:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy QI-Q b32-10", "StarClass":"M" }
+{ "timestamp":"2017-04-23T17:50:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Preae Aewsy XU-M b34-31", "StarClass":"M" }
+{ "timestamp":"2017-04-23T17:51:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge SK-Q a73-13", "StarClass":"L" }
+{ "timestamp":"2017-04-23T17:53:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge RM-R b38-21", "StarClass":"M" }
+{ "timestamp":"2017-04-23T17:54:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge TR-D a80-1", "StarClass":"T" }
+{ "timestamp":"2017-04-23T17:55:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge DA-M b41-28", "StarClass":"M" }
+{ "timestamp":"2017-04-23T17:57:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge IB-K b42-6", "StarClass":"M" }
+{ "timestamp":"2017-04-23T17:58:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge PN-G b44-15", "StarClass":"M" }
+{ "timestamp":"2017-04-23T17:59:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge YU-C b46-14", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:00:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge BB-B b47-6", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:02:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge ER-L c24-5", "StarClass":"K" }
+{ "timestamp":"2017-04-23T18:03:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge IX-J c25-23", "StarClass":"K" }
+{ "timestamp":"2017-04-23T18:05:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge ZB-Q b52-24", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:06:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge NY-H c26-73", "StarClass":"K" }
+{ "timestamp":"2017-04-23T18:07:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge QE-G c27-78", "StarClass":"K" }
+{ "timestamp":"2017-04-23T18:08:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge CL-Y g14", "StarClass":"O" }
+{ "timestamp":"2017-04-23T18:10:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Flyiedge KF-C d14-225", "StarClass":"F" }
+{ "timestamp":"2017-04-23T18:16:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude IQ-K b9", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:18:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude PC-H b2-5", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:19:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude DM-C d116", "StarClass":"F" }
+{ "timestamp":"2017-04-23T18:20:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude CQ-B b5-12", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:21:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude LX-X b6-12", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:22:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude UE-U b8-6", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:23:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude BR-Q b10-2", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:24:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude TJ-Z e447", "StarClass":"B" }
+{ "timestamp":"2017-04-23T18:25:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude OE-L b13-3", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:26:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude MQ-Q c7-51", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:27:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude EY-D b17-5", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:29:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude NF-A b19-10", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:30:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude QL-Y b19-0", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:31:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude XX-U b21-6", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:32:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude HF-R b23-2", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:33:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude BS-R d5-94", "StarClass":"G" }
+{ "timestamp":"2017-04-23T18:34:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude JW-F c13-43", "StarClass":"K" }
+{ "timestamp":"2017-04-23T18:35:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude NC-E c14-20", "StarClass":"K" }
+{ "timestamp":"2017-04-23T18:36:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude KC-D b31-4", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:37:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude UO-A c16-32", "StarClass":"K" }
+{ "timestamp":"2017-04-23T18:38:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude CL-Y g14", "StarClass":"O" }
+{ "timestamp":"2017-04-23T18:40:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaude AW-V b34-9", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:41:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai JX-W c17-11", "StarClass":"K" }
+{ "timestamp":"2017-04-23T18:42:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai YL-Q b37-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:42:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai QJ-T c19-38", "StarClass":"K" }
+{ "timestamp":"2017-04-23T18:43:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai JZ-K b40-6", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:45:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai KS-I d10-71", "StarClass":"F" }
+{ "timestamp":"2017-04-23T18:46:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai DL-Y g7", "StarClass":"O" }
+{ "timestamp":"2017-04-23T18:48:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai DZ-B b45-4", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:49:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai NG-Y b46-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:50:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai SX-U b48-8", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:52:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai AK-R b50-6", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:53:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai JR-N b52-4", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:54:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai QD-K b54-8", "StarClass":"M" }
+{ "timestamp":"2017-04-23T18:56:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai ZH-D c28-0", "StarClass":"G" }
+{ "timestamp":"2017-04-23T18:58:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai FC-D b58-2", "StarClass":"M" }
+{ "timestamp":"2017-04-23T19:00:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Skaudai BM-B d14-230", "StarClass":"F" }
+{ "timestamp":"2017-04-23T19:11:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe KA-E c45", "StarClass":"K" }
+{ "timestamp":"2017-04-23T19:12:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe SX-B d13", "StarClass":"F" }
+{ "timestamp":"2017-04-23T19:14:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe WD-A d1-198", "StarClass":"F" }
+{ "timestamp":"2017-04-23T19:15:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe WD-A d1-326", "StarClass":"A" }
+{ "timestamp":"2017-04-23T19:16:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe AF-Z e44", "StarClass":"B" }
+{ "timestamp":"2017-04-23T19:17:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe EA-V c4-5", "StarClass":"K" }
+{ "timestamp":"2017-04-23T19:18:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe SX-K b12-4", "StarClass":"M" }
+{ "timestamp":"2017-04-23T19:19:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe DQ-W d2-36", "StarClass":"G" }
+{ "timestamp":"2017-04-23T19:21:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe PS-P c7-1", "StarClass":"K" }
+{ "timestamp":"2017-04-23T19:22:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe DB-E b16-1", "StarClass":"M" }
+{ "timestamp":"2017-04-23T19:22:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe QD-O c8-33", "StarClass":"K" }
+{ "timestamp":"2017-04-23T19:24:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe JD-Z b18-8", "StarClass":"M" }
+{ "timestamp":"2017-04-23T19:25:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe OU-V b20-3", "StarClass":"M" }
+{ "timestamp":"2017-04-23T19:29:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe UU-K c10-63", "StarClass":"K" }
+{ "timestamp":"2017-04-23T19:30:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe VP-F a48-0", "StarClass":"Y" }
+{ "timestamp":"2017-04-23T19:31:48Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe CE-N b25-13", "StarClass":"M" }
+{ "timestamp":"2017-04-23T19:32:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe DP-L b26-5", "StarClass":"M" }
+{ "timestamp":"2017-04-24T14:50:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe ED-E c14-60", "StarClass":"M" }
+{ "timestamp":"2017-04-24T14:53:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe MY-P d6-108", "StarClass":"G" }
+{ "timestamp":"2017-04-24T14:54:46Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe QD-D b31-3", "StarClass":"M" }
+{ "timestamp":"2017-04-24T14:55:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe TJ-B b32-24", "StarClass":"M" }
+{ "timestamp":"2017-04-24T14:56:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe IC-U e3-164", "StarClass":"B" }
+{ "timestamp":"2017-04-24T14:59:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe ZV-X b33-0", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:00:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe EN-U b35-6", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:02:01Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-24T15:02:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe XQ-K d9-199", "StarClass":"F" }
+{ "timestamp":"2017-04-24T15:05:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe XQ-K d9-283", "StarClass":"F" }
+{ "timestamp":"2017-04-24T15:11:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe AX-I d10-90", "StarClass":"G" }
+{ "timestamp":"2017-04-24T15:13:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe CE-I b42-17", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:14:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe SW-H a89-0", "StarClass":"T" }
+{ "timestamp":"2017-04-24T15:15:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe BP-C a92-2", "StarClass":"Y" }
+{ "timestamp":"2017-04-24T15:16:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe DD-H d11-851", "StarClass":"F" }
+{ "timestamp":"2017-04-24T15:17:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe XZ-V b48-13", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:18:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe EM-S b50-60", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:19:49Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-24T15:20:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe LY-O b52-43", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:21:53Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe QP-L b54-72", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:22:46Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe IU-D d13-658", "StarClass":"A" }
+{ "timestamp":"2017-04-24T15:23:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe ZH-G b57-9", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:24:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Prua Phoe GU-C b59-49", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:25:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku DM-C d22", "StarClass":"F" }
+{ "timestamp":"2017-04-24T15:26:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku KE-D c1-83", "StarClass":"K" }
+{ "timestamp":"2017-04-24T15:27:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku NK-B c2-190", "StarClass":"K" }
+{ "timestamp":"2017-04-24T15:28:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku IH-Z b5-57", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:29:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku GS-A d1-256", "StarClass":"G" }
+{ "timestamp":"2017-04-24T15:30:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku RZ-T b8-85", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:31:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku JY-Y d1-414", "StarClass":"A" }
+{ "timestamp":"2017-04-24T15:34:42Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-24T15:35:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku XC-W c4-398", "StarClass":"K" }
+{ "timestamp":"2017-04-24T15:36:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku IT-M b12-26", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:36:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku PF-J b14-18", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:37:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku KQ-Q c7-220", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:38:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku GZ-B b18-0", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:39:46Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku NL-Y b19-43", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:40:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku RQ-P a43-0", "StarClass":"L" }
+{ "timestamp":"2017-04-24T15:41:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku AW-V e2-2326", "StarClass":"B" }
+{ "timestamp":"2017-04-24T15:43:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku JG-P b24-13", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:44:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku KR-F c13-38", "StarClass":"K" }
+{ "timestamp":"2017-04-24T15:45:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Clooku AA-I b28-2", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:46:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa XE-C c15-289", "StarClass":"K" }
+{ "timestamp":"2017-04-24T15:47:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa BL-A c16-33", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:48:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa DL-Y g12", "StarClass":"O" }
+{ "timestamp":"2017-04-24T15:52:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa NO-V b34-72", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:53:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa HX-W c17-28", "StarClass":"K" }
+{ "timestamp":"2017-04-24T15:54:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa SA-S b36-33", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:55:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa YM-O b38-75", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:55:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa BT-M b39-66", "StarClass":"M" }
+{ "timestamp":"2017-04-24T15:56:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa QP-R c20-89", "StarClass":"K" }
+{ "timestamp":"2017-04-24T16:00:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa KL-H b42-10", "StarClass":"TTS" }
+{ "timestamp":"2017-04-24T16:01:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa IS-I d10-778", "StarClass":"F" }
+{ "timestamp":"2017-04-24T16:02:46Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa RI-C b45-19", "StarClass":"M" }
+{ "timestamp":"2017-04-24T16:03:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa AI-M c23-13", "StarClass":"K" }
+{ "timestamp":"2017-04-24T16:04:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa ZH-M c23-174", "StarClass":"K" }
+{ "timestamp":"2017-04-24T16:06:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa JI-T b49-60", "StarClass":"M" }
+{ "timestamp":"2017-04-24T16:07:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa ZN-H a102-0", "StarClass":"T" }
+{ "timestamp":"2017-04-24T16:08:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa JA-H c26-420", "StarClass":"K" }
+{ "timestamp":"2017-04-24T16:09:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa UG-M b53-26", "StarClass":"M" }
+{ "timestamp":"2017-04-24T16:10:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa RK-D d13-1151", "StarClass":"A" }
+{ "timestamp":"2017-04-24T16:38:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa OM-D c28-100", "StarClass":"K" }
+{ "timestamp":"2017-04-24T16:39:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa VQ-B d14-575", "StarClass":"A" }
+{ "timestamp":"2017-04-24T16:42:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blua Hypa UQ-B d14-1206", "StarClass":"F" }
+{ "timestamp":"2017-04-24T16:43:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou QY-P a1-2", "StarClass":"T" }
+{ "timestamp":"2017-04-24T16:44:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou BG-F b2-0", "StarClass":"M" }
+{ "timestamp":"2017-04-24T16:45:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou ZP-C c1-5", "StarClass":"K" }
+{ "timestamp":"2017-04-24T16:46:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou DW-A c2-212", "StarClass":"K" }
+{ "timestamp":"2017-04-24T16:47:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou GC-Z c2-43", "StarClass":"K" }
+{ "timestamp":"2017-04-24T16:49:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou TO-Y d1-566", "StarClass":"A" }
+{ "timestamp":"2017-04-24T16:50:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou SO-Y d1-1045", "StarClass":"F" }
+{ "timestamp":"2017-04-24T16:51:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou QU-T c5-217", "StarClass":"K" }
+{ "timestamp":"2017-04-24T16:52:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou UA-S c6-289", "StarClass":"K" }
+{ "timestamp":"2017-04-24T16:53:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou VU-W d2-35", "StarClass":"F" }
+{ "timestamp":"2017-04-24T16:54:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou YI-J a32-1", "StarClass":"Y" }
+{ "timestamp":"2017-04-24T16:55:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou HB-B b18-36", "StarClass":"M" }
+{ "timestamp":"2017-04-24T16:58:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou AL-X e1-748", "StarClass":"B" }
+{ "timestamp":"2017-04-24T16:59:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou AL-W a38-2", "StarClass":"T" }
+{ "timestamp":"2017-04-24T17:00:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou EC-T d4-690", "StarClass":"F" }
+{ "timestamp":"2017-04-24T17:02:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou KP-K c10-229", "StarClass":"K" }
+{ "timestamp":"2017-04-24T17:04:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou HI-R d5-861", "StarClass":"F" }
+{ "timestamp":"2017-04-24T17:05:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou HI-R d5-716", "StarClass":"F" }
+{ "timestamp":"2017-04-24T17:23:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou UR-G c12-273", "StarClass":"K" }
+{ "timestamp":"2017-04-24T17:24:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou VV-J b26-36", "StarClass":"M" }
+{ "timestamp":"2017-04-24T17:25:22Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou XB-I b27-8", "StarClass":"M" }
+{ "timestamp":"2017-04-24T17:26:48Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou GJ-E b29-2", "StarClass":"M" }
+{ "timestamp":"2017-04-24T17:27:48Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou FF-B c15-94", "StarClass":"K" }
+{ "timestamp":"2017-04-24T17:28:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou JD-Z a62-1", "StarClass":"T" }
+{ "timestamp":"2017-04-24T17:29:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou UM-Y b31-11", "StarClass":"M" }
+{ "timestamp":"2017-04-24T17:31:02Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou UQ-L d8-889", "StarClass":"A" }
+{ "timestamp":"2017-04-24T17:32:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou IS-T e3-1502", "StarClass":"B" }
+{ "timestamp":"2017-04-24T17:33:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Stuelou UI-V c17-284", "StarClass":"K" }
+{ "timestamp":"2017-04-24T17:34:21Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa HG-N b37-33", "StarClass":"M" }
+{ "timestamp":"2017-04-24T17:35:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa FG-Y g9", "StarClass":"H" }
+{ "timestamp":"2017-04-24T17:36:59Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-24T17:40:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa ON-J b39-13", "StarClass":"M" }
+{ "timestamp":"2017-04-24T17:41:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa OS-J d9-394", "StarClass":"F" }
+{ "timestamp":"2017-04-24T17:49:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa SY-H d10-298", "StarClass":"G" }
+{ "timestamp":"2017-04-24T17:50:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa QD-I d10-925", "StarClass":"G" }
+{ "timestamp":"2017-04-24T17:52:00Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-04-24T17:52:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa JN-O c21-82", "StarClass":"K" }
+{ "timestamp":"2017-04-24T17:53:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa QQ-B b44-41", "StarClass":"M" }
+{ "timestamp":"2017-04-24T17:54:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa SJ-G d11-206", "StarClass":"F" }
+{ "timestamp":"2017-04-24T17:55:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa NF-V a92-0", "StarClass":"Y" }
+{ "timestamp":"2017-04-24T17:56:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa TS-W b46-36", "StarClass":"M" }
+{ "timestamp":"2017-04-24T17:57:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa UD-V b47-42", "StarClass":"M" }
+{ "timestamp":"2017-04-24T17:58:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa UO-T b48-65", "StarClass":"M" }
+{ "timestamp":"2017-04-24T17:59:33Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa UF-I a100-3", "StarClass":"Y" }
+{ "timestamp":"2017-04-24T18:00:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa DL-Y g7", "StarClass":"O" }
+{ "timestamp":"2017-04-24T18:03:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa QG-G c26-94", "StarClass":"M" }
+{ "timestamp":"2017-04-24T18:04:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa OL-G c26-51", "StarClass":"K" }
+{ "timestamp":"2017-04-24T18:06:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa TF-D d13-1477", "StarClass":"F" }
+{ "timestamp":"2017-04-24T18:07:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa VX-C c28-602", "StarClass":"K" }
+{ "timestamp":"2017-04-24T18:08:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Greae Hypa BO-A b59-47", "StarClass":"M" }
+{ "timestamp":"2017-04-24T18:09:38Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec EV-D c66", "StarClass":"G" }
+{ "timestamp":"2017-04-24T18:11:06Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec RN-C b3-35", "StarClass":"M" }
+{ "timestamp":"2017-04-24T18:12:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec WO-A b4-36", "StarClass":"M" }
+{ "timestamp":"2017-04-24T18:13:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec ON-Y c2-330", "StarClass":"K" }
+{ "timestamp":"2017-04-24T18:14:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec ST-W c3-502", "StarClass":"K" }
+{ "timestamp":"2017-04-24T18:15:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec WJ-Y d1-1102", "StarClass":"F" }
+{ "timestamp":"2017-04-24T18:16:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec ZF-T c5-369", "StarClass":"K" }
+{ "timestamp":"2017-04-24T18:17:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec DM-R c6-349", "StarClass":"G" }
+{ "timestamp":"2017-04-24T18:18:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec LP-F b15-39", "StarClass":"M" }
+{ "timestamp":"2017-04-24T18:19:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec SB-C b17-18", "StarClass":"M" }
+{ "timestamp":"2017-04-24T18:20:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec JY-N c8-334", "StarClass":"K" }
+{ "timestamp":"2017-04-24T18:21:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec GC-T d4-749", "StarClass":"F" }
+{ "timestamp":"2017-04-24T18:22:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec GC-T d4-2169", "StarClass":"F" }
+{ "timestamp":"2017-04-24T18:23:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec GL-F a47-1", "StarClass":"T" }
+{ "timestamp":"2017-04-24T18:24:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec XW-G c12-93", "StarClass":"K" }
+{ "timestamp":"2017-04-24T18:25:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec AD-F c13-142", "StarClass":"K" }
+{ "timestamp":"2017-04-24T18:26:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec GX-G b28-55", "StarClass":"M" }
+{ "timestamp":"2017-04-24T18:27:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec IX-T e3-2884", "StarClass":"B" }
+{ "timestamp":"2017-04-24T18:28:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec IX-T e3-782", "StarClass":"B" }
+{ "timestamp":"2017-04-25T12:25:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec QU-N d7-331", "StarClass":"G" }
+{ "timestamp":"2017-04-25T12:26:40Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec ET-U b34-12", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:27:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec UA-M d8-1327", "StarClass":"F" }
+{ "timestamp":"2017-04-25T12:28:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec VS-U c18-250", "StarClass":"K" }
+{ "timestamp":"2017-04-25T12:29:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec VB-V a80-1", "StarClass":"Y" }
+{ "timestamp":"2017-04-25T12:30:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec FA-H b42-9", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:31:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec LR-D b44-74", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:32:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec RI-A b46-118", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:33:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec KH-M c23-445", "StarClass":"K" }
+{ "timestamp":"2017-04-25T12:34:47Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec IE-F d12-920", "StarClass":"K" }
+{ "timestamp":"2017-04-25T12:35:48Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec MY-P b51-25", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:36:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec UE-H c26-235", "StarClass":"K" }
+{ "timestamp":"2017-04-25T12:37:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec YK-F c27-185", "StarClass":"K" }
+{ "timestamp":"2017-04-25T12:38:50Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec GT-F b57-53", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:39:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Blaa Eaec CL-Y g6", "StarClass":"B" }
+{ "timestamp":"2017-04-25T12:41:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph YC-J b98", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:42:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph PU-C c1-74", "StarClass":"TTS" }
+{ "timestamp":"2017-04-25T12:43:18Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph NB-C b4-9", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:44:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph XI-Y b5-106", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:45:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph DI-X c3-839", "StarClass":"K" }
+{ "timestamp":"2017-04-25T12:46:10Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph OC-R b9-14", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:47:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph YJ-N b11-46", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:47:58Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph FW-J b13-17", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:49:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph UB-Q c7-611", "StarClass":"K" }
+{ "timestamp":"2017-04-25T12:50:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph XA-V d3-29", "StarClass":"F" }
+{ "timestamp":"2017-04-25T12:53:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph ZV-U d3-1205", "StarClass":"A" }
+{ "timestamp":"2017-04-25T12:56:13Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph NY-W b19-12", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:58:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph UK-T b21-15", "StarClass":"M" }
+{ "timestamp":"2017-04-25T12:58:59Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph OQ-I c11-33", "StarClass":"K" }
+{ "timestamp":"2017-04-25T12:59:54Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Boeph OZ-L b25-37", "StarClass":"M" }

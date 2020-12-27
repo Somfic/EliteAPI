@@ -1,0 +1,187 @@
+{ "timestamp":"2017-08-07T02:01:45Z", "event":"CrewMemberQuits", "Crew":"Fina1e" }
+{ "timestamp":"2017-08-07T02:30:40Z", "event":"CrewMemberQuits", "Crew":"Gusmo" }
+{ "timestamp":"2017-08-08T00:10:08Z", "event":"CrewMemberQuits", "Crew":"Gusmo" }
+{ "timestamp":"2017-08-08T00:24:18Z", "event":"CrewMemberQuits", "Crew":"Pauloche" }
+{ "timestamp":"2017-08-08T00:27:11Z", "event":"CrewMemberQuits", "Crew":"Marcoux" }
+{ "timestamp":"2017-08-08T00:41:25Z", "event":"CrewMemberQuits", "Crew":"tylerracecar" }
+{ "timestamp":"2017-08-08T00:49:32Z", "event":"CrewMemberQuits", "Crew":"Marcoux" }
+{ "timestamp":"2017-08-08T01:13:25Z", "event":"CrewMemberQuits", "Crew":"Drop9" }
+{ "timestamp":"2017-08-08T01:30:15Z", "event":"CrewMemberQuits", "Crew":"Kyssa Akisan" }
+{ "timestamp":"2017-08-08T17:22:43Z", "event":"CrewMemberQuits", "Crew":"zaltorg" }
+{ "timestamp":"2017-08-08T17:45:10Z", "event":"CrewMemberQuits", "Crew":"Cmdr. Perez" }
+{ "timestamp":"2017-08-08T18:08:56Z", "event":"CrewMemberQuits", "Crew":"Tod Quiller" }
+{ "timestamp":"2017-08-12T01:19:43Z", "event":"CrewMemberQuits", "Crew":"BoxierTumple" }
+{ "timestamp":"2017-08-18T19:19:01Z", "event":"CrewMemberQuits", "Crew":"air13" }
+{ "timestamp":"2017-08-20T14:51:12Z", "event":"CrewMemberQuits", "Crew":"SOLOMON K9" }
+{ "timestamp":"2017-08-20T15:10:17Z", "event":"CrewMemberQuits", "Crew":"Andy Galler" }
+{ "timestamp":"2017-08-20T15:14:23Z", "event":"CrewMemberQuits", "Crew":"RoyalSausageGB" }
+{ "timestamp":"2017-08-20T15:43:45Z", "event":"CrewMemberQuits", "Crew":"Space Jew" }
+{ "timestamp":"2017-08-20T15:48:55Z", "event":"CrewMemberQuits", "Crew":"El Mal" }
+{ "timestamp":"2017-08-20T15:50:44Z", "event":"CrewMemberQuits", "Crew":"Krystoh" }
+{ "timestamp":"2017-08-20T16:02:11Z", "event":"CrewMemberQuits", "Crew":"Turgalon" }
+{ "timestamp":"2017-08-20T16:24:13Z", "event":"CrewMemberQuits", "Crew":"Vanishon" }
+{ "timestamp":"2017-08-21T10:51:03Z", "event":"CrewMemberQuits", "Crew":"xXShadowslapXx" }
+{ "timestamp":"2017-08-21T11:31:04Z", "event":"CrewMemberQuits", "Crew":"Slim Reaper" }
+{ "timestamp":"2017-08-21T11:49:21Z", "event":"CrewMemberQuits", "Crew":"QuantumVanguard" }
+{ "timestamp":"2017-08-21T11:54:16Z", "event":"CrewMemberQuits", "Crew":"commander 588" }
+{ "timestamp":"2017-08-21T15:45:43Z", "event":"CrewMemberQuits", "Crew":"StormingHorizon" }
+{ "timestamp":"2017-08-21T16:02:52Z", "event":"CrewMemberQuits", "Crew":"Cloudust" }
+{ "timestamp":"2017-08-21T16:08:42Z", "event":"CrewMemberQuits", "Crew":"barteks1" }
+{ "timestamp":"2017-08-21T16:10:42Z", "event":"CrewMemberQuits", "Crew":"Drakeardian" }
+{ "timestamp":"2017-08-21T16:15:58Z", "event":"CrewMemberQuits", "Crew":"Dontpanic Nine" }
+{ "timestamp":"2017-08-21T16:27:43Z", "event":"CrewMemberQuits", "Crew":"CaptainBrak" }
+{ "timestamp":"2017-08-21T18:45:23Z", "event":"CrewMemberQuits", "Crew":"Lute_Ryner" }
+{ "timestamp":"2017-08-21T18:53:39Z", "event":"CrewMemberQuits", "Crew":"Scrublord-sama" }
+{ "timestamp":"2017-08-21T19:15:44Z", "event":"CrewMemberQuits", "Crew":"Jake Sandersen" }
+{ "timestamp":"2017-08-21T19:18:23Z", "event":"CrewMemberQuits", "Crew":"MaloB31" }
+{ "timestamp":"2017-08-22T13:10:43Z", "event":"CrewMemberQuits", "Crew":"Xateris" }
+{ "timestamp":"2017-08-22T15:06:14Z", "event":"CrewMemberQuits", "Crew":"Valerie Feralon" }
+{ "timestamp":"2017-08-22T15:22:31Z", "event":"CrewMemberQuits", "Crew":"jkfd89330" }
+{ "timestamp":"2017-08-22T15:46:59Z", "event":"CrewMemberQuits", "Crew":"jkfd89330" }
+{ "timestamp":"2017-08-22T15:51:37Z", "event":"CrewMemberQuits", "Crew":"Crustyjam" }
+{ "timestamp":"2017-08-22T16:40:48Z", "event":"CrewMemberQuits", "Crew":"barteks1" }
+{ "timestamp":"2017-08-22T17:34:56Z", "event":"CrewMemberQuits", "Crew":"Sydöstran" }
+{ "timestamp":"2017-08-22T17:37:40Z", "event":"CrewMemberQuits", "Crew":"barteks1" }
+{ "timestamp":"2017-08-22T18:05:06Z", "event":"CrewMemberQuits", "Crew":"Maximuse02" }
+{ "timestamp":"2017-08-22T18:09:32Z", "event":"CrewMemberQuits", "Crew":"Maximuse02" }
+{ "timestamp":"2017-08-22T18:33:44Z", "event":"CrewMemberQuits", "Crew":"Ulon Origal" }
+{ "timestamp":"2017-08-22T20:08:33Z", "event":"CrewMemberQuits", "Crew":"SneakyNinja" }
+{ "timestamp":"2017-08-23T16:00:06Z", "event":"CrewMemberQuits", "Crew":"Othyar Scott" }
+{ "timestamp":"2017-08-23T16:31:47Z", "event":"CrewMemberQuits", "Crew":"Othyar Scott" }
+{ "timestamp":"2017-08-23T16:49:34Z", "event":"CrewMemberQuits", "Crew":"Terra8585" }
+{ "timestamp":"2017-08-23T16:56:18Z", "event":"CrewMemberQuits", "Crew":"DimKal" }
+{ "timestamp":"2017-08-23T17:23:27Z", "event":"CrewMemberQuits", "Crew":"DimKal" }
+{ "timestamp":"2017-08-23T17:43:46Z", "event":"CrewMemberQuits", "Crew":"Sergeant Titmilk" }
+{ "timestamp":"2017-08-23T18:33:01Z", "event":"CrewMemberQuits", "Crew":"DimKal" }
+{ "timestamp":"2017-08-23T18:43:42Z", "event":"CrewMemberQuits", "Crew":"leshiykz" }
+{ "timestamp":"2017-08-23T18:53:52Z", "event":"CrewMemberQuits", "Crew":"Maximuse02" }
+{ "timestamp":"2017-08-23T19:14:35Z", "event":"CrewMemberQuits", "Crew":"andreska" }
+{ "timestamp":"2017-08-23T19:29:48Z", "event":"CrewMemberQuits", "Crew":"Andreus" }
+{ "timestamp":"2017-08-24T10:10:05Z", "event":"CrewMemberQuits", "Crew":"Vulturist" }
+{ "timestamp":"2017-08-24T10:58:48Z", "event":"CrewMemberQuits", "Crew":"DeadFight" }
+{ "timestamp":"2017-08-24T11:21:26Z", "event":"CrewMemberQuits", "Crew":"DeadFight" }
+{ "timestamp":"2017-08-25T11:34:10Z", "event":"CrewMemberQuits", "Crew":"Jake Sandersen" }
+{ "timestamp":"2017-08-25T12:44:59Z", "event":"CrewMemberQuits", "Crew":"Drangasta" }
+{ "timestamp":"2017-08-25T12:51:06Z", "event":"CrewMemberQuits", "Crew":"Darkothus" }
+{ "timestamp":"2017-08-25T12:52:44Z", "event":"CrewMemberQuits", "Crew":"Gerh7" }
+{ "timestamp":"2017-08-25T14:01:23Z", "event":"CrewMemberQuits", "Crew":"NaxodbI4" }
+{ "timestamp":"2017-08-25T14:12:53Z", "event":"CrewMemberQuits", "Crew":"Baltersahr Nexus [UGC]" }
+{ "timestamp":"2017-08-25T14:29:26Z", "event":"CrewMemberQuits", "Crew":"Cyborgcow" }
+{ "timestamp":"2017-08-25T14:36:59Z", "event":"CrewMemberQuits", "Crew":"AIW" }
+{ "timestamp":"2017-08-25T14:38:28Z", "event":"CrewMemberQuits", "Crew":"Cyborgcow" }
+{ "timestamp":"2017-08-25T14:53:06Z", "event":"CrewMemberQuits", "Crew":"Razor404" }
+{ "timestamp":"2017-08-25T14:59:26Z", "event":"CrewMemberQuits", "Crew":"Razor404" }
+{ "timestamp":"2017-08-25T15:18:04Z", "event":"CrewMemberQuits", "Crew":"Varakai" }
+{ "timestamp":"2017-08-25T15:51:20Z", "event":"CrewMemberQuits", "Crew":"DimKal" }
+{ "timestamp":"2017-08-25T16:52:22Z", "event":"CrewMemberQuits", "Crew":"Mondaffe" }
+{ "timestamp":"2017-08-25T17:59:06Z", "event":"CrewMemberQuits", "Crew":"Allen Zoomfig" }
+{ "timestamp":"2017-08-25T18:04:35Z", "event":"CrewMemberQuits", "Crew":"Antanique" }
+{ "timestamp":"2017-08-25T18:09:34Z", "event":"CrewMemberQuits", "Crew":"Allen Zoomfig" }
+{ "timestamp":"2017-08-25T18:33:29Z", "event":"CrewMemberQuits", "Crew":"BossTone" }
+{ "timestamp":"2017-08-25T18:52:55Z", "event":"CrewMemberQuits", "Crew":"BossTone" }
+{ "timestamp":"2017-08-26T16:47:02Z", "event":"CrewMemberQuits", "Crew":"Roju Williams" }
+{ "timestamp":"2017-08-26T16:50:34Z", "event":"CrewMemberQuits", "Crew":"Maksis" }
+{ "timestamp":"2017-08-26T17:01:54Z", "event":"CrewMemberQuits", "Crew":"Spencer Snr." }
+{ "timestamp":"2017-08-26T17:24:25Z", "event":"CrewMemberQuits", "Crew":"Undeadhuman2002" }
+{ "timestamp":"2017-08-26T18:12:55Z", "event":"CrewMemberQuits", "Crew":"Aidric" }
+{ "timestamp":"2017-08-26T18:14:56Z", "event":"CrewMemberQuits", "Crew":"Astronach" }
+{ "timestamp":"2017-08-26T18:25:47Z", "event":"CrewMemberQuits", "Crew":"Sergeant Titmilk" }
+{ "timestamp":"2017-08-26T18:29:29Z", "event":"CrewMemberQuits", "Crew":"Broax" }
+{ "timestamp":"2017-08-26T18:52:48Z", "event":"CrewMemberQuits", "Crew":"Scaperoot" }
+{ "timestamp":"2017-08-26T18:54:42Z", "event":"CrewMemberQuits", "Crew":"Lemak" }
+{ "timestamp":"2017-08-27T13:51:49Z", "event":"CrewMemberQuits", "Crew":"James G. Kirk" }
+{ "timestamp":"2017-08-27T14:02:07Z", "event":"CrewMemberQuits", "Crew":"Shon Harper" }
+{ "timestamp":"2017-08-27T14:47:43Z", "event":"CrewMemberQuits", "Crew":"James G. Kirk" }
+{ "timestamp":"2017-08-27T16:06:32Z", "event":"CrewMemberQuits", "Crew":"Mlat Hromovlad" }
+{ "timestamp":"2017-08-27T16:23:43Z", "event":"CrewMemberQuits", "Crew":"FlynnRocks1556" }
+{ "timestamp":"2017-08-27T18:09:41Z", "event":"CrewMemberQuits", "Crew":"Denvirux" }
+{ "timestamp":"2017-08-27T19:21:02Z", "event":"CrewMemberQuits", "Crew":"Space Lotion" }
+{ "timestamp":"2017-08-28T12:36:42Z", "event":"CrewMemberQuits", "Crew":"IIStrikerII" }
+{ "timestamp":"2017-08-28T12:47:10Z", "event":"CrewMemberQuits", "Crew":"Ev0lution" }
+{ "timestamp":"2017-08-29T09:41:15Z", "event":"CrewMemberQuits", "Crew":"Storok" }
+{ "timestamp":"2017-08-30T16:26:32Z", "event":"CrewMemberQuits", "Crew":"TangoSierra" }
+{ "timestamp":"2017-08-31T15:07:29Z", "event":"CrewMemberQuits", "Crew":"Murphy Scoot" }
+{ "timestamp":"2017-08-31T15:36:51Z", "event":"CrewMemberQuits", "Crew":"Kevin Grewal" }
+{ "timestamp":"2017-08-31T15:45:33Z", "event":"CrewMemberQuits", "Crew":"Starscrubber34" }
+{ "timestamp":"2017-08-31T19:53:11Z", "event":"CrewMemberQuits", "Crew":"xXShadowslapXx" }
+{ "timestamp":"2017-09-01T18:24:38Z", "event":"CrewMemberQuits", "Crew":"Shmuckalina" }
+{ "timestamp":"2017-09-01T18:43:07Z", "event":"CrewMemberQuits", "Crew":"xXShadowslapXx" }
+{ "timestamp":"2017-09-01T18:53:35Z", "event":"CrewMemberQuits", "Crew":"Randall Flagg" }
+{ "timestamp":"2017-09-01T19:05:02Z", "event":"CrewMemberQuits", "Crew":"Daddel_Matis" }
+{ "timestamp":"2017-09-01T19:26:22Z", "event":"CrewMemberQuits", "Crew":"Soosenkiller" }
+{ "timestamp":"2017-09-01T19:43:29Z", "event":"CrewMemberQuits", "Crew":"Bloody-Lyra" }
+{ "timestamp":"2017-09-01T19:49:31Z", "event":"CrewMemberQuits", "Crew":"TheMrScoober" }
+{ "timestamp":"2017-09-01T20:03:03Z", "event":"CrewMemberQuits", "Crew":"Mr._Nobody" }
+{ "timestamp":"2017-09-01T20:49:26Z", "event":"CrewMemberQuits", "Crew":"Starlord72" }
+{ "timestamp":"2017-09-01T21:00:31Z", "event":"CrewMemberQuits", "Crew":"ChocoGeek" }
+{ "timestamp":"2017-09-01T21:08:02Z", "event":"CrewMemberQuits", "Crew":"G.D. Runciter" }
+{ "timestamp":"2017-09-01T21:11:03Z", "event":"CrewMemberQuits", "Crew":"Obey-me" }
+{ "timestamp":"2017-09-01T21:32:37Z", "event":"CrewMemberQuits", "Crew":"Alfen" }
+{ "timestamp":"2017-09-02T12:55:51Z", "event":"CrewMemberQuits", "Crew":"Phantom Gamma" }
+{ "timestamp":"2017-09-02T13:06:51Z", "event":"CrewMemberQuits", "Crew":"madome" }
+{ "timestamp":"2017-09-02T13:18:04Z", "event":"CrewMemberQuits", "Crew":"Arcangel042" }
+{ "timestamp":"2017-09-02T13:53:49Z", "event":"CrewMemberQuits", "Crew":"Ares 7" }
+{ "timestamp":"2017-09-02T15:07:36Z", "event":"CrewMemberQuits", "Crew":"Alien Hunter PL" }
+{ "timestamp":"2017-09-02T15:23:00Z", "event":"CrewMemberQuits", "Crew":"LE GRAND BAGUETTE" }
+{ "timestamp":"2017-09-02T15:36:47Z", "event":"CrewMemberQuits", "Crew":"LE GRAND BAGUETTE" }
+{ "timestamp":"2017-09-02T15:55:19Z", "event":"CrewMemberQuits", "Crew":"Boris Verne" }
+{ "timestamp":"2017-09-02T16:02:35Z", "event":"CrewMemberQuits", "Crew":"Youf93" }
+{ "timestamp":"2017-09-02T16:09:37Z", "event":"CrewMemberQuits", "Crew":"LE GRAND BAGUETTE" }
+{ "timestamp":"2017-09-02T17:09:51Z", "event":"CrewMemberQuits", "Crew":"Soosenkiller" }
+{ "timestamp":"2017-09-02T17:11:37Z", "event":"CrewMemberQuits", "Crew":"NaxodbI4" }
+{ "timestamp":"2017-09-03T16:22:07Z", "event":"CrewMemberQuits", "Crew":"Terathore" }
+{ "timestamp":"2017-09-03T16:31:08Z", "event":"CrewMemberQuits", "Crew":"prabu" }
+{ "timestamp":"2017-09-03T16:58:15Z", "event":"CrewMemberQuits", "Crew":"Gannicus Octavius" }
+{ "timestamp":"2017-09-03T17:50:02Z", "event":"CrewMemberQuits", "Crew":"Dyaln1009" }
+{ "timestamp":"2017-09-03T17:56:51Z", "event":"CrewMemberQuits", "Crew":"WontonSoup" }
+{ "timestamp":"2017-09-03T18:05:48Z", "event":"CrewMemberQuits", "Crew":"Chamuck" }
+{ "timestamp":"2017-09-03T18:22:05Z", "event":"CrewMemberQuits", "Crew":"Tjörven Baetens" }
+{ "timestamp":"2017-09-03T18:56:33Z", "event":"CrewMemberQuits", "Crew":"IVAN der Schrecklich" }
+{ "timestamp":"2017-09-03T19:42:59Z", "event":"CrewMemberQuits", "Crew":"Desertmoon" }
+{ "timestamp":"2017-09-03T19:44:05Z", "event":"CrewMemberQuits", "Crew":"Geonaut" }
+{ "timestamp":"2017-09-04T13:18:48Z", "event":"CrewMemberQuits", "Crew":"David Bochner" }
+{ "timestamp":"2017-09-04T13:36:08Z", "event":"CrewMemberQuits", "Crew":"Skymaster" }
+{ "timestamp":"2017-09-04T13:46:03Z", "event":"CrewMemberQuits", "Crew":"HSD" }
+{ "timestamp":"2017-09-04T13:55:56Z", "event":"CrewMemberQuits", "Crew":"HSD" }
+{ "timestamp":"2017-09-04T14:14:36Z", "event":"CrewMemberQuits", "Crew":"7th" }
+{ "timestamp":"2017-09-04T14:41:23Z", "event":"CrewMemberQuits", "Crew":"MACHIDA" }
+{ "timestamp":"2017-09-04T15:51:16Z", "event":"CrewMemberQuits", "Crew":"Racmix17" }
+{ "timestamp":"2017-09-04T16:08:49Z", "event":"CrewMemberQuits", "Crew":"BrownyBlacky007" }
+{ "timestamp":"2017-09-04T16:13:05Z", "event":"CrewMemberQuits", "Crew":"Obsidian Pilot" }
+{ "timestamp":"2017-09-04T18:04:31Z", "event":"CrewMemberQuits", "Crew":"muic" }
+{ "timestamp":"2017-09-05T17:58:51Z", "event":"CrewMemberQuits", "Crew":"rya_60" }
+{ "timestamp":"2017-09-05T18:14:42Z", "event":"CrewMemberQuits", "Crew":"Senya Pirojkov" }
+{ "timestamp":"2017-09-05T18:38:27Z", "event":"CrewMemberQuits", "Crew":"Animum" }
+{ "timestamp":"2017-09-05T19:29:26Z", "event":"CrewMemberQuits", "Crew":"Sarri" }
+{ "timestamp":"2017-09-06T14:47:42Z", "event":"CrewMemberQuits", "Crew":"TangoSierra" }
+{ "timestamp":"2017-09-06T19:22:21Z", "event":"CrewMemberQuits", "Crew":"Commander Mason" }
+{ "timestamp":"2017-09-06T19:43:15Z", "event":"CrewMemberQuits", "Crew":"vladde777" }
+{ "timestamp":"2017-09-08T19:17:49Z", "event":"CrewMemberQuits", "Crew":"Doc Hollandaise" }
+{ "timestamp":"2017-09-08T19:20:50Z", "event":"CrewMemberQuits", "Crew":"Zirias" }
+{ "timestamp":"2017-09-08T19:46:21Z", "event":"CrewMemberQuits", "Crew":"Joning" }
+{ "timestamp":"2017-09-08T19:53:38Z", "event":"CrewMemberQuits", "Crew":"Everpulse" }
+{ "timestamp":"2017-09-08T20:03:29Z", "event":"CrewMemberQuits", "Crew":"Jtech00" }
+{ "timestamp":"2017-09-08T20:13:18Z", "event":"CrewMemberQuits", "Crew":"NovaBlood" }
+{ "timestamp":"2017-09-08T20:14:39Z", "event":"CrewMemberQuits", "Crew":"CuddlingTuna" }
+{ "timestamp":"2017-09-09T17:18:31Z", "event":"CrewMemberQuits", "Crew":"Rellian" }
+{ "timestamp":"2017-09-10T12:36:15Z", "event":"CrewMemberQuits", "Crew":"Soosenkiller" }
+{ "timestamp":"2017-09-12T18:41:31Z", "event":"CrewMemberQuits", "Crew":"MLGMarel" }
+{ "timestamp":"2017-09-19T17:06:47Z", "event":"CrewMemberQuits", "Crew":"Mlat Hromovlad" }
+{ "timestamp":"2017-09-19T17:07:16Z", "event":"CrewMemberQuits", "Crew":"Othyar Scott" }
+{ "timestamp":"2017-09-19T19:03:08Z", "event":"CrewMemberQuits", "Crew":"florian1185" }
+{ "timestamp":"2017-09-19T19:05:13Z", "event":"CrewMemberQuits", "Crew":"Evard" }
+{ "timestamp":"2017-09-24T19:52:10Z", "event":"CrewMemberQuits", "Crew":"quamrana" }
+{ "timestamp":"2017-09-24T19:52:10Z", "event":"CrewMemberQuits", "Crew":"Alcazaba" }
+{ "timestamp":"2017-09-25T08:53:41Z", "event":"CrewMemberQuits", "Crew":"ChefVortivask" }
+{ "timestamp":"2017-09-25T09:32:42Z", "event":"CrewMemberQuits", "Crew":"TKChocolate" }
+{ "timestamp":"2017-09-25T09:58:55Z", "event":"CrewMemberQuits", "Crew":"ChefVortivask" }
+{ "timestamp":"2017-09-25T10:04:08Z", "event":"CrewMemberQuits", "Crew":"StarxLord" }
+{ "timestamp":"2017-09-25T12:06:41Z", "event":"CrewMemberQuits", "Crew":"LoveJester" }
+{ "timestamp":"2017-09-25T12:39:31Z", "event":"CrewMemberQuits", "Crew":"MHT" }
+{ "timestamp":"2017-09-25T18:07:43Z", "event":"CrewMemberQuits", "Crew":"Kyabe" }
+{ "timestamp":"2017-09-25T18:21:56Z", "event":"CrewMemberQuits", "Crew":"Smokekush" }
+{ "timestamp":"2017-09-25T18:24:12Z", "event":"CrewMemberQuits", "Crew":"Kaelaris" }
+{ "timestamp":"2017-09-25T18:28:24Z", "event":"CrewMemberQuits", "Crew":"Smokekush" }
+{ "timestamp":"2017-09-25T18:36:07Z", "event":"CrewMemberQuits", "Crew":"Smokekush" }
+{ "timestamp":"2017-09-25T18:38:29Z", "event":"CrewMemberQuits", "Crew":"Delta 1" }
+{ "timestamp":"2017-09-25T18:41:28Z", "event":"CrewMemberQuits", "Crew":"FishVer" }

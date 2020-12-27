@@ -1,27 +1,43 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class PowerplayCollectEvent : EventBase
+    public partial class PowerplayCollectEvent : EventBase
     {
-        internal PowerplayCollectEvent() { }
+        internal PowerplayCollectEvent()
+        {
+        }
 
-        public static PowerplayCollectEvent FromJson(string json) => JsonConvert.DeserializeObject<PowerplayCollectEvent>(json);
+        [JsonProperty("Power")] public string Power { get; private set; }
 
+        [JsonProperty("Type")] public string Type { get; private set; }
 
-        [JsonProperty("Power")]
-        public string Power { get; internal set; }
+        [JsonProperty("Type_Localised")] public string TypeLocalised { get; private set; }
 
-        [JsonProperty("Type")]
-        public string Type { get; internal set; }
+        [JsonProperty("Count")] public long Count { get; private set; }
+    }
 
-        [JsonProperty("Type_Localised")]
-        public string TypeLocalised { get; internal set; }
+    public partial class PowerplayCollectEvent
+    {
+        public static PowerplayCollectEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<PowerplayCollectEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Count")]
-        public long Count { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<PowerplayCollectEvent> PowerplayCollectEvent;
 
-        
+        internal void InvokePowerplayCollectEvent(PowerplayCollectEvent arg)
+        {
+            PowerplayCollectEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -1,0 +1,25 @@
+{ "timestamp":"2017-09-26T19:57:02Z", "event":"FactionKillBond", "Reward":9200, "AwardingFaction":"I.P.S.A.L Project", "VictimFaction":"Rational Logistics" }
+{ "timestamp":"2017-09-26T19:58:40Z", "event":"FactionKillBond", "Reward":36800, "AwardingFaction":"I.P.S.A.L Project", "VictimFaction":"Rational Logistics" }
+{ "timestamp":"2017-09-26T19:59:12Z", "event":"FactionKillBond", "Reward":9200, "AwardingFaction":"I.P.S.A.L Project", "VictimFaction":"Rational Logistics" }
+{ "timestamp":"2017-09-26T19:59:42Z", "event":"FactionKillBond", "Reward":32200, "AwardingFaction":"I.P.S.A.L Project", "VictimFaction":"Rational Logistics" }
+{ "timestamp":"2017-09-26T19:59:56Z", "event":"FactionKillBond", "Reward":41400, "AwardingFaction":"I.P.S.A.L Project", "VictimFaction":"Rational Logistics" }
+{ "timestamp":"2017-09-26T20:04:34Z", "event":"FactionKillBond", "Reward":18400, "AwardingFaction":"I.P.S.A.L Project", "VictimFaction":"Rational Logistics" }
+{ "timestamp":"2017-09-26T20:05:32Z", "event":"FactionKillBond", "Reward":18400, "AwardingFaction":"I.P.S.A.L Project", "VictimFaction":"Rational Logistics" }
+{ "timestamp":"2017-09-26T20:06:23Z", "event":"FactionKillBond", "Reward":41400, "AwardingFaction":"I.P.S.A.L Project", "VictimFaction":"Rational Logistics" }
+{ "timestamp":"2017-10-24T14:25:50Z", "event":"FactionKillBond", "Reward":36800, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:27:11Z", "event":"FactionKillBond", "Reward":41400, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:27:50Z", "event":"FactionKillBond", "Reward":9200, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:28:22Z", "event":"FactionKillBond", "Reward":23000, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:28:42Z", "event":"FactionKillBond", "Reward":18400, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:28:49Z", "event":"FactionKillBond", "Reward":27600, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:32:46Z", "event":"FactionKillBond", "Reward":23000, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:33:00Z", "event":"FactionKillBond", "Reward":4600, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:33:24Z", "event":"FactionKillBond", "Reward":50600, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:34:20Z", "event":"FactionKillBond", "Reward":59800, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:35:39Z", "event":"FactionKillBond", "Reward":18400, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:36:19Z", "event":"FactionKillBond", "Reward":9200, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:37:09Z", "event":"FactionKillBond", "Reward":4600, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:37:25Z", "event":"FactionKillBond", "Reward":18400, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:37:52Z", "event":"FactionKillBond", "Reward":18400, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-10-24T14:38:44Z", "event":"FactionKillBond", "Reward":41400, "AwardingFaction":"Ugrivirii Emperor's Grace", "VictimFaction":"Noctilucent Dyn" }
+{ "timestamp":"2017-11-11T20:19:21Z", "event":"FactionKillBond", "Reward":92000, "AwardingFaction":"Kabiak Purple Fortune Group", "VictimFaction":"Kabiak Empire Assembly" }

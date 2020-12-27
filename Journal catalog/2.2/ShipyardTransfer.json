@@ -1,0 +1,52 @@
+{ "timestamp":"2016-11-05T16:35:01Z", "event":"ShipyardTransfer", "ShipType":"SideWinder", "ShipID":13, "System":"Diaguandri", "Distance":260.283173, "TransferPrice":1430 }
+{ "timestamp":"2016-11-10T14:00:18Z", "event":"ShipyardTransfer", "ShipType":"Anaconda", "ShipID":6, "System":"Hollos", "Distance":8.490458, "TransferPrice":101050 }
+{ "timestamp":"2016-11-16T13:33:35Z", "event":"ShipyardTransfer", "ShipType":"Empire_Courier", "ShipID":16, "System":"Eburnakura", "Distance":216.196915, "TransferPrice":48282 }
+{ "timestamp":"2016-11-16T14:54:35Z", "event":"ShipyardTransfer", "ShipType":"Hauler", "ShipID":15, "System":"Annwn", "Distance":155.376892, "TransferPrice":1502 }
+{ "timestamp":"2016-11-16T14:54:42Z", "event":"ShipyardTransfer", "ShipType":"Empire_Courier", "ShipID":16, "System":"Mitnahas", "Distance":185.132980, "TransferPrice":41591 }
+{ "timestamp":"2016-11-20T12:20:47Z", "event":"ShipyardTransfer", "ShipType":"Empire_Courier", "ShipID":16, "System":"LFT 926", "Distance":180.748978, "TransferPrice":40647 }
+{ "timestamp":"2016-11-20T12:21:06Z", "event":"ShipyardTransfer", "ShipType":"Empire_Eagle", "ShipID":18, "System":"Herthans", "Distance":177.765564, "TransferPrice":25124 }
+{ "timestamp":"2016-11-20T12:21:15Z", "event":"ShipyardTransfer", "ShipType":"Asp", "ShipID":19, "System":"Caspatsuria", "Distance":191.975861, "TransferPrice":74588 }
+{ "timestamp":"2016-12-08T13:24:04Z", "event":"ShipyardTransfer", "ShipType":"Viper", "ShipID":20, "System":"Omagatae", "Distance":390.891327, "TransferPrice":51893 }
+{ "timestamp":"2016-12-09T18:08:32Z", "event":"ShipyardTransfer", "ShipType":"Viper", "ShipID":20, "System":"Sothis", "Distance":444.077545, "TransferPrice":58864 }
+{ "timestamp":"2016-12-09T18:08:47Z", "event":"ShipyardTransfer", "ShipType":"Empire_Courier", "ShipID":16, "System":"Diaguandri", "Distance":262.117432, "TransferPrice":58172 }
+{ "timestamp":"2016-12-15T14:42:39Z", "event":"ShipyardTransfer", "ShipType":"Python", "ShipID":19, "System":"Badbadzist", "Distance":37.005238, "TransferPrice":221839 }
+{ "timestamp":"2016-12-27T13:27:23Z", "event":"ShipyardTransfer", "ShipType":"Anaconda", "ShipID":17, "System":"Tagoman", "Distance":227.578247, "TransferPrice":2040403 }
+{ "timestamp":"2016-12-30T18:52:49Z", "event":"ShipyardTransfer", "ShipType":"Anaconda", "ShipID":17, "System":"Vega", "Distance":12.865211, "TransferPrice":160840 }
+{ "timestamp":"2017-01-07T12:31:02Z", "event":"ShipyardTransfer", "ShipType":"Anaconda", "ShipID":17, "System":"Deciat", "Distance":107.309395, "TransferPrice":992815 }
+{ "timestamp":"2017-01-23T19:50:58Z", "event":"ShipyardTransfer", "ShipType":"Empire_Eagle", "ShipID":26, "System":"CF 464", "Distance":152.639908, "TransferPrice":10498 }
+{ "timestamp":"2017-01-23T19:51:05Z", "event":"ShipyardTransfer", "ShipType":"Eagle", "ShipID":20, "System":"HIP 9141", "Distance":107.471779, "TransferPrice":14644 }
+{ "timestamp":"2017-01-23T19:51:12Z", "event":"ShipyardTransfer", "ShipType":"Eagle", "ShipID":24, "System":"Leesti", "Distance":233.807037, "TransferPrice":1637 }
+{ "timestamp":"2017-01-23T19:51:18Z", "event":"ShipyardTransfer", "ShipType":"Adder", "ShipID":34, "System":"Fuelum", "Distance":179.385086, "TransferPrice":1962 }
+{ "timestamp":"2017-01-23T19:51:29Z", "event":"ShipyardTransfer", "ShipType":"Viper", "ShipID":28, "System":"LHS 2936", "Distance":157.193054, "TransferPrice":2376 }
+{ "timestamp":"2017-01-23T19:51:36Z", "event":"ShipyardTransfer", "ShipType":"Type6", "ShipID":35, "System":"Sol", "Distance":127.318855, "TransferPrice":24943 }
+{ "timestamp":"2017-01-23T19:51:44Z", "event":"ShipyardTransfer", "ShipType":"Viper", "ShipID":30, "System":"Ross 145", "Distance":140.778442, "TransferPrice":26174 }
+{ "timestamp":"2017-01-23T19:51:51Z", "event":"ShipyardTransfer", "ShipType":"Viper", "ShipID":27, "System":"CF 464", "Distance":152.639908, "TransferPrice":27968 }
+{ "timestamp":"2017-01-23T19:51:58Z", "event":"ShipyardTransfer", "ShipType":"CobraMkIV", "ShipID":33, "System":"Fuelum", "Distance":179.385086, "TransferPrice":31448 }
+{ "timestamp":"2017-01-23T19:52:07Z", "event":"ShipyardTransfer", "ShipType":"Eagle", "ShipID":31, "System":"Naunei", "Distance":181.953308, "TransferPrice":3886 }
+{ "timestamp":"2017-01-23T19:52:14Z", "event":"ShipyardTransfer", "ShipType":"Empire_Eagle", "ShipID":32, "System":"Jurokkju", "Distance":183.368851, "TransferPrice":60107 }
+{ "timestamp":"2017-01-30T14:41:17Z", "event":"ShipyardTransfer", "ShipType":"Independant_Trader", "ShipID":27, "System":"Walmiri", "Distance":8.150801, "TransferPrice":14926 }
+{ "timestamp":"2017-02-03T17:08:17Z", "event":"ShipyardTransfer", "ShipType":"DiamondBackXL", "ShipID":29, "System":"HIP 115181", "Distance":16.188707, "TransferPrice":3219 }
+{ "timestamp":"2017-02-03T17:08:25Z", "event":"ShipyardTransfer", "ShipType":"Asp", "ShipID":28, "System":"HIP 115181", "Distance":16.188707, "TransferPrice":17564 }
+{ "timestamp":"2017-02-04T15:34:21Z", "event":"ShipyardTransfer", "ShipType":"Asp", "ShipID":28, "System":"Can Qing", "Distance":16.188707, "TransferPrice":17564 }
+{ "timestamp":"2017-02-04T18:05:09Z", "event":"ShipyardTransfer", "ShipType":"DiamondBackXL", "ShipID":29, "System":"HIP 115181", "Distance":245.450974, "TransferPrice":145811 }
+{ "timestamp":"2017-02-04T18:05:15Z", "event":"ShipyardTransfer", "ShipType":"DiamondBack", "ShipID":30, "System":"Can Qing", "Distance":260.495636, "TransferPrice":35714 }
+{ "timestamp":"2017-02-05T18:03:53Z", "event":"ShipyardTransfer", "ShipType":"Viper", "ShipID":35, "System":"HIP 14211", "Distance":10.864489, "TransferPrice":3395 }
+{ "timestamp":"2017-02-19T16:36:13Z", "event":"ShipyardTransfer", "ShipType":"Adder", "ShipID":25, "System":"36 Doradus", "Distance":157.606720, "TransferPrice":14414 }
+{ "timestamp":"2017-02-19T16:36:20Z", "event":"ShipyardTransfer", "ShipType":"CobraMkIII", "ShipID":27, "System":"Meldrith", "Distance":205.389221, "TransferPrice":16268 }
+{ "timestamp":"2017-02-19T16:36:29Z", "event":"ShipyardTransfer", "ShipType":"Vulture", "ShipID":42, "System":"Krinda", "Distance":136.169907, "TransferPrice":40794 }
+{ "timestamp":"2017-02-19T16:36:38Z", "event":"ShipyardTransfer", "ShipType":"Viper_MkIV", "ShipID":43, "System":"LP 205-44", "Distance":105.264832, "TransferPrice":51399 }
+{ "timestamp":"2017-02-19T16:36:45Z", "event":"ShipyardTransfer", "ShipType":"SideWinder", "ShipID":26, "System":"36 Doradus", "Distance":157.606720, "TransferPrice":9482 }
+{ "timestamp":"2017-02-20T13:46:26Z", "event":"ShipyardTransfer", "ShipType":"Vulture", "ShipID":42, "System":"Diaguandri", "Distance":452.988617, "TransferPrice":131170 }
+{ "timestamp":"2017-03-03T14:43:54Z", "event":"ShipyardTransfer", "ShipType":"Anaconda", "ShipID":32, "System":"Harm", "Distance":82.253593, "TransferPrice":761040 }
+{ "timestamp":"2017-03-03T19:14:17Z", "event":"ShipyardTransfer", "ShipType":"Empire_Trader", "ShipID":46, "System":"Diaguandri", "Distance":183.546051, "TransferPrice":681305 }
+{ "timestamp":"2017-03-15T11:15:01Z", "event":"ShipyardTransfer", "ShipType":"Empire_Trader", "ShipID":46, "System":"Maiku", "Distance":26.018492, "TransferPrice":78290 }
+{ "timestamp":"2017-03-16T16:48:27Z", "event":"ShipyardTransfer", "ShipType":"Vulture", "ShipID":55, "System":"HR 6565", "Distance":114.032654, "TransferPrice":187130 }
+{ "timestamp":"2017-03-21T18:51:05Z", "event":"ShipyardTransfer", "ShipType":"Empire_Trader", "ShipID":46, "System":"Rindjalavs", "Distance":235.863037, "TransferPrice":921586 }
+{ "timestamp":"2017-03-22T18:11:09Z", "event":"ShipyardTransfer", "ShipType":"Vulture", "ShipID":55, "System":"Xevioso", "Distance":106.653198, "TransferPrice":190823 }
+{ "timestamp":"2017-03-24T17:20:29Z", "event":"ShipyardTransfer", "ShipType":"Vulture", "ShipID":55, "System":"Toluku", "Distance":227.763275, "TransferPrice":399844 }
+{ "timestamp":"2017-03-24T17:20:40Z", "event":"ShipyardTransfer", "ShipType":"Empire_Trader", "ShipID":46, "System":"Toluku", "Distance":227.763275, "TransferPrice":600054 }
+{ "timestamp":"2017-03-27T17:12:48Z", "event":"ShipyardTransfer", "ShipType":"Anaconda", "ShipID":32, "System":"Wikanawal", "Distance":29.822096, "TransferPrice":327045 }
+{ "timestamp":"2017-03-27T17:12:54Z", "event":"ShipyardTransfer", "ShipType":"Empire_Trader", "ShipID":46, "System":"Wikanawal", "Distance":29.822096, "TransferPrice":86946 }
+{ "timestamp":"2017-04-06T12:52:39Z", "event":"ShipyardTransfer", "ShipType":"FerDeLance", "ShipID":56, "System":"Grabil", "Distance":117.745193, "TransferPrice":1013857 }
+{ "timestamp":"2017-04-08T17:48:49Z", "event":"ShipyardTransfer", "ShipType":"FerDeLance", "ShipID":56, "System":"Shinrarta Dezhra", "Distance":184.671112, "TransferPrice":1573712 }
+{ "timestamp":"2017-04-10T18:10:44Z", "event":"ShipyardTransfer", "ShipType":"FerDeLance", "ShipID":56, "System":"Gandii", "Distance":124.804550, "TransferPrice":1072910 }

@@ -1,27 +1,37 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class DiedEvent : EventBase
+    public partial class DiedEvent : EventBase
     {
-        internal DiedEvent() { }
+        internal DiedEvent()
+        {
+        }
 
-        public static DiedEvent FromJson(string json) => JsonConvert.DeserializeObject<DiedEvent>(json);
+        [JsonProperty("event")] public string Event { get; private set; }
+    }
 
+    public partial class DiedEvent
+    {
+        public static DiedEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<DiedEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("KillerName")]
-        public string KillerName { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<DiedEvent> DiedEvent;
 
-        [JsonProperty("KillerName_Localised")]
-        public string KillerNameLocalised { get; internal set; }
-
-        [JsonProperty("KillerShip")]
-        public string KillerShip { get; internal set; }
-
-        [JsonProperty("KillerRank")]
-        public string KillerRank { get; internal set; }
-
-        
+        internal void InvokeDiedEvent(DiedEvent arg)
+        {
+            DiedEvent?.Invoke(this, arg);
+        }
     }
 }

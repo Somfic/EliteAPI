@@ -1,0 +1,32 @@
+{ "timestamp":"2017-09-26T17:56:04Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-09-26T17:56:19Z", "event":"DockingDenied", "Reason":"NoReason", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-09-27T14:56:54Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Obsidian Orbital" }
+{ "timestamp":"2017-09-28T16:22:52Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"New Dawn Station" }
+{ "timestamp":"2017-09-28T19:59:50Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Blackmount Orbital" }
+{ "timestamp":"2017-09-28T20:13:37Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"" }
+{ "timestamp":"2017-09-29T13:01:37Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"The Indra" }
+{ "timestamp":"2017-10-02T14:58:32Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Ito Orbital" }
+{ "timestamp":"2017-10-02T15:31:21Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Ito Orbital" }
+{ "timestamp":"2017-10-03T13:02:56Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"Ito Orbital" }
+{ "timestamp":"2017-10-05T15:37:46Z", "event":"DockingDenied", "Reason":"Hostile", "StationName":"Jeffries High" }
+{ "timestamp":"2017-10-06T21:58:51Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Alexandria Gateway" }
+{ "timestamp":"2017-10-07T13:12:14Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Suydam Hub" }
+{ "timestamp":"2017-10-08T11:13:11Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Elder Hub" }
+{ "timestamp":"2017-10-18T19:03:24Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-10-18T19:04:03Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-10-18T19:04:15Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-10-18T19:04:32Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-10-18T19:04:53Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-10-18T19:05:02Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-10-18T19:05:05Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"Ray Gateway" }
+{ "timestamp":"2017-10-19T19:21:58Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Pashin Settlement" }
+{ "timestamp":"2017-10-20T19:45:58Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Jameson Memorial" }
+{ "timestamp":"2017-10-28T12:26:20Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"The Gnosis" }
+{ "timestamp":"2017-10-28T12:27:08Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"The Gnosis" }
+{ "timestamp":"2017-10-28T12:27:19Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"The Gnosis" }
+{ "timestamp":"2017-10-28T12:27:33Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"The Gnosis" }
+{ "timestamp":"2017-10-28T12:27:44Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"The Gnosis" }
+{ "timestamp":"2017-10-28T12:27:47Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"The Gnosis" }
+{ "timestamp":"2017-10-28T12:29:08Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"The Gnosis" }
+{ "timestamp":"2017-10-28T12:29:14Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"The Gnosis" }
+{ "timestamp":"2017-11-12T14:00:36Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Elbakyan Enterprise" }

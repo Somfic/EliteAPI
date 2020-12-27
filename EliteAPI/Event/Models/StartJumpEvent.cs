@@ -1,27 +1,37 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class StartJumpEvent : EventBase
+    public partial class StartJumpEvent : EventBase
     {
-        internal StartJumpEvent() { }
+        internal StartJumpEvent()
+        {
+        }
 
-        public static StartJumpEvent FromJson(string json) => JsonConvert.DeserializeObject<StartJumpEvent>(json);
+        [JsonProperty("JumpType")] public string JumpType { get; private set; }
+    }
 
+    public partial class StartJumpEvent
+    {
+        public static StartJumpEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<StartJumpEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("JumpType")]
-        public string JumpType { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<StartJumpEvent> StartJumpEvent;
 
-        [JsonProperty("StarSystem")]
-        public string StarSystem { get; internal set; }
-
-        [JsonProperty("SystemAddress")]
-        public string SystemAddress { get; internal set; }
-
-        [JsonProperty("StarClass")]
-        public string StarClass { get; internal set; }
-
-        
+        internal void InvokeStartJumpEvent(StartJumpEvent arg)
+        {
+            StartJumpEvent?.Invoke(this, arg);
+        }
     }
 }

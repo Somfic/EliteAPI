@@ -1,0 +1,6 @@
+{ "timestamp":"2019-06-22T21:36:43Z", "event":"FSSDiscoveryScan", "Progress":1.000000, "BodyCount":19, "NonBodyCount":23, "SystemName":"LHS 1446", "SystemAddress":2621817489763 }
+{ "timestamp":"2019-08-18T02:17:30Z", "event":"FSSDiscoveryScan", "Progress":0.394108, "BodyCount":13, "NonBodyCount":25, "SystemName":"DX 799", "SystemAddress":8879945552594 }
+{ "timestamp":"2019-08-18T02:18:29Z", "event":"FSSDiscoveryScan", "Progress":0.394108, "BodyCount":13, "NonBodyCount":25, "SystemName":"DX 799", "SystemAddress":8879945552594 }
+{ "timestamp":"2019-08-27T02:06:55Z", "event":"FSSDiscoveryScan", "Progress":1.000000, "BodyCount":8, "NonBodyCount":13, "SystemName":"Eta Cassiopeiae", "SystemAddress":663312402795 }
+{ "timestamp":"2019-08-27T02:08:00Z", "event":"FSSDiscoveryScan", "Progress":1.000000, "BodyCount":8, "NonBodyCount":13, "SystemName":"Eta Cassiopeiae", "SystemAddress":663312402795 }
+{ "timestamp":"2019-08-27T02:08:48Z", "event":"FSSDiscoveryScan", "Progress":1.000000, "BodyCount":8, "NonBodyCount":13, "SystemName":"Eta Cassiopeiae", "SystemAddress":663312402795 }

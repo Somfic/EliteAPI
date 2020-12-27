@@ -1,0 +1,48 @@
+{ "timestamp":"2017-03-18T12:26:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"He Bo", "StarClass":"A" }
+{ "timestamp":"2017-03-18T12:26:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"NLTT 34715", "StarClass":"M" }
+{ "timestamp":"2017-03-18T12:27:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2936", "StarClass":"M" }
+{ "timestamp":"2017-03-18T12:35:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nanauatzin", "StarClass":"M" }
+{ "timestamp":"2017-03-18T12:35:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ross 486", "StarClass":"M" }
+{ "timestamp":"2017-03-18T12:36:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LP 911-13", "StarClass":"M" }
+{ "timestamp":"2017-03-18T12:37:29Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-03-18T13:22:05Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-18T13:24:10Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-18T13:26:32Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bunda", "StarClass":"K" }
+{ "timestamp":"2017-03-18T13:32:32Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-18T13:38:51Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-18T13:42:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Eravarenth", "StarClass":"K" }
+{ "timestamp":"2017-03-18T13:43:43Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 4497", "StarClass":"F" }
+{ "timestamp":"2017-03-18T13:44:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Delkar", "StarClass":"G" }
+{ "timestamp":"2017-03-18T14:36:46Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-18T14:37:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2477", "StarClass":"M" }
+{ "timestamp":"2017-03-18T14:38:42Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Katta", "StarClass":"M" }
+{ "timestamp":"2017-03-18T14:39:36Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2435", "StarClass":"M" }
+{ "timestamp":"2017-03-18T14:40:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-03-18T15:01:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bunda", "StarClass":"K" }
+{ "timestamp":"2017-03-18T15:02:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Eravarenth", "StarClass":"K" }
+{ "timestamp":"2017-03-18T15:03:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 4497", "StarClass":"F" }
+{ "timestamp":"2017-03-18T15:04:04Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Delkar", "StarClass":"G" }
+{ "timestamp":"2017-03-18T15:09:02Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-18T15:38:24Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Core Sys Sector DL-Y d133", "StarClass":"M" }
+{ "timestamp":"2017-03-18T15:39:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Luyten 145-141", "StarClass":"D" }
+{ "timestamp":"2017-03-18T15:40:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Sol", "StarClass":"G" }
+{ "timestamp":"2017-03-18T15:46:56Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 340", "StarClass":"M" }
+{ "timestamp":"2017-03-18T15:47:49Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 2552", "StarClass":"M" }
+{ "timestamp":"2017-03-18T15:48:41Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-03-18T17:23:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Bunda", "StarClass":"K" }
+{ "timestamp":"2017-03-18T17:24:27Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Eravarenth", "StarClass":"K" }
+{ "timestamp":"2017-03-18T17:25:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 4497", "StarClass":"F" }
+{ "timestamp":"2017-03-18T17:29:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Delkar", "StarClass":"G" }
+{ "timestamp":"2017-03-18T17:56:05Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 4497", "StarClass":"F" }
+{ "timestamp":"2017-03-18T18:08:42Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-18T18:15:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Shinrarta Dezhra", "StarClass":"K" }
+{ "timestamp":"2017-03-18T18:21:29Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-18T18:23:30Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-18T18:30:14Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 4487", "StarClass":"M" }
+{ "timestamp":"2017-03-18T18:49:15Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-18T18:56:55Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-18T19:26:21Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-18T19:35:32Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-03-19T14:20:39Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 4487", "StarClass":"M" }
+{ "timestamp":"2017-03-19T14:21:30Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Delkar", "StarClass":"G" }
+{ "timestamp":"2017-03-19T17:14:06Z", "event":"StartJump", "JumpType":"Supercruise" }

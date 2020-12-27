@@ -1,0 +1,2 @@
+{ "timestamp":"2018-03-27T00:50:21Z", "event":"NavBeaconScan", "SystemAddress":1458107749010, "NumBodies":22 }
+{ "timestamp":"2018-03-27T01:20:32Z", "event":"NavBeaconScan", "SystemAddress":8216113749, "NumBodies":50 }

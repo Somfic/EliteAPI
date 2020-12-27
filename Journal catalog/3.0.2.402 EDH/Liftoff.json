@@ -1,0 +1,4 @@
+{ "timestamp":"2018-03-08T02:51:14Z", "event":"Liftoff", "PlayerControlled":false }
+{ "timestamp":"2018-03-08T03:08:16Z", "event":"Liftoff", "PlayerControlled":true, "Latitude":-54.537052, "Longitude":-99.289536 }
+{ "timestamp":"2018-03-08T19:50:35Z", "event":"Liftoff", "PlayerControlled":false }
+{ "timestamp":"2018-03-08T20:12:32Z", "event":"Liftoff", "PlayerControlled":true, "Latitude":5.261852, "Longitude":-47.575375 }

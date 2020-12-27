@@ -1,0 +1,4 @@
+{ "timestamp":"2018-03-01T02:27:21Z", "event":"Bounty", "Rewards":[ { "Faction":"Federation", "Reward":11520 } ], "Target":"cobramkiii", "TotalReward":11520, "VictimFaction":"Syndicate of Venetic" }
+{ "timestamp":"2018-03-01T19:11:25Z", "event":"Bounty", "Rewards":[ { "Faction":"Federation", "Reward":20745 } ], "Target":"viper_mkiv", "TotalReward":20745, "VictimFaction":"Syndicate of Venetic" }
+{ "timestamp":"2018-03-01T19:53:45Z", "event":"Bounty", "Rewards":[ { "Faction":"V774 Herculis Transport Company", "Reward":5670 } ], "Target":"cobramkiii", "TotalReward":5670, "VictimFaction":"V774 Herculis Silver Ring" }
+{ "timestamp":"2018-03-05T03:46:27Z", "event":"Bounty", "Rewards":[ { "Faction":"Federation", "Reward":12225 } ], "Target":"cobramkiii", "TotalReward":12225, "VictimFaction":"GD 219 Purple Partnership" }

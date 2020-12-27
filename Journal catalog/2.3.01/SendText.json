@@ -1,0 +1,13 @@
+{ "timestamp":"2017-04-25T15:37:04Z", "event":"SendText", "To":"Lurion", "Message":"hey" }
+{ "timestamp":"2017-04-25T15:37:08Z", "event":"SendText", "To":"Lurion", "Message":"almost there" }
+{ "timestamp":"2017-04-25T15:37:49Z", "event":"SendText", "To":"Lurion", "Message":"ok" }
+{ "timestamp":"2017-04-25T15:38:15Z", "event":"SendText", "To":"Lurion", "Message":"ill tell you when i arrive" }
+{ "timestamp":"2017-04-25T15:38:46Z", "event":"SendText", "To":"Lurion", "Message":"maybe yyou can join me for the final jump" }
+{ "timestamp":"2017-04-25T16:59:43Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"hey" }
+{ "timestamp":"2017-04-25T16:59:47Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"bald da!" }
+{ "timestamp":"2017-04-25T17:55:19Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"letzte route geplottet!" }
+{ "timestamp":"2017-04-25T18:15:35Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"letzter sprung :D" }
+{ "timestamp":"2017-04-25T18:15:41Z", "event":"SendText", "To":"Ryan (Ger)", "Message":"willste mit" }
+{ "timestamp":"2017-04-25T18:17:21Z", "event":"SendText", "To":"$cmdr_decorate:#name=Rellian;", "To_Localised":"CMDR Rellian", "Message":"hello" }
+{ "timestamp":"2017-04-25T18:18:50Z", "event":"SendText", "To":"Rellian", "Message":"endlich hier!" }
+{ "timestamp":"2017-04-25T18:21:37Z", "event":"SendText", "To":"$cmdr_decorate:#name=Heat Shield;", "To_Localised":"CMDR Heat Shield", "Message":"hey" }

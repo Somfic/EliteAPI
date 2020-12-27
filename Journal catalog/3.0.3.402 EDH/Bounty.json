@@ -1,0 +1,3 @@
+{ "timestamp":"2018-03-21T22:20:05Z", "event":"Bounty", "Rewards":[ { "Faction":"AC +26 37030 Confederacy", "Reward":3300 } ], "Target":"viper_mkiv", "TotalReward":3300, "VictimFaction":"BAG 7 Purple Brotherhood" }
+{ "timestamp":"2018-03-21T22:22:00Z", "event":"Bounty", "Rewards":[ { "Faction":"AC +26 37030 Confederacy", "Reward":43975 } ], "Target":"viper", "TotalReward":43975, "VictimFaction":"BAG 7 Purple Brotherhood" }
+{ "timestamp":"2018-03-21T23:02:02Z", "event":"Bounty", "Rewards":[ { "Faction":"Progressive Party of Thunderbird", "Reward":3035 } ], "Target":"eagle", "TotalReward":3035, "VictimFaction":"Eulexia Jet Camorra" }

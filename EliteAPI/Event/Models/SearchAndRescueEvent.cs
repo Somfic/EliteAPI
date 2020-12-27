@@ -1,24 +1,41 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class SearchAndRescueEvent : EventBase
+    public partial class SearchAndRescueEvent : EventBase
     {
-        internal SearchAndRescueEvent() { }
+        internal SearchAndRescueEvent()
+        {
+        }
 
-        public static SearchAndRescueEvent FromJson(string json) => JsonConvert.DeserializeObject<SearchAndRescueEvent>(json);
+        [JsonProperty("Name")] public string Name { get; private set; }
 
+        [JsonProperty("Count")] public long Count { get; private set; }
 
-        [JsonProperty("Name")]
-        public string Name { get; internal set; }
+        [JsonProperty("Reward")] public long Reward { get; private set; }
+    }
 
-        [JsonProperty("Count")]
-        public long Count { get; internal set; }
+    public partial class SearchAndRescueEvent
+    {
+        public static SearchAndRescueEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<SearchAndRescueEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Reward")]
-        public long Reward { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<SearchAndRescueEvent> SearchAndRescueEvent;
 
-        
+        internal void InvokeSearchAndRescueEvent(SearchAndRescueEvent arg)
+        {
+            SearchAndRescueEvent?.Invoke(this, arg);
+        }
     }
 }

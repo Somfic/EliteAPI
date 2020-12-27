@@ -1,42 +1,53 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ModuleSwapEvent : EventBase
+    public partial class ModuleSwapEvent : EventBase
     {
-        internal ModuleSwapEvent() { }
+        internal ModuleSwapEvent()
+        {
+        }
 
-        public static ModuleSwapEvent FromJson(string json) => JsonConvert.DeserializeObject<ModuleSwapEvent>(json);
+        [JsonProperty("MarketID")] public long MarketId { get; private set; }
 
+        [JsonProperty("FromSlot")] public string FromSlot { get; private set; }
 
-        [JsonProperty("MarketID")]
-        public long MarketId { get; internal set; }
+        [JsonProperty("ToSlot")] public string ToSlot { get; private set; }
 
-        [JsonProperty("FromSlot")]
-        public string FromSlot { get; internal set; }
+        [JsonProperty("FromItem")] public string FromItem { get; private set; }
 
-        [JsonProperty("ToSlot")]
-        public string ToSlot { get; internal set; }
+        [JsonProperty("FromItem_Localised")] public string FromItemLocalised { get; private set; }
 
-        [JsonProperty("FromItem")]
-        public string FromItem { get; internal set; }
+        [JsonProperty("ToItem")] public string ToItem { get; private set; }
 
-        [JsonProperty("FromItem_Localised")]
-        public string FromItemLocalised { get; internal set; }
+        [JsonProperty("ToItem_Localised")] public string ToItemLocalised { get; private set; }
 
-        [JsonProperty("ToItem")]
-        public string ToItem { get; internal set; }
+        [JsonProperty("Ship")] public string Ship { get; private set; }
 
-        [JsonProperty("ToItem_Localised")]
-        public string ToItemLocalised { get; internal set; }
+        [JsonProperty("ShipID")] public long ShipId { get; private set; }
+    }
 
-        [JsonProperty("Ship")]
-        public string Ship { get; internal set; }
+    public partial class ModuleSwapEvent
+    {
+        public static ModuleSwapEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ModuleSwapEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("ShipID")]
-        public long ShipId { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<ModuleSwapEvent> ModuleSwapEvent;
 
-        
+        internal void InvokeModuleSwapEvent(ModuleSwapEvent arg)
+        {
+            ModuleSwapEvent?.Invoke(this, arg);
+        }
     }
 }

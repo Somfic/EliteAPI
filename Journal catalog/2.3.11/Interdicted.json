@@ -1,0 +1,38 @@
+{ "timestamp":"2017-07-15T11:14:05Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Dene Foran", "IsPlayer":false, "Faction":"Bunda Crimson Organisation" }
+{ "timestamp":"2017-07-15T11:45:44Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Federal Agent", "IsPlayer":false, "Faction":"Felicia Winters", "Power":"Federation" }
+{ "timestamp":"2017-07-15T11:47:07Z", "event":"Interdicted", "Submitted":true, "Interdictor":"DRMena", "IsPlayer":true, "CombatRank":5 }
+{ "timestamp":"2017-07-16T13:57:30Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Stefan Bangel", "IsPlayer":false, "Faction":"Tionisla Corp." }
+{ "timestamp":"2017-07-16T16:20:08Z", "event":"Interdicted", "Submitted":false, "Interdictor":"nanhat", "IsPlayer":true, "CombatRank":7 }
+{ "timestamp":"2017-07-18T10:03:42Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Sancho Cooley", "IsPlayer":false, "Faction":"" }
+{ "timestamp":"2017-07-18T19:47:55Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Serafina Orsina Metcalfe", "IsPlayer":false, "Faction":"Autahenetsi Life Holdings" }
+{ "timestamp":"2017-07-19T12:27:52Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Peter Heinicke", "IsPlayer":false, "Faction":"Kora Pin Movement" }
+{ "timestamp":"2017-09-08T14:28:20Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Daniel Malacek", "IsPlayer":false, "Faction":"EG Union" }
+{ "timestamp":"2017-09-09T14:23:28Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Doedoe Puppenstein", "IsPlayer":false, "Faction":"Tetela Limited" }
+{ "timestamp":"2017-09-09T16:17:10Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Zu Abdul", "IsPlayer":false, "Faction":"" }
+{ "timestamp":"2017-09-09T17:28:37Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Agnew", "IsPlayer":false, "Faction":"Freedom Party of Sirius" }
+{ "timestamp":"2017-09-09T18:14:32Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Kyano", "IsPlayer":false, "Faction":"Confederation of LTT 7251" }
+{ "timestamp":"2017-09-10T11:07:50Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Pehmo Taidoka", "IsPlayer":false, "Faction":"Movement for Venetic Progressive Party" }
+{ "timestamp":"2017-09-10T11:51:59Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Daniel Dean Simpleman", "IsPlayer":false, "Faction":"New Ross 145 Liberty Party" }
+{ "timestamp":"2017-09-10T12:16:56Z", "event":"Interdicted", "Submitted":true, "Interdictor":"$ShipName_Military_Federation;", "Interdictor_Localised":"Federal Navy Ship", "IsPlayer":false, "Faction":"Lalande 38451 Creative PLC" }
+{ "timestamp":"2017-09-10T12:42:21Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Evangeline Rhys", "IsPlayer":false, "Faction":"Cet Power Ltd" }
+{ "timestamp":"2017-09-10T18:06:36Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Harry Potter", "IsPlayer":true, "CombatRank":8 }
+{ "timestamp":"2017-09-10T18:10:55Z", "event":"Interdicted", "Submitted":false, "Interdictor":"Harry Potter", "IsPlayer":true, "CombatRank":8 }
+{ "timestamp":"2017-09-10T18:12:15Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Harry Potter", "IsPlayer":true, "CombatRank":8 }
+{ "timestamp":"2017-09-10T18:12:51Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Harry Potter", "IsPlayer":true, "CombatRank":8 }
+{ "timestamp":"2017-09-12T18:40:25Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Simon Vass", "IsPlayer":false, "Faction":"Sol Nationalists" }
+{ "timestamp":"2017-09-12T19:12:30Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Cheryl", "IsPlayer":false, "Faction":"Mbukuravi Crimson Major Dev" }
+{ "timestamp":"2017-09-14T19:17:36Z", "event":"Interdicted", "Submitted":true, "Interdictor":"SURFIN'BIRD", "IsPlayer":true, "CombatRank":8 }
+{ "timestamp":"2017-09-14T19:36:45Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Jane Riker", "IsPlayer":false, "Faction":"Eravate School of Commerce" }
+{ "timestamp":"2017-09-15T13:02:43Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Arcweld", "IsPlayer":false, "Faction":"Narasimha Ltd" }
+{ "timestamp":"2017-09-15T18:54:31Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Darth Sandhu", "IsPlayer":false, "Faction":"Allied Ualapalor League" }
+{ "timestamp":"2017-09-15T19:46:03Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Davey PEE", "IsPlayer":false, "Faction":"Ho Hsi Corp." }
+{ "timestamp":"2017-09-19T16:58:09Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Jakub Dabrowski", "IsPlayer":false, "Faction":"Kulianminy Crimson Creative & Co" }
+{ "timestamp":"2017-09-19T17:53:10Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Mazzy M", "IsPlayer":false, "Faction":"LHS 1122 Empire Consulate" }
+{ "timestamp":"2017-09-19T18:11:34Z", "event":"Interdicted", "Submitted":true, "Interdictor":"John Blackthorn", "IsPlayer":false, "Faction":"LHS 1122 Liberals" }
+{ "timestamp":"2017-09-20T13:29:55Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Laura Summers", "IsPlayer":false, "Faction":"Pomeche Electronics Corporation" }
+{ "timestamp":"2017-09-21T15:29:42Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Glen White", "IsPlayer":false, "Faction":"Dagaz Legal Commodities" }
+{ "timestamp":"2017-09-21T15:49:17Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Darren Kelly", "IsPlayer":false, "Faction":"" }
+{ "timestamp":"2017-09-21T15:56:51Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Marcus Smilie", "IsPlayer":false, "Faction":"Soch Gold Pirates" }
+{ "timestamp":"2017-09-22T17:18:19Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Brecken Toth", "IsPlayer":false, "Faction":"Beta-3 Tucani Silver Allied Net" }
+{ "timestamp":"2017-09-22T17:43:56Z", "event":"Interdicted", "Submitted":false, "Interdictor":"-=Apached=-", "IsPlayer":true, "CombatRank":8 }
+{ "timestamp":"2017-09-22T18:39:30Z", "event":"Interdicted", "Submitted":true, "Interdictor":"LeatherFace", "IsPlayer":false, "Faction":"The Pilots Federation" }

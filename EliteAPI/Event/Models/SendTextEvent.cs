@@ -1,27 +1,41 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class SendTextEvent : EventBase
+    public partial class SendTextEvent : EventBase
     {
-        internal SendTextEvent() { }
+        internal SendTextEvent()
+        {
+        }
 
-        public static SendTextEvent FromJson(string json) => JsonConvert.DeserializeObject<SendTextEvent>(json);
+        [JsonProperty("To")] public string To { get; private set; }
 
+        [JsonProperty("Message")] public string Message { get; private set; }
 
-        [JsonProperty("To")]
-        public string To { get; internal set; }
+        [JsonProperty("Sent")] public bool Sent { get; private set; }
+    }
 
-        [JsonProperty("To_Localised")]
-        public string ToLocalised { get; internal set; }
+    public partial class SendTextEvent
+    {
+        public static SendTextEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<SendTextEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Message")]
-        public string Message { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<SendTextEvent> SendTextEvent;
 
-        [JsonProperty("Sent")]
-        public bool Sent { get; internal set; }
-
-        
+        internal void InvokeSendTextEvent(SendTextEvent arg)
+        {
+            SendTextEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -1,18 +1,37 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class CrewMemberQuitsEvent : EventBase
+    public partial class CrewMemberQuitsEvent : EventBase
     {
-        internal CrewMemberQuitsEvent() { }
+        internal CrewMemberQuitsEvent()
+        {
+        }
 
-        public static CrewMemberQuitsEvent FromJson(string json) => JsonConvert.DeserializeObject<CrewMemberQuitsEvent>(json);
+        [JsonProperty("Crew")] public string Crew { get; private set; }
+    }
 
+    public partial class CrewMemberQuitsEvent
+    {
+        public static CrewMemberQuitsEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<CrewMemberQuitsEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Crew")]
-        public string Crew { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<CrewMemberQuitsEvent> CrewMemberQuitsEvent;
 
-        
+        internal void InvokeCrewMemberQuitsEvent(CrewMemberQuitsEvent arg)
+        {
+            CrewMemberQuitsEvent?.Invoke(this, arg);
+        }
     }
 }

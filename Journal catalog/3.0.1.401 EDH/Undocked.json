@@ -1,0 +1,17 @@
+{ "timestamp":"2018-02-28T18:56:35Z", "event":"Undocked", "StationName":"Trevithick Dock", "StationType":"Outpost", "MarketID":3230572544 }
+{ "timestamp":"2018-02-28T19:30:42Z", "event":"Undocked", "StationName":"Sylvester City", "StationType":"Outpost", "MarketID":3230449152 }
+{ "timestamp":"2018-02-28T20:30:05Z", "event":"Undocked", "StationName":"Russell Ring", "StationType":"Orbis", "MarketID":3230448640 }
+{ "timestamp":"2018-02-28T20:51:47Z", "event":"Undocked", "StationName":"Kadenyuk Orbital", "StationType":"Outpost", "MarketID":3230440192 }
+{ "timestamp":"2018-03-01T01:17:22Z", "event":"Undocked", "StationName":"Kadenyuk Orbital", "StationType":"Outpost", "MarketID":3230440192 }
+{ "timestamp":"2018-03-01T01:28:15Z", "event":"Undocked", "StationName":"Cleve Hub", "StationType":"Orbis", "MarketID":3230448384 }
+{ "timestamp":"2018-03-01T01:48:18Z", "event":"Undocked", "StationName":"McKee Ring", "StationType":"Coriolis", "MarketID":3228921856 }
+{ "timestamp":"2018-03-01T02:03:23Z", "event":"Undocked", "StationName":"Beatty Port", "StationType":"Outpost", "MarketID":3228923904 }
+{ "timestamp":"2018-03-01T02:13:39Z", "event":"Undocked", "StationName":"Vonarburg Enterprise", "StationType":"Coriolis", "MarketID":3228923648 }
+{ "timestamp":"2018-03-01T02:23:56Z", "event":"Undocked", "StationName":"Boulton Station", "StationType":"Bernal", "MarketID":3226662912 }
+{ "timestamp":"2018-03-01T02:52:47Z", "event":"Undocked", "StationName":"Vonarburg Enterprise", "StationType":"Coriolis", "MarketID":3228923648 }
+{ "timestamp":"2018-03-01T18:49:41Z", "event":"Undocked", "StationName":"Vonarburg Enterprise", "StationType":"Coriolis", "MarketID":3228923648 }
+{ "timestamp":"2018-03-01T19:45:25Z", "event":"Undocked", "StationName":"Vonarburg Enterprise", "StationType":"Coriolis", "MarketID":3228923648 }
+{ "timestamp":"2018-03-05T03:09:56Z", "event":"Undocked", "StationName":"Vonarburg Enterprise", "StationType":"Coriolis", "MarketID":3228923648 }
+{ "timestamp":"2018-03-05T03:15:13Z", "event":"Undocked", "StationName":"Vonarburg Enterprise", "StationType":"Coriolis", "MarketID":3228923648 }
+{ "timestamp":"2018-03-05T03:19:20Z", "event":"Undocked", "StationName":"Vonarburg Enterprise", "StationType":"Coriolis", "MarketID":3228923648 }
+{ "timestamp":"2018-03-05T03:31:47Z", "event":"Undocked", "StationName":"Vonarburg Enterprise", "StationType":"Coriolis", "MarketID":3228923648 }

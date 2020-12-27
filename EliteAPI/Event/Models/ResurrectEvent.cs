@@ -1,24 +1,41 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ResurrectEvent : EventBase
+    public partial class ResurrectEvent : EventBase
     {
-        internal ResurrectEvent() { }
+        internal ResurrectEvent()
+        {
+        }
 
-        public static ResurrectEvent FromJson(string json) => JsonConvert.DeserializeObject<ResurrectEvent>(json);
+        [JsonProperty("Option")] public string Option { get; private set; }
 
+        [JsonProperty("Cost")] public long Cost { get; private set; }
 
-        [JsonProperty("Option")]
-        public string Option { get; internal set; }
+        [JsonProperty("Bankrupt")] public bool Bankrupt { get; private set; }
+    }
 
-        [JsonProperty("Cost")]
-        public long Cost { get; internal set; }
+    public partial class ResurrectEvent
+    {
+        public static ResurrectEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ResurrectEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Bankrupt")]
-        public bool Bankrupt { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<ResurrectEvent> ResurrectEvent;
 
-        
+        internal void InvokeResurrectEvent(ResurrectEvent arg)
+        {
+            ResurrectEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -1,0 +1,2 @@
+{ "timestamp":"2020-09-29T18:27:00Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"emissiondata", "Name_Localised":"Unexpected Emission Data", "Count":3 }
+{ "timestamp":"2020-09-29T18:27:00Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"shieldpatternanalysis", "Name_Localised":"Aberrant Shield Pattern Analysis", "Count":3 }

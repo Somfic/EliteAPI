@@ -1,0 +1,76 @@
+{ "timestamp":"2018-12-12T15:26:09Z", "event":"SupercruiseEntry", "StarSystem":"Pleiades Sector PD-S b4-0", "SystemAddress":669880231201 }
+{ "timestamp":"2018-12-12T16:40:56Z", "event":"SupercruiseEntry", "StarSystem":"Shinrarta Dezhra", "SystemAddress":3932277478106 }
+{ "timestamp":"2018-12-12T21:42:06Z", "event":"SupercruiseEntry", "StarSystem":"Shinrarta Dezhra", "SystemAddress":3932277478106 }
+{ "timestamp":"2018-12-12T22:04:17Z", "event":"SupercruiseEntry", "StarSystem":"Shinrarta Dezhra", "SystemAddress":3932277478106 }
+{ "timestamp":"2018-12-12T22:06:21Z", "event":"SupercruiseEntry", "StarSystem":"Shinrarta Dezhra", "SystemAddress":3932277478106 }
+{ "timestamp":"2018-12-12T22:11:52Z", "event":"SupercruiseEntry", "StarSystem":"Shinrarta Dezhra", "SystemAddress":3932277478106 }
+{ "timestamp":"2018-12-12T23:13:39Z", "event":"SupercruiseEntry", "StarSystem":"Shinrarta Dezhra", "SystemAddress":3932277478106 }
+{ "timestamp":"2018-12-12T23:30:54Z", "event":"SupercruiseEntry", "StarSystem":"Shinrarta Dezhra", "SystemAddress":3932277478106 }
+{ "timestamp":"2018-12-13T11:39:04Z", "event":"SupercruiseEntry", "StarSystem":"Luyten's Star", "SystemAddress":7268024264097 }
+{ "timestamp":"2018-12-13T11:45:32Z", "event":"SupercruiseEntry", "StarSystem":"Luyten's Star", "SystemAddress":7268024264097 }
+{ "timestamp":"2018-12-13T16:42:48Z", "event":"SupercruiseEntry", "StarSystem":"Wredguia OC-J b23-1", "SystemAddress":2860045968585 }
+{ "timestamp":"2018-12-13T20:25:44Z", "event":"SupercruiseEntry", "StarSystem":"G 89-32", "SystemAddress":20462163797409 }
+{ "timestamp":"2018-12-13T22:17:44Z", "event":"SupercruiseEntry", "StarSystem":"LFT 65", "SystemAddress":3102853810539 }
+{ "timestamp":"2018-12-13T22:21:52Z", "event":"SupercruiseEntry", "StarSystem":"LFT 65", "SystemAddress":3102853810539 }
+{ "timestamp":"2018-12-13T22:22:20Z", "event":"SupercruiseEntry", "StarSystem":"LFT 65", "SystemAddress":3102853810539 }
+{ "timestamp":"2018-12-13T22:35:55Z", "event":"SupercruiseEntry", "StarSystem":"LFT 65", "SystemAddress":3102853810539 }
+{ "timestamp":"2018-12-13T22:39:40Z", "event":"SupercruiseEntry", "StarSystem":"LFT 65", "SystemAddress":3102853810539 }
+{ "timestamp":"2018-12-14T10:38:28Z", "event":"SupercruiseEntry", "StarSystem":"HIP 15310", "SystemAddress":2965414857059 }
+{ "timestamp":"2018-12-14T10:40:47Z", "event":"SupercruiseEntry", "StarSystem":"HIP 15310", "SystemAddress":2965414857059 }
+{ "timestamp":"2018-12-14T10:45:33Z", "event":"SupercruiseEntry", "StarSystem":"HIP 15310", "SystemAddress":2965414857059 }
+{ "timestamp":"2018-12-14T11:10:11Z", "event":"SupercruiseEntry", "StarSystem":"HIP 15310", "SystemAddress":2965414857059 }
+{ "timestamp":"2018-12-14T16:11:00Z", "event":"SupercruiseEntry", "StarSystem":"Wredguia SX-L d7-92", "SystemAddress":3171506194755 }
+{ "timestamp":"2018-12-14T18:04:48Z", "event":"SupercruiseEntry", "StarSystem":"Corona Austr. Dark Region KS-T b3-3", "SystemAddress":7266949867105 }
+{ "timestamp":"2018-12-14T18:10:52Z", "event":"SupercruiseEntry", "StarSystem":"Corona Austr. Dark Region KS-T b3-3", "SystemAddress":7266949867105 }
+{ "timestamp":"2018-12-14T19:12:53Z", "event":"SupercruiseEntry", "StarSystem":"Col 359 Sector GJ-H b24-3", "SystemAddress":7266949605033 }
+{ "timestamp":"2018-12-14T19:28:25Z", "event":"SupercruiseEntry", "StarSystem":"Col 359 Sector GJ-H b24-3", "SystemAddress":7266949605033 }
+{ "timestamp":"2018-12-14T20:26:51Z", "event":"SupercruiseEntry", "StarSystem":"Col 359 Sector LW-N d6-37", "SystemAddress":1281770850731 }
+{ "timestamp":"2018-12-14T20:30:48Z", "event":"SupercruiseEntry", "StarSystem":"Col 359 Sector LW-N d6-37", "SystemAddress":1281770850731 }
+{ "timestamp":"2018-12-14T21:11:13Z", "event":"SupercruiseEntry", "StarSystem":"Col 359 Sector OC-M d7-18", "SystemAddress":628919044531 }
+{ "timestamp":"2018-12-14T23:48:35Z", "event":"SupercruiseEntry", "StarSystem":"Ross 986", "SystemAddress":5069001008545 }
+{ "timestamp":"2018-12-14T23:53:51Z", "event":"SupercruiseEntry", "StarSystem":"Ross 986", "SystemAddress":5069001008545 }
+{ "timestamp":"2018-12-15T10:54:17Z", "event":"SupercruiseEntry", "StarSystem":"Vela Dark Region NC-V b2-0", "SystemAddress":684107244929 }
+{ "timestamp":"2018-12-15T11:24:59Z", "event":"SupercruiseEntry", "StarSystem":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163 }
+{ "timestamp":"2018-12-15T11:38:20Z", "event":"SupercruiseEntry", "StarSystem":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163 }
+{ "timestamp":"2018-12-15T11:40:37Z", "event":"SupercruiseEntry", "StarSystem":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163 }
+{ "timestamp":"2018-12-15T19:13:33Z", "event":"SupercruiseEntry", "StarSystem":"Luyten's Star", "SystemAddress":7268024264097 }
+{ "timestamp":"2018-12-12T04:10:47Z", "event":"SupercruiseEntry", "StarSystem":"CD-24 5005", "SystemAddress":1183498375882 }
+{ "timestamp":"2018-12-12T07:11:06Z", "event":"SupercruiseEntry", "StarSystem":"Eranin", "SystemAddress":2832631632594 }
+{ "timestamp":"2018-12-12T07:20:07Z", "event":"SupercruiseEntry", "StarSystem":"Eranin", "SystemAddress":2832631632594 }
+{ "timestamp":"2018-12-13T20:59:12Z", "event":"SupercruiseEntry", "StarSystem":"G 239-25", "SystemAddress":5068732638625 }
+{ "timestamp":"2018-12-13T21:25:59Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-13T21:29:47Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-13T21:36:16Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-13T21:57:02Z", "event":"SupercruiseEntry", "StarSystem":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-13T22:20:25Z", "event":"SupercruiseEntry", "StarSystem":"G 175-42", "SystemAddress":908486251210 }
+{ "timestamp":"2018-12-17T16:58:07Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-17T17:06:54Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-17T17:07:36Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-17T17:14:08Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-17T17:19:03Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-17T17:22:18Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-17T19:07:55Z", "event":"SupercruiseEntry", "StarSystem":"Nanomam", "SystemAddress":4752121268587 }
+{ "timestamp":"2018-12-17T19:13:49Z", "event":"SupercruiseEntry", "StarSystem":"Nanomam", "SystemAddress":4752121268587 }
+{ "timestamp":"2018-12-17T19:20:08Z", "event":"SupercruiseEntry", "StarSystem":"Nanomam", "SystemAddress":4752121268587 }
+{ "timestamp":"2018-12-17T19:22:50Z", "event":"SupercruiseEntry", "StarSystem":"Nanomam", "SystemAddress":4752121268587 }
+{ "timestamp":"2018-12-17T20:12:00Z", "event":"SupercruiseEntry", "StarSystem":"Lushertha", "SystemAddress":4442883623275 }
+{ "timestamp":"2018-12-17T20:34:26Z", "event":"SupercruiseEntry", "StarSystem":"Lushertha", "SystemAddress":4442883623275 }
+{ "timestamp":"2018-12-18T01:51:45Z", "event":"SupercruiseEntry", "StarSystem":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-18T02:00:08Z", "event":"SupercruiseEntry", "StarSystem":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-18T02:32:48Z", "event":"SupercruiseEntry", "StarSystem":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-18T02:40:50Z", "event":"SupercruiseEntry", "StarSystem":"LHS 215", "SystemAddress":2869709317537 }
+{ "timestamp":"2018-12-18T03:03:22Z", "event":"SupercruiseEntry", "StarSystem":"LP 64-194", "SystemAddress":13864825660833 }
+{ "timestamp":"2018-12-18T03:10:52Z", "event":"SupercruiseEntry", "StarSystem":"LP 64-194", "SystemAddress":13864825660833 }
+{ "timestamp":"2018-12-18T03:20:15Z", "event":"SupercruiseEntry", "StarSystem":"LP 64-194", "SystemAddress":13864825660833 }
+{ "timestamp":"2018-12-18T17:02:22Z", "event":"SupercruiseEntry", "StarSystem":"Ross 318", "SystemAddress":670686061985 }
+{ "timestamp":"2018-12-18T17:10:37Z", "event":"SupercruiseEntry", "StarSystem":"Ross 318", "SystemAddress":670686061985 }
+{ "timestamp":"2018-12-18T17:15:06Z", "event":"SupercruiseEntry", "StarSystem":"Ross 318", "SystemAddress":670686061985 }
+{ "timestamp":"2018-12-18T17:17:50Z", "event":"SupercruiseEntry", "StarSystem":"Ross 318", "SystemAddress":670686061985 }
+{ "timestamp":"2018-12-18T17:19:50Z", "event":"SupercruiseEntry", "StarSystem":"Ross 318", "SystemAddress":670686061985 }
+{ "timestamp":"2018-12-18T17:26:55Z", "event":"SupercruiseEntry", "StarSystem":"Ross 318", "SystemAddress":670686061985 }
+{ "timestamp":"2018-12-18T18:13:20Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-18T18:23:10Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-18T19:45:20Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-18T19:56:51Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-18T20:00:48Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }
+{ "timestamp":"2018-12-18T20:03:03Z", "event":"SupercruiseEntry", "StarSystem":"Tollan", "SystemAddress":18262872171937 }

@@ -1,52 +1,52 @@
-﻿using EliteAPI.Status.Models.Abstractions;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using EliteAPI.Status.Models.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI.Abstractions
 {
     /// <summary>
-    /// EliteAPI
+    ///     EliteAPI
     /// </summary>
     public interface IEliteDangerousAPI
     {
         /// <summary>
-        /// EliteAPI's version
+        ///     EliteAPI's version
         /// </summary>
         Version Version { get; }
 
         /// <summary>
-        /// Container for all events
+        ///     Container for all events
         /// </summary>
         EventHandler Events { get; }
 
         /// <summary>
-        /// Container for the ship's current status
+        ///     Container for the ship's current status
         /// </summary>
         IShipStatus Status { get; }
 
         /// <summary>
-        /// Whether the api is currently running
+        ///     Whether the api is currently running
         /// </summary>
         bool IsRunning { get; }
 
         /// <summary>
-        /// Whether the api has catched up on past event in this session
+        ///     Whether the api has catched up on past event in this session
         /// </summary>
         bool HasCatchedUp { get; }
 
         /// <summary>
-        /// Initializes the api
+        ///     Initializes the api
         /// </summary>
         Task InitializeAsync();
 
         /// <summary>
-        /// Starts the api
+        ///     Starts the api
         /// </summary>
         Task StartAsync();
 
         /// <summary>
-        /// Stops the api
+        ///     Stops the api
         /// </summary>
         Task StopAsync();
     }

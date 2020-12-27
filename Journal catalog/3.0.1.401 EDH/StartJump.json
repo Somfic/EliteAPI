@@ -1,0 +1,40 @@
+{ "timestamp":"2018-02-28T18:58:31Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Eravate", "SystemAddress":5856221467362, "StarClass":"K" }
+{ "timestamp":"2018-02-28T19:31:38Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-02-28T20:32:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Kini", "SystemAddress":11665265468865, "StarClass":"M" }
+{ "timestamp":"2018-02-28T20:52:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LTT 18486", "SystemAddress":3657198211810, "StarClass":"M" }
+{ "timestamp":"2018-02-28T21:00:38Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-02-28T21:11:46Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Kini", "SystemAddress":11665265468865, "StarClass":"M" }
+{ "timestamp":"2018-02-28T21:19:25Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-01T01:18:48Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Eravate", "SystemAddress":5856221467362, "StarClass":"K" }
+{ "timestamp":"2018-03-01T01:20:14Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-01T01:29:20Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"LHS 3447", "SystemAddress":5306465653474, "StarClass":"K" }
+{ "timestamp":"2018-03-01T01:30:19Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Ephesus", "SystemAddress":7230611002074, "StarClass":"K" }
+{ "timestamp":"2018-03-01T01:32:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"GD 219", "SystemAddress":5068195702201, "StarClass":"DA" }
+{ "timestamp":"2018-03-01T01:50:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Genetrix", "SystemAddress":2484378536299, "StarClass":"G" }
+{ "timestamp":"2018-03-01T01:50:57Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"V775 Herculis", "SystemAddress":3932076118746, "StarClass":"K" }
+{ "timestamp":"2018-03-01T02:04:35Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-01T02:14:52Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nodens", "SystemAddress":250978765163, "StarClass":"G" }
+{ "timestamp":"2018-03-01T02:15:45Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Venetic", "SystemAddress":2827959142763, "StarClass":"G" }
+{ "timestamp":"2018-03-01T02:18:35Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-01T02:24:55Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-01T02:28:34Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nodens", "SystemAddress":250978765163, "StarClass":"G" }
+{ "timestamp":"2018-03-01T02:29:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"V775 Herculis", "SystemAddress":3932076118746, "StarClass":"K" }
+{ "timestamp":"2018-03-01T02:54:08Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"110 Herculis", "SystemAddress":2381299321195, "StarClass":"F" }
+{ "timestamp":"2018-03-01T02:57:29Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-01T03:02:45Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-01T18:51:23Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nodens", "SystemAddress":250978765163, "StarClass":"G" }
+{ "timestamp":"2018-03-01T18:52:26Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Venetic", "SystemAddress":2827959142763, "StarClass":"G" }
+{ "timestamp":"2018-03-01T18:54:40Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-01T19:12:11Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Nodens", "SystemAddress":250978765163, "StarClass":"G" }
+{ "timestamp":"2018-03-01T19:13:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"V775 Herculis", "SystemAddress":3932076118746, "StarClass":"K" }
+{ "timestamp":"2018-03-01T19:46:37Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"V774 Herculis", "SystemAddress":2282808709850, "StarClass":"K" }
+{ "timestamp":"2018-03-01T19:57:43Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-01T20:01:32Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-01T20:03:57Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-01T20:06:29Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-05T03:33:07Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Genetrix", "SystemAddress":2484378536299, "StarClass":"G" }
+{ "timestamp":"2018-03-05T03:34:00Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"GD 219", "SystemAddress":5068195702201, "StarClass":"DA" }
+{ "timestamp":"2018-03-05T03:35:44Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-05T03:38:58Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2018-03-05T03:48:01Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Genetrix", "SystemAddress":2484378536299, "StarClass":"G" }
+{ "timestamp":"2018-03-05T03:48:55Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"V775 Herculis", "SystemAddress":3932076118746, "StarClass":"K" }

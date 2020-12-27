@@ -40,6 +40,7 @@ namespace EliteAPI.Event.Helper
                     return "";
             }
         }
+
         public static string Federation(long x)
         {
             switch (x)
@@ -78,6 +79,7 @@ namespace EliteAPI.Event.Helper
                     return "";
             }
         }
+
         public static string Combat(long x)
         {
             switch (x)
@@ -104,6 +106,7 @@ namespace EliteAPI.Event.Helper
                     return "";
             }
         }
+
         public static string Trade(long x)
         {
             switch (x)
@@ -130,6 +133,7 @@ namespace EliteAPI.Event.Helper
                     return "";
             }
         }
+
         public static string Exploration(long x)
         {
             switch (x)
@@ -159,10 +163,10 @@ namespace EliteAPI.Event.Helper
 
         public static string Reputation(float alliance)
         {
-            if (alliance <= -90) { return "Hostile"; }
-            if (alliance <= -35) { return "Unfriendly"; }
-            if (alliance <= 4) { return "Neutral"; }
-            if (alliance <= 35) { return "Cordial"; }
+            if (alliance <= -90) return "Hostile";
+            if (alliance <= -35) return "Unfriendly";
+            if (alliance <= 4) return "Neutral";
+            if (alliance <= 35) return "Cordial";
             return alliance <= 90 ? "Friendly" : "Allied";
         }
     }

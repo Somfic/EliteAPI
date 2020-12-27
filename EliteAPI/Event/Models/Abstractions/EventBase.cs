@@ -3,15 +3,17 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models.Abstractions
 {
-    /// <inheritdoc />
+    /// <summary>
+    ///     An in-game event
+    /// </summary>
     public abstract class EventBase : IEvent
     {
         /// <inheritdoc />
-        [JsonProperty("Timestamp")]
+        [JsonProperty("timestamp")]
         public DateTime Timestamp { get; protected set; } = DateTime.Now;
 
         /// <inheritdoc />
-        [JsonProperty("Event")]
+        [JsonProperty("event")]
         public string Event { get; protected set; }
     }
 }

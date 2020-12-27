@@ -1,0 +1,44 @@
+{ "timestamp":"2017-06-27T18:54:12Z", "event":"SupercruiseExit", "StarSystem":"Wu Guinagi", "Body":"Ziegel Dock", "BodyType":"Station" }
+{ "timestamp":"2017-06-27T19:16:46Z", "event":"SupercruiseExit", "StarSystem":"HIP 14909", "Body":"HIP 14909 1", "BodyType":"Planet" }
+{ "timestamp":"2017-06-27T19:34:49Z", "event":"SupercruiseExit", "StarSystem":"HIP 19026", "Body":"HIP 19026 B 1 c", "BodyType":"Planet" }
+{ "timestamp":"2017-06-27T19:39:24Z", "event":"SupercruiseExit", "StarSystem":"HIP 19026", "Body":"HIP 19026 B 1 c", "BodyType":"Planet" }
+{ "timestamp":"2017-06-28T13:03:17Z", "event":"SupercruiseExit", "StarSystem":"HIP 19026", "Body":"HIP 19026 B 1 c", "BodyType":"Planet" }
+{ "timestamp":"2017-06-28T13:15:30Z", "event":"SupercruiseExit", "StarSystem":"HIP 14909", "Body":"HIP 14909 2 a", "BodyType":"Planet" }
+{ "timestamp":"2017-06-28T13:48:29Z", "event":"SupercruiseExit", "StarSystem":"HIP 17403", "Body":"HIP 17403 A 4 a", "BodyType":"Planet" }
+{ "timestamp":"2017-06-28T13:55:21Z", "event":"SupercruiseExit", "StarSystem":"HIP 17403", "Body":"HIP 17403 A 4 a", "BodyType":"Planet" }
+{ "timestamp":"2017-07-01T11:02:56Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial", "BodyType":"Station" }
+{ "timestamp":"2017-07-01T13:32:08Z", "event":"SupercruiseExit", "StarSystem":"Scorpius Dark Region ZE-A d51", "Body":"Scorpius Dark Region ZE-A d51 4", "BodyType":"Planet" }
+{ "timestamp":"2017-07-01T13:57:16Z", "event":"SupercruiseExit", "StarSystem":"M7 Sector BR-L c8-8", "Body":"M7 Sector BR-L c8-8", "BodyType":"Star" }
+{ "timestamp":"2017-07-01T14:18:24Z", "event":"SupercruiseExit", "StarSystem":"V970 Scorpii", "Body":"V970 Scorpii B", "BodyType":"Star" }
+{ "timestamp":"2017-07-01T14:21:27Z", "event":"SupercruiseExit", "StarSystem":"V970 Scorpii", "Body":"V970 Scorpii B", "BodyType":"Star" }
+{ "timestamp":"2017-07-01T14:29:05Z", "event":"SupercruiseExit", "StarSystem":"Blu Thua XE-R c4-21", "Body":"Blu Thua XE-R c4-21 A", "BodyType":"Star" }
+{ "timestamp":"2017-07-01T14:32:29Z", "event":"SupercruiseExit", "StarSystem":"Blu Thua NS-U d2-93", "Body":"Blu Thua NS-U d2-93 A", "BodyType":"Star" }
+{ "timestamp":"2017-07-01T17:35:41Z", "event":"SupercruiseExit", "StarSystem":"Traikaae CU-S b17-8", "Body":"Traikaae CU-S b17-8 A 2", "BodyType":"Planet" }
+{ "timestamp":"2017-07-01T18:02:59Z", "event":"SupercruiseExit", "StarSystem":"Lagoon Sector FW-W d1-122", "Body":"Attenborough's Watch", "BodyType":"Station" }
+{ "timestamp":"2017-07-02T11:21:28Z", "event":"SupercruiseExit", "StarSystem":"Lysoorb CM-C c13-10", "Body":"Lysoorb CM-C c13-10 8 b", "BodyType":"Planet" }
+{ "timestamp":"2017-07-02T11:51:28Z", "event":"SupercruiseExit", "StarSystem":"Prieluia HK-A d148", "Body":"Prieluia HK-A d148 10 B Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-07-03T15:24:07Z", "event":"SupercruiseExit", "StarSystem":"Prua Phio MB-W b21-14", "Body":"Prua Phio MB-W b21-14", "BodyType":"Star" }
+{ "timestamp":"2017-07-03T16:37:04Z", "event":"SupercruiseExit", "StarSystem":"Prua Phio DD-Q d6-34", "Body":"Prua Phio DD-Q d6-34 2 B Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-07-03T17:54:49Z", "event":"SupercruiseExit", "StarSystem":"Blae Hypue VF-C d14-657", "Body":"Blae Hypue VF-C d14-657 A", "BodyType":"Star" }
+{ "timestamp":"2017-07-04T18:47:43Z", "event":"SupercruiseExit", "StarSystem":"Eesholt IA-P c22-377", "Body":"Eesholt IA-P c22-377", "BodyType":"Star" }
+{ "timestamp":"2017-07-05T14:22:42Z", "event":"SupercruiseExit", "StarSystem":"Dryaa Flyi FC-S d5-861", "Body":"Dryaa Flyi FC-S d5-861 AB", "BodyType":"Null" }
+{ "timestamp":"2017-07-05T18:07:57Z", "event":"SupercruiseExit", "StarSystem":"Leamuae EB-X f1-3934", "Body":"Leamuae EB-X f1-3934 A", "BodyType":"Star" }
+{ "timestamp":"2017-07-05T18:47:47Z", "event":"SupercruiseExit", "StarSystem":"Dryaa Pri MQ-G c13-2488", "Body":"Dryaa Pri MQ-G c13-2488 A 2", "BodyType":"Planet" }
+{ "timestamp":"2017-07-05T19:38:56Z", "event":"SupercruiseExit", "StarSystem":"Athaip XM-W c4-625", "Body":"Athaip XM-W c4-625 A 5 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-07-06T14:33:17Z", "event":"SupercruiseExit", "StarSystem":"Athaip JD-Z d1-8922", "Body":"Athaip JD-Z d1-8922 B 5 a", "BodyType":"Planet" }
+{ "timestamp":"2017-07-06T14:46:11Z", "event":"SupercruiseExit", "StarSystem":"Athaip JD-Z d1-8922", "Body":"Athaip JD-Z d1-8922 B 5", "BodyType":"Planet" }
+{ "timestamp":"2017-07-06T15:05:51Z", "event":"SupercruiseExit", "StarSystem":"Athaip XM-W c4-625", "Body":"Athaip XM-W c4-625 A 5 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-07-06T17:32:25Z", "event":"SupercruiseExit", "StarSystem":"Athaip AT-U c5-2214", "Body":"Athaip AT-U c5-2214 2", "BodyType":"Planet" }
+{ "timestamp":"2017-07-06T18:53:32Z", "event":"SupercruiseExit", "StarSystem":"Hypio Pri WM-F c2156", "Body":"Hypio Pri WM-F c2156 A", "BodyType":"Star" }
+{ "timestamp":"2017-07-06T19:47:09Z", "event":"SupercruiseExit", "StarSystem":"Stuemeae KM-W c1-8086", "Body":"Stuemeae KM-W c1-8086 ABC", "BodyType":"Null" }
+{ "timestamp":"2017-07-08T14:20:07Z", "event":"SupercruiseExit", "StarSystem":"Sagittarius A*", "Body":"Sagittarius A*", "BodyType":"Star" }
+{ "timestamp":"2017-07-08T15:00:13Z", "event":"SupercruiseExit", "StarSystem":"Stuemeae SA-X b5-37", "Body":"Stuemeae SA-X b5-37", "BodyType":"Star" }
+{ "timestamp":"2017-07-08T16:25:38Z", "event":"SupercruiseExit", "StarSystem":"Hypuae Audst BV-P e5-853", "Body":"Hypuae Audst BV-P e5-853", "BodyType":"Star" }
+{ "timestamp":"2017-07-08T17:08:46Z", "event":"SupercruiseExit", "StarSystem":"Hypiae Auscs HE-F d12-393", "Body":"Hypiae Auscs HE-F d12-393", "BodyType":"Star" }
+{ "timestamp":"2017-07-08T17:59:58Z", "event":"SupercruiseExit", "StarSystem":"Hypiae Auscs LI-J d9-2987", "Body":"Hypiae Auscs LI-J d9-2987 A", "BodyType":"Star" }
+{ "timestamp":"2017-07-08T18:33:57Z", "event":"SupercruiseExit", "StarSystem":"Hypiae Auscs GF-Z d2804", "Body":"Hypiae Auscs GF-Z d2804 A", "BodyType":"Star" }
+{ "timestamp":"2017-07-08T19:58:37Z", "event":"SupercruiseExit", "StarSystem":"Hypoae Aoc HJ-E c26-1119", "Body":"Hypoae Aoc HJ-E c26-1119 A", "BodyType":"Star" }
+{ "timestamp":"2017-07-09T13:32:57Z", "event":"SupercruiseExit", "StarSystem":"Whambooe VX-E c26-256", "Body":"Whambooe VX-E c26-256 6", "BodyType":"Planet" }
+{ "timestamp":"2017-07-09T15:00:50Z", "event":"SupercruiseExit", "StarSystem":"Eor Aoc GZ-Y c1-0", "Body":"Eor Aoc GZ-Y c1-0 2", "BodyType":"Planet" }
+{ "timestamp":"2017-07-10T14:42:27Z", "event":"SupercruiseExit", "StarSystem":"Synookoi BB-G c26-6", "Body":"Synookoi BB-G c26-6 2", "BodyType":"Planet" }
+{ "timestamp":"2017-07-10T15:11:09Z", "event":"SupercruiseExit", "StarSystem":"Synookoi FX-S d4-5", "Body":"Synookoi FX-S d4-5 AB", "BodyType":"Null" }

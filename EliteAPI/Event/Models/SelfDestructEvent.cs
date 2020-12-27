@@ -1,15 +1,37 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class SelfDestructEvent : EventBase
+    public partial class SelfDestructEvent : EventBase
     {
-        internal SelfDestructEvent() { }
+        internal SelfDestructEvent()
+        {
+        }
 
-        public static SelfDestructEvent FromJson(string json) => JsonConvert.DeserializeObject<SelfDestructEvent>(json);
+        [JsonProperty("event")] public string Event { get; private set; }
+    }
 
+    public partial class SelfDestructEvent
+    {
+        public static SelfDestructEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<SelfDestructEvent>(json);
+        }
+    }
+}
 
-        
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<SelfDestructEvent> SelfDestructEvent;
+
+        internal void InvokeSelfDestructEvent(SelfDestructEvent arg)
+        {
+            SelfDestructEvent?.Invoke(this, arg);
+        }
     }
 }

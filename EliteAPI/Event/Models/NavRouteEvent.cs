@@ -1,15 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class NavRouteEvent : EventBase
+    public partial class NavRouteEvent : EventBase
     {
-        internal NavRouteEvent() { }
+        internal NavRouteEvent()
+        {
+        }
 
-        public static NavRouteEvent FromJson(string json) => JsonConvert.DeserializeObject<NavRouteEvent>(json);
+        [JsonProperty("event")] public string Event { get; private set; }
+    }
+
+    public partial class NavRouteEvent
+    {
+        public static NavRouteEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<NavRouteEvent>(json);
+        }
+    }
+}
+
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<NavRouteEvent> NavRouteEvent;
+
+        internal void InvokeNavRouteEvent(NavRouteEvent arg)
+        {
+            NavRouteEvent?.Invoke(this, arg);
+        }
     }
 }

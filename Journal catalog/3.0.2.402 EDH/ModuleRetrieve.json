@@ -1,0 +1,2 @@
+{ "timestamp":"2018-03-07T21:42:43Z", "event":"ModuleRetrieve", "MarketID":3542148608, "Slot":"SmallHardpoint1", "RetrievedItem":"$hpt_beamlaser_fixed_small_name;", "RetrievedItem_Localised":"Beam Laser", "Ship":"cobramkiii", "ShipID":0, "Hot":false }
+{ "timestamp":"2018-03-07T21:42:50Z", "event":"ModuleRetrieve", "MarketID":3542148608, "Slot":"SmallHardpoint2", "RetrievedItem":"$hpt_beamlaser_fixed_small_name;", "RetrievedItem_Localised":"Beam Laser", "Ship":"cobramkiii", "ShipID":0, "Hot":false }

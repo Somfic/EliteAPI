@@ -1,7 +1,7 @@
 ﻿namespace EliteAPI.Journal.Processor.Abstractions
 {
     /// <summary>
-    /// A journal entry
+    ///     A journal entry
     /// </summary>
     public class JournalEntry
     {
@@ -12,12 +12,12 @@
         }
 
         /// <summary>
-        /// This entry's Json event
+        ///     This entry's Json event
         /// </summary>
         public string Json { get; }
 
         /// <summary>
-        /// Whether this entry was ran before EliteAPI was started
+        ///     Whether this entry was ran before EliteAPI was started
         /// </summary>
         public bool IsWhileCatchingUp { get; }
     }

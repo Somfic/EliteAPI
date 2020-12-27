@@ -1,24 +1,41 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class CrimeVictimEvent : EventBase
+    public partial class CrimeVictimEvent : EventBase
     {
-        internal CrimeVictimEvent() { }
+        internal CrimeVictimEvent()
+        {
+        }
 
-        public static CrimeVictimEvent FromJson(string json) => JsonConvert.DeserializeObject<CrimeVictimEvent>(json);
+        [JsonProperty("Offender")] public string Offender { get; private set; }
 
+        [JsonProperty("CrimeType")] public string CrimeType { get; private set; }
 
-        [JsonProperty("Offender")]
-        public string Offender { get; internal set; }
+        [JsonProperty("Bounty")] public long Bounty { get; private set; }
+    }
 
-        [JsonProperty("CrimeType")]
-        public string CrimeType { get; internal set; }
+    public partial class CrimeVictimEvent
+    {
+        public static CrimeVictimEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<CrimeVictimEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Bounty")]
-        public long Bounty { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<CrimeVictimEvent> CrimeVictimEvent;
 
-        
+        internal void InvokeCrimeVictimEvent(CrimeVictimEvent arg)
+        {
+            CrimeVictimEvent?.Invoke(this, arg);
+        }
     }
 }

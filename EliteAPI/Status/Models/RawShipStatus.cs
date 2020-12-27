@@ -1,18 +1,16 @@
-﻿using EliteAPI.Event.Models.Abstractions;
-using EliteAPI.Status.Models.JsonConverters;
-
+﻿using EliteAPI.Status.Models.JsonConverters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace EliteAPI.Status.Models
 {
     /// <summary>
-    /// Only used for deserialization of the raw Status.json file
+    ///     Only used for deserialization of the raw Status.json file
     /// </summary>
-    internal class RawShipStatus : EventBase
+    internal class RawShipStatus
     {
-        [JsonProperty("Flags")]
-        public ShipStatusFlags Flags { get; private set; }
+        [JsonProperty("Flags")] public ShipStatusFlags Flags { get; private set; }
+
         public bool Docked => GetFlag(0);
         public bool Landed => GetFlag(1);
         public bool Gear => GetFlag(2);
@@ -46,17 +44,11 @@ namespace EliteAPI.Status.Models
         public bool FsdJump => GetFlag(30);
         public bool SrvHighBeam => GetFlag(31);
 
-        private bool GetFlag(int bit)
-        {
-            return Flags.HasFlag((ShipStatusFlags)(1 << bit));
-        }
-
         [JsonProperty("Pips")]
         [JsonConverter(typeof(PipsConverter))]
         public ShipPips Pips { get; private set; }
 
-        [JsonProperty("FireGroup")]
-        public int FireGroup { get; private set; }
+        [JsonProperty("FireGroup")] public int FireGroup { get; private set; }
 
         [JsonProperty("GuiFocus")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -81,5 +73,10 @@ namespace EliteAPI.Status.Models
         [JsonProperty("BodyName")] public string Body { get; private set; } = string.Empty;
 
         [JsonProperty("PlanetRadius")] public float BodyRadius { get; private set; }
+
+        private bool GetFlag(int bit)
+        {
+            return Flags.HasFlag((ShipStatusFlags) (1 << bit));
+        }
     }
 }

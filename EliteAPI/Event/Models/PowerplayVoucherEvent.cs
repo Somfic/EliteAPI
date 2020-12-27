@@ -1,22 +1,40 @@
+using System;
 using System.Collections.Generic;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class PowerplayVoucherEvent : EventBase
+    public partial class PowerplayVoucherEvent : EventBase
     {
-        internal PowerplayVoucherEvent() { }
+        internal PowerplayVoucherEvent()
+        {
+        }
 
-        public static PowerplayVoucherEvent FromJson(string json) => JsonConvert.DeserializeObject<PowerplayVoucherEvent>(json);
+        [JsonProperty("Power")] public string Power { get; private set; }
 
+        [JsonProperty("Systems")] public IReadOnlyList<string> Systems { get; private set; }
+    }
 
-        [JsonProperty("Power")]
-        public string Power { get; internal set; }
+    public partial class PowerplayVoucherEvent
+    {
+        public static PowerplayVoucherEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<PowerplayVoucherEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Systems")]
-        public List<string> Systems { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<PowerplayVoucherEvent> PowerplayVoucherEvent;
 
-        
+        internal void InvokePowerplayVoucherEvent(PowerplayVoucherEvent arg)
+        {
+            PowerplayVoucherEvent?.Invoke(this, arg);
+        }
     }
 }

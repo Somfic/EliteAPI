@@ -1,0 +1,4 @@
+{ "timestamp":"2017-04-11T14:10:31Z", "event":"SupercruiseExit", "StarSystem":"Achenar", "Body":"Achenar 3", "BodyType":"Planet" }
+{ "timestamp":"2017-04-11T14:17:55Z", "event":"SupercruiseExit", "StarSystem":"Achenar", "Body":"Achenar 3", "BodyType":"Planet" }
+{ "timestamp":"2017-04-11T14:32:30Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-04-11T16:30:51Z", "event":"SupercruiseExit", "StarSystem":"Lave", "Body":"Warinus", "BodyType":"Station" }

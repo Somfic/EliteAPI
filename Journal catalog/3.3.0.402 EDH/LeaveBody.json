@@ -1,0 +1,8 @@
+{ "timestamp":"2018-12-13T16:43:35Z", "event":"LeaveBody", "StarSystem":"Wredguia OC-J b23-1", "SystemAddress":2860045968585, "Body":"Wredguia OC-J b23-1 4 b", "BodyID":30 }
+{ "timestamp":"2018-12-13T16:43:52Z", "event":"LeaveBody", "StarSystem":"Wredguia OC-J b23-1", "SystemAddress":2860045968585, "Body":"Wredguia OC-J b23-1 4 b", "BodyID":30 }
+{ "timestamp":"2018-12-15T11:42:38Z", "event":"LeaveBody", "StarSystem":"Vela Dark Region ZE-A d64", "SystemAddress":2209701923163, "Body":"Vela Dark Region ZE-A d64 1", "BodyID":13 }
+{ "timestamp":"2018-12-17T17:08:45Z", "event":"LeaveBody", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Tollan 3 a", "BodyID":17 }
+{ "timestamp":"2018-12-17T20:35:58Z", "event":"LeaveBody", "StarSystem":"Lushertha", "SystemAddress":4442883623275, "Body":"Lushertha B 7 a", "BodyID":28 }
+{ "timestamp":"2018-12-18T02:01:40Z", "event":"LeaveBody", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"LHS 215 5 c", "BodyID":57 }
+{ "timestamp":"2018-12-18T03:12:21Z", "event":"LeaveBody", "StarSystem":"LP 64-194", "SystemAddress":13864825660833, "Body":"Gargarii", "BodyID":1 }
+{ "timestamp":"2018-12-18T19:46:07Z", "event":"LeaveBody", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Tollan 3 a", "BodyID":17 }

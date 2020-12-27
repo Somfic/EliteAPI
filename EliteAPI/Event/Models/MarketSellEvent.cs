@@ -1,42 +1,49 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class MarketSellEvent : EventBase
+    public partial class MarketSellEvent : EventBase
     {
-        internal MarketSellEvent() { }
+        internal MarketSellEvent()
+        {
+        }
 
-        public static MarketSellEvent FromJson(string json) => JsonConvert.DeserializeObject<MarketSellEvent>(json);
+        [JsonProperty("MarketID")] public long MarketId { get; private set; }
 
+        [JsonProperty("Type")] public string Type { get; private set; }
 
-        [JsonProperty("MarketID")]
-        public long MarketId { get; internal set; }
+        [JsonProperty("Type_Localised")] public string TypeLocalised { get; private set; }
 
-        [JsonProperty("Type")]
-        public string Type { get; internal set; }
+        [JsonProperty("Count")] public long Count { get; private set; }
 
-        [JsonProperty("Type_Localised")]
-        public string TypeLocalised { get; internal set; }
+        [JsonProperty("SellPrice")] public long SellPrice { get; private set; }
 
-        [JsonProperty("Count")]
-        public long Count { get; internal set; }
+        [JsonProperty("TotalSale")] public long TotalSale { get; private set; }
 
-        [JsonProperty("SellPrice")]
-        public long SellPrice { get; internal set; }
+        [JsonProperty("AvgPricePaid")] public long AvgPricePaid { get; private set; }
+    }
 
-        [JsonProperty("TotalSale")]
-        public long TotalSale { get; internal set; }
+    public partial class MarketSellEvent
+    {
+        public static MarketSellEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<MarketSellEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("AvgPricePaid")]
-        public long AvgPricePaid { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<MarketSellEvent> MarketSellEvent;
 
-        [JsonProperty("StolenGoods")]
-        public bool StolenGoods { get; internal set; }
-
-        [JsonProperty("BlackMarket")]
-        public bool BlackMarket { get; internal set; }
-
-        
+        internal void InvokeMarketSellEvent(MarketSellEvent arg)
+        {
+            MarketSellEvent?.Invoke(this, arg);
+        }
     }
 }

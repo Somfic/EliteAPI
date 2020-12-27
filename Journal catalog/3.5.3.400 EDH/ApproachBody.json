@@ -1,0 +1,2 @@
+{ "timestamp":"2019-10-27T01:38:01Z", "event":"ApproachBody", "StarSystem":"Lalande 18115", "SystemAddress":4207021134546, "Body":"Lalande 18115 A 2", "BodyID":10 }
+{ "timestamp":"2019-10-27T01:59:07Z", "event":"ApproachBody", "StarSystem":"Lalande 18115", "SystemAddress":4207021134546, "Body":"Lalande 18115 B 7", "BodyID":21 }

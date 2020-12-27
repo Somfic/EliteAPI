@@ -1,0 +1,88 @@
+{ "timestamp":"2016-11-06T14:40:19Z", "event":"ShipyardBuy", "ShipType":"asp", "ShipPrice":5661981, "StoreOldShip":"Anaconda", "StoreShipID":6 }
+{ "timestamp":"2016-11-08T18:17:21Z", "event":"ShipyardBuy", "ShipType":"hauler", "ShipPrice":52720, "StoreOldShip":"Anaconda", "StoreShipID":6 }
+{ "timestamp":"2016-11-10T13:30:28Z", "event":"ShipyardBuy", "ShipType":"empire_courier", "ShipPrice":2542931, "StoreOldShip":"Anaconda", "StoreShipID":6 }
+{ "timestamp":"2016-11-16T13:33:07Z", "event":"ShipyardBuy", "ShipType":"sidewinder", "ShipPrice":27200, "StoreOldShip":"Anaconda", "StoreShipID":6 }
+{ "timestamp":"2016-11-16T15:28:47Z", "event":"ShipyardBuy", "ShipType":"empire_eagle", "ShipPrice":110825, "StoreOldShip":"Anaconda", "StoreShipID":6 }
+{ "timestamp":"2016-11-18T08:04:36Z", "event":"ShipyardBuy", "ShipType":"asp", "ShipPrice":6661154, "StoreOldShip":"Anaconda", "StoreShipID":6 }
+{ "timestamp":"2016-12-02T17:07:49Z", "event":"ShipyardBuy", "ShipType":"diamondback", "ShipPrice":479680, "StoreOldShip":"Anaconda", "StoreShipID":6 }
+{ "timestamp":"2016-12-07T15:39:58Z", "event":"ShipyardBuy", "ShipType":"belugaliner", "ShipPrice":71852850, "StoreOldShip":"Anaconda", "StoreShipID":6 }
+{ "timestamp":"2016-12-07T17:02:46Z", "event":"ShipyardBuy", "ShipType":"cobramkiii", "ShipPrice":297261, "StoreOldShip":"BelugaLiner", "StoreShipID":17 }
+{ "timestamp":"2016-12-07T17:10:35Z", "event":"ShipyardBuy", "ShipType":"federation_dropship_mkii", "ShipPrice":16842075, "StoreOldShip":"CobraMkIII", "StoreShipID":18 }
+{ "timestamp":"2016-12-07T20:15:28Z", "event":"ShipyardBuy", "ShipType":"viper", "ShipPrice":142931, "StoreOldShip":"BelugaLiner", "StoreShipID":17 }
+{ "timestamp":"2016-12-10T18:02:03Z", "event":"ShipyardBuy", "ShipType":"eagle", "ShipPrice":44800, "StoreOldShip":"BelugaLiner", "StoreShipID":17 }
+{ "timestamp":"2016-12-10T19:54:36Z", "event":"ShipyardBuy", "ShipType":"vulture", "ShipPrice":4186773, "StoreOldShip":"BelugaLiner", "StoreShipID":17 }
+{ "timestamp":"2016-12-14T14:15:35Z", "event":"ShipyardBuy", "ShipType":"python", "ShipPrice":48431453, "StoreOldShip":"BelugaLiner", "StoreShipID":17 }
+{ "timestamp":"2016-12-15T14:16:23Z", "event":"ShipyardBuy", "ShipType":"eagle", "ShipPrice":44800, "StoreOldShip":"Python", "StoreShipID":19 }
+{ "timestamp":"2016-12-15T15:00:25Z", "event":"ShipyardBuy", "ShipType":"federation_gunship", "ShipPrice":35814205, "StoreOldShip":"Python", "StoreShipID":19 }
+{ "timestamp":"2016-12-15T16:00:07Z", "event":"ShipyardBuy", "ShipType":"vulture", "ShipPrice":4925615, "StoreOldShip":"Federation_Gunship", "StoreShipID":21 }
+{ "timestamp":"2016-12-15T20:02:06Z", "event":"ShipyardBuy", "ShipType":"asp_scout", "ShipPrice":3961154, "StoreOldShip":"Vulture", "StoreShipID":22 }
+{ "timestamp":"2016-12-15T20:26:40Z", "event":"ShipyardBuy", "ShipType":"anaconda", "ShipPrice":124924034, "SellOldShip":"BelugaLiner", "SellShipID":17, "SellPrice":62093260 }
+{ "timestamp":"2016-12-27T12:39:27Z", "event":"ShipyardBuy", "ShipType":"hauler", "ShipPrice":52720, "StoreOldShip":"Anaconda", "StoreShipID":17 }
+{ "timestamp":"2016-12-27T13:25:54Z", "event":"ShipyardBuy", "ShipType":"eagle", "ShipPrice":44800, "SellOldShip":"Hauler", "SellShipID":24, "SellPrice":405654 }
+{ "timestamp":"2016-12-28T13:51:01Z", "event":"ShipyardBuy", "ShipType":"vulture", "ShipPrice":4925615, "StoreOldShip":"Anaconda", "StoreShipID":17 }
+{ "timestamp":"2016-12-28T14:07:20Z", "event":"ShipyardBuy", "ShipType":"empire_eagle", "ShipPrice":99742, "StoreOldShip":"Vulture", "StoreShipID":25 }
+{ "timestamp":"2016-12-28T14:10:25Z", "event":"ShipyardBuy", "ShipType":"viper", "ShipPrice":142931, "StoreOldShip":"Empire_Eagle", "StoreShipID":26 }
+{ "timestamp":"2016-12-30T18:04:55Z", "event":"ShipyardBuy", "ShipType":"viper", "ShipPrice":142931, "StoreOldShip":"Anaconda", "StoreShipID":17 }
+{ "timestamp":"2016-12-30T18:35:59Z", "event":"ShipyardBuy", "ShipType":"vulture", "ShipPrice":4925615, "StoreOldShip":"Anaconda", "StoreShipID":17 }
+{ "timestamp":"2017-01-01T17:04:55Z", "event":"ShipyardBuy", "ShipType":"viper", "ShipPrice":142931, "StoreOldShip":"Anaconda", "StoreShipID":17 }
+{ "timestamp":"2017-01-06T14:46:23Z", "event":"ShipyardBuy", "ShipType":"eagle", "ShipPrice":44800, "StoreOldShip":"Anaconda", "StoreShipID":17 }
+{ "timestamp":"2017-01-06T16:02:54Z", "event":"ShipyardBuy", "ShipType":"empire_eagle", "ShipPrice":110825, "StoreOldShip":"Eagle", "StoreShipID":31 }
+{ "timestamp":"2017-01-07T15:52:26Z", "event":"ShipyardBuy", "ShipType":"cobramkiv", "ShipPrice":764718, "StoreOldShip":"Anaconda", "StoreShipID":17 }
+{ "timestamp":"2017-01-07T16:22:33Z", "event":"ShipyardBuy", "ShipType":"adder", "ShipPrice":87808, "StoreOldShip":"CobraMkIV", "StoreShipID":33 }
+{ "timestamp":"2017-01-11T17:15:00Z", "event":"ShipyardBuy", "ShipType":"sidewinder", "ShipPrice":32000, "StoreOldShip":"Anaconda", "StoreShipID":17 }
+{ "timestamp":"2017-01-11T18:10:39Z", "event":"ShipyardBuy", "ShipType":"type6", "ShipPrice":1045945, "SellOldShip":"SideWinder", "SellShipID":35, "SellPrice":168507 }
+{ "timestamp":"2017-01-12T19:38:33Z", "event":"ShipyardBuy", "ShipType":"vulture", "ShipPrice":4186773, "StoreOldShip":"Anaconda", "StoreShipID":17 }
+{ "timestamp":"2017-01-24T17:32:21Z", "event":"ShipyardBuy", "ShipType":"ferdelance", "ShipPrice":43831984, "StoreOldShip":"Anaconda", "StoreShipID":17 }
+{ "timestamp":"2017-01-25T19:14:34Z", "event":"ShipyardBuy", "ShipType":"adder", "ShipPrice":87808, "StoreOldShip":"FerDeLance", "StoreShipID":24 }
+{ "timestamp":"2017-01-25T19:17:23Z", "event":"ShipyardBuy", "ShipType":"sidewinder", "ShipPrice":32000, "StoreOldShip":"Adder", "StoreShipID":25 }
+{ "timestamp":"2017-01-27T15:42:25Z", "event":"ShipyardBuy", "ShipType":"asp", "ShipPrice":6661154, "StoreOldShip":"FerDeLance", "StoreShipID":24 }
+{ "timestamp":"2017-01-30T14:16:22Z", "event":"ShipyardBuy", "ShipType":"independant_trader", "ShipPrice":3126154, "StoreOldShip":"FerDeLance", "StoreShipID":24 }
+{ "timestamp":"2017-01-31T18:08:31Z", "event":"ShipyardBuy", "ShipType":"adder", "ShipPrice":87808, "StoreOldShip":"FerDeLance", "StoreShipID":24 }
+{ "timestamp":"2017-01-31T18:20:03Z", "event":"ShipyardBuy", "ShipType":"cobramkiii", "ShipPrice":349718, "SellOldShip":"Adder", "SellShipID":27, "SellPrice":606273 }
+{ "timestamp":"2017-01-31T19:03:10Z", "event":"ShipyardBuy", "ShipType":"asp_scout", "ShipPrice":3961154, "StoreOldShip":"CobraMkIII", "StoreShipID":27 }
+{ "timestamp":"2017-01-31T19:03:39Z", "event":"ShipyardBuy", "ShipType":"asp", "ShipPrice":6661154, "SellOldShip":"Asp_Scout", "SellShipID":28, "SellPrice":3565038 }
+{ "timestamp":"2017-02-03T16:56:56Z", "event":"ShipyardBuy", "ShipType":"diamondbackxl", "ShipPrice":1894760, "StoreOldShip":"Asp", "StoreShipID":28 }
+{ "timestamp":"2017-02-03T16:58:42Z", "event":"ShipyardBuy", "ShipType":"diamondback", "ShipPrice":564329, "StoreOldShip":"DiamondBackXL", "StoreShipID":29 }
+{ "timestamp":"2017-02-04T16:32:28Z", "event":"ShipyardBuy", "ShipType":"type7", "ShipPrice":17472252, "StoreOldShip":"Asp", "StoreShipID":28 }
+{ "timestamp":"2017-02-04T18:06:18Z", "event":"ShipyardBuy", "ShipType":"anaconda", "ShipPrice":124924034, "StoreOldShip":"Asp", "StoreShipID":28 }
+{ "timestamp":"2017-02-05T13:25:20Z", "event":"ShipyardBuy", "ShipType":"viper", "ShipPrice":121492, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-02-05T15:34:01Z", "event":"ShipyardBuy", "ShipType":"diamondback", "ShipPrice":479680, "StoreOldShip":"Viper", "StoreShipID":35 }
+{ "timestamp":"2017-02-06T15:30:15Z", "event":"ShipyardBuy", "ShipType":"federation_dropship", "ShipPrice":14314205, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-02-06T16:07:17Z", "event":"ShipyardBuy", "ShipType":"cobramkiv", "ShipPrice":764718, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-02-12T17:19:27Z", "event":"ShipyardBuy", "ShipType":"vulture", "ShipPrice":4925615, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-02-18T19:06:26Z", "event":"ShipyardBuy", "ShipType":"viper_mkiv", "ShipPrice":437931, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-02-19T16:37:28Z", "event":"ShipyardBuy", "ShipType":"type9", "ShipPrice":65072466, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-02-20T14:40:04Z", "event":"ShipyardBuy", "ShipType":"federation_dropship", "ShipPrice":14314205, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-02-20T14:41:38Z", "event":"ShipyardBuy", "ShipType":"python", "ShipPrice":56978179, "StoreOldShip":"Federation_Dropship", "StoreShipID":44 }
+{ "timestamp":"2017-02-20T14:48:55Z", "event":"ShipyardBuy", "ShipType":"python", "ShipPrice":56978179, "StoreOldShip":"Federation_Dropship", "StoreShipID":44 }
+{ "timestamp":"2017-02-21T15:53:39Z", "event":"ShipyardBuy", "ShipType":"asp_scout", "ShipPrice":3961154, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-02-21T17:33:13Z", "event":"ShipyardBuy", "ShipType":"cobramkiv", "ShipPrice":764718, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-03-02T18:40:07Z", "event":"ShipyardBuy", "ShipType":"empire_trader", "ShipPrice":18951481, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-03-04T14:39:56Z", "event":"ShipyardBuy", "ShipType":"hauler", "ShipPrice":52720, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-03-04T14:49:06Z", "event":"ShipyardBuy", "ShipType":"eagle", "ShipPrice":44800, "StoreOldShip":"Hauler", "StoreShipID":47 }
+{ "timestamp":"2017-03-04T15:14:32Z", "event":"ShipyardBuy", "ShipType":"viper", "ShipPrice":142931, "StoreOldShip":"Hauler", "StoreShipID":47 }
+{ "timestamp":"2017-03-04T15:58:26Z", "event":"ShipyardBuy", "ShipType":"type6", "ShipPrice":1045945, "StoreOldShip":"Viper", "StoreShipID":49 }
+{ "timestamp":"2017-03-09T15:06:38Z", "event":"ShipyardBuy", "ShipType":"asp", "ShipPrice":6661154, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-03-09T16:21:54Z", "event":"ShipyardBuy", "ShipType":"adder", "ShipPrice":87808, "StoreOldShip":"Asp", "StoreShipID":51 }
+{ "timestamp":"2017-03-10T15:20:14Z", "event":"ShipyardBuy", "ShipType":"viper", "ShipPrice":142931, "StoreOldShip":"Asp", "StoreShipID":51 }
+{ "timestamp":"2017-03-10T15:56:50Z", "event":"ShipyardBuy", "ShipType":"cobramkiii", "ShipPrice":349718, "StoreOldShip":"Asp", "StoreShipID":51 }
+{ "timestamp":"2017-03-11T16:48:59Z", "event":"ShipyardBuy", "ShipType":"asp", "ShipPrice":6661154, "StoreOldShip":"Empire_Trader", "StoreShipID":46 }
+{ "timestamp":"2017-03-11T17:04:10Z", "event":"ShipyardBuy", "ShipType":"vulture", "ShipPrice":4925615, "SellOldShip":"Asp", "SellShipID":55, "SellPrice":6148463 }
+{ "timestamp":"2017-03-17T11:59:04Z", "event":"ShipyardBuy", "ShipType":"cobramkiii", "ShipPrice":349718, "StoreOldShip":"Vulture", "StoreShipID":55 }
+{ "timestamp":"2017-03-21T10:04:39Z", "event":"ShipyardBuy", "ShipType":"python", "ShipPrice":56978179, "StoreOldShip":"Empire_Trader", "StoreShipID":46 }
+{ "timestamp":"2017-03-27T17:41:45Z", "event":"ShipyardBuy", "ShipType":"ferdelance", "ShipPrice":51567040, "StoreOldShip":"Empire_Trader", "StoreShipID":46 }
+{ "timestamp":"2017-04-04T16:06:08Z", "event":"ShipyardBuy", "ShipType":"sidewinder", "ShipPrice":32000, "StoreOldShip":"FerDeLance", "StoreShipID":56 }
+{ "timestamp":"2017-04-04T16:08:22Z", "event":"ShipyardBuy", "ShipType":"hauler", "ShipPrice":52720, "StoreOldShip":"SideWinder", "StoreShipID":58 }
+{ "timestamp":"2017-04-04T16:09:06Z", "event":"ShipyardBuy", "ShipType":"type6", "ShipPrice":1045945, "SellOldShip":"Hauler", "SellShipID":59, "SellPrice":47448 }
+{ "timestamp":"2017-04-04T16:10:05Z", "event":"ShipyardBuy", "ShipType":"asp_scout", "ShipPrice":3961154, "SellOldShip":"Type6", "SellShipID":59, "SellPrice":941350 }
+{ "timestamp":"2017-04-06T12:54:47Z", "event":"ShipyardBuy", "ShipType":"adder", "ShipPrice":77053, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-04-06T12:55:13Z", "event":"ShipyardBuy", "ShipType":"empire_eagle", "ShipPrice":97250, "StoreOldShip":"Adder", "StoreShipID":63 }
+{ "timestamp":"2017-04-06T12:55:41Z", "event":"ShipyardBuy", "ShipType":"viper", "ShipPrice":125423, "StoreOldShip":"Empire_Eagle", "StoreShipID":64 }
+{ "timestamp":"2017-04-06T12:56:05Z", "event":"ShipyardBuy", "ShipType":"diamondbackxl", "ShipPrice":1662652, "StoreOldShip":"Viper", "StoreShipID":65 }
+{ "timestamp":"2017-04-06T12:56:35Z", "event":"ShipyardBuy", "ShipType":"empire_courier", "ShipPrice":2231423, "StoreOldShip":"DiamondBackXL", "StoreShipID":66 }
+{ "timestamp":"2017-04-06T12:57:07Z", "event":"ShipyardBuy", "ShipType":"asp", "ShipPrice":5845164, "StoreOldShip":"Empire_Courier", "StoreShipID":67 }
+{ "timestamp":"2017-04-06T12:57:56Z", "event":"ShipyardBuy", "ShipType":"empire_trader", "ShipPrice":19564618, "StoreOldShip":"Asp", "StoreShipID":68 }
+{ "timestamp":"2017-04-06T12:58:34Z", "event":"ShipyardBuy", "ShipType":"orca", "ShipPrice":42593752, "StoreOldShip":"Empire_Trader", "StoreShipID":69 }
+{ "timestamp":"2017-04-06T12:59:04Z", "event":"ShipyardBuy", "ShipType":"belugaliner", "ShipPrice":74177501, "StoreOldShip":"Orca", "StoreShipID":70 }
+{ "timestamp":"2017-04-07T15:07:55Z", "event":"ShipyardBuy", "ShipType":"sidewinder", "ShipPrice":31200, "StoreOldShip":"Anaconda", "StoreShipID":32 }
+{ "timestamp":"2017-04-10T15:34:30Z", "event":"ShipyardBuy", "ShipType":"type6", "ShipPrice":1019797, "StoreOldShip":"Anaconda", "StoreShipID":32 }

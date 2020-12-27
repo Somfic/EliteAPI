@@ -1,0 +1,13 @@
+{ "timestamp":"2017-06-14T15:48:44Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Swoilz ZU-S a3-2", "StarClass":"L" }
+{ "timestamp":"2017-06-14T15:49:35Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 65878", "StarClass":"G" }
+{ "timestamp":"2017-06-14T15:50:51Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"HIP 60907", "StarClass":"F" }
+{ "timestamp":"2017-06-14T15:52:12Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe GT-S a113-0", "StarClass":"M" }
+{ "timestamp":"2017-06-14T15:53:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe VW-A c27-30", "StarClass":"K" }
+{ "timestamp":"2017-06-14T15:54:17Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe RQ-C c26-12", "StarClass":"K" }
+{ "timestamp":"2017-06-14T15:55:16Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Wregoe FB-H b51-9", "StarClass":"M" }
+{ "timestamp":"2017-06-14T15:56:09Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe BY-F d12-117", "StarClass":"G" }
+{ "timestamp":"2017-06-14T15:57:03Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe AB-M c24-4", "StarClass":"K" }
+{ "timestamp":"2017-06-14T15:58:25Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe SP-B b47-0", "StarClass":"M" }
+{ "timestamp":"2017-06-14T15:59:15Z", "event":"StartJump", "JumpType":"Hyperspace", "StarSystem":"Synuefe XR-H d11-102", "StarClass":"F" }
+{ "timestamp":"2017-06-14T16:09:34Z", "event":"StartJump", "JumpType":"Supercruise" }
+{ "timestamp":"2017-06-14T16:18:44Z", "event":"StartJump", "JumpType":"Supercruise" }

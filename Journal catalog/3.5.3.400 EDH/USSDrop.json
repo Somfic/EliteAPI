@@ -1,0 +1,15 @@
+{ "timestamp":"2019-11-01T23:06:47Z", "event":"USSDrop", "USSType":"$USS_Type_Aftermath;", "USSType_Localised":"Combat aftermath", "USSThreat":1 }
+{ "timestamp":"2019-11-01T23:42:18Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":2 }
+{ "timestamp":"2019-11-18T02:10:14Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":1 }
+{ "timestamp":"2019-11-18T02:19:48Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":1 }
+{ "timestamp":"2019-12-07T20:39:26Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":2 }
+{ "timestamp":"2019-12-07T20:48:22Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":2 }
+{ "timestamp":"2019-12-07T20:58:39Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":2 }
+{ "timestamp":"2019-12-07T21:30:59Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":1 }
+{ "timestamp":"2019-12-11T02:45:33Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":2 }
+{ "timestamp":"2019-12-11T03:03:01Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":1 }
+{ "timestamp":"2019-12-11T03:08:10Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":1 }
+{ "timestamp":"2019-12-11T03:13:33Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":1 }
+{ "timestamp":"2019-12-11T03:20:05Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":1 }
+{ "timestamp":"2019-12-11T03:24:49Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":2 }
+{ "timestamp":"2019-12-11T03:32:34Z", "event":"USSDrop", "USSType":"$USS_Type_MissionTarget;", "USSType_Localised":"Mission target", "USSThreat":2 }

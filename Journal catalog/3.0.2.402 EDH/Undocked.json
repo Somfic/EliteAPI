@@ -1,0 +1,14 @@
+{ "timestamp":"2018-03-06T23:45:49Z", "event":"Undocked", "StationName":"Vonarburg Enterprise", "StationType":"Coriolis", "MarketID":3228923648 }
+{ "timestamp":"2018-03-07T00:04:24Z", "event":"Undocked", "StationName":"Jahn Hangar", "StationType":"Outpost", "MarketID":3228737792 }
+{ "timestamp":"2018-03-07T00:27:46Z", "event":"Undocked", "StationName":"Jahn Hangar", "StationType":"Outpost", "MarketID":3228737792 }
+{ "timestamp":"2018-03-07T20:47:56Z", "event":"Undocked", "StationName":"Jahn Hangar", "StationType":"Outpost", "MarketID":3228737792 }
+{ "timestamp":"2018-03-07T21:10:30Z", "event":"Undocked", "StationName":"Cleve Hub", "StationType":"Orbis", "MarketID":3230448384 }
+{ "timestamp":"2018-03-07T21:17:46Z", "event":"Undocked", "StationName":"Kubasov Orbital", "StationType":"Outpost", "MarketID":3230468352 }
+{ "timestamp":"2018-03-07T21:52:19Z", "event":"Undocked", "StationName":"Wiley Vision", "StationType":"SurfaceStation", "MarketID":3542148608 }
+{ "timestamp":"2018-03-08T02:39:34Z", "event":"Undocked", "StationName":"Dalton Gateway", "StationType":"Orbis", "MarketID":3230571520 }
+{ "timestamp":"2018-03-08T19:18:45Z", "event":"Undocked", "StationName":"Dalton Gateway", "StationType":"Orbis", "MarketID":3230571520 }
+{ "timestamp":"2018-03-08T19:34:00Z", "event":"Undocked", "StationName":"Flint Station", "StationType":"Outpost", "MarketID":3230454528 }
+{ "timestamp":"2018-03-08T20:24:52Z", "event":"Undocked", "StationName":"Flint Station", "StationType":"Outpost", "MarketID":3230454528 }
+{ "timestamp":"2018-03-08T20:55:23Z", "event":"Undocked", "StationName":"Flint Station", "StationType":"Outpost", "MarketID":3230454528 }
+{ "timestamp":"2018-03-08T21:17:46Z", "event":"Undocked", "StationName":"Flint Station", "StationType":"Outpost", "MarketID":3230454528 }
+{ "timestamp":"2018-03-08T21:32:44Z", "event":"Undocked", "StationName":"Chaviano Platform", "StationType":"Outpost", "MarketID":3228998144 }

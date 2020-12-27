@@ -1,21 +1,39 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class SupercruiseEntryEvent : EventBase
+    public partial class SupercruiseEntryEvent : EventBase
     {
-        internal SupercruiseEntryEvent() { }
+        internal SupercruiseEntryEvent()
+        {
+        }
 
-        public static SupercruiseEntryEvent FromJson(string json) => JsonConvert.DeserializeObject<SupercruiseEntryEvent>(json);
+        [JsonProperty("StarSystem")] public string StarSystem { get; private set; }
 
+        [JsonProperty("SystemAddress")] public long SystemAddress { get; private set; }
+    }
 
-        [JsonProperty("StarSystem")]
-        public string StarSystem { get; internal set; }
+    public partial class SupercruiseEntryEvent
+    {
+        public static SupercruiseEntryEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<SupercruiseEntryEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("SystemAddress")]
-        public string SystemAddress { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<SupercruiseEntryEvent> SupercruiseEntryEvent;
 
-        
+        internal void InvokeSupercruiseEntryEvent(SupercruiseEntryEvent arg)
+        {
+            SupercruiseEntryEvent?.Invoke(this, arg);
+        }
     }
 }

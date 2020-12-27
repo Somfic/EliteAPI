@@ -1,40 +1,49 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ApproachSettlementEvent : EventBase
+    public partial class ApproachSettlementEvent : EventBase
     {
-        internal ApproachSettlementEvent() { }
+        internal ApproachSettlementEvent()
+        {
+        }
 
-        public static ApproachSettlementEvent FromJson(string json) => JsonConvert.DeserializeObject<ApproachSettlementEvent>(json);
+        [JsonProperty("Name")] public string Name { get; private set; }
 
+        [JsonProperty("MarketID")] public long MarketId { get; private set; }
 
+        [JsonProperty("SystemAddress")] public long SystemAddress { get; private set; }
 
-        [JsonProperty("Name")]
-        public string Name { get; internal set; }
+        [JsonProperty("BodyID")] public long BodyId { get; private set; }
 
-        [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; internal set; }
+        [JsonProperty("BodyName")] public string BodyName { get; private set; }
 
-        [JsonProperty("BodyID")]
-        public int BodyId { get; internal set; }
+        [JsonProperty("Latitude")] public double Latitude { get; private set; }
 
-        [JsonProperty("BodyName")]
-        public string BodyName { get; internal set; }
+        [JsonProperty("Longitude")] public double Longitude { get; private set; }
+    }
 
-        [JsonProperty("SystemAddress")]
-        public string SystemAddress { get; internal set; }
+    public partial class ApproachSettlementEvent
+    {
+        public static ApproachSettlementEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ApproachSettlementEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("MarketID")]
-        public long MarketId { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<ApproachSettlementEvent> ApproachSettlementEvent;
 
-        [JsonProperty("Latitude")]
-        public float Latitude { get; internal set; }
-
-        [JsonProperty("Longitude")]
-        public float Longitude { get; internal set; }
-
-
+        internal void InvokeApproachSettlementEvent(ApproachSettlementEvent arg)
+        {
+            ApproachSettlementEvent?.Invoke(this, arg);
+        }
     }
 }

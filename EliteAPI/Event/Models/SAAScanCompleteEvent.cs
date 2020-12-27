@@ -1,30 +1,43 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class SAAScanCompleteEvent : EventBase
+    public partial class SaaScanCompleteEvent : EventBase
     {
-        internal SAAScanCompleteEvent() { }
+        internal SaaScanCompleteEvent()
+        {
+        }
 
-        public static SAAScanCompleteEvent FromJson(string json) => JsonConvert.DeserializeObject<SAAScanCompleteEvent>(json);
+        [JsonProperty("BodyName")] public string BodyName { get; private set; }
 
+        [JsonProperty("BodyID")] public long BodyId { get; private set; }
 
-        [JsonProperty("SystemAddress")]
-        public string SystemAddress { get; internal set; }
+        [JsonProperty("ProbesUsed")] public long ProbesUsed { get; private set; }
 
-        [JsonProperty("BodyName")]
-        public string BodyName { get; internal set; }
+        [JsonProperty("EfficiencyTarget")] public long EfficiencyTarget { get; private set; }
+    }
 
-        [JsonProperty("BodyID")]
-        public long BodyId { get; internal set; }
+    public partial class SaaScanCompleteEvent
+    {
+        public static SaaScanCompleteEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<SaaScanCompleteEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("ProbesUsed")]
-        public long ProbesUsed { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<SaaScanCompleteEvent> SaaScanCompleteEvent;
 
-        [JsonProperty("EfficiencyTarget")]
-        public long EfficiencyTarget { get; internal set; }
-
-        
+        internal void InvokeSaaScanCompleteEvent(SaaScanCompleteEvent arg)
+        {
+            SaaScanCompleteEvent?.Invoke(this, arg);
+        }
     }
 }

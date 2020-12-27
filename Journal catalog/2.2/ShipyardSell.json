@@ -1,0 +1,67 @@
+{ "timestamp":"2016-11-06T15:22:40Z", "event":"ShipyardSell", "ShipType":"diamondbackxl", "SellShipID":12, "ShipPrice":1307319 }
+{ "timestamp":"2016-11-06T15:22:46Z", "event":"ShipyardSell", "ShipType":"asp", "SellShipID":15, "ShipPrice":4765797 }
+{ "timestamp":"2016-12-03T13:55:31Z", "event":"ShipyardSell", "ShipType":"diamondback", "SellShipID":22, "ShipPrice":403376 }
+{ "timestamp":"2016-12-03T13:55:50Z", "event":"ShipyardSell", "ShipType":"asp", "SellShipID":19, "ShipPrice":5651660 }
+{ "timestamp":"2016-12-07T15:38:56Z", "event":"ShipyardSell", "ShipType":"SideWinder", "SellShipID":17, "ShipPrice":24480, "System":"Mitnahas" }
+{ "timestamp":"2016-12-07T15:39:03Z", "event":"ShipyardSell", "ShipType":"SideWinder", "SellShipID":14, "ShipPrice":24480, "System":"Diaguandri" }
+{ "timestamp":"2016-12-07T15:39:11Z", "event":"ShipyardSell", "ShipType":"SideWinder", "SellShipID":13, "ShipPrice":24480, "System":"Andonnus" }
+{ "timestamp":"2016-12-07T15:39:22Z", "event":"ShipyardSell", "ShipType":"Hauler", "SellShipID":9, "ShipPrice":270381, "System":"Fehu" }
+{ "timestamp":"2016-12-07T15:39:28Z", "event":"ShipyardSell", "ShipType":"SideWinder", "SellShipID":11, "ShipPrice":161844, "System":"Diaguandri" }
+{ "timestamp":"2016-12-07T15:39:35Z", "event":"ShipyardSell", "ShipType":"Hauler", "SellShipID":15, "ShipPrice":47448, "System":"LFT 926" }
+{ "timestamp":"2016-12-07T15:39:42Z", "event":"ShipyardSell", "ShipType":"Empire_Eagle", "SellShipID":18, "ShipPrice":1998136, "System":"Diaguandri" }
+{ "timestamp":"2016-12-07T16:00:58Z", "event":"ShipyardSell", "ShipType":"Anaconda", "SellShipID":6, "ShipPrice":109289032, "System":"Qama" }
+{ "timestamp":"2016-12-09T18:08:57Z", "event":"ShipyardSell", "ShipType":"CobraMkIII", "SellShipID":18, "ShipPrice":281738, "System":"Shenich" }
+{ "timestamp":"2016-12-10T14:02:39Z", "event":"ShipyardSell", "ShipType":"viper", "SellShipID":20, "ShipPrice":154846 }
+{ "timestamp":"2016-12-10T14:04:07Z", "event":"ShipyardSell", "ShipType":"empire_courier", "SellShipID":16, "ShipPrice":2314649 }
+{ "timestamp":"2016-12-10T14:28:22Z", "event":"ShipyardSell", "ShipType":"federation_dropship_mkii", "SellShipID":19, "ShipPrice":28794643 }
+{ "timestamp":"2016-12-14T14:13:04Z", "event":"ShipyardSell", "ShipType":"vulture", "SellShipID":19, "ShipPrice":3649647 }
+{ "timestamp":"2016-12-15T15:00:51Z", "event":"ShipyardSell", "ShipType":"python", "SellShipID":19, "ShipPrice":42971430 }
+{ "timestamp":"2016-12-15T16:05:32Z", "event":"ShipyardSell", "ShipType":"federation_gunship", "SellShipID":21, "ShipPrice":31991240 }
+{ "timestamp":"2016-12-15T20:26:26Z", "event":"ShipyardSell", "ShipType":"asp_scout", "SellShipID":24, "ShipPrice":3545783 }
+{ "timestamp":"2016-12-15T20:27:43Z", "event":"ShipyardSell", "ShipType":"Vulture", "SellShipID":22, "ShipPrice":17140367, "System":"Kholu" }
+{ "timestamp":"2016-12-30T12:07:17Z", "event":"ShipyardSell", "ShipType":"vulture", "SellShipID":25, "ShipPrice":5149319 }
+{ "timestamp":"2017-01-01T20:29:50Z", "event":"ShipyardSell", "ShipType":"vulture", "SellShipID":29, "ShipPrice":8298765 }
+{ "timestamp":"2017-01-24T14:05:58Z", "event":"ShipyardSell", "ShipType":"eagle", "SellShipID":24, "ShipPrice":40320 }
+{ "timestamp":"2017-01-24T14:06:14Z", "event":"ShipyardSell", "ShipType":"adder", "SellShipID":34, "ShipPrice":79027 }
+{ "timestamp":"2017-01-24T14:08:08Z", "event":"ShipyardSell", "ShipType":"viper", "SellShipID":28, "ShipPrice":128637 }
+{ "timestamp":"2017-01-24T14:08:21Z", "event":"ShipyardSell", "ShipType":"eagle", "SellShipID":31, "ShipPrice":233643 }
+{ "timestamp":"2017-01-24T14:09:01Z", "event":"ShipyardSell", "ShipType":"eagle", "SellShipID":20, "ShipPrice":1847067 }
+{ "timestamp":"2017-01-24T14:09:06Z", "event":"ShipyardSell", "ShipType":"cobramkiv", "SellShipID":33, "ShipPrice":2499637 }
+{ "timestamp":"2017-01-24T14:09:19Z", "event":"ShipyardSell", "ShipType":"viper", "SellShipID":27, "ShipPrice":2593526 }
+{ "timestamp":"2017-01-24T14:09:37Z", "event":"ShipyardSell", "ShipType":"viper", "SellShipID":30, "ShipPrice":2620290 }
+{ "timestamp":"2017-01-24T14:10:16Z", "event":"ShipyardSell", "ShipType":"empire_eagle", "SellShipID":26, "ShipPrice":913490 }
+{ "timestamp":"2017-01-24T17:10:19Z", "event":"ShipyardSell", "ShipType":"empire_eagle", "SellShipID":32, "ShipPrice":141652 }
+{ "timestamp":"2017-01-24T17:10:22Z", "event":"ShipyardSell", "ShipType":"type6", "SellShipID":35, "ShipPrice":829211 }
+{ "timestamp":"2017-01-24T17:10:32Z", "event":"ShipyardSell", "ShipType":"vulture", "SellShipID":40, "ShipPrice":3672618 }
+{ "timestamp":"2017-01-24T17:39:19Z", "event":"ShipyardSell", "ShipType":"anaconda", "SellShipID":17, "ShipPrice":110111225 }
+{ "timestamp":"2017-01-27T15:45:38Z", "event":"ShipyardSell", "ShipType":"asp", "SellShipID":27, "ShipPrice":11456262 }
+{ "timestamp":"2017-01-31T18:08:00Z", "event":"ShipyardSell", "ShipType":"independant_trader", "SellShipID":27, "ShipPrice":2888840 }
+{ "timestamp":"2017-02-03T14:56:06Z", "event":"ShipyardSell", "ShipType":"ferdelance", "SellShipID":24, "ShipPrice":39571857 }
+{ "timestamp":"2017-02-04T17:35:03Z", "event":"ShipyardSell", "ShipType":"type7", "SellShipID":32, "ShipPrice":16642455 }
+{ "timestamp":"2017-02-04T18:06:47Z", "event":"ShipyardSell", "ShipType":"asp", "SellShipID":28, "ShipPrice":7540695 }
+{ "timestamp":"2017-02-06T15:38:31Z", "event":"ShipyardSell", "ShipType":"federation_dropship", "SellShipID":38, "ShipPrice":14111620 }
+{ "timestamp":"2017-02-19T16:47:43Z", "event":"ShipyardSell", "ShipType":"type9", "SellShipID":44, "ShipPrice":57726216 }
+{ "timestamp":"2017-02-20T14:53:42Z", "event":"ShipyardSell", "ShipType":"federation_dropship", "SellShipID":44, "ShipPrice":12882784 }
+{ "timestamp":"2017-02-20T19:35:54Z", "event":"ShipyardSell", "ShipType":"python", "SellShipID":45, "ShipPrice":49907508 }
+{ "timestamp":"2017-03-02T15:57:17Z", "event":"ShipyardSell", "ShipType":"Vulture", "SellShipID":42, "ShipPrice":9519600, "System":"17 Draconis" }
+{ "timestamp":"2017-03-02T15:57:26Z", "event":"ShipyardSell", "ShipType":"DiamondBackXL", "SellShipID":29, "ShipPrice":8731176, "System":"Diaguandri" }
+{ "timestamp":"2017-03-02T15:57:33Z", "event":"ShipyardSell", "ShipType":"DiamondBack", "SellShipID":30, "ShipPrice":1973673, "System":"Diaguandri" }
+{ "timestamp":"2017-03-02T15:57:41Z", "event":"ShipyardSell", "ShipType":"DiamondBack", "SellShipID":36, "ShipPrice":2071942, "System":"Diaguandri" }
+{ "timestamp":"2017-03-02T15:57:50Z", "event":"ShipyardSell", "ShipType":"CobraMkIV", "SellShipID":38, "ShipPrice":3087928, "System":"HIP 74290" }
+{ "timestamp":"2017-03-10T16:00:56Z", "event":"ShipyardSell", "ShipType":"asp", "SellShipID":51, "ShipPrice":11098930 }
+{ "timestamp":"2017-03-11T13:38:26Z", "event":"ShipyardSell", "ShipType":"sidewinder", "SellShipID":26, "ShipPrice":790548 }
+{ "timestamp":"2017-03-11T13:38:29Z", "event":"ShipyardSell", "ShipType":"cobramkiii", "SellShipID":27, "ShipPrice":1097306 }
+{ "timestamp":"2017-03-11T13:38:33Z", "event":"ShipyardSell", "ShipType":"adder", "SellShipID":25, "ShipPrice":1250302 }
+{ "timestamp":"2017-03-11T13:38:36Z", "event":"ShipyardSell", "ShipType":"viper", "SellShipID":35, "ShipPrice":2530324 }
+{ "timestamp":"2017-03-11T13:38:39Z", "event":"ShipyardSell", "ShipType":"viper_mkiv", "SellShipID":43, "ShipPrice":6961326 }
+{ "timestamp":"2017-03-16T16:49:36Z", "event":"ShipyardSell", "ShipType":"Viper", "SellShipID":53, "ShipPrice":3574165, "System":"Almagest" }
+{ "timestamp":"2017-03-16T16:49:45Z", "event":"ShipyardSell", "ShipType":"Asp_Scout", "SellShipID":44, "ShipPrice":3561078, "System":"LP 131-66" }
+{ "timestamp":"2017-03-16T16:49:51Z", "event":"ShipyardSell", "ShipType":"Type6", "SellShipID":50, "ShipPrice":2565342, "System":"HIP 13317" }
+{ "timestamp":"2017-03-16T16:49:57Z", "event":"ShipyardSell", "ShipType":"CobraMkIII", "SellShipID":54, "ShipPrice":3925566, "System":"Deciat" }
+{ "timestamp":"2017-03-16T16:50:03Z", "event":"ShipyardSell", "ShipType":"CobraMkIV", "SellShipID":45, "ShipPrice":2694419, "System":"78 Ursae Majoris" }
+{ "timestamp":"2017-03-21T17:03:52Z", "event":"ShipyardSell", "ShipType":"python", "SellShipID":62, "ShipPrice":51631167 }
+{ "timestamp":"2017-03-27T17:12:18Z", "event":"ShipyardSell", "ShipType":"CobraMkIII", "SellShipID":61, "ShipPrice":2320983, "System":"Laksak" }
+{ "timestamp":"2017-03-27T17:12:26Z", "event":"ShipyardSell", "ShipType":"Viper", "SellShipID":49, "ShipPrice":2052953, "System":"HIP 10483" }
+{ "timestamp":"2017-03-27T17:42:13Z", "event":"ShipyardSell", "ShipType":"empire_trader", "SellShipID":46, "ShipPrice":18119642 }
+{ "timestamp":"2017-03-27T17:49:44Z", "event":"ShipyardSell", "ShipType":"Vulture", "SellShipID":55, "ShipPrice":7385779, "System":"Yembo" }
+{ "timestamp":"2017-04-06T12:52:46Z", "event":"ShipyardSell", "ShipType":"Asp_Scout", "SellShipID":59, "ShipPrice":4144548, "System":"Yembo" }

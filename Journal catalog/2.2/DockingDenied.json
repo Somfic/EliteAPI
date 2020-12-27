@@ -1,0 +1,46 @@
+{ "timestamp":"2016-10-25T17:15:24Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-10-25T17:47:25Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Shajn Market" }
+{ "timestamp":"2016-10-26T12:31:09Z", "event":"DockingDenied", "Reason":"ActiveFighter", "StationName":"" }
+{ "timestamp":"2016-10-26T13:04:34Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Azeban City" }
+{ "timestamp":"2016-11-06T15:18:59Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Ray Gateway" }
+{ "timestamp":"2016-11-06T18:03:15Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"MacLean Gateway" }
+{ "timestamp":"2016-11-08T20:01:57Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Suzuki Station" }
+{ "timestamp":"2016-11-10T12:47:13Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Leckie Port" }
+{ "timestamp":"2016-11-13T11:17:43Z", "event":"DockingDenied", "Reason":"Hostile", "StationName":"Williams Dock" }
+{ "timestamp":"2016-11-18T08:00:53Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Binney Dock" }
+{ "timestamp":"2016-11-18T08:01:03Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Binney Dock" }
+{ "timestamp":"2016-12-03T15:38:51Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-03T15:38:55Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-07T19:08:57Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"" }
+{ "timestamp":"2016-12-10T16:34:42Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Tietjen City" }
+{ "timestamp":"2016-12-11T15:03:28Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Chadwick Ring" }
+{ "timestamp":"2016-12-14T14:48:58Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Fabian Terminal" }
+{ "timestamp":"2016-12-14T14:50:34Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Fabian Terminal" }
+{ "timestamp":"2016-12-26T13:34:35Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Newholm Station" }
+{ "timestamp":"2016-12-28T13:29:04Z", "event":"DockingDenied", "Reason":"Hostile", "StationName":"Noguchi Enterprise" }
+{ "timestamp":"2017-01-01T20:51:58Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Paradiso Outpost" }
+{ "timestamp":"2017-01-11T16:18:53Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Pontes Gateway" }
+{ "timestamp":"2017-01-11T19:38:36Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Daedalus" }
+{ "timestamp":"2017-01-24T13:41:51Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Felice Dock" }
+{ "timestamp":"2017-02-03T16:07:31Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Zenbei Port" }
+{ "timestamp":"2017-02-05T12:50:19Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Gunn Ring" }
+{ "timestamp":"2017-02-05T12:51:36Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Gunn Ring" }
+{ "timestamp":"2017-02-06T15:26:01Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Dobrovolskiy City" }
+{ "timestamp":"2017-02-08T19:14:05Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Pratchett's Disc" }
+{ "timestamp":"2017-02-16T14:50:46Z", "event":"DockingDenied", "Reason":"ActiveFighter", "StationName":"Xiaoguan Station" }
+{ "timestamp":"2017-02-18T19:02:51Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Kaku Horizons" }
+{ "timestamp":"2017-02-22T14:22:24Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"H. G. Wells Terminal" }
+{ "timestamp":"2017-03-05T15:23:58Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Tisserand Hub" }
+{ "timestamp":"2017-03-09T15:40:35Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Robigo Mines" }
+{ "timestamp":"2017-03-12T13:43:00Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Marsden City" }
+{ "timestamp":"2017-03-13T15:29:58Z", "event":"DockingDenied", "Reason":"Hostile", "StationName":"Crossfield Terminal" }
+{ "timestamp":"2017-03-13T16:34:33Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Stjepan Seljan Hub" }
+{ "timestamp":"2017-03-16T18:43:35Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"" }
+{ "timestamp":"2017-03-22T18:19:43Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Foden Orbital" }
+{ "timestamp":"2017-03-24T16:46:51Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Foden Orbital" }
+{ "timestamp":"2017-03-27T17:10:16Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Naddoddur Terminal" }
+{ "timestamp":"2017-04-01T15:50:16Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Solo Orbiter" }
+{ "timestamp":"2017-04-04T17:23:05Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"George Lucas" }
+{ "timestamp":"2017-04-06T13:30:17Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"" }
+{ "timestamp":"2017-04-10T12:48:41Z", "event":"DockingDenied", "Reason":"Offences", "StationName":"Cregglezone" }
+{ "timestamp":"2017-04-10T20:53:43Z", "event":"DockingDenied", "Reason":"Distance", "StationName":"Hammel Terminal" }

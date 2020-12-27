@@ -1,24 +1,41 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class TouchdownEvent : EventBase
+    public partial class TouchdownEvent : EventBase
     {
-        internal TouchdownEvent() { }
+        internal TouchdownEvent()
+        {
+        }
 
-        public static TouchdownEvent FromJson(string json) => JsonConvert.DeserializeObject<TouchdownEvent>(json);
+        [JsonProperty("PlayerControlled")] public bool PlayerControlled { get; private set; }
 
+        [JsonProperty("Latitude")] public double Latitude { get; private set; }
 
-        [JsonProperty("PlayerControlled")]
-        public bool PlayerControlled { get; internal set; }
+        [JsonProperty("Longitude")] public double Longitude { get; private set; }
+    }
 
-        [JsonProperty("Latitude")]
-        public float Latitude { get; internal set; }
+    public partial class TouchdownEvent
+    {
+        public static TouchdownEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<TouchdownEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Longitude")]
-        public float Longitude { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<TouchdownEvent> TouchdownEvent;
 
-        
+        internal void InvokeTouchdownEvent(TouchdownEvent arg)
+        {
+            TouchdownEvent?.Invoke(this, arg);
+        }
     }
 }

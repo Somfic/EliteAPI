@@ -1,0 +1,16 @@
+{ "timestamp":"2017-09-26T17:57:55Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-09-27T18:54:36Z", "event":"RestockVehicle", "Type":"testbuggy", "Loadout":"starter", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-10-01T21:09:59Z", "event":"RestockVehicle", "Type":"testbuggy", "Loadout":"starter", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-10-03T13:39:31Z", "event":"RestockVehicle", "Type":"testbuggy", "Loadout":"starter", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-10-06T14:30:23Z", "event":"RestockVehicle", "Type":"testbuggy", "Loadout":"starter", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-10-19T15:14:24Z", "event":"RestockVehicle", "Type":"testbuggy", "Loadout":"starter", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-10-20T19:16:14Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-10-21T20:39:09Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":2060, "Count":2 }
+{ "timestamp":"2017-10-22T09:53:53Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-10-22T09:53:53Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":2060, "Count":2 }
+{ "timestamp":"2017-10-23T20:49:37Z", "event":"RestockVehicle", "Type":"testbuggy", "Loadout":"starter", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-10-24T11:43:10Z", "event":"RestockVehicle", "Type":"testbuggy", "Loadout":"starter", "Cost":1030, "Count":1 }
+{ "timestamp":"2017-10-24T14:18:23Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":4120, "Count":4 }
+{ "timestamp":"2017-10-24T14:18:23Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":2060, "Count":2 }
+{ "timestamp":"2017-10-24T14:46:51Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":3090, "Count":3 }
+{ "timestamp":"2017-10-24T14:46:51Z", "event":"RestockVehicle", "Type":"independent_fighter", "Loadout":"two", "Cost":4120, "Count":4 }

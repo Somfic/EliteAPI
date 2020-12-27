@@ -1,0 +1,998 @@
+{ "timestamp":"2016-10-25T16:52:05Z", "event":"SupercruiseExit", "StarSystem":"Maia", "Body":"Obsidian Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-10-25T17:15:13Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-10-25T17:46:23Z", "event":"SupercruiseExit", "StarSystem":"Kamadhenu", "Body":"Shajn Market", "BodyType":"Station" }
+{ "timestamp":"2016-10-25T18:04:18Z", "event":"SupercruiseExit", "StarSystem":"Arapa", "Body":"Arapa", "BodyType":"Star" }
+{ "timestamp":"2016-10-26T12:11:40Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Mercury", "BodyType":"Planet" }
+{ "timestamp":"2016-10-26T12:46:33Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Earth", "BodyType":"Planet" }
+{ "timestamp":"2016-10-26T13:04:05Z", "event":"SupercruiseExit", "StarSystem":"Eranin", "Body":"Azeban City", "BodyType":"Station" }
+{ "timestamp":"2016-10-26T15:46:08Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"M.Gorbachev", "BodyType":"Station" }
+{ "timestamp":"2016-10-26T15:59:50Z", "event":"SupercruiseExit", "StarSystem":"Vega", "Body":"Taylor City", "BodyType":"Station" }
+{ "timestamp":"2016-10-26T16:13:36Z", "event":"SupercruiseExit", "StarSystem":"Ross 145", "Body":"Levchenko City", "BodyType":"Station" }
+{ "timestamp":"2016-10-26T16:34:26Z", "event":"SupercruiseExit", "StarSystem":"G 141-21", "Body":"Aldiss Vision", "BodyType":"Station" }
+{ "timestamp":"2016-10-28T13:04:51Z", "event":"SupercruiseExit", "StarSystem":"Synuefe XR-H d11-102", "Body":"Synuefe XR-H d11-102 1 b a", "BodyType":"Planet" }
+{ "timestamp":"2016-10-28T13:17:47Z", "event":"SupercruiseExit", "StarSystem":"Synuefe XR-H d11-102", "Body":"Synuefe XR-H d11-102 1 b", "BodyType":"Planet" }
+{ "timestamp":"2016-10-28T13:20:49Z", "event":"SupercruiseExit", "StarSystem":"Synuefe XR-H d11-102", "Body":"Synuefe XR-H d11-102 1 b", "BodyType":"Planet" }
+{ "timestamp":"2016-10-28T13:23:40Z", "event":"SupercruiseExit", "StarSystem":"Synuefe XR-H d11-102", "Body":"Synuefe XR-H d11-102 1 b a", "BodyType":"Planet" }
+{ "timestamp":"2016-11-05T16:31:53Z", "event":"SupercruiseExit", "StarSystem":"Andonnus", "Body":"Mrkos Vision", "BodyType":"Station" }
+{ "timestamp":"2016-11-05T20:20:05Z", "event":"SupercruiseExit", "StarSystem":"Kamadhenu", "Body":"Shajn Market", "BodyType":"Station" }
+{ "timestamp":"2016-11-05T20:35:08Z", "event":"SupercruiseExit", "StarSystem":"Mundigal", "Body":"Henry Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-11-05T21:41:53Z", "event":"SupercruiseExit", "StarSystem":"Maia", "Body":"Maia A 2", "BodyType":"Star" }
+{ "timestamp":"2016-11-05T21:43:37Z", "event":"SupercruiseExit", "StarSystem":"Maia", "Body":"Obsidian Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-11-05T22:31:30Z", "event":"SupercruiseExit", "StarSystem":"Pleiades Sector IH-V c2-16", "Body":"Pleiades Sector IH-V c2-16 D 2", "BodyType":"Planet" }
+{ "timestamp":"2016-11-05T22:38:32Z", "event":"SupercruiseExit", "StarSystem":"Pleiades Sector IH-V c2-16", "Body":"Pleiades Sector IH-V c2-16 D 2", "BodyType":"Planet" }
+{ "timestamp":"2016-11-05T22:40:27Z", "event":"SupercruiseExit", "StarSystem":"Pleiades Sector IH-V c2-16", "Body":"Pleiades Sector IH-V c2-16 D 2", "BodyType":"Planet" }
+{ "timestamp":"2016-11-06T14:36:10Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-11-06T15:07:47Z", "event":"SupercruiseExit", "StarSystem":"Lunga", "Body":"Lunga A 1", "BodyType":"Planet" }
+{ "timestamp":"2016-11-06T15:12:17Z", "event":"SupercruiseExit", "StarSystem":"Lunga", "Body":"Mieville Station", "BodyType":"Station" }
+{ "timestamp":"2016-11-06T15:18:49Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-11-06T15:51:28Z", "event":"SupercruiseExit", "StarSystem":"Dongkum", "Body":"Dongkum A", "BodyType":"Star" }
+{ "timestamp":"2016-11-06T16:07:19Z", "event":"SupercruiseExit", "StarSystem":"Dongkum", "Body":"Swanwick Enterprise", "BodyType":"Station" }
+{ "timestamp":"2016-11-06T16:19:25Z", "event":"SupercruiseExit", "StarSystem":"Dongkum", "Body":"Dongkum A 3+4", "BodyType":"Null" }
+{ "timestamp":"2016-11-06T16:24:12Z", "event":"SupercruiseExit", "StarSystem":"Khaima", "Body":"Khaima AB 2", "BodyType":"Planet" }
+{ "timestamp":"2016-11-06T16:25:31Z", "event":"SupercruiseExit", "StarSystem":"Khaima", "Body":"Khaima AB 2", "BodyType":"Planet" }
+{ "timestamp":"2016-11-06T16:31:22Z", "event":"SupercruiseExit", "StarSystem":"Tote", "Body":"Tote A", "BodyType":"Star" }
+{ "timestamp":"2016-11-06T16:35:09Z", "event":"SupercruiseExit", "StarSystem":"Tote", "Body":"Tote A", "BodyType":"Star" }
+{ "timestamp":"2016-11-06T16:43:08Z", "event":"SupercruiseExit", "StarSystem":"Kwaraseti", "Body":"Kwaraseti", "BodyType":"Star" }
+{ "timestamp":"2016-11-06T16:48:13Z", "event":"SupercruiseExit", "StarSystem":"Mentor", "Body":"Mentor 1", "BodyType":"Planet" }
+{ "timestamp":"2016-11-06T16:49:10Z", "event":"SupercruiseExit", "StarSystem":"Mentor", "Body":"Mentor 1", "BodyType":"Planet" }
+{ "timestamp":"2016-11-06T17:33:24Z", "event":"SupercruiseExit", "StarSystem":"Mentor", "Body":"Mentor", "BodyType":"Star" }
+{ "timestamp":"2016-11-06T17:43:09Z", "event":"SupercruiseExit", "StarSystem":"Clarus", "Body":"Clarus A 4", "BodyType":"Planet" }
+{ "timestamp":"2016-11-06T18:03:06Z", "event":"SupercruiseExit", "StarSystem":"Clarus", "Body":"MacLean Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-11-06T18:13:10Z", "event":"SupercruiseExit", "StarSystem":"Clarus", "Body":"Clarus A 4", "BodyType":"Planet" }
+{ "timestamp":"2016-11-06T18:27:02Z", "event":"SupercruiseExit", "StarSystem":"Clarus", "Body":"Clarus A 6", "BodyType":"Planet" }
+{ "timestamp":"2016-11-06T18:46:25Z", "event":"SupercruiseExit", "StarSystem":"Clarus", "Body":"MacLean Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-11-06T18:56:42Z", "event":"SupercruiseExit", "StarSystem":"Esuvit", "Body":"Esuvit A 2", "BodyType":"Planet" }
+{ "timestamp":"2016-11-07T15:27:03Z", "event":"SupercruiseExit", "StarSystem":"Esuvit", "Body":"Esuvit A 2", "BodyType":"Planet" }
+{ "timestamp":"2016-11-07T15:31:16Z", "event":"SupercruiseExit", "StarSystem":"Esuvit", "Body":"Wilhelm Vision", "BodyType":"Station" }
+{ "timestamp":"2016-11-07T16:02:33Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri AB 1", "BodyType":"Planet" }
+{ "timestamp":"2016-11-07T16:04:26Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-11-08T16:22:20Z", "event":"SupercruiseExit", "StarSystem":"Kamadhenu", "Body":"Kamadhenu 1", "BodyType":"Planet" }
+{ "timestamp":"2016-11-08T16:23:37Z", "event":"SupercruiseExit", "StarSystem":"Kamadhenu", "Body":"Kamadhenu 1", "BodyType":"Planet" }
+{ "timestamp":"2016-11-08T16:24:48Z", "event":"SupercruiseExit", "StarSystem":"Kamadhenu", "Body":"Shajn Market", "BodyType":"Station" }
+{ "timestamp":"2016-11-08T16:56:32Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Thompson-Keen Asylum", "BodyType":"Station" }
+{ "timestamp":"2016-11-08T17:30:27Z", "event":"SupercruiseExit", "StarSystem":"Bolocara", "Body":"Bolocara 1", "BodyType":"Planet" }
+{ "timestamp":"2016-11-08T17:49:55Z", "event":"SupercruiseExit", "StarSystem":"Tamar", "Body":"Gould Port", "BodyType":"Station" }
+{ "timestamp":"2016-11-08T18:08:34Z", "event":"SupercruiseExit", "StarSystem":"Annwn", "Body":"Gallimaufry", "BodyType":"Station" }
+{ "timestamp":"2016-11-08T18:21:20Z", "event":"SupercruiseExit", "StarSystem":"Annwn", "Body":"Baade Enterprise", "BodyType":"Station" }
+{ "timestamp":"2016-11-08T18:25:46Z", "event":"SupercruiseExit", "StarSystem":"Annwn", "Body":"Gallimaufry", "BodyType":"Station" }
+{ "timestamp":"2016-11-08T18:33:44Z", "event":"SupercruiseExit", "StarSystem":"Gende", "Body":"Baliunas Hub", "BodyType":"Station" }
+{ "timestamp":"2016-11-08T18:34:27Z", "event":"SupercruiseExit", "StarSystem":"Gende", "Body":"Baliunas Hub", "BodyType":"Station" }
+{ "timestamp":"2016-11-08T19:00:27Z", "event":"SupercruiseExit", "StarSystem":"Kamadhenu", "Body":"Kamadhenu", "BodyType":"Star" }
+{ "timestamp":"2016-11-08T19:02:46Z", "event":"SupercruiseExit", "StarSystem":"Kamadhenu", "Body":"Shajn Market", "BodyType":"Station" }
+{ "timestamp":"2016-11-08T19:40:30Z", "event":"SupercruiseExit", "StarSystem":"Kamadhenu", "Body":"Couper Hub", "BodyType":"Station" }
+{ "timestamp":"2016-11-08T19:51:36Z", "event":"SupercruiseExit", "StarSystem":"Anum", "Body":"Dubyago Port", "BodyType":"Station" }
+{ "timestamp":"2016-11-08T20:01:47Z", "event":"SupercruiseExit", "StarSystem":"Sawait", "Body":"Suzuki Station", "BodyType":"Station" }
+{ "timestamp":"2016-11-09T13:32:55Z", "event":"SupercruiseExit", "StarSystem":"Brestla", "Body":"Brestla A 1", "BodyType":"Planet" }
+{ "timestamp":"2016-11-09T13:34:49Z", "event":"SupercruiseExit", "StarSystem":"Brestla", "Body":"Roed Odegaard Port", "BodyType":"Station" }
+{ "timestamp":"2016-11-09T14:00:35Z", "event":"SupercruiseExit", "StarSystem":"Bhatas", "Body":"Urata City", "BodyType":"Station" }
+{ "timestamp":"2016-11-09T14:09:20Z", "event":"SupercruiseExit", "StarSystem":"Sawait", "Body":"Suzuki Station", "BodyType":"Station" }
+{ "timestamp":"2016-11-09T14:18:36Z", "event":"SupercruiseExit", "StarSystem":"Pirigen", "Body":"Iben Dock", "BodyType":"Station" }
+{ "timestamp":"2016-11-09T14:26:09Z", "event":"SupercruiseExit", "StarSystem":"Baldur", "Body":"Baldur A", "BodyType":"Star" }
+{ "timestamp":"2016-11-09T14:31:10Z", "event":"SupercruiseExit", "StarSystem":"Baldur", "Body":"Thollon Station", "BodyType":"Station" }
+{ "timestamp":"2016-11-09T14:58:39Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Thompson-Keen Asylum", "BodyType":"Station" }
+{ "timestamp":"2016-11-09T15:03:46Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Frigschneck's Resort", "BodyType":"Station" }
+{ "timestamp":"2016-11-09T15:24:25Z", "event":"SupercruiseExit", "StarSystem":"HIP 7396", "Body":"Seares Ring", "BodyType":"Station" }
+{ "timestamp":"2016-11-09T19:09:33Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Frigschneck's Resort", "BodyType":"Station" }
+{ "timestamp":"2016-11-09T19:09:59Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Frigschneck's Resort", "BodyType":"Station" }
+{ "timestamp":"2016-11-10T12:45:50Z", "event":"SupercruiseExit", "StarSystem":"HR 494", "Body":"Leckie Port", "BodyType":"Station" }
+{ "timestamp":"2016-11-10T12:57:55Z", "event":"SupercruiseExit", "StarSystem":"Miphifa", "Body":"Happis", "BodyType":"Station" }
+{ "timestamp":"2016-11-10T13:08:14Z", "event":"SupercruiseExit", "StarSystem":"Kokobii", "Body":"Kokobii A 3", "BodyType":"Planet" }
+{ "timestamp":"2016-11-10T13:11:20Z", "event":"SupercruiseExit", "StarSystem":"Kokobii", "Body":"Bauman Station", "BodyType":"Station" }
+{ "timestamp":"2016-11-10T13:25:28Z", "event":"SupercruiseExit", "StarSystem":"Hollos", "Body":"Hollos B 2", "BodyType":"Planet" }
+{ "timestamp":"2016-11-10T13:27:07Z", "event":"SupercruiseExit", "StarSystem":"Hollos", "Body":"Bharadwaj Hub", "BodyType":"Station" }
+{ "timestamp":"2016-11-10T13:35:41Z", "event":"SupercruiseExit", "StarSystem":"Murato", "Body":"Tietjen Ring", "BodyType":"Station" }
+{ "timestamp":"2016-11-10T13:48:58Z", "event":"SupercruiseExit", "StarSystem":"Hollos", "Body":"Hollos A 1", "BodyType":"Planet" }
+{ "timestamp":"2016-11-10T13:58:49Z", "event":"SupercruiseExit", "StarSystem":"Eburnakura", "Body":"Parkinson Terminal", "BodyType":"Station" }
+{ "timestamp":"2016-11-10T14:18:03Z", "event":"SupercruiseExit", "StarSystem":"Murato", "Body":"Murato 1", "BodyType":"Planet" }
+{ "timestamp":"2016-11-10T14:21:06Z", "event":"SupercruiseExit", "StarSystem":"Murato", "Body":"Tietjen Ring", "BodyType":"Station" }
+{ "timestamp":"2016-11-10T14:47:18Z", "event":"SupercruiseExit", "StarSystem":"Woyo Mina", "Body":"Woyo Mina A", "BodyType":"Star" }
+{ "timestamp":"2016-11-10T14:51:16Z", "event":"SupercruiseExit", "StarSystem":"Woyo Mina", "Body":"Woyo Mina A", "BodyType":"Star" }
+{ "timestamp":"2016-11-11T13:22:49Z", "event":"SupercruiseExit", "StarSystem":"Woyo Mina", "Body":"Cannon Vision", "BodyType":"Station" }
+{ "timestamp":"2016-11-11T13:39:15Z", "event":"SupercruiseExit", "StarSystem":"Carns", "Body":"Humason Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-11-11T13:49:08Z", "event":"SupercruiseExit", "StarSystem":"Guuguyni", "Body":"Shen Terminal", "BodyType":"Station" }
+{ "timestamp":"2016-11-11T14:38:52Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-11-11T14:46:27Z", "event":"SupercruiseExit", "StarSystem":"HIP 15062", "Body":"HIP 15062 1 a", "BodyType":"Planet" }
+{ "timestamp":"2016-11-11T14:49:32Z", "event":"SupercruiseExit", "StarSystem":"HIP 15062", "Body":"HIP 15062 1 a", "BodyType":"Planet" }
+{ "timestamp":"2016-11-11T16:27:38Z", "event":"SupercruiseExit", "StarSystem":"HIP 15062", "Body":"HIP 15062 1 a", "BodyType":"Planet" }
+{ "timestamp":"2016-11-11T16:41:42Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-11-11T17:26:35Z", "event":"SupercruiseExit", "StarSystem":"Ndjabog", "Body":"Ndjabog C 1", "BodyType":"Planet" }
+{ "timestamp":"2016-11-11T17:44:07Z", "event":"SupercruiseExit", "StarSystem":"HIP 10123", "Body":"HIP 10123 3", "BodyType":"Planet" }
+{ "timestamp":"2016-11-11T17:55:01Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-11-13T10:56:23Z", "event":"SupercruiseExit", "StarSystem":"Mitnahas", "Body":"Mitnahas AB 2", "BodyType":"Planet" }
+{ "timestamp":"2016-11-13T11:05:42Z", "event":"SupercruiseExit", "StarSystem":"Mitnahas", "Body":"Burgess Hub", "BodyType":"Station" }
+{ "timestamp":"2016-11-13T11:15:10Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"Williams Dock", "BodyType":"Station" }
+{ "timestamp":"2016-11-16T14:42:32Z", "event":"SupercruiseExit", "StarSystem":"LFT 926", "Body":"LFT 926 A", "BodyType":"Star" }
+{ "timestamp":"2016-11-16T14:48:55Z", "event":"SupercruiseExit", "StarSystem":"LFT 926", "Body":"Meredith City", "BodyType":"Station" }
+{ "timestamp":"2016-11-16T15:08:05Z", "event":"SupercruiseExit", "StarSystem":"Maorsi", "Body":"Karachkina City", "BodyType":"Station" }
+{ "timestamp":"2016-11-16T15:18:41Z", "event":"SupercruiseExit", "StarSystem":"Nahua", "Body":"Fuller Vision", "BodyType":"Station" }
+{ "timestamp":"2016-11-16T15:27:13Z", "event":"SupercruiseExit", "StarSystem":"Herthans", "Body":"Henry Vision", "BodyType":"Station" }
+{ "timestamp":"2016-11-18T07:58:53Z", "event":"SupercruiseExit", "StarSystem":"Caspatsuria", "Body":"Binney Dock", "BodyType":"Station" }
+{ "timestamp":"2016-11-18T08:15:44Z", "event":"SupercruiseExit", "StarSystem":"Aramzahd", "Body":"Norman - Mavis's Bingo Palace", "BodyType":"Station" }
+{ "timestamp":"2016-11-18T08:24:48Z", "event":"SupercruiseExit", "StarSystem":"HIP 11144", "Body":"HIP 11144 1", "BodyType":"Planet" }
+{ "timestamp":"2016-11-18T08:26:51Z", "event":"SupercruiseExit", "StarSystem":"HIP 11144", "Body":"Ortiz Moreno Base", "BodyType":"Station" }
+{ "timestamp":"2016-11-20T11:58:57Z", "event":"SupercruiseExit", "StarSystem":"Caspatsuria", "Body":"Binney Dock", "BodyType":"Station" }
+{ "timestamp":"2016-11-20T12:17:01Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-11-20T12:41:42Z", "event":"SupercruiseExit", "StarSystem":"Balante", "Body":"Balante A A Belt Cluster 1", "BodyType":"AsteroidCluster" }
+{ "timestamp":"2016-11-29T13:40:40Z", "event":"SupercruiseExit", "StarSystem":"Kotigeni", "Body":"Shaw Port", "BodyType":"Station" }
+{ "timestamp":"2016-11-29T14:06:47Z", "event":"SupercruiseExit", "StarSystem":"Lave", "Body":"Lave", "BodyType":"Star" }
+{ "timestamp":"2016-11-29T14:10:29Z", "event":"SupercruiseExit", "StarSystem":"Lave", "Body":"Lave", "BodyType":"Star" }
+{ "timestamp":"2016-11-29T14:11:59Z", "event":"SupercruiseExit", "StarSystem":"Lave", "Body":"Lave Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-01T16:41:27Z", "event":"SupercruiseExit", "StarSystem":"Leesti", "Body":"Leesti", "BodyType":"Planet" }
+{ "timestamp":"2016-12-01T16:44:12Z", "event":"SupercruiseExit", "StarSystem":"Leesti", "Body":"George Lucas", "BodyType":"Station" }
+{ "timestamp":"2016-12-01T16:57:21Z", "event":"SupercruiseExit", "StarSystem":"Arexe", "Body":"Janes Horizons", "BodyType":"Station" }
+{ "timestamp":"2016-12-01T18:21:59Z", "event":"SupercruiseExit", "StarSystem":"Khun", "Body":"Khun 5", "BodyType":"Planet" }
+{ "timestamp":"2016-12-01T18:44:10Z", "event":"SupercruiseExit", "StarSystem":"Wyrd", "Body":"Wyrd A 2", "BodyType":"Planet" }
+{ "timestamp":"2016-12-01T19:37:22Z", "event":"SupercruiseExit", "StarSystem":"Maia", "Body":"Maia A 2 a", "BodyType":"Planet" }
+{ "timestamp":"2016-12-01T20:17:57Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 a", "BodyType":"Planet" }
+{ "timestamp":"2016-12-01T20:19:37Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 a", "BodyType":"Planet" }
+{ "timestamp":"2016-12-02T13:21:58Z", "event":"SupercruiseExit", "StarSystem":"Kaukamine", "Body":"Vinci Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-02T13:34:43Z", "event":"SupercruiseExit", "StarSystem":"Kwekwaki", "Body":"Kwekwaki A 1 a", "BodyType":"Planet" }
+{ "timestamp":"2016-12-02T15:06:42Z", "event":"SupercruiseExit", "StarSystem":"Kaukamine", "Body":"Kaukamine 4 a", "BodyType":"Planet" }
+{ "timestamp":"2016-12-02T15:42:35Z", "event":"SupercruiseExit", "StarSystem":"Khun", "Body":"Khun 5", "BodyType":"Planet" }
+{ "timestamp":"2016-12-02T16:13:24Z", "event":"SupercruiseExit", "StarSystem":"Pegasi Sector AG-U a4-0", "Body":"Pegasi Sector AG-U a4-0", "BodyType":"Star" }
+{ "timestamp":"2016-12-02T16:15:48Z", "event":"SupercruiseExit", "StarSystem":"Pegasi Sector DQ-X b1-4", "Body":"Pegasi Sector DQ-X b1-4", "BodyType":"Star" }
+{ "timestamp":"2016-12-02T16:20:20Z", "event":"SupercruiseExit", "StarSystem":"Antal", "Body":"Antal AB 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-02T16:23:20Z", "event":"SupercruiseExit", "StarSystem":"Antal", "Body":"Lobachevsky Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-02T16:59:31Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-12-02T17:13:24Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri AB 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-03T14:05:01Z", "event":"SupercruiseExit", "StarSystem":"Snoquot", "Body":"Snoquot 2", "BodyType":"Planet" }
+{ "timestamp":"2016-12-03T14:41:31Z", "event":"SupercruiseExit", "StarSystem":"Khun", "Body":"Khun 5", "BodyType":"Planet" }
+{ "timestamp":"2016-12-03T15:01:38Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-03T15:19:21Z", "event":"SupercruiseExit", "StarSystem":"Ceos", "Body":"New Dawn Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-03T15:37:52Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-03T16:04:24Z", "event":"SupercruiseExit", "StarSystem":"Ceos", "Body":"New Dawn Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-03T18:39:59Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-03T19:18:54Z", "event":"SupercruiseExit", "StarSystem":"Luyten's Star", "Body":"Ashby City", "BodyType":"Station" }
+{ "timestamp":"2016-12-03T19:55:14Z", "event":"SupercruiseExit", "StarSystem":"17 Draconis", "Body":"Paradiso Outpost", "BodyType":"Station" }
+{ "timestamp":"2016-12-03T20:15:47Z", "event":"SupercruiseExit", "StarSystem":"Wredguia CJ-I b52-0", "Body":"Wredguia CJ-I b52-0", "BodyType":"Star" }
+{ "timestamp":"2016-12-04T13:54:23Z", "event":"SupercruiseExit", "StarSystem":"Prooe Drye OP-L b1", "Body":"Prooe Drye OP-L b1 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-04T14:04:37Z", "event":"SupercruiseExit", "StarSystem":"Prooe Drye LO-D c1-6", "Body":"Prooe Drye LO-D c1-6", "BodyType":"Star" }
+{ "timestamp":"2016-12-04T15:01:23Z", "event":"SupercruiseExit", "StarSystem":"Plaa Eurk GT-Z d13-16", "Body":"Plaa Eurk GT-Z d13-16 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-04T15:42:28Z", "event":"SupercruiseExit", "StarSystem":"IC 1396 Sector RU-F d11-7", "Body":"IC 1396 Sector RU-F d11-7 5 a", "BodyType":"Planet" }
+{ "timestamp":"2016-12-04T16:00:24Z", "event":"SupercruiseExit", "StarSystem":"Sifi TV-L b8-0", "Body":"Sifi TV-L b8-0 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-04T18:22:52Z", "event":"SupercruiseExit", "StarSystem":"Phylur AP-Z b13-2", "Body":"Phylur AP-Z b13-2", "BodyType":"Star" }
+{ "timestamp":"2016-12-04T21:07:43Z", "event":"SupercruiseExit", "StarSystem":"Traikoa FL-P e5-4", "Body":"Traikoa FL-P e5-4", "BodyType":"Star" }
+{ "timestamp":"2016-12-04T21:12:34Z", "event":"SupercruiseExit", "StarSystem":"Traikoa FL-P e5-4", "Body":"Traikoa FL-P e5-4", "BodyType":"Star" }
+{ "timestamp":"2016-12-05T15:57:12Z", "event":"SupercruiseExit", "StarSystem":"Traikoa KF-V b43-2", "Body":"Traikoa KF-V b43-2 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-05T20:56:20Z", "event":"SupercruiseExit", "StarSystem":"Droju KV-P c8-7", "Body":"Droju KV-P c8-7 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-05T21:06:47Z", "event":"SupercruiseExit", "StarSystem":"Droju FM-O b12-1", "Body":"Droju FM-O b12-1 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-05T21:34:40Z", "event":"SupercruiseExit", "StarSystem":"Bleia Eohn RM-U c19-18", "Body":"Bleia Eohn RM-U c19-18", "BodyType":"Star" }
+{ "timestamp":"2016-12-05T21:44:46Z", "event":"SupercruiseExit", "StarSystem":"Bleia Eohn AC-U b36-4", "Body":"Bleia Eohn AC-U b36-4", "BodyType":"Star" }
+{ "timestamp":"2016-12-06T15:28:06Z", "event":"SupercruiseExit", "StarSystem":"M25 Sector PD-T d3-21", "Body":"M25 Sector PD-T d3-21 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-06T16:19:16Z", "event":"SupercruiseExit", "StarSystem":"Swoiwns TU-W b48-4", "Body":"Swoiwns TU-W b48-4", "BodyType":"Star" }
+{ "timestamp":"2016-12-06T16:45:51Z", "event":"SupercruiseExit", "StarSystem":"Col 359 Sector AF-Q d5-42", "Body":"Col 359 Sector AF-Q d5-42 AB", "BodyType":"Null" }
+{ "timestamp":"2016-12-06T16:51:17Z", "event":"SupercruiseExit", "StarSystem":"Col 359 Sector XC-Z b15-3", "Body":"Col 359 Sector XC-Z b15-3 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-06T17:11:04Z", "event":"SupercruiseExit", "StarSystem":"Luyten's Star", "Body":"Ashby City", "BodyType":"Station" }
+{ "timestamp":"2016-12-06T17:48:37Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Sothis A", "BodyType":"Star" }
+{ "timestamp":"2016-12-06T17:50:16Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-06T18:50:16Z", "event":"SupercruiseExit", "StarSystem":"Ceos", "Body":"New Dawn Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-06T19:18:04Z", "event":"SupercruiseExit", "StarSystem":"Maia", "Body":"Obsidian Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-06T19:23:08Z", "event":"SupercruiseExit", "StarSystem":"Maia", "Body":"Maia A 2 a", "BodyType":"Planet" }
+{ "timestamp":"2016-12-06T19:44:32Z", "event":"SupercruiseExit", "StarSystem":"Luyten's Star", "Body":"Ashby City", "BodyType":"Station" }
+{ "timestamp":"2016-12-06T19:53:23Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Patterson Enterprise", "BodyType":"Station" }
+{ "timestamp":"2016-12-06T21:05:14Z", "event":"SupercruiseExit", "StarSystem":"Veil West Sector GW-W c1-16", "Body":"Veil West Sector GW-W c1-16 A 3", "BodyType":"Planet" }
+{ "timestamp":"2016-12-07T13:50:17Z", "event":"SupercruiseExit", "StarSystem":"Wredguia DX-Y b41-2", "Body":"Wredguia DX-Y b41-2 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T14:06:47Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T14:14:07Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Sothis A 5", "BodyType":"Planet" }
+{ "timestamp":"2016-12-07T14:24:37Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Sothis A 5", "BodyType":"Planet" }
+{ "timestamp":"2016-12-07T14:29:56Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T15:04:18Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T15:18:30Z", "event":"SupercruiseExit", "StarSystem":"BD+24 543", "Body":"Pharos", "BodyType":"Planet" }
+{ "timestamp":"2016-12-07T15:21:22Z", "event":"SupercruiseExit", "StarSystem":"BD+24 543", "Body":"Proteus Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T15:32:15Z", "event":"SupercruiseExit", "StarSystem":"Qama", "Body":"Thurston Ring", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T15:58:10Z", "event":"SupercruiseExit", "StarSystem":"6 Andromedae", "Body":"Galilei Ring", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T15:58:37Z", "event":"SupercruiseExit", "StarSystem":"6 Andromedae", "Body":"Galilei Ring", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T16:18:52Z", "event":"SupercruiseExit", "StarSystem":"LHS 1038", "Body":"LHS 1038 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T16:26:26Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Daedalus", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T16:59:13Z", "event":"SupercruiseExit", "StarSystem":"Lumba", "Body":"Fujimori Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T17:08:40Z", "event":"SupercruiseExit", "StarSystem":"Shenich", "Body":"Wafer Terminal", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T17:21:36Z", "event":"SupercruiseExit", "StarSystem":"Meiri", "Body":"Meiri 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-07T17:36:59Z", "event":"SupercruiseExit", "StarSystem":"Meiri", "Body":"Meiri", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T18:03:04Z", "event":"SupercruiseExit", "StarSystem":"Meiri", "Body":"Meiri", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T18:10:38Z", "event":"SupercruiseExit", "StarSystem":"Meiri", "Body":"Meiri 3", "BodyType":"Planet" }
+{ "timestamp":"2016-12-07T18:14:49Z", "event":"SupercruiseExit", "StarSystem":"Meiri", "Body":"Meiri", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T18:17:32Z", "event":"SupercruiseExit", "StarSystem":"Meiri", "Body":"Meiri", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T18:24:08Z", "event":"SupercruiseExit", "StarSystem":"Mboyan", "Body":"Mboyan A", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T18:28:41Z", "event":"SupercruiseExit", "StarSystem":"Mboyan", "Body":"Mboyan A", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T18:33:39Z", "event":"SupercruiseExit", "StarSystem":"Mboyan", "Body":"Mboyan A", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T18:38:03Z", "event":"SupercruiseExit", "StarSystem":"Mboyan", "Body":"Mboyan A", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T18:50:52Z", "event":"SupercruiseExit", "StarSystem":"Lumba", "Body":"Fujimori Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T19:08:38Z", "event":"SupercruiseExit", "StarSystem":"Khun", "Body":"Khun 5", "BodyType":"Planet" }
+{ "timestamp":"2016-12-07T20:12:50Z", "event":"SupercruiseExit", "StarSystem":"Omagatae", "Body":"Hiroyuki Vision", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T20:23:19Z", "event":"SupercruiseExit", "StarSystem":"Omagatae", "Body":"Omagatae A", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T20:24:35Z", "event":"SupercruiseExit", "StarSystem":"Omagatae", "Body":"Omagatae A", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T20:26:07Z", "event":"SupercruiseExit", "StarSystem":"Omagatae", "Body":"Omagatae A", "BodyType":"Star" }
+{ "timestamp":"2016-12-07T20:54:17Z", "event":"SupercruiseExit", "StarSystem":"Omagatae", "Body":"Hiroyuki Vision", "BodyType":"Station" }
+{ "timestamp":"2016-12-07T21:04:33Z", "event":"SupercruiseExit", "StarSystem":"Khun", "Body":"Khun 5", "BodyType":"Planet" }
+{ "timestamp":"2016-12-08T13:20:51Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-08T14:56:37Z", "event":"SupercruiseExit", "StarSystem":"Ceos", "Body":"New Dawn Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-08T15:08:43Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-08T15:15:33Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Sothis A 5", "BodyType":"Planet" }
+{ "timestamp":"2016-12-08T15:17:42Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Sothis A 5", "BodyType":"Planet" }
+{ "timestamp":"2016-12-08T15:24:15Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Sothis A 5", "BodyType":"Planet" }
+{ "timestamp":"2016-12-08T17:00:32Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-08T17:24:06Z", "event":"SupercruiseExit", "StarSystem":"Ceos", "Body":"New Dawn Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-08T17:35:03Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-08T18:29:38Z", "event":"SupercruiseExit", "StarSystem":"Ceos", "Body":"New Dawn Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-08T18:37:27Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-08T19:00:03Z", "event":"SupercruiseExit", "StarSystem":"Ququve", "Body":"Smirnova Relay", "BodyType":"Station" }
+{ "timestamp":"2016-12-08T19:11:05Z", "event":"SupercruiseExit", "StarSystem":"Segovan", "Body":"Segovan A 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-08T19:38:26Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-08T20:14:15Z", "event":"SupercruiseExit", "StarSystem":"Warnates", "Body":"Bursch Terminal", "BodyType":"Station" }
+{ "timestamp":"2016-12-08T20:14:41Z", "event":"SupercruiseExit", "StarSystem":"Warnates", "Body":"Bursch Terminal", "BodyType":"Station" }
+{ "timestamp":"2016-12-09T17:30:56Z", "event":"SupercruiseExit", "StarSystem":"Ross 128", "Body":"Warren Prison Mine", "BodyType":"Station" }
+{ "timestamp":"2016-12-09T17:46:04Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Patterson Enterprise", "BodyType":"Station" }
+{ "timestamp":"2016-12-09T18:04:24Z", "event":"SupercruiseExit", "StarSystem":"Gabri", "Body":"Tull Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T14:19:51Z", "event":"SupercruiseExit", "StarSystem":"Lumba", "Body":"Fujimori Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T14:35:55Z", "event":"SupercruiseExit", "StarSystem":"Harm", "Body":"Gentil Hub", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T14:36:41Z", "event":"SupercruiseExit", "StarSystem":"Harm", "Body":"Gentil Hub", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T14:48:36Z", "event":"SupercruiseExit", "StarSystem":"Ross 569", "Body":"Pimi Dock", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T15:03:33Z", "event":"SupercruiseExit", "StarSystem":"Cubeo", "Body":"Medupe City", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T15:35:09Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Thompson-Keen Asylum", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T16:29:56Z", "event":"SupercruiseExit", "StarSystem":"Guttors", "Body":"Tietjen City", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T17:36:07Z", "event":"SupercruiseExit", "StarSystem":"Namba", "Body":"McCrea Estate", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T17:54:25Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Likopo", "BodyType":"Planet" }
+{ "timestamp":"2016-12-10T17:55:23Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Thompson-Keen Asylum", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T18:13:53Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Frigschneck's Resort", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T18:28:05Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Thompson-Keen Asylum", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T19:52:01Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T20:04:31Z", "event":"SupercruiseExit", "StarSystem":"Lembava", "Body":"Goldstein Port", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T20:18:22Z", "event":"SupercruiseExit", "StarSystem":"Yimakuapa", "Body":"Yimakuapa AB 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-10T20:19:56Z", "event":"SupercruiseExit", "StarSystem":"Yimakuapa", "Body":"Frobisher Terminal", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T20:28:12Z", "event":"SupercruiseExit", "StarSystem":"Momus Reach", "Body":"Nemesis", "BodyType":"Planet" }
+{ "timestamp":"2016-12-10T20:30:23Z", "event":"SupercruiseExit", "StarSystem":"Momus Reach", "Body":"Ralphus", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T20:40:07Z", "event":"SupercruiseExit", "StarSystem":"Kolaga", "Body":"Britnev Hub", "BodyType":"Station" }
+{ "timestamp":"2016-12-10T20:48:32Z", "event":"SupercruiseExit", "StarSystem":"GCRV 54903", "Body":"GCRV 54903", "BodyType":"Star" }
+{ "timestamp":"2016-12-10T20:54:05Z", "event":"SupercruiseExit", "StarSystem":"GCRV 54903", "Body":"GCRV 54903", "BodyType":"Star" }
+{ "timestamp":"2016-12-10T21:00:04Z", "event":"SupercruiseExit", "StarSystem":"GCRV 54903", "Body":"GCRV 54903", "BodyType":"Star" }
+{ "timestamp":"2016-12-10T21:17:12Z", "event":"SupercruiseExit", "StarSystem":"GCRV 54903", "Body":"GCRV 54903", "BodyType":"Star" }
+{ "timestamp":"2016-12-10T21:28:57Z", "event":"SupercruiseExit", "StarSystem":"Kim 2-17", "Body":"Kim 2-17 E 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-10T21:30:41Z", "event":"SupercruiseExit", "StarSystem":"Kim 2-17", "Body":"Thomas Vision", "BodyType":"Station" }
+{ "timestamp":"2016-12-11T14:27:01Z", "event":"SupercruiseExit", "StarSystem":"HIP 24046", "Body":"Resnik Dock", "BodyType":"Station" }
+{ "timestamp":"2016-12-11T14:37:50Z", "event":"SupercruiseExit", "StarSystem":"Konejandi", "Body":"Konejandi A", "BodyType":"Star" }
+{ "timestamp":"2016-12-11T14:42:48Z", "event":"SupercruiseExit", "StarSystem":"Konejandi", "Body":"Konejandi A", "BodyType":"Star" }
+{ "timestamp":"2016-12-11T14:46:20Z", "event":"SupercruiseExit", "StarSystem":"Konejandi", "Body":"Konejandi A", "BodyType":"Star" }
+{ "timestamp":"2016-12-11T14:53:01Z", "event":"SupercruiseExit", "StarSystem":"HIP 20777", "Body":"Chadwick Ring", "BodyType":"Station" }
+{ "timestamp":"2016-12-11T14:56:48Z", "event":"SupercruiseExit", "StarSystem":"HIP 20777", "Body":"HIP 20777 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-11T15:03:22Z", "event":"SupercruiseExit", "StarSystem":"HIP 20777", "Body":"Chadwick Ring", "BodyType":"Station" }
+{ "timestamp":"2016-12-11T15:06:25Z", "event":"SupercruiseExit", "StarSystem":"HIP 20777", "Body":"HIP 20777 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-12T14:07:15Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri AB", "BodyType":"Null" }
+{ "timestamp":"2016-12-12T14:09:05Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-12-13T16:21:48Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri A A Belt Cluster 1", "BodyType":"AsteroidCluster" }
+{ "timestamp":"2016-12-13T16:44:18Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri A A Belt Cluster 6", "BodyType":"AsteroidCluster" }
+{ "timestamp":"2016-12-13T16:47:49Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri A A Belt Cluster 4", "BodyType":"AsteroidCluster" }
+{ "timestamp":"2016-12-13T16:51:24Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri A A Belt Cluster 3", "BodyType":"AsteroidCluster" }
+{ "timestamp":"2016-12-13T17:20:04Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri B", "BodyType":"Star" }
+{ "timestamp":"2016-12-13T17:21:12Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri AB", "BodyType":"Null" }
+{ "timestamp":"2016-12-13T17:22:06Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri AB 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-13T17:23:38Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-12-13T18:01:44Z", "event":"SupercruiseExit", "StarSystem":"Khun", "Body":"Khun 5", "BodyType":"Planet" }
+{ "timestamp":"2016-12-13T18:20:57Z", "event":"SupercruiseExit", "StarSystem":"Wyrd", "Body":"Wyrd A 2", "BodyType":"Planet" }
+{ "timestamp":"2016-12-14T13:54:08Z", "event":"SupercruiseExit", "StarSystem":"Wyrd", "Body":"Vonarburg Co-operative", "BodyType":"Station" }
+{ "timestamp":"2016-12-14T14:07:49Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-12-14T14:34:32Z", "event":"SupercruiseExit", "StarSystem":"Badbadzist", "Body":"Fabian Terminal", "BodyType":"Station" }
+{ "timestamp":"2016-12-14T14:55:40Z", "event":"SupercruiseExit", "StarSystem":"Badbadzist", "Body":"Badbadzist A 2", "BodyType":"Planet" }
+{ "timestamp":"2016-12-14T15:01:45Z", "event":"SupercruiseExit", "StarSystem":"Badbadzist", "Body":"Badbadzist A", "BodyType":"Star" }
+{ "timestamp":"2016-12-14T15:40:49Z", "event":"SupercruiseExit", "StarSystem":"HIP 14857", "Body":"HIP 14857 A 2", "BodyType":"Planet" }
+{ "timestamp":"2016-12-15T14:24:05Z", "event":"SupercruiseExit", "StarSystem":"Vivates", "Body":"Vivates A", "BodyType":"Star" }
+{ "timestamp":"2016-12-15T14:30:15Z", "event":"SupercruiseExit", "StarSystem":"LTT 1015", "Body":"Fischer Point", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T14:40:32Z", "event":"SupercruiseExit", "StarSystem":"HIP 9141", "Body":"Jean Terminal", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T15:09:30Z", "event":"SupercruiseExit", "StarSystem":"HIP 8830", "Body":"Miyasaka Port", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T15:20:32Z", "event":"SupercruiseExit", "StarSystem":"Gliese 58", "Body":"Roth Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T15:36:12Z", "event":"SupercruiseExit", "StarSystem":"Gliese 58", "Body":"Gliese 58 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-15T15:42:05Z", "event":"SupercruiseExit", "StarSystem":"HIP 7687", "Body":"HIP 7687 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-15T15:43:58Z", "event":"SupercruiseExit", "StarSystem":"HIP 7687", "Body":"HIP 7687 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-15T15:54:07Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"May City", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T16:07:58Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-15T16:15:07Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-15T16:19:28Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-15T16:21:01Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-15T16:21:31Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-15T16:22:03Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-15T16:34:20Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"May City", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T16:38:36Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-15T16:51:41Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-15T16:53:20Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-15T17:06:16Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"May City", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T17:13:24Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-15T17:19:29Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-15T17:29:30Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"May City", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T17:34:58Z", "event":"SupercruiseExit", "StarSystem":"HR 494", "Body":"HR 494 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-15T17:47:21Z", "event":"SupercruiseExit", "StarSystem":"HR 494", "Body":"HR 494 A 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-15T18:48:18Z", "event":"SupercruiseExit", "StarSystem":"Usdiae", "Body":"Usdiae 4", "BodyType":"Planet" }
+{ "timestamp":"2016-12-15T19:40:30Z", "event":"SupercruiseExit", "StarSystem":"Guttors", "Body":"Tietjen City", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T19:50:36Z", "event":"SupercruiseExit", "StarSystem":"Kholu", "Body":"Kholu 1 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-15T20:00:26Z", "event":"SupercruiseExit", "StarSystem":"Kholu", "Body":"Abetti Vision", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T20:13:29Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T20:44:55Z", "event":"SupercruiseExit", "StarSystem":"6 Andromedae", "Body":"Galilei Ring", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T20:57:04Z", "event":"SupercruiseExit", "StarSystem":"LHS 2936", "Body":"Fraser Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T21:07:27Z", "event":"SupercruiseExit", "StarSystem":"Aasgaa", "Body":"Steiner Platform", "BodyType":"Station" }
+{ "timestamp":"2016-12-15T21:24:30Z", "event":"SupercruiseExit", "StarSystem":"Khun", "Body":"Khun 5", "BodyType":"Planet" }
+{ "timestamp":"2016-12-16T13:40:24Z", "event":"SupercruiseExit", "StarSystem":"Bactrimpox", "Body":"Coney Enterprise", "BodyType":"Station" }
+{ "timestamp":"2016-12-16T14:01:47Z", "event":"SupercruiseExit", "StarSystem":"Clayakarma", "Body":"Sinclair Port", "BodyType":"Station" }
+{ "timestamp":"2016-12-16T14:10:03Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Patterson Enterprise", "BodyType":"Station" }
+{ "timestamp":"2016-12-16T14:22:01Z", "event":"SupercruiseExit", "StarSystem":"Wolf 359", "Body":"Lomas Orbiter", "BodyType":"Station" }
+{ "timestamp":"2016-12-16T14:22:39Z", "event":"SupercruiseExit", "StarSystem":"Wolf 359", "Body":"Lomas Orbiter", "BodyType":"Station" }
+{ "timestamp":"2016-12-16T14:36:41Z", "event":"SupercruiseExit", "StarSystem":"Wolf 562", "Body":"Hopkins Port", "BodyType":"Station" }
+{ "timestamp":"2016-12-16T15:47:13Z", "event":"SupercruiseExit", "StarSystem":"LFT 133", "Body":"LFT 133", "BodyType":"Star" }
+{ "timestamp":"2016-12-16T16:05:20Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Thompson-Keen Asylum", "BodyType":"Station" }
+{ "timestamp":"2016-12-16T16:23:06Z", "event":"SupercruiseExit", "StarSystem":"Aditi", "Body":"Aditi 4 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-17T12:50:47Z", "event":"SupercruiseExit", "StarSystem":"Aditi", "Body":"PEW-1901", "BodyType":"Station" }
+{ "timestamp":"2016-12-17T13:05:04Z", "event":"SupercruiseExit", "StarSystem":"Aries Dark Region SN-T b3-0", "Body":"Aries Dark Region SN-T b3-0", "BodyType":"Star" }
+{ "timestamp":"2016-12-17T13:07:33Z", "event":"SupercruiseExit", "StarSystem":"Pleiades Sector NX-U c2-8", "Body":"Pleiades Sector NX-U c2-8", "BodyType":"Star" }
+{ "timestamp":"2016-12-17T13:15:07Z", "event":"SupercruiseExit", "StarSystem":"Maia", "Body":"Obsidian Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-17T13:29:12Z", "event":"SupercruiseExit", "StarSystem":"Tujila", "Body":"Fernao do Po Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-17T13:42:10Z", "event":"SupercruiseExit", "StarSystem":"Harm", "Body":"Gentil Hub", "BodyType":"Station" }
+{ "timestamp":"2016-12-17T13:54:36Z", "event":"SupercruiseExit", "StarSystem":"Arietis Sector BQ-Y c10", "Body":"Arietis Sector BQ-Y c10 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-17T14:09:38Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-18T14:35:46Z", "event":"SupercruiseExit", "StarSystem":"HIP 6450", "Body":"HIP 6450 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-18T14:45:11Z", "event":"SupercruiseExit", "StarSystem":"Synuefe OA-D d13-19", "Body":"Synuefe OA-D d13-19 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-18T15:16:55Z", "event":"SupercruiseExit", "StarSystem":"HD 1740", "Body":"HD 1740 A 2 a", "BodyType":"Planet" }
+{ "timestamp":"2016-12-18T15:49:29Z", "event":"SupercruiseExit", "StarSystem":"Swoilz CV-U b4-0", "Body":"Swoilz CV-U b4-0", "BodyType":"Star" }
+{ "timestamp":"2016-12-20T20:59:18Z", "event":"SupercruiseExit", "StarSystem":"Bleae Thua NB-O d6-50", "Body":"Bleae Thua NB-O d6-50 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-21T21:35:57Z", "event":"SupercruiseExit", "StarSystem":"Traikoa FL-P e5-4", "Body":"Traikoa FL-P e5-4", "BodyType":"Star" }
+{ "timestamp":"2016-12-22T14:44:25Z", "event":"SupercruiseExit", "StarSystem":"Bleae Thua GE-K c24-0", "Body":"Bleae Thua GE-K c24-0", "BodyType":"Star" }
+{ "timestamp":"2016-12-22T15:08:57Z", "event":"SupercruiseExit", "StarSystem":"Bleae Thua UA-Z c16-0", "Body":"Bleae Thua UA-Z c16-0 A", "BodyType":"Star" }
+{ "timestamp":"2016-12-22T15:14:07Z", "event":"SupercruiseExit", "StarSystem":"Bleae Thua RU-A c16-0", "Body":"Bleae Thua RU-A c16-0 A 2 a", "BodyType":"Planet" }
+{ "timestamp":"2016-12-22T16:46:58Z", "event":"SupercruiseExit", "StarSystem":"Praea Euq MG-H b28-0", "Body":"Praea Euq MG-H b28-0", "BodyType":"Star" }
+{ "timestamp":"2016-12-26T13:34:30Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-27T12:14:47Z", "event":"SupercruiseExit", "StarSystem":"Col 285 Sector BG-X d1-50", "Body":"Col 285 Sector BG-X d1-50", "BodyType":"Star" }
+{ "timestamp":"2016-12-27T12:16:39Z", "event":"SupercruiseExit", "StarSystem":"Col 285 Sector BG-X d1-50", "Body":"Col 285 Sector BG-X d1-50", "BodyType":"Star" }
+{ "timestamp":"2016-12-27T12:37:05Z", "event":"SupercruiseExit", "StarSystem":"Tagoman", "Body":"Brorsen Port", "BodyType":"Station" }
+{ "timestamp":"2016-12-27T12:51:54Z", "event":"SupercruiseExit", "StarSystem":"Njambalba", "Body":"Frost Dock", "BodyType":"Station" }
+{ "timestamp":"2016-12-27T13:18:11Z", "event":"SupercruiseExit", "StarSystem":"Santa Muerte", "Body":"Clauss Port", "BodyType":"Station" }
+{ "timestamp":"2016-12-27T13:24:24Z", "event":"SupercruiseExit", "StarSystem":"Leesti", "Body":"George Lucas", "BodyType":"Station" }
+{ "timestamp":"2016-12-27T15:48:33Z", "event":"SupercruiseExit", "StarSystem":"L 190-21", "Body":"Gurragchaa Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-27T15:49:54Z", "event":"SupercruiseExit", "StarSystem":"L 190-21", "Body":"Gurragchaa Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-27T16:13:16Z", "event":"SupercruiseExit", "StarSystem":"L 190-21", "Body":"L 190-21 A 1 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-27T16:17:04Z", "event":"SupercruiseExit", "StarSystem":"L 190-21", "Body":"L 190-21 A 1 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-27T16:25:42Z", "event":"SupercruiseExit", "StarSystem":"L 190-21", "Body":"Gurragchaa Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-27T16:37:19Z", "event":"SupercruiseExit", "StarSystem":"L 190-21", "Body":"L 190-21 A 1 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-28T11:22:37Z", "event":"SupercruiseExit", "StarSystem":"L 190-21", "Body":"Gurragchaa Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-28T11:38:04Z", "event":"SupercruiseExit", "StarSystem":"Bunuras", "Body":"Noguchi Enterprise", "BodyType":"Station" }
+{ "timestamp":"2016-12-28T13:01:53Z", "event":"SupercruiseExit", "StarSystem":"Bunuras", "Body":"Bunuras A 3", "BodyType":"Planet" }
+{ "timestamp":"2016-12-28T13:14:41Z", "event":"SupercruiseExit", "StarSystem":"Bunuras", "Body":"Bunuras A 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2016-12-28T13:28:13Z", "event":"SupercruiseExit", "StarSystem":"Bunuras", "Body":"Noguchi Enterprise", "BodyType":"Station" }
+{ "timestamp":"2016-12-28T13:41:45Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"May City", "BodyType":"Station" }
+{ "timestamp":"2016-12-28T14:05:25Z", "event":"SupercruiseExit", "StarSystem":"CF 464", "Body":"Bartini Enterprise", "BodyType":"Station" }
+{ "timestamp":"2016-12-28T14:20:06Z", "event":"SupercruiseExit", "StarSystem":"CF 464", "Body":"CF 464 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-28T14:26:06Z", "event":"SupercruiseExit", "StarSystem":"CF 464", "Body":"CF 464 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-28T14:34:56Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115", "BodyType":"Star" }
+{ "timestamp":"2016-12-30T11:55:31Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115", "BodyType":"Star" }
+{ "timestamp":"2016-12-30T12:00:32Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"LP 940-115 3", "BodyType":"Planet" }
+{ "timestamp":"2016-12-30T12:02:15Z", "event":"SupercruiseExit", "StarSystem":"LP 940-115", "Body":"May City", "BodyType":"Station" }
+{ "timestamp":"2016-12-30T12:24:53Z", "event":"SupercruiseExit", "StarSystem":"Chamuluma", "Body":"Bisnovatyi-Kogan Landing", "BodyType":"Station" }
+{ "timestamp":"2016-12-30T12:37:53Z", "event":"SupercruiseExit", "StarSystem":"Cubeo", "Body":"Medupe City", "BodyType":"Station" }
+{ "timestamp":"2016-12-30T12:47:15Z", "event":"SupercruiseExit", "StarSystem":"Zhao", "Body":"Zhao", "BodyType":"Star" }
+{ "timestamp":"2016-12-30T12:49:05Z", "event":"SupercruiseExit", "StarSystem":"Zhao", "Body":"Bolton Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-30T16:25:35Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Patterson Enterprise", "BodyType":"Station" }
+{ "timestamp":"2016-12-30T16:26:08Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Patterson Enterprise", "BodyType":"Station" }
+{ "timestamp":"2016-12-30T16:59:23Z", "event":"SupercruiseExit", "StarSystem":"Wyrd", "Body":"Wyrd A 2", "BodyType":"Planet" }
+{ "timestamp":"2016-12-30T18:02:29Z", "event":"SupercruiseExit", "StarSystem":"LHS 2936", "Body":"Fraser Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-30T18:03:13Z", "event":"SupercruiseExit", "StarSystem":"LHS 2936", "Body":"Fraser Orbital", "BodyType":"Station" }
+{ "timestamp":"2016-12-30T18:14:14Z", "event":"SupercruiseExit", "StarSystem":"Wyrd", "Body":"Wyrd A 2", "BodyType":"Planet" }
+{ "timestamp":"2016-12-30T18:31:22Z", "event":"SupercruiseExit", "StarSystem":"Vega", "Body":"Taylor City", "BodyType":"Station" }
+{ "timestamp":"2016-12-30T18:32:04Z", "event":"SupercruiseExit", "StarSystem":"Vega", "Body":"Taylor City", "BodyType":"Station" }
+{ "timestamp":"2016-12-30T18:40:35Z", "event":"SupercruiseExit", "StarSystem":"Vega", "Body":"Popov Reward", "BodyType":"Planet" }
+{ "timestamp":"2016-12-30T18:50:58Z", "event":"SupercruiseExit", "StarSystem":"Ross 145", "Body":"Levchenko City", "BodyType":"Station" }
+{ "timestamp":"2016-12-30T19:11:56Z", "event":"SupercruiseExit", "StarSystem":"Ross 708", "Body":"Ross 708", "BodyType":"Star" }
+{ "timestamp":"2016-12-30T19:14:08Z", "event":"SupercruiseExit", "StarSystem":"Ross 708", "Body":"Ross 708 1", "BodyType":"Planet" }
+{ "timestamp":"2016-12-30T19:19:08Z", "event":"SupercruiseExit", "StarSystem":"Ross 708", "Body":"Smith Station", "BodyType":"Station" }
+{ "timestamp":"2016-12-30T19:25:00Z", "event":"SupercruiseExit", "StarSystem":"b Herculis", "Body":"b Herculis", "BodyType":"Star" }
+{ "timestamp":"2017-01-01T14:52:48Z", "event":"SupercruiseExit", "StarSystem":"Ross 145", "Body":"Levchenko City", "BodyType":"Station" }
+{ "timestamp":"2017-01-01T15:00:42Z", "event":"SupercruiseExit", "StarSystem":"LP 336-4", "Body":"LP 336-4", "BodyType":"Star" }
+{ "timestamp":"2017-01-01T15:30:25Z", "event":"SupercruiseExit", "StarSystem":"LP 336-4", "Body":"Bolotov City", "BodyType":"Station" }
+{ "timestamp":"2017-01-01T15:37:09Z", "event":"SupercruiseExit", "StarSystem":"LP 336-4", "Body":"LP 336-4 2 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-01T15:47:55Z", "event":"SupercruiseExit", "StarSystem":"LP 336-4", "Body":"Bolotov City", "BodyType":"Station" }
+{ "timestamp":"2017-01-01T16:23:44Z", "event":"SupercruiseExit", "StarSystem":"Ross 145", "Body":"Levchenko City", "BodyType":"Station" }
+{ "timestamp":"2017-01-01T16:35:09Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Trus Madi", "BodyType":"Planet" }
+{ "timestamp":"2017-01-01T17:03:12Z", "event":"SupercruiseExit", "StarSystem":"Ross 145", "Body":"Levchenko City", "BodyType":"Station" }
+{ "timestamp":"2017-01-01T17:24:13Z", "event":"SupercruiseExit", "StarSystem":"G 141-21", "Body":"G 141-21", "BodyType":"Star" }
+{ "timestamp":"2017-01-01T17:42:32Z", "event":"SupercruiseExit", "StarSystem":"Colanja", "Body":"Colanja A", "BodyType":"Star" }
+{ "timestamp":"2017-01-01T17:51:42Z", "event":"SupercruiseExit", "StarSystem":"Ross 730", "Body":"Pavlov Settlement", "BodyType":"Station" }
+{ "timestamp":"2017-01-01T17:54:57Z", "event":"SupercruiseExit", "StarSystem":"Ross 730", "Body":"Ross 730 A 1", "BodyType":"Planet" }
+{ "timestamp":"2017-01-01T18:05:56Z", "event":"SupercruiseExit", "StarSystem":"Ross 730", "Body":"Ross 730 A 4 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-01T18:08:23Z", "event":"SupercruiseExit", "StarSystem":"Ross 730", "Body":"Ross 730 A 4 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-01T20:24:11Z", "event":"SupercruiseExit", "StarSystem":"Ross 145", "Body":"Levchenko City", "BodyType":"Station" }
+{ "timestamp":"2017-01-01T20:50:40Z", "event":"SupercruiseExit", "StarSystem":"17 Draconis", "Body":"Paradiso Outpost", "BodyType":"Station" }
+{ "timestamp":"2017-01-01T21:09:38Z", "event":"SupercruiseExit", "StarSystem":"17 Draconis", "Body":"Limbo", "BodyType":"Planet" }
+{ "timestamp":"2017-01-01T21:10:48Z", "event":"SupercruiseExit", "StarSystem":"17 Draconis", "Body":"Limbo", "BodyType":"Planet" }
+{ "timestamp":"2017-01-05T20:11:08Z", "event":"SupercruiseExit", "StarSystem":"17 Draconis", "Body":"Limbo", "BodyType":"Planet" }
+{ "timestamp":"2017-01-05T20:16:04Z", "event":"SupercruiseExit", "StarSystem":"17 Draconis", "Body":"Paradiso Outpost", "BodyType":"Station" }
+{ "timestamp":"2017-01-06T13:36:25Z", "event":"SupercruiseExit", "StarSystem":"Tripu", "Body":"Chargaff Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-01-06T13:54:32Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-01-06T13:57:21Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-01-06T14:43:54Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Garay Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-01-06T15:01:44Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 a", "BodyType":"Planet" }
+{ "timestamp":"2017-01-06T15:28:09Z", "event":"SupercruiseExit", "StarSystem":"RMK 6", "Body":"Zudov Hub", "BodyType":"Station" }
+{ "timestamp":"2017-01-06T16:00:25Z", "event":"SupercruiseExit", "StarSystem":"Naunei", "Body":"Cuffey Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-01-06T16:15:23Z", "event":"SupercruiseExit", "StarSystem":"Albangait", "Body":"Albangait 3 a", "BodyType":"Planet" }
+{ "timestamp":"2017-01-06T16:44:15Z", "event":"SupercruiseExit", "StarSystem":"Naunei", "Body":"Naunei C 8 c", "BodyType":"Planet" }
+{ "timestamp":"2017-01-07T12:28:19Z", "event":"SupercruiseExit", "StarSystem":"Jurokkju", "Body":"Nakamura Port", "BodyType":"Station" }
+{ "timestamp":"2017-01-07T15:44:46Z", "event":"SupercruiseExit", "StarSystem":"Fuelum", "Body":"Wollheim Vision", "BodyType":"Station" }
+{ "timestamp":"2017-01-07T16:07:26Z", "event":"SupercruiseExit", "StarSystem":"Tatapai", "Body":"Shirazi Estate", "BodyType":"Station" }
+{ "timestamp":"2017-01-07T16:14:15Z", "event":"SupercruiseExit", "StarSystem":"Tatapai", "Body":"Tatapai 1", "BodyType":"Planet" }
+{ "timestamp":"2017-01-07T16:19:47Z", "event":"SupercruiseExit", "StarSystem":"Fuelum", "Body":"Wollheim Vision", "BodyType":"Station" }
+{ "timestamp":"2017-01-10T15:35:06Z", "event":"SupercruiseExit", "StarSystem":"Khun", "Body":"Khun 5", "BodyType":"Planet" }
+{ "timestamp":"2017-01-10T15:55:46Z", "event":"SupercruiseExit", "StarSystem":"Belispel", "Body":"Gardner Dock", "BodyType":"Station" }
+{ "timestamp":"2017-01-10T16:12:25Z", "event":"SupercruiseExit", "StarSystem":"Belispel", "Body":"Belispel B 2", "BodyType":"Planet" }
+{ "timestamp":"2017-01-10T16:13:52Z", "event":"SupercruiseExit", "StarSystem":"Belispel", "Body":"Belispel B 2", "BodyType":"Planet" }
+{ "timestamp":"2017-01-11T15:14:27Z", "event":"SupercruiseExit", "StarSystem":"Khun", "Body":"Khun 5", "BodyType":"Planet" }
+{ "timestamp":"2017-01-11T15:44:55Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Patterson Enterprise", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T16:17:27Z", "event":"SupercruiseExit", "StarSystem":"Procyon", "Body":"Pontes Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T16:26:03Z", "event":"SupercruiseExit", "StarSystem":"Procyon", "Body":"Cormack Hub", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T16:33:56Z", "event":"SupercruiseExit", "StarSystem":"Duamta", "Body":"Davis Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T16:41:33Z", "event":"SupercruiseExit", "StarSystem":"Duamta", "Body":"Duamta 3 a", "BodyType":"Planet" }
+{ "timestamp":"2017-01-11T16:53:06Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Lucifer", "BodyType":"Planet" }
+{ "timestamp":"2017-01-11T17:03:46Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Daedalus", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T17:23:04Z", "event":"SupercruiseExit", "StarSystem":"WISE 0855-0714", "Body":"WISE 0855-0714 6", "BodyType":"Planet" }
+{ "timestamp":"2017-01-11T17:54:50Z", "event":"SupercruiseExit", "StarSystem":"WISE 0855-0714", "Body":"Yamazaki Landing", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T18:02:28Z", "event":"SupercruiseExit", "StarSystem":"Wolf 424", "Body":"Pontes Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T18:08:22Z", "event":"SupercruiseExit", "StarSystem":"LHS 450", "Body":"Wilson Relay", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T18:18:04Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Mercury", "BodyType":"Planet" }
+{ "timestamp":"2017-01-11T18:19:32Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Daedalus", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T18:39:15Z", "event":"SupercruiseExit", "StarSystem":"Wolf 359", "Body":"Camp Donalds", "BodyType":"Planet" }
+{ "timestamp":"2017-01-11T18:41:28Z", "event":"SupercruiseExit", "StarSystem":"Wolf 359", "Body":"Powell High", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T18:50:02Z", "event":"SupercruiseExit", "StarSystem":"TZ Arietis", "Body":"Snyder Enterprise", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T19:01:39Z", "event":"SupercruiseExit", "StarSystem":"YZ Ceti", "Body":"YZ Ceti A 11 c", "BodyType":"Planet" }
+{ "timestamp":"2017-01-11T19:08:49Z", "event":"SupercruiseExit", "StarSystem":"George Pantazis", "Body":"George Pantazis A", "BodyType":"Star" }
+{ "timestamp":"2017-01-11T19:10:54Z", "event":"SupercruiseExit", "StarSystem":"George Pantazis", "Body":"George Pantazis A 9", "BodyType":"Planet" }
+{ "timestamp":"2017-01-11T19:18:49Z", "event":"SupercruiseExit", "StarSystem":"YZ Ceti", "Body":"YZ Ceti A 11 c", "BodyType":"Planet" }
+{ "timestamp":"2017-01-11T19:24:08Z", "event":"SupercruiseExit", "StarSystem":"TZ Arietis", "Body":"Snyder Enterprise", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T19:31:39Z", "event":"SupercruiseExit", "StarSystem":"54 Piscium", "Body":"Rushd Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T19:38:30Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Daedalus", "BodyType":"Station" }
+{ "timestamp":"2017-01-11T20:43:39Z", "event":"SupercruiseExit", "StarSystem":"Meene", "Body":"Felice Dock", "BodyType":"Station" }
+{ "timestamp":"2017-01-12T15:00:22Z", "event":"SupercruiseExit", "StarSystem":"Synuefe XR-H d11-102", "Body":"Synuefe XR-H d11-102 1 b", "BodyType":"Planet" }
+{ "timestamp":"2017-01-12T18:28:08Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Sirius B", "BodyType":"Star" }
+{ "timestamp":"2017-01-12T18:32:51Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Lucifer", "BodyType":"Planet" }
+{ "timestamp":"2017-01-12T19:05:47Z", "event":"SupercruiseExit", "StarSystem":"L 190-21", "Body":"Gurragchaa Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-01-12T19:14:51Z", "event":"SupercruiseExit", "StarSystem":"Hill Pa Hsi", "Body":"Curie Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-01-12T19:20:55Z", "event":"SupercruiseExit", "StarSystem":"Hill Pa Hsi", "Body":"Reilly Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-01-12T19:34:36Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-01-12T19:54:29Z", "event":"SupercruiseExit", "StarSystem":"Balante", "Body":"Balante A", "BodyType":"Star" }
+{ "timestamp":"2017-01-12T20:12:04Z", "event":"SupercruiseExit", "StarSystem":"HIP 15062", "Body":"HIP 15062", "BodyType":"Star" }
+{ "timestamp":"2017-01-12T20:20:06Z", "event":"SupercruiseExit", "StarSystem":"Kotigeni", "Body":"Kotigeni", "BodyType":"Star" }
+{ "timestamp":"2017-01-12T20:22:29Z", "event":"SupercruiseExit", "StarSystem":"Kotigeni", "Body":"Shaw Port", "BodyType":"Station" }
+{ "timestamp":"2017-01-22T16:17:06Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-01-22T16:37:05Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"Williams Dock", "BodyType":"Station" }
+{ "timestamp":"2017-01-22T16:46:38Z", "event":"SupercruiseExit", "StarSystem":"Umbroges", "Body":"Umbroges", "BodyType":"Star" }
+{ "timestamp":"2017-01-22T16:55:51Z", "event":"SupercruiseExit", "StarSystem":"Umbroges", "Body":"Wylie Settlement", "BodyType":"Station" }
+{ "timestamp":"2017-01-22T17:02:44Z", "event":"SupercruiseExit", "StarSystem":"Umbroges", "Body":"Umbroges", "BodyType":"Star" }
+{ "timestamp":"2017-01-23T17:39:46Z", "event":"SupercruiseExit", "StarSystem":"Umbroges", "Body":"Wylie Settlement", "BodyType":"Station" }
+{ "timestamp":"2017-01-23T19:13:33Z", "event":"SupercruiseExit", "StarSystem":"Umbroges", "Body":"Umbroges", "BodyType":"Star" }
+{ "timestamp":"2017-01-23T19:39:47Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri A", "BodyType":"Star" }
+{ "timestamp":"2017-01-23T19:49:40Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-01-23T20:07:27Z", "event":"SupercruiseExit", "StarSystem":"Khun", "Body":"Khun 5", "BodyType":"Planet" }
+{ "timestamp":"2017-01-23T20:40:45Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Lucifer", "BodyType":"Planet" }
+{ "timestamp":"2017-01-23T20:42:36Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Lucifer", "BodyType":"Planet" }
+{ "timestamp":"2017-01-24T13:41:42Z", "event":"SupercruiseExit", "StarSystem":"Meene", "Body":"Felice Dock", "BodyType":"Station" }
+{ "timestamp":"2017-01-24T14:02:17Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri AB", "BodyType":"Null" }
+{ "timestamp":"2017-01-24T14:03:56Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-01-24T14:27:20Z", "event":"SupercruiseExit", "StarSystem":"HIP 13653", "Body":"HIP 13653 1 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-24T16:45:59Z", "event":"SupercruiseExit", "StarSystem":"HIP 13653", "Body":"HIP 13653 1 B Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-24T16:47:12Z", "event":"SupercruiseExit", "StarSystem":"HIP 13653", "Body":"HIP 13653 1 B Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-24T16:49:43Z", "event":"SupercruiseExit", "StarSystem":"HIP 13653", "Body":"Vinge Dock", "BodyType":"Station" }
+{ "timestamp":"2017-01-24T17:00:26Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri AB", "BodyType":"Null" }
+{ "timestamp":"2017-01-24T17:02:44Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-01-24T17:30:13Z", "event":"SupercruiseExit", "StarSystem":"Remines", "Body":"Bobko Hub", "BodyType":"Station" }
+{ "timestamp":"2017-01-24T18:07:35Z", "event":"SupercruiseExit", "StarSystem":"Nandjabinja", "Body":"Brand City", "BodyType":"Station" }
+{ "timestamp":"2017-01-24T18:29:49Z", "event":"SupercruiseExit", "StarSystem":"68 Eridani", "Body":"Voss Dock", "BodyType":"Station" }
+{ "timestamp":"2017-01-24T19:32:22Z", "event":"SupercruiseExit", "StarSystem":"Cama Zotz", "Body":"Cama Zotz 1", "BodyType":"Planet" }
+{ "timestamp":"2017-01-24T19:34:27Z", "event":"SupercruiseExit", "StarSystem":"Cama Zotz", "Body":"Stanier Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-01-24T20:39:00Z", "event":"SupercruiseExit", "StarSystem":"Theotokos", "Body":"Theotokos A", "BodyType":"Star" }
+{ "timestamp":"2017-01-25T15:08:32Z", "event":"SupercruiseExit", "StarSystem":"Alpha Caeli", "Body":"Heyerdahl Hub", "BodyType":"Station" }
+{ "timestamp":"2017-01-25T15:20:54Z", "event":"SupercruiseExit", "StarSystem":"Herci", "Body":"Herci", "BodyType":"Star" }
+{ "timestamp":"2017-01-25T15:24:56Z", "event":"SupercruiseExit", "StarSystem":"Herci", "Body":"Herci", "BodyType":"Star" }
+{ "timestamp":"2017-01-25T19:11:27Z", "event":"SupercruiseExit", "StarSystem":"36 Doradus", "Body":"36 Doradus A", "BodyType":"Star" }
+{ "timestamp":"2017-01-25T19:13:04Z", "event":"SupercruiseExit", "StarSystem":"36 Doradus", "Body":"Pudwill Gorie Dock", "BodyType":"Station" }
+{ "timestamp":"2017-01-25T19:28:50Z", "event":"SupercruiseExit", "StarSystem":"LPM 229", "Body":"LPM 229", "BodyType":"Star" }
+{ "timestamp":"2017-01-25T19:34:57Z", "event":"SupercruiseExit", "StarSystem":"LPM 229", "Body":"LPM 229 5 B Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-25T19:48:08Z", "event":"SupercruiseExit", "StarSystem":"Rureri", "Body":"Rureri A", "BodyType":"Star" }
+{ "timestamp":"2017-01-25T19:52:42Z", "event":"SupercruiseExit", "StarSystem":"Rureri", "Body":"Rureri A", "BodyType":"Star" }
+{ "timestamp":"2017-01-25T20:02:37Z", "event":"SupercruiseExit", "StarSystem":"Rureri", "Body":"Deutsch Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-01-27T14:49:15Z", "event":"SupercruiseExit", "StarSystem":"Verner", "Body":"Verner 5 B Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-27T15:38:44Z", "event":"SupercruiseExit", "StarSystem":"Nauani", "Body":"Vaucanson Station", "BodyType":"Station" }
+{ "timestamp":"2017-01-27T15:53:04Z", "event":"SupercruiseExit", "StarSystem":"Bok", "Body":"Bok 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-27T16:06:27Z", "event":"SupercruiseExit", "StarSystem":"Bok", "Body":"Bok 5 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-27T16:27:32Z", "event":"SupercruiseExit", "StarSystem":"Bok", "Body":"Bok 5", "BodyType":"Star" }
+{ "timestamp":"2017-01-27T19:09:05Z", "event":"SupercruiseExit", "StarSystem":"Walmir", "Body":"Evans Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-01-27T19:18:18Z", "event":"SupercruiseExit", "StarSystem":"Aecerbot", "Body":"Lawson Survey", "BodyType":"Station" }
+{ "timestamp":"2017-01-28T12:59:49Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Roberts Port", "BodyType":"Station" }
+{ "timestamp":"2017-01-28T13:08:53Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-28T13:17:41Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-28T13:18:14Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-28T13:19:04Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-28T13:52:57Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Roberts Port", "BodyType":"Station" }
+{ "timestamp":"2017-01-28T14:02:17Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-28T14:02:59Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-28T15:05:33Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Roberts Port", "BodyType":"Station" }
+{ "timestamp":"2017-01-28T15:21:08Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-28T15:26:11Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-28T16:36:36Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Roberts Port", "BodyType":"Station" }
+{ "timestamp":"2017-01-28T16:50:37Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-28T16:51:05Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-28T17:06:58Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Ron Hubbard Dock", "BodyType":"Station" }
+{ "timestamp":"2017-01-28T17:17:41Z", "event":"SupercruiseExit", "StarSystem":"Walmiri", "Body":"Walmiri 8 a", "BodyType":"Planet" }
+{ "timestamp":"2017-01-29T15:25:12Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich", "BodyType":"Star" }
+{ "timestamp":"2017-01-29T15:26:34Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Effinger Port", "BodyType":"Station" }
+{ "timestamp":"2017-01-29T19:17:57Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-29T19:27:20Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-29T19:28:20Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-29T19:53:39Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-29T20:40:58Z", "event":"SupercruiseExit", "StarSystem":"Walmiri", "Body":"Walmiri", "BodyType":"Star" }
+{ "timestamp":"2017-01-30T14:13:45Z", "event":"SupercruiseExit", "StarSystem":"Walmiri", "Body":"Virtanen Hub", "BodyType":"Station" }
+{ "timestamp":"2017-01-30T14:26:07Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-30T14:34:55Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-30T14:39:18Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Roberts Port", "BodyType":"Station" }
+{ "timestamp":"2017-01-30T14:55:07Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-30T14:56:07Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-30T14:57:06Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-01-31T17:57:50Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Roberts Port", "BodyType":"Station" }
+{ "timestamp":"2017-01-31T18:31:32Z", "event":"SupercruiseExit", "StarSystem":"Meldrith", "Body":"Meldrith", "BodyType":"Star" }
+{ "timestamp":"2017-01-31T18:50:16Z", "event":"SupercruiseExit", "StarSystem":"Meldrith", "Body":"Meldrith", "BodyType":"Star" }
+{ "timestamp":"2017-01-31T19:01:08Z", "event":"SupercruiseExit", "StarSystem":"Meldrith", "Body":"Wilson Station", "BodyType":"Station" }
+{ "timestamp":"2017-02-02T15:03:48Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Roberts Port", "BodyType":"Station" }
+{ "timestamp":"2017-02-02T15:10:30Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-02-02T15:11:16Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 8 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-02-03T15:03:11Z", "event":"SupercruiseExit", "StarSystem":"Feuma", "Body":"Frobac's Folly", "BodyType":"Station" }
+{ "timestamp":"2017-02-03T15:10:46Z", "event":"SupercruiseExit", "StarSystem":"Meldrith", "Body":"Meldrith 2", "BodyType":"Planet" }
+{ "timestamp":"2017-02-03T15:12:06Z", "event":"SupercruiseExit", "StarSystem":"Meldrith", "Body":"Wilson Station", "BodyType":"Station" }
+{ "timestamp":"2017-02-03T15:21:28Z", "event":"SupercruiseExit", "StarSystem":"Maljenni", "Body":"Bowersox Enterprise", "BodyType":"Station" }
+{ "timestamp":"2017-02-03T15:57:38Z", "event":"SupercruiseExit", "StarSystem":"Tetela", "Body":"Mueller Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-02-03T16:07:20Z", "event":"SupercruiseExit", "StarSystem":"Maiki", "Body":"Zenbei Port", "BodyType":"Station" }
+{ "timestamp":"2017-02-03T16:54:43Z", "event":"SupercruiseExit", "StarSystem":"HIP 115181", "Body":"Biermann Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-02-03T17:06:28Z", "event":"SupercruiseExit", "StarSystem":"Can Qing", "Body":"William Sargent Hub", "BodyType":"Station" }
+{ "timestamp":"2017-02-03T17:33:16Z", "event":"SupercruiseExit", "StarSystem":"HIP 114040", "Body":"Bolton Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-02-03T18:43:31Z", "event":"SupercruiseExit", "StarSystem":"California Sector BA-A e6", "Body":"California Sector BA-A e6 4", "BodyType":"Planet" }
+{ "timestamp":"2017-02-03T19:33:20Z", "event":"SupercruiseExit", "StarSystem":"Wredguia VZ-S b3-1", "Body":"Wredguia VZ-S b3-1", "BodyType":"Star" }
+{ "timestamp":"2017-02-04T14:57:22Z", "event":"SupercruiseExit", "StarSystem":"Synuefai DV-W b35-0", "Body":"Synuefai DV-W b35-0 A", "BodyType":"Star" }
+{ "timestamp":"2017-02-04T14:58:58Z", "event":"SupercruiseExit", "StarSystem":"Synuefai IB-V b36-1", "Body":"Synuefai IB-V b36-1 A", "BodyType":"Star" }
+{ "timestamp":"2017-02-04T15:15:23Z", "event":"SupercruiseExit", "StarSystem":"Col 285 Sector KX-J b9-0", "Body":"Col 285 Sector KX-J b9-0 A", "BodyType":"Star" }
+{ "timestamp":"2017-02-04T15:31:27Z", "event":"SupercruiseExit", "StarSystem":"HIP 115181", "Body":"Biermann Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-02-04T15:32:25Z", "event":"SupercruiseExit", "StarSystem":"HIP 115181", "Body":"Biermann Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-02-04T16:16:06Z", "event":"SupercruiseExit", "StarSystem":"HIP 97024", "Body":"Ilyushin Enterprise", "BodyType":"Station" }
+{ "timestamp":"2017-02-04T16:27:58Z", "event":"SupercruiseExit", "StarSystem":"HIP 74290", "Body":"Pratchett's Disc", "BodyType":"Station" }
+{ "timestamp":"2017-02-04T17:44:40Z", "event":"SupercruiseExit", "StarSystem":"Synuefe DF-I b57-11", "Body":"Synuefe DF-I b57-11", "BodyType":"Star" }
+{ "timestamp":"2017-02-04T18:02:15Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-02-04T18:25:07Z", "event":"SupercruiseExit", "StarSystem":"Caberani", "Body":"Caberani", "BodyType":"Star" }
+{ "timestamp":"2017-02-04T18:33:00Z", "event":"SupercruiseExit", "StarSystem":"Wo 9067 B", "Body":"Wo 9067 B 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-02-05T12:50:11Z", "event":"SupercruiseExit", "StarSystem":"Hernir", "Body":"Gunn Ring", "BodyType":"Station" }
+{ "timestamp":"2017-02-05T13:10:07Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri AB 1", "BodyType":"Planet" }
+{ "timestamp":"2017-02-05T13:12:44Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-02-05T13:13:22Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-02-05T13:51:01Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T13:51:30Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T14:02:13Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T14:17:13Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T14:21:59Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T14:25:35Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T14:35:37Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T14:37:38Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T14:43:13Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T14:51:05Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211 1", "BodyType":"Planet" }
+{ "timestamp":"2017-02-05T15:03:14Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T15:05:19Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T15:10:56Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T15:15:27Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T15:20:00Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T15:23:37Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T15:26:15Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T15:28:17Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"HIP 14211", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T15:32:26Z", "event":"SupercruiseExit", "StarSystem":"HIP 14211", "Body":"Williams Dock", "BodyType":"Station" }
+{ "timestamp":"2017-02-05T15:45:19Z", "event":"SupercruiseExit", "StarSystem":"Umbila", "Body":"Umbila", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T16:13:36Z", "event":"SupercruiseExit", "StarSystem":"GCRV 1568", "Body":"GCRV 1568 B 1", "BodyType":"Planet" }
+{ "timestamp":"2017-02-05T17:35:56Z", "event":"SupercruiseExit", "StarSystem":"GCRV 1568", "Body":"GCRV 1568 B 2", "BodyType":"Planet" }
+{ "timestamp":"2017-02-05T17:37:01Z", "event":"SupercruiseExit", "StarSystem":"GCRV 1568", "Body":"GCRV 1568 B 2", "BodyType":"Planet" }
+{ "timestamp":"2017-02-05T17:42:02Z", "event":"SupercruiseExit", "StarSystem":"Pikum", "Body":"Pikum", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T17:44:25Z", "event":"SupercruiseExit", "StarSystem":"Pikum", "Body":"Pikum", "BodyType":"Star" }
+{ "timestamp":"2017-02-05T17:50:02Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-02-05T18:16:10Z", "event":"SupercruiseExit", "StarSystem":"Khun", "Body":"Khun 5", "BodyType":"Planet" }
+{ "timestamp":"2017-02-05T18:37:26Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Lucifer", "BodyType":"Planet" }
+{ "timestamp":"2017-02-06T13:07:23Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Trus Madi", "BodyType":"Planet" }
+{ "timestamp":"2017-02-06T13:48:07Z", "event":"SupercruiseExit", "StarSystem":"IV Comae Berenices", "Body":"Litke Dock", "BodyType":"Station" }
+{ "timestamp":"2017-02-06T14:04:57Z", "event":"SupercruiseExit", "StarSystem":"LHS 2661", "Body":"LHS 2661 6 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-02-06T14:16:07Z", "event":"SupercruiseExit", "StarSystem":"LFT 1103", "Body":"Kirk Ring", "BodyType":"Station" }
+{ "timestamp":"2017-02-06T14:25:06Z", "event":"SupercruiseExit", "StarSystem":"LHS 2661", "Body":"LHS 2661 6 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-02-06T15:24:56Z", "event":"SupercruiseExit", "StarSystem":"Ross 835", "Body":"Dobrovolskiy City", "BodyType":"Station" }
+{ "timestamp":"2017-02-06T16:01:45Z", "event":"SupercruiseExit", "StarSystem":"HIP 74290", "Body":"Pratchett's Disc", "BodyType":"Station" }
+{ "timestamp":"2017-02-06T16:34:49Z", "event":"SupercruiseExit", "StarSystem":"HIP 74290", "Body":"HIP 74290 AB 1", "BodyType":"Planet" }
+{ "timestamp":"2017-02-08T19:13:57Z", "event":"SupercruiseExit", "StarSystem":"HIP 74290", "Body":"Pratchett's Disc", "BodyType":"Station" }
+{ "timestamp":"2017-02-08T19:31:18Z", "event":"SupercruiseExit", "StarSystem":"Sentii", "Body":"Tucker Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-02-08T19:42:32Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Roberts Port", "BodyType":"Station" }
+{ "timestamp":"2017-02-08T19:50:44Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich 4", "BodyType":"Planet" }
+{ "timestamp":"2017-02-09T13:52:17Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Roberts Port", "BodyType":"Station" }
+{ "timestamp":"2017-02-09T14:33:49Z", "event":"SupercruiseExit", "StarSystem":"Synuefe FD-Q d6-33", "Body":"Synuefe FD-Q d6-33", "BodyType":"Star" }
+{ "timestamp":"2017-02-09T15:46:09Z", "event":"SupercruiseExit", "StarSystem":"Gagarin", "Body":"Gagarin 3 b", "BodyType":"Planet" }
+{ "timestamp":"2017-02-09T15:47:59Z", "event":"SupercruiseExit", "StarSystem":"Gagarin", "Body":"Gagarin 3 b", "BodyType":"Planet" }
+{ "timestamp":"2017-02-09T18:22:23Z", "event":"SupercruiseExit", "StarSystem":"Flame Sector GG-Y d5", "Body":"Flame Sector GG-Y d5 A", "BodyType":"Star" }
+{ "timestamp":"2017-02-09T19:36:25Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Frigschneck's Resort", "BodyType":"Station" }
+{ "timestamp":"2017-02-09T19:52:04Z", "event":"SupercruiseExit", "StarSystem":"CPD-28 332", "Body":"CPD-28 332 A", "BodyType":"Star" }
+{ "timestamp":"2017-02-10T13:39:41Z", "event":"SupercruiseExit", "StarSystem":"Wolf 485a", "Body":"Wolf 485a", "BodyType":"Star" }
+{ "timestamp":"2017-02-10T13:41:44Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Fedmich", "BodyType":"Star" }
+{ "timestamp":"2017-02-10T13:45:54Z", "event":"SupercruiseExit", "StarSystem":"Fedmich", "Body":"Roberts Port", "BodyType":"Station" }
+{ "timestamp":"2017-02-10T14:07:10Z", "event":"SupercruiseExit", "StarSystem":"Deuringas", "Body":"Shukor Hub", "BodyType":"Station" }
+{ "timestamp":"2017-02-10T14:39:41Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-02-12T15:49:25Z", "event":"SupercruiseExit", "StarSystem":"Caeritis", "Body":"Bernoulli Vision", "BodyType":"Station" }
+{ "timestamp":"2017-02-12T16:00:44Z", "event":"SupercruiseExit", "StarSystem":"Chih Zhua", "Body":"Anthony Enterprise", "BodyType":"Station" }
+{ "timestamp":"2017-02-12T16:16:27Z", "event":"SupercruiseExit", "StarSystem":"LHS 1832", "Body":"Coney Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-02-12T16:27:22Z", "event":"SupercruiseExit", "StarSystem":"Wyrd", "Body":"Wyrd A 2", "BodyType":"Planet" }
+{ "timestamp":"2017-02-12T16:43:22Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Trus Madi", "BodyType":"Planet" }
+{ "timestamp":"2017-02-12T16:45:21Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Trus Madi", "BodyType":"Planet" }
+{ "timestamp":"2017-02-12T17:01:34Z", "event":"SupercruiseExit", "StarSystem":"Khun", "Body":"Khun 5", "BodyType":"Planet" }
+{ "timestamp":"2017-02-12T17:12:31Z", "event":"SupercruiseExit", "StarSystem":"Krinda", "Body":"Krinda B 4", "BodyType":"Planet" }
+{ "timestamp":"2017-02-12T17:14:19Z", "event":"SupercruiseExit", "StarSystem":"Krinda", "Body":"Xiaoguan Station", "BodyType":"Station" }
+{ "timestamp":"2017-02-12T17:30:26Z", "event":"SupercruiseExit", "StarSystem":"Ross 667", "Body":"Ross 667 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-02-17T15:09:04Z", "event":"SupercruiseExit", "StarSystem":"Merope", "Body":"Merope", "BodyType":"Star" }
+{ "timestamp":"2017-02-17T15:19:27Z", "event":"SupercruiseExit", "StarSystem":"Merope", "Body":"Merope 1 a+b", "BodyType":"Null" }
+{ "timestamp":"2017-02-17T15:26:44Z", "event":"SupercruiseExit", "StarSystem":"Merope", "Body":"Merope 1 a+b", "BodyType":"Null" }
+{ "timestamp":"2017-02-18T17:14:21Z", "event":"SupercruiseExit", "StarSystem":"Merope", "Body":"Merope 5 c", "BodyType":"Planet" }
+{ "timestamp":"2017-02-18T18:00:34Z", "event":"SupercruiseExit", "StarSystem":"Maia", "Body":"Obsidian Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-02-18T18:23:14Z", "event":"SupercruiseExit", "StarSystem":"Metzili", "Body":"Metzili 1", "BodyType":"Planet" }
+{ "timestamp":"2017-02-18T19:02:40Z", "event":"SupercruiseExit", "StarSystem":"LP 205-44", "Body":"Kaku Horizons", "BodyType":"Station" }
+{ "timestamp":"2017-02-18T19:19:00Z", "event":"SupercruiseExit", "StarSystem":"Wyrd", "Body":"Wyrd A 2", "BodyType":"Planet" }
+{ "timestamp":"2017-02-18T19:21:22Z", "event":"SupercruiseExit", "StarSystem":"Wyrd", "Body":"Wyrd A 2", "BodyType":"Planet" }
+{ "timestamp":"2017-02-18T19:32:25Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Rhodius", "BodyType":"Planet" }
+{ "timestamp":"2017-02-18T19:34:03Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Trus Madi", "BodyType":"Planet" }
+{ "timestamp":"2017-02-18T19:35:56Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Trus Madi", "BodyType":"Planet" }
+{ "timestamp":"2017-02-18T20:05:29Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Wolf 397", "BodyType":"Star" }
+{ "timestamp":"2017-02-19T13:49:41Z", "event":"SupercruiseExit", "StarSystem":"LP 205-44", "Body":"LP 205-44 B", "BodyType":"Star" }
+{ "timestamp":"2017-02-19T13:52:07Z", "event":"SupercruiseExit", "StarSystem":"LP 205-44", "Body":"Kaku Horizons", "BodyType":"Station" }
+{ "timestamp":"2017-02-19T14:01:39Z", "event":"SupercruiseExit", "StarSystem":"Col 285 Sector MW-D b12-2", "Body":"Col 285 Sector MW-D b12-2", "BodyType":"Star" }
+{ "timestamp":"2017-02-19T14:19:53Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Thompson-Keen Asylum", "BodyType":"Station" }
+{ "timestamp":"2017-02-19T14:45:25Z", "event":"SupercruiseExit", "StarSystem":"HIP 74290", "Body":"Pratchett's Disc", "BodyType":"Station" }
+{ "timestamp":"2017-02-19T16:32:37Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Diaguandri AB 1", "BodyType":"Planet" }
+{ "timestamp":"2017-02-19T16:33:59Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-02-20T13:38:47Z", "event":"SupercruiseExit", "StarSystem":"17 Draconis", "Body":"Paradiso Outpost", "BodyType":"Station" }
+{ "timestamp":"2017-02-20T14:36:01Z", "event":"SupercruiseExit", "StarSystem":"Krinda", "Body":"Krinda B 4", "BodyType":"Planet" }
+{ "timestamp":"2017-02-20T14:37:36Z", "event":"SupercruiseExit", "StarSystem":"Krinda", "Body":"Xiaoguan Station", "BodyType":"Station" }
+{ "timestamp":"2017-02-20T15:06:55Z", "event":"SupercruiseExit", "StarSystem":"Torno", "Body":"Torno 10", "BodyType":"Star" }
+{ "timestamp":"2017-02-20T15:09:03Z", "event":"SupercruiseExit", "StarSystem":"Torno", "Body":"Young Dock", "BodyType":"Station" }
+{ "timestamp":"2017-02-20T15:22:33Z", "event":"SupercruiseExit", "StarSystem":"Torno", "Body":"Torno 3", "BodyType":"Planet" }
+{ "timestamp":"2017-02-20T16:10:38Z", "event":"SupercruiseExit", "StarSystem":"Torno", "Body":"Torno 3", "BodyType":"Planet" }
+{ "timestamp":"2017-02-20T16:12:46Z", "event":"SupercruiseExit", "StarSystem":"Torno", "Body":"Torno", "BodyType":"Star" }
+{ "timestamp":"2017-02-20T16:15:47Z", "event":"SupercruiseExit", "StarSystem":"Torno", "Body":"Gardner Port", "BodyType":"Station" }
+{ "timestamp":"2017-02-20T19:30:15Z", "event":"SupercruiseExit", "StarSystem":"Krinda", "Body":"Xiaoguan Station", "BodyType":"Station" }
+{ "timestamp":"2017-02-20T19:52:06Z", "event":"SupercruiseExit", "StarSystem":"HR 943", "Body":"Hildebrandt Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-02-20T20:06:23Z", "event":"SupercruiseExit", "StarSystem":"HIP 10716", "Body":"HIP 10716 1 a", "BodyType":"Planet" }
+{ "timestamp":"2017-02-21T15:24:02Z", "event":"SupercruiseExit", "StarSystem":"Tankobung", "Body":"Berkey Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-02-21T15:49:55Z", "event":"SupercruiseExit", "StarSystem":"LP 131-66", "Body":"Vasilyev Vision", "BodyType":"Station" }
+{ "timestamp":"2017-02-21T16:23:10Z", "event":"SupercruiseExit", "StarSystem":"Tau Bootis", "Body":"Schweickart Dock", "BodyType":"Station" }
+{ "timestamp":"2017-02-21T16:33:21Z", "event":"SupercruiseExit", "StarSystem":"Khernidjal", "Body":"Khernidjal 3", "BodyType":"Planet" }
+{ "timestamp":"2017-02-21T16:41:43Z", "event":"SupercruiseExit", "StarSystem":"STF 1774", "Body":"Froude Ring", "BodyType":"Station" }
+{ "timestamp":"2017-02-21T16:50:14Z", "event":"SupercruiseExit", "StarSystem":"LHS 2637", "Body":"Perez Ring", "BodyType":"Station" }
+{ "timestamp":"2017-02-21T17:04:07Z", "event":"SupercruiseExit", "StarSystem":"78 Ursae Majoris", "Body":"Berners-Lee City", "BodyType":"Station" }
+{ "timestamp":"2017-02-21T17:05:54Z", "event":"SupercruiseExit", "StarSystem":"78 Ursae Majoris", "Body":"Berners-Lee City", "BodyType":"Station" }
+{ "timestamp":"2017-02-21T17:28:35Z", "event":"SupercruiseExit", "StarSystem":"78 Ursae Majoris", "Body":"78 Ursae Majoris B", "BodyType":"Star" }
+{ "timestamp":"2017-02-21T17:30:17Z", "event":"SupercruiseExit", "StarSystem":"78 Ursae Majoris", "Body":"Townshend Hub", "BodyType":"Station" }
+{ "timestamp":"2017-02-22T13:27:16Z", "event":"SupercruiseExit", "StarSystem":"Alcor", "Body":"Alcor B", "BodyType":"Star" }
+{ "timestamp":"2017-02-22T13:29:55Z", "event":"SupercruiseExit", "StarSystem":"Alcor", "Body":"Macdonald Settlement", "BodyType":"Station" }
+{ "timestamp":"2017-02-22T13:52:34Z", "event":"SupercruiseExit", "StarSystem":"He Bo", "Body":"Krylov Ring", "BodyType":"Station" }
+{ "timestamp":"2017-02-22T14:03:20Z", "event":"SupercruiseExit", "StarSystem":"LHS 2789", "Body":"LHS 2789 A 3 a", "BodyType":"Planet" }
+{ "timestamp":"2017-02-22T14:22:16Z", "event":"SupercruiseExit", "StarSystem":"Olgrea", "Body":"H. G. Wells Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-02-24T10:49:07Z", "event":"SupercruiseExit", "StarSystem":"17 Draconis", "Body":"Paradiso Outpost", "BodyType":"Station" }
+{ "timestamp":"2017-02-24T11:53:30Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-02T14:44:08Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Thompson-Keen Asylum", "BodyType":"Station" }
+{ "timestamp":"2017-03-02T15:20:06Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Frigschneck's Resort", "BodyType":"Station" }
+{ "timestamp":"2017-03-02T15:31:48Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Thompson-Keen Asylum", "BodyType":"Station" }
+{ "timestamp":"2017-03-02T15:54:57Z", "event":"SupercruiseExit", "StarSystem":"HIP 12779", "Body":"Rechtin Vision", "BodyType":"Station" }
+{ "timestamp":"2017-03-02T16:12:23Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Thompson-Keen Asylum", "BodyType":"Station" }
+{ "timestamp":"2017-03-02T16:43:23Z", "event":"SupercruiseExit", "StarSystem":"HIP 7396", "Body":"Seares Ring", "BodyType":"Station" }
+{ "timestamp":"2017-03-02T17:46:24Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Likopo", "BodyType":"Planet" }
+{ "timestamp":"2017-03-02T17:49:49Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Thompson-Keen Asylum", "BodyType":"Station" }
+{ "timestamp":"2017-03-02T18:26:45Z", "event":"SupercruiseExit", "StarSystem":"Valkindan", "Body":"de Kamp City", "BodyType":"Station" }
+{ "timestamp":"2017-03-02T18:36:08Z", "event":"SupercruiseExit", "StarSystem":"Harm", "Body":"Gentil Hub", "BodyType":"Station" }
+{ "timestamp":"2017-03-02T18:49:26Z", "event":"SupercruiseExit", "StarSystem":"Badbadzist", "Body":"Fabian Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-03-03T14:30:17Z", "event":"SupercruiseExit", "StarSystem":"Ceti Sector AA-Z b5", "Body":"Ceti Sector AA-Z b5 A", "BodyType":"Star" }
+{ "timestamp":"2017-03-03T14:40:32Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-03-03T15:16:15Z", "event":"SupercruiseExit", "StarSystem":"Col 285 Sector KY-S a33-0", "Body":"Col 285 Sector KY-S a33-0 A", "BodyType":"Star" }
+{ "timestamp":"2017-03-03T15:29:04Z", "event":"SupercruiseExit", "StarSystem":"HIP 74290", "Body":"Pratchett's Disc", "BodyType":"Station" }
+{ "timestamp":"2017-03-03T18:54:40Z", "event":"SupercruiseExit", "StarSystem":"Arthaiyati", "Body":"Hermaszewski Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-03T19:11:33Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Garay Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-03-03T19:12:08Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Garay Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-03-03T19:25:15Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 a", "BodyType":"Planet" }
+{ "timestamp":"2017-03-03T19:38:12Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Garay Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-03-03T19:56:26Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Thompson-Keen Asylum", "BodyType":"Station" }
+{ "timestamp":"2017-03-04T14:13:55Z", "event":"SupercruiseExit", "StarSystem":"Fehu", "Body":"Frigschneck's Resort", "BodyType":"Station" }
+{ "timestamp":"2017-03-04T14:27:52Z", "event":"SupercruiseExit", "StarSystem":"Wu Guinagi", "Body":"Wu Guinagi 1", "BodyType":"Planet" }
+{ "timestamp":"2017-03-04T14:29:31Z", "event":"SupercruiseExit", "StarSystem":"Wu Guinagi", "Body":"Ziegel Dock", "BodyType":"Station" }
+{ "timestamp":"2017-03-04T14:36:02Z", "event":"SupercruiseExit", "StarSystem":"HIP 13317", "Body":"HIP 13317 A 4", "BodyType":"Planet" }
+{ "timestamp":"2017-03-04T14:37:55Z", "event":"SupercruiseExit", "StarSystem":"HIP 13317", "Body":"Tisserand Hub", "BodyType":"Station" }
+{ "timestamp":"2017-03-04T14:46:43Z", "event":"SupercruiseExit", "StarSystem":"Mandill", "Body":"Cassini Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-03-04T14:56:26Z", "event":"SupercruiseExit", "StarSystem":"Menero Kimi", "Body":"Reichelt Camp", "BodyType":"Station" }
+{ "timestamp":"2017-03-04T15:03:54Z", "event":"SupercruiseExit", "StarSystem":"Namorovi", "Body":"Haack's Claim", "BodyType":"Station" }
+{ "timestamp":"2017-03-04T15:11:09Z", "event":"SupercruiseExit", "StarSystem":"HIP 10483", "Body":"Borrego Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-04T15:26:58Z", "event":"SupercruiseExit", "StarSystem":"Kumbou", "Body":"Kumbou A", "BodyType":"Star" }
+{ "timestamp":"2017-03-04T15:42:19Z", "event":"SupercruiseExit", "StarSystem":"Kumbou", "Body":"Kumbou C", "BodyType":"Star" }
+{ "timestamp":"2017-03-04T15:46:07Z", "event":"SupercruiseExit", "StarSystem":"Kumbou", "Body":"Kumbou C 4", "BodyType":"Planet" }
+{ "timestamp":"2017-03-04T15:54:48Z", "event":"SupercruiseExit", "StarSystem":"HIP 10483", "Body":"Borrego Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-04T16:06:11Z", "event":"SupercruiseExit", "StarSystem":"Kumbou", "Body":"Thome Vision", "BodyType":"Station" }
+{ "timestamp":"2017-03-05T15:23:54Z", "event":"SupercruiseExit", "StarSystem":"HIP 13317", "Body":"Tisserand Hub", "BodyType":"Station" }
+{ "timestamp":"2017-03-05T15:54:09Z", "event":"SupercruiseExit", "StarSystem":"HIP 74290", "Body":"Pratchett's Disc", "BodyType":"Station" }
+{ "timestamp":"2017-03-09T14:56:18Z", "event":"SupercruiseExit", "StarSystem":"Sitakapa", "Body":"Finlay-Freundlich Port", "BodyType":"Station" }
+{ "timestamp":"2017-03-09T15:04:02Z", "event":"SupercruiseExit", "StarSystem":"HR 6565", "Body":"Naubakht Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-09T15:16:56Z", "event":"SupercruiseExit", "StarSystem":"LTT 7669", "Body":"Virts Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-03-09T15:40:28Z", "event":"SupercruiseExit", "StarSystem":"Robigo", "Body":"Robigo Mines", "BodyType":"Station" }
+{ "timestamp":"2017-03-09T15:59:27Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-09T16:12:38Z", "event":"SupercruiseExit", "StarSystem":"Robigo", "Body":"Robigo Mines", "BodyType":"Station" }
+{ "timestamp":"2017-03-09T16:20:30Z", "event":"SupercruiseExit", "StarSystem":"Sothis", "Body":"Newholm Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-09T16:42:13Z", "event":"SupercruiseExit", "StarSystem":"Robigo", "Body":"Robigo", "BodyType":"Star" }
+{ "timestamp":"2017-03-09T16:42:37Z", "event":"SupercruiseExit", "StarSystem":"Robigo", "Body":"Robigo", "BodyType":"Star" }
+{ "timestamp":"2017-03-10T15:18:00Z", "event":"SupercruiseExit", "StarSystem":"Almagest", "Body":"Sirius Reach", "BodyType":"Station" }
+{ "timestamp":"2017-03-10T15:18:25Z", "event":"SupercruiseExit", "StarSystem":"Almagest", "Body":"Sirius Reach", "BodyType":"Station" }
+{ "timestamp":"2017-03-10T15:31:29Z", "event":"SupercruiseExit", "StarSystem":"Robigo", "Body":"Robigo", "BodyType":"Star" }
+{ "timestamp":"2017-03-10T15:54:22Z", "event":"SupercruiseExit", "StarSystem":"11 Cephei", "Body":"Cook Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-03-10T16:14:54Z", "event":"SupercruiseExit", "StarSystem":"Col 285 Sector XZ-Y d73", "Body":"Col 285 Sector XZ-Y d73 A", "BodyType":"Star" }
+{ "timestamp":"2017-03-10T17:33:30Z", "event":"SupercruiseExit", "StarSystem":"Wredguia AN-J b36-1", "Body":"Wredguia AN-J b36-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T13:35:21Z", "event":"SupercruiseExit", "StarSystem":"Diaguandri", "Body":"Ray Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-03-11T13:52:29Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Garay Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-03-11T14:15:49Z", "event":"SupercruiseExit", "StarSystem":"Col 285 Sector OS-T d3-148", "Body":"Col 285 Sector OS-T d3-148 3 B Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-11T14:58:59Z", "event":"SupercruiseExit", "StarSystem":"Vulganji", "Body":"Erikson Port", "BodyType":"Station" }
+{ "timestamp":"2017-03-11T15:24:33Z", "event":"SupercruiseExit", "StarSystem":"Vulganji", "Body":"Vulganji 4", "BodyType":"Planet" }
+{ "timestamp":"2017-03-11T15:26:34Z", "event":"SupercruiseExit", "StarSystem":"Vulganji", "Body":"Vulganji 4 B Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-11T16:28:45Z", "event":"SupercruiseExit", "StarSystem":"Machola", "Body":"Mies van der Rohe Vision", "BodyType":"Station" }
+{ "timestamp":"2017-03-11T16:45:35Z", "event":"SupercruiseExit", "StarSystem":"Maiku", "Body":"Austin Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-11T17:00:05Z", "event":"SupercruiseExit", "StarSystem":"Picoria", "Body":"Kohoutek Ring", "BodyType":"Station" }
+{ "timestamp":"2017-03-11T17:23:09Z", "event":"SupercruiseExit", "StarSystem":"Crucis Sector YE-A d146", "Body":"Crucis Sector YE-A d146 A", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T17:26:48Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T17:28:56Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T17:30:36Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T17:34:04Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T17:41:59Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T17:45:28Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T17:50:07Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T17:53:00Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T18:54:45Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Faraday Ring", "BodyType":"Station" }
+{ "timestamp":"2017-03-11T19:01:03Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T19:09:08Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T19:12:06Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T19:41:46Z", "event":"SupercruiseExit", "StarSystem":"Bidiono", "Body":"Wellman Dock", "BodyType":"Station" }
+{ "timestamp":"2017-03-11T20:03:33Z", "event":"SupercruiseExit", "StarSystem":"Kherthaje", "Body":"Kherthaje 2", "BodyType":"Planet" }
+{ "timestamp":"2017-03-11T20:06:35Z", "event":"SupercruiseExit", "StarSystem":"Kherthaje", "Body":"Herreshoff Prospect", "BodyType":"Station" }
+{ "timestamp":"2017-03-11T20:17:08Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T21:06:05Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T21:07:56Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Faraday Ring", "BodyType":"Station" }
+{ "timestamp":"2017-03-11T21:13:58Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T21:19:37Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-11T21:59:03Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Faraday Ring", "BodyType":"Station" }
+{ "timestamp":"2017-03-12T12:24:59Z", "event":"SupercruiseExit", "StarSystem":"Bunda", "Body":"Bunda", "BodyType":"Star" }
+{ "timestamp":"2017-03-12T12:52:39Z", "event":"SupercruiseExit", "StarSystem":"Kherthaje", "Body":"Herreshoff Prospect", "BodyType":"Station" }
+{ "timestamp":"2017-03-12T13:04:12Z", "event":"SupercruiseExit", "StarSystem":"HR 6565", "Body":"Naubakht Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-12T13:19:32Z", "event":"SupercruiseExit", "StarSystem":"HIP 74290", "Body":"Pratchett's Disc", "BodyType":"Station" }
+{ "timestamp":"2017-03-12T13:42:52Z", "event":"SupercruiseExit", "StarSystem":"Theta Pavonis", "Body":"Marsden City", "BodyType":"Station" }
+{ "timestamp":"2017-03-12T13:52:03Z", "event":"SupercruiseExit", "StarSystem":"Theta Pavonis", "Body":"Theta Pavonis 1", "BodyType":"Planet" }
+{ "timestamp":"2017-03-12T16:32:07Z", "event":"SupercruiseExit", "StarSystem":"Maiku", "Body":"Austin Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-12T16:45:40Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Garay Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-03-12T17:35:35Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 a", "BodyType":"Planet" }
+{ "timestamp":"2017-03-12T17:46:17Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 d", "BodyType":"Planet" }
+{ "timestamp":"2017-03-12T18:52:03Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 d", "BodyType":"Planet" }
+{ "timestamp":"2017-03-12T18:55:02Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 a", "BodyType":"Planet" }
+{ "timestamp":"2017-03-12T19:08:04Z", "event":"SupercruiseExit", "StarSystem":"Wyrd", "Body":"Wyrd A 2", "BodyType":"Planet" }
+{ "timestamp":"2017-03-13T15:00:03Z", "event":"SupercruiseExit", "StarSystem":"Maiku", "Body":"Austin Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-13T15:20:58Z", "event":"SupercruiseExit", "StarSystem":"Gaula Wu", "Body":"Cowling Dock", "BodyType":"Station" }
+{ "timestamp":"2017-03-13T15:29:04Z", "event":"SupercruiseExit", "StarSystem":"Gubian", "Body":"Crossfield Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-03-13T15:35:55Z", "event":"SupercruiseExit", "StarSystem":"Njiri", "Body":"Helin Dock", "BodyType":"Station" }
+{ "timestamp":"2017-03-13T15:46:04Z", "event":"SupercruiseExit", "StarSystem":"Chamuluma", "Body":"Bisnovatyi-Kogan Landing", "BodyType":"Station" }
+{ "timestamp":"2017-03-13T16:16:01Z", "event":"SupercruiseExit", "StarSystem":"Laksak", "Body":"Laksak A 1", "BodyType":"Planet" }
+{ "timestamp":"2017-03-13T16:18:59Z", "event":"SupercruiseExit", "StarSystem":"Laksak", "Body":"Laksak A 1", "BodyType":"Planet" }
+{ "timestamp":"2017-03-13T16:34:27Z", "event":"SupercruiseExit", "StarSystem":"Laksak", "Body":"Stjepan Seljan Hub", "BodyType":"Station" }
+{ "timestamp":"2017-03-13T16:45:48Z", "event":"SupercruiseExit", "StarSystem":"Maik", "Body":"Maik 2 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-14T15:41:54Z", "event":"SupercruiseExit", "StarSystem":"Maik", "Body":"Womack Hub", "BodyType":"Station" }
+{ "timestamp":"2017-03-14T15:58:38Z", "event":"SupercruiseExit", "StarSystem":"Bandjigali", "Body":"Bandjigali AB 6 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-14T16:35:04Z", "event":"SupercruiseExit", "StarSystem":"Lencali", "Body":"Lencali 1", "BodyType":"Planet" }
+{ "timestamp":"2017-03-14T16:36:19Z", "event":"SupercruiseExit", "StarSystem":"Lencali", "Body":"Reynolds Ring", "BodyType":"Station" }
+{ "timestamp":"2017-03-14T16:57:39Z", "event":"SupercruiseExit", "StarSystem":"Atins", "Body":"Atins 2 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-14T17:33:51Z", "event":"SupercruiseExit", "StarSystem":"Atins", "Body":"Atins 2 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-14T18:10:31Z", "event":"SupercruiseExit", "StarSystem":"Kuk", "Body":"NN 3742 B", "BodyType":"Star" }
+{ "timestamp":"2017-03-14T18:12:51Z", "event":"SupercruiseExit", "StarSystem":"Kuk", "Body":"Kuk B 3", "BodyType":"Planet" }
+{ "timestamp":"2017-03-14T18:14:31Z", "event":"SupercruiseExit", "StarSystem":"Kuk", "Body":"Kuk B 3", "BodyType":"Planet" }
+{ "timestamp":"2017-03-14T18:32:31Z", "event":"SupercruiseExit", "StarSystem":"Lave", "Body":"Lave Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-14T18:44:34Z", "event":"SupercruiseExit", "StarSystem":"Placet", "Body":"Placet 6 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-15T11:12:57Z", "event":"SupercruiseExit", "StarSystem":"Rindjalavs", "Body":"Battani Landing", "BodyType":"Station" }
+{ "timestamp":"2017-03-15T11:33:00Z", "event":"SupercruiseExit", "StarSystem":"Tjingola", "Body":"Tjingola A", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T11:47:07Z", "event":"SupercruiseExit", "StarSystem":"HIP 14479", "Body":"HIP 14479", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T11:54:27Z", "event":"SupercruiseExit", "StarSystem":"HIP 14479", "Body":"HIP 14479", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T12:00:27Z", "event":"SupercruiseExit", "StarSystem":"Aries Dark Region UE-P b6-2", "Body":"Aries Dark Region UE-P b6-2", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T12:06:42Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T12:11:17Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T12:16:30Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T17:35:56Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T17:39:17Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T17:41:21Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T17:47:03Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T17:51:11Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T17:57:42Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T18:09:17Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T18:12:53Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T18:17:13Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T18:19:44Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T18:26:43Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T18:49:10Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T18:57:30Z", "event":"SupercruiseExit", "StarSystem":"HIP 18174", "Body":"HIP 18174", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T19:14:29Z", "event":"SupercruiseExit", "StarSystem":"Hyades Sector MW-W b1-1", "Body":"Hyades Sector MW-W b1-1", "BodyType":"Star" }
+{ "timestamp":"2017-03-15T19:26:12Z", "event":"SupercruiseExit", "StarSystem":"Maia", "Body":"Maia A 3 a", "BodyType":"Planet" }
+{ "timestamp":"2017-03-15T19:39:57Z", "event":"SupercruiseExit", "StarSystem":"Maia", "Body":"Maia A 3 a", "BodyType":"Planet" }
+{ "timestamp":"2017-03-16T16:45:59Z", "event":"SupercruiseExit", "StarSystem":"Laksak", "Body":"Stjepan Seljan Hub", "BodyType":"Station" }
+{ "timestamp":"2017-03-16T16:53:44Z", "event":"SupercruiseExit", "StarSystem":"Laksak", "Body":"Laksak A 1", "BodyType":"Planet" }
+{ "timestamp":"2017-03-16T17:06:59Z", "event":"SupercruiseExit", "StarSystem":"Laksak", "Body":"Stjepan Seljan Hub", "BodyType":"Station" }
+{ "timestamp":"2017-03-16T17:21:25Z", "event":"SupercruiseExit", "StarSystem":"Laksak", "Body":"Laksak A 1", "BodyType":"Planet" }
+{ "timestamp":"2017-03-16T17:31:08Z", "event":"SupercruiseExit", "StarSystem":"Laksak", "Body":"Stjepan Seljan Hub", "BodyType":"Station" }
+{ "timestamp":"2017-03-16T18:27:23Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Lucifer", "BodyType":"Planet" }
+{ "timestamp":"2017-03-16T18:28:43Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Lucifer", "BodyType":"Planet" }
+{ "timestamp":"2017-03-16T18:42:31Z", "event":"SupercruiseExit", "StarSystem":"Wyrd", "Body":"Wyrd A 2", "BodyType":"Planet" }
+{ "timestamp":"2017-03-16T18:58:09Z", "event":"SupercruiseExit", "StarSystem":"Kuk", "Body":"Kuk B 3", "BodyType":"Planet" }
+{ "timestamp":"2017-03-16T19:00:09Z", "event":"SupercruiseExit", "StarSystem":"Kuk", "Body":"Kuk B 3", "BodyType":"Planet" }
+{ "timestamp":"2017-03-16T19:15:11Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Trus Madi", "BodyType":"Planet" }
+{ "timestamp":"2017-03-16T19:33:36Z", "event":"SupercruiseExit", "StarSystem":"Wolf 1438", "Body":"Wolf 1438", "BodyType":"Star" }
+{ "timestamp":"2017-03-17T11:48:35Z", "event":"SupercruiseExit", "StarSystem":"Wolf 1438", "Body":"Shaw Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-17T11:57:36Z", "event":"SupercruiseExit", "StarSystem":"Xevioso", "Body":"Ciferri Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-03-17T14:32:59Z", "event":"SupercruiseExit", "StarSystem":"Laksak", "Body":"Stjepan Seljan Hub", "BodyType":"Station" }
+{ "timestamp":"2017-03-17T14:48:43Z", "event":"SupercruiseExit", "StarSystem":"Mantxe", "Body":"de Sousa Ring", "BodyType":"Station" }
+{ "timestamp":"2017-03-17T14:59:23Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Ariel", "BodyType":"Planet" }
+{ "timestamp":"2017-03-17T15:00:39Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Ariel", "BodyType":"Planet" }
+{ "timestamp":"2017-03-17T15:02:04Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Ariel", "BodyType":"Planet" }
+{ "timestamp":"2017-03-21T09:52:11Z", "event":"SupercruiseExit", "StarSystem":"Col 285 Sector EM-L c8-22", "Body":"Col 285 Sector EM-L c8-22 A", "BodyType":"Star" }
+{ "timestamp":"2017-03-21T10:00:33Z", "event":"SupercruiseExit", "StarSystem":"Luvalla", "Body":"Ejeta Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-21T10:13:16Z", "event":"SupercruiseExit", "StarSystem":"Lyncis Sector PD-T b3-2", "Body":"Lyncis Sector PD-T b3-2 A", "BodyType":"Star" }
+{ "timestamp":"2017-03-21T11:03:14Z", "event":"SupercruiseExit", "StarSystem":"Robigo", "Body":"Robigo", "BodyType":"Star" }
+{ "timestamp":"2017-03-21T11:07:02Z", "event":"SupercruiseExit", "StarSystem":"Robigo", "Body":"Robigo Mines", "BodyType":"Station" }
+{ "timestamp":"2017-03-21T11:13:50Z", "event":"SupercruiseExit", "StarSystem":"Ceos", "Body":"New Dawn Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-21T11:23:45Z", "event":"SupercruiseExit", "StarSystem":"Robigo", "Body":"Robigo Mines", "BodyType":"Station" }
+{ "timestamp":"2017-03-21T16:43:02Z", "event":"SupercruiseExit", "StarSystem":"HIP 12346", "Body":"HIP 12346", "BodyType":"Star" }
+{ "timestamp":"2017-03-21T16:44:48Z", "event":"SupercruiseExit", "StarSystem":"Wredguia AN-J b36-4", "Body":"Wredguia AN-J b36-4 A", "BodyType":"Star" }
+{ "timestamp":"2017-03-21T16:49:19Z", "event":"SupercruiseExit", "StarSystem":"Col 285 Sector KT-O b7-4", "Body":"Col 285 Sector KT-O b7-4 A", "BodyType":"Star" }
+{ "timestamp":"2017-03-21T16:57:13Z", "event":"SupercruiseExit", "StarSystem":"Luvalla", "Body":"Ejeta Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-21T17:06:15Z", "event":"SupercruiseExit", "StarSystem":"Cephei Sector AF-A c22", "Body":"Cephei Sector AF-A c22", "BodyType":"Star" }
+{ "timestamp":"2017-03-21T17:19:11Z", "event":"SupercruiseExit", "StarSystem":"Rindjalavs", "Body":"Battani Landing", "BodyType":"Station" }
+{ "timestamp":"2017-03-21T17:35:02Z", "event":"SupercruiseExit", "StarSystem":"Onuros", "Body":"Penzias Dock", "BodyType":"Station" }
+{ "timestamp":"2017-03-21T17:49:30Z", "event":"SupercruiseExit", "StarSystem":"HIP 74290", "Body":"Pratchett's Disc", "BodyType":"Station" }
+{ "timestamp":"2017-03-21T18:18:27Z", "event":"SupercruiseExit", "StarSystem":"Toluku", "Body":"Foden Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-03-21T19:03:39Z", "event":"SupercruiseExit", "StarSystem":"LTT 4599", "Body":"LTT 4599 4", "BodyType":"Planet" }
+{ "timestamp":"2017-03-22T15:07:54Z", "event":"SupercruiseExit", "StarSystem":"Nocoma", "Body":"Nocoma 5 c", "BodyType":"Planet" }
+{ "timestamp":"2017-03-22T15:17:01Z", "event":"SupercruiseExit", "StarSystem":"Toluku", "Body":"Foden Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-03-22T15:29:42Z", "event":"SupercruiseExit", "StarSystem":"Toluku", "Body":"Toluku AB 4 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-22T18:06:20Z", "event":"SupercruiseExit", "StarSystem":"Toluku", "Body":"Foden Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-03-22T18:26:44Z", "event":"SupercruiseExit", "StarSystem":"We Jenuteki", "Body":"We Jenuteki A", "BodyType":"Star" }
+{ "timestamp":"2017-03-22T18:29:30Z", "event":"SupercruiseExit", "StarSystem":"We Jenuteki", "Body":"We Jenuteki A", "BodyType":"Star" }
+{ "timestamp":"2017-03-24T16:45:03Z", "event":"SupercruiseExit", "StarSystem":"Toluku", "Body":"Foden Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-03-24T17:18:59Z", "event":"SupercruiseExit", "StarSystem":"Wikanawal", "Body":"Schwann Hub", "BodyType":"Station" }
+{ "timestamp":"2017-03-24T19:09:06Z", "event":"SupercruiseExit", "StarSystem":"Wikanawal", "Body":"Wikanawal", "BodyType":"Star" }
+{ "timestamp":"2017-03-25T17:54:41Z", "event":"SupercruiseExit", "StarSystem":"Chique", "Body":"Birdseye Dock", "BodyType":"Station" }
+{ "timestamp":"2017-03-25T17:58:35Z", "event":"SupercruiseExit", "StarSystem":"Wikanawal", "Body":"Wikanawal", "BodyType":"Star" }
+{ "timestamp":"2017-03-27T16:57:45Z", "event":"SupercruiseExit", "StarSystem":"Chique", "Body":"Birdseye Dock", "BodyType":"Station" }
+{ "timestamp":"2017-03-27T17:09:29Z", "event":"SupercruiseExit", "StarSystem":"Yembo", "Body":"Naddoddur Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-03-27T17:38:20Z", "event":"SupercruiseExit", "StarSystem":"LO Pegasi", "Body":"Garcia Station", "BodyType":"Station" }
+{ "timestamp":"2017-03-27T18:05:37Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Sirius B", "BodyType":"Star" }
+{ "timestamp":"2017-03-27T18:09:09Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Lucifer", "BodyType":"Planet" }
+{ "timestamp":"2017-03-27T18:33:09Z", "event":"SupercruiseExit", "StarSystem":"Toolfa", "Body":"Crook Hub", "BodyType":"Station" }
+{ "timestamp":"2017-03-27T18:44:22Z", "event":"SupercruiseExit", "StarSystem":"Toolfa", "Body":"Toolfa A 10 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-27T18:50:28Z", "event":"SupercruiseExit", "StarSystem":"Lacaille 9352", "Body":"Gupta City", "BodyType":"Station" }
+{ "timestamp":"2017-03-27T18:59:44Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Europa", "BodyType":"Planet" }
+{ "timestamp":"2017-03-27T19:03:03Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Jupiter Halo Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-03-28T14:41:39Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "Body":"Cleve Hub", "BodyType":"Station" }
+{ "timestamp":"2017-03-28T14:50:48Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "Body":"Eravate", "BodyType":"Star" }
+{ "timestamp":"2017-03-28T14:53:21Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "Body":"Eravate", "BodyType":"Star" }
+{ "timestamp":"2017-03-28T14:57:42Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "Body":"Eravate", "BodyType":"Star" }
+{ "timestamp":"2017-03-28T14:58:09Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "Body":"Eravate", "BodyType":"Star" }
+{ "timestamp":"2017-03-31T19:56:27Z", "event":"SupercruiseExit", "StarSystem":"G 139-50", "Body":"G 139-50", "BodyType":"Star" }
+{ "timestamp":"2017-03-31T20:02:47Z", "event":"SupercruiseExit", "StarSystem":"G 139-50", "Body":"G 139-50 1", "BodyType":"Planet" }
+{ "timestamp":"2017-03-31T20:04:53Z", "event":"SupercruiseExit", "StarSystem":"G 139-50", "Body":"Filipchenko City", "BodyType":"Station" }
+{ "timestamp":"2017-04-01T14:13:00Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T14:18:10Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T14:27:26Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T14:32:01Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T14:35:29Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T14:37:37Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T14:41:24Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T14:43:37Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T14:46:35Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T14:49:50Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T14:52:24Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T15:03:08Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-01T15:07:08Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T15:12:07Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-01T15:13:57Z", "event":"SupercruiseExit", "StarSystem":"LHS 3384", "Body":"LHS 3384 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-01T15:38:49Z", "event":"SupercruiseExit", "StarSystem":"Wat Yu", "Body":"Cameron Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-04-01T15:49:33Z", "event":"SupercruiseExit", "StarSystem":"Altair", "Body":"Solo Orbiter", "BodyType":"Station" }
+{ "timestamp":"2017-04-01T15:50:02Z", "event":"SupercruiseExit", "StarSystem":"Altair", "Body":"Solo Orbiter", "BodyType":"Station" }
+{ "timestamp":"2017-04-01T16:02:10Z", "event":"SupercruiseExit", "StarSystem":"Altair", "Body":"Altair", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T16:06:31Z", "event":"SupercruiseExit", "StarSystem":"Altair", "Body":"Altair 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-01T17:13:48Z", "event":"SupercruiseExit", "StarSystem":"Altair", "Body":"Grandin Gateway", "BodyType":"Station" }
+{ "timestamp":"2017-04-01T17:18:47Z", "event":"SupercruiseExit", "StarSystem":"Altair", "Body":"Altair 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-01T17:29:29Z", "event":"SupercruiseExit", "StarSystem":"61 Cygni", "Body":"Broglie Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-04-01T17:52:43Z", "event":"SupercruiseExit", "StarSystem":"Altair", "Body":"Altair 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-01T18:45:08Z", "event":"SupercruiseExit", "StarSystem":"70 Ophiuchi", "Body":"Richardson", "BodyType":"Planet" }
+{ "timestamp":"2017-04-01T18:57:29Z", "event":"SupercruiseExit", "StarSystem":"70 Ophiuchi", "Body":"Richardson", "BodyType":"Planet" }
+{ "timestamp":"2017-04-01T20:15:39Z", "event":"SupercruiseExit", "StarSystem":"Midgcut", "Body":"Midgcut A", "BodyType":"Star" }
+{ "timestamp":"2017-04-01T20:21:37Z", "event":"SupercruiseExit", "StarSystem":"Coriccha", "Body":"Schirra Dock", "BodyType":"Station" }
+{ "timestamp":"2017-04-01T20:30:57Z", "event":"SupercruiseExit", "StarSystem":"Wyrd", "Body":"Wyrd A 2", "BodyType":"Planet" }
+{ "timestamp":"2017-04-02T17:27:24Z", "event":"SupercruiseExit", "StarSystem":"Shudun Sector AA-A d142", "Body":"Shudun Sector AA-A d142 A", "BodyType":"Star" }
+{ "timestamp":"2017-04-02T17:57:20Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Trus Madi", "BodyType":"Planet" }
+{ "timestamp":"2017-04-02T18:04:34Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Chelbin Service Station", "BodyType":"Station" }
+{ "timestamp":"2017-04-02T18:17:47Z", "event":"SupercruiseExit", "StarSystem":"LTT 4728", "Body":"LTT 4728 A", "BodyType":"Star" }
+{ "timestamp":"2017-04-02T18:42:59Z", "event":"SupercruiseExit", "StarSystem":"Laksak", "Body":"Laksak A 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-03T12:30:03Z", "event":"SupercruiseExit", "StarSystem":"Indjigan", "Body":"Indjigan 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-03T12:32:05Z", "event":"SupercruiseExit", "StarSystem":"Indjigan", "Body":"Indjigan 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-03T12:36:35Z", "event":"SupercruiseExit", "StarSystem":"Indjigan", "Body":"Indjigan 1 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-04-03T15:10:46Z", "event":"SupercruiseExit", "StarSystem":"Indjigan", "Body":"Nicollier Vision", "BodyType":"Station" }
+{ "timestamp":"2017-04-04T15:31:15Z", "event":"SupercruiseExit", "StarSystem":"Indjigan", "Body":"Indjigan 3 B Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-04-04T15:36:01Z", "event":"SupercruiseExit", "StarSystem":"Indjigan", "Body":"Indjigan 3 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-04-04T15:53:00Z", "event":"SupercruiseExit", "StarSystem":"Indjigan", "Body":"Nicollier Vision", "BodyType":"Station" }
+{ "timestamp":"2017-04-04T16:02:07Z", "event":"SupercruiseExit", "StarSystem":"Grabil", "Body":"Grabil A 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-04T16:04:05Z", "event":"SupercruiseExit", "StarSystem":"Grabil", "Body":"Klimuk Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-04-04T16:32:08Z", "event":"SupercruiseExit", "StarSystem":"Yembo", "Body":"Naddoddur Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-04-04T17:22:58Z", "event":"SupercruiseExit", "StarSystem":"Leesti", "Body":"George Lucas", "BodyType":"Station" }
+{ "timestamp":"2017-04-04T17:40:52Z", "event":"SupercruiseExit", "StarSystem":"HIP 74290", "Body":"Pratchett's Disc", "BodyType":"Station" }
+{ "timestamp":"2017-04-06T12:49:43Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial", "BodyType":"Station" }
+{ "timestamp":"2017-04-06T13:29:30Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 a", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T13:30:47Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 a", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T13:50:08Z", "event":"SupercruiseExit", "StarSystem":"Paipai", "Body":"Paipai 7", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T13:55:57Z", "event":"SupercruiseExit", "StarSystem":"Paipai", "Body":"Paipai", "BodyType":"Star" }
+{ "timestamp":"2017-04-06T13:58:31Z", "event":"SupercruiseExit", "StarSystem":"Paipai", "Body":"Paipai", "BodyType":"Star" }
+{ "timestamp":"2017-04-06T14:01:59Z", "event":"SupercruiseExit", "StarSystem":"Paipai", "Body":"Paipai 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T14:03:04Z", "event":"SupercruiseExit", "StarSystem":"Paipai", "Body":"Paipai 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T14:04:44Z", "event":"SupercruiseExit", "StarSystem":"Paipai", "Body":"Paipai 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T14:18:56Z", "event":"SupercruiseExit", "StarSystem":"Cai", "Body":"Trango", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T14:53:18Z", "event":"SupercruiseExit", "StarSystem":"Kuanes", "Body":"Kuanes 3", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T15:12:10Z", "event":"SupercruiseExit", "StarSystem":"Kokary", "Body":"Kokary 3", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T15:34:49Z", "event":"SupercruiseExit", "StarSystem":"Kokary", "Body":"Kokary 3", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T16:15:32Z", "event":"SupercruiseExit", "StarSystem":"Wyrd", "Body":"Lister", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T16:53:01Z", "event":"SupercruiseExit", "StarSystem":"Raksaka", "Body":"Raksaka 3 f", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T17:24:26Z", "event":"SupercruiseExit", "StarSystem":"Du Shas", "Body":"Du Shas A 2", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T17:49:39Z", "event":"SupercruiseExit", "StarSystem":"Chick Bara", "Body":"Chick Bara D 2", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T18:24:06Z", "event":"SupercruiseExit", "StarSystem":"Prthautas", "Body":"Prthautas A", "BodyType":"Star" }
+{ "timestamp":"2017-04-06T18:26:31Z", "event":"SupercruiseExit", "StarSystem":"Prthautas", "Body":"Prthautas A 3", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T18:50:02Z", "event":"SupercruiseExit", "StarSystem":"Prthautas", "Body":"Prthautas A 3", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T18:53:30Z", "event":"SupercruiseExit", "StarSystem":"Koleti", "Body":"Koleti A 1", "BodyType":"Planet" }
+{ "timestamp":"2017-04-06T18:55:42Z", "event":"SupercruiseExit", "StarSystem":"Koleti", "Body":"Pannekoek Dock", "BodyType":"Station" }
+{ "timestamp":"2017-04-07T14:26:07Z", "event":"SupercruiseExit", "StarSystem":"Du Shas", "Body":"Du Shas A 2", "BodyType":"Planet" }
+{ "timestamp":"2017-04-07T14:33:39Z", "event":"SupercruiseExit", "StarSystem":"Du Shas", "Body":"Du Shas A 2", "BodyType":"Planet" }
+{ "timestamp":"2017-04-07T14:48:57Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial", "BodyType":"Station" }
+{ "timestamp":"2017-04-07T15:05:44Z", "event":"SupercruiseExit", "StarSystem":"Quince", "Body":"Millerport", "BodyType":"Station" }
+{ "timestamp":"2017-04-07T15:23:38Z", "event":"SupercruiseExit", "StarSystem":"Quince", "Body":"Kosmala Rewards", "BodyType":"Planet" }
+{ "timestamp":"2017-04-07T15:40:44Z", "event":"SupercruiseExit", "StarSystem":"Quince", "Body":"Kosmala Rewards", "BodyType":"Planet" }
+{ "timestamp":"2017-04-07T16:02:03Z", "event":"SupercruiseExit", "StarSystem":"Quince", "Body":"Kosmala Rewards", "BodyType":"Planet" }
+{ "timestamp":"2017-04-07T17:51:22Z", "event":"SupercruiseExit", "StarSystem":"Quince", "Body":"Kosmala Rewards", "BodyType":"Planet" }
+{ "timestamp":"2017-04-08T15:49:55Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial", "BodyType":"Station" }
+{ "timestamp":"2017-04-08T16:49:31Z", "event":"SupercruiseExit", "StarSystem":"Maia", "Body":"Maia A 3 a", "BodyType":"Planet" }
+{ "timestamp":"2017-04-08T16:57:17Z", "event":"SupercruiseExit", "StarSystem":"Pleiades Sector MN-T c3-13", "Body":"Pleiades Sector MN-T c3-13", "BodyType":"Star" }
+{ "timestamp":"2017-04-08T17:19:05Z", "event":"SupercruiseExit", "StarSystem":"Sirius", "Body":"Lucifer", "BodyType":"Planet" }
+{ "timestamp":"2017-04-08T17:47:21Z", "event":"SupercruiseExit", "StarSystem":"Gandii", "Body":"Lu Hub", "BodyType":"Station" }
+{ "timestamp":"2017-04-08T18:28:09Z", "event":"SupercruiseExit", "StarSystem":"Gandii", "Body":"Lu Hub", "BodyType":"Station" }
+{ "timestamp":"2017-04-08T18:29:18Z", "event":"SupercruiseExit", "StarSystem":"Gandii", "Body":"Lu Hub", "BodyType":"Station" }
+{ "timestamp":"2017-04-08T18:31:58Z", "event":"SupercruiseExit", "StarSystem":"Gandii", "Body":"Gandii A 11 A Ring", "BodyType":"PlanetaryRing" }
+{ "timestamp":"2017-04-08T18:41:07Z", "event":"SupercruiseExit", "StarSystem":"Gandii", "Body":"Gandii A 8", "BodyType":"Planet" }
+{ "timestamp":"2017-04-08T18:52:51Z", "event":"SupercruiseExit", "StarSystem":"Gandii", "Body":"Gandii A 8", "BodyType":"Planet" }
+{ "timestamp":"2017-04-09T11:16:11Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial", "BodyType":"Station" }
+{ "timestamp":"2017-04-09T11:33:53Z", "event":"SupercruiseExit", "StarSystem":"HIP 74290", "Body":"Pratchett's Disc", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T12:47:19Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Cregglezone", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T12:55:26Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Trus Madi", "BodyType":"Planet" }
+{ "timestamp":"2017-04-10T13:04:19Z", "event":"SupercruiseExit", "StarSystem":"Komotae", "Body":"Bluford Station", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T13:22:16Z", "event":"SupercruiseExit", "StarSystem":"Wolf 397", "Body":"Trus Madi", "BodyType":"Planet" }
+{ "timestamp":"2017-04-10T14:42:13Z", "event":"SupercruiseExit", "StarSystem":"171 Puppis", "Body":"171 Puppis", "BodyType":"Star" }
+{ "timestamp":"2017-04-10T14:48:21Z", "event":"SupercruiseExit", "StarSystem":"Eurybia", "Body":"Chris & Silvia's Paradise Hideout", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T14:56:22Z", "event":"SupercruiseExit", "StarSystem":"Eta-1 Pictoris", "Body":"Northrop Orbital", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T15:04:55Z", "event":"SupercruiseExit", "StarSystem":"Eurybia", "Body":"Chris & Silvia's Paradise Hideout", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T15:17:37Z", "event":"SupercruiseExit", "StarSystem":"Potrigua", "Body":"Potrigua 4 b", "BodyType":"Planet" }
+{ "timestamp":"2017-04-10T15:29:56Z", "event":"SupercruiseExit", "StarSystem":"Eurybia", "Body":"Chris & Silvia's Paradise Hideout", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T15:46:12Z", "event":"SupercruiseExit", "StarSystem":"Potrigua", "Body":"Potrigua 4 b", "BodyType":"Planet" }
+{ "timestamp":"2017-04-10T15:52:31Z", "event":"SupercruiseExit", "StarSystem":"Eurybia", "Body":"Chris & Silvia's Paradise Hideout", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T16:02:59Z", "event":"SupercruiseExit", "StarSystem":"CPD-60 604", "Body":"Gantt Enterprise", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T16:09:45Z", "event":"SupercruiseExit", "StarSystem":"Eurybia", "Body":"Chris & Silvia's Paradise Hideout", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T16:27:11Z", "event":"SupercruiseExit", "StarSystem":"Decima", "Body":"Nanda", "BodyType":"Planet" }
+{ "timestamp":"2017-04-10T17:23:51Z", "event":"SupercruiseExit", "StarSystem":"Scylla", "Body":"Scylla D 2", "BodyType":"Planet" }
+{ "timestamp":"2017-04-10T17:25:40Z", "event":"SupercruiseExit", "StarSystem":"Scylla", "Body":"Boe Dock", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T17:34:15Z", "event":"SupercruiseExit", "StarSystem":"Eurybia", "Body":"Makalu", "BodyType":"Planet" }
+{ "timestamp":"2017-04-10T18:07:30Z", "event":"SupercruiseExit", "StarSystem":"Kamitra", "Body":"Hammel Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T18:29:20Z", "event":"SupercruiseExit", "StarSystem":"Kuwemaki", "Body":"Kuwemaki A 3 a", "BodyType":"Planet" }
+{ "timestamp":"2017-04-10T18:42:26Z", "event":"SupercruiseExit", "StarSystem":"Kamitra", "Body":"Hammel Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T18:56:04Z", "event":"SupercruiseExit", "StarSystem":"Beta Sculptoris", "Body":"Fan Horizons", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T19:02:55Z", "event":"SupercruiseExit", "StarSystem":"Kamitra", "Body":"Kamitra A", "BodyType":"Star" }
+{ "timestamp":"2017-04-10T19:08:10Z", "event":"SupercruiseExit", "StarSystem":"Kamitra", "Body":"Kamitra A", "BodyType":"Star" }
+{ "timestamp":"2017-04-10T19:13:02Z", "event":"SupercruiseExit", "StarSystem":"Kamitra", "Body":"Hammel Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T19:24:22Z", "event":"SupercruiseExit", "StarSystem":"Kuwemaki", "Body":"Kuwemaki A 3 a", "BodyType":"Planet" }
+{ "timestamp":"2017-04-10T19:40:46Z", "event":"SupercruiseExit", "StarSystem":"Kamitra", "Body":"Hammel Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T20:03:35Z", "event":"SupercruiseExit", "StarSystem":"Kuwemaki", "Body":"Kuwemaki A 3 a", "BodyType":"Planet" }
+{ "timestamp":"2017-04-10T20:15:31Z", "event":"SupercruiseExit", "StarSystem":"Kamitra", "Body":"Hammel Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T20:41:16Z", "event":"SupercruiseExit", "StarSystem":"Kuwemaki", "Body":"Kuwemaki A 3 a", "BodyType":"Planet" }
+{ "timestamp":"2017-04-10T20:53:21Z", "event":"SupercruiseExit", "StarSystem":"Kamitra", "Body":"Hammel Terminal", "BodyType":"Station" }
+{ "timestamp":"2017-04-10T21:08:53Z", "event":"SupercruiseExit", "StarSystem":"Kuwemaki", "Body":"Kuwemaki A 3 a", "BodyType":"Planet" }

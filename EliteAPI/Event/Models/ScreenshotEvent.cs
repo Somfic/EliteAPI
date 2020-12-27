@@ -1,42 +1,45 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ScreenshotEvent : EventBase
+    public partial class ScreenshotEvent : EventBase
     {
-        internal ScreenshotEvent() { }
+        internal ScreenshotEvent()
+        {
+        }
 
-        public static ScreenshotEvent FromJson(string json) => JsonConvert.DeserializeObject<ScreenshotEvent>(json);
+        [JsonProperty("Filename")] public string Filename { get; private set; }
 
+        [JsonProperty("Width")] public long Width { get; private set; }
 
-        [JsonProperty("Filename")]
-        public string Filename { get; internal set; }
+        [JsonProperty("Height")] public long Height { get; private set; }
 
-        [JsonProperty("Width")]
-        public long Width { get; internal set; }
+        [JsonProperty("System")] public string System { get; private set; }
 
-        [JsonProperty("Height")]
-        public long Height { get; internal set; }
+        [JsonProperty("Body")] public string Body { get; private set; }
+    }
 
-        [JsonProperty("System")]
-        public string System { get; internal set; }
+    public partial class ScreenshotEvent
+    {
+        public static ScreenshotEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ScreenshotEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("Body")]
-        public string Body { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<ScreenshotEvent> ScreenshotEvent;
 
-        [JsonProperty("Latitude")]
-        public float Latitude { get; internal set; }
-
-        [JsonProperty("Longitude")]
-        public float Longitude { get; internal set; }
-
-        [JsonProperty("Heading")]
-        public long Heading { get; internal set; }
-
-        [JsonProperty("Altitude")]
-        public float Altitude { get; internal set; }
-
-        
+        internal void InvokeScreenshotEvent(ScreenshotEvent arg)
+        {
+            ScreenshotEvent?.Invoke(this, arg);
+        }
     }
 }

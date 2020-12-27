@@ -1,33 +1,47 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class ShipyardBuyEvent : EventBase
+    public partial class ShipyardBuyEvent : EventBase
     {
-        internal ShipyardBuyEvent() { }
+        internal ShipyardBuyEvent()
+        {
+        }
 
-        public static ShipyardBuyEvent FromJson(string json) => JsonConvert.DeserializeObject<ShipyardBuyEvent>(json);
+        [JsonProperty("ShipType")] public string ShipType { get; private set; }
 
+        [JsonProperty("ShipType_Localised")] public string ShipTypeLocalised { get; private set; }
 
-        [JsonProperty("ShipType")]
-        public string ShipType { get; internal set; }
+        [JsonProperty("ShipPrice")] public long ShipPrice { get; private set; }
 
-        [JsonProperty("ShipType_Localised")]
-        public string ShipTypeLocalised { get; internal set; }
+        [JsonProperty("StoreOldShip")] public string StoreOldShip { get; private set; }
 
-        [JsonProperty("ShipPrice")]
-        public long ShipPrice { get; internal set; }
+        [JsonProperty("StoreShipID")] public long StoreShipId { get; private set; }
 
-        [JsonProperty("StoreOldShip")]
-        public string StoreOldShip { get; internal set; }
+        [JsonProperty("MarketID")] public long MarketId { get; private set; }
+    }
 
-        [JsonProperty("StoreShipID")]
-        public long StoreShipId { get; internal set; }
+    public partial class ShipyardBuyEvent
+    {
+        public static ShipyardBuyEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ShipyardBuyEvent>(json);
+        }
+    }
+}
 
-        [JsonProperty("MarketID")]
-        public long MarketId { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<ShipyardBuyEvent> ShipyardBuyEvent;
 
-        
+        internal void InvokeShipyardBuyEvent(ShipyardBuyEvent arg)
+        {
+            ShipyardBuyEvent?.Invoke(this, arg);
+        }
     }
 }

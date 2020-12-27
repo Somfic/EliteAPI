@@ -1,39 +1,43 @@
+using System;
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    public class AfmuRepairsEvent : EventBase
+    public partial class AfmuRepairsEvent : EventBase
     {
-        internal AfmuRepairsEvent() { }
+        internal AfmuRepairsEvent()
+        {
+        }
 
-        public static AfmuRepairsEvent FromJson(string json) => JsonConvert.DeserializeObject<AfmuRepairsEvent>(json);
+        [JsonProperty("Module")] public string Module { get; private set; }
 
+        [JsonProperty("Module_Localised")] public string ModuleLocalised { get; private set; }
 
-        /// <summary>
-        /// The name of the module
-        /// </summary>
-        [JsonProperty("Module")]
-        public string Module { get; internal set; }
+        [JsonProperty("FullyRepaired")] public bool FullyRepaired { get; private set; }
 
-        /// <summary>
-        /// The local name of the module
-        /// </summary>
-        [JsonProperty("Module_Localised")]
-        public string ModuleLocalised { get; internal set; }
+        [JsonProperty("Health")] public double Health { get; private set; }
+    }
 
-        /// <summary>
-        /// Whether modules are now fully repaired
-        /// </summary>
-        [JsonProperty("FullyRepaired")]
-        public bool FullyRepaired { get; internal set; }
+    public partial class AfmuRepairsEvent
+    {
+        public static AfmuRepairsEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<AfmuRepairsEvent>(json);
+        }
+    }
+}
 
-        /// <summary>
-        /// Value between 0 and 1.
-        /// </summary>
-        [JsonProperty("Health")]
-        public float Health { get; internal set; }
+namespace EliteAPI.Event.Handler
+{
+    public partial class EventHandler
+    {
+        public event EventHandler<AfmuRepairsEvent> AfmuRepairsEvent;
 
-
+        internal void InvokeAfmuRepairsEvent(AfmuRepairsEvent arg)
+        {
+            AfmuRepairsEvent?.Invoke(this, arg);
+        }
     }
 }

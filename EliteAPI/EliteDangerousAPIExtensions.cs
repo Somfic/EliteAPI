@@ -1,4 +1,7 @@
-﻿using EliteAPI.Abstractions;
+﻿using System;
+using System.Collections.Generic;
+using EliteAPI.Abstractions;
+using EliteAPI.Event.Module;
 using EliteAPI.Event.Processor;
 using EliteAPI.Event.Processor.Abstractions;
 using EliteAPI.Event.Provider;
@@ -9,17 +12,13 @@ using EliteAPI.Journal.Processor;
 using EliteAPI.Journal.Processor.Abstractions;
 using EliteAPI.Journal.Provider;
 using EliteAPI.Journal.Provider.Abstractions;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using EliteAPI.Event.Attributes;
-using EliteAPI.Event.Module;
 using EliteAPI.Status.Models;
 using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Processor;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Provider;
 using EliteAPI.Status.Provider.Abstractions;
+using Microsoft.Extensions.DependencyInjection;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
@@ -27,9 +26,10 @@ namespace EliteAPI
     public static class EliteDangerousAPIExtensions
     {
         /// <summary>
-        /// Adds all EliteAPI's necessary services to the <seealso cref="IServiceCollection"/>
+        ///     Adds all EliteAPI's necessary services to the <seealso cref="IServiceCollection" />
         /// </summary>
-        public static IServiceCollection AddEliteAPI(this IServiceCollection services, Action<EliteDangerousAPIConfiguration> configuration = null)
+        public static IServiceCollection AddEliteAPI(this IServiceCollection services,
+            Action<EliteDangerousAPIConfiguration> configuration = null)
         {
             services.AddSingleton<IEliteDangerousAPI, EliteDangerousAPI>();
 
@@ -45,7 +45,7 @@ namespace EliteAPI
 
             services.AddSingleton<EventHandler>();
 
-            EliteDangerousAPIConfiguration configInstance = new EliteDangerousAPIConfiguration();
+            var configInstance = new EliteDangerousAPIConfiguration();
             configuration?.Invoke(configInstance);
             configInstance.AddServices(services);
 
@@ -61,7 +61,7 @@ namespace EliteAPI
         internal EliteDangerousAPIConfiguration()
         {
             eventModuleImplementations = new List<Type>();
-            _eventProcessors = new List<Type>()
+            _eventProcessors = new List<Type>
             {
                 typeof(EventsEventProcessor),
                 typeof(AttributeEventProcessor),
@@ -70,7 +70,7 @@ namespace EliteAPI
         }
 
         /// <summary>
-        /// Add an event module to EliteAPI
+        ///     Add an event module to EliteAPI
         /// </summary>
         /// <typeparam name="T">The event module to be added</typeparam>
         public void AddEventModule<T>() where T : EliteDangerousEventModule
@@ -79,7 +79,7 @@ namespace EliteAPI
         }
 
         /// <summary>
-        /// Remove the default event processors
+        ///     Remove the default event processors
         /// </summary>
         public void ClearProcessors()
         {
@@ -87,7 +87,7 @@ namespace EliteAPI
         }
 
         /// <summary>
-        /// Adds a event processor
+        ///     Adds an event processor
         /// </summary>
         /// <typeparam name="T">The event processor to be used</typeparam>
         public void AddProcessor<T>() where T : IEventProcessor
@@ -97,15 +97,10 @@ namespace EliteAPI
 
         internal void AddServices(IServiceCollection services)
         {
-            foreach (Type implementation in eventModuleImplementations)
-            {
-                services.AddSingleton(implementation);
-            }
+            foreach (var implementation in eventModuleImplementations) services.AddSingleton(implementation);
 
-            foreach (Type implementation in _eventProcessors)
-            {
+            foreach (var implementation in _eventProcessors)
                 services.AddSingleton(typeof(IEventProcessor), implementation);
-            }
         }
     }
 }

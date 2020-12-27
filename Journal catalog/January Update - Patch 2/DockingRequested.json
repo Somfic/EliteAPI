@@ -1,0 +1,9 @@
+{ "timestamp":"2020-05-14T20:09:13Z", "event":"DockingRequested", "MarketID":128158712, "StationName":"Stevenson Relay", "StationType":"Coriolis" }
+{ "timestamp":"2020-05-14T20:31:38Z", "event":"DockingRequested", "MarketID":3228861696, "StationName":"Spring Gateway", "StationType":"Coriolis" }
+{ "timestamp":"2020-05-14T20:39:13Z", "event":"DockingRequested", "MarketID":128158712, "StationName":"Stevenson Relay", "StationType":"Coriolis" }
+{ "timestamp":"2020-05-14T21:00:25Z", "event":"DockingRequested", "MarketID":128158712, "StationName":"Stevenson Relay", "StationType":"Coriolis" }
+{ "timestamp":"2020-05-14T21:09:52Z", "event":"DockingRequested", "MarketID":3228861696, "StationName":"Spring Gateway", "StationType":"Coriolis" }
+{ "timestamp":"2020-05-15T21:58:27Z", "event":"DockingRequested", "MarketID":3228861696, "StationName":"Spring Gateway", "StationType":"Coriolis" }
+{ "timestamp":"2020-05-15T22:13:42Z", "event":"DockingRequested", "MarketID":3228861696, "StationName":"Spring Gateway", "StationType":"Coriolis" }
+{ "timestamp":"2020-05-22T22:19:20Z", "event":"DockingRequested", "MarketID":128016896, "StationName":"Abraham Lincoln", "StationType":"Orbis" }
+{ "timestamp":"2020-05-22T22:40:28Z", "event":"DockingRequested", "MarketID":128016896, "StationName":"Abraham Lincoln", "StationType":"Orbis" }

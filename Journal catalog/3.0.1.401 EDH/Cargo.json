@@ -1,0 +1,10 @@
+{ "timestamp":"2018-02-28T18:49:16Z", "event":"Cargo", "Inventory":[ { "Name":"biowaste", "Count":4, "Stolen":0 } ] }
+{ "timestamp":"2018-02-28T18:52:35Z", "event":"Cargo", "Inventory":[  ] }
+{ "timestamp":"2018-02-28T19:29:28Z", "event":"Cargo", "Inventory":[ { "Name":"basicmedicines", "Name_Localised":"Basic Medicines", "Count":4, "Stolen":0 } ] }
+{ "timestamp":"2018-02-28T20:28:15Z", "event":"Cargo", "Inventory":[ { "Name":"liquor", "Count":3, "Stolen":0 } ] }
+{ "timestamp":"2018-03-01T01:15:24Z", "event":"Cargo", "Inventory":[ { "Name":"aluminium", "Count":6, "Stolen":0 } ] }
+{ "timestamp":"2018-03-01T02:23:27Z", "event":"Cargo", "Inventory":[  ] }
+{ "timestamp":"2018-03-01T03:12:42Z", "event":"Cargo", "Inventory":[  ] }
+{ "timestamp":"2018-03-01T18:45:14Z", "event":"Cargo", "Inventory":[  ] }
+{ "timestamp":"2018-03-01T20:12:43Z", "event":"Cargo", "Inventory":[  ] }
+{ "timestamp":"2018-03-05T02:41:35Z", "event":"Cargo", "Inventory":[  ] }

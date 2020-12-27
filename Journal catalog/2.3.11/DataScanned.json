@@ -1,0 +1,11 @@
+{ "timestamp":"2017-07-16T17:22:49Z", "event":"DataScanned", "Type":"TouristBeacon" }
+{ "timestamp":"2017-07-16T17:36:45Z", "event":"DataScanned", "Type":"TouristBeacon" }
+{ "timestamp":"2017-07-17T11:15:13Z", "event":"DataScanned", "Type":"TouristBeacon" }
+{ "timestamp":"2017-09-02T16:09:10Z", "event":"DataScanned", "Type":"TouristBeacon" }
+{ "timestamp":"2017-09-08T19:41:59Z", "event":"DataScanned", "Type":"TouristBeacon" }
+{ "timestamp":"2017-09-16T13:59:21Z", "event":"DataScanned", "Type":"ListeningPost" }
+{ "timestamp":"2017-09-16T14:19:17Z", "event":"DataScanned", "Type":"ShipUplink" }
+{ "timestamp":"2017-09-16T14:19:40Z", "event":"DataScanned", "Type":"ShipUplink" }
+{ "timestamp":"2017-09-16T14:19:57Z", "event":"DataScanned", "Type":"ShipUplink" }
+{ "timestamp":"2017-09-16T14:20:29Z", "event":"DataScanned", "Type":"ShipUplink" }
+{ "timestamp":"2017-09-16T14:21:35Z", "event":"DataScanned", "Type":"ShipUplink" }

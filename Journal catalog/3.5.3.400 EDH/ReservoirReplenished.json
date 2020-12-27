@@ -1,0 +1,8 @@
+{ "timestamp":"2019-10-27T01:40:02Z", "event":"ReservoirReplenished", "FuelMain":31.370001, "FuelReservoir":0.630000 }
+{ "timestamp":"2019-11-01T22:56:37Z", "event":"ReservoirReplenished", "FuelMain":13.957783, "FuelReservoir":0.770000 }
+{ "timestamp":"2019-11-01T23:27:11Z", "event":"ReservoirReplenished", "FuelMain":11.925213, "FuelReservoir":0.770000 }
+{ "timestamp":"2019-11-18T02:14:32Z", "event":"ReservoirReplenished", "FuelMain":12.606596, "FuelReservoir":0.770000 }
+{ "timestamp":"2019-12-07T20:51:36Z", "event":"ReservoirReplenished", "FuelMain":13.926785, "FuelReservoir":0.770000 }
+{ "timestamp":"2019-12-11T03:07:26Z", "event":"ReservoirReplenished", "FuelMain":14.072084, "FuelReservoir":0.770000 }
+{ "timestamp":"2019-12-11T03:31:51Z", "event":"ReservoirReplenished", "FuelMain":13.302084, "FuelReservoir":0.770000 }
+{ "timestamp":"2020-01-03T23:13:57Z", "event":"ReservoirReplenished", "FuelMain":14.067537, "FuelReservoir":0.770000 }

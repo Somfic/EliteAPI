@@ -1,0 +1,9 @@
+{ "timestamp":"2017-06-27T19:45:37Z", "event":"DataScanned", "Type":"Unknown_Uplink" }
+{ "timestamp":"2017-06-27T19:47:11Z", "event":"DataScanned", "Type":"Unknown_Uplink" }
+{ "timestamp":"2017-06-27T19:47:33Z", "event":"DataScanned", "Type":"Unknown_Uplink" }
+{ "timestamp":"2017-06-27T19:48:15Z", "event":"DataScanned", "Type":"Unknown_Uplink" }
+{ "timestamp":"2017-06-27T19:53:07Z", "event":"DataScanned", "Type":"Unknown_Uplink" }
+{ "timestamp":"2017-06-28T13:18:09Z", "event":"DataScanned", "Type":"Unknown_Uplink" }
+{ "timestamp":"2017-06-28T13:19:50Z", "event":"DataScanned", "Type":"Unknown_Uplink" }
+{ "timestamp":"2017-06-28T13:22:18Z", "event":"DataScanned", "Type":"Unknown_Uplink" }
+{ "timestamp":"2017-07-08T14:20:19Z", "event":"DataScanned", "Type":"TouristBeacon" }

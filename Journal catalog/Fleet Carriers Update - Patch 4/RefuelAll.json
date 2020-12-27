@@ -1,0 +1,4 @@
+{ "timestamp":"2020-09-01T09:15:03Z", "event":"RefuelAll", "Cost":11, "Amount":0.207544 }
+{ "timestamp":"2020-09-01T09:25:04Z", "event":"RefuelAll", "Cost":10, "Amount":0.199931 }
+{ "timestamp":"2020-09-01T11:39:19Z", "event":"RefuelAll", "Cost":10, "Amount":0.075485 }
+{ "timestamp":"2020-09-02T12:38:23Z", "event":"RefuelAll", "Cost":12, "Amount":0.231439 }

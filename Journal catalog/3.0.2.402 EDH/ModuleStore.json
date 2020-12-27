@@ -1,0 +1,2 @@
+{ "timestamp":"2018-03-07T21:42:21Z", "event":"ModuleStore", "MarketID":3542148608, "Slot":"MediumHardpoint2", "StoredItem":"$hpt_beamlaser_fixed_small_name;", "StoredItem_Localised":"Beam Laser", "Ship":"cobramkiii", "ShipID":0, "Hot":false }
+{ "timestamp":"2018-03-07T21:42:31Z", "event":"ModuleStore", "MarketID":3542148608, "Slot":"MediumHardpoint1", "StoredItem":"$hpt_beamlaser_fixed_small_name;", "StoredItem_Localised":"Beam Laser", "Ship":"cobramkiii", "ShipID":0, "Hot":false }

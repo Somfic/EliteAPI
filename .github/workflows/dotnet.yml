@@ -5,6 +5,7 @@ on: [push, pull_request]
 jobs:
   build:
     name: Build
+    needs: [sync-version]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -28,6 +29,7 @@ jobs:
 
   test:
     name: Unit test
+    needs: [sync-version]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -49,35 +51,40 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
 
+      - name: Test
+        run: dotnet test --no-restore --no-build --configuration Release
+
+  comment-pull-request:
+    name: Comment on pull request
+    needs: [build, test]
+    strategy:
+      matrix:
+        dotnet-version: [5.0.x]
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup .NET ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+
       - name: Get pull request number
         id: PRNUMBER
-        if: ${{ github.event_name == 'pull_request' }}
         uses: kkak10/pr-number-action@v1.3
 
       - name: Set test title
         id: TEST
         run: |
-          if ${{ github.event_name == 'pull_request' }}
-          then
-            echo "::set-output name=title::Test run for Pull Request #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})"
-            echo "::set-output name=file_name::TestReport.${{steps.PRNUMBER.outputs.pr}}.${{github.run_number}}.md"
-          else
-            echo "::set-output name=title::Test run ${{github.run_number}}"
-            echo "::set-output name=file_name::TestReport.${{github.run_number}}.md"
-          fi
+          echo "::set-output name=title::Test run for pull request #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})"
+          echo "::set-output name=file_name::TestReport.${{steps.PRNUMBER.outputs.pr}}.${{github.run_number}}.md"
 
       - name: Test
         run: dotnet test --no-restore --no-build --configuration Release --logger:"liquid.md;LogFileName=${{github.workspace}}/${{steps.TEST.outputs.file_name}};Title=${{steps.TEST.outputs.title}};"
 
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v2
-        if: ${{always()}}
-        with:
-          name: "Build (.NET v${{ matrix.dotnet-version }} on ${{ matrix.os }})"
-          path: ${{github.workspace}}/${{steps.TEST.outputs.file_name}}
-
       - name: Comment on Pull Request
-        if: ${{ github.event_name == 'pull_request' }} && ${{ matrix.os == 'ubuntu-latest'}}
         uses: machine-learning-apps/pr-comment@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -85,7 +92,6 @@ jobs:
           path: ${{steps.TEST.outputs.file_name}}
 
   get-version:
-    needs: [build, test]
     name: Get version
     runs-on: ubuntu-latest
     steps:

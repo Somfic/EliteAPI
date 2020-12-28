@@ -12,7 +12,6 @@ jobs:
         uses: docker://decathlon/release-notes-generator-action:2.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USE_MILESTONE_TITLE: "true"
 
       - name: Read release notes
         id: notes

@@ -1,60 +1,89 @@
 name: Testing
 
-on: [ push, pull_request ]
+on: [push, pull_request]
 
 jobs:
-  test:
-    name: Testing (dotnet v${{ matrix.dotnet-version }})
-    runs-on: ubuntu-latest
+  build:
+    name: Build
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         dotnet-version: [5.0.x]
-      
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
+
       - name: Setup .NET ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
-      
+
       - name: Install dependencies
         run: dotnet restore
-      
+
       - name: Build
         run: dotnet build --configuration Release --no-restore
-       
+
+  test:
+    name: Unit test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        dotnet-version: [5.0.x]
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup .NET ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test --no-restore --no-build --configuration Release
+
+  comment-pull-request:
+    name: Create test report (pull requests)
+    needs: [build, test]
+    strategy:
+      matrix:
+        dotnet-version: [5.0.x]
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup .NET ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+
       - name: Get pull request number
         id: PRNUMBER
-        if: ${{ github.event_name == 'pull_request' }}
         uses: kkak10/pr-number-action@v1.3
-      
+
       - name: Set test title
         id: TEST
-        run: | 
-            if ${{ github.event_name == 'pull_request' }}
-            then
-              echo "::set-output name=title::Test run for Pull Request #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})"
-              echo "::set-output name=file_name::TestReport.${{steps.PRNUMBER.outputs.pr}}.${{github.run_number}}.md"
-            else
-              echo "::set-output name=title::Test run ${{github.run_number}}"
-              echo "::set-output name=file_name::TestReport.${{github.run_number}}.md"
-            fi
-      
-      - name: Test 
+        run: |
+          echo "::set-output name=title::Test run for pull request #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})"
+          echo "::set-output name=file_name::TestReport.${{steps.PRNUMBER.outputs.pr}}.${{github.run_number}}.md"
+
+      - name: Test
         run: dotnet test --no-restore --no-build --configuration Release --logger:"liquid.md;LogFileName=${{github.workspace}}/${{steps.TEST.outputs.file_name}};Title=${{steps.TEST.outputs.title}};"
 
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v2
-        if: ${{always()}}
-        with:
-         name: 'Build (dotnet v${{ matrix.dotnet-version }})'
-         path: ${{github.workspace}}/${{steps.TEST.outputs.file_name}}
-      
       - name: Comment on Pull Request
         uses: machine-learning-apps/pr-comment@master
-        if: ${{ github.event_name == 'pull_request' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

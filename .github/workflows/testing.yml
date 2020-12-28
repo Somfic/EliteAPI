@@ -102,10 +102,12 @@ jobs:
         with:
           versionSpec: "5.x"
 
-      - name: Fetch tags and master for GitVersion
-        run: |
-          git fetch --tags --unshallow
-          git branch --create-reflog master origin/master
+      - name: Fetch tags for GitVersion
+        run: git fetch --tags
+
+      - name: Fetch master for GitVersion
+        if: github.ref != 'refs/heads/master'
+        run: git branch --create-reflog master origin/master
           
       - name: Determine version
         id: gitversion
@@ -149,6 +151,7 @@ jobs:
         run: |
           content=`cat version.json`
           echo "::set-output name=versioning::$content"
+          
       - name: Update project version
         uses: roryprimrose/set-vs-sdk-project-version@v1
         with:

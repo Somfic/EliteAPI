@@ -100,13 +100,16 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: master
+      
+      - name: Clean
+        run: dotnet clean
 
       - name: Build
-        run: |
-          dotnet clean
-          dotnet publish
-        working-directory: EliteAPI
-
+        run: dotnet build --configuration Release
+        
+      - name: Pack
+        run: dotnet pack
+        
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         with:

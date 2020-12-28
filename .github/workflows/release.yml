@@ -5,7 +5,7 @@ name: "Publish & Release"
 
 jobs:
   get-version:
-    name: Get version
+    name: Determine new version
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -46,11 +46,13 @@ jobs:
 
   sync-version:
     needs: get-version
-    name: Sync version
+    name: Apply new version
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ADMIN_TOKEN }}
 
       - name: Download version artifact
         uses: actions/download-artifact@v2
@@ -74,11 +76,12 @@ jobs:
       - name: Apply changes
         uses: EndBug/add-and-commit@v6.2.0
         with:
-          author_name: Somfic
-          author_email: somfic@gmail.com
-          message: "Automated versioning"
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "Applied automated versioning"
           branch: master
-
+          token: ${{ secrets.ADMIN_TOKEN }}
+          
   setup-dotnet:
     name: Setup .NET
     runs-on: ubuntu-latest
@@ -126,11 +129,17 @@ jobs:
         with:
           filename: release.zip
           path: "./netstandard2.0/publish"
+      
+      - name: Get release
+        id: get_release
+        uses: bruceadams/get-release@v1.2.2
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
         with:
-          upload_url: ${{ github.event.release.upload_url }}
+          upload_url: ${{ steps.get_release.outputs.upload_url }}
           asset_path: "release.zip"
           asset_name: "EliteAPI"
           asset_content_type: application/zip

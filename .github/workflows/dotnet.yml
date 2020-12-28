@@ -5,7 +5,6 @@ on: [push, pull_request]
 jobs:
   build:
     name: Build
-    needs: [sync-version]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -29,7 +28,6 @@ jobs:
 
   test:
     name: Unit test
-    needs: [sync-version]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -92,6 +90,7 @@ jobs:
           path: ${{steps.TEST.outputs.file_name}}
 
   get-version:
+    needs: [build, test]
     name: Get version
     runs-on: ubuntu-latest
     steps:

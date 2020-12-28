@@ -2,22 +2,8 @@ name: Update version
 on: push
 
 jobs:
-  setup-dotnet:
-    name: Setup .NET
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        dotnet-version: ["5.0.x"]
-
-    steps:
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: ${{matrix.dotnet-version}}
-
   update-version:
     name: Update version
-    needs: [setup-dotnet]
     runs-on: ubuntu-latest
     strategy:
       matrix:

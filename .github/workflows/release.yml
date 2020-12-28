@@ -16,10 +16,12 @@ jobs:
         with:
           versionSpec: "5.x"
 
-      - name: Fetch tags and master for GitVersion
-        run: |
-          git fetch --tags --unshallow
-          git branch --create-reflog master origin/master
+      - name: Fetch tags for GitVersion
+        run: git fetch --tags
+
+      - name: Fetch master for GitVersion
+        if: github.ref != 'refs/heads/master'
+        run: git branch --create-reflog master origin/master
           
       - name: Determine version
         id: gitversion

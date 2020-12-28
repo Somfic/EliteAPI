@@ -16,10 +16,12 @@ jobs:
         with:
           versionSpec: "5.x"
 
-      - name: Fetch tags and master for GitVersion
-        run: |
-          git fetch --tags --unshallow
-          git branch --create-reflog master origin/master
+      - name: Fetch tags for GitVersion
+        run: git fetch --tags
+
+      - name: Fetch master for GitVersion
+        if: github.ref != 'refs/heads/master'
+        run: git branch --create-reflog master origin/master
           
       - name: Determine version
         id: gitversion
@@ -100,18 +102,24 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: master
+      
+      - name: Clean
+        run: dotnet clean
+      
+      - name: Restore
+        run: dotnet restore
 
       - name: Build
-        run: |
-          dotnet clean
-          dotnet publish
-        working-directory: EliteAPI
-
+        run: dotnet build --configuration Release
+        
+      - name: Pack
+        run: dotnet pack --configuration Release
+        
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         with:
           name: Build
-          path: "/home/runner/work/EliteAPI/EliteAPI/EliteAPI/bin/Debug"
+          path: "/home/runner/work/EliteAPI/EliteAPI/EliteAPI/bin/Release"
           if-no-files-found: error
 
   add-to-release:

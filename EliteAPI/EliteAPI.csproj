@@ -1,51 +1,47 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
-    <FileVersion>3.0.0.0</FileVersion>
-    <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
-    <PackageIconUrl></PackageIconUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic</PackageTags>
-    <NeutralLanguage>en</NeutralLanguage>
-    <Description>A powerful event based .NET API for Elite: Dangerous</Description>
-    <Copyright>© Somfic 2020</Copyright>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.0.0-alpha8</Version>
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <PackageIcon>logo_gradient_small.jpg</PackageIcon>
-    <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
-    <LangVersion>9</LangVersion>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Authors>Somfic</Authors>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>EliteAPI.xml</DocumentationFile>
-    <NoWarn></NoWarn>
-    <Optimize>true</Optimize>
-  </PropertyGroup>  
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-  </ItemGroup>  
-
-  <ItemGroup>
-    <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="logo_gradient_small.jpg">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <FileVersion>3.0.0</FileVersion>
+        <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
+        <PackageIconUrl/>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic</PackageTags>
+        <NeutralLanguage>en</NeutralLanguage>
+        <Description>A powerful event based .NET API for Elite: Dangerous</Description>
+        <Copyright>© Somfic 2020</Copyright>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <Version>3.0.0-alpha0010</Version>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <PackageIcon>logo_gradient_small.jpg</PackageIcon>
+        <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
+        <LangVersion>9</LangVersion>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <Authors>Somfic</Authors>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <InformationalVersion>3.0.0-alpha.10+Branch.tags-v3.0.0-alpha10.Sha.2fb8f8a9e2a1bf339e36ae7f5f9f66faab1e7ff1</InformationalVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DocumentationFile>EliteAPI.xml</DocumentationFile>
+        <NoWarn/>
+        <Optimize>true</Optimize>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CSharp" Version="4.7.0"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0"/>
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="..\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath/>
+        </None>
+        <None Include="logo_gradient_small.jpg">
+            <Pack>True</Pack>
+            <PackagePath/>
+        </None>
+    </ItemGroup>
 </Project>

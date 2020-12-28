@@ -5,7 +5,7 @@
         <Version>3.0.0-alpha0010</Version>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <FileVersion>3.0.0</FileVersion>
-        <InformationalVersion>3.0.0-alpha.10+Branch.tags-v3.0.0-alpha10.Sha.08df729508ef984173332ed9572dafafdc1f70af</InformationalVersion>
+        <InformationalVersion>3.0.0-alpha.10+Branch.tags-v3.0.0-alpha10.Sha.2fb8f8a9e2a1bf339e36ae7f5f9f66faab1e7ff1</InformationalVersion>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="LiquidTestReports.Markdown" Version="1.0.9"/>

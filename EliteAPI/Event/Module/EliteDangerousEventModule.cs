@@ -4,13 +4,23 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace EliteAPI.Event.Module
 {
+    /// <summary>
+    /// Wrapper for event modules
+    /// </summary>
     public abstract class EliteDangerousEventModule
     {
+        /// <summary>
+        /// The Elite Dangerous API
+        /// </summary>
         protected readonly IEliteDangerousAPI EliteAPI;
 
-        protected EliteDangerousEventModule(IServiceProvider services)
+        /// <summary>
+        /// Wrapper for event modules
+        /// </summary>
+        /// <param name="api">The EliteDangerousAPI</param>
+        protected EliteDangerousEventModule(IEliteDangerousAPI api)
         {
-            EliteAPI = services.GetRequiredService<IEliteDangerousAPI>();
+            EliteAPI = api;
         }
     }
 }

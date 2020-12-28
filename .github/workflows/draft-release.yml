@@ -1,0 +1,33 @@
+name: Draft release
+on:
+  milestone:
+    types: [closed]
+
+jobs:
+  draft-release:
+    name: Draft new release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create release notes
+        uses: docker://decathlon/release-notes-generator-action:2.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USE_MILESTONE_TITLE: "true"
+
+      - name: Read release notes
+        id: notes
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: release_file.md
+
+      - name: Draft new release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: ${{steps.notes.outputs.content}}
+          draft: true
+          prerelease: false

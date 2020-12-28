@@ -51,6 +51,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ADMIN_TOKEN }}
 
       - name: Download version artifact
         uses: actions/download-artifact@v2
@@ -74,11 +76,12 @@ jobs:
       - name: Apply changes
         uses: EndBug/add-and-commit@v6.2.0
         with:
-          author_name: Somfic
-          author_email: somfic@gmail.com
-          message: "Automated versioning"
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "Applied automated versioning"
           branch: master
-
+          token: ${{ secrets.ADMIN_TOKEN }}
+          
   setup-dotnet:
     name: Setup .NET
     runs-on: ubuntu-latest

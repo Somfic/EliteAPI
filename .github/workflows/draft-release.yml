@@ -13,6 +13,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Upload release notes artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: release-notes
+          path: release_file.md
+
       - name: Read release notes
         id: notes
         uses: juliangruber/read-file-action@v1

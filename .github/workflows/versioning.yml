@@ -30,6 +30,9 @@ jobs:
       - name: Setup GitVersion
         run: dotnet tool install --global GitVersion.Tool --version ${{matrix.gitversion-version}}
 
+      - name: Fetch unshallow for GitVersion
+        run: git fetch --unshallow
+
       - name: Fetch tags for GitVersion
         run: git fetch --tags
 

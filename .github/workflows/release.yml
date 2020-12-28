@@ -103,18 +103,21 @@ jobs:
       
       - name: Clean
         run: dotnet clean
+      
+      - name: Restore
+        run: dotnet restore
 
       - name: Build
         run: dotnet build --configuration Release
         
       - name: Pack
-        run: dotnet pack
+        run: dotnet pack --configuration Release
         
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         with:
           name: Build
-          path: "/home/runner/work/EliteAPI/EliteAPI/EliteAPI/bin/Debug"
+          path: "/home/runner/work/EliteAPI/EliteAPI/EliteAPI/bin/Release"
           if-no-files-found: error
 
   add-to-release:

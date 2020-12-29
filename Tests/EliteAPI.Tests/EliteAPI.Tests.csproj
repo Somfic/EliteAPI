@@ -2,10 +2,10 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <Version>3.0.0</Version>
+    <Version>3.0.0-somfic-codeql0001</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0+825.Branch.master.Sha.14f0103fdcebead71074c863a0bc6c939eb60d5d</InformationalVersion>
+    <InformationalVersion>3.0.0-Somfic-codeql.1+829.Branch.Somfic-codeql.Sha.8492a2752fda0a29309f226f0a507e1d472abcdc</InformationalVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="LiquidTestReports.Markdown" Version="1.0.9" />

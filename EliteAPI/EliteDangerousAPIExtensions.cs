@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using EliteAPI.Abstractions;
-using EliteAPI.Event.Module;
-using EliteAPI.Event.Processor;
-using EliteAPI.Event.Processor.Abstractions;
+using EliteAPI.Configuration;
 using EliteAPI.Event.Provider;
 using EliteAPI.Event.Provider.Abstractions;
 using EliteAPI.Journal.Directory;
@@ -29,8 +26,12 @@ namespace EliteAPI
         ///     Adds all EliteAPI's necessary services to the <seealso cref="IServiceCollection" />
         /// </summary>
         public static IServiceCollection AddEliteAPI(this IServiceCollection services,
-            Action<EliteDangerousAPIConfiguration> configuration = null)
+            Action<EliteDangerousApiConfigurationBuilder> configuration = null)
         {
+            var configInstance = new EliteDangerousApiConfigurationBuilder();
+            configuration?.Invoke(configInstance);
+            configInstance.AddServices(services);
+
             services.AddSingleton<IEliteDangerousAPI, EliteDangerousAPI>();
 
             services.AddSingleton<IEventProvider, EventProvider>();
@@ -45,62 +46,7 @@ namespace EliteAPI
 
             services.AddSingleton<EventHandler>();
 
-            var configInstance = new EliteDangerousAPIConfiguration();
-            configuration?.Invoke(configInstance);
-            configInstance.AddServices(services);
-
             return services;
-        }
-    }
-
-    public class EliteDangerousAPIConfiguration
-    {
-        private readonly IList<Type> eventModuleImplementations;
-        private IList<Type> _eventProcessors;
-
-        internal EliteDangerousAPIConfiguration()
-        {
-            eventModuleImplementations = new List<Type>();
-            _eventProcessors = new List<Type>
-            {
-                typeof(EventsEventProcessor),
-                typeof(AttributeEventProcessor),
-                typeof(AllEventProcessor)
-            };
-        }
-
-        /// <summary>
-        ///     Add an event module to EliteAPI
-        /// </summary>
-        /// <typeparam name="T">The event module to be added</typeparam>
-        public void AddEventModule<T>() where T : EliteDangerousEventModule
-        {
-            eventModuleImplementations.Add(typeof(T));
-        }
-
-        /// <summary>
-        ///     Remove the default event processors
-        /// </summary>
-        public void ClearProcessors()
-        {
-            _eventProcessors = new List<Type>();
-        }
-
-        /// <summary>
-        ///     Adds an event processor
-        /// </summary>
-        /// <typeparam name="T">The event processor to be used</typeparam>
-        public void AddProcessor<T>() where T : IEventProcessor
-        {
-            _eventProcessors.Add(typeof(T));
-        }
-
-        internal void AddServices(IServiceCollection services)
-        {
-            foreach (var implementation in eventModuleImplementations) services.AddSingleton(implementation);
-
-            foreach (var implementation in _eventProcessors)
-                services.AddSingleton(typeof(IEventProcessor), implementation);
         }
     }
 }

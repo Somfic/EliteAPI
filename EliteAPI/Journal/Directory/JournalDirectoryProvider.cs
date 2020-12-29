@@ -64,7 +64,7 @@ namespace EliteAPI.Journal.Directory
 
             if (directory.GetFiles("Journal.*.log").Length == 0)
             {
-                var exception = new JournalNotFoundException("No journal files could be found in the directory");
+                var exception = new JournalFileNotFoundException("No journal files could be found in the directory");
                 exception.Data.Add("Path", directory.FullName);
                 return exception;
             }

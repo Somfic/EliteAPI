@@ -34,7 +34,7 @@ namespace EliteAPI.Journal.Provider
             }
             catch (Exception ex)
             {
-                Exception exception = new JournalNotFoundException("Could not find journal file", ex);
+                Exception exception = new JournalFileNotFoundException("Could not find journal file", ex);
                 exception.Data.Add("Path", journalDirectory.FullName);
                 _log.LogTrace(exception, "Could not get active journal file from journal directory");
                 throw exception;

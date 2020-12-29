@@ -54,7 +54,7 @@ namespace EliteAPI.Journal.Directory
 
             if (!directory.Exists)
             {
-                var exception = new DirectoryNotFoundException("The journal directory does not exist");
+                var exception = new JournalDirectoryNotFoundException("The journal directory does not exist");
                 exception.Data.Add("Path", directory.FullName);
                 return exception;
             }

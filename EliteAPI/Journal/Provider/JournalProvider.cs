@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using EliteAPI.Exceptions;
 using EliteAPI.Journal.Provider.Abstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,7 +34,8 @@ namespace EliteAPI.Journal.Provider
             }
             catch (Exception ex)
             {
-                Exception exception = new FileNotFoundException("Could not find journal file", ex);
+                Exception exception = new JournalNotFoundException("Could not find journal file", ex);
+                exception.Data.Add("Path", journalDirectory.FullName);
                 _log.LogTrace(exception, "Could not get active journal file from journal directory");
                 throw exception;
             }

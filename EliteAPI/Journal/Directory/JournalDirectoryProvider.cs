@@ -1,12 +1,15 @@
-﻿using System;
-using System.IO;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
+﻿using EliteAPI.Exceptions;
 using EliteAPI.Journal.Directory.Abstractions;
 using EliteAPI.Journal.Provider;
+
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+
+using System;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace EliteAPI.Journal.Directory
 {
@@ -61,8 +64,7 @@ namespace EliteAPI.Journal.Directory
 
             if (directory.GetFiles("Journal.*.log").Length == 0)
             {
-                var exception = new FileNotFoundException("No journal files could be found in the directory",
-                    Path.Combine(directory.FullName, "Journal.*.json"));
+                var exception = new JournalNotFoundException("No journal files could be found in the directory");
                 exception.Data.Add("Path", directory.FullName);
                 return exception;
             }
@@ -74,8 +76,7 @@ namespace EliteAPI.Journal.Directory
         {
             try
             {
-                return new DirectoryInfo(
-                    Path.Combine(GetSavedGamesDirectory(), "Frontier Developments/Elite Dangerous"));
+                return new DirectoryInfo(Path.Combine(GetSavedGamesDirectory(), "Frontier Developments/Elite Dangerous"));
             }
             catch (Exception ex)
             {

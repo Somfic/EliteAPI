@@ -20,7 +20,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
         with:
-          languages: c-sharp
+          languages: csharp
       
       - name: Clean
         run: dotnet clean

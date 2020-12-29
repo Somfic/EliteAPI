@@ -94,10 +94,9 @@ namespace EliteAPI.Status.Provider
         {
             if (!directory.Exists)
             {
-                Exception directoryException = new DirectoryNotFoundException("The journal directory does not exist");
-                directoryException.Data.Add("Directory", directory.FullName);
-                directoryException.Data.Add("File", name);
-                throw directoryException;
+                var dirException = new JournalDirectoryNotFoundException("The journal directory does not exist");
+                dirException.Data.Add("Path", directory.FullName);
+                return Task.FromException<FileInfo>(dirException);
             }
 
             var files = directory.GetFiles(name);

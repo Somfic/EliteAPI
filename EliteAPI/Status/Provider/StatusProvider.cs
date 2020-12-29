@@ -1,9 +1,12 @@
-﻿using System;
+﻿using EliteAPI.Exceptions;
+using EliteAPI.Status.Provider.Abstractions;
+
+using Microsoft.Extensions.Logging;
+
+using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using EliteAPI.Status.Provider.Abstractions;
-using Microsoft.Extensions.Logging;
 
 namespace EliteAPI.Status.Provider
 {
@@ -101,16 +104,10 @@ namespace EliteAPI.Status.Provider
 
             if (files.Length > 0) return Task.FromResult(files.First());
 
-            if (name == "Status.json")
-            {
-                var path = Path.Combine(directory.FullName, name);
-                var fileException = new FileNotFoundException("The file does not exist", path);
-                fileException.Data.Add("Directory", directory.FullName);
-                fileException.Data.Add("File", name);
-                throw fileException;
-            }
-
-            return Task.FromResult<FileInfo>(null);
+            var path = Path.Combine(directory.FullName, name);
+            var fileException = new SupportFileNotFoundException($"The {name} could not be found");
+            fileException.Data.Add("Path", path);
+            return Task.FromException<FileInfo>(fileException);
         }
     }
 }

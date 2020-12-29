@@ -64,7 +64,7 @@ jobs:
 
   publish-nuget:
     needs: [build]
-    name: Publish to NuGet
+    name: Publish package
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifact

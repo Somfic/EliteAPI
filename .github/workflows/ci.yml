@@ -148,7 +148,7 @@ jobs:
 
   publish-nuget:
     needs: [build, update-version, test]
-    name: Publish prerelease to NuGet
+    name: Publish prerelease package
     if: ${{ github.ref != 'refs/heads/master' && github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:

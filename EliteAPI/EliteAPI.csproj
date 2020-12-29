@@ -20,7 +20,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Somfic</Authors>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <InformationalVersion>3.0.0-exceptions.1+845.Branch.feature-exceptions.Sha.e300a03efd54f6e44401e74218b22c1f177da056</InformationalVersion>
+    <InformationalVersion>3.0.0-exceptions.1+855.Branch.feature-exceptions.Sha.5e5eb8fe5e837410f37582c9bee5e292b346c27c</InformationalVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>EliteAPI.xml</DocumentationFile>

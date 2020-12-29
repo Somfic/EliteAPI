@@ -13,7 +13,7 @@ namespace EliteAPI.Abstractions
         /// <summary>
         ///     EliteAPI's version
         /// </summary>
-        Version Version { get; }
+        string Version { get; }
 
         /// <summary>
         ///     Container for all events

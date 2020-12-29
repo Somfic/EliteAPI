@@ -45,9 +45,12 @@ namespace EliteAPI
         {
             try
             {
-                Version = Assembly.GetExecutingAssembly().GetName().Version;
-
                 _log = services.GetRequiredService<ILogger<EliteDangerousAPI>>();
+
+                Events = services.GetRequiredService<EventHandler>();
+                Status = services.GetRequiredService<IShipStatus>();
+                Version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion.Split('+')[0];
+
                 _config = services.GetRequiredService<IConfiguration>();
 
                 _eventProvider = services.GetRequiredService<IEventProvider>();
@@ -60,9 +63,6 @@ namespace EliteAPI
 
                 _statusProvider = services.GetRequiredService<IStatusProvider>();
                 _statusProcessor = services.GetRequiredService<IStatusProcessor>();
-
-                Events = services.GetRequiredService<EventHandler>();
-                Status = services.GetRequiredService<IShipStatus>();
             }
             catch (Exception ex)
             {
@@ -90,7 +90,7 @@ namespace EliteAPI
         public bool HasCatchedUp { get; private set; }
 
         /// <inheritdoc />
-        public Version Version { get; }
+        public string Version { get; }
 
         /// <inheritdoc />
         public EventHandler Events { get; }
@@ -111,7 +111,7 @@ namespace EliteAPI
 
             try
             {
-                _log.LogInformation("Initializing EliteAPI v{version}", Version.ToString());
+                _log.LogInformation("Initializing EliteAPI v{version}", Version);
 
                 await CheckComputerOperatingSystem();
                 await InitializeEventHandlers();

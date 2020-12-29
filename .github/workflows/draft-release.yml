@@ -1,0 +1,54 @@
+name: Draft new release
+on:
+  milestone:
+    types: [closed]
+
+jobs:
+  draft-release:
+    name: Draft release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Create release notes
+        uses: docker://decathlon/release-notes-generator-action:2.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload release notes artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: release-notes
+          path: release_file.md
+
+      - name: Setup GitVersion
+        run: dotnet tool install --global GitVersion.Tool --version 5.6.0
+
+      - name: Fetch for GitVersion
+        run: git fetch --tags --unshallow
+
+      - name: Fetch master for GitVersion
+        if: github.ref != 'refs/heads/master'
+        run: git branch --create-reflog master origin/master
+
+      - name: Get version
+        run: dotnet-gitversion /output buildserver
+
+      - name: Read release notes
+        id: NOTES
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: release_file.md
+
+      - name: Draft new release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.GitVersion_LegacySemVerPadded }}
+          release_name: EliteAPI v${{ env.GitVersion_LegacySemVer }}
+          body: ${{steps.NOTES.outputs.content}}
+          draft: true
+          prerelease: ${{ env.GitVersion_PreReleaseLabel != '' }}

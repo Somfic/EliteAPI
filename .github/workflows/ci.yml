@@ -1,0 +1,187 @@
+name: CI
+on: [push, pull_request]
+
+jobs:   
+  build:
+    name: Build
+    needs: [update-version]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+      
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.extract_branch.outputs.branch }}
+      
+      - name: Clean
+        run: dotnet clean
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: "/home/runner/work/EliteAPI/EliteAPI/EliteAPI/bin/Release"
+          if-no-files-found: error
+          
+  test:
+    name: Unit test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test --no-restore --no-build --configuration Release
+
+  comment-pull-request:
+    name: Create test report
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get pull request number
+        id: PRNUMBER
+        uses: kkak10/pr-number-action@v1.3
+
+      - name: Set test title
+        id: TEST
+        run: |
+          echo "::set-output name=title::Test run for pull request #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})"
+          echo "::set-output name=file_name::${{github.workspace}}/TestReport.md"
+
+      - name: Test
+        run: dotnet test --configuration Release --logger:"liquid.md;LogFileName=${{steps.TEST.outputs.file_name}};Title=${{steps.TEST.outputs.title}};"
+
+      - name: Create test report
+        id: REPORT
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ${{steps.TEST.outputs.file_name}}
+
+      - name: Comment on pull request
+        if: github.event_name == 'pull_request'
+        uses: thollander/actions-comment-pull-request@master
+        with:
+          message: ${{steps.REPORT.outputs.content}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+  update-version:
+    name: Update version
+    if: ${{ github.event_name != 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+      
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup GitVersion
+        run: dotnet tool install --global GitVersion.Tool --version 5.6.0
+
+      - name: Fetch for GitVersion
+        run: git fetch --tags --unshallow
+
+      - name: Fetch master for GitVersion
+        if: github.ref != 'refs/heads/master'
+        run: git branch --create-reflog master origin/master
+
+      - name: Update version
+        run: dotnet-gitversion /updateprojectfiles /updateassemblyinfo /output buildserver
+     
+      - name: Enable branch protection bypass
+        uses: Somfic/bypass-branch-protection@1.0.2
+        id: BYPASS
+        with:
+          token: ${{secrets.ADMIN_TOKEN}}
+          branch: ${{steps.extract_branch.outputs.branch}}
+
+      - name: Apply changes
+        uses: EndBug/add-and-commit@v6.2.0
+        with:
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "Bumped version to ${{env.GitVersion_LegacySemVer}}"
+      
+      - name: Disable branch protection bypass
+        uses: Somfic/bypass-branch-protection@1.0.2
+        if: ${{always()}}
+        with:
+          token: ${{secrets.ADMIN_TOKEN}}
+          branch: ${{steps.extract_branch.outputs.branch}}
+          backup: ${{steps.BYPASS.outputs.backup}}
+          
+  publish-nuget:
+    needs: [update-version, test]
+    name: Publish prerelease to NuGet
+    if: ${{ github.ref != 'refs/heads/master' && github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+      
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with: 
+          ref: ${{steps.extrac_branch.outputs.branch}}
+          
+      - name: Setup GitVersion
+        run: dotnet tool install --global GitVersion.Tool --version 5.6.0
+
+      - name: Fetch for GitVersion
+        run: git fetch --tags --unshallow
+
+      - name: Fetch master for GitVersion
+        if: github.ref != 'refs/heads/master'
+        run: git branch --create-reflog master origin/master
+
+      - name: Get version
+        run: dotnet-gitversion /output buildserver
+
+      - name: Download build artifact
+        if: ${{ env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+  
+      - name: Publish NuGet
+        uses: brandedoutcast/publish-nuget@v2.5.5
+        if: ${{ env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}
+        with:
+          PROJECT_FILE_PATH: EliteAPI/EliteAPI.csproj
+          TAG_COMMIT: false
+          NUGET_KEY: ${{secrets.NUGET_KEY}}
+
+      - name: Unlist earlier packages
+        if: ${{ env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}
+        uses: darenm/unlist-nuget@v1
+        with:
+          NUGET_PACKAGE: 'EliteAPI'
+          VERSION_REGEX: '.*${{env.GitVersion_PreReleaseLabel}}.*'
+          NUGET_KEY: ${{secrets.NUGET_KEY}}

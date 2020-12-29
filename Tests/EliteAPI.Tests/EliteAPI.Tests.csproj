@@ -2,10 +2,10 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <Version>3.0.0-alpha0835</Version>
+    <Version>3.0.0-setcustompath0001</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.835+Branch.dev.Sha.5939370f10a00ca8e8a7c7fbc96b4c5ad15a9e8e</InformationalVersion>
+    <InformationalVersion>3.0.0-setcustompath.1+833.Branch.feature-setcustompath.Sha.ccdd1c4f80d81550aa59b24899c71212c0eba9bf</InformationalVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="LiquidTestReports.Markdown" Version="1.0.9" />

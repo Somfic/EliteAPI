@@ -149,7 +149,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with: 
-          ref: ${{steps.extrac_branch.outputs.branch}}
+          ref: ${{steps.extract_branch.outputs.branch}}
           
       - name: Setup GitVersion
         run: dotnet tool install --global GitVersion.Tool --version 5.6.0

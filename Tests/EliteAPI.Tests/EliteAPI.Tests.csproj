@@ -5,7 +5,7 @@
     <Version>3.0.0-exceptions0001</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-exceptions.1+843.Branch.feature-exceptions.Sha.6958c94d75ef1c5bfcbdae15bf72aca7978d5e70</InformationalVersion>
+    <InformationalVersion>3.0.0-exceptions.1+845.Branch.feature-exceptions.Sha.e300a03efd54f6e44401e74218b22c1f177da056</InformationalVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="LiquidTestReports.Markdown" Version="1.0.9" />

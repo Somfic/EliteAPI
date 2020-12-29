@@ -84,7 +84,7 @@ namespace EliteAPI.Event.Provider
             }
             catch (Exception ex)
             {
-                throw new NotImplementedEventException($"The {eventName} is not implemented", ex);
+                throw new EventNotImplementedException($"The {eventName} is not implemented", ex);
             }
            
         }

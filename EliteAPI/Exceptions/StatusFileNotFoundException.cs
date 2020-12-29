@@ -5,7 +5,7 @@ using EliteAPI.Exceptions.Abstractions;
 namespace EliteAPI.Exceptions
 {
     /// <summary>
-    /// The exception that is thrown when an event is not implemented
+    /// The exception that is thrown when the Status.json file could not be found
     /// </summary>
     public class StatusFileNotFoundException : EliteDangerousApiException
     {

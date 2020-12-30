@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build
-          path: "/home/runner/work/EliteAPI/EliteAPI/EliteAPI/bin/Release"
+          path: "/home/runner/work/${{ github.repository }}/${{ github.event.repository.name }}/bin/Release"
           if-no-files-found: error
 
   add-to-release:
@@ -59,7 +59,7 @@ jobs:
         with:
           upload_url: ${{ steps.get_release.outputs.upload_url }}
           asset_path: "release.zip"
-          asset_name: "EliteAPI"
+          asset_name: "${{ github.event.repository.name }}"
           asset_content_type: application/zip
 
   publish-nuget:
@@ -78,17 +78,17 @@ jobs:
           name: Build
 
       - name: Authorize with Github Package Registry
-        run: dotnet nuget add source https://nuget.pkg.github.com/EliteAPI/index.json -n "github" -u "EliteAPI" -p "${{secrets.ADMIN_TOKEN}}"
+        run: dotnet nuget add source https://nuget.pkg.github.com/${{ github.event.repository_owner }}/index.json -n "github" -u "${{ github.event.repository_owner }}" -p "${{secrets.ADMIN_TOKEN}}"
 
       - name: Publish project to NuGet
-        run: dotnet nuget push 'EliteAPI.*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
+        run: dotnet nuget push '${{ github.repository.name }}.*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
 
       - name: Publish project to Github Package Registry
-        run: dotnet nuget push 'EliteAPI.*.nupkg' -s github
+        run: dotnet nuget push '${{ github.repository.name }}.*.nupkg' -s github
 
       - name: Unlist alpha and beta packages on NuGet
         uses: darenm/unlist-nuget@v1
         with:
-          NUGET_PACKAGE: EliteAPI
+          NUGET_PACKAGE: ${{ github.repository.name }}
           VERSION_REGEX: (.*alpha.*)|(.*beta.*)
           NUGET_KEY: ${{secrets.NUGET_KEY}}

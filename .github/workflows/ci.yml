@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build
-          path: "/home/runner/work/EliteAPI/EliteAPI/EliteAPI/bin/Release"
+          path: "/home/runner/work/${{ github.repository }}/${{ github.event.repository.name }}/bin/Release"
           if-no-files-found: error
 
   test:
@@ -173,17 +173,17 @@ jobs:
           name: build
 
       - name: Authorize with Github Package Registry
-        run: dotnet nuget add source https://nuget.pkg.github.com/EliteAPI/index.json -n "github" -u "EliteAPI" -p "${{secrets.ADMIN_TOKEN}}"
+        run: dotnet nuget add source https://nuget.pkg.github.com/${{ github.event.repository.name }}/index.json -n "github" -u "${{ github.repository_owner }}" -p "${{secrets.ADMIN_TOKEN}}"
 
       - name: Publish project to NuGet
-        run: dotnet nuget push 'EliteAPI.*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
+        run: dotnet nuget push '${{ github.event.repository.name }}.*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
 
       - name: Publish project to Github Package Registry
-        run: dotnet nuget push 'EliteAPI.*.nupkg' -s github
+        run: dotnet nuget push '${{ github.event.repository.name }}.*.nupkg' -s github
 
       - name: Unlist earlier packages of this type
         uses: darenm/unlist-nuget@v1
         with:
-          NUGET_PACKAGE: "EliteAPI"
+          NUGET_PACKAGE: "${{ github.event.repository.name }}"
           VERSION_REGEX: ".*${{needs.update-version.outputs.label}}.*"
           NUGET_KEY: ${{secrets.NUGET_KEY}}

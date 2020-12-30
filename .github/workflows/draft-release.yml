@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
+
       - name: Create release notes
         uses: docker://decathlon/release-notes-generator-action:2.0.1
         env:
@@ -48,7 +48,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ env.GitVersion_LegacySemVerPadded }}
-          release_name: EliteAPI v${{ env.GitVersion_LegacySemVer }}
+          release_name: ${{ github.event.repository.name }} v${{ env.GitVersion_LegacySemVer }}
           body: ${{steps.NOTES.outputs.content}}
           draft: true
           prerelease: ${{ env.GitVersion_PreReleaseLabel != '' }}

@@ -49,6 +49,64 @@
                 Stops the api
             </summary>
         </member>
+        <member name="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration">
+            <summary>
+            Interface for the <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration"/> configuration class
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.JournalPath">
+            <summary>
+            The active journal directory path
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.Journal">
+            <summary>
+            The targeted journal file
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Configuration.EliteDangerousApiConfiguration">
+            <summary>
+            Standard implementation of the <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration"/> configuration class
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.JournalPath">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.Journal">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder">
+            <summary>
+            Creates a <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration"/> configuration class through a builder
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.AddEventModule``1">
+            <summary>
+                Add an event module to EliteAPI
+            </summary>
+            <typeparam name="T">The event module to be added</typeparam>
+        </member>
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.ClearProcessors">
+            <summary>
+                Remove the default event processors
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.AddProcessor``1">
+            <summary>
+                Adds an event processor
+            </summary>
+            <typeparam name="T">The event processor to be used</typeparam>
+        </member>
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseJournalDirectory(System.String)">
+            <summary>
+            Sets which directory to use as active journal directory
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseJournal(System.String)">
+            <summary>
+            Sets which journal file to use, defaults to latest if not invoked
+            </summary>
+        </member>
         <member name="T:EliteAPI.EliteDangerousAPI">
             <inheritdoc />
         </member>
@@ -82,27 +140,10 @@
         <member name="M:EliteAPI.EliteDangerousAPI.StopAsync">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.EliteDangerousAPIExtensions.AddEliteAPI(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{EliteAPI.EliteDangerousAPIConfiguration})">
+        <member name="M:EliteAPI.EliteDangerousAPIExtensions.AddEliteAPI(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder})">
             <summary>
                 Adds all EliteAPI's necessary services to the <seealso cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />
             </summary>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPIConfiguration.AddEventModule``1">
-            <summary>
-                Add an event module to EliteAPI
-            </summary>
-            <typeparam name="T">The event module to be added</typeparam>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPIConfiguration.ClearProcessors">
-            <summary>
-                Remove the default event processors
-            </summary>
-        </member>
-        <member name="M:EliteAPI.EliteDangerousAPIConfiguration.AddProcessor``1">
-            <summary>
-                Adds an event processor
-            </summary>
-            <typeparam name="T">The event processor to be used</typeparam>
         </member>
         <member name="T:EliteAPI.Event.Attributes.EliteDangerousEventAttribute">
             <summary>
@@ -228,10 +269,235 @@
         <member name="M:EliteAPI.Event.Provider.EventProvider.RegisterEventClasses">
             <inheritdoc />
         </member>
-        <member name="T:EliteAPI.Exceptions.NotImplementedEventException">
+        <member name="T:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException">
             <summary>
-            Thrown when an event is not implemented
+            Base class for all EliteAPI's exceptions
             </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.CargoFileNotFoundException">
+            <summary>
+            The exception that is thrown when the Cargo.json file could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.CargoFileNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.CargoFileNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.CargoFileNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.EventNotImplementedException">
+            <summary>
+            The exception that is thrown when an event is not implemented
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.EventNotImplementedException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventNotImplementedException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.EventNotImplementedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventNotImplementedException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.EventNotImplementedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventNotImplementedException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException">
+            <summary>
+            The exception that is thrown when an event is not implemented
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.JournalDirectoryNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.JournalDirectoryNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.JournalDirectoryNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.JournalFileNotFoundException">
+            <summary>
+            The exception that is thrown when an event is not implemented
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.JournalFileNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalFileNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.JournalFileNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalFileNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.JournalFileNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.MarketFileNotFoundException">
+            <summary>
+            The exception that is thrown when the Market.json file could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.MarketFileNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.MarketFileNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.MarketFileNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.OutfittingFileNotFoundException">
+            <summary>
+            The exception that is thrown when the Status.json file could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.OutfittingFileNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.OutfittingFileNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.OutfittingFileNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.OutfittingFileNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.OutfittingFileNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.OutfittingFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.ShipyardFileNotFoundException">
+            <summary>
+            The exception that is thrown when the Shipyard.json file could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.ShipyardFileNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ShipyardFileNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.ShipyardFileNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ShipyardFileNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.ShipyardFileNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="!:ShipyardFileNotFound"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.StatusFileNotFoundException">
+            <summary>
+            The exception that is thrown when the Status.json file could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.StatusFileNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.StatusFileNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.StatusFileNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.StatusFileNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.StatusFileNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.StatusFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.SupportFileNotFoundException">
+            <summary>
+            The exception that is thrown when a support JSON file could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.SupportFileNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.SupportFileNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.SupportFileNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.SupportFileNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.SupportFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
         </member>
         <member name="T:EliteAPI.Journal.Directory.Abstractions.IJournalDirectoryProvider">
             <summary>
@@ -605,6 +871,16 @@
         </member>
         <member name="M:EliteAPI.Status.Provider.StatusProvider.FindOutfittingFile(System.IO.DirectoryInfo)">
             <inheritdoc />
+        </member>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+                Reserved to be used by the compiler for tracking metadata.
+                This class should not be used by developers in source code.
+            </summary>
+            <remarks>
+                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
+                Please see https://github.com/manuelroemer/IsExternalInit for more information.
+            </remarks>
         </member>
     </members>
 </doc>

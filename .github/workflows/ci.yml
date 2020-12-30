@@ -137,7 +137,7 @@ jobs:
           echo '::set-output name=applicable::${{env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta' || steps.extract_branch.outputs.branch == 'master' }}'
 
       - name: Enable branch protection bypass
-        if: ${{ steps.VERSION.outputs.applicable == true && steps.extract_branch.outputs.branch == 'master'}}
+        if: ${{ steps.VERSION.outputs.applicable == 'true' && steps.extract_branch.outputs.branch == 'master'}}
         uses: Somfic/bypass-branch-protection@1.0.2
         id: BYPASS
         with:
@@ -145,7 +145,7 @@ jobs:
           branch: ${{steps.extract_branch.outputs.branch}}
 
       - name: Apply changes
-        if: ${{ steps.VERSION.outputs.applicable == true }}
+        if: ${{ steps.VERSION.outputs.applicable == 'true' }}
         uses: EndBug/add-and-commit@v6.2.0
         with:
           author_name: github-actions[bot]
@@ -154,7 +154,7 @@ jobs:
 
       - name: Disable branch protection bypass
         uses: Somfic/bypass-branch-protection@1.0.2
-        if: ${{always() && steps.extract_branch.outputs.branch == 'master'}}
+        if: ${{always() && steps.VERSION.outputs.applicable == 'true' && steps.extract_branch.outputs.branch == 'master'}}
         with:
           token: ${{secrets.ADMIN_TOKEN}}
           branch: ${{steps.extract_branch.outputs.branch}}

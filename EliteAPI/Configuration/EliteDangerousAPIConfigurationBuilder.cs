@@ -16,6 +16,7 @@ namespace EliteAPI.Configuration
     {
         private readonly IList<Type> _eventModuleImplementations;
         private IList<Type> _eventProcessors;
+        private string _journalDirectory;
         private string _journal;
 
         internal EliteDangerousApiConfigurationBuilder()
@@ -27,6 +28,7 @@ namespace EliteAPI.Configuration
                 typeof(AttributeEventProcessor),
                 typeof(AllEventProcessor)
             };
+            _journalDirectory = "";
             _journal = "";
         }
 
@@ -61,7 +63,15 @@ namespace EliteAPI.Configuration
         /// </summary>
         public void UseJournalDirectory(string path)
         {
-            _journal = path;
+            _journalDirectory = path;
+        }
+
+        /// <summary>
+        /// Sets which journal file to use, defaults to latest if not invoked
+        /// </summary>
+        public void UseJournal(string journal)
+        {
+            _journal = journal;
         }
 
         internal void AddServices(IServiceCollection services)
@@ -76,7 +86,7 @@ namespace EliteAPI.Configuration
 
         private EliteDangerousApiConfiguration Build()
         {
-            return new() { JournalPath = _journal };
+            return new() { JournalPath = _journalDirectory, Journal = _journal };
         }
     }
 }

@@ -15,5 +15,8 @@ namespace EliteAPI.Configuration
 
         /// <inheritdoc />
         public string JournalPath { get; init; }
+
+        /// <inheritdoc />
+        public string Journal { get; init; }
     }
 }

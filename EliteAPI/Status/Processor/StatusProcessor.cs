@@ -43,6 +43,9 @@ namespace EliteAPI.Status.Processor
         public event EventHandler<string> OutfittingUpdated;
 
         /// <inheritdoc />
+        public event EventHandler<string> NavRouteUpdated;
+
+        /// <inheritdoc />
         public async Task ProcessStatusFile(FileInfo statusFile)
         {
             if (!statusFile.Exists) return;
@@ -118,6 +121,21 @@ namespace EliteAPI.Status.Processor
             {
                 AddToCache(outfittingFile, content);
                 OutfittingUpdated?.Invoke(this, content);
+            }
+
+            return Task.CompletedTask;
+        }
+
+        /// <inheritdoc />
+        public Task ProcessNavRouteFile(FileInfo navRouteFile)
+        {
+            if (navRouteFile == null || !navRouteFile.Exists) return Task.CompletedTask;
+
+            var content = ReadAllText(navRouteFile);
+            if (!IsInCache(navRouteFile, content))
+            {
+                AddToCache(navRouteFile, content);
+                NavRouteUpdated?.Invoke(this, content);
             }
 
             return Task.CompletedTask;

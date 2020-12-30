@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: main
 
       - name: Clean
         run: dotnet clean
@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build
-          path: "/home/runner/work/${{ github.repository }}/${{ github.event.repository.name }}/bin/Release"
+          path: "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/${{ github.repository_owner }}.${{ github.event.repository.name }}/bin/Release"
           if-no-files-found: error
 
   add-to-release:
@@ -65,30 +65,45 @@ jobs:
   publish-nuget:
     needs: [build]
     name: Publish to NuGet
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+
+      - name: Publish project to NuGet
+        run: dotnet nuget push '*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
+
+      - name: Unlist alpha and beta packages on NuGet
+        uses: darenm/unlist-nuget@v1
+        with:
+          NUGET_PACKAGE: ${{ github.event.repository.name }}
+          VERSION_REGEX: (.*alpha.*)|(.*beta.*)
+          NUGET_KEY: ${{secrets.NUGET_KEY}}
+
+  publish-github:
+    needs: [build]
+    name: Publish to GitHub
     runs-on: windows-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: main
 
       - name: Download build artifact
         uses: actions/download-artifact@v2
         with:
-          name: Build
+          name: build
 
       - name: Authorize with Github Package Registry
         run: dotnet nuget add source https://nuget.pkg.github.com/${{ github.event.repository_owner }}/index.json -n "github" -u "${{ github.event.repository_owner }}" -p "${{secrets.ADMIN_TOKEN}}"
 
-      - name: Publish project to NuGet
-        run: dotnet nuget push '${{ github.repository.name }}.*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
-
       - name: Publish project to Github Package Registry
-        run: dotnet nuget push '${{ github.repository.name }}.*.nupkg' -s github
-
-      - name: Unlist alpha and beta packages on NuGet
-        uses: darenm/unlist-nuget@v1
-        with:
-          NUGET_PACKAGE: ${{ github.repository.name }}
-          VERSION_REGEX: (.*alpha.*)|(.*beta.*)
-          NUGET_KEY: ${{secrets.NUGET_KEY}}
+        run: dotnet nuget push '*.nupkg' -s github --skip-duplicate

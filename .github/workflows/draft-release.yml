@@ -28,9 +28,9 @@ jobs:
       - name: Fetch for GitVersion
         run: git fetch --tags --unshallow
 
-      - name: Fetch master for GitVersion
-        if: github.ref != 'refs/heads/master'
-        run: git branch --create-reflog master origin/master
+      - name: Fetch main for GitVersion
+        if: github.ref != 'refs/heads/main'
+        run: git branch --create-reflog main origin/main
 
       - name: Get version
         run: dotnet-gitversion /output buildserver
@@ -48,7 +48,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ env.GitVersion_LegacySemVerPadded }}
-          release_name: ${{ github.event.repository.name }} v${{ env.GitVersion_LegacySemVer }}
-          body: ${{steps.NOTES.outputs.content}}
+          release_name: v${{ env.GitVersion_LegacySemVer }}
+          body: |
+            # ${{ github.event.repository.name }} v${{ env.GitVersion_LegacySemVer }} has been released
+            ${{steps.NOTES.outputs.content}}
           draft: true
           prerelease: ${{ env.GitVersion_PreReleaseLabel != '' }}

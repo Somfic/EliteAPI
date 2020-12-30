@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build
-          path: "/home/runner/work/${{ github.repository }}/${{ github.event.repository.name }}/bin/Release"
+          path: "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/${{ github.repository_owner }}.${{ github.event.repository.name }}/bin/Release"
           if-no-files-found: error
 
   test:
@@ -123,9 +123,9 @@ jobs:
       - name: Fetch for GitVersion
         run: git fetch --tags --unshallow
 
-      - name: Fetch master for GitVersion
-        if: github.ref != 'refs/heads/master'
-        run: git branch --create-reflog master origin/master
+      - name: Fetch main for GitVersion
+        if: github.ref != 'refs/heads/main'
+        run: git branch --create-reflog main origin/main
 
       - name: Update version
         run: dotnet-gitversion /updateprojectfiles /updateassemblyinfo /output buildserver
@@ -136,18 +136,18 @@ jobs:
           echo '::set-output name=label::${{env.GitVersion_PreReleaseLabel}}'
           echo '::set-output name=semver::${{env.GitVersion_LegacySemVer}}'
           echo '::set-output name=nuget::${{env.GitVersion_NuGetPreReleaseTagV2}}'
-          echo '::set-output name=applicable::${{env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta' || steps.extract_branch.outputs.branch == 'master' }}'
+          echo '::set-output name=applicable::${{env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta' }}'
 
       - name: Enable branch protection bypass
-        if: ${{ steps.VERSION.outputs.applicable == 'true' && steps.extract_branch.outputs.branch == 'master'}}
-        uses: Somfic/bypass-branch-protection@1.0.2
+        if: ${{ steps.extract_branch.outputs.branch == 'main'}}
+        uses: Somfic/bypass-branch-protection@1.0.3
         id: BYPASS
         with:
           token: ${{secrets.ADMIN_TOKEN}}
           branch: ${{steps.extract_branch.outputs.branch}}
 
       - name: Apply changes
-        if: ${{ steps.VERSION.outputs.applicable == 'true' }}
+        if: ${{ steps.VERSION.outputs.applicable == 'true' || steps.extract_branch.outputs.branch == 'main' }}
         uses: EndBug/add-and-commit@v6.2.0
         with:
           author_name: github-actions[bot]
@@ -155,8 +155,8 @@ jobs:
           message: "Bumped version to ${{env.GitVersion_LegacySemVer}}"
 
       - name: Disable branch protection bypass
-        uses: Somfic/bypass-branch-protection@1.0.2
-        if: ${{always() && steps.VERSION.outputs.applicable == 'true' && steps.extract_branch.outputs.branch == 'master'}}
+        uses: Somfic/bypass-branch-protection@1.0.3
+        if: ${{always() && steps.extract_branch.outputs.branch == 'main'}}
         with:
           token: ${{secrets.ADMIN_TOKEN}}
           branch: ${{steps.extract_branch.outputs.branch}}
@@ -173,18 +173,12 @@ jobs:
         with:
           name: build
 
-      - name: Authorize with Github Package Registry
-        run: dotnet nuget add source https://nuget.pkg.github.com/${{ github.event.repository.name }}/index.json -n "github" -u "${{ github.repository_owner }}" -p "${{secrets.ADMIN_TOKEN}}"
-
       - name: Publish project to NuGet
-        run: dotnet nuget push '${{ github.event.repository.name }}.*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
-
-      - name: Publish project to Github Package Registry
-        run: dotnet nuget push '${{ github.event.repository.name }}.*.nupkg' -s github
+        run: dotnet nuget push '*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
 
       - name: Unlist earlier packages of this type
         uses: darenm/unlist-nuget@v1
         with:
-          NUGET_PACKAGE: "${{ github.event.repository.name }}"
+          NUGET_PACKAGE: "${{ github.repository_owner }}.${{ github.event.repository.name }}"
           VERSION_REGEX: ".*${{needs.update-version.outputs.label}}.*"
           NUGET_KEY: ${{secrets.NUGET_KEY}}

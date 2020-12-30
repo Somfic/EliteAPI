@@ -45,10 +45,10 @@ namespace EliteAPI.Journal.Directory
                 if (exception == null) return Task.FromResult(defaultDirectory);
             }
 
-            _log.LogError(exception,
+            _log.LogDebug(exception,
                 "No valid journal directory could not be found, please specify the correct journal directory in the configuration");
 
-            return Task.FromResult<DirectoryInfo>(null);
+            return Task.FromException<DirectoryInfo>(exception);
         }
 
         private Exception CheckDirectoryValidity(DirectoryInfo directory)

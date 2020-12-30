@@ -35,6 +35,11 @@ namespace EliteAPI.Status.Processor.Abstractions
         event EventHandler<string> OutfittingUpdated;
 
         /// <summary>
+        ///     Triggered when the navroute file is updated
+        /// </summary>
+        event EventHandler<string> NavRouteUpdated;
+
+        /// <summary>
         ///     Hooks the specified status file to <see cref="StatusUpdated" /> and invokes <see cref="StatusUpdated" /> when
         ///     needed
         /// </summary>
@@ -62,5 +67,11 @@ namespace EliteAPI.Status.Processor.Abstractions
         ///     <see cref="OutfittingUpdated" /> when needed
         /// </summary>
         Task ProcessOutfittingFile(FileInfo outfittingFile);
+
+        /// <summary>
+        ///     Hooks the specified navroute file to <see cref="NavRouteUpdated" /> and invokes <see cref="NavRouteUpdated" /> when
+        ///     needed
+        /// </summary>
+        Task ProcessNavRouteFile(FileInfo navRouteFile);
     }
 }

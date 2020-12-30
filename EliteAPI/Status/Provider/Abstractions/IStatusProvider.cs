@@ -37,5 +37,11 @@ namespace EliteAPI.Status.Provider.Abstractions
         /// </summary>
         /// <param name="journalDirectory">The journal directory</param>
         Task<FileInfo> FindOutfittingFile(DirectoryInfo journalDirectory);
+
+        /// <summary>
+        ///     Finds the navroute file from the specified journal directory
+        /// </summary>
+        /// <param name="journalDirectory">The journal directory</param>
+        Task<FileInfo> FindNavRouteFile(DirectoryInfo journalDirectory);
     }
 }

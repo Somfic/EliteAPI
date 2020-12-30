@@ -179,6 +179,6 @@ jobs:
       - name: Unlist earlier packages of this type
         uses: darenm/unlist-nuget@v1
         with:
-          NUGET_PACKAGE: "${{ github.repository_owner }}.${{ github.event.repository.name }}"
+          NUGET_PACKAGE: "${{ github.event.repository.name }}"
           VERSION_REGEX: ".*${{needs.update-version.outputs.label}}.*"
           NUGET_KEY: ${{secrets.NUGET_KEY}}

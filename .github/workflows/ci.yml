@@ -32,7 +32,7 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Pack
-        f: ${{ needs.update-version.outputs.applicable == 'true' }}
+        if: ${{ needs.update-version.outputs.applicable == 'true' }}
         run: dotnet pack --configuration Release
 
       - name: Perform CodeQL Analysis

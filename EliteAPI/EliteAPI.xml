@@ -104,6 +104,22 @@
             </summary>
             <typeparam name="T">The event processor to be used</typeparam>
         </member>
+        <member name="T:EliteAPI.Event.Attributes.EliteDangerousEventAttribute">
+            <summary>
+            Class for modular events in EliteAPI
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Event.Attributes.EliteDangerousEventAttribute.#ctor(System.Boolean)">
+            <summary>
+            Class for modular events in EliteAPI
+            </summary>
+            <param name="runOnCatchup">Whether to run this method while catching up</param>
+        </member>
+        <member name="P:EliteAPI.Event.Attributes.EliteDangerousEventAttribute.RunOnCatchup">
+            <summary>
+            Whether to run this method while catching up
+            </summary>
+        </member>
         <member name="T:EliteAPI.Event.Models.Abstractions.EventBase">
             <summary>
                 An in-game event
@@ -129,6 +145,22 @@
             <summary>
                 The name of the event
             </summary>
+        </member>
+        <member name="T:EliteAPI.Event.Module.EliteDangerousEventModule">
+            <summary>
+            Wrapper for event modules
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Event.Module.EliteDangerousEventModule.EliteAPI">
+            <summary>
+            The Elite Dangerous API
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Event.Module.EliteDangerousEventModule.#ctor(EliteAPI.Abstractions.IEliteDangerousAPI)">
+            <summary>
+            Wrapper for event modules
+            </summary>
+            <param name="api">The EliteDangerousAPI</param>
         </member>
         <member name="T:EliteAPI.Event.Processor.Abstractions.IEventProcessor">
             <summary>

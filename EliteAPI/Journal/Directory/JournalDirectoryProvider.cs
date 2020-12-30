@@ -1,6 +1,11 @@
-﻿using EliteAPI.Exceptions;
+using System;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using EliteAPI.Configuration.Abstractions;
 using EliteAPI.Journal.Directory.Abstractions;
 using EliteAPI.Journal.Provider;
+using EliteAPI.Exceptions;
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,21 +23,44 @@ namespace EliteAPI.Journal.Directory
     {
         private readonly IConfiguration _config;
         private readonly ILogger<JournalProvider> _log;
+        private IEliteDangerousApiConfiguration _codeConfig;
 
         public JournalDirectoryProvider(IServiceProvider services)
         {
             _config = services.GetRequiredService<IConfiguration>();
             _log = services.GetRequiredService<ILogger<JournalProvider>>();
+            _codeConfig = services.GetRequiredService<IEliteDangerousApiConfiguration>();
         }
 
         /// <inheritdoc />
         public Task<DirectoryInfo> FindJournalDirectory()
         {
             var configDirectory = GetConfigDirectory();
+            var codeConfigDirectory = GetCodeConfigDirectory();
             var defaultDirectory = GetDefaultDirectory();
 
             var exception = CheckDirectoryValidity(configDirectory);
-            if (exception == null) return Task.FromResult(configDirectory);
+            if (exception == null)
+            {
+                return Task.FromResult(configDirectory);
+            }
+            else
+            {
+                if(!(exception is NullReferenceException))
+                    _log.LogDebug(exception, "The journal directory provided by the file configuration is invalid");
+            }
+
+            exception = CheckDirectoryValidity(codeConfigDirectory);
+            if (exception == null)
+            {
+                return Task.FromResult(codeConfigDirectory);
+            }
+            else
+            {
+                if (!(exception is NullReferenceException))
+                    _log.LogDebug(exception, "The journal directory provided by the code configuration is invalid");
+            }
+
 
             if (configDirectory?.FullName != defaultDirectory.FullName)
             {
@@ -81,6 +109,19 @@ namespace EliteAPI.Journal.Directory
             catch (Exception ex)
             {
                 _log.LogTrace(ex, "Could not get default journal directory");
+                return null;
+            }
+        }
+
+        private DirectoryInfo GetCodeConfigDirectory()
+        {
+            try
+            {
+                return !string.IsNullOrWhiteSpace(_codeConfig.JournalPath) ? new DirectoryInfo(_codeConfig.JournalPath) : null;
+            }
+            catch (Exception ex)
+            {
+                _log.LogTrace(ex, "Could not get config journal directory");
                 return null;
             }
         }

@@ -29,7 +29,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                throw new StatusFileNotFoundException("Could not getting the Status.json file", ex);
+                throw new StatusFileNotFoundException("Could not find the Status.json file", ex);
             }
         }
 
@@ -42,7 +42,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                throw new MarketFileNotFoundException("Could not getting the Market.json file", ex);
+                throw new MarketFileNotFoundException("Could not find the Market.json file", ex);
             }
         }
 
@@ -55,7 +55,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                throw new CargoFileNotFoundException("Could not getting the Cargo.json file", ex);
+                throw new CargoFileNotFoundException("Could not find the Cargo.json file", ex);
             }
         }
 
@@ -68,7 +68,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                throw new ShipyardFileNotFoundException("Could not getting the Shipyard.json file", ex);
+                throw new ShipyardFileNotFoundException("Could not find the Shipyard.json file", ex);
             }
         }
 
@@ -81,7 +81,9 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                throw new OutfittingFileNotFoundException("Could not getting the Outfitting.json file", ex);
+                throw new OutfittingFileNotFoundException("Could not get the Outfitting.json file", ex);
+            }
+        }
 
         /// <inheritdoc />
         public async Task<FileInfo> FindNavRouteFile(DirectoryInfo journalDirectory)

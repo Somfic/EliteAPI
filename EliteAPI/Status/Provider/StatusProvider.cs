@@ -42,8 +42,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogWarning(ex, "Could not get Market.json file");
-                throw;
+                throw new MarketFileNotFoundException("Could not getting the Market.json file", ex);
             }
         }
 

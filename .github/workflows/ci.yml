@@ -32,6 +32,7 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Pack
+        f: ${{ needs.update-version.outputs.applicable == 'true' }}
         run: dotnet pack --configuration Release
 
       - name: Perform CodeQL Analysis
@@ -163,7 +164,7 @@ jobs:
   publish-nuget:
     needs: [build, update-version, test]
     name: Publish prerelease package
-    if: ${{ github.ref != 'refs/heads/master' && github.event_name == 'push' && (needs.update-version.outputs.label == 'alpha' || needs.update-version.outputs.label == 'beta') }}
+    if: ${{ needs.update-version.outputs.applicable == 'true' }}
     runs-on: windows-latest
     steps:
       - name: Download build artifact

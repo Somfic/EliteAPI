@@ -235,7 +235,6 @@ namespace EliteAPI
         {
             try
             {
-                _log.LogTrace("Setting journal directory");
                 var newJournalDirectory = await _journalDirectoryProvider.FindJournalDirectory();
                 if (newJournalDirectory == null || JournalDirectory?.FullName == newJournalDirectory.FullName) return;
 
@@ -253,7 +252,6 @@ namespace EliteAPI
         {
             try
             {
-                _log.LogTrace("Setting journal file");
                 var newJournalFile = await _journalProvider.FindJournalFile(JournalDirectory);
 
                 if (JournalFile?.FullName == newJournalFile.FullName) return;
@@ -272,8 +270,6 @@ namespace EliteAPI
         {
             try
             {
-                _log.LogTrace("Setting support files");
-
                 if (!DisabledSupportFiles.Contains("Status"))
                     StatusFile = await _statusProvider.FindStatusFile(JournalDirectory);
 
@@ -321,8 +317,7 @@ namespace EliteAPI
         }
 
         private Task CheckComputerOperatingSystem()
-        {
-            _log.LogTrace("Checking operating system");
+        {   
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 _log.LogWarning("You are not running on a Windows machine, some features may not work properly");
 

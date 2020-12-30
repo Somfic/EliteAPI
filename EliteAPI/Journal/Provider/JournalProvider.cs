@@ -32,8 +32,6 @@ namespace EliteAPI.Journal.Provider
             {
                 string fileFilter = !string.IsNullOrWhiteSpace(_codeConfig.Journal) ? _codeConfig.Journal : "Journal.*.log";
 
-                _log.LogTrace($"Searching for '{fileFilter}' files in {journalDirectory.FullName}");
-
                 return Task.FromResult(journalDirectory
                     .GetFiles(fileFilter)
                     .OrderByDescending(file => file.LastWriteTime)

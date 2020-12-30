@@ -64,13 +64,18 @@ jobs:
 
   publish-nuget:
     needs: [build]
-    name: Publish package
-    runs-on: ubuntu-latest
+    name: Publish to NuGet
+    runs-on: windows-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
       - name: Download build artifact
         uses: actions/download-artifact@v2
         with:
-          name: build
+          name: Build
 
       - name: Authorize with Github Package Registry
         run: dotnet nuget add source https://nuget.pkg.github.com/EliteAPI/index.json -n "github" -u "EliteAPI" -p "${{secrets.ADMIN_TOKEN}}"
@@ -82,7 +87,6 @@ jobs:
         run: dotnet nuget push 'EliteAPI.*.nupkg' -s github
 
       - name: Unlist alpha and beta packages on NuGet
-        if: ${{ env.GitVersion_PreReleaseLabel != 'alpha' && env.GitVersion_PreReleaseLabel != 'beta'}}
         uses: darenm/unlist-nuget@v1
         with:
           NUGET_PACKAGE: EliteAPI

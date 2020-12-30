@@ -102,6 +102,10 @@ jobs:
     name: Update version
     if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
+    outputs:
+      label: ${{steps.VERSION.outputs.label}}
+      semver: ${{steps.VERSION.outputs.semver}}
+      nuget: ${{steps.VERSION.outputs.nuget}}
     steps:
       - name: Extract branch name
         shell: bash
@@ -123,6 +127,13 @@ jobs:
 
       - name: Update version
         run: dotnet-gitversion /updateprojectfiles /updateassemblyinfo /output buildserver
+
+      - name: Set job output
+        id: VERSION
+        run: |
+          echo '::set-output name=label::${{env.GitVersion_PreReleaseLabel}}'
+          echo '::set-output name=semver::${{env.GitVersion_LegacySemVer}}'
+          echo '::set-output name=nuget::${{env.GitVersion_NuGetPreReleaseTagV2}}'
 
       - name: Enable branch protection bypass
         uses: Somfic/bypass-branch-protection@1.0.2
@@ -149,8 +160,8 @@ jobs:
   publish-nuget:
     needs: [build, update-version, test]
     name: Publish prerelease package
-    if: ${{ github.ref != 'refs/heads/master' && github.event_name == 'push' }}
-    runs-on: ubuntu-latest
+    if: ${{ github.ref != 'refs/heads/master' && github.event_name == 'push' && (needs.update-version.outputs.label == 'alpha' || needs.update-version.outputs.label == 'beta') }}
+    runs-on: windows-latest
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v2
@@ -167,9 +178,8 @@ jobs:
         run: dotnet nuget push 'EliteAPI.*.nupkg' -s github
 
       - name: Unlist earlier packages of this type
-        if: ${{ env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}
         uses: darenm/unlist-nuget@v1
         with:
           NUGET_PACKAGE: "EliteAPI"
-          VERSION_REGEX: ".*${{env.GitVersion_PreReleaseLabel}}.*"
+          VERSION_REGEX: ".*${{needs.update-version.outputs.label}}.*"
           NUGET_KEY: ${{secrets.NUGET_KEY}}

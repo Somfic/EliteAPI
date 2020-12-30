@@ -1,13 +1,20 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using EliteAPI.Configuration.Abstractions;
 using EliteAPI.Journal.Directory.Abstractions;
 using EliteAPI.Journal.Provider;
+using EliteAPI.Exceptions;
+
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+
+using System;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace EliteAPI.Journal.Directory
 {
@@ -66,10 +73,10 @@ namespace EliteAPI.Journal.Directory
                 if (exception == null) return Task.FromResult(defaultDirectory);
             }
 
-            _log.LogError(exception,
+            _log.LogDebug(exception,
                 "No valid journal directory could not be found, please specify the correct journal directory in the configuration");
 
-            return Task.FromResult<DirectoryInfo>(null);
+            return Task.FromException<DirectoryInfo>(exception);
         }
 
         private Exception CheckDirectoryValidity(DirectoryInfo directory)
@@ -78,15 +85,14 @@ namespace EliteAPI.Journal.Directory
 
             if (!directory.Exists)
             {
-                var exception = new DirectoryNotFoundException("The journal directory does not exist");
+                var exception = new JournalDirectoryNotFoundException("The journal directory does not exist");
                 exception.Data.Add("Path", directory.FullName);
                 return exception;
             }
 
             if (directory.GetFiles("Journal.*.log").Length == 0)
             {
-                var exception = new FileNotFoundException("No journal files could be found in the directory",
-                    Path.Combine(directory.FullName, "Journal.*.json"));
+                var exception = new JournalFileNotFoundException("No journal files could be found in the directory");
                 exception.Data.Add("Path", directory.FullName);
                 return exception;
             }
@@ -98,8 +104,7 @@ namespace EliteAPI.Journal.Directory
         {
             try
             {
-                return new DirectoryInfo(
-                    Path.Combine(GetSavedGamesDirectory(), "Frontier Developments/Elite Dangerous"));
+                return new DirectoryInfo(Path.Combine(GetSavedGamesDirectory(), "Frontier Developments/Elite Dangerous"));
             }
             catch (Exception ex)
             {

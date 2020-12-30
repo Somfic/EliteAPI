@@ -1,9 +1,12 @@
-﻿using System;
+﻿using EliteAPI.Exceptions;
+using EliteAPI.Status.Provider.Abstractions;
+
+using Microsoft.Extensions.Logging;
+
+using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using EliteAPI.Status.Provider.Abstractions;
-using Microsoft.Extensions.Logging;
 
 namespace EliteAPI.Status.Provider
 {
@@ -26,8 +29,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogWarning(ex, "Could not get Status.json file");
-                throw;
+                throw new StatusFileNotFoundException("Could not getting the Status.json file", ex);
             }
         }
 
@@ -40,8 +42,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogWarning(ex, "Could not get Market.json file");
-                throw;
+                throw new MarketFileNotFoundException("Could not getting the Market.json file", ex);
             }
         }
 
@@ -54,8 +55,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogWarning(ex, "Could not get Cargo.json file");
-                throw;
+                throw new CargoFileNotFoundException("Could not getting the Cargo.json file", ex);
             }
         }
 
@@ -68,8 +68,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogWarning(ex, "Could not get Shipyard.json file");
-                throw;
+                throw new ShipyardFileNotFoundException("Could not getting the Shipyard.json file", ex);
             }
         }
 
@@ -82,8 +81,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogWarning(ex, "Could not get Outfitting.json file");
-                throw;
+                throw new OutfittingFileNotFoundException("Could not getting the Outfitting.json file", ex);
             }
         }
 
@@ -91,26 +89,19 @@ namespace EliteAPI.Status.Provider
         {
             if (!directory.Exists)
             {
-                Exception directoryException = new DirectoryNotFoundException("The journal directory does not exist");
-                directoryException.Data.Add("Directory", directory.FullName);
-                directoryException.Data.Add("File", name);
-                throw directoryException;
+                var dirException = new JournalDirectoryNotFoundException("The journal directory does not exist");
+                dirException.Data.Add("Path", directory.FullName);
+                return Task.FromException<FileInfo>(dirException);
             }
 
             var files = directory.GetFiles(name);
 
             if (files.Length > 0) return Task.FromResult(files.First());
 
-            if (name == "Status.json")
-            {
-                var path = Path.Combine(directory.FullName, name);
-                var fileException = new FileNotFoundException("The file does not exist", path);
-                fileException.Data.Add("Directory", directory.FullName);
-                fileException.Data.Add("File", name);
-                throw fileException;
-            }
-
-            return Task.FromResult<FileInfo>(null);
+            var path = Path.Combine(directory.FullName, name);
+            var fileException = new SupportFileNotFoundException($"The {name} could not be found");
+            fileException.Data.Add("Path", path);
+            return Task.FromException<FileInfo>(fileException);
         }
     }
 }

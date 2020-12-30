@@ -107,6 +107,7 @@ jobs:
       label: ${{steps.VERSION.outputs.label}}
       semver: ${{steps.VERSION.outputs.semver}}
       nuget: ${{steps.VERSION.outputs.nuget}}
+      applicable: ${{steps.VERSION.outputs.applicable}}
     steps:
       - name: Extract branch name
         shell: bash

@@ -81,6 +81,7 @@ namespace EliteAPI
         private FileInfo MarketFile { get; set; }
         private FileInfo OutfittingFile { get; set; }
         private FileInfo ShipyardFile { get; set; }
+        private FileInfo NavRouteFile { get; set; }
         private IList<string> DisabledSupportFiles { get; set; }
         private Exception PreInitializationException { get; }
         private Exception InitializationException { get; set; }
@@ -186,6 +187,7 @@ namespace EliteAPI
                 await _statusProcessor.ProcessMarketFile(MarketFile);
                 await _statusProcessor.ProcessOutfittingFile(OutfittingFile);
                 await _statusProcessor.ProcessShipyardFile(ShipyardFile);
+                await _statusProcessor.ProcessNavRouteFile(NavRouteFile);
 
                 await SetJournalFile();
                 await _journalProcessor.ProcessJournalFile(JournalFile, !HasCatchedUp);
@@ -284,6 +286,9 @@ namespace EliteAPI
 
                 if (!DisabledSupportFiles.Contains("Shipyard"))
                     ShipyardFile = await _statusProvider.FindShipyardFile(JournalDirectory);
+
+                if (!DisabledSupportFiles.Contains("NavRoute"))
+                    NavRouteFile = await _statusProvider.FindNavRouteFile(JournalDirectory);
             }
             catch (StatusFileNotFoundException ex)
             {
@@ -309,6 +314,11 @@ namespace EliteAPI
             {
                 _log.LogWarning(ex, "Shipyard.json file support has been disabled");
                 DisabledSupportFiles.Add("Shipyard");
+            }
+            catch (NavRouteFileNotFoundException ex)
+            {
+                _log.LogWarning(ex, "NavRoute.json file support has been disabled");
+                DisabledSupportFiles.Add("NavRoute");
             }
             catch (Exception ex)
             {

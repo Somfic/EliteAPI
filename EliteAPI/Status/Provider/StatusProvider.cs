@@ -82,6 +82,17 @@ namespace EliteAPI.Status.Provider
             catch (Exception ex)
             {
                 throw new OutfittingFileNotFoundException("Could not getting the Outfitting.json file", ex);
+
+        /// <inheritdoc />
+        public async Task<FileInfo> FindNavRouteFile(DirectoryInfo journalDirectory)
+        {
+            try
+            {
+                return await FindFile(journalDirectory, "NavRoute.json");
+            }
+            catch (Exception ex)
+            {
+                throw new NavRouteFileNotFoundException("Could not find the NavRoute.json file", ex);
             }
         }
 

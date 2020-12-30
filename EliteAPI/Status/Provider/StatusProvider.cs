@@ -55,8 +55,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogWarning(ex, "Could not get Cargo.json file");
-                throw;
+                throw new CargoFileNotFoundException("Could not getting the Cargo.json file", ex);
             }
         }
 

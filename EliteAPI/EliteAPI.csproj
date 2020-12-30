@@ -12,7 +12,7 @@
     <Description>A powerful event based .NET API for Elite: Dangerous</Description>
     <Copyright>© Somfic 2020</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.0.0-alpha0864</Version>
+    <Version>3.0.0-alpha0867</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageIcon>logo_gradient_small.jpg</PackageIcon>
     <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
@@ -20,7 +20,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Somfic</Authors>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <InformationalVersion>3.0.0-alpha.864+Branch.dev.Sha.e7accf4436467786e272af4e56eac95fb9ad1176</InformationalVersion>
+    <InformationalVersion>3.0.0-alpha.867+Branch.dev.Sha.328a96e01942fcf1a417fe6d30a1741808b03b3d</InformationalVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>EliteAPI.xml</DocumentationFile>

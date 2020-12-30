@@ -29,8 +29,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogWarning(ex, "Could not get Status.json file");
-                throw;
+                throw new StatusFileNotFoundException("Could not getting the Status.json file", ex);
             }
         }
 

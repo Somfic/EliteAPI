@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build
-          path: "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/${{ github.repository_owner }}.${{ github.event.repository.name }}/bin/Release"
+          path: "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/${{ github.event.repository.name }}/bin/Release"
           if-no-files-found: error
 
   test:

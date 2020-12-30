@@ -68,8 +68,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogWarning(ex, "Could not get Shipyard.json file");
-                throw;
+                throw new ShipyardFileNotFoundException("Could not getting the Shipyard.json file", ex);
             }
         }
 

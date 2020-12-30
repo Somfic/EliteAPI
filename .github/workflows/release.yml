@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: main
 
       - name: Clean
         run: dotnet clean
@@ -22,11 +22,14 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release
 
+      - name: Pack
+        run: dotnet pack --configuration Release
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         with:
           name: build
-          path: "/home/runner/work/EliteAPI/EliteAPI/EliteAPI/bin/Release"
+          path: "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/${{ github.repository_owner }}.${{ github.event.repository.name }}/bin/Release"
           if-no-files-found: error
 
   add-to-release:
@@ -56,7 +59,7 @@ jobs:
         with:
           upload_url: ${{ steps.get_release.outputs.upload_url }}
           asset_path: "release.zip"
-          asset_name: "EliteAPI"
+          asset_name: "${{ github.event.repository.name }}"
           asset_content_type: application/zip
 
   publish-nuget:
@@ -67,21 +70,40 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          ref: master
-          
-      - name: Publish NuGet
-        uses: brandedoutcast/publish-nuget@v2.5.5
-        if: ${{ env.GitVersion_PreReleaseLabel != 'alpha' && env.GitVersion_PreReleaseLabel != 'beta'}}
+          ref: main
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v2
         with:
-          PROJECT_FILE_PATH: EliteAPI/EliteAPI.csproj
-          TAG_COMMIT: false
-          NUGET_KEY: ${{secrets.NUGET_KEY}}
-      
-      - name: Unlist alpha and beta packages
-        if: ${{ env.GitVersion_PreReleaseLabel != 'alpha' && env.GitVersion_PreReleaseLabel != 'beta'}}
+          name: build
+
+      - name: Publish project to NuGet
+        run: dotnet nuget push '*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
+
+      - name: Unlist alpha and beta packages on NuGet
         uses: darenm/unlist-nuget@v1
         with:
-          NUGET_PACKAGE: EliteAPI
+          NUGET_PACKAGE: ${{ github.event.repository.name }}
           VERSION_REGEX: (.*alpha.*)|(.*beta.*)
           NUGET_KEY: ${{secrets.NUGET_KEY}}
 
+  publish-github:
+    needs: [build]
+    name: Publish to GitHub
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+
+      - name: Authorize with Github Package Registry
+        run: dotnet nuget add source https://nuget.pkg.github.com/${{ github.event.repository_owner }}/index.json -n "github" -u "${{ github.event.repository_owner }}" -p "${{secrets.ADMIN_TOKEN}}"
+
+      - name: Publish project to Github Package Registry
+        run: dotnet nuget push '*.nupkg' -s github --skip-duplicate

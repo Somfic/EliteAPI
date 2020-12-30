@@ -1,7 +1,7 @@
 name: CI
 on: [push, pull_request]
 
-jobs:   
+jobs:
   build:
     name: Build
     needs: [update-version]
@@ -11,17 +11,17 @@ jobs:
         shell: bash
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         id: extract_branch
-      
+
       - name: Checkout code
         uses: actions/checkout@v2
         with:
           ref: ${{ steps.extract_branch.outputs.branch }}
-      
+
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
         with:
           languages: csharp
-      
+
       - name: Clean
         run: dotnet clean
 
@@ -31,6 +31,10 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release
 
+      - name: Pack
+        if: ${{ needs.update-version.outputs.applicable == 'true' }}
+        run: dotnet pack --configuration Release
+
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
 
@@ -38,9 +42,9 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build
-          path: "/home/runner/work/EliteAPI/EliteAPI/EliteAPI/bin/Release"
+          path: "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/${{ github.repository_owner }}.${{ github.event.repository.name }}/bin/Release"
           if-no-files-found: error
-          
+
   test:
     name: Unit test
     runs-on: ${{ matrix.os }}
@@ -94,17 +98,22 @@ jobs:
         with:
           message: ${{steps.REPORT.outputs.content}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
   update-version:
     name: Update version
     if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
+    outputs:
+      label: ${{steps.VERSION.outputs.label}}
+      semver: ${{steps.VERSION.outputs.semver}}
+      nuget: ${{steps.VERSION.outputs.nuget}}
+      applicable: ${{steps.VERSION.outputs.applicable}}
     steps:
       - name: Extract branch name
         shell: bash
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         id: extract_branch
-      
+
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -114,82 +123,62 @@ jobs:
       - name: Fetch for GitVersion
         run: git fetch --tags --unshallow
 
-      - name: Fetch master for GitVersion
-        if: github.ref != 'refs/heads/master'
-        run: git branch --create-reflog master origin/master
+      - name: Fetch main for GitVersion
+        if: github.ref != 'refs/heads/main'
+        run: git branch --create-reflog main origin/main
 
       - name: Update version
         run: dotnet-gitversion /updateprojectfiles /updateassemblyinfo /output buildserver
-     
+
+      - name: Set job output
+        id: VERSION
+        run: |
+          echo '::set-output name=label::${{env.GitVersion_PreReleaseLabel}}'
+          echo '::set-output name=semver::${{env.GitVersion_LegacySemVer}}'
+          echo '::set-output name=nuget::${{env.GitVersion_NuGetPreReleaseTagV2}}'
+          echo '::set-output name=applicable::${{env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta' }}'
+
       - name: Enable branch protection bypass
-        uses: Somfic/bypass-branch-protection@1.0.2
+        if: ${{ steps.extract_branch.outputs.branch == 'main'}}
+        uses: Somfic/bypass-branch-protection@1.0.3
         id: BYPASS
         with:
           token: ${{secrets.ADMIN_TOKEN}}
           branch: ${{steps.extract_branch.outputs.branch}}
 
       - name: Apply changes
+        if: ${{ steps.VERSION.outputs.applicable == 'true' || steps.extract_branch.outputs.branch == 'main' }}
         uses: EndBug/add-and-commit@v6.2.0
         with:
           author_name: github-actions[bot]
           author_email: github-actions[bot]@users.noreply.github.com
           message: "Bumped version to ${{env.GitVersion_LegacySemVer}}"
-      
+
       - name: Disable branch protection bypass
-        uses: Somfic/bypass-branch-protection@1.0.2
-        if: ${{always()}}
+        uses: Somfic/bypass-branch-protection@1.0.3
+        if: ${{always() && steps.extract_branch.outputs.branch == 'main'}}
         with:
           token: ${{secrets.ADMIN_TOKEN}}
           branch: ${{steps.extract_branch.outputs.branch}}
           backup: ${{steps.BYPASS.outputs.backup}}
-          
+
   publish-nuget:
-    needs: [update-version, test]
-    name: Publish prerelease to NuGet
-    if: ${{ github.ref != 'refs/heads/master' && github.event_name == 'push' }}
-    runs-on: ubuntu-latest
+    needs: [build, update-version, test]
+    name: Publish prerelease package
+    if: ${{ needs.update-version.outputs.applicable == 'true' }}
+    runs-on: windows-latest
     steps:
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
-      
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with: 
-          ref: ${{steps.extract_branch.outputs.branch}}
-          
-      - name: Setup GitVersion
-        run: dotnet tool install --global GitVersion.Tool --version 5.6.0
-
-      - name: Fetch for GitVersion
-        run: git fetch --tags --unshallow
-
-      - name: Fetch master for GitVersion
-        if: github.ref != 'refs/heads/master'
-        run: git branch --create-reflog master origin/master
-
-      - name: Get version
-        run: dotnet-gitversion /output buildserver
-
       - name: Download build artifact
-        if: ${{ env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}
         uses: actions/download-artifact@v2
         with:
           name: build
-  
-      - name: Publish NuGet
-        uses: brandedoutcast/publish-nuget@v2.5.5
-        if: ${{ env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}
-        with:
-          PROJECT_FILE_PATH: EliteAPI/EliteAPI.csproj
-          TAG_COMMIT: false
-          NUGET_KEY: ${{secrets.NUGET_KEY}}
 
-      - name: Unlist earlier packages
-        if: ${{ env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}
+      - name: Publish project to NuGet
+        run: dotnet nuget push '*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
+
+      - name: Unlist earlier packages of this type
         uses: darenm/unlist-nuget@v1
         with:
-          NUGET_PACKAGE: 'EliteAPI'
-          VERSION_REGEX: '.*${{env.GitVersion_PreReleaseLabel}}.*'
+          NUGET_PACKAGE: "${{ github.repository_owner }}.${{ github.event.repository.name }}"
+          VERSION_REGEX: ".*${{needs.update-version.outputs.label}}.*"
           NUGET_KEY: ${{secrets.NUGET_KEY}}

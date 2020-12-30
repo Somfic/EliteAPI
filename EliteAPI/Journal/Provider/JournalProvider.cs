@@ -30,7 +30,7 @@ namespace EliteAPI.Journal.Provider
         {
             try
             {
-                string fileFilter = string.IsNullOrWhiteSpace(_codeConfig.Journal) ? _codeConfig.Journal : "Journal.*.log";
+                string fileFilter = !string.IsNullOrWhiteSpace(_codeConfig.Journal) ? _codeConfig.Journal : "Journal.*.log";
 
                 _log.LogTrace($"Searching for '{fileFilter}' files in {journalDirectory.FullName}");
 

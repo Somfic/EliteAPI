@@ -81,8 +81,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogWarning(ex, "Could not get Outfitting.json file");
-                throw;
+                throw new OutfittingFileNotFoundException("Could not getting the Outfitting.json file", ex);
             }
         }
 

@@ -1,21 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
-using EliteAPI.Abstractions;
+﻿using EliteAPI.Abstractions;
 using EliteAPI.Event.Processor.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
+using EliteAPI.Exceptions;
 using EliteAPI.Journal.Directory.Abstractions;
 using EliteAPI.Journal.Processor.Abstractions;
 using EliteAPI.Journal.Provider.Abstractions;
 using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Provider.Abstractions;
+
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
@@ -77,7 +81,7 @@ namespace EliteAPI
         private FileInfo MarketFile { get; set; }
         private FileInfo OutfittingFile { get; set; }
         private FileInfo ShipyardFile { get; set; }
-
+        private IList<string> DisabledSupportFiles { get; set; }
         private Exception PreInitializationException { get; }
         private Exception InitializationException { get; set; }
 
@@ -112,6 +116,8 @@ namespace EliteAPI
             try
             {
                 _log.LogInformation("Initializing EliteAPI v{version}", Version);
+
+                DisabledSupportFiles = new List<string>();
 
                 await CheckComputerOperatingSystem();
                 await InitializeEventHandlers();
@@ -267,11 +273,46 @@ namespace EliteAPI
             try
             {
                 _log.LogTrace("Setting support files");
-                StatusFile = await _statusProvider.FindStatusFile(JournalDirectory);
-                CargoFile = await _statusProvider.FindCargoFile(JournalDirectory);
-                MarketFile = await _statusProvider.FindMarketFile(JournalDirectory);
-                OutfittingFile = await _statusProvider.FindOutfittingFile(JournalDirectory);
-                ShipyardFile = await _statusProvider.FindShipyardFile(JournalDirectory);
+
+                if (!DisabledSupportFiles.Contains("Status"))
+                    StatusFile = await _statusProvider.FindStatusFile(JournalDirectory);
+
+                if (!DisabledSupportFiles.Contains("Cargo"))
+                    CargoFile = await _statusProvider.FindCargoFile(JournalDirectory);
+
+                if (!DisabledSupportFiles.Contains("Market"))
+                    MarketFile = await _statusProvider.FindMarketFile(JournalDirectory);
+
+                if (!DisabledSupportFiles.Contains("Outfitting"))
+                    OutfittingFile = await _statusProvider.FindOutfittingFile(JournalDirectory);
+
+                if (!DisabledSupportFiles.Contains("Shipyard"))
+                    ShipyardFile = await _statusProvider.FindShipyardFile(JournalDirectory);
+            }
+            catch (StatusFileNotFoundException ex)
+            {
+                _log.LogError(ex, "Status.json file support has been disabled. Live information like gear and hardpoints are not supported");
+                DisabledSupportFiles.Add("Status");
+            }
+            catch (CargoFileNotFoundException ex)
+            {
+                _log.LogWarning(ex, "Cargo.json file support has been disabled");
+                DisabledSupportFiles.Add("Cargo");
+            }
+            catch (MarketFileNotFoundException ex)
+            {
+                _log.LogWarning(ex, "Market.json file support has been disabled");
+                DisabledSupportFiles.Add("Market");
+            }
+            catch (OutfittingFileNotFoundException ex)
+            {
+                _log.LogWarning(ex, "Outfitting.json file support has been disabled");
+                DisabledSupportFiles.Add("Outfitting");
+            }
+            catch (ShipyardFileNotFoundException ex)
+            {
+                _log.LogWarning(ex, "Shipyard.json file support has been disabled");
+                DisabledSupportFiles.Add("Shipyard");
             }
             catch (Exception ex)
             {

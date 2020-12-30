@@ -45,9 +45,12 @@ namespace EliteAPI
         {
             try
             {
-                Version = Assembly.GetExecutingAssembly().GetName().Version;
-
                 _log = services.GetRequiredService<ILogger<EliteDangerousAPI>>();
+
+                Events = services.GetRequiredService<EventHandler>();
+                Status = services.GetRequiredService<IShipStatus>();
+                Version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion.Split('+')[0];
+
                 _config = services.GetRequiredService<IConfiguration>();
 
                 _eventProvider = services.GetRequiredService<IEventProvider>();
@@ -60,9 +63,6 @@ namespace EliteAPI
 
                 _statusProvider = services.GetRequiredService<IStatusProvider>();
                 _statusProcessor = services.GetRequiredService<IStatusProcessor>();
-
-                Events = services.GetRequiredService<EventHandler>();
-                Status = services.GetRequiredService<IShipStatus>();
             }
             catch (Exception ex)
             {
@@ -90,7 +90,7 @@ namespace EliteAPI
         public bool HasCatchedUp { get; private set; }
 
         /// <inheritdoc />
-        public Version Version { get; }
+        public string Version { get; }
 
         /// <inheritdoc />
         public EventHandler Events { get; }
@@ -111,7 +111,7 @@ namespace EliteAPI
 
             try
             {
-                _log.LogInformation("Initializing EliteAPI v{version}", Version.ToString());
+                _log.LogInformation("Initializing EliteAPI v{version}", Version);
 
                 await CheckComputerOperatingSystem();
                 await InitializeEventHandlers();
@@ -198,6 +198,7 @@ namespace EliteAPI
 
         private async Task InitializeEventHandlers()
         {
+            _log.LogTrace("Initializing event handlers");
             foreach (var eventProcessor in _eventProcessors)
                 try
                 {
@@ -228,6 +229,7 @@ namespace EliteAPI
         {
             try
             {
+                _log.LogTrace("Setting journal directory");
                 var newJournalDirectory = await _journalDirectoryProvider.FindJournalDirectory();
                 if (newJournalDirectory == null || JournalDirectory?.FullName == newJournalDirectory.FullName) return;
 
@@ -237,7 +239,7 @@ namespace EliteAPI
             catch (Exception ex)
             {
                 _log.LogWarning(ex, "Could not find journal directory");
-                throw;
+                throw ex;
             }
         }
 
@@ -245,6 +247,7 @@ namespace EliteAPI
         {
             try
             {
+                _log.LogTrace("Setting journal file");
                 var newJournalFile = await _journalProvider.FindJournalFile(JournalDirectory);
 
                 if (JournalFile?.FullName == newJournalFile.FullName) return;
@@ -263,6 +266,7 @@ namespace EliteAPI
         {
             try
             {
+                _log.LogTrace("Setting support files");
                 StatusFile = await _statusProvider.FindStatusFile(JournalDirectory);
                 CargoFile = await _statusProvider.FindCargoFile(JournalDirectory);
                 MarketFile = await _statusProvider.FindMarketFile(JournalDirectory);
@@ -277,6 +281,7 @@ namespace EliteAPI
 
         private Task CheckComputerOperatingSystem()
         {
+            _log.LogTrace("Checking operating system");
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 _log.LogWarning("You are not running on a Windows machine, some features may not work properly");
 

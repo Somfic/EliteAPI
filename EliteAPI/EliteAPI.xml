@@ -611,6 +611,16 @@
         <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
+        <member name="T:EliteAPI.Status.Abstractions.IStatus">
+            <summary>
+            Holds status information about the game
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Abstractions.IStatus.OnChange">
+            <summary>
+            Triggered when any of the properties have been updated
+            </summary>
+        </member>
         <member name="T:EliteAPI.Status.NavRoute.Abstractions.INavRoute">
             <summary>
             Holds information about the current navigation route
@@ -1055,11 +1065,6 @@
         <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.BodyRadius">
             <summary>
             The radius of the currently visiting body
-            </summary>
-        </member>
-        <member name="E:EliteAPI.Status.Ship.Abstractions.IShip.OnChange">
-            <summary>
-            Triggered when any of the properties have been updated
             </summary>
         </member>
         <member name="T:EliteAPI.Status.Ship.Ship">

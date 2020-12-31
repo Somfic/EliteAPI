@@ -1,4 +1,5 @@
 ﻿using System;
+using EliteAPI.Status.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
 
 namespace EliteAPI.Status.Ship
@@ -6,11 +7,6 @@ namespace EliteAPI.Status.Ship
     /// <inheritdoc />
     public class Ship : IShip
     {
-        internal Ship()
-        {
-
-        }
-
         /// <inheritdoc />
         public StatusProperty<ShipFlag> Flags { get; } = new(ShipFlag.None);
 
@@ -148,7 +144,7 @@ namespace EliteAPI.Status.Ship
         /// <inheritdoc />
         public event EventHandler OnChange;
 
-        void IShip.TriggerOnChange()
+        void IStatus.TriggerOnChange()
         {
             OnChange?.Invoke(this, EventArgs.Empty);
         }

@@ -1,11 +1,12 @@
 ﻿using System;
+using EliteAPI.Status.Abstractions;
 
 namespace EliteAPI.Status.Ship.Abstractions
 {
     /// <summary>
     /// Holds all information about the ship
     /// </summary>
-    public interface IShip
+    public interface IShip : IStatus
     {
         /// <summary>
         /// Overview of all ship flags
@@ -232,12 +233,5 @@ namespace EliteAPI.Status.Ship.Abstractions
         /// The radius of the currently visiting body
         /// </summary>
         StatusProperty<float> BodyRadius { get; }
-
-        /// <summary>
-        /// Triggered when any of the properties have been updated
-        /// </summary>
-        event EventHandler OnChange;
-
-        internal void TriggerOnChange();
     }
 }

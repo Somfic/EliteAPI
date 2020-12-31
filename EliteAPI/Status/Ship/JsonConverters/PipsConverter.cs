@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
-using EliteAPI.Status.Models;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Ship.JsonConverters

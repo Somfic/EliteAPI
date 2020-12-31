@@ -1,5 +1,4 @@
-﻿using EliteAPI.Status.Models;
-using EliteAPI.Status.Ship.JsonConverters;
+﻿using EliteAPI.Status.Ship.JsonConverters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 

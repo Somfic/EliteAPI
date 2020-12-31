@@ -21,6 +21,11 @@
         </member>
         <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Status">
             <summary>
+            Container for the ship's current status
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Ship">
+            <summary>
                 Container for the ship's current status
             </summary>
         </member>
@@ -129,6 +134,9 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Status">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousAPI.Ship">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.EliteDangerousAPI.InitializeAsync">
@@ -407,6 +415,29 @@
             <param name="message">The message that describes the error</param>
             <param name="innerException">The inner exception that caused this exception</param>
         </member>
+        <member name="T:EliteAPI.Exceptions.NavRouteFileNotFoundException">
+            <summary>
+            The exception that is thrown when the NavRoute.json file could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.NavRouteFileNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.NavRouteFileNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.NavRouteFileNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.NavRouteFileNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.NavRouteFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
         <member name="T:EliteAPI.Exceptions.OutfittingFileNotFoundException">
             <summary>
             The exception that is thrown when the Status.json file could not be found
@@ -572,161 +603,6 @@
         <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
-        <member name="T:EliteAPI.Status.Models.RawShipStatus">
-            <summary>
-                Only used for deserialization of the raw Status.json file
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Status.Models.ShipFuel">
-            <summary>
-                Container for information about the ship's fuel situation
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Models.ShipFuel.Main">
-            <summary>
-                The amount of fuel left in the main tank, in tonnes
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Models.ShipFuel.Reservoir">
-            <summary>
-                The amount of fuel left in the reservoir tank, in tonnes
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Status.Models.ShipGuiFocus">
-            <summary>
-                Ship GUI focus
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.NoFocus">
-            <summary>
-                There is no focus
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.InternalPanel">
-            <summary>
-                The internal (right) panel
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.ExternalPanel">
-            <summary>
-                The external (left) panel
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.CommsPanel">
-            <summary>
-                The communication panel
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.RolePanel">
-            <summary>
-                The role panel
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.StationServices">
-            <summary>
-                Station services
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.GalaxyMap">
-            <summary>
-                The galaxy map
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.SystemMap">
-            <summary>
-                The system map
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.Orrery">
-            <summary>
-                The orrery
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.FssMode">
-            <summary>
-                Full spectrum scanner mode
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.SaaMode">
-            <summary>
-                Saa mode
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipGuiFocus.Codex">
-            <summary>
-                The codex
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Status.Models.ShipLegalState">
-            <summary>
-                Legal ship states
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipLegalState.Clean">
-            <summary>
-                Clean
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipLegalState.IllegalCargo">
-            <summary>
-                Illegal cargo on-board
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipLegalState.Speeding">
-            <summary>
-                Speeding at stations
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipLegalState.Wanted">
-            <summary>
-                Wanted
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipLegalState.Hostile">
-            <summary>
-                Hostile
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipLegalState.PassengerWanted">
-            <summary>
-                Passenger on ship is wanted
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.ShipLegalState.Warrant">
-            <summary>
-                Warrant for arrest
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Models.ShipPips.System">
-            <summary>
-                Amount of half pips set to systems
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Models.ShipPips.Engines">
-            <summary>
-                Amount of half pips set to engines
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Models.ShipPips.Weapons">
-            <summary>
-                Amount of half pips set to weapons
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Status.Models.StatusProperty`1">
-            <summary>
-                Container for status properties
-            </summary>
-        </member>
-        <member name="F:EliteAPI.Status.Models.StatusProperty`1.OnChange">
-            <summary>
-                Triggered whenever this property is changed
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Models.StatusProperty`1.Value">
-            <summary>
-                The value of this property
-            </summary>
-        </member>
         <member name="T:EliteAPI.Status.Processor.Abstractions.IStatusProcessor">
             <summary>
                 Processes status files
@@ -755,6 +631,11 @@
         <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated">
             <summary>
                 Triggered when the outfitting file is updated
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.NavRouteUpdated">
+            <summary>
+                Triggered when the navroute file is updated
             </summary>
         </member>
         <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
@@ -786,6 +667,12 @@
                 <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated" /> when needed
             </summary>
         </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessNavRouteFile(System.IO.FileInfo)">
+            <summary>
+                Hooks the specified navroute file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.NavRouteUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.NavRouteUpdated" /> when
+                needed
+            </summary>
+        </member>
         <member name="T:EliteAPI.Status.Processor.StatusProcessor">
             <inheritdoc />
         </member>
@@ -804,6 +691,9 @@
         <member name="E:EliteAPI.Status.Processor.StatusProcessor.OutfittingUpdated">
             <inheritdoc />
         </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.NavRouteUpdated">
+            <inheritdoc />
+        </member>
         <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
             <inheritdoc />
         </member>
@@ -817,6 +707,9 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessOutfittingFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessNavRouteFile(System.IO.FileInfo)">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.Provider.Abstractions.IStatusProvider">
@@ -854,6 +747,12 @@
             </summary>
             <param name="journalDirectory">The journal directory</param>
         </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindNavRouteFile(System.IO.DirectoryInfo)">
+            <summary>
+                Finds the navroute file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
         <member name="T:EliteAPI.Status.Provider.StatusProvider">
             <inheritdoc />
         </member>
@@ -871,6 +770,536 @@
         </member>
         <member name="M:EliteAPI.Status.Provider.StatusProvider.FindOutfittingFile(System.IO.DirectoryInfo)">
             <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindNavRouteFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.Ship.Abstractions.IShip">
+            <summary>
+            Holds all information about the ship
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Flags">
+            <summary>
+            Overview of all ship flags
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Docked">
+            <summary>
+            Whether the ship is currently docked at a station or outpost
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Landed">
+            <summary>
+            Whether the ship is currently landed on a planet
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Gear">
+            <summary>
+            Whether the ship's landing gear is currently deployed
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Shields">
+            <summary>
+            Whether the ship's shields are currently active
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Supercruise">
+            <summary>
+            Whether the ship is currently in supercruise
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.FlightAssist">
+            <summary>
+            Whether the ship's flight assist is enabled
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Hardpoints">
+            <summary>
+            Whether the ship's weapons are currently deployed
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Winging">
+            <summary>
+            Whether the ship is currently winging with other commanders
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Lights">
+            <summary>
+            Whether the ship's exterior lights are currently enabled
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.CargoScoop">
+            <summary>
+            Whether the ship's cargo scoop is currently deployed
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.SilentRunning">
+            <summary>
+            Whether the ship is currently in silent running mode
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Scooping">
+            <summary>
+            Whether the ship is currently scooping fuel from a star
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.SrvHandbreak">
+            <summary>
+            Whether the SRV handbreak is currently enabled
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.SrvTurrent">
+            <summary>
+            Whether the SRV turrent is currently enabled
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.SrvNearShip">
+            <summary>
+            Whether the SRV is currently near the mothership
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.SrvDriveAssist">
+            <summary>
+            Whether the SRV has drive assist currently enabled
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.MassLocked">
+            <summary>
+            Whether the ship is currently mass locked
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.FsdCharging">
+            <summary>
+            Whether the ship's frame shift drive is currently charging
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.FsdCooldown">
+            <summary>
+            Whether the ship's frame shift drive is currently cooling down
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.LowFuel">
+            <summary>
+            Whether the ship is currently low on fuel
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Overheating">
+            <summary>
+            Whether the ship is currently overheating
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.HasLatLong">
+            <summary>
+            Whether the ship currently has latitude and longitude information available
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.InDanger">
+            <summary>
+            Whether the ship is currently in danger
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.InInterdiction">
+            <summary>
+            Whether the ship is currently being interdicted
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.InMothership">
+            <summary>
+            Whether the ship's commander is currently in the mothership
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.InFighter">
+            <summary>
+            Whether the ship's commander is currently in the fighter
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.InSrv">
+            <summary>
+            Whether the ship's commander is currently in the SRV
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.AnalysisMode">
+            <summary>
+            Whether the ship is currently in analysis mode
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.NightVision">
+            <summary>
+            Whether the ship currently has night vision enabled
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.AltitudeFromAverageRadius">
+            <summary>
+            Whether the ship's current altitude is being calculated by the planet's average radius
+            See also <see cref="P:EliteAPI.Status.Ship.Abstractions.IShip.Altitude"/>
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.FsdJump">
+            <summary>
+            Whether the ship is currently in a jump to another star system
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.SrvHighBeam">
+            <summary>
+            Whether the ship's SRV high beam is currently active
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Pips">
+            <summary>
+            The ship's currently energy distribution configuration
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.FireGroup">
+            <summary>
+            The ship's current firegroup
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.GuiFocus">
+            <summary>
+            The ship's current interface focus
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Fuel">
+            <summary>
+            The ship's current fuel information
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Cargo">
+            <summary>
+            The ship's currently amount of cargo in tonnes
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.LegalState">
+            <summary>
+            The ship's current legal state
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Latitude">
+            <summary>
+            The ship's current latitude on the planet
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Altitude">
+            <summary>
+            The ship's current altitude on the planet
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Longitude">
+            <summary>
+            The ship's current longitude on the planet
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Heading">
+            <summary>
+            The ship's current heading on the planet
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Body">
+            <summary>
+            The name of the body the ship is currently visiting
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.BodyRadius">
+            <summary>
+            The radius of the currently visiting body
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Ship.Abstractions.IShip.OnChange">
+            <summary>
+            Triggered when any of the properties have been updated
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Ship.Ship">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Flags">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Docked">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Landed">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Gear">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Shields">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Supercruise">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.FlightAssist">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Hardpoints">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Winging">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Lights">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.CargoScoop">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.SilentRunning">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Scooping">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.SrvHandbreak">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.SrvTurrent">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.SrvNearShip">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.SrvDriveAssist">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.MassLocked">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.FsdCharging">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.FsdCooldown">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.LowFuel">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Overheating">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.HasLatLong">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.InDanger">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.InInterdiction">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.InMothership">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.InFighter">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.InSrv">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.AnalysisMode">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.NightVision">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.AltitudeFromAverageRadius">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.FsdJump">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.SrvHighBeam">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Pips">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.FireGroup">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.GuiFocus">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Fuel">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Cargo">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.LegalState">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Latitude">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Altitude">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Longitude">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Heading">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Body">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.BodyRadius">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Ship.Ship.OnChange">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.Ship.ShipFuel">
+            <summary>
+            Container class for information about the ship's fuel situation
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.ShipFuel.Main">
+            <summary>
+            The ship's current amount of fuel left in the main fuel tank 
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.ShipFuel.Reservoir">
+            <summary>
+            The ship's current amount of fuel left in the reservoir fuel tank 
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Ship.ShipGuiFocus">
+            <summary>
+                Ship GUI focus
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.NoFocus">
+            <summary>
+                There is no focus
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.InternalPanel">
+            <summary>
+                The internal (right) panel
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.ExternalPanel">
+            <summary>
+                The external (left) panel
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.CommsPanel">
+            <summary>
+                The communication panel
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.RolePanel">
+            <summary>
+                The role panel
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.StationServices">
+            <summary>
+                Station services
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.GalaxyMap">
+            <summary>
+                The galaxy map
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.SystemMap">
+            <summary>
+                The system map
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.Orrery">
+            <summary>
+                The orrery
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.FssMode">
+            <summary>
+                Full spectrum scanner mode
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.SaaMode">
+            <summary>
+                Saa mode
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.Codex">
+            <summary>
+                The codex
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Ship.ShipLegalState">
+            <summary>
+                Legal ship states
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipLegalState.Clean">
+            <summary>
+                Clean
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipLegalState.IllegalCargo">
+            <summary>
+                Illegal cargo on-board
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipLegalState.Speeding">
+            <summary>
+                Speeding at stations
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipLegalState.Wanted">
+            <summary>
+                Wanted
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipLegalState.Hostile">
+            <summary>
+                Hostile
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipLegalState.PassengerWanted">
+            <summary>
+                Passenger on ship is wanted
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.Ship.ShipLegalState.Warrant">
+            <summary>
+                Warrant for arrest
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.ShipPips.System">
+            <summary>
+                Amount of half pips set to systems
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.ShipPips.Engines">
+            <summary>
+                Amount of half pips set to engines
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.ShipPips.Weapons">
+            <summary>
+                Amount of half pips set to weapons
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.StatusProperty`1">
+            <summary>
+            Container class for a status property
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.StatusProperty`1.Value">
+            <summary>
+            The value of this property
+            </summary>
+        </member>
+        <member name="F:EliteAPI.Status.StatusProperty`1.OnChange">
+            <summary>
+            Triggered whenever this property is changed
+            </summary>
         </member>
         <member name="T:System.Runtime.CompilerServices.IsExternalInit">
             <summary>

@@ -1,5 +1,4 @@
 ﻿using System;
-using EliteAPI.Status.Models;
 using EliteAPI.Status.Ship.Abstractions;
 
 namespace EliteAPI.Status.Ship

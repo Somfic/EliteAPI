@@ -9,12 +9,12 @@ using EliteAPI.Journal.Processor;
 using EliteAPI.Journal.Processor.Abstractions;
 using EliteAPI.Journal.Provider;
 using EliteAPI.Journal.Provider.Abstractions;
-using EliteAPI.Status.Models;
-using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Processor;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Provider;
 using EliteAPI.Status.Provider.Abstractions;
+using EliteAPI.Status.Ship;
+using EliteAPI.Status.Ship.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
@@ -42,7 +42,7 @@ namespace EliteAPI
             services.AddSingleton<IJournalProcessor, JournalProcessor>();
             services.AddSingleton<IStatusProcessor, StatusProcessor>();
 
-            services.AddSingleton<IShipStatus, ShipStatus>();
+            services.AddSingleton<IShip, Ship>();
 
             services.AddSingleton<EventHandler>();
 

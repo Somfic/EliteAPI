@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace EliteAPI.Status.Models
+namespace EliteAPI.Status.Ship
 {
     [Flags]
-    public enum ShipStatusFlags
+    public enum ShipFlag
     {
         None = 0,
         Docked = 1,

@@ -1,27 +1,32 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace EliteAPI.Status.Models
+namespace EliteAPI.Status
 {
     /// <summary>
-    ///     Container for status properties
+    /// Container class for a status property
     /// </summary>
-    public class ShipStatusProperty<T>
+    public class StatusProperty<T>
     {
-        /// <summary>
-        ///     Triggered whenever this property is changed
-        /// </summary>
-        public EventHandler<T> OnChange;
+        internal StatusProperty()
+        {
+            Value = default;
+        }
 
-        internal ShipStatusProperty(T initValue)
+        internal StatusProperty(T initValue)
         {
             Value = initValue;
         }
 
         /// <summary>
-        ///     The value of this property
+        /// The value of this property
         /// </summary>
         public T Value { get; private set; }
+
+        /// <summary>
+        /// Triggered whenever this property is changed
+        /// </summary>
+        public EventHandler<T> OnChange;
 
         internal bool NeedsUpdate(object rawValue)
         {

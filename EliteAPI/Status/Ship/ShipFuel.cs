@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 
-namespace EliteAPI.Status.Models
+namespace EliteAPI.Status.Ship
 {
     /// <summary>
-    ///     Container for information about the ship's fuel situation
+    /// Container class for information about the ship's fuel situation
     /// </summary>
     public class ShipFuel
     {
@@ -12,13 +12,13 @@ namespace EliteAPI.Status.Models
         }
 
         /// <summary>
-        ///     The amount of fuel left in the main tank, in tonnes
+        /// The ship's current amount of fuel left in the main fuel tank 
         /// </summary>
         [JsonProperty("FuelMain")]
         public float Main { get; private set; }
 
         /// <summary>
-        ///     The amount of fuel left in the reservoir tank, in tonnes
+        /// The ship's current amount of fuel left in the reservoir fuel tank 
         /// </summary>
         [JsonProperty("FuelReservoir")]
         public float Reservoir { get; private set; }

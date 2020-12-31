@@ -5,7 +5,6 @@ using EliteAPI.Exceptions;
 using EliteAPI.Journal.Directory.Abstractions;
 using EliteAPI.Journal.Processor.Abstractions;
 using EliteAPI.Journal.Provider.Abstractions;
-using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Provider.Abstractions;
 
@@ -19,7 +18,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-
+using EliteAPI.Status.Ship.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
@@ -52,7 +51,7 @@ namespace EliteAPI
                 _log = services.GetRequiredService<ILogger<EliteDangerousAPI>>();
 
                 Events = services.GetRequiredService<EventHandler>();
-                Status = services.GetRequiredService<IShipStatus>();
+                Ship = services.GetRequiredService<IShip>();
                 Version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion.Split('+')[0];
 
                 _config = services.GetRequiredService<IConfiguration>();
@@ -101,7 +100,11 @@ namespace EliteAPI
         public EventHandler Events { get; }
 
         /// <inheritdoc />
-        public IShipStatus Status { get; }
+        [Obsolete("Use the Ship property instead", true)]
+        public IShip Status { get; }
+
+        /// <inheritdoc />
+        public IShip Ship { get; }
 
         /// <inheritdoc />
         public async Task InitializeAsync()

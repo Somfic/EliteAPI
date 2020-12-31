@@ -712,17 +712,17 @@
                 Amount of half pips set to weapons
             </summary>
         </member>
-        <member name="T:EliteAPI.Status.Models.ShipStatusProperty`1">
+        <member name="T:EliteAPI.Status.Models.StatusProperty`1">
             <summary>
                 Container for status properties
             </summary>
         </member>
-        <member name="F:EliteAPI.Status.Models.ShipStatusProperty`1.OnChange">
+        <member name="F:EliteAPI.Status.Models.StatusProperty`1.OnChange">
             <summary>
                 Triggered whenever this property is changed
             </summary>
         </member>
-        <member name="P:EliteAPI.Status.Models.ShipStatusProperty`1.Value">
+        <member name="P:EliteAPI.Status.Models.StatusProperty`1.Value">
             <summary>
                 The value of this property
             </summary>

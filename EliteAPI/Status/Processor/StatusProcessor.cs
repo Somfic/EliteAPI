@@ -5,9 +5,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using EliteAPI.Status.Models;
-using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Processor.Abstractions;
+using EliteAPI.Status.Ship.Abstractions;
+using EliteAPI.Status.Ship.Raw;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
@@ -18,12 +18,13 @@ namespace EliteAPI.Status.Processor
     {
         private readonly IDictionary<string, string> _cache;
         private readonly ILogger<StatusProcessor> _log;
-        private readonly IShipStatus _status;
 
-        public StatusProcessor(ILogger<StatusProcessor> log, IShipStatus status)
+        private readonly IShip _ship;
+
+        public StatusProcessor(ILogger<StatusProcessor> log, IShip ship)
         {
             _log = log;
-            _status = status;
+            _ship = ship;
             _cache = new Dictionary<string, string>();
         }
 
@@ -145,12 +146,12 @@ namespace EliteAPI.Status.Processor
         {
             try
             {
-                var raw = JsonConvert.DeserializeObject<RawShipStatus>(json);
+                var raw = JsonConvert.DeserializeObject<RawShip>(json);
 
-                foreach (var propertyName in _status.GetType().GetProperties().Select(x => x.Name))
-                    await InvokeStatusUpdateMethod(raw, _status, propertyName);
+                foreach (var propertyName in _ship.GetType().GetProperties().Select(x => x.Name))
+                    await InvokeStatusUpdateMethod(raw, _ship, propertyName);
 
-                _status.TriggerOnChange();
+                _ship.TriggerOnChange();
             }
             catch (Exception ex)
             {
@@ -158,12 +159,12 @@ namespace EliteAPI.Status.Processor
             }
         }
 
-        private Task InvokeStatusUpdateMethod(RawShipStatus raw, IShipStatus status, string propertyName)
+        private Task InvokeStatusUpdateMethod(RawShip raw, IShip status, string propertyName)
         {
             try
             {
                 var rawValue = raw.GetType().GetProperty(propertyName).GetValue(raw);
-                var statusUpdateProperty = _status.GetType().GetProperty(propertyName).GetValue(_status);
+                var statusUpdateProperty = _ship.GetType().GetProperty(propertyName).GetValue(_ship);
                 var updateMethod = statusUpdateProperty.GetType()
                     .GetMethod("Update", BindingFlags.NonPublic | BindingFlags.Instance);
                 var needsUpdateMethod = statusUpdateProperty.GetType()

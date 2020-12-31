@@ -32,6 +32,8 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Rank", NullValueHandling = NullValueHandling.Ignore)]
         public long? Rank { get; private set; }
+
+        ///feiohjriohqoiqrqioqioqewoodbwqdqidijpfqvopojfewnfnqoqp2opo2po22o2o2o
     }
 
     public partial class EngineerProgressEvent

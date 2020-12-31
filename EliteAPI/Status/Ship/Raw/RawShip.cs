@@ -1,15 +1,13 @@
-﻿using EliteAPI.Status.Models.JsonConverters;
+﻿using EliteAPI.Status.Models;
+using EliteAPI.Status.Ship.JsonConverters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace EliteAPI.Status.Models
+namespace EliteAPI.Status.Ship.Raw
 {
-    /// <summary>
-    ///     Only used for deserialization of the raw Status.json file
-    /// </summary>
-    internal class RawShipStatus
+    internal class RawShip
     {
-        [JsonProperty("Flags")] public ShipStatusFlags Flags { get; private set; }
+        [JsonProperty("Flag")] public ShipFlag Flag { get; private set; }
 
         public bool Docked => GetFlag(0);
         public bool Landed => GetFlag(1);
@@ -76,7 +74,7 @@ namespace EliteAPI.Status.Models
 
         private bool GetFlag(int bit)
         {
-            return Flags.HasFlag((ShipStatusFlags) (1 << bit));
+            return Flag.HasFlag((ShipFlag)(1 << bit));
         }
     }
 }

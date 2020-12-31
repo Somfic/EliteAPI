@@ -1,4 +1,4 @@
-﻿namespace EliteAPI.Status.Models
+﻿namespace EliteAPI.Status.Ship
 {
     /// <summary>
     ///     Legal ship states

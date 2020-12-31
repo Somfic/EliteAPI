@@ -26,7 +26,12 @@
         </member>
         <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Ship">
             <summary>
-                Container for the ship's current status
+            Container for the ship's current status
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.NavRoute">
+            <summary>
+            Container for the ship's current navigation route
             </summary>
         </member>
         <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.IsRunning">
@@ -137,6 +142,9 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.Ship">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousAPI.NavRoute">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.EliteDangerousAPI.InitializeAsync">
@@ -602,6 +610,50 @@
         </member>
         <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
             <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.NavRoute.Abstractions.INavRoute">
+            <summary>
+            Holds information about the current navigation route
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.NavRoute.Abstractions.INavRoute.Stops">
+            <summary>
+            All stops on the route
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.NavRoute.NavRoute.Stops">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.NavRoute.NavRoute.OnChange">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.NavRoute.NavRoute.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.NavRoute.RouteStop">
+            <summary>
+            Container class for a waypoint on the route
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.NavRoute.RouteStop.System">
+            <summary>
+            The name of the star system
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.NavRoute.RouteStop.Address">
+            <summary>
+            The address of the star system
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.NavRoute.RouteStop.Position">
+            <summary>
+            The position of the star system
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.NavRoute.RouteStop.Class">
+            <summary>
+            The class of the star system's main star
+            </summary>
         </member>
         <member name="T:EliteAPI.Status.Processor.Abstractions.IStatusProcessor">
             <summary>

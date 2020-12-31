@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
@@ -27,9 +28,14 @@ namespace EliteAPI.Abstractions
         IShip Status { get; }
 
         /// <summary>
-        ///     Container for the ship's current status
+        /// Container for the ship's current status
         /// </summary>
         IShip Ship { get; }
+
+        /// <summary>
+        /// Container for the ship's current navigation route
+        /// </summary>
+        INavRoute NavRoute { get; }
 
         /// <summary>
         ///     Whether the api is currently running

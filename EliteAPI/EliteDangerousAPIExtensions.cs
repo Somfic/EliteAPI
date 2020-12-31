@@ -9,6 +9,8 @@ using EliteAPI.Journal.Processor;
 using EliteAPI.Journal.Processor.Abstractions;
 using EliteAPI.Journal.Provider;
 using EliteAPI.Journal.Provider.Abstractions;
+using EliteAPI.Status.NavRoute;
+using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Processor;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Provider;
@@ -43,6 +45,7 @@ namespace EliteAPI
             services.AddSingleton<IStatusProcessor, StatusProcessor>();
 
             services.AddSingleton<IShip, Ship>();
+            services.AddSingleton<INavRoute, NavRoute>();
 
             services.AddSingleton<EventHandler>();
 

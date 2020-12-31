@@ -18,6 +18,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
@@ -52,6 +53,8 @@ namespace EliteAPI
 
                 Events = services.GetRequiredService<EventHandler>();
                 Ship = services.GetRequiredService<IShip>();
+                NavRoute = services.GetRequiredService<INavRoute>();
+
                 Version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion.Split('+')[0];
 
                 _config = services.GetRequiredService<IConfiguration>();
@@ -105,6 +108,9 @@ namespace EliteAPI
 
         /// <inheritdoc />
         public IShip Ship { get; }
+
+        /// <inheritdoc />
+        public INavRoute NavRoute { get; }
 
         /// <inheritdoc />
         public async Task InitializeAsync()

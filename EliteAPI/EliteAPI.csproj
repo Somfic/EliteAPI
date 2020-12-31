@@ -48,7 +48,4 @@
       <PackagePath />
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Status\Models\" />
-  </ItemGroup>
 </Project>

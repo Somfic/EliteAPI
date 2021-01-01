@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using EliteAPI.Status.Models.Abstractions;
-using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI.Abstractions
 {
@@ -24,7 +23,7 @@ namespace EliteAPI.Abstractions
         /// <summary>
         ///     Container for all events
         /// </summary>
-        EventHandler Events { get; }
+        EliteAPI.Event.Handler.EventHandler Events { get; }
 
         /// <summary>
         ///     Container for the ship's current status
@@ -55,5 +54,25 @@ namespace EliteAPI.Abstractions
         ///     Stops the api
         /// </summary>
         Task StopAsync();
+
+        /// <summary>
+        /// Triggered when the api has catched up to the current session
+        /// </summary>
+        event EventHandler OnCatchedUp;
+
+        /// <summary>
+        /// Triggered when the api has started
+        /// </summary>
+        event EventHandler OnStart;
+
+        /// <summary>
+        /// Triggered when the api has stopped
+        /// </summary>
+        event EventHandler OnStop;
+
+        /// <summary>
+        /// Triggered when the api couldn't start because of an exception
+        /// </summary>
+        event EventHandler<Exception> OnError;
     }
 }

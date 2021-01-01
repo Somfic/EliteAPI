@@ -17,24 +17,24 @@ namespace EliteAPI.Status.NavRoute
         /// The name of the star system
         /// </summary>
         [JsonProperty("StarSystem")]
-        public string System { get; private set; }
+        public string System { get; init; }
 
         /// <summary>
         /// The address of the star system
         /// </summary>
         [JsonProperty("SystemAddress")]
-        public string Address { get; private set; }
+        public string Address { get; init; }
 
         /// <summary>
         /// The position of the star system
         /// </summary>
         [JsonProperty("StarPos")]
-        public IReadOnlyList<double> Position { get; private set; }
+        public IReadOnlyList<double> Position { get; init; }
 
         /// <summary>
         /// The class of the star system's main star
         /// </summary>
         [JsonProperty("StarClass")]
-        public string Class { get; private set; }
+        public string Class { get; init; }
     }
 }

@@ -4,62 +4,77 @@
         <name>EliteAPI</name>
     </assembly>
     <members>
-        <member name="T:EliteAPI.Abstractions.IEliteDangerousAPI">
+        <member name="T:EliteAPI.Abstractions.IEliteDangerousApi">
             <summary>
                 EliteAPI
             </summary>
         </member>
-        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Version">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Version">
             <summary>
                 EliteAPI's version
             </summary>
         </member>
-        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Events">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Events">
             <summary>
                 Container for all events
             </summary>
         </member>
-        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Status">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Status">
             <summary>
             Container for the ship's current status
             </summary>
         </member>
-        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Ship">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Ship">
             <summary>
             Container for the ship's current status
             </summary>
         </member>
-        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.NavRoute">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.NavRoute">
             <summary>
             Container for the ship's current navigation route
             </summary>
         </member>
-        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Cargo">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Cargo">
             <summary>
             Container for the ship's current cargo
             </summary>
         </member>
-        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.IsRunning">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Market">
+            <summary>
+            Container for the current market information
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Modules">
+            <summary>
+            Container for ship's modules
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Outfitting">
+            <summary>
+            Container for the current outfitting market information
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.IsRunning">
             <summary>
                 Whether the api is currently running
             </summary>
         </member>
-        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.HasCatchedUp">
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.HasCatchedUp">
             <summary>
                 Whether the api has catched up on past event in this session
             </summary>
         </member>
-        <member name="M:EliteAPI.Abstractions.IEliteDangerousAPI.InitializeAsync">
+        <member name="M:EliteAPI.Abstractions.IEliteDangerousApi.InitializeAsync">
             <summary>
                 Initializes the api
             </summary>
         </member>
-        <member name="M:EliteAPI.Abstractions.IEliteDangerousAPI.StartAsync">
+        <member name="M:EliteAPI.Abstractions.IEliteDangerousApi.StartAsync">
             <summary>
                 Starts the api
             </summary>
         </member>
-        <member name="M:EliteAPI.Abstractions.IEliteDangerousAPI.StopAsync">
+        <member name="M:EliteAPI.Abstractions.IEliteDangerousApi.StopAsync">
             <summary>
                 Stops the api
             </summary>
@@ -135,49 +150,58 @@
             Sets at which frequency EliteAPI should check for journal and status files updates
             </summary>
         </member>
-        <member name="T:EliteAPI.EliteDangerousAPI">
+        <member name="T:EliteAPI.EliteDangerousApi">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.#ctor(System.IServiceProvider)">
+        <member name="M:EliteAPI.EliteDangerousApi.#ctor(System.IServiceProvider)">
             <summary>
             Creates a new EliteDangerousAPI class
             </summary>
             <param name="services">ServiceProvider</param>
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.IsRunning">
+        <member name="P:EliteAPI.EliteDangerousApi.IsRunning">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.HasCatchedUp">
+        <member name="P:EliteAPI.EliteDangerousApi.HasCatchedUp">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Version">
+        <member name="P:EliteAPI.EliteDangerousApi.Version">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Events">
+        <member name="P:EliteAPI.EliteDangerousApi.Events">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Status">
+        <member name="P:EliteAPI.EliteDangerousApi.Status">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Ship">
+        <member name="P:EliteAPI.EliteDangerousApi.Ship">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.NavRoute">
+        <member name="P:EliteAPI.EliteDangerousApi.NavRoute">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.EliteDangerousAPI.Cargo">
+        <member name="P:EliteAPI.EliteDangerousApi.Cargo">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.InitializeAsync">
+        <member name="P:EliteAPI.EliteDangerousApi.Market">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.StartAsync">
+        <member name="P:EliteAPI.EliteDangerousApi.Modules">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.EliteDangerousAPI.StopAsync">
+        <member name="P:EliteAPI.EliteDangerousApi.Outfitting">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.EliteDangerousAPIExtensions.AddEliteAPI(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder})">
+        <member name="M:EliteAPI.EliteDangerousApi.InitializeAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.EliteDangerousApi.StartAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.EliteDangerousApi.StopAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.EliteDangerousApiExtensions.AddEliteAPI(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder})">
             <summary>
                 Adds all EliteAPI's necessary services to the <seealso cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />
             </summary>
@@ -234,7 +258,7 @@
             The Elite Dangerous API
             </summary>
         </member>
-        <member name="M:EliteAPI.Event.Module.EliteDangerousEventModule.#ctor(EliteAPI.Abstractions.IEliteDangerousAPI)">
+        <member name="M:EliteAPI.Event.Module.EliteDangerousEventModule.#ctor(EliteAPI.Abstractions.IEliteDangerousApi)">
             <summary>
             Wrapper for event modules
             </summary>
@@ -440,6 +464,29 @@
         <member name="M:EliteAPI.Exceptions.MarketFileNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
             Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.ModulesInfoFileNotFoundException">
+            <summary>
+            The exception that is thrown when the ModulesInfo.json file could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.ModulesInfoFileNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ModulesInfoFileNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.ModulesInfoFileNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ModulesInfoFileNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.ModulesInfoFileNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ModulesInfoFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
             </summary>
             <param name="message">The message that describes the error</param>
             <param name="innerException">The inner exception that caused this exception</param>
@@ -705,6 +752,184 @@
             The amount of tonnes of this item in the ship's cargo that are stolen
             </summary>
         </member>
+        <member name="T:EliteAPI.Status.Market.Abstractions.IMarket">
+            <summary>
+            Holds information about the current market
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Abstractions.IMarket.MarketId">
+            <summary>
+            The id of this market
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Abstractions.IMarket.StationName">
+            <summary>
+            The name of the station of this market
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Abstractions.IMarket.StationType">
+            <summary>
+            The type of station this market is
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Abstractions.IMarket.StarSystem">
+            <summary>
+            The name of the starsystem
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Abstractions.IMarket.Commodities">
+            <summary>
+            All the commodities that are traded at this market
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Market.Commodity">
+            <summary>
+            A commodity that is traded in a market
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.Id">
+            <summary>
+            The id of this commodity entry
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.Name">
+            <summary>
+            The name of the commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.NameLocalised">
+            <summary>
+            The localised name of this commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.Category">
+            <summary>
+            The category of this commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.CategoryLocalised">
+            <summary>
+            The localised category of this commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.BuyPrice">
+            <summary>
+            The buy price of this commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.SellPrice">
+            <summary>
+            The sell price of this commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.MeanPrice">
+            <summary>
+            The mean price of this commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.StockBracket">
+            <summary>
+            The bracket of stock for this commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.DemandBracket">
+            <summary>
+            The bracket of demand for this commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.Stock">
+            <summary>
+            This market's stock for this commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.Demand">
+            <summary>
+            This market's demand for this commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.Consumer">
+            <summary>
+            Whether this market is a consumer of this commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.Producer">
+            <summary>
+            Whether this market is a producer of this commodity
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Market.Commodity.Rare">
+            <summary>
+            Whether this commodity is rare
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Market.Market">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Market.Market.MarketId">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Market.Market.StationName">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Market.Market.StationType">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Market.Market.StarSystem">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Market.Market.Commodities">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Market.Market.OnChange">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Market.Market.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.Modules.Abstractions.IModules">
+            <summary>
+            Holds information about the ship's currently installed modules
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Modules.Abstractions.IModules.Installed">
+            <summary>
+            A list of installed modules
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Modules.Module">
+            <summary>
+            Holds information about a module in the ship
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Modules.Module.Slot">
+            <summary>
+            In which slot this module is located
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Modules.Module.Name">
+            <summary>
+            The module's name
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Modules.Module.Power">
+            <summary>
+            The factor of power this module has
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Modules.Module.Priority">
+            <summary>
+            The priority of this module, if applicable
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Modules.Modules.Installed">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Modules.Modules.OnChange">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Modules.Modules.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
+            <inheritdoc />
+        </member>
         <member name="T:EliteAPI.Status.NavRoute.Abstractions.INavRoute">
             <summary>
             Holds information about the current navigation route
@@ -749,6 +974,80 @@
             The class of the star system's main star
             </summary>
         </member>
+        <member name="T:EliteAPI.Status.Outfitting.Abstractions.IOutfitting">
+            <summary>
+            Holds information about the currently available outfitting deals at the station market
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.Abstractions.IOutfitting.MarketId">
+            <summary>
+            The id of this market
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.Abstractions.IOutfitting.StationName">
+            <summary>
+            The name of the station of this market
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.Abstractions.IOutfitting.StarSystem">
+            <summary>
+            The name of the starsystem
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.Abstractions.IOutfitting.Horizons">
+            <summary>
+            Whether the Horizon DLC is active
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.Abstractions.IOutfitting.Deals">
+            <summary>
+            The outfitting items being dealt at this station
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Outfitting.Outfitting">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.Outfitting.MarketId">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.Outfitting.StationName">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.Outfitting.StarSystem">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.Outfitting.Horizons">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.Outfitting.Deals">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Outfitting.Outfitting.OnChange">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Outfitting.Outfitting.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.Outfitting.OutfittingItem">
+            <summary>
+            Holds information about an outfitting item
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.OutfittingItem.Id">
+            <summary>
+            The id of this outfitting deal
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.OutfittingItem.Name">
+            <summary>
+            The name of the module
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Outfitting.OutfittingItem.Price">
+            <summary>
+            The price of this module
+            </summary>
+        </member>
         <member name="T:EliteAPI.Status.Processor.Abstractions.IStatusProcessor">
             <summary>
                 Processes status files
@@ -772,6 +1071,11 @@
         <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipyardUpdated">
             <summary>
                 Triggered when the shipyard file is updated
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ModulesUpdated">
+            <summary>
+                Triggered when the modules file is updated
             </summary>
         </member>
         <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated">
@@ -807,6 +1111,12 @@
                 needed
             </summary>
         </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessModulesFile(System.IO.FileInfo)">
+            <summary>
+                Hooks the specified modules file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ModulesUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ModulesUpdated" /> when
+                needed
+            </summary>
+        </member>
         <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessOutfittingFile(System.IO.FileInfo)">
             <summary>
                 Hooks the specified outfitting file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated" /> and invokes
@@ -823,6 +1133,9 @@
             <inheritdoc />
         </member>
         <member name="E:EliteAPI.Status.Processor.StatusProcessor.StatusUpdated">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.ModulesUpdated">
             <inheritdoc />
         </member>
         <member name="E:EliteAPI.Status.Processor.StatusProcessor.CargoUpdated">
@@ -844,6 +1157,9 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessCargoFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessModulesFile(System.IO.FileInfo)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessMarketFile(System.IO.FileInfo)">
@@ -893,6 +1209,12 @@
             </summary>
             <param name="journalDirectory">The journal directory</param>
         </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindModulesFile(System.IO.DirectoryInfo)">
+            <summary>
+                Finds the modules file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
         <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindNavRouteFile(System.IO.DirectoryInfo)">
             <summary>
                 Finds the navroute file from the specified journal directory
@@ -906,6 +1228,9 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Status.Provider.StatusProvider.FindMarketFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindModulesFile(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Status.Provider.StatusProvider.FindCargoFile(System.IO.DirectoryInfo)">

@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
 using EliteAPI.Status.Cargo.Abstractions;
+using EliteAPI.Status.Market.Abstractions;
 using EliteAPI.Status.Models.Abstractions;
+using EliteAPI.Status.Modules.Abstractions;
 using EliteAPI.Status.NavRoute.Abstractions;
+using EliteAPI.Status.Outfitting.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
@@ -49,6 +52,21 @@ namespace EliteAPI.Abstractions
         /// Container for the ship's current cargo
         /// </summary>
         ICargo Cargo { get; }
+
+        /// <summary>
+        /// Container for the current market information
+        /// </summary>
+        IMarket Market { get; }
+
+        /// <summary>
+        /// Container for ship's modules
+        /// </summary>
+        IModules Modules { get; }
+
+        /// <summary>
+        /// Container for the current outfitting market information
+        /// </summary>
+        IOutfitting Outfitting { get; }
 
         /// <summary>
         ///     Whether the api is currently running

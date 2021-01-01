@@ -11,9 +11,15 @@ using EliteAPI.Journal.Provider;
 using EliteAPI.Journal.Provider.Abstractions;
 using EliteAPI.Status.Cargo;
 using EliteAPI.Status.Cargo.Abstractions;
+using EliteAPI.Status.Market;
+using EliteAPI.Status.Market.Abstractions;
 using EliteAPI.Status.Models.Abstractions;
+using EliteAPI.Status.Modules;
+using EliteAPI.Status.Modules.Abstractions;
 using EliteAPI.Status.NavRoute;
 using EliteAPI.Status.NavRoute.Abstractions;
+using EliteAPI.Status.Outfitting;
+using EliteAPI.Status.Outfitting.Abstractions;
 using EliteAPI.Status.Processor;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Provider;
@@ -58,6 +64,9 @@ namespace EliteAPI
             services.AddSingleton<IShipStatus, ShipStatus>();
             services.AddSingleton<INavRoute, NavRoute>();
             services.AddSingleton<ICargo, Cargo>();
+            services.AddSingleton<IMarket, Market>();
+            services.AddSingleton<IModules, Modules>();
+            services.AddSingleton<IOutfitting, Outfitting>();
 
             services.AddSingleton<EventHandler>();
 

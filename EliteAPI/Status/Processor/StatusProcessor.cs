@@ -8,9 +8,15 @@ using System.Threading.Tasks;
 using EliteAPI.Status.Abstractions;
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Cargo.Raw;
+using EliteAPI.Status.Market.Abstractions;
+using EliteAPI.Status.Market.Raw;
 using EliteAPI.Status.Models.Abstractions;
+using EliteAPI.Status.Modules.Abstractions;
+using EliteAPI.Status.Modules.Raw;
 using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.NavRoute.Raw;
+using EliteAPI.Status.Outfitting.Abstractions;
+using EliteAPI.Status.Outfitting.Raw;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
 using EliteAPI.Status.Ship.Raw;
@@ -29,19 +35,28 @@ namespace EliteAPI.Status.Processor
         private readonly IShipStatus _status;
         private readonly INavRoute _navRoute;
         private readonly ICargo _cargo;
+        private readonly IMarket _market;
+        private readonly IModules _modules;
+        private readonly IOutfitting _outfitting;
 
-        public StatusProcessor(ILogger<StatusProcessor> log, IShip ship, INavRoute navRoute, ICargo cargo, IShipStatus status)
+        public StatusProcessor(ILogger<StatusProcessor> log, IShip ship, INavRoute navRoute, ICargo cargo, IMarket market, IShipStatus status, IModules modules, IOutfitting outfitting)
         {
             _log = log;
             _ship = ship;
             _navRoute = navRoute;
             _cargo = cargo;
+            _market = market;
             _status = status;
+            _modules = modules;
+            _outfitting = outfitting;
             _cache = new Dictionary<string, string>();
         }
 
         /// <inheritdoc />
         public event EventHandler<string> StatusUpdated;
+
+        /// <inheritdoc />
+        public event EventHandler<string> ModulesUpdated;
 
         /// <inheritdoc />
         public event EventHandler<string> CargoUpdated;
@@ -95,19 +110,31 @@ namespace EliteAPI.Status.Processor
         }
 
         /// <inheritdoc />
-        public Task ProcessMarketFile(FileInfo marketFile)
+        public async Task ProcessModulesFile(FileInfo modulesFile)
         {
-            if (marketFile == null || !marketFile.Exists) return Task.CompletedTask;
+            if (!modulesFile.Exists) return;
+
+            var content = ReadAllText(modulesFile);
+            if (!IsInCache(modulesFile, content))
+            {
+                AddToCache(modulesFile, content);
+                await InvokeMethods<RawModules>(content, _modules);
+                ModulesUpdated?.Invoke(this, content);
+            }
+        }
+
+        /// <inheritdoc />
+        public async Task ProcessMarketFile(FileInfo marketFile)
+        {
+            if (marketFile == null || !marketFile.Exists) return;
 
             var content = ReadAllText(marketFile);
             if (!IsInCache(marketFile, content))
             {
                 AddToCache(marketFile, content);
-                //await InvokeMarketMethods(content);
+                await InvokeMethods<RawMarket>(content, _market);
                 MarketUpdated?.Invoke(this, content);
             }
-
-            return Task.CompletedTask;
         }
 
         /// <inheritdoc />
@@ -127,19 +154,17 @@ namespace EliteAPI.Status.Processor
         }
 
         /// <inheritdoc />
-        public Task ProcessOutfittingFile(FileInfo outfittingFile)
+        public async Task ProcessOutfittingFile(FileInfo outfittingFile)
         {
-            if (outfittingFile == null || !outfittingFile.Exists) return Task.CompletedTask;
+            if (outfittingFile == null || !outfittingFile.Exists) return;
 
             var content = ReadAllText(outfittingFile);
             if (!IsInCache(outfittingFile, content))
             {
                 AddToCache(outfittingFile, content);
-                //await InvokeOutfittingMethods(content);
+                await InvokeMethods<RawOutfitting>(content, _outfitting);
                 OutfittingUpdated?.Invoke(this, content);
             }
-
-            return Task.CompletedTask;
         }
 
         /// <inheritdoc />

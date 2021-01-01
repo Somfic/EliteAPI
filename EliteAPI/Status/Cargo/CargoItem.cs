@@ -11,24 +11,24 @@ namespace EliteAPI.Status.Cargo
         /// The name of the item
         /// </summary>
         [JsonProperty("Name")]
-        public string Name { get; set; }
+        public string Name { get; init; }
 
         /// <summary>
         /// The localised name of the item
         /// </summary>
         [JsonProperty("Name_Localised")]
-        public string NameLocalised { get; set; }
+        public string NameLocalised { get; init; }
 
         /// <summary>
         /// The amount of tonnes of this item in the ship's cargo
         /// </summary>
         [JsonProperty("Count")]
-        public int Count { get; set; }
+        public int Count { get; init; }
 
         /// <summary>
         /// The amount of tonnes of this item in the ship's cargo that are stolen
         /// </summary>
         [JsonProperty("Stolen")]
-        public int Stolen { get; set; }
+        public int Stolen { get; init; }
     }
 }

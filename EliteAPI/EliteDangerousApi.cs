@@ -23,6 +23,9 @@ using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
 using EliteAPI.Configuration.Abstractions;
+using EliteAPI.Status.Market.Abstractions;
+using EliteAPI.Status.Modules.Abstractions;
+using EliteAPI.Status.Outfitting.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
@@ -67,6 +70,9 @@ namespace EliteAPI
                 Status = services.GetRequiredService<IShipStatus>();
                 NavRoute = services.GetRequiredService<INavRoute>();
                 Cargo = services.GetRequiredService<ICargo>();
+                Market = services.GetRequiredService<IMarket>();
+                Modules = services.GetRequiredService<IModules>();
+                Outfitting = services.GetRequiredService<IOutfitting>();
 
                 Version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion.Split('+')[0];
 
@@ -98,6 +104,7 @@ namespace EliteAPI
         private FileInfo OutfittingFile { get; set; }
         private FileInfo ShipyardFile { get; set; }
         private FileInfo NavRouteFile { get; set; }
+        private FileInfo ModulesInfoFile { get; set; }
         private IList<string> DisabledSupportFiles { get; set; }
         private Exception PreInitializationException { get; }
         private Exception InitializationException { get; set; }
@@ -128,6 +135,15 @@ namespace EliteAPI
 
         /// <inheritdoc />
         public ICargo Cargo { get; }
+
+        /// <inheritdoc />
+        public IMarket Market { get; }
+
+        /// <inheritdoc />
+        public IModules Modules { get; }
+
+        /// <inheritdoc />
+        public IOutfitting Outfitting { get; }
 
         /// <inheritdoc />
         public async Task InitializeAsync()
@@ -220,6 +236,7 @@ namespace EliteAPI
                 await _statusProcessor.ProcessOutfittingFile(OutfittingFile);
                 await _statusProcessor.ProcessShipyardFile(ShipyardFile);
                 await _statusProcessor.ProcessNavRouteFile(NavRouteFile);
+                await _statusProcessor.ProcessModulesFile(ModulesInfoFile);
 
                 await SetJournalFile();
                 await _journalProcessor.ProcessJournalFile(JournalFile, !HasCatchedUp);
@@ -321,6 +338,9 @@ namespace EliteAPI
 
                 if (!DisabledSupportFiles.Contains("NavRoute"))
                     NavRouteFile = await _statusProvider.FindNavRouteFile(JournalDirectory);
+
+                if (!DisabledSupportFiles.Contains("ModulesInfo"))
+                    ModulesInfoFile = await _statusProvider.FindModulesFile(JournalDirectory);
             }
             catch (StatusFileNotFoundException ex)
             {
@@ -351,6 +371,11 @@ namespace EliteAPI
             {
                 _log.LogWarning(ex, "NavRoute.json file support has been disabled");
                 DisabledSupportFiles.Add("NavRoute");
+            }
+            catch (ModulesInfoFileNotFoundException ex)
+            {
+                _log.LogWarning(ex, "ModulesInfo.json file support has been disabled");
+                DisabledSupportFiles.Add("ModulesInfo");
             }
             catch (Exception ex)
             {

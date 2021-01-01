@@ -30,6 +30,11 @@ namespace EliteAPI.Status.Processor.Abstractions
         event EventHandler<string> ShipyardUpdated;
 
         /// <summary>
+        ///     Triggered when the modules file is updated
+        /// </summary>
+        event EventHandler<string> ModulesUpdated;
+
+        /// <summary>
         ///     Triggered when the outfitting file is updated
         /// </summary>
         event EventHandler<string> OutfittingUpdated;
@@ -61,6 +66,12 @@ namespace EliteAPI.Status.Processor.Abstractions
         ///     needed
         /// </summary>
         Task ProcessShipyardFile(FileInfo shipyardFile);
+
+        /// <summary>
+        ///     Hooks the specified modules file to <see cref="ModulesUpdated" /> and invokes <see cref="ModulesUpdated" /> when
+        ///     needed
+        /// </summary>
+        Task ProcessModulesFile(FileInfo modulesFile);
 
         /// <summary>
         ///     Hooks the specified outfitting file to <see cref="OutfittingUpdated" /> and invokes

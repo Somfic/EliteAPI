@@ -34,6 +34,11 @@
             Container for the ship's current navigation route
             </summary>
         </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.Cargo">
+            <summary>
+            Container for the ship's current cargo
+            </summary>
+        </member>
         <member name="P:EliteAPI.Abstractions.IEliteDangerousAPI.IsRunning">
             <summary>
                 Whether the api is currently running
@@ -145,6 +150,9 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousAPI.NavRoute">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousAPI.Cargo">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.EliteDangerousAPI.InitializeAsync">
@@ -619,6 +627,69 @@
         <member name="E:EliteAPI.Status.Abstractions.IStatus.OnChange">
             <summary>
             Triggered when any of the properties have been updated
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Cargo.Abstractions.ICargo">
+            <summary>
+            Holds information about the ship's cargo
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.ICargo.Vessel">
+            <summary>
+            The name type of vessel that holds the cargo
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.ICargo.Count">
+            <summary>
+            The amount of tonnes that are in cargo
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.ICargo.Inventory">
+            <summary>
+            All the cargo's inventory
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Cargo.Cargo">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Cargo.Vessel">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Cargo.Count">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Cargo.Inventory">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Cargo.Cargo.OnChange">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Cargo.Cargo.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.Cargo.CargoItem">
+            <summary>
+            Container class for an item in the ship's cargo
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.CargoItem.Name">
+            <summary>
+            The name of the item
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.CargoItem.NameLocalised">
+            <summary>
+            The localised name of the item
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.CargoItem.Count">
+            <summary>
+            The amount of tonnes of this item in the ship's cargo
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.CargoItem.Stolen">
+            <summary>
+            The amount of tonnes of this item in the ship's cargo that are stolen
             </summary>
         </member>
         <member name="T:EliteAPI.Status.NavRoute.Abstractions.INavRoute">

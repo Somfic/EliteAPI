@@ -6,6 +6,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using EliteAPI.Status.Abstractions;
+using EliteAPI.Status.Cargo.Abstractions;
+using EliteAPI.Status.Cargo.Raw;
 using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.NavRoute.Raw;
 using EliteAPI.Status.Processor.Abstractions;
@@ -24,12 +26,14 @@ namespace EliteAPI.Status.Processor
 
         private readonly IShip _ship;
         private readonly INavRoute _navRoute;
+        private readonly ICargo _cargo;
 
-        public StatusProcessor(ILogger<StatusProcessor> log, IShip ship, INavRoute navRoute)
+        public StatusProcessor(ILogger<StatusProcessor> log, IShip ship, INavRoute navRoute, ICargo cargo)
         {
             _log = log;
             _ship = ship;
             _navRoute = navRoute;
+            _cargo = cargo;
             _cache = new Dictionary<string, string>();
         }
 
@@ -73,19 +77,17 @@ namespace EliteAPI.Status.Processor
         }
 
         /// <inheritdoc />
-        public Task ProcessCargoFile(FileInfo cargoFile)
+        public async Task ProcessCargoFile(FileInfo cargoFile)
         {
-            if (!cargoFile.Exists) return Task.CompletedTask;
+            if (!cargoFile.Exists) return;
 
             var content = ReadAllText(cargoFile);
             if (!IsInCache(cargoFile, content))
             {
                 AddToCache(cargoFile, content);
-                //await InvokeCargoMethods(content);
+                await InvokeMethods<RawCargo>(content, _cargo);
                 CargoUpdated?.Invoke(this, content);
             }
-
-            return Task.CompletedTask;
         }
 
         /// <inheritdoc />

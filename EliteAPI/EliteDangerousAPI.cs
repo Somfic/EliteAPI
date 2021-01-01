@@ -18,6 +18,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
@@ -111,6 +112,9 @@ namespace EliteAPI
 
         /// <inheritdoc />
         public INavRoute NavRoute { get; }
+
+        /// <inheritdoc />
+        public ICargo Cargo { get; }
 
         /// <inheritdoc />
         public async Task InitializeAsync()

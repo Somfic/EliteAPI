@@ -51,6 +51,9 @@ jobs:
           release_name: v${{ env.GitVersion_LegacySemVer }}
           body: |
             # ${{ github.event.repository.name }} v${{ env.GitVersion_LegacySemVer }} has been released
+            ```
+            dotnet add package {{ github.event.repository.name }} --version ${{ env.GitVersion_NuGetVersionV2 }}
+            ```
             ${{steps.NOTES.outputs.content}}
           draft: true
           prerelease: ${{ env.GitVersion_PreReleaseLabel != '' }}

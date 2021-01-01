@@ -64,6 +64,11 @@
             The targeted journal file
             </summary>
         </member>
+        <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.TickFrequency">
+            <summary>
+            At which frequency EliteAPI checks for journal and status files updates 
+            </summary>
+        </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfiguration">
             <summary>
             Standard implementation of the <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration"/> configuration class
@@ -73,6 +78,9 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.Journal">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.TickFrequency">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder">
@@ -105,6 +113,11 @@
         <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseJournal(System.String)">
             <summary>
             Sets which journal file to use, defaults to latest if not invoked
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseTickFrequency(System.TimeSpan)">
+            <summary>
+            Sets at which frequency EliteAPI should check for journal and status files updates
             </summary>
         </member>
         <member name="T:EliteAPI.EliteDangerousAPI">
@@ -403,6 +416,29 @@
         <member name="M:EliteAPI.Exceptions.MarketFileNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
             Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.NavRouteFileNotFoundException">
+            <summary>
+            The exception that is thrown when the NavRoute.json file could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.NavRouteFileNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.NavRouteFileNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.NavRouteFileNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.NavRouteFileNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.NavRouteFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
             </summary>
             <param name="message">The message that describes the error</param>
             <param name="innerException">The inner exception that caused this exception</param>
@@ -757,6 +793,11 @@
                 Triggered when the outfitting file is updated
             </summary>
         </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.NavRouteUpdated">
+            <summary>
+                Triggered when the navroute file is updated
+            </summary>
+        </member>
         <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
             <summary>
                 Hooks the specified status file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated" /> when
@@ -786,6 +827,12 @@
                 <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated" /> when needed
             </summary>
         </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessNavRouteFile(System.IO.FileInfo)">
+            <summary>
+                Hooks the specified navroute file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.NavRouteUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.NavRouteUpdated" /> when
+                needed
+            </summary>
+        </member>
         <member name="T:EliteAPI.Status.Processor.StatusProcessor">
             <inheritdoc />
         </member>
@@ -804,6 +851,9 @@
         <member name="E:EliteAPI.Status.Processor.StatusProcessor.OutfittingUpdated">
             <inheritdoc />
         </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.NavRouteUpdated">
+            <inheritdoc />
+        </member>
         <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
             <inheritdoc />
         </member>
@@ -817,6 +867,9 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessOutfittingFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessNavRouteFile(System.IO.FileInfo)">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.Provider.Abstractions.IStatusProvider">
@@ -854,6 +907,12 @@
             </summary>
             <param name="journalDirectory">The journal directory</param>
         </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindNavRouteFile(System.IO.DirectoryInfo)">
+            <summary>
+                Finds the navroute file from the specified journal directory
+            </summary>
+            <param name="journalDirectory">The journal directory</param>
+        </member>
         <member name="T:EliteAPI.Status.Provider.StatusProvider">
             <inheritdoc />
         </member>
@@ -870,6 +929,9 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Status.Provider.StatusProvider.FindOutfittingFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindNavRouteFile(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
         <member name="T:System.Runtime.CompilerServices.IsExternalInit">

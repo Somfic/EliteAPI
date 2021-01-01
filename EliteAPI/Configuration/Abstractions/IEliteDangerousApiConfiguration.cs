@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace EliteAPI.Configuration.Abstractions
 {
@@ -16,5 +17,10 @@ namespace EliteAPI.Configuration.Abstractions
         /// The targeted journal file
         /// </summary>
         public string Journal { get; }
+
+        /// <summary>
+        /// At which frequency EliteAPI checks for journal and status files updates 
+        /// </summary>
+        public TimeSpan TickFrequency { get; }
     }
 }

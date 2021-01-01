@@ -184,6 +184,13 @@ namespace EliteAPI.Status.Processor
                 name = $"{clean.GetType().Name}.{name}";
 
                 var rawValue = raw.GetType().GetProperty(propertyName).GetValue(raw);
+
+                string value = rawValue.ToString();
+                if(Type.GetTypeCode(rawValue.GetType()) == TypeCode.Object)
+                {
+                    value = JsonConvert.SerializeObject(rawValue);
+                }
+
                 var statusUpdateProperty = clean.GetType().GetProperty(propertyName).GetValue(clean);
                 var updateMethod = statusUpdateProperty.GetType()
                     .GetMethod("Update", BindingFlags.NonPublic | BindingFlags.Instance);
@@ -193,7 +200,7 @@ namespace EliteAPI.Status.Processor
                 var needsUpdate = needsUpdateMethod.Invoke(statusUpdateProperty, new[] {rawValue});
                 if ((bool) needsUpdate)
                 {
-                    _log.LogTrace("Invoking OnChange event for {name}", name, propertyName);
+                    _log.LogTrace("Invoking OnChange event for {name} ({value})", name, value);
                     updateMethod.Invoke(statusUpdateProperty, new[] {this, rawValue});
                 }
             }

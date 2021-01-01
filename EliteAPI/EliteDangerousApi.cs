@@ -22,14 +22,23 @@ using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
+using EliteAPI.Configuration.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
 {
+    [Obsolete("Use EliteDangerousApi instead", true)]
+    public class EliteDangerousAPI
+    {
+
+    }
+
     /// <inheritdoc />
-    public class EliteDangerousAPI : IEliteDangerousAPI
+    public class EliteDangerousApi : IEliteDangerousApi
     {
         private readonly IConfiguration _config;
+        private readonly IEliteDangerousApiConfiguration _codeConfig;
+
         private readonly IEnumerable<IEventProcessor> _eventProcessors;
 
         private readonly IEventProvider _eventProvider;
@@ -39,7 +48,7 @@ namespace EliteAPI
 
         private readonly IJournalProvider _journalProvider;
 
-        private readonly ILogger<EliteDangerousAPI> _log;
+        private readonly ILogger<EliteDangerousApi> _log;
         private readonly IStatusProcessor _statusProcessor;
         private readonly IStatusProvider _statusProvider;
 
@@ -47,11 +56,11 @@ namespace EliteAPI
         /// Creates a new EliteDangerousAPI class
         /// </summary>
         /// <param name="services">ServiceProvider</param>
-        public EliteDangerousAPI(IServiceProvider services)
+        public EliteDangerousApi(IServiceProvider services)
         {
             try
             {
-                _log = services.GetRequiredService<ILogger<EliteDangerousAPI>>();
+                _log = services.GetRequiredService<ILogger<EliteDangerousApi>>();
 
                 Events = services.GetRequiredService<EventHandler>();
                 Ship = services.GetRequiredService<IShip>();
@@ -62,6 +71,7 @@ namespace EliteAPI
                 Version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion.Split('+')[0];
 
                 _config = services.GetRequiredService<IConfiguration>();
+                _codeConfig = services.GetRequiredService<IEliteDangerousApiConfiguration>();
 
                 _eventProvider = services.GetRequiredService<IEventProvider>();
                 _eventProcessors = services.GetRequiredService<IEnumerable<IEventProcessor>>();
@@ -169,12 +179,18 @@ namespace EliteAPI
 
             IsRunning = true;
 
+            var delay = TimeSpan.FromMilliseconds(500);
+            if (_codeConfig.TickFrequency != TimeSpan.Zero)
+            {
+                delay = _codeConfig.TickFrequency;
+            }
+
             var task = Task.Run(async () =>
             {
                 while (IsRunning)
                 {
                     await DoTick();
-                    await Task.Delay(TimeSpan.FromMilliseconds(500));
+                    await Task.Delay(delay);
                 }
             });
 

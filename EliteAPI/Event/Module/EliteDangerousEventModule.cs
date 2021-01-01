@@ -12,13 +12,13 @@ namespace EliteAPI.Event.Module
         /// <summary>
         /// The Elite Dangerous API
         /// </summary>
-        protected readonly IEliteDangerousAPI EliteAPI;
+        protected readonly IEliteDangerousApi EliteAPI;
 
         /// <summary>
         /// Wrapper for event modules
         /// </summary>
         /// <param name="api">The EliteDangerousAPI</param>
-        protected EliteDangerousEventModule(IEliteDangerousAPI api)
+        protected EliteDangerousEventModule(IEliteDangerousApi api)
         {
             EliteAPI = api;
         }

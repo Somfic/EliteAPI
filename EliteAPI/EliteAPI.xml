@@ -79,6 +79,11 @@
             The targeted journal file
             </summary>
         </member>
+        <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.TickFrequency">
+            <summary>
+            At which frequency EliteAPI checks for journal and status files updates 
+            </summary>
+        </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfiguration">
             <summary>
             Standard implementation of the <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration"/> configuration class
@@ -88,6 +93,9 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.Journal">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.TickFrequency">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder">
@@ -120,6 +128,11 @@
         <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseJournal(System.String)">
             <summary>
             Sets which journal file to use, defaults to latest if not invoked
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseTickFrequency(System.TimeSpan)">
+            <summary>
+            Sets at which frequency EliteAPI should check for journal and status files updates
             </summary>
         </member>
         <member name="T:EliteAPI.EliteDangerousAPI">

@@ -18,6 +18,7 @@ namespace EliteAPI.Configuration
         private IList<Type> _eventProcessors;
         private string _journalDirectory;
         private string _journal;
+        private TimeSpan _tickFrequency;
 
         internal EliteDangerousApiConfigurationBuilder()
         {
@@ -30,6 +31,7 @@ namespace EliteAPI.Configuration
             };
             _journalDirectory = "";
             _journal = "";
+            _tickFrequency = TimeSpan.Zero;
         }
 
         /// <summary>
@@ -74,6 +76,14 @@ namespace EliteAPI.Configuration
             _journal = journal;
         }
 
+        /// <summary>
+        /// Sets at which frequency EliteAPI should check for journal and status files updates
+        /// </summary>
+        public void UseTickFrequency(TimeSpan tickFrequency)
+        {
+            _tickFrequency = tickFrequency;
+        }
+
         internal void AddServices(IServiceCollection services)
         {
             foreach (var implementation in _eventModuleImplementations) services.AddSingleton(implementation);
@@ -86,7 +96,7 @@ namespace EliteAPI.Configuration
 
         private EliteDangerousApiConfiguration Build()
         {
-            return new() { JournalPath = _journalDirectory, Journal = _journal };
+            return new() { JournalPath = _journalDirectory, Journal = _journal, TickFrequency = _tickFrequency };
         }
     }
 }

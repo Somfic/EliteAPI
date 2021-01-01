@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using EliteAPI.Configuration.Abstractions;
 
 namespace EliteAPI.Configuration
@@ -18,5 +19,8 @@ namespace EliteAPI.Configuration
 
         /// <inheritdoc />
         public string Journal { get; init; }
+
+        /// <inheritdoc />
+        public TimeSpan TickFrequency { get; init; }
     }
 }

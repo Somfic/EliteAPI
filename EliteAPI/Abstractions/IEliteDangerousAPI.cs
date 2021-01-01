@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using EliteAPI.Status.Cargo.Abstractions;
+using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
@@ -25,8 +26,8 @@ namespace EliteAPI.Abstractions
         /// <summary>
         /// Container for the ship's current status
         /// </summary>
-        [Obsolete("Use the Ship property instead", true)]
-        IShip Status { get; }
+        [Obsolete("Use the Ship property instead", false)]
+        IShipStatus Status { get; }
 
         /// <summary>
         /// Container for the ship's current status

@@ -907,6 +907,147 @@
         <member name="M:EliteAPI.Status.Provider.StatusProvider.FindNavRouteFile(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Flags">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Docked">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Landed">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Gear">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Shields">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Supercruise">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.FlightAssist">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Hardpoints">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Winging">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Lights">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.CargoScoop">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.SilentRunning">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Scooping">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.SrvHandbreak">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.SrvTurrent">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.SrvNearShip">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.SrvDriveAssist">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.MassLocked">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.FsdCharging">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.FsdCooldown">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.LowFuel">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Overheating">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.HasLatLong">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.InDanger">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.InInterdiction">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.InMothership">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.InFighter">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.InSrv">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.AnalysisMode">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.NightVision">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.AltitudeFromAverageRadius">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.FsdJump">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.SrvHighBeam">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Pips">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.FireGroup">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.GuiFocus">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Fuel">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Cargo">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.LegalState">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Latitude">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Altitude">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Longitude">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Heading">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Body">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.BodyRadius">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.ShipStatus.ShipStatus.OnChange">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.ShipStatus.ShipStatus.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
+            <inheritdoc />
+        </member>
         <member name="T:EliteAPI.Status.Ship.Abstractions.IShip">
             <summary>
             Holds all information about the ship

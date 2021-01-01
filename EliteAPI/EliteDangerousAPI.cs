@@ -19,6 +19,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using EliteAPI.Status.Cargo.Abstractions;
+using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
@@ -54,6 +55,7 @@ namespace EliteAPI
 
                 Events = services.GetRequiredService<EventHandler>();
                 Ship = services.GetRequiredService<IShip>();
+                Status = services.GetRequiredService<IShipStatus>();
                 NavRoute = services.GetRequiredService<INavRoute>();
                 Cargo = services.GetRequiredService<ICargo>();
 
@@ -105,8 +107,8 @@ namespace EliteAPI
         public EventHandler Events { get; }
 
         /// <inheritdoc />
-        [Obsolete("Use the Ship property instead", true)]
-        public IShip Status { get; }
+        [Obsolete("Use the Ship property instead", false)]
+        public IShipStatus Status { get; }
 
         /// <inheritdoc />
         public IShip Ship { get; }

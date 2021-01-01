@@ -11,6 +11,7 @@ using EliteAPI.Journal.Provider;
 using EliteAPI.Journal.Provider.Abstractions;
 using EliteAPI.Status.Cargo;
 using EliteAPI.Status.Cargo.Abstractions;
+using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.NavRoute;
 using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Processor;
@@ -19,6 +20,7 @@ using EliteAPI.Status.Provider;
 using EliteAPI.Status.Provider.Abstractions;
 using EliteAPI.Status.Ship;
 using EliteAPI.Status.Ship.Abstractions;
+using EliteAPI.Status.ShipStatus;
 using Microsoft.Extensions.DependencyInjection;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
@@ -47,6 +49,7 @@ namespace EliteAPI
             services.AddSingleton<IStatusProcessor, StatusProcessor>();
 
             services.AddSingleton<IShip, Ship>();
+            services.AddSingleton<IShipStatus, ShipStatus>();
             services.AddSingleton<INavRoute, NavRoute>();
             services.AddSingleton<ICargo, Cargo>();
 

@@ -25,7 +25,7 @@ using EventHandler = EliteAPI.Event.Handler.EventHandler;
 namespace EliteAPI
 {
     [Obsolete("Use EliteDangerousApi instead", true)]
-    public class EliteDangerousAPI
+    public class EliteDangerousAPI : IEliteDangerousAPI
     {
 
     }

@@ -20,7 +20,13 @@ using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
 {
+    [Obsolete("Use EliteDangerousApiExtensions instead", true)]
     public static class EliteDangerousAPIExtensions
+    {
+
+    }
+
+    public static class EliteDangerousApiExtensions
     {
         /// <summary>
         ///     Adds all EliteAPI's necessary services to the <seealso cref="IServiceCollection" />
@@ -32,7 +38,7 @@ namespace EliteAPI
             configuration?.Invoke(configInstance);
             configInstance.AddServices(services);
 
-            services.AddSingleton<IEliteDangerousAPI, EliteDangerousAPI>();
+            services.AddSingleton<IEliteDangerousApi, EliteDangerousApi>();
 
             services.AddSingleton<IEventProvider, EventProvider>();
             services.AddTransient<IJournalDirectoryProvider, JournalDirectoryProvider>();

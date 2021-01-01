@@ -24,8 +24,14 @@ using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
 {
+    [Obsolete("Use EliteDangerousApi instead", true)]
+    public class EliteDangerousAPI
+    {
+
+    }
+
     /// <inheritdoc />
-    public class EliteDangerousAPI : IEliteDangerousAPI
+    public class EliteDangerousApi : IEliteDangerousApi
     {
         private readonly IConfiguration _config;
         private readonly IEliteDangerousApiConfiguration _codeConfig;
@@ -39,7 +45,7 @@ namespace EliteAPI
 
         private readonly IJournalProvider _journalProvider;
 
-        private readonly ILogger<EliteDangerousAPI> _log;
+        private readonly ILogger<EliteDangerousApi> _log;
         private readonly IStatusProcessor _statusProcessor;
         private readonly IStatusProvider _statusProvider;
 
@@ -47,11 +53,11 @@ namespace EliteAPI
         /// Creates a new EliteDangerousAPI class
         /// </summary>
         /// <param name="services">ServiceProvider</param>
-        public EliteDangerousAPI(IServiceProvider services)
+        public EliteDangerousApi(IServiceProvider services)
         {
             try
             {
-                _log = services.GetRequiredService<ILogger<EliteDangerousAPI>>();
+                _log = services.GetRequiredService<ILogger<EliteDangerousApi>>();
 
                 Events = services.GetRequiredService<EventHandler>();
                 Status = services.GetRequiredService<IShipStatus>();

@@ -5,10 +5,16 @@ using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI.Abstractions
 {
+    [Obsolete("Use IEliteDangerousApi instead", true)]
+    public interface IEliteDangerousAPI
+    {
+
+    }
+
     /// <summary>
     ///     EliteAPI
     /// </summary>
-    public interface IEliteDangerousAPI
+    public interface IEliteDangerousApi
     {
         /// <summary>
         ///     EliteAPI's version

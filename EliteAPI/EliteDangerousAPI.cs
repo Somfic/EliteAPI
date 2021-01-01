@@ -55,6 +55,7 @@ namespace EliteAPI
                 Events = services.GetRequiredService<EventHandler>();
                 Ship = services.GetRequiredService<IShip>();
                 NavRoute = services.GetRequiredService<INavRoute>();
+                Cargo = services.GetRequiredService<ICargo>();
 
                 Version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion.Split('+')[0];
 

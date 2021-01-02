@@ -1248,6 +1248,9 @@
         <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Flags">
             <inheritdoc />
         </member>
+        <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Available">
+            <inheritdoc />
+        </member>
         <member name="P:EliteAPI.Status.ShipStatus.ShipStatus.Docked">
             <inheritdoc />
         </member>
@@ -1394,6 +1397,11 @@
         <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Flags">
             <summary>
             Overview of all ship flags
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Available">
+            <summary>
+            Whether ship information is currently available
             </summary>
         </member>
         <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Docked">
@@ -1621,6 +1629,9 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Status.Ship.Ship.Flags">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Available">
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Status.Ship.Ship.Docked">

@@ -8,6 +8,7 @@ namespace EliteAPI.Status.Models.Abstractions
     public interface IShipStatus : IStatus
     {
         StatusProperty<ShipFlag> Flags { get; }
+        StatusProperty<bool> Available { get; }
         StatusProperty<bool> Docked { get; }
         StatusProperty<bool> Landed { get; }
         StatusProperty<bool> Gear { get; }

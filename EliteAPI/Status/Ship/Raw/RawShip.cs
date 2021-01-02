@@ -8,6 +8,7 @@ namespace EliteAPI.Status.Ship.Raw
     {
         [JsonProperty("Flag")] public ShipFlag Flags { get; private set; }
 
+        public bool Available => Flags != 0;
         public bool Docked => GetFlag(0);
         public bool Landed => GetFlag(1);
         public bool Gear => GetFlag(2);

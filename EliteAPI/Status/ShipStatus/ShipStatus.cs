@@ -14,6 +14,9 @@ namespace EliteAPI.Status.ShipStatus
         public StatusProperty<ShipFlag> Flags { get; } = new(ShipFlag.None);
 
         /// <inheritdoc />
+        public StatusProperty<bool> Available { get; } = new();
+
+        /// <inheritdoc />
         public StatusProperty<bool> Docked { get; } = new();
 
         /// <inheritdoc />

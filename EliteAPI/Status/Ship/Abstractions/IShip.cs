@@ -14,6 +14,11 @@ namespace EliteAPI.Status.Ship.Abstractions
         StatusProperty<ShipFlag> Flags { get; }
 
         /// <summary>
+        /// Whether ship information is currently available
+        /// </summary>
+        StatusProperty<bool> Available { get; }
+
+        /// <summary>
         /// Whether the ship is currently docked at a station or outpost
         /// </summary>
         StatusProperty<bool> Docked { get; }

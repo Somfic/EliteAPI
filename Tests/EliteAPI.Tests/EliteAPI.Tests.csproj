@@ -2,10 +2,10 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <Version>3.0.0-alpha0955</Version>
+    <Version>3.0.0-alpha0962</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.955+Branch.dev.Sha.d7d79dd410f7076ef8d5d9428f4878bcefd09de0</InformationalVersion>
+    <InformationalVersion>3.0.0-alpha.962+Branch.dev.Sha.394d489629b77d63ce99741f4df993b2c4247f08</InformationalVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="LiquidTestReports.Markdown" Version="1.0.9" />

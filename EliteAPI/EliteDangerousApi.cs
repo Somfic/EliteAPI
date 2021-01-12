@@ -189,6 +189,7 @@ namespace EliteAPI
             if (InitializationException != null)
             {
                 _log.LogCritical(InitializationException, "EliteAPI could not be started");
+                OnError?.Invoke(this, InitializationException);
                 await StopAsync();
                 return;
             }
@@ -203,14 +204,17 @@ namespace EliteAPI
 
             var task = Task.Run(async () =>
             {
+                _log.LogInformation("EliteAPI has started");
+                OnStart?.Invoke(this, EventArgs.Empty);
+
                 while (IsRunning)
                 {
                     await DoTick();
                     await Task.Delay(delay);
                 }
-            });
 
-            _log.LogInformation("EliteAPI has started");
+                OnStop?.Invoke(this, EventArgs.Empty);
+            });
         }
 
 
@@ -224,6 +228,18 @@ namespace EliteAPI
 
             return Task.CompletedTask;
         }
+
+        /// <inheritdoc />
+        public event System.EventHandler OnCatchedUp;
+
+        /// <inheritdoc />
+        public event System.EventHandler OnStart;
+
+        /// <inheritdoc />
+        public event System.EventHandler OnStop;
+
+        /// <inheritdoc />
+        public event EventHandler<Exception> OnError;
 
         private async Task DoTick()
         {
@@ -244,6 +260,7 @@ namespace EliteAPI
                 if (!HasCatchedUp)
                 {
                     _log.LogInformation("EliteAPI has catched up to current session");
+                    OnCatchedUp?.Invoke(this, EventArgs.Empty);
                     HasCatchedUp = true;
                 }
             }

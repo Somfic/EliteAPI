@@ -325,6 +325,12 @@ namespace EliteAPI
                 if (JournalFile?.FullName == newJournalFile.FullName) return;
 
                 _log.LogInformation("Setting journal file to {filePath}", newJournalFile.Name);
+
+                if (!newJournalFile.Name.Contains("Journal"))
+                {
+                    _log.LogWarning(new InvalidJournalFileException($"The selected journal file '{newJournalFile.Name}' does not match standard naming conventions"), "Invalid journal file detected, errors may occur");
+                }
+
                 JournalFile = newJournalFile;
             }
             catch (Exception ex)

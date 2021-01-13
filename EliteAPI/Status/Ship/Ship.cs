@@ -121,7 +121,7 @@ namespace EliteAPI.Status.Ship
         public StatusProperty<ShipFuel> Fuel { get; } = new(new ShipFuel());
 
         /// <inheritdoc />
-        public StatusProperty<float> Cargo { get; } = new(0);
+        public StatusProperty<int> Cargo { get; } = new(0);
 
         /// <inheritdoc />
         public StatusProperty<ShipLegalState> LegalState { get; } = new(ShipLegalState.Clean);

@@ -11,7 +11,7 @@ namespace EliteAPI.Status.Cargo.Raw
         public string Vessel { get; set; }
 
         [JsonProperty("Count")]
-        public long Count { get; set; }
+        public int Count { get; set; }
 
         [JsonProperty("Inventory")]
         public IReadOnlyList<CargoItem> Inventory { get; set; }

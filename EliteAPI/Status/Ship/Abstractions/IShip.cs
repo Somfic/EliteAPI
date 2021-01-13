@@ -202,7 +202,7 @@ namespace EliteAPI.Status.Ship.Abstractions
         /// <summary>
         /// The ship's currently amount of cargo in tonnes
         /// </summary>
-        StatusProperty<float> Cargo { get; }
+        StatusProperty<int> Cargo { get; }
         
         /// <summary>
         /// The ship's current legal state

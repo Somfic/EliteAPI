@@ -54,7 +54,9 @@ namespace EliteAPI.Status.Ship.Raw
 
         [JsonProperty("Fuel")] public ShipFuel Fuel { get; private set; }
 
-        [JsonProperty("Cargo")] public float Cargo { get; private set; }
+        [JsonProperty("Cargo")] 
+        [JsonConverter(typeof(DecimalToIntConverter))]
+        public int Cargo { get; private set; }
 
         [JsonProperty("LegalState")]
         [JsonConverter(typeof(StringEnumConverter))]

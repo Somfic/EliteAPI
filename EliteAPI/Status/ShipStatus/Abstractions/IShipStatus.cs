@@ -45,7 +45,7 @@ namespace EliteAPI.Status.Models.Abstractions
         StatusProperty<int> FireGroup { get; }
         StatusProperty<ShipGuiFocus> GuiFocus { get; }
         StatusProperty<ShipFuel> Fuel { get; }
-        StatusProperty<float> Cargo { get; }
+        StatusProperty<int> Cargo { get; }
         StatusProperty<ShipLegalState> LegalState { get; }
         StatusProperty<float> Latitude { get; }
         StatusProperty<float> Altitude { get; }

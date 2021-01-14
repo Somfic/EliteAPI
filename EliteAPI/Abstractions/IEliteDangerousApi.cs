@@ -7,7 +7,6 @@ using EliteAPI.Status.Modules.Abstractions;
 using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Outfitting.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
-using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI.Abstractions
 {

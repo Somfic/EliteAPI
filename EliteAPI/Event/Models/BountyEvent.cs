@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
         {
         }
 
-        [JsonProperty("Rewards")] public IReadOnlyList<Reward> Rewards { get; private set; }
+        [JsonProperty("Rewards")] public IReadOnlyList<BountryReward> Rewards { get; private set; }
 
         [JsonProperty("Target")] public string Target { get; private set; }
 
@@ -23,17 +23,17 @@ namespace EliteAPI.Event.Models
         [JsonProperty("VictimFaction")] public string VictimFaction { get; private set; }
 
         [JsonProperty("SharedWithOthers")] public long SharedWithOthers { get; private set; }
-    }
 
-    public class Reward
-    {
-        internal Reward()
+        public class BountryReward
         {
+            internal BountryReward()
+            {
+            }
+
+            [JsonProperty("Faction")] public string Faction { get; private set; }
+
+            [JsonProperty("Reward")] public long Reward { get; private set; }
         }
-
-        [JsonProperty("Faction")] public string Faction { get; private set; }
-
-        [JsonProperty("Reward")] public long RewardReward { get; private set; }
     }
 
     public partial class BountyEvent

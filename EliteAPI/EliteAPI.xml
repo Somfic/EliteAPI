@@ -79,6 +79,26 @@
                 Stops the api
             </summary>
         </member>
+        <member name="E:EliteAPI.Abstractions.IEliteDangerousApi.OnCatchedUp">
+            <summary>
+            Triggered when the api has catched up to the current session
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Abstractions.IEliteDangerousApi.OnStart">
+            <summary>
+            Triggered when the api has started
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Abstractions.IEliteDangerousApi.OnStop">
+            <summary>
+            Triggered when the api has stopped
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Abstractions.IEliteDangerousApi.OnError">
+            <summary>
+            Triggered when the api couldn't start because of an exception
+            </summary>
+        </member>
         <member name="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration">
             <summary>
             Interface for the <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration"/> configuration class
@@ -199,6 +219,18 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.EliteDangerousApi.StopAsync">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.EliteDangerousApi.OnCatchedUp">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.EliteDangerousApi.OnStart">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.EliteDangerousApi.OnStop">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.EliteDangerousApi.OnError">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.EliteDangerousApiExtensions.AddEliteAPI(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder})">
@@ -395,6 +427,29 @@
         <member name="M:EliteAPI.Exceptions.EventNotImplementedException.#ctor(System.String,System.Exception)">
             <summary>
             Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventNotImplementedException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.InvalidJournalFileException">
+            <summary>
+            The exception that is thrown when an invalid Journal file is being targeted
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.InvalidJournalFileException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.InvalidJournalFileException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.InvalidJournalFileException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.InvalidJournalFileException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.InvalidJournalFileException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.InvalidJournalFileException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
             </summary>
             <param name="message">The message that describes the error</param>
             <param name="innerException">The inner exception that caused this exception</param>
@@ -1624,6 +1679,18 @@
             <summary>
             The radius of the currently visiting body
             </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Ship.JsonConverters.DecimalToIntConverter.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Ship.JsonConverters.DecimalToIntConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Ship.JsonConverters.DecimalToIntConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Ship.JsonConverters.DecimalToIntConverter.CanConvert(System.Type)">
+            <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.Ship.Ship">
             <inheritdoc />

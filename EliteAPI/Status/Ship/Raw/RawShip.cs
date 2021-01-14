@@ -6,7 +6,7 @@ namespace EliteAPI.Status.Ship.Raw
 {
     internal class RawShip
     {
-        [JsonProperty("Flag")] public ShipFlag Flags { get; private set; }
+        [JsonProperty("Flags")] public ShipFlag Flags { get; private set; }
 
         public bool Available => Flags != 0;
         public bool Docked => GetFlag(0);

@@ -24,6 +24,12 @@ namespace EliteAPI.Event.Models
         [JsonProperty("TotalSale")] public long TotalSale { get; private set; }
 
         [JsonProperty("AvgPricePaid")] public long AvgPricePaid { get; private set; }
+
+        [JsonProperty("IllegalGoods")] public bool HasIllegalGoods { get; private set; } = false;
+
+        [JsonProperty("StolenGoods")] public bool HasStolenGoods { get; private set; } = false;
+
+        [JsonProperty("BlackMarket")] public bool IsBlackMarket { get; private set; } = false;
     }
 
     public partial class MarketSellEvent

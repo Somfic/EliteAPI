@@ -60,8 +60,7 @@ namespace EliteAPI.BuildTools
             var generated = await FromJson(json);
 
             var eventName = await GetEventNameFromJson(json);
-            Directory.CreateDirectory("generated");
-            await File.WriteAllTextAsync($"../../../../EliteAPI/Event/Models/{eventName}.cs", generated);
+            await File.WriteAllTextAsync($"../../../../../EliteAPI/Event/Models/{eventName}.cs", generated);
         }
 
         private static async Task Generate(string version)
@@ -192,12 +191,18 @@ namespace EliteAPI.BuildTools
                 // Change all lists to readonly lists
                 type = Regex.Replace(type, "List", "IReadOnlyList");
 
+                // Make sure all system address's are strings
+                type = Regex.Replace(type, "long SystemAddress", "string SystemAddress");
+
+                // Make sure all market id's are strings
+                type = Regex.Replace(type, "long MarketId", "string MarketId");
+
                 // Check if we have any subclasses
                 if (Regex.Matches(type, "public partial class.*?public partial class.*?", RegexOptions.Singleline)
                     .Count > 1)
                 {
-                    // Rename *Class types to just *
-                    type = Regex.Replace(type, " (.*?)Class", " $1");
+                    // Rename *Class types to *Info
+                    type = Regex.Replace(type, " (.*?)Class", " $1Info");
 
                     // Remove closing tag in main class, making all subclasses actual subclasses
                     type = Regex.Replace(type, "(EventBase\n.*?}\n    )}", "$1", RegexOptions.Singleline);
@@ -211,6 +216,9 @@ namespace EliteAPI.BuildTools
                         .Select(x => x.Groups[1].Value);
                     foreach (var subClass in subClasses)
                     {
+                        continue;
+                        
+
                         if (subClass.Trim() == eventName || subClass.Trim() == "EventBase") continue;
 
                         // Rename subclasses to *Info
@@ -218,6 +226,9 @@ namespace EliteAPI.BuildTools
 
                         // Rename properties back from *Info to just *
                         type = Regex.Replace(type, $"{subClass}Info {{ get", $"{subClass.Trim()} {{ get");
+
+                        // Rename json attributes back from *Info to just *
+                        type = Regex.Replace(type, $"\"{subClass}Info\"", $"\"{subClass.Trim()}\"");
                     }
 
                     // Remove accidental double Info's

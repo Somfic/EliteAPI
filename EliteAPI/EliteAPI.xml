@@ -408,6 +408,29 @@
             <param name="message">The message that describes the error</param>
             <param name="innerException">The inner exception that caused this exception</param>
         </member>
+        <member name="T:EliteAPI.Exceptions.EventHasMissingDataException">
+            <summary>
+            The exception that is thrown when an event is not implemented
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.EventHasMissingDataException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventHasMissingDataException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.EventHasMissingDataException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventHasMissingDataException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.EventHasMissingDataException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventHasMissingDataException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
         <member name="T:EliteAPI.Exceptions.EventNotImplementedException">
             <summary>
             The exception that is thrown when an event is not implemented

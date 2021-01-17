@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
@@ -11,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using FluentAssertions;
+using FluentAssertions.Json;
 
 namespace EliteAPI.Event.Provider
 {
@@ -22,9 +25,9 @@ namespace EliteAPI.Event.Provider
 
         private IDictionary<string, Type> _cache;
 
-        public EventProvider(IServiceProvider service)
+        public EventProvider(ILogger<EventProvider> log)
         {
-            _log = service.GetRequiredService<ILogger<EventProvider>>();
+            _log = log;
             _assembly = Assembly.GetExecutingAssembly();
         }
 
@@ -41,7 +44,26 @@ namespace EliteAPI.Event.Provider
                 var method = GetFromJsonMethod(eventName);
                 var eventBase = InvokeFromJsonMethod(method, json);
 
+                var expected = JToken.Parse(json);
+                var actual = JToken.Parse(JsonConvert.SerializeObject(eventBase));
+
                 _log.LogTrace(json);
+
+                try
+                {
+                    actual.Should().BeEquivalentTo(expected);
+                }
+                catch (Exception ex)
+                {
+                    string message = Regex.Split(ex.Message, Environment.NewLine)[0];
+                    message = message.Replace("JSON document", $"{eventName} event");
+                    message = message.Substring(0, message.Length - 1);
+
+                    EventHasMissingDataException exception = new(message);
+                    _log.LogWarning(exception, $"{eventName} was not fully implemented");
+
+                    _log.LogDebug(ex, $"{eventName} was not fully implemented");
+                }
 
                 return Task.FromResult(eventBase);
             }

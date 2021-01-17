@@ -1,0 +1,4 @@
+{ "timestamp":"2020-10-01T09:43:35Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"Fleet Carriers Update - Patch 5", "build":"r241328/r0 " }
+{ "timestamp":"2020-10-01T09:43:35Z", "event":"Music", "MusicTrack":"NoTrack" }
+{ "timestamp":"2020-10-01T09:43:35Z", "event":"Music", "MusicTrack":"MainMenu" }
+{ "timestamp":"2020-10-01T09:46:28Z", "event":"Shutdown" }

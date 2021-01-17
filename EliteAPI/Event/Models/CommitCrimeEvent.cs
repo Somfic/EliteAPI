@@ -16,6 +16,13 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Faction")] public string Faction { get; private set; }
 
         [JsonProperty("Fine")] public long Fine { get; private set; }
+
+        [JsonProperty("Victim")] public string Victim { get; private set; }
+
+        [JsonProperty("Victim_Localised")] public string VictimLocalised { get; private set; }
+
+        [JsonProperty("Bounty")] public long Bounty { get; private set; }
+
     }
 
     public partial class CommitCrimeEvent

@@ -11,7 +11,8 @@ namespace EliteAPI.Event.Models
         {
         }
 
-        [JsonProperty("event")] public string Event { get; private set; }
+        [JsonProperty("KillerName")] public string KillerName { get; private set; }
+        [JsonProperty("KillerShip")] public string KillerShip { get; private set; }
     }
 
     public partial class DiedEvent

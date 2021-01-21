@@ -163,7 +163,8 @@ jobs:
           backup: ${{steps.BYPASS.outputs.backup}}
 
   publish-nuget:
-    needs: [build, update-version, test]
+    #needs: [build, update-version, test]
+    needs: [build, update-version]
     name: Publish prerelease package
     if: ${{ needs.update-version.outputs.applicable == 'true' }}
     runs-on: windows-latest

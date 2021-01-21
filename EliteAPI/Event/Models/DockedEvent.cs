@@ -77,6 +77,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Name")]
         public string Name { get; private set; }
+
+        [JsonProperty("FactionState")]
+        public string FactionState { get; private set; }
     }
 
 }

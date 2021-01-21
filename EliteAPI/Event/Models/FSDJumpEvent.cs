@@ -67,7 +67,7 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Name")] public string Name { get; private set; }
 
-            [JsonProperty("FactionInfoState")] public string FactionInfoState { get; private set; }
+            [JsonProperty("FactionState")] public string FactionState { get; private set; }
 
             [JsonProperty("Government")] public string Government { get; private set; }
 

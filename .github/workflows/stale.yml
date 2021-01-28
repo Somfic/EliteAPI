@@ -10,9 +10,7 @@ jobs:
       - uses: actions/stale@v3
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          days-before-stale: 21
-          days-before-close: 7
-          stale-issue-message: "It's pretty quiet out here, I'm marking this issue as `stale` for now. Comment or remove the stale lable or this issue will be closed in 7 days"
-          stale-pr-message: "It's pretty quiet out here, I'm marking this pull request as `stale` for now. Comment or remove the stale lable or this pull request will be closed in 7 days"
-          close-issue-message: "My predictions were true, I'll close this issue for now"
-          close-pr-message: "My predictions were true, I'll close this pull request for now"
+          days-before-stale: 60
+          days-before-close: 40
+          stale-issue-message: "It's pretty quiet out here, I'm marking this issue as `stale` for now. Comment or remove the stale lable or this issue will be closed in 20 days"
+          stale-pr-message: "It's pretty quiet out here, I'm marking this pull request as `stale` for now. Comment or remove the stale lable or this pull request will be closed in 2- days"

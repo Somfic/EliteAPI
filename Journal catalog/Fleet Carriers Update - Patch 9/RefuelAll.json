@@ -1,1 +1,6 @@
 { "timestamp":"2020-12-19T20:11:41Z", "event":"RefuelAll", "Cost":95, "Amount":1.880651 }
+{ "timestamp":"2020-12-23T12:18:53Z", "event":"RefuelAll", "Cost":82, "Amount":1.637574 }
+{ "timestamp":"2020-12-31T17:28:05Z", "event":"RefuelAll", "Cost":121, "Amount":2.393968 }
+{ "timestamp":"2021-01-04T21:57:03Z", "event":"RefuelAll", "Cost":1443, "Amount":28.855396 }
+{ "timestamp":"2021-01-07T20:42:28Z", "event":"RefuelAll", "Cost":580, "Amount":11.580289 }
+{ "timestamp":"2021-01-16T15:34:02Z", "event":"RefuelAll", "Cost":1192, "Amount":23.807253 }

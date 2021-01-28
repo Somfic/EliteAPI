@@ -1,0 +1,7 @@
+{ "timestamp":"2020-12-23T12:17:18Z", "event":"DockingRequested", "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2020-12-31T17:25:05Z", "event":"DockingRequested", "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2021-01-01T16:23:07Z", "event":"DockingRequested", "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2021-01-01T23:54:42Z", "event":"DockingRequested", "MarketID":3228624896, "StationName":"Eddington Refinery", "StationType":"Coriolis" }
+{ "timestamp":"2021-01-04T21:54:59Z", "event":"DockingRequested", "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2021-01-07T20:39:36Z", "event":"DockingRequested", "MarketID":128102904, "StationName":"Invergary", "StationType":"Coriolis" }
+{ "timestamp":"2021-01-16T15:31:02Z", "event":"DockingRequested", "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }

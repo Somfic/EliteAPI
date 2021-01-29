@@ -5,6 +5,7 @@ using Somfic.VoiceAttack.Proxy.Abstractions;
 using System;
 using System.IO;
 using System.Reflection;
+using System.Text.Json.Serialization;
 
 using EliteAPI;
 using EliteAPI.Abstractions;
@@ -13,6 +14,8 @@ using EliteAPI.Event.Models.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+
+using Newtonsoft.Json;
 
 namespace EliteVA
 {
@@ -27,18 +30,40 @@ namespace EliteVA
         {
             return new Guid("189a4e44-caf1-459b-b62e-fabc60a12986");
         }
-        
+
         public static string VA_DisplayName()
         {
             return "EliteVA";
         }
-        
-        public static string VA_DisplayInfo() => "EliteVA by Somfic";
 
-        public static void VA_Init1(dynamic vaProxy) => Initialize(vaProxy);
-        public static void VA_Exit1(dynamic vaProxy) => Proxy = new VoiceAttackProxy(vaProxy, Host.Services);
-        public static void VA_StopCommand() => Log?.LogInformation("EliteVA was stopped");
-        public static void VA_Invoke1(dynamic vaProxy) => Proxy = new VoiceAttackProxy(vaProxy, Host.Services);
+        public static string VA_DisplayInfo()
+        {
+            return "EliteVA by Somfic";
+        }
+
+        public static void VA_Init1(dynamic vaProxy)
+        {
+            try { Initialize(vaProxy); }
+            catch (Exception ex) { File.WriteAllText("eliteva.init.error", JsonConvert.SerializeObject(ex)); }
+        }
+
+        public static void VA_Exit1(dynamic vaProxy)
+        {
+            try { Proxy = new VoiceAttackProxy(vaProxy, Host.Services); }
+            catch (Exception ex) { File.WriteAllText("eliteva.exit.error", JsonConvert.SerializeObject(ex)); }
+        }
+
+        public static void VA_StopCommand()
+        {
+            try { Log?.LogInformation("EliteVA was stopped"); }
+            catch (Exception ex) { File.WriteAllText("eliteva.stop.error", JsonConvert.SerializeObject(ex)); }
+        }
+
+        public static void VA_Invoke1(dynamic vaProxy)
+        {
+            try { Proxy = new VoiceAttackProxy(vaProxy, Host.Services); }
+            catch (Exception ex) { File.WriteAllText("eltiva.invoke.error", JsonConvert.SerializeObject(ex)); }
+        }
 
         private static void Initialize(dynamic vaProxy)
         {
@@ -127,7 +152,7 @@ namespace EliteVA
         }
 
         private static string ToEventCommand(IEvent e) => ToEventCommand(e.Event);
-        
+
         private static string ToEventCommand(string command) => $"((EliteAPI.{command}))";
 
         private static string ToEventVariable(string variable) => $"EliteAPI.{variable}";

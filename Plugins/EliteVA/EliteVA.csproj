@@ -11,7 +11,7 @@
         <AppDesignerFolder>Properties</AppDesignerFolder>
         <RootNamespace>EliteVA</RootNamespace>
         <AssemblyName>EliteVA</AssemblyName>
-        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -144,16 +144,20 @@
           <Private>True</Private>
         </Reference>
         <Reference Include="mscorlib" />
+        <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+          <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
         <Reference Include="Somfic.Logging, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>..\..\packages\Somfic.Logging.1.0.1\lib\netstandard2.0\Somfic.Logging.dll</HintPath>
           <Private>True</Private>
         </Reference>
-        <Reference Include="Somfic.Logging.VoiceAttack, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Somfic.Logging.VoiceAttack.1.0.3\lib\netstandard2.0\Somfic.Logging.VoiceAttack.dll</HintPath>
+        <Reference Include="Somfic.Logging.VoiceAttack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\packages\Somfic.Logging.VoiceAttack.1.1.0\lib\netstandard2.0\Somfic.Logging.VoiceAttack.dll</HintPath>
           <Private>True</Private>
         </Reference>
-        <Reference Include="Somfic.VoiceAttack, Version=1.0.13.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Somfic.VoiceAttack.1.0.13\lib\netstandard2.0\Somfic.VoiceAttack.dll</HintPath>
+        <Reference Include="Somfic.VoiceAttack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\packages\Somfic.VoiceAttack.1.1.0\lib\netstandard2.0\Somfic.VoiceAttack.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="System" />
@@ -162,15 +166,19 @@
           <Private>True</Private>
         </Reference>
         <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-          <HintPath>..\..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+          <HintPath>..\..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="System.ComponentModel.Composition" />
         <Reference Include="System.ComponentModel.DataAnnotations" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
-        <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
-          <HintPath>..\..\packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+        <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+          <HintPath>..\..\packages\System.Diagnostics.DiagnosticSource.5.0.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Diagnostics.EventLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+          <HintPath>..\..\packages\System.Diagnostics.EventLog.5.0.0\lib\net461\System.Diagnostics.EventLog.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -186,8 +194,8 @@
           <HintPath>..\..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
           <Private>True</Private>
         </Reference>
-        <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-          <HintPath>..\..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+        <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+          <HintPath>..\..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -208,6 +216,10 @@
         </Reference>
         <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
           <HintPath>..\..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+          <HintPath>..\..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
@@ -248,8 +260,8 @@
       </PropertyGroup>
       <Error Condition="!Exists('..\..\packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props'))" />
       <Error Condition="!Exists('..\..\packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets'))" />
-      <Error Condition="!Exists('..\..\packages\Fody.6.3.0\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Fody.6.3.0\build\Fody.targets'))" />
       <Error Condition="!Exists('..\..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props'))" />
+      <Error Condition="!Exists('..\..\packages\Fody.6.3.0\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Fody.6.3.0\build\Fody.targets'))" />
     </Target>
     <Import Project="..\..\packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets" Condition="Exists('..\..\packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets')" />
     <Import Project="..\..\packages\Fody.6.3.0\build\Fody.targets" Condition="Exists('..\..\packages\Fody.6.3.0\build\Fody.targets')" />

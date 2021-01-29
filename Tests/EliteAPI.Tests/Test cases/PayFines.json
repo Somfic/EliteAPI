@@ -1,0 +1,2 @@
+{ "timestamp":"2021-01-04T21:46:44Z", "event":"PayFines", "Amount":100, "AllFines":true, "ShipID":61 }
+{ "timestamp":"2021-01-04T21:56:59Z", "event":"PayFines", "Amount":200, "AllFines":true, "ShipID":61 }

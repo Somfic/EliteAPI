@@ -12,7 +12,7 @@
     <Description>A powerful event based .NET API for Elite: Dangerous</Description>
     <Copyright>© Somfic 2020</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.0.0-alpha0995</Version>
+    <Version>3.0.0-alpha1032</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageIcon>logo_gradient_small.jpg</PackageIcon>
     <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
@@ -20,7 +20,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Somfic</Authors>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <InformationalVersion>3.0.0-alpha.995+Branch.dev.Sha.678c6c1299f25bc24f0a3821830f8b5545366107</InformationalVersion>
+    <InformationalVersion>3.0.0-alpha.1032+Branch.dev.Sha.49507cda0ce9c0acc7f3f7fd80043eba9bd65cd7</InformationalVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>EliteAPI.xml</DocumentationFile>
@@ -29,7 +29,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
-    <PackageReference Include="FluentAssertions.Json" Version="5.5.0" />
     <PackageReference Include="IsExternalInit" Version="1.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

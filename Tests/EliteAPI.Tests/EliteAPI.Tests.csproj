@@ -2,10 +2,10 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <Version>3.0.0-alpha0995</Version>
+    <Version>3.0.0-alpha1032</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.995+Branch.dev.Sha.678c6c1299f25bc24f0a3821830f8b5545366107</InformationalVersion>
+    <InformationalVersion>3.0.0-alpha.1032+Branch.dev.Sha.49507cda0ce9c0acc7f3f7fd80043eba9bd65cd7</InformationalVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="LiquidTestReports.Markdown" Version="1.0.9" />
@@ -19,160 +19,280 @@
     <ProjectReference Include="..\..\EliteAPI\EliteAPI.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="Test cases\Journal.200901110954.01.log">
+    <None Update="Test cases\ApproachBody.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.200901132724.01.log">
+    <None Update="Test cases\ApproachSettlement.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.200901202841.01.log">
+    <None Update="Test cases\AsteroidCracked.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.200902143043.01.log">
+    <None Update="Test cases\BuyAmmo.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.200902143927.01.log">
+    <None Update="Test cases\BuyDrones.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.200902191228.01.log">
+    <None Update="Test cases\Cargo.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.200903144831.01.log">
+    <None Update="Test cases\CargoTransfer.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.200904112150.01.log">
+    <None Update="Test cases\CarrierJump.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.200905230436.01.log">
+    <None Update="Test cases\CarrierJumpRequest.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.200929193808.01.log">
+    <None Update="Test cases\CarrierStats.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.200930150643.01.log">
+    <None Update="Test cases\CodexEntry.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.200930172826.01.log">
+    <None Update="Test cases\Commander.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.200930191449.01.log">
+    <None Update="Test cases\CommitCrime.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201001114335.01.log">
+    <None Update="Test cases\CrewAssign.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201001114654.01.log">
+    <None Update="Test cases\CrimeVictim.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201001115244.01.log">
+    <None Update="Test cases\Died.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201002131424.01.log">
+    <None Update="Test cases\Docked.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201003000236.01.log">
+    <None Update="Test cases\DockFighter.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201003173907.01.log">
+    <None Update="Test cases\DockingDenied.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201005170416.01.log">
+    <None Update="Test cases\DockingGranted.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201006162434.01.log">
+    <None Update="Test cases\DockingRequested.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201006180905.01.log">
+    <None Update="Test cases\DockingTimeout.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201007150841.01.log">
+    <None Update="Test cases\DockSRV.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201007183754.01.log">
+    <None Update="Test cases\EjectCargo.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201008101220.01.log">
+    <None Update="Test cases\EngineerProgress.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201010163415.01.log">
+    <None Update="Test cases\FighterDestroyed.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201011163001.01.log">
+    <None Update="Test cases\FighterRebuilt.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201029210916.01.log">
+    <None Update="Test cases\Fileheader.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201030185207.01.log">
+    <None Update="Test cases\Friends.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201104174207.01.log">
+    <None Update="Test cases\FSDJump.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201105191435.01.log">
+    <None Update="Test cases\FSDTarget.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201106202014.01.log">
+    <None Update="Test cases\FSSAllBodiesFound.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201109220640.01.log">
+    <None Update="Test cases\FSSSignalDiscovered.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201124145917.01.log">
+    <None Update="Test cases\FuelScoop.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201125192913.01.log">
+    <None Update="Test cases\HeatDamage.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201214194531.01.log">
+    <None Update="Test cases\HeatWarning.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201222133000.01.log">
+    <None Update="Test cases\HullDamage.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201223131354.01.log">
+    <None Update="Test cases\Interdicted.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201225200839.01.log">
+    <None Update="Test cases\LaunchDrone.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201231172520.01.log">
+    <None Update="Test cases\LaunchFighter.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.201231180232.01.log">
+    <None Update="Test cases\LaunchSRV.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.210101170615.01.log">
+    <None Update="Test cases\LeaveBody.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.210101190947.01.log">
+    <None Update="Test cases\Liftoff.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.210102010023.01.log">
+    <None Update="Test cases\LoadGame.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.210102165519.01.log">
+    <None Update="Test cases\Loadout.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.210104190828.01.log">
+    <None Update="Test cases\Location.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.210104224522.01.log">
+    <None Update="Test cases\Market.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.210107212916.01.log">
+    <None Update="Test cases\MarketBuy.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.210112121338.01.log">
+    <None Update="Test cases\Materials.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.210114223531.01.log">
+    <None Update="Test cases\MiningRefined.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.210114223930.01.log">
+    <None Update="Test cases\Missions.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Test cases\Journal.210116140720.01.log">
+    <None Update="Test cases\ModuleInfo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Music.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\NavRoute.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\NpcCrewPaidWage.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Outfitting.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\PayFines.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Powerplay.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Progress.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\ProspectedAsteroid.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Rank.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\ReceiveText.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\RefuelAll.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Repair.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\RepairAll.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Reputation.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\ReservoirReplenished.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Resurrect.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\SAAScanComplete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\SAASignalsFound.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Scan.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Scanned.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\SendText.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\ShieldState.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\ShipTargeted.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Shipyard.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\ShipyardSwap.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Shutdown.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\SquadronStartup.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\StartJump.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Statistics.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\StoredModules.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\StoredShips.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\SupercruiseEntry.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\SupercruiseExit.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Touchdown.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\UnderAttack.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\Undocked.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\VehicleSwitch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\WingAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\WingJoin.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test cases\WingLeave.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

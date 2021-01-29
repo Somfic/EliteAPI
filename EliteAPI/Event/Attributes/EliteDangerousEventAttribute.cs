@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Attributes
         /// <summary>
         /// Class for modular events in EliteAPI
         /// </summary>
-        /// <param name="runOnCatchup">Whether to run this method while catching up</param>
+        /// <param name="runOnCatchup"> Whether to run this method while catching up </param>
         public EliteDangerousEventAttribute(bool runOnCatchup = false)
         {
             RunOnCatchup = runOnCatchup;

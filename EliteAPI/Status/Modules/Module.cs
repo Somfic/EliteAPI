@@ -7,10 +7,7 @@ namespace EliteAPI.Status.Modules
     /// </summary>
     public class Module
     {
-        internal Module()
-        {
-
-        }
+        internal Module() { }
 
         /// <summary>
         /// In which slot this module is located

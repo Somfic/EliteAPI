@@ -1,19 +1,21 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class FuelScoopEvent : EventBase
     {
-        internal FuelScoopEvent()
-        {
-        }
+        internal FuelScoopEvent() { }
 
-        [JsonProperty("Scooped")] public double Scooped { get; private set; }
+        [JsonProperty("Scooped")]
+        public double Scooped { get; private set; }
 
-        [JsonProperty("Total")] public double Total { get; private set; }
+        [JsonProperty("Total")]
+        public double Total { get; private set; }
     }
 
     public partial class FuelScoopEvent

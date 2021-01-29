@@ -1,21 +1,24 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class LaunchFighterEvent : EventBase
     {
-        internal LaunchFighterEvent()
-        {
-        }
+        internal LaunchFighterEvent() { }
 
-        [JsonProperty("Loadout")] public string Loadout { get; private set; }
+        [JsonProperty("Loadout")]
+        public string Loadout { get; private set; }
 
-        [JsonProperty("ID")] public long Id { get; private set; }
+        [JsonProperty("ID")]
+        public long Id { get; private set; }
 
-        [JsonProperty("PlayerControlled")] public bool PlayerControlled { get; private set; }
+        [JsonProperty("PlayerControlled")]
+        public bool PlayerControlled { get; private set; }
     }
 
     public partial class LaunchFighterEvent

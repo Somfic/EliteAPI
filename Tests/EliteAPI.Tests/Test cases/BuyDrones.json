@@ -1,0 +1,2 @@
+{ "timestamp":"2021-01-04T21:59:39Z", "event":"BuyDrones", "Type":"Drones", "Count":142, "BuyPrice":91, "TotalCost":12922 }
+{ "timestamp":"2021-01-07T20:43:35Z", "event":"BuyDrones", "Type":"Drones", "Count":115, "BuyPrice":101, "TotalCost":11615 }

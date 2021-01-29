@@ -1,24 +1,28 @@
 using System;
 using System.Collections.Generic;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class SellExplorationDataEvent : EventBase
     {
-        internal SellExplorationDataEvent()
-        {
-        }
+        internal SellExplorationDataEvent() { }
 
-        [JsonProperty("Systems")] public IReadOnlyList<string> Systems { get; private set; }
+        [JsonProperty("Systems")]
+        public IReadOnlyList<string> Systems { get; private set; }
 
-        [JsonProperty("Discovered")] public IReadOnlyList<object> Discovered { get; private set; }
+        [JsonProperty("Discovered")]
+        public IReadOnlyList<object> Discovered { get; private set; }
 
-        [JsonProperty("BaseValue")] public long BaseValue { get; private set; }
+        [JsonProperty("BaseValue")]
+        public long BaseValue { get; private set; }
 
-        [JsonProperty("Bonus")] public long Bonus { get; private set; }
+        [JsonProperty("Bonus")]
+        public long Bonus { get; private set; }
     }
 
     public partial class SellExplorationDataEvent

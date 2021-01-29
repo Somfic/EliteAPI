@@ -1,9 +1,12 @@
+using System;
+
+using EliteAPI.Event.Models;
+using EliteAPI.Event.Models.Abstractions;
+
+using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    using Abstractions;
-
-    using Newtonsoft.Json;
 
 
     public partial class MaterialTradeEvent : EventBase
@@ -23,7 +26,7 @@ namespace EliteAPI.Event.Models
         public Paid Received { get; private set; }
     }
 
-    public partial class Paid
+    public class Paid
     {
         internal Paid() { }
 
@@ -53,9 +56,6 @@ namespace EliteAPI.Event.Models
 
 namespace EliteAPI.Event.Handler
 {
-    using Models;
-
-    using System;
 
     public partial class EventHandler
     {

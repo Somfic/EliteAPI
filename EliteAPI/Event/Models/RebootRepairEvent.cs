@@ -1,18 +1,19 @@
 using System;
 using System.Collections.Generic;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class RebootRepairEvent : EventBase
     {
-        internal RebootRepairEvent()
-        {
-        }
+        internal RebootRepairEvent() { }
 
-        [JsonProperty("Modules")] public IReadOnlyList<object> Modules { get; private set; }
+        [JsonProperty("Modules")]
+        public IReadOnlyList<object> Modules { get; private set; }
     }
 
     public partial class RebootRepairEvent

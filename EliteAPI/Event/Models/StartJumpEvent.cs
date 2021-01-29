@@ -1,17 +1,27 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class StartJumpEvent : EventBase
     {
-        internal StartJumpEvent()
-        {
-        }
+        internal StartJumpEvent() { }
 
-        [JsonProperty("JumpType")] public string JumpType { get; private set; }
+        [JsonProperty("JumpType")]
+        public string JumpType { get; private set; }
+        
+        [JsonProperty("StarSystem")]
+        public string StarSystem { get; private set; }
+        
+        [JsonProperty("SystemAddress")]
+        public string SystemAddress { get; private set; }
+        
+        [JsonProperty("StarClass")]
+        public string StarClass { get; private set; }
     }
 
     public partial class StartJumpEvent

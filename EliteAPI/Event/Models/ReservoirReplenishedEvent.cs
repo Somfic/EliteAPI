@@ -1,19 +1,21 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class ReservoirReplenishedEvent : EventBase
     {
-        internal ReservoirReplenishedEvent()
-        {
-        }
+        internal ReservoirReplenishedEvent() { }
 
-        [JsonProperty("FuelMain")] public double FuelMain { get; private set; }
+        [JsonProperty("FuelMain")]
+        public double FuelMain { get; private set; }
 
-        [JsonProperty("FuelReservoir")] public double FuelReservoir { get; private set; }
+        [JsonProperty("FuelReservoir")]
+        public double FuelReservoir { get; private set; }
     }
 
     public partial class ReservoirReplenishedEvent

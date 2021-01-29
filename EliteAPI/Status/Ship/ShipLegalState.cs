@@ -1,42 +1,42 @@
 ﻿namespace EliteAPI.Status.Ship
 {
     /// <summary>
-    ///     Legal ship states
+    /// Legal ship states
     /// </summary>
     public enum ShipLegalState
     {
         /// <summary>
-        ///     Clean
+        /// Clean
         /// </summary>
         Clean,
 
         /// <summary>
-        ///     Illegal cargo on-board
+        /// Illegal cargo on-board
         /// </summary>
         IllegalCargo,
 
         /// <summary>
-        ///     Speeding at stations
+        /// Speeding at stations
         /// </summary>
         Speeding,
 
         /// <summary>
-        ///     Wanted
+        /// Wanted
         /// </summary>
         Wanted,
 
         /// <summary>
-        ///     Hostile
+        /// Hostile
         /// </summary>
         Hostile,
 
         /// <summary>
-        ///     Passenger on ship is wanted
+        /// Passenger on ship is wanted
         /// </summary>
         PassengerWanted,
 
         /// <summary>
-        ///     Warrant for arrest
+        /// Warrant for arrest
         /// </summary>
         Warrant
     }

@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class ScannedEvent : EventBase
     {
-        internal ScannedEvent()
-        {
-        }
+        internal ScannedEvent() { }
 
-        [JsonProperty("ScanType")] public string ScanType { get; private set; }
+        [JsonProperty("ScanType")]
+        public string ScanType { get; private set; }
     }
 
     public partial class ScannedEvent

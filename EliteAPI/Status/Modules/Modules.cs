@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+
 using EliteAPI.Status.Abstractions;
 using EliteAPI.Status.Modules.Abstractions;
-using EliteAPI.Status.Modules.Raw;
 
 namespace EliteAPI.Status.Modules
 {

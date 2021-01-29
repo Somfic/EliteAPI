@@ -1,23 +1,27 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class PayFinesEvent : EventBase
     {
-        internal PayFinesEvent()
-        {
-        }
+        internal PayFinesEvent() { }
 
-        [JsonProperty("Amount")] public long Amount { get; private set; }
+        [JsonProperty("Amount")]
+        public long Amount { get; private set; }
 
-        [JsonProperty("AllFines")] public bool AllFines { get; private set; }
+        [JsonProperty("AllFines")]
+        public bool AllFines { get; private set; }
 
-        [JsonProperty("Faction")] public string Faction { get; private set; }
+        [JsonProperty("Faction")]
+        public string Faction { get; private set; }
 
-        [JsonProperty("ShipID")] public long ShipId { get; private set; }
+        [JsonProperty("ShipID")]
+        public long ShipId { get; private set; }
     }
 
     public partial class PayFinesEvent

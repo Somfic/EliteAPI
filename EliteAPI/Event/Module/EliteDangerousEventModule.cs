@@ -1,6 +1,4 @@
-﻿using System;
-using EliteAPI.Abstractions;
-using Microsoft.Extensions.DependencyInjection;
+﻿using EliteAPI.Abstractions;
 
 namespace EliteAPI.Event.Module
 {
@@ -17,7 +15,7 @@ namespace EliteAPI.Event.Module
         /// <summary>
         /// Wrapper for event modules
         /// </summary>
-        /// <param name="api">The EliteDangerousAPI</param>
+        /// <param name="api"> The EliteDangerousAPI </param>
         protected EliteDangerousEventModule(IEliteDangerousApi api)
         {
             EliteAPI = api;

@@ -33,7 +33,7 @@ namespace EliteAPI.BuildTools
                         switch (command)
                         {
                             case "json":
-                                Json(argument);
+                                await Json(argument);
                                 break;
 
                             case "sort":
@@ -68,7 +68,7 @@ namespace EliteAPI.BuildTools
             var dir = new DirectoryInfo($"../../../../Journal catalog/{version}");
             if (!dir.Exists)
             {
-                Console.WriteLine("Error: Directory not found");
+                Console.WriteLine("Error: Directory not found: " + dir.FullName);
                 return;
             }
 
@@ -91,13 +91,13 @@ namespace EliteAPI.BuildTools
                 var version = Regex.Match(await File.ReadAllTextAsync(path), "\"gameversion\":\"(.*?)\"").Groups[1]
                     .Value;
 
-                Directory.CreateDirectory($"Journal/{version}");
+                Directory.CreateDirectory($"../../../../../Journal catalog/{version}");
 
                 var entries = await File.ReadAllLinesAsync(path);
                 foreach (var entry in entries)
                     try
                     {
-                        var file = $"Journal/{version}/{JsonConvert.DeserializeObject<dynamic>(entry).@event}.json";
+                        var file = $"../../../../../Journal catalog/{version}/{JsonConvert.DeserializeObject<dynamic>(entry).@event}.json";
                         if (!File.Exists(file) || !(await File.ReadAllLinesAsync(file)).Contains(entry))
                             await File.AppendAllTextAsync(file, entry + Environment.NewLine);
                     }

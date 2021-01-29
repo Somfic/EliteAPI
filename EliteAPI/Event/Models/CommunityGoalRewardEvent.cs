@@ -1,21 +1,24 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class CommunityGoalRewardEvent : EventBase
     {
-        internal CommunityGoalRewardEvent()
-        {
-        }
+        internal CommunityGoalRewardEvent() { }
 
-        [JsonProperty("Name")] public string Name { get; private set; }
+        [JsonProperty("Name")]
+        public string Name { get; private set; }
 
-        [JsonProperty("System")] public string System { get; private set; }
+        [JsonProperty("System")]
+        public string System { get; private set; }
 
-        [JsonProperty("Reward")] public long Reward { get; private set; }
+        [JsonProperty("Reward")]
+        public long Reward { get; private set; }
     }
 
     public partial class CommunityGoalRewardEvent

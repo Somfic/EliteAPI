@@ -1,18 +1,19 @@
 using System;
 using System.Collections.Generic;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class WingJoinEvent : EventBase
     {
-        internal WingJoinEvent()
-        {
-        }
+        internal WingJoinEvent() { }
 
-        [JsonProperty("Others")] public IReadOnlyList<string> Others { get; private set; }
+        [JsonProperty("Others")]
+        public IReadOnlyList<string> Others { get; private set; }
     }
 
     public partial class WingJoinEvent

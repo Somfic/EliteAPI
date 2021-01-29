@@ -1,0 +1,2 @@
+{ "timestamp":"2020-12-23T12:16:26Z", "event":"DockingDenied", "Reason":"Distance", "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2021-01-01T23:53:19Z", "event":"DockingDenied", "Reason":"Distance", "MarketID":3228624896, "StationName":"Eddington Refinery", "StationType":"Coriolis" }

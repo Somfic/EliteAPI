@@ -12,17 +12,17 @@ namespace EliteAPI.Status.Ship
         }
 
         /// <summary>
-        ///     Amount of half pips set to systems
+        /// Amount of half pips set to systems
         /// </summary>
         public int System => _pips[0];
 
         /// <summary>
-        ///     Amount of half pips set to engines
+        /// Amount of half pips set to engines
         /// </summary>
         public int Engines => _pips[1];
 
         /// <summary>
-        ///     Amount of half pips set to weapons
+        /// Amount of half pips set to weapons
         /// </summary>
         public int Weapons => _pips[2];
     }

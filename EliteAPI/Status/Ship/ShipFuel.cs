@@ -7,18 +7,16 @@ namespace EliteAPI.Status.Ship
     /// </summary>
     public class ShipFuel
     {
-        internal ShipFuel()
-        {
-        }
+        internal ShipFuel() { }
 
         /// <summary>
-        /// The ship's current amount of fuel left in the main fuel tank 
+        /// The ship's current amount of fuel left in the main fuel tank
         /// </summary>
         [JsonProperty("FuelMain")]
         public float Main { get; init; }
 
         /// <summary>
-        /// The ship's current amount of fuel left in the reservoir fuel tank 
+        /// The ship's current amount of fuel left in the reservoir fuel tank
         /// </summary>
         [JsonProperty("FuelReservoir")]
         public float Reservoir { get; init; }

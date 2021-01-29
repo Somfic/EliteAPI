@@ -7,10 +7,7 @@ namespace EliteAPI.Status.Outfitting
     /// </summary>
     public class OutfittingItem
     {
-        internal OutfittingItem()
-        {
-
-        }
+        internal OutfittingItem() { }
 
         /// <summary>
         /// The id of this outfitting deal

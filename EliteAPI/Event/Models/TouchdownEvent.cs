@@ -1,21 +1,24 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class TouchdownEvent : EventBase
     {
-        internal TouchdownEvent()
-        {
-        }
+        internal TouchdownEvent() { }
 
-        [JsonProperty("PlayerControlled")] public bool PlayerControlled { get; private set; }
+        [JsonProperty("PlayerControlled")]
+        public bool PlayerControlled { get; private set; }
 
-        [JsonProperty("Latitude")] public double Latitude { get; private set; }
+        [JsonProperty("Latitude")]
+        public double Latitude { get; private set; }
 
-        [JsonProperty("Longitude")] public double Longitude { get; private set; }
+        [JsonProperty("Longitude")]
+        public double Longitude { get; private set; }
     }
 
     public partial class TouchdownEvent

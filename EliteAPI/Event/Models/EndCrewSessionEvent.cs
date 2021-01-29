@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class EndCrewSessionEvent : EventBase
     {
-        internal EndCrewSessionEvent()
-        {
-        }
+        internal EndCrewSessionEvent() { }
 
-        [JsonProperty("OnCrime")] public bool OnCrime { get; private set; }
+        [JsonProperty("OnCrime")]
+        public bool OnCrime { get; private set; }
     }
 
     public partial class EndCrewSessionEvent

@@ -1,0 +1,30 @@
+{ "timestamp":"2020-11-25T18:30:43Z", "event":"ReceiveText", "From":"", "Message":"$COMMS_entered:#name=Shinrarta Dezhra;", "Message_Localised":"Entered Channel: Shinrarta Dezhra", "Channel":"npc" }
+{ "timestamp":"2020-11-25T18:35:45Z", "event":"ReceiveText", "From":"PRO100VAVAN", "Message":"07", "Channel":"starsystem" }
+{ "timestamp":"2020-11-25T18:36:35Z", "event":"ReceiveText", "From":"dash01", "Message":"o7", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:36:45Z", "event":"ReceiveText", "From":"GuavaNOG", "Message":"o7", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:37:12Z", "event":"ReceiveText", "From":"6abyx6", "Message":" like ya cut g", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:37:21Z", "event":"ReceiveText", "From":"Jameson Memorial", "Message":"$STATION_NoFireZone_entered;", "Message_Localised":"No fire zone entered.", "Channel":"npc" }
+{ "timestamp":"2020-11-25T18:37:23Z", "event":"ReceiveText", "From":"Puer_Spatium", "Message":"SMACK", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:38:01Z", "event":"ReceiveText", "From":"Jameson Memorial", "Message":"$DockingChatter_Friendly;", "Message_Localised":"It's great to see you again, Commander.", "Channel":"npc" }
+{ "timestamp":"2020-11-25T18:38:01Z", "event":"ReceiveText", "From":"Jameson Memorial", "Message":"$STATION_docking_granted;", "Message_Localised":"Docking request granted.", "Channel":"npc" }
+{ "timestamp":"2020-11-25T18:38:10Z", "event":"ReceiveText", "From":"6abyx6", "Message":"thats less of a smack and more of an explosion hahaha", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:38:13Z", "event":"ReceiveText", "From":"Gordon Lightyear", "Message":"2 jumps away", "Channel":"starsystem" }
+{ "timestamp":"2020-11-25T18:39:15Z", "event":"ReceiveText", "From":"6abyx6", "Message":"a thunderous clap ngl", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:39:15Z", "event":"ReceiveText", "From":"LEONARDO DOUJINSHI", "Message":"heelo everyone, i have arrived", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:39:40Z", "event":"ReceiveText", "From":"6abyx6", "Message":"welcome i lmao thats lame sorry ", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:40:14Z", "event":"ReceiveText", "From":"zanza21", "Message":"o7 Leo", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:42:03Z", "event":"ReceiveText", "From":"mcnugget shephard", "Message":"What sort of ship has the longest warp range? I'm up to some uncountable number now and think I should try to up my range a bit", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:42:35Z", "event":"ReceiveText", "From":"zanza21", "Message":"anaconda", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:42:53Z", "event":"ReceiveText", "From":"zanza21", "Message":"and dbbx", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:43:24Z", "event":"ReceiveText", "From":"spamhater", "Message":"wat about cargo space?", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:43:30Z", "event":"ReceiveText", "From":"spamhater", "Message":"which ship is good for it", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:43:41Z", "event":"ReceiveText", "From":"dash01", "Message":"DID SOMEONE SAY CARGO?", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:43:50Z", "event":"ReceiveText", "From":"$npc_name_decorate:#name=Shadowspawn;", "From_Localised":"Shadowspawn", "Message":"$Commuter_AuthorityScan02;", "Message_Localised":"How can I be of assistance?", "Channel":"npc" }
+{ "timestamp":"2020-11-25T18:43:52Z", "event":"ReceiveText", "From":"dash01", "Message":"depends how early you are", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:44:12Z", "event":"ReceiveText", "From":"dash01", "Message":"the earliest cargo ship is the hauler, but oof, it's tiny", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:44:33Z", "event":"ReceiveText", "From":"dash01", "Message":"then type-(insert number) will always have a lot of cargo space", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:44:50Z", "event":"ReceiveText", "From":"dash01", "Message":"just usually trash at combat", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:45:01Z", "event":"ReceiveText", "From":"spamhater", "Message":"how much is the cargo space", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:45:11Z", "event":"ReceiveText", "From":"spamhater", "Message":"combat dont matter since i can just jump away", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:45:24Z", "event":"ReceiveText", "From":"dash01", "Message":"exactly", "Channel":"squadron" }
+{ "timestamp":"2020-11-25T18:45:30Z", "event":"ReceiveText", "From":"dash01", "Message":"lemme look up exact cargo space", "Channel":"squadron" }

@@ -1,25 +1,30 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class ScreenshotEvent : EventBase
     {
-        internal ScreenshotEvent()
-        {
-        }
+        internal ScreenshotEvent() { }
 
-        [JsonProperty("Filename")] public string Filename { get; private set; }
+        [JsonProperty("Filename")]
+        public string Filename { get; private set; }
 
-        [JsonProperty("Width")] public long Width { get; private set; }
+        [JsonProperty("Width")]
+        public long Width { get; private set; }
 
-        [JsonProperty("Height")] public long Height { get; private set; }
+        [JsonProperty("Height")]
+        public long Height { get; private set; }
 
-        [JsonProperty("System")] public string System { get; private set; }
+        [JsonProperty("System")]
+        public string System { get; private set; }
 
-        [JsonProperty("Body")] public string Body { get; private set; }
+        [JsonProperty("Body")]
+        public string Body { get; private set; }
     }
 
     public partial class ScreenshotEvent

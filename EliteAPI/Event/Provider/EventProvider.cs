@@ -3,17 +3,16 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
 using EliteAPI.Exceptions;
-using Microsoft.Extensions.DependencyInjection;
+
 using Microsoft.Extensions.Logging;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using FluentAssertions;
-using FluentAssertions.Json;
 
 namespace EliteAPI.Event.Provider
 {
@@ -44,26 +43,7 @@ namespace EliteAPI.Event.Provider
                 var method = GetFromJsonMethod(eventName);
                 var eventBase = InvokeFromJsonMethod(method, json);
 
-                var expected = JToken.Parse(json);
-                var actual = JToken.Parse(JsonConvert.SerializeObject(eventBase));
-
                 _log.LogTrace(json);
-
-                try
-                {
-                    actual.Should().BeEquivalentTo(expected);
-                }
-                catch (Exception ex)
-                {
-                    string message = Regex.Split(ex.Message, Environment.NewLine)[0];
-                    message = message.Replace("JSON document", $"{eventName} event");
-                    message = message.Substring(0, message.Length - 1);
-
-                    EventHasMissingDataException exception = new(message);
-                    //_log.LogWarning(exception, $"{eventName} was not fully implemented"); ACW commented to stop clutter
-
-                    _log.LogDebug(ex, $"{eventName} was not fully implemented");
-                }
 
                 return Task.FromResult(eventBase);
             }
@@ -82,8 +62,7 @@ namespace EliteAPI.Event.Provider
         {
             _cache = new ConcurrentDictionary<string, Type>();
 
-            foreach (var eventType in GetAllEventTypes(typeof(EventHandler)))
-                _cache.Add(eventType.Name.Replace("Event", "").ToUpper(), eventType);
+            foreach (var eventType in GetAllEventTypes(typeof(EventHandler))) _cache.Add(eventType.Name.Replace("Event", "").ToUpper(), eventType);
 
             return Task.CompletedTask;
         }
@@ -104,11 +83,8 @@ namespace EliteAPI.Event.Provider
 
                 return type.GetMethods().First(x => x.Name == "FromJson");
             }
-            catch (Exception ex)
-            {
-                throw new EventNotImplementedException($"The {eventName} is not implemented", ex);
-            }
-           
+            catch (Exception ex) { throw new EventNotImplementedException($"The {eventName} is not implemented", ex); }
+
         }
 
         private EventBase InvokeFromJsonMethod(MethodBase method, string json)

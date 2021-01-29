@@ -1,4 +1,5 @@
 ﻿using System;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Status
@@ -8,6 +9,12 @@ namespace EliteAPI.Status
     /// </summary>
     public class StatusProperty<T>
     {
+
+        /// <summary>
+        /// Triggered whenever this property is changed
+        /// </summary>
+        public EventHandler<T> OnChange;
+
         internal StatusProperty()
         {
             Value = default;
@@ -22,11 +29,6 @@ namespace EliteAPI.Status
         /// The value of this property
         /// </summary>
         public T Value { get; private set; }
-
-        /// <summary>
-        /// Triggered whenever this property is changed
-        /// </summary>
-        public EventHandler<T> OnChange;
 
         internal bool NeedsUpdate(object rawValue)
         {

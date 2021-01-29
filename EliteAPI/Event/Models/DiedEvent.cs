@@ -1,18 +1,20 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class DiedEvent : EventBase
     {
-        internal DiedEvent()
-        {
-        }
+        internal DiedEvent() { }
 
-        [JsonProperty("KillerName")] public string KillerName { get; private set; }
-        [JsonProperty("KillerShip")] public string KillerShip { get; private set; }
+        [JsonProperty("KillerName")]
+        public string KillerName { get; private set; }
+        [JsonProperty("KillerShip")]
+        public string KillerShip { get; private set; }
     }
 
     public partial class DiedEvent

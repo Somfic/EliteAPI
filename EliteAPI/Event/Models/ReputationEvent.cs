@@ -1,23 +1,27 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class ReputationEvent : EventBase
     {
-        internal ReputationEvent()
-        {
-        }
+        internal ReputationEvent() { }
 
-        [JsonProperty("Empire")] public double Empire { get; private set; }
+        [JsonProperty("Empire")]
+        public double Empire { get; private set; }
 
-        [JsonProperty("Federation")] public double Federation { get; private set; }
+        [JsonProperty("Federation")]
+        public double Federation { get; private set; }
 
-        [JsonProperty("Independent")] public double Independent { get; private set; }
+        [JsonProperty("Independent")]
+        public double Independent { get; private set; }
 
-        [JsonProperty("Alliance")] public double Alliance { get; private set; }
+        [JsonProperty("Alliance")]
+        public double Alliance { get; private set; }
     }
 
     public partial class ReputationEvent

@@ -1,23 +1,27 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class AfmuRepairsEvent : EventBase
     {
-        internal AfmuRepairsEvent()
-        {
-        }
+        internal AfmuRepairsEvent() { }
 
-        [JsonProperty("Module")] public string Module { get; private set; }
+        [JsonProperty("Module")]
+        public string Module { get; private set; }
 
-        [JsonProperty("Module_Localised")] public string ModuleLocalised { get; private set; }
+        [JsonProperty("Module_Localised")]
+        public string ModuleLocalised { get; private set; }
 
-        [JsonProperty("FullyRepaired")] public bool FullyRepaired { get; private set; }
+        [JsonProperty("FullyRepaired")]
+        public bool FullyRepaired { get; private set; }
 
-        [JsonProperty("Health")] public double Health { get; private set; }
+        [JsonProperty("Health")]
+        public double Health { get; private set; }
     }
 
     public partial class AfmuRepairsEvent

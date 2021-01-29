@@ -69,12 +69,14 @@ namespace EliteAPI.Event.Models
         [JsonProperty("FuelLevel")]
         public double FuelLevel { get; private set; }
 
-        [JsonProperty("FactionInfos")]
-        public IReadOnlyList<FactionInfo> FactionInfos { get; private set; }
+        [JsonProperty("Factions")]
+        public IReadOnlyList<FactionInfo> Factions { get; private set; }
 
-        [JsonProperty("SystemFactionInfo")]
+        [JsonProperty("SystemFaction")]
         public SystemFactionInfo SystemFaction { get; private set; }
-
+        
+        [JsonProperty("Conflicts")]
+        public IReadOnlyList<ConflictInfo> Conflicts { get; private set; }
 
         public class FactionInfo
         {
@@ -104,8 +106,13 @@ namespace EliteAPI.Event.Models
             [JsonProperty("MyReputation")]
             public double MyReputation { get; private set; }
 
-            [JsonProperty("ActiveStateInfos", NullValueHandling = NullValueHandling.Ignore)]
-            public IReadOnlyList<ActiveStateInfo> ActiveStateInfos { get; private set; }
+            [JsonProperty("PendingStates", NullValueHandling = NullValueHandling.Ignore)]
+            public IReadOnlyList<PendingStateInfo> PendingStates { get; private set; }
+            [JsonProperty("RecoveringStates", NullValueHandling = NullValueHandling.Ignore)]
+            public IReadOnlyList<RecoveringStateInfo> RecoveringStates { get; private set; }
+            
+            [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
+            public IReadOnlyList<ActiveStateInfo> ActiveStates { get; private set; }
         }
 
         public class ActiveStateInfo
@@ -115,6 +122,28 @@ namespace EliteAPI.Event.Models
             [JsonProperty("State")]
             public string State { get; private set; }
         }
+        
+        public class PendingStateInfo
+        {
+            internal PendingStateInfo() { }
+
+            [JsonProperty("State")]
+            public string State { get; private set; }
+            
+            [JsonProperty("Trend")]
+            public double Trend { get; private set; }
+        }
+        
+        public class RecoveringStateInfo
+        {
+            internal RecoveringStateInfo() { }
+
+            [JsonProperty("State")]
+            public string State { get; private set; }
+            
+            [JsonProperty("Trend")]
+            public double Trend { get; private set; }
+        }
 
         public class SystemFactionInfo
         {
@@ -122,6 +151,36 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Name")]
             public string Name { get; private set; }
+            
+            [JsonProperty("FactionState")]
+            public string FactionState { get; private set;}
+        }
+
+        public class ConflictInfo
+        {
+            [JsonProperty("WarType")]
+            public string WarType { get; set; }
+
+            [JsonProperty("Status")]
+            public string Status { get; set; }
+
+            [JsonProperty("Faction1")]
+            public ConflictFactionInfo Faction1 { get; set; }
+
+            [JsonProperty("Faction2")]
+            public ConflictFactionInfo Faction2 { get; set; }
+        }
+
+        public class ConflictFactionInfo
+        {
+            [JsonProperty("Name")]
+            public string Name { get; set; }
+
+            [JsonProperty("Stake")]
+            public string Stake { get; set; }
+
+            [JsonProperty("WonDays")]
+            public long WonDays { get; set; }
         }
     }
 

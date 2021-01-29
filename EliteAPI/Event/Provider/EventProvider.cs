@@ -44,26 +44,7 @@ namespace EliteAPI.Event.Provider
                 var method = GetFromJsonMethod(eventName);
                 var eventBase = InvokeFromJsonMethod(method, json);
 
-                var expected = JToken.Parse(json);
-                var actual = JToken.Parse(JsonConvert.SerializeObject(eventBase));
-
                 _log.LogTrace(json);
-
-                try
-                {
-                    actual.Should().BeEquivalentTo(expected);
-                }
-                catch (Exception ex)
-                {
-                    string message = Regex.Split(ex.Message, Environment.NewLine)[0];
-                    message = message.Replace("JSON document", $"{eventName} event");
-                    message = message.Substring(0, message.Length - 1);
-
-                    EventHasMissingDataException exception = new(message);
-                    _log.LogWarning(exception, $"{eventName} was not fully implemented");
-
-                    _log.LogDebug(ex, $"{eventName} was not fully implemented");
-                }
 
                 return Task.FromResult(eventBase);
             }

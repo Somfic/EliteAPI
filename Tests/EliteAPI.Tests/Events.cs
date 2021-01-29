@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Provider;
 using EliteAPI.Event.Provider.Abstractions;
 using FluentAssertions;
+using FluentAssertions.Equivalency;
 using FluentAssertions.Json;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -16,6 +18,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Xunit;
 using Xunit.Abstractions;
+using Xunit.Sdk;
 
 namespace EliteAPI.Tests
 {
@@ -45,12 +48,31 @@ namespace EliteAPI.Tests
             var expectedJson = json;
             var actualJson = JsonConvert.SerializeObject(parsedEvent);
 
-            var expected = JsonConvert.DeserializeObject(expectedJson);
+            var expected = JsonConvert.DeserializeObject(expectedJson); 
             var actual = JsonConvert.DeserializeObject(actualJson);
 
-            _output.WriteLine("Actual JSON:\n{0}\n\nExpected JSON:\n{1}", actualJson, expectedJson);
+            try
+            {
+                actual.Should().BeEquivalentTo(expected);
+            }
+            catch (XunitException ex)
+            {
+                IEnumerable<string> issues = ex.UserMessage.Split(Environment.NewLine);
+                
+                issues = issues.Where(x => !string.IsNullOrWhiteSpace(x));
+                issues = issues.Where(x => !x.Contains("With configuration:"));
+                issues = issues.Where(x => !x.StartsWith("-"));
+                issues = issues.Where(x => !x.Contains("but has additional key(s)")).ToList();
 
-            actual.Should().BeEquivalentTo(expected);
+                var processedIssues = issues.ToList();
+                
+                if (processedIssues.Any())
+                {
+                    _output.WriteLine("Elite: Dangerous event JSON:\n{1}\n\nEliteAPI event JSON:\n{0}", JsonConvert.SerializeObject(actual, Formatting.Indented), JsonConvert.SerializeObject(expected, Formatting.Indented));
+                    throw new XunitException(string.Join(Environment.NewLine, processedIssues));
+                }
+            }
+           
         }
 
         [Theory]

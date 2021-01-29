@@ -11,8 +11,8 @@ namespace EliteAPI.Event.Models
     {
         internal VehicleSwitchEvent() { }
 
-        [JsonProperty("event")]
-        public string Event { get; private set; }
+        [JsonProperty("To")]
+        public string To { get; private set; }
     }
 
     public partial class VehicleSwitchEvent

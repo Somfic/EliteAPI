@@ -26,6 +26,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("HullValue")]
         public long HullValue { get; private set; }
+        
+        [JsonProperty("ModulesValue")]
+        public long ModulesValue { get; private set; }
 
         [JsonProperty("ModuleInfosValue")]
         public long ModuleInfosValue { get; private set; }
@@ -42,16 +45,15 @@ namespace EliteAPI.Event.Models
         [JsonProperty("MaxJumpRange")]
         public double MaxJumpRange { get; private set; }
 
-        [JsonProperty("FuelCapacityInfo")]
+        [JsonProperty("FuelCapacity")]
         public FuelCapacityInfo FuelCapacity { get; private set; }
 
         [JsonProperty("Rebuy")]
         public long Rebuy { get; private set; }
 
-        [JsonProperty("ModuleInfos")]
-        public IReadOnlyList<ModuleInfo> ModuleInfos { get; private set; }
-
-
+        [JsonProperty("Modules")]
+        public IReadOnlyList<ModuleInfo> Modules { get; private set; }
+        
         public class FuelCapacityInfo
         {
             internal FuelCapacityInfo() { }

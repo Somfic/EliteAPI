@@ -239,6 +239,10 @@
           <Private>True</Private>
         </Reference>
         <Reference Include="System.Xml" />
+        <Reference Include="Valsom.Logging.File, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\packages\Valsom.Logging.File.0.1.0\lib\netstandard2.0\Valsom.Logging.File.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="VoiceAttackPlugin.cs" />

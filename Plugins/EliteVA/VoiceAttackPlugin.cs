@@ -5,7 +5,6 @@ using Somfic.VoiceAttack.Proxy.Abstractions;
 using System;
 using System.IO;
 using System.Reflection;
-using System.Text.Json.Serialization;
 
 using EliteAPI;
 using EliteAPI.Abstractions;
@@ -16,6 +15,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 using Newtonsoft.Json;
+
+using Valsom.Logging.File;
+using Valsom.Logging.File.Formats;
 
 namespace EliteVA
 {
@@ -75,6 +77,7 @@ namespace EliteVA
                 {
                     log.SetMinimumLevel(LogLevel.Trace);
                     VoiceAttackLoggerExtensions.AddVoiceAttack(log, vaProxy);
+                    log.AddPrettyConsole("EliteVA", new DirectoryInfo(pluginDir), FileNamingFormats.Default, FileFormats.Default);
                 })
                 .Build();
 

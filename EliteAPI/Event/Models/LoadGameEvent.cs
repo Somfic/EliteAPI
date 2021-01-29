@@ -41,6 +41,9 @@ namespace EliteAPI.Event.Models
         [JsonProperty("FuelCapacity")]
         public double FuelCapacity { get; private set; }
 
+        [JsonProperty("StartLanded")]
+        public bool StartLanded { get; private set; }
+        
         [JsonProperty("GameMode")]
         public string GameMode { get; private set; }
 

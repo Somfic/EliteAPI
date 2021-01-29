@@ -1,5 +1,5 @@
 <div text-align="center">
-<img src="https://github.com/EliteAPI/EliteAPI/blob/master/Icons/logo_gradient_shine.jpg?raw=true" align="right"
+<img src="https://github.com/EliteAPI/Icons/blob/main/logo_gradient_shine.jpg?raw=true" align="right"
      title="EliteAPI by Somfic" width="280" height="280">
 <h1 align="center">EliteAPI</h1>
      

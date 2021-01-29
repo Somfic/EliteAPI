@@ -16,6 +16,12 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("SignalName")]
         public string SignalName { get; private set; }
+        
+        [JsonProperty("SignalName_Localised")]
+        public string SignalNameLocalised { get; private set; }
+        
+        [JsonProperty("IsStation")]
+        public bool IsStation { get; private set; }
     }
 
     public partial class FssSignalDiscoveredEvent

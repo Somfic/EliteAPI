@@ -1,23 +1,27 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class EjectCargoEvent : EventBase
     {
-        internal EjectCargoEvent()
-        {
-        }
+        internal EjectCargoEvent() { }
 
-        [JsonProperty("Type")] public string Type { get; private set; }
+        [JsonProperty("Type")]
+        public string Type { get; private set; }
 
-        [JsonProperty("Type_Localised")] public string TypeLocalised { get; private set; }
+        [JsonProperty("Type_Localised")]
+        public string TypeLocalised { get; private set; }
 
-        [JsonProperty("Count")] public long Count { get; private set; }
+        [JsonProperty("Count")]
+        public long Count { get; private set; }
 
-        [JsonProperty("Abandoned")] public bool Abandoned { get; private set; }
+        [JsonProperty("Abandoned")]
+        public bool Abandoned { get; private set; }
     }
 
     public partial class EjectCargoEvent

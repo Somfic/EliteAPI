@@ -1,4 +1,5 @@
 ﻿using System;
+
 using EliteAPI.Status.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
 
@@ -109,7 +110,7 @@ namespace EliteAPI.Status.Ship
         public StatusProperty<bool> SrvHighBeam { get; } = new(false);
 
         /// <inheritdoc />
-        public StatusProperty<ShipPips> Pips { get; } = new(new ShipPips(new[] { 0, 0, 0 }));
+        public StatusProperty<ShipPips> Pips { get; } = new(new ShipPips(new[] {0, 0, 0}));
 
         /// <inheritdoc />
         public StatusProperty<int> FireGroup { get; } = new(0);

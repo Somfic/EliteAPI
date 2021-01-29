@@ -1,31 +1,33 @@
 using System;
 using System.Collections.Generic;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class SynthesisEvent : EventBase
     {
-        internal SynthesisEvent()
-        {
-        }
+        internal SynthesisEvent() { }
 
-        [JsonProperty("Name")] public string Name { get; private set; }
+        [JsonProperty("Name")]
+        public string Name { get; private set; }
 
-        [JsonProperty("Materials")] public IReadOnlyList<MaterialInfo> Materials { get; private set; }
+        [JsonProperty("Materials")]
+        public IReadOnlyList<MaterialInfo> Materials { get; private set; }
     }
 
     public class MaterialInfo
     {
-        internal MaterialInfo()
-        {
-        }
+        internal MaterialInfo() { }
 
-        [JsonProperty("Name")] public string Name { get; private set; }
+        [JsonProperty("Name")]
+        public string Name { get; private set; }
 
-        [JsonProperty("Count")] public long Count { get; private set; }
+        [JsonProperty("Count")]
+        public long Count { get; private set; }
     }
 
     public partial class SynthesisEvent

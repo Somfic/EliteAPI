@@ -1,11 +1,13 @@
+using System;
+using System.Collections.Generic;
+
+using EliteAPI.Event.Models;
+using EliteAPI.Event.Models.Abstractions;
+
+using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    using Abstractions;
-
-    using Newtonsoft.Json;
-
-    using System.Collections.Generic;
 
 
     public partial class LocationEvent : EventBase
@@ -109,7 +111,7 @@ namespace EliteAPI.Event.Models
         public StationFactionInfo SystemFaction { get; private set; }
 
 
-        public partial class FactionInfo
+        public class FactionInfo
         {
             internal FactionInfo() { }
 
@@ -141,7 +143,7 @@ namespace EliteAPI.Event.Models
             public IReadOnlyList<ActiveStateInfo> ActiveStates { get; private set; }
         }
 
-        public partial class ActiveStateInfo
+        public class ActiveStateInfo
         {
             internal ActiveStateInfo() { }
 
@@ -149,7 +151,7 @@ namespace EliteAPI.Event.Models
             public string State { get; private set; }
         }
 
-        public partial class StationEconomyInfo
+        public class StationEconomyInfo
         {
             internal StationEconomyInfo() { }
 
@@ -163,7 +165,7 @@ namespace EliteAPI.Event.Models
             public double Proportion { get; private set; }
         }
 
-        public partial class StationFactionInfo
+        public class StationFactionInfo
         {
             internal StationFactionInfo() { }
 
@@ -173,7 +175,6 @@ namespace EliteAPI.Event.Models
             [JsonProperty("FactionState")]
             public string FactionState { get; private set; }
         }
-
     }
 
     public partial class LocationEvent
@@ -189,9 +190,6 @@ namespace EliteAPI.Event.Models
 
 namespace EliteAPI.Event.Handler
 {
-    using Models;
-
-    using System;
 
     public partial class EventHandler
     {

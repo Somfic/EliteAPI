@@ -1,40 +1,51 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class CodexEntryEvent : EventBase
     {
-        internal CodexEntryEvent()
-        {
-        }
+        internal CodexEntryEvent() { }
 
-        [JsonProperty("EntryID")] public long EntryId { get; private set; }
+        [JsonProperty("EntryID")]
+        public long EntryId { get; private set; }
 
-        [JsonProperty("Name")] public string Name { get; private set; }
+        [JsonProperty("Name")]
+        public string Name { get; private set; }
 
-        [JsonProperty("Name_Localised")] public string NameLocalised { get; private set; }
+        [JsonProperty("Name_Localised")]
+        public string NameLocalised { get; private set; }
 
-        [JsonProperty("SubCategory")] public string SubCategory { get; private set; }
+        [JsonProperty("SubCategory")]
+        public string SubCategory { get; private set; }
 
         [JsonProperty("SubCategory_Localised")]
         public string SubCategoryLocalised { get; private set; }
 
-        [JsonProperty("Category")] public string Category { get; private set; }
+        [JsonProperty("Category")]
+        public string Category { get; private set; }
 
-        [JsonProperty("Category_Localised")] public string CategoryLocalised { get; private set; }
+        [JsonProperty("Category_Localised")]
+        public string CategoryLocalised { get; private set; }
 
-        [JsonProperty("Region")] public string Region { get; private set; }
+        [JsonProperty("Region")]
+        public string Region { get; private set; }
 
-        [JsonProperty("Region_Localised")] public string RegionLocalised { get; private set; }
+        [JsonProperty("Region_Localised")]
+        public string RegionLocalised { get; private set; }
 
-        [JsonProperty("System")] public string System { get; private set; }
+        [JsonProperty("System")]
+        public string System { get; private set; }
 
-        [JsonProperty("SystemAddress")] public long SystemAddress { get; private set; }
+        [JsonProperty("SystemAddress")]
+        public long SystemAddress { get; private set; }
 
-        [JsonProperty("IsNewEntry")] public bool IsNewEntry { get; private set; }
+        [JsonProperty("IsNewEntry")]
+        public bool IsNewEntry { get; private set; }
     }
 
     public partial class CodexEntryEvent

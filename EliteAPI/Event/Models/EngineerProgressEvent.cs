@@ -1,31 +1,33 @@
 using System;
 using System.Collections.Generic;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class EngineerProgressEvent : EventBase
     {
-        internal EngineerProgressEvent()
-        {
-        }
+        internal EngineerProgressEvent() { }
 
-        [JsonProperty("Engineers")] public IReadOnlyList<Engineer> Engineers { get; private set; }
+        [JsonProperty("Engineers")]
+        public IReadOnlyList<Engineer> Engineers { get; private set; }
     }
 
     public class Engineer
     {
-        internal Engineer()
-        {
-        }
+        internal Engineer() { }
 
-        [JsonProperty("Engineer")] public string EngineerEngineer { get; private set; }
+        [JsonProperty("Engineer")]
+        public string EngineerEngineer { get; private set; }
 
-        [JsonProperty("EngineerID")] public long EngineerId { get; private set; }
+        [JsonProperty("EngineerID")]
+        public long EngineerId { get; private set; }
 
-        [JsonProperty("Progress")] public string Progress { get; private set; }
+        [JsonProperty("Progress")]
+        public string Progress { get; private set; }
 
         [JsonProperty("RankProgress", NullValueHandling = NullValueHandling.Ignore)]
         public long? RankProgress { get; private set; }

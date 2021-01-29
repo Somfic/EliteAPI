@@ -1,23 +1,27 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class MaterialCollectedEvent : EventBase
     {
-        internal MaterialCollectedEvent()
-        {
-        }
+        internal MaterialCollectedEvent() { }
 
-        [JsonProperty("Category")] public string Category { get; private set; }
+        [JsonProperty("Category")]
+        public string Category { get; private set; }
 
-        [JsonProperty("Name")] public string Name { get; private set; }
+        [JsonProperty("Name")]
+        public string Name { get; private set; }
 
-        [JsonProperty("Name_Localised")] public string NameLocalised { get; private set; }
+        [JsonProperty("Name_Localised")]
+        public string NameLocalised { get; private set; }
 
-        [JsonProperty("Count")] public long Count { get; private set; }
+        [JsonProperty("Count")]
+        public long Count { get; private set; }
     }
 
     public partial class MaterialCollectedEvent

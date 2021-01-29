@@ -1,31 +1,33 @@
 using System;
 using System.Collections.Generic;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class CargoTransferEvent : EventBase
     {
-        internal CargoTransferEvent()
-        {
-        }
+        internal CargoTransferEvent() { }
 
-        [JsonProperty("Transfers")] public IReadOnlyList<Transfer> Transfers { get; private set; }
+        [JsonProperty("Transfers")]
+        public IReadOnlyList<Transfer> Transfers { get; private set; }
     }
 
     public class Transfer
     {
-        internal Transfer()
-        {
-        }
+        internal Transfer() { }
 
-        [JsonProperty("Type")] public string Type { get; private set; }
+        [JsonProperty("Type")]
+        public string Type { get; private set; }
 
-        [JsonProperty("Count")] public long Count { get; private set; }
+        [JsonProperty("Count")]
+        public long Count { get; private set; }
 
-        [JsonProperty("Direction")] public string Direction { get; private set; }
+        [JsonProperty("Direction")]
+        public string Direction { get; private set; }
     }
 
     public partial class CargoTransferEvent

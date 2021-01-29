@@ -1,4 +1,5 @@
 ﻿using System;
+
 using EliteAPI.Status.Abstractions;
 using EliteAPI.Status.Ship;
 

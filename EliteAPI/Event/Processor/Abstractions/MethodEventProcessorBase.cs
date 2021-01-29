@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
+
 using EliteAPI.Event.Models.Abstractions;
+
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -20,7 +22,7 @@ namespace EliteAPI.Event.Processor.Abstractions
         }
 
         /// <summary>
-        ///     Methods to invoke, mapped to the name of a event
+        /// Methods to invoke, mapped to the name of a event
         /// </summary>
         protected IDictionary<string, IEnumerable<MethodBase>> Cache { get; set; }
 
@@ -42,10 +44,7 @@ namespace EliteAPI.Event.Processor.Abstractions
 
                 foreach (var method in methods) InvokeMethod(method, eventBase);
             }
-            catch (Exception ex)
-            {
-                _log.LogWarning(ex, "Could not invoke methods for {eventName}", eventBase.Event);
-            }
+            catch (Exception ex) { _log.LogWarning(ex, "Could not invoke methods for {eventName}", eventBase.Event); }
         }
 
         private void InvokeMethod(MethodBase method, IEvent eventBase)
@@ -70,14 +69,8 @@ namespace EliteAPI.Event.Processor.Abstractions
 
                 method.Invoke(parentClassInstance, new object[] {eventBase});
             }
-            catch (InvalidOperationException ex)
-            {
-                _log.LogWarning(ex, "{parentClass} is not registered", method.DeclaringType?.FullName);
-            }
-            catch (Exception ex)
-            {
-                _log.LogError(ex, "Could not invoke method for {event}", eventBase.Event);
-            }
+            catch (InvalidOperationException ex) { _log.LogWarning(ex, "{parentClass} is not registered", method.DeclaringType?.FullName); }
+            catch (Exception ex) { _log.LogError(ex, "Could not invoke method for {event}", eventBase.Event); }
         }
     }
 }

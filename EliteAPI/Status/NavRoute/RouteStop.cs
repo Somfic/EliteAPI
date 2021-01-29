@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
 
-using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Status.NavRoute
 {
@@ -9,9 +9,7 @@ namespace EliteAPI.Status.NavRoute
     /// </summary>
     public class RouteStop
     {
-        internal RouteStop()
-        {
-        }
+        internal RouteStop() { }
 
         /// <summary>
         /// The name of the star system

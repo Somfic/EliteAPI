@@ -1,19 +1,21 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class FssSignalDiscoveredEvent : EventBase
     {
-        internal FssSignalDiscoveredEvent()
-        {
-        }
+        internal FssSignalDiscoveredEvent() { }
 
-        [JsonProperty("SystemAddress")] public long SystemAddress { get; private set; }
+        [JsonProperty("SystemAddress")]
+        public long SystemAddress { get; private set; }
 
-        [JsonProperty("SignalName")] public string SignalName { get; private set; }
+        [JsonProperty("SignalName")]
+        public string SignalName { get; private set; }
     }
 
     public partial class FssSignalDiscoveredEvent

@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class CrewFireEvent : EventBase
     {
-        internal CrewFireEvent()
-        {
-        }
+        internal CrewFireEvent() { }
 
-        [JsonProperty("Name")] public string Name { get; private set; }
+        [JsonProperty("Name")]
+        public string Name { get; private set; }
     }
 
     public partial class CrewFireEvent

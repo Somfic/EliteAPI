@@ -1,21 +1,24 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class RedeemVoucherEvent : EventBase
     {
-        internal RedeemVoucherEvent()
-        {
-        }
+        internal RedeemVoucherEvent() { }
 
-        [JsonProperty("Type")] public string Type { get; private set; }
+        [JsonProperty("Type")]
+        public string Type { get; private set; }
 
-        [JsonProperty("Amount")] public long Amount { get; private set; }
+        [JsonProperty("Amount")]
+        public long Amount { get; private set; }
 
-        [JsonProperty("Faction")] public string Faction { get; private set; }
+        [JsonProperty("Faction")]
+        public string Faction { get; private set; }
     }
 
     public partial class RedeemVoucherEvent

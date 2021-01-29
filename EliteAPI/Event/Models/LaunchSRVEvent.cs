@@ -1,21 +1,24 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class LaunchSrvEvent : EventBase
     {
-        internal LaunchSrvEvent()
-        {
-        }
+        internal LaunchSrvEvent() { }
 
-        [JsonProperty("Loadout")] public string Loadout { get; private set; }
+        [JsonProperty("Loadout")]
+        public string Loadout { get; private set; }
 
-        [JsonProperty("ID")] public long Id { get; private set; }
+        [JsonProperty("ID")]
+        public long Id { get; private set; }
 
-        [JsonProperty("PlayerControlled")] public bool PlayerControlled { get; private set; }
+        [JsonProperty("PlayerControlled")]
+        public bool PlayerControlled { get; private set; }
     }
 
     public partial class LaunchSrvEvent

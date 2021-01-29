@@ -1,19 +1,21 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class EscapeInterdictionEvent : EventBase
     {
-        internal EscapeInterdictionEvent()
-        {
-        }
+        internal EscapeInterdictionEvent() { }
 
-        [JsonProperty("Interdictor")] public string Interdictor { get; private set; }
+        [JsonProperty("Interdictor")]
+        public string Interdictor { get; private set; }
 
-        [JsonProperty("IsPlayer")] public bool IsPlayer { get; private set; }
+        [JsonProperty("IsPlayer")]
+        public bool IsPlayer { get; private set; }
     }
 
     public partial class EscapeInterdictionEvent

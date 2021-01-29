@@ -1,21 +1,24 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class ResurrectEvent : EventBase
     {
-        internal ResurrectEvent()
-        {
-        }
+        internal ResurrectEvent() { }
 
-        [JsonProperty("Option")] public string Option { get; private set; }
+        [JsonProperty("Option")]
+        public string Option { get; private set; }
 
-        [JsonProperty("Cost")] public long Cost { get; private set; }
+        [JsonProperty("Cost")]
+        public long Cost { get; private set; }
 
-        [JsonProperty("Bankrupt")] public bool Bankrupt { get; private set; }
+        [JsonProperty("Bankrupt")]
+        public bool Bankrupt { get; private set; }
     }
 
     public partial class ResurrectEvent

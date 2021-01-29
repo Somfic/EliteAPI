@@ -7,10 +7,7 @@ namespace EliteAPI.Status.Market
     /// </summary>
     public class Commodity
     {
-        internal Commodity()
-        {
-
-        }
+        internal Commodity() { }
 
         /// <summary>
         /// The id of this commodity entry
@@ -65,7 +62,7 @@ namespace EliteAPI.Status.Market
         /// </summary>
         [JsonProperty("StockBracket")]
         public long StockBracket { get; init; }
-        
+
         /// <summary>
         /// The bracket of demand for this commodity
         /// </summary>

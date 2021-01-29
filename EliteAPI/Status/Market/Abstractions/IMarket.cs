@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+
 using EliteAPI.Status.Abstractions;
 
 namespace EliteAPI.Status.Market.Abstractions

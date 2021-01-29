@@ -1,19 +1,21 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class MissionAbandonedEvent : EventBase
     {
-        internal MissionAbandonedEvent()
-        {
-        }
+        internal MissionAbandonedEvent() { }
 
-        [JsonProperty("Name")] public string Name { get; private set; }
+        [JsonProperty("Name")]
+        public string Name { get; private set; }
 
-        [JsonProperty("MissionID")] public long MissionId { get; private set; }
+        [JsonProperty("MissionID")]
+        public long MissionId { get; private set; }
     }
 
     public partial class MissionAbandonedEvent

@@ -1,28 +1,33 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class CommitCrimeEvent : EventBase
     {
-        internal CommitCrimeEvent()
-        {
-        }
+        internal CommitCrimeEvent() { }
 
-        [JsonProperty("CrimeType")] public string CrimeType { get; private set; }
+        [JsonProperty("CrimeType")]
+        public string CrimeType { get; private set; }
 
-        [JsonProperty("Faction")] public string Faction { get; private set; }
+        [JsonProperty("Faction")]
+        public string Faction { get; private set; }
 
-        [JsonProperty("Fine")] public long Fine { get; private set; }
+        [JsonProperty("Fine")]
+        public long Fine { get; private set; }
 
-        [JsonProperty("Victim")] public string Victim { get; private set; }
+        [JsonProperty("Victim")]
+        public string Victim { get; private set; }
 
-        [JsonProperty("Victim_Localised")] public string VictimLocalised { get; private set; }
+        [JsonProperty("Victim_Localised")]
+        public string VictimLocalised { get; private set; }
 
-        [JsonProperty("Bounty")] public long Bounty { get; private set; }
-
+        [JsonProperty("Bounty")]
+        public long Bounty { get; private set; }
     }
 
     public partial class CommitCrimeEvent

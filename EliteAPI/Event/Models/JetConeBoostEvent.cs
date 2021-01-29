@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class JetConeBoostEvent : EventBase
     {
-        internal JetConeBoostEvent()
-        {
-        }
+        internal JetConeBoostEvent() { }
 
-        [JsonProperty("BoostValue")] public double BoostValue { get; private set; }
+        [JsonProperty("BoostValue")]
+        public double BoostValue { get; private set; }
     }
 
     public partial class JetConeBoostEvent

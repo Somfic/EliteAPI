@@ -1,21 +1,24 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class FactionKillBondEvent : EventBase
     {
-        internal FactionKillBondEvent()
-        {
-        }
+        internal FactionKillBondEvent() { }
 
-        [JsonProperty("Reward")] public long Reward { get; private set; }
+        [JsonProperty("Reward")]
+        public long Reward { get; private set; }
 
-        [JsonProperty("AwardingFaction")] public string AwardingFaction { get; private set; }
+        [JsonProperty("AwardingFaction")]
+        public string AwardingFaction { get; private set; }
 
-        [JsonProperty("VictimFaction")] public string VictimFaction { get; private set; }
+        [JsonProperty("VictimFaction")]
+        public string VictimFaction { get; private set; }
     }
 
     public partial class FactionKillBondEvent

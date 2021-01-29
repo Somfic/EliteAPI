@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class ChangeCrewRoleEvent : EventBase
     {
-        internal ChangeCrewRoleEvent()
-        {
-        }
+        internal ChangeCrewRoleEvent() { }
 
-        [JsonProperty("Role")] public string Role { get; private set; }
+        [JsonProperty("Role")]
+        public string Role { get; private set; }
     }
 
     public partial class ChangeCrewRoleEvent

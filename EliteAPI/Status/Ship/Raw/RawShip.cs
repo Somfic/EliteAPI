@@ -1,4 +1,5 @@
 ﻿using EliteAPI.Status.Ship.JsonConverters;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -6,7 +7,8 @@ namespace EliteAPI.Status.Ship.Raw
 {
     internal class RawShip
     {
-        [JsonProperty("Flags")] public ShipFlag Flags { get; private set; }
+        [JsonProperty("Flags")]
+        public ShipFlag Flags { get; private set; }
 
         public bool Available => Flags != 0;
         public bool Docked => GetFlag(0);
@@ -46,15 +48,17 @@ namespace EliteAPI.Status.Ship.Raw
         [JsonConverter(typeof(PipsConverter))]
         public ShipPips Pips { get; private set; }
 
-        [JsonProperty("FireGroup")] public int FireGroup { get; private set; }
+        [JsonProperty("FireGroup")]
+        public int FireGroup { get; private set; }
 
         [JsonProperty("GuiFocus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public ShipGuiFocus GuiFocus { get; private set; }
 
-        [JsonProperty("Fuel")] public ShipFuel Fuel { get; private set; }
+        [JsonProperty("Fuel")]
+        public ShipFuel Fuel { get; private set; }
 
-        [JsonProperty("Cargo")] 
+        [JsonProperty("Cargo")]
         [JsonConverter(typeof(DecimalToIntConverter))]
         public int Cargo { get; private set; }
 
@@ -62,21 +66,27 @@ namespace EliteAPI.Status.Ship.Raw
         [JsonConverter(typeof(StringEnumConverter))]
         public ShipLegalState LegalState { get; private set; }
 
-        [JsonProperty("Latitude")] public float Latitude { get; private set; }
+        [JsonProperty("Latitude")]
+        public float Latitude { get; private set; }
 
-        [JsonProperty("Altitude")] public float Altitude { get; private set; }
+        [JsonProperty("Altitude")]
+        public float Altitude { get; private set; }
 
-        [JsonProperty("Longitude")] public float Longitude { get; private set; }
+        [JsonProperty("Longitude")]
+        public float Longitude { get; private set; }
 
-        [JsonProperty("Heading")] public float Heading { get; private set; }
+        [JsonProperty("Heading")]
+        public float Heading { get; private set; }
 
-        [JsonProperty("BodyName")] public string Body { get; private set; } = string.Empty;
+        [JsonProperty("BodyName")]
+        public string Body { get; private set; } = string.Empty;
 
-        [JsonProperty("PlanetRadius")] public float BodyRadius { get; private set; }
+        [JsonProperty("PlanetRadius")]
+        public float BodyRadius { get; private set; }
 
         private bool GetFlag(int bit)
         {
-            return Flags.HasFlag((ShipFlag)(1 << bit));
+            return Flags.HasFlag((ShipFlag) (1 << bit));
         }
     }
 }

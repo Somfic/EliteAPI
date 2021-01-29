@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class DockingCancelledEvent : EventBase
     {
-        internal DockingCancelledEvent()
-        {
-        }
+        internal DockingCancelledEvent() { }
 
-        [JsonProperty("StationName")] public string StationName { get; private set; }
+        [JsonProperty("StationName")]
+        public string StationName { get; private set; }
     }
 
     public partial class DockingCancelledEvent

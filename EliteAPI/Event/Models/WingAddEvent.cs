@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class WingAddEvent : EventBase
     {
-        internal WingAddEvent()
-        {
-        }
+        internal WingAddEvent() { }
 
-        [JsonProperty("Name")] public string Name { get; private set; }
+        [JsonProperty("Name")]
+        public string Name { get; private set; }
     }
 
     public partial class WingAddEvent

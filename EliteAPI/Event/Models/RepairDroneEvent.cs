@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class RepairDroneEvent : EventBase
     {
-        internal RepairDroneEvent()
-        {
-        }
+        internal RepairDroneEvent() { }
 
-        [JsonProperty("HullRepaired")] public double HullRepaired { get; private set; }
+        [JsonProperty("HullRepaired")]
+        public double HullRepaired { get; private set; }
     }
 
     public partial class RepairDroneEvent

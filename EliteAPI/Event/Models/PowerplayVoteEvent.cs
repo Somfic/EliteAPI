@@ -1,21 +1,24 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class PowerplayVoteEvent : EventBase
     {
-        internal PowerplayVoteEvent()
-        {
-        }
+        internal PowerplayVoteEvent() { }
 
-        [JsonProperty("Power")] public string Power { get; private set; }
+        [JsonProperty("Power")]
+        public string Power { get; private set; }
 
-        [JsonProperty("Votes")] public long Votes { get; private set; }
+        [JsonProperty("Votes")]
+        public long Votes { get; private set; }
 
-        [JsonProperty("")] public long Empty { get; private set; }
+        [JsonProperty("")]
+        public long Empty { get; private set; }
     }
 
     public partial class PowerplayVoteEvent

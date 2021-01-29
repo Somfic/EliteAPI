@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 using EliteAPI.Status.Abstractions;
 using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Ship;
@@ -8,7 +7,7 @@ using EliteAPI.Status.Ship;
 namespace EliteAPI.Status.ShipStatus
 {
     [Obsolete("Use Ship instead", false)]
-    class ShipStatus : IShipStatus
+    public class ShipStatus : IShipStatus
     {
         /// <inheritdoc />
         public StatusProperty<ShipFlag> Flags { get; } = new(ShipFlag.None);

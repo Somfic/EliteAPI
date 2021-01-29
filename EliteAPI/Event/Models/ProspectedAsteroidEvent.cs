@@ -1,13 +1,13 @@
+using System;
+using System.Collections.Generic;
+
+using EliteAPI.Event.Models;
+using EliteAPI.Event.Models.Abstractions;
+
+using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-    using Abstractions;
 
 
     public partial class ProspectedAsteroidEvent : EventBase
@@ -27,7 +27,7 @@ namespace EliteAPI.Event.Models
         public double Remaining { get; private set; }
     }
 
-    public partial class Material
+    public class Material
     {
         internal Material() { }
 
@@ -43,20 +43,24 @@ namespace EliteAPI.Event.Models
 
     public partial class ProspectedAsteroidEvent
     {
-        public static ProspectedAsteroidEvent FromJson(string json) => JsonConvert.DeserializeObject<ProspectedAsteroidEvent>(json);
+        public static ProspectedAsteroidEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<ProspectedAsteroidEvent>(json);
+        }
     }
 
-    
+
 }
 
 namespace EliteAPI.Event.Handler
 {
-    using System;
-    using Models;
 
     public partial class EventHandler
     {
         public event EventHandler<ProspectedAsteroidEvent> ProspectedAsteroidEvent;
-        internal void InvokeProspectedAsteroidEvent(ProspectedAsteroidEvent arg) => ProspectedAsteroidEvent?.Invoke(this, arg);
+        internal void InvokeProspectedAsteroidEvent(ProspectedAsteroidEvent arg)
+        {
+            ProspectedAsteroidEvent?.Invoke(this, arg);
+        }
     }
 }

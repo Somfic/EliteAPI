@@ -1,0 +1,7 @@
+{ "timestamp":"2020-12-23T12:17:19Z", "event":"DockingGranted", "LandingPad":24, "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2020-12-31T17:25:06Z", "event":"DockingGranted", "LandingPad":39, "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2021-01-01T16:23:08Z", "event":"DockingGranted", "LandingPad":40, "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2021-01-01T23:54:44Z", "event":"DockingGranted", "LandingPad":25, "MarketID":3228624896, "StationName":"Eddington Refinery", "StationType":"Coriolis" }
+{ "timestamp":"2021-01-04T21:55:00Z", "event":"DockingGranted", "LandingPad":32, "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2021-01-07T20:39:37Z", "event":"DockingGranted", "LandingPad":11, "MarketID":128102904, "StationName":"Invergary", "StationType":"Coriolis" }
+{ "timestamp":"2021-01-16T15:31:04Z", "event":"DockingGranted", "LandingPad":37, "MarketID":128666762, "StationName":"Jameson Memorial", "StationType":"Orbis" }

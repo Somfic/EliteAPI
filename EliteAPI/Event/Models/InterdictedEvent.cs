@@ -16,6 +16,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Interdictor")]
         public string Interdictor { get; private set; }
+        
+        [JsonProperty("Interdictor_Localised")]
+        public string InterdictorLocalised { get; private set; }
 
         [JsonProperty("IsPlayer")]
         public bool IsPlayer { get; private set; }

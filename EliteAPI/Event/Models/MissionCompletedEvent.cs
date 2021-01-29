@@ -37,7 +37,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Reward")] public long Reward { get; private set; }
 
-        [JsonProperty("FactionEffectInfos")]
+        [JsonProperty("FactionEffects")]
         public IReadOnlyList<FactionEffectInfo> FactionEffectInfos { get; private set; }
 
 
@@ -49,9 +49,9 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Faction")] public string Faction { get; private set; }
 
-            [JsonProperty("EffectInfos")] public IReadOnlyList<EffectInfo> EffectInfos { get; private set; }
+            [JsonProperty("Effects")] public IReadOnlyList<EffectInfo> EffectInfos { get; private set; }
 
-            [JsonProperty("InfluenceInfo")] public IReadOnlyList<InfluenceInfo> Influence { get; private set; }
+            [JsonProperty("Influence")] public IReadOnlyList<InfluenceInfo> Influence { get; private set; }
 
             [JsonProperty("ReputationTrend")] public string ReputationTrend { get; private set; }
 
@@ -64,9 +64,9 @@ namespace EliteAPI.Event.Models
             {
             }
 
-            [JsonProperty("EffectInfo")] public string EffectInfoEffect { get; private set; }
+            [JsonProperty("Effect")] public string EffectInfoEffect { get; private set; }
 
-            [JsonProperty("EffectInfo_Localised")] public string EffectInfoLocalised { get; private set; }
+            [JsonProperty("Effect_Localised")] public string EffectInfoLocalised { get; private set; }
 
             [JsonProperty("Trend")] public string Trend { get; private set; }
         }
@@ -81,7 +81,7 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Trend")] public string Trend { get; private set; }
 
-            [JsonProperty("InfluenceInfo")] public string InfluenceInfoInfluence { get; private set; }
+            [JsonProperty("Influence")] public string InfluenceInfoInfluence { get; private set; }
         }
     }
 

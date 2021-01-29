@@ -56,7 +56,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("FactionInfos")] public IReadOnlyList<FactionInfo> FactionInfos { get; private set; }
 
-        [JsonProperty("SystemFactionInfo")] public SystemFactionInfo SystemFaction { get; private set; }
+        [JsonProperty("SystemFaction")] public SystemFactionInfo SystemFaction { get; private set; }
 
 
         public class FactionInfo

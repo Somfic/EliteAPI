@@ -60,7 +60,7 @@ namespace EliteAPI.Event.Provider
                     message = message.Substring(0, message.Length - 1);
 
                     EventHasMissingDataException exception = new(message);
-                    _log.LogWarning(exception, $"{eventName} was not fully implemented");
+                    //_log.LogWarning(exception, $"{eventName} was not fully implemented"); ACW commented to stop clutter
 
                     _log.LogDebug(ex, $"{eventName} was not fully implemented");
                 }

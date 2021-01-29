@@ -12,13 +12,13 @@ namespace EliteAPI.Event.Models
     {
         internal MaterialsEvent() { }
 
-        [JsonProperty("RawInfo")]
+        [JsonProperty("Raw")]
         public IReadOnlyList<RawInfo> Raw { get; private set; }
 
         [JsonProperty("Manufactured")]
         public IReadOnlyList<EncodedInfo> Manufactured { get; private set; }
 
-        [JsonProperty("EncodedInfo")]
+        [JsonProperty("Encoded")]
         public IReadOnlyList<EncodedInfo> Encoded { get; private set; }
 
 

@@ -6,17 +6,17 @@
     <members>
         <member name="T:EliteAPI.Abstractions.IEliteDangerousApi">
             <summary>
-                EliteAPI
+            EliteAPI
             </summary>
         </member>
         <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Version">
             <summary>
-                EliteAPI's version
+            EliteAPI's version
             </summary>
         </member>
         <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Events">
             <summary>
-                Container for all events
+            Container for all events
             </summary>
         </member>
         <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Status">
@@ -56,27 +56,27 @@
         </member>
         <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.IsRunning">
             <summary>
-                Whether the api is currently running
+            Whether the api is currently running
             </summary>
         </member>
         <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.HasCatchedUp">
             <summary>
-                Whether the api has catched up on past event in this session
+            Whether the api has catched up on past event in this session
             </summary>
         </member>
         <member name="M:EliteAPI.Abstractions.IEliteDangerousApi.InitializeAsync">
             <summary>
-                Initializes the api
+            Initializes the api
             </summary>
         </member>
         <member name="M:EliteAPI.Abstractions.IEliteDangerousApi.StartAsync">
             <summary>
-                Starts the api
+            Starts the api
             </summary>
         </member>
         <member name="M:EliteAPI.Abstractions.IEliteDangerousApi.StopAsync">
             <summary>
-                Stops the api
+            Stops the api
             </summary>
         </member>
         <member name="E:EliteAPI.Abstractions.IEliteDangerousApi.OnCatchedUp">
@@ -101,7 +101,7 @@
         </member>
         <member name="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration">
             <summary>
-            Interface for the <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration"/> configuration class
+            Interface for the <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration" /> configuration class
             </summary>
         </member>
         <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.JournalPath">
@@ -116,12 +116,12 @@
         </member>
         <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.TickFrequency">
             <summary>
-            At which frequency EliteAPI checks for journal and status files updates 
+            At which frequency EliteAPI checks for journal and status files updates
             </summary>
         </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfiguration">
             <summary>
-            Standard implementation of the <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration"/> configuration class
+            Standard implementation of the <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration" /> configuration class
             </summary>
         </member>
         <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.JournalPath">
@@ -135,25 +135,25 @@
         </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder">
             <summary>
-            Creates a <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration"/> configuration class through a builder
+            Creates a <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration" /> configuration class through a builder
             </summary>
         </member>
         <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.AddEventModule``1">
             <summary>
-                Add an event module to EliteAPI
+            Add an event module to EliteAPI
             </summary>
-            <typeparam name="T">The event module to be added</typeparam>
+            <typeparam name="T"> The event module to be added </typeparam>
         </member>
         <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.ClearProcessors">
             <summary>
-                Remove the default event processors
+            Remove the default event processors
             </summary>
         </member>
         <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.AddProcessor``1">
             <summary>
-                Adds an event processor
+            Adds an event processor
             </summary>
-            <typeparam name="T">The event processor to be used</typeparam>
+            <typeparam name="T"> The event processor to be used </typeparam>
         </member>
         <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseJournalDirectory(System.String)">
             <summary>
@@ -177,7 +177,7 @@
             <summary>
             Creates a new EliteDangerousAPI class
             </summary>
-            <param name="services">ServiceProvider</param>
+            <param name="services"> ServiceProvider </param>
         </member>
         <member name="P:EliteAPI.EliteDangerousApi.IsRunning">
             <inheritdoc />
@@ -235,7 +235,7 @@
         </member>
         <member name="M:EliteAPI.EliteDangerousApiExtensions.AddEliteAPI(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder})">
             <summary>
-                Adds all EliteAPI's necessary services to the <seealso cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />
+            Adds all EliteAPI's necessary services to the <seealso cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />
             </summary>
         </member>
         <member name="T:EliteAPI.Event.Attributes.EliteDangerousEventAttribute">
@@ -247,7 +247,7 @@
             <summary>
             Class for modular events in EliteAPI
             </summary>
-            <param name="runOnCatchup">Whether to run this method while catching up</param>
+            <param name="runOnCatchup"> Whether to run this method while catching up </param>
         </member>
         <member name="P:EliteAPI.Event.Attributes.EliteDangerousEventAttribute.RunOnCatchup">
             <summary>
@@ -256,7 +256,7 @@
         </member>
         <member name="T:EliteAPI.Event.Models.Abstractions.EventBase">
             <summary>
-                An in-game event
+            An in-game event
             </summary>
         </member>
         <member name="P:EliteAPI.Event.Models.Abstractions.EventBase.Timestamp">
@@ -267,17 +267,17 @@
         </member>
         <member name="T:EliteAPI.Event.Models.Abstractions.IEvent">
             <summary>
-                An in-game event
+            An in-game event
             </summary>
         </member>
         <member name="P:EliteAPI.Event.Models.Abstractions.IEvent.Timestamp">
             <summary>
-                The timestamp of the event
+            The timestamp of the event
             </summary>
         </member>
         <member name="P:EliteAPI.Event.Models.Abstractions.IEvent.Event">
             <summary>
-                The name of the event
+            The name of the event
             </summary>
         </member>
         <member name="T:EliteAPI.Event.Module.EliteDangerousEventModule">
@@ -294,29 +294,29 @@
             <summary>
             Wrapper for event modules
             </summary>
-            <param name="api">The EliteDangerousAPI</param>
+            <param name="api"> The EliteDangerousAPI </param>
         </member>
         <member name="T:EliteAPI.Event.Processor.Abstractions.IEventProcessor">
             <summary>
-                Invokes registered event-handlers
+            Invokes registered event-handlers
             </summary>
         </member>
         <member name="M:EliteAPI.Event.Processor.Abstractions.IEventProcessor.RegisterHandlers">
             <summary>
-                Finds, registers, and caches the event-handlers
+            Finds, registers, and caches the event-handlers
             </summary>
-            <returns></returns>
+            <returns> </returns>
         </member>
         <member name="M:EliteAPI.Event.Processor.Abstractions.IEventProcessor.InvokeHandler(EliteAPI.Event.Models.Abstractions.EventBase,System.Boolean)">
             <summary>
-                Invokes the registered handler for this event
+            Invokes the registered handler for this event
             </summary>
-            <param name="eventBase">The event to be invoked</param>
-            <param name="isWhileCatchingUp">Whether this event was ran before EliteAPI was started</param>
+            <param name="eventBase"> The event to be invoked </param>
+            <param name="isWhileCatchingUp"> Whether this event was ran before EliteAPI was started </param>
         </member>
         <member name="P:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.Cache">
             <summary>
-                Methods to invoke, mapped to the name of a event
+            Methods to invoke, mapped to the name of a event
             </summary>
         </member>
         <member name="M:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.RegisterHandlers">
@@ -339,18 +339,18 @@
         </member>
         <member name="T:EliteAPI.Event.Provider.Abstractions.IEventProvider">
             <summary>
-                Converts JSON events to <see cref="T:EliteAPI.Event.Models.Abstractions.EventBase" /> events
+            Converts JSON events to <see cref="T:EliteAPI.Event.Models.Abstractions.EventBase" /> events
             </summary>
         </member>
         <member name="M:EliteAPI.Event.Provider.Abstractions.IEventProvider.ProcessJsonEvent(System.String)">
             <summary>
-                Processes a json event to <see cref="T:EliteAPI.Event.Models.Abstractions.EventBase" />
+            Processes a json event to <see cref="T:EliteAPI.Event.Models.Abstractions.EventBase" />
             </summary>
-            <param name="json">The json event from the journal</param>
+            <param name="json"> The json event from the journal </param>
         </member>
         <member name="M:EliteAPI.Event.Provider.Abstractions.IEventProvider.RegisterEventClasses">
             <summary>
-                Caches all the event classes
+            Caches all the event classes
             </summary>
         </member>
         <member name="T:EliteAPI.Event.Provider.EventProvider">
@@ -369,21 +369,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.Abstractions.EliteDangerousApiException" /> class with a specified error message and a
+            reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.CargoFileNotFoundException">
             <summary>
@@ -392,21 +393,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.CargoFileNotFoundException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.CargoFileNotFoundException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.CargoFileNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException" /> class with a specified error message and a
+            reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.EventHasMissingDataException">
             <summary>
@@ -415,21 +417,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.EventHasMissingDataException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventHasMissingDataException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventHasMissingDataException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.EventHasMissingDataException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventHasMissingDataException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventHasMissingDataException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.EventHasMissingDataException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventHasMissingDataException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventHasMissingDataException" /> class with a specified error message and
+            a reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.EventNotImplementedException">
             <summary>
@@ -438,21 +441,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.EventNotImplementedException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventNotImplementedException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventNotImplementedException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.EventNotImplementedException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventNotImplementedException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventNotImplementedException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.EventNotImplementedException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventNotImplementedException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.EventNotImplementedException" /> class with a specified error message and
+            a reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.InvalidJournalFileException">
             <summary>
@@ -461,21 +465,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.InvalidJournalFileException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.InvalidJournalFileException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.InvalidJournalFileException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.InvalidJournalFileException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.InvalidJournalFileException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.InvalidJournalFileException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.InvalidJournalFileException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.InvalidJournalFileException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.InvalidJournalFileException" /> class with a specified error message and a
+            reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException">
             <summary>
@@ -484,21 +489,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.JournalDirectoryNotFoundException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.JournalDirectoryNotFoundException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.JournalDirectoryNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException" /> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.JournalFileNotFoundException">
             <summary>
@@ -507,21 +513,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.JournalFileNotFoundException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalFileNotFoundException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalFileNotFoundException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.JournalFileNotFoundException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalFileNotFoundException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalFileNotFoundException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.JournalFileNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalFileNotFoundException" /> class with a specified error message and
+            a reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.MarketFileNotFoundException">
             <summary>
@@ -530,21 +537,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.MarketFileNotFoundException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.MarketFileNotFoundException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.MarketFileNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException" /> class with a specified error message and a
+            reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.ModulesInfoFileNotFoundException">
             <summary>
@@ -553,21 +561,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.ModulesInfoFileNotFoundException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ModulesInfoFileNotFoundException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ModulesInfoFileNotFoundException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.ModulesInfoFileNotFoundException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ModulesInfoFileNotFoundException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ModulesInfoFileNotFoundException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.ModulesInfoFileNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ModulesInfoFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ModulesInfoFileNotFoundException" /> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.NavRouteFileNotFoundException">
             <summary>
@@ -576,21 +585,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.NavRouteFileNotFoundException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.MarketFileNotFoundException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.NavRouteFileNotFoundException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.NavRouteFileNotFoundException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.NavRouteFileNotFoundException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.NavRouteFileNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.NavRouteFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.NavRouteFileNotFoundException" /> class with a specified error message and
+            a reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.OutfittingFileNotFoundException">
             <summary>
@@ -599,21 +609,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.OutfittingFileNotFoundException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.OutfittingFileNotFoundException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.OutfittingFileNotFoundException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.OutfittingFileNotFoundException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.OutfittingFileNotFoundException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.OutfittingFileNotFoundException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.OutfittingFileNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.OutfittingFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.OutfittingFileNotFoundException" /> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.ShipyardFileNotFoundException">
             <summary>
@@ -622,21 +633,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.ShipyardFileNotFoundException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ShipyardFileNotFoundException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ShipyardFileNotFoundException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.ShipyardFileNotFoundException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ShipyardFileNotFoundException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ShipyardFileNotFoundException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.ShipyardFileNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="!:ShipyardFileNotFound"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="!:ShipyardFileNotFound" /> class with a specified error message and a
+            reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.StatusFileNotFoundException">
             <summary>
@@ -645,21 +657,22 @@
         </member>
         <member name="M:EliteAPI.Exceptions.StatusFileNotFoundException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.StatusFileNotFoundException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.StatusFileNotFoundException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.StatusFileNotFoundException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.StatusFileNotFoundException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.StatusFileNotFoundException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.StatusFileNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.StatusFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.StatusFileNotFoundException" /> class with a specified error message and a
+            reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.SupportFileNotFoundException">
             <summary>
@@ -668,30 +681,31 @@
         </member>
         <member name="M:EliteAPI.Exceptions.SupportFileNotFoundException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.SupportFileNotFoundException"/> class
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.SupportFileNotFoundException" /> class
             </summary>
         </member>
         <member name="M:EliteAPI.Exceptions.SupportFileNotFoundException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException"/> class with a specified error message
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.JournalDirectoryNotFoundException" /> class with a specified error message
             </summary>
-            <param name="message">The message that describes the error</param>
+            <param name="message"> The message that describes the error </param>
         </member>
         <member name="M:EliteAPI.Exceptions.SupportFileNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.SupportFileNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.SupportFileNotFoundException" /> class with a specified error message and
+            a reference to the inner exception that is the cause of this exception
             </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Journal.Directory.Abstractions.IJournalDirectoryProvider">
             <summary>
-                Provides the journal directory
+            Provides the journal directory
             </summary>
         </member>
         <member name="M:EliteAPI.Journal.Directory.Abstractions.IJournalDirectoryProvider.FindJournalDirectory">
             <summary>
-                Finds the journal directory containing all the journal and support files
+            Finds the journal directory containing all the journal and support files
             </summary>
         </member>
         <member name="T:EliteAPI.Journal.Directory.JournalDirectoryProvider">
@@ -702,33 +716,33 @@
         </member>
         <member name="T:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor">
             <summary>
-                Processes journal files
+            Processes journal files
             </summary>
         </member>
         <member name="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry">
             <summary>
-                Triggered when a new json entry is made in the active journal file
+            Triggered when a new json entry is made in the active journal file
             </summary>
         </member>
         <member name="M:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.ProcessJournalFile(System.IO.FileInfo,System.Boolean)">
             <summary>
-                Hooks the specified journal file to <see cref="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry" /> and invokes <see cref="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry" /> when
-                needed
+            Hooks the specified journal file to <see cref="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry" /> and invokes <see cref="E:EliteAPI.Journal.Processor.Abstractions.IJournalProcessor.NewJournalEntry" /> when
+            needed
             </summary>
         </member>
         <member name="T:EliteAPI.Journal.Processor.Abstractions.JournalEntry">
             <summary>
-                A journal entry
+            A journal entry
             </summary>
         </member>
         <member name="P:EliteAPI.Journal.Processor.Abstractions.JournalEntry.Json">
             <summary>
-                This entry's Json event
+            This entry's Json event
             </summary>
         </member>
         <member name="P:EliteAPI.Journal.Processor.Abstractions.JournalEntry.IsWhileCatchingUp">
             <summary>
-                Whether this entry was ran before EliteAPI was started
+            Whether this entry was ran before EliteAPI was started
             </summary>
         </member>
         <member name="T:EliteAPI.Journal.Processor.JournalProcessor">
@@ -742,14 +756,14 @@
         </member>
         <member name="T:EliteAPI.Journal.Provider.Abstractions.IJournalProvider">
             <summary>
-                Finds the journal and support files
+            Finds the journal and support files
             </summary>
         </member>
         <member name="M:EliteAPI.Journal.Provider.Abstractions.IJournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
             <summary>
-                Finds the active journal file from the specified journal directory
+            Finds the active journal file from the specified journal directory
             </summary>
-            <param name="journalDirectory">The journal directory</param>
+            <param name="journalDirectory"> The journal directory </param>
         </member>
         <member name="T:EliteAPI.Journal.Provider.JournalProvider">
             <inheritdoc />
@@ -1128,83 +1142,83 @@
         </member>
         <member name="T:EliteAPI.Status.Processor.Abstractions.IStatusProcessor">
             <summary>
-                Processes status files
+            Processes status files
             </summary>
         </member>
         <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated">
             <summary>
-                Triggered when the status file is updated
+            Triggered when the status file is updated
             </summary>
         </member>
         <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.CargoUpdated">
             <summary>
-                Triggered when the cargo file is updated
+            Triggered when the cargo file is updated
             </summary>
         </member>
         <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.MarketUpdated">
             <summary>
-                Triggered when the market file is updated
+            Triggered when the market file is updated
             </summary>
         </member>
         <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipyardUpdated">
             <summary>
-                Triggered when the shipyard file is updated
+            Triggered when the shipyard file is updated
             </summary>
         </member>
         <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ModulesUpdated">
             <summary>
-                Triggered when the modules file is updated
+            Triggered when the modules file is updated
             </summary>
         </member>
         <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated">
             <summary>
-                Triggered when the outfitting file is updated
+            Triggered when the outfitting file is updated
             </summary>
         </member>
         <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.NavRouteUpdated">
             <summary>
-                Triggered when the navroute file is updated
+            Triggered when the navroute file is updated
             </summary>
         </member>
         <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
             <summary>
-                Hooks the specified status file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated" /> when
-                needed
+            Hooks the specified status file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated" /> when
+            needed
             </summary>
         </member>
         <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessCargoFile(System.IO.FileInfo)">
             <summary>
-                Hooks the specified cargo file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.CargoUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.CargoUpdated" /> when needed
+            Hooks the specified cargo file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.CargoUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.CargoUpdated" /> when needed
             </summary>
         </member>
         <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessMarketFile(System.IO.FileInfo)">
             <summary>
-                Hooks the specified market file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.MarketUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.MarketUpdated" /> when
-                needed
+            Hooks the specified market file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.MarketUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.MarketUpdated" /> when
+            needed
             </summary>
         </member>
         <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessShipyardFile(System.IO.FileInfo)">
             <summary>
-                Hooks the specified shipyard file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipyardUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipyardUpdated" /> when
-                needed
+            Hooks the specified shipyard file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipyardUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipyardUpdated" /> when
+            needed
             </summary>
         </member>
         <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessModulesFile(System.IO.FileInfo)">
             <summary>
-                Hooks the specified modules file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ModulesUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ModulesUpdated" /> when
-                needed
+            Hooks the specified modules file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ModulesUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ModulesUpdated" /> when
+            needed
             </summary>
         </member>
         <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessOutfittingFile(System.IO.FileInfo)">
             <summary>
-                Hooks the specified outfitting file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated" /> and invokes
-                <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated" /> when needed
+            Hooks the specified outfitting file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated" /> and invokes
+            <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.OutfittingUpdated" /> when needed
             </summary>
         </member>
         <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessNavRouteFile(System.IO.FileInfo)">
             <summary>
-                Hooks the specified navroute file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.NavRouteUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.NavRouteUpdated" /> when
-                needed
+            Hooks the specified navroute file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.NavRouteUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.NavRouteUpdated" /> when
+            needed
             </summary>
         </member>
         <member name="T:EliteAPI.Status.Processor.StatusProcessor">
@@ -1254,50 +1268,50 @@
         </member>
         <member name="T:EliteAPI.Status.Provider.Abstractions.IStatusProvider">
             <summary>
-                Provides status files
+            Provides status files
             </summary>
         </member>
         <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindStatusFile(System.IO.DirectoryInfo)">
             <summary>
-                Finds the status file from the specified journal directory
+            Finds the status file from the specified journal directory
             </summary>
-            <param name="journalDirectory">The journal directory</param>
+            <param name="journalDirectory"> The journal directory </param>
         </member>
         <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindMarketFile(System.IO.DirectoryInfo)">
             <summary>
-                Finds the market file from the specified journal directory
+            Finds the market file from the specified journal directory
             </summary>
-            <param name="journalDirectory">The journal directory</param>
+            <param name="journalDirectory"> The journal directory </param>
         </member>
         <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindCargoFile(System.IO.DirectoryInfo)">
             <summary>
-                Finds the cargo file from the specified journal directory
+            Finds the cargo file from the specified journal directory
             </summary>
-            <param name="journalDirectory">The journal directory</param>
+            <param name="journalDirectory"> The journal directory </param>
         </member>
         <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindShipyardFile(System.IO.DirectoryInfo)">
             <summary>
-                Finds the shipyard file from the specified journal directory
+            Finds the shipyard file from the specified journal directory
             </summary>
-            <param name="journalDirectory">The journal directory</param>
+            <param name="journalDirectory"> The journal directory </param>
         </member>
         <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindOutfittingFile(System.IO.DirectoryInfo)">
             <summary>
-                Finds the outfitting file from the specified journal directory
+            Finds the outfitting file from the specified journal directory
             </summary>
-            <param name="journalDirectory">The journal directory</param>
+            <param name="journalDirectory"> The journal directory </param>
         </member>
         <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindModulesFile(System.IO.DirectoryInfo)">
             <summary>
-                Finds the modules file from the specified journal directory
+            Finds the modules file from the specified journal directory
             </summary>
-            <param name="journalDirectory">The journal directory</param>
+            <param name="journalDirectory"> The journal directory </param>
         </member>
         <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindNavRouteFile(System.IO.DirectoryInfo)">
             <summary>
-                Finds the navroute file from the specified journal directory
+            Finds the navroute file from the specified journal directory
             </summary>
-            <param name="journalDirectory">The journal directory</param>
+            <param name="journalDirectory"> The journal directory </param>
         </member>
         <member name="T:EliteAPI.Status.Provider.StatusProvider">
             <inheritdoc />
@@ -1630,7 +1644,7 @@
         <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.AltitudeFromAverageRadius">
             <summary>
             Whether the ship's current altitude is being calculated by the planet's average radius
-            See also <see cref="P:EliteAPI.Status.Ship.Abstractions.IShip.Altitude"/>
+            See also <see cref="P:EliteAPI.Status.Ship.Abstractions.IShip.Altitude" />
             </summary>
         </member>
         <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.FsdJump">
@@ -1866,132 +1880,132 @@
         </member>
         <member name="P:EliteAPI.Status.Ship.ShipFuel.Main">
             <summary>
-            The ship's current amount of fuel left in the main fuel tank 
+            The ship's current amount of fuel left in the main fuel tank
             </summary>
         </member>
         <member name="P:EliteAPI.Status.Ship.ShipFuel.Reservoir">
             <summary>
-            The ship's current amount of fuel left in the reservoir fuel tank 
+            The ship's current amount of fuel left in the reservoir fuel tank
             </summary>
         </member>
         <member name="T:EliteAPI.Status.Ship.ShipGuiFocus">
             <summary>
-                Ship GUI focus
+            Ship GUI focus
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.NoFocus">
             <summary>
-                There is no focus
+            There is no focus
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.InternalPanel">
             <summary>
-                The internal (right) panel
+            The internal (right) panel
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.ExternalPanel">
             <summary>
-                The external (left) panel
+            The external (left) panel
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.CommsPanel">
             <summary>
-                The communication panel
+            The communication panel
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.RolePanel">
             <summary>
-                The role panel
+            The role panel
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.StationServices">
             <summary>
-                Station services
+            Station services
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.GalaxyMap">
             <summary>
-                The galaxy map
+            The galaxy map
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.SystemMap">
             <summary>
-                The system map
+            The system map
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.Orrery">
             <summary>
-                The orrery
+            The orrery
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.FssMode">
             <summary>
-                Full spectrum scanner mode
+            Full spectrum scanner mode
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.SaaMode">
             <summary>
-                Saa mode
+            Saa mode
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipGuiFocus.Codex">
             <summary>
-                The codex
+            The codex
             </summary>
         </member>
         <member name="T:EliteAPI.Status.Ship.ShipLegalState">
             <summary>
-                Legal ship states
+            Legal ship states
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipLegalState.Clean">
             <summary>
-                Clean
+            Clean
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipLegalState.IllegalCargo">
             <summary>
-                Illegal cargo on-board
+            Illegal cargo on-board
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipLegalState.Speeding">
             <summary>
-                Speeding at stations
+            Speeding at stations
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipLegalState.Wanted">
             <summary>
-                Wanted
+            Wanted
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipLegalState.Hostile">
             <summary>
-                Hostile
+            Hostile
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipLegalState.PassengerWanted">
             <summary>
-                Passenger on ship is wanted
+            Passenger on ship is wanted
             </summary>
         </member>
         <member name="F:EliteAPI.Status.Ship.ShipLegalState.Warrant">
             <summary>
-                Warrant for arrest
+            Warrant for arrest
             </summary>
         </member>
         <member name="P:EliteAPI.Status.Ship.ShipPips.System">
             <summary>
-                Amount of half pips set to systems
+            Amount of half pips set to systems
             </summary>
         </member>
         <member name="P:EliteAPI.Status.Ship.ShipPips.Engines">
             <summary>
-                Amount of half pips set to engines
+            Amount of half pips set to engines
             </summary>
         </member>
         <member name="P:EliteAPI.Status.Ship.ShipPips.Weapons">
             <summary>
-                Amount of half pips set to weapons
+            Amount of half pips set to weapons
             </summary>
         </member>
         <member name="T:EliteAPI.Status.StatusProperty`1">
@@ -1999,14 +2013,14 @@
             Container class for a status property
             </summary>
         </member>
-        <member name="P:EliteAPI.Status.StatusProperty`1.Value">
-            <summary>
-            The value of this property
-            </summary>
-        </member>
         <member name="F:EliteAPI.Status.StatusProperty`1.OnChange">
             <summary>
             Triggered whenever this property is changed
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.StatusProperty`1.Value">
+            <summary>
+            The value of this property
             </summary>
         </member>
         <member name="T:System.Runtime.CompilerServices.IsExternalInit">

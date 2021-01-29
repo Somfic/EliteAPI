@@ -56,6 +56,8 @@ namespace EliteAPI.Event.Models
         [JsonProperty("DistFromStarLS")]
         public double DistFromStarLs { get; private set; }
 
+        [JsonProperty("ActiveFine")]
+        public bool ActiveFine { get; private set; }
 
         public class StationEconomyInfo
         {

@@ -14,6 +14,12 @@ namespace EliteAPI.Event.Models
     {
         internal LocationEvent() { }
 
+        [JsonProperty("Longitude")]
+        public double Longitude { get; private set; }
+
+        [JsonProperty("Latitude")]
+        public double Latitude { get; private set; }
+
         [JsonProperty("Docked")]
         public bool Docked { get; private set; }
 
@@ -110,6 +116,8 @@ namespace EliteAPI.Event.Models
         [JsonProperty("SystemFaction")]
         public StationFactionInfo SystemFaction { get; private set; }
 
+        [JsonProperty("Conflicts")]
+        public IReadOnlyList<ConflictInfo> Conflicts { get; private set; }
 
         public class FactionInfo
         {
@@ -174,6 +182,35 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("FactionState")]
             public string FactionState { get; private set; }
+        }
+
+        public class ConflictInfo
+        {
+            [JsonProperty("WarType")]
+            public string WarType { get; set; }
+
+            [JsonProperty("Status")]
+            public string Status { get; set; }
+
+            [JsonProperty("Faction1")]
+            public ConflictFactionInfo Faction1 { get; set; }
+
+            [JsonProperty("Faction2")]
+            public ConflictFactionInfo Faction2 { get; set; }
+        }
+
+        public class ConflictFactionInfo
+        {
+            internal ConflictFactionInfo() { }
+
+            [JsonProperty("Name")]
+            public string Name { get; set; }
+
+            [JsonProperty("Stake")]
+            public string Stake { get; set; }
+
+            [JsonProperty("WonDays")]
+            public long WonDays { get; set; }
         }
     }
 

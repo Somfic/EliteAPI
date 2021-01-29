@@ -13,7 +13,6 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using FluentAssertions;
-using FluentAssertions.Json;
 
 namespace EliteAPI.Event.Provider
 {

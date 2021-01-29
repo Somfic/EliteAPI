@@ -13,6 +13,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("From")]
         public string From { get; private set; }
+        
+        [JsonProperty("From_Localised")]
+        public string FromLocalised { get; private set; }
 
         [JsonProperty("Message")]
         public string Message { get; private set; }

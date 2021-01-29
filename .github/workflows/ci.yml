@@ -65,40 +65,6 @@ jobs:
       - name: Test
         run: dotnet test --no-restore --no-build --configuration Release
 
-  comment-pull-request:
-    name: Create test report
-    if: ${{ github.event_name == 'pull_request' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Get pull request number
-        id: PRNUMBER
-        uses: kkak10/pr-number-action@v1.3
-
-      - name: Set test title
-        id: TEST
-        run: |
-          echo "::set-output name=title::Test run for pull request #${{steps.PRNUMBER.outputs.pr}} (${{github.run_number}})"
-          echo "::set-output name=file_name::${{github.workspace}}/TestReport.md"
-
-      - name: Test
-        run: dotnet test --configuration Release --logger:"liquid.md;LogFileName=${{steps.TEST.outputs.file_name}};Title=${{steps.TEST.outputs.title}};"
-
-      - name: Create test report
-        id: REPORT
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ${{steps.TEST.outputs.file_name}}
-
-      - name: Comment on pull request
-        if: github.event_name == 'pull_request'
-        uses: thollander/actions-comment-pull-request@master
-        with:
-          message: ${{steps.REPORT.outputs.content}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   update-version:
     needs: [test]
     name: Update version

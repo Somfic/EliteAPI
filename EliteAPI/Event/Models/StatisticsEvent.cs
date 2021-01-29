@@ -14,37 +14,37 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Bank_Account")]
         public BankAccountInfo BankAccount { get; private set; }
 
-        [JsonProperty("CombatInfo")]
+        [JsonProperty("Combat")]
         public CombatInfo Combat { get; private set; }
 
-        [JsonProperty("CrimeInfo")]
+        [JsonProperty("Crime")]
         public CrimeInfo Crime { get; private set; }
 
-        [JsonProperty("SmugglingInfo")]
+        [JsonProperty("Smuggling")]
         public SmugglingInfo Smuggling { get; private set; }
 
-        [JsonProperty("TradingInfo")]
+        [JsonProperty("Trading")]
         public TradingInfo Trading { get; private set; }
 
-        [JsonProperty("MiningInfo")]
+        [JsonProperty("Mining")]
         public MiningInfo Mining { get; private set; }
 
-        [JsonProperty("ExplorationInfo")]
+        [JsonProperty("Exploration")]
         public ExplorationInfo Exploration { get; private set; }
 
-        [JsonProperty("PassengersInfo")]
+        [JsonProperty("Passengers")]
         public PassengersInfo Passengers { get; private set; }
 
         [JsonProperty("Search_And_Rescue")]
         public SearchAndRescueInfo SearchAndRescue { get; private set; }
 
-        [JsonProperty("CraftingInfo")]
+        [JsonProperty("Crafting")]
         public CraftingInfo Crafting { get; private set; }
 
-        [JsonProperty("CrewInfo")]
+        [JsonProperty("Crew")]
         public CrewInfo Crew { get; private set; }
 
-        [JsonProperty("MulticrewInfo")]
+        [JsonProperty("Multicrew")]
         public MulticrewInfo Multicrew { get; private set; }
 
         [JsonProperty("Material_Trader_Stats")]

@@ -16,6 +16,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("StationName")]
         public string StationName { get; private set; }
+        
+        [JsonProperty("StationType")]
+        public string StationType { get; private set; }
 
         [JsonProperty("StarSystem")]
         public string StarSystem { get; private set; }

@@ -69,11 +69,11 @@ namespace EliteAPI.Event.Models
         [JsonProperty("FuelLevel")]
         public double FuelLevel { get; private set; }
 
-        [JsonProperty("Factions")]
-        public IReadOnlyList<FactionInfo> Factions { get; private set; }
-
         [JsonProperty("SystemFaction")]
         public SystemFactionInfo SystemFaction { get; private set; }
+
+        [JsonProperty("Factions")]
+        public IReadOnlyList<FactionInfo> Factions { get; private set; }
         
         [JsonProperty("Conflicts")]
         public IReadOnlyList<ConflictInfo> Conflicts { get; private set; }

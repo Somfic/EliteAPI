@@ -17,6 +17,9 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Materials")]
         public IReadOnlyList<Material> Materials { get; private set; }
 
+        [JsonProperty("MotherlodeMaterial")]
+        public string Motherlode { get; private set; }
+        
         [JsonProperty("Content")]
         public string Content { get; private set; }
 

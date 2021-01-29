@@ -19,6 +19,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("StarClass")]
         public string StarClass { get; private set; }
+        
+        [JsonProperty("RemainingJumpsInRoute")]
+        public int RemainingJumpsInRoute { get; private set; }
     }
 
     public partial class FsdTargetEvent

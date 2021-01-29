@@ -11,8 +11,14 @@ namespace EliteAPI.Event.Models
     {
         internal MarketBuyEvent() { }
 
+        [JsonProperty("MarketID")]
+        public string MarketId { get; private set; }
+        
         [JsonProperty("Type")]
         public string Type { get; private set; }
+        
+        [JsonProperty("Type_Localised")]
+        public string TypeLocalised { get; private set; }
 
         [JsonProperty("Count")]
         public long Count { get; private set; }

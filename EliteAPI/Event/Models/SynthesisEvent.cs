@@ -14,12 +14,12 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Name")] public string Name { get; private set; }
 
-        [JsonProperty("Materials")] public IReadOnlyList<Material> Materials { get; private set; }
+        [JsonProperty("Materials")] public IReadOnlyList<MaterialInfo> Materials { get; private set; }
     }
 
-    public class Material
+    public class MaterialInfo
     {
-        internal Material()
+        internal MaterialInfo()
         {
         }
 

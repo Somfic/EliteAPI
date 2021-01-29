@@ -80,7 +80,7 @@ namespace EliteAPI.Event.Models
             [JsonProperty("Name")]
             public string Name { get; private set; }
 
-            [JsonProperty("FactionState")]
+            [JsonProperty("FactionState", NullValueHandling = NullValueHandling.Ignore)]
             public string FactionState { get; private set; }
         }
     }

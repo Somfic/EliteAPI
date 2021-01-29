@@ -24,7 +24,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("MarketID")]
         public long MarketId { get; private set; }
 
-        [JsonProperty("StationFactionInfo")]
+        [JsonProperty("StationFaction")]
         public StationFactionInfo StationFaction { get; private set; }
 
         [JsonProperty("StationGovernment")]
@@ -36,11 +36,11 @@ namespace EliteAPI.Event.Models
         [JsonProperty("StationServices")]
         public IReadOnlyList<string> StationServices { get; private set; }
 
-        [JsonProperty("StationEconomyInfo")]
+        [JsonProperty("StationEconomy")]
         public string StationEconomy { get; private set; }
 
-        [JsonProperty("StationEconomyInfo_Localised")]
-        public string StationEconomyInfoLocalised { get; private set; }
+        [JsonProperty("StationEconomy_Localised")]
+        public string StationEconomyLocalised { get; private set; }
 
         [JsonProperty("StationEconomies")]
         public IReadOnlyList<StationEconomyInfo> StationEconomies { get; private set; }

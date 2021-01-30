@@ -78,6 +78,7 @@ namespace EliteAPI
                 Market = services.GetRequiredService<IMarket>();
                 Modules = services.GetRequiredService<IModules>();
                 Outfitting = services.GetRequiredService<IOutfitting>();
+                Bindings = services.GetRequiredService<IBindings>();
 
                 Version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion.Split('+')[0];
 
@@ -120,9 +121,6 @@ namespace EliteAPI
         private bool IsInitialized { get; set; }
 
         /// <inheritdoc />
-        public IBindings Bindings { get; }
-        
-        /// <inheritdoc />
         public bool IsRunning { get; private set; }
 
         /// <inheritdoc />
@@ -155,6 +153,9 @@ namespace EliteAPI
 
         /// <inheritdoc />
         public IOutfitting Outfitting { get; }
+        
+        /// <inheritdoc />
+        public IBindings Bindings { get; }
 
         /// <inheritdoc />
         public async Task InitializeAsync()
@@ -270,7 +271,7 @@ namespace EliteAPI
 
                 if (!HasCatchedUp)
                 {
-                    _log.LogInformation("EliteAPI has catched up to current session");
+                    _log.LogInformation("EliteAPI has caught up to current session");
                     OnCatchedUp?.Invoke(this, EventArgs.Empty);
                     HasCatchedUp = true;
                 }
@@ -356,6 +357,7 @@ namespace EliteAPI
             }
         }
 
+        private string lastPresetErrorname = "";
         private async Task SetSupportFiles()
         {
             try
@@ -374,7 +376,11 @@ namespace EliteAPI
 
                 if (!DisabledSupportFiles.Contains("ModulesInfo")) ModulesInfoFile = await _statusProvider.FindModulesFile(JournalDirectory);
 
-                if (!DisabledSupportFiles.Contains("Bindings")) BindingsFile = await _optionsProvider.FindActiveBindingsFile(OptionsDirectory);
+                if (!DisabledSupportFiles.Contains("Bindings"))
+                {
+                    BindingsFile = await _optionsProvider.FindActiveBindingsFile(OptionsDirectory);
+                    lastPresetErrorname = "";
+                }
             }
             catch (StatusFileNotFoundException ex)
             {
@@ -410,6 +416,22 @@ namespace EliteAPI
             {
                 _log.LogWarning(ex, "ModulesInfo.json file support has been disabled");
                 DisabledSupportFiles.Add("ModulesInfo");
+            }
+            catch (ActiveBindingsNotFoundException ex)
+            {
+                _log.LogWarning(ex, "Bindings support has been disabled");
+                DisabledSupportFiles.Add("Bindings");
+            }
+            catch (BindingsNotFoundException ex)
+            {
+                var preset = ex.Data["Active bindings"].ToString();
+
+                if (lastPresetErrorname != preset)
+                {
+                    lastPresetErrorname = preset;
+
+                    _log.LogWarning(ex, !string.IsNullOrWhiteSpace(Bindings.Active.PresetName) ? "Cannot switch to bindings preset {Bindings}" : "Cannot use bindings preset {Bindings}", preset);
+                }
             }
             catch (Exception ex) { _log.LogWarning(ex, "Could not set support files"); }
         }

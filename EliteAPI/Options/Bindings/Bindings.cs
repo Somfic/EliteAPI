@@ -9,11 +9,11 @@ namespace EliteAPI.Options.Bindings
     public class Bindings : IBindings
     {
         private KeyBindings _active;
-        
-        internal Bindings() { }
-        
-        /// <inheritdoc />
 
+        public Bindings()
+        {
+            _active = new KeyBindings();
+        }
         
         /// <inheritdoc />
         public event EventHandler OnChange;

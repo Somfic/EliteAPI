@@ -54,6 +54,11 @@
             Container for the current outfitting market information
             </summary>
         </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Bindings">
+            <summary>
+            Container for keybindings information
+            </summary>
+        </member>
         <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.IsRunning">
             <summary>
             Whether the api is currently running
@@ -109,7 +114,12 @@
             The active journal directory path
             </summary>
         </member>
-        <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.Journal">
+        <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.OptionsPath">
+            <summary>
+            The options directory path
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.JournalFile">
             <summary>
             The targeted journal file
             </summary>
@@ -127,7 +137,10 @@
         <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.JournalPath">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.Journal">
+        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.OptionsPath">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.JournalFile">
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.TickFrequency">
@@ -160,9 +173,19 @@
             Sets which directory to use as active journal directory
             </summary>
         </member>
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseJournalFile(System.String)">
+            <summary>
+            Sets which journal file to use, defaults to latest if not invoked
+            </summary>
+        </member>
         <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseJournal(System.String)">
             <summary>
             Sets which journal file to use, defaults to latest if not invoked
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseOptionsDirectory(System.String)">
+            <summary>
+            Sets which directory to use as the options directory
             </summary>
         </member>
         <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseTickFrequency(System.TimeSpan)">
@@ -178,9 +201,6 @@
             Creates a new EliteDangerousAPI class
             </summary>
             <param name="services"> ServiceProvider </param>
-        </member>
-        <member name="P:EliteAPI.EliteDangerousApi.Bindings">
-            <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousApi.IsRunning">
             <inheritdoc />
@@ -213,6 +233,9 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousApi.Outfitting">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousApi.Bindings">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.EliteDangerousApi.InitializeAsync">
@@ -420,29 +443,6 @@
             <param name="message">The message that describes the error</param>
             <param name="innerException">The inner exception that caused this exception</param>
         </member>
-        <member name="T:EliteAPI.Exceptions.ActiveBindingsNotSetException">
-            <summary>
-            The exception that is thrown when no active bindings could be found
-            </summary>
-        </member>
-        <member name="M:EliteAPI.Exceptions.ActiveBindingsNotSetException.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ActiveBindingsNotSetException"/> class
-            </summary>
-        </member>
-        <member name="M:EliteAPI.Exceptions.ActiveBindingsNotSetException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ActiveBindingsNotSetException"/> class with a specified error message
-            </summary>
-            <param name="message">The message that describes the error</param>
-        </member>
-        <member name="M:EliteAPI.Exceptions.ActiveBindingsNotSetException.#ctor(System.String,System.Exception)">
-            <summary>
-            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ActiveBindingsNotSetException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
-            </summary>
-            <param name="message">The message that describes the error</param>
-            <param name="innerException">The inner exception that caused this exception</param>
-        </member>
         <member name="T:EliteAPI.Exceptions.BindingsDirectoryNotFoundException">
             <summary>
             The exception that is thrown when the bindings option directory could not be found
@@ -462,6 +462,29 @@
         <member name="M:EliteAPI.Exceptions.BindingsDirectoryNotFoundException.#ctor(System.String,System.Exception)">
             <summary>
             Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.BindingsDirectoryNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.BindingsNotFoundException">
+            <summary>
+            The exception that is thrown when the active binding could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.BindingsNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.BindingsNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.BindingsNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.BindingsNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.BindingsNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.BindingsNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
             </summary>
             <param name="message">The message that describes the error</param>
             <param name="innerException">The inner exception that caused this exception</param>
@@ -682,6 +705,30 @@
             <param name="message"> The message that describes the error </param>
             <param name="innerException"> The inner exception that caused this exception </param>
         </member>
+        <member name="T:EliteAPI.Exceptions.OptionsDirectoryNotFoundException">
+            <summary>
+            The exception that is thrown when the options directory could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.OptionsDirectoryNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.OptionsDirectoryNotFoundException" /> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.OptionsDirectoryNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.OptionsDirectoryNotFoundException" /> class with a specified error message
+            </summary>
+            <param name="message"> The message that describes the error </param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.OptionsDirectoryNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.OptionsDirectoryNotFoundException" /> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
+        </member>
         <member name="T:EliteAPI.Exceptions.OutfittingFileNotFoundException">
             <summary>
             The exception that is thrown when the Status.json file could not be found
@@ -851,16 +898,81 @@
         <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Options.Provider.Abstractions.IOptionsProvider.FindBindingsFile(System.IO.DirectoryInfo)">
+        <member name="T:EliteAPI.Options.Abstractions.IOption">
             <summary>
-            Finds the bindings file from the specified options directory
+            Holds information about the game options
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Options.Abstractions.IOption.OnChange">
+            <summary>
+            Triggered when any of the properties of this option have been updated
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Options.Bindings.Models.IBindings">
+            <summary>
+            Holds information about the keybindings
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Options.Bindings.Models.IBindings.Active">
+            <summary>
+            The active keybindings
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Options.Bindings.Bindings">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Options.Bindings.Bindings.OnChange">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Options.Bindings.Bindings.EliteAPI#Options#Abstractions#IOption#TriggerOnChange">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Options.Bindings.Bindings.EliteAPI#Options#Bindings#Models#IBindings#Active">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Options.Directory.Abstractions.IOptionsDirectoryProvider">
+            <summary>
+            Provides the options directory
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Options.Directory.Abstractions.IOptionsDirectoryProvider.FindOptionsDirectory">
+            <summary>
+            Finds the options directory containing all the option directories
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Options.Directory.OptionsDirectoryProvider.FindOptionsDirectory">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Options.Processor.Abstractions.IOptionsProcessor.BindingsUpdated">
+            <summary>
+            Triggered when the active bindings file is updated
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Options.Processor.Abstractions.IOptionsProcessor.ProcessBindingsFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified options file to <see cref="E:EliteAPI.Options.Processor.Abstractions.IOptionsProcessor.BindingsUpdated" /> and invokes <see cref="E:EliteAPI.Options.Processor.Abstractions.IOptionsProcessor.BindingsUpdated" /> when
+            needed
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Options.Processor.OptionsProcessor">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Options.Processor.OptionsProcessor.BindingsUpdated">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Options.Processor.OptionsProcessor.ProcessBindingsFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Options.Provider.Abstractions.IOptionsProvider.FindActiveBindingsFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the active bindings file from the specified options directory
             </summary>
             <param name="optionsDirectory">The options directory</param>
         </member>
         <member name="T:EliteAPI.Options.Provider.OptionsProvider">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Options.Provider.OptionsProvider.FindBindingsFile(System.IO.DirectoryInfo)">
+        <member name="M:EliteAPI.Options.Provider.OptionsProvider.FindActiveBindingsFile(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Services.FileReader.Abstractions.IFileReader">

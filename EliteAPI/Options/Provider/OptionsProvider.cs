@@ -34,7 +34,7 @@ namespace EliteAPI.Options.Provider
 
             if (startPresetFiles.Length == 0)
             {
-                throw new ActiveBindingsNotSetException("No selected bindings could be detected");
+                throw new ActiveBindingsNotFoundException("No selected bindings could be detected");
             }
 
             var startPresetFile = startPresetFiles.First();
@@ -45,7 +45,7 @@ namespace EliteAPI.Options.Provider
 
             if (activePresetFiles.Length == 0)
             {
-                ActiveBindingsNotFoundException ex = new("The select bindings could not be found");
+                BindingsNotFoundException ex = new("The select bindings could not be found");
                 ex.Data.Add("Active bindings", activePresetName);
 
                 throw ex;

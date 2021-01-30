@@ -10,1252 +10,1216 @@ namespace EliteAPI.Options.Bindings.Models
         internal KeyBindings() { }
 
         [XmlElement(ElementName = "KeyboardLayout")]
-        public string KeyboardLayout { get; private set; }
+        public string KeyboardLayout { get; set; }
 
         [XmlAttribute(AttributeName = "PresetName")]
-        public string PresetName { get; private set; }
+        public string PresetName { get; set; }
 
         [XmlAttribute(AttributeName = "MajorVersion")]
-        public int MajorVersion { get; private set; }
+        public int MajorVersion { get; set; }
 
         [XmlAttribute(AttributeName = "MinorVersion")]
-        public int MinorVersion { get; private set; }
+        public int MinorVersion { get; set; }
 
         [XmlText]
-        public string Text { get; private set; }
+        public string Text { get; set; }
 
         [XmlElement(ElementName = "MouseXMode")]
-        public MouseXModeBinding MouseXMode { get; private set; }
+        public MouseXModeBinding MouseXMode { get; set; }
 
         [XmlElement(ElementName = "MouseXDecay")]
-        public MouseXDecayBinding MouseXDecay { get; private set; }
+        public MouseXDecayBinding MouseXDecay { get; set; }
 
         [XmlElement(ElementName = "MouseYMode")]
-        public MouseYModeBinding MouseYMode { get; private set; }
+        public MouseYModeBinding MouseYMode { get; set; }
 
         [XmlElement(ElementName = "MouseYDecay")]
-        public MouseYDecayBinding MouseYDecay { get; private set; }
+        public MouseYDecayBinding MouseYDecay { get; set; }
 
         [XmlElement(ElementName = "MouseReset")]
-        public MouseResetBinding MouseReset { get; private set; }
+        public MouseResetBinding MouseReset { get; set; }
 
         [XmlElement(ElementName = "MouseSensitivity")]
-        public MouseSensitivityBinding MouseSensitivity { get; private set; }
+        public MouseSensitivityBinding MouseSensitivity { get; set; }
 
         [XmlElement(ElementName = "MouseDecayRate")]
-        public MouseDecayRateBinding MouseDecayRate { get; private set; }
+        public MouseDecayRateBinding MouseDecayRate { get; set; }
 
         [XmlElement(ElementName = "MouseDeadzone")]
-        public MouseDeadzoneBinding MouseDeadzone { get; private set; }
+        public MouseDeadzoneBinding MouseDeadzone { get; set; }
 
         [XmlElement(ElementName = "MouseLinearity")]
-        public MouseLinearityBinding MouseLinearity { get; private set; }
+        public MouseLinearityBinding MouseLinearity { get; set; }
 
         [XmlElement(ElementName = "MouseGUI")]
-        public IReadOnlyList<MouseGUIBinding> MouseGUI { get; private set; }
+        public MouseGUIBinding MouseGUI { get; set; }
 
         [XmlElement(ElementName = "YawAxisRaw")]
-        public YawAxisRawBinding YawAxisRaw { get; private set; }
+        public YawAxisRawBinding YawAxisRaw { get; set; }
 
         [XmlElement(ElementName = "YawLeftButton")]
-        public YawLeftButtonBinding YawLeftButton { get; private set; }
+        public YawLeftButtonBinding YawLeftButton { get; set; }
 
         [XmlElement(ElementName = "YawRightButton")]
-        public YawRightButtonBinding YawRightButton { get; private set; }
+        public YawRightButtonBinding YawRightButton { get; set; }
 
         [XmlElement(ElementName = "YawToRollMode")]
-        public YawToRollModeBinding YawToRollMode { get; private set; }
+        public YawToRollModeBinding YawToRollMode { get; set; }
 
         [XmlElement(ElementName = "YawToRollSensitivity")]
-        public YawToRollSensitivityBinding YawToRollSensitivity { get; private set; }
+        public YawToRollSensitivityBinding YawToRollSensitivity { get; set; }
 
         [XmlElement(ElementName = "YawToRollMode_FAOff")]
-        public YawToRollModeFAOffBinding YawToRollModeFAOff { get; private set; }
+        public YawToRollModeFAOffBinding YawToRollModeFAOff { get; set; }
 
         [XmlElement(ElementName = "YawToRollButton")]
-        public YawToRollButtonBinding YawToRollButton { get; private set; }
+        public YawToRollButtonBinding YawToRollButton { get; set; }
 
         [XmlElement(ElementName = "RollAxisRaw")]
-        public RollAxisRawBinding RollAxisRaw { get; private set; }
+        public RollAxisRawBinding RollAxisRaw { get; set; }
 
         [XmlElement(ElementName = "RollLeftButton")]
-        public RollLeftButtonBinding RollLeftButton { get; private set; }
+        public RollLeftButtonBinding RollLeftButton { get; set; }
 
         [XmlElement(ElementName = "RollRightButton")]
-        public RollRightButtonBinding RollRightButton { get; private set; }
+        public RollRightButtonBinding RollRightButton { get; set; }
 
         [XmlElement(ElementName = "PitchAxisRaw")]
-        public PitchAxisRawBinding PitchAxisRaw { get; private set; }
+        public PitchAxisRawBinding PitchAxisRaw { get; set; }
 
         [XmlElement(ElementName = "PitchUpButton")]
-        public PitchUpButtonBinding PitchUpButton { get; private set; }
+        public PitchUpButtonBinding PitchUpButton { get; set; }
 
         [XmlElement(ElementName = "PitchDownButton")]
-        public PitchDownButtonBinding PitchDownButton { get; private set; }
+        public PitchDownButtonBinding PitchDownButton { get; set; }
 
         [XmlElement(ElementName = "LateralThrustRaw")]
-        public LateralThrustRawBinding LateralThrustRaw { get; private set; }
+        public LateralThrustRawBinding LateralThrustRaw { get; set; }
 
         [XmlElement(ElementName = "LeftThrustButton")]
-        public LeftThrustButtonBinding LeftThrustButton { get; private set; }
+        public LeftThrustButtonBinding LeftThrustButton { get; set; }
 
         [XmlElement(ElementName = "RightThrustButton")]
-        public RightThrustButtonBinding RightThrustButton { get; private set; }
+        public RightThrustButtonBinding RightThrustButton { get; set; }
 
         [XmlElement(ElementName = "VerticalThrustRaw")]
-        public VerticalThrustRawBinding VerticalThrustRaw { get; private set; }
+        public VerticalThrustRawBinding VerticalThrustRaw { get; set; }
 
         [XmlElement(ElementName = "UpThrustButton")]
-        public UpThrustButtonBinding UpThrustButton { get; private set; }
+        public UpThrustButtonBinding UpThrustButton { get; set; }
 
         [XmlElement(ElementName = "DownThrustButton")]
-        public DownThrustButtonBinding DownThrustButton { get; private set; }
+        public DownThrustButtonBinding DownThrustButton { get; set; }
 
         [XmlElement(ElementName = "AheadThrust")]
-        public AheadThrustBinding AheadThrust { get; private set; }
+        public AheadThrustBinding AheadThrust { get; set; }
 
         [XmlElement(ElementName = "ForwardThrustButton")]
-        public ForwardThrustButtonBinding ForwardThrustButton { get; private set; }
+        public ForwardThrustButtonBinding ForwardThrustButton { get; set; }
 
         [XmlElement(ElementName = "BackwardThrustButton")]
-        public BackwardThrustButtonBinding BackwardThrustButton { get; private set; }
+        public BackwardThrustButtonBinding BackwardThrustButton { get; set; }
 
         [XmlElement(ElementName = "UseAlternateFlightValuesToggle")]
-        public UseAlternateFlightValuesToggleBinding UseAlternateFlightValuesToggle { get; private set; }
+        public UseAlternateFlightValuesToggleBinding UseAlternateFlightValuesToggle { get; set; }
 
         [XmlElement(ElementName = "YawAxisAlternate")]
-        public YawAxisAlternateBinding YawAxisAlternate { get; private set; }
+        public YawAxisAlternateBinding YawAxisAlternate { get; set; }
 
         [XmlElement(ElementName = "RollAxisAlternate")]
-        public RollAxisAlternateBinding RollAxisAlternate { get; private set; }
+        public RollAxisAlternateBinding RollAxisAlternate { get; set; }
 
         [XmlElement(ElementName = "PitchAxisAlternate")]
-        public PitchAxisAlternateBinding PitchAxisAlternate { get; private set; }
+        public PitchAxisAlternateBinding PitchAxisAlternate { get; set; }
 
         [XmlElement(ElementName = "LateralThrustAlternate")]
-        public LateralThrustAlternateBinding LateralThrustAlternate { get; private set; }
+        public LateralThrustAlternateBinding LateralThrustAlternate { get; set; }
 
         [XmlElement(ElementName = "VerticalThrustAlternate")]
-        public VerticalThrustAlternateBinding VerticalThrustAlternate { get; private set; }
+        public VerticalThrustAlternateBinding VerticalThrustAlternate { get; set; }
 
         [XmlElement(ElementName = "ThrottleAxis")]
-        public ThrottleAxisBinding ThrottleAxis { get; private set; }
+        public ThrottleAxisBinding ThrottleAxis { get; set; }
 
         [XmlElement(ElementName = "ThrottleRange")]
-        public ThrottleRangeBinding ThrottleRange { get; private set; }
+        public ThrottleRangeBinding ThrottleRange { get; set; }
 
         [XmlElement(ElementName = "ToggleReverseThrottleInput")]
-        public ToggleReverseThrottleInputBinding ToggleReverseThrottleInput { get; private set; }
+        public ToggleReverseThrottleInputBinding ToggleReverseThrottleInput { get; set; }
 
         [XmlElement(ElementName = "ForwardKey")]
-        public ForwardKeyBinding ForwardKey { get; private set; }
+        public ForwardKeyBinding ForwardKey { get; set; }
 
         [XmlElement(ElementName = "BackwardKey")]
-        public BackwardKeyBinding BackwardKey { get; private set; }
+        public BackwardKeyBinding BackwardKey { get; set; }
 
         [XmlElement(ElementName = "ThrottleIncrement")]
-        public ThrottleIncrementBinding ThrottleIncrement { get; private set; }
+        public ThrottleIncrementBinding ThrottleIncrement { get; set; }
 
         [XmlElement(ElementName = "SetSpeedMinus100")]
-        public SetSpeedMinus100Binding SetSpeedMinus100 { get; private set; }
+        public SetSpeedMinus100Binding SetSpeedMinus100 { get; set; }
 
         [XmlElement(ElementName = "SetSpeedMinus75")]
-        public SetSpeedMinus75Binding SetSpeedMinus75 { get; private set; }
+        public SetSpeedMinus75Binding SetSpeedMinus75 { get; set; }
 
         [XmlElement(ElementName = "SetSpeedMinus50")]
-        public SetSpeedMinus50Binding SetSpeedMinus50 { get; private set; }
+        public SetSpeedMinus50Binding SetSpeedMinus50 { get; set; }
 
         [XmlElement(ElementName = "SetSpeedMinus25")]
-        public SetSpeedMinus25Binding SetSpeedMinus25 { get; private set; }
+        public SetSpeedMinus25Binding SetSpeedMinus25 { get; set; }
 
         [XmlElement(ElementName = "SetSpeedZero")]
-        public SetSpeedZeroBinding SetSpeedZero { get; private set; }
+        public SetSpeedZeroBinding SetSpeedZero { get; set; }
 
         [XmlElement(ElementName = "SetSpeed25")]
-        public SetSpeed25Binding SetSpeed25 { get; private set; }
+        public SetSpeed25Binding SetSpeed25 { get; set; }
 
         [XmlElement(ElementName = "SetSpeed50")]
-        public SetSpeed50Binding SetSpeed50 { get; private set; }
+        public SetSpeed50Binding SetSpeed50 { get; set; }
 
         [XmlElement(ElementName = "SetSpeed75")]
-        public SetSpeed75Binding SetSpeed75 { get; private set; }
+        public SetSpeed75Binding SetSpeed75 { get; set; }
 
         [XmlElement(ElementName = "SetSpeed100")]
-        public SetSpeed100Binding SetSpeed100 { get; private set; }
+        public SetSpeed100Binding SetSpeed100 { get; set; }
 
         [XmlElement(ElementName = "YawAxis_Landing")]
-        public YawAxisLandingBinding YawAxisLanding { get; private set; }
+        public YawAxisLandingBinding YawAxisLanding { get; set; }
 
         [XmlElement(ElementName = "YawLeftButton_Landing")]
-        public YawLeftButtonLandingBinding YawLeftButtonLanding { get; private set; }
+        public YawLeftButtonLandingBinding YawLeftButtonLanding { get; set; }
 
         [XmlElement(ElementName = "YawRightButton_Landing")]
-        public YawRightButtonLandingBinding YawRightButtonLanding { get; private set; }
+        public YawRightButtonLandingBinding YawRightButtonLanding { get; set; }
 
         [XmlElement(ElementName = "YawToRollMode_Landing")]
-        public YawToRollModeLandingBinding YawToRollModeLanding { get; private set; }
+        public YawToRollModeLandingBinding YawToRollModeLanding { get; set; }
 
         [XmlElement(ElementName = "PitchAxis_Landing")]
-        public PitchAxisLandingBinding PitchAxisLanding { get; private set; }
+        public PitchAxisLandingBinding PitchAxisLanding { get; set; }
 
         [XmlElement(ElementName = "PitchUpButton_Landing")]
-        public PitchUpButtonLandingBinding PitchUpButtonLanding { get; private set; }
+        public PitchUpButtonLandingBinding PitchUpButtonLanding { get; set; }
 
         [XmlElement(ElementName = "PitchDownButton_Landing")]
-        public PitchDownButtonLandingBinding PitchDownButtonLanding { get; private set; }
+        public PitchDownButtonLandingBinding PitchDownButtonLanding { get; set; }
 
         [XmlElement(ElementName = "RollAxis_Landing")]
-        public RollAxisLandingBinding RollAxisLanding { get; private set; }
+        public RollAxisLandingBinding RollAxisLanding { get; set; }
 
         [XmlElement(ElementName = "RollLeftButton_Landing")]
-        public RollLeftButtonLandingBinding RollLeftButtonLanding { get; private set; }
+        public RollLeftButtonLandingBinding RollLeftButtonLanding { get; set; }
 
         [XmlElement(ElementName = "RollRightButton_Landing")]
-        public RollRightButtonLandingBinding RollRightButtonLanding { get; private set; }
+        public RollRightButtonLandingBinding RollRightButtonLanding { get; set; }
 
         [XmlElement(ElementName = "LateralThrust_Landing")]
-        public LateralThrustLandingBinding LateralThrustLanding { get; private set; }
+        public LateralThrustLandingBinding LateralThrustLanding { get; set; }
 
         [XmlElement(ElementName = "LeftThrustButton_Landing")]
-        public LeftThrustButtonLandingBinding LeftThrustButtonLanding { get; private set; }
+        public LeftThrustButtonLandingBinding LeftThrustButtonLanding { get; set; }
 
         [XmlElement(ElementName = "RightThrustButton_Landing")]
-        public RightThrustButtonLandingBinding RightThrustButtonLanding { get; private set; }
+        public RightThrustButtonLandingBinding RightThrustButtonLanding { get; set; }
 
         [XmlElement(ElementName = "VerticalThrust_Landing")]
-        public VerticalThrustLandingBinding VerticalThrustLanding { get; private set; }
+        public VerticalThrustLandingBinding VerticalThrustLanding { get; set; }
 
         [XmlElement(ElementName = "UpThrustButton_Landing")]
-        public UpThrustButtonLandingBinding UpThrustButtonLanding { get; private set; }
+        public UpThrustButtonLandingBinding UpThrustButtonLanding { get; set; }
 
         [XmlElement(ElementName = "DownThrustButton_Landing")]
-        public DownThrustButtonLandingBinding DownThrustButtonLanding { get; private set; }
+        public DownThrustButtonLandingBinding DownThrustButtonLanding { get; set; }
 
         [XmlElement(ElementName = "AheadThrust_Landing")]
-        public AheadThrustLandingBinding AheadThrustLanding { get; private set; }
+        public AheadThrustLandingBinding AheadThrustLanding { get; set; }
 
         [XmlElement(ElementName = "ForwardThrustButton_Landing")]
-        public ForwardThrustButtonLandingBinding ForwardThrustButtonLanding { get; private set; }
+        public ForwardThrustButtonLandingBinding ForwardThrustButtonLanding { get; set; }
 
         [XmlElement(ElementName = "BackwardThrustButton_Landing")]
-        public BackwardThrustButtonLandingBinding BackwardThrustButtonLanding { get; private set; }
+        public BackwardThrustButtonLandingBinding BackwardThrustButtonLanding { get; set; }
 
         [XmlElement(ElementName = "ToggleFlightAssist")]
-        public ToggleFlightAssistBinding ToggleFlightAssist { get; private set; }
+        public ToggleFlightAssistBinding ToggleFlightAssist { get; set; }
 
         [XmlElement(ElementName = "UseBoostJuice")]
-        public UseBoostJuiceBinding UseBoostJuice { get; private set; }
+        public UseBoostJuiceBinding UseBoostJuice { get; set; }
 
         [XmlElement(ElementName = "HyperSuperCombination")]
-        public HyperSuperCombinationBinding HyperSuperCombination { get; private set; }
+        public HyperSuperCombinationBinding HyperSuperCombination { get; set; }
 
         [XmlElement(ElementName = "Supercruise")]
-        public SupercruiseBinding Supercruise { get; private set; }
+        public SupercruiseBinding Supercruise { get; set; }
 
         [XmlElement(ElementName = "Hyperspace")]
-        public HyperspaceBinding Hyperspace { get; private set; }
+        public HyperspaceBinding Hyperspace { get; set; }
 
         [XmlElement(ElementName = "DisableRotationCorrectToggle")]
-        public DisableRotationCorrectToggleBinding DisableRotationCorrectToggle { get; private set; }
+        public DisableRotationCorrectToggleBinding DisableRotationCorrectToggle { get; set; }
 
         [XmlElement(ElementName = "OrbitLinesToggle")]
-        public OrbitLinesToggleBinding OrbitLinesToggle { get; private set; }
+        public OrbitLinesToggleBinding OrbitLinesToggle { get; set; }
 
         [XmlElement(ElementName = "SelectTarget")]
-        public SelectTargetBinding SelectTarget { get; private set; }
+        public SelectTargetBinding SelectTarget { get; set; }
 
         [XmlElement(ElementName = "CycleNextTarget")]
-        public CycleNextTargetBinding CycleNextTarget { get; private set; }
+        public CycleNextTargetBinding CycleNextTarget { get; set; }
 
         [XmlElement(ElementName = "CyclePreviousTarget")]
-        public CyclePreviousTargetBinding CyclePreviousTarget { get; private set; }
+        public CyclePreviousTargetBinding CyclePreviousTarget { get; set; }
 
         [XmlElement(ElementName = "SelectHighestThreat")]
-        public SelectHighestThreatBinding SelectHighestThreat { get; private set; }
+        public SelectHighestThreatBinding SelectHighestThreat { get; set; }
 
         [XmlElement(ElementName = "CycleNextHostileTarget")]
-        public CycleNextHostileTargetBinding CycleNextHostileTarget { get; private set; }
+        public CycleNextHostileTargetBinding CycleNextHostileTarget { get; set; }
 
         [XmlElement(ElementName = "CyclePreviousHostileTarget")]
-        public CyclePreviousHostileTargetBinding CyclePreviousHostileTarget { get; private set; }
+        public CyclePreviousHostileTargetBinding CyclePreviousHostileTarget { get; set; }
 
         [XmlElement(ElementName = "TargetWingman0")]
-        public TargetWingman0Binding TargetWingman0 { get; private set; }
+        public TargetWingman0Binding TargetWingman0 { get; set; }
 
         [XmlElement(ElementName = "TargetWingman1")]
-        public TargetWingman1Binding TargetWingman1 { get; private set; }
+        public TargetWingman1Binding TargetWingman1 { get; set; }
 
         [XmlElement(ElementName = "TargetWingman2")]
-        public TargetWingman2Binding TargetWingman2 { get; private set; }
+        public TargetWingman2Binding TargetWingman2 { get; set; }
 
         [XmlElement(ElementName = "SelectTargetsTarget")]
-        public SelectTargetsTargetBinding SelectTargetsTarget { get; private set; }
+        public SelectTargetsTargetBinding SelectTargetsTarget { get; set; }
 
         [XmlElement(ElementName = "WingNavLock")]
-        public WingNavLockBinding WingNavLock { get; private set; }
+        public WingNavLockBinding WingNavLock { get; set; }
 
         [XmlElement(ElementName = "CycleNextSubsystem")]
-        public CycleNextSubsystemBinding CycleNextSubsystem { get; private set; }
+        public CycleNextSubsystemBinding CycleNextSubsystem { get; set; }
 
         [XmlElement(ElementName = "CyclePreviousSubsystem")]
-        public CyclePreviousSubsystemBinding CyclePreviousSubsystem { get; private set; }
+        public CyclePreviousSubsystemBinding CyclePreviousSubsystem { get; set; }
 
         [XmlElement(ElementName = "TargetNextRouteSystem")]
-        public TargetNextRouteSystemBinding TargetNextRouteSystem { get; private set; }
+        public TargetNextRouteSystemBinding TargetNextRouteSystem { get; set; }
 
         [XmlElement(ElementName = "PrimaryFire")]
-        public PrimaryFireBinding PrimaryFire { get; private set; }
+        public PrimaryFireBinding PrimaryFire { get; set; }
 
         [XmlElement(ElementName = "SecondaryFire")]
-        public SecondaryFireBinding SecondaryFire { get; private set; }
+        public SecondaryFireBinding SecondaryFire { get; set; }
 
         [XmlElement(ElementName = "CycleFireGroupNext")]
-        public CycleFireGroupNextBinding CycleFireGroupNext { get; private set; }
+        public CycleFireGroupNextBinding CycleFireGroupNext { get; set; }
 
         [XmlElement(ElementName = "CycleFireGroupPrevious")]
-        public CycleFireGroupPreviousBinding CycleFireGroupPrevious { get; private set; }
+        public CycleFireGroupPreviousBinding CycleFireGroupPrevious { get; set; }
 
         [XmlElement(ElementName = "DeployHardpointToggle")]
-        public DeployHardpointToggleBinding DeployHardpointToggle { get; private set; }
+        public DeployHardpointToggleBinding DeployHardpointToggle { get; set; }
 
         [XmlElement(ElementName = "DeployHardpointsOnFire")]
-        public DeployHardpointsOnFireBinding DeployHardpointsOnFire { get; private set; }
+        public DeployHardpointsOnFireBinding DeployHardpointsOnFire { get; set; }
 
         [XmlElement(ElementName = "ToggleButtonUpInput")]
-        public ToggleButtonUpInputBinding ToggleButtonUpInput { get; private set; }
+        public ToggleButtonUpInputBinding ToggleButtonUpInput { get; set; }
 
         [XmlElement(ElementName = "DeployHeatSink")]
-        public DeployHeatSinkBinding DeployHeatSink { get; private set; }
+        public DeployHeatSinkBinding DeployHeatSink { get; set; }
 
         [XmlElement(ElementName = "ShipSpotLightToggle")]
-        public ShipSpotLightToggleBinding ShipSpotLightToggle { get; private set; }
+        public ShipSpotLightToggleBinding ShipSpotLightToggle { get; set; }
 
         [XmlElement(ElementName = "RadarRangeAxis")]
-        public RadarRangeAxisBinding RadarRangeAxis { get; private set; }
+        public RadarRangeAxisBinding RadarRangeAxis { get; set; }
 
         [XmlElement(ElementName = "RadarIncreaseRange")]
-        public RadarIncreaseRangeBinding RadarIncreaseRange { get; private set; }
+        public RadarIncreaseRangeBinding RadarIncreaseRange { get; set; }
 
         [XmlElement(ElementName = "RadarDecreaseRange")]
-        public RadarDecreaseRangeBinding RadarDecreaseRange { get; private set; }
+        public RadarDecreaseRangeBinding RadarDecreaseRange { get; set; }
 
         [XmlElement(ElementName = "IncreaseEnginesPower")]
-        public IncreaseEnginesPowerBinding IncreaseEnginesPower { get; private set; }
+        public IncreaseEnginesPowerBinding IncreaseEnginesPower { get; set; }
 
         [XmlElement(ElementName = "IncreaseWeaponsPower")]
-        public IncreaseWeaponsPowerBinding IncreaseWeaponsPower { get; private set; }
+        public IncreaseWeaponsPowerBinding IncreaseWeaponsPower { get; set; }
 
         [XmlElement(ElementName = "IncreaseSystemsPower")]
-        public IncreaseSystemsPowerBinding IncreaseSystemsPower { get; private set; }
+        public IncreaseSystemsPowerBinding IncreaseSystemsPower { get; set; }
 
         [XmlElement(ElementName = "ResetPowerDistribution")]
-        public ResetPowerDistributionBinding ResetPowerDistribution { get; private set; }
+        public ResetPowerDistributionBinding ResetPowerDistribution { get; set; }
 
         [XmlElement(ElementName = "HMDReset")]
-        public HMDResetBinding HMDReset { get; private set; }
+        public HMDResetBinding HMDReset { get; set; }
 
         [XmlElement(ElementName = "ToggleCargoScoop")]
-        public ToggleCargoScoopBinding ToggleCargoScoop { get; private set; }
+        public ToggleCargoScoopBinding ToggleCargoScoop { get; set; }
 
         [XmlElement(ElementName = "EjectAllCargo")]
-        public EjectAllCargoBinding EjectAllCargo { get; private set; }
+        public EjectAllCargoBinding EjectAllCargo { get; set; }
 
         [XmlElement(ElementName = "LandingGearToggle")]
-        public LandingGearToggleBinding LandingGearToggle { get; private set; }
+        public LandingGearToggleBinding LandingGearToggle { get; set; }
 
         [XmlElement(ElementName = "MicrophoneMute")]
-        public MicrophoneMuteBinding MicrophoneMute { get; private set; }
+        public MicrophoneMuteBinding MicrophoneMute { get; set; }
 
         [XmlElement(ElementName = "MuteButtonMode")]
-        public MuteButtonModeBinding MuteButtonMode { get; private set; }
+        public MuteButtonModeBinding MuteButtonMode { get; set; }
 
         [XmlElement(ElementName = "CqcMuteButtonMode")]
-        public CqcMuteButtonModeBinding CqcMuteButtonMode { get; private set; }
+        public CqcMuteButtonModeBinding CqcMuteButtonMode { get; set; }
 
         [XmlElement(ElementName = "UseShieldCell")]
-        public UseShieldCellBinding UseShieldCell { get; private set; }
+        public UseShieldCellBinding UseShieldCell { get; set; }
 
         [XmlElement(ElementName = "FireChaffLauncher")]
-        public FireChaffLauncherBinding FireChaffLauncher { get; private set; }
+        public FireChaffLauncherBinding FireChaffLauncher { get; set; }
 
         [XmlElement(ElementName = "ChargeECM")]
-        public ChargeECMBinding ChargeECM { get; private set; }
+        public ChargeECMBinding ChargeECM { get; set; }
 
         [XmlElement(ElementName = "EnableRumbleTrigger")]
-        public EnableRumbleTriggerBinding EnableRumbleTrigger { get; private set; }
+        public EnableRumbleTriggerBinding EnableRumbleTrigger { get; set; }
 
         [XmlElement(ElementName = "EnableMenuGroups")]
-        public EnableMenuGroupsBinding EnableMenuGroups { get; private set; }
+        public EnableMenuGroupsBinding EnableMenuGroups { get; set; }
 
         [XmlElement(ElementName = "WeaponColourToggle")]
-        public WeaponColourToggleBinding WeaponColourToggle { get; private set; }
+        public WeaponColourToggleBinding WeaponColourToggle { get; set; }
 
         [XmlElement(ElementName = "EngineColourToggle")]
-        public EngineColourToggleBinding EngineColourToggle { get; private set; }
+        public EngineColourToggleBinding EngineColourToggle { get; set; }
 
         [XmlElement(ElementName = "NightVisionToggle")]
-        public NightVisionToggleBinding NightVisionToggle { get; private set; }
+        public NightVisionToggleBinding NightVisionToggle { get; set; }
 
         [XmlElement(ElementName = "UIFocus")]
-        public UIFocusBinding UIFocus { get; private set; }
+        public UIFocusBinding UIFocus { get; set; }
 
         [XmlElement(ElementName = "UIFocusMode")]
-        public UIFocusModeBinding UIFocusMode { get; private set; }
+        public UIFocusModeBinding UIFocusMode { get; set; }
 
         [XmlElement(ElementName = "FocusLeftPanel")]
-        public FocusLeftPanelBinding FocusLeftPanel { get; private set; }
+        public FocusLeftPanelBinding FocusLeftPanel { get; set; }
 
         [XmlElement(ElementName = "FocusCommsPanel")]
-        public FocusCommsPanelBinding FocusCommsPanel { get; private set; }
+        public FocusCommsPanelBinding FocusCommsPanel { get; set; }
 
         [XmlElement(ElementName = "FocusOnTextEntryField")]
-        public FocusOnTextEntryFieldBinding FocusOnTextEntryField { get; private set; }
+        public FocusOnTextEntryFieldBinding FocusOnTextEntryField { get; set; }
 
         [XmlElement(ElementName = "QuickCommsPanel")]
-        public QuickCommsPanelBinding QuickCommsPanel { get; private set; }
+        public QuickCommsPanelBinding QuickCommsPanel { get; set; }
 
         [XmlElement(ElementName = "FocusRadarPanel")]
-        public FocusRadarPanelBinding FocusRadarPanel { get; private set; }
+        public FocusRadarPanelBinding FocusRadarPanel { get; set; }
 
         [XmlElement(ElementName = "FocusRightPanel")]
-        public FocusRightPanelBinding FocusRightPanel { get; private set; }
+        public FocusRightPanelBinding FocusRightPanel { get; set; }
 
         [XmlElement(ElementName = "LeftPanelFocusOptions")]
-        public LeftPanelFocusOptionsBinding LeftPanelFocusOptions { get; private set; }
+        public LeftPanelFocusOptionsBinding LeftPanelFocusOptions { get; set; }
 
         [XmlElement(ElementName = "CommsPanelFocusOptions")]
-        public CommsPanelFocusOptionsBinding CommsPanelFocusOptions { get; private set; }
+        public CommsPanelFocusOptionsBinding CommsPanelFocusOptions { get; set; }
 
         [XmlElement(ElementName = "RolePanelFocusOptions")]
-        public RolePanelFocusOptionsBinding RolePanelFocusOptions { get; private set; }
+        public RolePanelFocusOptionsBinding RolePanelFocusOptions { get; set; }
 
         [XmlElement(ElementName = "RightPanelFocusOptions")]
-        public RightPanelFocusOptionsBinding RightPanelFocusOptions { get; private set; }
+        public RightPanelFocusOptionsBinding RightPanelFocusOptions { get; set; }
 
         [XmlElement(ElementName = "EnableCameraLockOn")]
-        public EnableCameraLockOnBinding EnableCameraLockOn { get; private set; }
+        public EnableCameraLockOnBinding EnableCameraLockOn { get; set; }
 
         [XmlElement(ElementName = "GalaxyMapOpen")]
-        public GalaxyMapOpenBinding GalaxyMapOpen { get; private set; }
+        public GalaxyMapOpenBinding GalaxyMapOpen { get; set; }
 
         [XmlElement(ElementName = "SystemMapOpen")]
-        public SystemMapOpenBinding SystemMapOpen { get; private set; }
+        public SystemMapOpenBinding SystemMapOpen { get; set; }
 
         [XmlElement(ElementName = "ShowPGScoreSummaryInput")]
-        public ShowPGScoreSummaryInputBinding ShowPGScoreSummaryInput { get; private set; }
+        public ShowPGScoreSummaryInputBinding ShowPGScoreSummaryInput { get; set; }
 
         [XmlElement(ElementName = "HeadLookToggle")]
-        public HeadLookToggleBinding HeadLookToggle { get; private set; }
+        public HeadLookToggleBinding HeadLookToggle { get; set; }
 
         [XmlElement(ElementName = "Pause")]
-        public PauseBinding Pause { get; private set; }
+        public PauseBinding Pause { get; set; }
 
         [XmlElement(ElementName = "FriendsMenu")]
-        public FriendsMenuBinding FriendsMenu { get; private set; }
+        public FriendsMenuBinding FriendsMenu { get; set; }
 
         [XmlElement(ElementName = "OpenCodexGoToDiscovery")]
-        public OpenCodexGoToDiscoveryBinding OpenCodexGoToDiscovery { get; private set; }
+        public OpenCodexGoToDiscoveryBinding OpenCodexGoToDiscovery { get; set; }
 
         [XmlElement(ElementName = "PlayerHUDModeToggle")]
-        public PlayerHUDModeToggleBinding PlayerHUDModeToggle { get; private set; }
+        public PlayerHUDModeToggleBinding PlayerHUDModeToggle { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSEnter")]
-        public ExplorationFSSEnterBinding ExplorationFSSEnter { get; private set; }
+        public ExplorationFSSEnterBinding ExplorationFSSEnter { get; set; }
 
         [XmlElement(ElementName = "UI_Up")]
-        public UIUpBinding UIUp { get; private set; }
+        public UIUpBinding UIUp { get; set; }
 
         [XmlElement(ElementName = "UI_Down")]
-        public UIDownBinding UIDown { get; private set; }
+        public UIDownBinding UIDown { get; set; }
 
         [XmlElement(ElementName = "UI_Left")]
-        public UILeftBinding UILeft { get; private set; }
+        public UILeftBinding UILeft { get; set; }
 
         [XmlElement(ElementName = "UI_Right")]
-        public UIRightBinding UIRight { get; private set; }
+        public UIRightBinding UIRight { get; set; }
 
         [XmlElement(ElementName = "UI_Select")]
-        public UISelectBinding UISelect { get; private set; }
+        public UISelectBinding UISelect { get; set; }
 
         [XmlElement(ElementName = "UI_Back")]
-        public UIBackBinding UIBack { get; private set; }
+        public UIBackBinding UIBack { get; set; }
 
         [XmlElement(ElementName = "UI_Toggle")]
-        public UIToggleBinding UIToggle { get; private set; }
+        public UIToggleBinding UIToggle { get; set; }
 
         [XmlElement(ElementName = "CycleNextPanel")]
-        public CycleNextPanelBinding CycleNextPanel { get; private set; }
+        public CycleNextPanelBinding CycleNextPanel { get; set; }
 
         [XmlElement(ElementName = "CyclePreviousPanel")]
-        public CyclePreviousPanelBinding CyclePreviousPanel { get; private set; }
+        public CyclePreviousPanelBinding CyclePreviousPanel { get; set; }
 
         [XmlElement(ElementName = "CycleNextPage")]
-        public CycleNextPageBinding CycleNextPage { get; private set; }
+        public CycleNextPageBinding CycleNextPage { get; set; }
 
         [XmlElement(ElementName = "CyclePreviousPage")]
-        public CyclePreviousPageBinding CyclePreviousPage { get; private set; }
+        public CyclePreviousPageBinding CyclePreviousPage { get; set; }
 
         [XmlElement(ElementName = "MouseHeadlook")]
-        public MouseHeadlookBinding MouseHeadlook { get; private set; }
+        public MouseHeadlookBinding MouseHeadlook { get; set; }
 
         [XmlElement(ElementName = "MouseHeadlookInvert")]
-        public MouseHeadlookInvertBinding MouseHeadlookInvert { get; private set; }
+        public MouseHeadlookInvertBinding MouseHeadlookInvert { get; set; }
 
         [XmlElement(ElementName = "MouseHeadlookSensitivity")]
-        public MouseHeadlookSensitivityBinding MouseHeadlookSensitivity { get; private set; }
+        public MouseHeadlookSensitivityBinding MouseHeadlookSensitivity { get; set; }
 
         [XmlElement(ElementName = "HeadlookDefault")]
-        public HeadlookDefaultBinding HeadlookDefault { get; private set; }
+        public HeadlookDefaultBinding HeadlookDefault { get; set; }
 
         [XmlElement(ElementName = "HeadlookIncrement")]
-        public HeadlookIncrementBinding HeadlookIncrement { get; private set; }
+        public HeadlookIncrementBinding HeadlookIncrement { get; set; }
 
         [XmlElement(ElementName = "HeadlookMode")]
-        public HeadlookModeBinding HeadlookMode { get; private set; }
+        public HeadlookModeBinding HeadlookMode { get; set; }
 
         [XmlElement(ElementName = "HeadlookResetOnToggle")]
-        public HeadlookResetOnToggleBinding HeadlookResetOnToggle { get; private set; }
+        public HeadlookResetOnToggleBinding HeadlookResetOnToggle { get; set; }
 
         [XmlElement(ElementName = "HeadlookSensitivity")]
-        public HeadlookSensitivityBinding HeadlookSensitivity { get; private set; }
+        public HeadlookSensitivityBinding HeadlookSensitivity { get; set; }
 
         [XmlElement(ElementName = "HeadlookSmoothing")]
-        public HeadlookSmoothingBinding HeadlookSmoothing { get; private set; }
+        public HeadlookSmoothingBinding HeadlookSmoothing { get; set; }
 
         [XmlElement(ElementName = "HeadLookReset")]
-        public HeadLookResetBinding HeadLookReset { get; private set; }
+        public HeadLookResetBinding HeadLookReset { get; set; }
 
         [XmlElement(ElementName = "HeadLookPitchUp")]
-        public HeadLookPitchUpBinding HeadLookPitchUp { get; private set; }
+        public HeadLookPitchUpBinding HeadLookPitchUp { get; set; }
 
         [XmlElement(ElementName = "HeadLookPitchDown")]
-        public HeadLookPitchDownBinding HeadLookPitchDown { get; private set; }
+        public HeadLookPitchDownBinding HeadLookPitchDown { get; set; }
 
         [XmlElement(ElementName = "HeadLookPitchAxisRaw")]
-        public HeadLookPitchAxisRawBinding HeadLookPitchAxisRaw { get; private set; }
+        public HeadLookPitchAxisRawBinding HeadLookPitchAxisRaw { get; set; }
 
         [XmlElement(ElementName = "HeadLookYawLeft")]
-        public HeadLookYawLeftBinding HeadLookYawLeft { get; private set; }
+        public HeadLookYawLeftBinding HeadLookYawLeft { get; set; }
 
         [XmlElement(ElementName = "HeadLookYawRight")]
-        public HeadLookYawRightBinding HeadLookYawRight { get; private set; }
+        public HeadLookYawRightBinding HeadLookYawRight { get; set; }
 
         [XmlElement(ElementName = "HeadLookYawAxis")]
-        public HeadLookYawAxisBinding HeadLookYawAxis { get; private set; }
+        public HeadLookYawAxisBinding HeadLookYawAxis { get; set; }
 
         [XmlElement(ElementName = "MotionHeadlook")]
-        public MotionHeadlookBinding MotionHeadlook { get; private set; }
+        public MotionHeadlookBinding MotionHeadlook { get; set; }
 
         [XmlElement(ElementName = "HeadlookMotionSensitivity")]
-        public HeadlookMotionSensitivityBinding HeadlookMotionSensitivity { get; private set; }
+        public HeadlookMotionSensitivityBinding HeadlookMotionSensitivity { get; set; }
 
         [XmlElement(ElementName = "yawRotateHeadlook")]
-        public YawRotateHeadlookBinding YawRotateHeadlook { get; private set; }
+        public YawRotateHeadlookBinding YawRotateHeadlook { get; set; }
 
         [XmlElement(ElementName = "CamPitchAxis")]
-        public CamPitchAxisBinding CamPitchAxis { get; private set; }
+        public CamPitchAxisBinding CamPitchAxis { get; set; }
 
         [XmlElement(ElementName = "CamPitchUp")]
-        public CamPitchUpBinding CamPitchUp { get; private set; }
+        public CamPitchUpBinding CamPitchUp { get; set; }
 
         [XmlElement(ElementName = "CamPitchDown")]
-        public CamPitchDownBinding CamPitchDown { get; private set; }
+        public CamPitchDownBinding CamPitchDown { get; set; }
 
         [XmlElement(ElementName = "CamYawAxis")]
-        public CamYawAxisBinding CamYawAxis { get; private set; }
+        public CamYawAxisBinding CamYawAxis { get; set; }
 
         [XmlElement(ElementName = "CamYawLeft")]
-        public CamYawLeftBinding CamYawLeft { get; private set; }
+        public CamYawLeftBinding CamYawLeft { get; set; }
 
         [XmlElement(ElementName = "CamYawRight")]
-        public CamYawRightBinding CamYawRight { get; private set; }
+        public CamYawRightBinding CamYawRight { get; set; }
 
         [XmlElement(ElementName = "CamTranslateYAxis")]
-        public CamTranslateYAxisBinding CamTranslateYAxis { get; private set; }
+        public CamTranslateYAxisBinding CamTranslateYAxis { get; set; }
 
         [XmlElement(ElementName = "CamTranslateForward")]
-        public CamTranslateForwardBinding CamTranslateForward { get; private set; }
+        public CamTranslateForwardBinding CamTranslateForward { get; set; }
 
         [XmlElement(ElementName = "CamTranslateBackward")]
-        public CamTranslateBackwardBinding CamTranslateBackward { get; private set; }
+        public CamTranslateBackwardBinding CamTranslateBackward { get; set; }
 
         [XmlElement(ElementName = "CamTranslateXAxis")]
-        public CamTranslateXAxisBinding CamTranslateXAxis { get; private set; }
+        public CamTranslateXAxisBinding CamTranslateXAxis { get; set; }
 
         [XmlElement(ElementName = "CamTranslateLeft")]
-        public CamTranslateLeftBinding CamTranslateLeft { get; private set; }
+        public CamTranslateLeftBinding CamTranslateLeft { get; set; }
 
         [XmlElement(ElementName = "CamTranslateRight")]
-        public CamTranslateRightBinding CamTranslateRight { get; private set; }
+        public CamTranslateRightBinding CamTranslateRight { get; set; }
 
         [XmlElement(ElementName = "CamTranslateZAxis")]
-        public CamTranslateZAxisBinding CamTranslateZAxis { get; private set; }
+        public CamTranslateZAxisBinding CamTranslateZAxis { get; set; }
 
         [XmlElement(ElementName = "CamTranslateUp")]
-        public CamTranslateUpBinding CamTranslateUp { get; private set; }
+        public CamTranslateUpBinding CamTranslateUp { get; set; }
 
         [XmlElement(ElementName = "CamTranslateDown")]
-        public CamTranslateDownBinding CamTranslateDown { get; private set; }
+        public CamTranslateDownBinding CamTranslateDown { get; set; }
 
         [XmlElement(ElementName = "CamZoomAxis")]
-        public CamZoomAxisBinding CamZoomAxis { get; private set; }
+        public CamZoomAxisBinding CamZoomAxis { get; set; }
 
         [XmlElement(ElementName = "CamZoomIn")]
-        public CamZoomInBinding CamZoomIn { get; private set; }
+        public CamZoomInBinding CamZoomIn { get; set; }
 
         [XmlElement(ElementName = "CamZoomOut")]
-        public CamZoomOutBinding CamZoomOut { get; private set; }
+        public CamZoomOutBinding CamZoomOut { get; set; }
 
         [XmlElement(ElementName = "CamTranslateZHold")]
-        public CamTranslateZHoldBinding CamTranslateZHold { get; private set; }
+        public CamTranslateZHoldBinding CamTranslateZHold { get; set; }
 
         [XmlElement(ElementName = "GalaxyMapHome")]
-        public GalaxyMapHomeBinding GalaxyMapHome { get; private set; }
+        public GalaxyMapHomeBinding GalaxyMapHome { get; set; }
 
         [XmlElement(ElementName = "ToggleDriveAssist")]
-        public ToggleDriveAssistBinding ToggleDriveAssist { get; private set; }
+        public ToggleDriveAssistBinding ToggleDriveAssist { get; set; }
 
         [XmlElement(ElementName = "DriveAssistDefault")]
-        public DriveAssistDefaultBinding DriveAssistDefault { get; private set; }
+        public DriveAssistDefaultBinding DriveAssistDefault { get; set; }
 
         [XmlElement(ElementName = "MouseBuggySteeringXMode")]
-        public MouseBuggySteeringXModeBinding MouseBuggySteeringXMode { get; private set; }
+        public MouseBuggySteeringXModeBinding MouseBuggySteeringXMode { get; set; }
 
         [XmlElement(ElementName = "MouseBuggySteeringXDecay")]
-        public MouseBuggySteeringXDecayBinding MouseBuggySteeringXDecay { get; private set; }
+        public MouseBuggySteeringXDecayBinding MouseBuggySteeringXDecay { get; set; }
 
         [XmlElement(ElementName = "MouseBuggyRollingXMode")]
-        public MouseBuggyRollingXModeBinding MouseBuggyRollingXMode { get; private set; }
+        public MouseBuggyRollingXModeBinding MouseBuggyRollingXMode { get; set; }
 
         [XmlElement(ElementName = "MouseBuggyRollingXDecay")]
-        public MouseBuggyRollingXDecayBinding MouseBuggyRollingXDecay { get; private set; }
+        public MouseBuggyRollingXDecayBinding MouseBuggyRollingXDecay { get; set; }
 
         [XmlElement(ElementName = "MouseBuggyYMode")]
-        public MouseBuggyYModeBinding MouseBuggyYMode { get; private set; }
+        public MouseBuggyYModeBinding MouseBuggyYMode { get; set; }
 
         [XmlElement(ElementName = "MouseBuggyYDecay")]
-        public MouseBuggyYDecayBinding MouseBuggyYDecay { get; private set; }
+        public MouseBuggyYDecayBinding MouseBuggyYDecay { get; set; }
 
         [XmlElement(ElementName = "SteeringAxis")]
-        public SteeringAxisBinding SteeringAxis { get; private set; }
+        public SteeringAxisBinding SteeringAxis { get; set; }
 
         [XmlElement(ElementName = "SteerLeftButton")]
-        public SteerLeftButtonBinding SteerLeftButton { get; private set; }
+        public SteerLeftButtonBinding SteerLeftButton { get; set; }
 
         [XmlElement(ElementName = "SteerRightButton")]
-        public SteerRightButtonBinding SteerRightButton { get; private set; }
+        public SteerRightButtonBinding SteerRightButton { get; set; }
 
         [XmlElement(ElementName = "BuggyRollAxisRaw")]
-        public BuggyRollAxisRawBinding BuggyRollAxisRaw { get; private set; }
+        public BuggyRollAxisRawBinding BuggyRollAxisRaw { get; set; }
 
         [XmlElement(ElementName = "BuggyRollLeftButton")]
-        public BuggyRollLeftButtonBinding BuggyRollLeftButton { get; private set; }
+        public BuggyRollLeftButtonBinding BuggyRollLeftButton { get; set; }
 
         [XmlElement(ElementName = "BuggyRollRightButton")]
-        public BuggyRollRightButtonBinding BuggyRollRightButton { get; private set; }
+        public BuggyRollRightButtonBinding BuggyRollRightButton { get; set; }
 
         [XmlElement(ElementName = "BuggyPitchAxis")]
-        public BuggyPitchAxisBinding BuggyPitchAxis { get; private set; }
+        public BuggyPitchAxisBinding BuggyPitchAxis { get; set; }
 
         [XmlElement(ElementName = "BuggyPitchUpButton")]
-        public BuggyPitchUpButtonBinding BuggyPitchUpButton { get; private set; }
+        public BuggyPitchUpButtonBinding BuggyPitchUpButton { get; set; }
 
         [XmlElement(ElementName = "BuggyPitchDownButton")]
-        public BuggyPitchDownButtonBinding BuggyPitchDownButton { get; private set; }
+        public BuggyPitchDownButtonBinding BuggyPitchDownButton { get; set; }
 
         [XmlElement(ElementName = "VerticalThrustersButton")]
-        public VerticalThrustersButtonBinding VerticalThrustersButton { get; private set; }
+        public VerticalThrustersButtonBinding VerticalThrustersButton { get; set; }
 
         [XmlElement(ElementName = "BuggyPrimaryFireButton")]
-        public BuggyPrimaryFireButtonBinding BuggyPrimaryFireButton { get; private set; }
+        public BuggyPrimaryFireButtonBinding BuggyPrimaryFireButton { get; set; }
 
         [XmlElement(ElementName = "BuggySecondaryFireButton")]
-        public BuggySecondaryFireButtonBinding BuggySecondaryFireButton { get; private set; }
+        public BuggySecondaryFireButtonBinding BuggySecondaryFireButton { get; set; }
 
         [XmlElement(ElementName = "AutoBreakBuggyButton")]
-        public AutoBreakBuggyButtonBinding AutoBreakBuggyButton { get; private set; }
+        public AutoBreakBuggyButtonBinding AutoBreakBuggyButton { get; set; }
 
         [XmlElement(ElementName = "HeadlightsBuggyButton")]
-        public HeadlightsBuggyButtonBinding HeadlightsBuggyButton { get; private set; }
+        public HeadlightsBuggyButtonBinding HeadlightsBuggyButton { get; set; }
 
         [XmlElement(ElementName = "ToggleBuggyTurretButton")]
-        public ToggleBuggyTurretButtonBinding ToggleBuggyTurretButton { get; private set; }
+        public ToggleBuggyTurretButtonBinding ToggleBuggyTurretButton { get; set; }
 
         [XmlElement(ElementName = "BuggyCycleFireGroupNext")]
-        public BuggyCycleFireGroupNextBinding BuggyCycleFireGroupNext { get; private set; }
+        public BuggyCycleFireGroupNextBinding BuggyCycleFireGroupNext { get; set; }
 
         [XmlElement(ElementName = "BuggyCycleFireGroupPrevious")]
-        public BuggyCycleFireGroupPreviousBinding BuggyCycleFireGroupPrevious { get; private set; }
+        public BuggyCycleFireGroupPreviousBinding BuggyCycleFireGroupPrevious { get; set; }
 
         [XmlElement(ElementName = "SelectTarget_Buggy")]
-        public SelectTargetBuggyBinding SelectTargetBuggy { get; private set; }
+        public SelectTargetBuggyBinding SelectTargetBuggy { get; set; }
 
         [XmlElement(ElementName = "MouseTurretXMode")]
-        public MouseTurretXModeBinding MouseTurretXMode { get; private set; }
+        public MouseTurretXModeBinding MouseTurretXMode { get; set; }
 
         [XmlElement(ElementName = "MouseTurretXDecay")]
-        public MouseTurretXDecayBinding MouseTurretXDecay { get; private set; }
+        public MouseTurretXDecayBinding MouseTurretXDecay { get; set; }
 
         [XmlElement(ElementName = "MouseTurretYMode")]
-        public MouseTurretYModeBinding MouseTurretYMode { get; private set; }
+        public MouseTurretYModeBinding MouseTurretYMode { get; set; }
 
         [XmlElement(ElementName = "MouseTurretYDecay")]
-        public MouseTurretYDecayBinding MouseTurretYDecay { get; private set; }
+        public MouseTurretYDecayBinding MouseTurretYDecay { get; set; }
 
         [XmlElement(ElementName = "BuggyTurretYawAxisRaw")]
-        public BuggyTurretYawAxisRawBinding BuggyTurretYawAxisRaw { get; private set; }
+        public BuggyTurretYawAxisRawBinding BuggyTurretYawAxisRaw { get; set; }
 
         [XmlElement(ElementName = "BuggyTurretYawLeftButton")]
-        public BuggyTurretYawLeftButtonBinding BuggyTurretYawLeftButton { get; private set; }
+        public BuggyTurretYawLeftButtonBinding BuggyTurretYawLeftButton { get; set; }
 
         [XmlElement(ElementName = "BuggyTurretYawRightButton")]
-        public BuggyTurretYawRightButtonBinding BuggyTurretYawRightButton { get; private set; }
+        public BuggyTurretYawRightButtonBinding BuggyTurretYawRightButton { get; set; }
 
         [XmlElement(ElementName = "BuggyTurretPitchAxisRaw")]
-        public BuggyTurretPitchAxisRawBinding BuggyTurretPitchAxisRaw { get; private set; }
+        public BuggyTurretPitchAxisRawBinding BuggyTurretPitchAxisRaw { get; set; }
 
         [XmlElement(ElementName = "BuggyTurretPitchUpButton")]
-        public BuggyTurretPitchUpButtonBinding BuggyTurretPitchUpButton { get; private set; }
+        public BuggyTurretPitchUpButtonBinding BuggyTurretPitchUpButton { get; set; }
 
         [XmlElement(ElementName = "BuggyTurretPitchDownButton")]
-        public BuggyTurretPitchDownButtonBinding BuggyTurretPitchDownButton { get; private set; }
+        public BuggyTurretPitchDownButtonBinding BuggyTurretPitchDownButton { get; set; }
 
         [XmlElement(ElementName = "BuggyTurretMouseSensitivity")]
-        public BuggyTurretMouseSensitivityBinding BuggyTurretMouseSensitivity { get; private set; }
+        public BuggyTurretMouseSensitivityBinding BuggyTurretMouseSensitivity { get; set; }
 
         [XmlElement(ElementName = "BuggyTurretMouseDeadzone")]
-        public BuggyTurretMouseDeadzoneBinding BuggyTurretMouseDeadzone { get; private set; }
+        public BuggyTurretMouseDeadzoneBinding BuggyTurretMouseDeadzone { get; set; }
 
         [XmlElement(ElementName = "BuggyTurretMouseLinearity")]
-        public BuggyTurretMouseLinearityBinding BuggyTurretMouseLinearity { get; private set; }
+        public BuggyTurretMouseLinearityBinding BuggyTurretMouseLinearity { get; set; }
 
         [XmlElement(ElementName = "DriveSpeedAxis")]
-        public DriveSpeedAxisBinding DriveSpeedAxis { get; private set; }
+        public DriveSpeedAxisBinding DriveSpeedAxis { get; set; }
 
         [XmlElement(ElementName = "BuggyThrottleRange")]
-        public BuggyThrottleRangeBinding BuggyThrottleRange { get; private set; }
+        public BuggyThrottleRangeBinding BuggyThrottleRange { get; set; }
 
         [XmlElement(ElementName = "BuggyToggleReverseThrottleInput")]
-        public BuggyToggleReverseThrottleInputBinding BuggyToggleReverseThrottleInput { get; private set; }
+        public BuggyToggleReverseThrottleInputBinding BuggyToggleReverseThrottleInput { get; set; }
 
         [XmlElement(ElementName = "BuggyThrottleIncrement")]
-        public BuggyThrottleIncrementBinding BuggyThrottleIncrement { get; private set; }
+        public BuggyThrottleIncrementBinding BuggyThrottleIncrement { get; set; }
 
         [XmlElement(ElementName = "IncreaseSpeedButtonMax")]
-        public IncreaseSpeedButtonMaxBinding IncreaseSpeedButtonMax { get; private set; }
+        public IncreaseSpeedButtonMaxBinding IncreaseSpeedButtonMax { get; set; }
 
         [XmlElement(ElementName = "DecreaseSpeedButtonMax")]
-        public DecreaseSpeedButtonMaxBinding DecreaseSpeedButtonMax { get; private set; }
+        public DecreaseSpeedButtonMaxBinding DecreaseSpeedButtonMax { get; set; }
 
         [XmlElement(ElementName = "IncreaseSpeedButtonPartial")]
-        public IncreaseSpeedButtonPartialBinding IncreaseSpeedButtonPartial { get; private set; }
+        public IncreaseSpeedButtonPartialBinding IncreaseSpeedButtonPartial { get; set; }
 
         [XmlElement(ElementName = "DecreaseSpeedButtonPartial")]
-        public DecreaseSpeedButtonPartialBinding DecreaseSpeedButtonPartial { get; private set; }
+        public DecreaseSpeedButtonPartialBinding DecreaseSpeedButtonPartial { get; set; }
 
         [XmlElement(ElementName = "IncreaseEnginesPower_Buggy")]
-        public IncreaseEnginesPowerBuggyBinding IncreaseEnginesPowerBuggy { get; private set; }
+        public IncreaseEnginesPowerBuggyBinding IncreaseEnginesPowerBuggy { get; set; }
 
         [XmlElement(ElementName = "IncreaseWeaponsPower_Buggy")]
-        public IncreaseWeaponsPowerBuggyBinding IncreaseWeaponsPowerBuggy { get; private set; }
+        public IncreaseWeaponsPowerBuggyBinding IncreaseWeaponsPowerBuggy { get; set; }
 
         [XmlElement(ElementName = "IncreaseSystemsPower_Buggy")]
-        public IncreaseSystemsPowerBuggyBinding IncreaseSystemsPowerBuggy { get; private set; }
+        public IncreaseSystemsPowerBuggyBinding IncreaseSystemsPowerBuggy { get; set; }
 
         [XmlElement(ElementName = "ResetPowerDistribution_Buggy")]
-        public ResetPowerDistributionBuggyBinding ResetPowerDistributionBuggy { get; private set; }
+        public ResetPowerDistributionBuggyBinding ResetPowerDistributionBuggy { get; set; }
 
         [XmlElement(ElementName = "ToggleCargoScoop_Buggy")]
-        public ToggleCargoScoopBuggyBinding ToggleCargoScoopBuggy { get; private set; }
+        public ToggleCargoScoopBuggyBinding ToggleCargoScoopBuggy { get; set; }
 
         [XmlElement(ElementName = "EjectAllCargo_Buggy")]
-        public EjectAllCargoBuggyBinding EjectAllCargoBuggy { get; private set; }
+        public EjectAllCargoBuggyBinding EjectAllCargoBuggy { get; set; }
 
         [XmlElement(ElementName = "RecallDismissShip")]
-        public RecallDismissShipBinding RecallDismissShip { get; private set; }
+        public RecallDismissShipBinding RecallDismissShip { get; set; }
 
         [XmlElement(ElementName = "UIFocus_Buggy")]
-        public UIFocusBuggyBinding UIFocusBuggy { get; private set; }
+        public UIFocusBuggyBinding UIFocusBuggy { get; set; }
 
         [XmlElement(ElementName = "FocusLeftPanel_Buggy")]
-        public FocusLeftPanelBuggyBinding FocusLeftPanelBuggy { get; private set; }
+        public FocusLeftPanelBuggyBinding FocusLeftPanelBuggy { get; set; }
 
         [XmlElement(ElementName = "FocusCommsPanel_Buggy")]
-        public FocusCommsPanelBuggyBinding FocusCommsPanelBuggy { get; private set; }
+        public FocusCommsPanelBuggyBinding FocusCommsPanelBuggy { get; set; }
 
         [XmlElement(ElementName = "QuickCommsPanel_Buggy")]
-        public QuickCommsPanelBuggyBinding QuickCommsPanelBuggy { get; private set; }
+        public QuickCommsPanelBuggyBinding QuickCommsPanelBuggy { get; set; }
 
         [XmlElement(ElementName = "FocusRadarPanel_Buggy")]
-        public FocusRadarPanelBuggyBinding FocusRadarPanelBuggy { get; private set; }
+        public FocusRadarPanelBuggyBinding FocusRadarPanelBuggy { get; set; }
 
         [XmlElement(ElementName = "FocusRightPanel_Buggy")]
-        public FocusRightPanelBuggyBinding FocusRightPanelBuggy { get; private set; }
+        public FocusRightPanelBuggyBinding FocusRightPanelBuggy { get; set; }
 
         [XmlElement(ElementName = "GalaxyMapOpen_Buggy")]
-        public GalaxyMapOpenBuggyBinding GalaxyMapOpenBuggy { get; private set; }
+        public GalaxyMapOpenBuggyBinding GalaxyMapOpenBuggy { get; set; }
 
         [XmlElement(ElementName = "SystemMapOpen_Buggy")]
-        public SystemMapOpenBuggyBinding SystemMapOpenBuggy { get; private set; }
+        public SystemMapOpenBuggyBinding SystemMapOpenBuggy { get; set; }
 
         [XmlElement(ElementName = "OpenCodexGoToDiscovery_Buggy")]
-        public OpenCodexGoToDiscoveryBuggyBinding OpenCodexGoToDiscoveryBuggy { get; private set; }
+        public OpenCodexGoToDiscoveryBuggyBinding OpenCodexGoToDiscoveryBuggy { get; set; }
 
         [XmlElement(ElementName = "PlayerHUDModeToggle_Buggy")]
-        public PlayerHUDModeToggleBuggyBinding PlayerHUDModeToggleBuggy { get; private set; }
+        public PlayerHUDModeToggleBuggyBinding PlayerHUDModeToggleBuggy { get; set; }
 
         [XmlElement(ElementName = "HeadLookToggle_Buggy")]
-        public HeadLookToggleBuggyBinding HeadLookToggleBuggy { get; private set; }
+        public HeadLookToggleBuggyBinding HeadLookToggleBuggy { get; set; }
 
         [XmlElement(ElementName = "MultiCrewToggleMode")]
-        public MultiCrewToggleModeBinding MultiCrewToggleMode { get; private set; }
+        public MultiCrewToggleModeBinding MultiCrewToggleMode { get; set; }
 
         [XmlElement(ElementName = "MultiCrewPrimaryFire")]
-        public MultiCrewPrimaryFireBinding MultiCrewPrimaryFire { get; private set; }
+        public MultiCrewPrimaryFireBinding MultiCrewPrimaryFire { get; set; }
 
         [XmlElement(ElementName = "MultiCrewSecondaryFire")]
-        public MultiCrewSecondaryFireBinding MultiCrewSecondaryFire { get; private set; }
+        public MultiCrewSecondaryFireBinding MultiCrewSecondaryFire { get; set; }
 
         [XmlElement(ElementName = "MultiCrewPrimaryUtilityFire")]
-        public MultiCrewPrimaryUtilityFireBinding MultiCrewPrimaryUtilityFire { get; private set; }
+        public MultiCrewPrimaryUtilityFireBinding MultiCrewPrimaryUtilityFire { get; set; }
 
         [XmlElement(ElementName = "MultiCrewSecondaryUtilityFire")]
-        public MultiCrewSecondaryUtilityFireBinding MultiCrewSecondaryUtilityFire { get; private set; }
+        public MultiCrewSecondaryUtilityFireBinding MultiCrewSecondaryUtilityFire { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonMouseXMode")]
-        public MultiCrewThirdPersonMouseXModeBinding MultiCrewThirdPersonMouseXMode { get; private set; }
+        public MultiCrewThirdPersonMouseXModeBinding MultiCrewThirdPersonMouseXMode { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonMouseXDecay")]
-        public MultiCrewThirdPersonMouseXDecayBinding MultiCrewThirdPersonMouseXDecay { get; private set; }
+        public MultiCrewThirdPersonMouseXDecayBinding MultiCrewThirdPersonMouseXDecay { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonMouseYMode")]
-        public MultiCrewThirdPersonMouseYModeBinding MultiCrewThirdPersonMouseYMode { get; private set; }
+        public MultiCrewThirdPersonMouseYModeBinding MultiCrewThirdPersonMouseYMode { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonMouseYDecay")]
-        public MultiCrewThirdPersonMouseYDecayBinding MultiCrewThirdPersonMouseYDecay { get; private set; }
+        public MultiCrewThirdPersonMouseYDecayBinding MultiCrewThirdPersonMouseYDecay { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonYawAxisRaw")]
-        public MultiCrewThirdPersonYawAxisRawBinding MultiCrewThirdPersonYawAxisRaw { get; private set; }
+        public MultiCrewThirdPersonYawAxisRawBinding MultiCrewThirdPersonYawAxisRaw { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonYawLeftButton")]
-        public MultiCrewThirdPersonYawLeftButtonBinding MultiCrewThirdPersonYawLeftButton { get; private set; }
+        public MultiCrewThirdPersonYawLeftButtonBinding MultiCrewThirdPersonYawLeftButton { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonYawRightButton")]
-        public MultiCrewThirdPersonYawRightButtonBinding MultiCrewThirdPersonYawRightButton { get; private set; }
+        public MultiCrewThirdPersonYawRightButtonBinding MultiCrewThirdPersonYawRightButton { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonPitchAxisRaw")]
-        public MultiCrewThirdPersonPitchAxisRawBinding MultiCrewThirdPersonPitchAxisRaw { get; private set; }
+        public MultiCrewThirdPersonPitchAxisRawBinding MultiCrewThirdPersonPitchAxisRaw { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonPitchUpButton")]
-        public MultiCrewThirdPersonPitchUpButtonBinding MultiCrewThirdPersonPitchUpButton { get; private set; }
+        public MultiCrewThirdPersonPitchUpButtonBinding MultiCrewThirdPersonPitchUpButton { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonPitchDownButton")]
-        public MultiCrewThirdPersonPitchDownButtonBinding MultiCrewThirdPersonPitchDownButton { get; private set; }
+        public MultiCrewThirdPersonPitchDownButtonBinding MultiCrewThirdPersonPitchDownButton { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonMouseSensitivity")]
-        public MultiCrewThirdPersonMouseSensitivityBinding MultiCrewThirdPersonMouseSensitivity { get; private set; }
+        public MultiCrewThirdPersonMouseSensitivityBinding MultiCrewThirdPersonMouseSensitivity { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonFovAxisRaw")]
-        public MultiCrewThirdPersonFovAxisRawBinding MultiCrewThirdPersonFovAxisRaw { get; private set; }
+        public MultiCrewThirdPersonFovAxisRawBinding MultiCrewThirdPersonFovAxisRaw { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonFovOutButton")]
-        public MultiCrewThirdPersonFovOutButtonBinding MultiCrewThirdPersonFovOutButton { get; private set; }
+        public MultiCrewThirdPersonFovOutButtonBinding MultiCrewThirdPersonFovOutButton { get; set; }
 
         [XmlElement(ElementName = "MultiCrewThirdPersonFovInButton")]
-        public MultiCrewThirdPersonFovInButtonBinding MultiCrewThirdPersonFovInButton { get; private set; }
+        public MultiCrewThirdPersonFovInButtonBinding MultiCrewThirdPersonFovInButton { get; set; }
 
         [XmlElement(ElementName = "MultiCrewCockpitUICycleForward")]
-        public MultiCrewCockpitUICycleForwardBinding MultiCrewCockpitUICycleForward { get; private set; }
+        public MultiCrewCockpitUICycleForwardBinding MultiCrewCockpitUICycleForward { get; set; }
 
         [XmlElement(ElementName = "MultiCrewCockpitUICycleBackward")]
-        public MultiCrewCockpitUICycleBackwardBinding MultiCrewCockpitUICycleBackward { get; private set; }
+        public MultiCrewCockpitUICycleBackwardBinding MultiCrewCockpitUICycleBackward { get; set; }
 
         [XmlElement(ElementName = "OrderRequestDock")]
-        public OrderRequestDockBinding OrderRequestDock { get; private set; }
+        public OrderRequestDockBinding OrderRequestDock { get; set; }
 
         [XmlElement(ElementName = "OrderDefensiveBehaviour")]
-        public OrderDefensiveBehaviourBinding OrderDefensiveBehaviour { get; private set; }
+        public OrderDefensiveBehaviourBinding OrderDefensiveBehaviour { get; set; }
 
         [XmlElement(ElementName = "OrderAggressiveBehaviour")]
-        public OrderAggressiveBehaviourBinding OrderAggressiveBehaviour { get; private set; }
+        public OrderAggressiveBehaviourBinding OrderAggressiveBehaviour { get; set; }
 
         [XmlElement(ElementName = "OrderFocusTarget")]
-        public OrderFocusTargetBinding OrderFocusTarget { get; private set; }
+        public OrderFocusTargetBinding OrderFocusTarget { get; set; }
 
         [XmlElement(ElementName = "OrderHoldFire")]
-        public OrderHoldFireBinding OrderHoldFire { get; private set; }
+        public OrderHoldFireBinding OrderHoldFire { get; set; }
 
         [XmlElement(ElementName = "OrderHoldPosition")]
-        public OrderHoldPositionBinding OrderHoldPosition { get; private set; }
+        public OrderHoldPositionBinding OrderHoldPosition { get; set; }
 
         [XmlElement(ElementName = "OrderFollow")]
-        public OrderFollowBinding OrderFollow { get; private set; }
+        public OrderFollowBinding OrderFollow { get; set; }
 
         [XmlElement(ElementName = "OpenOrders")]
-        public OpenOrdersBinding OpenOrders { get; private set; }
+        public OpenOrdersBinding OpenOrders { get; set; }
 
         [XmlElement(ElementName = "PhotoCameraToggle")]
-        public PhotoCameraToggleBinding PhotoCameraToggle { get; private set; }
+        public PhotoCameraToggleBinding PhotoCameraToggle { get; set; }
 
         [XmlElement(ElementName = "PhotoCameraToggle_Buggy")]
-        public PhotoCameraToggleBuggyBinding PhotoCameraToggleBuggy { get; private set; }
+        public PhotoCameraToggleBuggyBinding PhotoCameraToggleBuggy { get; set; }
 
         [XmlElement(ElementName = "VanityCameraScrollLeft")]
-        public VanityCameraScrollLeftBinding VanityCameraScrollLeft { get; private set; }
+        public VanityCameraScrollLeftBinding VanityCameraScrollLeft { get; set; }
 
         [XmlElement(ElementName = "VanityCameraScrollRight")]
-        public VanityCameraScrollRightBinding VanityCameraScrollRight { get; private set; }
+        public VanityCameraScrollRightBinding VanityCameraScrollRight { get; set; }
 
         [XmlElement(ElementName = "ToggleFreeCam")]
-        public ToggleFreeCamBinding ToggleFreeCam { get; private set; }
+        public ToggleFreeCamBinding ToggleFreeCam { get; set; }
 
         [XmlElement(ElementName = "VanityCameraOne")]
-        public VanityCameraOneBinding VanityCameraOne { get; private set; }
+        public VanityCameraOneBinding VanityCameraOne { get; set; }
 
         [XmlElement(ElementName = "VanityCameraTwo")]
-        public VanityCameraTwoBinding VanityCameraTwo { get; private set; }
+        public VanityCameraTwoBinding VanityCameraTwo { get; set; }
 
         [XmlElement(ElementName = "VanityCameraThree")]
-        public VanityCameraThreeBinding VanityCameraThree { get; private set; }
+        public VanityCameraThreeBinding VanityCameraThree { get; set; }
 
         [XmlElement(ElementName = "VanityCameraFour")]
-        public VanityCameraFourBinding VanityCameraFour { get; private set; }
+        public VanityCameraFourBinding VanityCameraFour { get; set; }
 
         [XmlElement(ElementName = "VanityCameraFive")]
-        public VanityCameraFiveBinding VanityCameraFive { get; private set; }
+        public VanityCameraFiveBinding VanityCameraFive { get; set; }
 
         [XmlElement(ElementName = "VanityCameraSix")]
-        public VanityCameraSixBinding VanityCameraSix { get; private set; }
+        public VanityCameraSixBinding VanityCameraSix { get; set; }
 
         [XmlElement(ElementName = "VanityCameraSeven")]
-        public VanityCameraSevenBinding VanityCameraSeven { get; private set; }
+        public VanityCameraSevenBinding VanityCameraSeven { get; set; }
 
         [XmlElement(ElementName = "VanityCameraEight")]
-        public VanityCameraEightBinding VanityCameraEight { get; private set; }
+        public VanityCameraEightBinding VanityCameraEight { get; set; }
 
         [XmlElement(ElementName = "VanityCameraNine")]
-        public VanityCameraNineBinding VanityCameraNine { get; private set; }
+        public VanityCameraNineBinding VanityCameraNine { get; set; }
 
         [XmlElement(ElementName = "FreeCamToggleHUD")]
-        public FreeCamToggleHUDBinding FreeCamToggleHUD { get; private set; }
+        public FreeCamToggleHUDBinding FreeCamToggleHUD { get; set; }
 
         [XmlElement(ElementName = "FreeCamSpeedInc")]
-        public FreeCamSpeedIncBinding FreeCamSpeedInc { get; private set; }
+        public FreeCamSpeedIncBinding FreeCamSpeedInc { get; set; }
 
         [XmlElement(ElementName = "FreeCamSpeedDec")]
-        public FreeCamSpeedDecBinding FreeCamSpeedDec { get; private set; }
+        public FreeCamSpeedDecBinding FreeCamSpeedDec { get; set; }
 
         [XmlElement(ElementName = "MoveFreeCamY")]
-        public MoveFreeCamYBinding MoveFreeCamY { get; private set; }
+        public MoveFreeCamYBinding MoveFreeCamY { get; set; }
 
         [XmlElement(ElementName = "ThrottleRangeFreeCam")]
-        public ThrottleRangeFreeCamBinding ThrottleRangeFreeCam { get; private set; }
+        public ThrottleRangeFreeCamBinding ThrottleRangeFreeCam { get; set; }
 
         [XmlElement(ElementName = "ToggleReverseThrottleInputFreeCam")]
-        public ToggleReverseThrottleInputFreeCamBinding ToggleReverseThrottleInputFreeCam { get; private set; }
+        public ToggleReverseThrottleInputFreeCamBinding ToggleReverseThrottleInputFreeCam { get; set; }
 
         [XmlElement(ElementName = "MoveFreeCamForward")]
-        public MoveFreeCamForwardBinding MoveFreeCamForward { get; private set; }
+        public MoveFreeCamForwardBinding MoveFreeCamForward { get; set; }
 
         [XmlElement(ElementName = "MoveFreeCamBackwards")]
-        public MoveFreeCamBackwardsBinding MoveFreeCamBackwards { get; private set; }
+        public MoveFreeCamBackwardsBinding MoveFreeCamBackwards { get; set; }
 
         [XmlElement(ElementName = "MoveFreeCamX")]
-        public MoveFreeCamXBinding MoveFreeCamX { get; private set; }
+        public MoveFreeCamXBinding MoveFreeCamX { get; set; }
 
         [XmlElement(ElementName = "MoveFreeCamRight")]
-        public MoveFreeCamRightBinding MoveFreeCamRight { get; private set; }
+        public MoveFreeCamRightBinding MoveFreeCamRight { get; set; }
 
         [XmlElement(ElementName = "MoveFreeCamLeft")]
-        public MoveFreeCamLeftBinding MoveFreeCamLeft { get; private set; }
+        public MoveFreeCamLeftBinding MoveFreeCamLeft { get; set; }
 
         [XmlElement(ElementName = "MoveFreeCamZ")]
-        public MoveFreeCamZBinding MoveFreeCamZ { get; private set; }
+        public MoveFreeCamZBinding MoveFreeCamZ { get; set; }
 
         [XmlElement(ElementName = "MoveFreeCamUpAxis")]
-        public MoveFreeCamUpAxisBinding MoveFreeCamUpAxis { get; private set; }
+        public MoveFreeCamUpAxisBinding MoveFreeCamUpAxis { get; set; }
 
         [XmlElement(ElementName = "MoveFreeCamDownAxis")]
-        public MoveFreeCamDownAxisBinding MoveFreeCamDownAxis { get; private set; }
+        public MoveFreeCamDownAxisBinding MoveFreeCamDownAxis { get; set; }
 
         [XmlElement(ElementName = "MoveFreeCamUp")]
-        public MoveFreeCamUpBinding MoveFreeCamUp { get; private set; }
+        public MoveFreeCamUpBinding MoveFreeCamUp { get; set; }
 
         [XmlElement(ElementName = "MoveFreeCamDown")]
-        public MoveFreeCamDownBinding MoveFreeCamDown { get; private set; }
+        public MoveFreeCamDownBinding MoveFreeCamDown { get; set; }
 
         [XmlElement(ElementName = "PitchCameraMouse")]
-        public PitchCameraMouseBinding PitchCameraMouse { get; private set; }
+        public PitchCameraMouseBinding PitchCameraMouse { get; set; }
 
         [XmlElement(ElementName = "YawCameraMouse")]
-        public YawCameraMouseBinding YawCameraMouse { get; private set; }
+        public YawCameraMouseBinding YawCameraMouse { get; set; }
 
         [XmlElement(ElementName = "PitchCamera")]
-        public PitchCameraBinding PitchCamera { get; private set; }
+        public PitchCameraBinding PitchCamera { get; set; }
 
         [XmlElement(ElementName = "FreeCamMouseSensitivity")]
-        public FreeCamMouseSensitivityBinding FreeCamMouseSensitivity { get; private set; }
+        public FreeCamMouseSensitivityBinding FreeCamMouseSensitivity { get; set; }
 
         [XmlElement(ElementName = "FreeCamMouseYDecay")]
-        public FreeCamMouseYDecayBinding FreeCamMouseYDecay { get; private set; }
+        public FreeCamMouseYDecayBinding FreeCamMouseYDecay { get; set; }
 
         [XmlElement(ElementName = "PitchCameraUp")]
-        public PitchCameraUpBinding PitchCameraUp { get; private set; }
+        public PitchCameraUpBinding PitchCameraUp { get; set; }
 
         [XmlElement(ElementName = "PitchCameraDown")]
-        public PitchCameraDownBinding PitchCameraDown { get; private set; }
+        public PitchCameraDownBinding PitchCameraDown { get; set; }
 
         [XmlElement(ElementName = "YawCamera")]
-        public YawCameraBinding YawCamera { get; private set; }
+        public YawCameraBinding YawCamera { get; set; }
 
         [XmlElement(ElementName = "FreeCamMouseXDecay")]
-        public FreeCamMouseXDecayBinding FreeCamMouseXDecay { get; private set; }
+        public FreeCamMouseXDecayBinding FreeCamMouseXDecay { get; set; }
 
         [XmlElement(ElementName = "YawCameraLeft")]
-        public YawCameraLeftBinding YawCameraLeft { get; private set; }
+        public YawCameraLeftBinding YawCameraLeft { get; set; }
 
         [XmlElement(ElementName = "YawCameraRight")]
-        public YawCameraRightBinding YawCameraRight { get; private set; }
+        public YawCameraRightBinding YawCameraRight { get; set; }
 
         [XmlElement(ElementName = "RollCamera")]
-        public RollCameraBinding RollCamera { get; private set; }
+        public RollCameraBinding RollCamera { get; set; }
 
         [XmlElement(ElementName = "RollCameraLeft")]
-        public RollCameraLeftBinding RollCameraLeft { get; private set; }
+        public RollCameraLeftBinding RollCameraLeft { get; set; }
 
         [XmlElement(ElementName = "RollCameraRight")]
-        public RollCameraRightBinding RollCameraRight { get; private set; }
+        public RollCameraRightBinding RollCameraRight { get; set; }
 
         [XmlElement(ElementName = "ToggleRotationLock")]
-        public ToggleRotationLockBinding ToggleRotationLock { get; private set; }
+        public ToggleRotationLockBinding ToggleRotationLock { get; set; }
 
         [XmlElement(ElementName = "FixCameraRelativeToggle")]
-        public FixCameraRelativeToggleBinding FixCameraRelativeToggle { get; private set; }
+        public FixCameraRelativeToggleBinding FixCameraRelativeToggle { get; set; }
 
         [XmlElement(ElementName = "FixCameraWorldToggle")]
-        public FixCameraWorldToggleBinding FixCameraWorldToggle { get; private set; }
+        public FixCameraWorldToggleBinding FixCameraWorldToggle { get; set; }
 
         [XmlElement(ElementName = "QuitCamera")]
-        public QuitCameraBinding QuitCamera { get; private set; }
+        public QuitCameraBinding QuitCamera { get; set; }
 
         [XmlElement(ElementName = "ToggleAdvanceMode")]
-        public ToggleAdvanceModeBinding ToggleAdvanceMode { get; private set; }
+        public ToggleAdvanceModeBinding ToggleAdvanceMode { get; set; }
 
         [XmlElement(ElementName = "FreeCamZoomIn")]
-        public FreeCamZoomInBinding FreeCamZoomIn { get; private set; }
+        public FreeCamZoomInBinding FreeCamZoomIn { get; set; }
 
         [XmlElement(ElementName = "FreeCamZoomOut")]
-        public FreeCamZoomOutBinding FreeCamZoomOut { get; private set; }
+        public FreeCamZoomOutBinding FreeCamZoomOut { get; set; }
 
         [XmlElement(ElementName = "FStopDec")]
-        public FStopDecBinding FStopDec { get; private set; }
+        public FStopDecBinding FStopDec { get; set; }
 
         [XmlElement(ElementName = "FStopInc")]
-        public FStopIncBinding FStopInc { get; private set; }
+        public FStopIncBinding FStopInc { get; set; }
 
         [XmlElement(ElementName = "StoreEnableRotation")]
-        public StoreEnableRotationBinding StoreEnableRotation { get; private set; }
+        public StoreEnableRotationBinding StoreEnableRotation { get; set; }
 
         [XmlElement(ElementName = "StorePitchCamera")]
-        public StorePitchCameraBinding StorePitchCamera { get; private set; }
+        public StorePitchCameraBinding StorePitchCamera { get; set; }
 
         [XmlElement(ElementName = "StoreYawCamera")]
-        public StoreYawCameraBinding StoreYawCamera { get; private set; }
+        public StoreYawCameraBinding StoreYawCamera { get; set; }
 
         [XmlElement(ElementName = "StoreCamZoomIn")]
-        public StoreCamZoomInBinding StoreCamZoomIn { get; private set; }
+        public StoreCamZoomInBinding StoreCamZoomIn { get; set; }
 
         [XmlElement(ElementName = "StoreCamZoomOut")]
-        public StoreCamZoomOutBinding StoreCamZoomOut { get; private set; }
+        public StoreCamZoomOutBinding StoreCamZoomOut { get; set; }
 
         [XmlElement(ElementName = "StoreToggle")]
-        public StoreToggleBinding StoreToggle { get; private set; }
+        public StoreToggleBinding StoreToggle { get; set; }
 
         [XmlElement(ElementName = "CommanderCreator_Undo")]
-        public CommanderCreatorUndoBinding CommanderCreatorUndo { get; private set; }
+        public CommanderCreatorUndoBinding CommanderCreatorUndo { get; set; }
 
         [XmlElement(ElementName = "CommanderCreator_Redo")]
-        public CommanderCreatorRedoBinding CommanderCreatorRedo { get; private set; }
+        public CommanderCreatorRedoBinding CommanderCreatorRedo { get; set; }
 
         [XmlElement(ElementName = "CommanderCreator_Rotation_MouseToggle")]
-        public CommanderCreatorRotationMouseToggleBinding CommanderCreatorRotationMouseToggle { get; private set; }
+        public CommanderCreatorRotationMouseToggleBinding CommanderCreatorRotationMouseToggle { get; set; }
 
         [XmlElement(ElementName = "CommanderCreator_Rotation")]
-        public CommanderCreatorRotationBinding CommanderCreatorRotation { get; private set; }
+        public CommanderCreatorRotationBinding CommanderCreatorRotation { get; set; }
 
         [XmlElement(ElementName = "GalnetAudio_Play_Pause")]
-        public GalnetAudioPlayPauseBinding GalnetAudioPlayPause { get; private set; }
+        public GalnetAudioPlayPauseBinding GalnetAudioPlayPause { get; set; }
 
         [XmlElement(ElementName = "GalnetAudio_SkipForward")]
-        public GalnetAudioSkipForwardBinding GalnetAudioSkipForward { get; private set; }
+        public GalnetAudioSkipForwardBinding GalnetAudioSkipForward { get; set; }
 
         [XmlElement(ElementName = "GalnetAudio_SkipBackward")]
-        public GalnetAudioSkipBackwardBinding GalnetAudioSkipBackward { get; private set; }
+        public GalnetAudioSkipBackwardBinding GalnetAudioSkipBackward { get; set; }
 
         [XmlElement(ElementName = "GalnetAudio_ClearQueue")]
-        public GalnetAudioClearQueueBinding GalnetAudioClearQueue { get; private set; }
+        public GalnetAudioClearQueueBinding GalnetAudioClearQueue { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSCameraPitch")]
-        public ExplorationFSSCameraPitchBinding ExplorationFSSCameraPitch { get; private set; }
+        public ExplorationFSSCameraPitchBinding ExplorationFSSCameraPitch { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSCameraPitchIncreaseButton")]
-        public ExplorationFSSCameraPitchIncreaseButtonBinding ExplorationFSSCameraPitchIncreaseButton { get; private set; }
+        public ExplorationFSSCameraPitchIncreaseButtonBinding ExplorationFSSCameraPitchIncreaseButton { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSCameraPitchDecreaseButton")]
-        public ExplorationFSSCameraPitchDecreaseButtonBinding ExplorationFSSCameraPitchDecreaseButton { get; private set; }
+        public ExplorationFSSCameraPitchDecreaseButtonBinding ExplorationFSSCameraPitchDecreaseButton { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSCameraYaw")]
-        public ExplorationFSSCameraYawBinding ExplorationFSSCameraYaw { get; private set; }
+        public ExplorationFSSCameraYawBinding ExplorationFSSCameraYaw { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSCameraYawIncreaseButton")]
-        public ExplorationFSSCameraYawIncreaseButtonBinding ExplorationFSSCameraYawIncreaseButton { get; private set; }
+        public ExplorationFSSCameraYawIncreaseButtonBinding ExplorationFSSCameraYawIncreaseButton { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSCameraYawDecreaseButton")]
-        public ExplorationFSSCameraYawDecreaseButtonBinding ExplorationFSSCameraYawDecreaseButton { get; private set; }
+        public ExplorationFSSCameraYawDecreaseButtonBinding ExplorationFSSCameraYawDecreaseButton { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSZoomIn")]
-        public ExplorationFSSZoomInBinding ExplorationFSSZoomIn { get; private set; }
+        public ExplorationFSSZoomInBinding ExplorationFSSZoomIn { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSZoomOut")]
-        public ExplorationFSSZoomOutBinding ExplorationFSSZoomOut { get; private set; }
+        public ExplorationFSSZoomOutBinding ExplorationFSSZoomOut { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSMiniZoomIn")]
-        public ExplorationFSSMiniZoomInBinding ExplorationFSSMiniZoomIn { get; private set; }
+        public ExplorationFSSMiniZoomInBinding ExplorationFSSMiniZoomIn { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSMiniZoomOut")]
-        public ExplorationFSSMiniZoomOutBinding ExplorationFSSMiniZoomOut { get; private set; }
+        public ExplorationFSSMiniZoomOutBinding ExplorationFSSMiniZoomOut { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSRadioTuningX_Raw")]
-        public ExplorationFSSRadioTuningXRawBinding ExplorationFSSRadioTuningXRaw { get; private set; }
+        public ExplorationFSSRadioTuningXRawBinding ExplorationFSSRadioTuningXRaw { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSRadioTuningX_Increase")]
-        public ExplorationFSSRadioTuningXIncreaseBinding ExplorationFSSRadioTuningXIncrease { get; private set; }
+        public ExplorationFSSRadioTuningXIncreaseBinding ExplorationFSSRadioTuningXIncrease { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSRadioTuningX_Decrease")]
-        public ExplorationFSSRadioTuningXDecreaseBinding ExplorationFSSRadioTuningXDecrease { get; private set; }
+        public ExplorationFSSRadioTuningXDecreaseBinding ExplorationFSSRadioTuningXDecrease { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSRadioTuningAbsoluteX")]
-        public ExplorationFSSRadioTuningAbsoluteXBinding ExplorationFSSRadioTuningAbsoluteX { get; private set; }
+        public ExplorationFSSRadioTuningAbsoluteXBinding ExplorationFSSRadioTuningAbsoluteX { get; set; }
 
         [XmlElement(ElementName = "FSSTuningSensitivity")]
-        public FSSTuningSensitivityBinding FSSTuningSensitivity { get; private set; }
+        public FSSTuningSensitivityBinding FSSTuningSensitivity { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSDiscoveryScan")]
-        public ExplorationFSSDiscoveryScanBinding ExplorationFSSDiscoveryScan { get; private set; }
+        public ExplorationFSSDiscoveryScanBinding ExplorationFSSDiscoveryScan { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSQuit")]
-        public ExplorationFSSQuitBinding ExplorationFSSQuit { get; private set; }
+        public ExplorationFSSQuitBinding ExplorationFSSQuit { get; set; }
 
         [XmlElement(ElementName = "FSSMouseXMode")]
-        public FSSMouseXModeBinding FSSMouseXMode { get; private set; }
+        public FSSMouseXModeBinding FSSMouseXMode { get; set; }
 
         [XmlElement(ElementName = "FSSMouseXDecay")]
-        public FSSMouseXDecayBinding FSSMouseXDecay { get; private set; }
+        public FSSMouseXDecayBinding FSSMouseXDecay { get; set; }
 
         [XmlElement(ElementName = "FSSMouseYMode")]
-        public FSSMouseYModeBinding FSSMouseYMode { get; private set; }
+        public FSSMouseYModeBinding FSSMouseYMode { get; set; }
 
         [XmlElement(ElementName = "FSSMouseYDecay")]
-        public FSSMouseYDecayBinding FSSMouseYDecay { get; private set; }
+        public FSSMouseYDecayBinding FSSMouseYDecay { get; set; }
 
         [XmlElement(ElementName = "FSSMouseSensitivity")]
-        public FSSMouseSensitivityBinding FSSMouseSensitivity { get; private set; }
+        public FSSMouseSensitivityBinding FSSMouseSensitivity { get; set; }
 
         [XmlElement(ElementName = "FSSMouseDeadzone")]
-        public FSSMouseDeadzoneBinding FSSMouseDeadzone { get; private set; }
+        public FSSMouseDeadzoneBinding FSSMouseDeadzone { get; set; }
 
         [XmlElement(ElementName = "FSSMouseLinearity")]
-        public FSSMouseLinearityBinding FSSMouseLinearity { get; private set; }
+        public FSSMouseLinearityBinding FSSMouseLinearity { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSTarget")]
-        public ExplorationFSSTargetBinding ExplorationFSSTarget { get; private set; }
+        public ExplorationFSSTargetBinding ExplorationFSSTarget { get; set; }
 
         [XmlElement(ElementName = "ExplorationFSSShowHelp")]
-        public ExplorationFSSShowHelpBinding ExplorationFSSShowHelp { get; private set; }
+        public ExplorationFSSShowHelpBinding ExplorationFSSShowHelp { get; set; }
 
         [XmlElement(ElementName = "ExplorationSAAChangeScannedAreaViewToggle")]
-        public ExplorationSAAChangeScannedAreaViewToggleBinding ExplorationSAAChangeScannedAreaViewToggle { get; private set; }
+        public ExplorationSAAChangeScannedAreaViewToggleBinding ExplorationSAAChangeScannedAreaViewToggle { get; set; }
 
         [XmlElement(ElementName = "ExplorationSAAExitThirdPerson")]
-        public ExplorationSAAExitThirdPersonBinding ExplorationSAAExitThirdPerson { get; private set; }
+        public ExplorationSAAExitThirdPersonBinding ExplorationSAAExitThirdPerson { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonMouseXMode")]
-        public SAAThirdPersonMouseXModeBinding SAAThirdPersonMouseXMode { get; private set; }
+        public SAAThirdPersonMouseXModeBinding SAAThirdPersonMouseXMode { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonMouseXDecay")]
-        public SAAThirdPersonMouseXDecayBinding SAAThirdPersonMouseXDecay { get; private set; }
+        public SAAThirdPersonMouseXDecayBinding SAAThirdPersonMouseXDecay { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonMouseYMode")]
-        public SAAThirdPersonMouseYModeBinding SAAThirdPersonMouseYMode { get; private set; }
+        public SAAThirdPersonMouseYModeBinding SAAThirdPersonMouseYMode { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonMouseYDecay")]
-        public SAAThirdPersonMouseYDecayBinding SAAThirdPersonMouseYDecay { get; private set; }
+        public SAAThirdPersonMouseYDecayBinding SAAThirdPersonMouseYDecay { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonMouseSensitivity")]
-        public SAAThirdPersonMouseSensitivityBinding SAAThirdPersonMouseSensitivity { get; private set; }
+        public SAAThirdPersonMouseSensitivityBinding SAAThirdPersonMouseSensitivity { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonYawAxisRaw")]
-        public SAAThirdPersonYawAxisRawBinding SAAThirdPersonYawAxisRaw { get; private set; }
+        public SAAThirdPersonYawAxisRawBinding SAAThirdPersonYawAxisRaw { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonYawLeftButton")]
-        public SAAThirdPersonYawLeftButtonBinding SAAThirdPersonYawLeftButton { get; private set; }
+        public SAAThirdPersonYawLeftButtonBinding SAAThirdPersonYawLeftButton { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonYawRightButton")]
-        public SAAThirdPersonYawRightButtonBinding SAAThirdPersonYawRightButton { get; private set; }
+        public SAAThirdPersonYawRightButtonBinding SAAThirdPersonYawRightButton { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonPitchAxisRaw")]
-        public SAAThirdPersonPitchAxisRawBinding SAAThirdPersonPitchAxisRaw { get; private set; }
+        public SAAThirdPersonPitchAxisRawBinding SAAThirdPersonPitchAxisRaw { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonPitchUpButton")]
-        public SAAThirdPersonPitchUpButtonBinding SAAThirdPersonPitchUpButton { get; private set; }
+        public SAAThirdPersonPitchUpButtonBinding SAAThirdPersonPitchUpButton { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonPitchDownButton")]
-        public SAAThirdPersonPitchDownButtonBinding SAAThirdPersonPitchDownButton { get; private set; }
+        public SAAThirdPersonPitchDownButtonBinding SAAThirdPersonPitchDownButton { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonFovAxisRaw")]
-        public SAAThirdPersonFovAxisRawBinding SAAThirdPersonFovAxisRaw { get; private set; }
+        public SAAThirdPersonFovAxisRawBinding SAAThirdPersonFovAxisRaw { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonFovOutButton")]
-        public SAAThirdPersonFovOutButtonBinding SAAThirdPersonFovOutButton { get; private set; }
+        public SAAThirdPersonFovOutButtonBinding SAAThirdPersonFovOutButton { get; set; }
 
         [XmlElement(ElementName = "SAAThirdPersonFovInButton")]
-        public SAAThirdPersonFovInButtonBinding SAAThirdPersonFovInButton { get; private set; }
-
-        [XmlRoot(ElementName = "MouseXMode")]
-        public class MouseXModeBinding
-        {
-            internal MouseXModeBinding() { }
-
-            [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
-        }
-
-        [XmlRoot(ElementName = "MouseXDecay")]
-        public class MouseXDecayBinding
-        {
-            internal MouseXDecayBinding() { }
-
-            [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
-        }
-
-        [XmlRoot(ElementName = "MouseYMode")]
-        public class MouseYModeBinding
-        {
-            internal MouseYModeBinding() { }
-
-            [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
-        }
-
-        [XmlRoot(ElementName = "MouseYDecay")]
-        public class MouseYDecayBinding
-        {
-            internal MouseYDecayBinding() { }
-
-            [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
-        }
+        public SAAThirdPersonFovInButtonBinding SAAThirdPersonFovInButton { get; set; }
 
         [XmlRoot(ElementName = "Primary")]
         public class PrimaryBinding
@@ -1263,13 +1227,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal PrimaryBinding() { }
 
             [XmlAttribute(AttributeName = "Device")]
-            public string Device { get; private set; }
+            public string Device { get; set; }
 
             [XmlAttribute(AttributeName = "Key")]
-            public object Key { get; private set; }
+            public string Key { get; set; }
 
             [XmlElement(ElementName = "Modifier")]
-            public ModifierBinding Modifier { get; private set; }
+            public ModifierBinding Modifier { get; set; }
         }
 
         [XmlRoot(ElementName = "Secondary")]
@@ -1278,10 +1242,49 @@ namespace EliteAPI.Options.Bindings.Models
             internal SecondaryBinding() { }
 
             [XmlAttribute(AttributeName = "Device")]
-            public string Device { get; private set; }
+            public string Device { get; set; }
 
             [XmlAttribute(AttributeName = "Key")]
-            public object Key { get; private set; }
+            public string Key { get; set; }
+            
+            [XmlElement(ElementName = "Modifier")]
+            public ModifierBinding Modifier { get; set; }
+        }
+        
+        [XmlRoot(ElementName = "MouseXMode")]
+        public class MouseXModeBinding
+        {
+            internal MouseXModeBinding() { }
+
+            [XmlAttribute(AttributeName = "Value")]
+            public string Value { get; set; }
+        }
+
+        [XmlRoot(ElementName = "MouseXDecay")]
+        public class MouseXDecayBinding
+        {
+            internal MouseXDecayBinding() { }
+
+            [XmlAttribute(AttributeName = "Value")]
+            public int Value { get; set; }
+        }
+
+        [XmlRoot(ElementName = "MouseYMode")]
+        public class MouseYModeBinding
+        {
+            internal MouseYModeBinding() { }
+
+            [XmlAttribute(AttributeName = "Value")]
+            public string Value { get; set; }
+        }
+
+        [XmlRoot(ElementName = "MouseYDecay")]
+        public class MouseYDecayBinding
+        {
+            internal MouseYDecayBinding() { }
+
+            [XmlAttribute(AttributeName = "Value")]
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseReset")]
@@ -1290,10 +1293,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseResetBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseSensitivity")]
@@ -1302,7 +1305,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseSensitivityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseDecayRate")]
@@ -1311,7 +1314,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseDecayRateBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseDeadzone")]
@@ -1320,7 +1323,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseDeadzoneBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseLinearity")]
@@ -1329,7 +1332,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseLinearityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseGUI")]
@@ -1338,7 +1341,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseGUIBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "Binding")]
@@ -1347,10 +1350,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BindingBinding() { }
 
             [XmlAttribute(AttributeName = "Device")]
-            public string Device { get; private set; }
+            public string Device { get; set; }
 
             [XmlAttribute(AttributeName = "Key")]
-            public object Key { get; private set; }
+            public string Key { get; set; }
         }
 
         [XmlRoot(ElementName = "Inverted")]
@@ -1359,7 +1362,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal InvertedBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "Deadzone")]
@@ -1368,7 +1371,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal DeadzoneBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "YawAxisRaw")]
@@ -1377,13 +1380,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "YawLeftButton")]
@@ -1392,10 +1395,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawLeftButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "YawRightButton")]
@@ -1404,10 +1407,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawRightButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "YawToRollMode")]
@@ -1416,7 +1419,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawToRollModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "YawToRollSensitivity")]
@@ -1425,7 +1428,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawToRollSensitivityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "YawToRollMode_FAOff")]
@@ -1434,7 +1437,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawToRollModeFAOffBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public object Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "ToggleOn")]
@@ -1443,7 +1446,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal ToggleOnBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "YawToRollButton")]
@@ -1452,13 +1455,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawToRollButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "RollAxisRaw")]
@@ -1467,13 +1470,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal RollAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "RollLeftButton")]
@@ -1482,10 +1485,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal RollLeftButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "RollRightButton")]
@@ -1494,10 +1497,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal RollRightButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "PitchAxisRaw")]
@@ -1506,13 +1509,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal PitchAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "PitchUpButton")]
@@ -1521,10 +1524,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal PitchUpButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "PitchDownButton")]
@@ -1533,10 +1536,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal PitchDownButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "LateralThrustRaw")]
@@ -1545,13 +1548,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal LateralThrustRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "LeftThrustButton")]
@@ -1560,10 +1563,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal LeftThrustButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "RightThrustButton")]
@@ -1572,10 +1575,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal RightThrustButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VerticalThrustRaw")]
@@ -1584,13 +1587,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal VerticalThrustRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "UpThrustButton")]
@@ -1599,10 +1602,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UpThrustButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "DownThrustButton")]
@@ -1611,10 +1614,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal DownThrustButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "AheadThrust")]
@@ -1623,13 +1626,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal AheadThrustBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "ForwardThrustButton")]
@@ -1638,10 +1641,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ForwardThrustButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BackwardThrustButton")]
@@ -1650,10 +1653,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BackwardThrustButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "UseAlternateFlightValuesToggle")]
@@ -1662,13 +1665,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal UseAlternateFlightValuesToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "YawAxisAlternate")]
@@ -1677,13 +1680,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawAxisAlternateBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "RollAxisAlternate")]
@@ -1692,13 +1695,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal RollAxisAlternateBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "PitchAxisAlternate")]
@@ -1707,13 +1710,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal PitchAxisAlternateBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "LateralThrustAlternate")]
@@ -1722,13 +1725,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal LateralThrustAlternateBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "VerticalThrustAlternate")]
@@ -1737,13 +1740,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal VerticalThrustAlternateBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "ThrottleAxis")]
@@ -1752,13 +1755,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ThrottleAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "ThrottleRange")]
@@ -1767,7 +1770,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal ThrottleRangeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public object Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "ToggleReverseThrottleInput")]
@@ -1776,13 +1779,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ToggleReverseThrottleInputBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "ForwardKey")]
@@ -1791,10 +1794,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ForwardKeyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BackwardKey")]
@@ -1803,10 +1806,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BackwardKeyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ThrottleIncrement")]
@@ -1815,7 +1818,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal ThrottleIncrementBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "Modifier")]
@@ -1824,10 +1827,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ModifierBinding() { }
 
             [XmlAttribute(AttributeName = "Device")]
-            public string Device { get; private set; }
+            public string Device { get; set; }
 
             [XmlAttribute(AttributeName = "Key")]
-            public string Key { get; private set; }
+            public string Key { get; set; }
         }
 
         [XmlRoot(ElementName = "SetSpeedMinus100")]
@@ -1836,10 +1839,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SetSpeedMinus100Binding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SetSpeedMinus75")]
@@ -1848,10 +1851,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SetSpeedMinus75Binding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SetSpeedMinus50")]
@@ -1860,10 +1863,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SetSpeedMinus50Binding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SetSpeedMinus25")]
@@ -1872,10 +1875,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SetSpeedMinus25Binding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SetSpeedZero")]
@@ -1884,10 +1887,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SetSpeedZeroBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SetSpeed25")]
@@ -1896,10 +1899,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SetSpeed25Binding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SetSpeed50")]
@@ -1908,10 +1911,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SetSpeed50Binding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SetSpeed75")]
@@ -1920,10 +1923,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SetSpeed75Binding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SetSpeed100")]
@@ -1932,10 +1935,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SetSpeed100Binding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "YawAxis_Landing")]
@@ -1944,13 +1947,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawAxisLandingBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "YawLeftButton_Landing")]
@@ -1959,10 +1962,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawLeftButtonLandingBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "YawRightButton_Landing")]
@@ -1971,10 +1974,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawRightButtonLandingBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "YawToRollMode_Landing")]
@@ -1983,7 +1986,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawToRollModeLandingBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public object Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "PitchAxis_Landing")]
@@ -1992,13 +1995,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal PitchAxisLandingBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "PitchUpButton_Landing")]
@@ -2007,10 +2010,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal PitchUpButtonLandingBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "PitchDownButton_Landing")]
@@ -2019,10 +2022,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal PitchDownButtonLandingBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "RollAxis_Landing")]
@@ -2031,13 +2034,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal RollAxisLandingBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "RollLeftButton_Landing")]
@@ -2046,10 +2049,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal RollLeftButtonLandingBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "RollRightButton_Landing")]
@@ -2058,10 +2061,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal RollRightButtonLandingBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "LateralThrust_Landing")]
@@ -2070,13 +2073,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal LateralThrustLandingBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "LeftThrustButton_Landing")]
@@ -2085,10 +2088,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal LeftThrustButtonLandingBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "RightThrustButton_Landing")]
@@ -2097,10 +2100,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal RightThrustButtonLandingBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VerticalThrust_Landing")]
@@ -2109,13 +2112,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal VerticalThrustLandingBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "UpThrustButton_Landing")]
@@ -2124,10 +2127,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UpThrustButtonLandingBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "DownThrustButton_Landing")]
@@ -2136,10 +2139,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal DownThrustButtonLandingBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "AheadThrust_Landing")]
@@ -2148,13 +2151,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal AheadThrustLandingBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "ForwardThrustButton_Landing")]
@@ -2163,10 +2166,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ForwardThrustButtonLandingBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BackwardThrustButton_Landing")]
@@ -2175,10 +2178,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BackwardThrustButtonLandingBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ToggleFlightAssist")]
@@ -2187,13 +2190,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ToggleFlightAssistBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "UseBoostJuice")]
@@ -2202,10 +2205,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UseBoostJuiceBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "HyperSuperCombination")]
@@ -2214,10 +2217,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal HyperSuperCombinationBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "Supercruise")]
@@ -2226,10 +2229,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SupercruiseBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "Hyperspace")]
@@ -2238,10 +2241,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal HyperspaceBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "DisableRotationCorrectToggle")]
@@ -2250,13 +2253,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal DisableRotationCorrectToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "OrbitLinesToggle")]
@@ -2265,10 +2268,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal OrbitLinesToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SelectTarget")]
@@ -2277,10 +2280,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SelectTargetBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CycleNextTarget")]
@@ -2289,10 +2292,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CycleNextTargetBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CyclePreviousTarget")]
@@ -2301,10 +2304,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CyclePreviousTargetBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SelectHighestThreat")]
@@ -2313,10 +2316,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SelectHighestThreatBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CycleNextHostileTarget")]
@@ -2325,10 +2328,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CycleNextHostileTargetBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CyclePreviousHostileTarget")]
@@ -2337,10 +2340,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CyclePreviousHostileTargetBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "TargetWingman0")]
@@ -2349,10 +2352,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal TargetWingman0Binding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "TargetWingman1")]
@@ -2361,10 +2364,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal TargetWingman1Binding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "TargetWingman2")]
@@ -2373,10 +2376,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal TargetWingman2Binding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SelectTargetsTarget")]
@@ -2385,10 +2388,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SelectTargetsTargetBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "WingNavLock")]
@@ -2397,10 +2400,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal WingNavLockBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CycleNextSubsystem")]
@@ -2409,10 +2412,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CycleNextSubsystemBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CyclePreviousSubsystem")]
@@ -2421,10 +2424,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CyclePreviousSubsystemBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "TargetNextRouteSystem")]
@@ -2433,10 +2436,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal TargetNextRouteSystemBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "PrimaryFire")]
@@ -2445,10 +2448,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal PrimaryFireBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SecondaryFire")]
@@ -2457,10 +2460,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SecondaryFireBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CycleFireGroupNext")]
@@ -2469,10 +2472,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CycleFireGroupNextBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CycleFireGroupPrevious")]
@@ -2481,10 +2484,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CycleFireGroupPreviousBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "DeployHardpointToggle")]
@@ -2493,10 +2496,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal DeployHardpointToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "DeployHardpointsOnFire")]
@@ -2505,7 +2508,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal DeployHardpointsOnFireBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "ToggleButtonUpInput")]
@@ -2514,13 +2517,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ToggleButtonUpInputBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "DeployHeatSink")]
@@ -2529,10 +2532,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal DeployHeatSinkBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ShipSpotLightToggle")]
@@ -2541,10 +2544,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ShipSpotLightToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "RadarRangeAxis")]
@@ -2553,13 +2556,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal RadarRangeAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "RadarIncreaseRange")]
@@ -2568,10 +2571,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal RadarIncreaseRangeBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "RadarDecreaseRange")]
@@ -2580,10 +2583,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal RadarDecreaseRangeBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "IncreaseEnginesPower")]
@@ -2592,10 +2595,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal IncreaseEnginesPowerBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "IncreaseWeaponsPower")]
@@ -2604,10 +2607,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal IncreaseWeaponsPowerBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "IncreaseSystemsPower")]
@@ -2616,10 +2619,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal IncreaseSystemsPowerBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ResetPowerDistribution")]
@@ -2628,10 +2631,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ResetPowerDistributionBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "HMDReset")]
@@ -2640,10 +2643,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal HMDResetBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ToggleCargoScoop")]
@@ -2652,13 +2655,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ToggleCargoScoopBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "EjectAllCargo")]
@@ -2667,10 +2670,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal EjectAllCargoBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "LandingGearToggle")]
@@ -2679,10 +2682,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal LandingGearToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MicrophoneMute")]
@@ -2691,13 +2694,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal MicrophoneMuteBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "MuteButtonMode")]
@@ -2706,7 +2709,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MuteButtonModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "CqcMuteButtonMode")]
@@ -2715,7 +2718,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal CqcMuteButtonModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "UseShieldCell")]
@@ -2724,10 +2727,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UseShieldCellBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FireChaffLauncher")]
@@ -2736,10 +2739,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FireChaffLauncherBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ChargeECM")]
@@ -2748,10 +2751,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ChargeECMBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "EnableRumbleTrigger")]
@@ -2760,7 +2763,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal EnableRumbleTriggerBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "EnableMenuGroups")]
@@ -2769,7 +2772,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal EnableMenuGroupsBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "WeaponColourToggle")]
@@ -2778,10 +2781,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal WeaponColourToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "EngineColourToggle")]
@@ -2790,10 +2793,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal EngineColourToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "NightVisionToggle")]
@@ -2802,10 +2805,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal NightVisionToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "UIFocus")]
@@ -2814,10 +2817,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UIFocusBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "UIFocusMode")]
@@ -2826,7 +2829,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal UIFocusModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "FocusLeftPanel")]
@@ -2835,10 +2838,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FocusLeftPanelBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FocusCommsPanel")]
@@ -2847,10 +2850,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FocusCommsPanelBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FocusOnTextEntryField")]
@@ -2859,7 +2862,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal FocusOnTextEntryFieldBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "QuickCommsPanel")]
@@ -2868,10 +2871,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal QuickCommsPanelBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FocusRadarPanel")]
@@ -2880,10 +2883,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FocusRadarPanelBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FocusRightPanel")]
@@ -2892,10 +2895,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FocusRightPanelBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "LeftPanelFocusOptions")]
@@ -2904,7 +2907,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal LeftPanelFocusOptionsBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "CommsPanelFocusOptions")]
@@ -2913,7 +2916,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal CommsPanelFocusOptionsBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "RolePanelFocusOptions")]
@@ -2922,7 +2925,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal RolePanelFocusOptionsBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "RightPanelFocusOptions")]
@@ -2931,7 +2934,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal RightPanelFocusOptionsBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "EnableCameraLockOn")]
@@ -2940,7 +2943,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal EnableCameraLockOnBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "GalaxyMapOpen")]
@@ -2949,10 +2952,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal GalaxyMapOpenBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SystemMapOpen")]
@@ -2961,10 +2964,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SystemMapOpenBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ShowPGScoreSummaryInput")]
@@ -2973,13 +2976,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ShowPGScoreSummaryInputBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadLookToggle")]
@@ -2988,13 +2991,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadLookToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "Pause")]
@@ -3003,10 +3006,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal PauseBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FriendsMenu")]
@@ -3015,10 +3018,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FriendsMenuBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "OpenCodexGoToDiscovery")]
@@ -3027,10 +3030,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal OpenCodexGoToDiscoveryBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "PlayerHUDModeToggle")]
@@ -3039,10 +3042,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal PlayerHUDModeToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSEnter")]
@@ -3051,10 +3054,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSEnterBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "UI_Up")]
@@ -3063,10 +3066,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UIUpBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "UI_Down")]
@@ -3075,10 +3078,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UIDownBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "UI_Left")]
@@ -3087,10 +3090,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UILeftBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "UI_Right")]
@@ -3099,10 +3102,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UIRightBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "UI_Select")]
@@ -3111,10 +3114,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UISelectBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "UI_Back")]
@@ -3123,10 +3126,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UIBackBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "UI_Toggle")]
@@ -3135,10 +3138,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UIToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CycleNextPanel")]
@@ -3147,10 +3150,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CycleNextPanelBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CyclePreviousPanel")]
@@ -3159,10 +3162,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CyclePreviousPanelBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CycleNextPage")]
@@ -3171,10 +3174,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CycleNextPageBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CyclePreviousPage")]
@@ -3183,10 +3186,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CyclePreviousPageBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseHeadlook")]
@@ -3195,7 +3198,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseHeadlookBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseHeadlookInvert")]
@@ -3204,7 +3207,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseHeadlookInvertBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseHeadlookSensitivity")]
@@ -3213,7 +3216,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseHeadlookSensitivityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadlookDefault")]
@@ -3222,7 +3225,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadlookDefaultBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadlookIncrement")]
@@ -3231,7 +3234,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadlookIncrementBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadlookMode")]
@@ -3240,7 +3243,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadlookModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadlookResetOnToggle")]
@@ -3249,7 +3252,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadlookResetOnToggleBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadlookSensitivity")]
@@ -3258,7 +3261,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadlookSensitivityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadlookSmoothing")]
@@ -3267,7 +3270,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadlookSmoothingBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadLookReset")]
@@ -3276,10 +3279,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadLookResetBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadLookPitchUp")]
@@ -3288,10 +3291,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadLookPitchUpBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadLookPitchDown")]
@@ -3300,10 +3303,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadLookPitchDownBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadLookPitchAxisRaw")]
@@ -3312,13 +3315,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadLookPitchAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadLookYawLeft")]
@@ -3327,10 +3330,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadLookYawLeftBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadLookYawRight")]
@@ -3339,10 +3342,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadLookYawRightBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadLookYawAxis")]
@@ -3351,13 +3354,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadLookYawAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "MotionHeadlook")]
@@ -3366,7 +3369,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MotionHeadlookBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadlookMotionSensitivity")]
@@ -3375,7 +3378,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadlookMotionSensitivityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "yawRotateHeadlook")]
@@ -3384,7 +3387,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawRotateHeadlookBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "CamPitchAxis")]
@@ -3393,13 +3396,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamPitchAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "CamPitchUp")]
@@ -3408,10 +3411,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamPitchUpBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CamPitchDown")]
@@ -3420,10 +3423,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamPitchDownBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CamYawAxis")]
@@ -3432,13 +3435,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamYawAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "CamYawLeft")]
@@ -3447,10 +3450,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamYawLeftBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CamYawRight")]
@@ -3459,10 +3462,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamYawRightBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CamTranslateYAxis")]
@@ -3471,13 +3474,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamTranslateYAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "CamTranslateForward")]
@@ -3486,10 +3489,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamTranslateForwardBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CamTranslateBackward")]
@@ -3498,10 +3501,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamTranslateBackwardBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CamTranslateXAxis")]
@@ -3510,13 +3513,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamTranslateXAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "CamTranslateLeft")]
@@ -3525,10 +3528,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamTranslateLeftBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CamTranslateRight")]
@@ -3537,10 +3540,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamTranslateRightBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CamTranslateZAxis")]
@@ -3549,13 +3552,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamTranslateZAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "CamTranslateUp")]
@@ -3564,10 +3567,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamTranslateUpBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CamTranslateDown")]
@@ -3576,10 +3579,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamTranslateDownBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CamZoomAxis")]
@@ -3588,13 +3591,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamZoomAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "CamZoomIn")]
@@ -3603,10 +3606,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamZoomInBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CamZoomOut")]
@@ -3615,10 +3618,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamZoomOutBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CamTranslateZHold")]
@@ -3627,13 +3630,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal CamTranslateZHoldBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "GalaxyMapHome")]
@@ -3642,10 +3645,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal GalaxyMapHomeBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ToggleDriveAssist")]
@@ -3654,13 +3657,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ToggleDriveAssistBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "DriveAssistDefault")]
@@ -3669,7 +3672,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal DriveAssistDefaultBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseBuggySteeringXMode")]
@@ -3678,7 +3681,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseBuggySteeringXModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public object Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseBuggySteeringXDecay")]
@@ -3687,7 +3690,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseBuggySteeringXDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseBuggyRollingXMode")]
@@ -3696,7 +3699,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseBuggyRollingXModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public object Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseBuggyRollingXDecay")]
@@ -3705,7 +3708,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseBuggyRollingXDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseBuggyYMode")]
@@ -3714,7 +3717,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseBuggyYModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public object Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseBuggyYDecay")]
@@ -3723,7 +3726,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseBuggyYDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "SteeringAxis")]
@@ -3732,13 +3735,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal SteeringAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "SteerLeftButton")]
@@ -3747,10 +3750,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SteerLeftButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SteerRightButton")]
@@ -3759,10 +3762,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SteerRightButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyRollAxisRaw")]
@@ -3771,13 +3774,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyRollAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyRollLeftButton")]
@@ -3786,10 +3789,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyRollLeftButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyRollRightButton")]
@@ -3798,10 +3801,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyRollRightButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyPitchAxis")]
@@ -3810,13 +3813,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyPitchAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyPitchUpButton")]
@@ -3825,10 +3828,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyPitchUpButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyPitchDownButton")]
@@ -3837,10 +3840,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyPitchDownButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VerticalThrustersButton")]
@@ -3849,13 +3852,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal VerticalThrustersButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyPrimaryFireButton")]
@@ -3864,10 +3867,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyPrimaryFireButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggySecondaryFireButton")]
@@ -3876,10 +3879,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggySecondaryFireButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "AutoBreakBuggyButton")]
@@ -3888,13 +3891,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal AutoBreakBuggyButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadlightsBuggyButton")]
@@ -3903,10 +3906,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadlightsBuggyButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ToggleBuggyTurretButton")]
@@ -3915,10 +3918,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ToggleBuggyTurretButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyCycleFireGroupNext")]
@@ -3927,10 +3930,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyCycleFireGroupNextBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyCycleFireGroupPrevious")]
@@ -3939,10 +3942,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyCycleFireGroupPreviousBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SelectTarget_Buggy")]
@@ -3951,10 +3954,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SelectTargetBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseTurretXMode")]
@@ -3963,7 +3966,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseTurretXModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseTurretXDecay")]
@@ -3972,7 +3975,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseTurretXDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseTurretYMode")]
@@ -3981,7 +3984,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseTurretYModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MouseTurretYDecay")]
@@ -3990,7 +3993,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MouseTurretYDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyTurretYawAxisRaw")]
@@ -3999,13 +4002,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyTurretYawAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyTurretYawLeftButton")]
@@ -4014,10 +4017,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyTurretYawLeftButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyTurretYawRightButton")]
@@ -4026,10 +4029,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyTurretYawRightButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyTurretPitchAxisRaw")]
@@ -4038,13 +4041,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyTurretPitchAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyTurretPitchUpButton")]
@@ -4053,10 +4056,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyTurretPitchUpButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyTurretPitchDownButton")]
@@ -4065,10 +4068,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyTurretPitchDownButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyTurretMouseSensitivity")]
@@ -4077,7 +4080,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyTurretMouseSensitivityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyTurretMouseDeadzone")]
@@ -4086,7 +4089,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyTurretMouseDeadzoneBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyTurretMouseLinearity")]
@@ -4095,7 +4098,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyTurretMouseLinearityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "DriveSpeedAxis")]
@@ -4104,13 +4107,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal DriveSpeedAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyThrottleRange")]
@@ -4119,7 +4122,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyThrottleRangeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyToggleReverseThrottleInput")]
@@ -4128,13 +4131,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyToggleReverseThrottleInputBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "BuggyThrottleIncrement")]
@@ -4143,7 +4146,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal BuggyThrottleIncrementBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "IncreaseSpeedButtonMax")]
@@ -4152,10 +4155,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal IncreaseSpeedButtonMaxBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "DecreaseSpeedButtonMax")]
@@ -4164,10 +4167,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal DecreaseSpeedButtonMaxBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "IncreaseSpeedButtonPartial")]
@@ -4176,13 +4179,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal IncreaseSpeedButtonPartialBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "DecreaseSpeedButtonPartial")]
@@ -4191,13 +4194,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal DecreaseSpeedButtonPartialBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "IncreaseEnginesPower_Buggy")]
@@ -4206,10 +4209,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal IncreaseEnginesPowerBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "IncreaseWeaponsPower_Buggy")]
@@ -4218,10 +4221,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal IncreaseWeaponsPowerBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "IncreaseSystemsPower_Buggy")]
@@ -4230,10 +4233,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal IncreaseSystemsPowerBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ResetPowerDistribution_Buggy")]
@@ -4242,10 +4245,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ResetPowerDistributionBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ToggleCargoScoop_Buggy")]
@@ -4254,13 +4257,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ToggleCargoScoopBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "EjectAllCargo_Buggy")]
@@ -4269,10 +4272,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal EjectAllCargoBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "RecallDismissShip")]
@@ -4281,10 +4284,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal RecallDismissShipBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "UIFocus_Buggy")]
@@ -4293,10 +4296,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal UIFocusBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FocusLeftPanel_Buggy")]
@@ -4305,10 +4308,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FocusLeftPanelBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FocusCommsPanel_Buggy")]
@@ -4317,10 +4320,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FocusCommsPanelBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "QuickCommsPanel_Buggy")]
@@ -4329,10 +4332,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal QuickCommsPanelBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FocusRadarPanel_Buggy")]
@@ -4341,10 +4344,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FocusRadarPanelBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FocusRightPanel_Buggy")]
@@ -4353,10 +4356,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FocusRightPanelBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "GalaxyMapOpen_Buggy")]
@@ -4365,10 +4368,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal GalaxyMapOpenBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SystemMapOpen_Buggy")]
@@ -4377,10 +4380,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SystemMapOpenBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "OpenCodexGoToDiscovery_Buggy")]
@@ -4389,10 +4392,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal OpenCodexGoToDiscoveryBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "PlayerHUDModeToggle_Buggy")]
@@ -4401,10 +4404,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal PlayerHUDModeToggleBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "HeadLookToggle_Buggy")]
@@ -4413,13 +4416,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal HeadLookToggleBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewToggleMode")]
@@ -4428,10 +4431,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewToggleModeBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewPrimaryFire")]
@@ -4440,10 +4443,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewPrimaryFireBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewSecondaryFire")]
@@ -4452,10 +4455,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewSecondaryFireBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewPrimaryUtilityFire")]
@@ -4464,10 +4467,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewPrimaryUtilityFireBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewSecondaryUtilityFire")]
@@ -4476,10 +4479,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewSecondaryUtilityFireBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonMouseXMode")]
@@ -4488,7 +4491,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonMouseXModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonMouseXDecay")]
@@ -4497,7 +4500,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonMouseXDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonMouseYMode")]
@@ -4506,7 +4509,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonMouseYModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonMouseYDecay")]
@@ -4515,7 +4518,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonMouseYDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonYawAxisRaw")]
@@ -4524,13 +4527,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonYawAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonYawLeftButton")]
@@ -4539,10 +4542,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonYawLeftButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonYawRightButton")]
@@ -4551,10 +4554,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonYawRightButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonPitchAxisRaw")]
@@ -4563,13 +4566,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonPitchAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonPitchUpButton")]
@@ -4578,10 +4581,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonPitchUpButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonPitchDownButton")]
@@ -4590,10 +4593,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonPitchDownButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonMouseSensitivity")]
@@ -4602,7 +4605,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonMouseSensitivityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonFovAxisRaw")]
@@ -4611,13 +4614,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonFovAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonFovOutButton")]
@@ -4626,10 +4629,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonFovOutButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewThirdPersonFovInButton")]
@@ -4638,10 +4641,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewThirdPersonFovInButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewCockpitUICycleForward")]
@@ -4650,10 +4653,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewCockpitUICycleForwardBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MultiCrewCockpitUICycleBackward")]
@@ -4662,10 +4665,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MultiCrewCockpitUICycleBackwardBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "OrderRequestDock")]
@@ -4674,10 +4677,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal OrderRequestDockBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "OrderDefensiveBehaviour")]
@@ -4686,10 +4689,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal OrderDefensiveBehaviourBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "OrderAggressiveBehaviour")]
@@ -4698,10 +4701,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal OrderAggressiveBehaviourBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "OrderFocusTarget")]
@@ -4710,10 +4713,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal OrderFocusTargetBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "OrderHoldFire")]
@@ -4722,10 +4725,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal OrderHoldFireBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "OrderHoldPosition")]
@@ -4734,10 +4737,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal OrderHoldPositionBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "OrderFollow")]
@@ -4746,10 +4749,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal OrderFollowBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "OpenOrders")]
@@ -4758,10 +4761,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal OpenOrdersBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "PhotoCameraToggle")]
@@ -4770,10 +4773,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal PhotoCameraToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "PhotoCameraToggle_Buggy")]
@@ -4782,10 +4785,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal PhotoCameraToggleBuggyBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VanityCameraScrollLeft")]
@@ -4794,10 +4797,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal VanityCameraScrollLeftBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VanityCameraScrollRight")]
@@ -4806,10 +4809,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal VanityCameraScrollRightBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ToggleFreeCam")]
@@ -4818,10 +4821,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ToggleFreeCamBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VanityCameraOne")]
@@ -4830,10 +4833,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal VanityCameraOneBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VanityCameraTwo")]
@@ -4842,10 +4845,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal VanityCameraTwoBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VanityCameraThree")]
@@ -4854,10 +4857,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal VanityCameraThreeBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VanityCameraFour")]
@@ -4866,10 +4869,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal VanityCameraFourBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VanityCameraFive")]
@@ -4878,10 +4881,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal VanityCameraFiveBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VanityCameraSix")]
@@ -4890,10 +4893,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal VanityCameraSixBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VanityCameraSeven")]
@@ -4902,10 +4905,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal VanityCameraSevenBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VanityCameraEight")]
@@ -4914,10 +4917,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal VanityCameraEightBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "VanityCameraNine")]
@@ -4926,10 +4929,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal VanityCameraNineBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FreeCamToggleHUD")]
@@ -4938,10 +4941,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FreeCamToggleHUDBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FreeCamSpeedInc")]
@@ -4950,10 +4953,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FreeCamSpeedIncBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FreeCamSpeedDec")]
@@ -4962,10 +4965,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FreeCamSpeedDecBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MoveFreeCamY")]
@@ -4974,13 +4977,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal MoveFreeCamYBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "ThrottleRangeFreeCam")]
@@ -4989,7 +4992,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal ThrottleRangeFreeCamBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public object Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "ToggleReverseThrottleInputFreeCam")]
@@ -4998,13 +5001,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ToggleReverseThrottleInputFreeCamBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "MoveFreeCamForward")]
@@ -5013,10 +5016,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MoveFreeCamForwardBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MoveFreeCamBackwards")]
@@ -5025,10 +5028,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MoveFreeCamBackwardsBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MoveFreeCamX")]
@@ -5037,13 +5040,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal MoveFreeCamXBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "MoveFreeCamRight")]
@@ -5052,10 +5055,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MoveFreeCamRightBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MoveFreeCamLeft")]
@@ -5064,10 +5067,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MoveFreeCamLeftBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MoveFreeCamZ")]
@@ -5076,13 +5079,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal MoveFreeCamZBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "MoveFreeCamUpAxis")]
@@ -5091,13 +5094,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal MoveFreeCamUpAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "MoveFreeCamDownAxis")]
@@ -5106,13 +5109,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal MoveFreeCamDownAxisBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "MoveFreeCamUp")]
@@ -5121,10 +5124,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MoveFreeCamUpBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "MoveFreeCamDown")]
@@ -5133,10 +5136,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal MoveFreeCamDownBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "PitchCameraMouse")]
@@ -5145,7 +5148,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal PitchCameraMouseBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "YawCameraMouse")]
@@ -5154,7 +5157,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawCameraMouseBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "PitchCamera")]
@@ -5163,13 +5166,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal PitchCameraBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "FreeCamMouseSensitivity")]
@@ -5178,7 +5181,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal FreeCamMouseSensitivityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "FreeCamMouseYDecay")]
@@ -5187,7 +5190,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal FreeCamMouseYDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "PitchCameraUp")]
@@ -5196,10 +5199,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal PitchCameraUpBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "PitchCameraDown")]
@@ -5208,10 +5211,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal PitchCameraDownBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "YawCamera")]
@@ -5220,13 +5223,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawCameraBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "FreeCamMouseXDecay")]
@@ -5235,7 +5238,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal FreeCamMouseXDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "YawCameraLeft")]
@@ -5244,10 +5247,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawCameraLeftBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "YawCameraRight")]
@@ -5256,10 +5259,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal YawCameraRightBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "RollCamera")]
@@ -5268,13 +5271,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal RollCameraBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "RollCameraLeft")]
@@ -5283,10 +5286,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal RollCameraLeftBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "RollCameraRight")]
@@ -5295,10 +5298,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal RollCameraRightBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ToggleRotationLock")]
@@ -5307,10 +5310,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ToggleRotationLockBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FixCameraRelativeToggle")]
@@ -5319,10 +5322,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FixCameraRelativeToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FixCameraWorldToggle")]
@@ -5331,10 +5334,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FixCameraWorldToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "QuitCamera")]
@@ -5343,10 +5346,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal QuitCameraBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ToggleAdvanceMode")]
@@ -5355,10 +5358,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ToggleAdvanceModeBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FreeCamZoomIn")]
@@ -5367,10 +5370,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FreeCamZoomInBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FreeCamZoomOut")]
@@ -5379,10 +5382,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FreeCamZoomOutBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FStopDec")]
@@ -5391,10 +5394,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FStopDecBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FStopInc")]
@@ -5403,10 +5406,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal FStopIncBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "StoreEnableRotation")]
@@ -5415,10 +5418,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal StoreEnableRotationBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "StorePitchCamera")]
@@ -5427,13 +5430,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal StorePitchCameraBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "StoreYawCamera")]
@@ -5442,13 +5445,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal StoreYawCameraBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "StoreCamZoomIn")]
@@ -5457,10 +5460,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal StoreCamZoomInBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "StoreCamZoomOut")]
@@ -5469,10 +5472,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal StoreCamZoomOutBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "StoreToggle")]
@@ -5481,10 +5484,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal StoreToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CommanderCreator_Undo")]
@@ -5493,10 +5496,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CommanderCreatorUndoBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CommanderCreator_Redo")]
@@ -5505,10 +5508,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CommanderCreatorRedoBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CommanderCreator_Rotation_MouseToggle")]
@@ -5517,10 +5520,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal CommanderCreatorRotationMouseToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "CommanderCreator_Rotation")]
@@ -5529,13 +5532,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal CommanderCreatorRotationBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "GalnetAudio_Play_Pause")]
@@ -5544,10 +5547,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal GalnetAudioPlayPauseBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "GalnetAudio_SkipForward")]
@@ -5556,10 +5559,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal GalnetAudioSkipForwardBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "GalnetAudio_SkipBackward")]
@@ -5568,10 +5571,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal GalnetAudioSkipBackwardBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "GalnetAudio_ClearQueue")]
@@ -5580,10 +5583,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal GalnetAudioClearQueueBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSCameraPitch")]
@@ -5592,13 +5595,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSCameraPitchBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSCameraPitchIncreaseButton")]
@@ -5607,10 +5610,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSCameraPitchIncreaseButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSCameraPitchDecreaseButton")]
@@ -5619,10 +5622,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSCameraPitchDecreaseButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSCameraYaw")]
@@ -5631,13 +5634,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSCameraYawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSCameraYawIncreaseButton")]
@@ -5646,10 +5649,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSCameraYawIncreaseButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSCameraYawDecreaseButton")]
@@ -5658,10 +5661,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSCameraYawDecreaseButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSZoomIn")]
@@ -5670,10 +5673,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSZoomInBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSZoomOut")]
@@ -5682,10 +5685,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSZoomOutBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSMiniZoomIn")]
@@ -5694,10 +5697,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSMiniZoomInBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSMiniZoomOut")]
@@ -5706,10 +5709,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSMiniZoomOutBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSRadioTuningX_Raw")]
@@ -5718,13 +5721,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSRadioTuningXRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSRadioTuningX_Increase")]
@@ -5733,10 +5736,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSRadioTuningXIncreaseBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSRadioTuningX_Decrease")]
@@ -5745,10 +5748,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSRadioTuningXDecreaseBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSRadioTuningAbsoluteX")]
@@ -5757,13 +5760,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSRadioTuningAbsoluteXBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "FSSTuningSensitivity")]
@@ -5772,7 +5775,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal FSSTuningSensitivityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSDiscoveryScan")]
@@ -5781,10 +5784,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSDiscoveryScanBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSQuit")]
@@ -5793,10 +5796,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSQuitBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "FSSMouseXMode")]
@@ -5805,7 +5808,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal FSSMouseXModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "FSSMouseXDecay")]
@@ -5814,7 +5817,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal FSSMouseXDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "FSSMouseYMode")]
@@ -5823,7 +5826,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal FSSMouseYModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public string Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "FSSMouseYDecay")]
@@ -5832,7 +5835,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal FSSMouseYDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "FSSMouseSensitivity")]
@@ -5841,7 +5844,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal FSSMouseSensitivityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "FSSMouseDeadzone")]
@@ -5850,7 +5853,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal FSSMouseDeadzoneBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "FSSMouseLinearity")]
@@ -5859,7 +5862,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal FSSMouseLinearityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSTarget")]
@@ -5868,10 +5871,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSTargetBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationFSSShowHelp")]
@@ -5880,10 +5883,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationFSSShowHelpBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationSAAChangeScannedAreaViewToggle")]
@@ -5892,13 +5895,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationSAAChangeScannedAreaViewToggleBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
 
             [XmlElement(ElementName = "ToggleOn")]
-            public ToggleOnBinding ToggleOn { get; private set; }
+            public ToggleOnBinding ToggleOn { get; set; }
         }
 
         [XmlRoot(ElementName = "ExplorationSAAExitThirdPerson")]
@@ -5907,10 +5910,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal ExplorationSAAExitThirdPersonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonMouseXMode")]
@@ -5919,7 +5922,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonMouseXModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public object Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonMouseXDecay")]
@@ -5928,7 +5931,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonMouseXDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonMouseYMode")]
@@ -5937,7 +5940,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonMouseYModeBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public object Value { get; private set; }
+            public string Value { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonMouseYDecay")]
@@ -5946,7 +5949,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonMouseYDecayBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public int Value { get; private set; }
+            public int Value { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonMouseSensitivity")]
@@ -5955,7 +5958,7 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonMouseSensitivityBinding() { }
 
             [XmlAttribute(AttributeName = "Value")]
-            public double Value { get; private set; }
+            public double Value { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonYawAxisRaw")]
@@ -5964,13 +5967,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonYawAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonYawLeftButton")]
@@ -5979,10 +5982,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonYawLeftButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonYawRightButton")]
@@ -5991,10 +5994,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonYawRightButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonPitchAxisRaw")]
@@ -6003,13 +6006,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonPitchAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonPitchUpButton")]
@@ -6018,10 +6021,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonPitchUpButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonPitchDownButton")]
@@ -6030,10 +6033,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonPitchDownButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonFovAxisRaw")]
@@ -6042,13 +6045,13 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonFovAxisRawBinding() { }
 
             [XmlElement(ElementName = "Binding")]
-            public BindingBinding Binding { get; private set; }
+            public BindingBinding Binding { get; set; }
 
             [XmlElement(ElementName = "Inverted")]
-            public InvertedBinding Inverted { get; private set; }
+            public InvertedBinding Inverted { get; set; }
 
             [XmlElement(ElementName = "Deadzone")]
-            public DeadzoneBinding Deadzone { get; private set; }
+            public DeadzoneBinding Deadzone { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonFovOutButton")]
@@ -6057,10 +6060,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonFovOutButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
 
         [XmlRoot(ElementName = "SAAThirdPersonFovInButton")]
@@ -6069,10 +6072,10 @@ namespace EliteAPI.Options.Bindings.Models
             internal SAAThirdPersonFovInButtonBinding() { }
 
             [XmlElement(ElementName = "Primary")]
-            public PrimaryBinding Primary { get; private set; }
+            public PrimaryBinding Primary { get; set; }
 
             [XmlElement(ElementName = "Secondary")]
-            public SecondaryBinding Secondary { get; private set; }
+            public SecondaryBinding Secondary { get; set; }
         }
     }
 }

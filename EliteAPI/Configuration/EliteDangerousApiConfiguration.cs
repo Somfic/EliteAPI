@@ -13,9 +13,12 @@ namespace EliteAPI.Configuration
 
         /// <inheritdoc />
         public string JournalPath { get; init; }
+        
+        /// <inheritdoc />
+        public string OptionsPath { get; init; }
 
         /// <inheritdoc />
-        public string Journal { get; init; }
+        public string JournalFile { get; init; }
 
         /// <inheritdoc />
         public TimeSpan TickFrequency { get; init; }

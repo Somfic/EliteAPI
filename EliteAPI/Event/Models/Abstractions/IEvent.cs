@@ -16,5 +16,10 @@ namespace EliteAPI.Event.Models.Abstractions
         /// The name of the event
         /// </summary>
         string Event { get; }
+
+        /// <summary>
+        ///  The original Json entry for this event
+        /// </summary>
+        string Json { get; }
     }
 }

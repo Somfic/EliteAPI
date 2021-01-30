@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 using EliteAPI.Status.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;

@@ -19,6 +19,7 @@ namespace EliteAPI.Configuration
         private IList<Type> _eventProcessors;
         private string _journal;
         private string _journalDirectory;
+        private string _options;
         private TimeSpan _tickFrequency;
 
         internal EliteDangerousApiConfigurationBuilder()
@@ -27,6 +28,7 @@ namespace EliteAPI.Configuration
             _eventProcessors = new List<Type> {typeof(EventsEventProcessor), typeof(AttributeEventProcessor), typeof(AllEventProcessor)};
             _journalDirectory = "";
             _journal = "";
+            _options = "";
             _tickFrequency = TimeSpan.Zero;
         }
 
@@ -67,9 +69,23 @@ namespace EliteAPI.Configuration
         /// <summary>
         /// Sets which journal file to use, defaults to latest if not invoked
         /// </summary>
-        public void UseJournal(string journal)
+        public void UseJournalFile(string file)
         {
-            _journal = journal;
+            _journal = file;
+        }
+
+        /// <summary>
+        /// Sets which journal file to use, defaults to latest if not invoked
+        /// </summary>
+        [Obsolete("Use UseJournalFile instead")]
+        public void UseJournal(string file) => UseJournalFile(file);
+        
+        /// <summary>
+        /// Sets which directory to use as the options directory
+        /// </summary>
+        public void UseOptionsDirectory(string path)
+        {
+            _options = path;
         }
 
         /// <summary>
@@ -91,7 +107,7 @@ namespace EliteAPI.Configuration
 
         private EliteDangerousApiConfiguration Build()
         {
-            return new() {JournalPath = _journalDirectory, Journal = _journal, TickFrequency = _tickFrequency};
+            return new() {JournalPath = _journalDirectory, JournalFile = _journal, OptionsPath = _options, TickFrequency = _tickFrequency};
         }
     }
 }

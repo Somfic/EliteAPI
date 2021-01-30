@@ -5,16 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 using EliteAPI.Journal.Processor.Abstractions;
+using EliteAPI.Services.FileReader.Abstractions;
 
 namespace EliteAPI.Journal.Processor
 {
     /// <inheritdoc />
     public class JournalProcessor : IJournalProcessor
     {
+        private readonly IFileReader _fileReader;
         private readonly IDictionary<FileInfo, IList<string>> _cache;
 
-        public JournalProcessor()
+        public JournalProcessor(IFileReader fileReader)
         {
+            _fileReader = fileReader;
             _cache = new Dictionary<FileInfo, IList<string>>();
         }
 
@@ -24,7 +27,7 @@ namespace EliteAPI.Journal.Processor
         /// <inheritdoc />
         public Task ProcessJournalFile(FileInfo journalFile, bool isWhileCatchingUp)
         {
-            var journalContent = ReadAllLines(journalFile);
+            var journalContent = _fileReader.ReadAllLines(journalFile);
             foreach (var entry in journalContent)
             {
                 if (IsInCache(journalFile, entry)) continue;
@@ -48,21 +51,6 @@ namespace EliteAPI.Journal.Processor
         private bool IsInCache(FileInfo file, string content)
         {
             return _cache.ContainsKey(file) && _cache[file].Contains(content);
-        }
-
-        private IEnumerable<string> ReadAllLines(FileInfo file)
-        {
-            using var fs = new FileStream(file.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 0x1000,
-                FileOptions.RandomAccess);
-            using var stream = new StreamReader(fs, Encoding.UTF8);
-
-            string line;
-            while ((line = stream.ReadLine()) != null) yield return line;
-        }
-
-        private string ReadAllText(FileInfo file)
-        {
-            return string.Join(Environment.NewLine, ReadAllLines(file));
         }
     }
 }

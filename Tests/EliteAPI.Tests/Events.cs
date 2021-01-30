@@ -5,8 +5,10 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
+using EliteAPI.Abstractions;
 using EliteAPI.Event.Provider;
 using EliteAPI.Event.Provider.Abstractions;
+using EliteAPI.Options.Bindings;
 
 using FluentAssertions;
 
@@ -121,6 +123,8 @@ namespace EliteAPI.Tests
         public async Task Cargo(string json)
         {
             await TestEvent(json);
+
+            EliteDangerousApi api = new EliteDangerousApi(null);
         }
 
         [Theory]

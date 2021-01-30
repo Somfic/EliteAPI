@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
+using EliteAPI.Options.Bindings.Models;
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Market.Abstractions;
 using EliteAPI.Status.Models.Abstractions;
@@ -66,6 +67,11 @@ namespace EliteAPI.Abstractions
         /// Container for the current outfitting market information
         /// </summary>
         IOutfitting Outfitting { get; }
+        
+        /// <summary>
+        /// Container for keybindings information
+        /// </summary>
+        IBindings Bindings { get; }
 
         /// <summary>
         /// Whether the api is currently running

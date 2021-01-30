@@ -10,6 +10,16 @@ using EliteAPI.Journal.Processor;
 using EliteAPI.Journal.Processor.Abstractions;
 using EliteAPI.Journal.Provider;
 using EliteAPI.Journal.Provider.Abstractions;
+using EliteAPI.Options.Bindings;
+using EliteAPI.Options.Bindings.Models;
+using EliteAPI.Options.Directory;
+using EliteAPI.Options.Directory.Abstractions;
+using EliteAPI.Options.Processor;
+using EliteAPI.Options.Processor.Abstractions;
+using EliteAPI.Options.Provider;
+using EliteAPI.Options.Provider.Abstractions;
+using EliteAPI.Services.FileReader;
+using EliteAPI.Services.FileReader.Abstractions;
 using EliteAPI.Status.Cargo;
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Market;
@@ -50,25 +60,35 @@ namespace EliteAPI
             configuration?.Invoke(configInstance);
             configInstance.AddServices(services);
 
+            // EliteAPI
             services.AddSingleton<IEliteDangerousApi, EliteDangerousApi>();
 
-            services.AddSingleton<IEventProvider, EventProvider>();
+            // Events
             services.AddTransient<IJournalDirectoryProvider, JournalDirectoryProvider>();
             services.AddTransient<IJournalProvider, JournalProvider>();
-            services.AddTransient<IStatusProvider, StatusProvider>();
-
             services.AddSingleton<IJournalProcessor, JournalProcessor>();
-            services.AddSingleton<IStatusProcessor, StatusProcessor>();
+            services.AddSingleton<IEventProvider, EventProvider>();
+            services.AddSingleton<EventHandler>();
 
+            // Status
+            services.AddTransient<IStatusProvider, StatusProvider>();
+            services.AddSingleton<IStatusProcessor, StatusProcessor>();
             services.AddSingleton<IShip, Ship>();
-            services.AddSingleton<IShipStatus, ShipStatus>();
+            services.AddSingleton<IShipStatus, ShipStatus>(); // backwards compatibility
             services.AddSingleton<INavRoute, NavRoute>();
             services.AddSingleton<ICargo, Cargo>();
             services.AddSingleton<IMarket, Market>();
             services.AddSingleton<IModules, Modules>();
             services.AddSingleton<IOutfitting, Outfitting>();
 
-            services.AddSingleton<EventHandler>();
+            // Options
+            services.AddTransient<IOptionsDirectoryProvider, OptionsDirectoryProvider>();
+            services.AddTransient<IOptionsProvider, OptionsProvider>();
+            services.AddSingleton<IOptionsProcessor, OptionsProcessor>();
+            services.AddSingleton<IBindings, Bindings>();
+
+            // Util
+            services.AddTransient<IFileReader, FileReader>();
 
             return services;
         }

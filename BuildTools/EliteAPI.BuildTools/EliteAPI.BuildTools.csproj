@@ -2,10 +2,10 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>3.0.0-alpha2076</Version>
+    <Version>3.0.0-alpha1055</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.2076+Branch.dev.Sha.b0aa75a13fe0a114c5cd5a93f7b3397f4fbbbbb7</InformationalVersion>
+    <InformationalVersion>3.0.0-alpha.1055+Branch.dev.Sha.3afa12915bf8f774a6657ae58471e69221d7f99a</InformationalVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />

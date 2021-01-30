@@ -9,6 +9,8 @@ using EliteAPI.Journal.Processor;
 using EliteAPI.Journal.Processor.Abstractions;
 using EliteAPI.Journal.Provider;
 using EliteAPI.Journal.Provider.Abstractions;
+using EliteAPI.Services.FileReader;
+using EliteAPI.Services.FileReader.Abstractions;
 using EliteAPI.Status.Cargo;
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Market;
@@ -69,6 +71,8 @@ namespace EliteAPI
             services.AddSingleton<IOutfitting, Outfitting>();
 
             services.AddSingleton<EventHandler>();
+
+            services.AddTransient<IFileReader, FileReader>();
 
             return services;
         }

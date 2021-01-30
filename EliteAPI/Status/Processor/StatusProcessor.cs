@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using EliteAPI.Services.FileReader.Abstractions;
 using EliteAPI.Status.Abstractions;
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Cargo.Raw;
@@ -38,8 +39,9 @@ namespace EliteAPI.Status.Processor
         private readonly IMarket _market;
         private readonly IModules _modules;
         private readonly IOutfitting _outfitting;
+        private readonly IFileReader _fileReader;
 
-        public StatusProcessor(ILogger<StatusProcessor> log, IShip ship, INavRoute navRoute, ICargo cargo, IMarket market, IShipStatus status, IModules modules, IOutfitting outfitting)
+        public StatusProcessor(ILogger<StatusProcessor> log, IShip ship, INavRoute navRoute, ICargo cargo, IMarket market, IShipStatus status, IModules modules, IOutfitting outfitting, IFileReader fileReader)
         {
             _log = log;
             _ship = ship;
@@ -49,6 +51,7 @@ namespace EliteAPI.Status.Processor
             _status = status;
             _modules = modules;
             _outfitting = outfitting;
+            _fileReader = fileReader;
             _cache = new Dictionary<string, string>();
         }
 
@@ -78,7 +81,7 @@ namespace EliteAPI.Status.Processor
         {
             if (!statusFile.Exists) return;
 
-            var content = ReadAllText(statusFile);
+            var content = _fileReader.ReadAllText(statusFile);
 
             if (string.IsNullOrWhiteSpace(content))
             {
@@ -100,7 +103,7 @@ namespace EliteAPI.Status.Processor
         {
             if (!cargoFile.Exists) return;
 
-            var content = ReadAllText(cargoFile);
+            var content = _fileReader.ReadAllText(cargoFile);
             if (!IsInCache(cargoFile, content))
             {
                 AddToCache(cargoFile, content);
@@ -114,7 +117,7 @@ namespace EliteAPI.Status.Processor
         {
             if (!modulesFile.Exists) return;
 
-            var content = ReadAllText(modulesFile);
+            var content = _fileReader.ReadAllText(modulesFile);
             if (!IsInCache(modulesFile, content))
             {
                 AddToCache(modulesFile, content);
@@ -128,7 +131,7 @@ namespace EliteAPI.Status.Processor
         {
             if (marketFile == null || !marketFile.Exists) return;
 
-            var content = ReadAllText(marketFile);
+            var content = _fileReader.ReadAllText(marketFile);
             if (!IsInCache(marketFile, content))
             {
                 AddToCache(marketFile, content);
@@ -142,7 +145,7 @@ namespace EliteAPI.Status.Processor
         {
             if (shipyardFile == null || !shipyardFile.Exists) return Task.CompletedTask;
 
-            var content = ReadAllText(shipyardFile);
+            var content = _fileReader.ReadAllText(shipyardFile);
             if (!IsInCache(shipyardFile, content))
             {
                 AddToCache(shipyardFile, content);
@@ -158,7 +161,7 @@ namespace EliteAPI.Status.Processor
         {
             if (outfittingFile == null || !outfittingFile.Exists) return;
 
-            var content = ReadAllText(outfittingFile);
+            var content = _fileReader.ReadAllText(outfittingFile);
             if (!IsInCache(outfittingFile, content))
             {
                 AddToCache(outfittingFile, content);
@@ -172,7 +175,7 @@ namespace EliteAPI.Status.Processor
         {
             if (navRouteFile == null || !navRouteFile.Exists) return;
 
-            var content = ReadAllText(navRouteFile);
+            var content = _fileReader.ReadAllText(navRouteFile);
             if (!IsInCache(navRouteFile, content))
             {
                 AddToCache(navRouteFile, content);
@@ -249,21 +252,6 @@ namespace EliteAPI.Status.Processor
         private bool IsInCache(FileSystemInfo file, string content)
         {
             return _cache.ContainsKey(file.Name) && _cache[file.Name] == content;
-        }
-
-        private static IEnumerable<string> ReadAllLines(FileInfo file)
-        {
-            using var fs = new FileStream(file.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 0x1000,
-                FileOptions.RandomAccess);
-            using var stream = new StreamReader(fs, Encoding.UTF8);
-
-            string line;
-            while ((line = stream.ReadLine()) != null) yield return line;
-        }
-
-        private static string ReadAllText(FileInfo file)
-        {
-            return string.Join(Environment.NewLine, ReadAllLines(file));
         }
     }
 }

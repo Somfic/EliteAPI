@@ -179,6 +179,9 @@
             </summary>
             <param name="services"> ServiceProvider </param>
         </member>
+        <member name="P:EliteAPI.EliteDangerousApi.Bindings">
+            <inheritdoc />
+        </member>
         <member name="P:EliteAPI.EliteDangerousApi.IsRunning">
             <inheritdoc />
         </member>
@@ -265,6 +268,9 @@
         <member name="P:EliteAPI.Event.Models.Abstractions.EventBase.Event">
             <inheritdoc />
         </member>
+        <member name="P:EliteAPI.Event.Models.Abstractions.EventBase.Json">
+            <inheritdoc />
+        </member>
         <member name="T:EliteAPI.Event.Models.Abstractions.IEvent">
             <summary>
             An in-game event
@@ -278,6 +284,11 @@
         <member name="P:EliteAPI.Event.Models.Abstractions.IEvent.Event">
             <summary>
             The name of the event
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.Abstractions.IEvent.Json">
+            <summary>
+             The original Json entry for this event
             </summary>
         </member>
         <member name="T:EliteAPI.Event.Module.EliteDangerousEventModule">
@@ -385,6 +396,75 @@
             </summary>
             <param name="message"> The message that describes the error </param>
             <param name="innerException"> The inner exception that caused this exception </param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.ActiveBindingsNotFoundException">
+            <summary>
+            The exception that is thrown when the active binding could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.ActiveBindingsNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ActiveBindingsNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.ActiveBindingsNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ActiveBindingsNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.ActiveBindingsNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ActiveBindingsNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.ActiveBindingsNotSetException">
+            <summary>
+            The exception that is thrown when no active bindings could be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.ActiveBindingsNotSetException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ActiveBindingsNotSetException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.ActiveBindingsNotSetException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ActiveBindingsNotSetException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.ActiveBindingsNotSetException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.ActiveBindingsNotSetException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.BindingsDirectoryNotFoundException">
+            <summary>
+            The exception that is thrown when the bindings option directory could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.BindingsDirectoryNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.BindingsDirectoryNotFoundException"/> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.BindingsDirectoryNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.BindingsDirectoryNotFoundException"/> class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.BindingsDirectoryNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.BindingsDirectoryNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The message that describes the error</param>
+            <param name="innerException">The inner exception that caused this exception</param>
         </member>
         <member name="T:EliteAPI.Exceptions.CargoFileNotFoundException">
             <summary>
@@ -769,6 +849,44 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Options.Provider.Abstractions.IOptionsProvider.FindBindingsFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the bindings file from the specified options directory
+            </summary>
+            <param name="optionsDirectory">The options directory</param>
+        </member>
+        <member name="T:EliteAPI.Options.Provider.OptionsProvider">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Options.Provider.OptionsProvider.FindBindingsFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Services.FileReader.Abstractions.IFileReader">
+            <summary>
+            A file reading service
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Services.FileReader.Abstractions.IFileReader.ReadAllLines(System.IO.FileInfo)">
+            <summary>
+            Reads all the lines of a file
+            </summary>
+            <param name="file">The file to be read</param>
+        </member>
+        <member name="M:EliteAPI.Services.FileReader.Abstractions.IFileReader.ReadAllText(System.IO.FileInfo)">
+            <summary>
+            Reads all the text of a file
+            </summary>
+            <param name="file">The file to be read</param>
+        </member>
+        <member name="T:EliteAPI.Services.FileReader.FileReader">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Services.FileReader.FileReader.ReadAllLines(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Services.FileReader.FileReader.ReadAllText(System.IO.FileInfo)">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.Abstractions.IStatus">

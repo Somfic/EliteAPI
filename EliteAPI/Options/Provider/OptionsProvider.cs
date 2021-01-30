@@ -19,7 +19,7 @@ namespace EliteAPI.Options.Provider
         }
 
         /// <inheritdoc />
-        public Task<FileInfo> FindBindingsFile(DirectoryInfo optionsDirectory)
+        public Task<FileInfo> FindActiveBindingsFile(DirectoryInfo optionsDirectory)
         {
             var bindingsDirectories = optionsDirectory.GetDirectories("Bindings");
 

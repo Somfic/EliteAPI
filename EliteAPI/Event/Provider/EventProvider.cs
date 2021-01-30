@@ -43,6 +43,8 @@ namespace EliteAPI.Event.Provider
                 var method = GetFromJsonMethod(eventName);
                 var eventBase = InvokeFromJsonMethod(method, json);
 
+                eventBase.Json = json;
+                
                 _log.LogTrace(json);
 
                 return Task.FromResult(eventBase);
@@ -83,7 +85,7 @@ namespace EliteAPI.Event.Provider
 
                 return type.GetMethods().First(x => x.Name == "FromJson");
             }
-            catch (Exception ex) { throw new EventNotImplementedException($"The {eventName} is not implemented", ex); }
+            catch (Exception ex) { throw new EventNotImplementedException($"The {eventName} event is not implemented", ex); }
 
         }
 

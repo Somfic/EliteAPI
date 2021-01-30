@@ -16,5 +16,8 @@ namespace EliteAPI.Event.Models.Abstractions
         /// <inheritdoc />
         [JsonProperty("event")]
         public string Event { get; protected set; }
+        
+        /// <inheritdoc />
+        public string Json { get; internal set; }
     }
 }

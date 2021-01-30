@@ -13,6 +13,10 @@ using EliteAPI.Exceptions;
 using EliteAPI.Journal.Directory.Abstractions;
 using EliteAPI.Journal.Processor.Abstractions;
 using EliteAPI.Journal.Provider.Abstractions;
+using EliteAPI.Options.Bindings.Models;
+using EliteAPI.Options.Directory.Abstractions;
+using EliteAPI.Options.Processor.Abstractions;
+using EliteAPI.Options.Provider.Abstractions;
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Market.Abstractions;
 using EliteAPI.Status.Models.Abstractions;
@@ -46,12 +50,15 @@ namespace EliteAPI
 
         private readonly IJournalDirectoryProvider _journalDirectoryProvider;
         private readonly IJournalProcessor _journalProcessor;
-
         private readonly IJournalProvider _journalProvider;
 
         private readonly ILogger<EliteDangerousApi> _log;
         private readonly IStatusProcessor _statusProcessor;
         private readonly IStatusProvider _statusProvider;
+
+        private readonly IOptionsDirectoryProvider _optionsDirectoryProvider;
+        private readonly IOptionsProvider _optionsProvider;
+        private readonly IOptionsProcessor _optionsProcessor;
 
         /// <summary>
         /// Creates a new EliteDangerousAPI class
@@ -87,11 +94,16 @@ namespace EliteAPI
 
                 _statusProvider = services.GetRequiredService<IStatusProvider>();
                 _statusProcessor = services.GetRequiredService<IStatusProcessor>();
+
+                _optionsDirectoryProvider = services.GetRequiredService<IOptionsDirectoryProvider>();
+                _optionsProvider = services.GetRequiredService<IOptionsProvider>();
+                _optionsProcessor = services.GetRequiredService<IOptionsProcessor>();
             }
             catch (Exception ex) { PreInitializationException = ex; }
         }
 
         private DirectoryInfo JournalDirectory { get; set; }
+        private DirectoryInfo OptionsDirectory { get; set; }
         private FileInfo JournalFile { get; set; }
         private FileInfo StatusFile { get; set; }
         private FileInfo CargoFile { get; set; }
@@ -100,12 +112,16 @@ namespace EliteAPI
         private FileInfo ShipyardFile { get; set; }
         private FileInfo NavRouteFile { get; set; }
         private FileInfo ModulesInfoFile { get; set; }
+        private FileInfo BindingsFile { get; set; }
         private IList<string> DisabledSupportFiles { get; set; }
         private Exception PreInitializationException { get; }
         private Exception InitializationException { get; set; }
 
         private bool IsInitialized { get; set; }
 
+        /// <inheritdoc />
+        public IBindings Bindings { get; }
+        
         /// <inheritdoc />
         public bool IsRunning { get; private set; }
 
@@ -160,6 +176,7 @@ namespace EliteAPI
                 await CheckComputerOperatingSystem();
                 await InitializeEventHandlers();
                 await SetJournalDirectory();
+                await SetOptionsDirectory();
                 await SetJournalFile();
                 await SetSupportFiles();
 
@@ -245,6 +262,8 @@ namespace EliteAPI
                 await _statusProcessor.ProcessShipyardFile(ShipyardFile);
                 await _statusProcessor.ProcessNavRouteFile(NavRouteFile);
                 await _statusProcessor.ProcessModulesFile(ModulesInfoFile);
+                
+                await _optionsProcessor.ProcessBindingsFile(BindingsFile);
 
                 await SetJournalFile();
                 await _journalProcessor.ProcessJournalFile(JournalFile, !HasCatchedUp);
@@ -294,7 +313,24 @@ namespace EliteAPI
             catch (Exception ex)
             {
                 _log.LogWarning(ex, "Could not find journal directory");
-                throw ex;
+                throw;
+            }
+        }
+        
+        private async Task SetOptionsDirectory()
+        {
+            try
+            {
+                var newOptionsDirectory = await _optionsDirectoryProvider.FindOptionsDirectory();
+                if (newOptionsDirectory == null || OptionsDirectory?.FullName == newOptionsDirectory.FullName) return;
+
+                _log.LogInformation("Setting options directory to {filePath}", newOptionsDirectory.FullName);
+                OptionsDirectory = newOptionsDirectory;
+            }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not find options directory");
+                throw;
             }
         }
 
@@ -337,6 +373,8 @@ namespace EliteAPI
                 if (!DisabledSupportFiles.Contains("NavRoute")) NavRouteFile = await _statusProvider.FindNavRouteFile(JournalDirectory);
 
                 if (!DisabledSupportFiles.Contains("ModulesInfo")) ModulesInfoFile = await _statusProvider.FindModulesFile(JournalDirectory);
+
+                if (!DisabledSupportFiles.Contains("Bindings")) BindingsFile = await _optionsProvider.FindActiveBindingsFile(OptionsDirectory);
             }
             catch (StatusFileNotFoundException ex)
             {
@@ -375,7 +413,7 @@ namespace EliteAPI
             }
             catch (Exception ex) { _log.LogWarning(ex, "Could not set support files"); }
         }
-
+        
         private Task CheckComputerOperatingSystem()
         {
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) _log.LogWarning("You are not running on a Windows machine, some features may not work properly");

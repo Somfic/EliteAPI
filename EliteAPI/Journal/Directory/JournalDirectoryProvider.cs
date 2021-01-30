@@ -23,8 +23,8 @@ namespace EliteAPI.Journal.Directory
 
         public JournalDirectoryProvider(IServiceProvider services)
         {
-            _config = services.GetRequiredService<IConfiguration>();
             _log = services.GetRequiredService<ILogger<JournalProvider>>();
+            _config = services.GetRequiredService<IConfiguration>();
             _codeConfig = services.GetRequiredService<IEliteDangerousApiConfiguration>();
         }
 

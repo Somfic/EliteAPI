@@ -17,11 +17,6 @@ jobs:
         with:
           ref: ${{ steps.extract_branch.outputs.branch }}
 
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
-        with:
-          languages: csharp
-
       - name: Clean
         run: dotnet clean
 
@@ -34,9 +29,6 @@ jobs:
       - name: Pack
         if: ${{ needs.update-version.outputs.applicable == 'true' }}
         run: dotnet pack --configuration Release
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v1
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v2

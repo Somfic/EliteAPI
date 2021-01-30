@@ -2,19 +2,15 @@ using System;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+
 using EliteAPI.Configuration.Abstractions;
+using EliteAPI.Exceptions;
 using EliteAPI.Journal.Directory.Abstractions;
 using EliteAPI.Journal.Provider;
-using EliteAPI.Exceptions;
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-
-using System;
-using System.IO;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 
 namespace EliteAPI.Journal.Directory
 {
@@ -23,7 +19,7 @@ namespace EliteAPI.Journal.Directory
     {
         private readonly IConfiguration _config;
         private readonly ILogger<JournalProvider> _log;
-        private IEliteDangerousApiConfiguration _codeConfig;
+        private readonly IEliteDangerousApiConfiguration _codeConfig;
 
         public JournalDirectoryProvider(IServiceProvider services)
         {
@@ -40,26 +36,14 @@ namespace EliteAPI.Journal.Directory
             var defaultDirectory = GetDefaultDirectory();
 
             var exception = CheckDirectoryValidity(configDirectory);
-            if (exception == null)
-            {
-                return Task.FromResult(configDirectory);
-            }
-            else
-            {
-                if(!(exception is NullReferenceException))
-                    _log.LogDebug(exception, "The journal directory provided by the file configuration is invalid");
-            }
+            if (exception == null) return Task.FromResult(configDirectory);
+
+            if (!(exception is NullReferenceException)) _log.LogDebug(exception, "The journal directory provided by the file configuration is invalid");
 
             exception = CheckDirectoryValidity(codeConfigDirectory);
-            if (exception == null)
-            {
-                return Task.FromResult(codeConfigDirectory);
-            }
-            else
-            {
-                if (!(exception is NullReferenceException))
-                    _log.LogDebug(exception, "The journal directory provided by the code configuration is invalid");
-            }
+            if (exception == null) { return Task.FromResult(codeConfigDirectory); }
+
+            if (!(exception is NullReferenceException)) _log.LogDebug(exception, "The journal directory provided by the code configuration is invalid");
 
 
             if (configDirectory?.FullName != defaultDirectory.FullName)
@@ -102,10 +86,7 @@ namespace EliteAPI.Journal.Directory
 
         private DirectoryInfo GetDefaultDirectory()
         {
-            try
-            {
-                return new DirectoryInfo(Path.Combine(GetSavedGamesDirectory(), "Frontier Developments/Elite Dangerous"));
-            }
+            try { return new DirectoryInfo(Path.Combine(GetSavedGamesDirectory(), "Frontier Developments/Elite Dangerous")); }
             catch (Exception ex)
             {
                 _log.LogTrace(ex, "Could not get default journal directory");
@@ -115,10 +96,7 @@ namespace EliteAPI.Journal.Directory
 
         private DirectoryInfo GetCodeConfigDirectory()
         {
-            try
-            {
-                return !string.IsNullOrWhiteSpace(_codeConfig.JournalPath) ? new DirectoryInfo(_codeConfig.JournalPath) : null;
-            }
+            try { return !string.IsNullOrWhiteSpace(_codeConfig.JournalPath) ? new DirectoryInfo(_codeConfig.JournalPath) : null; }
             catch (Exception ex)
             {
                 _log.LogTrace(ex, "Could not get config journal directory");
@@ -165,7 +143,8 @@ namespace EliteAPI.Journal.Directory
         }
 
         [DllImport("Shell32.dll")]
-        private static extern int SHGetKnownFolderPath([MarshalAs(UnmanagedType.LPStruct)] Guid rfid, uint dwFlags,
+        private static extern int SHGetKnownFolderPath([MarshalAs(UnmanagedType.LPStruct)]
+            Guid rfid, uint dwFlags,
             IntPtr hToken, out IntPtr ppszPath);
     }
 }

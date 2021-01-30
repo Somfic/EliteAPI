@@ -1,21 +1,24 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class DatalinkVoucherEvent : EventBase
     {
-        internal DatalinkVoucherEvent()
-        {
-        }
+        internal DatalinkVoucherEvent() { }
 
-        [JsonProperty("Reward")] public long Reward { get; private set; }
+        [JsonProperty("Reward")]
+        public long Reward { get; private set; }
 
-        [JsonProperty("VictimFaction")] public string VictimFaction { get; private set; }
+        [JsonProperty("VictimFaction")]
+        public string VictimFaction { get; private set; }
 
-        [JsonProperty("PayeeFaction")] public string PayeeFaction { get; private set; }
+        [JsonProperty("PayeeFaction")]
+        public string PayeeFaction { get; private set; }
     }
 
     public partial class DatalinkVoucherEvent

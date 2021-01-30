@@ -1,4 +1,5 @@
 ﻿using System;
+
 using EliteAPI.Abstractions;
 using EliteAPI.Configuration;
 using EliteAPI.Event.Provider;
@@ -29,21 +30,20 @@ using EliteAPI.Status.Provider.Abstractions;
 using EliteAPI.Status.Ship;
 using EliteAPI.Status.Ship.Abstractions;
 using EliteAPI.Status.ShipStatus;
+
 using Microsoft.Extensions.DependencyInjection;
+
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
 {
     [Obsolete("Use EliteDangerousApiExtensions instead", true)]
-    public static class EliteDangerousAPIExtensions
-    {
-
-    }
+    public static class EliteDangerousAPIExtensions { }
 
     public static class EliteDangerousApiExtensions
     {
         /// <summary>
-        ///     Adds all EliteAPI's necessary services to the <seealso cref="IServiceCollection" />
+        /// Adds all EliteAPI's necessary services to the <seealso cref="IServiceCollection" />
         /// </summary>
         public static IServiceCollection AddEliteAPI(this IServiceCollection services,
             Action<EliteDangerousApiConfigurationBuilder> configuration = null)

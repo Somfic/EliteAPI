@@ -1,0 +1,20 @@
+{ "timestamp":"2020-12-14T18:48:23Z", "event":"ReceiveText", "From":"", "Message":"$COMMS_entered:#name=Shinrarta Dezhra;", "Message_Localised":"Entered Channel: Shinrarta Dezhra", "Channel":"npc" }
+{ "timestamp":"2020-12-14T18:48:46Z", "event":"ReceiveText", "From":"kaj", "Message":"hmm well my corvette isent very enginnered but sure", "Channel":"starsystem" }
+{ "timestamp":"2020-12-14T18:49:12Z", "event":"ReceiveText", "From":"zentzlb", "Message":"oh go get that thing engineered lol", "Channel":"starsystem" }
+{ "timestamp":"2020-12-14T18:50:12Z", "event":"ReceiveText", "From":"kaj", "Message":"yeah its a new ship i typicly use a cutter", "Channel":"starsystem" }
+{ "timestamp":"2020-12-14T18:50:17Z", "event":"ReceiveText", "From":"Mr.shnigles", "Message":"how much better is the corvette than the conda in combat?", "Channel":"starsystem" }
+{ "timestamp":"2020-12-14T18:51:30Z", "event":"ReceiveText", "From":"kaj", "Message":"well the conda has higher dps but the corvette is more agile", "Channel":"starsystem" }
+{ "timestamp":"2020-12-14T18:51:48Z", "event":"ReceiveText", "From":"kaj", "Message":"so its complicated", "Channel":"starsystem" }
+{ "timestamp":"2020-12-14T18:51:54Z", "event":"ReceiveText", "From":"Mr.shnigles", "Message":"hmm", "Channel":"starsystem" }
+{ "timestamp":"2020-12-14T18:59:44Z", "event":"ReceiveText", "From":"Tar garyen", "Message":"Congrats TAINO2", "Channel":"squadron" }
+{ "timestamp":"2020-12-14T18:59:49Z", "event":"ReceiveText", "From":"Tar garyen", "Message":"o7", "Channel":"squadron" }
+{ "timestamp":"2020-12-14T19:08:24Z", "event":"ReceiveText", "From":"Jameson Memorial", "Message":"$STATION_NoFireZone_exited;", "Message_Localised":"No fire zone left.", "Channel":"npc" }
+{ "timestamp":"2020-12-14T19:12:40Z", "event":"ReceiveText", "From":"Queen Villanelle", "Message":"anyone seen level 6-7 pirate activity POI within <30ly here recently?", "Channel":"starsystem" }
+{ "timestamp":"2020-12-14T19:19:40Z", "event":"ReceiveText", "From":"$npc_name_decorate:#name=GRACE;", "From_Localised":"GRACE", "Message":"$Commuter_AuthorityScan10;", "Message_Localised":"You'll get no trouble from me, officer.", "Channel":"npc" }
+{ "timestamp":"2020-12-14T19:30:42Z", "event":"ReceiveText", "From":"zentzlb", "Message":"hey", "Channel":"starsystem" }
+{ "timestamp":"2020-12-14T19:30:46Z", "event":"ReceiveText", "From":"zentzlb", "Message":"that1guy", "Channel":"starsystem" }
+{ "timestamp":"2020-12-14T19:30:51Z", "event":"ReceiveText", "From":"zentzlb", "Message":"are you still here??", "Channel":"starsystem" }
+{ "timestamp":"2020-12-14T19:31:03Z", "event":"ReceiveText", "From":"Mederi", "Message":"hey", "Channel":"starsystem" }
+{ "timestamp":"2020-12-14T19:34:13Z", "event":"ReceiveText", "From":"Zmaxi", "Message":"hi, if i play in solo mode , is the same one for community goal?", "Channel":"squadron" }
+{ "timestamp":"2020-12-14T19:34:24Z", "event":"ReceiveText", "From":"ERIK HOLMES", "Message":"uea", "Channel":"squadron" }
+{ "timestamp":"2020-12-14T19:34:27Z", "event":"ReceiveText", "From":"ERIK HOLMES", "Message":"yea", "Channel":"squadron" }

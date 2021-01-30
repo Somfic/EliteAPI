@@ -1,13 +1,13 @@
+using System;
+using System.Collections.Generic;
+
+using EliteAPI.Event.Models;
+using EliteAPI.Event.Models.Abstractions;
+
+using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-    using Abstractions;
 
 
     public partial class SaaSignalsFoundEvent : EventBase
@@ -27,7 +27,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<Signal> Signals { get; private set; }
     }
 
-    public partial class Signal
+    public class Signal
     {
         internal Signal() { }
 
@@ -43,20 +43,24 @@ namespace EliteAPI.Event.Models
 
     public partial class SaaSignalsFoundEvent
     {
-        public static SaaSignalsFoundEvent FromJson(string json) => JsonConvert.DeserializeObject<SaaSignalsFoundEvent>(json);
+        public static SaaSignalsFoundEvent FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<SaaSignalsFoundEvent>(json);
+        }
     }
 
-    
+
 }
 
 namespace EliteAPI.Event.Handler
 {
-    using System;
-    using Models;
 
     public partial class EventHandler
     {
         public event EventHandler<SaaSignalsFoundEvent> SaaSignalsFoundEvent;
-        internal void InvokeSaaSignalsFoundEvent(SaaSignalsFoundEvent arg) => SaaSignalsFoundEvent?.Invoke(this, arg);
+        internal void InvokeSaaSignalsFoundEvent(SaaSignalsFoundEvent arg)
+        {
+            SaaSignalsFoundEvent?.Invoke(this, arg);
+        }
     }
 }

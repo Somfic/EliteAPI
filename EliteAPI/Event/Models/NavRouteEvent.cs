@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class NavRouteEvent : EventBase
     {
-        internal NavRouteEvent()
-        {
-        }
+        internal NavRouteEvent() { }
 
-        [JsonProperty("event")] public string Event { get; private set; }
+        [JsonProperty("event")]
+        public string Event { get; private set; }
     }
 
     public partial class NavRouteEvent

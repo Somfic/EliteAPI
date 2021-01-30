@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Market.Abstractions;
 using EliteAPI.Status.Models.Abstractions;
@@ -8,28 +9,27 @@ using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Outfitting.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
 
+using EventHandler = EliteAPI.Event.Handler.EventHandler;
+
 namespace EliteAPI.Abstractions
 {
     [Obsolete("Use IEliteDangerousApi instead", true)]
-    public interface IEliteDangerousAPI
-    {
-
-    }
+    public interface IEliteDangerousAPI { }
 
     /// <summary>
-    ///     EliteAPI
+    /// EliteAPI
     /// </summary>
     public interface IEliteDangerousApi
     {
         /// <summary>
-        ///     EliteAPI's version
+        /// EliteAPI's version
         /// </summary>
         string Version { get; }
 
         /// <summary>
-        ///     Container for all events
+        /// Container for all events
         /// </summary>
-        EliteAPI.Event.Handler.EventHandler Events { get; }
+        EventHandler Events { get; }
 
         /// <summary>
         /// Container for the ship's current status
@@ -68,44 +68,44 @@ namespace EliteAPI.Abstractions
         IOutfitting Outfitting { get; }
 
         /// <summary>
-        ///     Whether the api is currently running
+        /// Whether the api is currently running
         /// </summary>
         bool IsRunning { get; }
 
         /// <summary>
-        ///     Whether the api has catched up on past event in this session
+        /// Whether the api has catched up on past event in this session
         /// </summary>
         bool HasCatchedUp { get; }
 
         /// <summary>
-        ///     Initializes the api
+        /// Initializes the api
         /// </summary>
         Task InitializeAsync();
 
         /// <summary>
-        ///     Starts the api
+        /// Starts the api
         /// </summary>
         Task StartAsync();
 
         /// <summary>
-        ///     Stops the api
+        /// Stops the api
         /// </summary>
         Task StopAsync();
 
         /// <summary>
         /// Triggered when the api has catched up to the current session
         /// </summary>
-        event EventHandler OnCatchedUp;
+        event System.EventHandler OnCatchedUp;
 
         /// <summary>
         /// Triggered when the api has started
         /// </summary>
-        event EventHandler OnStart;
+        event System.EventHandler OnStart;
 
         /// <summary>
         /// Triggered when the api has stopped
         /// </summary>
-        event EventHandler OnStop;
+        event System.EventHandler OnStop;
 
         /// <summary>
         /// Triggered when the api couldn't start because of an exception

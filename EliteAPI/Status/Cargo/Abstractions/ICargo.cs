@@ -1,6 +1,6 @@
-﻿using EliteAPI.Status.Abstractions;
+﻿using System.Collections.Generic;
 
-using System.Collections.Generic;
+using EliteAPI.Status.Abstractions;
 
 namespace EliteAPI.Status.Cargo.Abstractions
 {

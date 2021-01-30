@@ -1,19 +1,21 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class BuyExplorationDataEvent : EventBase
     {
-        internal BuyExplorationDataEvent()
-        {
-        }
+        internal BuyExplorationDataEvent() { }
 
-        [JsonProperty("System")] public string System { get; private set; }
+        [JsonProperty("System")]
+        public string System { get; private set; }
 
-        [JsonProperty("Cost")] public long Cost { get; private set; }
+        [JsonProperty("Cost")]
+        public long Cost { get; private set; }
     }
 
     public partial class BuyExplorationDataEvent

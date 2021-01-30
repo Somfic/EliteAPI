@@ -1,23 +1,33 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class MarketBuyEvent : EventBase
     {
-        internal MarketBuyEvent()
-        {
-        }
+        internal MarketBuyEvent() { }
 
-        [JsonProperty("Type")] public string Type { get; private set; }
+        [JsonProperty("MarketID")]
+        public string MarketId { get; private set; }
+        
+        [JsonProperty("Type")]
+        public string Type { get; private set; }
+        
+        [JsonProperty("Type_Localised")]
+        public string TypeLocalised { get; private set; }
 
-        [JsonProperty("Count")] public long Count { get; private set; }
+        [JsonProperty("Count")]
+        public long Count { get; private set; }
 
-        [JsonProperty("BuyPrice")] public long BuyPrice { get; private set; }
+        [JsonProperty("BuyPrice")]
+        public long BuyPrice { get; private set; }
 
-        [JsonProperty("TotalCost")] public long TotalCost { get; private set; }
+        [JsonProperty("TotalCost")]
+        public long TotalCost { get; private set; }
     }
 
     public partial class MarketBuyEvent

@@ -1,23 +1,27 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class ShipyardSellEvent : EventBase
     {
-        internal ShipyardSellEvent()
-        {
-        }
+        internal ShipyardSellEvent() { }
 
-        [JsonProperty("ShipType")] public string ShipType { get; private set; }
+        [JsonProperty("ShipType")]
+        public string ShipType { get; private set; }
 
-        [JsonProperty("SellShipID")] public long SellShipId { get; private set; }
+        [JsonProperty("SellShipID")]
+        public long SellShipId { get; private set; }
 
-        [JsonProperty("ShipPrice")] public long ShipPrice { get; private set; }
+        [JsonProperty("ShipPrice")]
+        public long ShipPrice { get; private set; }
 
-        [JsonProperty("System")] public string System { get; private set; }
+        [JsonProperty("System")]
+        public string System { get; private set; }
     }
 
     public partial class ShipyardSellEvent

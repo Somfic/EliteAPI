@@ -1,21 +1,24 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class NpcCrewPaidWageEvent : EventBase
     {
-        internal NpcCrewPaidWageEvent()
-        {
-        }
+        internal NpcCrewPaidWageEvent() { }
 
-        [JsonProperty("NpcCrewName")] public string NpcCrewName { get; private set; }
+        [JsonProperty("NpcCrewName")]
+        public string NpcCrewName { get; private set; }
 
-        [JsonProperty("NpcCrewId")] public long NpcCrewId { get; private set; }
+        [JsonProperty("NpcCrewId")]
+        public long NpcCrewId { get; private set; }
 
-        [JsonProperty("Amount")] public long Amount { get; private set; }
+        [JsonProperty("Amount")]
+        public long Amount { get; private set; }
     }
 
     public partial class NpcCrewPaidWageEvent

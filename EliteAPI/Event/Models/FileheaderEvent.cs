@@ -1,23 +1,27 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class FileheaderEvent : EventBase
     {
-        internal FileheaderEvent()
-        {
-        }
+        internal FileheaderEvent() { }
 
-        [JsonProperty("part")] public long Part { get; private set; }
+        [JsonProperty("part")]
+        public long Part { get; private set; }
 
-        [JsonProperty("language")] public string Language { get; private set; }
+        [JsonProperty("language")]
+        public string Language { get; private set; }
 
-        [JsonProperty("gameversion")] public string Gameversion { get; private set; }
+        [JsonProperty("gameversion")]
+        public string Gameversion { get; private set; }
 
-        [JsonProperty("build")] public string Build { get; private set; }
+        [JsonProperty("build")]
+        public string Build { get; private set; }
     }
 
     public partial class FileheaderEvent

@@ -1,19 +1,21 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class PayLegacyFinesEvent : EventBase
     {
-        internal PayLegacyFinesEvent()
-        {
-        }
+        internal PayLegacyFinesEvent() { }
 
-        [JsonProperty("Amount")] public long Amount { get; private set; }
+        [JsonProperty("Amount")]
+        public long Amount { get; private set; }
 
-        [JsonProperty("BrokerPercentage")] public double BrokerPercentage { get; private set; }
+        [JsonProperty("BrokerPercentage")]
+        public double BrokerPercentage { get; private set; }
     }
 
     public partial class PayLegacyFinesEvent

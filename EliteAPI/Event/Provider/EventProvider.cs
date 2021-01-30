@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
 using EliteAPI.Exceptions;
-using Microsoft.Extensions.DependencyInjection;
+
 using Microsoft.Extensions.Logging;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -22,9 +24,9 @@ namespace EliteAPI.Event.Provider
 
         private IDictionary<string, Type> _cache;
 
-        public EventProvider(IServiceProvider service)
+        public EventProvider(ILogger<EventProvider> log)
         {
-            _log = service.GetRequiredService<ILogger<EventProvider>>();
+            _log = log;
             _assembly = Assembly.GetExecutingAssembly();
         }
 
@@ -60,8 +62,7 @@ namespace EliteAPI.Event.Provider
         {
             _cache = new ConcurrentDictionary<string, Type>();
 
-            foreach (var eventType in GetAllEventTypes(typeof(EventHandler)))
-                _cache.Add(eventType.Name.Replace("Event", "").ToUpper(), eventType);
+            foreach (var eventType in GetAllEventTypes(typeof(EventHandler))) _cache.Add(eventType.Name.Replace("Event", "").ToUpper(), eventType);
 
             return Task.CompletedTask;
         }
@@ -82,11 +83,8 @@ namespace EliteAPI.Event.Provider
 
                 return type.GetMethods().First(x => x.Name == "FromJson");
             }
-            catch (Exception ex)
-            {
-                throw new EventNotImplementedException($"The {eventName} is not implemented", ex);
-            }
-           
+            catch (Exception ex) { throw new EventNotImplementedException($"The {eventName} is not implemented", ex); }
+
         }
 
         private EventBase InvokeFromJsonMethod(MethodBase method, string json)

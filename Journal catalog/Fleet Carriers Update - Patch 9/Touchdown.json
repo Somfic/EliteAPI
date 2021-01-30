@@ -1,0 +1,6 @@
+{ "timestamp":"2020-12-23T12:31:05Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-26.981388, "Longitude":-71.748871 }
+{ "timestamp":"2020-12-25T19:11:44Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-26.981388, "Longitude":-71.748871 }
+{ "timestamp":"2020-12-31T16:26:20Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-26.981388, "Longitude":-71.748871 }
+{ "timestamp":"2020-12-31T17:03:21Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-26.981388, "Longitude":-71.748871 }
+{ "timestamp":"2021-01-01T17:45:05Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-15.442923, "Longitude":135.841675 }
+{ "timestamp":"2021-01-01T18:16:36Z", "event":"Touchdown", "PlayerControlled":false }

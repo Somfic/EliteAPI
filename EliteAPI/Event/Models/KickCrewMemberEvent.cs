@@ -1,19 +1,21 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class KickCrewMemberEvent : EventBase
     {
-        internal KickCrewMemberEvent()
-        {
-        }
+        internal KickCrewMemberEvent() { }
 
-        [JsonProperty("Crew")] public string Crew { get; private set; }
+        [JsonProperty("Crew")]
+        public string Crew { get; private set; }
 
-        [JsonProperty("OnCrime")] public bool OnCrime { get; private set; }
+        [JsonProperty("OnCrime")]
+        public bool OnCrime { get; private set; }
     }
 
     public partial class KickCrewMemberEvent

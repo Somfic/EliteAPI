@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class MusicEvent : EventBase
     {
-        internal MusicEvent()
-        {
-        }
+        internal MusicEvent() { }
 
-        [JsonProperty("MusicTrack")] public string MusicTrack { get; private set; }
+        [JsonProperty("MusicTrack")]
+        public string MusicTrack { get; private set; }
     }
 
     public partial class MusicEvent

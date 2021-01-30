@@ -1,22 +1,25 @@
 using System;
 using System.Collections.Generic;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class MissionsEvent : EventBase
     {
-        internal MissionsEvent()
-        {
-        }
+        internal MissionsEvent() { }
 
-        [JsonProperty("Active")] public IReadOnlyList<object> Active { get; private set; }
+        [JsonProperty("Active")]
+        public IReadOnlyList<object> Active { get; private set; }
 
-        [JsonProperty("Failed")] public IReadOnlyList<object> Failed { get; private set; }
+        [JsonProperty("Failed")]
+        public IReadOnlyList<object> Failed { get; private set; }
 
-        [JsonProperty("Complete")] public IReadOnlyList<object> Complete { get; private set; }
+        [JsonProperty("Complete")]
+        public IReadOnlyList<object> Complete { get; private set; }
     }
 
     public partial class MissionsEvent

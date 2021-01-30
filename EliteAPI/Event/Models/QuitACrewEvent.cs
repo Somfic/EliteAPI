@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class QuitACrewEvent : EventBase
     {
-        internal QuitACrewEvent()
-        {
-        }
+        internal QuitACrewEvent() { }
 
-        [JsonProperty("Captain")] public string Captain { get; private set; }
+        [JsonProperty("Captain")]
+        public string Captain { get; private set; }
     }
 
     public partial class QuitACrewEvent

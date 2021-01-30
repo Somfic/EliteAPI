@@ -1,19 +1,21 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class FriendsEvent : EventBase
     {
-        internal FriendsEvent()
-        {
-        }
+        internal FriendsEvent() { }
 
-        [JsonProperty("Status")] public string Status { get; private set; }
+        [JsonProperty("Status")]
+        public string Status { get; private set; }
 
-        [JsonProperty("Name")] public string Name { get; private set; }
+        [JsonProperty("Name")]
+        public string Name { get; private set; }
     }
 
     public partial class FriendsEvent

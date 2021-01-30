@@ -1,47 +1,57 @@
 using System;
 using System.Collections.Generic;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class EngineerCraftEvent : EventBase
     {
-        internal EngineerCraftEvent()
-        {
-        }
+        internal EngineerCraftEvent() { }
 
-        [JsonProperty("Slot")] public string Slot { get; private set; }
+        [JsonProperty("Slot")]
+        public string Slot { get; private set; }
 
-        [JsonProperty("Module")] public string Module { get; private set; }
+        [JsonProperty("Module")]
+        public string Module { get; private set; }
 
-        [JsonProperty("IngredientInfos")] public IReadOnlyList<IngredientInfo> IngredientInfos { get; private set; }
+        [JsonProperty("IngredientInfos")]
+        public IReadOnlyList<IngredientInfo> IngredientInfos { get; private set; }
 
-        [JsonProperty("Engineer")] public string Engineer { get; private set; }
+        [JsonProperty("Engineer")]
+        public string Engineer { get; private set; }
 
-        [JsonProperty("EngineerID")] public long EngineerId { get; private set; }
+        [JsonProperty("EngineerID")]
+        public long EngineerId { get; private set; }
 
-        [JsonProperty("BlueprintID")] public long BlueprintId { get; private set; }
+        [JsonProperty("BlueprintID")]
+        public long BlueprintId { get; private set; }
 
-        [JsonProperty("BlueprintName")] public string BlueprintName { get; private set; }
+        [JsonProperty("BlueprintName")]
+        public string BlueprintName { get; private set; }
 
-        [JsonProperty("Level")] public long Level { get; private set; }
+        [JsonProperty("Level")]
+        public long Level { get; private set; }
 
-        [JsonProperty("Quality")] public double Quality { get; private set; }
+        [JsonProperty("Quality")]
+        public double Quality { get; private set; }
 
-        [JsonProperty("ModifierInfos")] public IReadOnlyList<ModifierInfo> ModifierInfos { get; private set; }
+        [JsonProperty("ModifierInfos")]
+        public IReadOnlyList<ModifierInfo> ModifierInfos { get; private set; }
 
 
         public class IngredientInfo
         {
-            internal IngredientInfo()
-            {
-            }
+            internal IngredientInfo() { }
 
-            [JsonProperty("Name")] public string Name { get; private set; }
+            [JsonProperty("Name")]
+            public string Name { get; private set; }
 
-            [JsonProperty("Count")] public long Count { get; private set; }
+            [JsonProperty("Count")]
+            public long Count { get; private set; }
 
             [JsonProperty("Name_Localised", NullValueHandling = NullValueHandling.Ignore)]
             public string NameLocalised { get; private set; }
@@ -49,17 +59,19 @@ namespace EliteAPI.Event.Models
 
         public class ModifierInfo
         {
-            internal ModifierInfo()
-            {
-            }
+            internal ModifierInfo() { }
 
-            [JsonProperty("Label")] public string Label { get; private set; }
+            [JsonProperty("Label")]
+            public string Label { get; private set; }
 
-            [JsonProperty("Value")] public double Value { get; private set; }
+            [JsonProperty("Value")]
+            public double Value { get; private set; }
 
-            [JsonProperty("OriginalValue")] public double OriginalValue { get; private set; }
+            [JsonProperty("OriginalValue")]
+            public double OriginalValue { get; private set; }
 
-            [JsonProperty("LessIsGood")] public long LessIsGood { get; private set; }
+            [JsonProperty("LessIsGood")]
+            public long LessIsGood { get; private set; }
         }
     }
 

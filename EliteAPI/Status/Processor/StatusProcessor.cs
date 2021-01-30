@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using EliteAPI.Services.FileReader.Abstractions;
+
 using EliteAPI.Status.Abstractions;
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Cargo.Raw;
@@ -21,7 +22,9 @@ using EliteAPI.Status.Outfitting.Raw;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
 using EliteAPI.Status.Ship.Raw;
+
 using Microsoft.Extensions.Logging;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Processor
@@ -30,16 +33,16 @@ namespace EliteAPI.Status.Processor
     public class StatusProcessor : IStatusProcessor
     {
         private readonly IDictionary<string, string> _cache;
+        private readonly ICargo _cargo;
         private readonly ILogger<StatusProcessor> _log;
+        private readonly IMarket _market;
+        private readonly IModules _modules;
+        private readonly INavRoute _navRoute;
+        private readonly IOutfitting _outfitting;
+        private readonly IFileReader _fileReader;
 
         private readonly IShip _ship;
         private readonly IShipStatus _status;
-        private readonly INavRoute _navRoute;
-        private readonly ICargo _cargo;
-        private readonly IMarket _market;
-        private readonly IModules _modules;
-        private readonly IOutfitting _outfitting;
-        private readonly IFileReader _fileReader;
 
         public StatusProcessor(ILogger<StatusProcessor> log, IShip ship, INavRoute navRoute, ICargo cargo, IMarket market, IShipStatus status, IModules modules, IOutfitting outfitting, IFileReader fileReader)
         {
@@ -186,26 +189,22 @@ namespace EliteAPI.Status.Processor
 
         private async Task InvokeMethods<T>(string json, IStatus status)
         {
-            string name = status.GetType().Name;
+            var name = status.GetType().Name;
 
             try
             {
                 var raw = JsonConvert.DeserializeObject<T>(json);
 
-                foreach (var propertyName in status.GetType().GetProperties().Select(x => x.Name))
-                    await InvokeUpdateMethod(raw, status, propertyName);
+                foreach (var propertyName in status.GetType().GetProperties().Select(x => x.Name)) await InvokeUpdateMethod(raw, status, propertyName);
 
                 status.TriggerOnChange();
             }
-            catch (Exception ex)
-            {
-                _log.LogWarning(ex, "Could not update {name} status", name);
-            }
+            catch (Exception ex) { _log.LogWarning(ex, "Could not update {name} status", name); }
         }
 
         private Task InvokeUpdateMethod(object raw, object clean, string propertyName)
         {
-            string name = propertyName;
+            var name = propertyName;
 
             try
             {
@@ -213,11 +212,8 @@ namespace EliteAPI.Status.Processor
 
                 var rawValue = raw.GetType().GetProperty(propertyName).GetValue(raw);
 
-                string value = rawValue.ToString();
-                if(Type.GetTypeCode(rawValue.GetType()) == TypeCode.Object)
-                {
-                    value = JsonConvert.SerializeObject(rawValue);
-                }
+                var value = rawValue.ToString();
+                if (Type.GetTypeCode(rawValue.GetType()) == TypeCode.Object) value = JsonConvert.SerializeObject(rawValue);
 
                 var statusUpdateProperty = clean.GetType().GetProperty(propertyName).GetValue(clean);
                 var updateMethod = statusUpdateProperty.GetType()

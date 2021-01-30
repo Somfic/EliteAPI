@@ -1,38 +1,44 @@
 using System;
 using System.Collections.Generic;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class BountyEvent : EventBase
     {
-        internal BountyEvent()
-        {
-        }
+        internal BountyEvent() { }
 
-        [JsonProperty("Rewards")] public IReadOnlyList<BountryReward> Rewards { get; private set; }
+        [JsonProperty("Rewards")]
+        public IReadOnlyList<BountryReward> Rewards { get; private set; }
 
-        [JsonProperty("Target")] public string Target { get; private set; }
+        [JsonProperty("Target")]
+        public string Target { get; private set; }
 
-        [JsonProperty("Target_Localised")] public string TargetLocalised { get; private set; }
+        [JsonProperty("Target_Localised")]
+        public string TargetLocalised { get; private set; }
 
-        [JsonProperty("TotalReward")] public long TotalReward { get; private set; }
+        [JsonProperty("TotalReward")]
+        public long TotalReward { get; private set; }
 
-        [JsonProperty("VictimFaction")] public string VictimFaction { get; private set; }
+        [JsonProperty("VictimFaction")]
+        public string VictimFaction { get; private set; }
 
-        [JsonProperty("SharedWithOthers")] public long SharedWithOthers { get; private set; }
+        [JsonProperty("SharedWithOthers")]
+        public long SharedWithOthers { get; private set; }
 
         public class BountryReward
         {
-            internal BountryReward()
-            {
-            }
+            internal BountryReward() { }
 
-            [JsonProperty("Faction")] public string Faction { get; private set; }
+            [JsonProperty("Faction")]
+            public string Faction { get; private set; }
 
-            [JsonProperty("Reward")] public long Reward { get; private set; }
+            [JsonProperty("Reward")]
+            public long Reward { get; private set; }
         }
     }
 

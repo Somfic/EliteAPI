@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class JoinACrewEvent : EventBase
     {
-        internal JoinACrewEvent()
-        {
-        }
+        internal JoinACrewEvent() { }
 
-        [JsonProperty("Captain")] public string Captain { get; private set; }
+        [JsonProperty("Captain")]
+        public string Captain { get; private set; }
     }
 
     public partial class JoinACrewEvent

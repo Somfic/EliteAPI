@@ -1,5 +1,4 @@
-﻿using System;
-using EliteAPI.Status.Abstractions;
+﻿using EliteAPI.Status.Abstractions;
 
 namespace EliteAPI.Status.Ship.Abstractions
 {
@@ -165,7 +164,7 @@ namespace EliteAPI.Status.Ship.Abstractions
 
         /// <summary>
         /// Whether the ship's current altitude is being calculated by the planet's average radius
-        /// See also <see cref="Altitude"/>
+        /// See also <see cref="Altitude" />
         /// </summary>
         StatusProperty<bool> AltitudeFromAverageRadius { get; }
 
@@ -203,7 +202,7 @@ namespace EliteAPI.Status.Ship.Abstractions
         /// The ship's currently amount of cargo in tonnes
         /// </summary>
         StatusProperty<int> Cargo { get; }
-        
+
         /// <summary>
         /// The ship's current legal state
         /// </summary>

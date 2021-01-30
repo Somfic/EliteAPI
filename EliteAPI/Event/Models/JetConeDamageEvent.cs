@@ -1,19 +1,21 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class JetConeDamageEvent : EventBase
     {
-        internal JetConeDamageEvent()
-        {
-        }
+        internal JetConeDamageEvent() { }
 
-        [JsonProperty("Module")] public string Module { get; private set; }
+        [JsonProperty("Module")]
+        public string Module { get; private set; }
 
-        [JsonProperty("Module_Localised")] public string ModuleLocalised { get; private set; }
+        [JsonProperty("Module_Localised")]
+        public string ModuleLocalised { get; private set; }
     }
 
     public partial class JetConeDamageEvent

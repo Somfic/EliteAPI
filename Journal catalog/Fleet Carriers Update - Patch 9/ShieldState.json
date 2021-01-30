@@ -1,0 +1,3 @@
+{ "timestamp":"2021-01-01T22:05:34Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2021-01-01T23:56:06Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2021-01-04T18:31:45Z", "event":"ShieldState", "ShieldsUp":false }

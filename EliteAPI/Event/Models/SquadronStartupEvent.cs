@@ -1,19 +1,21 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class SquadronStartupEvent : EventBase
     {
-        internal SquadronStartupEvent()
-        {
-        }
+        internal SquadronStartupEvent() { }
 
-        [JsonProperty("SquadronName")] public string SquadronName { get; private set; }
+        [JsonProperty("SquadronName")]
+        public string SquadronName { get; private set; }
 
-        [JsonProperty("CurrentRank")] public long CurrentRank { get; private set; }
+        [JsonProperty("CurrentRank")]
+        public long CurrentRank { get; private set; }
     }
 
     public partial class SquadronStartupEvent

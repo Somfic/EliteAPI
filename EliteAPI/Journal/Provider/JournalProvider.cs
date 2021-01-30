@@ -2,9 +2,11 @@
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+
 using EliteAPI.Configuration.Abstractions;
 using EliteAPI.Exceptions;
 using EliteAPI.Journal.Provider.Abstractions;
+
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -14,8 +16,8 @@ namespace EliteAPI.Journal.Provider
     /// <inheritdoc />
     public class JournalProvider : IJournalProvider
     {
-        private readonly IConfiguration _config;
         private readonly IEliteDangerousApiConfiguration _codeConfig;
+        private readonly IConfiguration _config;
         private readonly ILogger<JournalProvider> _log;
 
         public JournalProvider(IServiceProvider services)
@@ -30,7 +32,7 @@ namespace EliteAPI.Journal.Provider
         {
             try
             {
-                string fileFilter = !string.IsNullOrWhiteSpace(_codeConfig.Journal) ? _codeConfig.Journal : "Journal.*.log";
+                var fileFilter = !string.IsNullOrWhiteSpace(_codeConfig.Journal) ? _codeConfig.Journal : "Journal.*.log";
 
                 return Task.FromResult(journalDirectory
                     .GetFiles(fileFilter)

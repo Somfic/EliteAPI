@@ -1,19 +1,21 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class ClearSavedGameEvent : EventBase
     {
-        internal ClearSavedGameEvent()
-        {
-        }
+        internal ClearSavedGameEvent() { }
 
-        [JsonProperty("Name")] public string Name { get; private set; }
+        [JsonProperty("Name")]
+        public string Name { get; private set; }
 
-        [JsonProperty("FID")] public string Fid { get; private set; }
+        [JsonProperty("FID")]
+        public string Fid { get; private set; }
     }
 
     public partial class ClearSavedGameEvent

@@ -1,17 +1,18 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class PowerplayJoinEvent : EventBase
     {
-        internal PowerplayJoinEvent()
-        {
-        }
+        internal PowerplayJoinEvent() { }
 
-        [JsonProperty("Power")] public string Power { get; private set; }
+        [JsonProperty("Power")]
+        public string Power { get; private set; }
     }
 
     public partial class PowerplayJoinEvent

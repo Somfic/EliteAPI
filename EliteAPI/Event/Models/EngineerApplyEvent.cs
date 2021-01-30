@@ -1,21 +1,24 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class EngineerApplyEvent : EventBase
     {
-        internal EngineerApplyEvent()
-        {
-        }
+        internal EngineerApplyEvent() { }
 
-        [JsonProperty("Engineer")] public string Engineer { get; private set; }
+        [JsonProperty("Engineer")]
+        public string Engineer { get; private set; }
 
-        [JsonProperty("Blueprint")] public string Blueprint { get; private set; }
+        [JsonProperty("Blueprint")]
+        public string Blueprint { get; private set; }
 
-        [JsonProperty("Level")] public long Level { get; private set; }
+        [JsonProperty("Level")]
+        public long Level { get; private set; }
     }
 
     public partial class EngineerApplyEvent

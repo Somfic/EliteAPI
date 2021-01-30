@@ -1,0 +1,9 @@
+{ "timestamp":"2021-01-04T22:16:46Z", "event":"LaunchDrone", "Type":"Prospector" }
+{ "timestamp":"2021-01-04T22:16:54Z", "event":"LaunchDrone", "Type":"Prospector" }
+{ "timestamp":"2021-01-04T22:17:31Z", "event":"LaunchDrone", "Type":"Prospector" }
+{ "timestamp":"2021-01-04T22:18:22Z", "event":"LaunchDrone", "Type":"Prospector" }
+{ "timestamp":"2021-01-04T22:18:48Z", "event":"LaunchDrone", "Type":"Prospector" }
+{ "timestamp":"2021-01-04T22:21:10Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2021-01-04T22:21:15Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2021-01-04T22:21:17Z", "event":"LaunchDrone", "Type":"Collection" }
+{ "timestamp":"2021-01-04T22:21:43Z", "event":"LaunchDrone", "Type":"Collection" }

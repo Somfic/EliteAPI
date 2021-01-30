@@ -1,0 +1,2 @@
+{ "timestamp":"2021-01-04T21:57:26Z", "event":"ShipyardSwap", "ShipType":"python", "ShipID":66, "StoreOldShip":"Cutter", "StoreShipID":61, "MarketID":128666762 }
+{ "timestamp":"2021-01-16T15:46:48Z", "event":"ShipyardSwap", "ShipType":"cutter", "ShipType_Localised":"Imperial Cutter", "ShipID":61, "StoreOldShip":"Python", "StoreShipID":66, "MarketID":128666762 }

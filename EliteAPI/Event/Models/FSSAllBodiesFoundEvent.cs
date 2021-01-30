@@ -1,21 +1,24 @@
 using System;
+
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models
 {
     public partial class FssAllBodiesFoundEvent : EventBase
     {
-        internal FssAllBodiesFoundEvent()
-        {
-        }
+        internal FssAllBodiesFoundEvent() { }
 
-        [JsonProperty("SystemName")] public string SystemName { get; private set; }
+        [JsonProperty("SystemName")]
+        public string SystemName { get; private set; }
 
-        [JsonProperty("SystemAddress")] public long SystemAddress { get; private set; }
+        [JsonProperty("SystemAddress")]
+        public long SystemAddress { get; private set; }
 
-        [JsonProperty("Count")] public long Count { get; private set; }
+        [JsonProperty("Count")]
+        public long Count { get; private set; }
     }
 
     public partial class FssAllBodiesFoundEvent

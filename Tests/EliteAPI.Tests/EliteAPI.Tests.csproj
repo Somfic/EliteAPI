@@ -8,6 +8,7 @@
     <InformationalVersion>3.0.0-alpha.1055+Branch.dev.Sha.3afa12915bf8f774a6657ae58471e69221d7f99a</InformationalVersion>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
     <PackageReference Include="LiquidTestReports.Markdown" Version="1.0.9" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
     <PackageReference Include="Moq" Version="4.16.0" />

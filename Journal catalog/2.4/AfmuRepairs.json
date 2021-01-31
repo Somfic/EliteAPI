@@ -1,7 +1,0 @@
-{ "timestamp":"2017-10-29T21:38:18Z", "event":"AfmuRepairs", "Module":"$int_powerdistributor_size5_class2_name;", "Module_Localised":"Power Distributor", "FullyRepaired":true, "Health":1.000000 }
-{ "timestamp":"2017-10-29T21:39:55Z", "event":"AfmuRepairs", "Module":"$int_fuelscoop_size7_class4_name;", "Module_Localised":"Fuel Scoop", "FullyRepaired":true, "Health":1.000000 }
-{ "timestamp":"2017-10-29T21:40:52Z", "event":"AfmuRepairs", "Module":"$int_repairer_size5_class4_name;", "Module_Localised":"AFM Unit", "FullyRepaired":true, "Health":1.000000 }
-{ "timestamp":"2017-10-29T21:41:19Z", "event":"AfmuRepairs", "Module":"$int_shieldgenerator_size3_class2_name;", "Module_Localised":"Shield Generator", "FullyRepaired":true, "Health":1.000000 }
-{ "timestamp":"2017-10-29T21:41:22Z", "event":"AfmuRepairs", "Module":"$anaconda_cockpit_name;", "Module_Localised":"Cockpit", "FullyRepaired":true, "Health":1.000000 }
-{ "timestamp":"2017-10-29T21:41:39Z", "event":"AfmuRepairs", "Module":"$int_stellarbodydiscoveryscanner_advanced_name;", "Module_Localised":"D - Scanner", "FullyRepaired":true, "Health":1.000000 }
-{ "timestamp":"2017-11-01T19:51:09Z", "event":"AfmuRepairs", "Module":"$modularcargobaydoor_name;", "Module_Localised":"Cargo Hatch", "FullyRepaired":true, "Health":1.000000 }

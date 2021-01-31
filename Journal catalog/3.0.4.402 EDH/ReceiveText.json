@@ -1,9 +1,0 @@
-{ "timestamp":"2018-03-27T00:15:20Z", "event":"ReceiveText", "From":"Holden Horizons", "Message":"$STATION_NoFireZone_exited;", "Message_Localised":"No fire zone left.", "Channel":"npc" }
-{ "timestamp":"2018-03-27T00:56:22Z", "event":"ReceiveText", "From":"Rix Depot", "Message":"$STATION_NoFireZone_entered;", "Message_Localised":"No fire zone entered.", "Channel":"npc" }
-{ "timestamp":"2018-03-27T00:57:13Z", "event":"ReceiveText", "From":"Rix Depot", "Message":"$DockingChatter_Neutral;", "Message_Localised":"Ensure to observe starport protocol during your visit, pilot.", "Channel":"npc" }
-{ "timestamp":"2018-03-27T00:57:13Z", "event":"ReceiveText", "From":"Rix Depot", "Message":"$STATION_docking_granted;", "Message_Localised":"Docking request granted.", "Channel":"npc" }
-{ "timestamp":"2018-03-27T01:15:55Z", "event":"ReceiveText", "From":"$ShipName_Police_Independent;", "From_Localised":"System Authority Vessel", "Message":"$Police_ThankYouPassedStopAndSearch05;", "Message_Localised":"Scan finished. Be about your business.", "Channel":"npc" }
-{ "timestamp":"2018-03-27T01:16:57Z", "event":"ReceiveText", "From":"Rix Depot", "Message":"$STATION_NoFireZone_exited;", "Message_Localised":"No fire zone left.", "Channel":"npc" }
-{ "timestamp":"2018-03-27T01:24:16Z", "event":"ReceiveText", "From":"Darnielle's Progress", "Message":"$STATION_NoFireZone_entered;", "Message_Localised":"No fire zone entered.", "Channel":"npc" }
-{ "timestamp":"2018-03-27T01:24:49Z", "event":"ReceiveText", "From":"Darnielle's Progress", "Message":"$DockingChatter_Neutral;", "Message_Localised":"Ensure to observe starport protocol during your visit, pilot.", "Channel":"npc" }
-{ "timestamp":"2018-03-27T01:24:49Z", "event":"ReceiveText", "From":"Darnielle's Progress", "Message":"$STATION_docking_granted;", "Message_Localised":"Docking request granted.", "Channel":"npc" }

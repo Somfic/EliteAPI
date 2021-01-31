@@ -1,5 +1,0 @@
-{ "timestamp":"2018-12-12T15:25:07Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Aegis Research", "Fine":50 }
-{ "timestamp":"2018-12-14T10:27:15Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Red Squadron", "Fine":100 }
-{ "timestamp":"2018-12-14T23:52:06Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Coalition of Wolf 294", "Victim":"$LUASC_Scenario_Warzone_NPC_SpecOps_A;", "Victim_Localised":"Spec Ops Wing Alpha", "Bounty":100 }
-{ "timestamp":"2018-12-15T13:31:29Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Red Squadron", "Fine":400 }
-{ "timestamp":"2018-12-15T18:41:12Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Red Squadron", "Fine":100 }

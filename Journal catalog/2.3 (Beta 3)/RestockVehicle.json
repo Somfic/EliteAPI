@@ -1,4 +1,0 @@
-{ "timestamp":"2017-03-18T14:45:59Z", "event":"RestockVehicle", "Type":"empire_fighter", "Loadout":"one", "Cost":3090, "Count":3 }
-{ "timestamp":"2017-03-18T14:45:59Z", "event":"RestockVehicle", "Type":"federation_fighter", "Loadout":"two", "Cost":3090, "Count":3 }
-{ "timestamp":"2017-03-18T18:26:36Z", "event":"RestockVehicle", "Type":"empire_fighter", "Loadout":"one", "Cost":4120, "Count":4 }
-{ "timestamp":"2017-03-18T18:26:36Z", "event":"RestockVehicle", "Type":"federation_fighter", "Loadout":"two", "Cost":5150, "Count":5 }

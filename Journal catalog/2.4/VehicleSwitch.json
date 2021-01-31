@@ -1,6 +1,0 @@
-{ "timestamp":"2017-09-28T15:29:13Z", "event":"VehicleSwitch" }
-{ "timestamp":"2017-10-01T14:36:08Z", "event":"VehicleSwitch" }
-{ "timestamp":"2017-10-20T19:05:54Z", "event":"VehicleSwitch", "To":"Mothership" }
-{ "timestamp":"2017-10-23T20:34:39Z", "event":"VehicleSwitch" }
-{ "timestamp":"2017-11-01T20:40:20Z", "event":"VehicleSwitch", "To":"Mothership" }
-{ "timestamp":"2017-11-01T20:42:18Z", "event":"VehicleSwitch", "To":"Fighter" }

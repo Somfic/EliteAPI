@@ -1,4 +1,0 @@
-{ "timestamp":"2017-04-19T14:45:38Z", "event":"Synthesis", "Name":"FSD Premium", "Materials":[ { "Name":"arsenic", "Count":1 }, { "Name":"niobium", "Count":3 }, { "Name":"yttrium", "Count":1 }, { "Name":"polonium", "Count":1 } ] }
-{ "timestamp":"2017-04-21T17:29:24Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":[ { "Name":"iron", "Count":2 }, { "Name":"nickel", "Count":1 } ] }
-{ "timestamp":"2017-04-21T17:30:40Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":[ { "Name":"iron", "Count":2 }, { "Name":"nickel", "Count":1 } ] }
-{ "timestamp":"2017-04-21T20:58:24Z", "event":"Synthesis", "Name":"Ammo Basic", "Materials":[ { "Name":"iron", "Count":2 }, { "Name":"nickel", "Count":1 }, { "Name":"sulphur", "Count":2 } ] }

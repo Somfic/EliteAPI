@@ -1,7 +1,0 @@
-{ "timestamp":"2018-02-28T18:49:06Z", "event":"Materials", "Raw":[  ], "Manufactured":[  ], "Encoded":[ { "Name":"consumerfirmware", "Name_Localised":"Modified Consumer Firmware", "Count":1 } ] }
-{ "timestamp":"2018-02-28T18:52:33Z", "event":"Materials", "Raw":[  ], "Manufactured":[  ], "Encoded":[  ] }
-{ "timestamp":"2018-02-28T19:29:18Z", "event":"Materials", "Raw":[  ], "Manufactured":[  ], "Encoded":[  ] }
-{ "timestamp":"2018-02-28T20:28:06Z", "event":"Materials", "Raw":[  ], "Manufactured":[  ], "Encoded":[  ] }
-{ "timestamp":"2018-03-01T01:15:15Z", "event":"Materials", "Raw":[  ], "Manufactured":[  ], "Encoded":[  ] }
-{ "timestamp":"2018-03-01T18:45:03Z", "event":"Materials", "Raw":[  ], "Manufactured":[  ], "Encoded":[ { "Name":"shielddensityreports", "Name_Localised":"Untypical Shield Scans ", "Count":3 } ] }
-{ "timestamp":"2018-03-05T02:41:23Z", "event":"Materials", "Raw":[  ], "Manufactured":[  ], "Encoded":[ { "Name":"shielddensityreports", "Name_Localised":"Untypical Shield Scans ", "Count":9 }, { "Name":"bulkscandata", "Name_Localised":"Anomalous Bulk Scan Data", "Count":6 }, { "Name":"shieldpatternanalysis", "Name_Localised":"Aberrant Shield Pattern Analysis", "Count":3 }, { "Name":"decodedemissiondata", "Name_Localised":"Decoded Emission Data", "Count":6 } ] }

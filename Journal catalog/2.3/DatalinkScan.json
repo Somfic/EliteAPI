@@ -1,5 +1,0 @@
-{ "timestamp":"2017-04-11T20:54:05Z", "event":"DatalinkScan", "Message":"$DATAPOINT_GAMEPLAY_complete;", "Message_Localised":"Alert: All Data Point telemetry links established, Intel package created." }
-{ "timestamp":"2017-04-12T18:18:03Z", "event":"DatalinkScan", "Message":"$DATAPOINT_GAMEPLAY_complete;", "Message_Localised":"Alert: All Data Point telemetry links established, Intel package created." }
-{ "timestamp":"2017-04-19T18:21:56Z", "event":"DatalinkScan", "Message":"$DATAPOINT_GAMEPLAY_complete;", "Message_Localised":"Alert: All Data Point telemetry links established, Intel package created." }
-{ "timestamp":"2017-04-20T10:20:12Z", "event":"DatalinkScan", "Message":"$DATAPOINT_GAMEPLAY_complete;", "Message_Localised":"Alert: All Data Point telemetry links established, Intel package created." }
-{ "timestamp":"2017-04-20T10:52:41Z", "event":"DatalinkScan", "Message":"$DATAPOINT_GAMEPLAY_complete;", "Message_Localised":"Alert: All Data Point telemetry links established, Intel package created." }

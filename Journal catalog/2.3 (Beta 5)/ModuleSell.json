@@ -1,5 +1,0 @@
-{ "timestamp":"2017-04-11T10:50:41Z", "event":"ModuleSell", "Slot":"MediumHardpoint1", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":198, "Ship":"type9", "ShipID":69 }
-{ "timestamp":"2017-04-11T10:50:51Z", "event":"ModuleSell", "Slot":"MediumHardpoint2", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":198, "Ship":"type9", "ShipID":69 }
-{ "timestamp":"2017-04-11T16:21:49Z", "event":"ModuleSell", "Slot":"SmallHardpoint1", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":198, "Ship":"anaconda", "ShipID":72 }
-{ "timestamp":"2017-04-11T16:21:59Z", "event":"ModuleSell", "Slot":"SmallHardpoint2", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":198, "Ship":"anaconda", "ShipID":72 }
-{ "timestamp":"2017-04-11T16:22:35Z", "event":"ModuleSell", "Slot":"Slot03_Size6", "SellItem":"$int_shieldgenerator_size6_class1_name;", "SellItem_Localised":"Shield Generator", "SellPrice":17977, "Ship":"anaconda", "ShipID":72 }

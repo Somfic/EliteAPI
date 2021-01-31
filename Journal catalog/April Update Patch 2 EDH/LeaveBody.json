@@ -1,5 +1,0 @@
-{ "timestamp":"2019-06-22T17:31:44Z", "event":"LeaveBody", "StarSystem":"Nanomam", "SystemAddress":4752121268587, "Body":"Nanomam 5 a", "BodyID":8 }
-{ "timestamp":"2019-06-22T20:38:23Z", "event":"LeaveBody", "StarSystem":"Struve 1321", "SystemAddress":18262872106401, "Body":"Struve 1321 A 1", "BodyID":9 }
-{ "timestamp":"2019-06-22T21:16:44Z", "event":"LeaveBody", "StarSystem":"Lushertha", "SystemAddress":4442883623275, "Body":"Lushertha B 7 a", "BodyID":28 }
-{ "timestamp":"2019-06-22T21:25:39Z", "event":"LeaveBody", "StarSystem":"LHS 6128", "SystemAddress":2869709383065, "Body":"LHS 6128 1", "BodyID":5 }
-{ "timestamp":"2019-08-18T02:29:10Z", "event":"LeaveBody", "StarSystem":"DX 799", "SystemAddress":8879945552594, "Body":"DX 799 ABC 1 e", "BodyID":34 }

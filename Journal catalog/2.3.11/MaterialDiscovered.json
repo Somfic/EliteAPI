@@ -1,5 +1,0 @@
-{ "timestamp":"2017-07-14T18:20:41Z", "event":"MaterialDiscovered", "Category":"Manufactured", "Name":"fedproprietarycomposites", "DiscoveryNumber":48 }
-{ "timestamp":"2017-07-14T18:21:19Z", "event":"MaterialDiscovered", "Category":"Manufactured", "Name":"fedcorecomposites", "DiscoveryNumber":49 }
-{ "timestamp":"2017-07-14T18:35:16Z", "event":"MaterialDiscovered", "Category":"Manufactured", "Name":"protoradiolicalloys", "DiscoveryNumber":50 }
-{ "timestamp":"2017-08-21T15:01:09Z", "event":"MaterialDiscovered", "Category":"Raw", "Name":"mercury", "DiscoveryNumber":24 }
-{ "timestamp":"2017-09-15T14:46:39Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"adaptiveencryptors", "DiscoveryNumber":40 }

@@ -1,4 +1,0 @@
-{ "timestamp":"2018-12-19T16:46:03Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":2000, "Factions":[ { "Faction":"LHS 250 Industry", "Amount":2000 } ] }
-{ "timestamp":"2018-12-19T16:46:06Z", "event":"RedeemVoucher", "Type":"settlement", "Amount":11518, "Faction":"" }
-{ "timestamp":"2018-12-19T17:53:11Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":19980, "Factions":[ { "Faction":"C.O.N.T.R.A.I.L", "Amount":19980 } ] }
-{ "timestamp":"2019-01-03T18:27:42Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":351210, "Factions":[ { "Faction":"", "Amount":328035 }, { "Faction":"C.O.N.T.R.A.I.L", "Amount":23175 } ] }

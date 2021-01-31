@@ -1,9 +1,0 @@
-{ "timestamp":"2017-09-27T14:33:04Z", "event":"ShipyardTransfer", "ShipType":"DiamondBackXL", "ShipID":66, "System":"Shinrarta Dezhra", "Distance":412.382507, "TransferPrice":252918, "TransferTime":4423 }
-{ "timestamp":"2017-09-28T13:03:06Z", "event":"ShipyardTransfer", "ShipType":"FerDeLance", "ShipID":56, "System":"Tau Ceti", "Distance":77.648956, "TransferPrice":674061, "TransferTime":1076 }
-{ "timestamp":"2017-09-28T15:12:26Z", "event":"ShipyardTransfer", "ShipType":"Empire_Eagle", "ShipID":142, "System":"Algorab", "Distance":44.745659, "TransferPrice":15887, "TransferTime":747 }
-{ "timestamp":"2017-09-28T20:15:07Z", "event":"ShipyardTransfer", "ShipType":"Empire_Eagle", "ShipID":142, "System":"Shinrarta Dezhra", "Distance":411.868011, "TransferPrice":129561, "TransferTime":4418 }
-{ "timestamp":"2017-09-29T16:22:15Z", "event":"ShipyardTransfer", "ShipType":"Orca", "ShipID":70, "System":"HR 1185", "Distance":10.816070, "TransferPrice":50788, "TransferTime":408 }
-{ "timestamp":"2017-10-20T15:37:08Z", "event":"ShipyardTransfer", "ShipType":"DiamondBackXL", "ShipID":66, "System":"Bunda", "Distance":137.719437, "TransferPrice":102218, "TransferTime":1677 }
-{ "timestamp":"2017-10-22T10:13:30Z", "event":"ShipyardTransfer", "ShipType":"DiamondBackXL", "ShipID":66, "System":"HIP 17692", "Distance":411.868011, "TransferPrice":298944, "TransferTime":4418 }
-{ "timestamp":"2017-11-11T16:48:22Z", "event":"ShipyardTransfer", "ShipType":"Empire_Courier", "ShipID":67, "System":"Ugrivirii", "Distance":238.820328, "TransferPrice":125474, "TransferTime":2688 }
-{ "timestamp":"2017-11-11T16:48:42Z", "event":"ShipyardTransfer", "ShipType":"Empire_Eagle", "ShipID":64, "System":"Shinrarta Dezhra", "Distance":133.260147, "TransferPrice":53178, "TransferTime":1632 }

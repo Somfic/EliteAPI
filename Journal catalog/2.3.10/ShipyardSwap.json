@@ -1,3 +1,0 @@
-{ "timestamp":"2017-06-27T19:03:54Z", "event":"ShipyardSwap", "ShipType":"orca", "ShipID":70, "StoreOldShip":"Empire_Courier", "StoreShipID":67 }
-{ "timestamp":"2017-07-01T11:20:50Z", "event":"ShipyardSwap", "ShipType":"anaconda", "ShipID":32, "StoreOldShip":"Orca", "StoreShipID":70 }
-{ "timestamp":"2017-07-01T11:23:43Z", "event":"ShipyardSwap", "ShipType":"orca", "ShipID":70, "StoreOldShip":"Anaconda", "StoreShipID":32 }

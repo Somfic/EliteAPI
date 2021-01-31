@@ -1,9 +1,0 @@
-{ "timestamp":"2018-04-01T02:23:44Z", "event":"Undocked", "StationName":"Darnielle's Progress", "StationType":"SurfaceStation", "MarketID":3500000000 }
-{ "timestamp":"2018-04-04T00:16:00Z", "event":"Undocked", "StationName":"Bertin Settlement", "StationType":"Outpost", "MarketID":3221932800 }
-{ "timestamp":"2018-04-04T00:35:12Z", "event":"Undocked", "StationName":"Kurland Station", "StationType":"Coriolis", "MarketID":3229714688 }
-{ "timestamp":"2018-04-04T00:57:33Z", "event":"Undocked", "StationName":"Farseer Inc", "StationType":"SurfaceStation", "MarketID":128676487 }
-{ "timestamp":"2018-04-04T01:11:23Z", "event":"Undocked", "StationName":"Garay Terminal", "StationType":"Coriolis", "MarketID":3229756160 }
-{ "timestamp":"2018-04-04T01:21:14Z", "event":"Undocked", "StationName":"Fremont Landing", "StationType":"SurfaceStation", "MarketID":3538376960 }
-{ "timestamp":"2018-04-04T01:30:01Z", "event":"Undocked", "StationName":"Beebe Vista", "StationType":"SurfaceStation", "MarketID":3538377472 }
-{ "timestamp":"2018-05-11T23:29:53Z", "event":"Undocked", "StationName":"Culpeper Market", "StationType":"Coriolis", "MarketID":3229687552 }
-{ "timestamp":"2018-05-11T23:54:45Z", "event":"Undocked", "StationName":"Nakano Mines", "StationType":"Outpost", "MarketID":3229700096 }

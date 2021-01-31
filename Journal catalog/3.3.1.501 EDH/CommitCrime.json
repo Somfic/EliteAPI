@@ -1,2 +1,0 @@
-{ "timestamp":"2018-12-19T16:34:10Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"LHS 250 Industry", "Victim":"$poi_turretplatforma_name;", "Victim_Localised":"Defence Turret", "Bounty":400 }
-{ "timestamp":"2018-12-19T16:35:25Z", "event":"CommitCrime", "CrimeType":"dockingMajorTresspass", "Faction":"LHS 250 Industry", "Victim":"$poi_datapoint_name;", "Bounty":500 }

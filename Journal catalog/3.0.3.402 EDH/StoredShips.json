@@ -1,3 +1,0 @@
-{ "timestamp":"2018-03-21T23:27:22Z", "event":"StoredShips", "StationName":"Agassiz Orbital", "MarketID":3227921664, "StarSystem":"Thunderbird", "ShipsHere":[  ], "ShipsRemote":[  ] }
-{ "timestamp":"2018-03-23T03:16:41Z", "event":"StoredShips", "StationName":"Schiltberger Port", "MarketID":3228174848, "StarSystem":"LHS 221", "ShipsHere":[  ], "ShipsRemote":[  ] }
-{ "timestamp":"2018-03-23T04:04:36Z", "event":"StoredShips", "StationName":"Knight Installation", "MarketID":3504531712, "StarSystem":"Gliese 182.1", "ShipsHere":[  ], "ShipsRemote":[  ] }

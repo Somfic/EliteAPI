@@ -1,6 +1,0 @@
-{ "timestamp":"2017-06-27T19:50:08Z", "event":"HullDamage", "Health":0.779143, "PlayerPilot":true }
-{ "timestamp":"2017-06-28T12:51:08Z", "event":"HullDamage", "Health":0.788438, "PlayerPilot":true }
-{ "timestamp":"2017-06-28T12:57:58Z", "event":"HullDamage", "Health":0.764990, "PlayerPilot":true, "Fighter":false }
-{ "timestamp":"2017-06-28T13:37:01Z", "event":"HullDamage", "Health":0.797332, "PlayerPilot":true }
-{ "timestamp":"2017-06-28T13:37:13Z", "event":"HullDamage", "Health":0.593141, "PlayerPilot":true }
-{ "timestamp":"2017-06-28T13:57:20Z", "event":"HullDamage", "Health":0.107136, "PlayerPilot":true, "Fighter":false }

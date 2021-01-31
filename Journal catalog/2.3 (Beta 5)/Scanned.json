@@ -1,8 +1,0 @@
-{ "timestamp":"2017-04-11T10:44:19Z", "event":"Scanned", "ScanType":"Cargo" }
-{ "timestamp":"2017-04-11T10:54:34Z", "event":"Scanned", "ScanType":"Cargo" }
-{ "timestamp":"2017-04-11T14:27:29Z", "event":"Scanned", "ScanType":"Cargo" }
-{ "timestamp":"2017-04-11T14:33:12Z", "event":"Scanned", "ScanType":"Cargo" }
-{ "timestamp":"2017-04-11T14:33:23Z", "event":"Scanned", "ScanType":"Cargo" }
-{ "timestamp":"2017-04-11T16:14:02Z", "event":"Scanned", "ScanType":"Cargo" }
-{ "timestamp":"2017-04-11T16:25:23Z", "event":"Scanned", "ScanType":"Cargo" }
-{ "timestamp":"2017-04-11T16:31:35Z", "event":"Scanned", "ScanType":"Cargo" }

@@ -1,6 +1,0 @@
-{ "timestamp":"2021-01-01T17:06:16Z", "event":"LaunchFighter", "Loadout":"one", "ID":80, "PlayerControlled":false }
-{ "timestamp":"2021-01-01T22:05:50Z", "event":"LaunchFighter", "Loadout":"one", "ID":80, "PlayerControlled":true }
-{ "timestamp":"2021-01-01T22:08:13Z", "event":"LaunchFighter", "Loadout":"one", "ID":80, "PlayerControlled":true }
-{ "timestamp":"2021-01-01T22:12:33Z", "event":"LaunchFighter", "Loadout":"one", "ID":80, "PlayerControlled":true }
-{ "timestamp":"2021-01-04T18:25:51Z", "event":"LaunchFighter", "Loadout":"one", "ID":80, "PlayerControlled":true }
-{ "timestamp":"2021-01-04T18:26:30Z", "event":"LaunchFighter", "Loadout":"one", "ID":80, "PlayerControlled":true }

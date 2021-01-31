@@ -1,8 +1,0 @@
-{ "timestamp":"2018-12-13T13:22:37Z", "event":"MarketSell", "MarketID":3228852480, "Type":"lowtemperaturediamond", "Type_Localised":"Low Temperature Diamonds", "Count":8, "SellPrice":293064, "TotalSale":2344512, "AvgPricePaid":0 }
-{ "timestamp":"2018-12-13T13:22:41Z", "event":"MarketSell", "MarketID":3228852480, "Type":"lowtemperaturediamond", "Type_Localised":"Low Temperature Diamonds", "Count":4, "SellPrice":293064, "TotalSale":1172256, "AvgPricePaid":0 }
-{ "timestamp":"2018-12-13T13:31:21Z", "event":"MarketSell", "MarketID":3228922112, "Type":"opal", "Count":44, "SellPrice":180946, "TotalSale":7961624, "AvgPricePaid":0 }
-{ "timestamp":"2018-12-13T13:31:31Z", "event":"MarketSell", "MarketID":3228922112, "Type":"grandidierite", "Count":12, "SellPrice":253631, "TotalSale":3043572, "AvgPricePaid":0 }
-{ "timestamp":"2018-12-13T22:47:20Z", "event":"MarketSell", "MarketID":3228922112, "Type":"serendibite", "Count":13, "SellPrice":221256, "TotalSale":2876328, "AvgPricePaid":0 }
-{ "timestamp":"2018-12-13T22:47:25Z", "event":"MarketSell", "MarketID":3228922112, "Type":"lepidolite", "Count":2, "SellPrice":1153, "TotalSale":2306, "AvgPricePaid":0 }
-{ "timestamp":"2018-12-14T14:32:26Z", "event":"MarketSell", "MarketID":3228922112, "Type":"alexandrite", "Count":9, "SellPrice":271098, "TotalSale":2439882, "AvgPricePaid":0 }
-{ "timestamp":"2018-12-14T14:32:31Z", "event":"MarketSell", "MarketID":3228922112, "Type":"bromellite", "Count":8, "SellPrice":5369, "TotalSale":42952, "AvgPricePaid":0 }

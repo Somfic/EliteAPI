@@ -1,1 +1,0 @@
-{ "timestamp":"2018-04-04T00:52:28Z", "event":"StoredModules", "MarketID":128676487, "StationName":"Farseer Inc", "StarSystem":"Deciat", "Items":[ { "Name":"$int_cargorack_size2_class1_name;", "Name_Localised":"Cargo Rack", "StorageSlot":120, "StarSystem":"Gliese 182.1", "MarketID":3504531712, "TransferCost":126, "TransferTime":1635, "BuyPrice":3250, "Hot":false } ] }

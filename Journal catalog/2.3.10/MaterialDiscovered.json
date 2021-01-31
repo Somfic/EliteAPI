@@ -1,7 +1,0 @@
-{ "timestamp":"2017-06-27T19:45:38Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"tg_residuedata", "DiscoveryNumber":36 }
-{ "timestamp":"2017-06-27T19:45:38Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"tg_compositiondata", "DiscoveryNumber":37 }
-{ "timestamp":"2017-06-27T19:53:08Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"tg_structuraldata", "DiscoveryNumber":38 }
-{ "timestamp":"2017-06-27T19:55:22Z", "event":"MaterialDiscovered", "Category":"Manufactured", "Name":"unknownenergycell", "DiscoveryNumber":45 }
-{ "timestamp":"2017-06-27T19:55:28Z", "event":"MaterialDiscovered", "Category":"Manufactured", "Name":"unknowncarapace", "DiscoveryNumber":46 }
-{ "timestamp":"2017-06-27T20:02:11Z", "event":"MaterialDiscovered", "Category":"Manufactured", "Name":"unknownorganiccircuitry", "DiscoveryNumber":47 }
-{ "timestamp":"2017-06-27T20:02:48Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"unknownwakedata", "DiscoveryNumber":39 }

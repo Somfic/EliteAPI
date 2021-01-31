@@ -1,3 +1,0 @@
-{ "timestamp":"2017-06-14T16:42:21Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Dedicated Testers", "Fine":90 }
-{ "timestamp":"2017-06-14T16:42:21Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Dedicated Testers", "Fine":300 }
-{ "timestamp":"2017-06-14T17:16:19Z", "event":"CommitCrime", "CrimeType":"dockingMinorBlockingLandingPad", "Faction":"Dedicated Testers", "Fine":300 }

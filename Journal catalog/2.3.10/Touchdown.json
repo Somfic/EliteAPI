@@ -1,8 +1,0 @@
-{ "timestamp":"2017-06-27T19:40:30Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-17.811108, "Longitude":-152.609207 }
-{ "timestamp":"2017-06-27T19:57:31Z", "event":"Touchdown", "PlayerControlled":false }
-{ "timestamp":"2017-06-27T20:00:23Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-17.977142, "Longitude":-152.720367 }
-{ "timestamp":"2017-06-28T12:49:40Z", "event":"Touchdown", "PlayerControlled":false }
-{ "timestamp":"2017-06-28T12:51:42Z", "event":"Touchdown", "PlayerControlled":false }
-{ "timestamp":"2017-06-28T13:16:50Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":-26.446575, "Longitude":-27.471853 }
-{ "timestamp":"2017-06-28T13:29:03Z", "event":"Touchdown", "PlayerControlled":false }
-{ "timestamp":"2017-07-06T14:36:19Z", "event":"Touchdown", "PlayerControlled":true, "Latitude":72.221718, "Longitude":-171.185623 }

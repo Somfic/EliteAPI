@@ -1,4 +1,0 @@
-{ "timestamp":"2019-06-29T00:08:57Z", "event":"DockingDenied", "Reason":"NoSpace", "MarketID":3228076032, "StationName":"Bowersox Relay", "StationType":"Outpost" }
-{ "timestamp":"2019-06-29T00:09:58Z", "event":"DockingDenied", "Reason":"NoSpace", "MarketID":3228076032, "StationName":"Bowersox Relay", "StationType":"Outpost" }
-{ "timestamp":"2019-06-29T00:10:03Z", "event":"DockingDenied", "Reason":"NoSpace", "MarketID":3228076032, "StationName":"Bowersox Relay", "StationType":"Outpost" }
-{ "timestamp":"2019-08-18T02:32:36Z", "event":"DockingDenied", "Reason":"NoSpace", "MarketID":3228951808, "StationName":"Mondeh Station", "StationType":"Outpost" }

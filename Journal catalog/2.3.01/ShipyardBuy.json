@@ -1,3 +1,0 @@
-{ "timestamp":"2017-04-25T18:50:55Z", "event":"ShipyardBuy", "ShipType":"vulture", "ShipPrice":5762970, "StoreOldShip":"Orca", "StoreShipID":70 }
-{ "timestamp":"2017-04-25T18:56:58Z", "event":"ShipyardBuy", "ShipType":"diamondbackxl", "ShipPrice":2216870, "StoreOldShip":"Vulture", "StoreShipID":90 }
-{ "timestamp":"2017-04-25T18:59:42Z", "event":"ShipyardBuy", "ShipType":"viper", "ShipPrice":167230, "StoreOldShip":"DiamondBackXL", "StoreShipID":91 }

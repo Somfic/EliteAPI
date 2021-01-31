@@ -1,3 +1,0 @@
-{ "timestamp":"2018-03-01T02:42:19Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":11520, "Factions":[ { "Faction":"Federation", "Amount":11520 } ] }
-{ "timestamp":"2018-03-01T19:42:59Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":20745, "Factions":[ { "Faction":"Federation", "Amount":20745 } ] }
-{ "timestamp":"2018-03-05T04:06:02Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":12225, "Factions":[ { "Faction":"Federation", "Amount":12225 } ] }

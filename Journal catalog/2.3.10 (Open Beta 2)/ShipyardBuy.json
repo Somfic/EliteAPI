@@ -1,2 +1,0 @@
-{ "timestamp":"2017-06-14T16:25:02Z", "event":"ShipyardBuy", "ShipType":"cutter", "ShipPrice":203745215, "SellOldShip":"Anaconda", "SellShipID":32, "SellPrice":152434334 }
-{ "timestamp":"2017-06-14T17:12:03Z", "event":"ShipyardBuy", "ShipType":"empire_eagle", "ShipPrice":108055, "StoreOldShip":"Cutter", "StoreShipID":32 }

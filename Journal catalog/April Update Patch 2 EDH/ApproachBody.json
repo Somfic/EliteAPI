@@ -1,7 +1,0 @@
-{ "timestamp":"2019-06-22T20:30:36Z", "event":"ApproachBody", "StarSystem":"Struve 1321", "SystemAddress":18262872106401, "Body":"Struve 1321 A 1", "BodyID":9 }
-{ "timestamp":"2019-06-22T21:04:28Z", "event":"ApproachBody", "StarSystem":"Lushertha", "SystemAddress":4442883623275, "Body":"Lushertha B 7 a", "BodyID":28 }
-{ "timestamp":"2019-06-22T21:18:38Z", "event":"ApproachBody", "StarSystem":"LHS 6128", "SystemAddress":2869709383065, "Body":"LHS 6128 1", "BodyID":5 }
-{ "timestamp":"2019-06-22T22:19:27Z", "event":"ApproachBody", "StarSystem":"Lushertha", "SystemAddress":4442883623275, "Body":"Lushertha B 7 a", "BodyID":28 }
-{ "timestamp":"2019-06-28T23:42:49Z", "event":"ApproachBody", "StarSystem":"Nang Ta-khian", "SystemAddress":2007997911762, "Body":"Nisa", "BodyID":6 }
-{ "timestamp":"2019-08-18T02:22:20Z", "event":"ApproachBody", "StarSystem":"DX 799", "SystemAddress":8879945552594, "Body":"DX 799 ABC 1 e", "BodyID":34 }
-{ "timestamp":"2019-09-03T21:26:07Z", "event":"ApproachBody", "StarSystem":"Lushertha", "SystemAddress":4442883623275, "Body":"Lushertha B 7 a", "BodyID":28 }

@@ -1,3 +1,0 @@
-{ "timestamp":"2020-09-29T17:52:29Z", "event":"ModuleSell", "MarketID":128666762, "Slot":"Slot01_Size8", "SellItem":"$int_cargorack_size8_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":3360708, "Ship":"cutter", "ShipID":61 }
-{ "timestamp":"2020-09-29T17:52:32Z", "event":"ModuleSell", "MarketID":128666762, "Slot":"Slot02_Size8", "SellItem":"$int_cargorack_size8_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":3360708, "Ship":"cutter", "ShipID":61 }
-{ "timestamp":"2020-09-29T17:52:37Z", "event":"ModuleSell", "MarketID":128666762, "Slot":"Slot03_Size6", "SellItem":"$int_shieldgenerator_size6_class5_name;", "SellItem_Localised":"Shield Generator", "SellPrice":14197539, "Ship":"cutter", "ShipID":61 }

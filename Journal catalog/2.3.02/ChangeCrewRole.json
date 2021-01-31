@@ -1,6 +1,0 @@
-{ "timestamp":"2017-06-13T14:01:01Z", "event":"ChangeCrewRole", "Role":"Idle" }
-{ "timestamp":"2017-06-13T14:01:15Z", "event":"ChangeCrewRole", "Role":"FighterCon" }
-{ "timestamp":"2017-06-14T14:09:47Z", "event":"ChangeCrewRole", "Role":"Idle" }
-{ "timestamp":"2017-06-14T14:11:08Z", "event":"ChangeCrewRole", "Role":"FireCon" }
-{ "timestamp":"2017-06-22T19:09:52Z", "event":"ChangeCrewRole", "Role":"Idle" }
-{ "timestamp":"2017-06-22T19:10:34Z", "event":"ChangeCrewRole", "Role":"FireCon" }

@@ -1,5 +1,0 @@
-{ "timestamp":"2017-07-30T16:08:41Z", "event":"PayLegacyFines", "Amount":330 }
-{ "timestamp":"2017-09-08T19:22:18Z", "event":"PayLegacyFines", "Amount":400 }
-{ "timestamp":"2017-09-12T17:13:17Z", "event":"PayLegacyFines", "Amount":500 }
-{ "timestamp":"2017-09-19T12:29:27Z", "event":"PayLegacyFines", "Amount":400 }
-{ "timestamp":"2017-09-23T14:50:29Z", "event":"PayLegacyFines", "Amount":5685 }

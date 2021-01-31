@@ -1,6 +1,0 @@
-{ "timestamp":"2017-10-18T19:20:55Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
-{ "timestamp":"2017-10-20T19:03:27Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
-{ "timestamp":"2017-10-24T13:06:02Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":false }
-{ "timestamp":"2017-10-28T12:33:35Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
-{ "timestamp":"2017-10-30T17:30:09Z", "event":"LaunchFighter", "Loadout":"three", "PlayerControlled":true }
-{ "timestamp":"2017-11-01T20:39:10Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }

@@ -1,8 +1,0 @@
-{ "timestamp":"2017-03-18T12:29:19Z", "event":"DockingRequested", "StationName":"Fraser Orbital" }
-{ "timestamp":"2017-03-18T12:40:58Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
-{ "timestamp":"2017-03-18T12:58:14Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
-{ "timestamp":"2017-03-18T14:44:24Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
-{ "timestamp":"2017-03-18T15:42:49Z", "event":"DockingRequested", "StationName":"Daedalus" }
-{ "timestamp":"2017-03-18T15:51:40Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
-{ "timestamp":"2017-03-18T15:53:44Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
-{ "timestamp":"2017-03-18T18:25:18Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }

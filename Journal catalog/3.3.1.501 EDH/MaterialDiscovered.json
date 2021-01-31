@@ -1,3 +1,0 @@
-{ "timestamp":"2018-12-19T16:35:25Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"adaptiveencryptors", "Name_Localised":"Adaptive Encryptors Capture", "DiscoveryNumber":13 }
-{ "timestamp":"2018-12-19T16:35:26Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"consumerfirmware", "Name_Localised":"Modified Consumer Firmware", "DiscoveryNumber":14 }
-{ "timestamp":"2018-12-19T16:35:26Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"encryptionarchives", "Name_Localised":"Atypical Encryption Archives", "DiscoveryNumber":15 }

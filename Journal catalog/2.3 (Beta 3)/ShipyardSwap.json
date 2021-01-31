@@ -1,5 +1,0 @@
-{ "timestamp":"2017-03-18T14:58:20Z", "event":"ShipyardSwap", "ShipType":"federation_corvette", "ShipID":48, "StoreOldShip":"Dolphin", "StoreShipID":51 }
-{ "timestamp":"2017-03-18T15:34:05Z", "event":"ShipyardSwap", "ShipType":"dolphin", "ShipID":51, "StoreOldShip":"Federation_Corvette", "StoreShipID":48 }
-{ "timestamp":"2017-03-18T15:57:17Z", "event":"ShipyardSwap", "ShipType":"federation_corvette", "ShipID":48, "StoreOldShip":"Cutter", "StoreShipID":52 }
-{ "timestamp":"2017-03-18T19:14:21Z", "event":"ShipyardSwap", "ShipType":"cutter", "ShipID":52, "StoreOldShip":"Federation_Corvette", "StoreShipID":48 }
-{ "timestamp":"2017-03-18T19:33:14Z", "event":"ShipyardSwap", "ShipType":"federation_corvette", "ShipID":48, "StoreOldShip":"Cutter", "StoreShipID":52 }

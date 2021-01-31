@@ -1,2 +1,0 @@
-{ "timestamp":"2018-12-11T03:28:47Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":13730, "Factions":[ { "Faction":"Sanos Services", "Amount":13730 } ] }
-{ "timestamp":"2018-12-11T03:50:04Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":10232, "Factions":[ { "Faction":"Sanos Services", "Amount":10232 } ] }

@@ -1,3 +1,0 @@
-{ "timestamp":"2018-12-10T02:44:21Z", "event":"ModuleBuy", "Slot":"Slot04_Size2", "BuyItem":"$int_cargorack_size2_class1_name;", "BuyItem_Localised":"Cargo Rack", "MarketID":3228282112, "BuyPrice":3250, "Ship":"cobramkiii", "ShipID":0 }
-{ "timestamp":"2018-12-10T02:45:08Z", "event":"ModuleBuy", "Slot":"Slot02_Size4", "BuyItem":"$int_cargorack_size4_class1_name;", "BuyItem_Localised":"Cargo Rack", "MarketID":3228282112, "BuyPrice":34328, "Ship":"cobramkiii", "ShipID":0 }
-{ "timestamp":"2018-12-10T02:45:28Z", "event":"ModuleBuy", "Slot":"Slot01_Size4", "BuyItem":"$int_cargorack_size4_class1_name;", "BuyItem_Localised":"Cargo Rack", "MarketID":3228282112, "BuyPrice":34328, "Ship":"cobramkiii", "ShipID":0 }

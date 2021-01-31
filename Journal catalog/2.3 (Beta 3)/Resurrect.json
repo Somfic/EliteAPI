@@ -1,7 +1,0 @@
-{ "timestamp":"2017-03-18T15:33:34Z", "event":"Resurrect", "Option":"rebuy", "Cost":3286983, "Bankrupt":false }
-{ "timestamp":"2017-03-18T19:08:27Z", "event":"Resurrect", "Option":"rebuy", "Cost":3287058, "Bankrupt":false }
-{ "timestamp":"2017-03-18T19:32:28Z", "event":"Resurrect", "Option":"rebuy", "Cost":3262365, "Bankrupt":false }
-{ "timestamp":"2017-03-19T13:42:42Z", "event":"Resurrect", "Option":"rebuy", "Cost":3288068, "Bankrupt":false }
-{ "timestamp":"2017-03-19T13:53:54Z", "event":"Resurrect", "Option":"rebuy", "Cost":556502, "Bankrupt":false }
-{ "timestamp":"2017-03-19T13:56:14Z", "event":"Resurrect", "Option":"rebuy", "Cost":556577, "Bankrupt":false }
-{ "timestamp":"2017-03-19T14:11:20Z", "event":"Resurrect", "Option":"rebuy", "Cost":556312, "Bankrupt":false }

@@ -1,9 +1,0 @@
-{ "timestamp":"2018-04-01T03:19:59Z", "event":"RefuelAll", "Cost":692, "Amount":13.818102 }
-{ "timestamp":"2018-04-04T00:33:19Z", "event":"RefuelAll", "Cost":636, "Amount":12.692565 }
-{ "timestamp":"2018-04-04T00:48:59Z", "event":"RefuelAll", "Cost":162, "Amount":3.222909 }
-{ "timestamp":"2018-04-04T01:05:47Z", "event":"RefuelAll", "Cost":10, "Amount":0.160378 }
-{ "timestamp":"2018-04-04T01:20:44Z", "event":"RefuelAll", "Cost":18, "Amount":0.337352 }
-{ "timestamp":"2018-04-04T01:27:47Z", "event":"RefuelAll", "Cost":10, "Amount":0.107854 }
-{ "timestamp":"2018-04-04T01:37:12Z", "event":"RefuelAll", "Cost":73, "Amount":1.436284 }
-{ "timestamp":"2018-05-11T23:53:54Z", "event":"RefuelAll", "Cost":104, "Amount":2.057905 }
-{ "timestamp":"2018-05-11T23:59:59Z", "event":"RefuelAll", "Cost":10, "Amount":0.087489 }

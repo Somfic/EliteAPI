@@ -1,5 +1,0 @@
-{ "timestamp":"2017-04-25T15:50:17Z", "event":"SupercruiseExit", "StarSystem":"Boeph FC-V b47-34", "Body":"Boeph FC-V b47-34", "BodyType":"Star" }
-{ "timestamp":"2017-04-25T16:38:58Z", "event":"SupercruiseExit", "StarSystem":"Boeph EI-K b53-20", "Body":"Boeph EI-K b53-20", "BodyType":"Star" }
-{ "timestamp":"2017-04-25T17:02:30Z", "event":"SupercruiseExit", "StarSystem":"Eol Flyou VT-Z b30-19", "Body":"Eol Flyou VT-Z b30-19 A", "BodyType":"Star" }
-{ "timestamp":"2017-04-25T18:21:22Z", "event":"SupercruiseExit", "StarSystem":"Colonia", "Body":"Jaques Station", "BodyType":"Station" }
-{ "timestamp":"2017-04-25T18:48:55Z", "event":"SupercruiseExit", "StarSystem":"Colonia", "Body":"Colonia 2 a", "BodyType":"Planet" }

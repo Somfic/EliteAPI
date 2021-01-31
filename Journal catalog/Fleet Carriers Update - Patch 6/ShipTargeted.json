@@ -1,8 +1,0 @@
-{ "timestamp":"2020-11-09T21:15:45Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"python", "ScanStage":0 }
-{ "timestamp":"2020-11-09T21:15:46Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"python", "ScanStage":1, "PilotName":"$npc_name_decorate:#name=Jambo;", "PilotName_Localised":"Jambo", "PilotRank":"Competent" }
-{ "timestamp":"2020-11-09T21:15:48Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"viper", "Ship_Localised":"Viper Mk III", "ScanStage":0 }
-{ "timestamp":"2020-11-09T21:15:48Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"viper", "Ship_Localised":"Viper Mk III", "ScanStage":1, "PilotName":"$ShipName_Police_Independent;", "PilotName_Localised":"System Authority Vessel", "PilotRank":"Master" }
-{ "timestamp":"2020-11-09T21:15:50Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"python", "ScanStage":1, "PilotName":"$npc_name_decorate:#name=Jambo;", "PilotName_Localised":"Jambo", "PilotRank":"Competent" }
-{ "timestamp":"2020-11-09T21:15:51Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"python", "ScanStage":2, "PilotName":"$npc_name_decorate:#name=Jambo;", "PilotName_Localised":"Jambo", "PilotRank":"Competent", "ShieldHealth":100.000000, "HullHealth":100.000000 }
-{ "timestamp":"2020-11-09T21:15:53Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"python", "ScanStage":3, "PilotName":"$npc_name_decorate:#name=Jambo;", "PilotName_Localised":"Jambo", "PilotRank":"Competent", "ShieldHealth":100.000000, "HullHealth":100.000000, "Faction":"Future of Arro Naga", "LegalStatus":"Clean" }
-{ "timestamp":"2020-11-09T21:16:02Z", "event":"ShipTargeted", "TargetLocked":false }

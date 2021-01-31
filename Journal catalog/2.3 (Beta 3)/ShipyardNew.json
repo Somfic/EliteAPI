@@ -1,9 +1,0 @@
-{ "timestamp":"2017-03-18T11:11:27Z", "event":"ShipyardNew", "ShipType":"federation_corvette", "NewShipID":46 }
-{ "timestamp":"2017-03-18T12:20:57Z", "event":"ShipyardNew", "ShipType":"hauler", "NewShipID":46 }
-{ "timestamp":"2017-03-18T12:30:53Z", "event":"ShipyardNew", "ShipType":"anaconda", "NewShipID":47 }
-{ "timestamp":"2017-03-18T12:42:52Z", "event":"ShipyardNew", "ShipType":"cutter", "NewShipID":48 }
-{ "timestamp":"2017-03-18T13:05:30Z", "event":"ShipyardNew", "ShipType":"federation_corvette", "NewShipID":48 }
-{ "timestamp":"2017-03-18T14:57:26Z", "event":"ShipyardNew", "ShipType":"dolphin", "NewShipID":51 }
-{ "timestamp":"2017-03-18T15:55:20Z", "event":"ShipyardNew", "ShipType":"cutter", "NewShipID":52 }
-{ "timestamp":"2017-03-19T13:43:23Z", "event":"ShipyardNew", "ShipType":"federation_gunship", "NewShipID":63 }
-{ "timestamp":"2017-03-19T14:11:50Z", "event":"ShipyardNew", "ShipType":"cutter", "NewShipID":66 }

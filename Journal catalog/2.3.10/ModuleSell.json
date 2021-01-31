@@ -1,3 +1,0 @@
-{ "timestamp":"2017-07-01T11:18:23Z", "event":"ModuleSell", "Slot":"Slot07_Size2", "SellItem":"$int_buggybay_size2_class2_name;", "SellItem_Localised":"Planetary Vehicle Hangar", "SellPrice":23697, "Ship":"orca", "ShipID":70 }
-{ "timestamp":"2017-07-01T11:18:29Z", "event":"ModuleSell", "Slot":"Slot05_Size4", "SellItem":"$int_shieldgenerator_size4_class2_name;", "SellItem_Localised":"Shield Generator", "SellPrice":52329, "Ship":"orca", "ShipID":70 }
-{ "timestamp":"2017-07-01T11:21:21Z", "event":"ModuleSell", "Slot":"MediumHardpoint2", "SellItem":"$hpt_railgun_fixed_medium_name;", "SellItem_Localised":"Rail Gun", "SellPrice":402480, "Ship":"anaconda", "ShipID":32 }

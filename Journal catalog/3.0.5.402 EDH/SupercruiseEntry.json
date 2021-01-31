@@ -1,8 +1,0 @@
-{ "timestamp":"2018-04-01T03:03:36Z", "event":"SupercruiseEntry", "StarSystem":"Hyades Sector ON-S b4-3", "SystemAddress":7268292502881 }
-{ "timestamp":"2018-04-01T03:14:13Z", "event":"SupercruiseEntry", "StarSystem":"Djagana", "SystemAddress":5371393231576 }
-{ "timestamp":"2018-04-01T03:15:31Z", "event":"SupercruiseEntry", "StarSystem":"Djagana", "SystemAddress":5371393231576 }
-{ "timestamp":"2018-04-04T00:21:31Z", "event":"SupercruiseEntry", "StarSystem":"Trianguli Sector RI-B a1", "SystemAddress":22965726890728 }
-{ "timestamp":"2018-04-04T00:58:25Z", "event":"SupercruiseEntry", "StarSystem":"Deciat", "SystemAddress":6681123623626 }
-{ "timestamp":"2018-04-04T01:22:13Z", "event":"SupercruiseEntry", "StarSystem":"Xinca", "SystemAddress":4408557439331 }
-{ "timestamp":"2018-04-04T01:22:56Z", "event":"SupercruiseEntry", "StarSystem":"Xinca", "SystemAddress":4408557439331 }
-{ "timestamp":"2018-05-11T23:55:48Z", "event":"SupercruiseEntry", "StarSystem":"HIP 36165", "SystemAddress":1762857584995 }

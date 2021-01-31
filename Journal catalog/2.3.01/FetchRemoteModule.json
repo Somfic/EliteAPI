@@ -1,3 +1,0 @@
-{ "timestamp":"2017-04-25T18:52:53Z", "event":"FetchRemoteModule", "StorageSlot":40, "StoredItem":"$hpt_pulselaser_gimbal_large_name;", "StoredItem_Localised":"Pulse Laser", "ServerId":128049387, "TransferCost":184987, "Ship":"vulture", "ShipID":90 }
-{ "timestamp":"2017-04-25T18:52:57Z", "event":"FetchRemoteModule", "StorageSlot":38, "StoredItem":"$hpt_multicannon_gimbal_large_name;", "StoredItem_Localised":"Multi-Cannon", "ServerId":128049461, "TransferCost":760735, "Ship":"vulture", "ShipID":90 }
-{ "timestamp":"2017-04-25T18:53:20Z", "event":"FetchRemoteModule", "StorageSlot":7, "StoredItem":"$int_powerplant_size3_class5_name;", "StoredItem_Localised":"Power Plant", "ServerId":128064042, "TransferCost":653912, "Ship":"vulture", "ShipID":90 }

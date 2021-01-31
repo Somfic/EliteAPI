@@ -1,7 +1,0 @@
-{ "timestamp":"2020-09-29T17:48:12Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "SystemAddress":3932277478106, "Body":"Jameson Memorial", "BodyID":69, "BodyType":"Station" }
-{ "timestamp":"2020-09-29T18:12:30Z", "event":"SupercruiseExit", "StarSystem":"Rauraci", "SystemAddress":2283077014234, "Body":"Rauraci", "BodyID":0, "BodyType":"Star" }
-{ "timestamp":"2020-10-02T16:29:26Z", "event":"SupercruiseExit", "StarSystem":"MY Apodis", "SystemAddress":5069806249401, "Body":"MY Apodis 1", "BodyID":5, "BodyType":"Planet" }
-{ "timestamp":"2020-10-05T15:30:48Z", "event":"SupercruiseExit", "StarSystem":"MY Apodis", "SystemAddress":5069806249401, "Body":"MY Apodis", "BodyID":0, "BodyType":"Star" }
-{ "timestamp":"2020-10-05T15:32:53Z", "event":"SupercruiseExit", "StarSystem":"MY Apodis", "SystemAddress":5069806249401, "Body":"MY Apodis", "BodyID":0, "BodyType":"Star" }
-{ "timestamp":"2020-10-05T15:36:18Z", "event":"SupercruiseExit", "StarSystem":"MY Apodis", "SystemAddress":5069806249401, "Body":"MY Apodis", "BodyID":0, "BodyType":"Star" }
-{ "timestamp":"2020-10-05T15:42:50Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "SystemAddress":3932277478106, "Body":"Jameson Memorial", "BodyID":69, "BodyType":"Station" }

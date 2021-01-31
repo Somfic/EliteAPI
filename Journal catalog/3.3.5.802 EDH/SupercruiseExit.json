@@ -1,7 +1,0 @@
-{ "timestamp":"2019-02-23T02:24:46Z", "event":"SupercruiseExit", "StarSystem":"Tollan", "SystemAddress":18262872171937, "Body":"Gordon Plant", "BodyID":74, "BodyType":"Station" }
-{ "timestamp":"2019-02-23T02:36:12Z", "event":"SupercruiseExit", "StarSystem":"Nanomam", "SystemAddress":4752121268587, "Body":"Nanomam 5 a", "BodyID":8, "BodyType":"Planet" }
-{ "timestamp":"2019-02-23T02:48:28Z", "event":"SupercruiseExit", "StarSystem":"Xi Ursae Majoris", "SystemAddress":4133645977963, "Body":"Xi Ursae Majoris", "BodyID":1, "BodyType":"Star" }
-{ "timestamp":"2019-02-23T02:53:28Z", "event":"SupercruiseExit", "StarSystem":"Xi Ursae Majoris", "SystemAddress":4133645977963, "Body":"Durrance Dock", "BodyID":54, "BodyType":"Station" }
-{ "timestamp":"2019-02-23T03:03:18Z", "event":"SupercruiseExit", "StarSystem":"LHS 316", "SystemAddress":33656034960801, "Body":"LHS 316", "BodyID":0, "BodyType":"Star" }
-{ "timestamp":"2019-02-23T03:07:46Z", "event":"SupercruiseExit", "StarSystem":"Nanomam", "SystemAddress":4752121268587, "Body":"Nanomam 5 a", "BodyID":8, "BodyType":"Planet" }
-{ "timestamp":"2019-02-23T03:27:53Z", "event":"SupercruiseExit", "StarSystem":"LHS 215", "SystemAddress":2869709317537, "Body":"Spring Gateway", "BodyID":66, "BodyType":"Station" }

@@ -1,3 +1,0 @@
-{ "timestamp":"2019-11-01T13:53:45Z", "event":"StoredShips", "StationName":"Spring Gateway", "MarketID":3228861696, "StarSystem":"LHS 215", "ShipsHere":[  ], "ShipsRemote":[  ] }
-{ "timestamp":"2019-11-01T21:46:36Z", "event":"StoredShips", "StationName":"Steiner City", "MarketID":3228165376, "StarSystem":"Huokang", "ShipsHere":[  ], "ShipsRemote":[  ] }
-{ "timestamp":"2019-11-01T21:52:45Z", "event":"StoredShips", "StationName":"Steiner City", "MarketID":3228165376, "StarSystem":"Huokang", "ShipsHere":[  ], "ShipsRemote":[  ] }

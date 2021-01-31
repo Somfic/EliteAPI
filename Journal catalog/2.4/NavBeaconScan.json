@@ -1,8 +1,0 @@
-{ "timestamp":"2017-09-27T14:20:22Z", "event":"NavBeaconScan", "NumBodies":22 }
-{ "timestamp":"2017-10-19T15:36:57Z", "event":"NavBeaconScan", "NumBodies":23 }
-{ "timestamp":"2017-10-19T19:01:14Z", "event":"NavBeaconScan", "NumBodies":37 }
-{ "timestamp":"2017-10-22T10:32:37Z", "event":"NavBeaconScan", "NumBodies":51 }
-{ "timestamp":"2017-10-24T14:53:16Z", "event":"NavBeaconScan", "NumBodies":26 }
-{ "timestamp":"2017-10-25T15:40:33Z", "event":"NavBeaconScan", "NumBodies":26 }
-{ "timestamp":"2017-10-26T10:50:53Z", "event":"NavBeaconScan", "NumBodies":21 }
-{ "timestamp":"2017-10-26T10:55:27Z", "event":"NavBeaconScan", "NumBodies":20 }

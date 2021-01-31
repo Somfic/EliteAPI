@@ -1,5 +1,0 @@
-{ "timestamp":"2018-03-06T23:41:12Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
-{ "timestamp":"2018-03-07T19:28:15Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
-{ "timestamp":"2018-03-07T20:36:02Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }
-{ "timestamp":"2018-03-08T02:36:56Z", "event":"Missions", "Active":[ { "MissionID":336152446, "Name":"MISSION_Disable_name", "PassengerMission":false, "Expires":24922 } ], "Failed":[  ], "Complete":[  ] }
-{ "timestamp":"2018-03-08T19:11:25Z", "event":"Missions", "Active":[  ], "Failed":[  ], "Complete":[  ] }

@@ -1,5 +1,0 @@
-{ "timestamp":"2018-03-07T00:36:49Z", "event":"CollectCargo", "Type":"USSCargoBlackBox", "Type_Localised":"Black Box", "Stolen":true }
-{ "timestamp":"2018-03-07T00:42:53Z", "event":"CollectCargo", "Type":"ComercialSamples", "Type_Localised":"Commercial Samples", "Stolen":false }
-{ "timestamp":"2018-03-07T00:46:29Z", "event":"CollectCargo", "Type":"USSCargoBlackBox", "Type_Localised":"Black Box", "Stolen":false }
-{ "timestamp":"2018-03-07T00:54:38Z", "event":"CollectCargo", "Type":"ComercialSamples", "Type_Localised":"Commercial Samples", "Stolen":false }
-{ "timestamp":"2018-03-08T21:04:38Z", "event":"CollectCargo", "Type":"USSCargoBlackBox", "Type_Localised":"Black Box", "Stolen":false }

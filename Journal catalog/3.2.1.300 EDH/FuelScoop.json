@@ -1,8 +1,0 @@
-{ "timestamp":"2018-12-09T02:04:05Z", "event":"FuelScoop", "Scooped":0.010466, "Total":12.275048 }
-{ "timestamp":"2018-12-09T02:51:08Z", "event":"FuelScoop", "Scooped":0.010226, "Total":8.332654 }
-{ "timestamp":"2018-12-09T02:51:18Z", "event":"FuelScoop", "Scooped":0.027555, "Total":8.360205 }
-{ "timestamp":"2018-12-09T03:26:42Z", "event":"FuelScoop", "Scooped":0.580037, "Total":13.128611 }
-{ "timestamp":"2018-12-10T02:18:07Z", "event":"FuelScoop", "Scooped":0.035872, "Total":15.522105 }
-{ "timestamp":"2018-12-10T02:31:56Z", "event":"FuelScoop", "Scooped":0.032667, "Total":13.930515 }
-{ "timestamp":"2018-12-10T02:33:08Z", "event":"FuelScoop", "Scooped":0.291594, "Total":10.192915 }
-{ "timestamp":"2018-12-10T02:33:39Z", "event":"FuelScoop", "Scooped":0.037455, "Total":10.230370 }

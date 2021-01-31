@@ -1,9 +1,0 @@
-{ "timestamp":"2017-05-08T18:11:23Z", "event":"PayLegacyFines", "Amount":200 }
-{ "timestamp":"2017-05-10T13:11:51Z", "event":"PayLegacyFines", "Amount":75 }
-{ "timestamp":"2017-05-12T16:00:31Z", "event":"PayLegacyFines", "Amount":480 }
-{ "timestamp":"2017-05-14T18:29:12Z", "event":"PayLegacyFines", "Amount":805 }
-{ "timestamp":"2017-05-15T18:13:30Z", "event":"PayLegacyFines", "Amount":305 }
-{ "timestamp":"2017-05-15T20:17:29Z", "event":"PayLegacyFines", "Amount":305 }
-{ "timestamp":"2017-05-16T14:13:46Z", "event":"PayLegacyFines", "Amount":305 }
-{ "timestamp":"2017-06-17T11:59:22Z", "event":"PayLegacyFines", "Amount":600 }
-{ "timestamp":"2017-06-20T19:40:04Z", "event":"PayLegacyFines", "Amount":200 }

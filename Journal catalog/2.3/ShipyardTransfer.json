@@ -1,6 +1,0 @@
-{ "timestamp":"2017-04-11T18:55:57Z", "event":"ShipyardTransfer", "ShipType":"DiamondBackXL", "ShipID":66, "System":"Shinrarta Dezhra", "Distance":116.371597, "TransferPrice":75254 }
-{ "timestamp":"2017-04-13T18:03:48Z", "event":"ShipyardTransfer", "ShipType":"Empire_Courier", "ShipID":67, "System":"Kamitra", "Distance":210.394287, "TransferPrice":29598 }
-{ "timestamp":"2017-04-13T18:03:58Z", "event":"ShipyardTransfer", "ShipType":"DiamondBackXL", "ShipID":66, "System":"Fujin", "Distance":116.371597, "TransferPrice":75254 }
-{ "timestamp":"2017-04-19T15:08:00Z", "event":"ShipyardTransfer", "ShipType":"Empire_Courier", "ShipID":67, "System":"Shinrarta Dezhra", "Distance":116.066849, "TransferPrice":16976 }
-{ "timestamp":"2017-04-19T15:13:29Z", "event":"ShipyardTransfer", "ShipType":"FerDeLance", "ShipID":56, "System":"Shinrarta Dezhra", "Distance":116.066849, "TransferPrice":983912 }
-{ "timestamp":"2017-04-21T19:40:55Z", "event":"ShipyardTransfer", "ShipType":"FerDeLance", "ShipID":56, "System":"78 Ursae Majoris", "Distance":6.170906, "TransferPrice":79239 }

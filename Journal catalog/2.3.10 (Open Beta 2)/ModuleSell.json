@@ -1,2 +1,0 @@
-{ "timestamp":"2017-06-14T15:44:12Z", "event":"ModuleSell", "Slot":"Slot03_Size6", "SellItem":"$int_fuelscoop_size6_class5_name;", "SellItem_Localised":"Fuel Scoop", "SellPrice":25240068, "Ship":"anaconda", "ShipID":32 }
-{ "timestamp":"2017-06-14T16:28:14Z", "event":"ModuleSell", "Slot":"Slot08_Size4", "SellItem":"$int_stellarbodydiscoveryscanner_standard_name;", "SellItem_Localised":"D - Scanner", "SellPrice":975, "Ship":"cutter", "ShipID":32 }

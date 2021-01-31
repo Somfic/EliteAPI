@@ -1,6 +1,0 @@
-{ "timestamp":"2019-06-22T21:47:18Z", "event":"Repair", "Item":"Paint", "Cost":3 }
-{ "timestamp":"2019-06-22T22:23:01Z", "event":"Repair", "Item":"Paint", "Cost":2 }
-{ "timestamp":"2019-06-28T23:58:25Z", "event":"Repair", "Item":"Paint", "Cost":1 }
-{ "timestamp":"2019-08-18T01:27:40Z", "event":"Repair", "Item":"Paint", "Cost":1 }
-{ "timestamp":"2019-09-03T21:38:04Z", "event":"Repair", "Item":"Paint", "Cost":4 }
-{ "timestamp":"2019-09-03T21:38:10Z", "event":"Repair", "Item":"Wear", "Cost":5030 }

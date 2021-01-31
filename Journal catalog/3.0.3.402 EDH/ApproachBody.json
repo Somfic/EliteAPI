@@ -1,5 +1,0 @@
-{ "timestamp":"2018-03-21T23:04:10Z", "event":"ApproachBody", "StarSystem":"Thunderbird", "SystemAddress":327728235700, "Body":"Thunderbird C 2 a", "BodyID":23 }
-{ "timestamp":"2018-03-23T03:59:41Z", "event":"ApproachBody", "StarSystem":"Gliese 182.1", "SystemAddress":7230678078138, "Body":"Gliese 182.1 5 a", "BodyID":31 }
-{ "timestamp":"2018-03-23T04:00:41Z", "event":"ApproachBody", "StarSystem":"Gliese 182.1", "SystemAddress":7230678078138, "Body":"Gliese 182.1 5 a", "BodyID":31 }
-{ "timestamp":"2018-03-23T04:00:56Z", "event":"ApproachBody", "StarSystem":"Gliese 182.1", "SystemAddress":7230678078138, "Body":"Gliese 182.1 5 a", "BodyID":31 }
-{ "timestamp":"2018-03-23T04:01:19Z", "event":"ApproachBody", "StarSystem":"Gliese 182.1", "SystemAddress":7230678078138, "Body":"Gliese 182.1 5 a", "BodyID":31 }

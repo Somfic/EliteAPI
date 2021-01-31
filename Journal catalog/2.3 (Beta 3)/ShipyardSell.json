@@ -1,4 +1,0 @@
-{ "timestamp":"2017-03-18T15:44:08Z", "event":"ShipyardSell", "ShipType":"Hauler", "SellShipID":46, "ShipPrice":6168, "System":"LHS 2936" }
-{ "timestamp":"2017-03-18T15:44:15Z", "event":"ShipyardSell", "ShipType":"Vulture", "SellShipID":42, "ShipPrice":4278910, "System":"17 Draconis" }
-{ "timestamp":"2017-03-18T15:44:25Z", "event":"ShipyardSell", "ShipType":"Anaconda", "SellShipID":32, "ShipPrice":210495843, "System":"78 Ursae Majoris" }
-{ "timestamp":"2017-03-18T15:44:32Z", "event":"ShipyardSell", "ShipType":"Anaconda", "SellShipID":47, "ShipPrice":15974986, "System":"Shinrarta Dezhra" }

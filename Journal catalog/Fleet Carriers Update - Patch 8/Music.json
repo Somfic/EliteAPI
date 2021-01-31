@@ -1,8 +1,0 @@
-{ "timestamp":"2020-12-14T18:45:31Z", "event":"Music", "MusicTrack":"NoTrack" }
-{ "timestamp":"2020-12-14T18:45:31Z", "event":"Music", "MusicTrack":"MainMenu" }
-{ "timestamp":"2020-12-14T18:48:23Z", "event":"Music", "MusicTrack":"NoTrack" }
-{ "timestamp":"2020-12-14T18:48:23Z", "event":"Music", "MusicTrack":"Exploration" }
-{ "timestamp":"2020-12-14T18:48:23Z", "event":"Music", "MusicTrack":"Starport" }
-{ "timestamp":"2020-12-14T18:58:45Z", "event":"Music", "MusicTrack":"DockingComputer" }
-{ "timestamp":"2020-12-14T18:59:34Z", "event":"Music", "MusicTrack":"NoTrack" }
-{ "timestamp":"2020-12-14T19:28:10Z", "event":"Music", "MusicTrack":"Exploration" }

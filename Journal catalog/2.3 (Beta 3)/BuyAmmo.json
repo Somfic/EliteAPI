@@ -1,6 +1,0 @@
-{ "timestamp":"2017-03-18T11:11:02Z", "event":"BuyAmmo", "Cost":78000 }
-{ "timestamp":"2017-03-18T14:45:59Z", "event":"BuyAmmo", "Cost":890 }
-{ "timestamp":"2017-03-18T18:26:36Z", "event":"BuyAmmo", "Cost":382 }
-{ "timestamp":"2017-03-19T13:45:01Z", "event":"BuyAmmo", "Cost":150000 }
-{ "timestamp":"2017-03-19T13:56:30Z", "event":"BuyAmmo", "Cost":150000 }
-{ "timestamp":"2017-03-19T14:11:38Z", "event":"BuyAmmo", "Cost":150000 }

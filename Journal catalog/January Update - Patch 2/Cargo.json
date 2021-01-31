@@ -1,7 +1,0 @@
-{ "timestamp":"2020-05-14T19:42:19Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
-{ "timestamp":"2020-05-14T19:57:55Z", "event":"Cargo", "Vessel":"Ship", "Count":90 }
-{ "timestamp":"2020-05-14T20:11:44Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }
-{ "timestamp":"2020-05-14T20:33:21Z", "event":"Cargo", "Vessel":"Ship", "Count":42 }
-{ "timestamp":"2020-05-14T20:41:11Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }
-{ "timestamp":"2020-05-15T21:54:57Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }
-{ "timestamp":"2020-05-22T21:59:49Z", "event":"Cargo", "Vessel":"Ship", "Count":0, "Inventory":[  ] }

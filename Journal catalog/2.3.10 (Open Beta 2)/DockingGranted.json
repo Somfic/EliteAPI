@@ -1,5 +1,0 @@
-{ "timestamp":"2017-06-14T15:42:01Z", "event":"DockingGranted", "LandingPad":25, "StationName":"Pratchett's Disc" }
-{ "timestamp":"2017-06-14T16:03:13Z", "event":"DockingGranted", "LandingPad":9, "StationName":"No Moon" }
-{ "timestamp":"2017-06-14T16:21:42Z", "event":"DockingGranted", "LandingPad":9, "StationName":"No Moon" }
-{ "timestamp":"2017-06-14T16:44:35Z", "event":"DockingGranted", "LandingPad":24, "StationName":"No Moon" }
-{ "timestamp":"2017-06-14T17:15:41Z", "event":"DockingGranted", "LandingPad":43, "StationName":"No Moon" }

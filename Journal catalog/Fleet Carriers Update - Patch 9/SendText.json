@@ -1,8 +1,0 @@
-{ "timestamp":"2020-12-31T17:11:00Z", "event":"SendText", "To":"local", "Message":"\" ", "Sent":true }
-{ "timestamp":"2021-01-01T16:14:53Z", "event":"SendText", "To":"local", "Message":"test", "Sent":true }
-{ "timestamp":"2021-01-01T16:19:33Z", "event":"SendText", "To":"local", "Message":"test", "Sent":true }
-{ "timestamp":"2021-01-01T16:21:22Z", "event":"SendText", "To":"squadron", "Message":"Those are so pretty", "Sent":true }
-{ "timestamp":"2021-01-01T16:22:41Z", "event":"SendText", "To":"squadron", "Message":"me too", "Sent":true }
-{ "timestamp":"2021-01-01T22:43:25Z", "event":"SendText", "To":"local", "Message":"test", "Sent":true }
-{ "timestamp":"2021-01-01T22:43:26Z", "event":"SendText", "To":"local", "Message":"test", "Sent":true }
-{ "timestamp":"2021-01-04T18:23:28Z", "event":"SendText", "To":"squadron", "Message":"*laughs in hotas*", "Sent":true }

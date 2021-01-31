@@ -1,9 +1,0 @@
-{ "timestamp":"2018-04-01T03:18:36Z", "event":"DockingGranted", "LandingPad":1, "MarketID":3221932800, "StationName":"Bertin Settlement", "StationType":"Outpost" }
-{ "timestamp":"2018-04-04T00:31:30Z", "event":"DockingGranted", "LandingPad":12, "MarketID":3229714688, "StationName":"Kurland Station", "StationType":"Coriolis" }
-{ "timestamp":"2018-04-04T00:47:02Z", "event":"DockingGranted", "LandingPad":1, "MarketID":128676487, "StationName":"Farseer Inc", "StationType":"SurfaceStation" }
-{ "timestamp":"2018-04-04T01:04:30Z", "event":"DockingGranted", "LandingPad":36, "MarketID":3229756160, "StationName":"Garay Terminal", "StationType":"Coriolis" }
-{ "timestamp":"2018-04-04T01:18:57Z", "event":"DockingGranted", "LandingPad":3, "MarketID":3538376960, "StationName":"Fremont Landing", "StationType":"SurfaceStation" }
-{ "timestamp":"2018-04-04T01:26:12Z", "event":"DockingGranted", "LandingPad":4, "MarketID":3538377472, "StationName":"Beebe Vista", "StationType":"SurfaceStation" }
-{ "timestamp":"2018-04-04T01:35:29Z", "event":"DockingGranted", "LandingPad":12, "MarketID":3229687552, "StationName":"Culpeper Market", "StationType":"Coriolis" }
-{ "timestamp":"2018-05-11T23:52:25Z", "event":"DockingGranted", "LandingPad":1, "MarketID":3229700096, "StationName":"Nakano Mines", "StationType":"Outpost" }
-{ "timestamp":"2018-05-11T23:58:39Z", "event":"DockingGranted", "LandingPad":1, "MarketID":3229700352, "StationName":"Taylor Jr. Landing", "StationType":"Outpost" }

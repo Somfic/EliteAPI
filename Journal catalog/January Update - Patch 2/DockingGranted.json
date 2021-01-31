@@ -1,9 +1,0 @@
-{ "timestamp":"2020-05-14T20:09:15Z", "event":"DockingGranted", "LandingPad":33, "MarketID":128158712, "StationName":"Stevenson Relay", "StationType":"Coriolis" }
-{ "timestamp":"2020-05-14T20:31:39Z", "event":"DockingGranted", "LandingPad":11, "MarketID":3228861696, "StationName":"Spring Gateway", "StationType":"Coriolis" }
-{ "timestamp":"2020-05-14T20:39:14Z", "event":"DockingGranted", "LandingPad":8, "MarketID":128158712, "StationName":"Stevenson Relay", "StationType":"Coriolis" }
-{ "timestamp":"2020-05-14T21:00:26Z", "event":"DockingGranted", "LandingPad":20, "MarketID":128158712, "StationName":"Stevenson Relay", "StationType":"Coriolis" }
-{ "timestamp":"2020-05-14T21:09:53Z", "event":"DockingGranted", "LandingPad":5, "MarketID":3228861696, "StationName":"Spring Gateway", "StationType":"Coriolis" }
-{ "timestamp":"2020-05-15T21:58:28Z", "event":"DockingGranted", "LandingPad":11, "MarketID":3228861696, "StationName":"Spring Gateway", "StationType":"Coriolis" }
-{ "timestamp":"2020-05-15T22:13:43Z", "event":"DockingGranted", "LandingPad":37, "MarketID":3228861696, "StationName":"Spring Gateway", "StationType":"Coriolis" }
-{ "timestamp":"2020-05-22T22:19:21Z", "event":"DockingGranted", "LandingPad":30, "MarketID":128016896, "StationName":"Abraham Lincoln", "StationType":"Orbis" }
-{ "timestamp":"2020-05-22T22:40:29Z", "event":"DockingGranted", "LandingPad":45, "MarketID":128016896, "StationName":"Abraham Lincoln", "StationType":"Orbis" }

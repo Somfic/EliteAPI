@@ -1,7 +1,0 @@
-{ "timestamp":"2020-12-23T12:21:18Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis", "MarketID":128666762 }
-{ "timestamp":"2021-01-01T16:08:49Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis", "MarketID":128666762 }
-{ "timestamp":"2021-01-01T22:10:56Z", "event":"Undocked", "StationName":"Eddington Refinery", "StationType":"Coriolis", "MarketID":3228624896 }
-{ "timestamp":"2021-01-02T16:26:34Z", "event":"Undocked", "StationName":"Eddington Refinery", "StationType":"Coriolis", "MarketID":3228624896 }
-{ "timestamp":"2021-01-04T21:47:10Z", "event":"Undocked", "StationName":"The Iron Claw", "StationType":"MegaShip", "MarketID":128828823 }
-{ "timestamp":"2021-01-04T22:00:11Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis", "MarketID":128666762 }
-{ "timestamp":"2021-01-07T20:43:51Z", "event":"Undocked", "StationName":"Invergary", "StationType":"Coriolis", "MarketID":128102904 }

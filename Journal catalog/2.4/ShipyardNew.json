@@ -1,8 +1,0 @@
-{ "timestamp":"2017-09-27T14:36:55Z", "event":"ShipyardNew", "ShipType":"cobramkiii", "NewShipID":149 }
-{ "timestamp":"2017-09-27T18:55:36Z", "event":"ShipyardNew", "ShipType":"adder", "NewShipID":151 }
-{ "timestamp":"2017-10-05T19:14:59Z", "event":"ShipyardNew", "ShipType":"sidewinder", "NewShipID":154 }
-{ "timestamp":"2017-10-06T17:51:36Z", "event":"ShipyardNew", "ShipType":"cutter", "NewShipID":126 }
-{ "timestamp":"2017-10-18T19:07:41Z", "event":"ShipyardNew", "ShipType":"anaconda", "NewShipID":162 }
-{ "timestamp":"2017-10-20T15:43:31Z", "event":"ShipyardNew", "ShipType":"hauler", "NewShipID":166 }
-{ "timestamp":"2017-10-22T09:57:59Z", "event":"ShipyardNew", "ShipType":"cobramkiii", "NewShipID":167 }
-{ "timestamp":"2017-11-12T14:02:11Z", "event":"ShipyardNew", "ShipType":"asp_scout", "NewShipID":170 }

@@ -55,9 +55,9 @@ namespace EliteAPI.Tests
         {
             var invalidProperties = type.GetProperties()
                 .Where(x => x.PropertyType != typeof(long)
-                            && x.Name.EndsWith("price", StringComparison.OrdinalIgnoreCase)
-                            || !x.Name.EndsWith("cost", StringComparison.OrdinalIgnoreCase)
-                            || !x.Name.EndsWith("reward", StringComparison.OrdinalIgnoreCase));
+                            && (x.Name.EndsWith("price", StringComparison.OrdinalIgnoreCase)
+                                || x.Name.EndsWith("cost", StringComparison.OrdinalIgnoreCase)
+                                || x.Name.EndsWith("reward", StringComparison.OrdinalIgnoreCase)));
 
             invalidProperties.Should().BeEmpty();
         }
@@ -78,7 +78,7 @@ namespace EliteAPI.Tests
         public void FlagsAreEnums(Type type)
         {
             return; // todo: do enums
-            
+
             // this test works
             var invalidProperties = type.GetProperties()
                 .Where(x => !x.PropertyType.IsEnum && (x.Name.EndsWith("type", StringComparison.OrdinalIgnoreCase) || x.Name.EndsWith("state", StringComparison.OrdinalIgnoreCase)));

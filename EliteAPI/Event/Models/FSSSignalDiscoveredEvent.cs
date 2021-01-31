@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
         internal FssSignalDiscoveredEvent() { }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; private set; }
+        public string SystemAddress { get; private set; }
 
         [JsonProperty("SignalName")]
         public string SignalName { get; private set; }

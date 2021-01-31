@@ -13,7 +13,7 @@ namespace EliteAPI.Event.Models
         internal CarrierStatsEvent() { }
 
         [JsonProperty("CarrierID")]
-        public long CarrierId { get; private set; }
+        public string CarrierId { get; private set; }
 
         [JsonProperty("Callsign")]
         public string Callsign { get; private set; }
@@ -53,7 +53,6 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("ModulePacks")]
         public IReadOnlyList<object> ModulePacks { get; private set; }
-
 
         public class CrewInfo
         {

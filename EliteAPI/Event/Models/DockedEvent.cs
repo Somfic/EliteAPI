@@ -54,7 +54,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<StationEconomyInfo> StationEconomies { get; private set; }
 
         [JsonProperty("DistFromStarLS")]
-        public double DistFromStarLs { get; private set; }
+        public double DistanceFromStarInLightSeconds { get; private set; }
 
         [JsonProperty("ActiveFine")]
         public bool ActiveFine { get; private set; }

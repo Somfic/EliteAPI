@@ -24,10 +24,10 @@ namespace EliteAPI.Event.Models
         public string StoreOldShip { get; private set; }
 
         [JsonProperty("StoreShipID")]
-        public long StoreShipId { get; private set; }
+        public string StoreShipId { get; private set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; private set; }
+        public string MarketId { get; private set; }
     }
 
     public partial class ShipyardBuyEvent

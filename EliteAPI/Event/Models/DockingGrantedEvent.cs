@@ -12,10 +12,10 @@ namespace EliteAPI.Event.Models
         internal DockingGrantedEvent() { }
 
         [JsonProperty("LandingPad")]
-        public long LandingPad { get; private set; }
+        public int LandingPad { get; private set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; private set; }
+        public string MarketId { get; private set; }
 
         [JsonProperty("StationName")]
         public string StationName { get; private set; }

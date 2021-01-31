@@ -15,7 +15,7 @@ namespace EliteAPI.Event.Models
         public string Name { get; private set; }
 
         [JsonProperty("CrewID")]
-        public long CrewId { get; private set; }
+        public string CrewId { get; private set; }
 
         [JsonProperty("Role")]
         public string Role { get; private set; }

@@ -14,7 +14,7 @@ namespace EliteAPI.Event.Models
         internal MaterialTradeEvent() { }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; private set; }
+        public string MarketId { get; private set; }
 
         [JsonProperty("TraderType")]
         public string TraderType { get; private set; }

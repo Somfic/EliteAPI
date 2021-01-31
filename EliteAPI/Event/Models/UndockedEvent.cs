@@ -18,7 +18,7 @@ namespace EliteAPI.Event.Models
         public string StationType { get; private set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; private set; }
+        public string MarketId { get; private set; }
     }
 
     public partial class UndockedEvent

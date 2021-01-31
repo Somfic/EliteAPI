@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
         internal ModuleSellRemoteEvent() { }
 
         [JsonProperty("StorageSlot")]
-        public long StorageSlot { get; private set; }
+        public string StorageSlot { get; private set; }
 
         [JsonProperty("SellItem")]
         public string SellItem { get; private set; }
@@ -21,7 +21,7 @@ namespace EliteAPI.Event.Models
         public string SellItemLocalised { get; private set; }
 
         [JsonProperty("ServerId")]
-        public long ServerId { get; private set; }
+        public string ServerId { get; private set; }
 
         [JsonProperty("SellPrice")]
         public long SellPrice { get; private set; }
@@ -30,7 +30,7 @@ namespace EliteAPI.Event.Models
         public string Ship { get; private set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; private set; }
+        public string ShipId { get; private set; }
     }
 
     public partial class ModuleSellRemoteEvent

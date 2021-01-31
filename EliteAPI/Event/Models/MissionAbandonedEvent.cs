@@ -15,7 +15,7 @@ namespace EliteAPI.Event.Models
         public string Name { get; private set; }
 
         [JsonProperty("MissionID")]
-        public long MissionId { get; private set; }
+        public string MissionId { get; private set; }
     }
 
     public partial class MissionAbandonedEvent

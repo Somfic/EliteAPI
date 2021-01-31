@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
         internal DockFighterEvent() { }
 
         [JsonProperty("ID")]
-        public long Id { get; private set; }
+        public string Id { get; private set; }
     }
 
     public partial class DockFighterEvent

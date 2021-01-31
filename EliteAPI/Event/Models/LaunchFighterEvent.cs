@@ -15,7 +15,7 @@ namespace EliteAPI.Event.Models
         public string Loadout { get; private set; }
 
         [JsonProperty("ID")]
-        public long Id { get; private set; }
+        public string Id { get; private set; }
 
         [JsonProperty("PlayerControlled")]
         public bool PlayerControlled { get; private set; }

@@ -18,7 +18,7 @@ namespace EliteAPI.Event.Models
         public string ShipTypeLocalised { get; private set; }
 
         [JsonProperty("NewShipID")]
-        public long NewShipId { get; private set; }
+        public string NewShipId { get; private set; }
     }
 
     public partial class ShipyardNewEvent

@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
         internal MarketSellEvent() { }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; private set; }
+        public string MarketId { get; private set; }
 
         [JsonProperty("Type")]
         public string Type { get; private set; }

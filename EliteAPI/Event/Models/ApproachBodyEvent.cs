@@ -15,13 +15,13 @@ namespace EliteAPI.Event.Models
         public string StarSystem { get; private set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; private set; }
+        public string SystemAddress { get; private set; }
 
         [JsonProperty("Body")]
         public string Body { get; private set; }
 
         [JsonProperty("BodyID")]
-        public long BodyId { get; private set; }
+        public string BodyId { get; private set; }
     }
 
     public partial class ApproachBodyEvent

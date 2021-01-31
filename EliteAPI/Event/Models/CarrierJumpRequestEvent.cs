@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
         internal CarrierJumpRequestEvent() { }
 
         [JsonProperty("CarrierID")]
-        public long CarrierId { get; private set; }
+        public string CarrierId { get; private set; }
 
         [JsonProperty("SystemName")]
         public string SystemName { get; private set; }
@@ -21,10 +21,10 @@ namespace EliteAPI.Event.Models
         public string Body { get; private set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; private set; }
+        public string SystemAddress { get; private set; }
 
         [JsonProperty("BodyID")]
-        public long BodyId { get; private set; }
+        public string BodyId { get; private set; }
     }
 
     public partial class CarrierJumpRequestEvent

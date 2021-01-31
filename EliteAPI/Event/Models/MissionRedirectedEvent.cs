@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
         internal MissionRedirectedEvent() { }
 
         [JsonProperty("MissionID")]
-        public long MissionId { get; private set; }
+        public string MissionId { get; private set; }
 
         [JsonProperty("Name")]
         public string Name { get; private set; }

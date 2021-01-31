@@ -14,7 +14,7 @@ namespace EliteAPI.Event.Models
         internal CarrierJumpCancelledEvent() { }
 
         [JsonProperty("CarrierID")]
-        public long CarrierId { get; private set; }
+        public string CarrierId { get; private set; }
     }
 
     public partial class CarrierJumpCancelledEvent

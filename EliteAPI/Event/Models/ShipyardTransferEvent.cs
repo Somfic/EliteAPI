@@ -18,17 +18,17 @@ namespace EliteAPI.Event.Models
         public string ShipTypeLocalised { get; private set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; private set; }
+        public string ShipId { get; private set; }
 
         [JsonProperty("System")]
         public string System { get; private set; }
 
         [JsonProperty("ShipMarketID")]
-        public long ShipMarketId { get; private set; }
+        public string ShipMarketId { get; private set; }
 
         [JsonProperty("Distance")]
         public double Distance { get; private set; }
-
+    
         [JsonProperty("TransferPrice")]
         public long TransferPrice { get; private set; }
 
@@ -36,7 +36,7 @@ namespace EliteAPI.Event.Models
         public long TransferTime { get; private set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; private set; }
+        public string MarketId { get; private set; }
     }
 
     public partial class ShipyardTransferEvent

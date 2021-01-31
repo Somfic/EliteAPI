@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
         internal FetchRemoteModuleEvent() { }
 
         [JsonProperty("StorageSlot")]
-        public long StorageSlot { get; private set; }
+        public string StorageSlot { get; private set; }
 
         [JsonProperty("StoredItem")]
         public string StoredItem { get; private set; }
@@ -21,7 +21,7 @@ namespace EliteAPI.Event.Models
         public string StoredItemLocalised { get; private set; }
 
         [JsonProperty("ServerId")]
-        public long ServerId { get; private set; }
+        public string ServerId { get; private set; }
 
         [JsonProperty("TransferCost")]
         public long TransferCost { get; private set; }
@@ -33,7 +33,7 @@ namespace EliteAPI.Event.Models
         public string Ship { get; private set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; private set; }
+        public string ShipId { get; private set; }
     }
 
     public partial class FetchRemoteModuleEvent

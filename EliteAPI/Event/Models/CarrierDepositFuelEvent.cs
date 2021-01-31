@@ -14,7 +14,7 @@ namespace EliteAPI.Event.Models
         internal CarrierDepositFuelEvent() { }
 
         [JsonProperty("CarrierID")]
-        public long CarrierId { get; private set; }
+        public string CarrierId { get; private set; }
 
         [JsonProperty("Amount")]
         public long Amount { get; private set; }

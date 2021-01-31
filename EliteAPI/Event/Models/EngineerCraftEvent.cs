@@ -25,24 +25,23 @@ namespace EliteAPI.Event.Models
         public string Engineer { get; private set; }
 
         [JsonProperty("EngineerID")]
-        public long EngineerId { get; private set; }
+        public string EngineerId { get; private set; }
 
         [JsonProperty("BlueprintID")]
-        public long BlueprintId { get; private set; }
+        public string BlueprintId { get; private set; }
 
         [JsonProperty("BlueprintName")]
         public string BlueprintName { get; private set; }
 
         [JsonProperty("Level")]
-        public long Level { get; private set; }
+        public int Level { get; private set; }
 
         [JsonProperty("Quality")]
         public double Quality { get; private set; }
 
         [JsonProperty("ModifierInfos")]
         public IReadOnlyList<ModifierInfo> ModifierInfos { get; private set; }
-
-
+        
         public class IngredientInfo
         {
             internal IngredientInfo() { }

@@ -15,7 +15,7 @@ namespace EliteAPI.Event.Models
         public string StarSystem { get; private set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; private set; }
+        public string SystemAddress { get; private set; }
     }
 
     public partial class SupercruiseEntryEvent

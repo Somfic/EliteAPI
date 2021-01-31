@@ -21,7 +21,7 @@ namespace EliteAPI.Event.Models
         public string BuyItemLocalised { get; private set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; private set; }
+        public string MarketId { get; private set; }
 
         [JsonProperty("BuyPrice")]
         public long BuyPrice { get; private set; }
@@ -30,7 +30,7 @@ namespace EliteAPI.Event.Models
         public string Ship { get; private set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; private set; }
+        public string ShipId { get; private set; }
     }
 
     public partial class ModuleBuyEvent

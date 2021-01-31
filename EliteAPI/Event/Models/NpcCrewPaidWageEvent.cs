@@ -15,7 +15,7 @@ namespace EliteAPI.Event.Models
         public string NpcCrewName { get; private set; }
 
         [JsonProperty("NpcCrewId")]
-        public long NpcCrewId { get; private set; }
+        public string NpcCrewId { get; private set; }
 
         [JsonProperty("Amount")]
         public long Amount { get; private set; }

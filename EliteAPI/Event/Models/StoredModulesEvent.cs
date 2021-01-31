@@ -13,7 +13,7 @@ namespace EliteAPI.Event.Models
         internal StoredModulesEvent() { }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; private set; }
+        public string MarketId { get; private set; }
 
         [JsonProperty("StationName")]
         public string StationName { get; private set; }

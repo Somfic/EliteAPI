@@ -19,7 +19,7 @@ namespace EliteAPI.Event.Models
         public string BodyName { get; private set; }
 
         [JsonProperty("BodyID")]
-        public long BodyId { get; private set; }
+        public string BodyId { get; private set; }
 
         [JsonProperty("Parents")]
         public IReadOnlyList<ParentInfo> Parents { get; private set; }
@@ -28,7 +28,7 @@ namespace EliteAPI.Event.Models
         public string StarSystem { get; private set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; private set; }
+        public string SystemAddress { get; private set; }
 
         [JsonProperty("DistanceFromArrivalLS")]
         public double DistanceFromArrivalLs { get; private set; }

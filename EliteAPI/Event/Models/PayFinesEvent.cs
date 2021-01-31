@@ -21,7 +21,7 @@ namespace EliteAPI.Event.Models
         public string Faction { get; private set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; private set; }
+        public string ShipId { get; private set; }
     }
 
     public partial class PayFinesEvent

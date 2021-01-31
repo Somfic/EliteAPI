@@ -21,7 +21,7 @@ namespace EliteAPI.Event.Models
             internal CurrentGoalInfo() { }
 
             [JsonProperty("CGID")]
-            public long Cgid { get; private set; }
+            public string Cgid { get; private set; }
 
             [JsonProperty("Title")]
             public string Title { get; private set; }
@@ -33,7 +33,7 @@ namespace EliteAPI.Event.Models
             public string MarketName { get; private set; }
 
             [JsonProperty("Expiry")]
-            public DateTimeOffset Expiry { get; private set; }
+            public DateTime Expiry { get; private set; }
 
             [JsonProperty("IsComplete")]
             public bool IsComplete { get; private set; }

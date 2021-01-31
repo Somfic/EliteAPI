@@ -15,7 +15,7 @@ namespace EliteAPI.Event.Models
         public string Name { get; private set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; private set; }
+        public string SystemAddress { get; private set; }
 
         [JsonProperty("StarClass")]
         public string StarClass { get; private set; }

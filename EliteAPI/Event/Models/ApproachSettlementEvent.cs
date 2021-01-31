@@ -15,13 +15,13 @@ namespace EliteAPI.Event.Models
         public string Name { get; private set; }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; private set; }
+        public string MarketId { get; private set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; private set; }
+        public string SystemAddress { get; private set; }
 
         [JsonProperty("BodyID")]
-        public long BodyId { get; private set; }
+        public string BodyId { get; private set; }
 
         [JsonProperty("BodyName")]
         public string BodyName { get; private set; }

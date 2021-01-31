@@ -21,7 +21,7 @@ namespace EliteAPI.Event.Models
         public string SystemAddress { get; private set; }
 
         [JsonProperty("BodyID")]
-        public long BodyId { get; private set; }
+        public string BodyId { get; private set; }
 
         [JsonProperty("Signals")]
         public IReadOnlyList<Signal> Signals { get; private set; }

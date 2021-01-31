@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
         internal ModuleRetrieveEvent() { }
 
         [JsonProperty("MarketID")]
-        public long MarketId { get; private set; }
+        public string MarketId { get; private set; }
 
         [JsonProperty("Slot")]
         public string Slot { get; private set; }
@@ -27,7 +27,7 @@ namespace EliteAPI.Event.Models
         public string Ship { get; private set; }
 
         [JsonProperty("ShipID")]
-        public long ShipId { get; private set; }
+        public string ShipId { get; private set; }
 
         [JsonProperty("Hot")]
         public bool Hot { get; private set; }

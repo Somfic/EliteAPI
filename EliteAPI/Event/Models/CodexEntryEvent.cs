@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
         internal CodexEntryEvent() { }
 
         [JsonProperty("EntryID")]
-        public long EntryId { get; private set; }
+        public string EntryId { get; private set; }
 
         [JsonProperty("Name")]
         public string Name { get; private set; }
@@ -42,7 +42,7 @@ namespace EliteAPI.Event.Models
         public string System { get; private set; }
 
         [JsonProperty("SystemAddress")]
-        public long SystemAddress { get; private set; }
+        public string SystemAddress { get; private set; }
 
         [JsonProperty("IsNewEntry")]
         public bool IsNewEntry { get; private set; }

@@ -39,7 +39,7 @@ namespace EliteAPI.Event.Models
         public string Target { get; private set; }
 
         [JsonProperty("Expiry")]
-        public DateTimeOffset Expiry { get; private set; }
+        public DateTime Expiry { get; private set; }
 
         [JsonProperty("Wing")]
         public bool Wing { get; private set; }
@@ -54,7 +54,7 @@ namespace EliteAPI.Event.Models
         public long Reward { get; private set; }
 
         [JsonProperty("MissionID")]
-        public long MissionId { get; private set; }
+        public string MissionId { get; private set; }
     }
 
     public partial class MissionAcceptedEvent

@@ -37,6 +37,15 @@ namespace EliteAPI.Tests
             invalidProperties.Should().BeEmpty();
         }
 
+        [Theory(DisplayName = "No use of objects for properties")]
+        [MemberData(nameof(GetData))]
+        public void NoObjects(Type type)
+        {
+            var invalidProperties = type.GetProperties().Where(x => x.PropertyType == typeof(object));
+            
+            invalidProperties.Should().BeEmpty();
+        }
+
         [Theory(DisplayName = "Slots are strings")]
         [MemberData(nameof(GetData))]
         public void SlotsAreStrings(Type type)

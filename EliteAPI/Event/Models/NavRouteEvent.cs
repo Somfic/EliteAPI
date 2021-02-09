@@ -10,9 +10,6 @@ namespace EliteAPI.Event.Models
     public partial class NavRouteEvent : EventBase
     {
         internal NavRouteEvent() { }
-
-        [JsonProperty("event")]
-        public string Event { get; private set; }
     }
 
     public partial class NavRouteEvent
@@ -28,6 +25,7 @@ namespace EliteAPI.Event.Handler
 {
     public partial class EventHandler
     {
+        [Obsolete("Use IEliteDangerousAPI.NavRoute.OnChange instead")]
         public event EventHandler<NavRouteEvent> NavRouteEvent;
 
         internal void InvokeNavRouteEvent(NavRouteEvent arg)

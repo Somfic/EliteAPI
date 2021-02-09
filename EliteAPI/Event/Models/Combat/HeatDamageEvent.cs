@@ -10,9 +10,6 @@ namespace EliteAPI.Event.Models
     public partial class HeatDamageEvent : EventBase
     {
         internal HeatDamageEvent() { }
-
-        [JsonProperty("event")]
-        public string Event { get; private set; }
     }
 
     public partial class HeatDamageEvent

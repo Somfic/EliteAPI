@@ -19,7 +19,27 @@ namespace EliteAPI.Event.Models
         public long Count { get; private set; }
 
         [JsonProperty("Inventory")]
-        public IReadOnlyList<object> Inventory { get; private set; }
+        public IReadOnlyList<CargoInfo> Inventory { get; private set; }
+
+        public class CargoInfo
+        {
+            internal CargoInfo() {}
+
+            [JsonProperty("Name")]
+            public string Name { get; private set; }
+            
+            [JsonProperty("Name_Localised")]
+            public string NameLocalised { get; private set; }
+
+            [JsonProperty("Count")]
+            public int Count { get; private set; }
+
+            [JsonProperty("Stolen")]
+            public bool Stolen { get; private set; }
+
+            [JsonProperty("MissionID")]
+            public string MissionId { get; private set; }
+        }
     }
 
     public partial class CargoEvent

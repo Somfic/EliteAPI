@@ -12,6 +12,11 @@ namespace EliteAPI.Services.FileReader
         /// <inheritdoc />
         public IEnumerable<string> ReadAllLines(FileInfo file)
         {
+            return !file.Exists ? Array.Empty<string>() : ReadAllFileLines(file);
+        }
+        
+        private static IEnumerable<string> ReadAllFileLines(FileInfo file)
+        {
             using var fs = new FileStream(file.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 0x1000,
                 FileOptions.RandomAccess);
             using var stream = new StreamReader(fs, Encoding.UTF8);

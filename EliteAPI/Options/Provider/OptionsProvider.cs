@@ -45,7 +45,7 @@ namespace EliteAPI.Options.Provider
 
             if (activePresetFiles.Length == 0)
             {
-                BindingsNotFoundException ex = new("The select bindings could not be found");
+                BindingsNotFoundException ex = new("The selected bindings could not be found");
                 ex.Data.Add("Active bindings", activePresetName);
 
                 throw ex;

@@ -270,3 +270,4 @@ __pycache__/
 .vscode/
 Testing/
 act/
+Tests/EliteAPI.ManualTest/

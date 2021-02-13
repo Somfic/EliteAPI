@@ -5,8 +5,12 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public partial class FuelScoopEvent : EventBase
     {
         internal FuelScoopEvent() { }

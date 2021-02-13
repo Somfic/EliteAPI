@@ -12,7 +12,6 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    [ProtoInclude(500, typeof(EventBase))]
     public partial class RebootRepairEvent : EventBase
     {
         internal RebootRepairEvent() { }

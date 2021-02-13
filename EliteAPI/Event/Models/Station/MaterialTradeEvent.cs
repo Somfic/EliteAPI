@@ -28,7 +28,8 @@ namespace EliteAPI.Event.Models
         public Paid Received { get; private set; }
     }
 
-    public class Paid
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class Paid
     {
         internal Paid() { }
 

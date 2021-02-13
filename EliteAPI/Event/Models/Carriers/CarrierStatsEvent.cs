@@ -58,6 +58,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("ModulePacks")]
         public IReadOnlyList<object> ModulePacks { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CrewInfo
         {
             internal CrewInfo() { }
@@ -75,6 +76,7 @@ namespace EliteAPI.Event.Models
             public string CrewName { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class FinanceInfo
         {
             internal FinanceInfo() { }
@@ -95,6 +97,7 @@ namespace EliteAPI.Event.Models
             public long TaxRate { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class SpaceUsageInfo
         {
             internal SpaceUsageInfo() { }

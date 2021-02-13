@@ -20,7 +20,8 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<Engineer> Engineers { get; private set; }
     }
 
-    public class Engineer
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class Engineer
     {
         internal Engineer() { }
 

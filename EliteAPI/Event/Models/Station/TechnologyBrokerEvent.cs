@@ -31,6 +31,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Materials")] //todo: own class
         public IReadOnlyList<CommodityInfo> Materials { get; internal set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ItemsUnlockedInfo
         {
             internal ItemsUnlockedInfo()
@@ -45,6 +46,7 @@ namespace EliteAPI.Event.Models
             public string NameLocalised { get; internal set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CommodityInfo
         {
             CommodityInfo()

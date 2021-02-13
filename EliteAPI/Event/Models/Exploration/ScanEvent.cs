@@ -136,6 +136,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("ReserveLevel")]
         public string ReserveLevel { get; private set; }
         
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ParentInfo
         {
             internal ParentInfo() { }
@@ -144,6 +145,7 @@ namespace EliteAPI.Event.Models
             public long Null { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class RingInfo
         {
             internal RingInfo() { }
@@ -164,6 +166,7 @@ namespace EliteAPI.Event.Models
             public long OuterRad { get; private set; }
         }
         
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class Materialinfo
         {
             internal Materialinfo() { }
@@ -175,6 +178,7 @@ namespace EliteAPI.Event.Models
             public double Percent { get; private set; }
         }
         
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class AtmosphereCompositionInfo
         {
             internal AtmosphereCompositionInfo() { }
@@ -186,6 +190,7 @@ namespace EliteAPI.Event.Models
             public double Percent { get; private set; }
         }
         
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CompositionInfo
         {
             internal CompositionInfo() { }

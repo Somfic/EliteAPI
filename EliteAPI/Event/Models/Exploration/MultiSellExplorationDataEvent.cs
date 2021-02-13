@@ -29,7 +29,8 @@ namespace EliteAPI.Event.Models
         public long TotalEarnings { get; private set; }
     }
 
-    public class Discovered
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class Discovered
     {
         internal Discovered() { }
 

@@ -82,6 +82,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Conflicts")]
         public IReadOnlyList<ConflictInfo> Conflicts { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class FactionInfo
         {
             internal FactionInfo() { }
@@ -119,6 +120,7 @@ namespace EliteAPI.Event.Models
             public IReadOnlyList<ActiveStateInfo> ActiveStates { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ActiveStateInfo
         {
             internal ActiveStateInfo() { }
@@ -127,6 +129,7 @@ namespace EliteAPI.Event.Models
             public string State { get; private set; }
         }
         
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class PendingStateInfo
         {
             internal PendingStateInfo() { }
@@ -138,6 +141,7 @@ namespace EliteAPI.Event.Models
             public double Trend { get; private set; }
         }
         
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class RecoveringStateInfo
         {
             internal RecoveringStateInfo() { }
@@ -149,6 +153,7 @@ namespace EliteAPI.Event.Models
             public double Trend { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class SystemFactionInfo
         {
             internal SystemFactionInfo() { }
@@ -160,6 +165,7 @@ namespace EliteAPI.Event.Models
             public string FactionState { get; private set;}
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ConflictInfo
         {
             [JsonProperty("WarType")]
@@ -175,6 +181,7 @@ namespace EliteAPI.Event.Models
             public ConflictFactionInfo Faction2 { get; set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ConflictFactionInfo
         {
             [JsonProperty("Name")]

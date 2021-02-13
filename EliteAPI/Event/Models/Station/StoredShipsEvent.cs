@@ -32,7 +32,8 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<object> ShipsRemote { get; private set; }
     }
 
-    public class ShipsHere
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class ShipsHere
     {
         internal ShipsHere() { }
 

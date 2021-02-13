@@ -29,7 +29,8 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<Signal> Signals { get; private set; }
     }
 
-    public class Signal
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class Signal
     {
         internal Signal() { }
 

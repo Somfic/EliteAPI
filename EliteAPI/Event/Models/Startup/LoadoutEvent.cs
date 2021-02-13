@@ -58,6 +58,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Modules")]
         public IReadOnlyList<ModuleInfo> Modules { get; private set; }
         
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class FuelCapacityInfo
         {
             internal FuelCapacityInfo() { }
@@ -69,6 +70,7 @@ namespace EliteAPI.Event.Models
             public double Reserve { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ModuleInfo
         {
             internal ModuleInfo() { }
@@ -98,6 +100,7 @@ namespace EliteAPI.Event.Models
             public EngineeringInfo Engineering { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class EngineeringInfo
         {
             internal EngineeringInfo() { }
@@ -124,6 +127,7 @@ namespace EliteAPI.Event.Models
             public IReadOnlyList<ModifierInfo> ModifierInfos { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ModifierInfo
         {
             internal ModifierInfo() { }

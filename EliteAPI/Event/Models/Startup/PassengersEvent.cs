@@ -20,7 +20,8 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<Manifest> Manifest { get; private set; }
     }
 
-    public class Manifest
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class Manifest
     {
         internal Manifest() { }
 

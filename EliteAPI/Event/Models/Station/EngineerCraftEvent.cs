@@ -46,6 +46,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("ModifierInfos")]
         public IReadOnlyList<ModifierInfo> ModifierInfos { get; private set; }
         
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class IngredientInfo
         {
             internal IngredientInfo() { }
@@ -60,6 +61,7 @@ namespace EliteAPI.Event.Models
             public string NameLocalised { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ModifierInfo
         {
             internal ModifierInfo() { }

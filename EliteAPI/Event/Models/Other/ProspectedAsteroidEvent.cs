@@ -32,7 +32,8 @@ namespace EliteAPI.Event.Models
         public double Remaining { get; private set; }
     }
 
-    public class Material
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class Material
     {
         internal Material() { }
 

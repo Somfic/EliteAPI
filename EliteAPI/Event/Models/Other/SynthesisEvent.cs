@@ -23,7 +23,8 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<MaterialInfo> Materials { get; private set; }
     }
 
-    public class MaterialInfo
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class MaterialInfo
     {
         internal MaterialInfo() { }
 

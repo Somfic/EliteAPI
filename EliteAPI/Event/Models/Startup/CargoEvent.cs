@@ -25,6 +25,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Inventory")]
         public IReadOnlyList<CargoInfo> Inventory { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CargoInfo
         {
             internal CargoInfo() {}

@@ -20,6 +20,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<CurrentGoalInfo> CurrentGoalInfos { get; private set; }
 
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CurrentGoalInfo
         {
             internal CurrentGoalInfo() { }
@@ -64,6 +65,7 @@ namespace EliteAPI.Event.Models
             public long Bonus { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class TopTierInfo
         {
             internal TopTierInfo() { }

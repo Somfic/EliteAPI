@@ -29,7 +29,8 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<Item> Items { get; private set; }
     }
 
-    public class Item
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class Item
     {
         internal Item() { }
 

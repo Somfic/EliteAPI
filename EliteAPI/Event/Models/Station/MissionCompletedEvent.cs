@@ -56,6 +56,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<FactionEffectInfo> FactionEffectInfos { get; private set; }
 
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class FactionEffectInfo
         {
             internal FactionEffectInfo() { }
@@ -76,6 +77,7 @@ namespace EliteAPI.Event.Models
             public string Reputation { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class EffectInfo
         {
             internal EffectInfo() { }
@@ -90,6 +92,7 @@ namespace EliteAPI.Event.Models
             public string Trend { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class InfluenceInfo
         {
             internal InfluenceInfo() { }

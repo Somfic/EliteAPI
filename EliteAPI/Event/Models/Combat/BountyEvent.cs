@@ -34,6 +34,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("SharedWithOthers")]
         public long SharedWithOthers { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class BountryReward
         {
             internal BountryReward() { }

@@ -61,6 +61,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("ActiveFine")]
         public bool ActiveFine { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class StationEconomyInfo
         {
             internal StationEconomyInfo() { }
@@ -75,6 +76,7 @@ namespace EliteAPI.Event.Models
             public double Proportion { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class StationFactionInfo
         {
             internal StationFactionInfo() { }

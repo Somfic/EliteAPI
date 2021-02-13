@@ -26,6 +26,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<EncodedInfo> Encoded { get; private set; }
 
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class EncodedInfo
         {
             internal EncodedInfo() { }
@@ -40,6 +41,7 @@ namespace EliteAPI.Event.Models
             public long Count { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class RawInfo
         {
             internal RawInfo() { }

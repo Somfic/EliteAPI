@@ -20,7 +20,8 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<Transfer> Transfers { get; private set; }
     }
 
-    public class Transfer
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class Transfer
     {
         internal Transfer() { }
 

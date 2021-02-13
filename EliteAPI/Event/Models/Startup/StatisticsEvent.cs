@@ -63,6 +63,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("TG_ENCOUNTERS")]
         public TgEncountersInfo TgEncounters { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class BankAccountInfo
         {
             internal BankAccountInfo() { }
@@ -95,6 +96,7 @@ namespace EliteAPI.Event.Models
             public long OwnedShipCount { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CombatInfo
         {
             internal CombatInfo() { }
@@ -124,6 +126,7 @@ namespace EliteAPI.Event.Models
             public long SkimmersKilled { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CqcInfo
         {
             internal CqcInfo() { }
@@ -144,6 +147,7 @@ namespace EliteAPI.Event.Models
             public double CqcInfoWl { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class TgEncountersInfo
         {
             internal TgEncountersInfo() { }
@@ -165,6 +169,7 @@ namespace EliteAPI.Event.Models
         }
 
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CraftingInfo
         {
             internal CraftingInfo() { }
@@ -191,6 +196,7 @@ namespace EliteAPI.Event.Models
             public long RecipesGeneratedRank5 { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CrewInfo
         {
             internal CrewInfo() { }
@@ -208,6 +214,7 @@ namespace EliteAPI.Event.Models
             public long NpcCrewInfoDied { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CrimeInfo
         {
             internal CrimeInfo() { }
@@ -231,6 +238,7 @@ namespace EliteAPI.Event.Models
             public long HighestBounty { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ExplorationInfo
         {
             internal ExplorationInfo() { }
@@ -266,6 +274,7 @@ namespace EliteAPI.Event.Models
             public long TimePlayed { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class FleetcarrierInfo
         {
             internal FleetcarrierInfo() { }
@@ -325,6 +334,7 @@ namespace EliteAPI.Event.Models
             public long FleetcarrierInfoVouchersProfit { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class MaterialTraderStatsInfo
         {
             internal MaterialTraderStatsInfo() { }
@@ -357,6 +367,7 @@ namespace EliteAPI.Event.Models
             public long Grade5_MaterialsTraded { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class MiningInfo
         {
             internal MiningInfo() { }
@@ -371,6 +382,7 @@ namespace EliteAPI.Event.Models
             public long MaterialsCollected { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class MulticrewInfo
         {
             internal MulticrewInfo() { }
@@ -391,6 +403,7 @@ namespace EliteAPI.Event.Models
             public long MulticrewInfoFinesTotal { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class PassengersInfo
         {
             internal PassengersInfo() { }
@@ -414,6 +427,7 @@ namespace EliteAPI.Event.Models
             public long PassengersInfoMissionsEjected { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class SearchAndRescueInfo
         {
             internal SearchAndRescueInfo() { }
@@ -428,6 +442,7 @@ namespace EliteAPI.Event.Models
             public long SearchRescueCount { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class SmugglingInfo
         {
             internal SmugglingInfo() { }
@@ -448,6 +463,7 @@ namespace EliteAPI.Event.Models
             public long HighestSingleTransaction { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class TradingInfo
         {
             internal TradingInfo() { }

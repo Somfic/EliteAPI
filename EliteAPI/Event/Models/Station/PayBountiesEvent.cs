@@ -11,6 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    [ProtoInclude(500, typeof(EventBase))]
     public partial class PayBountiesEvent : EventBase
     {
         internal PayBountiesEvent() { }

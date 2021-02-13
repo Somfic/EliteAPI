@@ -2,11 +2,14 @@ using System;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models.Abstractions
 {
     /// <summary>
     /// An in-game event
     /// </summary>
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public abstract class EventBase : IEvent
     {
         /// <inheritdoc />

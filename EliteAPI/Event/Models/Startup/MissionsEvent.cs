@@ -17,13 +17,34 @@ namespace EliteAPI.Event.Models
         internal MissionsEvent() { }
 
         [JsonProperty("Active")]
-        public IReadOnlyList<object> Active { get; private set; }
+        public IReadOnlyList<MissionInfo> Active { get; private set; }
 
         [JsonProperty("Failed")]
-        public IReadOnlyList<object> Failed { get; private set; }
+        public IReadOnlyList<MissionInfo> Failed { get; private set; }
 
         [JsonProperty("Complete")]
-        public IReadOnlyList<object> Complete { get; private set; }
+        public IReadOnlyList<MissionInfo> Complete { get; private set; }
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class MissionInfo
+        {
+            internal MissionInfo()
+            {
+                
+            }
+
+            [JsonProperty("MissionID")]
+            public string MissionId { get; private set; }
+            
+            [JsonProperty("Name")]
+            public string Name { get; private set; }
+            
+            [JsonProperty("PassengerMission")]
+            public bool IsPassengerMission { get; private set; }
+            
+            [JsonProperty("Expires")]
+            public long Expires { get; private set; }
+        }
     }
 
     public partial class MissionsEvent

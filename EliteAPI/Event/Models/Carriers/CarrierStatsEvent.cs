@@ -53,11 +53,26 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<CrewInfo> Crew { get; private set; }
 
         [JsonProperty("ShipPacks")]
-        public IReadOnlyList<object> ShipPacks { get; private set; }
+        public IReadOnlyList<PackInfo> ShipPacks { get; private set; }
 
         [JsonProperty("ModulePacks")]
-        public IReadOnlyList<object> ModulePacks { get; private set; }
+        public IReadOnlyList<PackInfo> ModulePacks { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class PackInfo
+        {
+            internal PackInfo()
+            {
+                
+            }
+            
+            [JsonProperty("PackTheme")]
+            public string Theme { get; private set; }
+            
+            [JsonProperty("PackTier")]
+            public string Tier { get; private set; }
+        }
+        
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CrewInfo
         {

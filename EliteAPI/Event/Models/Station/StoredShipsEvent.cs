@@ -26,16 +26,16 @@ namespace EliteAPI.Event.Models
         public string StarSystem { get; private set; }
 
         [JsonProperty("ShipsHere")]
-        public IReadOnlyList<ShipsHere> ShipsHere { get; private set; }
+        public IReadOnlyList<ShipsInfo> ShipsHere { get; private set; }
 
         [JsonProperty("ShipsRemote")]
-        public IReadOnlyList<object> ShipsRemote { get; private set; }
+        public IReadOnlyList<ShipsInfo> ShipsRemote { get; private set; }
     }
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class ShipsHere
+        public class ShipsInfo
     {
-        internal ShipsHere() { }
+        internal ShipsInfo() { }
 
         [JsonProperty("ShipID")]
         public long ShipId { get; private set; }

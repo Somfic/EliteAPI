@@ -17,7 +17,7 @@ namespace EliteAPI.Event.Models
         internal RebootRepairEvent() { }
 
         [JsonProperty("Modules")]
-        public IReadOnlyList<object> Modules { get; private set; }
+        public IReadOnlyList<string> Modules { get; private set; }
     }
 
     public partial class RebootRepairEvent

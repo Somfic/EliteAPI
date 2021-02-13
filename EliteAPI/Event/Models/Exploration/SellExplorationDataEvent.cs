@@ -20,7 +20,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<string> Systems { get; private set; }
 
         [JsonProperty("Discovered")]
-        public IReadOnlyList<object> Discovered { get; private set; }
+        public IReadOnlyList<string> Discovered { get; private set; }
 
         [JsonProperty("BaseValue")]
         public long BaseValue { get; private set; }

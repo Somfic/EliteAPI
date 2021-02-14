@@ -75,7 +75,7 @@ namespace EliteAPI.Event.Processor
         private IEnumerable<Type> GetAllEventTypes()
         {
             var eventTypes = _assembly.GetTypes()
-                .Where(x => x.IsSubclassOf(typeof(EventBase<>)) && x.IsClass && !x.IsAbstract);
+                .Where(x => typeof(IEvent).IsAssignableFrom(x) && x.IsClass && !x.IsAbstract && !x.IsInterface);
 
             return eventTypes;
         }
@@ -89,7 +89,7 @@ namespace EliteAPI.Event.Processor
                     .Where(y =>
                         y.GetCustomAttribute<EliteDangerousEventAttribute>() != null
                         && y.GetParameters().Length == 1
-                        && y.GetParameters()[0].ParameterType.IsSubclassOf(typeof(EventBase<>))
+                        && typeof(IEvent).IsAssignableFrom(y.GetParameters()[0].ParameterType)
                     ));
         }
 

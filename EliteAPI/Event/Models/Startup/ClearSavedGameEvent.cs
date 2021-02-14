@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ClearSavedGameEvent> ClearSavedGameEvent;
 
+        internal void InvokeClearSavedGameEvent(ClearSavedGameEvent arg)
+        {
+            ClearSavedGameEvent?.Invoke(this, arg);
+        }
     }
 }

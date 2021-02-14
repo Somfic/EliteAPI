@@ -20,7 +20,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Deposit")]
         public long Deposit { get; private set; }
-        
+
         [JsonProperty("Withdraw")]
         public long Withdraw { get; private set; }
 
@@ -39,5 +39,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierBankTransferEvent> CarrierBankTransferEvent;
 
+        internal void InvokeCarrierBankTransferEvent(CarrierBankTransferEvent arg)
+        {
+            CarrierBankTransferEvent?.Invoke(this, arg);
+        }
     }
 }

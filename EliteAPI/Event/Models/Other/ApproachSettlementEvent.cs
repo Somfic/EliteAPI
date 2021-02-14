@@ -45,5 +45,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ApproachSettlementEvent> ApproachSettlementEvent;
 
+        internal void InvokeApproachSettlementEvent(ApproachSettlementEvent arg)
+        {
+            ApproachSettlementEvent?.Invoke(this, arg);
+        }
     }
 }

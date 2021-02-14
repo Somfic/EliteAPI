@@ -30,7 +30,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("HullValue")]
         public long HullValue { get; private set; }
-        
+
         [JsonProperty("ModulesValue")]
         public long ModulesValue { get; private set; }
 
@@ -57,7 +57,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Modules")]
         public IReadOnlyList<ModuleInfo> Modules { get; private set; }
-        
+
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class FuelCapacityInfo
         {
@@ -154,5 +154,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LoadoutEvent> LoadoutEvent;
 
+        internal void InvokeLoadoutEvent(LoadoutEvent arg)
+        {
+            LoadoutEvent?.Invoke(this, arg);
+        }
     }
 }

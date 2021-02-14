@@ -20,7 +20,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("DockingAccess")]
         public string DockingAccess { get; private set; }
-        
+
         [JsonProperty("AllowNotorious")]
         public bool AllowNotorious { get; private set; }
     }
@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierDockingPermissionEvent> CarrierDockingPermissionEvent;
 
+        internal void InvokeCarrierDockingPermissionEvent(CarrierDockingPermissionEvent arg)
+        {
+            CarrierDockingPermissionEvent?.Invoke(this, arg);
+        }
     }
 }

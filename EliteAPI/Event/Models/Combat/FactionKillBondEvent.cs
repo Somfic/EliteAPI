@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FactionKillBondEvent> FactionKillBondEvent;
 
+        internal void InvokeFactionKillBondEvent(FactionKillBondEvent arg)
+        {
+            FactionKillBondEvent?.Invoke(this, arg);
+        }
     }
 }

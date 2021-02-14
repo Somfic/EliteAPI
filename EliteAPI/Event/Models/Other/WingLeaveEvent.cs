@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<WingLeaveEvent> WingLeaveEvent;
 
+        internal void InvokeWingLeaveEvent(WingLeaveEvent arg)
+        {
+            WingLeaveEvent?.Invoke(this, arg);
+        }
     }
 }

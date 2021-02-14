@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<OutfittingEvent> OutfittingEvent;
 
+        internal void InvokeOutfittingEvent(OutfittingEvent arg)
+        {
+            OutfittingEvent?.Invoke(this, arg);
+        }
     }
 }

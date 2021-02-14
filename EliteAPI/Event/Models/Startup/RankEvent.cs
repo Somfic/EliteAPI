@@ -42,5 +42,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RankEvent> RankEvent;
 
+        internal void InvokeRankEvent(RankEvent arg)
+        {
+            RankEvent?.Invoke(this, arg);
+        }
     }
 }

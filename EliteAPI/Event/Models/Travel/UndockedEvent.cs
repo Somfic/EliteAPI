@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<UndockedEvent> UndockedEvent;
 
+        internal void InvokeUndockedEvent(UndockedEvent arg)
+        {
+            UndockedEvent?.Invoke(this, arg);
+        }
     }
 }

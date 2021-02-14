@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<EndCrewSessionEvent> EndCrewSessionEvent;
 
+        internal void InvokeEndCrewSessionEvent(EndCrewSessionEvent arg)
+        {
+            EndCrewSessionEvent?.Invoke(this, arg);
+        }
     }
 }

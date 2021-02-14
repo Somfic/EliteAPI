@@ -223,7 +223,6 @@ namespace EliteAPI.Event.Models
     }
 
 
-
 }
 
 namespace EliteAPI.Event.Handler
@@ -232,5 +231,10 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<LocationEvent> LocationEvent;
+        
+        internal void InvokeLocationEvent(LocationEvent arg)
+        {
+            LocationEvent?.Invoke(this, arg);
+        }
     }
 }

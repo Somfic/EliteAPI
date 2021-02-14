@@ -28,20 +28,17 @@ namespace EliteAPI.Event.Models
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class MissionInfo
         {
-            internal MissionInfo()
-            {
-                
-            }
+            internal MissionInfo() { }
 
             [JsonProperty("MissionID")]
             public string MissionId { get; private set; }
-            
+
             [JsonProperty("Name")]
             public string Name { get; private set; }
-            
+
             [JsonProperty("PassengerMission")]
             public bool IsPassengerMission { get; private set; }
-            
+
             [JsonProperty("Expires")]
             public long Expires { get; private set; }
         }
@@ -55,5 +52,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MissionsEvent> MissionsEvent;
 
+        internal void InvokeMissionsEvent(MissionsEvent arg)
+        {
+            MissionsEvent?.Invoke(this, arg);
+        }
     }
 }

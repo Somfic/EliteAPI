@@ -23,10 +23,10 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Longitude")]
         public double Longitude { get; private set; }
-        
+
         [JsonProperty("NearestDestination")]
         public string NearestDestination { get; private set; }
-        
+
         [JsonProperty("NearestDestination_Localised")]
         public string NearestDestinationLocalised { get; private set; }
     }
@@ -39,5 +39,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LiftoffEvent> LiftoffEvent;
 
+        internal void InvokeLiftoffEvent(LiftoffEvent arg)
+        {
+            LiftoffEvent?.Invoke(this, arg);
+        }
     }
 }

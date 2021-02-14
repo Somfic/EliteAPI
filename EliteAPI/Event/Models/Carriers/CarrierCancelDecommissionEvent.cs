@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierCancelDecommissionEvent> CarrierCancelDecommissionEvent;
 
+        internal void InvokeCarrierCancelDecommissionEvent(CarrierCancelDecommissionEvent arg)
+        {
+            CarrierCancelDecommissionEvent?.Invoke(this, arg);
+        }
     }
 }

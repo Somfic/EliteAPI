@@ -39,5 +39,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PayBountiesEvent> PayBountiesEvent;
 
+        internal void InvokePayBountiesEvent(PayBountiesEvent arg)
+        {
+            PayBountiesEvent?.Invoke(this, arg);
+        }
     }
 }

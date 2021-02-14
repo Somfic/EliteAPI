@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FssDiscoveryScanEvent> FssDiscoveryScanEvent;
 
+        internal void InvokeFssDiscoveryScanEvent(FssDiscoveryScanEvent arg)
+        {
+            FssDiscoveryScanEvent?.Invoke(this, arg);
+        }
     }
 }

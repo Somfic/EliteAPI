@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ShutdownEvent> ShutdownEvent;
 
+        internal void InvokeShutdownEvent(ShutdownEvent arg)
+        {
+            ShutdownEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CrewHireEvent> CrewHireEvent;
 
+        internal void InvokeCrewHireEvent(CrewHireEvent arg)
+        {
+            CrewHireEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SearchAndRescueEvent> SearchAndRescueEvent;
 
+        internal void InvokeSearchAndRescueEvent(SearchAndRescueEvent arg)
+        {
+            SearchAndRescueEvent?.Invoke(this, arg);
+        }
     }
 }

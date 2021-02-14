@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DatalinkVoucherEvent> DatalinkVoucherEvent;
 
+        internal void InvokeDatalinkVoucherEvent(DatalinkVoucherEvent arg)
+        {
+            DatalinkVoucherEvent?.Invoke(this, arg);
+        }
     }
 }

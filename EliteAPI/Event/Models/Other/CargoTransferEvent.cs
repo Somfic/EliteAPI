@@ -21,7 +21,7 @@ namespace EliteAPI.Event.Models
     }
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class Transfer
+    public class Transfer
     {
         internal Transfer() { }
 
@@ -43,5 +43,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CargoTransferEvent> CargoTransferEvent;
 
+        internal void InvokeCargoTransferEvent(CargoTransferEvent arg)
+        {
+            CargoTransferEvent?.Invoke(this, arg);
+        }
     }
 }

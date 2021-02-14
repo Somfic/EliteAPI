@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ReservoirReplenishedEvent> ReservoirReplenishedEvent;
 
+        internal void InvokeReservoirReplenishedEvent(ReservoirReplenishedEvent arg)
+        {
+            ReservoirReplenishedEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MaterialDiscardedEvent> MaterialDiscardedEvent;
 
+        internal void InvokeMaterialDiscardedEvent(MaterialDiscardedEvent arg)
+        {
+            MaterialDiscardedEvent?.Invoke(this, arg);
+        }
     }
 }

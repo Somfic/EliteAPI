@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DataScannedEvent> DataScannedEvent;
 
+        internal void InvokeDataScannedEvent(DataScannedEvent arg)
+        {
+            DataScannedEvent?.Invoke(this, arg);
+        }
     }
 }

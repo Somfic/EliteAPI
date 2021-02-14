@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RestockVehicleEvent> RestockVehicleEvent;
 
+        internal void InvokeRestockVehicleEvent(RestockVehicleEvent arg)
+        {
+            RestockVehicleEvent?.Invoke(this, arg);
+        }
     }
 }

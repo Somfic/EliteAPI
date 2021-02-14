@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SendTextEvent> SendTextEvent;
 
+        internal void InvokeSendTextEvent(SendTextEvent arg)
+        {
+            SendTextEvent?.Invoke(this, arg);
+        }
     }
 }

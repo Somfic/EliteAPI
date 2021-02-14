@@ -493,5 +493,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<StatisticsEvent> StatisticsEvent;
 
+        internal void InvokeStatisticsEvent(StatisticsEvent arg)
+        {
+            StatisticsEvent?.Invoke(this, arg);
+        }
     }
 }

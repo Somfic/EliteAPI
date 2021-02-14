@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PayLegacyFinesEvent> PayLegacyFinesEvent;
 
+        internal void InvokePayLegacyFinesEvent(PayLegacyFinesEvent arg)
+        {
+            PayLegacyFinesEvent?.Invoke(this, arg);
+        }
     }
 }

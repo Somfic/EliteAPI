@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LaunchDroneEvent> LaunchDroneEvent;
 
+        internal void InvokeLaunchDroneEvent(LaunchDroneEvent arg)
+        {
+            LaunchDroneEvent?.Invoke(this, arg);
+        }
     }
 }

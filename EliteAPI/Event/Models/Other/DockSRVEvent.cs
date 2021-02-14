@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DockSrvEvent> DockSrvEvent;
 
+        internal void InvokeDockSrvEvent(DockSrvEvent arg)
+        {
+            DockSrvEvent?.Invoke(this, arg);
+        }
     }
 }

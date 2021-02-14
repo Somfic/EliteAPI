@@ -28,11 +28,11 @@ namespace EliteAPI.Event.Models
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CargoInfo
         {
-            internal CargoInfo() {}
+            internal CargoInfo() { }
 
             [JsonProperty("Name")]
             public string Name { get; private set; }
-            
+
             [JsonProperty("Name_Localised")]
             public string NameLocalised { get; private set; }
 
@@ -55,5 +55,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CargoEvent> CargoEvent;
 
+        internal void InvokeCargoEvent(CargoEvent arg)
+        {
+            CargoEvent?.Invoke(this, arg);
+        }
     }
 }

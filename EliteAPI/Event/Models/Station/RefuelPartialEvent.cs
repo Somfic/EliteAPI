@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RefuelPartialEvent> RefuelPartialEvent;
 
+        internal void InvokeRefuelPartialEvent(RefuelPartialEvent arg)
+        {
+            RefuelPartialEvent?.Invoke(this, arg);
+        }
     }
 }

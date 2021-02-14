@@ -28,5 +28,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RebootRepairEvent> RebootRepairEvent;
 
+        internal void InvokeRebootRepairEvent(RebootRepairEvent arg)
+        {
+            RebootRepairEvent?.Invoke(this, arg);
+        }
     }
 }

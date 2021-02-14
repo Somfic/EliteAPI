@@ -24,7 +24,7 @@ namespace EliteAPI.Event.Models
     }
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class MaterialInfo
+    public class MaterialInfo
     {
         internal MaterialInfo() { }
 
@@ -43,5 +43,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SynthesisEvent> SynthesisEvent;
 
+        internal void InvokeSynthesisEvent(SynthesisEvent arg)
+        {
+            SynthesisEvent?.Invoke(this, arg);
+        }
     }
 }

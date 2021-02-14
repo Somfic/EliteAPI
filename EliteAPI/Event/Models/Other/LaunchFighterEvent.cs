@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LaunchFighterEvent> LaunchFighterEvent;
 
+        internal void InvokeLaunchFighterEvent(LaunchFighterEvent arg)
+        {
+            LaunchFighterEvent?.Invoke(this, arg);
+        }
     }
 }

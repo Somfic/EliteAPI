@@ -42,5 +42,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierModulePackEvent> CarrierModulePackEvent;
 
+        internal void InvokeCarrierModulePackEvent(CarrierModulePackEvent arg)
+        {
+            CarrierModulePackEvent?.Invoke(this, arg);
+        }
     }
 }

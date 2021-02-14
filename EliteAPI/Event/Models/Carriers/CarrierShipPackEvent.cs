@@ -29,7 +29,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Cost")]
         public long Cost { get; private set; }
-        
+
         [JsonProperty("Refund")]
         public long Refund { get; private set; }
     }
@@ -42,5 +42,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierShipPackEvent> CarrierShipPackEvent;
 
+        internal void InvokeCarrierShipPackEvent(CarrierShipPackEvent arg)
+        {
+            CarrierShipPackEvent?.Invoke(this, arg);
+        }
     }
 }

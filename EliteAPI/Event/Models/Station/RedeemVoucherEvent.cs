@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RedeemVoucherEvent> RedeemVoucherEvent;
 
+        internal void InvokeRedeemVoucherEvent(RedeemVoucherEvent arg)
+        {
+            RedeemVoucherEvent?.Invoke(this, arg);
+        }
     }
 }

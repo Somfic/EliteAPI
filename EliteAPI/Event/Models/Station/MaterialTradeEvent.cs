@@ -29,7 +29,7 @@ namespace EliteAPI.Event.Models
     }
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class Paid
+    public class Paid
     {
         internal Paid() { }
 
@@ -47,7 +47,6 @@ namespace EliteAPI.Event.Models
     }
 
 
-
 }
 
 namespace EliteAPI.Event.Handler
@@ -56,5 +55,10 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<MaterialTradeEvent> MaterialTradeEvent;
+        
+        internal void InvokeMaterialTradeEvent(MaterialTradeEvent arg)
+        {
+            MaterialTradeEvent?.Invoke(this, arg);
+        }
     }
 }

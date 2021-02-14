@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SupercruiseEntryEvent> SupercruiseEntryEvent;
 
+        internal void InvokeSupercruiseEntryEvent(SupercruiseEntryEvent arg)
+        {
+            SupercruiseEntryEvent?.Invoke(this, arg);
+        }
     }
 }

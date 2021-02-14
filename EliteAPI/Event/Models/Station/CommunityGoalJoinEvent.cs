@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CommunityGoalJoinEvent> CommunityGoalJoinEvent;
 
+        internal void InvokeCommunityGoalJoinEvent(CommunityGoalJoinEvent arg)
+        {
+            CommunityGoalJoinEvent?.Invoke(this, arg);
+        }
     }
 }

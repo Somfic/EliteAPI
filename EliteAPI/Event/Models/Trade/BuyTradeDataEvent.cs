@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<BuyTradeDataEvent> BuyTradeDataEvent;
 
+        internal void InvokeBuyTradeDataEvent(BuyTradeDataEvent arg)
+        {
+            BuyTradeDataEvent?.Invoke(this, arg);
+        }
     }
 }

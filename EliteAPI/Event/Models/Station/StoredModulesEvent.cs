@@ -30,7 +30,7 @@ namespace EliteAPI.Event.Models
     }
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class Item
+    public class Item
     {
         internal Item() { }
 
@@ -79,5 +79,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<StoredModulesEvent> StoredModulesEvent;
 
+        internal void InvokeStoredModulesEvent(StoredModulesEvent arg)
+        {
+            StoredModulesEvent?.Invoke(this, arg);
+        }
     }
 }

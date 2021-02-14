@@ -78,7 +78,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Factions")]
         public IReadOnlyList<FactionInfo> Factions { get; private set; }
-        
+
         [JsonProperty("Conflicts")]
         public IReadOnlyList<ConflictInfo> Conflicts { get; private set; }
 
@@ -115,7 +115,7 @@ namespace EliteAPI.Event.Models
             public IReadOnlyList<PendingStateInfo> PendingStates { get; private set; }
             [JsonProperty("RecoveringStates", NullValueHandling = NullValueHandling.Ignore)]
             public IReadOnlyList<RecoveringStateInfo> RecoveringStates { get; private set; }
-            
+
             [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
             public IReadOnlyList<ActiveStateInfo> ActiveStates { get; private set; }
         }
@@ -128,7 +128,7 @@ namespace EliteAPI.Event.Models
             [JsonProperty("State")]
             public string State { get; private set; }
         }
-        
+
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class PendingStateInfo
         {
@@ -136,11 +136,11 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("State")]
             public string State { get; private set; }
-            
+
             [JsonProperty("Trend")]
             public double Trend { get; private set; }
         }
-        
+
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class RecoveringStateInfo
         {
@@ -148,7 +148,7 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("State")]
             public string State { get; private set; }
-            
+
             [JsonProperty("Trend")]
             public double Trend { get; private set; }
         }
@@ -160,9 +160,9 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Name")]
             public string Name { get; private set; }
-            
+
             [JsonProperty("FactionState")]
-            public string FactionState { get; private set;}
+            public string FactionState { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -203,5 +203,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FsdJumpEvent> FsdJumpEvent;
 
+        internal void InvokeFsdJumpEvent(FsdJumpEvent arg)
+        {
+            FsdJumpEvent?.Invoke(this, arg);
+        }
     }
 }

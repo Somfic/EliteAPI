@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MusicEvent> MusicEvent;
 
+        internal void InvokeMusicEvent(MusicEvent arg)
+        {
+            MusicEvent?.Invoke(this, arg);
+        }
     }
 }

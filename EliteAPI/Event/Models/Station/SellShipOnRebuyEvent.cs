@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SellShipOnRebuyEvent> SellShipOnRebuyEvent;
 
+        internal void InvokeSellShipOnRebuyEvent(SellShipOnRebuyEvent arg)
+        {
+            SellShipOnRebuyEvent?.Invoke(this, arg);
+        }
     }
 }

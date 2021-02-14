@@ -37,5 +37,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MassModuleStoreEvent> MassModuleStoreEvent;
 
+        internal void InvokeMassModuleStoreEvent(MassModuleStoreEvent arg)
+        {
+            MassModuleStoreEvent?.Invoke(this, arg);
+        }
     }
 }

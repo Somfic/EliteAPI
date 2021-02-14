@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PromotionEvent> PromotionEvent;
 
+        internal void InvokePromotionEvent(PromotionEvent arg)
+        {
+            PromotionEvent?.Invoke(this, arg);
+        }
     }
 }

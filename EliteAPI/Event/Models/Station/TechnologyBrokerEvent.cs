@@ -34,11 +34,8 @@ namespace EliteAPI.Event.Models
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ItemsUnlockedInfo
         {
-            internal ItemsUnlockedInfo()
-            {
-                
-            }
-            
+            internal ItemsUnlockedInfo() { }
+
             [JsonProperty("Name")]
             public string Name { get; internal set; }
 
@@ -49,11 +46,8 @@ namespace EliteAPI.Event.Models
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CommodityInfo
         {
-            CommodityInfo()
-            {
-                
-            }
-            
+            private CommodityInfo() { }
+
             [JsonProperty("Name")]
             public string Name { get; internal set; }
 
@@ -76,5 +70,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<TechnologyBrokerEvent> TechnologyBrokerEvent;
 
+        internal void InvokeTechnologyBrokerEvent(TechnologyBrokerEvent arg)
+        {
+            TechnologyBrokerEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DatalinkScanEvent> DatalinkScanEvent;
 
+        internal void InvokeDatalinkScanEvent(DatalinkScanEvent arg)
+        {
+            DatalinkScanEvent?.Invoke(this, arg);
+        }
     }
 }

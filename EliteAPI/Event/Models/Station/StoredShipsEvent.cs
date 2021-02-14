@@ -33,7 +33,7 @@ namespace EliteAPI.Event.Models
     }
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class ShipsInfo
+    public class ShipsInfo
     {
         internal ShipsInfo() { }
 
@@ -64,5 +64,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<StoredShipsEvent> StoredShipsEvent;
 
+        internal void InvokeStoredShipsEvent(StoredShipsEvent arg)
+        {
+            StoredShipsEvent?.Invoke(this, arg);
+        }
     }
 }

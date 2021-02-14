@@ -16,6 +16,23 @@ namespace EliteAPI.Tests
     {
         public static IEnumerable<object[]> GetData() => typeof(IEvent).Assembly.GetTypes().Where(x => x.IsAssignableTo(typeof(IEvent)) && x.IsClass && !x.IsInterface && !x.IsAbstract).Select(x => new object[] {x});
         
+        [Theory(DisplayName = "Contains invoke method")]
+        [MemberData(nameof(GetData))]
+        public void HasInvokeMethod(Type type)
+        {
+            typeof(Event.Handler.EventHandler).GetMethods(BindingFlags.Instance
+                                                          | BindingFlags.NonPublic
+                                                          | BindingFlags.Public
+                                                          | BindingFlags.Static)
+                .Where(x => !x.Name.StartsWith("add_")
+                            && !x.Name.StartsWith("remove_")
+                            && x.GetParameters().Length > 0
+                            && typeof(IEvent).IsAssignableFrom(x.GetParameters().First().ParameterType))
+                .Select(x => x.Name)
+                .Should()
+                .Contain($"Invoke{type.Name}");
+        }
+        
         [Theory(DisplayName = "Contains FromJson method")]
         [MemberData(nameof(GetData))]
         public void FromJson(Type type)

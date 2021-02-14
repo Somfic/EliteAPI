@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<NpcCrewPaidWageEvent> NpcCrewPaidWageEvent;
 
+        internal void InvokeNpcCrewPaidWageEvent(NpcCrewPaidWageEvent arg)
+        {
+            NpcCrewPaidWageEvent?.Invoke(this, arg);
+        }
     }
 }

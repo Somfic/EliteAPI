@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FriendsEvent> FriendsEvent;
 
+        internal void InvokeFriendsEvent(FriendsEvent arg)
+        {
+            FriendsEvent?.Invoke(this, arg);
+        }
     }
 }

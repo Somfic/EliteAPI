@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CrewLaunchFighterEvent> CrewLaunchFighterEvent;
 
+        internal void InvokeCrewLaunchFighterEvent(CrewLaunchFighterEvent arg)
+        {
+            CrewLaunchFighterEvent?.Invoke(this, arg);
+        }
     }
 }

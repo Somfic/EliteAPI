@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CommunityGoalRewardEvent> CommunityGoalRewardEvent;
 
+        internal void InvokeCommunityGoalRewardEvent(CommunityGoalRewardEvent arg)
+        {
+            CommunityGoalRewardEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -42,5 +42,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ModuleStoreEvent> ModuleStoreEvent;
 
+        internal void InvokeModuleStoreEvent(ModuleStoreEvent arg)
+        {
+            ModuleStoreEvent?.Invoke(this, arg);
+        }
     }
 }

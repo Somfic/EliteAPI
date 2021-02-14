@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<UssDropEvent> UssDropEvent;
 
+        internal void InvokeUssDropEvent(UssDropEvent arg)
+        {
+            UssDropEvent?.Invoke(this, arg);
+        }
     }
 }

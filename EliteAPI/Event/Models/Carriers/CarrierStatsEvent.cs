@@ -61,18 +61,15 @@ namespace EliteAPI.Event.Models
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class PackInfo
         {
-            internal PackInfo()
-            {
-                
-            }
-            
+            internal PackInfo() { }
+
             [JsonProperty("PackTheme")]
             public string Theme { get; private set; }
-            
+
             [JsonProperty("PackTier")]
             public string Tier { get; private set; }
         }
-        
+
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CrewInfo
         {
@@ -148,5 +145,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierStatsEvent> CarrierStatsEvent;
 
+        internal void InvokeCarrierStatsEvent(CarrierStatsEvent arg)
+        {
+            CarrierStatsEvent?.Invoke(this, arg);
+        }
     }
 }

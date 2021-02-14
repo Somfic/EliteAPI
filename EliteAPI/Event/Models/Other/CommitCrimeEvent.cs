@@ -42,5 +42,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CommitCrimeEvent> CommitCrimeEvent;
 
+        internal void InvokeCommitCrimeEvent(CommitCrimeEvent arg)
+        {
+            CommitCrimeEvent?.Invoke(this, arg);
+        }
     }
 }

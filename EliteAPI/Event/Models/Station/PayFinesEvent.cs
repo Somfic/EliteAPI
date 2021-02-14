@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PayFinesEvent> PayFinesEvent;
 
+        internal void InvokePayFinesEvent(PayFinesEvent arg)
+        {
+            PayFinesEvent?.Invoke(this, arg);
+        }
     }
 }

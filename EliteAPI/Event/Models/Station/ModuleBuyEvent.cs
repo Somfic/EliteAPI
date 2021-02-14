@@ -45,5 +45,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ModuleBuyEvent> ModuleBuyEvent;
 
+        internal void InvokeModuleBuyEvent(ModuleBuyEvent arg)
+        {
+            ModuleBuyEvent?.Invoke(this, arg);
+        }
     }
 }

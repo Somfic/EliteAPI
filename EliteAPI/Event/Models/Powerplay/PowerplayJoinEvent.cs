@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayJoinEvent> PowerplayJoinEvent;
 
+        internal void InvokePowerplayJoinEvent(PowerplayJoinEvent arg)
+        {
+            PowerplayJoinEvent?.Invoke(this, arg);
+        }
     }
 }

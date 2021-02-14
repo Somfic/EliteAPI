@@ -32,7 +32,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Distance")]
         public double Distance { get; private set; }
-    
+
         [JsonProperty("TransferPrice")]
         public long TransferPrice { get; private set; }
 
@@ -51,5 +51,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ShipyardTransferEvent> ShipyardTransferEvent;
 
+        internal void InvokeShipyardTransferEvent(ShipyardTransferEvent arg)
+        {
+            ShipyardTransferEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CrewMemberJoinsEvent> CrewMemberJoinsEvent;
 
+        internal void InvokeCrewMemberJoinsEvent(CrewMemberJoinsEvent arg)
+        {
+            CrewMemberJoinsEvent?.Invoke(this, arg);
+        }
     }
 }

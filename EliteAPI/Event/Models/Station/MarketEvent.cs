@@ -20,7 +20,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("StationName")]
         public string StationName { get; private set; }
-        
+
         [JsonProperty("StationType")]
         public string StationType { get; private set; }
 
@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MarketEvent> MarketEvent;
 
+        internal void InvokeMarketEvent(MarketEvent arg)
+        {
+            MarketEvent?.Invoke(this, arg);
+        }
     }
 }

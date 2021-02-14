@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<JetConeBoostEvent> JetConeBoostEvent;
 
+        internal void InvokeJetConeBoostEvent(JetConeBoostEvent arg)
+        {
+            JetConeBoostEvent?.Invoke(this, arg);
+        }
     }
 }

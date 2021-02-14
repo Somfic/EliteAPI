@@ -9,7 +9,7 @@ using ProtoBuf;
 
 namespace EliteAPI.Event.Models
 {
-    
+
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class CarrierDepositFuelEvent : EventBase<CarrierDepositFuelEvent>
     {
@@ -26,7 +26,6 @@ namespace EliteAPI.Event.Models
     }
 
 
-
 }
 
 namespace EliteAPI.Event.Handler
@@ -35,5 +34,10 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<CarrierDepositFuelEvent> CarrierDepositFuelEvent;
+        
+        internal void InvokeCarrierDepositFuelEvent(CarrierDepositFuelEvent arg)
+        {
+            CarrierDepositFuelEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayFastTrackEvent> PowerplayFastTrackEvent;
 
+        internal void InvokePowerplayFastTrackEvent(PowerplayFastTrackEvent arg)
+        {
+            PowerplayFastTrackEvent?.Invoke(this, arg);
+        }
     }
 }

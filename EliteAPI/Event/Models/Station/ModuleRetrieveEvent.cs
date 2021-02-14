@@ -45,5 +45,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ModuleRetrieveEvent> ModuleRetrieveEvent;
 
+        internal void InvokeModuleRetrieveEvent(ModuleRetrieveEvent arg)
+        {
+            ModuleRetrieveEvent?.Invoke(this, arg);
+        }
     }
 }

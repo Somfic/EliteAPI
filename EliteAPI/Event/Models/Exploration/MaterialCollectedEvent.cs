@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MaterialCollectedEvent> MaterialCollectedEvent;
 
+        internal void InvokeMaterialCollectedEvent(MaterialCollectedEvent arg)
+        {
+            MaterialCollectedEvent?.Invoke(this, arg);
+        }
     }
 }

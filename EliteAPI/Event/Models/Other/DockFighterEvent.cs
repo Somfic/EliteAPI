@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DockFighterEvent> DockFighterEvent;
 
+        internal void InvokeDockFighterEvent(DockFighterEvent arg)
+        {
+            DockFighterEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -17,13 +17,13 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("JumpType")]
         public string JumpType { get; private set; }
-        
+
         [JsonProperty("StarSystem")]
         public string StarSystem { get; private set; }
-        
+
         [JsonProperty("SystemAddress")]
         public string SystemAddress { get; private set; }
-        
+
         [JsonProperty("StarClass")]
         public string StarClass { get; private set; }
     }
@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<StartJumpEvent> StartJumpEvent;
 
+        internal void InvokeStartJumpEvent(StartJumpEvent arg)
+        {
+            StartJumpEvent?.Invoke(this, arg);
+        }
     }
 }

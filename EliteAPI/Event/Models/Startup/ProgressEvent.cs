@@ -42,5 +42,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ProgressEvent> ProgressEvent;
 
+        internal void InvokeProgressEvent(ProgressEvent arg)
+        {
+            ProgressEvent?.Invoke(this, arg);
+        }
     }
 }

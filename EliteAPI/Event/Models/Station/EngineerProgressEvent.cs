@@ -21,7 +21,7 @@ namespace EliteAPI.Event.Models
     }
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class Engineer
+    public class Engineer
     {
         internal Engineer() { }
 
@@ -51,5 +51,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<EngineerProgressEvent> EngineerProgressEvent;
 
+        internal void InvokeEngineerProgressEvent(EngineerProgressEvent arg)
+        {
+            EngineerProgressEvent?.Invoke(this, arg);
+        }
     }
 }

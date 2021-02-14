@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CommunityGoalDiscardEvent> CommunityGoalDiscardEvent;
 
+        internal void InvokeCommunityGoalDiscardEvent(CommunityGoalDiscardEvent arg)
+        {
+            CommunityGoalDiscardEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DockingDeniedEvent> DockingDeniedEvent;
 
+        internal void InvokeDockingDeniedEvent(DockingDeniedEvent arg)
+        {
+            DockingDeniedEvent?.Invoke(this, arg);
+        }
     }
 }

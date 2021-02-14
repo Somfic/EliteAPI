@@ -28,5 +28,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<WingJoinEvent> WingJoinEvent;
 
+        internal void InvokeWingJoinEvent(WingJoinEvent arg)
+        {
+            WingJoinEvent?.Invoke(this, arg);
+        }
     }
 }

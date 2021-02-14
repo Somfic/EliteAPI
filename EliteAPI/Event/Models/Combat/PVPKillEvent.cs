@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PvpKillEvent> PvpKillEvent;
 
+        internal void InvokePvpKillEvent(PvpKillEvent arg)
+        {
+            PvpKillEvent?.Invoke(this, arg);
+        }
     }
 }

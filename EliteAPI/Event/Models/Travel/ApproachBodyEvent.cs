@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ApproachBodyEvent> ApproachBodyEvent;
 
+        internal void InvokeApproachBodyEvent(ApproachBodyEvent arg)
+        {
+            ApproachBodyEvent?.Invoke(this, arg);
+        }
     }
 }

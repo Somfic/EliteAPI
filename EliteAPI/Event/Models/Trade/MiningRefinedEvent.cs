@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MiningRefinedEvent> MiningRefinedEvent;
 
+        internal void InvokeMiningRefinedEvent(MiningRefinedEvent arg)
+        {
+            MiningRefinedEvent?.Invoke(this, arg);
+        }
     }
 }

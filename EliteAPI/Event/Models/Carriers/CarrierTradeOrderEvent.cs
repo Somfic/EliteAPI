@@ -23,16 +23,16 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Commodity")]
         public string Commodity { get; private set; }
-        
+
         [JsonProperty("Commodity_Localised")]
         public string CommodityLocalised { get; private set; }
 
         [JsonProperty("PurchaseOrder")]
         public int PurchaseOrder { get; private set; }
-        
+
         [JsonProperty("SaleOrder")]
         public int SaleOrder { get; private set; }
-        
+
         [JsonProperty("CancelTrade")]
         public bool CancelTrade { get; private set; }
 
@@ -48,5 +48,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierTradeOrderEvent> CarrierTradeOrderEvent;
 
+        internal void InvokeCarrierTradeOrderEvent(CarrierTradeOrderEvent arg)
+        {
+            CarrierTradeOrderEvent?.Invoke(this, arg);
+        }
     }
 }

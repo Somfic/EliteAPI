@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CollectCargoEvent> CollectCargoEvent;
 
+        internal void InvokeCollectCargoEvent(CollectCargoEvent arg)
+        {
+            CollectCargoEvent?.Invoke(this, arg);
+        }
     }
 }

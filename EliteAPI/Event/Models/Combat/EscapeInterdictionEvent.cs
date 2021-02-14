@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<EscapeInterdictionEvent> EscapeInterdictionEvent;
 
+        internal void InvokeEscapeInterdictionEvent(EscapeInterdictionEvent arg)
+        {
+            EscapeInterdictionEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RepairAllEvent> RepairAllEvent;
 
+        internal void InvokeRepairAllEvent(RepairAllEvent arg)
+        {
+            RepairAllEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -42,5 +42,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierBuyEvent> CarrierBuyEvent;
 
+        internal void InvokeCarrierBuyEvent(CarrierBuyEvent arg)
+        {
+            CarrierBuyEvent?.Invoke(this, arg);
+        }
     }
 }

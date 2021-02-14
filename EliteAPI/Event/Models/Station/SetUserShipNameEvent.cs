@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SetUserShipNameEvent> SetUserShipNameEvent;
 
+        internal void InvokeSetUserShipNameEvent(SetUserShipNameEvent arg)
+        {
+            SetUserShipNameEvent?.Invoke(this, arg);
+        }
     }
 }

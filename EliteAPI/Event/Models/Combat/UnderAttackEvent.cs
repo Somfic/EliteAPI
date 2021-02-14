@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<UnderAttackEvent> UnderAttackEvent;
 
+        internal void InvokeUnderAttackEvent(UnderAttackEvent arg)
+        {
+            UnderAttackEvent?.Invoke(this, arg);
+        }
     }
 }

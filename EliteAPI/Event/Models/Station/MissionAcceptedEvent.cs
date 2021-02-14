@@ -69,5 +69,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MissionAcceptedEvent> MissionAcceptedEvent;
 
+        internal void InvokeMissionAcceptedEvent(MissionAcceptedEvent arg)
+        {
+            MissionAcceptedEvent?.Invoke(this, arg);
+        }
     }
 }

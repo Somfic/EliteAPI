@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SquadronCreatedEvent> SquadronCreatedEvent;
 
+        internal void InvokeSquadronCreatedEvent(SquadronCreatedEvent arg)
+        {
+            SquadronCreatedEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<EngineerApplyEvent> EngineerApplyEvent;
 
+        internal void InvokeEngineerApplyEvent(EngineerApplyEvent arg)
+        {
+            EngineerApplyEvent?.Invoke(this, arg);
+        }
     }
 }

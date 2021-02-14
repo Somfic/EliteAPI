@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FighterRebuiltEvent> FighterRebuiltEvent;
 
+        internal void InvokeFighterRebuiltEvent(FighterRebuiltEvent arg)
+        {
+            FighterRebuiltEvent?.Invoke(this, arg);
+        }
     }
 }

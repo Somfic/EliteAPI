@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CrimeVictimEvent> CrimeVictimEvent;
 
+        internal void InvokeCrimeVictimEvent(CrimeVictimEvent arg)
+        {
+            CrimeVictimEvent?.Invoke(this, arg);
+        }
     }
 }

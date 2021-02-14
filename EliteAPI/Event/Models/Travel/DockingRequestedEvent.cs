@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DockingRequestedEvent> DockingRequestedEvent;
 
+        internal void InvokeDockingRequestedEvent(DockingRequestedEvent arg)
+        {
+            DockingRequestedEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FileheaderEvent> FileheaderEvent;
 
+        internal void InvokeFileheaderEvent(FileheaderEvent arg)
+        {
+            FileheaderEvent?.Invoke(this, arg);
+        }
     }
 }

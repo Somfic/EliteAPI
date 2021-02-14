@@ -17,10 +17,10 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("MarketID")]
         public string MarketId { get; private set; }
-        
+
         [JsonProperty("Type")]
         public string Type { get; private set; }
-        
+
         [JsonProperty("Type_Localised")]
         public string TypeLocalised { get; private set; }
 
@@ -42,5 +42,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MarketBuyEvent> MarketBuyEvent;
 
+        internal void InvokeMarketBuyEvent(MarketBuyEvent arg)
+        {
+            MarketBuyEvent?.Invoke(this, arg);
+        }
     }
 }

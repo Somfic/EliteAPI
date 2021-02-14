@@ -295,7 +295,7 @@
             <summary>
             Generates an event entry from Json
             </summary>
-            <param name="json"> The json string </param>
+            <param name="json">The json string</param>
         </member>
         <member name="M:EliteAPI.Event.Models.Abstractions.EventBase`1.ToJson">
             <summary>

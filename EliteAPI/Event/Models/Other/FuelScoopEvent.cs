@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FuelScoopEvent> FuelScoopEvent;
 
+        internal void InvokeFuelScoopEvent(FuelScoopEvent arg)
+        {
+            FuelScoopEvent?.Invoke(this, arg);
+        }
     }
 }

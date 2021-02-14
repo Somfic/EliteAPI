@@ -55,5 +55,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<BountyEvent> BountyEvent;
 
+        internal void InvokeBountyEvent(BountyEvent arg)
+        {
+            BountyEvent?.Invoke(this, arg);
+        }
     }
 }

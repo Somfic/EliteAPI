@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ScientificResearchEvent> ScientificResearchEvent;
 
+        internal void InvokeScientificResearchEvent(ScientificResearchEvent arg)
+        {
+            ScientificResearchEvent?.Invoke(this, arg);
+        }
     }
 }

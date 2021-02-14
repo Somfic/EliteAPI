@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayVoteEvent> PowerplayVoteEvent;
 
+        internal void InvokePowerplayVoteEvent(PowerplayVoteEvent arg)
+        {
+            PowerplayVoteEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<KickedFromSquadronEvent> KickedFromSquadronEvent;
 
+        internal void InvokeKickedFromSquadronEvent(KickedFromSquadronEvent arg)
+        {
+            KickedFromSquadronEvent?.Invoke(this, arg);
+        }
     }
 }

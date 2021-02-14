@@ -96,7 +96,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("BodyType")]
         public string BodyType { get; private set; }
-        
+
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class StationEconomyInfo
         {
@@ -130,5 +130,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierJumpEvent> CarrierJumpEvent;
 
+        internal void InvokeCarrierJumpEvent(CarrierJumpEvent arg)
+        {
+            CarrierJumpEvent?.Invoke(this, arg);
+        }
     }
 }

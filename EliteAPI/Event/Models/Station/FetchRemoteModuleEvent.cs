@@ -48,5 +48,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FetchRemoteModuleEvent> FetchRemoteModuleEvent;
 
+        internal void InvokeFetchRemoteModuleEvent(FetchRemoteModuleEvent arg)
+        {
+            FetchRemoteModuleEvent?.Invoke(this, arg);
+        }
     }
 }

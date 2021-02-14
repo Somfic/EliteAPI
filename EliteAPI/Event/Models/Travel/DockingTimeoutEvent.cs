@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DockingTimeoutEvent> DockingTimeoutEvent;
 
+        internal void InvokeDockingTimeoutEvent(DockingTimeoutEvent arg)
+        {
+            DockingTimeoutEvent?.Invoke(this, arg);
+        }
     }
 }

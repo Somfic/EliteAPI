@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SquadronDemotionEvent> SquadronDemotionEvent;
 
+        internal void InvokeSquadronDemotionEvent(SquadronDemotionEvent arg)
+        {
+            SquadronDemotionEvent?.Invoke(this, arg);
+        }
     }
 }

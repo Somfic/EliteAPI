@@ -39,5 +39,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierJumpRequestEvent> CarrierJumpRequestEvent;
 
+        internal void InvokeCarrierJumpRequestEvent(CarrierJumpRequestEvent arg)
+        {
+            CarrierJumpRequestEvent?.Invoke(this, arg);
+        }
     }
 }

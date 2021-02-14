@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DiscoveryScanEvent> DiscoveryScanEvent;
 
+        internal void InvokeDiscoveryScanEvent(DiscoveryScanEvent arg)
+        {
+            DiscoveryScanEvent?.Invoke(this, arg);
+        }
     }
 }

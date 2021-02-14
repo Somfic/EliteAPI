@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<KickCrewMemberEvent> KickCrewMemberEvent;
 
+        internal void InvokeKickCrewMemberEvent(KickCrewMemberEvent arg)
+        {
+            KickCrewMemberEvent?.Invoke(this, arg);
+        }
     }
 }

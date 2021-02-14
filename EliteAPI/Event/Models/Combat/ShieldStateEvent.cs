@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ShieldStateEvent> ShieldStateEvent;
 
+        internal void InvokeShieldStateEvent(ShieldStateEvent arg)
+        {
+            ShieldStateEvent?.Invoke(this, arg);
+        }
     }
 }

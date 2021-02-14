@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ReputationEvent> ReputationEvent;
 
+        internal void InvokeReputationEvent(ReputationEvent arg)
+        {
+            ReputationEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -47,7 +47,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("StartLanded")]
         public bool StartLanded { get; private set; }
-        
+
         [JsonProperty("GameMode")]
         public string GameMode { get; private set; }
 
@@ -66,5 +66,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LoadGameEvent> LoadGameEvent;
 
+        internal void InvokeLoadGameEvent(LoadGameEvent arg)
+        {
+            LoadGameEvent?.Invoke(this, arg);
+        }
     }
 }

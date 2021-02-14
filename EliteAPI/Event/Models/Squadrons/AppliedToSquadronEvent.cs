@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<AppliedToSquadronEvent> AppliedToSquadronEvent;
 
+        internal void InvokeAppliedToSquadronEvent(AppliedToSquadronEvent arg)
+        {
+            AppliedToSquadronEvent?.Invoke(this, arg);
+        }
     }
 }

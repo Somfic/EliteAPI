@@ -3,8 +3,6 @@ using System;
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 
-using Newtonsoft.Json;
-
 using ProtoBuf;
 
 namespace EliteAPI.Event.Models
@@ -14,7 +12,6 @@ namespace EliteAPI.Event.Models
     public class HeatWarningEvent : EventBase<HeatWarningEvent>
     {
         internal HeatWarningEvent() { }
-        
     }
 
 }
@@ -25,5 +22,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<HeatWarningEvent> HeatWarningEvent;
 
+        internal void InvokeHeatWarningEvent(HeatWarningEvent arg)
+        {
+            HeatWarningEvent?.Invoke(this, arg);
+        }
     }
 }

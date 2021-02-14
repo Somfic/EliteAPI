@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FighterDestroyedEvent> FighterDestroyedEvent;
 
+        internal void InvokeFighterDestroyedEvent(FighterDestroyedEvent arg)
+        {
+            FighterDestroyedEvent?.Invoke(this, arg);
+        }
     }
 }

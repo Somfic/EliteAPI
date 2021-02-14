@@ -51,5 +51,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ModuleSwapEvent> ModuleSwapEvent;
 
+        internal void InvokeModuleSwapEvent(ModuleSwapEvent arg)
+        {
+            ModuleSwapEvent?.Invoke(this, arg);
+        }
     }
 }

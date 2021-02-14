@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<HullDamageEvent> HullDamageEvent;
 
+        internal void InvokeHullDamageEvent(HullDamageEvent arg)
+        {
+            HullDamageEvent?.Invoke(this, arg);
+        }
     }
 }

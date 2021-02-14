@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ShipyardEvent> ShipyardEvent;
 
+        internal void InvokeShipyardEvent(ShipyardEvent arg)
+        {
+            ShipyardEvent?.Invoke(this, arg);
+        }
     }
 }

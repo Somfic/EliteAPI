@@ -21,7 +21,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("MotherlodeMaterial")]
         public string Motherlode { get; private set; }
-        
+
         [JsonProperty("Content")]
         public string Content { get; private set; }
 
@@ -33,7 +33,7 @@ namespace EliteAPI.Event.Models
     }
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class Material
+    public class Material
     {
         internal Material() { }
 
@@ -48,7 +48,6 @@ namespace EliteAPI.Event.Models
     }
 
 
-
 }
 
 namespace EliteAPI.Event.Handler
@@ -57,5 +56,10 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<ProspectedAsteroidEvent> ProspectedAsteroidEvent;
+        
+        internal void InvokeProspectedAsteroidEvent(ProspectedAsteroidEvent arg)
+        {
+            ProspectedAsteroidEvent?.Invoke(this, arg);
+        }
     }
 }

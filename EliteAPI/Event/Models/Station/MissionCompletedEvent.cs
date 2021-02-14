@@ -82,10 +82,10 @@ namespace EliteAPI.Event.Models
         {
             internal EffectInfo() { }
 
-            [JsonProperty("Effect")] 
+            [JsonProperty("Effect")]
             public string Effect { get; private set; }
 
-            [JsonProperty("Effect_Localised")] 
+            [JsonProperty("Effect_Localised")]
             public string EffectLocalised { get; private set; }
 
             [JsonProperty("Trend")]
@@ -103,7 +103,7 @@ namespace EliteAPI.Event.Models
             [JsonProperty("Trend")]
             public string Trend { get; private set; }
 
-            [JsonProperty("Influence")] 
+            [JsonProperty("Influence")]
             public string Influence { get; private set; }
         }
     }
@@ -116,5 +116,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MissionCompletedEvent> MissionCompletedEvent;
 
+        internal void InvokeMissionCompletedEvent(MissionCompletedEvent arg)
+        {
+            MissionCompletedEvent?.Invoke(this, arg);
+        }
     }
 }

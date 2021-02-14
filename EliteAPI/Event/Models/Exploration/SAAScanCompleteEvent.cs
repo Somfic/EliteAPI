@@ -17,7 +17,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("BodyName")]
         public string BodyName { get; private set; }
-        
+
         [JsonProperty("SystemAddress")]
         public string SystemAddress { get; private set; }
 
@@ -39,5 +39,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SaaScanCompleteEvent> SaaScanCompleteEvent;
 
+        internal void InvokeSaaScanCompleteEvent(SaaScanCompleteEvent arg)
+        {
+            SaaScanCompleteEvent?.Invoke(this, arg);
+        }
     }
 }

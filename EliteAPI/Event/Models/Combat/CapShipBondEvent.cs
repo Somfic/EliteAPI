@@ -20,7 +20,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("RewardingFaction")]
         public string RewardingFaction { get; internal set; }
-        
+
         [JsonProperty("VictimFaction")]
         public string VictimFaction { get; internal set; }
     }
@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CapShipBondEvent> CapShipBondEvent;
 
+        internal void InvokeCapShipBondEvent(CapShipBondEvent arg)
+        {
+            CapShipBondEvent?.Invoke(this, arg);
+        }
     }
 }

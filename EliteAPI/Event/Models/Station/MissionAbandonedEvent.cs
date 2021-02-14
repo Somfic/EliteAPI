@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MissionAbandonedEvent> MissionAbandonedEvent;
 
+        internal void InvokeMissionAbandonedEvent(MissionAbandonedEvent arg)
+        {
+            MissionAbandonedEvent?.Invoke(this, arg);
+        }
     }
 }

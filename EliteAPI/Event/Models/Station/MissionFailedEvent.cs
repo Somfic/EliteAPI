@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MissionFailedEvent> MissionFailedEvent;
 
+        internal void InvokeMissionFailedEvent(MissionFailedEvent arg)
+        {
+            MissionFailedEvent?.Invoke(this, arg);
+        }
     }
 }

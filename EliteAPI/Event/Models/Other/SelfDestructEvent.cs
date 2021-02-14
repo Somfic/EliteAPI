@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SelfDestructEvent> SelfDestructEvent;
 
+        internal void InvokeSelfDestructEvent(SelfDestructEvent arg)
+        {
+            SelfDestructEvent?.Invoke(this, arg);
+        }
     }
 }

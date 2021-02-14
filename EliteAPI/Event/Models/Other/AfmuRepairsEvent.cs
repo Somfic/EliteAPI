@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<AfmuRepairsEvent> AfmuRepairsEvent;
 
+        internal void InvokeAfmuRepairsEvent(AfmuRepairsEvent arg)
+        {
+            AfmuRepairsEvent?.Invoke(this, arg);
+        }
     }
 }

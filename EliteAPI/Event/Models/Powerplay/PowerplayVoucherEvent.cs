@@ -31,5 +31,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayVoucherEvent> PowerplayVoucherEvent;
 
+        internal void InvokePowerplayVoucherEvent(PowerplayVoucherEvent arg)
+        {
+            PowerplayVoucherEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -20,10 +20,10 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("SignalName")]
         public string SignalName { get; private set; }
-        
+
         [JsonProperty("SignalName_Localised")]
         public string SignalNameLocalised { get; private set; }
-        
+
         [JsonProperty("IsStation")]
         public bool IsStation { get; private set; }
     }
@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FssSignalDiscoveredEvent> FssSignalDiscoveredEvent;
 
+        internal void InvokeFssSignalDiscoveredEvent(FssSignalDiscoveredEvent arg)
+        {
+            FssSignalDiscoveredEvent?.Invoke(this, arg);
+        }
     }
 }

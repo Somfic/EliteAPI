@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<JetConeDamageEvent> JetConeDamageEvent;
 
+        internal void InvokeJetConeDamageEvent(JetConeDamageEvent arg)
+        {
+            JetConeDamageEvent?.Invoke(this, arg);
+        }
     }
 }

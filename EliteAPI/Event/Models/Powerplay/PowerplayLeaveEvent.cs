@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayLeaveEvent> PowerplayLeaveEvent;
 
+        internal void InvokePowerplayLeaveEvent(PowerplayLeaveEvent arg)
+        {
+            PowerplayLeaveEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<InterdictionEvent> InterdictionEvent;
 
+        internal void InvokeInterdictionEvent(InterdictionEvent arg)
+        {
+            InterdictionEvent?.Invoke(this, arg);
+        }
     }
 }

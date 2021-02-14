@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<VehicleSwitchEvent> VehicleSwitchEvent;
 
+        internal void InvokeVehicleSwitchEvent(VehicleSwitchEvent arg)
+        {
+            VehicleSwitchEvent?.Invoke(this, arg);
+        }
     }
 }

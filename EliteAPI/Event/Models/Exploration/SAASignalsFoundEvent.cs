@@ -30,7 +30,7 @@ namespace EliteAPI.Event.Models
     }
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class Signal
+    public class Signal
     {
         internal Signal() { }
 
@@ -45,7 +45,6 @@ namespace EliteAPI.Event.Models
     }
 
 
-
 }
 
 namespace EliteAPI.Event.Handler
@@ -54,5 +53,10 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<SaaSignalsFoundEvent> SaaSignalsFoundEvent;
+        
+        internal void InvokeSaaSignalsFoundEvent(SaaSignalsFoundEvent arg)
+        {
+            SaaSignalsFoundEvent?.Invoke(this, arg);
+        }
     }
 }

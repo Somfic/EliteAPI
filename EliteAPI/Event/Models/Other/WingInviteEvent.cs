@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<WingInviteEvent> WingInviteEvent;
 
+        internal void InvokeWingInviteEvent(WingInviteEvent arg)
+        {
+            WingInviteEvent?.Invoke(this, arg);
+        }
     }
 }

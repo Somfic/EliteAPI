@@ -57,5 +57,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CargoDepotEvent> CargoDepotEvent;
 
+        internal void InvokeCargoDepotEvent(CargoDepotEvent arg)
+        {
+            CargoDepotEvent?.Invoke(this, arg);
+        }
     }
 }

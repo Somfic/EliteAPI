@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SquadronDisbandedEvent> SquadronDisbandedEvent;
 
+        internal void InvokeSquadronDisbandedEvent(SquadronDisbandedEvent arg)
+        {
+            SquadronDisbandedEvent?.Invoke(this, arg);
+        }
     }
 }

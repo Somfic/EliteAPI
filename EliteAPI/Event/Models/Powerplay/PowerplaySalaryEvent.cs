@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplaySalaryEvent> PowerplaySalaryEvent;
 
+        internal void InvokePowerplaySalaryEvent(PowerplaySalaryEvent arg)
+        {
+            PowerplaySalaryEvent?.Invoke(this, arg);
+        }
     }
 }

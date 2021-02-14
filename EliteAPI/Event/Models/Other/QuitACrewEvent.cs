@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<QuitACrewEvent> QuitACrewEvent;
 
+        internal void InvokeQuitACrewEvent(QuitACrewEvent arg)
+        {
+            QuitACrewEvent?.Invoke(this, arg);
+        }
     }
 }

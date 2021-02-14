@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<BuyAmmoEvent> BuyAmmoEvent;
 
+        internal void InvokeBuyAmmoEvent(BuyAmmoEvent arg)
+        {
+            BuyAmmoEvent?.Invoke(this, arg);
+        }
     }
 }

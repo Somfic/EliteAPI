@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayCollectEvent> PowerplayCollectEvent;
 
+        internal void InvokePowerplayCollectEvent(PowerplayCollectEvent arg)
+        {
+            PowerplayCollectEvent?.Invoke(this, arg);
+        }
     }
 }

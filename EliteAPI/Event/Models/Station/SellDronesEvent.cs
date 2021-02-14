@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SellDronesEvent> SellDronesEvent;
 
+        internal void InvokeSellDronesEvent(SellDronesEvent arg)
+        {
+            SellDronesEvent?.Invoke(this, arg);
+        }
     }
 }

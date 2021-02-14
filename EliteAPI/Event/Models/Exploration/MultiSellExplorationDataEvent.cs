@@ -30,7 +30,7 @@ namespace EliteAPI.Event.Models
     }
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class Discovered
+    public class Discovered
     {
         internal Discovered() { }
 
@@ -49,5 +49,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MultiSellExplorationDataEvent> MultiSellExplorationDataEvent;
 
+        internal void InvokeMultiSellExplorationDataEvent(MultiSellExplorationDataEvent arg)
+        {
+            MultiSellExplorationDataEvent?.Invoke(this, arg);
+        }
     }
 }

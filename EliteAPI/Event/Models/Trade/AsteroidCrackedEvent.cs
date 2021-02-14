@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<AsteroidCrackedEvent> AsteroidCrackedEvent;
 
+        internal void InvokeAsteroidCrackedEvent(AsteroidCrackedEvent arg)
+        {
+            AsteroidCrackedEvent?.Invoke(this, arg);
+        }
     }
 }

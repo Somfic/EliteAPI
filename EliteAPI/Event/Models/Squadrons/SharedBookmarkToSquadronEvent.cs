@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SharedBookmarkToSquadronEvent> SharedBookmarkToSquadronEvent;
 
+        internal void InvokeSharedBookmarkToSquadronEvent(SharedBookmarkToSquadronEvent arg)
+        {
+            SharedBookmarkToSquadronEvent?.Invoke(this, arg);
+        }
     }
 }

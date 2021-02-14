@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<JoinACrewEvent> JoinACrewEvent;
 
+        internal void InvokeJoinACrewEvent(JoinACrewEvent arg)
+        {
+            JoinACrewEvent?.Invoke(this, arg);
+        }
     }
 }

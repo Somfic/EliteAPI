@@ -17,7 +17,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("KillerName")]
         public string KillerName { get; private set; }
-        
+
         [JsonProperty("KillerShip")]
         public string KillerShip { get; private set; }
     }
@@ -28,5 +28,10 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<DiedEvent> DiedEvent;
+        
+        internal void InvokeDiedEvent(DiedEvent arg)
+        {
+            DiedEvent?.Invoke(this, arg);
+        }
     }
 }

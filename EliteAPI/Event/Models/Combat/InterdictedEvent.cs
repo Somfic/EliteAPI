@@ -20,7 +20,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Interdictor")]
         public string Interdictor { get; private set; }
-        
+
         [JsonProperty("Interdictor_Localised")]
         public string InterdictorLocalised { get; private set; }
 
@@ -39,5 +39,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<InterdictedEvent> InterdictedEvent;
 
+        internal void InvokeInterdictedEvent(InterdictedEvent arg)
+        {
+            InterdictedEvent?.Invoke(this, arg);
+        }
     }
 }

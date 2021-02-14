@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LeftSquadronEvent> LeftSquadronEvent;
 
+        internal void InvokeLeftSquadronEvent(LeftSquadronEvent arg)
+        {
+            LeftSquadronEvent?.Invoke(this, arg);
+        }
     }
 }

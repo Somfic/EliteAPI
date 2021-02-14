@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ResurrectEvent> ResurrectEvent;
 
+        internal void InvokeResurrectEvent(ResurrectEvent arg)
+        {
+            ResurrectEvent?.Invoke(this, arg);
+        }
     }
 }

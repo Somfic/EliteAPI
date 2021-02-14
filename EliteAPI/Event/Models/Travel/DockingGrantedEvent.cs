@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DockingGrantedEvent> DockingGrantedEvent;
 
+        internal void InvokeDockingGrantedEvent(DockingGrantedEvent arg)
+        {
+            DockingGrantedEvent?.Invoke(this, arg);
+        }
     }
 }

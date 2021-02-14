@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FssAllBodiesFoundEvent> FssAllBodiesFoundEvent;
 
+        internal void InvokeFssAllBodiesFoundEvent(FssAllBodiesFoundEvent arg)
+        {
+            FssAllBodiesFoundEvent?.Invoke(this, arg);
+        }
     }
 }

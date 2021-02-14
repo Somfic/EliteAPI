@@ -90,7 +90,6 @@ namespace EliteAPI.Event.Models
     }
 
 
-
 }
 
 namespace EliteAPI.Event.Handler
@@ -99,5 +98,10 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<DockedEvent> DockedEvent;
+        
+        internal void InvokeDockedEvent(DockedEvent arg)
+        {
+            DockedEvent?.Invoke(this, arg);
+        }
     }
 }

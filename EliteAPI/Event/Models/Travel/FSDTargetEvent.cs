@@ -23,7 +23,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("StarClass")]
         public string StarClass { get; private set; }
-        
+
         [JsonProperty("RemainingJumpsInRoute")]
         public int RemainingJumpsInRoute { get; private set; }
     }
@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FsdTargetEvent> FsdTargetEvent;
 
+        internal void InvokeFsdTargetEvent(FsdTargetEvent arg)
+        {
+            FsdTargetEvent?.Invoke(this, arg);
+        }
     }
 }

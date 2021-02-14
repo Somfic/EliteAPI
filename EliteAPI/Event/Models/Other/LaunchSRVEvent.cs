@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LaunchSrvEvent> LaunchSrvEvent;
 
+        internal void InvokeLaunchSrvEvent(LaunchSrvEvent arg)
+        {
+            LaunchSrvEvent?.Invoke(this, arg);
+        }
     }
 }

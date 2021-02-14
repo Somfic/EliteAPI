@@ -21,7 +21,7 @@ namespace EliteAPI.Event.Models
     }
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class Manifest
+    public class Manifest
     {
         internal Manifest() { }
 
@@ -49,5 +49,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PassengersEvent> PassengersEvent;
 
+        internal void InvokePassengersEvent(PassengersEvent arg)
+        {
+            PassengersEvent?.Invoke(this, arg);
+        }
     }
 }

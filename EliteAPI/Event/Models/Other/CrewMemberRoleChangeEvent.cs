@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CrewMemberRoleChangeEvent> CrewMemberRoleChangeEvent;
 
+        internal void InvokeCrewMemberRoleChangeEvent(CrewMemberRoleChangeEvent arg)
+        {
+            CrewMemberRoleChangeEvent?.Invoke(this, arg);
+        }
     }
 }

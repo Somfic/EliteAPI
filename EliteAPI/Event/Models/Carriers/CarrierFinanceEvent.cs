@@ -42,5 +42,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierFinanceEvent> CarrierFinanceEvent;
 
+        internal void InvokeCarrierFinanceEvent(CarrierFinanceEvent arg)
+        {
+            CarrierFinanceEvent?.Invoke(this, arg);
+        }
     }
 }

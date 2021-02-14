@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayDefectEvent> PowerplayDefectEvent;
 
+        internal void InvokePowerplayDefectEvent(PowerplayDefectEvent arg)
+        {
+            PowerplayDefectEvent?.Invoke(this, arg);
+        }
     }
 }

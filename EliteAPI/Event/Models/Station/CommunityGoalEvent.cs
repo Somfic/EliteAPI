@@ -86,5 +86,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CommunityGoalEvent> CommunityGoalEvent;
 
+        internal void InvokeCommunityGoalEvent(CommunityGoalEvent arg)
+        {
+            CommunityGoalEvent?.Invoke(this, arg);
+        }
     }
 }

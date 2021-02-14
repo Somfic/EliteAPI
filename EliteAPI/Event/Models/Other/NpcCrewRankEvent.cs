@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<NpcCrewRankEvent> NpcCrewRankEvent;
 
+        internal void InvokeNpcCrewRankEvent(NpcCrewRankEvent arg)
+        {
+            NpcCrewRankEvent?.Invoke(this, arg);
+        }
     }
 }

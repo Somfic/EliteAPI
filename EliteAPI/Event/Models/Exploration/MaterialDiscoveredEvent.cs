@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MaterialDiscoveredEvent> MaterialDiscoveredEvent;
 
+        internal void InvokeMaterialDiscoveredEvent(MaterialDiscoveredEvent arg)
+        {
+            MaterialDiscoveredEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -39,5 +39,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ScreenshotEvent> ScreenshotEvent;
 
+        internal void InvokeScreenshotEvent(ScreenshotEvent arg)
+        {
+            ScreenshotEvent?.Invoke(this, arg);
+        }
     }
 }

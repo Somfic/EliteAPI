@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CommanderEvent> CommanderEvent;
 
+        internal void InvokeCommanderEvent(CommanderEvent arg)
+        {
+            CommanderEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("ScrapRefund")]
         public long Refund { get; private set; }
-        
+
         [JsonProperty("ScrapTime")]
         public long ScramTime { get; private set; }
     }
@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierDecommissionEvent> CarrierDecommissionEvent;
 
+        internal void InvokeCarrierDecommissionEvent(CarrierDecommissionEvent arg)
+        {
+            CarrierDecommissionEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<WonATrophyForSquadronEvent> WonATrophyForSquadronEvent;
         
+        internal void InvokeWonATrophyForSquadronEvent(WonATrophyForSquadronEvent arg)
+        {
+            WonATrophyForSquadronEvent?.Invoke(this, arg);
+        }
     }
 }

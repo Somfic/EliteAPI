@@ -45,7 +45,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("ModifierInfos")]
         public IReadOnlyList<ModifierInfo> ModifierInfos { get; private set; }
-        
+
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class IngredientInfo
         {
@@ -88,5 +88,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<EngineerCraftEvent> EngineerCraftEvent;
 
+        internal void InvokeEngineerCraftEvent(EngineerCraftEvent arg)
+        {
+            EngineerCraftEvent?.Invoke(this, arg);
+        }
     }
 }

@@ -3,8 +3,6 @@ using System;
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 
-using Newtonsoft.Json;
-
 using ProtoBuf;
 
 namespace EliteAPI.Event.Models
@@ -24,5 +22,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CockpitBreachedEvent> CockpitBreachedEvent;
 
+        internal void InvokeCockpitBreachedEvent(CockpitBreachedEvent arg)
+        {
+            CockpitBreachedEvent?.Invoke(this, arg);
+        }
     }
 }

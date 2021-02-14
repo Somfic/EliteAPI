@@ -30,5 +30,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SquadronStartupEvent> SquadronStartupEvent;
 
+        internal void InvokeSquadronStartupEvent(SquadronStartupEvent arg)
+        {
+            SquadronStartupEvent?.Invoke(this, arg);
+        }
     }
 }

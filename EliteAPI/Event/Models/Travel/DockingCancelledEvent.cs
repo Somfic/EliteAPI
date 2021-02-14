@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DockingCancelledEvent> DockingCancelledEvent;
 
+        internal void InvokeDockingCancelledEvent(DockingCancelledEvent arg)
+        {
+            DockingCancelledEvent?.Invoke(this, arg);
+        }
     }
 }

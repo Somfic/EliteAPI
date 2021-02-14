@@ -36,5 +36,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LeaveBodyEvent> LeaveBodyEvent;
 
+        internal void InvokeLeaveBodyEvent(LeaveBodyEvent arg)
+        {
+            LeaveBodyEvent?.Invoke(this, arg);
+        }
     }
 }

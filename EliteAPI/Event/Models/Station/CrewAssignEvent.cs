@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CrewAssignEvent> CrewAssignEvent;
 
+        internal void InvokeCrewAssignEvent(CrewAssignEvent arg)
+        {
+            CrewAssignEvent?.Invoke(this, arg);
+        }
     }
 }

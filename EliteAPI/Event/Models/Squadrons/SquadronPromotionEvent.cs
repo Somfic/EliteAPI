@@ -33,5 +33,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SquadronPromotionEvent> SquadronPromotionEvent;
 
+        internal void InvokeSquadronPromotionEvent(SquadronPromotionEvent arg)
+        {
+            SquadronPromotionEvent?.Invoke(this, arg);
+        }
     }
 }

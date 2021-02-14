@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<NavBeaconScanEvent> NavBeaconScanEvent;
 
+        internal void InvokeNavBeaconScanEvent(NavBeaconScanEvent arg)
+        {
+            NavBeaconScanEvent?.Invoke(this, arg);
+        }
     }
 }

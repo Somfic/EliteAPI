@@ -39,5 +39,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SupercruiseExitEvent> SupercruiseExitEvent;
 
+        internal void InvokeSupercruiseExitEvent(SupercruiseExitEvent arg)
+        {
+            SupercruiseExitEvent?.Invoke(this, arg);
+        }
     }
 }

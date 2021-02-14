@@ -54,5 +54,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MarketSellEvent> MarketSellEvent;
 
+        internal void InvokeMarketSellEvent(MarketSellEvent arg)
+        {
+            MarketSellEvent?.Invoke(this, arg);
+        }
     }
 }

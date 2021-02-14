@@ -3,8 +3,6 @@
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 
-using Newtonsoft.Json;
-
 using ProtoBuf;
 
 namespace EliteAPI.Event.Models
@@ -13,7 +11,7 @@ namespace EliteAPI.Event.Models
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class SrvDestroyedEvent : EventBase<SrvDestroyedEvent>
     {
-        internal SrvDestroyedEvent() { }        
+        internal SrvDestroyedEvent() { }
     }
 
 }
@@ -24,5 +22,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SrvDestroyedEvent> SrvDestroyedEvent;
 
+        internal void InvokeSrvDestroyedEvent(SrvDestroyedEvent arg)
+        {
+            SrvDestroyedEvent?.Invoke(this, arg);
+        }
     }
 }

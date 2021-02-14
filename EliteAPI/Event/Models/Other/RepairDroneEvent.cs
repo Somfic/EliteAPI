@@ -27,5 +27,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RepairDroneEvent> RepairDroneEvent;
 
+        internal void InvokeRepairDroneEvent(RepairDroneEvent arg)
+        {
+            RepairDroneEvent?.Invoke(this, arg);
+        }
     }
 }

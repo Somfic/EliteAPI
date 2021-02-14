@@ -42,5 +42,9 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MissionRedirectedEvent> MissionRedirectedEvent;
 
+        internal void InvokeMissionRedirectedEvent(MissionRedirectedEvent arg)
+        {
+            MissionRedirectedEvent?.Invoke(this, arg);
+        }
     }
 }

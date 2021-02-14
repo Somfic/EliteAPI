@@ -1,4 +1,6 @@
-﻿using EliteAPI.Status.Ship.JsonConverters;
+﻿using System.Collections.Generic;
+
+using EliteAPI.Status.Ship.JsonConverters;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -46,7 +48,7 @@ namespace EliteAPI.Status.Ship.Raw
 
         [JsonProperty("Pips")]
         [JsonConverter(typeof(PipsConverter))]
-        public ShipPips Pips { get; private set; }
+        public ShipPips Pips { get; private set; } = new (new List<int> {0, 0, 0});
 
         [JsonProperty("FireGroup")]
         public int FireGroup { get; private set; }
@@ -56,7 +58,7 @@ namespace EliteAPI.Status.Ship.Raw
         public ShipGuiFocus GuiFocus { get; private set; }
 
         [JsonProperty("Fuel")]
-        public ShipFuel Fuel { get; private set; }
+        public ShipFuel Fuel { get; private set; } = new();
 
         [JsonProperty("Cargo")]
         [JsonConverter(typeof(DecimalToIntConverter))]

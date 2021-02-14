@@ -73,8 +73,7 @@ namespace EliteAPI
             // Status
             services.AddTransient<IStatusProvider, StatusProvider>();
             services.AddSingleton<IStatusProcessor, StatusProcessor>();
-            services.AddSingleton<IShip, Ship>();
-            services.AddSingleton<IShipStatus, ShipStatus>(); // backwards compatibility
+            services.AddSingleton<IShip, Ship>(); 
             services.AddSingleton<INavRoute, NavRoute>();
             services.AddSingleton<ICargo, Cargo>();
             services.AddSingleton<IMarket, Market>();

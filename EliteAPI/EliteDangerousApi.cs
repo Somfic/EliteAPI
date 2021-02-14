@@ -72,7 +72,6 @@ namespace EliteAPI
 
                 Events = services.GetRequiredService<EventHandler>();
                 Ship = services.GetRequiredService<IShip>();
-                Status = services.GetRequiredService<IShipStatus>();
                 NavRoute = services.GetRequiredService<INavRoute>();
                 Cargo = services.GetRequiredService<ICargo>();
                 Market = services.GetRequiredService<IMarket>();
@@ -133,7 +132,7 @@ namespace EliteAPI
         public EventHandler Events { get; }
 
         /// <inheritdoc />
-        [Obsolete("Use the Ship property instead", false)]
+        [Obsolete("Use the Ship property instead", true)]
         public IShipStatus Status { get; }
 
         /// <inheritdoc />

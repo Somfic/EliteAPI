@@ -2,10 +2,10 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <Version>3.0.0-alpha1071</Version>
+    <Version>3.0.0-alpha1093</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.1071+Branch.dev.Sha.3ae2d64e3532717f2bd3ab571e103e2e2bc65f8f</InformationalVersion>
+    <InformationalVersion>3.0.0-alpha.1093+Branch.dev.Sha.216aaca220243f2b5debdb5f1bf84ecbee0e832e</InformationalVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.10.3" />

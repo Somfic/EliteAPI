@@ -89,6 +89,7 @@ namespace EliteAPI.Tests
         {
             if (entry.jsons.Count == 0)
             {
+                _output.WriteLine("File not found, skipping");
                 return; //todo: throw warnig
             }
 
@@ -115,6 +116,7 @@ namespace EliteAPI.Tests
         {
             if (entry.jsons.Count == 0)
             {
+                _output.WriteLine("File not found, skipping");
                 return; //todo: throw warning 
             }
 

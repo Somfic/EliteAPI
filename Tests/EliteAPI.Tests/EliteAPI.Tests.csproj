@@ -299,5 +299,8 @@
     <None Update="Test cases\WingLeave.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Test cases\WonATrophyForSquadron.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

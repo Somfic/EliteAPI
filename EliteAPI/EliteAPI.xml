@@ -280,19 +280,27 @@
             Whether to run this method while catching up
             </summary>
         </member>
-        <member name="T:EliteAPI.Event.Models.Abstractions.EventBase">
+        <member name="T:EliteAPI.Event.Models.Abstractions.EventBase`1">
             <summary>
             An in-game event
             </summary>
         </member>
-        <member name="P:EliteAPI.Event.Models.Abstractions.EventBase.Timestamp">
+        <member name="P:EliteAPI.Event.Models.Abstractions.EventBase`1.Timestamp">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.Event.Models.Abstractions.EventBase.Event">
+        <member name="P:EliteAPI.Event.Models.Abstractions.EventBase`1.Event">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.Event.Models.Abstractions.EventBase.Json">
-            <inheritdoc />
+        <member name="M:EliteAPI.Event.Models.Abstractions.EventBase`1.FromJson(System.String)">
+            <summary>
+            Generates an event entry from Json
+            </summary>
+            <param name="json">The json string</param>
+        </member>
+        <member name="M:EliteAPI.Event.Models.Abstractions.EventBase`1.ToJson">
+            <summary>
+            Generates Json from an event entry
+            </summary>
         </member>
         <member name="T:EliteAPI.Event.Models.Abstractions.IEvent">
             <summary>
@@ -307,11 +315,6 @@
         <member name="P:EliteAPI.Event.Models.Abstractions.IEvent.Event">
             <summary>
             The name of the event
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Event.Models.Abstractions.IEvent.Json">
-            <summary>
-             The original Json entry for this event
             </summary>
         </member>
         <member name="T:EliteAPI.Event.Module.EliteDangerousEventModule">
@@ -341,11 +344,11 @@
             </summary>
             <returns> </returns>
         </member>
-        <member name="M:EliteAPI.Event.Processor.Abstractions.IEventProcessor.InvokeHandler(EliteAPI.Event.Models.Abstractions.EventBase,System.Boolean)">
+        <member name="M:EliteAPI.Event.Processor.Abstractions.IEventProcessor.InvokeHandler(EliteAPI.Event.Models.Abstractions.IEvent,System.Boolean)">
             <summary>
             Invokes the registered handler for this event
             </summary>
-            <param name="eventBase"> The event to be invoked </param>
+            <param name="gameEvent"> The event to be invoked </param>
             <param name="isWhileCatchingUp"> Whether this event was ran before EliteAPI was started </param>
         </member>
         <member name="P:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.Cache">
@@ -356,7 +359,7 @@
         <member name="M:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.RegisterHandlers">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.InvokeHandler(EliteAPI.Event.Models.Abstractions.EventBase,System.Boolean)">
+        <member name="M:EliteAPI.Event.Processor.Abstractions.MethodEventProcessorBase.InvokeHandler(EliteAPI.Event.Models.Abstractions.IEvent,System.Boolean)">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Event.Processor.AttributeEventProcessor">
@@ -373,12 +376,12 @@
         </member>
         <member name="T:EliteAPI.Event.Provider.Abstractions.IEventProvider">
             <summary>
-            Converts JSON events to <see cref="T:EliteAPI.Event.Models.Abstractions.EventBase" /> events
+            Converts JSON events to <see cref="!:IEvent&lt;T&gt;" /> events
             </summary>
         </member>
         <member name="M:EliteAPI.Event.Provider.Abstractions.IEventProvider.ProcessJsonEvent(System.String)">
             <summary>
-            Processes a json event to <see cref="T:EliteAPI.Event.Models.Abstractions.EventBase" />
+            Processes a json event to <see cref="!:IEvent&lt;T&gt;" />
             </summary>
             <param name="json"> The json event from the journal </param>
         </member>

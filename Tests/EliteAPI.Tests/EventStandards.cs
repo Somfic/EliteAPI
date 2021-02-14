@@ -14,8 +14,29 @@ namespace EliteAPI.Tests
 {
     public class EventStandards
     {
-        public static IEnumerable<object[]> GetData() => typeof(EventBase).Assembly.GetTypes().Where(x => x.IsSubclassOf(typeof(EventBase)) && x.IsClass && !x.IsAbstract).Select(x => new object[] {x});
-
+        public static IEnumerable<object[]> GetData() => typeof(IEvent).Assembly.GetTypes().Where(x => x.IsAssignableTo(typeof(IEvent)) && x.IsClass && !x.IsInterface && !x.IsAbstract).Select(x => new object[] {x});
+        
+        [Theory(DisplayName = "Contains FromJson method")]
+        [MemberData(nameof(GetData))]
+        public void FromJson(Type type)
+        {
+            type.BaseType.GetMethods().Select(x => x.Name).Should().Contain("FromJson");
+        }
+        
+        [Theory(DisplayName = "Contains ToJson method")]
+        [MemberData(nameof(GetData))]
+        public void ToJson(Type type)
+        {
+            type.BaseType.GetMethods().Select(x => x.Name).Should().Contain("ToJson");
+        }
+        
+        [Theory(DisplayName = "Naming convention")]
+        [MemberData(nameof(GetData))]
+        public void NamingConvention(Type type)
+        { 
+            type.Name.EndsWith("Event").Should().BeTrue();
+        }
+        
         [Theory(DisplayName = "No public constructors")]
         [MemberData(nameof(GetData))]
         public void PrivateConstructors(Type type)
@@ -116,31 +137,7 @@ namespace EliteAPI.Tests
 
             invalidProperties.Should().BeEmpty();
         }
-
-        [Theory(DisplayName = "Contains FromJson method")]
-        [MemberData(nameof(GetData))]
-        public void HasFromJsonMethod(Type type)
-        {
-            type.GetMethods().Select(x => x.Name).Should().Contain("FromJson");
-        }
-
-        [Theory(DisplayName = "Contains event methods")]
-        [MemberData(nameof(GetData))]
-        public void HasInvokeMethod(Type type)
-        {
-            typeof(Event.Handler.EventHandler).GetMethods(BindingFlags.Instance
-                                                          | BindingFlags.NonPublic
-                                                          | BindingFlags.Public
-                                                          | BindingFlags.Static)
-                .Where(x => !x.Name.StartsWith("add_")
-                            && !x.Name.StartsWith("remove_")
-                            && x.GetParameters().Length > 0
-                            && x.GetParameters().First().ParameterType.IsSubclassOf(typeof(EventBase)))
-                .Select(x => x.Name)
-                .Should()
-                .Contain($"Invoke{type.Name}");
-        }
-
+        
         [Theory(DisplayName = "EventHandler contains event")]
         [MemberData(nameof(GetData))]
         public void HasEvent(Type type)

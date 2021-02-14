@@ -28,7 +28,6 @@
 { "timestamp":"2021-01-04T22:22:10Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }
 { "timestamp":"2021-01-04T22:22:14Z", "event":"Cargo", "Vessel":"Ship", "Count":1 }
 { "timestamp":"2021-01-04T22:22:21Z", "event":"Cargo", "Vessel":"Ship", "Count":2 }
-{ "timestamp":"2021-01-07T20:30:26Z", "event":"Cargo", "Vessel":"Ship", "Count":2, "Inventory":[ { "Name":"grandidierite", "Count":2, "Stolen":0 } ] }
 { "timestamp":"2021-01-07T20:32:11Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }
 { "timestamp":"2021-01-07T20:32:13Z", "event":"Cargo", "Vessel":"Ship", "Count":0 }
 { "timestamp":"2021-01-07T20:43:38Z", "event":"Cargo", "Vessel":"Ship", "Count":115 }

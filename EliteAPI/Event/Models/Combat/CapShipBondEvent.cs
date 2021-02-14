@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CapShipBondEvent : EventBase
+    public class CapShipBondEvent : EventBase<CapShipBondEvent>
     {
         internal CapShipBondEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string VictimFaction { get; internal set; }
     }
 
-    public partial class CapShipBondEvent
-    {
-        public static CapShipBondEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CapShipBondEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CapShipBondEvent> CapShipBondEvent;
 
-        internal void InvokeCapShipBondEvent(CapShipBondEvent arg)
-        {
-            CapShipBondEvent?.Invoke(this, arg);
-        }
     }
 }

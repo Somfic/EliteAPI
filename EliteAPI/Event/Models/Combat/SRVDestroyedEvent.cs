@@ -11,18 +11,11 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class SrvDestroyedEvent : EventBase
+    public class SrvDestroyedEvent : EventBase<SrvDestroyedEvent>
     {
         internal SrvDestroyedEvent() { }        
     }
 
-    public partial class SrvDestroyedEvent
-    {
-        public static SrvDestroyedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SrvDestroyedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -31,9 +24,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SrvDestroyedEvent> SrvDestroyedEvent;
 
-        internal void InvokeSrvDestroyedEvent(SrvDestroyedEvent arg)
-        {
-            SrvDestroyedEvent?.Invoke(this, arg);
-        }
     }
 }

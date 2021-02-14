@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ModuleSwapEvent : EventBase
+    public class ModuleSwapEvent : EventBase<ModuleSwapEvent>
     {
         internal ModuleSwapEvent() { }
 
@@ -43,13 +43,6 @@ namespace EliteAPI.Event.Models
         public string ShipId { get; private set; }
     }
 
-    public partial class ModuleSwapEvent
-    {
-        public static ModuleSwapEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ModuleSwapEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -58,9 +51,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ModuleSwapEvent> ModuleSwapEvent;
 
-        internal void InvokeModuleSwapEvent(ModuleSwapEvent arg)
-        {
-            ModuleSwapEvent?.Invoke(this, arg);
-        }
     }
 }

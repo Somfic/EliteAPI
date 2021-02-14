@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class PowerplayJoinEvent : EventBase
+    public class PowerplayJoinEvent : EventBase<PowerplayJoinEvent>
     {
         internal PowerplayJoinEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Power { get; private set; }
     }
 
-    public partial class PowerplayJoinEvent
-    {
-        public static PowerplayJoinEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PowerplayJoinEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayJoinEvent> PowerplayJoinEvent;
 
-        internal void InvokePowerplayJoinEvent(PowerplayJoinEvent arg)
-        {
-            PowerplayJoinEvent?.Invoke(this, arg);
-        }
     }
 }

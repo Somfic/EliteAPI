@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ModuleRetrieveEvent : EventBase
+    public class ModuleRetrieveEvent : EventBase<ModuleRetrieveEvent>
     {
         internal ModuleRetrieveEvent() { }
 
@@ -37,13 +37,6 @@ namespace EliteAPI.Event.Models
         public bool Hot { get; private set; }
     }
 
-    public partial class ModuleRetrieveEvent
-    {
-        public static ModuleRetrieveEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ModuleRetrieveEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -52,9 +45,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ModuleRetrieveEvent> ModuleRetrieveEvent;
 
-        internal void InvokeModuleRetrieveEvent(ModuleRetrieveEvent arg)
-        {
-            ModuleRetrieveEvent?.Invoke(this, arg);
-        }
     }
 }

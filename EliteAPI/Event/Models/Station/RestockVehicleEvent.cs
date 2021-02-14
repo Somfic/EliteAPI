@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class RestockVehicleEvent : EventBase
+    public class RestockVehicleEvent : EventBase<RestockVehicleEvent>
     {
         internal RestockVehicleEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public long Count { get; private set; }
     }
 
-    public partial class RestockVehicleEvent
-    {
-        public static RestockVehicleEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<RestockVehicleEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RestockVehicleEvent> RestockVehicleEvent;
 
-        internal void InvokeRestockVehicleEvent(RestockVehicleEvent arg)
-        {
-            RestockVehicleEvent?.Invoke(this, arg);
-        }
     }
 }

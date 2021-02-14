@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class FuelScoopEvent : EventBase
+    public class FuelScoopEvent : EventBase<FuelScoopEvent>
     {
         internal FuelScoopEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public double Total { get; private set; }
     }
 
-    public partial class FuelScoopEvent
-    {
-        public static FuelScoopEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FuelScoopEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FuelScoopEvent> FuelScoopEvent;
 
-        internal void InvokeFuelScoopEvent(FuelScoopEvent arg)
-        {
-            FuelScoopEvent?.Invoke(this, arg);
-        }
     }
 }

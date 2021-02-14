@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class MaterialDiscardedEvent : EventBase
+    public class MaterialDiscardedEvent : EventBase<MaterialDiscardedEvent>
     {
         internal MaterialDiscardedEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long Count { get; private set; }
     }
 
-    public partial class MaterialDiscardedEvent
-    {
-        public static MaterialDiscardedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MaterialDiscardedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MaterialDiscardedEvent> MaterialDiscardedEvent;
 
-        internal void InvokeMaterialDiscardedEvent(MaterialDiscardedEvent arg)
-        {
-            MaterialDiscardedEvent?.Invoke(this, arg);
-        }
     }
 }

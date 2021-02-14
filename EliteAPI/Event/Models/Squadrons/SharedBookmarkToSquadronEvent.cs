@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class SharedBookmarkToSquadronEvent : EventBase
+    public class SharedBookmarkToSquadronEvent : EventBase<SharedBookmarkToSquadronEvent>
     {
         internal SharedBookmarkToSquadronEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Name { get; private set; }
     }
 
-    public partial class SharedBookmarkToSquadronEvent
-    {
-        public static SharedBookmarkToSquadronEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SharedBookmarkToSquadronEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SharedBookmarkToSquadronEvent> SharedBookmarkToSquadronEvent;
 
-        internal void InvokeSharedBookmarkToSquadronEvent(SharedBookmarkToSquadronEvent arg)
-        {
-            SharedBookmarkToSquadronEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class FssSignalDiscoveredEvent : EventBase
+    public class FssSignalDiscoveredEvent : EventBase<FssSignalDiscoveredEvent>
     {
         internal FssSignalDiscoveredEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public bool IsStation { get; private set; }
     }
 
-    public partial class FssSignalDiscoveredEvent
-    {
-        public static FssSignalDiscoveredEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FssSignalDiscoveredEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FssSignalDiscoveredEvent> FssSignalDiscoveredEvent;
 
-        internal void InvokeFssSignalDiscoveredEvent(FssSignalDiscoveredEvent arg)
-        {
-            FssSignalDiscoveredEvent?.Invoke(this, arg);
-        }
     }
 }

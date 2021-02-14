@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class FactionKillBondEvent : EventBase
+    public class FactionKillBondEvent : EventBase<FactionKillBondEvent>
     {
         internal FactionKillBondEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string VictimFaction { get; private set; }
     }
 
-    public partial class FactionKillBondEvent
-    {
-        public static FactionKillBondEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FactionKillBondEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FactionKillBondEvent> FactionKillBondEvent;
 
-        internal void InvokeFactionKillBondEvent(FactionKillBondEvent arg)
-        {
-            FactionKillBondEvent?.Invoke(this, arg);
-        }
     }
 }

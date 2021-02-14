@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CarrierStatsEvent : EventBase
+    public class CarrierStatsEvent : EventBase<CarrierStatsEvent>
     {
         internal CarrierStatsEvent() { }
 
@@ -140,13 +140,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class CarrierStatsEvent
-    {
-        public static CarrierStatsEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierStatsEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -155,9 +148,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierStatsEvent> CarrierStatsEvent;
 
-        internal void InvokeCarrierStatsEvent(CarrierStatsEvent arg)
-        {
-            CarrierStatsEvent?.Invoke(this, arg);
-        }
     }
 }

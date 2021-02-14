@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class StoredShipsEvent : EventBase
+    public class StoredShipsEvent : EventBase<StoredShipsEvent>
     {
         internal StoredShipsEvent() { }
 
@@ -56,13 +56,6 @@ namespace EliteAPI.Event.Models
         public string Name { get; private set; }
     }
 
-    public partial class StoredShipsEvent
-    {
-        public static StoredShipsEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<StoredShipsEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -71,9 +64,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<StoredShipsEvent> StoredShipsEvent;
 
-        internal void InvokeStoredShipsEvent(StoredShipsEvent arg)
-        {
-            StoredShipsEvent?.Invoke(this, arg);
-        }
     }
 }

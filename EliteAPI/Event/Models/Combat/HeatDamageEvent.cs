@@ -11,18 +11,11 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class HeatDamageEvent : EventBase
+    public class HeatDamageEvent : EventBase<HeatDamageEvent>
     {
         internal HeatDamageEvent() { }
     }
 
-    public partial class HeatDamageEvent
-    {
-        public static HeatDamageEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<HeatDamageEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -31,9 +24,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<HeatDamageEvent> HeatDamageEvent;
 
-        internal void InvokeHeatDamageEvent(HeatDamageEvent arg)
-        {
-            HeatDamageEvent?.Invoke(this, arg);
-        }
     }
 }

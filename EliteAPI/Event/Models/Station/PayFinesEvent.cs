@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class PayFinesEvent : EventBase
+    public class PayFinesEvent : EventBase<PayFinesEvent>
     {
         internal PayFinesEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string ShipId { get; private set; }
     }
 
-    public partial class PayFinesEvent
-    {
-        public static PayFinesEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PayFinesEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PayFinesEvent> PayFinesEvent;
 
-        internal void InvokePayFinesEvent(PayFinesEvent arg)
-        {
-            PayFinesEvent?.Invoke(this, arg);
-        }
     }
 }

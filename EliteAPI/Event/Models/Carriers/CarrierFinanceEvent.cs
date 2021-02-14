@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CarrierFinanceEvent : EventBase
+    public class CarrierFinanceEvent : EventBase<CarrierFinanceEvent>
     {
         internal CarrierFinanceEvent() { }
 
@@ -34,13 +34,6 @@ namespace EliteAPI.Event.Models
         public int ReservePercent { get; private set; }
     }
 
-    public partial class CarrierFinanceEvent
-    {
-        public static CarrierFinanceEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierFinanceEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -49,9 +42,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierFinanceEvent> CarrierFinanceEvent;
 
-        internal void InvokeCarrierFinanceEvent(CarrierFinanceEvent arg)
-        {
-            CarrierFinanceEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class MarketSellEvent : EventBase
+    public class MarketSellEvent : EventBase<MarketSellEvent>
     {
         internal MarketSellEvent() { }
 
@@ -46,13 +46,6 @@ namespace EliteAPI.Event.Models
         public bool IsBlackMarket { get; private set; }
     }
 
-    public partial class MarketSellEvent
-    {
-        public static MarketSellEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MarketSellEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -61,9 +54,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MarketSellEvent> MarketSellEvent;
 
-        internal void InvokeMarketSellEvent(MarketSellEvent arg)
-        {
-            MarketSellEvent?.Invoke(this, arg);
-        }
     }
 }

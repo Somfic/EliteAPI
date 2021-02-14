@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class SupercruiseExitEvent : EventBase
+    public class SupercruiseExitEvent : EventBase<SupercruiseExitEvent>
     {
         internal SupercruiseExitEvent() { }
 
@@ -31,13 +31,6 @@ namespace EliteAPI.Event.Models
         public string BodyType { get; private set; }
     }
 
-    public partial class SupercruiseExitEvent
-    {
-        public static SupercruiseExitEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SupercruiseExitEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -46,9 +39,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SupercruiseExitEvent> SupercruiseExitEvent;
 
-        internal void InvokeSupercruiseExitEvent(SupercruiseExitEvent arg)
-        {
-            SupercruiseExitEvent?.Invoke(this, arg);
-        }
     }
 }

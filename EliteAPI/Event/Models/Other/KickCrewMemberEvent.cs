@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class KickCrewMemberEvent : EventBase
+    public class KickCrewMemberEvent : EventBase<KickCrewMemberEvent>
     {
         internal KickCrewMemberEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public bool OnCrime { get; private set; }
     }
 
-    public partial class KickCrewMemberEvent
-    {
-        public static KickCrewMemberEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<KickCrewMemberEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<KickCrewMemberEvent> KickCrewMemberEvent;
 
-        internal void InvokeKickCrewMemberEvent(KickCrewMemberEvent arg)
-        {
-            KickCrewMemberEvent?.Invoke(this, arg);
-        }
     }
 }

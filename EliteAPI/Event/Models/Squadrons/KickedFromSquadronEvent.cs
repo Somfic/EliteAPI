@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class KickedFromSquadronEvent : EventBase
+    public class KickedFromSquadronEvent : EventBase<KickedFromSquadronEvent>
     {
         internal KickedFromSquadronEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Name { get; private set; }
     }
 
-    public partial class KickedFromSquadronEvent
-    {
-        public static KickedFromSquadronEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<KickedFromSquadronEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<KickedFromSquadronEvent> KickedFromSquadronEvent;
 
-        internal void InvokeKickedFromSquadronEvent(KickedFromSquadronEvent arg)
-        {
-            KickedFromSquadronEvent?.Invoke(this, arg);
-        }
     }
 }

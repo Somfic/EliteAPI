@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class SynthesisEvent : EventBase
+    public class SynthesisEvent : EventBase<SynthesisEvent>
     {
         internal SynthesisEvent() { }
 
@@ -35,13 +35,6 @@ namespace EliteAPI.Event.Models
         public long Count { get; private set; }
     }
 
-    public partial class SynthesisEvent
-    {
-        public static SynthesisEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SynthesisEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -50,9 +43,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SynthesisEvent> SynthesisEvent;
 
-        internal void InvokeSynthesisEvent(SynthesisEvent arg)
-        {
-            SynthesisEvent?.Invoke(this, arg);
-        }
     }
 }

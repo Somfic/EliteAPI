@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class UndockedEvent : EventBase
+    public class UndockedEvent : EventBase<UndockedEvent>
     {
         internal UndockedEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string MarketId { get; private set; }
     }
 
-    public partial class UndockedEvent
-    {
-        public static UndockedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<UndockedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<UndockedEvent> UndockedEvent;
 
-        internal void InvokeUndockedEvent(UndockedEvent arg)
-        {
-            UndockedEvent?.Invoke(this, arg);
-        }
     }
 }

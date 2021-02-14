@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ScreenshotEvent : EventBase
+    public class ScreenshotEvent : EventBase<ScreenshotEvent>
     {
         internal ScreenshotEvent() { }
 
@@ -31,13 +31,6 @@ namespace EliteAPI.Event.Models
         public string Body { get; private set; }
     }
 
-    public partial class ScreenshotEvent
-    {
-        public static ScreenshotEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ScreenshotEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -46,9 +39,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ScreenshotEvent> ScreenshotEvent;
 
-        internal void InvokeScreenshotEvent(ScreenshotEvent arg)
-        {
-            ScreenshotEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class PowerplayLeaveEvent : EventBase
+    public class PowerplayLeaveEvent : EventBase<PowerplayLeaveEvent>
     {
         internal PowerplayLeaveEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Power { get; private set; }
     }
 
-    public partial class PowerplayLeaveEvent
-    {
-        public static PowerplayLeaveEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PowerplayLeaveEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayLeaveEvent> PowerplayLeaveEvent;
 
-        internal void InvokePowerplayLeaveEvent(PowerplayLeaveEvent arg)
-        {
-            PowerplayLeaveEvent?.Invoke(this, arg);
-        }
     }
 }

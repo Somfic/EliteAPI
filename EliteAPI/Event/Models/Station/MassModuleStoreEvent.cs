@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class MassModuleStoreEvent : EventBase
+    public class MassModuleStoreEvent : EventBase<MassModuleStoreEvent>
     {
         internal MassModuleStoreEvent() { }
 
@@ -29,13 +29,6 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<Item> Items { get; internal set; }
     }
 
-    public partial class MassModuleStoreEvent
-    {
-        public static MassModuleStoreEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MassModuleStoreEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -44,9 +37,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MassModuleStoreEvent> MassModuleStoreEvent;
 
-        internal void InvokeMassModuleStoreEvent(MassModuleStoreEvent arg)
-        {
-            MassModuleStoreEvent?.Invoke(this, arg);
-        }
     }
 }

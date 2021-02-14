@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ShipyardSwapEvent : EventBase
+    public class ShipyardSwapEvent : EventBase<ShipyardSwapEvent>
     {
         internal ShipyardSwapEvent() { }
 
@@ -34,13 +34,6 @@ namespace EliteAPI.Event.Models
         public string MarketId { get; private set; }
     }
 
-    public partial class ShipyardSwapEvent
-    {
-        public static ShipyardSwapEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ShipyardSwapEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -49,9 +42,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ShipyardSwapEvent> ShipyardSwapEvent;
 
-        internal void InvokeShipyardSwapEvent(ShipyardSwapEvent arg)
-        {
-            ShipyardSwapEvent?.Invoke(this, arg);
-        }
     }
 }

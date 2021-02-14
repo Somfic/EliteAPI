@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class BuyAmmoEvent : EventBase
+    public class BuyAmmoEvent : EventBase<BuyAmmoEvent>
     {
         internal BuyAmmoEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public long Cost { get; private set; }
     }
 
-    public partial class BuyAmmoEvent
-    {
-        public static BuyAmmoEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<BuyAmmoEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<BuyAmmoEvent> BuyAmmoEvent;
 
-        internal void InvokeBuyAmmoEvent(BuyAmmoEvent arg)
-        {
-            BuyAmmoEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class SellShipOnRebuyEvent : EventBase
+    public class SellShipOnRebuyEvent : EventBase<SellShipOnRebuyEvent>
     {
         internal SellShipOnRebuyEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public long SellShipPrice { get; private set; }
     }
 
-    public partial class SellShipOnRebuyEvent
-    {
-        public static SellShipOnRebuyEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SellShipOnRebuyEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SellShipOnRebuyEvent> SellShipOnRebuyEvent;
 
-        internal void InvokeSellShipOnRebuyEvent(SellShipOnRebuyEvent arg)
-        {
-            SellShipOnRebuyEvent?.Invoke(this, arg);
-        }
     }
 }

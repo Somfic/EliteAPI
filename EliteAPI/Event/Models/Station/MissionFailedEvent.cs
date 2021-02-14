@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class MissionFailedEvent : EventBase
+    public class MissionFailedEvent : EventBase<MissionFailedEvent>
     {
         internal MissionFailedEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string MissionId { get; private set; }
     }
 
-    public partial class MissionFailedEvent
-    {
-        public static MissionFailedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MissionFailedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MissionFailedEvent> MissionFailedEvent;
 
-        internal void InvokeMissionFailedEvent(MissionFailedEvent arg)
-        {
-            MissionFailedEvent?.Invoke(this, arg);
-        }
     }
 }

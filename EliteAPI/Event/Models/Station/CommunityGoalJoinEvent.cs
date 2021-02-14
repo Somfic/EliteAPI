@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CommunityGoalJoinEvent : EventBase
+    public class CommunityGoalJoinEvent : EventBase<CommunityGoalJoinEvent>
     {
         internal CommunityGoalJoinEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string System { get; private set; }
     }
 
-    public partial class CommunityGoalJoinEvent
-    {
-        public static CommunityGoalJoinEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CommunityGoalJoinEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CommunityGoalJoinEvent> CommunityGoalJoinEvent;
 
-        internal void InvokeCommunityGoalJoinEvent(CommunityGoalJoinEvent arg)
-        {
-            CommunityGoalJoinEvent?.Invoke(this, arg);
-        }
     }
 }

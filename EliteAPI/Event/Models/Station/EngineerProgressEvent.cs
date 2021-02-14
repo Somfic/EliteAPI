@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class EngineerProgressEvent : EventBase
+    public class EngineerProgressEvent : EventBase<EngineerProgressEvent>
     {
         internal EngineerProgressEvent() { }
 
@@ -43,13 +43,6 @@ namespace EliteAPI.Event.Models
         ///feiohjriohqoiqrqioqioqewoodbwqdqidijpfqvopojfewnfnqoqp2opo2po22o2o2o
     }
 
-    public partial class EngineerProgressEvent
-    {
-        public static EngineerProgressEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<EngineerProgressEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -58,9 +51,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<EngineerProgressEvent> EngineerProgressEvent;
 
-        internal void InvokeEngineerProgressEvent(EngineerProgressEvent arg)
-        {
-            EngineerProgressEvent?.Invoke(this, arg);
-        }
     }
 }

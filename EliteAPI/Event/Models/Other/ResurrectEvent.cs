@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ResurrectEvent : EventBase
+    public class ResurrectEvent : EventBase<ResurrectEvent>
     {
         internal ResurrectEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public bool Bankrupt { get; private set; }
     }
 
-    public partial class ResurrectEvent
-    {
-        public static ResurrectEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ResurrectEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ResurrectEvent> ResurrectEvent;
 
-        internal void InvokeResurrectEvent(ResurrectEvent arg)
-        {
-            ResurrectEvent?.Invoke(this, arg);
-        }
     }
 }

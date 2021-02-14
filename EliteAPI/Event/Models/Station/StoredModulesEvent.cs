@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class StoredModulesEvent : EventBase
+    public class StoredModulesEvent : EventBase<StoredModulesEvent>
     {
         internal StoredModulesEvent() { }
 
@@ -71,13 +71,6 @@ namespace EliteAPI.Event.Models
         public double? Quality { get; private set; }
     }
 
-    public partial class StoredModulesEvent
-    {
-        public static StoredModulesEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<StoredModulesEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -86,9 +79,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<StoredModulesEvent> StoredModulesEvent;
 
-        internal void InvokeStoredModulesEvent(StoredModulesEvent arg)
-        {
-            StoredModulesEvent?.Invoke(this, arg);
-        }
     }
 }

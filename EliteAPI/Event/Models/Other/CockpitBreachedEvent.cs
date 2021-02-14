@@ -11,18 +11,11 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CockpitBreachedEvent : EventBase
+    public class CockpitBreachedEvent : EventBase<CockpitBreachedEvent>
     {
         internal CockpitBreachedEvent() { }
     }
 
-    public partial class CockpitBreachedEvent
-    {
-        public static CockpitBreachedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CockpitBreachedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -31,9 +24,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CockpitBreachedEvent> CockpitBreachedEvent;
 
-        internal void InvokeCockpitBreachedEvent(CockpitBreachedEvent arg)
-        {
-            CockpitBreachedEvent?.Invoke(this, arg);
-        }
     }
 }

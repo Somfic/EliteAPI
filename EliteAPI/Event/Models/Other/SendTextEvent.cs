@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class SendTextEvent : EventBase
+    public class SendTextEvent : EventBase<SendTextEvent>
     {
         internal SendTextEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public bool Sent { get; private set; }
     }
 
-    public partial class SendTextEvent
-    {
-        public static SendTextEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SendTextEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SendTextEvent> SendTextEvent;
 
-        internal void InvokeSendTextEvent(SendTextEvent arg)
-        {
-            SendTextEvent?.Invoke(this, arg);
-        }
     }
 }

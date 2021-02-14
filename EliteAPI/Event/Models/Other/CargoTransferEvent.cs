@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CargoTransferEvent : EventBase
+    public class CargoTransferEvent : EventBase<CargoTransferEvent>
     {
         internal CargoTransferEvent() { }
 
@@ -35,13 +35,6 @@ namespace EliteAPI.Event.Models
         public string Direction { get; private set; }
     }
 
-    public partial class CargoTransferEvent
-    {
-        public static CargoTransferEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CargoTransferEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -50,9 +43,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CargoTransferEvent> CargoTransferEvent;
 
-        internal void InvokeCargoTransferEvent(CargoTransferEvent arg)
-        {
-            CargoTransferEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class UssDropEvent : EventBase
+    public class UssDropEvent : EventBase<UssDropEvent>
     {
         internal UssDropEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long UssThreat { get; private set; }
     }
 
-    public partial class UssDropEvent
-    {
-        public static UssDropEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<UssDropEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<UssDropEvent> UssDropEvent;
 
-        internal void InvokeUssDropEvent(UssDropEvent arg)
-        {
-            UssDropEvent?.Invoke(this, arg);
-        }
     }
 }

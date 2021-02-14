@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CarrierCancelDecommissionEvent : EventBase
+    public class CarrierCancelDecommissionEvent : EventBase<CarrierCancelDecommissionEvent>
     {
         internal CarrierCancelDecommissionEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string CarrierId { get; private set; }
     }
 
-    public partial class CarrierCancelDecommissionEvent
-    {
-        public static CarrierCancelDecommissionEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierCancelDecommissionEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierCancelDecommissionEvent> CarrierCancelDecommissionEvent;
 
-        internal void InvokeCarrierCancelDecommissionEvent(CarrierCancelDecommissionEvent arg)
-        {
-            CarrierCancelDecommissionEvent?.Invoke(this, arg);
-        }
     }
 }

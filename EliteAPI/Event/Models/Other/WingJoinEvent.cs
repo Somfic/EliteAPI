@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class WingJoinEvent : EventBase
+    public class WingJoinEvent : EventBase<WingJoinEvent>
     {
         internal WingJoinEvent() { }
 
@@ -20,13 +20,6 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<string> Others { get; private set; }
     }
 
-    public partial class WingJoinEvent
-    {
-        public static WingJoinEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<WingJoinEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -35,9 +28,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<WingJoinEvent> WingJoinEvent;
 
-        internal void InvokeWingJoinEvent(WingJoinEvent arg)
-        {
-            WingJoinEvent?.Invoke(this, arg);
-        }
     }
 }

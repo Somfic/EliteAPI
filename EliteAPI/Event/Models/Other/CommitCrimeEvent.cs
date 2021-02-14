@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CommitCrimeEvent : EventBase
+    public class CommitCrimeEvent : EventBase<CommitCrimeEvent>
     {
         internal CommitCrimeEvent() { }
 
@@ -34,13 +34,6 @@ namespace EliteAPI.Event.Models
         public long Bounty { get; private set; }
     }
 
-    public partial class CommitCrimeEvent
-    {
-        public static CommitCrimeEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CommitCrimeEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -49,9 +42,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CommitCrimeEvent> CommitCrimeEvent;
 
-        internal void InvokeCommitCrimeEvent(CommitCrimeEvent arg)
-        {
-            CommitCrimeEvent?.Invoke(this, arg);
-        }
     }
 }

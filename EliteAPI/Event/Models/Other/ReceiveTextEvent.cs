@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ReceiveTextEvent : EventBase
+    public class ReceiveTextEvent : EventBase<ReceiveTextEvent>
     {
         internal ReceiveTextEvent() { }
 
@@ -31,13 +31,6 @@ namespace EliteAPI.Event.Models
         public string Channel { get; private set; }
     }
 
-    public partial class ReceiveTextEvent
-    {
-        public static ReceiveTextEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ReceiveTextEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -46,9 +39,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ReceiveTextEvent> ReceiveTextEvent;
 
-        internal void InvokeReceiveTextEvent(ReceiveTextEvent arg)
-        {
-            ReceiveTextEvent?.Invoke(this, arg);
-        }
     }
 }

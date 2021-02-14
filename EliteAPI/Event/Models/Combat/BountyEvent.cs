@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class BountyEvent : EventBase
+    public class BountyEvent : EventBase<BountyEvent>
     {
         internal BountyEvent() { }
 
@@ -47,13 +47,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class BountyEvent
-    {
-        public static BountyEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<BountyEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -62,9 +55,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<BountyEvent> BountyEvent;
 
-        internal void InvokeBountyEvent(BountyEvent arg)
-        {
-            BountyEvent?.Invoke(this, arg);
-        }
     }
 }

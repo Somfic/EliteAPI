@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class FssDiscoveryScanEvent : EventBase
+    public class FssDiscoveryScanEvent : EventBase<FssDiscoveryScanEvent>
     {
         internal FssDiscoveryScanEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long NonBodyCount { get; private set; }
     }
 
-    public partial class FssDiscoveryScanEvent
-    {
-        public static FssDiscoveryScanEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FssDiscoveryScanEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FssDiscoveryScanEvent> FssDiscoveryScanEvent;
 
-        internal void InvokeFssDiscoveryScanEvent(FssDiscoveryScanEvent arg)
-        {
-            FssDiscoveryScanEvent?.Invoke(this, arg);
-        }
     }
 }

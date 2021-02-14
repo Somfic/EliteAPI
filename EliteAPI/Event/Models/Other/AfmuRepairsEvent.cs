@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class AfmuRepairsEvent : EventBase
+    public class AfmuRepairsEvent : EventBase<AfmuRepairsEvent>
     {
         internal AfmuRepairsEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public double Health { get; private set; }
     }
 
-    public partial class AfmuRepairsEvent
-    {
-        public static AfmuRepairsEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<AfmuRepairsEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<AfmuRepairsEvent> AfmuRepairsEvent;
 
-        internal void InvokeAfmuRepairsEvent(AfmuRepairsEvent arg)
-        {
-            AfmuRepairsEvent?.Invoke(this, arg);
-        }
     }
 }

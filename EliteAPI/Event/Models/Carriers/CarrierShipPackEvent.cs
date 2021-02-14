@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CarrierShipPackEvent : EventBase
+    public class CarrierShipPackEvent : EventBase<CarrierShipPackEvent>
     {
         internal CarrierShipPackEvent() { }
 
@@ -34,13 +34,6 @@ namespace EliteAPI.Event.Models
         public long Refund { get; private set; }
     }
 
-    public partial class CarrierShipPackEvent
-    {
-        public static CarrierShipPackEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierShipPackEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -49,9 +42,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierShipPackEvent> CarrierShipPackEvent;
 
-        internal void InvokeCarrierShipPackEvent(CarrierShipPackEvent arg)
-        {
-            CarrierShipPackEvent?.Invoke(this, arg);
-        }
     }
 }

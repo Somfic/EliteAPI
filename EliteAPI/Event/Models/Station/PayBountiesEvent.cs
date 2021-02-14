@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class PayBountiesEvent : EventBase
+    public class PayBountiesEvent : EventBase<PayBountiesEvent>
     {
         internal PayBountiesEvent() { }
 
@@ -31,13 +31,6 @@ namespace EliteAPI.Event.Models
         public double BrokerPercentage { get; internal set; }
     }
 
-    public partial class PayBountiesEvent
-    {
-        public static PayBountiesEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PayBountiesEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -46,9 +39,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PayBountiesEvent> PayBountiesEvent;
 
-        internal void InvokePayBountiesEvent(PayBountiesEvent arg)
-        {
-            PayBountiesEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class LaunchDroneEvent : EventBase
+    public class LaunchDroneEvent : EventBase<LaunchDroneEvent>
     {
         internal LaunchDroneEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Type { get; private set; }
     }
 
-    public partial class LaunchDroneEvent
-    {
-        public static LaunchDroneEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LaunchDroneEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LaunchDroneEvent> LaunchDroneEvent;
 
-        internal void InvokeLaunchDroneEvent(LaunchDroneEvent arg)
-        {
-            LaunchDroneEvent?.Invoke(this, arg);
-        }
     }
 }

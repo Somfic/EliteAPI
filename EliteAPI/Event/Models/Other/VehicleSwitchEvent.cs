@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class VehicleSwitchEvent : EventBase
+    public class VehicleSwitchEvent : EventBase<VehicleSwitchEvent>
     {
         internal VehicleSwitchEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string To { get; private set; }
     }
 
-    public partial class VehicleSwitchEvent
-    {
-        public static VehicleSwitchEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<VehicleSwitchEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<VehicleSwitchEvent> VehicleSwitchEvent;
 
-        internal void InvokeVehicleSwitchEvent(VehicleSwitchEvent arg)
-        {
-            VehicleSwitchEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class FsdJumpEvent : EventBase
+    public class FsdJumpEvent : EventBase<FsdJumpEvent>
     {
         internal FsdJumpEvent() { }
 
@@ -195,13 +195,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class FsdJumpEvent
-    {
-        public static FsdJumpEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FsdJumpEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -210,9 +203,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FsdJumpEvent> FsdJumpEvent;
 
-        internal void InvokeFsdJumpEvent(FsdJumpEvent arg)
-        {
-            FsdJumpEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ScientificResearchEvent : EventBase
+    public class ScientificResearchEvent : EventBase<ScientificResearchEvent>
     {
         internal ScientificResearchEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public long Count { get; internal set; }
     }
 
-    public partial class ScientificResearchEvent
-    {
-        public static ScientificResearchEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ScientificResearchEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ScientificResearchEvent> ScientificResearchEvent;
 
-        internal void InvokeScientificResearchEvent(ScientificResearchEvent arg)
-        {
-            ScientificResearchEvent?.Invoke(this, arg);
-        }
     }
 }

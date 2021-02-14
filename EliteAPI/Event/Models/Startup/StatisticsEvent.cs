@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class StatisticsEvent : EventBase
+    public class StatisticsEvent : EventBase<StatisticsEvent>
     {
         internal StatisticsEvent() { }
 
@@ -485,13 +485,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class StatisticsEvent
-    {
-        public static StatisticsEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<StatisticsEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -500,9 +493,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<StatisticsEvent> StatisticsEvent;
 
-        internal void InvokeStatisticsEvent(StatisticsEvent arg)
-        {
-            StatisticsEvent?.Invoke(this, arg);
-        }
     }
 }

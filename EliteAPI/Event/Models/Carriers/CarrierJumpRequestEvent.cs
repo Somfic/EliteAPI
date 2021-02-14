@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CarrierJumpRequestEvent : EventBase
+    public class CarrierJumpRequestEvent : EventBase<CarrierJumpRequestEvent>
     {
         internal CarrierJumpRequestEvent() { }
 
@@ -31,13 +31,6 @@ namespace EliteAPI.Event.Models
         public string BodyId { get; private set; }
     }
 
-    public partial class CarrierJumpRequestEvent
-    {
-        public static CarrierJumpRequestEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierJumpRequestEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -46,9 +39,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierJumpRequestEvent> CarrierJumpRequestEvent;
 
-        internal void InvokeCarrierJumpRequestEvent(CarrierJumpRequestEvent arg)
-        {
-            CarrierJumpRequestEvent?.Invoke(this, arg);
-        }
     }
 }

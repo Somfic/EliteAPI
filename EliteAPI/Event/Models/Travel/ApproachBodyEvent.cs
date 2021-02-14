@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ApproachBodyEvent : EventBase
+    public class ApproachBodyEvent : EventBase<ApproachBodyEvent>
     {
         internal ApproachBodyEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string BodyId { get; private set; }
     }
 
-    public partial class ApproachBodyEvent
-    {
-        public static ApproachBodyEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ApproachBodyEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ApproachBodyEvent> ApproachBodyEvent;
 
-        internal void InvokeApproachBodyEvent(ApproachBodyEvent arg)
-        {
-            ApproachBodyEvent?.Invoke(this, arg);
-        }
     }
 }

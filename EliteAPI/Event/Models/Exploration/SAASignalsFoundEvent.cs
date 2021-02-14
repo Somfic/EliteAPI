@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class SaaSignalsFoundEvent : EventBase
+    public class SaaSignalsFoundEvent : EventBase<SaaSignalsFoundEvent>
     {
         internal SaaSignalsFoundEvent() { }
 
@@ -44,13 +44,6 @@ namespace EliteAPI.Event.Models
         public string TypeLocalised { get; private set; }
     }
 
-    public partial class SaaSignalsFoundEvent
-    {
-        public static SaaSignalsFoundEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SaaSignalsFoundEvent>(json);
-        }
-    }
 
 
 }
@@ -61,9 +54,5 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<SaaSignalsFoundEvent> SaaSignalsFoundEvent;
-        internal void InvokeSaaSignalsFoundEvent(SaaSignalsFoundEvent arg)
-        {
-            SaaSignalsFoundEvent?.Invoke(this, arg);
-        }
     }
 }

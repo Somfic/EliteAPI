@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class PassengersEvent : EventBase
+    public class PassengersEvent : EventBase<PassengersEvent>
     {
         internal PassengersEvent() { }
 
@@ -41,13 +41,6 @@ namespace EliteAPI.Event.Models
         public long Count { get; private set; }
     }
 
-    public partial class PassengersEvent
-    {
-        public static PassengersEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PassengersEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -56,9 +49,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PassengersEvent> PassengersEvent;
 
-        internal void InvokePassengersEvent(PassengersEvent arg)
-        {
-            PassengersEvent?.Invoke(this, arg);
-        }
     }
 }

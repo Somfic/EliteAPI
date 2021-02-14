@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class MusicEvent : EventBase
+    public class MusicEvent : EventBase<MusicEvent>
     {
         internal MusicEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string MusicTrack { get; private set; }
     }
 
-    public partial class MusicEvent
-    {
-        public static MusicEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MusicEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MusicEvent> MusicEvent;
 
-        internal void InvokeMusicEvent(MusicEvent arg)
-        {
-            MusicEvent?.Invoke(this, arg);
-        }
     }
 }

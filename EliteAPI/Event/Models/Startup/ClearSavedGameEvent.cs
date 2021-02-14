@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ClearSavedGameEvent : EventBase
+    public class ClearSavedGameEvent : EventBase<ClearSavedGameEvent>
     {
         internal ClearSavedGameEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string Fid { get; private set; }
     }
 
-    public partial class ClearSavedGameEvent
-    {
-        public static ClearSavedGameEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ClearSavedGameEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ClearSavedGameEvent> ClearSavedGameEvent;
 
-        internal void InvokeClearSavedGameEvent(ClearSavedGameEvent arg)
-        {
-            ClearSavedGameEvent?.Invoke(this, arg);
-        }
     }
 }

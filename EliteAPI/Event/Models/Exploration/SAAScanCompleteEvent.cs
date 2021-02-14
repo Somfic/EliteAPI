@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class SaaScanCompleteEvent : EventBase
+    public class SaaScanCompleteEvent : EventBase<SaaScanCompleteEvent>
     {
         internal SaaScanCompleteEvent() { }
 
@@ -31,13 +31,6 @@ namespace EliteAPI.Event.Models
         public long EfficiencyTarget { get; private set; }
     }
 
-    public partial class SaaScanCompleteEvent
-    {
-        public static SaaScanCompleteEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SaaScanCompleteEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -46,9 +39,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SaaScanCompleteEvent> SaaScanCompleteEvent;
 
-        internal void InvokeSaaScanCompleteEvent(SaaScanCompleteEvent arg)
-        {
-            SaaScanCompleteEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class NewCommanderEvent : EventBase
+    public class NewCommanderEvent : EventBase<NewCommanderEvent>
     {
         internal NewCommanderEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string StarterPackage { get; private set; }
     }
 
-    public partial class NewCommanderEvent
-    {
-        public static NewCommanderEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<NewCommanderEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

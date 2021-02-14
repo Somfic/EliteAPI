@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class PowerplayCollectEvent : EventBase
+    public class PowerplayCollectEvent : EventBase<PowerplayCollectEvent>
     {
         internal PowerplayCollectEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public long Count { get; private set; }
     }
 
-    public partial class PowerplayCollectEvent
-    {
-        public static PowerplayCollectEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PowerplayCollectEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayCollectEvent> PowerplayCollectEvent;
 
-        internal void InvokePowerplayCollectEvent(PowerplayCollectEvent arg)
-        {
-            PowerplayCollectEvent?.Invoke(this, arg);
-        }
     }
 }

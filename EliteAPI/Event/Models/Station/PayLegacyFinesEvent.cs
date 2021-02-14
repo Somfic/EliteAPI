@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class PayLegacyFinesEvent : EventBase
+    public class PayLegacyFinesEvent : EventBase<PayLegacyFinesEvent>
     {
         internal PayLegacyFinesEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public double BrokerPercentage { get; private set; }
     }
 
-    public partial class PayLegacyFinesEvent
-    {
-        public static PayLegacyFinesEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PayLegacyFinesEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PayLegacyFinesEvent> PayLegacyFinesEvent;
 
-        internal void InvokePayLegacyFinesEvent(PayLegacyFinesEvent arg)
-        {
-            PayLegacyFinesEvent?.Invoke(this, arg);
-        }
     }
 }

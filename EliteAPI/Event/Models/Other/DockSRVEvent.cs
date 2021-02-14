@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class DockSrvEvent : EventBase
+    public class DockSrvEvent : EventBase<DockSrvEvent>
     {
         internal DockSrvEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Id { get; private set; }
     }
 
-    public partial class DockSrvEvent
-    {
-        public static DockSrvEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DockSrvEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DockSrvEvent> DockSrvEvent;
 
-        internal void InvokeDockSrvEvent(DockSrvEvent arg)
-        {
-            DockSrvEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class LaunchSrvEvent : EventBase
+    public class LaunchSrvEvent : EventBase<LaunchSrvEvent>
     {
         internal LaunchSrvEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public bool PlayerControlled { get; private set; }
     }
 
-    public partial class LaunchSrvEvent
-    {
-        public static LaunchSrvEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LaunchSrvEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LaunchSrvEvent> LaunchSrvEvent;
 
-        internal void InvokeLaunchSrvEvent(LaunchSrvEvent arg)
-        {
-            LaunchSrvEvent?.Invoke(this, arg);
-        }
     }
 }

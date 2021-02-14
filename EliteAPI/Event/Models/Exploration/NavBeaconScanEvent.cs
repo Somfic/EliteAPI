@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class NavBeaconScanEvent : EventBase
+    public class NavBeaconScanEvent : EventBase<NavBeaconScanEvent>
     {
         internal NavBeaconScanEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public long NumBodies { get; private set; }
     }
 
-    public partial class NavBeaconScanEvent
-    {
-        public static NavBeaconScanEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<NavBeaconScanEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<NavBeaconScanEvent> NavBeaconScanEvent;
 
-        internal void InvokeNavBeaconScanEvent(NavBeaconScanEvent arg)
-        {
-            NavBeaconScanEvent?.Invoke(this, arg);
-        }
     }
 }

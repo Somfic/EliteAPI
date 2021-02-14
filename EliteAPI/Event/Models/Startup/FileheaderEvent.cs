@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class FileheaderEvent : EventBase
+    public class FileheaderEvent : EventBase<FileheaderEvent>
     {
         internal FileheaderEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string Build { get; private set; }
     }
 
-    public partial class FileheaderEvent
-    {
-        public static FileheaderEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FileheaderEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FileheaderEvent> FileheaderEvent;
 
-        internal void InvokeFileheaderEvent(FileheaderEvent arg)
-        {
-            FileheaderEvent?.Invoke(this, arg);
-        }
     }
 }

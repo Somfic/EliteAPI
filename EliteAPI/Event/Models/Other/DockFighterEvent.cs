@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class DockFighterEvent : EventBase
+    public class DockFighterEvent : EventBase<DockFighterEvent>
     {
         internal DockFighterEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Id { get; private set; }
     }
 
-    public partial class DockFighterEvent
-    {
-        public static DockFighterEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DockFighterEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DockFighterEvent> DockFighterEvent;
 
-        internal void InvokeDockFighterEvent(DockFighterEvent arg)
-        {
-            DockFighterEvent?.Invoke(this, arg);
-        }
     }
 }

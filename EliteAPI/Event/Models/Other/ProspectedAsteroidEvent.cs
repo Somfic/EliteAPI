@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ProspectedAsteroidEvent : EventBase
+    public class ProspectedAsteroidEvent : EventBase<ProspectedAsteroidEvent>
     {
         internal ProspectedAsteroidEvent() { }
 
@@ -40,20 +40,13 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Name")]
         public string Name { get; private set; }
 
-        [JsonProperty("Name_Localised", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("Name_Localised")]
         public string NameLocalised { get; private set; }
 
         [JsonProperty("Proportion")]
         public double Proportion { get; private set; }
     }
 
-    public partial class ProspectedAsteroidEvent
-    {
-        public static ProspectedAsteroidEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ProspectedAsteroidEvent>(json);
-        }
-    }
 
 
 }
@@ -64,9 +57,5 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<ProspectedAsteroidEvent> ProspectedAsteroidEvent;
-        internal void InvokeProspectedAsteroidEvent(ProspectedAsteroidEvent arg)
-        {
-            ProspectedAsteroidEvent?.Invoke(this, arg);
-        }
     }
 }

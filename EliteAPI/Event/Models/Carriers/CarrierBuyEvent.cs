@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CarrierBuyEvent : EventBase
+    public class CarrierBuyEvent : EventBase<CarrierBuyEvent>
     {
         internal CarrierBuyEvent() { }
 
@@ -34,13 +34,6 @@ namespace EliteAPI.Event.Models
         public string Callsign { get; private set; }
     }
 
-    public partial class CarrierBuyEvent
-    {
-        public static CarrierBuyEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierBuyEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -49,9 +42,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierBuyEvent> CarrierBuyEvent;
 
-        internal void InvokeCarrierBuyEvent(CarrierBuyEvent arg)
-        {
-            CarrierBuyEvent?.Invoke(this, arg);
-        }
     }
 }

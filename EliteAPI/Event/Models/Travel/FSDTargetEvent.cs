@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class FsdTargetEvent : EventBase
+    public class FsdTargetEvent : EventBase<FsdTargetEvent>
     {
         internal FsdTargetEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public int RemainingJumpsInRoute { get; private set; }
     }
 
-    public partial class FsdTargetEvent
-    {
-        public static FsdTargetEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FsdTargetEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FsdTargetEvent> FsdTargetEvent;
 
-        internal void InvokeFsdTargetEvent(FsdTargetEvent arg)
-        {
-            FsdTargetEvent?.Invoke(this, arg);
-        }
     }
 }

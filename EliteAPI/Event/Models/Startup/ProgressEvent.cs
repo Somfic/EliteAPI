@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ProgressEvent : EventBase
+    public class ProgressEvent : EventBase<ProgressEvent>
     {
         internal ProgressEvent() { }
 
@@ -34,13 +34,6 @@ namespace EliteAPI.Event.Models
         public long Cqc { get; private set; }
     }
 
-    public partial class ProgressEvent
-    {
-        public static ProgressEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ProgressEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -49,9 +42,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ProgressEvent> ProgressEvent;
 
-        internal void InvokeProgressEvent(ProgressEvent arg)
-        {
-            ProgressEvent?.Invoke(this, arg);
-        }
     }
 }

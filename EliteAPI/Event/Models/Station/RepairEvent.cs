@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class RepairEvent : EventBase
+    public class RepairEvent : EventBase<RepairEvent>
     {
         internal RepairEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public long Cost { get; private set; }
     }
 
-    public partial class RepairEvent
-    {
-        public static RepairEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<RepairEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RepairEvent> RepairEvent;
 
-        internal void InvokeRepairEvent(RepairEvent arg)
-        {
-            RepairEvent?.Invoke(this, arg);
-        }
     }
 }

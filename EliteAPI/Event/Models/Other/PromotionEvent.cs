@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class PromotionEvent : EventBase
+    public class PromotionEvent : EventBase<PromotionEvent>
     {
         internal PromotionEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public long Empire { get; private set; }
     }
 
-    public partial class PromotionEvent
-    {
-        public static PromotionEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PromotionEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PromotionEvent> PromotionEvent;
 
-        internal void InvokePromotionEvent(PromotionEvent arg)
-        {
-            PromotionEvent?.Invoke(this, arg);
-        }
     }
 }

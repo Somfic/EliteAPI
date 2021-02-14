@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class MarketEvent : EventBase
+    public class MarketEvent : EventBase<MarketEvent>
     {
         internal MarketEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string StarSystem { get; private set; }
     }
 
-    public partial class MarketEvent
-    {
-        public static MarketEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MarketEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MarketEvent> MarketEvent;
 
-        internal void InvokeMarketEvent(MarketEvent arg)
-        {
-            MarketEvent?.Invoke(this, arg);
-        }
     }
 }

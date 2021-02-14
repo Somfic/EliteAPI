@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class DockingDeniedEvent : EventBase
+    public class DockingDeniedEvent : EventBase<DockingDeniedEvent>
     {
         internal DockingDeniedEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string StationType { get; private set; }
     }
 
-    public partial class DockingDeniedEvent
-    {
-        public static DockingDeniedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DockingDeniedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DockingDeniedEvent> DockingDeniedEvent;
 
-        internal void InvokeDockingDeniedEvent(DockingDeniedEvent arg)
-        {
-            DockingDeniedEvent?.Invoke(this, arg);
-        }
     }
 }

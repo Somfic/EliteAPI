@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class UnderAttackEvent : EventBase
+    public class UnderAttackEvent : EventBase<UnderAttackEvent>
     {
         internal UnderAttackEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Target { get; private set; }
     }
 
-    public partial class UnderAttackEvent
-    {
-        public static UnderAttackEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<UnderAttackEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<UnderAttackEvent> UnderAttackEvent;
 
-        internal void InvokeUnderAttackEvent(UnderAttackEvent arg)
-        {
-            UnderAttackEvent?.Invoke(this, arg);
-        }
     }
 }

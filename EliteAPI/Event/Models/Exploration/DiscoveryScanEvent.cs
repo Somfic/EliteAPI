@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class DiscoveryScanEvent : EventBase
+    public class DiscoveryScanEvent : EventBase<DiscoveryScanEvent>
     {
         internal DiscoveryScanEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public long Bodies { get; internal set; }
     }
 
-    public partial class DiscoveryScanEvent
-    {
-        public static DiscoveryScanEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DiscoveryScanEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DiscoveryScanEvent> DiscoveryScanEvent;
 
-        internal void InvokeDiscoveryScanEvent(DiscoveryScanEvent arg)
-        {
-            DiscoveryScanEvent?.Invoke(this, arg);
-        }
     }
 }

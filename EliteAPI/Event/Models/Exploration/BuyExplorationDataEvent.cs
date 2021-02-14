@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class BuyExplorationDataEvent : EventBase
+    public class BuyExplorationDataEvent : EventBase<BuyExplorationDataEvent>
     {
         internal BuyExplorationDataEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public long Cost { get; private set; }
     }
 
-    public partial class BuyExplorationDataEvent
-    {
-        public static BuyExplorationDataEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<BuyExplorationDataEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<BuyExplorationDataEvent> BuyExplorationDataEvent;
 
-        internal void InvokeBuyExplorationDataEvent(BuyExplorationDataEvent arg)
-        {
-            BuyExplorationDataEvent?.Invoke(this, arg);
-        }
     }
 }

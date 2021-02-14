@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class TouchdownEvent : EventBase
+    public class TouchdownEvent : EventBase<TouchdownEvent>
     {
         internal TouchdownEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public double Longitude { get; private set; }
     }
 
-    public partial class TouchdownEvent
-    {
-        public static TouchdownEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<TouchdownEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<TouchdownEvent> TouchdownEvent;
 
-        internal void InvokeTouchdownEvent(TouchdownEvent arg)
-        {
-            TouchdownEvent?.Invoke(this, arg);
-        }
     }
 }

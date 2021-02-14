@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ScannedEvent : EventBase
+    public class ScannedEvent : EventBase<ScannedEvent>
     {
         internal ScannedEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string ScanType { get; private set; }
     }
 
-    public partial class ScannedEvent
-    {
-        public static ScannedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ScannedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ScannedEvent> ScannedEvent;
 
-        internal void InvokeScannedEvent(ScannedEvent arg)
-        {
-            ScannedEvent?.Invoke(this, arg);
-        }
     }
 }

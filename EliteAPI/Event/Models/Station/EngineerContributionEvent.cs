@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class EngineerContributionEvent : EventBase
+    public class EngineerContributionEvent : EventBase<EngineerContributionEvent>
     {
         internal EngineerContributionEvent() { }
 
@@ -31,13 +31,6 @@ namespace EliteAPI.Event.Models
         public long TotalQuantity { get; internal set; }
     }
 
-    public partial class EngineerContributionEvent
-    {
-        public static EngineerContributionEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<EngineerContributionEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -46,9 +39,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<EngineerContributionEvent> EngineerContributionEvent;
 
-        internal void InvokeEngineerContributionEvent(EngineerContributionEvent arg)
-        {
-            EngineerContributionEvent?.Invoke(this, arg);
-        }
     }
 }

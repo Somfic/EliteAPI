@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class TechnologyBrokerEvent : EventBase
+    public class TechnologyBrokerEvent : EventBase<TechnologyBrokerEvent>
     {
         internal TechnologyBrokerEvent() { }
 
@@ -68,13 +68,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class TechnologyBrokerEvent
-    {
-        public static TechnologyBrokerEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<TechnologyBrokerEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -83,9 +76,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<TechnologyBrokerEvent> TechnologyBrokerEvent;
 
-        internal void InvokeTechnologyBrokerEvent(TechnologyBrokerEvent arg)
-        {
-            TechnologyBrokerEvent?.Invoke(this, arg);
-        }
     }
 }

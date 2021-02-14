@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CarrierTradeOrderEvent : EventBase
+    public class CarrierTradeOrderEvent : EventBase<CarrierTradeOrderEvent>
     {
         internal CarrierTradeOrderEvent() { }
 
@@ -40,13 +40,6 @@ namespace EliteAPI.Event.Models
         public long Price { get; private set; }
     }
 
-    public partial class CarrierTradeOrderEvent
-    {
-        public static CarrierTradeOrderEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierTradeOrderEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -55,9 +48,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierTradeOrderEvent> CarrierTradeOrderEvent;
 
-        internal void InvokeCarrierTradeOrderEvent(CarrierTradeOrderEvent arg)
-        {
-            CarrierTradeOrderEvent?.Invoke(this, arg);
-        }
     }
 }

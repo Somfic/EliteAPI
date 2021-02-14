@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class MaterialTradeEvent : EventBase
+    public class MaterialTradeEvent : EventBase<MaterialTradeEvent>
     {
         internal MaterialTradeEvent() { }
 
@@ -46,13 +46,6 @@ namespace EliteAPI.Event.Models
         public long Quantity { get; private set; }
     }
 
-    public partial class MaterialTradeEvent
-    {
-        public static MaterialTradeEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MaterialTradeEvent>(json);
-        }
-    }
 
 
 }
@@ -63,9 +56,5 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<MaterialTradeEvent> MaterialTradeEvent;
-        internal void InvokeMaterialTradeEvent(MaterialTradeEvent arg)
-        {
-            MaterialTradeEvent?.Invoke(this, arg);
-        }
     }
 }

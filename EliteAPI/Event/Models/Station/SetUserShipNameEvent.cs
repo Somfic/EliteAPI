@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class SetUserShipNameEvent : EventBase
+    public class SetUserShipNameEvent : EventBase<SetUserShipNameEvent>
     {
         internal SetUserShipNameEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string UserShipId { get; private set; }
     }
 
-    public partial class SetUserShipNameEvent
-    {
-        public static SetUserShipNameEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SetUserShipNameEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SetUserShipNameEvent> SetUserShipNameEvent;
 
-        internal void InvokeSetUserShipNameEvent(SetUserShipNameEvent arg)
-        {
-            SetUserShipNameEvent?.Invoke(this, arg);
-        }
     }
 }

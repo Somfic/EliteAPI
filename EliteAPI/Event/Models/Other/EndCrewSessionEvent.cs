@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class EndCrewSessionEvent : EventBase
+    public class EndCrewSessionEvent : EventBase<EndCrewSessionEvent>
     {
         internal EndCrewSessionEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public bool OnCrime { get; private set; }
     }
 
-    public partial class EndCrewSessionEvent
-    {
-        public static EndCrewSessionEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<EndCrewSessionEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<EndCrewSessionEvent> EndCrewSessionEvent;
 
-        internal void InvokeEndCrewSessionEvent(EndCrewSessionEvent arg)
-        {
-            EndCrewSessionEvent?.Invoke(this, arg);
-        }
     }
 }

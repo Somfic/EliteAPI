@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class FetchRemoteModuleEvent : EventBase
+    public class FetchRemoteModuleEvent : EventBase<FetchRemoteModuleEvent>
     {
         internal FetchRemoteModuleEvent() { }
 
@@ -40,13 +40,6 @@ namespace EliteAPI.Event.Models
         public string ShipId { get; private set; }
     }
 
-    public partial class FetchRemoteModuleEvent
-    {
-        public static FetchRemoteModuleEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FetchRemoteModuleEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -55,9 +48,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FetchRemoteModuleEvent> FetchRemoteModuleEvent;
 
-        internal void InvokeFetchRemoteModuleEvent(FetchRemoteModuleEvent arg)
-        {
-            FetchRemoteModuleEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class QuitACrewEvent : EventBase
+    public class QuitACrewEvent : EventBase<QuitACrewEvent>
     {
         internal QuitACrewEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Captain { get; private set; }
     }
 
-    public partial class QuitACrewEvent
-    {
-        public static QuitACrewEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<QuitACrewEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<QuitACrewEvent> QuitACrewEvent;
 
-        internal void InvokeQuitACrewEvent(QuitACrewEvent arg)
-        {
-            QuitACrewEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,18 +11,11 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ModuleInfoEvent : EventBase
+    public class ModuleInfoEvent : EventBase<ModuleInfoEvent>
     {
         internal ModuleInfoEvent() { }
     }
 
-    public partial class ModuleInfoEvent
-    {
-        public static ModuleInfoEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ModuleInfoEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -31,9 +24,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ModuleInfoEvent> ModuleInfoEvent;
 
-        internal void InvokeModuleInfoEvent(ModuleInfoEvent arg)
-        {
-            ModuleInfoEvent?.Invoke(this, arg);
-        }
     }
 }

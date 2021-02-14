@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class InterdictedEvent : EventBase
+    public class InterdictedEvent : EventBase<InterdictedEvent>
     {
         internal InterdictedEvent() { }
 
@@ -31,13 +31,6 @@ namespace EliteAPI.Event.Models
         public string Faction { get; private set; }
     }
 
-    public partial class InterdictedEvent
-    {
-        public static InterdictedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<InterdictedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -46,9 +39,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<InterdictedEvent> InterdictedEvent;
 
-        internal void InvokeInterdictedEvent(InterdictedEvent arg)
-        {
-            InterdictedEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CarrierDockingPermissionEvent : EventBase
+    public class CarrierDockingPermissionEvent : EventBase<CarrierDockingPermissionEvent>
     {
         internal CarrierDockingPermissionEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public bool AllowNotorious { get; private set; }
     }
 
-    public partial class CarrierDockingPermissionEvent
-    {
-        public static CarrierDockingPermissionEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierDockingPermissionEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierDockingPermissionEvent> CarrierDockingPermissionEvent;
 
-        internal void InvokeCarrierDockingPermissionEvent(CarrierDockingPermissionEvent arg)
-        {
-            CarrierDockingPermissionEvent?.Invoke(this, arg);
-        }
     }
 }

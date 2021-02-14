@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class MiningRefinedEvent : EventBase
+    public class MiningRefinedEvent : EventBase<MiningRefinedEvent>
     {
         internal MiningRefinedEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string TypeLocalised { get; private set; }
     }
 
-    public partial class MiningRefinedEvent
-    {
-        public static MiningRefinedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MiningRefinedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MiningRefinedEvent> MiningRefinedEvent;
 
-        internal void InvokeMiningRefinedEvent(MiningRefinedEvent arg)
-        {
-            MiningRefinedEvent?.Invoke(this, arg);
-        }
     }
 }

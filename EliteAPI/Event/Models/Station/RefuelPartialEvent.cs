@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class RefuelPartialEvent : EventBase
+    public class RefuelPartialEvent : EventBase<RefuelPartialEvent>
     {
         internal RefuelPartialEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public double Amount { get; private set; }
     }
 
-    public partial class RefuelPartialEvent
-    {
-        public static RefuelPartialEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<RefuelPartialEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RefuelPartialEvent> RefuelPartialEvent;
 
-        internal void InvokeRefuelPartialEvent(RefuelPartialEvent arg)
-        {
-            RefuelPartialEvent?.Invoke(this, arg);
-        }
     }
 }

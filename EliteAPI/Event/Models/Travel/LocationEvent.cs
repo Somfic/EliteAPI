@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class LocationEvent : EventBase
+    public class LocationEvent : EventBase<LocationEvent>
     {
         internal LocationEvent() { }
 
@@ -222,13 +222,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class LocationEvent
-    {
-        public static LocationEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LocationEvent>(json);
-        }
-    }
 
 
 }
@@ -239,9 +232,5 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<LocationEvent> LocationEvent;
-        internal void InvokeLocationEvent(LocationEvent arg)
-        {
-            LocationEvent?.Invoke(this, arg);
-        }
     }
 }

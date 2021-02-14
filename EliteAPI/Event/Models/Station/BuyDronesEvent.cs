@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class BuyDronesEvent : EventBase
+    public class BuyDronesEvent : EventBase<BuyDronesEvent>
     {
         internal BuyDronesEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public long TotalCost { get; private set; }
     }
 
-    public partial class BuyDronesEvent
-    {
-        public static BuyDronesEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<BuyDronesEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<BuyDronesEvent> BuyDronesEvent;
 
-        internal void InvokeBuyDronesEvent(BuyDronesEvent arg)
-        {
-            BuyDronesEvent?.Invoke(this, arg);
-        }
     }
 }

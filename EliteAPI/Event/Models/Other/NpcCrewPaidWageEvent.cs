@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class NpcCrewPaidWageEvent : EventBase
+    public class NpcCrewPaidWageEvent : EventBase<NpcCrewPaidWageEvent>
     {
         internal NpcCrewPaidWageEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long Amount { get; private set; }
     }
 
-    public partial class NpcCrewPaidWageEvent
-    {
-        public static NpcCrewPaidWageEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<NpcCrewPaidWageEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<NpcCrewPaidWageEvent> NpcCrewPaidWageEvent;
 
-        internal void InvokeNpcCrewPaidWageEvent(NpcCrewPaidWageEvent arg)
-        {
-            NpcCrewPaidWageEvent?.Invoke(this, arg);
-        }
     }
 }

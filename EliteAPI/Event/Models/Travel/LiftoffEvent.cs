@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class LiftoffEvent : EventBase
+    public class LiftoffEvent : EventBase<LiftoffEvent>
     {
         internal LiftoffEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public double Longitude { get; private set; }
     }
 
-    public partial class LiftoffEvent
-    {
-        public static LiftoffEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LiftoffEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LiftoffEvent> LiftoffEvent;
 
-        internal void InvokeLiftoffEvent(LiftoffEvent arg)
-        {
-            LiftoffEvent?.Invoke(this, arg);
-        }
     }
 }

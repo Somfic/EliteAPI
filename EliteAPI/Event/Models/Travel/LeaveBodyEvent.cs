@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class LeaveBodyEvent : EventBase
+    public class LeaveBodyEvent : EventBase<LeaveBodyEvent>
     {
         internal LeaveBodyEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string BodyId { get; private set; }
     }
 
-    public partial class LeaveBodyEvent
-    {
-        public static LeaveBodyEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LeaveBodyEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LeaveBodyEvent> LeaveBodyEvent;
 
-        internal void InvokeLeaveBodyEvent(LeaveBodyEvent arg)
-        {
-            LeaveBodyEvent?.Invoke(this, arg);
-        }
     }
 }

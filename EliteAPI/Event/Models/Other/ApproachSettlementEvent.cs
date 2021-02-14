@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ApproachSettlementEvent : EventBase
+    public class ApproachSettlementEvent : EventBase<ApproachSettlementEvent>
     {
         internal ApproachSettlementEvent() { }
 
@@ -37,13 +37,6 @@ namespace EliteAPI.Event.Models
         public double Longitude { get; private set; }
     }
 
-    public partial class ApproachSettlementEvent
-    {
-        public static ApproachSettlementEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ApproachSettlementEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -52,9 +45,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ApproachSettlementEvent> ApproachSettlementEvent;
 
-        internal void InvokeApproachSettlementEvent(ApproachSettlementEvent arg)
-        {
-            ApproachSettlementEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class HullDamageEvent : EventBase
+    public class HullDamageEvent : EventBase<HullDamageEvent>
     {
         internal HullDamageEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public bool Fighter { get; private set; }
     }
 
-    public partial class HullDamageEvent
-    {
-        public static HullDamageEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<HullDamageEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<HullDamageEvent> HullDamageEvent;
 
-        internal void InvokeHullDamageEvent(HullDamageEvent arg)
-        {
-            HullDamageEvent?.Invoke(this, arg);
-        }
     }
 }

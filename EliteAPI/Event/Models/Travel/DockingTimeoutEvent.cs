@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class DockingTimeoutEvent : EventBase
+    public class DockingTimeoutEvent : EventBase<DockingTimeoutEvent>
     {
         internal DockingTimeoutEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string StationName { get; private set; }
     }
 
-    public partial class DockingTimeoutEvent
-    {
-        public static DockingTimeoutEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DockingTimeoutEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DockingTimeoutEvent> DockingTimeoutEvent;
 
-        internal void InvokeDockingTimeoutEvent(DockingTimeoutEvent arg)
-        {
-            DockingTimeoutEvent?.Invoke(this, arg);
-        }
     }
 }

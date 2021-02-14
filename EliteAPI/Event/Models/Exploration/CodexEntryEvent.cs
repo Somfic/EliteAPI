@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CodexEntryEvent : EventBase
+    public class CodexEntryEvent : EventBase<CodexEntryEvent>
     {
         internal CodexEntryEvent() { }
 
@@ -52,13 +52,6 @@ namespace EliteAPI.Event.Models
         public bool IsNewEntry { get; private set; }
     }
 
-    public partial class CodexEntryEvent
-    {
-        public static CodexEntryEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CodexEntryEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -67,9 +60,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CodexEntryEvent> CodexEntryEvent;
 
-        internal void InvokeCodexEntryEvent(CodexEntryEvent arg)
-        {
-            CodexEntryEvent?.Invoke(this, arg);
-        }
     }
 }

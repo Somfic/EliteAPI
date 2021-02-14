@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class MaterialsEvent : EventBase
+    public class MaterialsEvent : EventBase<MaterialsEvent>
     {
         internal MaterialsEvent() { }
 
@@ -54,13 +54,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class MaterialsEvent
-    {
-        public static MaterialsEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MaterialsEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -69,9 +62,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MaterialsEvent> MaterialsEvent;
 
-        internal void InvokeMaterialsEvent(MaterialsEvent arg)
-        {
-            MaterialsEvent?.Invoke(this, arg);
-        }
     }
 }

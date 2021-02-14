@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class AsteroidCrackedEvent : EventBase
+    public class AsteroidCrackedEvent : EventBase<AsteroidCrackedEvent>
     {
         internal AsteroidCrackedEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Body { get; private set; }
     }
 
-    public partial class AsteroidCrackedEvent
-    {
-        public static AsteroidCrackedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<AsteroidCrackedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<AsteroidCrackedEvent> AsteroidCrackedEvent;
 
-        internal void InvokeAsteroidCrackedEvent(AsteroidCrackedEvent arg)
-        {
-            AsteroidCrackedEvent?.Invoke(this, arg);
-        }
     }
 }

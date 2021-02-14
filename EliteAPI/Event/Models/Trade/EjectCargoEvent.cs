@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class EjectCargoEvent : EventBase
+    public class EjectCargoEvent : EventBase<EjectCargoEvent>
     {
         internal EjectCargoEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public bool Abandoned { get; private set; }
     }
 
-    public partial class EjectCargoEvent
-    {
-        public static EjectCargoEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<EjectCargoEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<EjectCargoEvent> EjectCargoEvent;
 
-        internal void InvokeEjectCargoEvent(EjectCargoEvent arg)
-        {
-            EjectCargoEvent?.Invoke(this, arg);
-        }
     }
 }

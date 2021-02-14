@@ -31,7 +31,7 @@ namespace EliteAPI.Event.Provider
         }
 
         /// <inheritdoc />
-        public Task<EventBase> ProcessJsonEvent(string json)
+        public Task<IEvent> ProcessJsonEvent(string json)
         {
             if (_cache == null) RegisterEventClasses();
 
@@ -41,13 +41,11 @@ namespace EliteAPI.Event.Provider
                 string eventName = ((dynamic) parsedFromGame).@event;
 
                 var method = GetFromJsonMethod(eventName);
-                var eventBase = InvokeFromJsonMethod(method, json);
+                var gameEvent = InvokeFromJsonMethod(method, json);
 
-                eventBase.Json = json;
-                
                 _log.LogTrace(json);
 
-                return Task.FromResult(eventBase);
+                return Task.FromResult(gameEvent);
             }
             catch (Exception ex)
             {
@@ -72,7 +70,7 @@ namespace EliteAPI.Event.Provider
         private IEnumerable<Type> GetAllEventTypes(Type eventHandler)
         {
             var eventTypes = _assembly.GetTypes()
-                .Where(x => x.IsSubclassOf(typeof(EventBase)) && x.IsClass && !x.IsAbstract);
+                .Where(x => typeof(IEvent).IsAssignableFrom(x) && x.IsClass && !x.IsAbstract && !x.IsInterface);
 
             return eventTypes;
         }
@@ -81,17 +79,25 @@ namespace EliteAPI.Event.Provider
         {
             try
             {
-                var type = _cache[eventName.ToUpper()];
+                if (!_cache.ContainsKey(eventName.ToUpper())) { throw new EventNotImplementedException($"The {eventName} event is not implemented"); }
 
-                return type.GetMethods().First(x => x.Name == "FromJson");
+                var type = _cache[eventName.ToUpper()];
+                var method = type.BaseType?.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance).First(x => x.Name == "FromJson");
+
+                if (method == null)
+                {
+                    throw new NullReferenceException("The FromJson method could not be found");
+                }
+
+                return method;
             }
-            catch (Exception ex) { throw new EventNotImplementedException($"The {eventName} event is not implemented", ex); }
+            catch (Exception ex) { throw new EventNotImplementedException($"The {eventName} event is not correctly implemented", ex); }
 
         }
 
-        private EventBase InvokeFromJsonMethod(MethodBase method, string json)
+        private IEvent InvokeFromJsonMethod(MethodBase method, string json)
         {
-            return method.Invoke(null, new object[] {json}) as EventBase;
+            return method.Invoke(null, new object[] {json}) as IEvent;
         }
     }
 }

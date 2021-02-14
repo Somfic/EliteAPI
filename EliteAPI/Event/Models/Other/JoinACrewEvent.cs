@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class JoinACrewEvent : EventBase
+    public class JoinACrewEvent : EventBase<JoinACrewEvent>
     {
         internal JoinACrewEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Captain { get; private set; }
     }
 
-    public partial class JoinACrewEvent
-    {
-        public static JoinACrewEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<JoinACrewEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<JoinACrewEvent> JoinACrewEvent;
 
-        internal void InvokeJoinACrewEvent(JoinACrewEvent arg)
-        {
-            JoinACrewEvent?.Invoke(this, arg);
-        }
     }
 }

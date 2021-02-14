@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class PowerplayVoucherEvent : EventBase
+    public class PowerplayVoucherEvent : EventBase<PowerplayVoucherEvent>
     {
         internal PowerplayVoucherEvent() { }
 
@@ -23,13 +23,6 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<string> Systems { get; private set; }
     }
 
-    public partial class PowerplayVoucherEvent
-    {
-        public static PowerplayVoucherEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PowerplayVoucherEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -38,9 +31,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayVoucherEvent> PowerplayVoucherEvent;
 
-        internal void InvokePowerplayVoucherEvent(PowerplayVoucherEvent arg)
-        {
-            PowerplayVoucherEvent?.Invoke(this, arg);
-        }
     }
 }

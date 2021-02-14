@@ -1,5 +1,7 @@
 using System;
 
+using Newtonsoft.Json;
+
 namespace EliteAPI.Event.Models.Abstractions
 {
     /// <summary>
@@ -10,16 +12,13 @@ namespace EliteAPI.Event.Models.Abstractions
         /// <summary>
         /// The timestamp of the event
         /// </summary>
+        [JsonProperty("timestamp")]
         DateTime Timestamp { get; }
 
         /// <summary>
         /// The name of the event
         /// </summary>
+        [JsonProperty("event")]
         string Event { get; }
-
-        /// <summary>
-        ///  The original Json entry for this event
-        /// </summary>
-        string Json { get; }
     }
 }

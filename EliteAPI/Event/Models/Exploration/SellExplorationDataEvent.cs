@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class SellExplorationDataEvent : EventBase
+    public class SellExplorationDataEvent : EventBase<SellExplorationDataEvent>
     {
         internal SellExplorationDataEvent() { }
 
@@ -29,13 +29,6 @@ namespace EliteAPI.Event.Models
         public long Bonus { get; private set; }
     }
 
-    public partial class SellExplorationDataEvent
-    {
-        public static SellExplorationDataEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SellExplorationDataEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -44,9 +37,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SellExplorationDataEvent> SellExplorationDataEvent;
 
-        internal void InvokeSellExplorationDataEvent(SellExplorationDataEvent arg)
-        {
-            SellExplorationDataEvent?.Invoke(this, arg);
-        }
     }
 }

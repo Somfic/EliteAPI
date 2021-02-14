@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class DatalinkVoucherEvent : EventBase
+    public class DatalinkVoucherEvent : EventBase<DatalinkVoucherEvent>
     {
         internal DatalinkVoucherEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string PayeeFaction { get; private set; }
     }
 
-    public partial class DatalinkVoucherEvent
-    {
-        public static DatalinkVoucherEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DatalinkVoucherEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DatalinkVoucherEvent> DatalinkVoucherEvent;
 
-        internal void InvokeDatalinkVoucherEvent(DatalinkVoucherEvent arg)
-        {
-            DatalinkVoucherEvent?.Invoke(this, arg);
-        }
     }
 }

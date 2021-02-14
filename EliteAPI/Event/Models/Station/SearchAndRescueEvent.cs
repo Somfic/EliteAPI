@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class SearchAndRescueEvent : EventBase
+    public class SearchAndRescueEvent : EventBase<SearchAndRescueEvent>
     {
         internal SearchAndRescueEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long Reward { get; private set; }
     }
 
-    public partial class SearchAndRescueEvent
-    {
-        public static SearchAndRescueEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SearchAndRescueEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SearchAndRescueEvent> SearchAndRescueEvent;
 
-        internal void InvokeSearchAndRescueEvent(SearchAndRescueEvent arg)
-        {
-            SearchAndRescueEvent?.Invoke(this, arg);
-        }
     }
 }

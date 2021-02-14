@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class RankEvent : EventBase
+    public class RankEvent : EventBase<RankEvent>
     {
         internal RankEvent() { }
 
@@ -34,13 +34,6 @@ namespace EliteAPI.Event.Models
         public long Cqc { get; private set; }
     }
 
-    public partial class RankEvent
-    {
-        public static RankEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<RankEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -49,9 +42,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RankEvent> RankEvent;
 
-        internal void InvokeRankEvent(RankEvent arg)
-        {
-            RankEvent?.Invoke(this, arg);
-        }
     }
 }

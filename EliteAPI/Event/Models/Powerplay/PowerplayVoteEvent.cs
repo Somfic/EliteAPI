@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class PowerplayVoteEvent : EventBase
+    public class PowerplayVoteEvent : EventBase<PowerplayVoteEvent>
     {
         internal PowerplayVoteEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long Empty { get; private set; }
     }
 
-    public partial class PowerplayVoteEvent
-    {
-        public static PowerplayVoteEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PowerplayVoteEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayVoteEvent> PowerplayVoteEvent;
 
-        internal void InvokePowerplayVoteEvent(PowerplayVoteEvent arg)
-        {
-            PowerplayVoteEvent?.Invoke(this, arg);
-        }
     }
 }

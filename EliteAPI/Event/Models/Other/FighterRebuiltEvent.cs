@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class FighterRebuiltEvent : EventBase
+    public class FighterRebuiltEvent : EventBase<FighterRebuiltEvent>
     {
         internal FighterRebuiltEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string Id { get; private set; }
     }
 
-    public partial class FighterRebuiltEvent
-    {
-        public static FighterRebuiltEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FighterRebuiltEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FighterRebuiltEvent> FighterRebuiltEvent;
 
-        internal void InvokeFighterRebuiltEvent(FighterRebuiltEvent arg)
-        {
-            FighterRebuiltEvent?.Invoke(this, arg);
-        }
     }
 }

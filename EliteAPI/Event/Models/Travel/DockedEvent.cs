@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class DockedEvent : EventBase
+    public class DockedEvent : EventBase<DockedEvent>
     {
         internal DockedEvent() { }
 
@@ -89,13 +89,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class DockedEvent
-    {
-        public static DockedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DockedEvent>(json);
-        }
-    }
 
 
 }
@@ -106,9 +99,5 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<DockedEvent> DockedEvent;
-        internal void InvokeDockedEvent(DockedEvent arg)
-        {
-            DockedEvent?.Invoke(this, arg);
-        }
     }
 }

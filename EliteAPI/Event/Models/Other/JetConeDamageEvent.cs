@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class JetConeDamageEvent : EventBase
+    public class JetConeDamageEvent : EventBase<JetConeDamageEvent>
     {
         internal JetConeDamageEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string ModuleLocalised { get; private set; }
     }
 
-    public partial class JetConeDamageEvent
-    {
-        public static JetConeDamageEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<JetConeDamageEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<JetConeDamageEvent> JetConeDamageEvent;
 
-        internal void InvokeJetConeDamageEvent(JetConeDamageEvent arg)
-        {
-            JetConeDamageEvent?.Invoke(this, arg);
-        }
     }
 }

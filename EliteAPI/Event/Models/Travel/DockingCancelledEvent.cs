@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class DockingCancelledEvent : EventBase
+    public class DockingCancelledEvent : EventBase<DockingCancelledEvent>
     {
         internal DockingCancelledEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string StationName { get; private set; }
     }
 
-    public partial class DockingCancelledEvent
-    {
-        public static DockingCancelledEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DockingCancelledEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<DockingCancelledEvent> DockingCancelledEvent;
 
-        internal void InvokeDockingCancelledEvent(DockingCancelledEvent arg)
-        {
-            DockingCancelledEvent?.Invoke(this, arg);
-        }
     }
 }

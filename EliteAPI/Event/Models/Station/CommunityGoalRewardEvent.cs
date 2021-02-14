@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CommunityGoalRewardEvent : EventBase
+    public class CommunityGoalRewardEvent : EventBase<CommunityGoalRewardEvent>
     {
         internal CommunityGoalRewardEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long Reward { get; private set; }
     }
 
-    public partial class CommunityGoalRewardEvent
-    {
-        public static CommunityGoalRewardEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CommunityGoalRewardEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CommunityGoalRewardEvent> CommunityGoalRewardEvent;
 
-        internal void InvokeCommunityGoalRewardEvent(CommunityGoalRewardEvent arg)
-        {
-            CommunityGoalRewardEvent?.Invoke(this, arg);
-        }
     }
 }

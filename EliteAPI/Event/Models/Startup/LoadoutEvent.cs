@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class LoadoutEvent : EventBase
+    public class LoadoutEvent : EventBase<LoadoutEvent>
     {
         internal LoadoutEvent() { }
 
@@ -146,13 +146,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class LoadoutEvent
-    {
-        public static LoadoutEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LoadoutEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -161,9 +154,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LoadoutEvent> LoadoutEvent;
 
-        internal void InvokeLoadoutEvent(LoadoutEvent arg)
-        {
-            LoadoutEvent?.Invoke(this, arg);
-        }
     }
 }

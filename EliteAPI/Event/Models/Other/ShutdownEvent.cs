@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ShutdownEvent : EventBase
+    public class ShutdownEvent : EventBase<ShutdownEvent>
     {
         internal ShutdownEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Event { get; private set; }
     }
 
-    public partial class ShutdownEvent
-    {
-        public static ShutdownEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ShutdownEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ShutdownEvent> ShutdownEvent;
 
-        internal void InvokeShutdownEvent(ShutdownEvent arg)
-        {
-            ShutdownEvent?.Invoke(this, arg);
-        }
     }
 }

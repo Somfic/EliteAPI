@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class StartJumpEvent : EventBase
+    public class StartJumpEvent : EventBase<StartJumpEvent>
     {
         internal StartJumpEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string StarClass { get; private set; }
     }
 
-    public partial class StartJumpEvent
-    {
-        public static StartJumpEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<StartJumpEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<StartJumpEvent> StartJumpEvent;
 
-        internal void InvokeStartJumpEvent(StartJumpEvent arg)
-        {
-            StartJumpEvent?.Invoke(this, arg);
-        }
     }
 }

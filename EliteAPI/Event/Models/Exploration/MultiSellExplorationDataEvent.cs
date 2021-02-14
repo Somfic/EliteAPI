@@ -12,7 +12,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class MultiSellExplorationDataEvent : EventBase
+    public class MultiSellExplorationDataEvent : EventBase<MultiSellExplorationDataEvent>
     {
         internal MultiSellExplorationDataEvent() { }
 
@@ -41,13 +41,6 @@ namespace EliteAPI.Event.Models
         public long NumBodies { get; private set; }
     }
 
-    public partial class MultiSellExplorationDataEvent
-    {
-        public static MultiSellExplorationDataEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MultiSellExplorationDataEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -56,9 +49,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MultiSellExplorationDataEvent> MultiSellExplorationDataEvent;
 
-        internal void InvokeMultiSellExplorationDataEvent(MultiSellExplorationDataEvent arg)
-        {
-            MultiSellExplorationDataEvent?.Invoke(this, arg);
-        }
     }
 }

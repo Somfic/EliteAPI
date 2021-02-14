@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class PowerplayFastTrackEvent : EventBase
+    public class PowerplayFastTrackEvent : EventBase<PowerplayFastTrackEvent>
     {
         internal PowerplayFastTrackEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public long Cost { get; private set; }
     }
 
-    public partial class PowerplayFastTrackEvent
-    {
-        public static PowerplayFastTrackEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PowerplayFastTrackEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplayFastTrackEvent> PowerplayFastTrackEvent;
 
-        internal void InvokePowerplayFastTrackEvent(PowerplayFastTrackEvent arg)
-        {
-            PowerplayFastTrackEvent?.Invoke(this, arg);
-        }
     }
 }

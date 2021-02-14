@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CarrierBankTransferEvent : EventBase
+    public class CarrierBankTransferEvent : EventBase<CarrierBankTransferEvent>
     {
         internal CarrierBankTransferEvent() { }
 
@@ -31,13 +31,6 @@ namespace EliteAPI.Event.Models
         public long CarrierBalance { get; private set; }
     }
 
-    public partial class CarrierBankTransferEvent
-    {
-        public static CarrierBankTransferEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierBankTransferEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -46,9 +39,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CarrierBankTransferEvent> CarrierBankTransferEvent;
 
-        internal void InvokeCarrierBankTransferEvent(CarrierBankTransferEvent arg)
-        {
-            CarrierBankTransferEvent?.Invoke(this, arg);
-        }
     }
 }

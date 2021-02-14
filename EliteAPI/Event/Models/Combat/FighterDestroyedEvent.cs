@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class FighterDestroyedEvent : EventBase
+    public class FighterDestroyedEvent : EventBase<FighterDestroyedEvent>
     {
         internal FighterDestroyedEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Id { get; private set; }
     }
 
-    public partial class FighterDestroyedEvent
-    {
-        public static FighterDestroyedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FighterDestroyedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<FighterDestroyedEvent> FighterDestroyedEvent;
 
-        internal void InvokeFighterDestroyedEvent(FighterDestroyedEvent arg)
-        {
-            FighterDestroyedEvent?.Invoke(this, arg);
-        }
     }
 }

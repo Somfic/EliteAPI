@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class RepairDroneEvent : EventBase
+    public class RepairDroneEvent : EventBase<RepairDroneEvent>
     {
         internal RepairDroneEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public double HullRepaired { get; private set; }
     }
 
-    public partial class RepairDroneEvent
-    {
-        public static RepairDroneEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<RepairDroneEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RepairDroneEvent> RepairDroneEvent;
 
-        internal void InvokeRepairDroneEvent(RepairDroneEvent arg)
-        {
-            RepairDroneEvent?.Invoke(this, arg);
-        }
     }
 }

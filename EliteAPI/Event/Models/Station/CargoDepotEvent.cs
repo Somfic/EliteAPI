@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class CargoDepotEvent : EventBase
+    public class CargoDepotEvent : EventBase<CargoDepotEvent>
     {
         internal CargoDepotEvent() { }
 
@@ -49,13 +49,6 @@ namespace EliteAPI.Event.Models
         public double Progress { get; internal set; }
     }
 
-    public partial class CargoDepotEvent
-    {
-        public static CargoDepotEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CargoDepotEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -64,9 +57,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<CargoDepotEvent> CargoDepotEvent;
 
-        internal void InvokeCargoDepotEvent(CargoDepotEvent arg)
-        {
-            CargoDepotEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class LoadGameEvent : EventBase
+    public class LoadGameEvent : EventBase<LoadGameEvent>
     {
         internal LoadGameEvent() { }
 
@@ -58,13 +58,6 @@ namespace EliteAPI.Event.Models
         public long Loan { get; private set; }
     }
 
-    public partial class LoadGameEvent
-    {
-        public static LoadGameEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LoadGameEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -73,9 +66,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LoadGameEvent> LoadGameEvent;
 
-        internal void InvokeLoadGameEvent(LoadGameEvent arg)
-        {
-            LoadGameEvent?.Invoke(this, arg);
-        }
     }
 }

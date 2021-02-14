@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class SquadronDemotionEvent : EventBase
+    public class SquadronDemotionEvent : EventBase<SquadronDemotionEvent>
     {
         internal SquadronDemotionEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public int NewRank { get; private set; }
     }
 
-    public partial class SquadronDemotionEvent
-    {
-        public static SquadronDemotionEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SquadronDemotionEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<SquadronDemotionEvent> SquadronDemotionEvent;
 
-        internal void InvokeSquadronDemotionEvent(SquadronDemotionEvent arg)
-        {
-            SquadronDemotionEvent?.Invoke(this, arg);
-        }
     }
 }

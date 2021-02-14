@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class LaunchFighterEvent : EventBase
+    public class LaunchFighterEvent : EventBase<LaunchFighterEvent>
     {
         internal LaunchFighterEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public bool PlayerControlled { get; private set; }
     }
 
-    public partial class LaunchFighterEvent
-    {
-        public static LaunchFighterEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LaunchFighterEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<LaunchFighterEvent> LaunchFighterEvent;
 
-        internal void InvokeLaunchFighterEvent(LaunchFighterEvent arg)
-        {
-            LaunchFighterEvent?.Invoke(this, arg);
-        }
     }
 }

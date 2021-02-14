@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ShipTargetedEvent : EventBase
+    public class ShipTargetedEvent : EventBase<ShipTargetedEvent>
     {
         internal ShipTargetedEvent() { }
 
@@ -61,13 +61,6 @@ namespace EliteAPI.Event.Models
         public double SubsystemHealth { get; private set; }
     }
 
-    public partial class ShipTargetedEvent
-    {
-        public static ShipTargetedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ShipTargetedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -76,9 +69,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ShipTargetedEvent> ShipTargetedEvent;
 
-        internal void InvokeShipTargetedEvent(ShipTargetedEvent arg)
-        {
-            ShipTargetedEvent?.Invoke(this, arg);
-        }
     }
 }

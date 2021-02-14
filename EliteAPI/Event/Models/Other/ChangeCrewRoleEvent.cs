@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ChangeCrewRoleEvent : EventBase
+    public class ChangeCrewRoleEvent : EventBase<ChangeCrewRoleEvent>
     {
         internal ChangeCrewRoleEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Role { get; private set; }
     }
 
-    public partial class ChangeCrewRoleEvent
-    {
-        public static ChangeCrewRoleEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ChangeCrewRoleEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ChangeCrewRoleEvent> ChangeCrewRoleEvent;
 
-        internal void InvokeChangeCrewRoleEvent(ChangeCrewRoleEvent arg)
-        {
-            ChangeCrewRoleEvent?.Invoke(this, arg);
-        }
     }
 }

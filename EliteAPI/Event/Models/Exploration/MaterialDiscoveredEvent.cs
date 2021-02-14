@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class MaterialDiscoveredEvent : EventBase
+    public class MaterialDiscoveredEvent : EventBase<MaterialDiscoveredEvent>
     {
         internal MaterialDiscoveredEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long DiscoveryNumber { get; private set; }
     }
 
-    public partial class MaterialDiscoveredEvent
-    {
-        public static MaterialDiscoveredEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MaterialDiscoveredEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MaterialDiscoveredEvent> MaterialDiscoveredEvent;
 
-        internal void InvokeMaterialDiscoveredEvent(MaterialDiscoveredEvent arg)
-        {
-            MaterialDiscoveredEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class PowerplaySalaryEvent : EventBase
+    public class PowerplaySalaryEvent : EventBase<PowerplaySalaryEvent>
     {
         internal PowerplaySalaryEvent() { }
 
@@ -22,13 +22,6 @@ namespace EliteAPI.Event.Models
         public long Amount { get; private set; }
     }
 
-    public partial class PowerplaySalaryEvent
-    {
-        public static PowerplaySalaryEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PowerplaySalaryEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -37,9 +30,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<PowerplaySalaryEvent> PowerplaySalaryEvent;
 
-        internal void InvokePowerplaySalaryEvent(PowerplaySalaryEvent arg)
-        {
-            PowerplaySalaryEvent?.Invoke(this, arg);
-        }
     }
 }

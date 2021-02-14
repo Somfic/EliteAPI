@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ShieldStateEvent : EventBase
+    public class ShieldStateEvent : EventBase<ShieldStateEvent>
     {
         internal ShieldStateEvent() { }
 
@@ -19,13 +19,6 @@ namespace EliteAPI.Event.Models
         public bool ShieldsUp { get; private set; }
     }
 
-    public partial class ShieldStateEvent
-    {
-        public static ShieldStateEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ShieldStateEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -34,9 +27,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ShieldStateEvent> ShieldStateEvent;
 
-        internal void InvokeShieldStateEvent(ShieldStateEvent arg)
-        {
-            ShieldStateEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class NpcCrewRankEvent : EventBase
+    public class NpcCrewRankEvent : EventBase<NpcCrewRankEvent>
     {
         internal NpcCrewRankEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public int RankCombat { get; private set; }
     }
 
-    public partial class NpcCrewRankEvent
-    {
-        public static NpcCrewRankEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<NpcCrewRankEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<NpcCrewRankEvent> NpcCrewRankEvent;
 
-        internal void InvokeNpcCrewRankEvent(NpcCrewRankEvent arg)
-        {
-            NpcCrewRankEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class RedeemVoucherEvent : EventBase
+    public class RedeemVoucherEvent : EventBase<RedeemVoucherEvent>
     {
         internal RedeemVoucherEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string Faction { get; private set; }
     }
 
-    public partial class RedeemVoucherEvent
-    {
-        public static RedeemVoucherEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<RedeemVoucherEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<RedeemVoucherEvent> RedeemVoucherEvent;
 
-        internal void InvokeRedeemVoucherEvent(RedeemVoucherEvent arg)
-        {
-            RedeemVoucherEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -29,17 +29,17 @@ namespace EliteAPI.Event.Processor
             return Task.CompletedTask;
         }
 
-        public Task InvokeHandler(EventBase eventBase, bool isWhileCatchingUp)
+        public Task InvokeHandler(IEvent gameEvent, bool isWhileCatchingUp)
         {
             try
             {
-                _log.LogTrace("Invoking AllEvent for {event}", eventBase.Event);
-                _eventHandler.InvokeAllEvent(eventBase);
+                _log.LogTrace("Invoking AllEvent for {event}", gameEvent.Event);
+                _eventHandler.InvokeAllEvent(gameEvent);
                 return Task.CompletedTask;
             }
             catch (Exception ex)
             {
-                _log.LogError(ex, "Could not invoke method for {event}", eventBase.Event);
+                _log.LogError(ex, "Could not invoke method for {event}", gameEvent.Event);
                 return Task.CompletedTask;
             }
         }

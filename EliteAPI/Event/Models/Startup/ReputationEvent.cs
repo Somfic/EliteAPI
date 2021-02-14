@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class ReputationEvent : EventBase
+    public class ReputationEvent : EventBase<ReputationEvent>
     {
         internal ReputationEvent() { }
 
@@ -28,13 +28,6 @@ namespace EliteAPI.Event.Models
         public double Alliance { get; private set; }
     }
 
-    public partial class ReputationEvent
-    {
-        public static ReputationEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ReputationEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -43,9 +36,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<ReputationEvent> ReputationEvent;
 
-        internal void InvokeReputationEvent(ReputationEvent arg)
-        {
-            ReputationEvent?.Invoke(this, arg);
-        }
     }
 }

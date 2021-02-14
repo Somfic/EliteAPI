@@ -11,18 +11,11 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class NavRouteEvent : EventBase
+    public class NavRouteEvent : EventBase<NavRouteEvent>
     {
         internal NavRouteEvent() { }
     }
 
-    public partial class NavRouteEvent
-    {
-        public static NavRouteEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<NavRouteEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -32,9 +25,5 @@ namespace EliteAPI.Event.Handler
         [Obsolete("Use IEliteDangerousAPI.NavRoute.OnChange instead")]
         public event EventHandler<NavRouteEvent> NavRouteEvent;
 
-        internal void InvokeNavRouteEvent(NavRouteEvent arg)
-        {
-            NavRouteEvent?.Invoke(this, arg);
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class MissionRedirectedEvent : EventBase
+    public class MissionRedirectedEvent : EventBase<MissionRedirectedEvent>
     {
         internal MissionRedirectedEvent() { }
 
@@ -34,13 +34,6 @@ namespace EliteAPI.Event.Models
         public string OldDestinationSystem { get; private set; }
     }
 
-    public partial class MissionRedirectedEvent
-    {
-        public static MissionRedirectedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MissionRedirectedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -49,9 +42,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<MissionRedirectedEvent> MissionRedirectedEvent;
 
-        internal void InvokeMissionRedirectedEvent(MissionRedirectedEvent arg)
-        {
-            MissionRedirectedEvent?.Invoke(this, arg);
-        }
     }
 }

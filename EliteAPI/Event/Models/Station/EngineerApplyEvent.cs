@@ -11,7 +11,7 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public partial class EngineerApplyEvent : EventBase
+    public class EngineerApplyEvent : EventBase<EngineerApplyEvent>
     {
         internal EngineerApplyEvent() { }
 
@@ -25,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long Level { get; private set; }
     }
 
-    public partial class EngineerApplyEvent
-    {
-        public static EngineerApplyEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<EngineerApplyEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler
@@ -40,9 +33,5 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<EngineerApplyEvent> EngineerApplyEvent;
 
-        internal void InvokeEngineerApplyEvent(EngineerApplyEvent arg)
-        {
-            EngineerApplyEvent?.Invoke(this, arg);
-        }
     }
 }

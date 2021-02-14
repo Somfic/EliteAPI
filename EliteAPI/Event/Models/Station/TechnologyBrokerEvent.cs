@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class TechnologyBrokerEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class TechnologyBrokerEvent : EventBase<TechnologyBrokerEvent>
     {
         internal TechnologyBrokerEvent() { }
 
@@ -27,13 +31,11 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Materials")] //todo: own class
         public IReadOnlyList<CommodityInfo> Materials { get; internal set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ItemsUnlockedInfo
         {
-            internal ItemsUnlockedInfo()
-            {
-                
-            }
-            
+            internal ItemsUnlockedInfo() { }
+
             [JsonProperty("Name")]
             public string Name { get; internal set; }
 
@@ -41,13 +43,11 @@ namespace EliteAPI.Event.Models
             public string NameLocalised { get; internal set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CommodityInfo
         {
-            CommodityInfo()
-            {
-                
-            }
-            
+            private CommodityInfo() { }
+
             [JsonProperty("Name")]
             public string Name { get; internal set; }
 
@@ -62,13 +62,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class TechnologyBrokerEvent
-    {
-        public static TechnologyBrokerEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<TechnologyBrokerEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

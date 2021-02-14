@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class MarketSellEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class MarketSellEvent : EventBase<MarketSellEvent>
     {
         internal MarketSellEvent() { }
 
@@ -42,13 +46,6 @@ namespace EliteAPI.Event.Models
         public bool IsBlackMarket { get; private set; }
     }
 
-    public partial class MarketSellEvent
-    {
-        public static MarketSellEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MarketSellEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

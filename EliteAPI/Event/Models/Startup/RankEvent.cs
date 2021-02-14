@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class RankEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class RankEvent : EventBase<RankEvent>
     {
         internal RankEvent() { }
 
@@ -30,13 +34,6 @@ namespace EliteAPI.Event.Models
         public long Cqc { get; private set; }
     }
 
-    public partial class RankEvent
-    {
-        public static RankEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<RankEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

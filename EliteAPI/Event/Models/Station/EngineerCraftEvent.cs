@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class EngineerCraftEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class EngineerCraftEvent : EventBase<EngineerCraftEvent>
     {
         internal EngineerCraftEvent() { }
 
@@ -41,7 +45,8 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("ModifierInfos")]
         public IReadOnlyList<ModifierInfo> ModifierInfos { get; private set; }
-        
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class IngredientInfo
         {
             internal IngredientInfo() { }
@@ -56,6 +61,7 @@ namespace EliteAPI.Event.Models
             public string NameLocalised { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ModifierInfo
         {
             internal ModifierInfo() { }
@@ -74,13 +80,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class EngineerCraftEvent
-    {
-        public static EngineerCraftEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<EngineerCraftEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

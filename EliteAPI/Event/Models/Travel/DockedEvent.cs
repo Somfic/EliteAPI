@@ -6,11 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
 
-
-    public partial class DockedEvent : EventBase
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class DockedEvent : EventBase<DockedEvent>
     {
         internal DockedEvent() { }
 
@@ -59,6 +61,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("ActiveFine")]
         public bool ActiveFine { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class StationEconomyInfo
         {
             internal StationEconomyInfo() { }
@@ -73,6 +76,7 @@ namespace EliteAPI.Event.Models
             public double Proportion { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class StationFactionInfo
         {
             internal StationFactionInfo() { }
@@ -85,14 +89,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class DockedEvent
-    {
-        public static DockedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DockedEvent>(json);
-        }
-    }
-
 
 }
 
@@ -102,6 +98,7 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<DockedEvent> DockedEvent;
+        
         internal void InvokeDockedEvent(DockedEvent arg)
         {
             DockedEvent?.Invoke(this, arg);

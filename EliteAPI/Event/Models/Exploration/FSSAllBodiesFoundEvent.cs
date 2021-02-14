@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class FssAllBodiesFoundEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class FssAllBodiesFoundEvent : EventBase<FssAllBodiesFoundEvent>
     {
         internal FssAllBodiesFoundEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long Count { get; private set; }
     }
 
-    public partial class FssAllBodiesFoundEvent
-    {
-        public static FssAllBodiesFoundEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FssAllBodiesFoundEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

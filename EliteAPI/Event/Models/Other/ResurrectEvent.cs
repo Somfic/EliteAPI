@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ResurrectEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ResurrectEvent : EventBase<ResurrectEvent>
     {
         internal ResurrectEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public bool Bankrupt { get; private set; }
     }
 
-    public partial class ResurrectEvent
-    {
-        public static ResurrectEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ResurrectEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

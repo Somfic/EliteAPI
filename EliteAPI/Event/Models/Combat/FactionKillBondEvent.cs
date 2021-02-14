@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class FactionKillBondEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class FactionKillBondEvent : EventBase<FactionKillBondEvent>
     {
         internal FactionKillBondEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string VictimFaction { get; private set; }
     }
 
-    public partial class FactionKillBondEvent
-    {
-        public static FactionKillBondEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FactionKillBondEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

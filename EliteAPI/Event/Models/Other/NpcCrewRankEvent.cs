@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class NpcCrewRankEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class NpcCrewRankEvent : EventBase<NpcCrewRankEvent>
     {
         internal NpcCrewRankEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public int RankCombat { get; private set; }
     }
 
-    public partial class NpcCrewRankEvent
-    {
-        public static NpcCrewRankEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<NpcCrewRankEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

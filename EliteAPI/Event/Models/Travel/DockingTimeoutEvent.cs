@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class DockingTimeoutEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class DockingTimeoutEvent : EventBase<DockingTimeoutEvent>
     {
         internal DockingTimeoutEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string StationName { get; private set; }
     }
 
-    public partial class DockingTimeoutEvent
-    {
-        public static DockingTimeoutEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DockingTimeoutEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class RestockVehicleEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class RestockVehicleEvent : EventBase<RestockVehicleEvent>
     {
         internal RestockVehicleEvent() { }
 
@@ -24,13 +28,6 @@ namespace EliteAPI.Event.Models
         public long Count { get; private set; }
     }
 
-    public partial class RestockVehicleEvent
-    {
-        public static RestockVehicleEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<RestockVehicleEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

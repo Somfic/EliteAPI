@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ReservoirReplenishedEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ReservoirReplenishedEvent : EventBase<ReservoirReplenishedEvent>
     {
         internal ReservoirReplenishedEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public double FuelReservoir { get; private set; }
     }
 
-    public partial class ReservoirReplenishedEvent
-    {
-        public static ReservoirReplenishedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ReservoirReplenishedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

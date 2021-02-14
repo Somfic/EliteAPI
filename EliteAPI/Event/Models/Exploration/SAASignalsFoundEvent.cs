@@ -6,11 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
 
-
-    public partial class SaaSignalsFoundEvent : EventBase
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SaaSignalsFoundEvent : EventBase<SaaSignalsFoundEvent>
     {
         internal SaaSignalsFoundEvent() { }
 
@@ -27,6 +29,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<Signal> Signals { get; private set; }
     }
 
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Signal
     {
         internal Signal() { }
@@ -41,14 +44,6 @@ namespace EliteAPI.Event.Models
         public string TypeLocalised { get; private set; }
     }
 
-    public partial class SaaSignalsFoundEvent
-    {
-        public static SaaSignalsFoundEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SaaSignalsFoundEvent>(json);
-        }
-    }
-
 
 }
 
@@ -58,6 +53,7 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<SaaSignalsFoundEvent> SaaSignalsFoundEvent;
+        
         internal void InvokeSaaSignalsFoundEvent(SaaSignalsFoundEvent arg)
         {
             SaaSignalsFoundEvent?.Invoke(this, arg);

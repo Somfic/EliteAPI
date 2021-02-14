@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class UnderAttackEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class UnderAttackEvent : EventBase<UnderAttackEvent>
     {
         internal UnderAttackEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Target { get; private set; }
     }
 
-    public partial class UnderAttackEvent
-    {
-        public static UnderAttackEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<UnderAttackEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

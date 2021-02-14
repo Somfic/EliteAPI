@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class LaunchSrvEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class LaunchSrvEvent : EventBase<LaunchSrvEvent>
     {
         internal LaunchSrvEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public bool PlayerControlled { get; private set; }
     }
 
-    public partial class LaunchSrvEvent
-    {
-        public static LaunchSrvEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LaunchSrvEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

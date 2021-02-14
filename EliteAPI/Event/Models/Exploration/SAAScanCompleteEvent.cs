@@ -5,15 +5,19 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class SaaScanCompleteEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SaaScanCompleteEvent : EventBase<SaaScanCompleteEvent>
     {
         internal SaaScanCompleteEvent() { }
 
         [JsonProperty("BodyName")]
         public string BodyName { get; private set; }
-        
+
         [JsonProperty("SystemAddress")]
         public string SystemAddress { get; private set; }
 
@@ -27,13 +31,6 @@ namespace EliteAPI.Event.Models
         public long EfficiencyTarget { get; private set; }
     }
 
-    public partial class SaaScanCompleteEvent
-    {
-        public static SaaScanCompleteEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SaaScanCompleteEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

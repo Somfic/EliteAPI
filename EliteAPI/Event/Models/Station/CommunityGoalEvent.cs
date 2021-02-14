@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CommunityGoalEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CommunityGoalEvent : EventBase<CommunityGoalEvent>
     {
         internal CommunityGoalEvent() { }
 
@@ -16,6 +20,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<CurrentGoalInfo> CurrentGoalInfos { get; private set; }
 
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CurrentGoalInfo
         {
             internal CurrentGoalInfo() { }
@@ -60,6 +65,7 @@ namespace EliteAPI.Event.Models
             public long Bonus { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class TopTierInfo
         {
             internal TopTierInfo() { }
@@ -72,13 +78,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class CommunityGoalEvent
-    {
-        public static CommunityGoalEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CommunityGoalEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

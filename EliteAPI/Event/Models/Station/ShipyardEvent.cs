@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ShipyardEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ShipyardEvent : EventBase<ShipyardEvent>
     {
         internal ShipyardEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string StarSystem { get; private set; }
     }
 
-    public partial class ShipyardEvent
-    {
-        public static ShipyardEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ShipyardEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

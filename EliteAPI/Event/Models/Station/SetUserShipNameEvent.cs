@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class SetUserShipNameEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SetUserShipNameEvent : EventBase<SetUserShipNameEvent>
     {
         internal SetUserShipNameEvent() { }
 
@@ -24,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string UserShipId { get; private set; }
     }
 
-    public partial class SetUserShipNameEvent
-    {
-        public static SetUserShipNameEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SetUserShipNameEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

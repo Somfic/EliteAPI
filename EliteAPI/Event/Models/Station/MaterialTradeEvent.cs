@@ -5,11 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
 
-
-    public partial class MaterialTradeEvent : EventBase
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class MaterialTradeEvent : EventBase<MaterialTradeEvent>
     {
         internal MaterialTradeEvent() { }
 
@@ -26,6 +28,7 @@ namespace EliteAPI.Event.Models
         public Paid Received { get; private set; }
     }
 
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Paid
     {
         internal Paid() { }
@@ -43,14 +46,6 @@ namespace EliteAPI.Event.Models
         public long Quantity { get; private set; }
     }
 
-    public partial class MaterialTradeEvent
-    {
-        public static MaterialTradeEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MaterialTradeEvent>(json);
-        }
-    }
-
 
 }
 
@@ -60,6 +55,7 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<MaterialTradeEvent> MaterialTradeEvent;
+        
         internal void InvokeMaterialTradeEvent(MaterialTradeEvent arg)
         {
             MaterialTradeEvent?.Invoke(this, arg);

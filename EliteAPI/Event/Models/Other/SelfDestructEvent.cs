@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class SelfDestructEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SelfDestructEvent : EventBase<SelfDestructEvent>
     {
         internal SelfDestructEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Event { get; private set; }
     }
 
-    public partial class SelfDestructEvent
-    {
-        public static SelfDestructEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SelfDestructEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

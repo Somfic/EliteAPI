@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class FsdJumpEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class FsdJumpEvent : EventBase<FsdJumpEvent>
     {
         internal FsdJumpEvent() { }
 
@@ -74,10 +78,11 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Factions")]
         public IReadOnlyList<FactionInfo> Factions { get; private set; }
-        
+
         [JsonProperty("Conflicts")]
         public IReadOnlyList<ConflictInfo> Conflicts { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class FactionInfo
         {
             internal FactionInfo() { }
@@ -110,11 +115,12 @@ namespace EliteAPI.Event.Models
             public IReadOnlyList<PendingStateInfo> PendingStates { get; private set; }
             [JsonProperty("RecoveringStates", NullValueHandling = NullValueHandling.Ignore)]
             public IReadOnlyList<RecoveringStateInfo> RecoveringStates { get; private set; }
-            
+
             [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
             public IReadOnlyList<ActiveStateInfo> ActiveStates { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ActiveStateInfo
         {
             internal ActiveStateInfo() { }
@@ -122,40 +128,44 @@ namespace EliteAPI.Event.Models
             [JsonProperty("State")]
             public string State { get; private set; }
         }
-        
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class PendingStateInfo
         {
             internal PendingStateInfo() { }
 
             [JsonProperty("State")]
             public string State { get; private set; }
-            
+
             [JsonProperty("Trend")]
             public double Trend { get; private set; }
         }
-        
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class RecoveringStateInfo
         {
             internal RecoveringStateInfo() { }
 
             [JsonProperty("State")]
             public string State { get; private set; }
-            
+
             [JsonProperty("Trend")]
             public double Trend { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class SystemFactionInfo
         {
             internal SystemFactionInfo() { }
 
             [JsonProperty("Name")]
             public string Name { get; private set; }
-            
+
             [JsonProperty("FactionState")]
-            public string FactionState { get; private set;}
+            public string FactionState { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ConflictInfo
         {
             [JsonProperty("WarType")]
@@ -171,6 +181,7 @@ namespace EliteAPI.Event.Models
             public ConflictFactionInfo Faction2 { get; set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ConflictFactionInfo
         {
             [JsonProperty("Name")]
@@ -184,13 +195,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class FsdJumpEvent
-    {
-        public static FsdJumpEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FsdJumpEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

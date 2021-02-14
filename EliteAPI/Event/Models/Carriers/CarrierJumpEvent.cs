@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CarrierJumpEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CarrierJumpEvent : EventBase<CarrierJumpEvent>
     {
         internal CarrierJumpEvent() { }
 
@@ -92,7 +96,8 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("BodyType")]
         public string BodyType { get; private set; }
-        
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class StationEconomyInfo
         {
             internal StationEconomyInfo() { }
@@ -107,6 +112,7 @@ namespace EliteAPI.Event.Models
             public double Proportion { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class StationFactionInfo
         {
             internal StationFactionInfo() { }
@@ -116,13 +122,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class CarrierJumpEvent
-    {
-        public static CarrierJumpEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierJumpEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

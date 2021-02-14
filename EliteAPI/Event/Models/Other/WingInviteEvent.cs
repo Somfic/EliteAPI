@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class WingInviteEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class WingInviteEvent : EventBase<WingInviteEvent>
     {
         internal WingInviteEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Name { get; private set; }
     }
 
-    public partial class WingInviteEvent
-    {
-        public static WingInviteEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<WingInviteEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

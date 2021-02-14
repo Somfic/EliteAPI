@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CollectCargoEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CollectCargoEvent : EventBase<CollectCargoEvent>
     {
         internal CollectCargoEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public bool Stolen { get; private set; }
     }
 
-    public partial class CollectCargoEvent
-    {
-        public static CollectCargoEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CollectCargoEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

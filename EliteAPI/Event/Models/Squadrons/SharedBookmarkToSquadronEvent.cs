@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class SharedBookmarkToSquadronEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SharedBookmarkToSquadronEvent : EventBase<SharedBookmarkToSquadronEvent>
     {
         internal SharedBookmarkToSquadronEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Name { get; private set; }
     }
 
-    public partial class SharedBookmarkToSquadronEvent
-    {
-        public static SharedBookmarkToSquadronEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SharedBookmarkToSquadronEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

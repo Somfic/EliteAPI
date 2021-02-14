@@ -5,7 +5,7 @@ using EliteAPI.Status.Ship;
 
 namespace EliteAPI.Status.Models.Abstractions
 {
-    [Obsolete("Use IShip instead", false)]
+    [Obsolete("Use IShip instead", true)]
     public interface IShipStatus : IStatus
     {
         StatusProperty<ShipFlag> Flags { get; }

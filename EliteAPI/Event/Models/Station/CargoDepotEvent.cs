@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CargoDepotEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CargoDepotEvent : EventBase<CargoDepotEvent>
     {
         internal CargoDepotEvent() { }
 
@@ -45,13 +49,6 @@ namespace EliteAPI.Event.Models
         public double Progress { get; internal set; }
     }
 
-    public partial class CargoDepotEvent
-    {
-        public static CargoDepotEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CargoDepotEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

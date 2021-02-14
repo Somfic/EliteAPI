@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class EngineerProgressEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class EngineerProgressEvent : EventBase<EngineerProgressEvent>
     {
         internal EngineerProgressEvent() { }
 
@@ -16,6 +20,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<Engineer> Engineers { get; private set; }
     }
 
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Engineer
     {
         internal Engineer() { }
@@ -38,13 +43,6 @@ namespace EliteAPI.Event.Models
         ///feiohjriohqoiqrqioqioqewoodbwqdqidijpfqvopojfewnfnqoqp2opo2po22o2o2o
     }
 
-    public partial class EngineerProgressEvent
-    {
-        public static EngineerProgressEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<EngineerProgressEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

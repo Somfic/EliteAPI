@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ModuleSellRemoteEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ModuleSellRemoteEvent : EventBase<ModuleSellRemoteEvent>
     {
         internal ModuleSellRemoteEvent() { }
 
@@ -33,13 +37,6 @@ namespace EliteAPI.Event.Models
         public string ShipId { get; private set; }
     }
 
-    public partial class ModuleSellRemoteEvent
-    {
-        public static ModuleSellRemoteEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ModuleSellRemoteEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

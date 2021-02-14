@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class PayFinesEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class PayFinesEvent : EventBase<PayFinesEvent>
     {
         internal PayFinesEvent() { }
 
@@ -24,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string ShipId { get; private set; }
     }
 
-    public partial class PayFinesEvent
-    {
-        public static PayFinesEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PayFinesEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

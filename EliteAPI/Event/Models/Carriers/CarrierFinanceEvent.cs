@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CarrierFinanceEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CarrierFinanceEvent : EventBase<CarrierFinanceEvent>
     {
         internal CarrierFinanceEvent() { }
 
@@ -30,13 +34,6 @@ namespace EliteAPI.Event.Models
         public int ReservePercent { get; private set; }
     }
 
-    public partial class CarrierFinanceEvent
-    {
-        public static CarrierFinanceEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierFinanceEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

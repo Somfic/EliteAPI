@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class HullDamageEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class HullDamageEvent : EventBase<HullDamageEvent>
     {
         internal HullDamageEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public bool Fighter { get; private set; }
     }
 
-    public partial class HullDamageEvent
-    {
-        public static HullDamageEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<HullDamageEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

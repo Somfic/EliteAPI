@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class PayLegacyFinesEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class PayLegacyFinesEvent : EventBase<PayLegacyFinesEvent>
     {
         internal PayLegacyFinesEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public double BrokerPercentage { get; private set; }
     }
 
-    public partial class PayLegacyFinesEvent
-    {
-        public static PayLegacyFinesEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PayLegacyFinesEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

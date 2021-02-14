@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ScientificResearchEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ScientificResearchEvent : EventBase<ScientificResearchEvent>
     {
         internal ScientificResearchEvent() { }
 
@@ -24,13 +28,6 @@ namespace EliteAPI.Event.Models
         public long Count { get; internal set; }
     }
 
-    public partial class ScientificResearchEvent
-    {
-        public static ScientificResearchEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ScientificResearchEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CarrierShipPackEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CarrierShipPackEvent : EventBase<CarrierShipPackEvent>
     {
         internal CarrierShipPackEvent() { }
 
@@ -25,18 +29,11 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Cost")]
         public long Cost { get; private set; }
-        
+
         [JsonProperty("Refund")]
         public long Refund { get; private set; }
     }
 
-    public partial class CarrierShipPackEvent
-    {
-        public static CarrierShipPackEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierShipPackEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

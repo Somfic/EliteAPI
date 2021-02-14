@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class DockFighterEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class DockFighterEvent : EventBase<DockFighterEvent>
     {
         internal DockFighterEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Id { get; private set; }
     }
 
-    public partial class DockFighterEvent
-    {
-        public static DockFighterEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DockFighterEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CarrierTradeOrderEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CarrierTradeOrderEvent : EventBase<CarrierTradeOrderEvent>
     {
         internal CarrierTradeOrderEvent() { }
 
@@ -19,16 +23,16 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Commodity")]
         public string Commodity { get; private set; }
-        
+
         [JsonProperty("Commodity_Localised")]
         public string CommodityLocalised { get; private set; }
 
         [JsonProperty("PurchaseOrder")]
         public int PurchaseOrder { get; private set; }
-        
+
         [JsonProperty("SaleOrder")]
         public int SaleOrder { get; private set; }
-        
+
         [JsonProperty("CancelTrade")]
         public bool CancelTrade { get; private set; }
 
@@ -36,13 +40,6 @@ namespace EliteAPI.Event.Models
         public long Price { get; private set; }
     }
 
-    public partial class CarrierTradeOrderEvent
-    {
-        public static CarrierTradeOrderEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierTradeOrderEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

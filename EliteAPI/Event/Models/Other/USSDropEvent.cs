@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class UssDropEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class UssDropEvent : EventBase<UssDropEvent>
     {
         internal UssDropEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long UssThreat { get; private set; }
     }
 
-    public partial class UssDropEvent
-    {
-        public static UssDropEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<UssDropEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

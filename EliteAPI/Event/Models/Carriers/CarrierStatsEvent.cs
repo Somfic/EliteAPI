@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CarrierStatsEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CarrierStatsEvent : EventBase<CarrierStatsEvent>
     {
         internal CarrierStatsEvent() { }
 
@@ -49,11 +53,24 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<CrewInfo> Crew { get; private set; }
 
         [JsonProperty("ShipPacks")]
-        public IReadOnlyList<object> ShipPacks { get; private set; }
+        public IReadOnlyList<PackInfo> ShipPacks { get; private set; }
 
         [JsonProperty("ModulePacks")]
-        public IReadOnlyList<object> ModulePacks { get; private set; }
+        public IReadOnlyList<PackInfo> ModulePacks { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class PackInfo
+        {
+            internal PackInfo() { }
+
+            [JsonProperty("PackTheme")]
+            public string Theme { get; private set; }
+
+            [JsonProperty("PackTier")]
+            public string Tier { get; private set; }
+        }
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CrewInfo
         {
             internal CrewInfo() { }
@@ -71,6 +88,7 @@ namespace EliteAPI.Event.Models
             public string CrewName { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class FinanceInfo
         {
             internal FinanceInfo() { }
@@ -91,6 +109,7 @@ namespace EliteAPI.Event.Models
             public long TaxRate { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class SpaceUsageInfo
         {
             internal SpaceUsageInfo() { }
@@ -118,13 +137,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class CarrierStatsEvent
-    {
-        public static CarrierStatsEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierStatsEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

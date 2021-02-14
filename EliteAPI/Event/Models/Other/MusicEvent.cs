@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class MusicEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class MusicEvent : EventBase<MusicEvent>
     {
         internal MusicEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string MusicTrack { get; private set; }
     }
 
-    public partial class MusicEvent
-    {
-        public static MusicEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MusicEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

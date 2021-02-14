@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ModuleStoreEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ModuleStoreEvent : EventBase<ModuleStoreEvent>
     {
         internal ModuleStoreEvent() { }
 
@@ -30,13 +34,6 @@ namespace EliteAPI.Event.Models
         public string EngineerModifications { get; private set; }
     }
 
-    public partial class ModuleStoreEvent
-    {
-        public static ModuleStoreEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ModuleStoreEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

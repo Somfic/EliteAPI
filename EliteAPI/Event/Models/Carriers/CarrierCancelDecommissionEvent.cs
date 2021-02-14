@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CarrierCancelDecommissionEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CarrierCancelDecommissionEvent : EventBase<CarrierCancelDecommissionEvent>
     {
         internal CarrierCancelDecommissionEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string CarrierId { get; private set; }
     }
 
-    public partial class CarrierCancelDecommissionEvent
-    {
-        public static CarrierCancelDecommissionEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierCancelDecommissionEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

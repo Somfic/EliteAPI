@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class FsdTargetEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class FsdTargetEvent : EventBase<FsdTargetEvent>
     {
         internal FsdTargetEvent() { }
 
@@ -19,18 +23,11 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("StarClass")]
         public string StarClass { get; private set; }
-        
+
         [JsonProperty("RemainingJumpsInRoute")]
         public int RemainingJumpsInRoute { get; private set; }
     }
 
-    public partial class FsdTargetEvent
-    {
-        public static FsdTargetEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FsdTargetEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

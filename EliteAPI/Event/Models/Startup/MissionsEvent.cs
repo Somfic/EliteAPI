@@ -6,29 +6,44 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class MissionsEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class MissionsEvent : EventBase<MissionsEvent>
     {
         internal MissionsEvent() { }
 
         [JsonProperty("Active")]
-        public IReadOnlyList<object> Active { get; private set; }
+        public IReadOnlyList<MissionInfo> Active { get; private set; }
 
         [JsonProperty("Failed")]
-        public IReadOnlyList<object> Failed { get; private set; }
+        public IReadOnlyList<MissionInfo> Failed { get; private set; }
 
         [JsonProperty("Complete")]
-        public IReadOnlyList<object> Complete { get; private set; }
-    }
+        public IReadOnlyList<MissionInfo> Complete { get; private set; }
 
-    public partial class MissionsEvent
-    {
-        public static MissionsEvent FromJson(string json)
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class MissionInfo
         {
-            return JsonConvert.DeserializeObject<MissionsEvent>(json);
+            internal MissionInfo() { }
+
+            [JsonProperty("MissionID")]
+            public string MissionId { get; private set; }
+
+            [JsonProperty("Name")]
+            public string Name { get; private set; }
+
+            [JsonProperty("PassengerMission")]
+            public bool IsPassengerMission { get; private set; }
+
+            [JsonProperty("Expires")]
+            public long Expires { get; private set; }
         }
     }
+
 }
 
 namespace EliteAPI.Event.Handler

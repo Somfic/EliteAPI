@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class SellExplorationDataEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SellExplorationDataEvent : EventBase<SellExplorationDataEvent>
     {
         internal SellExplorationDataEvent() { }
 
@@ -16,7 +20,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<string> Systems { get; private set; }
 
         [JsonProperty("Discovered")]
-        public IReadOnlyList<object> Discovered { get; private set; }
+        public IReadOnlyList<string> Discovered { get; private set; }
 
         [JsonProperty("BaseValue")]
         public long BaseValue { get; private set; }
@@ -25,13 +29,6 @@ namespace EliteAPI.Event.Models
         public long Bonus { get; private set; }
     }
 
-    public partial class SellExplorationDataEvent
-    {
-        public static SellExplorationDataEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SellExplorationDataEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

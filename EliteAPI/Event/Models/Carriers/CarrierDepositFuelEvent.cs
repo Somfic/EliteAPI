@@ -5,11 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
 
-
-    public partial class CarrierDepositFuelEvent : EventBase
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CarrierDepositFuelEvent : EventBase<CarrierDepositFuelEvent>
     {
         internal CarrierDepositFuelEvent() { }
 
@@ -23,14 +25,6 @@ namespace EliteAPI.Event.Models
         public int Total { get; private set; }
     }
 
-    public partial class CarrierDepositFuelEvent
-    {
-        public static CarrierDepositFuelEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierDepositFuelEvent>(json);
-        }
-    }
-
 
 }
 
@@ -40,6 +34,7 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<CarrierDepositFuelEvent> CarrierDepositFuelEvent;
+        
         internal void InvokeCarrierDepositFuelEvent(CarrierDepositFuelEvent arg)
         {
             CarrierDepositFuelEvent?.Invoke(this, arg);

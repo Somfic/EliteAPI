@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class PromotionEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class PromotionEvent : EventBase<PromotionEvent>
     {
         internal PromotionEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public long Empire { get; private set; }
     }
 
-    public partial class PromotionEvent
-    {
-        public static PromotionEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PromotionEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

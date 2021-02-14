@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CargoEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CargoEvent : EventBase<CargoEvent>
     {
         internal CargoEvent() { }
 
@@ -21,13 +25,14 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Inventory")]
         public IReadOnlyList<CargoInfo> Inventory { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CargoInfo
         {
-            internal CargoInfo() {}
+            internal CargoInfo() { }
 
             [JsonProperty("Name")]
             public string Name { get; private set; }
-            
+
             [JsonProperty("Name_Localised")]
             public string NameLocalised { get; private set; }
 
@@ -37,18 +42,11 @@ namespace EliteAPI.Event.Models
             [JsonProperty("Stolen")]
             public bool Stolen { get; private set; }
 
-            [JsonProperty("MissionID")]
+            [JsonProperty("MissionID", NullValueHandling = NullValueHandling.Ignore)]
             public string MissionId { get; private set; }
         }
     }
 
-    public partial class CargoEvent
-    {
-        public static CargoEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CargoEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

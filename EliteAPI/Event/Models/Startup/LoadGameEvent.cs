@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class LoadGameEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class LoadGameEvent : EventBase<LoadGameEvent>
     {
         internal LoadGameEvent() { }
 
@@ -43,7 +47,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("StartLanded")]
         public bool StartLanded { get; private set; }
-        
+
         [JsonProperty("GameMode")]
         public string GameMode { get; private set; }
 
@@ -54,13 +58,6 @@ namespace EliteAPI.Event.Models
         public long Loan { get; private set; }
     }
 
-    public partial class LoadGameEvent
-    {
-        public static LoadGameEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LoadGameEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

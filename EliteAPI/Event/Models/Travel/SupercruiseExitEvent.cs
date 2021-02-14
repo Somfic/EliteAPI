@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class SupercruiseExitEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SupercruiseExitEvent : EventBase<SupercruiseExitEvent>
     {
         internal SupercruiseExitEvent() { }
 
@@ -27,13 +31,6 @@ namespace EliteAPI.Event.Models
         public string BodyType { get; private set; }
     }
 
-    public partial class SupercruiseExitEvent
-    {
-        public static SupercruiseExitEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SupercruiseExitEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

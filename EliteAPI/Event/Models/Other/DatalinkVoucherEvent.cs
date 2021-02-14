@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class DatalinkVoucherEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class DatalinkVoucherEvent : EventBase<DatalinkVoucherEvent>
     {
         internal DatalinkVoucherEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string PayeeFaction { get; private set; }
     }
 
-    public partial class DatalinkVoucherEvent
-    {
-        public static DatalinkVoucherEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DatalinkVoucherEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

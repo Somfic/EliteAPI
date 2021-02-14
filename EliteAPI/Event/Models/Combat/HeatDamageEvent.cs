@@ -3,22 +3,17 @@ using System;
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 
-using Newtonsoft.Json;
+using ProtoBuf;
 
 namespace EliteAPI.Event.Models
 {
-    public partial class HeatDamageEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class HeatDamageEvent : EventBase<HeatDamageEvent>
     {
         internal HeatDamageEvent() { }
     }
 
-    public partial class HeatDamageEvent
-    {
-        public static HeatDamageEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<HeatDamageEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

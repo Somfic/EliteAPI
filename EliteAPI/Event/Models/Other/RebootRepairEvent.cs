@@ -6,23 +6,20 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class RebootRepairEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class RebootRepairEvent : EventBase<RebootRepairEvent>
     {
         internal RebootRepairEvent() { }
 
         [JsonProperty("Modules")]
-        public IReadOnlyList<object> Modules { get; private set; }
+        public IReadOnlyList<string> Modules { get; private set; }
     }
 
-    public partial class RebootRepairEvent
-    {
-        public static RebootRepairEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<RebootRepairEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

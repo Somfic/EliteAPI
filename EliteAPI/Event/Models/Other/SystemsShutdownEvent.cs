@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class SystemsShutdownEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SystemsShutdownEvent : EventBase<SystemsShutdownEvent>
     {
         internal SystemsShutdownEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Event { get; private set; }
     }
 
-    public partial class SystemsShutdownEvent
-    {
-        public static SystemsShutdownEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SystemsShutdownEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

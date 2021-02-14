@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class DatalinkScanEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class DatalinkScanEvent : EventBase<DatalinkScanEvent>
     {
         internal DatalinkScanEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string MessageLocalised { get; private set; }
     }
 
-    public partial class DatalinkScanEvent
-    {
-        public static DatalinkScanEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DatalinkScanEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

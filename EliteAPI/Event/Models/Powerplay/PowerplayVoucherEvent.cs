@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class PowerplayVoucherEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class PowerplayVoucherEvent : EventBase<PowerplayVoucherEvent>
     {
         internal PowerplayVoucherEvent() { }
 
@@ -19,13 +23,6 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<string> Systems { get; private set; }
     }
 
-    public partial class PowerplayVoucherEvent
-    {
-        public static PowerplayVoucherEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PowerplayVoucherEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

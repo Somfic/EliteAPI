@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class RepairDroneEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class RepairDroneEvent : EventBase<RepairDroneEvent>
     {
         internal RepairDroneEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public double HullRepaired { get; private set; }
     }
 
-    public partial class RepairDroneEvent
-    {
-        public static RepairDroneEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<RepairDroneEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

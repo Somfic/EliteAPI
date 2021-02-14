@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class FriendsEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class FriendsEvent : EventBase<FriendsEvent>
     {
         internal FriendsEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string Name { get; private set; }
     }
 
-    public partial class FriendsEvent
-    {
-        public static FriendsEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FriendsEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

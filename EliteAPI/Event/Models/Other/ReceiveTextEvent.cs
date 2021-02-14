@@ -5,15 +5,19 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ReceiveTextEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ReceiveTextEvent : EventBase<ReceiveTextEvent>
     {
         internal ReceiveTextEvent() { }
 
         [JsonProperty("From")]
         public string From { get; private set; }
-        
+
         [JsonProperty("From_Localised")]
         public string FromLocalised { get; private set; }
 
@@ -27,13 +31,6 @@ namespace EliteAPI.Event.Models
         public string Channel { get; private set; }
     }
 
-    public partial class ReceiveTextEvent
-    {
-        public static ReceiveTextEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ReceiveTextEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

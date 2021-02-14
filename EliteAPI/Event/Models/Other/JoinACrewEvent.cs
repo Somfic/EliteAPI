@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class JoinACrewEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class JoinACrewEvent : EventBase<JoinACrewEvent>
     {
         internal JoinACrewEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Captain { get; private set; }
     }
 
-    public partial class JoinACrewEvent
-    {
-        public static JoinACrewEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<JoinACrewEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

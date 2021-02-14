@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class PowerplaySalaryEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class PowerplaySalaryEvent : EventBase<PowerplaySalaryEvent>
     {
         internal PowerplaySalaryEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public long Amount { get; private set; }
     }
 
-    public partial class PowerplaySalaryEvent
-    {
-        public static PowerplaySalaryEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PowerplaySalaryEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

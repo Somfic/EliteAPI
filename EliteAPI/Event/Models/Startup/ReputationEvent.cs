@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ReputationEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ReputationEvent : EventBase<ReputationEvent>
     {
         internal ReputationEvent() { }
 
@@ -24,13 +28,6 @@ namespace EliteAPI.Event.Models
         public double Alliance { get; private set; }
     }
 
-    public partial class ReputationEvent
-    {
-        public static ReputationEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ReputationEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

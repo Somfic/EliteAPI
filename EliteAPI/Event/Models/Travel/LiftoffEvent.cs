@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class LiftoffEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class LiftoffEvent : EventBase<LiftoffEvent>
     {
         internal LiftoffEvent() { }
 
@@ -19,15 +23,14 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Longitude")]
         public double Longitude { get; private set; }
+
+        [JsonProperty("NearestDestination")]
+        public string NearestDestination { get; private set; }
+
+        [JsonProperty("NearestDestination_Localised")]
+        public string NearestDestinationLocalised { get; private set; }
     }
 
-    public partial class LiftoffEvent
-    {
-        public static LiftoffEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LiftoffEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

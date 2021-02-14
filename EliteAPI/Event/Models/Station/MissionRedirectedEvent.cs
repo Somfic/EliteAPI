@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class MissionRedirectedEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class MissionRedirectedEvent : EventBase<MissionRedirectedEvent>
     {
         internal MissionRedirectedEvent() { }
 
@@ -30,13 +34,6 @@ namespace EliteAPI.Event.Models
         public string OldDestinationSystem { get; private set; }
     }
 
-    public partial class MissionRedirectedEvent
-    {
-        public static MissionRedirectedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MissionRedirectedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

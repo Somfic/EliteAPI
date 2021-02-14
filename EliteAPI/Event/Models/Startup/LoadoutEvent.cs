@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class LoadoutEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class LoadoutEvent : EventBase<LoadoutEvent>
     {
         internal LoadoutEvent() { }
 
@@ -26,7 +30,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("HullValue")]
         public long HullValue { get; private set; }
-        
+
         [JsonProperty("ModulesValue")]
         public long ModulesValue { get; private set; }
 
@@ -53,7 +57,8 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Modules")]
         public IReadOnlyList<ModuleInfo> Modules { get; private set; }
-        
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class FuelCapacityInfo
         {
             internal FuelCapacityInfo() { }
@@ -65,6 +70,7 @@ namespace EliteAPI.Event.Models
             public double Reserve { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ModuleInfo
         {
             internal ModuleInfo() { }
@@ -94,6 +100,7 @@ namespace EliteAPI.Event.Models
             public EngineeringInfo Engineering { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class EngineeringInfo
         {
             internal EngineeringInfo() { }
@@ -120,6 +127,7 @@ namespace EliteAPI.Event.Models
             public IReadOnlyList<ModifierInfo> ModifierInfos { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ModifierInfo
         {
             internal ModifierInfo() { }
@@ -138,13 +146,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class LoadoutEvent
-    {
-        public static LoadoutEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LoadoutEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

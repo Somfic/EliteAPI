@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CarrierDockingPermissionEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CarrierDockingPermissionEvent : EventBase<CarrierDockingPermissionEvent>
     {
         internal CarrierDockingPermissionEvent() { }
 
@@ -16,18 +20,11 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("DockingAccess")]
         public string DockingAccess { get; private set; }
-        
+
         [JsonProperty("AllowNotorious")]
         public bool AllowNotorious { get; private set; }
     }
 
-    public partial class CarrierDockingPermissionEvent
-    {
-        public static CarrierDockingPermissionEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierDockingPermissionEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

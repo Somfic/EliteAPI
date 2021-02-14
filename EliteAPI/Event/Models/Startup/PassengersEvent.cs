@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class PassengersEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class PassengersEvent : EventBase<PassengersEvent>
     {
         internal PassengersEvent() { }
 
@@ -16,6 +20,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<Manifest> Manifest { get; private set; }
     }
 
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Manifest
     {
         internal Manifest() { }
@@ -36,13 +41,6 @@ namespace EliteAPI.Event.Models
         public long Count { get; private set; }
     }
 
-    public partial class PassengersEvent
-    {
-        public static PassengersEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PassengersEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

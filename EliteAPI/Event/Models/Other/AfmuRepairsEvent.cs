@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class AfmuRepairsEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class AfmuRepairsEvent : EventBase<AfmuRepairsEvent>
     {
         internal AfmuRepairsEvent() { }
 
@@ -24,13 +28,6 @@ namespace EliteAPI.Event.Models
         public double Health { get; private set; }
     }
 
-    public partial class AfmuRepairsEvent
-    {
-        public static AfmuRepairsEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<AfmuRepairsEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

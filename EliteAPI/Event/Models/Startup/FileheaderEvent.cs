@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class FileheaderEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class FileheaderEvent : EventBase<FileheaderEvent>
     {
         internal FileheaderEvent() { }
 
@@ -24,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string Build { get; private set; }
     }
 
-    public partial class FileheaderEvent
-    {
-        public static FileheaderEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<FileheaderEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

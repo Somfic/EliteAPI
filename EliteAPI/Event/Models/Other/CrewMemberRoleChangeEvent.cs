@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CrewMemberRoleChangeEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CrewMemberRoleChangeEvent : EventBase<CrewMemberRoleChangeEvent>
     {
         internal CrewMemberRoleChangeEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string Role { get; private set; }
     }
 
-    public partial class CrewMemberRoleChangeEvent
-    {
-        public static CrewMemberRoleChangeEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CrewMemberRoleChangeEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

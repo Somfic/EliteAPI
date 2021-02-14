@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class UndockedEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class UndockedEvent : EventBase<UndockedEvent>
     {
         internal UndockedEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string MarketId { get; private set; }
     }
 
-    public partial class UndockedEvent
-    {
-        public static UndockedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<UndockedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

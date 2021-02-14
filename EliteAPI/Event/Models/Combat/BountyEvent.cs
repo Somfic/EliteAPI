@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class BountyEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class BountyEvent : EventBase<BountyEvent>
     {
         internal BountyEvent() { }
 
@@ -30,6 +34,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("SharedWithOthers")]
         public long SharedWithOthers { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class BountryReward
         {
             internal BountryReward() { }
@@ -42,13 +47,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class BountyEvent
-    {
-        public static BountyEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<BountyEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

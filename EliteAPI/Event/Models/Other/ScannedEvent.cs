@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ScannedEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ScannedEvent : EventBase<ScannedEvent>
     {
         internal ScannedEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string ScanType { get; private set; }
     }
 
-    public partial class ScannedEvent
-    {
-        public static ScannedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ScannedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

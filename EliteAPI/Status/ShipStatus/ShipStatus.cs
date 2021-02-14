@@ -6,7 +6,7 @@ using EliteAPI.Status.Ship;
 
 namespace EliteAPI.Status.ShipStatus
 {
-    [Obsolete("Use Ship instead", false)]
+    [Obsolete("Use Ship instead", true)]
     public class ShipStatus : IShipStatus
     {
         /// <inheritdoc />

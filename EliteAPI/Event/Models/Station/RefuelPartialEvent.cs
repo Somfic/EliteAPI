@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class RefuelPartialEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class RefuelPartialEvent : EventBase<RefuelPartialEvent>
     {
         internal RefuelPartialEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public double Amount { get; private set; }
     }
 
-    public partial class RefuelPartialEvent
-    {
-        public static RefuelPartialEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<RefuelPartialEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

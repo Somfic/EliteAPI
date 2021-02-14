@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class EngineerContributionEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class EngineerContributionEvent : EventBase<EngineerContributionEvent>
     {
         internal EngineerContributionEvent() { }
 
@@ -27,13 +31,6 @@ namespace EliteAPI.Event.Models
         public long TotalQuantity { get; internal set; }
     }
 
-    public partial class EngineerContributionEvent
-    {
-        public static EngineerContributionEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<EngineerContributionEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class SendTextEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SendTextEvent : EventBase<SendTextEvent>
     {
         internal SendTextEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public bool Sent { get; private set; }
     }
 
-    public partial class SendTextEvent
-    {
-        public static SendTextEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SendTextEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

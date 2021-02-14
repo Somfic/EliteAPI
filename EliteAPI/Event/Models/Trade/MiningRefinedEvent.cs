@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class MiningRefinedEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class MiningRefinedEvent : EventBase<MiningRefinedEvent>
     {
         internal MiningRefinedEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string TypeLocalised { get; private set; }
     }
 
-    public partial class MiningRefinedEvent
-    {
-        public static MiningRefinedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MiningRefinedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class EscapeInterdictionEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class EscapeInterdictionEvent : EventBase<EscapeInterdictionEvent>
     {
         internal EscapeInterdictionEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public bool IsPlayer { get; private set; }
     }
 
-    public partial class EscapeInterdictionEvent
-    {
-        public static EscapeInterdictionEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<EscapeInterdictionEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

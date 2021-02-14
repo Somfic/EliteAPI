@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class PowerplayFastTrackEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class PowerplayFastTrackEvent : EventBase<PowerplayFastTrackEvent>
     {
         internal PowerplayFastTrackEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public long Cost { get; private set; }
     }
 
-    public partial class PowerplayFastTrackEvent
-    {
-        public static PowerplayFastTrackEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PowerplayFastTrackEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

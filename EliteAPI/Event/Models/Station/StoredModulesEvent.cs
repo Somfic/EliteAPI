@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class StoredModulesEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class StoredModulesEvent : EventBase<StoredModulesEvent>
     {
         internal StoredModulesEvent() { }
 
@@ -25,6 +29,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<Item> Items { get; private set; }
     }
 
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Item
     {
         internal Item() { }
@@ -66,13 +71,6 @@ namespace EliteAPI.Event.Models
         public double? Quality { get; private set; }
     }
 
-    public partial class StoredModulesEvent
-    {
-        public static StoredModulesEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<StoredModulesEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

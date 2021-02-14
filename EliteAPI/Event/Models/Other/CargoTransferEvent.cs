@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CargoTransferEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CargoTransferEvent : EventBase<CargoTransferEvent>
     {
         internal CargoTransferEvent() { }
 
@@ -16,6 +20,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<Transfer> Transfers { get; private set; }
     }
 
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Transfer
     {
         internal Transfer() { }
@@ -30,13 +35,6 @@ namespace EliteAPI.Event.Models
         public string Direction { get; private set; }
     }
 
-    public partial class CargoTransferEvent
-    {
-        public static CargoTransferEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CargoTransferEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

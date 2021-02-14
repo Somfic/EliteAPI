@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CapShipBondEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CapShipBondEvent : EventBase<CapShipBondEvent>
     {
         internal CapShipBondEvent() { }
 
@@ -16,18 +20,11 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("RewardingFaction")]
         public string RewardingFaction { get; internal set; }
-        
+
         [JsonProperty("VictimFaction")]
         public string VictimFaction { get; internal set; }
     }
 
-    public partial class CapShipBondEvent
-    {
-        public static CapShipBondEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CapShipBondEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -6,11 +6,11 @@ namespace EliteAPI.Event.Handler
 {
     public partial class EventHandler
     {
-        public event EventHandler<EventBase> AllEvent;
+        public event EventHandler<IEvent> AllEvent;
 
-        internal void InvokeAllEvent(EventBase arg)
+        internal void InvokeAllEvent(IEvent gameEvent)
         {
-            AllEvent?.Invoke(this, arg);
+            AllEvent?.Invoke(this, gameEvent);
         }
     }
 }

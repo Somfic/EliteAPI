@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class RedeemVoucherEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class RedeemVoucherEvent : EventBase<RedeemVoucherEvent>
     {
         internal RedeemVoucherEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string Faction { get; private set; }
     }
 
-    public partial class RedeemVoucherEvent
-    {
-        public static RedeemVoucherEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<RedeemVoucherEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

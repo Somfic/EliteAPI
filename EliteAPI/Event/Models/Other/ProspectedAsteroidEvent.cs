@@ -6,11 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
 
-
-    public partial class ProspectedAsteroidEvent : EventBase
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ProspectedAsteroidEvent : EventBase<ProspectedAsteroidEvent>
     {
         internal ProspectedAsteroidEvent() { }
 
@@ -19,7 +21,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("MotherlodeMaterial")]
         public string Motherlode { get; private set; }
-        
+
         [JsonProperty("Content")]
         public string Content { get; private set; }
 
@@ -30,6 +32,7 @@ namespace EliteAPI.Event.Models
         public double Remaining { get; private set; }
     }
 
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Material
     {
         internal Material() { }
@@ -37,19 +40,11 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Name")]
         public string Name { get; private set; }
 
-        [JsonProperty("Name_Localised", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("Name_Localised")]
         public string NameLocalised { get; private set; }
 
         [JsonProperty("Proportion")]
         public double Proportion { get; private set; }
-    }
-
-    public partial class ProspectedAsteroidEvent
-    {
-        public static ProspectedAsteroidEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ProspectedAsteroidEvent>(json);
-        }
     }
 
 
@@ -61,6 +56,7 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<ProspectedAsteroidEvent> ProspectedAsteroidEvent;
+        
         internal void InvokeProspectedAsteroidEvent(ProspectedAsteroidEvent arg)
         {
             ProspectedAsteroidEvent?.Invoke(this, arg);

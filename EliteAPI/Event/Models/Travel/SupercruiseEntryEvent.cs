@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class SupercruiseEntryEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SupercruiseEntryEvent : EventBase<SupercruiseEntryEvent>
     {
         internal SupercruiseEntryEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string SystemAddress { get; private set; }
     }
 
-    public partial class SupercruiseEntryEvent
-    {
-        public static SupercruiseEntryEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SupercruiseEntryEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

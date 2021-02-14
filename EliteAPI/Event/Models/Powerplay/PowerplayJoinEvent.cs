@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class PowerplayJoinEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class PowerplayJoinEvent : EventBase<PowerplayJoinEvent>
     {
         internal PowerplayJoinEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string Power { get; private set; }
     }
 
-    public partial class PowerplayJoinEvent
-    {
-        public static PowerplayJoinEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PowerplayJoinEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

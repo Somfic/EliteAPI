@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class MarketEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class MarketEvent : EventBase<MarketEvent>
     {
         internal MarketEvent() { }
 
@@ -16,7 +20,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("StationName")]
         public string StationName { get; private set; }
-        
+
         [JsonProperty("StationType")]
         public string StationType { get; private set; }
 
@@ -24,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string StarSystem { get; private set; }
     }
 
-    public partial class MarketEvent
-    {
-        public static MarketEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MarketEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

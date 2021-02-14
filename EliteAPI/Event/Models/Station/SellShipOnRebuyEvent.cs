@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class SellShipOnRebuyEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SellShipOnRebuyEvent : EventBase<SellShipOnRebuyEvent>
     {
         internal SellShipOnRebuyEvent() { }
 
@@ -24,13 +28,6 @@ namespace EliteAPI.Event.Models
         public long SellShipPrice { get; private set; }
     }
 
-    public partial class SellShipOnRebuyEvent
-    {
-        public static SellShipOnRebuyEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SellShipOnRebuyEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class MissionAcceptedEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class MissionAcceptedEvent : EventBase<MissionAcceptedEvent>
     {
         internal MissionAcceptedEvent() { }
 
@@ -57,13 +61,6 @@ namespace EliteAPI.Event.Models
         public string MissionId { get; private set; }
     }
 
-    public partial class MissionAcceptedEvent
-    {
-        public static MissionAcceptedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MissionAcceptedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

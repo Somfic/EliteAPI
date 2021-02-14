@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CarrierBuyEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CarrierBuyEvent : EventBase<CarrierBuyEvent>
     {
         internal CarrierBuyEvent() { }
 
@@ -30,13 +34,6 @@ namespace EliteAPI.Event.Models
         public string Callsign { get; private set; }
     }
 
-    public partial class CarrierBuyEvent
-    {
-        public static CarrierBuyEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierBuyEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

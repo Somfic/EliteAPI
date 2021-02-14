@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class PayBountiesEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class PayBountiesEvent : EventBase<PayBountiesEvent>
     {
         internal PayBountiesEvent() { }
 
@@ -27,13 +31,6 @@ namespace EliteAPI.Event.Models
         public double BrokerPercentage { get; internal set; }
     }
 
-    public partial class PayBountiesEvent
-    {
-        public static PayBountiesEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PayBountiesEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

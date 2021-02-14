@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class OutfittingEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class OutfittingEvent : EventBase<OutfittingEvent>
     {
         internal OutfittingEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string StarSystem { get; private set; }
     }
 
-    public partial class OutfittingEvent
-    {
-        public static OutfittingEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<OutfittingEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

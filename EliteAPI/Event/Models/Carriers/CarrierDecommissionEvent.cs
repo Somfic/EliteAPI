@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CarrierDecommissionEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CarrierDecommissionEvent : EventBase<CarrierDecommissionEvent>
     {
         internal CarrierDecommissionEvent() { }
 
@@ -16,18 +20,11 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("ScrapRefund")]
         public long Refund { get; private set; }
-        
+
         [JsonProperty("ScrapTime")]
         public long ScramTime { get; private set; }
     }
 
-    public partial class CarrierDecommissionEvent
-    {
-        public static CarrierDecommissionEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierDecommissionEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

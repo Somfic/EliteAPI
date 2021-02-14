@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ClearSavedGameEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ClearSavedGameEvent : EventBase<ClearSavedGameEvent>
     {
         internal ClearSavedGameEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string Fid { get; private set; }
     }
 
-    public partial class ClearSavedGameEvent
-    {
-        public static ClearSavedGameEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ClearSavedGameEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

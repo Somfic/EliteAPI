@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class JetConeBoostEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class JetConeBoostEvent : EventBase<JetConeBoostEvent>
     {
         internal JetConeBoostEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public double BoostValue { get; private set; }
     }
 
-    public partial class JetConeBoostEvent
-    {
-        public static JetConeBoostEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<JetConeBoostEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CommunityGoalJoinEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CommunityGoalJoinEvent : EventBase<CommunityGoalJoinEvent>
     {
         internal CommunityGoalJoinEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public string System { get; private set; }
     }
 
-    public partial class CommunityGoalJoinEvent
-    {
-        public static CommunityGoalJoinEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CommunityGoalJoinEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

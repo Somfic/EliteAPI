@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class LeaveBodyEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class LeaveBodyEvent : EventBase<LeaveBodyEvent>
     {
         internal LeaveBodyEvent() { }
 
@@ -24,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string BodyId { get; private set; }
     }
 
-    public partial class LeaveBodyEvent
-    {
-        public static LeaveBodyEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LeaveBodyEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class WingJoinEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class WingJoinEvent : EventBase<WingJoinEvent>
     {
         internal WingJoinEvent() { }
 
@@ -16,13 +20,6 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<string> Others { get; private set; }
     }
 
-    public partial class WingJoinEvent
-    {
-        public static WingJoinEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<WingJoinEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ScanEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ScanEvent : EventBase<ScanEvent>
     {
         internal ScanEvent() { }
 
@@ -86,52 +90,53 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("WasMapped")]
         public bool WasMapped { get; private set; }
-        
+
         [JsonProperty("TidalLock")]
         public bool TidalLock { get; private set; }
-        
+
         [JsonProperty("TerraformState")]
         public string TerraformState { get; private set; }
-        
+
         [JsonProperty("PlanetState")]
-        public string PlanetState { get; private set; }    
-        
+        public string PlanetState { get; private set; }
+
         [JsonProperty("PlanetClass")]
         public string PlanetClass { get; private set; }
-        
+
         [JsonProperty("Atmosphere")]
         public string Atmosphere { get; private set; }
-        
+
         [JsonProperty("AtmosphereType")]
         public string AtmosphereType { get; private set; }
 
         [JsonProperty("Volcanism")]
         public string Volcanism { get; private set; }
-        
+
         [JsonProperty("MassEM")]
         public double MassEM { get; private set; }
-        
+
         [JsonProperty("SurfaceGravity")]
         public double SurfaceGravity { get; private set; }
-        
+
         [JsonProperty("SurfacePressure")]
         public double SurfacePressure { get; private set; }
-        
+
         [JsonProperty("Landable")]
         public bool Landable { get; private set; }
-        
+
         [JsonProperty("Materials")]
         public IReadOnlyList<Materialinfo> Materials { get; private set; }
-        
+
         [JsonProperty("Composition")]
         public CompositionInfo Composition { get; private set; }
-        
+
         [JsonProperty("AtmosphereComposition")]
         public IReadOnlyList<AtmosphereCompositionInfo> AtmosphereComposition { get; private set; }
-        
+
         [JsonProperty("ReserveLevel")]
         public string ReserveLevel { get; private set; }
-        
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ParentInfo
         {
             internal ParentInfo() { }
@@ -140,6 +145,7 @@ namespace EliteAPI.Event.Models
             public long Null { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class RingInfo
         {
             internal RingInfo() { }
@@ -159,52 +165,47 @@ namespace EliteAPI.Event.Models
             [JsonProperty("OuterRad")]
             public long OuterRad { get; private set; }
         }
-        
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class Materialinfo
         {
             internal Materialinfo() { }
 
             [JsonProperty("Name")]
             public string Name { get; private set; }
-            
+
             [JsonProperty("Percent")]
             public double Percent { get; private set; }
         }
-        
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class AtmosphereCompositionInfo
         {
             internal AtmosphereCompositionInfo() { }
 
             [JsonProperty("Name")]
             public string Name { get; private set; }
-            
+
             [JsonProperty("Percent")]
             public double Percent { get; private set; }
         }
-        
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class CompositionInfo
         {
             internal CompositionInfo() { }
 
             [JsonProperty("Ice")]
             public double Ice { get; private set; }
-            
+
             [JsonProperty("Rock")]
             public double Rock { get; private set; }
-            
+
             [JsonProperty("Metal")]
             public double Metal { get; private set; }
         }
-
     }
 
-    public partial class ScanEvent
-    {
-        public static ScanEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ScanEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

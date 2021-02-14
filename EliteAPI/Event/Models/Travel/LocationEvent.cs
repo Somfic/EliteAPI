@@ -6,11 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
 
-
-    public partial class LocationEvent : EventBase
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class LocationEvent : EventBase<LocationEvent>
     {
         internal LocationEvent() { }
 
@@ -119,6 +121,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Conflicts")]
         public IReadOnlyList<ConflictInfo> Conflicts { get; private set; }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class FactionInfo
         {
             internal FactionInfo() { }
@@ -151,6 +154,7 @@ namespace EliteAPI.Event.Models
             public IReadOnlyList<ActiveStateInfo> ActiveStates { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ActiveStateInfo
         {
             internal ActiveStateInfo() { }
@@ -159,6 +163,7 @@ namespace EliteAPI.Event.Models
             public string State { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class StationEconomyInfo
         {
             internal StationEconomyInfo() { }
@@ -173,6 +178,7 @@ namespace EliteAPI.Event.Models
             public double Proportion { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class StationFactionInfo
         {
             internal StationFactionInfo() { }
@@ -184,6 +190,7 @@ namespace EliteAPI.Event.Models
             public string FactionState { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ConflictInfo
         {
             [JsonProperty("WarType")]
@@ -199,6 +206,7 @@ namespace EliteAPI.Event.Models
             public ConflictFactionInfo Faction2 { get; set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ConflictFactionInfo
         {
             internal ConflictFactionInfo() { }
@@ -214,14 +222,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class LocationEvent
-    {
-        public static LocationEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<LocationEvent>(json);
-        }
-    }
-
 
 }
 
@@ -231,6 +231,7 @@ namespace EliteAPI.Event.Handler
     public partial class EventHandler
     {
         public event EventHandler<LocationEvent> LocationEvent;
+        
         internal void InvokeLocationEvent(LocationEvent arg)
         {
             LocationEvent?.Invoke(this, arg);

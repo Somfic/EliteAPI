@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CrimeVictimEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CrimeVictimEvent : EventBase<CrimeVictimEvent>
     {
         internal CrimeVictimEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long Bounty { get; private set; }
     }
 
-    public partial class CrimeVictimEvent
-    {
-        public static CrimeVictimEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CrimeVictimEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

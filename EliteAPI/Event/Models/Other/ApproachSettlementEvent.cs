@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ApproachSettlementEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ApproachSettlementEvent : EventBase<ApproachSettlementEvent>
     {
         internal ApproachSettlementEvent() { }
 
@@ -33,13 +37,6 @@ namespace EliteAPI.Event.Models
         public double Longitude { get; private set; }
     }
 
-    public partial class ApproachSettlementEvent
-    {
-        public static ApproachSettlementEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ApproachSettlementEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

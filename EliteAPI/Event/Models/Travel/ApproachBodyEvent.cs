@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ApproachBodyEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ApproachBodyEvent : EventBase<ApproachBodyEvent>
     {
         internal ApproachBodyEvent() { }
 
@@ -24,13 +28,6 @@ namespace EliteAPI.Event.Models
         public string BodyId { get; private set; }
     }
 
-    public partial class ApproachBodyEvent
-    {
-        public static ApproachBodyEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ApproachBodyEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

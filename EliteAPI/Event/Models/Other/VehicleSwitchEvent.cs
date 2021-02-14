@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class VehicleSwitchEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class VehicleSwitchEvent : EventBase<VehicleSwitchEvent>
     {
         internal VehicleSwitchEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public string To { get; private set; }
     }
 
-    public partial class VehicleSwitchEvent
-    {
-        public static VehicleSwitchEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<VehicleSwitchEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

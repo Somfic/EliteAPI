@@ -35,7 +35,7 @@ namespace EliteAPI.Abstractions
         /// <summary>
         /// Container for the ship's current status
         /// </summary>
-        [Obsolete("Use the Ship property instead", false)]
+        [Obsolete("Use the Ship property instead", true)]
         IShipStatus Status { get; }
 
         /// <summary>

@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class PvpKillEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class PvpKillEvent : EventBase<PvpKillEvent>
     {
         internal PvpKillEvent() { }
 
@@ -18,13 +22,6 @@ namespace EliteAPI.Event.Models
         public long CombatRank { get; private set; }
     }
 
-    public partial class PvpKillEvent
-    {
-        public static PvpKillEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<PvpKillEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

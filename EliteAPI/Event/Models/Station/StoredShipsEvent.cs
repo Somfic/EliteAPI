@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class StoredShipsEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class StoredShipsEvent : EventBase<StoredShipsEvent>
     {
         internal StoredShipsEvent() { }
 
@@ -22,15 +26,16 @@ namespace EliteAPI.Event.Models
         public string StarSystem { get; private set; }
 
         [JsonProperty("ShipsHere")]
-        public IReadOnlyList<ShipsHere> ShipsHere { get; private set; }
+        public IReadOnlyList<ShipsInfo> ShipsHere { get; private set; }
 
         [JsonProperty("ShipsRemote")]
-        public IReadOnlyList<object> ShipsRemote { get; private set; }
+        public IReadOnlyList<ShipsInfo> ShipsRemote { get; private set; }
     }
 
-    public class ShipsHere
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ShipsInfo
     {
-        internal ShipsHere() { }
+        internal ShipsInfo() { }
 
         [JsonProperty("ShipID")]
         public long ShipId { get; private set; }
@@ -51,13 +56,6 @@ namespace EliteAPI.Event.Models
         public string Name { get; private set; }
     }
 
-    public partial class StoredShipsEvent
-    {
-        public static StoredShipsEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<StoredShipsEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

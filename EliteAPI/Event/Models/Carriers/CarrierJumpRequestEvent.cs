@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CarrierJumpRequestEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CarrierJumpRequestEvent : EventBase<CarrierJumpRequestEvent>
     {
         internal CarrierJumpRequestEvent() { }
 
@@ -27,13 +31,6 @@ namespace EliteAPI.Event.Models
         public string BodyId { get; private set; }
     }
 
-    public partial class CarrierJumpRequestEvent
-    {
-        public static CarrierJumpRequestEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierJumpRequestEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

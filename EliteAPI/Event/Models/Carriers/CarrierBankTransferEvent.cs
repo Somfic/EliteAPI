@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class CarrierBankTransferEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class CarrierBankTransferEvent : EventBase<CarrierBankTransferEvent>
     {
         internal CarrierBankTransferEvent() { }
 
@@ -16,7 +20,7 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Deposit")]
         public long Deposit { get; private set; }
-        
+
         [JsonProperty("Withdraw")]
         public long Withdraw { get; private set; }
 
@@ -27,13 +31,6 @@ namespace EliteAPI.Event.Models
         public long CarrierBalance { get; private set; }
     }
 
-    public partial class CarrierBankTransferEvent
-    {
-        public static CarrierBankTransferEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<CarrierBankTransferEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

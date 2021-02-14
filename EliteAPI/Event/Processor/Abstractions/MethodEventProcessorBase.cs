@@ -30,21 +30,21 @@ namespace EliteAPI.Event.Processor.Abstractions
         public abstract Task RegisterHandlers();
 
         /// <inheritdoc />
-        public async Task InvokeHandler(EventBase eventBase, bool isWhileCatchingUp)
+        public async Task InvokeHandler(IEvent gameEvent, bool isWhileCatchingUp)
         {
             if (Cache == null) await RegisterHandlers();
 
             try
             {
-                var key = eventBase.GetType().Name;
+                var key = gameEvent.GetType().Name;
 
                 if (!Cache.ContainsKey(key)) return;
 
                 var methods = Cache[key];
 
-                foreach (var method in methods) InvokeMethod(method, eventBase);
+                foreach (var method in methods) InvokeMethod(method, gameEvent);
             }
-            catch (Exception ex) { _log.LogWarning(ex, "Could not invoke methods for {eventName}", eventBase.Event); }
+            catch (Exception ex) { _log.LogWarning(ex, "Could not invoke methods for {eventName}", gameEvent.Event); }
         }
 
         private void InvokeMethod(MethodBase method, IEvent eventBase)

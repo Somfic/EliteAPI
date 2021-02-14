@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class NavBeaconScanEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class NavBeaconScanEvent : EventBase<NavBeaconScanEvent>
     {
         internal NavBeaconScanEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public long NumBodies { get; private set; }
     }
 
-    public partial class NavBeaconScanEvent
-    {
-        public static NavBeaconScanEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<NavBeaconScanEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

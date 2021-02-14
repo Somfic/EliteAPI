@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ProgressEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ProgressEvent : EventBase<ProgressEvent>
     {
         internal ProgressEvent() { }
 
@@ -30,13 +34,6 @@ namespace EliteAPI.Event.Models
         public long Cqc { get; private set; }
     }
 
-    public partial class ProgressEvent
-    {
-        public static ProgressEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ProgressEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

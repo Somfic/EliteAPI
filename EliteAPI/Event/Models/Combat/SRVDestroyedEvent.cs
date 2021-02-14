@@ -3,22 +3,17 @@
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 
-using Newtonsoft.Json;
+using ProtoBuf;
 
 namespace EliteAPI.Event.Models
 {
-    public partial class SrvDestroyedEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SrvDestroyedEvent : EventBase<SrvDestroyedEvent>
     {
-        internal SrvDestroyedEvent() { }        
+        internal SrvDestroyedEvent() { }
     }
 
-    public partial class SrvDestroyedEvent
-    {
-        public static SrvDestroyedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SrvDestroyedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

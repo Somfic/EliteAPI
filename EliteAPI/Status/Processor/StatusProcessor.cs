@@ -42,16 +42,14 @@ namespace EliteAPI.Status.Processor
         private readonly IFileReader _fileReader;
 
         private readonly IShip _ship;
-        private readonly IShipStatus _status;
 
-        public StatusProcessor(ILogger<StatusProcessor> log, IShip ship, INavRoute navRoute, ICargo cargo, IMarket market, IShipStatus status, IModules modules, IOutfitting outfitting, IFileReader fileReader)
+        public StatusProcessor(ILogger<StatusProcessor> log, IShip ship, INavRoute navRoute, ICargo cargo, IMarket market, IModules modules, IOutfitting outfitting, IFileReader fileReader)
         {
             _log = log;
             _ship = ship;
             _navRoute = navRoute;
             _cargo = cargo;
             _market = market;
-            _status = status;
             _modules = modules;
             _outfitting = outfitting;
             _fileReader = fileReader;
@@ -96,7 +94,6 @@ namespace EliteAPI.Status.Processor
             {
                 AddToCache(statusFile, content);
                 await InvokeMethods<RawShip>(content, _ship);
-                await InvokeMethods<RawShip>(content, _status);
                 StatusUpdated?.Invoke(this, content);
             }
         }

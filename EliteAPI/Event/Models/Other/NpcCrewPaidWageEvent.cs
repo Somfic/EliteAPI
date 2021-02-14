@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class NpcCrewPaidWageEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class NpcCrewPaidWageEvent : EventBase<NpcCrewPaidWageEvent>
     {
         internal NpcCrewPaidWageEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long Amount { get; private set; }
     }
 
-    public partial class NpcCrewPaidWageEvent
-    {
-        public static NpcCrewPaidWageEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<NpcCrewPaidWageEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

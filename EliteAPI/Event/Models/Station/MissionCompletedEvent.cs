@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class MissionCompletedEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class MissionCompletedEvent : EventBase<MissionCompletedEvent>
     {
         internal MissionCompletedEvent() { }
 
@@ -52,6 +56,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<FactionEffectInfo> FactionEffectInfos { get; private set; }
 
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class FactionEffectInfo
         {
             internal FactionEffectInfo() { }
@@ -72,20 +77,22 @@ namespace EliteAPI.Event.Models
             public string Reputation { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class EffectInfo
         {
             internal EffectInfo() { }
 
-            [JsonProperty("Effect")] 
+            [JsonProperty("Effect")]
             public string Effect { get; private set; }
 
-            [JsonProperty("Effect_Localised")] 
+            [JsonProperty("Effect_Localised")]
             public string EffectLocalised { get; private set; }
 
             [JsonProperty("Trend")]
             public string Trend { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class InfluenceInfo
         {
             internal InfluenceInfo() { }
@@ -96,18 +103,11 @@ namespace EliteAPI.Event.Models
             [JsonProperty("Trend")]
             public string Trend { get; private set; }
 
-            [JsonProperty("Influence")] 
+            [JsonProperty("Influence")]
             public string Influence { get; private set; }
         }
     }
 
-    public partial class MissionCompletedEvent
-    {
-        public static MissionCompletedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MissionCompletedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

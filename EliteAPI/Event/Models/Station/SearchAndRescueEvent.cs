@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class SearchAndRescueEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class SearchAndRescueEvent : EventBase<SearchAndRescueEvent>
     {
         internal SearchAndRescueEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public long Reward { get; private set; }
     }
 
-    public partial class SearchAndRescueEvent
-    {
-        public static SearchAndRescueEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<SearchAndRescueEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class BuyAmmoEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class BuyAmmoEvent : EventBase<BuyAmmoEvent>
     {
         internal BuyAmmoEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public long Cost { get; private set; }
     }
 
-    public partial class BuyAmmoEvent
-    {
-        public static BuyAmmoEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<BuyAmmoEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

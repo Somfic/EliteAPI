@@ -6,9 +6,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class MaterialsEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class MaterialsEvent : EventBase<MaterialsEvent>
     {
         internal MaterialsEvent() { }
 
@@ -22,6 +26,7 @@ namespace EliteAPI.Event.Models
         public IReadOnlyList<EncodedInfo> Encoded { get; private set; }
 
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class EncodedInfo
         {
             internal EncodedInfo() { }
@@ -36,6 +41,7 @@ namespace EliteAPI.Event.Models
             public long Count { get; private set; }
         }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class RawInfo
         {
             internal RawInfo() { }
@@ -48,13 +54,6 @@ namespace EliteAPI.Event.Models
         }
     }
 
-    public partial class MaterialsEvent
-    {
-        public static MaterialsEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<MaterialsEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

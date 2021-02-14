@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class ShieldStateEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ShieldStateEvent : EventBase<ShieldStateEvent>
     {
         internal ShieldStateEvent() { }
 
@@ -15,13 +19,6 @@ namespace EliteAPI.Event.Models
         public bool ShieldsUp { get; private set; }
     }
 
-    public partial class ShieldStateEvent
-    {
-        public static ShieldStateEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<ShieldStateEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

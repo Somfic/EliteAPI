@@ -3,22 +3,17 @@ using System;
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 
-using Newtonsoft.Json;
+using ProtoBuf;
 
 namespace EliteAPI.Event.Models
 {
-    public partial class NavRouteEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class NavRouteEvent : EventBase<NavRouteEvent>
     {
         internal NavRouteEvent() { }
     }
 
-    public partial class NavRouteEvent
-    {
-        public static NavRouteEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<NavRouteEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

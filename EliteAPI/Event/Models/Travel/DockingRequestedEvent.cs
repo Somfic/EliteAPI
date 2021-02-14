@@ -5,9 +5,13 @@ using EliteAPI.Event.Models.Abstractions;
 
 using Newtonsoft.Json;
 
+using ProtoBuf;
+
 namespace EliteAPI.Event.Models
 {
-    public partial class DockingRequestedEvent : EventBase
+
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class DockingRequestedEvent : EventBase<DockingRequestedEvent>
     {
         internal DockingRequestedEvent() { }
 
@@ -21,13 +25,6 @@ namespace EliteAPI.Event.Models
         public string StationType { get; private set; }
     }
 
-    public partial class DockingRequestedEvent
-    {
-        public static DockingRequestedEvent FromJson(string json)
-        {
-            return JsonConvert.DeserializeObject<DockingRequestedEvent>(json);
-        }
-    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -255,7 +255,7 @@ namespace EliteAPI
             try
             {
                 await SetSupportFiles();
-                await _statusProcessor.ProcessStatusFile(StatusFile);
+                await _statusProcessor.ProcessShipFile(StatusFile);
                 await _statusProcessor.ProcessCargoFile(CargoFile);
                 await _statusProcessor.ProcessMarketFile(MarketFile);
                 await _statusProcessor.ProcessOutfittingFile(OutfittingFile);

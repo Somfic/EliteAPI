@@ -29,15 +29,13 @@ namespace EliteAPI.Event.Models.Abstractions
             return JsonConvert.DeserializeObject<T>(json);
         }
 
-        /// <summary>
-        /// Generates Json from an event entry
-        /// </summary>
+        /// <inheritdoc />
         public string ToJson()
         {
             return JsonConvert.SerializeObject(this, new JsonSerializerSettings {ContractResolver = new EliteApiContractResolver()});
         }
-
-        private class EliteApiContractResolver : DefaultContractResolver
+        
+        class EliteApiContractResolver : DefaultContractResolver
         {
             protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
             {
@@ -53,4 +51,5 @@ namespace EliteAPI.Event.Models.Abstractions
             }
         }
     }
+
 }

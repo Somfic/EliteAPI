@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 
+using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Status.Ship.JsonConverters;
 
 using Newtonsoft.Json;
@@ -7,11 +8,10 @@ using Newtonsoft.Json.Converters;
 
 namespace EliteAPI.Status.Ship.Raw
 {
-    internal class RawShip
+    public class RawShip : EventBase<RawShip>
     {
         [JsonProperty("Flags")]
         public ShipFlag Flags { get; private set; }
-
         public bool Available => Flags != 0;
         public bool Docked => GetFlag(0);
         public bool Landed => GetFlag(1);

@@ -14,7 +14,7 @@ namespace EliteAPI.Tests
 {
     public class EventStandards
     {
-        public static IEnumerable<object[]> GetData() => typeof(IEvent).Assembly.GetTypes().Where(x => x.IsAssignableTo(typeof(IEvent)) && x.IsClass && !x.IsInterface && !x.IsAbstract).Select(x => new object[] {x});
+        public static IEnumerable<object[]> GetData() => typeof(IEvent).Assembly.GetTypes().Where(x => x.IsAssignableTo(typeof(IEvent)) && x.IsClass && !x.IsInterface && !x.IsAbstract && !x.Namespace.StartsWith("EliteAPI.Status")).Select(x => new object[] {x});
         
         [Theory(DisplayName = "Contains invoke method")]
         [MemberData(nameof(GetData))]

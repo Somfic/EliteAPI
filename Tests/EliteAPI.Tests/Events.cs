@@ -57,7 +57,7 @@ namespace EliteAPI.Tests
 
         public static IEnumerable<object[]> GetEventsWithJson()
         {
-            var types = typeof(EventBase<>).Assembly.GetTypes().Where(x => x.IsAssignableTo(typeof(IEvent)) && x.IsClass && !x.IsAbstract && !x.IsInterface).ToList();
+            var types = typeof(EventBase<>).Assembly.GetTypes().Where(x => x.IsAssignableTo(typeof(IEvent)) && x.IsClass && !x.IsAbstract && !x.IsInterface && !x.Namespace.StartsWith("EliteAPI.Status")).ToList();
 
             var directory = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "Test cases"));
 

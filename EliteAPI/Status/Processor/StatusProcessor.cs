@@ -57,28 +57,34 @@ namespace EliteAPI.Status.Processor
         }
 
         /// <inheritdoc />
-        public event EventHandler<string> StatusUpdated;
+        [Obsolete("Use ShipUpdated instead", true)]
+        public event EventHandler<(string Json, RawShip Ship)> StatusUpdated;
+        
+        /// <inheritdoc />
+        public event EventHandler<(string Json, RawShip Ship)> ShipUpdated;
 
         /// <inheritdoc />
-        public event EventHandler<string> ModulesUpdated;
+        public event EventHandler<(string Json, RawModules Modules)> ModulesUpdated;
 
         /// <inheritdoc />
-        public event EventHandler<string> CargoUpdated;
+        public event EventHandler<(string Json, RawCargo Cargo)> CargoUpdated;
 
         /// <inheritdoc />
-        public event EventHandler<string> MarketUpdated;
+        public event EventHandler<(string Json, RawMarket Market)> MarketUpdated;
 
         /// <inheritdoc />
+        [Obsolete("Not yet implemented")]
         public event EventHandler<string> ShipyardUpdated;
+        //public event EventHandler<(string Json, RawShipyard Shipyard)> ShipyardUpdated;
 
         /// <inheritdoc />
-        public event EventHandler<string> OutfittingUpdated;
+        public event EventHandler<(string Json, RawOutfitting Outfitting)> OutfittingUpdated;
 
         /// <inheritdoc />
-        public event EventHandler<string> NavRouteUpdated;
+        public event EventHandler<(string Json, RawNavRoute NavRoute)> NavRouteUpdated;
 
         /// <inheritdoc />
-        public async Task ProcessStatusFile(FileInfo statusFile)
+        public async Task ProcessShipFile(FileInfo statusFile)
         {
             if (!statusFile.Exists) return;
 
@@ -93,8 +99,8 @@ namespace EliteAPI.Status.Processor
             if (!IsInCache(statusFile, content))
             {
                 AddToCache(statusFile, content);
-                await InvokeMethods<RawShip>(content, _ship);
-                StatusUpdated?.Invoke(this, content);
+                var raw = await InvokeMethods<RawShip>(content, _ship);
+                ShipUpdated?.Invoke(this, (content, raw));
             }
         }
 
@@ -107,8 +113,8 @@ namespace EliteAPI.Status.Processor
             if (!IsInCache(cargoFile, content))
             {
                 AddToCache(cargoFile, content);
-                await InvokeMethods<RawCargo>(content, _cargo);
-                CargoUpdated?.Invoke(this, content);
+                var raw = await InvokeMethods<RawCargo>(content, _cargo);
+                CargoUpdated?.Invoke(this, (content, raw));
             }
         }
 
@@ -121,8 +127,8 @@ namespace EliteAPI.Status.Processor
             if (!IsInCache(modulesFile, content))
             {
                 AddToCache(modulesFile, content);
-                await InvokeMethods<RawModules>(content, _modules);
-                ModulesUpdated?.Invoke(this, content);
+                var raw = await InvokeMethods<RawModules>(content, _modules);
+                ModulesUpdated?.Invoke(this, (content, raw));
             }
         }
 
@@ -135,8 +141,8 @@ namespace EliteAPI.Status.Processor
             if (!IsInCache(marketFile, content))
             {
                 AddToCache(marketFile, content);
-                await InvokeMethods<RawMarket>(content, _market);
-                MarketUpdated?.Invoke(this, content);
+                var raw = await InvokeMethods<RawMarket>(content, _market);
+                MarketUpdated?.Invoke(this, (content, raw));
             }
         }
 
@@ -165,8 +171,8 @@ namespace EliteAPI.Status.Processor
             if (!IsInCache(outfittingFile, content))
             {
                 AddToCache(outfittingFile, content);
-                await InvokeMethods<RawOutfitting>(content, _outfitting);
-                OutfittingUpdated?.Invoke(this, content);
+                var raw = await InvokeMethods<RawOutfitting>(content, _outfitting);
+                OutfittingUpdated?.Invoke(this, (content, raw));
             }
         }
 
@@ -179,12 +185,12 @@ namespace EliteAPI.Status.Processor
             if (!IsInCache(navRouteFile, content))
             {
                 AddToCache(navRouteFile, content);
-                await InvokeMethods<RawNavRoute>(content, _navRoute);
-                NavRouteUpdated?.Invoke(this, content);
+                var raw = await InvokeMethods<RawNavRoute>(content, _navRoute);
+                NavRouteUpdated?.Invoke(this, (content, raw));
             }
         }
 
-        private async Task InvokeMethods<T>(string json, IStatus status)
+        private async Task<T> InvokeMethods<T>(string json, IStatus status)
         {
             var name = status.GetType().Name;
 
@@ -195,8 +201,12 @@ namespace EliteAPI.Status.Processor
                 foreach (var propertyName in status.GetType().GetProperties().Select(x => x.Name)) await InvokeUpdateMethod(raw, status, propertyName);
 
                 status.TriggerOnChange();
+
+                return raw;
             }
-            catch (Exception ex) { _log.LogWarning(ex, "Could not update {name} status", name); }
+            catch (Exception ex) { _log.LogWarning(ex, "Could not update {name} status", name);
+                return default;
+            }
         }
 
         private Task InvokeUpdateMethod(object raw, object clean, string propertyName)

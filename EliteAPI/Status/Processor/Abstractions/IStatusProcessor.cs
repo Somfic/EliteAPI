@@ -2,6 +2,13 @@
 using System.IO;
 using System.Threading.Tasks;
 
+using EliteAPI.Status.Cargo.Raw;
+using EliteAPI.Status.Market.Raw;
+using EliteAPI.Status.Modules.Raw;
+using EliteAPI.Status.NavRoute.Raw;
+using EliteAPI.Status.Outfitting.Raw;
+using EliteAPI.Status.Ship.Raw;
+
 namespace EliteAPI.Status.Processor.Abstractions
 {
     /// <summary>
@@ -12,17 +19,23 @@ namespace EliteAPI.Status.Processor.Abstractions
         /// <summary>
         /// Triggered when the status file is updated
         /// </summary>
-        event EventHandler<string> StatusUpdated;
+        [Obsolete("Use ShipUpdated instead", true)]
+        event EventHandler<(string Json, RawShip Ship)> StatusUpdated;
 
+        /// <summary>
+        /// Triggered when the status file is updated
+        /// </summary>
+        event EventHandler<(string Json, RawShip Ship)> ShipUpdated;
+        
         /// <summary>
         /// Triggered when the cargo file is updated
         /// </summary>
-        event EventHandler<string> CargoUpdated;
+        event EventHandler<(string Json, RawCargo Cargo)> CargoUpdated;
 
         /// <summary>
         /// Triggered when the market file is updated
         /// </summary>
-        event EventHandler<string> MarketUpdated;
+        event EventHandler<(string Json, RawMarket Market)> MarketUpdated;
 
         /// <summary>
         /// Triggered when the shipyard file is updated
@@ -32,23 +45,23 @@ namespace EliteAPI.Status.Processor.Abstractions
         /// <summary>
         /// Triggered when the modules file is updated
         /// </summary>
-        event EventHandler<string> ModulesUpdated;
+        event EventHandler<(string Json, RawModules Modules)> ModulesUpdated;
 
         /// <summary>
         /// Triggered when the outfitting file is updated
         /// </summary>
-        event EventHandler<string> OutfittingUpdated;
+        event EventHandler<(string Json, RawOutfitting Outfitting)> OutfittingUpdated;
 
         /// <summary>
         /// Triggered when the navroute file is updated
         /// </summary>
-        event EventHandler<string> NavRouteUpdated;
+        event EventHandler<(string Json, RawNavRoute NavRoute)> NavRouteUpdated;
 
         /// <summary>
         /// Hooks the specified status file to <see cref="StatusUpdated" /> and invokes <see cref="StatusUpdated" /> when
         /// needed
         /// </summary>
-        Task ProcessStatusFile(FileInfo statusFile);
+        Task ProcessShipFile(FileInfo statusFile);
 
         /// <summary>
         /// Hooks the specified cargo file to <see cref="CargoUpdated" /> and invokes <see cref="CargoUpdated" /> when needed

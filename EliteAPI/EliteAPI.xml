@@ -298,9 +298,7 @@
             <param name="json">The json string</param>
         </member>
         <member name="M:EliteAPI.Event.Models.Abstractions.EventBase`1.ToJson">
-            <summary>
-            Generates Json from an event entry
-            </summary>
+            <inheritdoc />
         </member>
         <member name="T:EliteAPI.Event.Models.Abstractions.IEvent">
             <summary>
@@ -315,6 +313,11 @@
         <member name="P:EliteAPI.Event.Models.Abstractions.IEvent.Event">
             <summary>
             The name of the event
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Event.Models.Abstractions.IEvent.ToJson">
+            <summary>
+            Generates this event's Json
             </summary>
         </member>
         <member name="T:EliteAPI.Event.Module.EliteDangerousEventModule">
@@ -1383,6 +1386,11 @@
             Triggered when the status file is updated
             </summary>
         </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ShipUpdated">
+            <summary>
+            Triggered when the status file is updated
+            </summary>
+        </member>
         <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.CargoUpdated">
             <summary>
             Triggered when the cargo file is updated
@@ -1413,7 +1421,7 @@
             Triggered when the navroute file is updated
             </summary>
         </member>
-        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessShipFile(System.IO.FileInfo)">
             <summary>
             Hooks the specified status file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated" /> when
             needed
@@ -1460,6 +1468,9 @@
         <member name="E:EliteAPI.Status.Processor.StatusProcessor.StatusUpdated">
             <inheritdoc />
         </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.ShipUpdated">
+            <inheritdoc />
+        </member>
         <member name="E:EliteAPI.Status.Processor.StatusProcessor.ModulesUpdated">
             <inheritdoc />
         </member>
@@ -1478,7 +1489,7 @@
         <member name="E:EliteAPI.Status.Processor.StatusProcessor.NavRouteUpdated">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessShipFile(System.IO.FileInfo)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessCargoFile(System.IO.FileInfo)">

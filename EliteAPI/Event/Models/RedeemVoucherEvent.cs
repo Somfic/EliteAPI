@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
@@ -15,10 +16,25 @@ namespace EliteAPI.Event.Models
         public string Type { get; private set; }
 
         [JsonProperty("Amount")]
-        public long Amount { get; private set; }
+        public long TotalAmount { get; private set; }
+
+        [JsonProperty("Factions", NullValueHandling = NullValueHandling.Ignore)]
+        public IReadOnlyList<FactionInfo> Factions { get; private set; }
+
+        [JsonProperty("BrokerPercentage", NullValueHandling = NullValueHandling.Ignore)]
+        public double BrokerPercentage { get; private set; }
+    }
+
+    public class FactionInfo
+    {
+        internal FactionInfo() { }
 
         [JsonProperty("Faction")]
-        public string Faction { get; private set; }
+        public string Name { get; private set; }
+
+        [JsonProperty("Amount")]
+        public long Amount { get; private set; }
+
     }
 
     public partial class RedeemVoucherEvent

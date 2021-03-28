@@ -34,7 +34,6 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Amount")]
         public long Amount { get; private set; }
-
     }
 
     public partial class RedeemVoucherEvent

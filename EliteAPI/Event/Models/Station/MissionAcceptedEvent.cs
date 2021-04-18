@@ -59,6 +59,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("MissionID")]
         public string MissionId { get; private set; }
+        
+        [JsonProperty("KillCount")] 
+        public int KillCount { get; private set; }
     }
 
 }

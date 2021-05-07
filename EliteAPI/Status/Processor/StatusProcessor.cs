@@ -86,7 +86,7 @@ namespace EliteAPI.Status.Processor
         /// <inheritdoc />
         public async Task ProcessShipFile(FileInfo statusFile)
         {
-            if (!statusFile.Exists) return;
+            if (statusFile == null || !statusFile.Exists) return;
 
             var content = _fileReader.ReadAllText(statusFile);
 
@@ -107,7 +107,7 @@ namespace EliteAPI.Status.Processor
         /// <inheritdoc />
         public async Task ProcessCargoFile(FileInfo cargoFile)
         {
-            if (!cargoFile.Exists) return;
+            if (cargoFile == null || !cargoFile.Exists) return;
 
             var content = _fileReader.ReadAllText(cargoFile);
             if (!IsInCache(cargoFile, content))
@@ -121,7 +121,7 @@ namespace EliteAPI.Status.Processor
         /// <inheritdoc />
         public async Task ProcessModulesFile(FileInfo modulesFile)
         {
-            if (!modulesFile.Exists) return;
+            if (modulesFile == null || !modulesFile.Exists) return;
 
             var content = _fileReader.ReadAllText(modulesFile);
             if (!IsInCache(modulesFile, content))

@@ -15,10 +15,10 @@ namespace EliteAPI.Event.Models.Abstractions
     public abstract class EventBase<T> : IEvent where T : IEvent
     {
         /// <inheritdoc />
-        public DateTime Timestamp { get; private set; } = DateTime.Now;
+        public DateTime Timestamp { get; protected set; } = DateTime.Now;
 
         /// <inheritdoc />
-        public string Event { get; private set; }
+        public string Event { get; protected set; }
 
         /// <summary>
         /// Generates an event entry from Json
@@ -34,22 +34,23 @@ namespace EliteAPI.Event.Models.Abstractions
         {
             return JsonConvert.SerializeObject(this, new JsonSerializerSettings {ContractResolver = new EliteApiContractResolver()});
         }
-        
+
         class EliteApiContractResolver : DefaultContractResolver
         {
             protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
             {
                 // Let the base class create all the JsonProperties 
                 // using the short names
-                IList<JsonProperty> list = base.CreateProperties(type, memberSerialization);
+                var list = base.CreateProperties(type, memberSerialization);
 
                 // Now inspect each property and replace the 
                 // short name with the real property name
-                foreach (JsonProperty prop in list) { prop.PropertyName = prop.UnderlyingName; }
+                foreach (var prop in list) { prop.PropertyName = prop.UnderlyingName; }
 
                 return list;
             }
         }
+        
     }
 
 }

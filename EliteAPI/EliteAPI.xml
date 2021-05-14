@@ -320,6 +320,16 @@
             Generates this event's Json
             </summary>
         </member>
+        <member name="T:EliteAPI.Event.Models.NotImplementedEvent">
+            <summary>
+            An empty event, for when the original event has not been implemented
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Event.Models.NotImplementedEvent.Json">
+            <summary>
+            The original JSON entry
+            </summary>
+        </member>
         <member name="T:EliteAPI.Event.Module.EliteDangerousEventModule">
             <summary>
             Wrapper for event modules

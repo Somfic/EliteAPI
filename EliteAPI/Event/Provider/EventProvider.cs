@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-
+using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
 using EliteAPI.Exceptions;
@@ -35,17 +35,27 @@ namespace EliteAPI.Event.Provider
         {
             if (_cache == null) RegisterEventClasses();
 
+            JObject parsedFromGame = null;
+            string eventName = null;
+            
             try
             {
-                var parsedFromGame = JsonConvert.DeserializeObject<JObject>(json);
-                string eventName = ((dynamic) parsedFromGame).@event;
-
+                _log.LogTrace(json);
+                
+                parsedFromGame = JsonConvert.DeserializeObject<JObject>(json);
+                eventName = ((dynamic) parsedFromGame).@event;
+                
                 var method = GetFromJsonMethod(eventName);
                 var gameEvent = InvokeFromJsonMethod(method, json);
 
-                _log.LogTrace(json);
-
                 return Task.FromResult(gameEvent);
+            }
+            catch (EventNotImplementedException ex)
+            {
+                ex.Data.Add("Json", json);
+                
+                _log.LogDebug(ex, "{Event} event not yet implemented", eventName);
+                return Task.FromResult(new NotImplementedEvent(json, parsedFromGame) as IEvent);
             }
             catch (Exception ex)
             {

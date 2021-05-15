@@ -383,42 +383,42 @@ namespace EliteAPI
             }
             catch (StatusFileNotFoundException ex)
             {
-                _log.LogError(ex, "Status.json file support has been disabled. Live information like gear and hardpoints are not supported");
+                _log.LogWarning(ex, "Status.json file support has been disabled");
                 DisabledSupportFiles.Add("Status");
             }
             catch (CargoFileNotFoundException ex)
             {
-                _log.LogWarning(ex, "Cargo.json file support has been disabled");
+                _log.LogDebug(ex, "Cargo.json file support has been disabled");
                 DisabledSupportFiles.Add("Cargo");
             }
             catch (MarketFileNotFoundException ex)
             {
-                _log.LogWarning(ex, "Market.json file support has been disabled");
+                _log.LogDebug(ex, "Market.json file support has been disabled");
                 DisabledSupportFiles.Add("Market");
             }
             catch (OutfittingFileNotFoundException ex)
             {
-                _log.LogWarning(ex, "Outfitting.json file support has been disabled");
+                _log.LogDebug(ex, "Outfitting.json file support has been disabled");
                 DisabledSupportFiles.Add("Outfitting");
             }
             catch (ShipyardFileNotFoundException ex)
             {
-                _log.LogWarning(ex, "Shipyard.json file support has been disabled");
+                _log.LogDebug(ex, "Shipyard.json file support has been disabled");
                 DisabledSupportFiles.Add("Shipyard");
             }
             catch (NavRouteFileNotFoundException ex)
             {
-                _log.LogWarning(ex, "NavRoute.json file support has been disabled");
+                _log.LogDebug(ex, "NavRoute.json file support has been disabled");
                 DisabledSupportFiles.Add("NavRoute");
             }
             catch (ModulesInfoFileNotFoundException ex)
             {
-                _log.LogWarning(ex, "ModulesInfo.json file support has been disabled");
+                _log.LogDebug(ex, "ModulesInfo.json file support has been disabled");
                 DisabledSupportFiles.Add("ModulesInfo");
             }
             catch (ActiveBindingsNotFoundException ex)
             {
-                _log.LogWarning(ex, "Bindings support has been disabled");
+                _log.LogWarning(ex, "Keybindings support has been disabled");
                 DisabledSupportFiles.Add("Bindings");
             }
             catch (BindingsNotFoundException ex)
@@ -429,7 +429,10 @@ namespace EliteAPI
                 {
                     lastPresetErrorname = preset;
 
-                    _log.LogWarning(ex, !string.IsNullOrWhiteSpace(Bindings.Active.PresetName) ? "Cannot switch to bindings preset {Bindings}" : "Cannot use bindings preset {Bindings}", preset);
+                    _log.LogWarning(ex,
+                        !string.IsNullOrWhiteSpace(Bindings.Active.PresetName)
+                            ? "Cannot switch to bindings preset {Bindings}"
+                            : "Cannot use bindings preset {Bindings}", preset);
                 }
             }
             catch (Exception ex) { _log.LogWarning(ex, "Could not set support files"); }

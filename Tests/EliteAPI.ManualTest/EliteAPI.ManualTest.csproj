@@ -4,8 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.1108+Branch.dev.Sha.d8dde408f207df1366e464e211aea16cd04a7bf1</InformationalVersion>
-    <Version>3.0.0-alpha1108</Version>
+    <InformationalVersion>3.0.0-alpha.1111+Branch.dev.Sha.848a04a7a0accfba9776071c1c140892d826d003</InformationalVersion>
+    <Version>3.0.0-alpha1111</Version>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\EliteAPI\EliteAPI.csproj" />

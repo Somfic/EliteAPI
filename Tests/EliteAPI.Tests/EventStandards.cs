@@ -3,19 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-
 using EliteAPI.Event.Models.Abstractions;
-
 using FluentAssertions;
-
 using Xunit;
 
 namespace EliteAPI.Tests
 {
     public class EventStandards
     {
-        public static IEnumerable<object[]> GetData() => typeof(IEvent).Assembly.GetTypes().Where(x => x.IsAssignableTo(typeof(IEvent)) && x.IsClass && !x.IsInterface && !x.IsAbstract && !x.Namespace.StartsWith("EliteAPI.Status")).Select(x => new object[] {x});
-        
+        public static IEnumerable<object[]> GetData() => typeof(IEvent).Assembly.GetTypes()
+            .Where(x => x.IsAssignableTo(typeof(IEvent)) && x.IsClass && !x.IsInterface && !x.IsAbstract &&
+                        !x.Namespace.StartsWith("EliteAPI.Status")).Select(x => new object[] {x});
+
         [Theory(DisplayName = "Contains invoke method")]
         [MemberData(nameof(GetData))]
         public void HasInvokeMethod(Type type)
@@ -32,28 +31,28 @@ namespace EliteAPI.Tests
                 .Should()
                 .Contain($"Invoke{type.Name}");
         }
-        
+
         [Theory(DisplayName = "Contains FromJson method")]
         [MemberData(nameof(GetData))]
         public void FromJson(Type type)
         {
             type.BaseType.GetMethods().Select(x => x.Name).Should().Contain("FromJson");
         }
-        
+
         [Theory(DisplayName = "Contains ToJson method")]
         [MemberData(nameof(GetData))]
         public void ToJson(Type type)
         {
             type.BaseType.GetMethods().Select(x => x.Name).Should().Contain("ToJson");
         }
-        
+
         [Theory(DisplayName = "Naming convention")]
         [MemberData(nameof(GetData))]
         public void NamingConvention(Type type)
-        { 
+        {
             type.Name.EndsWith("Event").Should().BeTrue();
         }
-        
+
         [Theory(DisplayName = "No public constructors")]
         [MemberData(nameof(GetData))]
         public void PrivateConstructors(Type type)
@@ -69,7 +68,8 @@ namespace EliteAPI.Tests
         {
             var invalidProperties = type.GetProperties()
                 .Where(x => x.PropertyType != typeof(string)
-                            && ((x.Name.EndsWith("id", StringComparison.OrdinalIgnoreCase) && !x.Name.EndsWith("paid", StringComparison.OrdinalIgnoreCase))
+                            && ((x.Name.EndsWith("id", StringComparison.OrdinalIgnoreCase) &&
+                                 !x.Name.EndsWith("paid", StringComparison.OrdinalIgnoreCase))
                                 || x.Name.EndsWith("address", StringComparison.OrdinalIgnoreCase)));
 
             invalidProperties.Should().BeEmpty();
@@ -80,11 +80,24 @@ namespace EliteAPI.Tests
         public void NoObjects(Type type)
         {
             var invalidProperties = type.GetProperties().Where(x => x.PropertyType == typeof(object));
-            
+
             invalidProperties.Should().BeEmpty();
         }
-        
-        [Theory(DisplayName = "Bools should start with 'is'")]
+
+        [Theory(DisplayName = "Types are enums", Skip = "To be implemented")]
+        [MemberData(nameof(GetData))]
+        public void TypesAreEnums(Type type)
+        {
+            var invalidProperties = type.GetProperties()
+                .Where(x => !x.PropertyType.IsEnum
+                            && (x.Name.EndsWith("type", StringComparison.OrdinalIgnoreCase)
+                                || x.Name.EndsWith("state", StringComparison.OrdinalIgnoreCase)
+                            ));
+
+            invalidProperties.Should().BeEmpty();
+        }
+
+        [Theory(DisplayName = "Bools start with 'is'")]
         [MemberData(nameof(GetData))]
         public void BoolsShouldStartWithIs(Type type)
         {
@@ -143,7 +156,8 @@ namespace EliteAPI.Tests
 
             // this test works
             var invalidProperties = type.GetProperties()
-                .Where(x => !x.PropertyType.IsEnum && (x.Name.EndsWith("type", StringComparison.OrdinalIgnoreCase) || x.Name.EndsWith("state", StringComparison.OrdinalIgnoreCase)));
+                .Where(x => !x.PropertyType.IsEnum && (x.Name.EndsWith("type", StringComparison.OrdinalIgnoreCase) ||
+                                                       x.Name.EndsWith("state", StringComparison.OrdinalIgnoreCase)));
 
             invalidProperties.Should().BeEmpty();
         }
@@ -153,10 +167,14 @@ namespace EliteAPI.Tests
         public void ReadOnlyListForEnumerables(Type type)
         {
             var properties = type.GetProperties();
-            var complexProperties = properties.Where(x => !x.PropertyType.IsPrimitive && x.PropertyType != typeof(string));
-            var collectionProperties = complexProperties.Where(x => x.PropertyType.GetInterface(nameof(IEnumerable)) != null);
+            var complexProperties =
+                properties.Where(x => !x.PropertyType.IsPrimitive && x.PropertyType != typeof(string));
+            var collectionProperties =
+                complexProperties.Where(x => x.PropertyType.GetInterface(nameof(IEnumerable)) != null);
 
-            var invalidProperties = collectionProperties.Where(x => !x.PropertyType.GetInterfaces().Any(n => n.IsGenericType && n.GetGenericTypeDefinition() == typeof(IReadOnlyCollection<>)));
+            var invalidProperties = collectionProperties.Where(x =>
+                !x.PropertyType.GetInterfaces().Any(n =>
+                    n.IsGenericType && n.GetGenericTypeDefinition() == typeof(IReadOnlyCollection<>)));
 
             invalidProperties.Should().BeEmpty();
         }
@@ -169,7 +187,7 @@ namespace EliteAPI.Tests
 
             invalidProperties.Should().BeEmpty();
         }
-        
+
         [Theory(DisplayName = "EventHandler contains event")]
         [MemberData(nameof(GetData))]
         public void HasEvent(Type type)

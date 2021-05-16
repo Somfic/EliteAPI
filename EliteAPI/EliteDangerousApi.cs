@@ -18,8 +18,8 @@ using EliteAPI.Options.Directory.Abstractions;
 using EliteAPI.Options.Processor.Abstractions;
 using EliteAPI.Options.Provider.Abstractions;
 using EliteAPI.Status.Cargo.Abstractions;
+using EliteAPI.Status.Commander.Abstractions;
 using EliteAPI.Status.Market.Abstractions;
-using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Modules.Abstractions;
 using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Outfitting.Abstractions;
@@ -72,6 +72,7 @@ namespace EliteAPI
 
                 Events = services.GetRequiredService<EventHandler>();
                 Ship = services.GetRequiredService<IShip>();
+                Commander = services.GetRequiredService<ICommander>();
                 NavRoute = services.GetRequiredService<INavRoute>();
                 Cargo = services.GetRequiredService<ICargo>();
                 Market = services.GetRequiredService<IMarket>();
@@ -132,11 +133,10 @@ namespace EliteAPI
         public EventHandler Events { get; }
 
         /// <inheritdoc />
-        [Obsolete("Use the Ship property instead", true)]
-        public IShipStatus Status { get; }
-
-        /// <inheritdoc />
         public IShip Ship { get; }
+        
+        /// <inheritdoc />
+        public ICommander Commander { get; }
 
         /// <inheritdoc />
         public INavRoute NavRoute { get; }
@@ -255,7 +255,7 @@ namespace EliteAPI
             try
             {
                 await SetSupportFiles();
-                await _statusProcessor.ProcessShipFile(StatusFile);
+                await _statusProcessor.ProcessStatusFile(StatusFile);
                 await _statusProcessor.ProcessCargoFile(CargoFile);
                 await _statusProcessor.ProcessMarketFile(MarketFile);
                 await _statusProcessor.ProcessOutfittingFile(OutfittingFile);

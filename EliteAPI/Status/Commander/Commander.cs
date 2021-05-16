@@ -1,0 +1,57 @@
+﻿using System;
+using EliteAPI.Status.Abstractions;
+using EliteAPI.Status.Commander.Abstractions;
+using EliteAPI.Status.Ship;
+
+namespace EliteAPI.Status.Commander
+{
+    public class Commander : ICommander
+    {
+        /// <inheritdoc />
+        public StatusProperty<CommanderFlags> Flags { get; } = new (CommanderFlags.None);
+
+        /// <inheritdoc />
+        public StatusProperty<bool> OnFoot { get; } = new();
+
+        /// <inheritdoc />
+        public StatusProperty<bool> InTaxi { get; } = new();
+
+        /// <inheritdoc />
+        public StatusProperty<bool> InMultiCrew { get; } = new();
+
+        /// <inheritdoc />
+        public StatusProperty<bool> OnFootInStation { get; } = new();
+
+        /// <inheritdoc />
+        public StatusProperty<bool> OnFootOnPlanet { get; } = new();
+
+        /// <inheritdoc />
+        public StatusProperty<bool> AimDownSight { get; } = new();
+
+        /// <inheritdoc />
+        public StatusProperty<bool> LowOxygen { get; } = new();
+
+        /// <inheritdoc />
+        public StatusProperty<bool> LowHealth { get; } = new();
+
+        /// <inheritdoc />
+        public StatusProperty<bool> Cold { get; } = new();
+
+        /// <inheritdoc />
+        public StatusProperty<bool> Hot { get; } = new();
+
+        /// <inheritdoc />
+        public StatusProperty<bool> VeryCold { get; } = new();
+
+        /// <inheritdoc />
+        public StatusProperty<bool> VeryHot { get; } = new();
+        
+        /// <inheritdoc />
+        public event EventHandler OnChange;
+
+        void IStatus.TriggerOnChange()
+        {
+            OnChange?.Invoke(this, EventArgs.Empty);
+        }
+    }
+}

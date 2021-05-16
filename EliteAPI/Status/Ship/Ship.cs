@@ -11,7 +11,7 @@ namespace EliteAPI.Status.Ship
     public class Ship : IShip
     {
         /// <inheritdoc />
-        public StatusProperty<ShipFlag> Flags { get; } = new(ShipFlag.None);
+        public StatusProperty<ShipFlags> Flags { get; } = new(ShipFlags.None);
 
         /// <inheritdoc />
         public StatusProperty<bool> Available { get; } = new();

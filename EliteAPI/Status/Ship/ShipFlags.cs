@@ -3,7 +3,7 @@
 namespace EliteAPI.Status.Ship
 {
     [Flags]
-    public enum ShipFlag
+    public enum ShipFlags
     {
         None = 0,
         Docked = 1,

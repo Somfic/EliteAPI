@@ -7,7 +7,7 @@ using EliteAPI.Status.Market.Raw;
 using EliteAPI.Status.Modules.Raw;
 using EliteAPI.Status.NavRoute.Raw;
 using EliteAPI.Status.Outfitting.Raw;
-using EliteAPI.Status.Ship.Raw;
+using EliteAPI.Status.Raw;
 
 namespace EliteAPI.Status.Processor.Abstractions
 {
@@ -20,12 +20,12 @@ namespace EliteAPI.Status.Processor.Abstractions
         /// Triggered when the status file is updated
         /// </summary>
         [Obsolete("Use ShipUpdated instead", true)]
-        event EventHandler<(string Json, RawShip Ship)> StatusUpdated;
+        event EventHandler<(string Json, RawStatus Ship)> StatusUpdated;
 
         /// <summary>
         /// Triggered when the status file is updated
         /// </summary>
-        event EventHandler<(string Json, RawShip Ship)> ShipUpdated;
+        event EventHandler<(string Json, RawStatus Ship)> ShipUpdated;
         
         /// <summary>
         /// Triggered when the cargo file is updated
@@ -61,7 +61,7 @@ namespace EliteAPI.Status.Processor.Abstractions
         /// Hooks the specified status file to <see cref="StatusUpdated" /> and invokes <see cref="StatusUpdated" /> when
         /// needed
         /// </summary>
-        Task ProcessShipFile(FileInfo statusFile);
+        Task ProcessStatusFile(FileInfo statusFile);
 
         /// <summary>
         /// Hooks the specified cargo file to <see cref="CargoUpdated" /> and invokes <see cref="CargoUpdated" /> when needed

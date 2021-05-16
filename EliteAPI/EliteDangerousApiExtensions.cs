@@ -22,9 +22,10 @@ using EliteAPI.Services.FileReader;
 using EliteAPI.Services.FileReader.Abstractions;
 using EliteAPI.Status.Cargo;
 using EliteAPI.Status.Cargo.Abstractions;
+using EliteAPI.Status.Commander;
+using EliteAPI.Status.Commander.Abstractions;
 using EliteAPI.Status.Market;
 using EliteAPI.Status.Market.Abstractions;
-using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Modules;
 using EliteAPI.Status.Modules.Abstractions;
 using EliteAPI.Status.NavRoute;
@@ -37,7 +38,6 @@ using EliteAPI.Status.Provider;
 using EliteAPI.Status.Provider.Abstractions;
 using EliteAPI.Status.Ship;
 using EliteAPI.Status.Ship.Abstractions;
-using EliteAPI.Status.ShipStatus;
 
 using Microsoft.Extensions.DependencyInjection;
 
@@ -73,7 +73,8 @@ namespace EliteAPI
             // Status
             services.AddTransient<IStatusProvider, StatusProvider>();
             services.AddSingleton<IStatusProcessor, StatusProcessor>();
-            services.AddSingleton<IShip, Ship>(); 
+            services.AddSingleton<IShip, Ship>();
+            services.AddSingleton<ICommander, Commander>();
             services.AddSingleton<INavRoute, NavRoute>();
             services.AddSingleton<ICargo, Cargo>();
             services.AddSingleton<IMarket, Market>();

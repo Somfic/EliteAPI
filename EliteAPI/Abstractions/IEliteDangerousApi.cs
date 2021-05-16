@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 
 using EliteAPI.Options.Bindings.Models;
 using EliteAPI.Status.Cargo.Abstractions;
+using EliteAPI.Status.Commander.Abstractions;
 using EliteAPI.Status.Market.Abstractions;
-using EliteAPI.Status.Models.Abstractions;
 using EliteAPI.Status.Modules.Abstractions;
 using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Outfitting.Abstractions;
@@ -35,13 +35,12 @@ namespace EliteAPI.Abstractions
         /// <summary>
         /// Container for the ship's current status
         /// </summary>
-        [Obsolete("Use the Ship property instead", true)]
-        IShipStatus Status { get; }
-
-        /// <summary>
-        /// Container for the ship's current status
-        /// </summary>
         IShip Ship { get; }
+        
+        /// <summary>
+        /// Container for the commander's current status
+        /// </summary>
+        ICommander Commander { get; }
 
         /// <summary>
         /// Container for the ship's current navigation route

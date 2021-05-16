@@ -10,7 +10,7 @@ namespace EliteAPI.Status.Ship.Abstractions
         /// <summary>
         /// Overview of all ship flags
         /// </summary>
-        StatusProperty<ShipFlag> Flags { get; }
+        StatusProperty<ShipFlags> Flags { get; }
 
         /// <summary>
         /// Whether ship information is currently available

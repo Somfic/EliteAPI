@@ -1,18 +1,20 @@
 ﻿using System.Collections.Generic;
-
 using EliteAPI.Event.Models.Abstractions;
+using EliteAPI.Status.Ship;
 using EliteAPI.Status.Ship.JsonConverters;
-
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace EliteAPI.Status.Ship.Raw
+namespace EliteAPI.Status.Raw
 {
-    public class RawShip : EventBase<RawShip>
+    public class RawStatus : EventBase<RawStatus>
     {
         [JsonProperty("Flags")]
-        public ShipFlag Flags { get; private set; }
-        public bool Available => Flags != 0;
+        public ShipFlags ShipFlags { get; private set; }
+        
+        [JsonProperty("Flags2")]
+        public CommanderFlags CommanderFlags { get; private set; }
+        public bool Available => ShipFlags != ShipFlags.None || CommanderFlags != CommanderFlags.None;
         public bool Docked => GetFlag(0);
         public bool Landed => GetFlag(1);
         public bool Gear => GetFlag(2);
@@ -45,6 +47,18 @@ namespace EliteAPI.Status.Ship.Raw
         public bool AltitudeFromAverageRadius => GetFlag(29);
         public bool FsdJump => GetFlag(30);
         public bool SrvHighBeam => GetFlag(31);
+        public bool OnFoot => GetFlag2(0);
+        public bool InTaxi => GetFlag2(1);
+        public bool InMultiCrew => GetFlag2(2);
+        public bool OnFootInStation => GetFlag2(3);
+        public bool OnFootOnPlanet => GetFlag2(4);
+        public bool AimDownSight => GetFlag2(5);
+        public bool LowOxygen => GetFlag2(6);
+        public bool LowHealth => GetFlag2(7);
+        public bool Cold => GetFlag2(8);
+        public bool Hot => GetFlag2(9);
+        public bool VeryCold => GetFlag2(10);
+        public bool VeryHot => GetFlag2(11);
 
         [JsonProperty("Pips")]
         [JsonConverter(typeof(PipsConverter))]
@@ -88,7 +102,12 @@ namespace EliteAPI.Status.Ship.Raw
 
         private bool GetFlag(int bit)
         {
-            return Flags.HasFlag((ShipFlag) (1 << bit));
+            return ShipFlags.HasFlag((ShipFlags) (1 << bit));
+        }
+        
+        private bool GetFlag2(int bit)
+        {
+            return CommanderFlags.HasFlag((CommanderFlags) (1 << bit));
         }
     }
 }

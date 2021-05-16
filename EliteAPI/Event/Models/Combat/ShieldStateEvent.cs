@@ -16,7 +16,7 @@ namespace EliteAPI.Event.Models
         internal ShieldStateEvent() { }
 
         [JsonProperty("ShieldsUp")]
-        public bool ShieldsUp { get; private set; }
+        public bool IsShieldsUp { get; private set; }
     }
 
 }

@@ -29,7 +29,7 @@ namespace EliteAPI.Event.Models
         public string DockingAccess { get; private set; }
 
         [JsonProperty("AllowNotorious")]
-        public bool AllowNotorious { get; private set; }
+        public bool AllowsNotorious { get; private set; }
 
         [JsonProperty("FuelLevel")]
         public long FuelLevel { get; private set; }
@@ -41,7 +41,7 @@ namespace EliteAPI.Event.Models
         public double JumpRangeMax { get; private set; }
 
         [JsonProperty("PendingDecommission")]
-        public bool PendingDecommission { get; private set; }
+        public bool IsPendingDecommission { get; private set; }
 
         [JsonProperty("SpaceUsage")]
         public SpaceUsageInfo SpaceUsage { get; private set; }
@@ -79,10 +79,10 @@ namespace EliteAPI.Event.Models
             public string CrewRole { get; private set; }
 
             [JsonProperty("Activated")]
-            public bool Activated { get; private set; }
+            public bool IsActivated { get; private set; }
 
             [JsonProperty("Enabled", NullValueHandling = NullValueHandling.Ignore)]
-            public bool? Enabled { get; private set; }
+            public bool? IsEnabled { get; private set; }
 
             [JsonProperty("CrewName", NullValueHandling = NullValueHandling.Ignore)]
             public string CrewName { get; private set; }

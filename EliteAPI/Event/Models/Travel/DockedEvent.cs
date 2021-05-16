@@ -59,7 +59,7 @@ namespace EliteAPI.Event.Models
         public double DistanceFromStarInLightSeconds { get; private set; }
 
         [JsonProperty("ActiveFine")]
-        public bool ActiveFine { get; private set; }
+        public bool HasActiveFine { get; private set; }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class StationEconomyInfo

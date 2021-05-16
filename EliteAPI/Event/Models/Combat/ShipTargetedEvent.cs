@@ -16,7 +16,7 @@ namespace EliteAPI.Event.Models
         internal ShipTargetedEvent() { }
 
         [JsonProperty("TargetLocked")]
-        public bool TargetLocked { get; private set; }
+        public bool IsTargetLocked { get; private set; }
 
         [JsonProperty("Ship")]
         public string Ship { get; private set; }

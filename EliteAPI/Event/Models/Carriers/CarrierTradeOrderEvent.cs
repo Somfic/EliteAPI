@@ -19,7 +19,7 @@ namespace EliteAPI.Event.Models
         public string CarrierId { get; private set; }
 
         [JsonProperty("BlackMarket")]
-        public bool BlackMarket { get; private set; }
+        public bool IsBlackMarket { get; private set; }
 
         [JsonProperty("Commodity")]
         public string Commodity { get; private set; }
@@ -34,7 +34,7 @@ namespace EliteAPI.Event.Models
         public int SaleOrder { get; private set; }
 
         [JsonProperty("CancelTrade")]
-        public bool CancelTrade { get; private set; }
+        public bool IsCancelTrade { get; private set; }
 
         [JsonProperty("Price")]
         public long Price { get; private set; }

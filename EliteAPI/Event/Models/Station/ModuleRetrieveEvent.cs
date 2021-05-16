@@ -34,7 +34,7 @@ namespace EliteAPI.Event.Models
         public string ShipId { get; private set; }
 
         [JsonProperty("Hot")]
-        public bool Hot { get; private set; }
+        public bool IsHot { get; private set; }
     }
 
 }

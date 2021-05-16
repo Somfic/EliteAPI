@@ -23,7 +23,7 @@ namespace EliteAPI.Event.Models
         public double Latitude { get; private set; }
 
         [JsonProperty("Docked")]
-        public bool Docked { get; private set; }
+        public bool IsDocked { get; private set; }
 
         [JsonProperty("StationName")]
         public string StationName { get; private set; }

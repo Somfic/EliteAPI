@@ -92,7 +92,7 @@ namespace EliteAPI.Event.Models
         public bool WasMapped { get; private set; }
 
         [JsonProperty("TidalLock")]
-        public bool TidalLock { get; private set; }
+        public bool IsTidalLock { get; private set; }
 
         [JsonProperty("TerraformState")]
         public string TerraformState { get; private set; }
@@ -122,7 +122,7 @@ namespace EliteAPI.Event.Models
         public double SurfacePressure { get; private set; }
 
         [JsonProperty("Landable")]
-        public bool Landable { get; private set; }
+        public bool IsLandable { get; private set; }
 
         [JsonProperty("Materials")]
         public IReadOnlyList<Materialinfo> Materials { get; private set; }

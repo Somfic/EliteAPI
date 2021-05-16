@@ -22,7 +22,7 @@ namespace EliteAPI.Event.Models
         public string ModuleLocalised { get; private set; }
 
         [JsonProperty("FullyRepaired")]
-        public bool FullyRepaired { get; private set; }
+        public bool IsFullyRepaired { get; private set; }
 
         [JsonProperty("Health")]
         public double Health { get; private set; }

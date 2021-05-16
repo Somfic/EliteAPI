@@ -19,10 +19,10 @@ namespace EliteAPI.Event.Models
         public double Health { get; private set; }
 
         [JsonProperty("PlayerPilot")]
-        public bool PlayerPilot { get; private set; }
+        public bool IsPlayerPilot { get; private set; }
 
         [JsonProperty("Fighter")]
-        public bool Fighter { get; private set; }
+        public bool IsFighter { get; private set; }
     }
 
 }

@@ -16,7 +16,7 @@ namespace EliteAPI.Event.Models
         internal InterdictionEvent() { }
 
         [JsonProperty("Success")]
-        public bool Success { get; private set; }
+        public bool IsSuccess { get; private set; }
 
         [JsonProperty("IsPlayer")]
         public bool IsPlayer { get; private set; }

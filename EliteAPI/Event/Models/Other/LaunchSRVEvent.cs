@@ -22,7 +22,7 @@ namespace EliteAPI.Event.Models
         public string Id { get; private set; }
 
         [JsonProperty("PlayerControlled")]
-        public bool PlayerControlled { get; private set; }
+        public bool IsPlayerControlled { get; private set; }
     }
 
 }

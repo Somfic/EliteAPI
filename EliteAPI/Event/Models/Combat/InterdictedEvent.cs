@@ -16,7 +16,7 @@ namespace EliteAPI.Event.Models
         internal InterdictedEvent() { }
 
         [JsonProperty("Submitted")]
-        public bool Submitted { get; private set; }
+        public bool HasSubmitted { get; private set; }
 
         [JsonProperty("Interdictor")]
         public string Interdictor { get; private set; }

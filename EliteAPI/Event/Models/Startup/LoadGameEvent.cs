@@ -22,7 +22,7 @@ namespace EliteAPI.Event.Models
         public string Commander { get; private set; }
 
         [JsonProperty("Horizons")]
-        public bool Horizons { get; private set; }
+        public bool HasHorizons { get; private set; }
 
         [JsonProperty("Ship")]
         public string Ship { get; private set; }
@@ -46,7 +46,7 @@ namespace EliteAPI.Event.Models
         public double FuelCapacity { get; private set; }
 
         [JsonProperty("StartLanded")]
-        public bool StartLanded { get; private set; }
+        public bool IsLanded { get; private set; }
 
         [JsonProperty("GameMode")]
         public string GameMode { get; private set; }

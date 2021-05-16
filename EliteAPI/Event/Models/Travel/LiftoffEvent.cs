@@ -16,7 +16,7 @@ namespace EliteAPI.Event.Models
         internal LiftoffEvent() { }
 
         [JsonProperty("PlayerControlled")]
-        public bool PlayerControlled { get; private set; }
+        public bool IsPlayerControlled { get; private set; }
 
         [JsonProperty("Latitude")]
         public double Latitude { get; private set; }

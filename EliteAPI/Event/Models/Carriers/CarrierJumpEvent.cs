@@ -17,7 +17,7 @@ namespace EliteAPI.Event.Models
         internal CarrierJumpEvent() { }
 
         [JsonProperty("Docked")]
-        public bool Docked { get; private set; }
+        public bool IsDocked { get; private set; }
 
         [JsonProperty("StationName")]
         public string StationName { get; private set; }

@@ -25,7 +25,7 @@ namespace EliteAPI.Event.Models
         public long Count { get; private set; }
 
         [JsonProperty("Abandoned")]
-        public bool Abandoned { get; private set; }
+        public bool IsAbandoned { get; private set; }
     }
 
 }

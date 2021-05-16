@@ -16,7 +16,7 @@ namespace EliteAPI.Event.Models
         internal EndCrewSessionEvent() { }
 
         [JsonProperty("OnCrime")]
-        public bool OnCrime { get; private set; }
+        public bool IsCrime { get; private set; }
     }
 
 }

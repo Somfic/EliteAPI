@@ -19,7 +19,7 @@ namespace EliteAPI.Event.Models
         public string Crew { get; private set; }
 
         [JsonProperty("OnCrime")]
-        public bool OnCrime { get; private set; }
+        public bool IsCrime { get; private set; }
     }
 
 }

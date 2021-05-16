@@ -46,7 +46,7 @@ namespace EliteAPI.Event.Models
         public DateTime Expiry { get; private set; }
 
         [JsonProperty("Wing")]
-        public bool Wing { get; private set; }
+        public bool IsWing { get; private set; }
 
         [JsonProperty("Influence")]
         public string Influence { get; private set; }

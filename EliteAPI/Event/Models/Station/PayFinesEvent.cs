@@ -19,7 +19,7 @@ namespace EliteAPI.Event.Models
         public long Amount { get; private set; }
 
         [JsonProperty("AllFines")]
-        public bool AllFines { get; private set; }
+        public bool IsAllFines { get; private set; }
 
         [JsonProperty("Faction")]
         public string Faction { get; private set; }

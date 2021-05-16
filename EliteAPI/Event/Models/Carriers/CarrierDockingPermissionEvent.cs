@@ -22,7 +22,7 @@ namespace EliteAPI.Event.Models
         public string DockingAccess { get; private set; }
 
         [JsonProperty("AllowNotorious")]
-        public bool AllowNotorious { get; private set; }
+        public bool AllowsNotorious { get; private set; }
     }
 
 }

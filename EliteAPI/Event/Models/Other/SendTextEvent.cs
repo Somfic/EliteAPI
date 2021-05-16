@@ -22,7 +22,7 @@ namespace EliteAPI.Event.Models
         public string Message { get; private set; }
 
         [JsonProperty("Sent")]
-        public bool Sent { get; private set; }
+        public bool IsSent { get; private set; }
     }
 
 }

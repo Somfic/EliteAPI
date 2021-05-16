@@ -83,6 +83,21 @@ namespace EliteAPI.Tests
             
             invalidProperties.Should().BeEmpty();
         }
+        
+        [Theory(DisplayName = "Bools should start with 'is'")]
+        [MemberData(nameof(GetData))]
+        public void BoolsShouldStartWithIs(Type type)
+        {
+            var invalidProperties = type.GetProperties()
+                .Where(x => x.PropertyType == typeof(bool)
+                            && !x.Name.StartsWith("is", StringComparison.OrdinalIgnoreCase)
+                            && !x.Name.StartsWith("has", StringComparison.OrdinalIgnoreCase)
+                            && !x.Name.StartsWith("was", StringComparison.OrdinalIgnoreCase)
+                            && !x.Name.StartsWith("allows", StringComparison.OrdinalIgnoreCase)
+                );
+
+            invalidProperties.Should().BeEmpty();
+        }
 
         [Theory(DisplayName = "Slots are strings")]
         [MemberData(nameof(GetData))]

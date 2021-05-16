@@ -22,7 +22,7 @@ namespace EliteAPI.Event.Models
         public long Cost { get; private set; }
 
         [JsonProperty("Bankrupt")]
-        public bool Bankrupt { get; private set; }
+        public bool IsBankrupt { get; private set; }
     }
 
 }

@@ -22,7 +22,7 @@ namespace EliteAPI.Event.Models
         public string TypeLocalised { get; private set; }
 
         [JsonProperty("Stolen")]
-        public bool Stolen { get; private set; }
+        public bool IsStolen { get; private set; }
     }
 
 }

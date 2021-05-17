@@ -69,5 +69,30 @@ namespace EliteAPI.Status.Commander.Abstractions
         /// Whether the commander is very hot
         /// </summary>
         StatusProperty<bool> VeryHot { get; }
+        
+        /// <summary>
+        /// The percentage of oxygen available
+        /// </summary>
+        StatusProperty<float> Oxygen { get; }
+        
+        /// <summary>
+        /// The percentage of health
+        /// </summary>
+        StatusProperty<float> Health { get; }
+        
+        /// <summary>
+        /// The temperature in Kelvin
+        /// </summary>
+        StatusProperty<float> Temperature { get; }
+        
+        /// <summary>
+        /// The selected weapon
+        /// </summary>
+        StatusProperty<string> SelectedWeapon { get; }
+        
+        /// <summary>
+        /// The gravity relative to Earth's
+        /// </summary>
+        StatusProperty<float> Gravity { get; }
     }
 }

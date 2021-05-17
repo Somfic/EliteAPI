@@ -160,6 +160,12 @@ namespace EliteAPI.Status.Processor
                 UpdateStatusProperty(_commander.VeryHot, raw.VeryHot, "Commander.VeryHot");
                 UpdateStatusProperty(_commander.VeryHot, raw.VeryCold, "Commander.VeryCold");
                 
+                UpdateStatusProperty(_commander.Oxygen, raw.Oxygen, "Commander.Oxygen");
+                UpdateStatusProperty(_commander.Health, raw.Health, "Commander.Health");
+                UpdateStatusProperty(_commander.Temperature, raw.Temperature, "Commander.Temperature");
+                UpdateStatusProperty(_commander.SelectedWeapon, raw.SelectedWeapon, "Commander.SelectedWeapon");
+                UpdateStatusProperty(_commander.Gravity, raw.Gravity, "Commander.Gravity");
+
                 StatusUpdated?.Invoke(this, (content, raw));
             }
         }

@@ -45,7 +45,22 @@ namespace EliteAPI.Status.Commander
 
         /// <inheritdoc />
         public StatusProperty<bool> VeryHot { get; } = new();
+
+        /// <inheritdoc />
+        public StatusProperty<float> Oxygen { get; } = new();
         
+        /// <inheritdoc />
+        public StatusProperty<float> Health { get; } = new();
+        
+        /// <inheritdoc />
+        public StatusProperty<float> Temperature { get; } = new();
+        
+        /// <inheritdoc />
+        public StatusProperty<string> SelectedWeapon { get; } = new();
+        
+        /// <inheritdoc />
+        public StatusProperty<float> Gravity { get; } = new();
+
         /// <inheritdoc />
         public event EventHandler OnChange;
 

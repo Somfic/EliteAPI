@@ -99,7 +99,22 @@ namespace EliteAPI.Status.Raw
 
         [JsonProperty("PlanetRadius")]
         public float BodyRadius { get; private set; }
+        
+        [JsonProperty("Oxygen")]
+        public float Oxygen { get; private set; }
 
+        [JsonProperty("Health")]
+        public float Health { get; private set; }
+        
+        [JsonProperty("Temperature")]
+        public float Temperature { get; private set; }
+        
+        [JsonProperty("SelectedWeapon")]
+        public string SelectedWeapon { get; private set; }
+        
+        [JsonProperty("Gravity")]
+        public float Gravity { get; private set; }
+        
         private bool GetFlag(int bit)
         {
             return ShipFlags.HasFlag((ShipFlags) (1 << bit));

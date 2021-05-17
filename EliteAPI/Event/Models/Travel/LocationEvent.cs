@@ -24,6 +24,18 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Docked")]
         public bool IsDocked { get; private set; }
+        
+        [JsonProperty("Taxi")]
+        public bool IsInTaxi { get; private set; }
+
+        [JsonProperty("MultiCrew")] 
+        public bool IsInMultiCrew { get; private set; }
+        
+        [JsonProperty("InSRV")] 
+        public bool IsInSrv { get; private set; }
+
+        [JsonProperty("OnFoot")] 
+        public bool IsOnFoot { get; private set; }
 
         [JsonProperty("StationName")]
         public string StationName { get; private set; }

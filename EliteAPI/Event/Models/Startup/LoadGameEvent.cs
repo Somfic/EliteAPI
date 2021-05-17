@@ -23,6 +23,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Horizons")]
         public bool HasHorizons { get; private set; }
+        
+        [JsonProperty("Odyssey")]
+        public bool HasOdyssey { get; private set; }
 
         [JsonProperty("Ship")]
         public string Ship { get; private set; }

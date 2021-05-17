@@ -24,6 +24,24 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Longitude")]
         public double Longitude { get; private set; }
 
+        [JsonProperty("StarSystem")] 
+        public string StarSystem { get; private set; }
+
+        [JsonProperty("SystemAddress")]
+        public string SystemAddress { get; private set; }
+
+        [JsonProperty("Body")] 
+        public string Body { get; private set; }
+
+        [JsonProperty("BodyID")]
+        public string BodyId { get; private set; }
+
+        [JsonProperty("OnPlanet")] 
+        public bool IsOnPlanet { get; private set; }
+
+        [JsonProperty("OnStation")] 
+        public bool OnStation { get; private set; }
+        
         [JsonProperty("NearestDestination")]
         public string NearestDestination { get; private set; }
 

@@ -40,7 +40,7 @@ namespace EliteAPI.Event.Models
         public bool IsOnPlanet { get; private set; }
 
         [JsonProperty("OnStation")] 
-        public bool OnStation { get; private set; }
+        public bool IsOnStation { get; private set; }
         
         [JsonProperty("NearestDestination")]
         public string NearestDestination { get; private set; }

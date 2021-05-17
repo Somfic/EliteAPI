@@ -1155,6 +1155,31 @@
             Whether the commander is very hot
             </summary>
         </member>
+        <member name="P:EliteAPI.Status.Commander.Abstractions.ICommander.Oxygen">
+            <summary>
+            The percentage of oxygen available
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Commander.Abstractions.ICommander.Health">
+            <summary>
+            The percentage of health
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Commander.Abstractions.ICommander.Temperature">
+            <summary>
+            The temperature in Kelvin
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Commander.Abstractions.ICommander.SelectedWeapon">
+            <summary>
+            The selected weapon
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Commander.Abstractions.ICommander.Gravity">
+            <summary>
+            The gravity relative to Earth's
+            </summary>
+        </member>
         <member name="P:EliteAPI.Status.Commander.Commander.Flags">
             <inheritdoc />
         </member>
@@ -1192,6 +1217,21 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Status.Commander.Commander.VeryHot">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Commander.Commander.Oxygen">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Commander.Commander.Health">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Commander.Commander.Temperature">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Commander.Commander.SelectedWeapon">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Commander.Commander.Gravity">
             <inheritdoc />
         </member>
         <member name="E:EliteAPI.Status.Commander.Commander.OnChange">

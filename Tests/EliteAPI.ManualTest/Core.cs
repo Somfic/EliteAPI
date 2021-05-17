@@ -36,21 +36,12 @@ namespace EliteAPI.ManualTest
 
         public async Task Run()
         {
-            try
+            _api.Ship.Available.OnChange += (sender, e) =>
             {
-                var n = StatisticsEvent.FromJson((await File.ReadAllLinesAsync(@"C:\Users\somfi\Documents\GitHub\EliteAPI\EliteAPI\Tests\EliteAPI.Tests\Test cases\Statistics.json"))[0]);
-
-                RpcEncoder encoder = new RpcEncoder(Mock.Of<ILogger<RpcEncoder>>());
-
-                string encoded = Convert.ToBase64String(encoder.Encode(n).ToArray());
-                string decoded = encoder.Decode<StatisticsEvent>(encoded).ToJson();
-                
-               _log.LogCritical(Serializer.GetProto<StatisticsEvent>(ProtoSyntax.Proto3));
-            }
-            catch (Exception ex)
-            {
-                _log.LogCritical(ex, "Could not run program");
-            }
+                _log.LogCritical("Available changed to {Value}!", e);
+            };
+            
+            await _api.StartAsync();
         }
     }
 }

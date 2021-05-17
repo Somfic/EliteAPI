@@ -168,30 +168,34 @@ namespace EliteAPI.Event.Models
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ConflictInfo
         {
+            internal ConflictInfo() { }
+            
             [JsonProperty("WarType")]
-            public string WarType { get; set; }
+            public string WarType { get; private set; }
 
             [JsonProperty("Status")]
-            public string Status { get; set; }
+            public string Status { get; private set; }
 
             [JsonProperty("Faction1")]
-            public ConflictFactionInfo Faction1 { get; set; }
+            public ConflictFactionInfo Faction1 { get; private set; }
 
             [JsonProperty("Faction2")]
-            public ConflictFactionInfo Faction2 { get; set; }
+            public ConflictFactionInfo Faction2 { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ConflictFactionInfo
         {
+            internal ConflictFactionInfo() { }
+            
             [JsonProperty("Name")]
-            public string Name { get; set; }
+            public string Name { get; private set; }
 
             [JsonProperty("Stake")]
-            public string Stake { get; set; }
+            public string Stake { get; private set; }
 
             [JsonProperty("WonDays")]
-            public long WonDays { get; set; }
+            public long WonDays { get; private set; }
         }
     }
 

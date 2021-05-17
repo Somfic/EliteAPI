@@ -17,7 +17,7 @@ namespace EliteAPI.Event.Models
         internal BountyEvent() { }
 
         [JsonProperty("Rewards")]
-        public IReadOnlyList<BountryReward> Rewards { get; private set; }
+        public IReadOnlyList<BountryRewardInfo> Rewards { get; private set; }
 
         [JsonProperty("Target")]
         public string Target { get; private set; }
@@ -35,9 +35,9 @@ namespace EliteAPI.Event.Models
         public long SharedWithOthers { get; private set; }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class BountryReward
+        public class BountryRewardInfo
         {
-            internal BountryReward() { }
+            internal BountryRewardInfo() { }
 
             [JsonProperty("Faction")]
             public string Faction { get; private set; }

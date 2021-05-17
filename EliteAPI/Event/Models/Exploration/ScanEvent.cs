@@ -113,7 +113,7 @@ namespace EliteAPI.Event.Models
         public string Volcanism { get; private set; }
 
         [JsonProperty("MassEM")]
-        public double MassEM { get; private set; }
+        public double MassEm { get; private set; }
 
         [JsonProperty("SurfaceGravity")]
         public double SurfaceGravity { get; private set; }
@@ -125,7 +125,7 @@ namespace EliteAPI.Event.Models
         public bool IsLandable { get; private set; }
 
         [JsonProperty("Materials")]
-        public IReadOnlyList<Materialinfo> Materials { get; private set; }
+        public IReadOnlyList<MaterialInfo> Materials { get; private set; }
 
         [JsonProperty("Composition")]
         public CompositionInfo Composition { get; private set; }
@@ -167,9 +167,9 @@ namespace EliteAPI.Event.Models
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class Materialinfo
+        public class MaterialInfo
         {
-            internal Materialinfo() { }
+            internal MaterialInfo() { }
 
             [JsonProperty("Name")]
             public string Name { get; private set; }

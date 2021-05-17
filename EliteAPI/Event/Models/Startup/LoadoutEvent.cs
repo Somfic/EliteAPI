@@ -82,7 +82,7 @@ namespace EliteAPI.Event.Models
             public string Item { get; private set; }
 
             [JsonProperty("On")]
-            public bool On { get; private set; }
+            public bool IsOn { get; private set; }
 
             [JsonProperty("Priority")]
             public long Priority { get; private set; }
@@ -109,10 +109,10 @@ namespace EliteAPI.Event.Models
             public string Engineer { get; private set; }
 
             [JsonProperty("EngineerID")]
-            public long EngineerId { get; private set; }
+            public string EngineerId { get; private set; }
 
             [JsonProperty("BlueprintID")]
-            public long BlueprintId { get; private set; }
+            public string BlueprintId { get; private set; }
 
             [JsonProperty("BlueprintName")]
             public string BlueprintName { get; private set; }

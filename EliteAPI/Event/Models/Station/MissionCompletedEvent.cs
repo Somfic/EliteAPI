@@ -98,7 +98,7 @@ namespace EliteAPI.Event.Models
             internal InfluenceInfo() { }
 
             [JsonProperty("SystemAddress")]
-            public long SystemAddress { get; private set; }
+            public string SystemAddress { get; private set; }
 
             [JsonProperty("Trend")]
             public string Trend { get; private set; }

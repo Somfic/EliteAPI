@@ -17,7 +17,7 @@ var host = Host.CreateDefaultBuilder()
     .ConfigureLogging((context, logger) =>
     {
         logger.ClearProviders();
-        logger.SetMinimumLevel(LogLevel.Information);
+        logger.SetMinimumLevel(LogLevel.Trace);
         logger.AddPrettyConsole(ConsoleFormats.Default, ConsoleThemes.OneDarkPro);
     })
 
@@ -25,8 +25,7 @@ var host = Host.CreateDefaultBuilder()
     {
         services.AddEliteAPI(configuration =>
         {
-            configuration.UseJournalDirectory(@"Z:\Saved Games\Frontier Developments\Elite Dangerous");   
-            configuration.UseOptionsDirectory(@"Z:\AppData\Local\Frontier Developments\Elite Dangerous\Options");
+
         });
     })
 

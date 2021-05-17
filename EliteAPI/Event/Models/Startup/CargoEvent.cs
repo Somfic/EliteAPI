@@ -40,7 +40,7 @@ namespace EliteAPI.Event.Models
             public int Count { get; private set; }
 
             [JsonProperty("Stolen")]
-            public bool Stolen { get; private set; }
+            public bool IsStolen { get; private set; }
 
             [JsonProperty("MissionID", NullValueHandling = NullValueHandling.Ignore)]
             public string MissionId { get; private set; }

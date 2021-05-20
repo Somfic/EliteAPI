@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EliteAPI.Services.FileReader.Abstractions;
 using EliteAPI.Status.Abstractions;
+using EliteAPI.Status.Backpack.Raw;
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Cargo.Raw;
 using EliteAPI.Status.Commander.Abstractions;
@@ -34,6 +35,8 @@ namespace EliteAPI.Status.Processor
         private readonly ILogger<StatusProcessor> _log;
         private readonly IMarket _market;
         private readonly IModules _modules;
+        private readonly IBackpack _backpack;
+        private readonly IShipyard _shipyard;
         private readonly INavRoute _navRoute;
         private readonly IOutfitting _outfitting;
         private readonly IFileReader _fileReader;
@@ -42,7 +45,7 @@ namespace EliteAPI.Status.Processor
         private readonly ICommander _commander;
 
         public StatusProcessor(ILogger<StatusProcessor> log, IShip ship, ICommander commander, INavRoute navRoute,
-            ICargo cargo, IMarket market, IModules modules, IOutfitting outfitting, IFileReader fileReader)
+            ICargo cargo, IMarket market, IModules modules, IBackpack backpack, IShipyard shipyard, IOutfitting outfitting, IFileReader fileReader)
         {
             _log = log;
             _ship = ship;
@@ -51,6 +54,8 @@ namespace EliteAPI.Status.Processor
             _cargo = cargo;
             _market = market;
             _modules = modules;
+            _backpack = backpack;
+            _shipyard = shipyard;
             _outfitting = outfitting;
             _fileReader = fileReader;
             _cache = new Dictionary<string, string>();
@@ -73,15 +78,16 @@ namespace EliteAPI.Status.Processor
         public event EventHandler<(string Json, RawMarket Market)> MarketUpdated;
 
         /// <inheritdoc />
-        [Obsolete("Not yet implemented")]
-        public event EventHandler<string> ShipyardUpdated;
-        //public event EventHandler<(string Json, RawShipyard Shipyard)> ShipyardUpdated;
+        public event EventHandler<(string Json, RawShipyard Shipyard)> ShipyardUpdated;
 
         /// <inheritdoc />
         public event EventHandler<(string Json, RawOutfitting Outfitting)> OutfittingUpdated;
 
         /// <inheritdoc />
         public event EventHandler<(string Json, RawNavRoute NavRoute)> NavRouteUpdated;
+
+        /// <inheritdoc />
+        public event EventHandler<(string Json, RawBackpack NavRoute)> BackpackUpdated;
 
         /// <inheritdoc />
         public async Task ProcessStatusFile(FileInfo statusFile)
@@ -213,19 +219,17 @@ namespace EliteAPI.Status.Processor
         }
 
         /// <inheritdoc />
-        public Task ProcessShipyardFile(FileInfo shipyardFile)
+        public async Task ProcessShipyardFile(FileInfo shipyardFile)
         {
-            if (shipyardFile == null || !shipyardFile.Exists) return Task.CompletedTask;
+            if (shipyardFile == null || !shipyardFile.Exists) return;
 
             var content = _fileReader.ReadAllText(shipyardFile);
             if (!IsInCache(shipyardFile, content))
             {
                 AddToCache(shipyardFile, content);
-                //await InvokeShipyardMethods(content);
-                ShipyardUpdated?.Invoke(this, content);
+                var raw = await InvokeMethods<RawShipyard>(content, _shipyard);
+                ShipyardUpdated?.Invoke(this, (content, raw));
             }
-
-            return Task.CompletedTask;
         }
 
         /// <inheritdoc />
@@ -256,6 +260,20 @@ namespace EliteAPI.Status.Processor
             }
         }
 
+        /// <inheritdoc />
+        public async Task ProcessBackpackFile(FileInfo backpackFile)
+        {
+            if (backpackFile == null || !backpackFile.Exists) return;
+
+            var content = _fileReader.ReadAllText(backpackFile);
+            if (!IsInCache(backpackFile, content))
+            {
+                AddToCache(backpackFile, content);
+                var raw = await InvokeMethods<RawBackpack>(content, _backpack);
+                BackpackUpdated?.Invoke(this, (content, raw));
+            }
+        }
+
         private async Task<T> InvokeMethods<T>(string json, IStatus status)
         {
             var name = status.GetType().Name;
@@ -282,11 +300,22 @@ namespace EliteAPI.Status.Processor
         {
             var name = propertyName;
 
+            if (raw == null || clean == null || string.IsNullOrWhiteSpace(propertyName))
+                return Task.CompletedTask;
+
             try
             {
                 name = $"{clean.GetType().Name}.{name}";
 
-                var rawValue = raw.GetType().GetProperty(propertyName).GetValue(raw);
+                var property = raw.GetType().GetProperty(propertyName);
+                if (property == null)
+                {
+                    _log.LogTrace("Could not process {Name}, property is null", name);
+                    return Task.CompletedTask;
+                    
+                }
+                
+                var rawValue = property.GetValue(raw);
 
                 var value = rawValue.ToString();
                 if (Type.GetTypeCode(rawValue.GetType()) == TypeCode.Object)

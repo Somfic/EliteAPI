@@ -49,5 +49,11 @@ namespace EliteAPI.Status.Provider.Abstractions
         /// </summary>
         /// <param name="journalDirectory"> The journal directory </param>
         Task<FileInfo> FindNavRouteFile(DirectoryInfo journalDirectory);
+
+        /// <summary>
+        /// Finds the backpack file from the specified journal directory
+        /// </summary>
+        /// <param name="journalDirectory"> The journal directory </param>
+        Task<FileInfo> FindBackpackFile(DirectoryInfo journalDirectory);
     }
 }

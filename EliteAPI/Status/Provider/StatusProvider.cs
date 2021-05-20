@@ -69,6 +69,13 @@ namespace EliteAPI.Status.Provider
             catch (Exception ex) { throw new NavRouteFileNotFoundException("Could not find the NavRoute.json file", ex); }
         }
 
+        /// <inheritdoc />
+        public async Task<FileInfo> FindBackpackFile(DirectoryInfo journalDirectory)
+        {
+            try { return await FindFile(journalDirectory, "Backpack.json"); }
+            catch (Exception ex) { throw new BackpackFileNotFoundException("Could not find the Backpack.json file", ex); }
+        }
+
         private Task<FileInfo> FindFile(DirectoryInfo directory, string name)
         {
             if (!directory.Exists)
@@ -85,6 +92,7 @@ namespace EliteAPI.Status.Provider
             var path = Path.Combine(directory.FullName, name);
             var fileException = new SupportFileNotFoundException($"The {name} could not be found");
             fileException.Data.Add("Path", path);
+            _log.LogDebug(fileException, "Could not find a support file");
             return Task.FromException<FileInfo>(fileException);
         }
     }

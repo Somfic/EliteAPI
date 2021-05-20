@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-
+using EliteAPI.Status.Backpack.Raw;
 using EliteAPI.Status.Cargo.Raw;
 using EliteAPI.Status.Market.Raw;
 using EliteAPI.Status.Modules.Raw;
@@ -40,7 +40,7 @@ namespace EliteAPI.Status.Processor.Abstractions
         /// <summary>
         /// Triggered when the shipyard file is updated
         /// </summary>
-        event EventHandler<string> ShipyardUpdated;
+        event EventHandler<(string Json, RawShipyard Shipyard)> ShipyardUpdated;
 
         /// <summary>
         /// Triggered when the modules file is updated
@@ -56,6 +56,12 @@ namespace EliteAPI.Status.Processor.Abstractions
         /// Triggered when the navroute file is updated
         /// </summary>
         event EventHandler<(string Json, RawNavRoute NavRoute)> NavRouteUpdated;
+        
+        /// <summary>
+        /// Triggered when the navroute file is updated
+        /// </summary>
+        event EventHandler<(string Json, RawBackpack NavRoute)> BackpackUpdated;
+
 
         /// <summary>
         /// Hooks the specified status file to <see cref="StatusUpdated" /> and invokes <see cref="StatusUpdated" /> when
@@ -97,5 +103,11 @@ namespace EliteAPI.Status.Processor.Abstractions
         /// needed
         /// </summary>
         Task ProcessNavRouteFile(FileInfo navRouteFile);
+
+        /// <summary>
+        /// Hooks the specified backpack file to <see cref="BackpackUpdated" /> and invokes
+        /// <see cref="BackpackUpdated" /> when needed
+        /// </summary>
+        Task ProcessBackpackFile(FileInfo backpackFile);
     }
 }

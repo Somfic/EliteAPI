@@ -37,15 +37,15 @@ namespace EliteAPI.Options.Provider
                 throw new ActiveBindingsNotFoundException("No selected bindings could be detected");
             }
 
-            var startPresetFile = startPresetFiles.First();
+            //var startPresetFile = startPresetFiles.First();
 
-            var activePresetName = _fileReader.ReadAllText(startPresetFile);
+            var activePresetName = "Custom.4.0.binds";
 
             var activePresetFiles = bindingsDirectory.GetFiles($"{activePresetName}*");
 
             if (activePresetFiles.Length == 0)
             {
-                BindingsNotFoundException ex = new("The selected bindings could not be found");
+                BindingsNotFoundException ex = new("The custom bindings could not be found");
                 ex.Data.Add("Active bindings", activePresetName);
 
                 throw ex;

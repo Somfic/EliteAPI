@@ -29,6 +29,16 @@
             Container for the commander's current status
             </summary>
         </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Backpack">
+            <summary>
+            Container for the commander's backpack
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.Shipyard">
+            <summary>
+            Container for the the last visited shipyard
+            </summary>
+        </member>
         <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.NavRoute">
             <summary>
             Container for the ship's current navigation route
@@ -218,6 +228,12 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousApi.Commander">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousApi.Backpack">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousApi.Shipyard">
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousApi.NavRoute">
@@ -458,6 +474,30 @@
             </summary>
             <param name="message">The message that describes the error</param>
             <param name="innerException">The inner exception that caused this exception</param>
+        </member>
+        <member name="T:EliteAPI.Exceptions.BackpackFileNotFoundException">
+            <summary>
+            The exception that is thrown when the Backpack.json file could not be found
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.BackpackFileNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.BackpackFileNotFoundException" /> class
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Exceptions.BackpackFileNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.BackpackFileNotFoundException" /> class with a specified error message
+            </summary>
+            <param name="message"> The message that describes the error </param>
+        </member>
+        <member name="M:EliteAPI.Exceptions.BackpackFileNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EliteAPI.Exceptions.BackpackFileNotFoundException" /> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message"> The message that describes the error </param>
+            <param name="innerException"> The inner exception that caused this exception </param>
         </member>
         <member name="T:EliteAPI.Exceptions.BindingsDirectoryNotFoundException">
             <summary>
@@ -1027,6 +1067,31 @@
             Triggered when any of the properties have been updated
             </summary>
         </member>
+        <member name="T:EliteAPI.Status.Cargo.Abstractions.IBackpack">
+            <summary>
+            Holds information about the ship's cargo
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.IBackpack.Items">
+            <summary>
+            The items in the backpack
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.IBackpack.Components">
+            <summary>
+            The components in the backpack
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.IBackpack.Consumables">
+            <summary>
+            The consumables in the backpack
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.IBackpack.Data">
+            <summary>
+            The data in the backpack
+            </summary>
+        </member>
         <member name="T:EliteAPI.Status.Cargo.Abstractions.ICargo">
             <summary>
             Holds information about the ship's cargo
@@ -1046,6 +1111,62 @@
             <summary>
             All the cargo's inventory
             </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Cargo.Abstractions.IShipyard">
+            <summary>
+            Holds information about the active shipyard
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.IShipyard.MarketId">
+            <summary>
+            The market id for the station this shipyard is at
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.IShipyard.StationName">
+            <summary>
+            The name of the station this shipyard is at
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.IShipyard.StarSystem">
+            <summary>
+            The name of the starsystem this shipyard is at
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.IShipyard.HasHorizons">
+            <summary>
+            Whether the commander has the Horizons expansion
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.IShipyard.AllowsCobraMk4">
+            <summary>
+            Whether the commander has access to the Cobra Mk IV
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Abstractions.IShipyard.Deals">
+            <summary>
+            The deals in this shipyard
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Cargo.Backpack">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Backpack.Items">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Backpack.Components">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Backpack.Consumables">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Backpack.Data">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Cargo.Backpack.OnChange">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Cargo.Backpack.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
+            <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.Cargo.Cargo">
             <inheritdoc />
@@ -1089,6 +1210,33 @@
             <summary>
             The amount of tonnes of this item in the ship's cargo that are stolen
             </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Cargo.Shipyard">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Shipyard.MarketId">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Shipyard.StationName">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Shipyard.StarSystem">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Shipyard.HasHorizons">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Shipyard.AllowsCobraMk4">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Cargo.Shipyard.Deals">
+            <inheritdoc />
+        </member>
+        <member name="E:EliteAPI.Status.Cargo.Shipyard.OnChange">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Cargo.Shipyard.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
+            <inheritdoc />
         </member>
         <member name="P:EliteAPI.Status.Commander.Abstractions.ICommander.Flags">
             <summary>
@@ -2105,6 +2253,11 @@
             Triggered when the navroute file is updated
             </summary>
         </member>
+        <member name="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.BackpackUpdated">
+            <summary>
+            Triggered when the navroute file is updated
+            </summary>
+        </member>
         <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
             <summary>
             Hooks the specified status file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated" /> and invokes <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.StatusUpdated" /> when
@@ -2146,6 +2299,12 @@
             needed
             </summary>
         </member>
+        <member name="M:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.ProcessBackpackFile(System.IO.FileInfo)">
+            <summary>
+            Hooks the specified backpack file to <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.BackpackUpdated" /> and invokes
+            <see cref="E:EliteAPI.Status.Processor.Abstractions.IStatusProcessor.BackpackUpdated" /> when needed
+            </summary>
+        </member>
         <member name="T:EliteAPI.Status.Processor.StatusProcessor">
             <inheritdoc />
         </member>
@@ -2173,6 +2332,9 @@
         <member name="E:EliteAPI.Status.Processor.StatusProcessor.NavRouteUpdated">
             <inheritdoc />
         </member>
+        <member name="E:EliteAPI.Status.Processor.StatusProcessor.BackpackUpdated">
+            <inheritdoc />
+        </member>
         <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessStatusFile(System.IO.FileInfo)">
             <inheritdoc />
         </member>
@@ -2192,6 +2354,9 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessNavRouteFile(System.IO.FileInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Processor.StatusProcessor.ProcessBackpackFile(System.IO.FileInfo)">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.Provider.Abstractions.IStatusProvider">
@@ -2241,6 +2406,12 @@
             </summary>
             <param name="journalDirectory"> The journal directory </param>
         </member>
+        <member name="M:EliteAPI.Status.Provider.Abstractions.IStatusProvider.FindBackpackFile(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the backpack file from the specified journal directory
+            </summary>
+            <param name="journalDirectory"> The journal directory </param>
+        </member>
         <member name="T:EliteAPI.Status.Provider.StatusProvider">
             <inheritdoc />
         </member>
@@ -2263,6 +2434,9 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Status.Provider.StatusProvider.FindNavRouteFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Provider.StatusProvider.FindBackpackFile(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.StatusProperty`1">

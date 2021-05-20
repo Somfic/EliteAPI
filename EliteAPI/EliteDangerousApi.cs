@@ -77,6 +77,8 @@ namespace EliteAPI
                 Cargo = services.GetRequiredService<ICargo>();
                 Market = services.GetRequiredService<IMarket>();
                 Modules = services.GetRequiredService<IModules>();
+                Backpack = services.GetRequiredService<IBackpack>();
+                Shipyard = services.GetRequiredService<IShipyard>();
                 Outfitting = services.GetRequiredService<IOutfitting>();
                 Bindings = services.GetRequiredService<IBindings>();
 
@@ -109,6 +111,7 @@ namespace EliteAPI
         private FileInfo StatusFile { get; set; }
         private FileInfo CargoFile { get; set; }
         private FileInfo MarketFile { get; set; }
+        private FileInfo BackpackFile { get; set; }
         private FileInfo OutfittingFile { get; set; }
         private FileInfo ShipyardFile { get; set; }
         private FileInfo NavRouteFile { get; set; }
@@ -137,6 +140,12 @@ namespace EliteAPI
         
         /// <inheritdoc />
         public ICommander Commander { get; }
+
+        /// <inheritdoc />
+        public IBackpack Backpack { get; }
+        
+        /// <inheritdoc />
+        public IShipyard Shipyard { get; }
 
         /// <inheritdoc />
         public INavRoute NavRoute { get; }
@@ -260,6 +269,7 @@ namespace EliteAPI
                 await _statusProcessor.ProcessMarketFile(MarketFile);
                 await _statusProcessor.ProcessOutfittingFile(OutfittingFile);
                 await _statusProcessor.ProcessShipyardFile(ShipyardFile);
+                await _statusProcessor.ProcessBackpackFile(BackpackFile);
                 await _statusProcessor.ProcessNavRouteFile(NavRouteFile);
                 await _statusProcessor.ProcessModulesFile(ModulesInfoFile);
                 
@@ -372,6 +382,8 @@ namespace EliteAPI
                 if (!DisabledSupportFiles.Contains("Shipyard")) ShipyardFile = await _statusProvider.FindShipyardFile(JournalDirectory);
 
                 if (!DisabledSupportFiles.Contains("NavRoute")) NavRouteFile = await _statusProvider.FindNavRouteFile(JournalDirectory);
+                
+                if (!DisabledSupportFiles.Contains("Backpack")) BackpackFile = await _statusProvider.FindBackpackFile(JournalDirectory);
 
                 if (!DisabledSupportFiles.Contains("ModulesInfo")) ModulesInfoFile = await _statusProvider.FindModulesFile(JournalDirectory);
 
@@ -415,6 +427,11 @@ namespace EliteAPI
             {
                 _log.LogDebug(ex, "ModulesInfo.json file support has been disabled");
                 DisabledSupportFiles.Add("ModulesInfo");
+            }
+            catch (BackpackFileNotFoundException ex)
+            {
+                _log.LogDebug(ex, "Backpack.json file support has been disabled");
+                DisabledSupportFiles.Add("Backpack");
             }
             catch (ActiveBindingsNotFoundException ex)
             {

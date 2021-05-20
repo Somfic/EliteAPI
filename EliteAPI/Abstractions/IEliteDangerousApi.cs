@@ -43,6 +43,16 @@ namespace EliteAPI.Abstractions
         ICommander Commander { get; }
 
         /// <summary>
+        /// Container for the commander's backpack
+        /// </summary>
+        IBackpack Backpack { get; }
+        
+        /// <summary>
+        /// Container for the the last visited shipyard
+        /// </summary>
+        IShipyard Shipyard { get; }
+
+        /// <summary>
         /// Container for the ship's current navigation route
         /// </summary>
         INavRoute NavRoute { get; }

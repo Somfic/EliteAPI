@@ -75,6 +75,8 @@ namespace EliteAPI
             services.AddSingleton<IStatusProcessor, StatusProcessor>();
             services.AddSingleton<IShip, Ship>();
             services.AddSingleton<ICommander, Commander>();
+            services.AddSingleton<IBackpack, Backpack>();
+            services.AddSingleton<IShipyard, Shipyard>();
             services.AddSingleton<INavRoute, NavRoute>();
             services.AddSingleton<ICargo, Cargo>();
             services.AddSingleton<IMarket, Market>();

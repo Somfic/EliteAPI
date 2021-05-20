@@ -87,7 +87,7 @@ namespace EliteAPI.Status.Processor
         public event EventHandler<(string Json, RawNavRoute NavRoute)> NavRouteUpdated;
 
         /// <inheritdoc />
-        public event EventHandler<(string Json, RawBackpack NavRoute)> BackpackUpdated;
+        public event EventHandler<(string Json, RawBackpack Backpack)> BackpackUpdated;
 
         /// <inheritdoc />
         public async Task ProcessStatusFile(FileInfo statusFile)

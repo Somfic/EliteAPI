@@ -60,7 +60,7 @@ namespace EliteAPI.Status.Processor.Abstractions
         /// <summary>
         /// Triggered when the navroute file is updated
         /// </summary>
-        event EventHandler<(string Json, RawBackpack NavRoute)> BackpackUpdated;
+        event EventHandler<(string Json, RawBackpack Backpack)> BackpackUpdated;
 
 
         /// <summary>

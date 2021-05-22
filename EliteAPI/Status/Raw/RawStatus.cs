@@ -115,6 +115,10 @@ namespace EliteAPI.Status.Raw
         [JsonProperty("Gravity")]
         public float Gravity { get; private set; }
         
+
+        [JsonProperty("SelectedWeapon_Localised")]
+        public object SelectedWeaponLocalised { get; private set; } = string.Empty;
+
         private bool GetFlag(int bit)
         {
             return ShipFlags.HasFlag((ShipFlags) (1 << bit));

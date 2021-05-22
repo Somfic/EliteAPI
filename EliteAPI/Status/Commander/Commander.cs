@@ -59,6 +59,9 @@ namespace EliteAPI.Status.Commander
         public StatusProperty<string> SelectedWeapon { get; } = new();
         
         /// <inheritdoc />
+        public StatusProperty<string> SelectedWeaponLocalised { get; } = new();
+        
+        /// <inheritdoc />
         public StatusProperty<float> Gravity { get; } = new();
 
         /// <inheritdoc />

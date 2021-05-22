@@ -91,6 +91,11 @@ namespace EliteAPI.Status.Commander.Abstractions
         StatusProperty<string> SelectedWeapon { get; }
         
         /// <summary>
+        /// The selected weapon, localised
+        /// </summary>
+        StatusProperty<string> SelectedWeaponLocalised { get; }
+        
+        /// <summary>
         /// The gravity relative to Earth's
         /// </summary>
         StatusProperty<float> Gravity { get; }

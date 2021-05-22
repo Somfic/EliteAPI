@@ -21,6 +21,7 @@ using EliteAPI.Status.Outfitting.Abstractions;
 using EliteAPI.Status.Outfitting.Raw;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Raw;
+using EliteAPI.Status.Ship;
 using EliteAPI.Status.Ship.Abstractions;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -45,7 +46,8 @@ namespace EliteAPI.Status.Processor
         private readonly ICommander _commander;
 
         public StatusProcessor(ILogger<StatusProcessor> log, IShip ship, ICommander commander, INavRoute navRoute,
-            ICargo cargo, IMarket market, IModules modules, IBackpack backpack, IShipyard shipyard, IOutfitting outfitting, IFileReader fileReader)
+            ICargo cargo, IMarket market, IModules modules, IBackpack backpack, IShipyard shipyard,
+            IOutfitting outfitting, IFileReader fileReader)
         {
             _log = log;
             _ship = ship;
@@ -135,7 +137,8 @@ namespace EliteAPI.Status.Processor
                 UpdateStatusProperty(_ship.InSrv, raw.InSrv, "Ship.InSrv");
                 UpdateStatusProperty(_ship.AnalysisMode, raw.AnalysisMode, "Ship.AnalysisMode");
                 UpdateStatusProperty(_ship.NightVision, raw.NightVision, "Ship.NightVision");
-                UpdateStatusProperty(_ship.AltitudeFromAverageRadius, raw.AltitudeFromAverageRadius, "Ship.AltitudeFromAverageRadius");
+                UpdateStatusProperty(_ship.AltitudeFromAverageRadius, raw.AltitudeFromAverageRadius,
+                    "Ship.AltitudeFromAverageRadius");
                 UpdateStatusProperty(_ship.FsdJump, raw.FsdJump, "Ship.FsdJump");
                 UpdateStatusProperty(_ship.SrvHighBeam, raw.SrvHighBeam, "Ship.SrvHighBeam");
 
@@ -151,7 +154,7 @@ namespace EliteAPI.Status.Processor
                 UpdateStatusProperty(_ship.Heading, raw.Heading, "Ship.Heading");
                 UpdateStatusProperty(_ship.Body, raw.Body, "Ship.Body");
                 UpdateStatusProperty(_ship.BodyRadius, raw.BodyRadius, "Ship.BodyRadius");
-                
+
                 UpdateStatusProperty(_commander.Flags, raw.CommanderFlags, "Commander.Flags");
                 UpdateStatusProperty(_commander.OnFoot, raw.OnFoot, "Commander.OnFoot");
                 UpdateStatusProperty(_commander.InTaxi, raw.InTaxi, "Commander.InTaxi");
@@ -165,11 +168,13 @@ namespace EliteAPI.Status.Processor
                 UpdateStatusProperty(_commander.Hot, raw.Hot, "Commander.Hot");
                 UpdateStatusProperty(_commander.VeryHot, raw.VeryHot, "Commander.VeryHot");
                 UpdateStatusProperty(_commander.VeryHot, raw.VeryCold, "Commander.VeryCold");
-                
+
+
                 UpdateStatusProperty(_commander.Oxygen, raw.Oxygen, "Commander.Oxygen");
                 UpdateStatusProperty(_commander.Health, raw.Health, "Commander.Health");
                 UpdateStatusProperty(_commander.Temperature, raw.Temperature, "Commander.Temperature");
                 UpdateStatusProperty(_commander.SelectedWeapon, raw.SelectedWeapon, "Commander.SelectedWeapon");
+                UpdateStatusProperty(_commander.SelectedWeaponLocalised, raw.SelectedWeaponLocalised, "Commander.SelectedWeaponLocalised");
                 UpdateStatusProperty(_commander.Gravity, raw.Gravity, "Commander.Gravity");
 
                 StatusUpdated?.Invoke(this, (content, raw));
@@ -312,9 +317,8 @@ namespace EliteAPI.Status.Processor
                 {
                     _log.LogTrace("Could not process {Name}, property is null", name);
                     return Task.CompletedTask;
-                    
                 }
-                
+
                 var rawValue = property.GetValue(raw);
 
                 var value = rawValue.ToString();
@@ -352,7 +356,7 @@ namespace EliteAPI.Status.Processor
                     var value = rawValue.ToString();
                     if (Type.GetTypeCode(rawValue.GetType()) == TypeCode.Object)
                         value = JsonConvert.SerializeObject(rawValue);
-                    
+
                     _log.LogTrace("Invoking OnChange event for {name} ({value})", name, value);
                     property.Update(this, rawValue);
                 }

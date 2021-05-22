@@ -110,11 +110,10 @@ namespace EliteAPI.Status.Raw
         public float Temperature { get; private set; }
         
         [JsonProperty("SelectedWeapon")]
-        public string SelectedWeapon { get; private set; }
+        public string SelectedWeapon { get; private set; } = string.Empty;
         
         [JsonProperty("Gravity")]
         public float Gravity { get; private set; }
-        
 
         [JsonProperty("SelectedWeapon_Localised")]
         public object SelectedWeaponLocalised { get; private set; } = string.Empty;

@@ -1323,6 +1323,11 @@
             The selected weapon
             </summary>
         </member>
+        <member name="P:EliteAPI.Status.Commander.Abstractions.ICommander.SelectedWeaponLocalised">
+            <summary>
+            The selected weapon, localised
+            </summary>
+        </member>
         <member name="P:EliteAPI.Status.Commander.Abstractions.ICommander.Gravity">
             <summary>
             The gravity relative to Earth's
@@ -1377,6 +1382,9 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Status.Commander.Commander.SelectedWeapon">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Commander.Commander.SelectedWeaponLocalised">
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Status.Commander.Commander.Gravity">

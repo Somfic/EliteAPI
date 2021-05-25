@@ -13,6 +13,9 @@ namespace EliteAPI.Status.Backpack
         [JsonProperty("Count")]
         public long Count { get; set; }
 
+        [JsonProperty("Type")]
+        public string Type { get; set; }
+
         [JsonProperty("Name_Localised", NullValueHandling = NullValueHandling.Ignore)]
         public string NameLocalised { get; set; }
     }

@@ -17,7 +17,7 @@ namespace EliteAPI.Event.Models
         internal SuitLoadoutEvent() { }
 
         [JsonProperty("SuitID")]
-        public string SuitID { get; private set; }
+        public string SuitId { get; private set; }
 
         [JsonProperty("SuitName")]
         public string SuitName { get; private set; }
@@ -26,24 +26,24 @@ namespace EliteAPI.Event.Models
         public string SuitNameLocalised { get; private set; }
 
         [JsonProperty("LoadoutID")]
-        public string LoadoutID { get; private set; }
+        public string LoadoutId { get; private set; }
 
         [JsonProperty("LoadoutName")]
         public string LoadoutName { get; private set; }
 
         [JsonProperty("Modules")]
-        public IReadOnlyList<LoadoutModules> Modules { get; private set; }
+        public IReadOnlyList<LoadoutModuleInfo> Modules { get; private set; }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class LoadoutModules
+        public class LoadoutModuleInfo
         {
-            internal LoadoutModules() { }
+            internal LoadoutModuleInfo() { }
 
             [JsonProperty("SlotName")]
             public string SlotName { get; private set; }
 
             [JsonProperty("SuitModuleID")]
-            public string SuitModuleID { get; private set; }
+            public string SuitModuleId { get; private set; }
 
             [JsonProperty("ModuleName")]
             public string ModuleName { get; private set; }

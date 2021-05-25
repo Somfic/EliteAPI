@@ -16,12 +16,12 @@ namespace EliteAPI.Event.Models
         internal TransferMicroResourcesEvent() { }
 
         [JsonProperty("Transfers")]
-        public IReadOnlyList<MicroResource> Transfers { get; private set; }
+        public IReadOnlyList<MicroResourceInfo> Transfers { get; private set; }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class MicroResource
+        public class MicroResourceInfo
         {
-            internal MicroResource() { }
+            internal MicroResourceInfo() { }
 
             [JsonProperty("Name")]
             public string Name { get; private set; }

@@ -17,13 +17,13 @@ namespace EliteAPI.Event.Models
         internal ShipLockerMaterialsEvent() { }
 
         [JsonProperty("Items")]
-        public IReadOnlyList<ShipLockerMaterials> Items { get; private set; }
+        public IReadOnlyList<ShipLockerMaterialInfo> Items { get; private set; }
 
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class ShipLockerMaterials
+        public class ShipLockerMaterialInfo
         {
-            internal ShipLockerMaterials() { }
+            internal ShipLockerMaterialInfo() { }
 
             [JsonProperty("Name")]
             public string Name { get; private set; }

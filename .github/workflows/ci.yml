@@ -39,10 +39,7 @@ jobs:
 
   test:
     name: Unit test
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code

@@ -121,7 +121,8 @@ namespace EliteAPI
         private Exception PreInitializationException { get; }
         private Exception InitializationException { get; set; }
 
-        private bool IsInitialized { get; set; }
+        /// <inheritdoc />
+        public bool IsInitialized { get; private set; }
 
         /// <inheritdoc />
         public bool IsRunning { get; private set; }

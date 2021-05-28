@@ -83,6 +83,11 @@ namespace EliteAPI.Abstractions
         IBindings Bindings { get; }
 
         /// <summary>
+        /// Whether the api is initialized
+        /// </summary>
+        bool IsInitialized { get; }
+        
+        /// <summary>
         /// Whether the api is currently running
         /// </summary>
         bool IsRunning { get; }

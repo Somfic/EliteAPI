@@ -244,6 +244,7 @@ namespace EliteAPI
 
             IsRunning = false;
             IsInitialized = false;
+            HasCatchedUp = false;
 
             return Task.CompletedTask;
         }

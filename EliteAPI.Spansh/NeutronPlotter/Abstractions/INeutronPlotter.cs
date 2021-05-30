@@ -5,6 +5,6 @@ namespace EliteAPI.Spansh.NeutronPlotter.Abstractions
 {
     public interface INeutronPlotter
     {
-        public Task<NeutronPlotterResponse> Plot(string sourceSystem, string destinationSystem, int range, int efficiency = 60);
+        Task<NeutronPlotterResponse> Plot(string sourceSystem, string destinationSystem, int range, int efficiency = 60);
     }
 }

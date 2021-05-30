@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
     <InformationalVersion>3.0.0-alpha.1167+Branch.dev.Sha.099ce00f0e0ecda1c982e32babfa324b9a36ff77</InformationalVersion>

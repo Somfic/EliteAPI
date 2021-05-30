@@ -69,6 +69,11 @@
             Container for keybindings information
             </summary>
         </member>
+        <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.IsInitialized">
+            <summary>
+            Whether the api is initialized
+            </summary>
+        </member>
         <member name="P:EliteAPI.Abstractions.IEliteDangerousApi.IsRunning">
             <summary>
             Whether the api is currently running
@@ -139,6 +144,11 @@
             At which frequency EliteAPI checks for journal and status files updates
             </summary>
         </member>
+        <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.BindingsFile">
+            <summary>
+            The active bindings file
+            </summary>
+        </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfiguration">
             <summary>
             Standard implementation of the <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration" /> configuration class
@@ -154,6 +164,9 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.TickFrequency">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.BindingsFile">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder">
@@ -188,6 +201,11 @@
             Sets which journal file to use, defaults to latest if not invoked
             </summary>
         </member>
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseBindingsFile(System.String)">
+            <summary>
+            Sets which bindings to use
+            </summary>
+        </member>
         <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseJournal(System.String)">
             <summary>
             Sets which journal file to use, defaults to latest if not invoked
@@ -211,6 +229,9 @@
             Creates a new EliteDangerousAPI class
             </summary>
             <param name="services"> ServiceProvider </param>
+        </member>
+        <member name="P:EliteAPI.EliteDangerousApi.IsInitialized">
+            <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousApi.IsRunning">
             <inheritdoc />

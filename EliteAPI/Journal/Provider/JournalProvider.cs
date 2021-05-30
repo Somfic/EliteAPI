@@ -32,7 +32,7 @@ namespace EliteAPI.Journal.Provider
         {
             try
             {
-                var fileFilter = !string.IsNullOrWhiteSpace(_codeConfig.JournalFile) ? _codeConfig.JournalFile : "Journal.*.log";
+                var fileFilter = !string.IsNullOrWhiteSpace(_config.GetSection("EliteAPI")["Journal"]) ? _config.GetSection("EliteAPI")["Journal"] : _codeConfig.JournalFile;
 
                 return Task.FromResult(journalDirectory
                     .GetFiles(fileFilter)

@@ -26,5 +26,10 @@ namespace EliteAPI.Configuration.Abstractions
         /// At which frequency EliteAPI checks for journal and status files updates
         /// </summary>
         public TimeSpan TickFrequency { get; }
+
+        /// <summary>
+        /// The active bindings file
+        /// </summary>
+        string BindingsFile { get; set; }
     }
 }

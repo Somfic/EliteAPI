@@ -1,10 +1,15 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-
+using EliteAPI.Configuration.Abstractions;
 using EliteAPI.Exceptions;
+using EliteAPI.Journal.Provider;
 using EliteAPI.Options.Provider.Abstractions;
 using EliteAPI.Services.FileReader.Abstractions;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace EliteAPI.Options.Provider
 {
@@ -12,10 +17,16 @@ namespace EliteAPI.Options.Provider
     public class OptionsProvider : IOptionsProvider
     {
         private readonly IFileReader _fileReader;
+        private IConfiguration _config;
+        private ILogger<JournalProvider> _log;
+        private IEliteDangerousApiConfiguration _codeConfig;
 
-        public OptionsProvider(IFileReader fileReader)
+        public OptionsProvider(IServiceProvider services)
         {
-            _fileReader = fileReader;
+            _fileReader = services.GetRequiredService<IFileReader>();
+            _config = services.GetRequiredService<IConfiguration>();
+            _log = services.GetRequiredService<ILogger<JournalProvider>>();
+            _codeConfig = services.GetRequiredService<IEliteDangerousApiConfiguration>();
         }
 
         /// <inheritdoc />
@@ -30,28 +41,19 @@ namespace EliteAPI.Options.Provider
 
             var bindingsDirectory = bindingsDirectories.First();
 
-            var startPresetFiles = bindingsDirectory.GetFiles("StartPreset.start");
+            var fileFilter = !string.IsNullOrWhiteSpace(_config.GetSection("EliteAPI")["Bindings"]) ? _config.GetSection("EliteAPI")["Bindings"] : _codeConfig.BindingsFile;
+            
+            var file = bindingsDirectory
+                .GetFiles(fileFilter)
+                .OrderByDescending(x => x.LastWriteTime)
+                .FirstOrDefault();
 
-            if (startPresetFiles.Length == 0)
+            if (file == null)
             {
-                throw new ActiveBindingsNotFoundException("No selected bindings could be detected");
+                throw new BindingsNotFoundException("Could not find a bindings file");
             }
-
-            //var startPresetFile = startPresetFiles.First();
-
-            var activePresetName = "Custom.4.0.binds";
-
-            var activePresetFiles = bindingsDirectory.GetFiles($"{activePresetName}*");
-
-            if (activePresetFiles.Length == 0)
-            {
-                BindingsNotFoundException ex = new("The custom bindings could not be found");
-                ex.Data.Add("Active bindings", activePresetName);
-
-                throw ex;
-            }
-
-            return Task.FromResult(activePresetFiles.First());
+            
+            return Task.FromResult(file);
         }
     }
 }

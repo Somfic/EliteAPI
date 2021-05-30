@@ -22,5 +22,8 @@ namespace EliteAPI.Configuration
 
         /// <inheritdoc />
         public TimeSpan TickFrequency { get; init; }
+
+        /// <inheritdoc />
+        public string BindingsFile { get; set; }
     }
 }

@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build
-          path: "/home/runner/work/EliteAPI/EliteAPI/EliteAPI/bin/Release"
+          path: "/home/runner/work/EliteAPI/EliteAPI/"
           if-no-files-found: error
 
   test:
@@ -114,7 +114,7 @@ jobs:
           name: build
 
       - name: Publish project to NuGet
-        run: dotnet nuget push '*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
+        run: dotnet nuget push '**/*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
 
       - name: Unlist earlier packages of this type
         uses: darenm/unlist-nuget@v1

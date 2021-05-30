@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EliteAPI.Tests", "Tests\Eli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI.ManualTest", "Tests\EliteAPI.ManualTest\EliteAPI.ManualTest.csproj", "{4672179D-4FED-42D4-8E60-5CCCE6EBFCBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI.Spansh", "EliteAPI.Spansh\EliteAPI.Spansh.csproj", "{C74DEA36-AC9E-4548-98CF-96AECEEC5ADF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,14 @@ Global
 		{4672179D-4FED-42D4-8E60-5CCCE6EBFCBD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4672179D-4FED-42D4-8E60-5CCCE6EBFCBD}.Release|x86.ActiveCfg = Release|Any CPU
 		{4672179D-4FED-42D4-8E60-5CCCE6EBFCBD}.Release|x86.Build.0 = Release|Any CPU
+		{C74DEA36-AC9E-4548-98CF-96AECEEC5ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C74DEA36-AC9E-4548-98CF-96AECEEC5ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C74DEA36-AC9E-4548-98CF-96AECEEC5ADF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C74DEA36-AC9E-4548-98CF-96AECEEC5ADF}.Debug|x86.Build.0 = Debug|Any CPU
+		{C74DEA36-AC9E-4548-98CF-96AECEEC5ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C74DEA36-AC9E-4548-98CF-96AECEEC5ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C74DEA36-AC9E-4548-98CF-96AECEEC5ADF}.Release|x86.ActiveCfg = Release|Any CPU
+		{C74DEA36-AC9E-4548-98CF-96AECEEC5ADF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

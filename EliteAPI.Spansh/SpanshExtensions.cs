@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using EliteAPI.Spansh.NeutronPlotter.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 namespace EliteAPI.Spansh
 {
@@ -10,7 +11,8 @@ namespace EliteAPI.Spansh
         /// </summary>
         public static IServiceCollection AddSpansh(this IServiceCollection services)
         {
-            services.AddTransient<IHttpClientFactory>();
+            services.AddHttpClient();
+            services.AddTransient<INeutronPlotter, NeutronPlotter.NeutronPlotter>();
             
             return services;
         }

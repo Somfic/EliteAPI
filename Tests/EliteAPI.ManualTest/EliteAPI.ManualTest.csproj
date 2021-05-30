@@ -8,6 +8,7 @@
     <Version>3.0.0-alpha1158</Version>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\EliteAPI.Spansh\EliteAPI.Spansh.csproj" />
     <ProjectReference Include="..\..\EliteAPI\EliteAPI.csproj" />
   </ItemGroup>
   <ItemGroup>

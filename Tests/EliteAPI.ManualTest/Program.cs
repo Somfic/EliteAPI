@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 
 using EliteAPI.ManualTest;
-
+using EliteAPI.Spansh;
 using Valsom.Logging.PrettyConsole;
 using Valsom.Logging.PrettyConsole.Formats;
 using Valsom.Logging.PrettyConsole.Themes;
@@ -27,6 +27,8 @@ var host = Host.CreateDefaultBuilder()
         {
 
         });
+
+        services.AddSpansh();
     })
 
     .Build();

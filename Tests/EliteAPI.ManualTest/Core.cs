@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using EliteAPI.Abstractions;
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
+using EliteAPI.Spansh.NeutronPlotter.Abstractions;
 using EliteAPI.Status.NavRoute;
 
 using Microsoft.Extensions.Logging;
@@ -25,23 +26,21 @@ namespace EliteAPI.ManualTest
     public class Core
     {
         private readonly IEliteDangerousApi _api;
+        private readonly INeutronPlotter _plotter;
         private readonly ILogger<Core> _log;
 
-        public Core(ILogger<Core> log, IEliteDangerousApi api)
+        public Core(ILogger<Core> log, IEliteDangerousApi api, INeutronPlotter plotter)
         {
             // Get our dependencies through dependency injection
             _log = log;
             _api = api;
+            _plotter = plotter;
         }
 
         public async Task Run()
         {
-            _api.Ship.Available.OnChange += (sender, e) =>
-            {
-                _log.LogCritical("Available changed to {Value}!", e);
-            };
-            
-            await _api.StartAsync();
+            var plot = (await _plotter.Plot("Fusaneg", "Fusang", 100)).Result;
+            _log.LogInformation(JsonConvert.SerializeObject(plot.SystemJumps, Formatting.Indented));
         }
     }
 }

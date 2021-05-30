@@ -4,8 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.1158+Branch.dev.Sha.fa65bd433978ea32e6135c56a45218459e1186e5</InformationalVersion>
-    <Version>3.0.0-alpha1158</Version>
+    <InformationalVersion>3.0.0-alpha.1161+Branch.dev.Sha.16a3322e021fda90f42103a29daa6ff254c70724</InformationalVersion>
+    <Version>3.0.0-alpha1161</Version>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\EliteAPI.Spansh\EliteAPI.Spansh.csproj" />

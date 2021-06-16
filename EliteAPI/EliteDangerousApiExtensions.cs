@@ -20,6 +20,8 @@ using EliteAPI.Options.Provider;
 using EliteAPI.Options.Provider.Abstractions;
 using EliteAPI.Services.FileReader;
 using EliteAPI.Services.FileReader.Abstractions;
+using EliteAPI.Status.Backpack;
+using EliteAPI.Status.Backpack.Abstractions;
 using EliteAPI.Status.Cargo;
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Commander;
@@ -38,7 +40,8 @@ using EliteAPI.Status.Provider;
 using EliteAPI.Status.Provider.Abstractions;
 using EliteAPI.Status.Ship;
 using EliteAPI.Status.Ship.Abstractions;
-
+using EliteAPI.Status.Shipyard;
+using EliteAPI.Status.Shipyard.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 
 using EventHandler = EliteAPI.Event.Handler.EventHandler;

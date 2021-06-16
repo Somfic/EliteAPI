@@ -17,6 +17,7 @@ using EliteAPI.Options.Bindings.Models;
 using EliteAPI.Options.Directory.Abstractions;
 using EliteAPI.Options.Processor.Abstractions;
 using EliteAPI.Options.Provider.Abstractions;
+using EliteAPI.Status.Backpack.Abstractions;
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Commander.Abstractions;
 using EliteAPI.Status.Market.Abstractions;
@@ -26,7 +27,7 @@ using EliteAPI.Status.Outfitting.Abstractions;
 using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Provider.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
-
+using EliteAPI.Status.Shipyard.Abstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -454,6 +455,7 @@ namespace EliteAPI
                             : "Cannot use bindings preset {Bindings}", preset);
                 }
             }
+
             catch (Exception ex) { _log.LogWarning(ex, "Could not set support files"); }
         }
         

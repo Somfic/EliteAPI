@@ -1,10 +1,7 @@
 ﻿using System.Collections.Generic;
-
 using EliteAPI.Status.Abstractions;
-using EliteAPI.Status.Backpack;
-using EliteAPI.Status.Backpack.Raw;
 
-namespace EliteAPI.Status.Cargo.Abstractions
+namespace EliteAPI.Status.Shipyard.Abstractions
 {
     /// <summary>
     /// Holds information about the active shipyard

@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using EliteAPI.Event.Models.Abstractions;
+using EliteAPI.Status.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Backpack.Raw
 {
-    public class RawBackpack : EventBase<RawBackpack>
+    public class RawBackpack : EventBase<RawBackpack>, IRawStatus
     {
         [JsonProperty("Items")]
         public IReadOnlyList<BackpackItem> Items { get; set; }

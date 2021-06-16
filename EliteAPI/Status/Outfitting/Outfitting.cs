@@ -7,7 +7,7 @@ using EliteAPI.Status.Outfitting.Abstractions;
 namespace EliteAPI.Status.Outfitting
 {
     /// <inheritdoc />
-    public class Outfitting : IOutfitting
+    public class Outfitting : StatusBase, IOutfitting
     {
         /// <inheritdoc />
         public StatusProperty<string> MarketId { get; } = new();
@@ -23,14 +23,5 @@ namespace EliteAPI.Status.Outfitting
 
         /// <inheritdoc />
         public StatusProperty<IReadOnlyList<OutfittingItem>> Deals { get; } = new();
-
-        /// <inheritdoc />
-        public event EventHandler OnChange;
-
-        /// <inheritdoc />
-        void IStatus.TriggerOnChange()
-        {
-            OnChange?.Invoke(this, EventArgs.Empty);
-        }
     }
 }

@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using EliteAPI.Status.Abstractions;
-using EliteAPI.Status.Backpack;
-using EliteAPI.Status.Cargo.Abstractions;
+using EliteAPI.Status.Backpack.Abstractions;
 
-namespace EliteAPI.Status.Cargo
+namespace EliteAPI.Status.Backpack
 {
     /// <inheritdoc />
-    public class Backpack : IBackpack
+    public class Backpack : StatusBase, IBackpack
     {
         /// <inheritdoc />
         public StatusProperty<IReadOnlyList<BackpackItem>> Items { get; } = new();
@@ -20,14 +19,5 @@ namespace EliteAPI.Status.Cargo
 
         /// <inheritdoc />
         public StatusProperty<IReadOnlyList<BackpackItem>> Data { get; } = new();
-
-        /// <inheritdoc />
-        public event EventHandler OnChange;
-
-        /// <inheritdoc />
-        void IStatus.TriggerOnChange()
-        {
-            OnChange?.Invoke(this, EventArgs.Empty);
-        }
     }
 }

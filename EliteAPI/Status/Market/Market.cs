@@ -7,7 +7,7 @@ using EliteAPI.Status.Market.Abstractions;
 namespace EliteAPI.Status.Market
 {
     /// <inheritdoc />
-    public class Market : IMarket
+    public class Market : StatusBase, IMarket
     {
         /// <inheritdoc />
         public StatusProperty<string> MarketId { get; } = new();
@@ -23,14 +23,5 @@ namespace EliteAPI.Status.Market
 
         /// <inheritdoc />
         public StatusProperty<IReadOnlyList<Commodity>> Commodities { get; } = new();
-
-        /// <inheritdoc />
-        public event EventHandler OnChange;
-
-        /// <inheritdoc />
-        void IStatus.TriggerOnChange()
-        {
-            OnChange?.Invoke(this, EventArgs.Empty);
-        }
     }
 }

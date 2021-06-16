@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 
 using EliteAPI.Event.Models.Abstractions;
-
+using EliteAPI.Status.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Outfitting.Raw
 {
-    public class RawOutfitting : EventBase<RawOutfitting>
+    public class RawOutfitting : EventBase<RawOutfitting>, IRawStatus
     {
         [JsonProperty("MarketID")]
         public string MarketId { get; set; }

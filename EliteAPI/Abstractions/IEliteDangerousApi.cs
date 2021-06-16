@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 
 using EliteAPI.Options.Bindings.Models;
+using EliteAPI.Status.Backpack.Abstractions;
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Commander.Abstractions;
 using EliteAPI.Status.Market.Abstractions;
@@ -9,7 +10,7 @@ using EliteAPI.Status.Modules.Abstractions;
 using EliteAPI.Status.NavRoute.Abstractions;
 using EliteAPI.Status.Outfitting.Abstractions;
 using EliteAPI.Status.Ship.Abstractions;
-
+using EliteAPI.Status.Shipyard.Abstractions;
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI.Abstractions

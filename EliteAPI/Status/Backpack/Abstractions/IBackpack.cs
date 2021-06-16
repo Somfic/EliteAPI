@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-
 using EliteAPI.Status.Abstractions;
-using EliteAPI.Status.Backpack;
 
-namespace EliteAPI.Status.Cargo.Abstractions
+namespace EliteAPI.Status.Backpack.Abstractions
 {
     /// <summary>
     /// Holds information about the ship's cargo

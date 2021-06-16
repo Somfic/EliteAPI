@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EliteAPI.Status.Backpack.Raw
+namespace EliteAPI.Status.Shipyard
 {
     public class ShipyardDeal
     {

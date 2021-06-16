@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using EliteAPI.Event.Models.Abstractions;
+using EliteAPI.Status.Abstractions;
 using Newtonsoft.Json;
 
-namespace EliteAPI.Status.Backpack.Raw
+namespace EliteAPI.Status.Shipyard.Raw
 {
-    public class RawShipyard : EventBase<RawShipyard>
+    public class RawShipyard : EventBase<RawShipyard>, IRawStatus
     {
         [JsonProperty("MarketID")]
         public string MarketId { get; set; }

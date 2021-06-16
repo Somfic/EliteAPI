@@ -8,7 +8,7 @@ using EliteAPI.Status.Ship.Abstractions;
 namespace EliteAPI.Status.Ship
 {
     /// <inheritdoc />
-    public class Ship : IShip
+    public class Ship : StatusBase, IShip
     {
         /// <inheritdoc />
         public StatusProperty<ShipFlags> Flags { get; } = new(ShipFlags.None);
@@ -146,13 +146,5 @@ namespace EliteAPI.Status.Ship
 
         /// <inheritdoc />
         public StatusProperty<float> BodyRadius { get; } = new(0);
-
-        /// <inheritdoc />
-        public event EventHandler OnChange;
-
-        void IStatus.TriggerOnChange()
-        {
-            OnChange?.Invoke(this, EventArgs.Empty);
-        }
     }
 }

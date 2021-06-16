@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 
 using EliteAPI.Event.Models.Abstractions;
-
+using EliteAPI.Status.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Status.Cargo.Raw
 {
-    public class RawCargo : EventBase<RawCargo>
+    public class RawCargo : EventBase<RawCargo>, IRawStatus
     {
         [JsonProperty("Vessel")]
         public string Vessel { get; set; }

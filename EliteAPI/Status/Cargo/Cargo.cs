@@ -7,7 +7,7 @@ using EliteAPI.Status.Cargo.Abstractions;
 namespace EliteAPI.Status.Cargo
 {
     /// <inheritdoc />
-    public class Cargo : ICargo
+    public class Cargo : StatusBase, ICargo
     {
         /// <inheritdoc />
         public StatusProperty<string> Vessel { get; } = new();
@@ -17,14 +17,5 @@ namespace EliteAPI.Status.Cargo
 
         /// <inheritdoc />
         public StatusProperty<IReadOnlyList<CargoItem>> Inventory { get; } = new();
-
-        /// <inheritdoc />
-        public event EventHandler OnChange;
-
-        /// <inheritdoc />
-        void IStatus.TriggerOnChange()
-        {
-            OnChange?.Invoke(this, EventArgs.Empty);
-        }
     }
 }

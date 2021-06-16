@@ -8,6 +8,7 @@ using EliteAPI.Status.Modules.Raw;
 using EliteAPI.Status.NavRoute.Raw;
 using EliteAPI.Status.Outfitting.Raw;
 using EliteAPI.Status.Raw;
+using EliteAPI.Status.Shipyard.Raw;
 
 namespace EliteAPI.Status.Processor.Abstractions
 {

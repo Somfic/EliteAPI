@@ -10,8 +10,13 @@ namespace EliteAPI.Status.Abstractions
         /// <summary>
         /// Triggered when any of the properties have been updated
         /// </summary>
-        event EventHandler OnChange;
+        event EventHandler<IRawStatus> OnChange;
 
-        internal void TriggerOnChange();
+        /// <summary>
+        /// Generates this status's Json
+        /// </summary>
+        string ToJson();
+        
+        internal void TriggerOnChange(IRawStatus rawStatus);
     }
 }

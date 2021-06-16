@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EliteAPI.Services.FileReader.Abstractions;
 using EliteAPI.Status.Abstractions;
+using EliteAPI.Status.Backpack.Abstractions;
 using EliteAPI.Status.Backpack.Raw;
 using EliteAPI.Status.Cargo.Abstractions;
 using EliteAPI.Status.Cargo.Raw;
@@ -23,6 +24,8 @@ using EliteAPI.Status.Processor.Abstractions;
 using EliteAPI.Status.Raw;
 using EliteAPI.Status.Ship;
 using EliteAPI.Status.Ship.Abstractions;
+using EliteAPI.Status.Shipyard.Abstractions;
+using EliteAPI.Status.Shipyard.Raw;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
@@ -120,6 +123,8 @@ namespace EliteAPI.Status.Processor
                 UpdateStatusProperty(_ship.Winging, raw.Winging, "Ship.Winging");
                 UpdateStatusProperty(_ship.Lights, raw.Lights, "Ship.Lights");
                 UpdateStatusProperty(_ship.CargoScoop, raw.CargoScoop, "Ship.CargoScoop");
+                UpdateStatusProperty(_ship.SilentRunning, raw.SilentRunning, "Ship.SilentRunning");
+                UpdateStatusProperty(_ship.Scooping, raw.Scooping, "Ship.Scooping");
                 UpdateStatusProperty(_ship.SrvHandbreak, raw.SrvHandbreak, "Ship.SrvHandbreak");
                 UpdateStatusProperty(_ship.SrvTurrent, raw.SrvTurrent, "Ship.SrvTurrent");
                 UpdateStatusProperty(_ship.SrvNearShip, raw.SrvNearShip, "Ship.SrvNearShip");
@@ -131,7 +136,7 @@ namespace EliteAPI.Status.Processor
                 UpdateStatusProperty(_ship.Overheating, raw.Overheating, "Ship.Overheating");
                 UpdateStatusProperty(_ship.HasLatLong, raw.HasLatLong, "Ship.HasLatLong");
                 UpdateStatusProperty(_ship.InDanger, raw.InDanger, "Ship.InDanger");
-                UpdateStatusProperty(_ship.InInterdiction, raw.InInterdiction, "Ship.InIntediction");
+                UpdateStatusProperty(_ship.InInterdiction, raw.InInterdiction, "Ship.InInterdiction");
                 UpdateStatusProperty(_ship.InMothership, raw.InMothership, "Ship.InMothership");
                 UpdateStatusProperty(_ship.InFighter, raw.InFighter, "Ship.InFighter");
                 UpdateStatusProperty(_ship.InSrv, raw.InSrv, "Ship.InSrv");
@@ -168,8 +173,7 @@ namespace EliteAPI.Status.Processor
                 UpdateStatusProperty(_commander.Hot, raw.Hot, "Commander.Hot");
                 UpdateStatusProperty(_commander.VeryHot, raw.VeryHot, "Commander.VeryHot");
                 UpdateStatusProperty(_commander.VeryHot, raw.VeryCold, "Commander.VeryCold");
-
-
+                
                 UpdateStatusProperty(_commander.Oxygen, raw.Oxygen, "Commander.Oxygen");
                 UpdateStatusProperty(_commander.Health, raw.Health, "Commander.Health");
                 UpdateStatusProperty(_commander.Temperature, raw.Temperature, "Commander.Temperature");
@@ -178,6 +182,8 @@ namespace EliteAPI.Status.Processor
                 UpdateStatusProperty(_commander.Gravity, raw.Gravity, "Commander.Gravity");
 
                 StatusUpdated?.Invoke(this, (content, raw));
+                _ship.TriggerOnChange(raw);
+                _commander.TriggerOnChange(raw);
             }
         }
 
@@ -192,6 +198,7 @@ namespace EliteAPI.Status.Processor
                 AddToCache(cargoFile, content);
                 var raw = await InvokeMethods<RawCargo>(content, _cargo);
                 CargoUpdated?.Invoke(this, (content, raw));
+                _cargo.TriggerOnChange(raw);
             }
         }
 
@@ -206,6 +213,7 @@ namespace EliteAPI.Status.Processor
                 AddToCache(modulesFile, content);
                 var raw = await InvokeMethods<RawModules>(content, _modules);
                 ModulesUpdated?.Invoke(this, (content, raw));
+                _modules.TriggerOnChange(raw);
             }
         }
 
@@ -220,6 +228,7 @@ namespace EliteAPI.Status.Processor
                 AddToCache(marketFile, content);
                 var raw = await InvokeMethods<RawMarket>(content, _market);
                 MarketUpdated?.Invoke(this, (content, raw));
+                _market.TriggerOnChange(raw);
             }
         }
 
@@ -234,6 +243,7 @@ namespace EliteAPI.Status.Processor
                 AddToCache(shipyardFile, content);
                 var raw = await InvokeMethods<RawShipyard>(content, _shipyard);
                 ShipyardUpdated?.Invoke(this, (content, raw));
+                _shipyard.TriggerOnChange(raw);
             }
         }
 
@@ -248,6 +258,7 @@ namespace EliteAPI.Status.Processor
                 AddToCache(outfittingFile, content);
                 var raw = await InvokeMethods<RawOutfitting>(content, _outfitting);
                 OutfittingUpdated?.Invoke(this, (content, raw));
+                _outfitting.TriggerOnChange(raw);
             }
         }
 
@@ -262,6 +273,7 @@ namespace EliteAPI.Status.Processor
                 AddToCache(navRouteFile, content);
                 var raw = await InvokeMethods<RawNavRoute>(content, _navRoute);
                 NavRouteUpdated?.Invoke(this, (content, raw));
+                _navRoute.TriggerOnChange(raw);
             }
         }
 
@@ -276,6 +288,7 @@ namespace EliteAPI.Status.Processor
                 AddToCache(backpackFile, content);
                 var raw = await InvokeMethods<RawBackpack>(content, _backpack);
                 BackpackUpdated?.Invoke(this, (content, raw));
+                _backpack.TriggerOnChange(raw);
             }
         }
 
@@ -289,8 +302,6 @@ namespace EliteAPI.Status.Processor
 
                 foreach (var propertyName in status.GetType().GetProperties().Select(x => x.Name))
                     await InvokeUpdateMethod(raw, status, propertyName);
-
-                status.TriggerOnChange();
 
                 return raw;
             }

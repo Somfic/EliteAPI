@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using EliteAPI.Status.Abstractions;
-using EliteAPI.Status.Backpack;
 using EliteAPI.Status.Backpack.Raw;
 using EliteAPI.Status.Cargo.Abstractions;
+using EliteAPI.Status.Shipyard.Abstractions;
 
-namespace EliteAPI.Status.Cargo
+namespace EliteAPI.Status.Shipyard
 {
     /// <inheritdoc />
-    public class Shipyard : IShipyard
+    public class Shipyard : StatusBase, IShipyard
     {
         /// <inheritdoc />
         public StatusProperty<string> MarketId { get; } = new();
@@ -27,14 +26,5 @@ namespace EliteAPI.Status.Cargo
 
         /// <inheritdoc />
         public StatusProperty<IReadOnlyList<ShipyardDeal>> Deals { get; } = new();
-
-        /// <inheritdoc />
-        public event EventHandler OnChange;
-
-        /// <inheritdoc />
-        void IStatus.TriggerOnChange()
-        {
-            OnChange?.Invoke(this, EventArgs.Empty);
-        }
     }
 }

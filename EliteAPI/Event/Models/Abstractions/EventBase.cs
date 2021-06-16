@@ -32,25 +32,8 @@ namespace EliteAPI.Event.Models.Abstractions
         /// <inheritdoc />
         public string ToJson()
         {
-            return JsonConvert.SerializeObject(this, new JsonSerializerSettings {ContractResolver = new EliteApiContractResolver()});
+            return JsonConvert.SerializeObject(this, new JsonSerializerSettings {ContractResolver = new JsonContractResolver()});
         }
-
-        class EliteApiContractResolver : DefaultContractResolver
-        {
-            protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
-            {
-                // Let the base class create all the JsonProperties 
-                // using the short names
-                var list = base.CreateProperties(type, memberSerialization);
-
-                // Now inspect each property and replace the 
-                // short name with the real property name
-                foreach (var prop in list) { prop.PropertyName = prop.UnderlyingName; }
-
-                return list;
-            }
-        }
-        
     }
 
 }

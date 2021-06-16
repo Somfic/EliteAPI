@@ -5,7 +5,7 @@ using EliteAPI.Status.Ship;
 
 namespace EliteAPI.Status.Commander
 {
-    public class Commander : ICommander
+    public class Commander : StatusBase, ICommander
     {
         /// <inheritdoc />
         public StatusProperty<CommanderFlags> Flags { get; } = new (CommanderFlags.None);
@@ -63,13 +63,5 @@ namespace EliteAPI.Status.Commander
         
         /// <inheritdoc />
         public StatusProperty<float> Gravity { get; } = new();
-
-        /// <inheritdoc />
-        public event EventHandler OnChange;
-
-        void IStatus.TriggerOnChange()
-        {
-            OnChange?.Invoke(this, EventArgs.Empty);
-        }
     }
 }

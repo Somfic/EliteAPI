@@ -22,8 +22,8 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Module")]
         public string Module { get; private set; }
 
-        [JsonProperty("IngredientInfos")]
-        public IReadOnlyList<IngredientInfo> IngredientInfos { get; private set; }
+        [JsonProperty("Ingredients")]
+        public IReadOnlyList<IngredientInfo> Ingredients { get; private set; }
 
         [JsonProperty("Engineer")]
         public string Engineer { get; private set; }
@@ -43,8 +43,8 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Quality")]
         public double Quality { get; private set; }
 
-        [JsonProperty("ModifierInfos")]
-        public IReadOnlyList<ModifierInfo> ModifierInfos { get; private set; }
+        [JsonProperty("Modifiers")]
+        public IReadOnlyList<ModifierInfo> Modifiers { get; private set; }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class IngredientInfo
@@ -71,6 +71,9 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Value")]
             public double Value { get; private set; }
+            
+            [JsonProperty("ValueStr")]
+            public string ValueString { get; private set; }
 
             [JsonProperty("OriginalValue")]
             public double OriginalValue { get; private set; }

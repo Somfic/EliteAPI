@@ -1,6 +1,0 @@
-{ "timestamp":"2021-01-01T16:09:03Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Pilots' Federation Local Branch", "Fine":100 }
-{ "timestamp":"2021-01-01T22:15:21Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"Galactic Squadron of Torgue", "Fine":500 }
-{ "timestamp":"2021-01-01T22:20:22Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Galactic Squadron of Torgue", "Fine":200 }
-{ "timestamp":"2021-01-04T21:55:46Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Pilots' Federation Local Branch", "Fine":100 }
-{ "timestamp":"2021-01-04T21:55:53Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"Pilots' Federation Local Branch", "Fine":100 }
-{ "timestamp":"2021-01-07T21:09:32Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Federal Reclamation Co", "Victim":"$ShipName_Military_Federation;", "Victim_Localised":"Federal Navy Ship", "Bounty":400 }

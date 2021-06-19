@@ -16,8 +16,8 @@ namespace EliteAPI.Event.Models
     {
         internal CommunityGoalEvent() { }
 
-        [JsonProperty("CurrentGoalInfos")]
-        public IReadOnlyList<CurrentGoalInfo> CurrentGoalInfos { get; private set; }
+        [JsonProperty("CurrentGoals")]
+        public IReadOnlyList<CurrentGoalInfo> CurrentGoals { get; private set; }
 
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -26,7 +26,7 @@ namespace EliteAPI.Event.Models
             internal CurrentGoalInfo() { }
 
             [JsonProperty("CGID")]
-            public string Cgid { get; private set; }
+            public string CgId { get; private set; }
 
             [JsonProperty("Title")]
             public string Title { get; private set; }
@@ -52,12 +52,18 @@ namespace EliteAPI.Event.Models
             [JsonProperty("NumContributors")]
             public long NumContributors { get; private set; }
 
-            [JsonProperty("TopTierInfo")]
+            [JsonProperty("TopTier")]
             public TopTierInfo TopTier { get; private set; }
 
             [JsonProperty("TierReached")]
             public string TierReached { get; private set; }
+            
+            [JsonProperty("TopRankSize")]
+            public int TopRankSize { get; private set; }
 
+            [JsonProperty("PlayerInTopRank")]
+            public bool IsInTopRank { get; private set; }
+            
             [JsonProperty("PlayerPercentileBand")]
             public long PlayerPercentileBand { get; private set; }
 

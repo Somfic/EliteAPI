@@ -53,7 +53,7 @@ namespace EliteAPI.Event.Models
         public long Reward { get; private set; }
 
         [JsonProperty("FactionEffects")]
-        public IReadOnlyList<FactionEffectInfo> FactionEffectInfos { get; private set; }
+        public IReadOnlyList<FactionEffectInfo> FactionEffects { get; private set; }
 
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

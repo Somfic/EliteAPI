@@ -58,7 +58,7 @@ namespace EliteAPI.Event.Models
         public CqcInfo Cqc { get; private set; }
 
         [JsonProperty("FLEETCARRIER")]
-        public FleetcarrierInfo Fleetcarrier { get; private set; }
+        public FleetCarrierInfo FleetCarrier { get; private set; }
 
         [JsonProperty("TG_ENCOUNTERS")]
         public TgEncountersInfo TgEncounters { get; private set; }
@@ -107,11 +107,11 @@ namespace EliteAPI.Event.Models
             [JsonProperty("Bounty_Hunting_Profit")]
             public long BountyHuntingProfit { get; private set; }
 
-            [JsonProperty("CombatInfo_Bonds")]
-            public long CombatInfoBonds { get; private set; }
+            [JsonProperty("Combat_Bonds")]
+            public long CombatBonds { get; private set; }
 
-            [JsonProperty("CombatInfo_Bond_Profits")]
-            public long CombatInfoBondProfits { get; private set; }
+            [JsonProperty("Combat_Bond_Profits")]
+            public long CombatBondProfits { get; private set; }
 
             [JsonProperty("Assassinations")]
             public long Assassinations { get; private set; }
@@ -132,19 +132,19 @@ namespace EliteAPI.Event.Models
             internal CqcInfo() { }
 
             [JsonProperty("CQC_Credits_Earned")]
-            public long CqcInfoCreditsEarned { get; private set; }
+            public long CqcCreditsEarned { get; private set; }
 
             [JsonProperty("CQC_Time_Played")]
-            public long CqcInfoTimePlayed { get; private set; }
+            public long CqcTimePlayed { get; private set; }
 
             [JsonProperty("CQC_KD")]
-            public double CqcInfoKd { get; private set; }
+            public double CqcKd { get; private set; }
 
             [JsonProperty("CQC_Kills")]
-            public long CqcInfoKills { get; private set; }
+            public long CqcKills { get; private set; }
 
             [JsonProperty("CQC_WL")]
-            public double CqcInfoWl { get; private set; }
+            public double CqcWl { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -201,17 +201,17 @@ namespace EliteAPI.Event.Models
         {
             internal CrewInfo() { }
 
-            [JsonProperty("NpcCrewInfo_TotalWages")]
-            public long NpcCrewInfoTotalWages { get; private set; }
+            [JsonProperty("NpcCrew_TotalWages")]
+            public long NpcCrewTotalWages { get; private set; }
 
-            [JsonProperty("NpcCrewInfo_Hired")]
-            public long NpcCrewInfoHired { get; private set; }
+            [JsonProperty("NpcCrew_Hired")]
+            public long NpcCrewHired { get; private set; }
 
-            [JsonProperty("NpcCrewInfo_Fired")]
-            public long NpcCrewInfoFired { get; private set; }
+            [JsonProperty("NpcCrew_Fired")]
+            public long NpcCrewFired { get; private set; }
 
-            [JsonProperty("NpcCrewInfo_Died")]
-            public long NpcCrewInfoDied { get; private set; }
+            [JsonProperty("NpcCrew_Died")]
+            public long NpcCrewDied { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -246,8 +246,8 @@ namespace EliteAPI.Event.Models
             [JsonProperty("Systems_Visited")]
             public long SystemsVisited { get; private set; }
 
-            [JsonProperty("ExplorationInfo_Profits")]
-            public long ExplorationInfoProfits { get; private set; }
+            [JsonProperty("Exploration_Profits")]
+            public long ExplorationProfits { get; private set; }
 
             [JsonProperty("Planets_Scanned_To_Level_2")]
             public long PlanetsScannedToLevel2 { get; private set; }
@@ -275,63 +275,63 @@ namespace EliteAPI.Event.Models
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class FleetcarrierInfo
+        public class FleetCarrierInfo
         {
-            internal FleetcarrierInfo() { }
+            internal FleetCarrierInfo() { }
 
             [JsonProperty("FLEETCARRIER_EXPORT_TOTAL")]
-            public long FleetcarrierInfoExportTotal { get; private set; }
+            public long ExportTotal { get; private set; }
 
             [JsonProperty("FLEETCARRIER_IMPORT_TOTAL")]
-            public long FleetcarrierInfoImportTotal { get; private set; }
+            public long ImportTotal { get; private set; }
 
             [JsonProperty("FLEETCARRIER_TRADEPROFIT_TOTAL")]
-            public long FleetcarrierInfoTradeprofitTotal { get; private set; }
+            public long TradeProfitTotal { get; private set; }
 
             [JsonProperty("FLEETCARRIER_TRADESPEND_TOTAL")]
-            public long FleetcarrierInfoTradespendTotal { get; private set; }
+            public long TradeSpendTotal { get; private set; }
 
             [JsonProperty("FLEETCARRIER_STOLENPROFIT_TOTAL")]
-            public long FleetcarrierInfoStolenprofitTotal { get; private set; }
+            public long StolenProfitTotal { get; private set; }
 
             [JsonProperty("FLEETCARRIER_STOLENSPEND_TOTAL")]
-            public long FleetcarrierInfoStolenspendTotal { get; private set; }
+            public long StolenSpendTotal { get; private set; }
 
             [JsonProperty("FLEETCARRIER_DISTANCE_TRAVELLED")]
-            public string FleetcarrierInfoDistanceTravelled { get; private set; }
+            public string DistanceTravelled { get; private set; }
 
             [JsonProperty("FLEETCARRIER_TOTAL_JUMPS")]
-            public long FleetcarrierInfoTotalJumps { get; private set; }
+            public long TotalJumps { get; private set; }
 
             [JsonProperty("FLEETCARRIER_SHIPYARD_SOLD")]
-            public long FleetcarrierInfoShipyardSold { get; private set; }
+            public long ShipyardSold { get; private set; }
 
             [JsonProperty("FLEETCARRIER_SHIPYARD_PROFIT")]
-            public long FleetcarrierInfoShipyardProfit { get; private set; }
+            public long ShipyardProfit { get; private set; }
 
             [JsonProperty("FLEETCARRIER_OUTFITTING_SOLD")]
-            public long FleetcarrierInfoOutfittingSold { get; private set; }
+            public long OutfittingSold { get; private set; }
 
             [JsonProperty("FLEETCARRIER_OUTFITTING_PROFIT")]
-            public long FleetcarrierInfoOutfittingProfit { get; private set; }
+            public long OutfittingProfit { get; private set; }
 
             [JsonProperty("FLEETCARRIER_REARM_TOTAL")]
-            public long FleetcarrierInfoRearmTotal { get; private set; }
+            public long RearmTotal { get; private set; }
 
             [JsonProperty("FLEETCARRIER_REFUEL_TOTAL")]
-            public long FleetcarrierInfoRefuelTotal { get; private set; }
+            public long RefuelTotal { get; private set; }
 
             [JsonProperty("FLEETCARRIER_REFUEL_PROFIT")]
-            public long FleetcarrierInfoRefuelProfit { get; private set; }
+            public long RefuelProfit { get; private set; }
 
             [JsonProperty("FLEETCARRIER_REPAIRS_TOTAL")]
-            public long FleetcarrierInfoRepairsTotal { get; private set; }
+            public long RepairsTotal { get; private set; }
 
             [JsonProperty("FLEETCARRIER_VOUCHERS_REDEEMED")]
-            public long FleetcarrierInfoVouchersRedeemed { get; private set; }
+            public long VouchersRedeemed { get; private set; }
 
             [JsonProperty("FLEETCARRIER_VOUCHERS_PROFIT")]
-            public long FleetcarrierInfoVouchersProfit { get; private set; }
+            public long VouchersProfit { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -372,8 +372,8 @@ namespace EliteAPI.Event.Models
         {
             internal MiningInfo() { }
 
-            [JsonProperty("MiningInfo_Profits")]
-            public long MiningInfoProfits { get; private set; }
+            [JsonProperty("Mining_Profits")]
+            public long Profits { get; private set; }
 
             [JsonProperty("Quantity_Mined")]
             public long QuantityMined { get; private set; }
@@ -387,20 +387,20 @@ namespace EliteAPI.Event.Models
         {
             internal MulticrewInfo() { }
 
-            [JsonProperty("MulticrewInfo_Time_Total")]
-            public long MulticrewInfoTimeTotal { get; private set; }
+            [JsonProperty("Multicrew_Time_Total")]
+            public long TimeTotal { get; private set; }
 
-            [JsonProperty("MulticrewInfo_Gunner_Time_Total")]
-            public long MulticrewInfoGunnerTimeTotal { get; private set; }
+            [JsonProperty("Multicrew_Gunner_Time_Total")]
+            public long GunnerTimeTotal { get; private set; }
 
-            [JsonProperty("MulticrewInfo_Fighter_Time_Total")]
-            public long MulticrewInfoFighterTimeTotal { get; private set; }
+            [JsonProperty("Multicrew_Fighter_Time_Total")]
+            public long FighterTimeTotal { get; private set; }
 
-            [JsonProperty("MulticrewInfo_Credits_Total")]
-            public long MulticrewInfoCreditsTotal { get; private set; }
+            [JsonProperty("Multicrew_Credits_Total")]
+            public long CreditsTotal { get; private set; }
 
-            [JsonProperty("MulticrewInfo_Fines_Total")]
-            public long MulticrewInfoFinesTotal { get; private set; }
+            [JsonProperty("Multicrew_Fines_Total")]
+            public long FinesTotal { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -408,23 +408,23 @@ namespace EliteAPI.Event.Models
         {
             internal PassengersInfo() { }
 
-            [JsonProperty("PassengersInfo_Missions_Accepted")]
-            public long PassengersInfoMissionsAccepted { get; private set; }
+            [JsonProperty("Passengers_Missions_Accepted")]
+            public long Accepted { get; private set; }
 
-            [JsonProperty("PassengersInfo_Missions_Disgruntled")]
-            public long PassengersInfoMissionsDisgruntled { get; private set; }
+            [JsonProperty("Passengers_Missions_Disgruntled")]
+            public long Disgruntled { get; private set; }
 
-            [JsonProperty("PassengersInfo_Missions_Bulk")]
-            public long PassengersInfoMissionsBulk { get; private set; }
+            [JsonProperty("Passengers_Missions_Bulk")]
+            public long Bulk { get; private set; }
 
-            [JsonProperty("PassengersInfo_Missions_VIP")]
-            public long PassengersInfoMissionsVip { get; private set; }
+            [JsonProperty("Passengers_Missions_VIP")]
+            public long Vip { get; private set; }
 
-            [JsonProperty("PassengersInfo_Missions_Delivered")]
-            public long PassengersInfoMissionsDelivered { get; private set; }
+            [JsonProperty("Passengers_Missions_Delivered")]
+            public long Delivered { get; private set; }
 
-            [JsonProperty("PassengersInfo_Missions_Ejected")]
-            public long PassengersInfoMissionsEjected { get; private set; }
+            [JsonProperty("Passengers_Missions_Ejected")]
+            public long Ejected { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

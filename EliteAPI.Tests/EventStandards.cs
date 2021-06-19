@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text.RegularExpressions;
 using EliteAPI.Event.Models.Abstractions;
 using FluentAssertions;
@@ -22,6 +23,16 @@ namespace EliteAPI.Tests
             allEvents.ToList().ForEach(x => { allEvents.AddRange(x.GetNestedTypes()); });
 
             return allEvents.Select(x => new object[] {x});
+        }
+
+        [Theory(DisplayName = "Contains 'info'")]
+        [MemberData(nameof(GetData))]
+        public void ContainsInfo(Type type)
+        {
+            var invalidProperties = type.GetProperties()
+                .Where(x => x.Name.Contains("Info", StringComparison.OrdinalIgnoreCase));
+
+                                  invalidProperties.Should().BeEmpty();
         }
 
         [Theory(DisplayName = "Contains invoke method")]

@@ -975,6 +975,9 @@
         <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
+        <member name="M:EliteAPI.JsonContractResolver.CreateProperties(System.Type,Newtonsoft.Json.MemberSerialization)">
+            <inheritdoc />
+        </member>
         <member name="T:EliteAPI.Options.Abstractions.IOption">
             <summary>
             Holds information about the game options
@@ -1088,30 +1091,56 @@
             Triggered when any of the properties have been updated
             </summary>
         </member>
-        <member name="T:EliteAPI.Status.Cargo.Abstractions.IBackpack">
+        <member name="M:EliteAPI.Status.Abstractions.IStatus.ToJson">
+            <summary>
+            Generates this status's Json
+            </summary>
+        </member>
+        <member name="E:EliteAPI.Status.Abstractions.StatusBase.OnChange">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Status.Abstractions.StatusBase.ToJson">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.Backpack.Abstractions.IBackpack">
             <summary>
             Holds information about the ship's cargo
             </summary>
         </member>
-        <member name="P:EliteAPI.Status.Cargo.Abstractions.IBackpack.Items">
+        <member name="P:EliteAPI.Status.Backpack.Abstractions.IBackpack.Items">
             <summary>
             The items in the backpack
             </summary>
         </member>
-        <member name="P:EliteAPI.Status.Cargo.Abstractions.IBackpack.Components">
+        <member name="P:EliteAPI.Status.Backpack.Abstractions.IBackpack.Components">
             <summary>
             The components in the backpack
             </summary>
         </member>
-        <member name="P:EliteAPI.Status.Cargo.Abstractions.IBackpack.Consumables">
+        <member name="P:EliteAPI.Status.Backpack.Abstractions.IBackpack.Consumables">
             <summary>
             The consumables in the backpack
             </summary>
         </member>
-        <member name="P:EliteAPI.Status.Cargo.Abstractions.IBackpack.Data">
+        <member name="P:EliteAPI.Status.Backpack.Abstractions.IBackpack.Data">
             <summary>
             The data in the backpack
             </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Backpack.Backpack">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Backpack.Backpack.Items">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Backpack.Backpack.Components">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Backpack.Backpack.Consumables">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Backpack.Backpack.Data">
+            <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.Cargo.Abstractions.ICargo">
             <summary>
@@ -1133,62 +1162,6 @@
             All the cargo's inventory
             </summary>
         </member>
-        <member name="T:EliteAPI.Status.Cargo.Abstractions.IShipyard">
-            <summary>
-            Holds information about the active shipyard
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Abstractions.IShipyard.MarketId">
-            <summary>
-            The market id for the station this shipyard is at
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Abstractions.IShipyard.StationName">
-            <summary>
-            The name of the station this shipyard is at
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Abstractions.IShipyard.StarSystem">
-            <summary>
-            The name of the starsystem this shipyard is at
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Abstractions.IShipyard.HasHorizons">
-            <summary>
-            Whether the commander has the Horizons expansion
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Abstractions.IShipyard.AllowsCobraMk4">
-            <summary>
-            Whether the commander has access to the Cobra Mk IV
-            </summary>
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Abstractions.IShipyard.Deals">
-            <summary>
-            The deals in this shipyard
-            </summary>
-        </member>
-        <member name="T:EliteAPI.Status.Cargo.Backpack">
-            <inheritdoc />
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Backpack.Items">
-            <inheritdoc />
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Backpack.Components">
-            <inheritdoc />
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Backpack.Consumables">
-            <inheritdoc />
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Backpack.Data">
-            <inheritdoc />
-        </member>
-        <member name="E:EliteAPI.Status.Cargo.Backpack.OnChange">
-            <inheritdoc />
-        </member>
-        <member name="M:EliteAPI.Status.Cargo.Backpack.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
-            <inheritdoc />
-        </member>
         <member name="T:EliteAPI.Status.Cargo.Cargo">
             <inheritdoc />
         </member>
@@ -1199,12 +1172,6 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Status.Cargo.Cargo.Inventory">
-            <inheritdoc />
-        </member>
-        <member name="E:EliteAPI.Status.Cargo.Cargo.OnChange">
-            <inheritdoc />
-        </member>
-        <member name="M:EliteAPI.Status.Cargo.Cargo.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.Cargo.CargoItem">
@@ -1231,33 +1198,6 @@
             <summary>
             The amount of tonnes of this item in the ship's cargo that are stolen
             </summary>
-        </member>
-        <member name="T:EliteAPI.Status.Cargo.Shipyard">
-            <inheritdoc />
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Shipyard.MarketId">
-            <inheritdoc />
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Shipyard.StationName">
-            <inheritdoc />
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Shipyard.StarSystem">
-            <inheritdoc />
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Shipyard.HasHorizons">
-            <inheritdoc />
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Shipyard.AllowsCobraMk4">
-            <inheritdoc />
-        </member>
-        <member name="P:EliteAPI.Status.Cargo.Shipyard.Deals">
-            <inheritdoc />
-        </member>
-        <member name="E:EliteAPI.Status.Cargo.Shipyard.OnChange">
-            <inheritdoc />
-        </member>
-        <member name="M:EliteAPI.Status.Cargo.Shipyard.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
-            <inheritdoc />
         </member>
         <member name="P:EliteAPI.Status.Commander.Abstractions.ICommander.Flags">
             <summary>
@@ -1409,9 +1349,6 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Status.Commander.Commander.Gravity">
-            <inheritdoc />
-        </member>
-        <member name="E:EliteAPI.Status.Commander.Commander.OnChange">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.Ship.Abstractions.IShip">
@@ -1803,9 +1740,6 @@
         <member name="P:EliteAPI.Status.Ship.Ship.BodyRadius">
             <inheritdoc />
         </member>
-        <member name="E:EliteAPI.Status.Ship.Ship.OnChange">
-            <inheritdoc />
-        </member>
         <member name="T:EliteAPI.Status.Ship.ShipFuel">
             <summary>
             Container class for information about the ship's fuel situation
@@ -2069,12 +2003,6 @@
         <member name="P:EliteAPI.Status.Market.Market.Commodities">
             <inheritdoc />
         </member>
-        <member name="E:EliteAPI.Status.Market.Market.OnChange">
-            <inheritdoc />
-        </member>
-        <member name="M:EliteAPI.Status.Market.Market.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
-            <inheritdoc />
-        </member>
         <member name="T:EliteAPI.Status.Modules.Abstractions.IModules">
             <summary>
             Holds information about the ship's currently installed modules
@@ -2113,12 +2041,6 @@
         <member name="P:EliteAPI.Status.Modules.Modules.Installed">
             <inheritdoc />
         </member>
-        <member name="E:EliteAPI.Status.Modules.Modules.OnChange">
-            <inheritdoc />
-        </member>
-        <member name="M:EliteAPI.Status.Modules.Modules.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
-            <inheritdoc />
-        </member>
         <member name="T:EliteAPI.Status.NavRoute.Abstractions.INavRoute">
             <summary>
             Holds information about the current navigation route
@@ -2130,12 +2052,6 @@
             </summary>
         </member>
         <member name="P:EliteAPI.Status.NavRoute.NavRoute.Stops">
-            <inheritdoc />
-        </member>
-        <member name="E:EliteAPI.Status.NavRoute.NavRoute.OnChange">
-            <inheritdoc />
-        </member>
-        <member name="M:EliteAPI.Status.NavRoute.NavRoute.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.NavRoute.RouteStop">
@@ -2209,12 +2125,6 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Status.Outfitting.Outfitting.Deals">
-            <inheritdoc />
-        </member>
-        <member name="E:EliteAPI.Status.Outfitting.Outfitting.OnChange">
-            <inheritdoc />
-        </member>
-        <member name="M:EliteAPI.Status.Outfitting.Outfitting.EliteAPI#Status#Abstractions#IStatus#TriggerOnChange">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.Outfitting.OutfittingItem">
@@ -2466,6 +2376,62 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Status.Provider.StatusProvider.FindBackpackFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.Shipyard.Abstractions.IShipyard">
+            <summary>
+            Holds information about the active shipyard
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Shipyard.Abstractions.IShipyard.MarketId">
+            <summary>
+            The market id for the station this shipyard is at
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Shipyard.Abstractions.IShipyard.StationName">
+            <summary>
+            The name of the station this shipyard is at
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Shipyard.Abstractions.IShipyard.StarSystem">
+            <summary>
+            The name of the starsystem this shipyard is at
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Shipyard.Abstractions.IShipyard.HasHorizons">
+            <summary>
+            Whether the commander has the Horizons expansion
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Shipyard.Abstractions.IShipyard.AllowsCobraMk4">
+            <summary>
+            Whether the commander has access to the Cobra Mk IV
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Status.Shipyard.Abstractions.IShipyard.Deals">
+            <summary>
+            The deals in this shipyard
+            </summary>
+        </member>
+        <member name="T:EliteAPI.Status.Shipyard.Shipyard">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Shipyard.Shipyard.MarketId">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Shipyard.Shipyard.StationName">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Shipyard.Shipyard.StarSystem">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Shipyard.Shipyard.HasHorizons">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Shipyard.Shipyard.AllowsCobraMk4">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Status.Shipyard.Shipyard.Deals">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Status.StatusProperty`1">

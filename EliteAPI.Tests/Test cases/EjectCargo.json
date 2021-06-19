@@ -1,4 +1,0 @@
-{ "timestamp":"2021-01-04T22:22:08Z", "event":"EjectCargo", "Type":"drones", "Type_Localised":"Limpet", "Count":133, "Abandoned":false }
-{ "timestamp":"2021-01-07T20:32:08Z", "event":"EjectCargo", "Type":"grandidierite", "Count":1, "Abandoned":false }
-{ "timestamp":"2021-01-07T20:32:10Z", "event":"EjectCargo", "Type":"grandidierite", "Count":1, "Abandoned":false }
-{ "timestamp":"2021-01-16T15:35:39Z", "event":"EjectCargo", "Type":"drones", "Type_Localised":"Limpet", "Count":115, "Abandoned":false }

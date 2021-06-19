@@ -34,9 +34,6 @@ namespace EliteAPI.Event.Models
         [JsonProperty("ModulesValue")]
         public long ModulesValue { get; private set; }
 
-        [JsonProperty("ModuleInfosValue")]
-        public long ModuleInfosValue { get; private set; }
-
         [JsonProperty("HullHealth")]
         public double HullHealth { get; private set; }
 
@@ -123,8 +120,8 @@ namespace EliteAPI.Event.Models
             [JsonProperty("Quality")]
             public double Quality { get; private set; }
 
-            [JsonProperty("ModifierInfos")]
-            public IReadOnlyList<ModifierInfo> ModifierInfos { get; private set; }
+            [JsonProperty("Modifications")]
+            public IReadOnlyList<ModifierInfo> Modifications { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

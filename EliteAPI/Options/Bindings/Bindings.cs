@@ -2,6 +2,7 @@
 
 using EliteAPI.Options.Abstractions;
 using EliteAPI.Options.Bindings.Models;
+using Newtonsoft.Json;
 
 namespace EliteAPI.Options.Bindings
 {
@@ -16,10 +17,16 @@ namespace EliteAPI.Options.Bindings
         }
         
         /// <inheritdoc />
-        public event EventHandler OnChange;
+        public event EventHandler<KeyBindings> OnChange;
         
         /// <inheritdoc />
-        void IOption.TriggerOnChange() { OnChange?.Invoke(this, EventArgs.Empty); }
+        void IOption.TriggerOnChange() { OnChange?.Invoke(this, _active); }
+
+        /// <inheritdoc />
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(_active, new JsonSerializerSettings {ContractResolver = new JsonContractResolver()});
+        }
 
         /// <inheritdoc />
         KeyBindings IBindings.Active

@@ -1,4 +1,5 @@
 ﻿using System;
+using EliteAPI.Options.Bindings.Models;
 
 namespace EliteAPI.Options.Abstractions
 {
@@ -10,8 +11,13 @@ namespace EliteAPI.Options.Abstractions
         /// <summary>
         /// Triggered when any of the properties of this option have been updated
         /// </summary>
-        event EventHandler OnChange;
+        event EventHandler<KeyBindings> OnChange;
 
         internal void TriggerOnChange();
+
+        /// <summary>
+        /// This option's JSON
+        /// </summary>
+        string ToJson();
     }
 }

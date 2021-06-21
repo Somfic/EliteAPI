@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
-namespace EliteAPI_app.WebSockets.Logging
+namespace EliteAPI.Dashboard.WebSockets.Logging
 {
     public readonly struct WebSocketLogMessage
     {

@@ -1,25 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using ElectronNET.API;
 using EliteAPI.Abstractions;
-using EliteAPI.Journal.Processor.Abstractions;
-using EliteAPI.Status.Processor.Abstractions;
-using EliteAPI.Status.Provider.Abstractions;
-using EliteAPI_app.WebSockets.Handler;
-using EliteAPI_app.WebSockets.Logging;
-using EliteAPI_app.WebSockets.Message;
+using EliteAPI.Dashboard.WebSockets.Handler;
+using EliteAPI.Dashboard.WebSockets.Logging;
+using EliteAPI.Dashboard.WebSockets.Message;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Valsom.Logging.PrettyConsole;
-using Valsom.Logging.PrettyConsole.Formats;
-using Valsom.Logging.PrettyConsole.Themes;
 
-namespace EliteAPI_app
+namespace EliteAPI.Dashboard
 {
     public class Program
     {

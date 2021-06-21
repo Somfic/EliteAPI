@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace EliteAPI_app.WebSockets.Logging
+namespace EliteAPI.Dashboard.WebSockets.Logging
 {
     public class WebSocketLoggerProvider : ILoggerProvider
     {

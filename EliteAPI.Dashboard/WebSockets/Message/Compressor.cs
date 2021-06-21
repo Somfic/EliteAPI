@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.IO.Compression;
-using System.Text;
-using ICSharpCode.SharpZipLib.Zip.Compression.Streams;
 using Newtonsoft.Json;
 
-namespace EliteAPI_app.WebSockets.Message
+namespace EliteAPI.Dashboard.WebSockets.Message
 {
     public static class Compressor
     {

@@ -1,10 +1,9 @@
-﻿using System;
-using EliteAPI_app.WebSockets.Handler;
-using EliteAPI_app.WebSockets.Handshake;
+﻿using EliteAPI.Dashboard.WebSockets.Handler;
+using EliteAPI.Dashboard.WebSockets.Handshake;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace EliteAPI_app.WebSockets
+namespace EliteAPI.Dashboard.WebSockets
 {
     public static class WebSocketsExtensions
     {

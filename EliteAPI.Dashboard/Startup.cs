@@ -1,21 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using ElectronNET.API;
 using ElectronNET.API.Entities;
-using EliteAPI;
-using EliteAPI_app.WebSockets;
+using EliteAPI.Dashboard.Controllers;
+using EliteAPI.Dashboard.WebSockets;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
-namespace EliteAPI_app
+namespace EliteAPI.Dashboard
 {
     public class Startup
     {
@@ -35,7 +28,12 @@ namespace EliteAPI_app
             
             // Add WebSocket handlers
             services.AddWebSocketHandshake();
+            
+            // Add controllers
+            services.AddControllers();
 
+            services.AddHttpClient();
+            
             services.AddElectron();
             
             Task.Run(async () =>
@@ -68,7 +66,7 @@ namespace EliteAPI_app
 
             // Redirect to Https
             app.UseHttpsRedirection();
-            
+
             // Allow for CORS   
             app.UseCors(builder => builder.WithOrigins($"http://localhost:{BridgeSettings.WebPort}"));
 
@@ -77,10 +75,13 @@ namespace EliteAPI_app
             app.UseWebSocketHandshake();
 
             // Setup the Api
-            // app.UseRouting();
-            // app.UseEndpoints(endpoints => endpoints.MapControllers());
-            
-            // Host the frontend
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+        // Host the frontend
             app.UseSpaStaticFiles();
             app.UseSpa(spa =>
             {

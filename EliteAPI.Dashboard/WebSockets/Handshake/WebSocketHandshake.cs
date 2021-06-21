@@ -1,10 +1,10 @@
 ﻿using System.Net;
 using System.Threading.Tasks;
-using EliteAPI_app.WebSockets.Handler;
+using EliteAPI.Dashboard.WebSockets.Handler;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
-namespace EliteAPI_app.WebSockets.Handshake
+namespace EliteAPI.Dashboard.WebSockets.Handshake
 {
     public class WebSocketHandshake
     {

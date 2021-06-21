@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using EliteAPI_app.WebSockets.Logging;
-using EliteAPI_app.WebSockets.Message;
+using EliteAPI.Dashboard.WebSockets.Logging;
+using EliteAPI.Dashboard.WebSockets.Message;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace EliteAPI_app.WebSockets.Handler
+namespace EliteAPI.Dashboard.WebSockets.Handler
 {
     public enum WebSocketType
     {

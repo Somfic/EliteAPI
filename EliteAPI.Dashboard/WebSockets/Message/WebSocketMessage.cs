@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EliteAPI_app.WebSockets.Message
+namespace EliteAPI.Dashboard.WebSockets.Message
 {
     public class WebSocketMessage
     {

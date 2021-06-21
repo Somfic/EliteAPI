@@ -988,6 +988,11 @@
             Triggered when any of the properties of this option have been updated
             </summary>
         </member>
+        <member name="M:EliteAPI.Options.Abstractions.IOption.ToJson">
+            <summary>
+            This option's JSON
+            </summary>
+        </member>
         <member name="T:EliteAPI.Options.Bindings.Models.IBindings">
             <summary>
             Holds information about the keybindings
@@ -1005,6 +1010,9 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Options.Bindings.Bindings.EliteAPI#Options#Abstractions#IOption#TriggerOnChange">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Options.Bindings.Bindings.ToJson">
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Options.Bindings.Bindings.EliteAPI#Options#Bindings#Models#IBindings#Active">

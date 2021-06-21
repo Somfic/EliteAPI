@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>EliteAPI_app</RootNamespace>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <FileVersion>0.1.0.0</FileVersion>
     <InformationalVersion>0.1.0-alpha.6+Branch.dev.Sha.fb0314c6f305c041ae1202ba494145006950efaa</InformationalVersion>
@@ -19,45 +18,11 @@
     <Folder Include="frontend" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EliteAPI\EliteAPI.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Update="electron.manifest.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="frontend\dist\manifest.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\web.config" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\web.config" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\appsettings.Development.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\appsettings.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\appsettings.Development.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\appsettings.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\electron-builder.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\electron.manifest.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\frontend\dist\manifest.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\frontend\package.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\vk_swiftshader_icd.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\electron-builder.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\electron.manifest.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\frontend\dist\manifest.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\frontend\package.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\vk_swiftshader_icd.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\web.config" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\web.config" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\appsettings.Development.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\appsettings.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\appsettings.Development.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\appsettings.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\electron-builder.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\electron.manifest.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\frontend\package.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\vk_swiftshader_icd.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\electron-builder.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\electron.manifest.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\frontend\dist\manifest.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\frontend\package.json" />
-    <_ContentIncludedByDefault Remove="dist\win-unpacked\resources\bin\dist\win-unpacked\resources\bin\dist\win-unpacked\vk_swiftshader_icd.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EliteAPI\EliteAPI.csproj" />
   </ItemGroup>
 </Project>

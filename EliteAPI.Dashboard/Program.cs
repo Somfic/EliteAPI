@@ -43,10 +43,11 @@ namespace EliteAPI_app
             api.Shipyard.OnChange += async (sender, e) => await socketHandler.Broadcast(new WebSocketMessage("Shipyard", api.Shipyard.ToJson()), true, true);
             api.Ship.OnChange += async (sender, e) => await socketHandler.Broadcast(new WebSocketMessage("Status", api.Ship.ToJson()), true, true);
             api.NavRoute.OnChange += async (sender, e) => await socketHandler.Broadcast(new WebSocketMessage("NavRoute", api.NavRoute.ToJson()), true, true);
+            
+            // Sub to options
             api.Bindings.OnChange += async (sender, e) => await socketHandler.Broadcast(new WebSocketMessage("Bindings", api.Bindings.ToJson()), true, true);
 
             await api.StartAsync();
-
             await host.RunAsync();
         }
 
@@ -56,7 +57,7 @@ namespace EliteAPI_app
                 {
                     logger.ClearProviders();
                     logger.SetMinimumLevel(LogLevel.Trace);
-                    //logger.AddPrettyConsole(ConsoleFormats.Default, ConsoleThemes.Vanilla);
+                    // logger.AddPrettyConsole(ConsoleFormats.Default, ConsoleThemes.Vanilla);
                     logger.AddSimpleConsole();
                     logger.AddWebSocketLogger();
                 })

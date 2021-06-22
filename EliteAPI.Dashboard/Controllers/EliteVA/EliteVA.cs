@@ -7,11 +7,11 @@ using Newtonsoft.Json;
 namespace EliteAPI.Dashboard.Controllers.EliteVA
 {
     [ApiController]
-    public class Versioning
+    public class EliteVA
     {
         private readonly HttpClient _httpClient;
 
-        public Versioning(HttpClient httpClient)
+        public EliteVA(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
@@ -26,6 +26,12 @@ namespace EliteAPI.Dashboard.Controllers.EliteVA
             
             var responseJson = await result.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<GithubVersioningResponse>(responseJson);
+        }
+
+        [HttpGet("eliteva/installed")]
+        public ActionResult<EliteVaProfile> GetEliteVa()
+        {
+            return UserProfile.Load().EliteVA;
         }
     }
 }

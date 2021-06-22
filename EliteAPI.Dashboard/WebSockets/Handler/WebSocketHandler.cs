@@ -130,9 +130,7 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                 return;
 
             var compressed = Compressor.Compress(messages);
-
-            _log.LogInformation("Sending {Json}", compressed);
-
+            
             var bytes = Encoding.UTF8.GetBytes(compressed);
 
             var arraySegment = new ArraySegment<byte>(bytes);

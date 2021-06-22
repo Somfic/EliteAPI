@@ -7,6 +7,12 @@ export default createStore({
       ip: window.location.hostname,
       port: window.location.port
     },
+    catchup: {
+      current: 0,
+      total: 0,
+      hasCaughtUp: false,
+      isCatchingUp: false
+    },
     sortedEvents: {},
     events: [],
     logs: [],
@@ -37,58 +43,76 @@ export default createStore({
       this.state.connection.client.onmessage = (compressed) => {
         let raw = compressed.data;
 
-        let messages = decompress(raw);
+        let message = decompress(raw);
 
-        messages.forEach(message => {
-          let type = message.type;
-          let data = message.value;
 
-          switch (type) {
-            case "Event":
-              if (!this.state.sortedEvents[data.Event]) {
-                this.state.sortedEvents[data.Event] = [];
-              }
+        let type = message.type;
+        let data = message.value;
 
-              this.state.sortedEvents[data.Event].unshift(data);
-              this.state.events.unshift(data);
-              break;
+        if (this.state.catchup.isCatchingUp) {
+          this.state.catchup.current++;
+        }
 
-            case "Log":
-              this.state.logs.unshift(data);
-              break;
+        switch (type) {
+          case "Event":
+            if (!this.state.sortedEvents[data.Event]) {
+              this.state.sortedEvents[data.Event] = [];
+            }
 
-            case "Cargo":
-              this.state.cargo = data;
-              break;
+            this.state.sortedEvents[data.Event].unshift(data);
+            this.state.events.unshift(data);
+            break;
 
-            case "Market":
-              this.state.market = data;
-              break;
+          case "CatchupStart":
+            this.state.catchup.total = data;
+            this.state.catchup.current = 0;
+            this.state.catchup.isCatchingUp = true;
+            this.state.catchup.hasCaughtUp = false;
+            console.log('start')
+            break;
 
-            case "Modules":
-              this.state.modules = data;
-              break;
+          case "CatchupEnd":
+            this.state.catchup.isCatchingUp = false;
+            this.state.catchup.hasCaughtUp = true;
+            this.state.catchup.current = this.state.catchup.total;
+            console.log('end')
+            break;
 
-            case "Outfitting":
-              this.state.outfitting = data;
-              break;
+          case "Log":
+            this.state.logs.unshift(data);
+            break;
 
-            case "Shipyard":
-              this.state.shipyard = data;
-              break;
+          case "Cargo":
+            this.state.cargo = data;
+            break;
 
-            case "Status":
-              this.state.status = data;
-              break;
+          case "Market":
+            this.state.market = data;
+            break;
 
-            case "NavRoute":
-              this.state.navroute = data;
-              break;
+          case "Modules":
+            this.state.modules = data;
+            break;
 
-            default:
-              console.warn(type, data)
-          }
-        });
+          case "Outfitting":
+            this.state.outfitting = data;
+            break;
+
+          case "Shipyard":
+            this.state.shipyard = data;
+            break;
+
+          case "Status":
+            this.state.status = data;
+            break;
+
+          case "NavRoute":
+            this.state.navroute = data;
+            break;
+
+          default:
+            console.warn(type, data);
+        }
       };
     },
 
@@ -106,12 +130,13 @@ function send(client, type, data) {
     value: data
   };
 
-  let compressed = compress([message]);
+  let compressed = compress(message);
   client.send(compressed);
 }
 
 function compress(message) {
   return JSON.stringify(message);
+
   //
   // console.log('COMPRESSING', message)
   //
@@ -133,13 +158,10 @@ function compress(message) {
 }
 
 function decompress(message) {
-  var objects = JSON.parse(message);
+  var object = JSON.parse(message);
+  object.value = JSON.parse(object.value);
+  return object;
 
-  objects.forEach(x => {
-    x.value = JSON.parse(x.value)
-  })
-
-  return objects;
   //
   // console.log('DECOMPRESSING', base64)
   //

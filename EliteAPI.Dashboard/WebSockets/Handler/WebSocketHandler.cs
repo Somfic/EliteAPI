@@ -35,7 +35,9 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
             _frontendCatchupMessages = new List<WebSocketMessage>();
             _clientCatchupMessages = new List<WebSocketMessage>();
 
-            WebSocketLogs.OnLog += async (sender, e) => await Broadcast(new WebSocketMessage("Log", JsonConvert.SerializeObject(e)), WebSocketType.FrontEnd, true, false);
+            WebSocketLogs.OnLog += async (sender, e) =>
+                await Broadcast(new WebSocketMessage("Log", JsonConvert.SerializeObject(e)), WebSocketType.FrontEnd,
+                    true, false);
         }
 
         public async Task Handle(WebSocket socket, WebSocketType type)
@@ -60,13 +62,15 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
             await ListenTo(socket, type);
         }
 
-        public async Task Broadcast(WebSocketMessage message, bool useDuringCatchup = false, bool onlySaveLatestForCatchup = false)
+        public async Task Broadcast(WebSocketMessage message, bool useDuringCatchup = false,
+            bool onlySaveLatestForCatchup = false)
         {
             await Broadcast(message, WebSocketType.FrontEnd, useDuringCatchup, onlySaveLatestForCatchup);
             await Broadcast(message, WebSocketType.Client, useDuringCatchup, onlySaveLatestForCatchup);
         }
 
-        public async Task Broadcast(WebSocketMessage message, WebSocketType type, bool useDuringCatchup, bool onlySaveLatestForCatchup)
+        public async Task Broadcast(WebSocketMessage message, WebSocketType type, bool useDuringCatchup,
+            bool onlySaveLatestForCatchup)
         {
             switch (type)
             {
@@ -103,7 +107,7 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                             _frontendCatchupMessages.RemoveAll(x =>
                                 string.Equals(x.Type, message.Type, StringComparison.InvariantCultureIgnoreCase));
                         }
-                        
+
                         // Add
                         _frontendCatchupMessages.Add(message);
                     }
@@ -121,16 +125,13 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
             }
         }
 
-        public async Task SendTo(WebSocket socket, WebSocketMessage message) =>
-            await SendTo(socket, new List<WebSocketMessage> {message});
-        
-        public async Task SendTo(WebSocket socket, IList<WebSocketMessage> messages)
+        public async Task SendTo(WebSocket socket, WebSocketMessage message)
         {
             if (socket.State != WebSocketState.Open)
                 return;
 
-            var compressed = Compressor.Compress(messages);
-            
+            var compressed = Compressor.Compress(message);
+
             var bytes = Encoding.UTF8.GetBytes(compressed);
 
             var arraySegment = new ArraySegment<byte>(bytes);
@@ -145,45 +146,46 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
             while (socket.State == WebSocketState.Open)
             {
                 // Read message
-                var messages = await GetMessage(socket, memory);
+                var message = await GetMessage(socket, memory);
+                
+                _log.LogInformation("WebSocket request ({Type}): {Json}", message.Type, message.Value);
 
-                foreach (var message in messages)
+                // Check authentication
+                if (!isAuthenticated)
                 {
-                    _log.LogInformation("WebSocket request ({Type}): {Json}", message.Type, message.Value);
+                    _log.LogDebug("Unauthenticated socket, checking authentication");
+                    isAuthenticated = await CheckAuthentication(message, type);
 
-                    // Check authentication
+                    // Break connection if still not authenticated
                     if (!isAuthenticated)
                     {
-                        _log.LogDebug("Unauthenticated socket, checking authentication");
-                        isAuthenticated = await CheckAuthentication(message, type);
+                        _log.LogDebug("Did not pass authentication, kicking");
+                        await socket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Unauthenticated",
+                            CancellationToken.None);
+                        return;
+                    }
 
-                        // Break connection if still not authenticated
-                        if (!isAuthenticated)
-                        {
-                            _log.LogDebug("Did not pass authentication, kicking");
-                            await socket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Unauthenticated",
-                                CancellationToken.None);
-                            return;
-                        }
+                    // Start listening from next message
+                    _log.LogDebug("Passed authentication, sending catchup");
 
-                        // Start listening from next message
-                        _log.LogDebug("Passed authentication, sending catchup");
+                    switch (type)
+                    {
+                        // Send catchup messages to frontend
+                        case WebSocketType.FrontEnd:
+                            await SendTo(socket, new WebSocketMessage("CatchupStart", _frontendCatchupMessages.Count));
+                            _frontendCatchupMessages.ForEach(async x => await SendTo(socket, x));
+                            await SendTo(socket, new WebSocketMessage("CatchupEnd"));
+                            break;
 
-                        switch (type)   
-                        {
-                            // Send catchup messages to frontend
-                            case WebSocketType.FrontEnd:
-                                await SendTo(socket, _frontendCatchupMessages);
-                                break;
+                        // Send catchup messages to client
+                        case WebSocketType.Client:
+                            await SendTo(socket, new WebSocketMessage("CatchupStart", _clientCatchupMessages.Count));
+                            _clientCatchupMessages.ForEach(async x =>  await SendTo(socket, x));
+                            await SendTo(socket, new WebSocketMessage("CatchupEnd"));
+                            break;
 
-                            // Send catchup messages to client
-                            case WebSocketType.Client:
-                                await SendTo(socket, _clientCatchupMessages);
-                                break;
-
-                            default:
-                                throw new ArgumentOutOfRangeException(nameof(type), type, "Invalid WebSocket type");
-                        }
+                        default:
+                            throw new ArgumentOutOfRangeException(nameof(type), type, "Invalid WebSocket type");
                     }
                 }
 
@@ -202,7 +204,7 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
             return Task.FromResult(true);
         }
 
-        private async Task<IReadOnlyList<WebSocketMessage>> GetMessage(WebSocket socket, MemoryStream memory)
+        private async Task<WebSocketMessage> GetMessage(WebSocket socket, MemoryStream memory)
         {
             try
             {
@@ -221,7 +223,7 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                     memory.Seek(0, SeekOrigin.Begin);
                     memory.Position = 0;
 
-                    IReadOnlyList<WebSocketMessage> message;
+                    WebSocketMessage message;
 
                     try
                     {

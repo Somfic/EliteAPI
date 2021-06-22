@@ -17,6 +17,11 @@ namespace EliteAPI.Dashboard.WebSockets.Message
             Value = JsonConvert.SerializeObject(value);
         }
 
+        public WebSocketMessage(string type)
+        {
+            Type = type;
+        }
+
         [JsonProperty("type")]
         public string Type { get; }
         

@@ -30,9 +30,6 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 @import './_typography.scss';
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
-
-
 body {
   a {
     color: $accent;

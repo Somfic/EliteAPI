@@ -6,7 +6,7 @@ namespace EliteAPI.Dashboard.WebSockets.Message
 {
     public static class Compressor
     {
-        public static string Compress(IList<WebSocketMessage> message)
+        public static string Compress(WebSocketMessage message)
         {
             return JsonConvert.SerializeObject(message);
             
@@ -24,9 +24,9 @@ namespace EliteAPI.Dashboard.WebSockets.Message
             // return base64;
         }
 
-        public static IReadOnlyList<WebSocketMessage> Decompress(string base64)
+        public static WebSocketMessage Decompress(string base64)
         {
-            return JsonConvert.DeserializeObject<List<WebSocketMessage>>(base64);
+            return JsonConvert.DeserializeObject<WebSocketMessage>(base64);
             
             // var compressedBytes = Convert.FromBase64String(base64);
             //

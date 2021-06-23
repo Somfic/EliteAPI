@@ -1,8 +1,8 @@
 <template>
-  <div class="loader-wrapper" :class="{hide: !canShow}">
+  <div class="loader-wrapper" :class="{hide: !imgLoaded, finished: finished }">
     <div class="loader">
       <div class="icon">
-        <img :src="icon" alt="" @load="canShow = true">
+        <img :src="icon" alt="" @load="imgLoad">
       </div>
       <div class="text">
         <h1 class="primary">{{ text }}</h1>
@@ -24,18 +24,46 @@ export default {
   components: { LoadingIndicator, ProgressBar },
   data() {
     return {
-      canShow: false
-    }
+      imgLoaded: false
+    };
   },
   props: {
     text: String,
     subText: String,
     icon: String,
-    percentage: Number
+    percentage: Number,
+    finished: Boolean
   },
   async mounted() {
-    if(!this.icon) {
-      this.canShow = true
+    if (!this.icon) {
+      this.imgLoaded = true;
+      this.setAnimateIn();
+    }
+  },
+  watch: {
+    finished() {
+      if (this.finished) {
+        this.setAnimateOut();
+      }
+    }
+  },
+
+  methods: {
+    setAnimateIn() {
+      setTimeout(() => {
+        this.$emit("animateIn");
+      }, 1000);
+    },
+
+    setAnimateOut() {
+      setTimeout(() => {
+        this.$emit("animateOut");
+      }, 1100);
+    },
+
+    imgLoad() {
+      this.imgLoaded = true;
+      this.setAnimateIn();
     }
   }
 };
@@ -46,11 +74,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 600ms ease-out;
 
   &.hide {
-    opacity: 0;
-    transform: translateY(20px);
+    .icon {
+      opacity: 0;
+      transform: translateY(20px);
+    }
 
     .progress-bar {
       max-width: 0 !important;
@@ -63,6 +92,29 @@ export default {
 
     .loading-indicator {
       right: 1rem !important;
+      opacity: 0 !important;
+    }
+  }
+
+  &.finished {
+    .icon {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    .progress-bar {
+      max-width: 0 !important;
+      margin-left: auto;
+    }
+
+    h1 {
+      opacity: 0 !important;
+      transform: translateX(25px);
+      transition-delay: 600ms;
+    }
+
+    .loading-indicator {
+      right: -1rem !important;
       opacity: 0 !important;
     }
   }
@@ -93,6 +145,8 @@ export default {
     }
 
     .icon {
+      transition: 600ms ease-out;
+
       img {
         max-height: 10rem;
         max-width: 10rem;

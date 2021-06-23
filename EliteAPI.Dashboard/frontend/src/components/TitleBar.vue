@@ -35,8 +35,15 @@ export default {
     margin-right: 2rem;
   }
 
+  .button {
+    margin-left: 0;
+    margin-right: 2rem;
+  }
+
   h1 {
     margin: 0;
+    color: $foreground;
+    filter: drop-shadow(0 0 5px transparentize($foreground, 0.8));
   }
 }
 </style>

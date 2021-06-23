@@ -8,7 +8,9 @@
 export default {
   name: "App",
   async mounted() {
-    this.$store.commit("connect");
+    if(!this.$store.state.catchup.hasCaughtUp) {
+      await this.$router.push({ name: 'Catchup' })
+    }
   }
 };
 </script>

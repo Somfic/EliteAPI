@@ -18,8 +18,11 @@ namespace EliteAPI.Dashboard.WebSockets.Logging
             // Only send EliteAPI related log messages
             if (!logMessage.Category.StartsWith("EliteAPI."))
                 return;
-            
+
             if (logMessage.Category.StartsWith("EliteAPI.Dashboard"))
+                return;
+
+            if (logLevel == LogLevel.Trace)
                 return;
 
             _logs.Add(logMessage);

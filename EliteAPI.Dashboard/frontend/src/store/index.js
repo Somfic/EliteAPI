@@ -68,14 +68,12 @@ export default createStore({
             this.state.catchup.current = 0;
             this.state.catchup.isCatchingUp = true;
             this.state.catchup.hasCaughtUp = false;
-            console.log('start')
             break;
 
           case "CatchupEnd":
             this.state.catchup.isCatchingUp = false;
             this.state.catchup.hasCaughtUp = true;
             this.state.catchup.current = this.state.catchup.total;
-            console.log('end')
             break;
 
           case "Log":

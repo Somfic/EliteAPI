@@ -1,17 +1,47 @@
 <template>
-  <TitleBar title="EliteAPI logs" :to="{name: 'Home'}"/>
-  <Loader :has-loaded="this.$store.state.logs.length > 0">
-    <LogEntry :log="log" v-for="log in this.$store.state.logs" :key="log" />
-  </Loader>
+  <TitleBar title="EliteAPI logs" :to="{name: 'Home'}" />
+  <div class="entries" :class="{hidden: hidden}">
+    <LogEntry :log="log" v-for="log in logs" :key="log" />
+  </div>
 </template>
 
 <script>
 import LogEntry from "@/components/LogEntry";
-import Loader from "@/components/Loader";
 import TitleBar from "@/components/TitleBar";
 
 export default {
   name: "MessageLog",
-  components: { TitleBar, Loader, LogEntry }
+  components: { TitleBar, LogEntry },
+  data() {
+    return {
+      hidden: true,
+      logs: this.$store.state.logs
+    };
+  },
+
+  async mounted() {
+    setTimeout(() => {
+      this.hidden = false;
+    }, 300)
+  }
 };
 </script>
+<style lang="scss" scoped>
+.hidden {
+  .log-entry {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+.log-entry {
+  transition: all 200ms ease;
+  opacity: 1;
+}
+
+@for $i from 1 through 30 {
+  .log-entry:nth-child(#{$i}) {
+    transition-delay: $i * 50ms;
+  }
+}
+</style>

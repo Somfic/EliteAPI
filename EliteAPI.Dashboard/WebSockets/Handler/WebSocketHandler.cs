@@ -180,7 +180,7 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                         // Send catchup messages to client
                         case WebSocketType.Client:
                             await SendTo(socket, new WebSocketMessage("CatchupStart", _clientCatchupMessages.Count));
-                            _clientCatchupMessages.ForEach(async x =>  await SendTo(socket, x));
+                            _clientCatchupMessages.ForEach(async x => await SendTo(socket, x));
                             await SendTo(socket, new WebSocketMessage("CatchupEnd"));
                             break;
 

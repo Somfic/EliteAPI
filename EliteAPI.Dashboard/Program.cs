@@ -20,7 +20,7 @@ namespace EliteAPI.Dashboard
             
             var api = host.Services.GetRequiredService<IEliteDangerousApi>();
             var socketHandler = host.Services.GetRequiredService<WebSocketHandler>();
-            
+
             await api.InitializeAsync();
             
             // Sub to events

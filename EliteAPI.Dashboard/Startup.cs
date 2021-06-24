@@ -48,7 +48,7 @@ namespace EliteAPI.Dashboard
                 await Electron.WindowManager.CreateWindowAsync(new BrowserWindowOptions
                 {
                     MinHeight = 500,
-                    MinWidth = 500,
+                    MinWidth = 800,
                     Title = "EliteAPI",
                     TitleBarStyle = TitleBarStyle.hiddenInset,
                     DarkTheme = true,

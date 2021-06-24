@@ -12,13 +12,21 @@ namespace EliteAPI.Event.Models
 {
 
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public class ShipLockerMaterialsEvent : EventBase<ShipLockerMaterialsEvent>
+    public class ShipLockerEvent : EventBase<ShipLockerEvent>
     {
-        internal ShipLockerMaterialsEvent() { }
+        internal ShipLockerEvent() { }
 
         [JsonProperty("Items")]
         public IReadOnlyList<ShipLockerMaterialInfo> Items { get; private set; }
 
+        [JsonProperty("Components")]
+        public IReadOnlyList<ShipLockerMaterialInfo> Components { get; private set; }
+        
+        [JsonProperty("Consumables")]
+        public IReadOnlyList<ShipLockerMaterialInfo> Consumables { get; private set; }
+        
+        [JsonProperty("Data")]
+        public IReadOnlyList<ShipLockerMaterialInfo> Data { get; private set; }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ShipLockerMaterialInfo
@@ -44,11 +52,11 @@ namespace EliteAPI.Event.Handler
 {
     public partial class EventHandler
     {
-        public event EventHandler<ShipLockerMaterialsEvent> ShipLockerMaterialsEvent;
+        public event EventHandler<ShipLockerEvent> ShipLockerEvent;
 
-        internal void InvokeShipLockerMaterialsEvent(ShipLockerMaterialsEvent arg)
+        internal void InvokeShipLockerEvent(ShipLockerEvent arg)
         {
-            ShipLockerMaterialsEvent?.Invoke(this, arg);
+            ShipLockerEvent?.Invoke(this, arg);
         }
     }
 }

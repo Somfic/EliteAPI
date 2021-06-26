@@ -4,6 +4,7 @@ export default createStore({
   state: {
     connection: {
       client: null,
+      state: "",
       ip: window.location.hostname,
       port: window.location.port
     },
@@ -22,29 +23,39 @@ export default createStore({
     outfitting: null,
     shipyard: null,
     ship: null,
-    navroute: null
+    navroute: null,
+    bindings: null,
+    eliteapi: null
   },
   mutations: {
     connect() {
+      this.state.connection.state = "connecting";
       this.state.connection.client = new WebSocket("ws://" + this.state.connection.ip + ":" + this.state.connection.port + "/ws", "EliteAPI-app");
 
+      setTimeout(() => {
+        if (this.state.connection.client.readyState === 0) {
+          this.state.connection.client.close();
+        }
+      }, 15000);
+
       this.state.connection.client.onerror = function(error) {
+        this.state.connection.state = "error";
         console.error("Websocket could not connect", error);
       };
 
       this.state.connection.client.onopen = () => {
+        this.state.connection.state = "connected";
         send(this.state.connection.client, "auth", "frontend");
       };
 
       this.state.connection.client.onclose = () => {
+        this.state.connection.state = "closed";
         console.log("Websocket closed");
       };
 
       this.state.connection.client.onmessage = (compressed) => {
         let raw = compressed.data;
-
         let message = decompress(raw);
-
 
         let type = message.type;
         let data = message.value;
@@ -80,12 +91,20 @@ export default createStore({
             this.state.logs.unshift(data);
             break;
 
+          case "EliteAPI":
+            this.state.eliteapi = data;
+            break;
+
           case "Cargo":
             this.state.cargo = data;
             break;
 
           case "Market":
             this.state.market = data;
+            break;
+
+          case "Bindings":
+            this.state.bindings = data;
             break;
 
           case "Modules":

@@ -44,16 +44,19 @@ namespace EliteAPI.Dashboard
                 // Electron.Tray.SetToolTip("EliteAPI");
                 
                 Electron.NativeTheme.SetThemeSource(ThemeSourceMode.Dark);
+
                 // Electron.Menu.SetApplicationMenu(new List<MenuItem>().ToArray());
                 await Electron.WindowManager.CreateWindowAsync(new BrowserWindowOptions
                 {
+                    ThickFrame = true,
                     MinHeight = 500,
                     MinWidth = 800,
                     Title = "EliteAPI",
                     TitleBarStyle = TitleBarStyle.hiddenInset,
                     DarkTheme = true,
-                    BackgroundColor = "#000",
-                    AutoHideMenuBar = true
+                    BackgroundColor = "#101013",
+                    AutoHideMenuBar = true,
+                    SkipTaskbar = false
                 });
             });
         }

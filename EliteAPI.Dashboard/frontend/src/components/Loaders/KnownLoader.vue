@@ -7,11 +7,14 @@
       <div class="text">
         <h1 class="primary">{{ text }}</h1>
         <div class="horizontal-loader">
-          <LoadingIndicator />
-          <ProgressBar :percentage="percentage" />
+          <LoadingIndicator :is-loading="isLoading" />
+          <ProgressBar :indeterminate="indeterminate" :percentage="percentage" />
         </div>
         <h1 class="secondary">{{ subText }}</h1>
       </div>
+    </div>
+    <div class="status">
+      <p>{{ status }}</p>
     </div>
   </div>
 </template>
@@ -31,8 +34,11 @@ export default {
     text: String,
     subText: String,
     icon: String,
+    isLoading: Boolean,
+    indeterminate: Boolean,
     percentage: Number,
-    finished: Boolean
+    finished: Boolean,
+    status: String
   },
   async mounted() {
     if (!this.icon) {
@@ -74,11 +80,24 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  .status {
+    position: absolute;
+    color: mix($foreground, $background, 20%);
+    bottom: 3rem;
+    transition: 1000ms;
+    transition-delay: 600ms;
+  }
 
   &.hide {
     .icon {
       opacity: 0;
       transform: translateY(20px);
+    }
+
+    .status {
+      opacity: 0;
     }
 
     .progress-bar {
@@ -105,6 +124,10 @@ export default {
     .progress-bar {
       max-width: 0 !important;
       margin-left: auto;
+    }
+
+    .status {
+      opacity: 0;
     }
 
     h1 {

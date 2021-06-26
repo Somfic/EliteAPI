@@ -1,5 +1,5 @@
 <template>
-  <div class="loading-indicator">
+  <div class="loading-indicator" :class="{loading: isLoading}">
     <div class="square"></div>
     <div class="square"></div>
     <div class="square"></div>
@@ -8,8 +8,11 @@
 </template>
 <script>
 export default {
-  name: 'LoadingIndicator'
-}
+  name: "LoadingIndicator",
+  props: {
+    isLoading: Boolean
+  }
+};
 </script>
 <style lang="scss">
 $size: .5rem;
@@ -21,12 +24,19 @@ $animationDelay: $animationLength / 5;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 
+  &.loading {
+    .square {
+      background-color: $accent !important;
+    }
+  }
+
   .square {
+    background-color:transparent;
     filter: drop-shadow(0 0 5px transparentize($accent, 0.8));
     margin: $size / 8;
     width: $size;
     height: $size;
-    background-color: $accent;
+    transition: 700ms;
     animation: pulse $animationLength infinite alternate;
 
     &:nth-child(1) {

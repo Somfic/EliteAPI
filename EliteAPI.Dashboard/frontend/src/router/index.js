@@ -4,22 +4,27 @@ const routes = [
     path: "/events",
     name: "Events",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/EventLog.vue"),
+      import(/* webpackChunkName: "events" */ "../views/EventLog.vue"),
   },  {
     path: "/logs",
     name: "Logs",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/MessageLog.vue"),
+      import(/* webpackChunkName: "logs" */ "../views/MessageLog.vue"),
   },  {
     path: "/catchup",
     name: "Catchup",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Catchup.vue"),
+      import(/* webpackChunkName: "catchup" */ "../views/Catchup.vue"),
   }, {
     path: "/",
     name: "Home",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Home.vue"),
+      import(/* webpackChunkName: "home" */ "../views/Home.vue"),
+  }, {
+    path: "/eliteva",
+    name: "EliteVA",
+    component: () =>
+      import(/* webpackChunkName: "eliteva" */ "../views/EliteVA.vue"),
   },
 ];
 

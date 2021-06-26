@@ -5,6 +5,7 @@ using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using EliteAPI.Abstractions;
 using EliteAPI.Dashboard.WebSockets.Logging;
 using EliteAPI.Dashboard.WebSockets.Message;
 using Microsoft.Extensions.Logging;
@@ -21,15 +22,17 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
     public class WebSocketHandler
     {
         private readonly ILogger<WebSocketHandler> _log;
+        private readonly IEliteDangerousApi _api;
         private readonly List<WebSocket> _frontendWebSockets;
         private readonly List<WebSocket> _clientWebSockets;
 
         private readonly List<WebSocketMessage> _frontendCatchupMessages;
         private readonly List<WebSocketMessage> _clientCatchupMessages;
 
-        public WebSocketHandler(ILogger<WebSocketHandler> log)
+        public WebSocketHandler(ILogger<WebSocketHandler> log, IEliteDangerousApi api)
         {
             _log = log;
+            _api = api;
             _frontendWebSockets = new List<WebSocket>();
             _clientWebSockets = new List<WebSocket>();
             _frontendCatchupMessages = new List<WebSocketMessage>();
@@ -168,20 +171,19 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                     // Start listening from next message
                     _log.LogDebug("Passed authentication, sending catchup");
 
+                    // Send EliteAPI information
+                    await SendTo(socket, new WebSocketMessage("EliteAPI", $"{{\"Version\": \"{_api.Version}\"}}"));
+                    
                     switch (type)
                     {
                         // Send catchup messages to frontend
                         case WebSocketType.FrontEnd:
-                            await SendTo(socket, new WebSocketMessage("CatchupStart", _frontendCatchupMessages.Count));
-                            _frontendCatchupMessages.ForEach(async x => await SendTo(socket, x));
-                            await SendTo(socket, new WebSocketMessage("CatchupEnd"));
+                            await Catchup(socket, _frontendCatchupMessages);
                             break;
 
                         // Send catchup messages to client
                         case WebSocketType.Client:
-                            await SendTo(socket, new WebSocketMessage("CatchupStart", _clientCatchupMessages.Count));
-                            _clientCatchupMessages.ForEach(async x => await SendTo(socket, x));
-                            await SendTo(socket, new WebSocketMessage("CatchupEnd"));
+                            await Catchup(socket, _clientCatchupMessages);
                             break;
 
                         default:
@@ -191,6 +193,13 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
 
                 // Process message
             }
+        }
+
+        private async Task Catchup(WebSocket socket, List<WebSocketMessage> messages)
+        {
+            await SendTo(socket, new WebSocketMessage("CatchupStart", messages.Count));
+            messages.ForEach(async x => await SendTo(socket, x));
+            await SendTo(socket, new WebSocketMessage("CatchupEnd"));
         }
 
         private Task<bool> CheckAuthentication(WebSocketMessage message, WebSocketType type)

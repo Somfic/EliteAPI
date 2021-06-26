@@ -1,5 +1,5 @@
 <template>
-  <TitleBar title="EliteAPI logs" :to="{name: 'Home'}" />
+  <TitleBar title="EliteAPI log" :to="{name: 'Home'}" />
   <div class="entries" :class="{hidden: hidden}">
     <LogEntry :log="log" v-for="log in logs" :key="log" />
   </div>

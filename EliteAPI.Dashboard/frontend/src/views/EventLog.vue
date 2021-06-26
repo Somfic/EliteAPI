@@ -1,5 +1,5 @@
 <template>
-  <TitleBar title="Event logs" :to="{name: 'Home'}" />
+  <TitleBar title="Event log" :to="{name: 'Home'}" />
     <div class="entries" :class="{hidden: hidden}">
       <EventEntry :entry="eliteEvent" v-for="eliteEvent in events" :key="eliteEvent" />
     </div>

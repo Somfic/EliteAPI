@@ -1,5 +1,5 @@
 <template>
-  <KnownLoader icon="/img/logo.png" text="Initializing EliteAPI" sub-text="Greetings Commander"
+  <KnownLoader icon="/img/eliteapi.svg" text="Initializing EliteAPI" sub-text="Greetings Commander"
                :indeterminate="this.$store.state.connection.state === 'connecting'"
                :is-loading="this.$store.state.connection.state !== 'closed'"
                @animateIn="this.$store.commit('connect')"

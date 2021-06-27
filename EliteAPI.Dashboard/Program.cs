@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Threading.Tasks;
 using ElectronNET.API;
 using EliteAPI.Abstractions;
@@ -24,8 +25,8 @@ namespace EliteAPI.Dashboard
             await api.InitializeAsync();
             
             // Sub to events
-            api.Events.AllEvent += async (sender, e) => await socketHandler.Broadcast(new WebSocketMessage("Event", e.ToJson()), true);
-            
+            api.Events.AllEvent += async (sender, e) => await socketHandler.Broadcast(new WebSocketMessage("Event", e.ToJson()),true);
+
             // Sub to statuses
             api.Cargo.OnChange += async (sender, e) => await socketHandler.Broadcast(new WebSocketMessage("Cargo", api.Cargo.ToJson()), true, true);
             api.Market.OnChange += async (sender, e) => await socketHandler.Broadcast(new WebSocketMessage("Market", api.Market.ToJson()), true, true);

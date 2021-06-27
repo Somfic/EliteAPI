@@ -1,16 +1,16 @@
 {
-  "executable": "EliteAPI.Dashboard",
+  "executable": "EliteAPI",
   "splashscreen": {
-    "imageFile": ""
+    "imageFile": "wwwroot/img/eliteapi.svg"
   },
-  "name": "EliteAPI.Dashboard",
-  "author": "",
+  "name": "EliteAPI",
+  "author": "Somfic",
   "singleInstance": false,
   "environment": "Production",
   "build": {
-    "appId": "com.EliteAPI.Dashboard.app",
-    "productName": "EliteAPI.Dashboard",
-    "copyright": "Copyright © 2020",
+    "appId": "com.EliteAPI.app",
+    "productName": "EliteAPI",
+    "copyright": "Copyright © 2021",
     "buildVersion": "1.0.0",
     "compression": "maximum",
     "directories": {

@@ -171,8 +171,8 @@ export default {
       transition: 600ms ease-out;
 
       img {
-        max-height: 10rem;
-        max-width: 10rem;
+        height: 10rem;
+        margin-right: 2rem;
         filter: drop-shadow(0 0 5px transparentize($accent, 0.7));
       }
     }

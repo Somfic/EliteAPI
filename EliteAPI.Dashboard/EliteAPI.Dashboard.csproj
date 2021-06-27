@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="frontend" />
+    <Folder Include="Images" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EliteAPI\EliteAPI.csproj" />

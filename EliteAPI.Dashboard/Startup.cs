@@ -16,33 +16,30 @@ namespace EliteAPI.Dashboard
         {
             // Add CORS
             services.AddCors();
-            
+
             // Add EliteAPI
             services.AddEliteAPI();
-            
+
             // Add frontend files
-            services.AddSpaStaticFiles(spa =>
-            {
-                spa.RootPath = "frontend/dist";
-            });
-            
+            services.AddSpaStaticFiles(spa => { spa.RootPath = "wwwroot"; });
+
             // Add WebSocket handlers
             services.AddWebSocketHandshake();
-            
+
             // Add controllers
             services.AddControllers();
 
             services.AddHttpClient();
-            
+
             services.AddElectron();
-            
+
             Task.Run(async () =>
             {
                 // Electron.Tray.SetImage("https://github.com/EliteAPI/Icons/blob/main/logo.png?raw=true");
                 // Electron.Tray.SetTitle("EliteAPI");
                 // Electron.Tray.Show("https://github.com/EliteAPI/Icons/blob/main/logo.png?raw=true");
                 // Electron.Tray.SetToolTip("EliteAPI");
-                
+
                 Electron.NativeTheme.SetThemeSource(ThemeSourceMode.Dark);
 
                 // Electron.Menu.SetApplicationMenu(new List<MenuItem>().ToArray());
@@ -78,18 +75,21 @@ namespace EliteAPI.Dashboard
             app.UseWebSocketHandshake();
 
             // Setup the Api
-            app.UseRouting();
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            // app.UseRouting();
+            //
+            // app.UseEndpoints(endpoints =>
+            // {
+            //     endpoints.MapControllers();
+            // });
 
-        // Host the frontend
+            // Host the frontend
             app.UseSpaStaticFiles();
             app.UseSpa(spa =>
             {
+                spa.Options.SourcePath = "wwwroot";
+
                 // Use localhost instead when developing
-                if(env.IsDevelopment())
+                if (env.IsDevelopment())
                     spa.UseProxyToSpaDevelopmentServer("http://localhost:8080");
             });
         }

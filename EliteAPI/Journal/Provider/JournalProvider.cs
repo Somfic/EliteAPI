@@ -28,23 +28,43 @@ namespace EliteAPI.Journal.Provider
         }
 
         /// <inheritdoc />
-        public Task<FileInfo> FindJournalFile(DirectoryInfo journalDirectory)
+        public async Task<FileInfo> FindJournalFile(DirectoryInfo journalDirectory)
         {
             try
             {
-                var fileFilter = !string.IsNullOrWhiteSpace(_config.GetSection("EliteAPI")["Journal"]) ? _config.GetSection("EliteAPI")["Journal"] : _codeConfig.JournalFile;
+                var files = await FindJournalFiles(journalDirectory);
 
-                return Task.FromResult(journalDirectory
-                    .GetFiles(fileFilter)
+                return files
                     .OrderByDescending(file => file.LastWriteTime)
-                    .First());
+                    .First();
             }
             catch (Exception ex)
             {
                 Exception exception = new JournalFileNotFoundException("Could not find journal file", ex);
                 exception.Data.Add("Path", journalDirectory.FullName);
                 _log.LogTrace(exception, "Could not get active journal file from journal directory");
-                return Task.FromException<FileInfo>(exception);
+                return await Task.FromException<FileInfo>(exception);
+            }
+        }
+
+        /// <inheritdoc />
+        public async Task<FileInfo[]> FindJournalFiles(DirectoryInfo journalDirectory)
+        {
+            try
+            {
+                var fileFilter = !string.IsNullOrWhiteSpace(_config.GetSection("EliteAPI")["Journal"]) ? _config.GetSection("EliteAPI")["Journal"] : _codeConfig.JournalFile;
+
+                return journalDirectory
+                    .GetFiles(fileFilter)
+                    .OrderByDescending(file => file.LastWriteTime)
+                    .ToArray();
+            }
+            catch (Exception ex)
+            {
+                Exception exception = new JournalFileNotFoundException("Could not find journal files", ex);
+                exception.Data.Add("Path", journalDirectory.FullName);
+                _log.LogTrace(exception, "Could not get journal files from journal directory");
+                return await Task.FromException<FileInfo[]>(exception);
             }
         }
     }

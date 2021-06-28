@@ -25,5 +25,11 @@ namespace EliteAPI.Configuration
 
         /// <inheritdoc />
         public string BindingsFile { get; set; }
+
+        /// <inheritdoc />
+        public bool ProcessHistoricalJournals { get; set; }
+
+        /// <inheritdoc />
+        public int? HistoricalJournalDays { get; set; }
     }
 }

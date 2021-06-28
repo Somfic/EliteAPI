@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
@@ -227,6 +228,9 @@ namespace EliteAPI
                 _log.LogInformation("EliteAPI has started");
                 OnStart?.Invoke(this, EventArgs.Empty);
 
+                if (_codeConfig.ProcessHistoricalJournals)
+                    await ProcessHistoricalJournalFiles(_codeConfig.HistoricalJournalDays);
+
                 while (IsRunning)
                 {
                     await DoTick();
@@ -236,8 +240,7 @@ namespace EliteAPI
                 OnStop?.Invoke(this, EventArgs.Empty);
             });
         }
-
-
+        
         /// <inheritdoc />
         public Task StopAsync()
         {
@@ -464,6 +467,38 @@ namespace EliteAPI
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) _log.LogWarning("You are not running on a Windows machine, some features may not work properly");
 
             return Task.CompletedTask;
+        }
+
+        private async Task ProcessHistoricalJournalFiles(int? daysToProcess)
+        {
+            try
+            {
+                var journalFiles = await _journalProvider.FindJournalFiles(JournalDirectory);
+
+                if (daysToProcess != null)
+                {
+                    var limitDateTime = DateTime.Now.AddDays(-daysToProcess.Value);
+
+                    journalFiles = journalFiles
+                        .Skip(1)
+                        .Where(f => f.LastWriteTime >= limitDateTime)
+                        .OrderBy(f => f.LastWriteTime)
+                        .ToArray();
+                }
+
+                foreach (var file in journalFiles)
+                {
+                    _log.LogInformation($"Processing file {file}");
+
+                    await _journalProcessor.ProcessJournalFile(file, false);
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not process historical journal files");
+
+                throw;
+            }
         }
     }
 }

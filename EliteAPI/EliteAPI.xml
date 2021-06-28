@@ -149,6 +149,16 @@
             The active bindings file
             </summary>
         </member>
+        <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.ProcessHistoricalJournals">
+            <summary>
+            Determines if EliteAPI will process historical journal files
+            </summary>
+        </member>
+        <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.HistoricalJournalDays">
+            <summary>
+            The number of days in the past EliteAPI will process for historical journal files
+            </summary>
+        </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfiguration">
             <summary>
             Standard implementation of the <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration" /> configuration class
@@ -167,6 +177,12 @@
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.BindingsFile">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.ProcessHistoricalJournals">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.HistoricalJournalDays">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder">
@@ -199,6 +215,11 @@
         <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseJournalFile(System.String)">
             <summary>
             Sets which journal file to use, defaults to latest if not invoked
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseHistoricalJournals(System.Nullable{System.Int32})">
+            <summary>
+            Enables the processing of historical journal files with an option number of days to process
             </summary>
         </member>
         <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseBindingsFile(System.String)">
@@ -969,10 +990,19 @@
             </summary>
             <param name="journalDirectory"> The journal directory </param>
         </member>
+        <member name="M:EliteAPI.Journal.Provider.Abstractions.IJournalProvider.FindJournalFiles(System.IO.DirectoryInfo)">
+            <summary>
+            Finds the journal files from the specified journal directory
+            </summary>
+            <param name="journalDirectory"> The journal directory </param>
+        </member>
         <member name="T:EliteAPI.Journal.Provider.JournalProvider">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindJournalFile(System.IO.DirectoryInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Journal.Provider.JournalProvider.FindJournalFiles(System.IO.DirectoryInfo)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.JsonContractResolver.CreateProperties(System.Type,Newtonsoft.Json.MemberSerialization)">
@@ -986,6 +1016,11 @@
         <member name="E:EliteAPI.Options.Abstractions.IOption.OnChange">
             <summary>
             Triggered when any of the properties of this option have been updated
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Options.Abstractions.IOption.ToJson">
+            <summary>
+            This option's JSON
             </summary>
         </member>
         <member name="T:EliteAPI.Options.Bindings.Models.IBindings">
@@ -1005,6 +1040,9 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Options.Bindings.Bindings.EliteAPI#Options#Abstractions#IOption#TriggerOnChange">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Options.Bindings.Bindings.ToJson">
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Options.Bindings.Bindings.EliteAPI#Options#Bindings#Models#IBindings#Active">

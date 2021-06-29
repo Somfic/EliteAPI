@@ -38,8 +38,8 @@ namespace EliteAPI.Configuration.Abstractions
         bool ProcessHistoricalJournals { get; set; }
 
         /// <summary>
-        /// The number of days in the past EliteAPI will process for historical journal files
+        /// The timespan in the past EliteAPI will process for historical journal files
         /// </summary>
-        int? HistoricalJournalDays { get; set; }
+        TimeSpan HistoricalJournalSpan { get; set; }
     }
 }

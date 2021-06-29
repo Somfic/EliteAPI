@@ -30,6 +30,6 @@ namespace EliteAPI.Configuration
         public bool ProcessHistoricalJournals { get; set; }
 
         /// <inheritdoc />
-        public int? HistoricalJournalDays { get; set; }
+        public TimeSpan HistoricalJournalSpan { get; set; }
     }
 }

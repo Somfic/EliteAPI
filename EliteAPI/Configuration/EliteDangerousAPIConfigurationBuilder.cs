@@ -23,7 +23,7 @@ namespace EliteAPI.Configuration
         private string _options;
         private TimeSpan _tickFrequency;
         private bool _processHistoricalJournals;
-        private int? _historicalJournalDays;
+        private TimeSpan _historicalJournalSpan;
 
         internal EliteDangerousApiConfigurationBuilder()
         {
@@ -81,10 +81,19 @@ namespace EliteAPI.Configuration
         /// <summary>
         /// Enables the processing of historical journal files with an option number of days to process
         /// </summary>
-        public void UseHistoricalJournals(int? numberOfDays = null)
+        public void UseHistoricalJournals(int numberOfDays)
         {
             _processHistoricalJournals = true;
-            _historicalJournalDays = numberOfDays;
+            _historicalJournalSpan = TimeSpan.FromDays(numberOfDays);
+        }
+        
+        /// <summary>
+        /// Enables the processing of historical journal files with an option number of days to process
+        /// </summary>
+        public void UseHistoricalJournals(TimeSpan timeSpan)
+        {
+            _processHistoricalJournals = true;
+            _historicalJournalSpan = timeSpan;
         }
 
         /// <summary>
@@ -136,7 +145,7 @@ namespace EliteAPI.Configuration
                 BindingsFile = _bindings, 
                 TickFrequency = _tickFrequency,
                 ProcessHistoricalJournals = _processHistoricalJournals,
-                HistoricalJournalDays = _historicalJournalDays
+                HistoricalJournalSpan = _historicalJournalSpan
             };
         }
     }

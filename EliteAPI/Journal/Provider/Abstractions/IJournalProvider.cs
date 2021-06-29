@@ -13,5 +13,11 @@ namespace EliteAPI.Journal.Provider.Abstractions
         /// </summary>
         /// <param name="journalDirectory"> The journal directory </param>
         Task<FileInfo> FindJournalFile(DirectoryInfo journalDirectory);
+
+        /// <summary>
+        /// Finds the journal files from the specified journal directory
+        /// </summary>
+        /// <param name="journalDirectory"> The journal directory </param>
+        Task<FileInfo[]> FindJournalFiles(DirectoryInfo journalDirectory);
     }
 }

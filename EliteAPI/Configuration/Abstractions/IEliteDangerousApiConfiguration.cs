@@ -31,5 +31,15 @@ namespace EliteAPI.Configuration.Abstractions
         /// The active bindings file
         /// </summary>
         string BindingsFile { get; set; }
+
+        /// <summary>
+        /// Determines if EliteAPI will process historical journal files
+        /// </summary>
+        bool ProcessHistoricalJournals { get; set; }
+
+        /// <summary>
+        /// The timespan in the past EliteAPI will process for historical journal files
+        /// </summary>
+        TimeSpan HistoricalJournalSpan { get; set; }
     }
 }

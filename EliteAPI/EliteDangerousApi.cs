@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-
 using EliteAPI.Abstractions;
 using EliteAPI.Configuration.Abstractions;
 using EliteAPI.Event.Processor.Abstractions;
@@ -31,13 +31,14 @@ using EliteAPI.Status.Shipyard.Abstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-
 using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
 namespace EliteAPI
 {
     [Obsolete("Use EliteDangerousApi instead", true)]
-    public class EliteDangerousAPI { }
+    public class EliteDangerousAPI
+    {
+    }
 
     /// <inheritdoc />
     public class EliteDangerousApi : IEliteDangerousApi
@@ -83,7 +84,8 @@ namespace EliteAPI
                 Outfitting = services.GetRequiredService<IOutfitting>();
                 Bindings = services.GetRequiredService<IBindings>();
 
-                Version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion.Split('+')[0];
+                Version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                    .InformationalVersion.Split('+')[0];
 
                 _config = services.GetRequiredService<IConfiguration>();
                 _codeConfig = services.GetRequiredService<IEliteDangerousApiConfiguration>();
@@ -103,7 +105,10 @@ namespace EliteAPI
                 _optionsProvider = services.GetRequiredService<IOptionsProvider>();
                 _optionsProcessor = services.GetRequiredService<IOptionsProcessor>();
             }
-            catch (Exception ex) { PreInitializationException = ex; }
+            catch (Exception ex)
+            {
+                PreInitializationException = ex;
+            }
         }
 
         private DirectoryInfo JournalDirectory { get; set; }
@@ -139,13 +144,13 @@ namespace EliteAPI
 
         /// <inheritdoc />
         public IShip Ship { get; }
-        
+
         /// <inheritdoc />
         public ICommander Commander { get; }
 
         /// <inheritdoc />
         public IBackpack Backpack { get; }
-        
+
         /// <inheritdoc />
         public IShipyard Shipyard { get; }
 
@@ -163,7 +168,7 @@ namespace EliteAPI
 
         /// <inheritdoc />
         public IOutfitting Outfitting { get; }
-        
+
         /// <inheritdoc />
         public IBindings Bindings { get; }
 
@@ -227,6 +232,9 @@ namespace EliteAPI
                 _log.LogInformation("EliteAPI has started");
                 OnStart?.Invoke(this, EventArgs.Empty);
 
+                if (_codeConfig.ProcessHistoricalJournals)
+                    await ProcessHistoricalJournalFiles(_codeConfig.HistoricalJournalSpan);
+
                 while (IsRunning)
                 {
                     await DoTick();
@@ -236,7 +244,6 @@ namespace EliteAPI
                 OnStop?.Invoke(this, EventArgs.Empty);
             });
         }
-
 
         /// <inheritdoc />
         public Task StopAsync()
@@ -275,7 +282,7 @@ namespace EliteAPI
                 await _statusProcessor.ProcessBackpackFile(BackpackFile);
                 await _statusProcessor.ProcessNavRouteFile(NavRouteFile);
                 await _statusProcessor.ProcessModulesFile(ModulesInfoFile);
-                
+
                 await _optionsProcessor.ProcessBindingsFile(BindingsFile);
 
                 await SetJournalFile();
@@ -288,14 +295,20 @@ namespace EliteAPI
                     HasCatchedUp = true;
                 }
             }
-            catch (Exception ex) { _log.LogWarning(ex, "Could not do tick"); }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not do tick");
+            }
         }
 
         private async Task InitializeEventHandlers()
         {
             _log.LogTrace("Initializing event handlers");
             foreach (var eventProcessor in _eventProcessors)
-                try { await eventProcessor.RegisterHandlers(); }
+                try
+                {
+                    await eventProcessor.RegisterHandlers();
+                }
                 catch (Exception ex)
                 {
                     _log.LogWarning(ex, "Could not initialize event handler {name}", eventProcessor.GetType().FullName);
@@ -308,9 +321,13 @@ namespace EliteAPI
             try
             {
                 var eventBase = await _eventProvider.ProcessJsonEvent(e.Json);
-                foreach (var eventProcessor in _eventProcessors) await eventProcessor.InvokeHandler(eventBase, e.IsWhileCatchingUp);
+                foreach (var eventProcessor in _eventProcessors)
+                    await eventProcessor.InvokeHandler(eventBase, e.IsWhileCatchingUp);
             }
-            catch (Exception ex) { _log.LogWarning(ex, "Could not execute event"); }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not execute event");
+            }
         }
 
         private async Task SetJournalDirectory()
@@ -329,7 +346,7 @@ namespace EliteAPI
                 throw;
             }
         }
-        
+
         private async Task SetOptionsDirectory()
         {
             try
@@ -358,7 +375,10 @@ namespace EliteAPI
                 _log.LogInformation("Setting journal file to {filePath}", newJournalFile.Name);
 
                 if (!newJournalFile.Name.Contains("Journal"))
-                    _log.LogWarning(new InvalidJournalFileException($"The selected journal file '{newJournalFile.Name}' does not match standard naming conventions"), "Invalid journal file detected, errors may occur");
+                    _log.LogWarning(
+                        new InvalidJournalFileException(
+                            $"The selected journal file '{newJournalFile.Name}' does not match standard naming conventions"),
+                        "Invalid journal file detected, errors may occur");
 
                 JournalFile = newJournalFile;
             }
@@ -370,25 +390,34 @@ namespace EliteAPI
         }
 
         private string lastPresetErrorname = "";
+
         private async Task SetSupportFiles()
         {
             try
             {
-                if (!DisabledSupportFiles.Contains("Status")) StatusFile = await _statusProvider.FindStatusFile(JournalDirectory);
+                if (!DisabledSupportFiles.Contains("Status"))
+                    StatusFile = await _statusProvider.FindStatusFile(JournalDirectory);
 
-                if (!DisabledSupportFiles.Contains("Cargo")) CargoFile = await _statusProvider.FindCargoFile(JournalDirectory);
+                if (!DisabledSupportFiles.Contains("Cargo"))
+                    CargoFile = await _statusProvider.FindCargoFile(JournalDirectory);
 
-                if (!DisabledSupportFiles.Contains("Market")) MarketFile = await _statusProvider.FindMarketFile(JournalDirectory);
+                if (!DisabledSupportFiles.Contains("Market"))
+                    MarketFile = await _statusProvider.FindMarketFile(JournalDirectory);
 
-                if (!DisabledSupportFiles.Contains("Outfitting")) OutfittingFile = await _statusProvider.FindOutfittingFile(JournalDirectory);
+                if (!DisabledSupportFiles.Contains("Outfitting"))
+                    OutfittingFile = await _statusProvider.FindOutfittingFile(JournalDirectory);
 
-                if (!DisabledSupportFiles.Contains("Shipyard")) ShipyardFile = await _statusProvider.FindShipyardFile(JournalDirectory);
+                if (!DisabledSupportFiles.Contains("Shipyard"))
+                    ShipyardFile = await _statusProvider.FindShipyardFile(JournalDirectory);
 
-                if (!DisabledSupportFiles.Contains("NavRoute")) NavRouteFile = await _statusProvider.FindNavRouteFile(JournalDirectory);
-                
-                if (!DisabledSupportFiles.Contains("Backpack")) BackpackFile = await _statusProvider.FindBackpackFile(JournalDirectory);
+                if (!DisabledSupportFiles.Contains("NavRoute"))
+                    NavRouteFile = await _statusProvider.FindNavRouteFile(JournalDirectory);
 
-                if (!DisabledSupportFiles.Contains("ModulesInfo")) ModulesInfoFile = await _statusProvider.FindModulesFile(JournalDirectory);
+                if (!DisabledSupportFiles.Contains("Backpack"))
+                    BackpackFile = await _statusProvider.FindBackpackFile(JournalDirectory);
+
+                if (!DisabledSupportFiles.Contains("ModulesInfo"))
+                    ModulesInfoFile = await _statusProvider.FindModulesFile(JournalDirectory);
 
                 if (!DisabledSupportFiles.Contains("Bindings"))
                 {
@@ -456,14 +485,47 @@ namespace EliteAPI
                 }
             }
 
-            catch (Exception ex) { _log.LogWarning(ex, "Could not set support files"); }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not set support files");
+            }
         }
-        
+
         private Task CheckComputerOperatingSystem()
         {
-            if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) _log.LogWarning("You are not running on a Windows machine, some features may not work properly");
+            if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                _log.LogWarning("You are not running on a Windows machine, some features may not work properly");
 
             return Task.CompletedTask;
+        }
+
+        private async Task ProcessHistoricalJournalFiles(TimeSpan spanToProcess)
+        {
+            try
+            {
+                var journalFiles = await _journalProvider.FindJournalFiles(JournalDirectory);
+
+                var limitDateTime = DateTime.Now - spanToProcess;
+
+                journalFiles = journalFiles
+                    .Skip(1)
+                    .Where(f => f.LastWriteTime >= limitDateTime)
+                    .OrderBy(f => f.LastWriteTime)
+                    .ToArray();
+
+
+                foreach (var file in journalFiles)
+                {
+                    _log.LogInformation("Processing historic file {File}", file.Name);
+
+                    await _journalProcessor.ProcessJournalFile(file, false);
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.LogWarning(ex, "Could not process historical journal files");
+                throw;
+            }
         }
     }
 }

@@ -1,18 +1,19 @@
 <template>
-  <div class="event-entry">
+  <Card class="event-entry" no-hover>
     <div class="information">
       <ObjectViewer :value="entry" :name="entry['Event']" />
       <p class="timestamp">{{ ago }}</p>
     </div>
-  </div>
+  </Card>
 </template>
 <script>
 import ObjectViewer from "@/components/ObjectViewer/ObjectNode";
+import Card from "@/components/Cards/Card";
 const moment = require("moment");
 
 export default {
   name: "EventEntry",
-  components: { ObjectViewer },
+  components: { Card, ObjectViewer },
   props: {
     entry: Object
   },

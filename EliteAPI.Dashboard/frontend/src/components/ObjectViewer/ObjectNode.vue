@@ -1,22 +1,27 @@
 <template>
   <div class="object-node" v-if="type !== 'null'" v-on:click.stop.prevent="toggleExpand"
        :class="{primitive: primitive}">
-    <div class="node" @mouseenter="mouseEnter" @mouseleave="mouseLeave" :class="{hover: isHovering, redundant: name === 'Timestamp' || name === 'Event'}">
+    <div class="node" @mouseenter="mouseEnter" @mouseleave="mouseLeave"
+         :class="{hover: isHovering, redundant: name === 'Timestamp' || name === 'Event'}">
       <p class="arrow" :class="{rotated: isExpanded, hide: !canExpand}">▼</p>
       <p class="name">{{ name }}</p>
       <p class="preview" :class="type" v-if="!isExpanded">
-        <span v-if="type === 'object' && maxChildren < cleanChildren.length">{ {{cleanChildren.slice(0, maxChildren).join(', ')}} and {{cleanChildren.length - maxChildren }} more }</span>
+        <span
+          v-if="type === 'object' && maxChildren < cleanChildren.length">{ {{ cleanChildren.slice(0, maxChildren).join(", ") }} and {{ cleanChildren.length - maxChildren
+          }} more }</span>
         <span v-else-if="type === 'object' && cleanChildren.length === 0">{ no values }</span>
         <span v-else-if="type === 'object' && cleanChildren.length > 0">{ {{ cleanChildren.join(", ") }} }</span>
         <span v-else-if="type === 'array' && value.length === 0">no values</span>
         <span v-else-if="type === 'array' && value.length === 1">1 value</span>
-        <span v-else-if="type === 'array' && value.length > 1">{{value.length}} values</span>
+        <span v-else-if="type === 'array' && value.length > 1">{{ value.length }} values</span>
         <span v-else-if="type === 'number'" :class="type">{{ value.toLocaleString() }}</span>
+        <span v-else-if="type === 'boolean'" :class="type + ' ' + value">{{ value.toLocaleString() }}</span>
         <span v-else :class="type">{{ value }}</span>
       </p>
     </div>
     <div class="values" v-if="type === 'object' && isExpanded">
-      <ObjectNode :value="value[child]" :name="child" v-for="child in children" :key="child" @childMouseEnter="mouseEnter" @childMouseLeave="mouseLeave" />
+      <ObjectNode :value="value[child]" :name="child" v-for="child in children" :key="child"
+                  @childMouseEnter="mouseEnter" @childMouseLeave="mouseLeave" />
     </div>
     <div class="values" v-else-if="type === 'array' && isExpanded">
       <ObjectNode :value="arrayValue" :name="'[' + index.toString() + ']'" v-for="(arrayValue, index) in value"
@@ -58,9 +63,7 @@ export default {
     canExpand() {
       if (this.primitive) {
         return false;
-      }
-
-      else return this.children.length !== 0;
+      } else return this.children.length !== 0;
     },
     children() {
       if (this.type === "array") {
@@ -91,13 +94,13 @@ export default {
     },
 
     mouseEnter() {
-      this.isHovering = true
-      this.$emit('childMouseEnter')
+      this.isHovering = true;
+      this.$emit("childMouseEnter");
     },
 
     mouseLeave() {
-      this.isHovering = false
-      this.$emit('childMouseLeave')
+      this.isHovering = false;
+      this.$emit("childMouseLeave");
     }
   }
 };
@@ -161,15 +164,19 @@ export default {
       }
 
       &.string {
-        color: mix($text-muted, #0099ff)
+        color: #68b9de
       }
 
       &.number {
-        color: mix($text-muted, green)
+        color: #a65cc1
       }
 
-      &.boolean {
-        color: mix($text-muted, red)
+      &.boolean .false {
+        color: #ea5461
+      }
+
+      &.boolean .true {
+        color: #72c454
       }
     }
   }

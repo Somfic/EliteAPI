@@ -3,7 +3,7 @@ $neuSetBackground: $background;
 $neuDegree: 145deg;
 $neuBackground: linear-gradient(0deg, $neuSetBackground, $neuSetBackground);
 
-$neuBorderColor: based-background($background, darken($neuSetBackground, 0.9%), lighten($neuSetBackground, 1.5%));
+$neuBorderColor: transparentize(based-background($background, darken($neuSetBackground, 0.9%), lighten($neuSetBackground, 1.5%)), .8);
 
 $neuWhiteDarkColor:transparentize(darken($neuSetBackground, 5%), 0.9);
 $neuWhiteLightColor:transparentize(lighten($neuSetBackground, 3%), 1);

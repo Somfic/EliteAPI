@@ -1,5 +1,5 @@
 <template>
-  <div class="greeting">
+  <div class="greeting" :class="{hidden: hidden}">
     <div class="name">
       <h3>{{ greeting }},</h3>
       <h1>CMDR {{ name }}</h1>
@@ -9,6 +9,14 @@
       <!--        <h1>{{ currentCredits }} CR</h1>-->
       <!--        <h3>Credits</h3>-->
       <!--      </div>-->
+      <div class="status" v-if="isInMainMenu && isPlaying">
+        <h1>MAIN MENU</h1>
+        <h3>currently in</h3>
+      </div>
+      <div class="status" v-if="isPlaying && !isInMainMenu">
+        <h1>{{ currentSystem }}</h1>
+        <h3>Current system</h3>
+      </div>
       <div class="status" v-if="isDocked && !isInMainMenu && isPlaying">
         <h1>{{ currentDocked }}</h1>
         <h3>Docked at</h3>
@@ -21,14 +29,6 @@
         <h1>{{ currentBody }}</h1>
         <h3>Flying around</h3>
       </div>
-      <div class="status" v-if="isInMainMenu && isPlaying">
-        <h1>MAIN MENU</h1>
-        <h3>currently in</h3>
-      </div>
-      <div class="status" v-if="isPlaying && !isInMainMenu">
-        <h1>{{ currentSystem }}</h1>
-        <h3>Current system</h3>
-      </div>
       <div class="status">
         <h1>{{ playTime }}</h1>
         <h3 v-if="isPlaying">Playtime</h3>
@@ -36,30 +36,79 @@
       </div>
     </div>
   </div>
-  <div class="links">
-    <CardLink :to="{name: 'EliteVA'}" text="VoiceAttack" big />
-    <CardLink :to="{name: 'Logs'}" text="Logs" />
-    <CardLink :to="{name: 'Events'}" text="Events" />
-    <CardLink :to="{name: 'Home'}" text="Status" />
-    <CardLink :to="{name: 'Home'}" text="Cargo" />
-    <CardLink :to="{name: 'Home'}" text="Modules" />
-    <CardLink :to="{name: 'Home'}" text="Market" />
-    <CardLink :to="{name: 'Home'}" text="Outfitting" />
-    <CardLink :to="{name: 'Home'}" text="Shipyard" />
-    <CardLink :to="{name: 'Home'}" text="Nav route" />
-    <CardLink :to="{name: 'Home'}" text="Bindings" />
+  <div class="links" :class="{hidden: hidden}">
+    <div class="link-wrapper big">
+      <Card class="link" :to="{name: 'EliteVA'}">
+        <h1>VoiceAttack</h1>
+      </Card>
+    </div>
+    <div class="link-wrapper">
+      <Card class="link" :to="{name: 'Events'}">
+        <h1>Events</h1>
+      </Card>
+    </div>
+    <div class="link-wrapper">
+      <Card class="link" :to="{name: 'Logs'}">
+        <h1>Logs</h1>
+      </Card>
+    </div>
+
+    <div class="link-wrapper">
+      <Card class="link" :to="{name: 'Status'}">
+        <h1>Status</h1>
+      </Card>
+    </div>
+
+    <div class="link-wrapper">
+      <Card class="link" :to="{name: 'Cargo'}">
+        <h1>Cargo</h1>
+      </Card>
+    </div>
+
+    <div class="link-wrapper">
+      <Card class="link" :to="{name: 'Modules'}">
+        <h1>Modules</h1>
+      </Card>
+    </div>
+
+    <div class="link-wrapper">
+      <Card class="link" :to="{name: 'Market'}">
+        <h1>Market</h1>
+      </Card>
+    </div>
+
+    <div class="link-wrapper">
+      <Card class="link" :to="{name: 'Outfitting'}">
+        <h1>Outfitting</h1>
+      </Card>
+    </div>
+    <div class="link-wrapper">
+      <Card class="link" :to="{name: 'Shipyard'}">
+        <h1>Shipyard</h1>
+      </Card>
+    </div>
+    <div class="link-wrapper">
+      <Card class="link" :to="{name: 'NavRoute'}">
+        <h1>Nav route</h1>
+      </Card>
+    </div>
+    <div class="link-wrapper">
+      <Card class="link" :to="{name: 'Bindings'}">
+        <h1>Bindings</h1>
+      </Card>
+    </div>
   </div>
   <div class="footer">
     <p>EliteAPI v{{ eliteApiVersion }}</p>
   </div>
 </template>
 <script>
+import Card from "@/components/Cards/Card";
 const moment = require("moment");
-import CardLink from "@/components/Cards/CardLink";
 
 export default {
   name: "Home",
-  components: { CardLink },
+  components: { Card },
   data() {
     return {
       greeting: "",
@@ -83,10 +132,16 @@ export default {
 
       eliteApiVersion: this.$store.state.eliteapi["Version"],
 
-      isInMainMenu: false
+      isInMainMenu: false,
+
+      hidden: true
     };
   },
   async created() {
+    setTimeout(() => {
+      this.hidden = false;
+    }, 10)
+
     setInterval(() => {
       this.updateData();
     }, 1000);
@@ -142,7 +197,7 @@ export default {
       this.isInMainMenu = this.$store.state.sortedEvents["Music"][0]["MusicTrack"] === "MainMenu";
 
       this.isInNormalSpace = !this.$store.state.status["Supercruise"];
-      this.currentBody = !this.$store.state.status["Supercruise"] ? this.$store.state.sortedEvents["SupercruiseExit"][0]["Body"] : "";
+      this.currentBody = !this.$store.state.status["Supercruise"] ? this.$store.state.events.filter(x => x.Body)[0]["Body"].replace(this.currentSystem, '') : "";
       if (this.currentBody === this.currentSystem) {
         this.currentBody = "empty space";
       }
@@ -155,6 +210,12 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 500ms;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
   .status-wrapper {
     display: flex;
@@ -208,6 +269,66 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 1rem;
+
+  @for $i from 1 through 30 {
+    .link-wrapper:nth-child(#{$i}) {
+      transition-delay: $i * 50ms;
+    }
+  }
+
+  &.hidden {
+    .link-wrapper {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+
+  .link-wrapper {
+    transition: 200ms;
+
+    &.big {
+      grid-column: span 2;
+      grid-row: span 2;
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .link {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: relative;
+    margin-bottom: 0;
+    height: 100%;
+    width: 100%;
+
+    h1 {
+      margin-top: auto;
+      font-size: calc(3vw + 3vh);
+      color: $foreground;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      filter: drop-shadow(0 0 5px transparentize($foreground, 0.8));
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    &:hover {
+      h1 {
+        color: $accent;
+        filter: drop-shadow(0 0 5px transparentize($accent, 0.8));
+      }
+    }
+  }
 }
 
 .footer {

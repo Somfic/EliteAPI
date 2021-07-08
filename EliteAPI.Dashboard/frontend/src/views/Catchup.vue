@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       greeting: this.getGreeting(),
-      state: "Hello world"
+      state: "Hello world",
     };
   },
   methods: {

@@ -6,7 +6,7 @@ export default createStore({
       client: null,
       state: "",
       ip: window.location.hostname,
-      port: window.location.port
+      port: 8001
     },
     catchup: {
       current: 0,
@@ -23,14 +23,16 @@ export default createStore({
     outfitting: null,
     shipyard: null,
     ship: null,
-    navroute: null,
+    navRoute: null,
     bindings: null,
     eliteapi: null
   },
   mutations: {
     connect() {
       this.state.connection.state = "connecting";
-      this.state.connection.client = new WebSocket("ws://" + this.state.connection.ip + ":" + this.state.connection.port + "/ws", "EliteAPI-app");
+      console.log("ws://" + this.state.connection.ip + ":" + this.state.connection.port + "/ws")
+
+        this.state.connection.client = new WebSocket("ws://" + this.state.connection.ip + ":" + this.state.connection.port + "/ws", "EliteAPI-app");
 
       setTimeout(() => {
         if (this.state.connection.client.readyState === 0) {
@@ -96,35 +98,43 @@ export default createStore({
             break;
 
           case "Cargo":
+            console.log('Setting cargo to', data)
             this.state.cargo = data;
             break;
 
           case "Market":
+            console.log('Setting market to', data)
             this.state.market = data;
             break;
 
           case "Bindings":
+            console.log('Setting bindings to', data)
             this.state.bindings = data;
             break;
 
           case "Modules":
+            console.log('Setting modules to', data)
             this.state.modules = data;
             break;
 
           case "Outfitting":
+            console.log('Setting outfitting to', data)
             this.state.outfitting = data;
             break;
 
           case "Shipyard":
+            console.log('Setting shipyard to', data)
             this.state.shipyard = data;
             break;
 
           case "Status":
+            console.log('Setting status to', data)
             this.state.status = data;
             break;
 
           case "NavRoute":
-            this.state.navroute = data;
+            console.log('Setting navroute to', data)
+            this.state.navRoute = data;
             break;
 
           default:

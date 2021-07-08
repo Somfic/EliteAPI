@@ -13,7 +13,7 @@
         <h1 class="secondary">{{ subText }}</h1>
       </div>
     </div>
-    <div class="status">
+    <div class="status muted">
       <p>{{ status }}</p>
     </div>
   </div>
@@ -84,7 +84,6 @@ export default {
 
   .status {
     position: absolute;
-    color: mix($foreground, $background, 20%);
     bottom: 3rem;
     transition: 1000ms;
     transition-delay: 600ms;

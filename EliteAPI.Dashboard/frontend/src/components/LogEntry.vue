@@ -1,5 +1,5 @@
 <template>
-  <div class="log-entry" :class="log['LogLevel'].toLowerCase()">
+  <Card class="log-entry" :class="log['LogLevel'].toLowerCase()" no-hover>
     <div class="message">
       <p>{{ log["Message"] }}</p>
       <p v-if="log['Exception']" class="exception">
@@ -10,13 +10,15 @@
     <div class="information">
       <span class="timestamp">{{ ago }}</span>
     </div>
-  </div>
+  </Card>
 </template>
 <script>
+import Card from "@/components/Cards/Card";
 const moment = require("moment");
 
 export default {
   name: "LogEntry",
+  components: { Card },
   props: {
     log: Object,
   },
@@ -49,6 +51,7 @@ export default {
   box-shadow: $neuShadowSmall;
   margin: .5rem 0;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 
   p {

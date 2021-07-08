@@ -198,7 +198,11 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
         private async Task Catchup(WebSocket socket, List<WebSocketMessage> messages)
         {
             await SendTo(socket, new WebSocketMessage("CatchupStart", messages.Count));
-            messages.ForEach(async x => await SendTo(socket, x));
+            foreach (var webSocketMessage in messages)
+            {
+                await SendTo(socket, webSocketMessage);
+                await Task.Delay(30);
+            }
             await SendTo(socket, new WebSocketMessage("CatchupEnd"));
         }
 

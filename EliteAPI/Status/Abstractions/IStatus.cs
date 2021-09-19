@@ -1,11 +1,12 @@
 ﻿using System;
+using EliteAPI.Abstractions;
 
 namespace EliteAPI.Status.Abstractions
 {
     /// <summary>
     /// Holds status information about the game
     /// </summary>
-    public interface IStatus
+    public interface IStatus : IJsonObject
     {
         /// <summary>
         /// Triggered when any of the properties have been updated
@@ -15,7 +16,7 @@ namespace EliteAPI.Status.Abstractions
         /// <summary>
         /// Generates this status's Json
         /// </summary>
-        string ToJson();
+        new string ToJson();
         
         internal void TriggerOnChange(IRawStatus rawStatus);
     }

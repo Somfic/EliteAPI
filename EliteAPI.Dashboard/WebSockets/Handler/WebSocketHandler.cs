@@ -16,27 +16,35 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
     public enum WebSocketType
     {
         FrontEnd,
-        Client
+        Client,
+        Plugin
     }
 
     public class WebSocketHandler
     {
         private readonly ILogger<WebSocketHandler> _log;
         private readonly IEliteDangerousApi _api;
+        
         private readonly List<WebSocket> _frontendWebSockets;
         private readonly List<WebSocket> _clientWebSockets;
+        private readonly List<WebSocket> _pluginWebSockets;
 
         private readonly List<WebSocketMessage> _frontendCatchupMessages;
         private readonly List<WebSocketMessage> _clientCatchupMessages;
+        private readonly List<WebSocketMessage> _pluginCatchupMessages;
 
         public WebSocketHandler(ILogger<WebSocketHandler> log, IEliteDangerousApi api)
         {
             _log = log;
             _api = api;
+            
             _frontendWebSockets = new List<WebSocket>();
             _clientWebSockets = new List<WebSocket>();
+            _pluginWebSockets = new List<WebSocket>();
+            
             _frontendCatchupMessages = new List<WebSocketMessage>();
             _clientCatchupMessages = new List<WebSocketMessage>();
+            _pluginCatchupMessages = new List<WebSocketMessage>();
 
             WebSocketLogs.OnLog += async (sender, e) =>
                 await Broadcast(new WebSocketMessage("Log", JsonConvert.SerializeObject(e)), WebSocketType.FrontEnd,
@@ -56,6 +64,11 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                     // Add socket to list of frontend WebSockets
                     _frontendWebSockets.Add(socket);
                     break;
+                
+                case WebSocketType.Plugin:
+                    // Add socket to list of plugin WebSockets
+                    _pluginWebSockets.Add(socket);
+                    break;
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, "Invalid WebSocket type");
@@ -65,15 +78,14 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
             await ListenTo(socket, type);
         }
 
-        public async Task Broadcast(WebSocketMessage message, bool useDuringCatchup = false,
-            bool onlySaveLatestForCatchup = false)
+        public async Task Broadcast(WebSocketMessage message, bool useDuringCatchup = false, bool onlySaveLatestForCatchup = false)
         {
             await Broadcast(message, WebSocketType.FrontEnd, useDuringCatchup, onlySaveLatestForCatchup);
             await Broadcast(message, WebSocketType.Client, useDuringCatchup, onlySaveLatestForCatchup);
+            await Broadcast(message, WebSocketType.Plugin, useDuringCatchup, onlySaveLatestForCatchup);
         }
 
-        public async Task Broadcast(WebSocketMessage message, WebSocketType type, bool useDuringCatchup,
-            bool onlySaveLatestForCatchup)
+        public async Task Broadcast(WebSocketMessage message, WebSocketType type, bool useDuringCatchup, bool onlySaveLatestForCatchup)
         {
             switch (type)
             {
@@ -97,7 +109,6 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                     {
                         await SendTo(clientWebSocket, message);
                     }
-
                     break;
 
                 case WebSocketType.FrontEnd:
@@ -120,15 +131,37 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                     {
                         await SendTo(frontendWebSocket, message);
                     }
-
                     break;
 
+                case WebSocketType.Plugin:
+                    // Store in catchup
+                    if (useDuringCatchup)
+                    {
+                        if (onlySaveLatestForCatchup)
+                        {
+                            // Replace of same type
+                            _pluginCatchupMessages.RemoveAll(x =>
+                                string.Equals(x.Type, message.Type, StringComparison.InvariantCultureIgnoreCase));
+                        }
+
+                        // Add
+                        _pluginCatchupMessages.Add(message);
+                    }
+
+                    // Broadcast to frontend WebSockets
+                    foreach (var pluginWebSocket in _pluginWebSockets)
+                    {
+                        await SendTo(pluginWebSocket, message);
+                    }
+                    break;
+                
+                
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, "Invalid WebSocket type");
             }
         }
 
-        public async Task SendTo(WebSocket socket, WebSocketMessage message)
+        private async Task SendTo(WebSocket socket, WebSocketMessage message)
         {
             if (socket.State != WebSocketState.Open)
                 return;
@@ -184,6 +217,11 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                         // Send catchup messages to client
                         case WebSocketType.Client:
                             await Catchup(socket, _clientCatchupMessages);
+                            break;
+                        
+                        // Send catchup messages to client
+                        case WebSocketType.Plugin:
+                            await Catchup(socket, _pluginCatchupMessages);
                             break;
 
                         default:

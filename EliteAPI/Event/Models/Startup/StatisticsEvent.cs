@@ -352,19 +352,19 @@ namespace EliteAPI.Event.Models
             public long RawMaterialsTraded { get; private set; }
 
             [JsonProperty("Grade_1_Materials_Traded")]
-            public long Grade1_MaterialsTraded { get; private set; }
+            public long Grade1Traded { get; private set; }
 
             [JsonProperty("Grade_2_Materials_Traded")]
-            public long Grade2_MaterialsTraded { get; private set; }
+            public long Grade2Traded { get; private set; }
 
             [JsonProperty("Grade_3_Materials_Traded")]
-            public long Grade3_MaterialsTraded { get; private set; }
+            public long Grade3Traded { get; private set; }
 
             [JsonProperty("Grade_4_Materials_Traded")]
-            public long Grade4_MaterialsTraded { get; private set; }
+            public long Grade4Traded { get; private set; }
 
             [JsonProperty("Grade_5_Materials_Traded")]
-            public long Grade5_MaterialsTraded { get; private set; }
+            public long Grade5Traded { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

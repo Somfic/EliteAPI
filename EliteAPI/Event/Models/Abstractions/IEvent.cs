@@ -1,5 +1,5 @@
 using System;
-
+using EliteAPI.Abstractions;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Event.Models.Abstractions
@@ -7,7 +7,7 @@ namespace EliteAPI.Event.Models.Abstractions
     /// <summary>
     /// An in-game event
     /// </summary>
-    public interface IEvent
+    public interface IEvent : IJsonObject
     {
         /// <summary>
         /// The timestamp of the event
@@ -24,6 +24,6 @@ namespace EliteAPI.Event.Models.Abstractions
         /// <summary>
         /// Generates this event's Json
         /// </summary>
-        string ToJson();
+        new string ToJson();
     }
 }

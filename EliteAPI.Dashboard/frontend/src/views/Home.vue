@@ -13,19 +13,19 @@
         <h1>MAIN MENU</h1>
         <h3>currently in</h3>
       </div>
-      <div class="status" v-if="isPlaying && !isInMainMenu">
+      <div class="status" v-if="isPlaying && !isInMainMenu && currentSystem">
         <h1>{{ currentSystem }}</h1>
         <h3>Current system</h3>
       </div>
-      <div class="status" v-if="isDocked && !isInMainMenu && isPlaying">
+      <div class="status" v-if="isDocked && !isInMainMenu && isPlaying && currentDocked">
         <h1>{{ currentDocked }}</h1>
         <h3>Docked at</h3>
       </div>
-      <div class="status" v-if="isLanded && !isInMainMenu && isPlaying">
+      <div class="status" v-if="isLanded && !isInMainMenu && isPlaying && currentLanded">
         <h1>{{ currentLanded }}</h1>
         <h3>Landed on</h3>
       </div>
-      <div class="status" v-if="isInNormalSpace && !isDocked && !isLanded && !isInJump && !isInMainMenu && isPlaying">
+      <div class="status" v-if="isInNormalSpace && !isDocked && !isLanded && !isInJump && !isInMainMenu && isPlaying && currentBody">
         <h1>{{ currentBody }}</h1>
         <h3>Flying around</h3>
       </div>
@@ -54,61 +54,70 @@
     </div>
 
     <div class="link-wrapper">
-      <Card class="link" :to="{name: 'Status'}">
+      <Card class="link" :to="{name: 'Status'}" :class="{disabled: !status}">
         <h1>Status</h1>
       </Card>
     </div>
 
     <div class="link-wrapper">
-      <Card class="link" :to="{name: 'Cargo'}">
+      <Card class="link" :to="{name: 'Cargo'}" :class="{disabled: !cargo}">
         <h1>Cargo</h1>
       </Card>
     </div>
 
     <div class="link-wrapper">
-      <Card class="link" :to="{name: 'Modules'}">
+      <Card class="link" :to="{name: 'Modules'}" :class="{disabled: !modules}">
         <h1>Modules</h1>
       </Card>
     </div>
 
     <div class="link-wrapper">
-      <Card class="link" :to="{name: 'Market'}">
+      <Card class="link" :to="{name: 'Market'}" :class="{disabled: !market}">
         <h1>Market</h1>
       </Card>
     </div>
 
     <div class="link-wrapper">
-      <Card class="link" :to="{name: 'Outfitting'}">
+      <Card class="link" :to="{name: 'Outfitting'}" :class="{disabled: !outfitting}">
         <h1>Outfitting</h1>
       </Card>
     </div>
     <div class="link-wrapper">
-      <Card class="link" :to="{name: 'Shipyard'}">
+      <Card class="link" :to="{name: 'Shipyard'}" :class="{disabled: !shipyard}">
         <h1>Shipyard</h1>
       </Card>
     </div>
     <div class="link-wrapper">
-      <Card class="link" :to="{name: 'NavRoute'}">
+      <Card class="link" :to="{name: 'NavRoute'}" :class="{disabled: !navRoute}">
         <h1>Nav route</h1>
       </Card>
     </div>
     <div class="link-wrapper">
-      <Card class="link" :to="{name: 'Bindings'}">
+      <Card class="link" :to="{name: 'Bindings'}" :class="{disabled: !bindings}">
         <h1>Bindings</h1>
+      </Card>
+    </div>
+    <div class="link-wrapper">
+      <Card class="link" :to="{name: 'Backpack'}" :class="{disabled: !backpack}">
+        <h1>Backpack</h1>
       </Card>
     </div>
   </div>
   <div class="footer">
-    <p>EliteAPI v{{ eliteApiVersion }}</p>
+    <div>
+      <p>EliteAPI v{{ eliteApiVersion }}</p>
+      <p v-if="gameVersion">Elite: Dangerous v{{ gameVersion }}</p>
+    </div>
   </div>
 </template>
 <script>
 import Card from "@/components/Cards/Card";
+
 const moment = require("moment");
 
 export default {
   name: "Home",
-  components: { Card },
+  components: {Card},
   data() {
     return {
       greeting: "",
@@ -130,11 +139,23 @@ export default {
       currentSystem: "",
       currentCredits: "",
 
-      eliteApiVersion: this.$store.state.eliteapi["Version"],
+      eliteApiVersion: "",
+      gameVersion: "",
 
       isInMainMenu: false,
 
-      hidden: true
+      hidden: true,
+
+      status: false,
+      cargo: false,
+      modules: false,
+      market: false,
+      outfitting: false,
+      shipyard: false,
+      navRoute: false,
+      bindings: false,
+      backpack: false,
+
     };
   },
   async created() {
@@ -178,23 +199,36 @@ export default {
     },
 
     updateData() {
+      this.status = !(this.$store.state.status == null);
+      this.cargo = !(this.$store.state.cargo == null);
+      this.modules = !(this.$store.state.modules == null);
+      this.market = !(this.$store.state.market == null);
+      this.outfitting = !(this.$store.state.outfitting == null);
+      this.shipyard = !(this.$store.state.shipyard == null);
+      this.navRoute = !(this.$store.state.navRoute == null);
+      this.bindings = !(this.$store.state.bindings == null);
+      this.backpack = !(this.$store.state.backpack == null);
+
+      this.eliteApiVersion = this.$store.state.eliteapi["Version"];
+      this.gameVersion = this.$store.state.sortedEvents["Fileheader"] ? this.$store.state.sortedEvents['Fileheader'][0]["Gameversion"] : "";
+
       this.greeting = this.getGreeting();
-      this.name = this.$store.state.sortedEvents["Commander"][0]["Name"];
+      this.name = this.$store.state.sortedEvents["Commander"] ? this.$store.state.sortedEvents["Commander"][0]["Name"] : 'o7';
       this.isPlaying = this.getIsPlaying();
 
       this.playTime = this.getPlaytime();
       this.isDocked = this.$store.state.status["Docked"];
-      this.currentDocked = this.$store.state.status["Docked"] ? this.$store.state.sortedEvents["Docked"][0]["StationName"] : "";
+      this.currentDocked = this.$store.state.sortedEvents["Docked"] ? this.$store.state.sortedEvents["Docked"][0]["StationName"] : "";
 
       this.isLanded = this.$store.state.status["Landed"];
       this.currentLanded = this.$store.state.status["Landed"] ? this.$store.state.sortedEvents["Touchdown"][0]["Body"] : "";
 
       this.isInJump = this.$store.state.status["FsdJump"];
 
-      this.currentSystem = this.$store.state.events.filter(x => x.StarSystem)[0]["StarSystem"];
-      this.currentCredits = this.$store.state.sortedEvents["LoadGame"][0]["Credits"].toLocaleString();
+      this.currentSystem = this.$store.state.events.filter(x => x.StarSystem).length > 0 ? this.$store.state.events.filter(x => x.StarSystem)[0]["StarSystem"] : "";
+      this.currentCredits = this.$store.state.sortedEvents["LoadGame"] ? this.$store.state.sortedEvents["LoadGame"][0]["Credits"].toLocaleString() : "";
 
-      this.isInMainMenu = this.$store.state.sortedEvents["Music"][0]["MusicTrack"] === "MainMenu";
+      this.isInMainMenu = this.$store.state.sortedEvents["Music"] ? this.$store.state.sortedEvents["Music"][0]["MusicTrack"] === "MainMenu" : true;
 
       this.isInNormalSpace = !this.$store.state.status["Supercruise"];
       this.currentBody = !this.$store.state.status["Supercruise"] ? this.$store.state.events.filter(x => x.Body)[0]["Body"].replace(this.currentSystem, '') : "";
@@ -320,6 +354,14 @@ export default {
       content: "";
       display: block;
       padding-bottom: 100%;
+    }
+
+    &.disabled {
+      h1 {
+        color: transparentize($foreground, .8)
+      }
+
+      pointer-events: none;
     }
 
     &:hover {

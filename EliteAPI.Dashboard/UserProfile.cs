@@ -25,10 +25,8 @@ namespace EliteAPI.Dashboard
 
     public class EliteVaProfile
     {
-        public bool IsInstalled { get; set; }
-        
-        public string InstalledVersion { get; set; }
-        
-        public string InstallationFolderPath { get; set; }
+        public string VoiceAttackDirectory { get; set; }
+
+        public string PluginName { get; set; } = "EliteVA";
     }
 }

@@ -65,6 +65,11 @@ const routes = [
     name: "Bindings",
     component: () =>
       import(/* webpackChunkName: "status" */ "../views/Status/Bindings.vue"),
+  },{
+    path: "/status/backpack",
+    name: "Backpack",
+    component: () =>
+        import(/* webpackChunkName: "status" */ "../views/Status/Backpack.vue"),
   }
 ];
 

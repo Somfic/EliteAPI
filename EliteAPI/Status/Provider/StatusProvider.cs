@@ -38,7 +38,7 @@ namespace EliteAPI.Status.Provider
         public async Task<FileInfo> FindModulesFile(DirectoryInfo journalDirectory)
         {
             try { return await FindFile(journalDirectory, "ModulesInfo.json"); }
-            catch (Exception ex) { throw new MarketFileNotFoundException("Could not find the ModulesInfo.json file", ex); }
+            catch (Exception ex) { throw new ModulesInfoFileNotFoundException("Could not find the ModulesInfo.json file", ex); }
         }
 
         /// <inheritdoc />

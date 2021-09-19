@@ -25,6 +25,7 @@ export default createStore({
     ship: null,
     navRoute: null,
     bindings: null,
+    backpack: null,
     eliteapi: null
   },
   mutations: {
@@ -110,6 +111,11 @@ export default createStore({
           case "Bindings":
             console.log('Setting bindings to', data)
             this.state.bindings = data;
+            break;
+
+          case "Backpack":
+            console.log('Setting backpack to', data)
+            this.state.backpack = data;
             break;
 
           case "Modules":

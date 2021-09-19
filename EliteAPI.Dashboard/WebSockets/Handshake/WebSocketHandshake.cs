@@ -39,21 +39,25 @@ namespace EliteAPI.Dashboard.WebSockets.Handshake
             // Check protocols
             var protocols = context.WebSockets.WebSocketRequestedProtocols;
             var isFrontend = protocols.Contains("EliteAPI-app");
+            var isPlugin = protocols.Contains("EliteAPI-plugin");
             var isClient = protocols.Contains("EliteAPI");
 
-            if (isFrontend && isClient)
-            {
-                _log.LogDebug("Bad WebSocket handshake request, both protocols");
-                context.Response.StatusCode = (int) HttpStatusCode.Unauthorized;
-            }
-            
-            else if (isFrontend)
+
+            if (isFrontend)
             {
                 // Accept our frontend request
                 _log.LogDebug("Accepting frontend WebSocket handshake");
                 using var webSocket = await context.WebSockets.AcceptWebSocketAsync("EliteAPI-app");
                 await _handler.Handle(webSocket, WebSocketType.FrontEnd);
             } 
+            
+            else if (isPlugin)
+            {
+                // Accept our plugin request
+                _log.LogDebug("Accepting plugin WebSocket handshake");
+                using var webSocket = await context.WebSockets.AcceptWebSocketAsync("EliteAPI-plugin");
+                await _handler.Handle(webSocket, WebSocketType.Plugin);
+            }
             
             else if (isClient)
             {

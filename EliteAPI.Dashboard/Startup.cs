@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using ElectronNET.API;
 using ElectronNET.API.Entities;
 using EliteAPI.Dashboard.Controllers;
+using EliteAPI.Dashboard.Services;
 using EliteAPI.Dashboard.WebSockets;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +33,9 @@ namespace EliteAPI.Dashboard
             services.AddHttpClient();
 
             services.AddElectron();
+
+            // Variable service
+            services.AddTransient<VariableService>();
 
             Task.Run(async () =>
             {
@@ -68,7 +72,7 @@ namespace EliteAPI.Dashboard
             app.UseHttpsRedirection();
 
             // Allow for CORS   
-            app.UseCors(builder => builder.WithOrigins($"http://localhost:{BridgeSettings.WebPort}"));
+            app.UseCors();
 
             // Allow and handle websockets
             app.UseWebSockets();

@@ -95,12 +95,12 @@ namespace EliteAPI.Dashboard
             app.UseWebSocketHandshake();
 
             // Setup the Api
-            // app.UseRouting();
-            //
-            // app.UseEndpoints(endpoints =>
-            // {
-            //     endpoints.MapControllers();
-            // });
+            app.UseRouting();
+            
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
 
             // Host the frontend
             app.UseSpaStaticFiles();

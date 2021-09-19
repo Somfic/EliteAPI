@@ -34,15 +34,17 @@ jobs:
       run: electronize build /target win
       working-directory: ./EliteAPI.Dashboard
 
-    - name: Upload a Build Artifact
+    - name: Upload setup
       uses: actions/upload-artifact@v2.2.4
       with:
         name: eliteapi
-        path: ./EliteAPI.Dashboard/bin/Desktop
+        path: ./EliteAPI.Dashboard/bin/Desktop/*.exe
 
   draft-release:
     name: Draft release
     runs-on: ubuntu-latest
+    outputs:
+        url: ${{steps.RELEASE.outputs.upload_url}}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -78,7 +80,7 @@ jobs:
           path: release_file.md
 
       - name: Draft new release
-        id: create_release
+        id: RELEASE
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -93,3 +95,24 @@ jobs:
             ${{steps.NOTES.outputs.content}}
           draft: true
           prerelease: ${{ env.GitVersion_PreReleaseLabel != '' }}
+   
+  upload-asset:
+    needs: [build, draft-release]
+    runs-on: ubuntu-latest
+      
+    steps:
+     - name: Download setup
+       uses: actions/download-artifact@v2.0.10
+       with:
+         name: eliteapi
+    
+     - name: Upload setup
+       uses: actions/upload-release-asset@v1
+       env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       with:
+          upload_url: ${{ needs.draft-release.outputs.url }} 
+          asset_path: ./eliteapi.zip
+          asset_name: eliteapi.zip
+          asset_content_type: application/zip
+  

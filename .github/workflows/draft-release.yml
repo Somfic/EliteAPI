@@ -88,7 +88,7 @@ jobs:
           body: |
             # ${{ github.event.repository.name }} v${{ env.GitVersion_LegacySemVer }} has been released
             ```
-            dotnet add package {{ github.event.repository.name }} --version ${{ env.GitVersion_NuGetVersionV2 }}
+            dotnet add package EliteAPI --version ${{ env.GitVersion_NuGetVersionV2 }}
             ```
             ${{steps.NOTES.outputs.content}}
           draft: true

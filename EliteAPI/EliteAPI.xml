@@ -159,9 +159,9 @@
             Determines if EliteAPI will process historical journal files
             </summary>
         </member>
-        <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.HistoricalJournalDays">
+        <member name="P:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration.HistoricalJournalSpan">
             <summary>
-            The number of days in the past EliteAPI will process for historical journal files
+            The timespan in the past EliteAPI will process for historical journal files
             </summary>
         </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfiguration">
@@ -187,7 +187,7 @@
         <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.ProcessHistoricalJournals">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.HistoricalJournalDays">
+        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.HistoricalJournalSpan">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder">
@@ -222,7 +222,12 @@
             Sets which journal file to use, defaults to latest if not invoked
             </summary>
         </member>
-        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseHistoricalJournals(System.Nullable{System.Int32})">
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseHistoricalJournals(System.Int32)">
+            <summary>
+            Enables the processing of historical journal files with an option number of days to process
+            </summary>
+        </member>
+        <member name="M:EliteAPI.Configuration.EliteDangerousApiConfigurationBuilder.UseHistoricalJournals(System.TimeSpan)">
             <summary>
             Enables the processing of historical journal files with an option number of days to process
             </summary>

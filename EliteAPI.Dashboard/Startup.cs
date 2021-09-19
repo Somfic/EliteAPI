@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using System.Threading.Tasks;
 using ElectronNET.API;
 using ElectronNET.API.Entities;
@@ -46,6 +48,20 @@ namespace EliteAPI.Dashboard
 
                 Electron.NativeTheme.SetThemeSource(ThemeSourceMode.Dark);
 
+                var menu = new MenuItem[] {
+                    new MenuItem 
+                    { 
+                        Label = "Test"
+                    },
+                    new MenuItem 
+                    { 
+                        Label = "Exit", 
+                        Click = () => Environment.Exit(0)
+                    }
+                };
+                Electron.Tray.Show("/assets/eliteapi-round.png", menu);
+                Electron.Tray.SetToolTip("EliteAPI Hub");
+                
                 // Electron.Menu.SetApplicationMenu(new List<MenuItem>().ToArray());
                 await Electron.WindowManager.CreateWindowAsync(new BrowserWindowOptions
                 {

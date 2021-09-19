@@ -3,14 +3,14 @@
   "splashscreen": {
     "imageFile": "wwwroot/img/eliteapi.svg"
   },
-  "name": "EliteAPI.Dashboard",
+  "name": "EliteAPI",
   "author": "",
   "singleInstance": false,
   "environment": "Production",
   "aspCoreBackendPort": 51555,
   "build": {
     "appId": "com.EliteAPI.Dashboard.app",
-    "productName": "EliteAPI.Dashboard",
+    "productName": "EliteAPI",
     "copyright": "Copyright © 2021",
     "buildVersion": "1.0.0",
     "compression": "maximum",

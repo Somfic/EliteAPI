@@ -105,8 +105,9 @@
   </div>
   <div class="footer">
     <div>
-      <p>EliteAPI v{{ eliteApiVersion }}</p>
-      <p v-if="gameVersion">Elite: Dangerous v{{ gameVersion }}</p>
+      <p>EliteAPI v<b>{{ eliteApiVersion }}</b></p>
+      <p v-if="gameVersion">Elite: Dangerous v<b>{{ gameVersion }}</b></p>
+      <p>Running on port #<b>{{port}}</b></p>
     </div>
   </div>
 </template>
@@ -125,6 +126,8 @@ export default {
       state: "",
       isPlaying: false,
       playTime: null,
+
+      port: window.location.port,
 
       isDocked: false,
       currentDocked: "",
@@ -379,10 +382,18 @@ export default {
   padding-top: 2rem;
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
+  line-height: 1rem;
+  font-size: .8rem;
 
   p {
-    margin: 0;
-    margin-left: auto;
+    margin: 0 0 0 auto;
+    color: mix($foreground, $background, 70%);
+  }
+
+  b {
+    color: mix($foreground, $background, 90%);
+    font-family: $fontMono;
   }
 }
 </style>

@@ -6,7 +6,9 @@ namespace EliteAPI.Dashboard
 {
     public class UserProfile
     {
-        private static string SaveFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "EliteAPI");
+        private static string SaveFolderPath =
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "EliteAPI");
+
         private static string SaveFilePath = Path.Combine(SaveFolderPath, "userprofile.json");
 
         public void Save()
@@ -15,18 +17,35 @@ namespace EliteAPI.Dashboard
             File.WriteAllText(SaveFilePath, JsonConvert.SerializeObject(this));
         }
 
-        public static UserProfile Load()
+        public static UserProfile Get()
         {
-            return File.Exists(SaveFilePath) ? JsonConvert.DeserializeObject<UserProfile>(File.ReadAllText(SaveFilePath)) : new UserProfile();
+            return File.Exists(SaveFilePath)
+                ? JsonConvert.DeserializeObject<UserProfile>(File.ReadAllText(SaveFilePath))
+                : new UserProfile();
         }
 
-        public EliteVaProfile EliteVA { get; init; }
+        public static void Set(UserProfile userProfile)
+        {
+            Directory.CreateDirectory(SaveFolderPath);
+            File.WriteAllText(SaveFilePath, JsonConvert.SerializeObject(userProfile));
+        }
+
+        public static void Set(string json)
+        {
+            Directory.CreateDirectory(SaveFolderPath);
+            File.WriteAllText(SaveFilePath,
+                JsonConvert.SerializeObject(JsonConvert.DeserializeObject<UserProfile>(json)));
+        }
+
+        public EliteVaProfile EliteVA { get; init; } = new();
+
+        public bool FirstRun { get; init; } = true;
     }
 
     public class EliteVaProfile
     {
-        public string VoiceAttackDirectory { get; set; }
+        public bool Installed { get; init; }
 
-        public string PluginName { get; set; } = "EliteVA";
+        public string InstallationDirectory { get; init; }
     }
 }

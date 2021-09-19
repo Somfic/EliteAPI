@@ -113,6 +113,7 @@
 </template>
 <script>
 import Card from "@/components/Cards/Card";
+import router from "@/router";
 
 const moment = require("moment");
 
@@ -162,6 +163,11 @@ export default {
     };
   },
   async created() {
+    if(this.$store.state.userprofile['FirstRun']) {
+      await router.push({name: 'Welcome'})
+      return;
+    }
+
     setTimeout(() => {
       this.hidden = false;
     }, 10)
@@ -299,80 +305,6 @@ export default {
     filter: drop-shadow(0 0 5px transparentize($foreground, 0.8));
     margin: 0;
     line-height: 1.8rem;
-  }
-}
-
-.links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 1rem;
-
-  @for $i from 1 through 30 {
-    .link-wrapper:nth-child(#{$i}) {
-      transition-delay: $i * 50ms;
-    }
-  }
-
-  &.hidden {
-    .link-wrapper {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-  }
-
-  .link-wrapper {
-    transition: 200ms;
-
-    &.big {
-      grid-column: span 2;
-      grid-row: span 2;
-
-      h1 {
-        font-size: 3rem;
-      }
-    }
-  }
-
-  .link {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    position: relative;
-    margin-bottom: 0;
-    height: 100%;
-    width: 100%;
-
-    h1 {
-      margin-top: auto;
-      font-size: calc(3vw + 3vh);
-      color: $foreground;
-    }
-
-    h1 {
-      font-size: 1.6rem;
-      filter: drop-shadow(0 0 5px transparentize($foreground, 0.8));
-    }
-
-    &:after {
-      content: "";
-      display: block;
-      padding-bottom: 100%;
-    }
-
-    &.disabled {
-      h1 {
-        color: transparentize($foreground, .8)
-      }
-
-      pointer-events: none;
-    }
-
-    &:hover {
-      h1 {
-        color: $accent;
-        filter: drop-shadow(0 0 5px transparentize($accent, 0.8));
-      }
-    }
   }
 }
 

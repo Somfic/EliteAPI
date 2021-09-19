@@ -229,7 +229,19 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                     }
                 }
 
+     
                 // Process message
+                switch (message.Type.ToLower())
+                {
+                    case "userprofile.get":
+                        await SendTo(socket, new WebSocketMessage("UserProfile", UserProfile.Get()));
+                        break;
+                    
+                    case "userprofile.set":
+                        UserProfile.Set(message.Value);
+                        await SendTo(socket, new WebSocketMessage("UserProfile", UserProfile.Get()));
+                        break;
+                }
             }
         }
 

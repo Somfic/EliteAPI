@@ -65,6 +65,7 @@ export default {
   justify-content: center;
   overflow: hidden;
   pointer-events: none;
+  z-index: -1;
 
   &.hidden {
     .ship-background {
@@ -85,7 +86,7 @@ export default {
   transition: 1000ms ease-out;
   width: 100%;
   height: auto;
-  opacity: 0.4;
+  opacity: .2;
   filter: grayscale(0.7) drop-shadow(10px 10px 10px rgba(33, 32, 32, 0.57));
 }
 </style>

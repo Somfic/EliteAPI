@@ -14,6 +14,7 @@ export default createStore({
       hasCaughtUp: false,
       isCatchingUp: false
     },
+    userprofile: null,
     sortedEvents: {},
     events: [],
     logs: [],
@@ -49,6 +50,7 @@ export default createStore({
       this.state.connection.client.onopen = () => {
         this.state.connection.state = "connected";
         send(this.state.connection.client, "auth", "frontend");
+        send(this.state.connection.client, "userprofile.get", "");
       };
 
       this.state.connection.client.onclose = () => {
@@ -143,14 +145,20 @@ export default createStore({
             this.state.navRoute = data;
             break;
 
+          case "UserProfile":
+            console.log('Setting userprofile to', data)
+            this.state.userprofile = data;
+            break;
+
           default:
             console.warn(type, data);
         }
       };
     },
 
-    send(type, data) {
-      send(this.state.connection.client, type, data);
+    send(context, payload) {
+      console.log(payload)
+      send(this.state.connection.client, payload.type, JSON.stringify(payload.value));
     }
   },
   actions: {},
@@ -164,6 +172,7 @@ function send(client, type, data) {
   };
 
   let compressed = compress(message);
+  console.log('SENDING', compressed)
   client.send(compressed);
 }
 

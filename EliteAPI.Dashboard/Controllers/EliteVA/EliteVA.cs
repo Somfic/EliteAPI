@@ -21,17 +21,11 @@ namespace EliteAPI.Dashboard.Controllers.EliteVA
         {
             _httpClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("EliteAPI", "1.0.0"));
             
-            var result = await _httpClient.GetAsync("https://api.github.com/repos/EliteAPI/Plugins/releases/latest");
+            var result = await _httpClient.GetAsync("https://api.github.com/repos/EliteAPI/EliteVA/releases/latest");
             result.EnsureSuccessStatusCode();
             
             var responseJson = await result.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<GithubVersioningResponse>(responseJson);
-        }
-
-        [HttpGet("eliteva/installed")]
-        public ActionResult<EliteVaProfile> GetEliteVa()
-        {
-            return UserProfile.Load().EliteVA;
         }
     }
 }

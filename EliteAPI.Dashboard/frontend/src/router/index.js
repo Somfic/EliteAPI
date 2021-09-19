@@ -70,6 +70,11 @@ const routes = [
     name: "Backpack",
     component: () =>
         import(/* webpackChunkName: "status" */ "../views/Status/Backpack.vue"),
+  },{
+    path: "/welcome",
+    name: "Welcome",
+    component: () =>
+        import(/* webpackChunkName: "welcome" */ "../views/Welcome.vue"),
   }
 ];
 

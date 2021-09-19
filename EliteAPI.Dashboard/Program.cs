@@ -80,7 +80,7 @@ namespace EliteAPI.Dashboard
                 }
 
                 await _socketHandler.Broadcast(new WebSocketMessage(type, new Models.Event(name, variables)), WebSocketType.Plugin, useDuringCatchup, onlySaveLatestForCatchup);   
-                await _socketHandler.Broadcast(new WebSocketMessage($"{type}-plugin", variables), WebSocketType.FrontEnd, useDuringCatchup, onlySaveLatestForCatchup);   
+                //await _socketHandler.Broadcast(new WebSocketMessage($"{type}-plugin", variables), WebSocketType.FrontEnd, useDuringCatchup, onlySaveLatestForCatchup);   
             }
             else
             {

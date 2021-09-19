@@ -1,9 +1,9 @@
 <template>
   <router-link v-if="to" :to="to" class="card" :class="{hover: !noHover}">
-    <slot />
+    <slot/>
   </router-link>
-  <div v-else class="card">
-    <slot />
+  <div v-else class="card" :class="{hover: !noHover}">
+    <slot/>
   </div>
 </template>
 <script>
@@ -28,11 +28,17 @@ export default {
   background: transparentize($background, .2);
   backdrop-filter: blur(6px);
   margin-bottom: 1rem;
+  color: mix($foreground, $background);
+
+  &.hover {
+    cursor: pointer;
+  }
 
   &.hover:hover {
     transform: translateY(-5px);
     border-color: transparentize($accent, .4);
     background: transparentize(mix($foreground, $background, 3%), .2);
+    color: $accent;
   }
 }
 </style>

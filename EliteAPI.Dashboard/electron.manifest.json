@@ -7,6 +7,7 @@
   "author": "",
   "singleInstance": false,
   "environment": "Production",
+  "aspCoreBackendPort": 51555,
   "build": {
     "appId": "com.EliteAPI.Dashboard.app",
     "productName": "EliteAPI.Dashboard",

@@ -6,7 +6,7 @@ export default createStore({
       client: null,
       state: "",
       ip: window.location.hostname,
-      port: 8001
+      port: 51555
     },
     catchup: {
       current: 0,

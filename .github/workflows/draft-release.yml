@@ -22,6 +22,10 @@ jobs:
     - name: Setup Electron.NET
       run: dotnet tool install ElectronNET.CLI -g
     
+    - name: Install dependencies
+      run: npm install
+      working-directory: ./EliteAPI.Dashboard/frontend
+    
     - name: Build frontend
       run: npm run build
       working-directory: ./EliteAPI.Dashboard/frontend

@@ -443,8 +443,13 @@ namespace EliteAPI
             }
             catch (BindingsNotFoundException ex)
             {
-                var preset = ex.Data["Active bindings"].ToString();
+                var preset = ex.Data["Active bindings"]?.ToString();
 
+                if (preset == null)
+                {
+                    DisabledSupportFiles.Add("Bindings");
+                }
+                
                 if (lastPresetErrorname != preset)
                 {
                     lastPresetErrorname = preset;

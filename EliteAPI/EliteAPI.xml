@@ -119,6 +119,11 @@
             Triggered when the api couldn't start because of an exception
             </summary>
         </member>
+        <member name="M:EliteAPI.Abstractions.IJsonObject.ToJson">
+            <summary>
+            Generates this objects's Json
+            </summary>
+        </member>
         <member name="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration">
             <summary>
             Interface for the <see cref="T:EliteAPI.Configuration.Abstractions.IEliteDangerousApiConfiguration" /> configuration class

@@ -106,13 +106,16 @@ jobs:
        with:
          name: eliteapi
     
+     - name: Rename file
+       run: mv * setup.exe
+    
      - name: Upload setup
        uses: actions/upload-release-asset@v1
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        with:
           upload_url: ${{ needs.draft-release.outputs.url }} 
-          asset_path: ./eliteapi.zip
-          asset_name: eliteapi.zip
-          asset_content_type: application/zip
+          asset_path: ./setup.exe
+          asset_name: setup.exe
+          asset_content_type: application/octet-stream
   

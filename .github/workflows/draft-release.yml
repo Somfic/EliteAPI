@@ -4,6 +4,38 @@ on:
     types: [closed]
 
 jobs:
+  build:
+    name: Build
+    runs-on: windows-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x   
+      
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2.4.0
+      
+    - name: Setup Electron.NET
+      run: dotnet tool install ElectronNET.CLI -g
+    
+    - name: Build frontend
+      run: npm run build
+      working-directory: ./EliteAPI.Dashboard/frontend
+    
+    - name: Build application
+      run: electronize build /target win
+      working-directory: ./EliteAPI.Dashboard
+
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: eliteapi
+        path: ./EliteAPI.Dashboard/bin/Desktop
+
   draft-release:
     name: Draft release
     runs-on: ubuntu-latest

@@ -3,8 +3,8 @@
     <TargetFramework>net5.0</TargetFramework>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.1235+Branch.dev.Sha.b655b900bf6d4c5effc1117798d33313d1649001</InformationalVersion>
-    <Version>3.0.0-alpha1235</Version>
+    <InformationalVersion>3.0.0-alpha.1238+Branch.dev.Sha.7ba0f71fe576479d24e899e07b1f8b05664c56f9</InformationalVersion>
+    <Version>3.0.0-alpha1238</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ElectronNET.API" Version="13.5.1" />

@@ -5,7 +5,7 @@
         <h1><span class="secondary">Welcome Commander</span> <span class="primary">{{ name }}</span></h1>
         <p>Please choose your preferred platform</p>
       </div>
-      <div class="links" :class="{hidden: hidden}">
+      <div class="links">
         <div class="link-wrapper">
           <Card class="link" @click="setPreferred('voiceattack')">
             <h1>VoiceAttack</h1>
@@ -65,7 +65,7 @@ export default {
           break;
 
         default:
-          router.push({name: "Home"});
+          router.push({name: "Home.vue"});
           break;
       }
     }

@@ -1,6 +1,6 @@
 <template>
   <div class="title-bar">
-    <Button icon="arrow-left" :to="to"/>
+    <Button icon="arrow-left" :to="to" v-if="to"/>
     <h1>{{ title }}</h1>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
       if(window.history.length > 2) {
         this.$router.back()
       } else {
-        this.$router.push({name: 'Home'})
+        this.$router.push({name: 'Home.vue'})
       }
     }
   }

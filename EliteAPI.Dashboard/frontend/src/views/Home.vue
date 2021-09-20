@@ -38,8 +38,8 @@
   </div>
   <div class="links" :class="{hidden: hidden}">
     <div class="link-wrapper big">
-      <Card class="link" :to="{name: 'EliteVA'}">
-        <h1>VoiceAttack</h1>
+      <Card class="link" :to="{name: 'Plugins'}">
+        <h1>Integrations</h1>
       </Card>
     </div>
     <div class="link-wrapper">

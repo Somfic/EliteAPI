@@ -21,10 +21,20 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "home" */ "../views/Home.vue"),
   }, {
-    path: "/eliteva",
+    path: "/integrations",
+    name: "Plugins",
+    component: () =>
+        import(/* webpackChunkName: "plugins" */ "../views/Plugins/Home.vue"),
+  }, {
+    path: "/integrations/eliteva",
     name: "EliteVA",
     component: () =>
-      import(/* webpackChunkName: "eliteva" */ "../views/EliteVA.vue"),
+      import(/* webpackChunkName: "plugins-eliteva" */ "../views/Plugins/EliteVA/Home.vue"),
+  }, {
+    path: "/integrations/eliteva/install",
+    name: "EliteVA-Install",
+    component: () =>
+        import(/* webpackChunkName: "plugins-eliteva" */ "../views/Plugins/EliteVA/Install.vue"),
   },{
     path: "/status/status",
     name: "Status",

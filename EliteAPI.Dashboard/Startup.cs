@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using ElectronNET.API;
 using ElectronNET.API.Entities;
 using EliteAPI.Dashboard.Controllers;
+using EliteAPI.Dashboard.Controllers.EliteVA;
 using EliteAPI.Dashboard.Services;
 using EliteAPI.Dashboard.WebSockets;
 using Microsoft.AspNetCore.Builder;
@@ -38,6 +39,7 @@ namespace EliteAPI.Dashboard
 
             // Variable service
             services.AddTransient<VariableService>();
+            services.AddSingleton<EliteVaInstaller>();
 
             Task.Run(async () =>
             {

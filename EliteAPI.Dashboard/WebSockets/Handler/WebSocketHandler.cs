@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using EliteAPI.Abstractions;
+using EliteAPI.Dashboard.Controllers.EliteVA;
 using EliteAPI.Dashboard.WebSockets.Logging;
 using EliteAPI.Dashboard.WebSockets.Message;
 using Microsoft.Extensions.Logging;
@@ -24,7 +25,8 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
     {
         private readonly ILogger<WebSocketHandler> _log;
         private readonly IEliteDangerousApi _api;
-        
+        private readonly EliteVaInstaller _eliteVaInstaller;
+
         private readonly List<WebSocket> _frontendWebSockets;
         private readonly List<WebSocket> _clientWebSockets;
         private readonly List<WebSocket> _pluginWebSockets;
@@ -33,10 +35,13 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
         private readonly List<WebSocketMessage> _clientCatchupMessages;
         private readonly List<WebSocketMessage> _pluginCatchupMessages;
 
-        public WebSocketHandler(ILogger<WebSocketHandler> log, IEliteDangerousApi api)
+        public WebSocketHandler(ILogger<WebSocketHandler> log, IEliteDangerousApi api, EliteVaInstaller eliteVaInstaller)
         {
             _log = log;
             _api = api;
+            _eliteVaInstaller = eliteVaInstaller;
+            _eliteVaInstaller.OnProgress += (sender, e) => Broadcast(new WebSocketMessage("download.progress", e.ProgressPercentage), WebSocketType.FrontEnd, false, false);
+            _eliteVaInstaller.OnFinished += (sender, e) => Broadcast(new WebSocketMessage("download.finished", "0"), WebSocketType.FrontEnd, false, false);
             
             _frontendWebSockets = new List<WebSocket>();
             _clientWebSockets = new List<WebSocket>();
@@ -240,6 +245,11 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                     case "userprofile.set":
                         UserProfile.Set(message.Value);
                         await SendTo(socket, new WebSocketMessage("UserProfile", UserProfile.Get()));
+                        break;
+                    
+                    case "eliteva.install":
+                        _eliteVaInstaller.DownloadLatestVersion();
+                        await SendTo(socket, new WebSocketMessage("download.ok", "0"));
                         break;
                 }
             }

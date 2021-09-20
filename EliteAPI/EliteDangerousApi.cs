@@ -395,75 +395,20 @@ namespace EliteAPI
         {
             try
             {
-                if (!DisabledSupportFiles.Contains("Status"))
-                    StatusFile = await _statusProvider.FindStatusFile(JournalDirectory);
-
-                if (!DisabledSupportFiles.Contains("Cargo"))
-                    CargoFile = await _statusProvider.FindCargoFile(JournalDirectory);
-
-                if (!DisabledSupportFiles.Contains("Market"))
-                    MarketFile = await _statusProvider.FindMarketFile(JournalDirectory);
-
-                if (!DisabledSupportFiles.Contains("Outfitting"))
-                    OutfittingFile = await _statusProvider.FindOutfittingFile(JournalDirectory);
-
-                if (!DisabledSupportFiles.Contains("Shipyard"))
-                    ShipyardFile = await _statusProvider.FindShipyardFile(JournalDirectory);
-
-                if (!DisabledSupportFiles.Contains("NavRoute"))
-                    NavRouteFile = await _statusProvider.FindNavRouteFile(JournalDirectory);
-
-                if (!DisabledSupportFiles.Contains("Backpack"))
-                    BackpackFile = await _statusProvider.FindBackpackFile(JournalDirectory);
-
-                if (!DisabledSupportFiles.Contains("ModulesInfo"))
-                    ModulesInfoFile = await _statusProvider.FindModulesFile(JournalDirectory);
+                StatusFile = await _statusProvider.FindStatusFile(JournalDirectory);
+                CargoFile = await _statusProvider.FindCargoFile(JournalDirectory);
+                MarketFile = await _statusProvider.FindMarketFile(JournalDirectory);
+                OutfittingFile = await _statusProvider.FindOutfittingFile(JournalDirectory);
+                ShipyardFile = await _statusProvider.FindShipyardFile(JournalDirectory);
+                NavRouteFile = await _statusProvider.FindNavRouteFile(JournalDirectory);
+                BackpackFile = await _statusProvider.FindBackpackFile(JournalDirectory);
+                ModulesInfoFile = await _statusProvider.FindModulesFile(JournalDirectory);
 
                 if (!DisabledSupportFiles.Contains("Bindings"))
                 {
                     BindingsFile = await _optionsProvider.FindActiveBindingsFile(OptionsDirectory);
                     lastPresetErrorname = "";
                 }
-            }
-            catch (StatusFileNotFoundException ex)
-            {
-                _log.LogWarning(ex, "Status.json file support has been disabled");
-                DisabledSupportFiles.Add("Status");
-            }
-            catch (CargoFileNotFoundException ex)
-            {
-                _log.LogDebug(ex, "Cargo.json file support has been disabled");
-                DisabledSupportFiles.Add("Cargo");
-            }
-            catch (MarketFileNotFoundException ex)
-            {
-                _log.LogDebug(ex, "Market.json file support has been disabled");
-                DisabledSupportFiles.Add("Market");
-            }
-            catch (OutfittingFileNotFoundException ex)
-            {
-                _log.LogDebug(ex, "Outfitting.json file support has been disabled");
-                DisabledSupportFiles.Add("Outfitting");
-            }
-            catch (ShipyardFileNotFoundException ex)
-            {
-                _log.LogDebug(ex, "Shipyard.json file support has been disabled");
-                DisabledSupportFiles.Add("Shipyard");
-            }
-            catch (NavRouteFileNotFoundException ex)
-            {
-                _log.LogDebug(ex, "NavRoute.json file support has been disabled");
-                DisabledSupportFiles.Add("NavRoute");
-            }
-            catch (ModulesInfoFileNotFoundException ex)
-            {
-                _log.LogDebug(ex, "ModulesInfo.json file support has been disabled");
-                DisabledSupportFiles.Add("ModulesInfo");
-            }
-            catch (BackpackFileNotFoundException ex)
-            {
-                _log.LogDebug(ex, "Backpack.json file support has been disabled");
-                DisabledSupportFiles.Add("Backpack");
             }
             catch (ActiveBindingsNotFoundException ex)
             {
@@ -478,7 +423,7 @@ namespace EliteAPI
                 {
                     DisabledSupportFiles.Add("Bindings");
                 }
-                
+
                 if (lastPresetErrorname != preset)
                 {
                     lastPresetErrorname = preset;

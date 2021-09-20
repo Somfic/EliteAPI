@@ -93,7 +93,7 @@ namespace EliteAPI.Dashboard
                 .ConfigureLogging(logger =>
                 {
                     logger.ClearProviders();
-                    logger.SetMinimumLevel(LogLevel.Trace);
+                    logger.SetMinimumLevel(LogLevel.Debug);
                     // logger.AddPrettyConsole(ConsoleFormats.Default, ConsoleThemes.Vanilla);
                     logger.AddSimpleConsole();
                     logger.AddWebSocketLogger();

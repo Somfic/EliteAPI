@@ -40,9 +40,19 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
             _log = log;
             _api = api;
             _eliteVaInstaller = eliteVaInstaller;
-            _eliteVaInstaller.OnProgress += (sender, e) => Broadcast(new WebSocketMessage("download.progress", e.ProgressPercentage), WebSocketType.FrontEnd, false, false);
-            _eliteVaInstaller.OnFinished += (sender, e) => Broadcast(new WebSocketMessage("download.finished", "0"), WebSocketType.FrontEnd, false, false);
-            
+            _eliteVaInstaller.OnStart += async (sender, e) =>
+            {
+                await Broadcast(new WebSocketMessage("EliteVA.Start", null));
+            };
+            _eliteVaInstaller.OnProgress += async (sender, e) =>
+            {
+                await Broadcast(new WebSocketMessage("EliteVA.Progress", e.ProgressPercentage));
+            };
+            _eliteVaInstaller.OnFinished += async (sender, e) =>
+            {
+                await Broadcast(new WebSocketMessage("EliteVA.Finished", null));
+            };
+
             _frontendWebSockets = new List<WebSocket>();
             _clientWebSockets = new List<WebSocket>();
             _pluginWebSockets = new List<WebSocket>();
@@ -176,6 +186,8 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
             var bytes = Encoding.UTF8.GetBytes(compressed);
 
             var arraySegment = new ArraySegment<byte>(bytes);
+            _log.LogInformation($"Sending {message.Type}:'{message.Value}'");
+            
             await socket.SendAsync(arraySegment, WebSocketMessageType.Text, true, CancellationToken.None);
         }
 
@@ -249,7 +261,6 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                     
                     case "eliteva.install":
                         _eliteVaInstaller.DownloadLatestVersion();
-                        await SendTo(socket, new WebSocketMessage("download.ok", "0"));
                         break;
                 }
             }
@@ -298,13 +309,15 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
 
                     WebSocketMessage message;
 
+                    string textMessage = Encoding.UTF8.GetString(memory.ToArray());
+                    
                     try
                     {
-                        message = Compressor.Decompress(Encoding.UTF8.GetString(memory.ToArray()));
+                        message = Compressor.Decompress(textMessage);
                     }
                     catch (JsonException ex)
                     {
-                        _log.LogWarning(ex, "Invalid WebSocket message");
+                        _log.LogWarning(ex, "Invalid WebSocket message ({Message})", textMessage);
                         return null;
                     }
                     catch (Exception ex)

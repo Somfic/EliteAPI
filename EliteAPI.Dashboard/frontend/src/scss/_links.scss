@@ -1,7 +1,7 @@
 
 .links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 220px));
   gap: 1rem;
 
   @for $i from 1 through 30 {

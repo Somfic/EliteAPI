@@ -44,9 +44,9 @@ namespace EliteAPI.Dashboard
 
     public class EliteVaProfile
     {
-        public bool IsInstalled { get; init; }
+        public bool IsInstalled { get; set; }
 
-        public string InstalledVersion { get; init; }
+        public string InstalledVersion { get; set; }
 
         public string InstallationDirectory { get; init; }
     }

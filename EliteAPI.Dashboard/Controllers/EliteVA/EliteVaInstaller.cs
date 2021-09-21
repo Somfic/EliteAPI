@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -7,33 +8,38 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting.Internal;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Dashboard.Controllers.EliteVA
 {
     public class EliteVaInstaller
     {
+        private readonly ILogger<EliteVaInstaller> _log;
         private readonly HttpClient _httpClient;
         private WebClient _webClient;
 
         private static string SaveFolderPath =
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "EliteAPI");
 
-        public EliteVaInstaller(HttpClient httpClient)
+        public EliteVaInstaller(ILogger<EliteVaInstaller> log, HttpClient httpClient)
         {
+            _log = log;
             _httpClient = httpClient;
         }
         
 
         public event EventHandler<DownloadProgressChangedEventArgs> OnProgress; 
         public event EventHandler OnFinished; 
+        public event EventHandler OnStart; 
 
         public void DownloadLatestVersion()
         {
+            OnStart?.Invoke(this, EventArgs.Empty);
+            
             _webClient = new WebClient();
             
-            _webClient.DownloadProgressChanged += (sender, e) =>  OnProgress?.Invoke(this, e);
-            _webClient.DownloadFileCompleted += (sender, e) => OnFinished?.Invoke(this, EventArgs.Empty);
+            _webClient.DownloadProgressChanged += (sender, e) => OnProgress?.Invoke(this, e);
             
             var release = GetLatestVersion("EliteAPI", "EliteVA").GetAwaiter().GetResult();
             var userprofile = UserProfile.Get();
@@ -41,11 +47,16 @@ namespace EliteAPI.Dashboard.Controllers.EliteVA
 
             Directory.CreateDirectory(downloadPath);
 
+            userprofile.EliteVA.IsInstalled = true;
+            userprofile.EliteVA.InstalledVersion = release.TagName;
+            userprofile.Save();
+            
             release.Assets.ToList().ForEach(x =>
             {
                 var path = Path.Combine(downloadPath, x.Name);
-                _webClient.DownloadFile(x.BrowserDownloadUrl, path);
-                System.IO.Compression.ZipFile.ExtractToDirectory(path, userprofile.EliteVA.InstallationDirectory, true);
+                _webClient.DownloadFileTaskAsync(x.BrowserDownloadUrl, path).GetAwaiter().GetResult();
+                ZipFile.ExtractToDirectory(path, userprofile.EliteVA.InstallationDirectory, true);
+                OnFinished?.Invoke(this, EventArgs.Empty);
             });
             
             _webClient.Dispose();

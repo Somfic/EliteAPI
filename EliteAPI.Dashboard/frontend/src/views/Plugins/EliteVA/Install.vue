@@ -1,8 +1,13 @@
 <template>
   <TitleBar title="Installing EliteVA"/>
-  <KnownLoader is-loading="true">
-
-  </KnownLoader>
+  <KnownLoader icon="/img/eliteapi.svg" text="Installing EliteVA" sub-text="VoiceAttack plugin"
+               :indeterminate="this.$store.state.eliteva.progress === 0 || this.$store.state.eliteva.progress === 100"
+               :is-loading="this.$store.state.eliteva.inProgress"
+               @animateIn="this.$store.commit('send', {type: 'eliteva.install'})"
+               @animateOut="this.$router.push({name: 'EliteVA'})"
+               :finished="this.$store.state.eliteva.progress === 100 && !this.$store.state.eliteva.inProgress"
+               :percentage="this.$store.state.eliteva.progress / 100"
+  />
 </template>
 
 <script>
@@ -13,8 +18,6 @@ export default {
   name: "EliteVA",
   components: {KnownLoader, TitleBar},
   async created() {
-    this.$store.commit('send', {type: 'eliteva.install', value: null});
-
     setInterval(() => {
       this.updateData();
     }, 1000);
@@ -37,8 +40,3 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-.links {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-</style>

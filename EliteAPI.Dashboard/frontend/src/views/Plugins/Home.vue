@@ -2,7 +2,7 @@
   <TitleBar title="Integrations" :to="{name: 'Home'}"/>
   <div class="select">
     <h2>Please select your EliteAPI platform</h2>
-    <div class="links">
+    <div class="links" :class="{hidden: hidden}">
       <div class="link-wrapper">
         <Card class="link" :to="{name: 'EliteVA'}">
           <h1>VoiceAttack</h1>
@@ -28,6 +28,16 @@ import Card from "@/components/Cards/Card";
 export default {
   name: "Plugins",
   components: {Card, TitleBar},
+  async created() {
+    setTimeout(() => {
+      this.hidden = false;
+    });
+  },
+  data() {
+    return {
+      hidden: true
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

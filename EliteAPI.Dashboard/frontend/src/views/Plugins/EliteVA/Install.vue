@@ -7,6 +7,7 @@
                @animateOut="this.$router.push({name: 'EliteVA'})"
                :finished="this.$store.state.eliteva.progress === 100 && !this.$store.state.eliteva.inProgress"
                :percentage="this.$store.state.eliteva.progress / 100"
+               :status="this.$store.state.eliteva.task"
   />
 </template>
 

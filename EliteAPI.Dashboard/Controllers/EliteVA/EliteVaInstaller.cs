@@ -56,9 +56,9 @@ namespace EliteAPI.Dashboard.Controllers.EliteVA
             release.Assets.ToList().ForEach(x =>
             {
                 var path = Path.Combine(downloadPath, x.Name);
-                OnNewTask?.Invoke(this, "downloading");
+                OnNewTask?.Invoke(this, "Downloading files");
                 _webClient.DownloadFileTaskAsync(x.BrowserDownloadUrl, path).GetAwaiter().GetResult();
-                OnNewTask?.Invoke(this, "extracting");
+                OnNewTask?.Invoke(this, "Extracting files");
                 ZipFile.ExtractToDirectory(path, userprofile.EliteVA.InstallationDirectory, true);
             });
             

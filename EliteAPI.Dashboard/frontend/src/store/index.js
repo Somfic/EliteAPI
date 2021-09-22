@@ -16,7 +16,8 @@ export default createStore({
         },
         eliteva: {
             progress: 0,
-            inProgress: false
+            inProgress: false,
+            task: 'fetching'
         },
         userprofile: null,
         sortedEvents: {},
@@ -156,6 +157,7 @@ export default createStore({
 
                     case "EliteVA.Start":
                         console.log('Starting EliteVA install', data)
+                        this.state.eliteva.task = 'Fetching latest version';
                         this.state.eliteva.progress = 0;
                         this.state.eliteva.inProgress = true;
                         break;
@@ -166,10 +168,17 @@ export default createStore({
                         this.state.eliteva.inProgress = true;
                         break;
 
+                    case "EliteVA.Task":
+                        console.log('Progress EliteVA install: ', data)
+                        this.state.eliteva.task = data;
+                        this.state.eliteva.inProgress = true;
+                        break;
+
                     case "EliteVA.Finished":
                         console.log('Finished EliteVA install', data)
                         this.state.eliteva.progress = 100;
                         this.state.eliteva.inProgress = false;
+                        this.state.eliteva.task = '';
                         send(this.state.connection.client, "userprofile.get", "");
                         break;
 
@@ -200,9 +209,7 @@ function send(client, type, data) {
     };
 
     let compressed = compress(message);
-    console.log('SENDING', compressed)
     client.send(compressed);
-    console.log('sent')
 }
 
 function compress(message) {
@@ -230,7 +237,11 @@ function compress(message) {
 
 function decompress(message) {
     var object = JSON.parse(message);
-    object.value = JSON.parse(object.value);
+
+    if(object.value && (object.value.startsWith("{") || object.value.startsWith("["))) {
+        object.value = JSON.parse(object.value);
+    }
+
     return object;
 
     //

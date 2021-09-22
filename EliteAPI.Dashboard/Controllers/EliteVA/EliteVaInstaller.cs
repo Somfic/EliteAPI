@@ -30,6 +30,8 @@ namespace EliteAPI.Dashboard.Controllers.EliteVA
         
 
         public event EventHandler<DownloadProgressChangedEventArgs> OnProgress; 
+        
+        public event EventHandler<string> OnNewTask;
         public event EventHandler OnFinished; 
         public event EventHandler OnStart; 
 
@@ -54,11 +56,13 @@ namespace EliteAPI.Dashboard.Controllers.EliteVA
             release.Assets.ToList().ForEach(x =>
             {
                 var path = Path.Combine(downloadPath, x.Name);
+                OnNewTask?.Invoke(this, "downloading");
                 _webClient.DownloadFileTaskAsync(x.BrowserDownloadUrl, path).GetAwaiter().GetResult();
+                OnNewTask?.Invoke(this, "extracting");
                 ZipFile.ExtractToDirectory(path, userprofile.EliteVA.InstallationDirectory, true);
-                OnFinished?.Invoke(this, EventArgs.Empty);
             });
             
+            OnFinished?.Invoke(this, EventArgs.Empty);
             _webClient.Dispose();
         }
 

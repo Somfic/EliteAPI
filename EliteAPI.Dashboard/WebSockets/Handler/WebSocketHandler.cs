@@ -48,6 +48,10 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
             {
                 await Broadcast(new WebSocketMessage("EliteVA.Progress", e.ProgressPercentage));
             };
+            _eliteVaInstaller.OnNewTask += async (sender, e) =>
+            {
+                await Broadcast(new WebSocketMessage("EliteVA.Task", e));
+            };
             _eliteVaInstaller.OnFinished += async (sender, e) =>
             {
                 await Broadcast(new WebSocketMessage("EliteVA.Finished", null));

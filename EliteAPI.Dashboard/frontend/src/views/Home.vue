@@ -38,7 +38,7 @@
   </div>
   <div class="links" :class="{hidden: hidden}">
     <div class="link-wrapper big">
-      <Card class="link" :to="{name: 'Plugins'}">
+      <Card class="link" :to="{name: 'Plugins'}" notice="updates available" :notice-if="pluginUpdatesAvailable">
         <h1>Integrations</h1>
       </Card>
     </div>
@@ -146,6 +146,8 @@ export default {
       eliteApiVersion: "",
       gameVersion: "",
 
+      pluginUpdatesAvailable: false,
+
       isInMainMenu: false,
 
       hidden: true,
@@ -217,6 +219,8 @@ export default {
       this.navRoute = !(this.$store.state.navRoute == null);
       this.bindings = !(this.$store.state.bindings == null);
       this.backpack = !(this.$store.state.backpack == null);
+
+      this.pluginUpdatesAvailable = this.$store.state.userprofile['EliteVA']['IsInstalled'] && this.$store.state.userprofile['EliteVA']['InstalledVersion'] !== this.$store.state.eliteva.newestVersion;
 
       this.eliteApiVersion = this.$store.state.eliteapi["Version"];
       this.gameVersion = this.$store.state.sortedEvents["Fileheader"] ? this.$store.state.sortedEvents['Fileheader'][0]["Gameversion"] : "";

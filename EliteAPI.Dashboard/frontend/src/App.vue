@@ -15,8 +15,11 @@ export default {
       await this.$router.push({ name: "Catchup" });
     }
 
-    setInterval(() => {
+    setInterval(async () => {
       this.setActiveShip();
+      if (this.$store.state.connection.state === 'closed') {
+        await this.$router.push({name: "Catchup"});
+      }
     }, 500);
   },
   data() {

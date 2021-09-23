@@ -46,8 +46,8 @@ namespace EliteAPI.Dashboard
     {
         public bool IsInstalled { get; set; }
 
-        public string InstalledVersion { get; set; }
+        public string InstalledVersion { get; set; } = "0.0.0";
 
-        public string InstallationDirectory { get; init; }
+        public string InstallationDirectory { get; init; } = "C:\\Program Files (x86)\\VoiceAttack\\Apps";
     }
 }

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ElectronNET.API;
 using EliteAPI.Abstractions;
+using EliteAPI.Dashboard.Controllers.EliteVA;
 using EliteAPI.Dashboard.Models;
 using EliteAPI.Dashboard.Services;
 using EliteAPI.Dashboard.WebSockets.Handler;
@@ -24,6 +25,7 @@ namespace EliteAPI.Dashboard
         private static WebSocketHandler _socketHandler;
         private static VariableService _variableService;
         private static ILogger<Program> _log;
+        private static EliteVaInstaller _eliteVaInstaller;
 
         public static async Task Main(string[] args)
         {
@@ -32,6 +34,7 @@ namespace EliteAPI.Dashboard
             _api = host.Services.GetRequiredService<IEliteDangerousApi>();
             _socketHandler = host.Services.GetRequiredService<WebSocketHandler>();
             _variableService = host.Services.GetRequiredService<VariableService>();
+            _eliteVaInstaller = host.Services.GetRequiredService<EliteVaInstaller>();
             _log = host.Services.GetRequiredService<ILogger<Program>>();
 
             await _api.InitializeAsync();
@@ -51,6 +54,9 @@ namespace EliteAPI.Dashboard
             
             // Sub to options
             _api.Bindings.OnChange += async (sender, e) => await _socketHandler.Broadcast(new WebSocketMessage("Bindings", _api.Bindings.ToJson()), true, true);
+
+            // Send latest eliteva version
+            await _socketHandler.Broadcast(new WebSocketMessage("EliteVA.Latest", await _eliteVaInstaller.GetLatestVersion()), true, true);
 
             await _api.StartAsync();
             await host.RunAsync();

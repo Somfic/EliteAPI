@@ -56,6 +56,10 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
             {
                 await Broadcast(new WebSocketMessage("EliteVA.Finished", null));
             };
+            _eliteVaInstaller.OnError += async (sender, e) =>
+            {
+                await Broadcast(new WebSocketMessage("EliteVA.Error", e));
+            };
 
             _frontendWebSockets = new List<WebSocket>();
             _clientWebSockets = new List<WebSocket>();
@@ -264,7 +268,11 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                         break;
                     
                     case "eliteva.install":
-                        _eliteVaInstaller.DownloadLatestVersion();
+                        await _eliteVaInstaller.DownloadLatestVersion();
+                        break;
+                    
+                    case "eliteva.latest":
+                        await SendTo(socket, new WebSocketMessage("EliteVA.Latest", await _eliteVaInstaller.GetLatestVersion()));
                         break;
                 }
             }

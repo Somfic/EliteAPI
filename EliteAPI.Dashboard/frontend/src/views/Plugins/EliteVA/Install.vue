@@ -1,13 +1,13 @@
 <template>
-  <TitleBar title="Installing EliteVA"/>
-  <KnownLoader icon="/img/eliteapi.svg" text="Installing EliteVA" sub-text="VoiceAttack plugin"
-               :indeterminate="this.$store.state.eliteva.progress === 0 || this.$store.state.eliteva.progress === 100"
+  <TitleBar title="Installing EliteVA" :to="{name: 'EliteVA'}"/>
+  <KnownLoader icon="/img/eliteapi.svg" text="Installing EliteVA" :sub-text="'Version ' + this.newestVersion"
+               :indeterminate="!this.$store.state.eliteva.error && (this.$store.state.eliteva.progress === 0 || this.$store.state.eliteva.progress === 100)"
                :is-loading="this.$store.state.eliteva.inProgress"
                @animateIn="this.$store.commit('send', {type: 'eliteva.install'})"
                @animateOut="this.$router.push({name: 'EliteVA'})"
                :finished="this.$store.state.eliteva.progress === 100 && !this.$store.state.eliteva.inProgress"
                :percentage="this.$store.state.eliteva.progress / 100"
-               :status="this.$store.state.eliteva.task"
+               :status="this.status"
   />
 </template>
 
@@ -29,14 +29,19 @@ export default {
     return {
       installed: false,
       installedVersion: null,
-      installationDirectory: null
+      newestVersion: '',
+      installationDirectory: null,
+      status: null
     }
   },
   methods: {
     updateData() {
       this.installed = this.$store.state.userprofile['EliteVA']['IsInstalled'];
       this.installedVersion = this.$store.state.userprofile['EliteVA']['InstalledVersion'];
+      this.newestVersion = this.$store.state.eliteva.newestVersion;
       this.installationDirectory = this.$store.state.userprofile['EliteVA']['InstallationDirectory'];
+
+      this.status = this.$store.state.eliteva.task;
     }
   }
 };

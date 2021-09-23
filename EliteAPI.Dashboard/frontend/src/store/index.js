@@ -17,7 +17,9 @@ export default createStore({
         eliteva: {
             progress: 0,
             inProgress: false,
-            task: 'fetching'
+            task: 'Fetching latest version',
+            newestVersion: '0.0.0',
+            error: false
         },
         userprofile: null,
         sortedEvents: {},
@@ -156,30 +158,38 @@ export default createStore({
                         break;
 
                     case "EliteVA.Start":
-                        console.log('Starting EliteVA install', data)
                         this.state.eliteva.task = 'Fetching latest version';
                         this.state.eliteva.progress = 0;
                         this.state.eliteva.inProgress = true;
+                        this.state.eliteva.error = false;
                         break;
 
                     case "EliteVA.Progress":
-                        console.log('Progress EliteVA install', data)
                         this.state.eliteva.progress = data;
                         this.state.eliteva.inProgress = true;
                         break;
 
                     case "EliteVA.Task":
-                        console.log('Progress EliteVA install: ', data)
                         this.state.eliteva.task = data;
                         this.state.eliteva.inProgress = true;
                         break;
 
                     case "EliteVA.Finished":
-                        console.log('Finished EliteVA install', data)
                         this.state.eliteva.progress = 100;
                         this.state.eliteva.inProgress = false;
                         this.state.eliteva.task = '';
                         send(this.state.connection.client, "userprofile.get", "");
+                        break;
+
+                    case "EliteVA.Error":
+                        this.state.eliteva.progress = 0;
+                        this.state.eliteva.inProgress = false;
+                        this.state.eliteva.error = true;
+                        this.state.eliteva.task = 'Error: ' + data;
+                        break;
+
+                    case "EliteVA.Latest":
+                        this.state.eliteva.newestVersion = data.tag_name;
                         break;
 
                     default:

@@ -4,7 +4,7 @@
     <h2>Please select your EliteAPI platform</h2>
     <div class="links" :class="{hidden: hidden}">
       <div class="link-wrapper">
-        <Card class="link" :to="{name: 'EliteVA'}">
+        <Card class="link" :to="{name: 'EliteVA'}" :notice="'update available'" :notice-if="eliteVaUpdatesAvailable">
           <h1>VoiceAttack</h1>
         </Card>
       </div>
@@ -32,10 +32,25 @@ export default {
     setTimeout(() => {
       this.hidden = false;
     });
+
+
+    this.updateData();
+    setInterval(() => {
+      this.updateData()
+    }, 1000)
   },
   data() {
     return {
-      hidden: true
+      hidden: true,
+      elitevaNewestVersion: false,
+      eliteVaUpdatesAvailable: null
+
+    }
+  },
+  methods: {
+    updateData() {
+      this.elitevaNewestVersion = this.$store.state.eliteva.newestVersion;
+      this.eliteVaUpdatesAvailable = this.$store.state.userprofile['EliteVA']['IsInstalled'] && this.$store.state.userprofile['EliteVA']['InstalledVersion'] !== this.$store.state.eliteva.newestVersion;
     }
   }
 };

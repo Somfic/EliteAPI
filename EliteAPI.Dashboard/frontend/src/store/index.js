@@ -1,4 +1,6 @@
 import {createStore} from "vuex";
+import {nextTick} from "vue";
+import router from "@/router";
 
 export default createStore({
     state: {
@@ -61,6 +63,10 @@ export default createStore({
             this.state.connection.client.onclose = () => {
                 this.state.connection.state = "closed";
                 console.log("Websocket closed");
+
+                nextTick(async () => {
+                    await router.push({name: 'Catchup'})
+                })
             };
 
             this.state.connection.client.onmessage = (compressed) => {
@@ -201,7 +207,7 @@ export default createStore({
             if (payload.valueOf() && payload.value != null && payload.value !== "") {
                 send(this.state.connection.client, payload.type, JSON.stringify(payload.value));
             } else {
-                send(this.state.connection.client, payload.type, "0");
+                send(this.state.connection.client, payload.type, payload.value);
             }
         }
     },
@@ -247,7 +253,7 @@ function compress(message) {
 function decompress(message) {
     var object = JSON.parse(message);
 
-    if(object.value && (object.value.startsWith("{") || object.value.startsWith("["))) {
+    if (object.value && (object.value.startsWith("{") || object.value.startsWith("["))) {
         object.value = JSON.parse(object.value);
     }
 

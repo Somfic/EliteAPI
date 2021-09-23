@@ -47,7 +47,7 @@ export default {
 
     install() {
       nextTick(() => {
-        this.$store.commit('send', {type: 'eliteva.install', value: 'just intsall please'});
+        this.$store.commit('send', {type: 'eliteva.install', value: '0'});
       })
     }
   }

@@ -6,7 +6,7 @@ namespace EliteAPI.Dashboard
 {
     public class UserProfile
     {
-        private static string SaveFolderPath =
+        public static string SaveFolderPath =
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "EliteAPI");
 
         private static string SaveFilePath = Path.Combine(SaveFolderPath, "userprofile.json");

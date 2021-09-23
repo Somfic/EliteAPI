@@ -3,8 +3,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.1242+Branch.dev.Sha.5b491ce72ad8ef26108cc36b92324641a2f729bf</InformationalVersion>
-    <Version>3.0.0-alpha1242</Version>
+    <InformationalVersion>3.0.0-alpha.1244+Branch.dev.Sha.1f0643cf3e9c523405b93c707db0aee540fc0dfa</InformationalVersion>
+    <Version>3.0.0-alpha1244</Version>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>

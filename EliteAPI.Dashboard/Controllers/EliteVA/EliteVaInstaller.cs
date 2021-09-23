@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting.Internal;
@@ -27,49 +28,73 @@ namespace EliteAPI.Dashboard.Controllers.EliteVA
             _log = log;
             _httpClient = httpClient;
         }
-        
 
-        public event EventHandler<DownloadProgressChangedEventArgs> OnProgress; 
-        
+
+        public event EventHandler<DownloadProgressChangedEventArgs> OnProgress;
+
         public event EventHandler<string> OnNewTask;
-        public event EventHandler OnFinished; 
-        public event EventHandler OnStart; 
+        public event EventHandler<string> OnError;
+        public event EventHandler OnFinished;
 
-        public void DownloadLatestVersion()
+        public event EventHandler OnStart;
+
+        public async Task DownloadLatestVersion()
         {
-            OnStart?.Invoke(this, EventArgs.Empty);
-            
-            _webClient = new WebClient();
-            
-            _webClient.DownloadProgressChanged += (sender, e) => OnProgress?.Invoke(this, e);
-            
-            var release = GetLatestVersion("EliteAPI", "EliteVA").GetAwaiter().GetResult();
-            var userprofile = UserProfile.Get();
-            var downloadPath = Path.Combine(Path.Combine(SaveFolderPath, "EliteVA"), release.TagName);
-
-            Directory.CreateDirectory(downloadPath);
-
-            userprofile.EliteVA.IsInstalled = true;
-            userprofile.EliteVA.InstalledVersion = release.TagName;
-            userprofile.Save();
-            
-            release.Assets.ToList().ForEach(x =>
+            try
             {
-                var path = Path.Combine(downloadPath, x.Name);
-                OnNewTask?.Invoke(this, "Downloading files");
-                _webClient.DownloadFileTaskAsync(x.BrowserDownloadUrl, path).GetAwaiter().GetResult();
-                OnNewTask?.Invoke(this, "Extracting files");
-                ZipFile.ExtractToDirectory(path, userprofile.EliteVA.InstallationDirectory, true);
-            });
-            
-            OnFinished?.Invoke(this, EventArgs.Empty);
-            _webClient.Dispose();
+                OnStart?.Invoke(this, EventArgs.Empty);
+
+                _webClient = new WebClient();
+
+                _webClient.DownloadProgressChanged += (sender, e) => OnProgress?.Invoke(this, e);
+
+                var release = await LatestVersion();
+
+                var userprofile = UserProfile.Get();
+                var downloadPath = Path.Combine(Path.Combine(SaveFolderPath, "EliteVA"), release.TagName);
+
+                Directory.CreateDirectory(downloadPath);
+                Directory.CreateDirectory(userprofile.EliteVA.InstallationDirectory);
+                
+                userprofile.EliteVA.IsInstalled = true;
+                userprofile.EliteVA.InstalledVersion = release.TagName;
+                userprofile.Save();
+
+                release.Assets.ToList().ForEach(async x =>
+                {
+                    var path = Path.Combine(downloadPath, x.Name);
+                    OnNewTask?.Invoke(this, "Downloading files");
+                    await _webClient.DownloadFileTaskAsync(x.BrowserDownloadUrl, path);
+                    OnNewTask?.Invoke(this, "Extracting files");
+                    ZipFile.ExtractToDirectory(path, userprofile.EliteVA.InstallationDirectory, true);
+                });
+
+                OnFinished?.Invoke(this, EventArgs.Empty);
+                _webClient.Dispose();
+            }
+            catch (Exception ex)
+            {
+                OnError?.Invoke(this, ex.Message);
+            }
         }
 
-        private async Task<GithubVersioningResponse> GetLatestVersion(string author, string repo)
+        public async Task<GithubVersioningResponse> GetLatestVersion()
+        {
+            try
+            {
+                return await LatestVersion();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        
+        private async Task<GithubVersioningResponse> LatestVersion()
         {
             _httpClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("EliteAPI", "1.0.0"));
-            var result = await _httpClient.GetAsync($"https://api.github.com/repos/{author}/{repo}/releases/latest");
+            var result =
+                await _httpClient.GetAsync($"https://api.github.com/repos/EliteAPI/EliteVA/releases/latest");
             result.EnsureSuccessStatusCode();
 
             var responseJson = await result.Content.ReadAsStringAsync();

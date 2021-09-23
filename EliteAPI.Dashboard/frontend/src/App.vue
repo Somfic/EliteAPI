@@ -3,7 +3,7 @@
     <img class="ship-background" :src="'/img/ships/cartoon/' + activeShip + '.svg'" alt="" @load="loaded">
   </div>
   <div id="root" :key="this.$route.name">
-    <router-view />
+    <router-view :key="this.$route.name" />
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
     setInterval(async () => {
       this.setActiveShip();
       if (this.$store.state.connection.state === 'closed') {
-        await this.$router.push({name: "Catchup"});
+        //await this.$router.push({name: "Catchup"});
       }
     }, 500);
   },

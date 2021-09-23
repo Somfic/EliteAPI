@@ -55,8 +55,12 @@ namespace EliteAPI.Dashboard
             // Sub to options
             _api.Bindings.OnChange += async (sender, e) => await _socketHandler.Broadcast(new WebSocketMessage("Bindings", _api.Bindings.ToJson()), true, true);
 
+            // Send userprofile
+            await _socketHandler.Broadcast(new WebSocketMessage("UserProfile", UserProfile.Get()), true, true);
+            
             // Send latest eliteva version
             await _socketHandler.Broadcast(new WebSocketMessage("EliteVA.Latest", await _eliteVaInstaller.GetLatestVersion()), true, true);
+
 
             await _api.StartAsync();
             await host.RunAsync();

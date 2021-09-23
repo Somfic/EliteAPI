@@ -269,6 +269,7 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                     
                     case "eliteva.install":
                         await _eliteVaInstaller.DownloadLatestVersion();
+                        await SendTo(socket, new WebSocketMessage("UserProfile", UserProfile.Get()));
                         break;
                     
                     case "eliteva.latest":
@@ -308,7 +309,7 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                 WebSocketReceiveResult result;
                 do
                 {
-                    var messageBuffer = WebSocket.CreateClientBuffer(1024, 16);
+                    var messageBuffer = WebSocket.CreateClientBuffer(16, 16);
                     result = await socket.ReceiveAsync(messageBuffer, CancellationToken.None);
                     memory.Write(messageBuffer.Array ?? Array.Empty<byte>(), messageBuffer.Offset, result.Count);
                 } while (!result.EndOfMessage);
@@ -322,6 +323,7 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                     WebSocketMessage message;
 
                     string textMessage = Encoding.UTF8.GetString(memory.ToArray());
+                    _log.LogCritical("Message: {Json}", textMessage);
                     
                     try
                     {

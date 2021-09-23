@@ -56,7 +56,6 @@ export default createStore({
             this.state.connection.client.onopen = () => {
                 this.state.connection.state = "connected";
                 send(this.state.connection.client, "auth", "frontend");
-                send(this.state.connection.client, "userprofile.get", "");
             };
 
             this.state.connection.client.onclose = () => {
@@ -178,7 +177,6 @@ export default createStore({
                         this.state.eliteva.progress = 100;
                         this.state.eliteva.inProgress = false;
                         this.state.eliteva.task = '';
-                        send(this.state.connection.client, "userprofile.get", "");
                         break;
 
                     case "EliteVA.Error":
@@ -200,11 +198,10 @@ export default createStore({
         },
 
         send(context, payload) {
-            console.log(payload)
             if (payload.valueOf() && payload.value != null && payload.value !== "") {
                 send(this.state.connection.client, payload.type, JSON.stringify(payload.value));
             } else {
-                send(this.state.connection.client, payload.type, "");
+                send(this.state.connection.client, payload.type, "0");
             }
         }
     },
@@ -213,6 +210,8 @@ export default createStore({
 });
 
 function send(client, type, data) {
+    console.log('Sending', type + ':' + data)
+
     let message = {
         type: type,
         value: data

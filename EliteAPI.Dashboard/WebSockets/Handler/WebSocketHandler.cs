@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net.WebSockets;
 using System.Text;
@@ -268,6 +269,7 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                         break;
                     
                     case "eliteva.install":
+                        Process.Start("taskkill", "/F /IM voiceattack.exe");
                         await _eliteVaInstaller.DownloadLatestVersion();
                         await SendTo(socket, new WebSocketMessage("UserProfile", UserProfile.Get()));
                         break;

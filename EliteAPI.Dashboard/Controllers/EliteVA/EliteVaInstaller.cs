@@ -55,19 +55,19 @@ namespace EliteAPI.Dashboard.Controllers.EliteVA
 
                 Directory.CreateDirectory(downloadPath);
                 Directory.CreateDirectory(userprofile.EliteVA.InstallationDirectory);
-                
+
                 userprofile.EliteVA.IsInstalled = true;
                 userprofile.EliteVA.InstalledVersion = release.TagName;
                 userprofile.Save();
 
-                release.Assets.ToList().ForEach(async x =>
+                foreach (var releaseAsset in release.Assets)
                 {
-                    var path = Path.Combine(downloadPath, x.Name);
+                    var path = Path.Combine(downloadPath, releaseAsset.Name);
                     OnNewTask?.Invoke(this, "Downloading files");
-                    await _webClient.DownloadFileTaskAsync(x.BrowserDownloadUrl, path);
+                    await _webClient.DownloadFileTaskAsync(releaseAsset.BrowserDownloadUrl, path);
                     OnNewTask?.Invoke(this, "Extracting files");
                     ZipFile.ExtractToDirectory(path, userprofile.EliteVA.InstallationDirectory, true);
-                });
+                }
 
                 OnFinished?.Invoke(this, EventArgs.Empty);
                 _webClient.Dispose();
@@ -89,7 +89,7 @@ namespace EliteAPI.Dashboard.Controllers.EliteVA
                 return null;
             }
         }
-        
+
         private async Task<GithubVersioningResponse> LatestVersion()
         {
             _httpClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("EliteAPI", "1.0.0"));

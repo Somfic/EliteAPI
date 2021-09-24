@@ -311,9 +311,9 @@ namespace EliteAPI.Dashboard.WebSockets.Handler
                 WebSocketReceiveResult result;
                 do
                 {
-                    var messageBuffer = WebSocket.CreateClientBuffer(16, 16);
+                    var messageBuffer = WebSocket.CreateClientBuffer(1024, 16);
                     result = await socket.ReceiveAsync(messageBuffer, CancellationToken.None);
-                    memory.Write(messageBuffer.Array ?? Array.Empty<byte>(), messageBuffer.Offset, result.Count);
+                    memory.Write(messageBuffer.Array ?? Array.Empty<byte>(), messageBuffer.Offset, messageBuffer.Count);
                 } while (!result.EndOfMessage);
 
                 // Process the received message

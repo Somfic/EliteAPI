@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using Microsoft.Win32;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Dashboard
@@ -48,6 +49,6 @@ namespace EliteAPI.Dashboard
 
         public string InstalledVersion { get; set; } = "0.0.0";
 
-        public string InstallationDirectory { get; init; } = "C:\\Program Files (x86)\\VoiceAttack\\Apps";
+        public string InstallationDirectory { get; init; } = (string) Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\VoiceAttack.com\VoiceAttack\LastRun", "AppsFolder", "C:\\Program Files (x86)\\VoiceAttack\\Apps");
     }
 }

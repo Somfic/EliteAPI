@@ -27,7 +27,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogTrace(new StatusFileNotFoundException("Could not find the Status.json file", ex), "Skipping Status.json");
+                //_log.LogTrace(new StatusFileNotFoundException("Could not find the Status.json file", ex), "Skipping Status.json");
                 return null;
             }
         }
@@ -41,7 +41,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogTrace(new MarketFileNotFoundException("Could not find the Market.json file", ex), "Skipping Market.json");
+                //_log.LogTrace(new MarketFileNotFoundException("Could not find the Market.json file", ex), "Skipping Market.json");
                 return null;
             }
         }
@@ -55,7 +55,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogTrace(new ModulesInfoFileNotFoundException("Could not find the ModulesInfo.json file", ex), "Skipping ModulesInfo.json");
+                //_log.LogTrace(new ModulesInfoFileNotFoundException("Could not find the ModulesInfo.json file", ex), "Skipping ModulesInfo.json");
                 return null;
             }
         }
@@ -69,7 +69,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogTrace(new CargoFileNotFoundException("Could not find the Cargo.json file", ex), "Skipping Cargo.json");
+                //_log.LogTrace(new CargoFileNotFoundException("Could not find the Cargo.json file", ex), "Skipping Cargo.json");
                 return null;
             }
         }
@@ -83,7 +83,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogTrace(new ShipyardFileNotFoundException("Could not find the Shipyard.json file", ex), "Skipping Shipyard.json");
+                //_log.LogTrace(new ShipyardFileNotFoundException("Could not find the Shipyard.json file", ex), "Skipping Shipyard.json");
                 return null;
             }
         }
@@ -97,7 +97,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogTrace(new OutfittingFileNotFoundException("Could not find the Outfitting.json file", ex), "Skipping Outfitting.json");
+                //_log.LogTrace(new OutfittingFileNotFoundException("Could not find the Outfitting.json file", ex), "Skipping Outfitting.json");
                 return null;
             }
         }
@@ -111,7 +111,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogTrace(new NavRouteFileNotFoundException("Could not find the NavRoute.json file", ex), "Skipping NavRoute.json");
+                //_log.LogTrace(new NavRouteFileNotFoundException("Could not find the NavRoute.json file", ex), "Skipping NavRoute.json");
                 return null;
             }
         }
@@ -125,7 +125,7 @@ namespace EliteAPI.Status.Provider
             }
             catch (Exception ex)
             {
-                _log.LogTrace(new BackpackFileNotFoundException("Could not find the Backpack.json file", ex), "Skipping Backpack.json");
+                //_log.LogTrace(new BackpackFileNotFoundException("Could not find the Backpack.json file", ex), "Skipping Backpack.json");
                 return null;
             }
         }

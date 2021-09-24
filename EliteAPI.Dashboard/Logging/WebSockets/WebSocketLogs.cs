@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 
-namespace EliteAPI.Dashboard.WebSockets.Logging
+namespace EliteAPI.Dashboard.Logging.WebSockets
 {
     public static class WebSocketLogs
     {

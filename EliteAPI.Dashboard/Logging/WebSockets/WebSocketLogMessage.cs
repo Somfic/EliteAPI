@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Logging;
 
-namespace EliteAPI.Dashboard.WebSockets.Logging
+namespace EliteAPI.Dashboard.Logging.WebSockets
 {
     public readonly struct WebSocketLogMessage
     {

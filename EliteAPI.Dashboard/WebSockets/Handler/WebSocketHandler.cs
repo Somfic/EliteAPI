@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using EliteAPI.Abstractions;
 using EliteAPI.Dashboard.Controllers.EliteVA;
-using EliteAPI.Dashboard.WebSockets.Logging;
+using EliteAPI.Dashboard.Logging.WebSockets;
 using EliteAPI.Dashboard.WebSockets.Message;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;

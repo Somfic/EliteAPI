@@ -1,13 +1,16 @@
+using System;
 using System.Collections;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using ElectronNET.API;
 using EliteAPI.Abstractions;
 using EliteAPI.Dashboard.Controllers.EliteVA;
+using EliteAPI.Dashboard.Logging.File;
+using EliteAPI.Dashboard.Logging.WebSockets;
 using EliteAPI.Dashboard.Models;
 using EliteAPI.Dashboard.Services;
 using EliteAPI.Dashboard.WebSockets.Handler;
-using EliteAPI.Dashboard.WebSockets.Logging;
 using EliteAPI.Dashboard.WebSockets.Message;
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Status.Abstractions;
@@ -53,15 +56,14 @@ namespace EliteAPI.Dashboard
             _api.Backpack.OnChange += async (sender, e) => await Broadcast("Backpack", _api.Backpack, true, true);
             
             // Sub to options
-            _api.Bindings.OnChange += async (sender, e) => await _socketHandler.Broadcast(new WebSocketMessage("Bindings", _api.Bindings.ToXml()), true, true);
+            _api.Bindings.OnChange += async (sender, e) => await _socketHandler.Broadcast(new WebSocketMessage("Bindings", RemoveLineEndings(_api.Bindings.ToXml())), true, true);
 
             // Send userprofile
             await _socketHandler.Broadcast(new WebSocketMessage("UserProfile", UserProfile.Get()), true, true);
             
             // Send latest eliteva version
             await _socketHandler.Broadcast(new WebSocketMessage("EliteVA.Latest", await _eliteVaInstaller.GetLatestVersion()), true, true);
-
-
+            
             await _api.StartAsync();
             await host.RunAsync();
         }
@@ -103,10 +105,11 @@ namespace EliteAPI.Dashboard
                 .ConfigureLogging(logger =>
                 {
                     logger.ClearProviders();
-                    logger.SetMinimumLevel(LogLevel.Debug);
+                    logger.SetMinimumLevel(LogLevel.Trace);
                     // logger.AddPrettyConsole(ConsoleFormats.Default, ConsoleThemes.Vanilla);
                     logger.AddSimpleConsole();
                     logger.AddWebSocketLogger();
+                    logger.AddFile("EliteAPI-Hub", Path.Combine(UserProfile.SaveFolderPath, "Logs"));
                 })
                 .ConfigureAppConfiguration(config => { config.AddIniFile("EliteAPI.ini", true, true); })
                 .ConfigureWebHostDefaults(webBuilder =>
@@ -114,5 +117,21 @@ namespace EliteAPI.Dashboard
                     webBuilder.UseElectron(args);
                     webBuilder.UseStartup<Startup>();
                 });
+        
+        private static string RemoveLineEndings(string value)
+        {
+            if(String.IsNullOrEmpty(value))
+            {
+                return value;
+            }
+            string lineSeparator = ((char) 0x2028).ToString();
+            string paragraphSeparator = ((char)0x2029).ToString();
+
+            return value.Replace("\r\n", string.Empty)
+                .Replace("\n", string.Empty)
+                .Replace("\r", string.Empty)
+                .Replace(lineSeparator, string.Empty)
+                .Replace(paragraphSeparator, string.Empty);
+        }
     }
 }

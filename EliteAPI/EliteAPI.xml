@@ -1043,6 +1043,11 @@
             The active keybindings
             </summary>
         </member>
+        <member name="M:EliteAPI.Options.Bindings.Models.IBindings.ToXml">
+            <summary>
+            Converts the Bindings to XML format
+            </summary>
+        </member>
         <member name="T:EliteAPI.Options.Bindings.Bindings">
             <inheritdoc />
         </member>

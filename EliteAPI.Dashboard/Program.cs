@@ -53,7 +53,7 @@ namespace EliteAPI.Dashboard
             _api.Backpack.OnChange += async (sender, e) => await Broadcast("Backpack", _api.Backpack, true, true);
             
             // Sub to options
-            _api.Bindings.OnChange += async (sender, e) => await _socketHandler.Broadcast(new WebSocketMessage("Bindings", _api.Bindings.ToJson()), true, true);
+            _api.Bindings.OnChange += async (sender, e) => await _socketHandler.Broadcast(new WebSocketMessage("Bindings", _api.Bindings.ToXml()), true, true);
 
             // Send userprofile
             await _socketHandler.Broadcast(new WebSocketMessage("UserProfile", UserProfile.Get()), true, true);

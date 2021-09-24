@@ -47,6 +47,7 @@ namespace EliteAPI.Options.Processor
 
                 using (StringReader reader = new StringReader(content))
                 {
+                    _bindings.Raw = content;
                     _bindings.Active = (KeyBindings) serializer.Deserialize(reader);
                     _bindings.TriggerOnChange();
                 }

@@ -10,6 +10,7 @@ namespace EliteAPI.Options.Bindings
     public class Bindings : IBindings
     {
         private KeyBindings _active;
+        private string _raw;
 
         public Bindings()
         {
@@ -33,6 +34,17 @@ namespace EliteAPI.Options.Bindings
         {
             get => _active;
             set => _active = value;
+        }
+
+        string IBindings.Raw
+        {
+            get => _raw;
+            set => _raw = value;
+        }
+
+        public string ToXml()
+        {
+            return this._raw;
         }
     }
 }

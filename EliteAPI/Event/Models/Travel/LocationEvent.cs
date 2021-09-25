@@ -166,16 +166,16 @@ namespace EliteAPI.Event.Models
             public double MyReputation { get; private set; }
 
             [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
-            public IReadOnlyList<FactionState> ActiveStates { get; private set; }
+            public IReadOnlyList<FactionStateInfo> ActiveStates { get; private set; }
 
             [JsonProperty("RecoveringStates", NullValueHandling = NullValueHandling.Ignore)]
-            public IReadOnlyList<FactionState> RecoveringStates { get; private set; }
+            public IReadOnlyList<FactionStateInfo> RecoveringStates { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class FactionState
+        public class FactionStateInfo
         {
-            internal FactionState() { }
+            internal FactionStateInfo() { }
 
             [JsonProperty("State")]
             public string State { get; private set; }

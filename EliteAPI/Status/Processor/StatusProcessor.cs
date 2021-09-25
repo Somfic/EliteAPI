@@ -151,6 +151,7 @@ namespace EliteAPI.Status.Processor
                 UpdateStatusProperty(_ship.FireGroup, raw.FireGroup, "Ship.FireGroup");
                 UpdateStatusProperty(_ship.GuiFocus, raw.GuiFocus, "Ship.GuiFocus");
                 UpdateStatusProperty(_ship.Fuel, raw.Fuel, "Ship.Fuel");
+                UpdateStatusProperty(_ship.Destination, raw.Destination, "Ship.Destination");
                 UpdateStatusProperty(_ship.Cargo, raw.Cargo, "Ship.Cargo");
                 UpdateStatusProperty(_ship.LegalState, raw.LegalState, "Ship.LegalState");
                 UpdateStatusProperty(_ship.Latitude, raw.Latitude, "Ship.Latitude");

@@ -20,6 +20,12 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("SystemAddress")]
         public string SystemAddress { get; private set; }
+        
+        [JsonProperty("Taxi")]
+        public bool IsTaxi { get; private set; }
+
+        [JsonProperty("Multicrew")]
+        public bool IsMulticrew { get; private set; }
     }
 
 }

@@ -23,6 +23,12 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("MarketID")]
         public string MarketId { get; private set; }
+        
+        [JsonProperty("Taxi")]
+        public bool IsTaxi { get; private set; }
+
+        [JsonProperty("Multicrew")]
+        public bool IsMulticrew { get; private set; }
     }
 
 }

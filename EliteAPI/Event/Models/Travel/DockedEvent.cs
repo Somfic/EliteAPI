@@ -61,6 +61,30 @@ namespace EliteAPI.Event.Models
         [JsonProperty("ActiveFine")]
         public bool HasActiveFine { get; private set; }
 
+        [JsonProperty("Taxi")]
+        public bool IsTaxi { get; private set; }
+
+        [JsonProperty("Multicrew")]
+        public bool IsMulticrew { get; private set; }
+        
+        [JsonProperty("LandingPads")]
+        public LandingPadsInfo LandingPads { get; private set; }
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class LandingPadsInfo
+        {
+            internal LandingPadsInfo() { }
+           
+            [JsonProperty("Small")]
+            public int Small { get; private set; }
+           
+            [JsonProperty("Medium")]
+            public int Medium { get; private set; }
+           
+            [JsonProperty("Large")]
+            public int Large { get; private set; }
+        }
+
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class StationEconomyInfo
         {

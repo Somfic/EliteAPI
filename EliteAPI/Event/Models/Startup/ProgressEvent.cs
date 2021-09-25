@@ -29,6 +29,12 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Federation")]
         public long Federation { get; private set; }
+        
+        [JsonProperty("Soldier")]
+        public long Soldier { get; private set; }
+
+        [JsonProperty("Exobiologist")]
+        public long Exobiologist { get; private set; }
 
         [JsonProperty("CQC")]
         public long Cqc { get; private set; }

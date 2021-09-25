@@ -26,6 +26,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("build")]
         public string Build { get; private set; }
+
+        [JsonProperty("Odyssey")]
+        public bool IsOdyssey { get; private set; }
     }
 
 }

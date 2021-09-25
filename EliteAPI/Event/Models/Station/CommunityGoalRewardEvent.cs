@@ -23,6 +23,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Reward")]
         public long Reward { get; private set; }
+        
+        [JsonProperty("CGID")]
+        public string Id { get; private set; }
     }
 
 }

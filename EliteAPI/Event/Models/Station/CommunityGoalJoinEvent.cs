@@ -20,6 +20,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("System")]
         public string System { get; private set; }
+
+        [JsonProperty("CGID")]
+        public string Id { get; private set; }
     }
 
 }

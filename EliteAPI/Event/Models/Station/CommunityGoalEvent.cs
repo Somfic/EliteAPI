@@ -26,7 +26,7 @@ namespace EliteAPI.Event.Models
             internal CurrentGoalInfo() { }
 
             [JsonProperty("CGID")]
-            public string CgId { get; private set; }
+            public string Id { get; private set; }
 
             [JsonProperty("Title")]
             public string Title { get; private set; }

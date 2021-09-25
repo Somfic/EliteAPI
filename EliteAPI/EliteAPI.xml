@@ -1640,6 +1640,11 @@
             The radius of the currently visiting body
             </summary>
         </member>
+        <member name="P:EliteAPI.Status.Ship.Abstractions.IShip.Destination">
+            <summary>
+            The destination of the ship
+            </summary>
+        </member>
         <member name="P:EliteAPI.Status.Ship.JsonConverters.DecimalToIntConverter.CanRead">
             <inheritdoc />
         </member>
@@ -1757,6 +1762,9 @@
         <member name="P:EliteAPI.Status.Ship.Ship.SrvHighBeam">
             <inheritdoc />
         </member>
+        <member name="P:EliteAPI.Status.Ship.Ship.Destination">
+            <inheritdoc />
+        </member>
         <member name="P:EliteAPI.Status.Ship.Ship.Pips">
             <inheritdoc />
         </member>
@@ -1792,6 +1800,11 @@
         </member>
         <member name="P:EliteAPI.Status.Ship.Ship.BodyRadius">
             <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Status.Ship.ShipDestination">
+            <summary>
+            Container class for information about the ship's destination
+            </summary>
         </member>
         <member name="T:EliteAPI.Status.Ship.ShipFuel">
             <summary>

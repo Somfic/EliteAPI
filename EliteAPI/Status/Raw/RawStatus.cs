@@ -97,7 +97,13 @@ namespace EliteAPI.Status.Raw
 
         [JsonProperty("BodyName")]
         public string Body { get; private set; } = string.Empty;
-
+        
+        [JsonProperty("Balance")]
+        public long Balance { get; private set; }
+        
+        [JsonProperty("Destination")]
+        public ShipDestination Destination { get; private set; }
+        
         [JsonProperty("PlanetRadius")]
         public float BodyRadius { get; private set; }
         

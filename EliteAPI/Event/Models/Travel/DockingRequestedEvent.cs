@@ -23,6 +23,24 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("StationType")]
         public string StationType { get; private set; }
+        
+        [JsonProperty("LandingPads")]
+        public LandingPadsInfo LandingPads { get; private set; }
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class LandingPadsInfo
+        {
+            internal LandingPadsInfo() { }
+           
+            [JsonProperty("Small")]
+            public int Small { get; private set; }
+           
+            [JsonProperty("Medium")]
+            public int Medium { get; private set; }
+           
+            [JsonProperty("Large")]
+            public int Large { get; private set; }
+        }
     }
 
 }

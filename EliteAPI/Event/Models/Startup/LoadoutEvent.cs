@@ -84,6 +84,9 @@ namespace EliteAPI.Event.Models
             [JsonProperty("Priority")]
             public long Priority { get; private set; }
 
+            [JsonProperty("Value")]
+            public long Value { get; private set; }
+
             [JsonProperty("Health")]
             public double Health { get; private set; }
 
@@ -93,7 +96,7 @@ namespace EliteAPI.Event.Models
             [JsonProperty("AmmoInHopper", NullValueHandling = NullValueHandling.Ignore)]
             public long? AmmoInHopper { get; private set; }
 
-            [JsonProperty("EngineeringInfo", NullValueHandling = NullValueHandling.Ignore)]
+            [JsonProperty("Engineering", NullValueHandling = NullValueHandling.Ignore)]
             public EngineeringInfo Engineering { get; private set; }
         }
 
@@ -114,13 +117,19 @@ namespace EliteAPI.Event.Models
             [JsonProperty("BlueprintName")]
             public string BlueprintName { get; private set; }
 
+            [JsonProperty("ExperimentalEffect")]
+            public string ExperimentalEffect { get; private set; }
+
+            [JsonProperty("ExperimentalEffect_Localised")]
+            public string ExperimentalEffectLocalised { get; private set; }
+
             [JsonProperty("Level")]
             public long Level { get; private set; }
 
             [JsonProperty("Quality")]
             public double Quality { get; private set; }
 
-            [JsonProperty("Modifications")]
+            [JsonProperty("Modifiers")]
             public IReadOnlyList<ModifierInfo> Modifications { get; private set; }
         }
 

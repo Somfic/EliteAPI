@@ -112,6 +112,9 @@ namespace EliteAPI.Status.Ship
         public StatusProperty<bool> SrvHighBeam { get; } = new(false);
 
         /// <inheritdoc />
+        public StatusProperty<ShipDestination> Destination { get; } = new(new ShipDestination());
+        
+        /// <inheritdoc />
         public StatusProperty<ShipPips> Pips { get; } = new(new ShipPips(new[] {0, 0, 0}));
 
         /// <inheritdoc />

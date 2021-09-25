@@ -326,7 +326,7 @@ namespace EliteAPI
             }
             catch (Exception ex)
             {
-                _log.LogWarning(ex, "Could not execute event");
+                _log.LogWarning(ex, "Could not execute event for '{Name}'", e.Json);
             }
         }
 

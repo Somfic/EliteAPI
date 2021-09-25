@@ -237,5 +237,10 @@ namespace EliteAPI.Status.Ship.Abstractions
         /// The radius of the currently visiting body
         /// </summary>
         StatusProperty<float> BodyRadius { get; }
+
+        /// <summary>
+        /// The destination of the ship
+        /// </summary>
+        StatusProperty<ShipDestination> Destination { get; }
     }
 }

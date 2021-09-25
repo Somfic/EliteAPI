@@ -53,7 +53,16 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("GameMode")]
         public string GameMode { get; private set; }
-
+        
+        [JsonProperty("language")]
+        public string Language { get; private set; }
+                
+        [JsonProperty("gameversion")]
+        public string GameVersion { get; private set; }
+        
+        [JsonProperty("build")]
+        public string Build { get; private set; }
+        
         [JsonProperty("Credits")]
         public long Credits { get; private set; }
 

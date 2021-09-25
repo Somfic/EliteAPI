@@ -62,6 +62,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("TG_ENCOUNTERS")]
         public TgEncountersInfo TgEncounters { get; private set; }
+        
+        [JsonProperty("Exobiology")]
+        public ExobiologyInfo Exobiology { get; private set; }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class BankAccountInfo
@@ -82,6 +85,27 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Spent_On_Fuel")]
             public long SpentOnFuel { get; private set; }
+
+            [JsonProperty("Spent_On_Suits")]
+            public long SpentOnSuits { get; private set; }
+            
+            [JsonProperty("Spent_On_Weapons")]
+            public long SpentOnWeapons { get; private set; }     
+            
+            [JsonProperty("Spent_On_Suit_Consumables")]
+            public long SpentOnSuitConsumables { get; private set; }
+            
+            [JsonProperty("Suits_Owned")]
+            public long SuitsOwned { get; private set; }
+            
+            [JsonProperty("Weapons_Owned")]
+            public long WeaponsOwned { get; private set; }
+
+            [JsonProperty("Spent_On_Premium_Stock")]
+            public long SpentOnPremiumStock { get; private set; }
+            
+            [JsonProperty("Premium_Stock_Bought")]
+            public long PremiumStockBought { get; private set; }
 
             [JsonProperty("Spent_On_Ammo_Consumables")]
             public long SpentOnAmmoConsumables { get; private set; }
@@ -124,6 +148,63 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Skimmers_Killed")]
             public long SkimmersKilled { get; private set; }
+            
+            [JsonProperty("OnFoot_Combat_Bonds")]
+            public long OnFootCombatBonds { get; private set; }
+            
+            [JsonProperty("OnFoot_Combat_Bonds_Profits")]
+            public long OnFootCombatBondsProfits { get; private set; }
+
+            [JsonProperty("OnFoot_Vehicles_Destroyed")]
+            public long OnFootVehiclesDestroyed { get; private set; }
+
+            [JsonProperty("OnFoot_Ships_Destroyed")]
+            public long OnFootShipsDestroyed { get; private set; }
+
+            [JsonProperty("Dropships_Taken")]
+            public long DropshipsTaken { get; private set; }
+
+            [JsonProperty("Dropships_Booked")]
+            public long DropshipsBooked { get; private set; }
+            
+            [JsonProperty("Dropships_Cancelled")]
+            public long DropshipsCancelled { get; private set; }
+            
+            [JsonProperty("ConflictZone_High")]
+            public long ConflictZoneHigh { get; private set; }
+            
+            [JsonProperty("ConflictZone_Medium")]
+            public long ConflictZoneMedium { get; private set; }
+
+            [JsonProperty("ConflictZone_Low")]
+            public long ConflictZoneLow { get; private set; }
+            
+            [JsonProperty("ConflictZone_Total")]
+            public long ConflictZoneTotal { get; private set; }
+
+            [JsonProperty("ConflictZone_High_Wins")]
+            public long ConflictZoneHighWins { get; private set; }
+
+            [JsonProperty("ConflictZone_Medium_Wins")]
+            public long ConflictZoneMediumWins { get; private set; }
+
+            [JsonProperty("ConflictZone_Low_Wins")]
+            public long ConflictZoneLowWins { get; private set; }
+            
+            [JsonProperty("ConflictZone_Total_Wins")]
+            public long ConflictZoneTotalWins { get; private set; }
+            
+            [JsonProperty("Settlement_Defended")]
+            public long SettlementsDefended { get; private set; }
+
+            [JsonProperty("Settlement_Conquered")]
+            public long SettlementsConquered { get; private set; }
+
+            [JsonProperty("OnFoot_Skimmers_Killed")]
+            public long OnFootSkimmersKilled  { get; private set; }
+            
+            [JsonProperty("OnFoot_Scavs_Killed")]
+            public long OnFootScavsKilled  { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -194,6 +275,30 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Recipes_Generated_Rank_5")]
             public long RecipesGeneratedRank5 { get; private set; }
+            
+            [JsonProperty("Suit_Mods_Applied")]
+            public long SuitModsApplied { get; private set; }
+            
+            [JsonProperty("Weapon_Mods_Applied")]
+            public long WeaponModsApplied { get; private set; }
+            
+            [JsonProperty("Suits_Upgraded")]
+            public long SuitsUpgraded { get; private set; }
+            
+            [JsonProperty("Weapons_Upgraded")]
+            public long WeaponsUpgraded { get; private set; }
+            
+            [JsonProperty("Suits_Upgraded_Full")]
+            public long SuitsFullyUpgraded { get; private set; }
+            
+            [JsonProperty("Weapons_Upgraded_Full")]
+            public long WeaponsFullyUpgraded { get; private set; }
+            
+            [JsonProperty("Suit_Mods_Applied_Full")]
+            public long SuitModsFullyApplied { get; private set; }
+            
+            [JsonProperty("Weapon_Mods_Applied_Full")]
+            public long WeaponModsFullyApplied { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -236,6 +341,57 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Highest_Bounty")]
             public long HighestBounty { get; private set; }
+
+            [JsonProperty("Malware_Uploaded")]
+            public long MalwareUploaded { get; private set; }
+
+            [JsonProperty("Settlements_State_Shutdown")]
+            public long SettlementsStateShutdown { get; private set; }
+            
+            [JsonProperty("Production_Sabotage")]
+            public long ProductionSabotage { get; private set; }
+            
+            [JsonProperty("Production_Theft")]
+            public long ProductionTheft { get; private set; }
+            
+            [JsonProperty("Total_Murders")]
+            public long TotalMurders { get; private set; }
+            
+            [JsonProperty("Citizens_Murdered")]
+            public long CitizensMurdered { get; private set; }
+            
+            [JsonProperty("Omnipol_Murdered")]
+            public long OmnipolMurdered { get; private set; }
+            
+            [JsonProperty("Guards_Murdered")]
+            public long GuardsMurdered { get; private set; }
+            
+            [JsonProperty("Data_Stolen")]
+            public long DataStolen { get; private set; }
+            
+            [JsonProperty("Goods_Stolen")]
+            public long GoodsStolen { get; private set; }
+            
+            [JsonProperty("Sample_Stolen")]
+            public long SamplesStolen  { get; private set; }
+            
+            [JsonProperty("Total_Stolen")]
+            public long TotalStolen { get; private set; }
+              
+            [JsonProperty("Turrets_Destroyed")]
+            public long TurretsDestroyed  { get; private set; }
+            
+            [JsonProperty("Turrets_Overloaded")]
+            public long TurretsOverloaded { get; private set; }
+            
+            [JsonProperty("Turrets_Total")]
+            public long TurrentsTotal { get; private set; }
+            
+            [JsonProperty("Value_Stolen_StateChange")]
+            public long ValueStolenStateChange { get; private set; }
+            
+            [JsonProperty("Profiles_Cloned")]
+            public long ProfilesCloned { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -272,6 +428,27 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Time_Played")]
             public long TimePlayed { get; private set; }
+
+            [JsonProperty("Shuttle_Journeys")]
+            public long ShuttleJourneys { get; private set; }
+
+            [JsonProperty("Shuttle_Distance_Travelled")]
+            public long ShuttleDistanceTravelled { get; private set; }
+
+            [JsonProperty("Spent_On_Shuttles")]
+            public long SpentOnShuttles { get; private set; }
+
+            [JsonProperty("First_Footfalls")]
+            public long FirstFootfalls { get; private set; }
+
+            [JsonProperty("Planet_Footfalls")]
+            public long PlanetFootfalls { get; private set; }
+
+            [JsonProperty("Settlements_Visited")]
+            public long SettlementsVisited { get; private set; }
+            
+            [JsonProperty("OnFoot_Distance_Travelled")]
+            public long DistanceTravelledOnFoot { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -365,6 +542,12 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Grade_5_Materials_Traded")]
             public long Grade5Traded { get; private set; }
+            
+            [JsonProperty("Assets_Traded_In")]
+            public long AssetsTradedIn { get; private set; }
+            
+            [JsonProperty("Assets_Traded_Out")]
+            public long AssetsTradedOut { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -440,6 +623,30 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("SearchRescue_Count")]
             public long SearchRescueCount { get; private set; }
+
+            [JsonProperty("Salvage_Legal_POI")]
+            public long SalvagedLegalPointOfInterest { get; private set; }
+
+            [JsonProperty("Salvage_Legal_Settlements")]
+            public long SalvagedLegalSettlements { get; private set; }
+
+            [JsonProperty("Salvage_Illegal_POI")]
+            public long SalvagedIllegalPointOfInterest { get; private set; }
+            
+            [JsonProperty("Salvage_Illegal_Settlements")]
+            public long SalvagedIllegalSettlements { get; private set; }
+            
+            [JsonProperty("Maglocks_Opened")]
+            public long MagneticLocksOpened { get; private set; }
+            
+            [JsonProperty("Panels_Opened")]
+            public long PanelsOpened { get; private set; }
+            
+            [JsonProperty("Settlements_State_FireOut")]
+            public long SettlementsStateFireOut { get; private set; }
+            
+            [JsonProperty("Settlements_State_Reboot")]
+            public long SettlementsStateReboot { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -482,6 +689,57 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Highest_Single_Transaction")]
             public long HighestSingleTransaction { get; private set; }
+            
+            [JsonProperty("Data_Sold")]
+            public long DataSold { get; private set; }
+            
+            [JsonProperty("Goods_Sold")]
+            public long GoodsSold { get; private set; }
+            
+            [JsonProperty("Assets_Sold")]
+            public long AssetsSold { get; private set; }
+        }
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class ExobiologyInfo
+        {
+            internal ExobiologyInfo() { }
+            
+            [JsonProperty("AssOrganic_Genus_Encountered")]
+            public long AssOrganicGenusEncountered { get; private set; }
+            
+            [JsonProperty("Organic_Genus_Encountered")]
+            public long OrganicGenusEncountered { get; private set; }
+            
+            [JsonProperty("Organic_Species_Encountered")]
+            public long OrganicSpeciesEncountered { get; private set; }
+            
+            [JsonProperty("Organic_Variant_Encountered")]
+            public long OrganicVariantsEncountered { get; private set; }
+            
+            [JsonProperty("Organic_Data_Profits")]
+            public long OrganicDataProfits { get; private set; }
+            
+            [JsonProperty("Organic_Data")]
+            public long OrganicData { get; private set; }
+            
+            [JsonProperty("First_Logged_Profits")]
+            public long FirstLoggedProfits { get; private set; }
+            
+            [JsonProperty("First_Logged")]
+            public long FirstLogged { get; private set; }
+            
+            [JsonProperty("Organic_Systems")]
+            public long OrganicSystems { get; private set; }
+            
+            [JsonProperty("Organic_Planets")]
+            public long OrganicPlanets { get; private set; }
+            
+            [JsonProperty("Organic_Genus")]
+            public long OrganicGenus { get; private set; }
+              
+            [JsonProperty("Organic_Species")]
+            public long Organic_Species { get; private set; }
         }
     }
 

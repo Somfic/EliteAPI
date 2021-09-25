@@ -8,9 +8,9 @@ using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
 using EliteAPI.Exceptions;
-
+using EliteAPI.Services.Variables;
+using FluentAssertions;
 using Microsoft.Extensions.Logging;
-
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -21,12 +21,14 @@ namespace EliteAPI.Event.Provider
     {
         private readonly Assembly _assembly;
         private readonly ILogger<EventProvider> _log;
+        private readonly VariablesService _variables;
 
         private IDictionary<string, Type> _cache;
 
-        public EventProvider(ILogger<EventProvider> log)
+        public EventProvider(ILogger<EventProvider> log, VariablesService variables)
         {
             _log = log;
+            _variables = variables;
             _assembly = Assembly.GetExecutingAssembly();
         }
 
@@ -37,23 +39,38 @@ namespace EliteAPI.Event.Provider
 
             JObject parsedFromGame = null;
             string eventName = null;
-            
+
             try
             {
                 _log.LogTrace(json);
-                
+
                 parsedFromGame = JsonConvert.DeserializeObject<JObject>(json);
                 eventName = ((dynamic) parsedFromGame).@event;
-                
+
                 var method = GetFromJsonMethod(eventName);
                 var gameEvent = InvokeFromJsonMethod(method, json);
+                //var parsedEliteApiEvents = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(gameEvent, new JsonSerializerSettings {ContractResolver = new JsonContractResolver()}));
+                var parsedEliteApiEvents = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(gameEvent));
+
+
+                var gameVariables = _variables.GetVariables(parsedFromGame);
+                var gamePaths = gameVariables.Select(x => x.Name).ToList();
+                
+                var eliteApiPaths = _variables.GetVariables(parsedEliteApiEvents).Select(x => x.Name).ToList();
+
+                var missing = gamePaths.Except(eliteApiPaths).ToList();
+                if (missing.Any())
+                {
+                    _log.LogWarning("{Name} event misses: {Missing}", eventName, string.Join(", " , gameVariables.Where(x => missing.Contains(x.Name)).Select(y => $"{y.Name} ({y.Type})")));
+                }
+
 
                 return Task.FromResult(gameEvent);
             }
             catch (EventNotImplementedException ex)
             {
                 ex.Data.Add("Json", json);
-                
+
                 _log.LogDebug(ex, "{Event} event not yet implemented", eventName);
                 return Task.FromResult(new NotImplementedEvent(json, parsedFromGame) as IEvent);
             }
@@ -72,7 +89,8 @@ namespace EliteAPI.Event.Provider
         {
             _cache = new ConcurrentDictionary<string, Type>();
 
-            foreach (var eventType in GetAllEventTypes(typeof(EventHandler))) _cache.Add(eventType.Name.Replace("Event", "").ToUpper(), eventType);
+            foreach (var eventType in GetAllEventTypes(typeof(EventHandler)))
+                _cache.Add(eventType.Name.Replace("Event", "").ToUpper(), eventType);
 
             return Task.CompletedTask;
         }
@@ -89,10 +107,15 @@ namespace EliteAPI.Event.Provider
         {
             try
             {
-                if (!_cache.ContainsKey(eventName.ToUpper())) { throw new EventNotImplementedException($"The {eventName} event is not implemented"); }
+                if (!_cache.ContainsKey(eventName.ToUpper()))
+                {
+                    throw new EventNotImplementedException($"The {eventName} event is not implemented");
+                }
 
                 var type = _cache[eventName.ToUpper()];
-                var method = type.BaseType?.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance).First(x => x.Name == "FromJson");
+                var method = type.BaseType
+                    ?.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static |
+                                 BindingFlags.Instance).First(x => x.Name == "FromJson");
 
                 if (method == null)
                 {
@@ -101,8 +124,10 @@ namespace EliteAPI.Event.Provider
 
                 return method;
             }
-            catch (Exception ex) { throw new EventNotImplementedException($"The {eventName} event is not correctly implemented", ex); }
-
+            catch (Exception ex)
+            {
+                throw new EventNotImplementedException($"The {eventName} event is not correctly implemented", ex);
+            }
         }
 
         private IEvent InvokeFromJsonMethod(MethodBase method, string json)

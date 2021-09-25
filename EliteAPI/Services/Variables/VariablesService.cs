@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using EliteAPI.Dashboard.Controllers.EliteVA;
-using EliteAPI.Dashboard.Models;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace EliteAPI.Dashboard.Services
+namespace EliteAPI.Services.Variables
 {
-    public class VariableService
+    public class VariablesService
     {
-        private readonly ILogger<VariableService> _log;
+        private readonly ILogger<VariablesService> _log;
 
-        public VariableService(ILogger<VariableService> log)
+        public VariablesService(ILogger<VariablesService> log)
         {
             _log = log;
         }

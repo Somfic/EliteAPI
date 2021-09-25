@@ -1,12 +1,10 @@
 using System;
-using System.Linq;
 using System.Threading.Tasks;
 using ElectronNET.API;
 using ElectronNET.API.Entities;
-using EliteAPI.Dashboard.Controllers;
 using EliteAPI.Dashboard.Controllers.EliteVA;
-using EliteAPI.Dashboard.Services;
 using EliteAPI.Dashboard.WebSockets;
+using EliteAPI.Services.Variables;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -38,7 +36,7 @@ namespace EliteAPI.Dashboard
             services.AddElectron();
 
             // Variable service
-            services.AddTransient<VariableService>();
+            services.AddTransient<VariablesService>();
             services.AddSingleton<EliteVaInstaller>();
 
             Task.Run(async () =>

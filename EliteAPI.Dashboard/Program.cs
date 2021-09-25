@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,12 +7,9 @@ using EliteAPI.Abstractions;
 using EliteAPI.Dashboard.Controllers.EliteVA;
 using EliteAPI.Dashboard.Logging.File;
 using EliteAPI.Dashboard.Logging.WebSockets;
-using EliteAPI.Dashboard.Models;
-using EliteAPI.Dashboard.Services;
 using EliteAPI.Dashboard.WebSockets.Handler;
 using EliteAPI.Dashboard.WebSockets.Message;
-using EliteAPI.Event.Models.Abstractions;
-using EliteAPI.Status.Abstractions;
+using EliteAPI.Services.Variables;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,7 +22,7 @@ namespace EliteAPI.Dashboard
     {
         private static IEliteDangerousApi _api;
         private static WebSocketHandler _socketHandler;
-        private static VariableService _variableService;
+        private static VariablesService _variableService;
         private static ILogger<Program> _log;
         private static EliteVaInstaller _eliteVaInstaller;
 
@@ -36,7 +32,7 @@ namespace EliteAPI.Dashboard
             
             _api = host.Services.GetRequiredService<IEliteDangerousApi>();
             _socketHandler = host.Services.GetRequiredService<WebSocketHandler>();
-            _variableService = host.Services.GetRequiredService<VariableService>();
+            _variableService = host.Services.GetRequiredService<VariablesService>();
             _eliteVaInstaller = host.Services.GetRequiredService<EliteVaInstaller>();
             _log = host.Services.GetRequiredService<ILogger<Program>>();
 
@@ -46,7 +42,7 @@ namespace EliteAPI.Dashboard
             _api.Events.AllEvent += async (sender, e) => await Broadcast("Event", e,true, false);
 
             // Sub to statuses
-            _api.Cargo.OnChange += async (sender, e) => await Broadcast("Cargo",_api.Cargo, true, true);
+            _api.Cargo.OnChange += async (sender, e) => await Broadcast("Cargo", _api.Cargo, true, true);
             _api.Market.OnChange += async (sender, e) => await Broadcast("Market", _api.Market, true, true);
             _api.Modules.OnChange += async (sender, e) => await Broadcast("Modules", _api.Modules, true, true);
             _api.Outfitting.OnChange += async (sender, e) => await Broadcast("Outfitting", _api.Outfitting, true, true);

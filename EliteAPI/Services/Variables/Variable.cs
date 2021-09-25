@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace EliteAPI.Dashboard.Models
+namespace EliteAPI.Services.Variables
 {
     public class Variable
     {

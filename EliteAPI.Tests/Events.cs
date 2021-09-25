@@ -10,7 +10,7 @@ using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Provider;
 using EliteAPI.Event.Provider.Abstractions;
 using EliteAPI.Options.Bindings;
-
+using EliteAPI.Services.Variables;
 using FluentAssertions;
 
 using Microsoft.Extensions.Logging;
@@ -95,7 +95,7 @@ namespace EliteAPI.Tests
 
             foreach (var json in entry.jsons)
             {
-                IEventProvider provider = new EventProvider(Mock.Of<ILogger<EventProvider>>());
+                IEventProvider provider = new EventProvider(Mock.Of<ILogger<EventProvider>>(), Mock.Of<VariablesService>());
 
                 var startWith = await provider.ProcessJsonEvent(json);
 
@@ -122,7 +122,7 @@ namespace EliteAPI.Tests
 
             foreach (var json in entry.jsons)
             {
-                IEventProvider provider = new EventProvider(Mock.Of<ILogger<EventProvider>>());
+                IEventProvider provider = new EventProvider(Mock.Of<ILogger<EventProvider>>(), Mock.Of<VariablesService>());
 
                 var parsedEvent = await provider.ProcessJsonEvent(json);
 

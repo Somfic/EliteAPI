@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
+using EliteAPI.Services.Variables;
 
 namespace EliteAPI.Dashboard.Models
 {

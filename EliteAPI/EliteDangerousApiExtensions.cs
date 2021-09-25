@@ -20,6 +20,7 @@ using EliteAPI.Options.Provider;
 using EliteAPI.Options.Provider.Abstractions;
 using EliteAPI.Services.FileReader;
 using EliteAPI.Services.FileReader.Abstractions;
+using EliteAPI.Services.Variables;
 using EliteAPI.Status.Backpack;
 using EliteAPI.Status.Backpack.Abstractions;
 using EliteAPI.Status.Cargo;
@@ -94,6 +95,7 @@ namespace EliteAPI
 
             // Util
             services.AddTransient<IFileReader, FileReader>();
+            services.AddTransient<VariablesService>();
 
             return services;
         }

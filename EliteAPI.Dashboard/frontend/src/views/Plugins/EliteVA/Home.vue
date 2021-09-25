@@ -1,5 +1,5 @@
 <template>
-  <TitleBar title="EliteVA" :to="{name: 'Plugins'}"/>
+  <TitleBar title="EliteVA" :to="{name: 'Home'}"/>
   <div class="links-wrapper">
     <div class="links" :class="{hidden: hidden}">
       <div class="link-wrapper big">

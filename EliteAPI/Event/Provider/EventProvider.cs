@@ -9,7 +9,6 @@ using EliteAPI.Event.Models.Abstractions;
 using EliteAPI.Event.Provider.Abstractions;
 using EliteAPI.Exceptions;
 using EliteAPI.Services.Variables;
-using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;

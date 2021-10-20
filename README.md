@@ -47,7 +47,7 @@ Below is an example of how to create a host in a .NET Core environment, and how 
 
 ```cs
 using EliteAPI;
-using System.Threading.Tasks;
+using EliteAPI.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 ```
@@ -64,7 +64,7 @@ private static async Task Main(string[] args) {
           .Build();
 
      // Get the EliteDangerousAPI api object
-     var api = Host.Services.GetService<IEliteDangerousAPI>();
+     var api = host.Services.GetService<IEliteDangerousApi>();
      
      // Start the api
      await api.StartAsync();

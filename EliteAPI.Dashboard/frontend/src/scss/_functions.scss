@@ -1,8 +1,0 @@
-@function based-background($bg, $light, $dark) {
-  @if (lightness($bg) > 50) {
-    @return $light;
-  } 
-  @else {
-    @return $dark;
-  }
-}

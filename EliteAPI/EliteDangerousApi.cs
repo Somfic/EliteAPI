@@ -1,481 +1,91 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using EliteAPI.Abstractions;
-using EliteAPI.Configuration.Abstractions;
-using EliteAPI.Event.Processor.Abstractions;
-using EliteAPI.Event.Provider.Abstractions;
-using EliteAPI.Exceptions;
-using EliteAPI.Journal.Directory.Abstractions;
-using EliteAPI.Journal.Processor.Abstractions;
-using EliteAPI.Journal.Provider.Abstractions;
-using EliteAPI.Options.Bindings.Models;
-using EliteAPI.Options.Directory.Abstractions;
-using EliteAPI.Options.Processor.Abstractions;
-using EliteAPI.Options.Provider.Abstractions;
-using EliteAPI.Status.Backpack.Abstractions;
-using EliteAPI.Status.Cargo.Abstractions;
-using EliteAPI.Status.Commander.Abstractions;
-using EliteAPI.Status.Market.Abstractions;
-using EliteAPI.Status.Modules.Abstractions;
-using EliteAPI.Status.NavRoute.Abstractions;
-using EliteAPI.Status.Outfitting.Abstractions;
-using EliteAPI.Status.Processor.Abstractions;
-using EliteAPI.Status.Provider.Abstractions;
-using EliteAPI.Status.Ship.Abstractions;
-using EliteAPI.Status.Shipyard.Abstractions;
-using Microsoft.Extensions.Configuration;
+using EliteAPI.Abstractions.Configuration;
+using EliteAPI.Abstractions.Events;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using EventHandler = EliteAPI.Event.Handler.EventHandler;
 
-namespace EliteAPI
+namespace EliteAPI;
+
+/// <inheritdoc />
+public class EliteDangerousApi : IEliteDangerousApi
 {
-    [Obsolete("Use EliteDangerousApi instead", true)]
-    public class EliteDangerousAPI
+    private readonly IEliteDangerousApiConfiguration _config;
+    private readonly ILogger<EliteDangerousApi>? _log;
+
+    private DirectoryInfo _journalsDirectory;
+    private DirectoryInfo _optionsDirectory;
+
+    /// <summary>Creates a new instance of the EliteDangerousApi class.</summary>
+    public EliteDangerousApi(IServiceProvider services)
     {
+        _log = services.GetService<ILogger<EliteDangerousApi>>();
+        _config = services.GetRequiredService<IEliteDangerousApiConfiguration>();
+        Events = services.GetRequiredService<IEvents>();
+    }
+
+    public async Task InitialiseAsync()
+    {
+        _log?.LogDebug("Initialising EliteAPI v{Version}", typeof(EliteDangerousApi).Assembly.GetName().Version);
+        Events.Register();
     }
 
     /// <inheritdoc />
-    public class EliteDangerousApi : IEliteDangerousApi
+    public async Task StartAsync()
     {
-        private readonly IEliteDangerousApiConfiguration _codeConfig;
-        private readonly IConfiguration _config;
-
-        private readonly IEnumerable<IEventProcessor> _eventProcessors;
-
-        private readonly IEventProvider _eventProvider;
-
-        private readonly IJournalDirectoryProvider _journalDirectoryProvider;
-        private readonly IJournalProcessor _journalProcessor;
-        private readonly IJournalProvider _journalProvider;
-
-        private readonly ILogger<EliteDangerousApi> _log;
-        private readonly IStatusProcessor _statusProcessor;
-        private readonly IStatusProvider _statusProvider;
-
-        private readonly IOptionsDirectoryProvider _optionsDirectoryProvider;
-        private readonly IOptionsProvider _optionsProvider;
-        private readonly IOptionsProcessor _optionsProcessor;
-
-        /// <summary>
-        /// Creates a new EliteDangerousAPI class
-        /// </summary>
-        /// <param name="services"> ServiceProvider </param>
-        public EliteDangerousApi(IServiceProvider services)
+        try
         {
-            try
+            _log?.LogInformation("Starting EliteAPI v{Version}", typeof(EliteDangerousApi).Assembly.GetName().Version);
+
+            _config.Apply();
+
+            _journalsDirectory = new DirectoryInfo(_config.JournalsPath);
+            _optionsDirectory = new DirectoryInfo(_config.OptionsPath);
+
+            var missingDirectories = new[] {_journalsDirectory, _optionsDirectory}.Where(d => !d.Exists).ToList();
+
+            if (missingDirectories.Any())
             {
-                _log = services.GetRequiredService<ILogger<EliteDangerousApi>>();
+                var ex = new DirectoryNotFoundException("Could not find necessary Elite: Dangerous directories");
+                ex.Data.Add("DirectoryPaths", missingDirectories.Select(d => d.FullName).ToArray());
 
-                Events = services.GetRequiredService<EventHandler>();
-                Ship = services.GetRequiredService<IShip>();
-                Commander = services.GetRequiredService<ICommander>();
-                NavRoute = services.GetRequiredService<INavRoute>();
-                Cargo = services.GetRequiredService<ICargo>();
-                Market = services.GetRequiredService<IMarket>();
-                Modules = services.GetRequiredService<IModules>();
-                Backpack = services.GetRequiredService<IBackpack>();
-                Shipyard = services.GetRequiredService<IShipyard>();
-                Outfitting = services.GetRequiredService<IOutfitting>();
-                Bindings = services.GetRequiredService<IBindings>();
-
-                Version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                    .InformationalVersion.Split('+')[0];
-
-                _config = services.GetRequiredService<IConfiguration>();
-                _codeConfig = services.GetRequiredService<IEliteDangerousApiConfiguration>();
-
-                _eventProvider = services.GetRequiredService<IEventProvider>();
-                _eventProcessors = services.GetRequiredService<IEnumerable<IEventProcessor>>();
-
-                _journalDirectoryProvider = services.GetRequiredService<IJournalDirectoryProvider>();
-
-                _journalProvider = services.GetRequiredService<IJournalProvider>();
-                _journalProcessor = services.GetRequiredService<IJournalProcessor>();
-
-                _statusProvider = services.GetRequiredService<IStatusProvider>();
-                _statusProcessor = services.GetRequiredService<IStatusProcessor>();
-
-                _optionsDirectoryProvider = services.GetRequiredService<IOptionsDirectoryProvider>();
-                _optionsProvider = services.GetRequiredService<IOptionsProvider>();
-                _optionsProcessor = services.GetRequiredService<IOptionsProcessor>();
-            }
-            catch (Exception ex)
-            {
-                PreInitializationException = ex;
-            }
-        }
-
-        private DirectoryInfo JournalDirectory { get; set; }
-        private DirectoryInfo OptionsDirectory { get; set; }
-        private FileInfo JournalFile { get; set; }
-        private FileInfo StatusFile { get; set; }
-        private FileInfo CargoFile { get; set; }
-        private FileInfo MarketFile { get; set; }
-        private FileInfo BackpackFile { get; set; }
-        private FileInfo OutfittingFile { get; set; }
-        private FileInfo ShipyardFile { get; set; }
-        private FileInfo NavRouteFile { get; set; }
-        private FileInfo ModulesInfoFile { get; set; }
-        private FileInfo BindingsFile { get; set; }
-        private IList<string> DisabledSupportFiles { get; set; }
-        private Exception PreInitializationException { get; }
-        private Exception InitializationException { get; set; }
-
-        /// <inheritdoc />
-        public bool IsInitialized { get; private set; }
-
-        /// <inheritdoc />
-        public bool IsRunning { get; private set; }
-
-        /// <inheritdoc />
-        public bool HasCatchedUp { get; private set; }
-
-        /// <inheritdoc />
-        public string Version { get; }
-
-        /// <inheritdoc />
-        public EventHandler Events { get; }
-
-        /// <inheritdoc />
-        public IShip Ship { get; }
-
-        /// <inheritdoc />
-        public ICommander Commander { get; }
-
-        /// <inheritdoc />
-        public IBackpack Backpack { get; }
-
-        /// <inheritdoc />
-        public IShipyard Shipyard { get; }
-
-        /// <inheritdoc />
-        public INavRoute NavRoute { get; }
-
-        /// <inheritdoc />
-        public ICargo Cargo { get; }
-
-        /// <inheritdoc />
-        public IMarket Market { get; }
-
-        /// <inheritdoc />
-        public IModules Modules { get; }
-
-        /// <inheritdoc />
-        public IOutfitting Outfitting { get; }
-
-        /// <inheritdoc />
-        public IBindings Bindings { get; }
-
-        /// <inheritdoc />
-        public async Task InitializeAsync()
-        {
-            if (PreInitializationException != null)
-            {
-                _log?.LogCritical(PreInitializationException, "EliteAPI could not load required services");
-                throw PreInitializationException;
-            }
-
-            if (IsInitialized) return;
-
-            try
-            {
-                _log.LogInformation("Initializing EliteAPI v{version}", Version);
-
-                DisabledSupportFiles = new List<string>();
-
-                await CheckComputerOperatingSystem();
-                await InitializeEventHandlers();
-                await SetJournalDirectory();
-                await SetOptionsDirectory();
-                await SetJournalFile();
-                await SetSupportFiles();
-
-                _journalProcessor.NewJournalEntry += _journalProcessor_NewJournalEntry;
-
-                _log.LogDebug("EliteAPI has initialized");
-            }
-            catch (Exception ex)
-            {
-                _log.LogError(ex, "EliteAPI could not be initialized");
-                InitializationException = ex;
-            }
-
-            IsInitialized = true;
-        }
-
-        /// <inheritdoc />
-        public async Task StartAsync()
-        {
-            if (!IsInitialized) await InitializeAsync();
-
-            if (InitializationException != null)
-            {
-                _log.LogCritical(InitializationException, "EliteAPI could not be started");
-                OnError?.Invoke(this, InitializationException);
-                await StopAsync();
+                _log?.LogError(ex, "Could not find necessary directories. Please check your configuration");
                 return;
             }
 
-            IsRunning = true;
+            // Select the latest journal file
+            var journalFiles = _journalsDirectory.GetFiles(_config.JournalPattern);
+            var latestJournal = journalFiles.OrderByDescending(f => f.LastWriteTime).FirstOrDefault();
 
-            var delay = TimeSpan.FromMilliseconds(500);
-            if (_codeConfig.TickFrequency != TimeSpan.Zero) delay = _codeConfig.TickFrequency;
-
-            var task = Task.Run(async () =>
+            if (latestJournal == null)
             {
-                _log.LogInformation("EliteAPI has started");
-                OnStart?.Invoke(this, EventArgs.Empty);
+                var ex = new FileNotFoundException("Could not find any journal files with the specified pattern");
+                ex.Data.Add("Pattern", _config.JournalPattern);
 
-                if (_codeConfig.ProcessHistoricalJournals)
-                    await ProcessHistoricalJournalFiles(_codeConfig.HistoricalJournalSpan);
+                _log?.LogError(ex, "Could not find any journal files. Please check your configuration");
+                return;
+            }
 
-                while (IsRunning)
-                {
-                    await DoTick();
-                    await Task.Delay(delay);
-                }
+            _log?.LogInformation("Using {JournalFile}", latestJournal.Name);
 
-                OnStop?.Invoke(this, EventArgs.Empty);
-            });
+            // Get the latest journal file.
+            // Hook into the journal file.
+            // Start the journal file watcher.
+            // On each edit, parse the new JSON events.   
         }
-
-        /// <inheritdoc />
-        public Task StopAsync()
+        catch (Exception ex)
         {
-            _journalProcessor.NewJournalEntry -= _journalProcessor_NewJournalEntry;
-
-            IsRunning = false;
-            IsInitialized = false;
-            HasCatchedUp = false;
-
-            return Task.CompletedTask;
-        }
-
-        /// <inheritdoc />
-        public event System.EventHandler OnCatchedUp;
-
-        /// <inheritdoc />
-        public event System.EventHandler OnStart;
-
-        /// <inheritdoc />
-        public event System.EventHandler OnStop;
-
-        /// <inheritdoc />
-        public event EventHandler<Exception> OnError;
-
-        private async Task DoTick()
-        {
-            try
-            {
-                await SetSupportFiles();
-                await _statusProcessor.ProcessStatusFile(StatusFile);
-                await _statusProcessor.ProcessCargoFile(CargoFile);
-                await _statusProcessor.ProcessMarketFile(MarketFile);
-                await _statusProcessor.ProcessOutfittingFile(OutfittingFile);
-                await _statusProcessor.ProcessShipyardFile(ShipyardFile);
-                await _statusProcessor.ProcessBackpackFile(BackpackFile);
-                await _statusProcessor.ProcessNavRouteFile(NavRouteFile);
-                await _statusProcessor.ProcessModulesFile(ModulesInfoFile);
-
-                await _optionsProcessor.ProcessBindingsFile(BindingsFile);
-
-                await SetJournalFile();
-                await _journalProcessor.ProcessJournalFile(JournalFile, !HasCatchedUp);
-
-                if (!HasCatchedUp)
-                {
-                    _log.LogInformation("EliteAPI has caught up to current session");
-                    OnCatchedUp?.Invoke(this, EventArgs.Empty);
-                    HasCatchedUp = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                _log.LogWarning(ex, "Could not do tick");
-            }
-        }
-
-        private async Task InitializeEventHandlers()
-        {
-            _log.LogTrace("Initializing event handlers");
-            foreach (var eventProcessor in _eventProcessors)
-                try
-                {
-                    await eventProcessor.RegisterHandlers();
-                }
-                catch (Exception ex)
-                {
-                    _log.LogWarning(ex, "Could not initialize event handler {name}", eventProcessor.GetType().FullName);
-                    throw;
-                }
-        }
-
-        private async void _journalProcessor_NewJournalEntry(object sender, JournalEntry e)
-        {
-            try
-            {
-                var eventBase = await _eventProvider.ProcessJsonEvent(e.Json);
-                foreach (var eventProcessor in _eventProcessors)
-                    await eventProcessor.InvokeHandler(eventBase, e.IsWhileCatchingUp);
-            }
-            catch (Exception ex)
-            {
-                _log.LogWarning(ex, "Could not execute event for '{Name}'", e.Json);
-            }
-        }
-
-        private async Task SetJournalDirectory()
-        {
-            try
-            {
-                var newJournalDirectory = await _journalDirectoryProvider.FindJournalDirectory();
-                if (newJournalDirectory == null || JournalDirectory?.FullName == newJournalDirectory.FullName) return;
-
-                _log.LogInformation("Setting journal directory to {filePath}", newJournalDirectory.FullName);
-                JournalDirectory = newJournalDirectory;
-            }
-            catch (Exception ex)
-            {
-                _log.LogWarning(ex, "Could not find journal directory");
-                throw;
-            }
-        }
-
-        private async Task SetOptionsDirectory()
-        {
-            try
-            {
-                var newOptionsDirectory = await _optionsDirectoryProvider.FindOptionsDirectory();
-                if (newOptionsDirectory == null || OptionsDirectory?.FullName == newOptionsDirectory.FullName) return;
-
-                _log.LogInformation("Setting options directory to {filePath}", newOptionsDirectory.FullName);
-                OptionsDirectory = newOptionsDirectory;
-            }
-            catch (Exception ex)
-            {
-                _log.LogWarning(ex, "Could not find options directory");
-                throw;
-            }
-        }
-
-        private async Task SetJournalFile()
-        {
-            try
-            {
-                var newJournalFile = await _journalProvider.FindJournalFile(JournalDirectory);
-
-                if (JournalFile?.FullName == newJournalFile.FullName) return;
-
-                _log.LogInformation("Setting journal file to {filePath}", newJournalFile.Name);
-
-                if (!newJournalFile.Name.Contains("Journal"))
-                    _log.LogWarning(
-                        new InvalidJournalFileException(
-                            $"The selected journal file '{newJournalFile.Name}' does not match standard naming conventions"),
-                        "Invalid journal file detected, errors may occur");
-
-                JournalFile = newJournalFile;
-            }
-            catch (Exception ex)
-            {
-                _log.LogWarning(ex, "Could not find the active journal file");
-                throw;
-            }
-        }
-
-        private string lastPresetErrorname = "";
-
-        private async Task SetSupportFiles()
-        {
-            try
-            {
-                StatusFile = await _statusProvider.FindStatusFile(JournalDirectory);
-                CargoFile = await _statusProvider.FindCargoFile(JournalDirectory);
-                MarketFile = await _statusProvider.FindMarketFile(JournalDirectory);
-                OutfittingFile = await _statusProvider.FindOutfittingFile(JournalDirectory);
-                ShipyardFile = await _statusProvider.FindShipyardFile(JournalDirectory);
-                NavRouteFile = await _statusProvider.FindNavRouteFile(JournalDirectory);
-                BackpackFile = await _statusProvider.FindBackpackFile(JournalDirectory);
-                ModulesInfoFile = await _statusProvider.FindModulesFile(JournalDirectory);
-
-                if (!DisabledSupportFiles.Contains("Bindings"))
-                {
-                    BindingsFile = await _optionsProvider.FindActiveBindingsFile(OptionsDirectory);
-                    lastPresetErrorname = "";
-                }
-            }
-            catch (ActiveBindingsNotFoundException ex)
-            {
-                _log.LogWarning(ex, "Keybindings support has been disabled");
-                DisabledSupportFiles.Add("Bindings");
-            }
-            catch (BindingsNotFoundException ex)
-            {
-                var preset = ex.Data["Active bindings"]?.ToString();
-
-                if (preset == null)
-                {
-                    DisabledSupportFiles.Add("Bindings");
-                }
-
-                if (lastPresetErrorname != preset)
-                {
-                    lastPresetErrorname = preset;
-
-                    _log.LogWarning(ex,
-                        !string.IsNullOrWhiteSpace(Bindings.Active.PresetName)
-                            ? "Cannot switch to bindings preset {Bindings}"
-                            : "Cannot use bindings preset {Bindings}", preset);
-                }
-            }
-
-            catch (Exception ex)
-            {
-                _log.LogWarning(ex, "Could not set support files");
-            }
-        }
-
-        private Task CheckComputerOperatingSystem()
-        {
-            if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                _log.LogWarning("You are not running on a Windows machine, some features may not work properly");
-
-            return Task.CompletedTask;
-        }
-
-        private async Task ProcessHistoricalJournalFiles(TimeSpan spanToProcess)
-        {
-            try
-            {
-                var journalFiles = await _journalProvider.FindJournalFiles(JournalDirectory);
-
-                var limitDateTime = DateTime.Now - spanToProcess;
-
-                journalFiles = journalFiles
-                    .Skip(1)
-                    .Where(f => f.LastWriteTime >= limitDateTime)
-                    .OrderBy(f => f.LastWriteTime)
-                    .ToArray();
-
-
-                foreach (var file in journalFiles)
-                {
-                    _log.LogInformation("Processing historic file {File}", file.Name);
-
-                    await _journalProcessor.ProcessJournalFile(file, false);
-                }
-            }
-            catch (Exception ex)
-            {
-                _log.LogWarning(ex, "Could not process historical journal files");
-                throw;
-            }
+            _log?.LogCritical(ex, "Could not start EliteAPI");
+            throw;
         }
     }
+
+    public async Task StopAsync()
+    {
+    }
+
+    public IEvents Events { get; }
 }

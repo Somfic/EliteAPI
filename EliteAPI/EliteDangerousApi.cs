@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
+using EliteAPI.Abstractions.Readers;
+using EliteAPI.Events;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -13,24 +15,50 @@ namespace EliteAPI;
 /// <inheritdoc />
 public class EliteDangerousApi : IEliteDangerousApi
 {
-    private readonly IEliteDangerousApiConfiguration _config;
+    /// <inheritdoc />
+    public IEliteDangerousApiConfiguration Config { get; }
+
+    /// <inheritdoc />
+    public IEventParser Parser { get; }
+
+    public bool IsRunning { get; private set; }
+
     private readonly ILogger<EliteDangerousApi>? _log;
 
     private DirectoryInfo _journalsDirectory;
     private DirectoryInfo _optionsDirectory;
+    private IReader _reader;
 
     /// <summary>Creates a new instance of the EliteDangerousApi class.</summary>
     public EliteDangerousApi(IServiceProvider services)
     {
         _log = services.GetService<ILogger<EliteDangerousApi>>();
-        _config = services.GetRequiredService<IEliteDangerousApiConfiguration>();
+
+        Parser = services.GetRequiredService<IEventParser>();
+        Config = services.GetRequiredService<IEliteDangerousApiConfiguration>();
         Events = services.GetRequiredService<IEvents>();
+        _reader = services.GetRequiredService<IReader>();
     }
 
+    /// <inheritdoc />
     public async Task InitialiseAsync()
     {
         _log?.LogDebug("Initialising EliteAPI v{Version}", typeof(EliteDangerousApi).Assembly.GetName().Version);
+
+        // Apply the configuration
+        Config.Apply();
+
+        // Use the Localised structs while parsing
+        Parser.Use<LocalisedConverter>();
+        
+        // Register all events
         Events.Register();
+
+        // Register Journal files
+        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), Config.JournalPattern, true));
+
+        // Register status files
+        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Status.json", true));
     }
 
     /// <inheritdoc />
@@ -40,10 +68,10 @@ public class EliteDangerousApi : IEliteDangerousApi
         {
             _log?.LogInformation("Starting EliteAPI v{Version}", typeof(EliteDangerousApi).Assembly.GetName().Version);
 
-            _config.Apply();
-
-            _journalsDirectory = new DirectoryInfo(_config.JournalsPath);
-            _optionsDirectory = new DirectoryInfo(_config.OptionsPath);
+            IsRunning = true;
+            
+            _journalsDirectory = new DirectoryInfo(Config.JournalsPath);
+            _optionsDirectory = new DirectoryInfo(Config.OptionsPath);
 
             var missingDirectories = new[] {_journalsDirectory, _optionsDirectory}.Where(d => !d.Exists).ToList();
 
@@ -53,28 +81,19 @@ public class EliteDangerousApi : IEliteDangerousApi
                 ex.Data.Add("DirectoryPaths", missingDirectories.Select(d => d.FullName).ToArray());
 
                 _log?.LogError(ex, "Could not find necessary directories. Please check your configuration");
-                return;
+                throw ex;
             }
 
-            // Select the latest journal file
-            var journalFiles = _journalsDirectory.GetFiles(_config.JournalPattern);
-            var latestJournal = journalFiles.OrderByDescending(f => f.LastWriteTime).FirstOrDefault();
 
-            if (latestJournal == null)
+            while (IsRunning)
             {
-                var ex = new FileNotFoundException("Could not find any journal files with the specified pattern");
-                ex.Data.Add("Pattern", _config.JournalPattern);
+                await foreach (var line in _reader.FindNew())
+                {
+                    Events.Invoke(line);
+                }
 
-                _log?.LogError(ex, "Could not find any journal files. Please check your configuration");
-                return;
+                await Task.Delay(100);
             }
-
-            _log?.LogInformation("Using {JournalFile}", latestJournal.Name);
-
-            // Get the latest journal file.
-            // Hook into the journal file.
-            // Start the journal file watcher.
-            // On each edit, parse the new JSON events.   
         }
         catch (Exception ex)
         {
@@ -85,6 +104,7 @@ public class EliteDangerousApi : IEliteDangerousApi
 
     public async Task StopAsync()
     {
+        IsRunning = false;
     }
 
     public IEvents Events { get; }

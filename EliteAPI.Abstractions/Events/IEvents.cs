@@ -6,9 +6,6 @@ namespace EliteAPI.Abstractions.Events;
 /// <summary>Provides the framework for building and registering event handlers.</summary>
 public interface IEvents
 {
-    /// <summary>JSON converters used when serialising and deserialising events.</summary>
-    IEnumerable<JsonConverter> Converters { get; }
-
     /// <summary>All event types that have been registered.</summary>
     IEnumerable<Type> EventTypes { get; }
 
@@ -18,16 +15,17 @@ public interface IEvents
     void On<TEvent>(EventDelegate<TEvent> handler) where TEvent : IEvent;
 
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
-    /// <param name="handler"></param>
+    /// <param name="handler">The <see cref="EventDelegate{T}" /> delegate handler</param>
     void OnAny(EventDelegate<IEvent> handler);
 
     /// <summary>Invokes the registered event handlers for the specified event.</summary>
-    /// <param name="argument">The instance of the event</param>
+    /// <param name="event">The instance of the event</param>
     /// <typeparam name="TEvent">The event type</typeparam>
-    void Invoke<TEvent>(TEvent argument) where TEvent : IEvent;
+    void Invoke<TEvent>(TEvent @event) where TEvent : IEvent;
 
-    /// <summary>Registers a JSON converter used when serialising and deserialising events.</summary>
-    void RegisterConverter<TConverter>() where TConverter : JsonConverter;
+    /// <summary>Converts the JSON to a registered event type and invokes the registered event handlers.</summary>
+    /// <param name="json">The event JSON</param>
+    void Invoke(string? json);
 
     /// <summary>Discovers and registers all the events in the specified assembly.</summary>
     /// <param name="assembly">The assembly the events are defined in</param>

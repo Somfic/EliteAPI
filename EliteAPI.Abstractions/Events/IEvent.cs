@@ -1,9 +1,10 @@
+using EliteAPI.Abstractions.Readers;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Abstractions.Events;
 
 /// <summary>Base interface for all events.</summary>
-public interface IEvent
+public interface IEvent : IReadable
 {
     /// <summary>The timestamp of the event.</summary>
     [JsonProperty("timestamp", Order = -3)]

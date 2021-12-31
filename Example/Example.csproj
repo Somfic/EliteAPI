@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\EliteAPI.Events\EliteAPI.Events.csproj"/>
+<!--        <ProjectReference Include="..\EliteAPI.Events\EliteAPI.Events.csproj"/>-->
         <ProjectReference Include="..\EliteAPI.Web.EDSM\EliteAPI.Web.EDSM.csproj"/>
         <ProjectReference Include="..\EliteAPI.Web.Spansh\EliteAPI.Web.Spansh.csproj"/>
         <ProjectReference Include="..\EliteAPI\EliteAPI.csproj"/>

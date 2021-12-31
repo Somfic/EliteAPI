@@ -3,9 +3,11 @@ using EliteAPI;
 using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
+using EliteAPI.Abstractions.Readers;
 using EliteAPI.Configuration;
 using EliteAPI.Events;
 using EliteAPI.Extensions;
+using EliteAPI.Readers;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
 // ReSharper disable once CheckNamespace
@@ -18,7 +20,7 @@ public static class EliteDangerousApiServiceCollectionExtensions
     /// <returns>The <see cref="IServiceCollection" /> so that additional calls can be chained.</returns>
     public static IServiceCollection AddEliteApi(this IServiceCollection services)
     {
-        return services.AddEliteApi(_ => { });
+        return services.AddEliteApi(null);
     }
 
     /// <summary>Adds EliteAPI services to the specified <see cref="IServiceCollection" />.</summary>
@@ -26,20 +28,19 @@ public static class EliteDangerousApiServiceCollectionExtensions
     /// <param name="configure">The <see cref="EliteDangerousApiOptions" /> configuration delegate.</param>
     /// <returns>The <see cref="IServiceCollection" /> so that additional calls can be chained.</returns>
     public static IServiceCollection AddEliteApi(this IServiceCollection services,
-        Action<EliteDangerousApiOptions> configure)
+        Action<EliteDangerousApiOptions>? configure)
     {
         if (services == null)
             throw new ArgumentNullException(nameof(services), "Service collection cannot be null.");
 
-        if (configure != null)
-        {
-            // todo: configure the api   
-        }
+    
+        // todo: configure the api   
 
         services.TryAddSingleton<IEliteDangerousApi, EliteDangerousApi>();
         services.TryAddSingleton<IEliteDangerousApiConfiguration, EliteDangerousApiConfiguration>();
         services.TryAddSingleton<IEvents, Events>();
-        services.TryAddSingleton<IEventUtilities, EventUtilities>();
+        services.TryAddSingleton<IEventParser, EventParser>();
+        services.TryAddSingleton<IReader, Reader>();
 
         return services;
     }

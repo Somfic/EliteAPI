@@ -25,10 +25,40 @@
         <member name="T:EliteAPI.EliteDangerousApi">
             <inheritdoc />
         </member>
+        <member name="P:EliteAPI.EliteDangerousApi.Config">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousApi.Parser">
+            <inheritdoc />
+        </member>
         <member name="M:EliteAPI.EliteDangerousApi.#ctor(System.IServiceProvider)">
             <summary>Creates a new instance of the EliteDangerousApi class.</summary>
         </member>
+        <member name="M:EliteAPI.EliteDangerousApi.InitialiseAsync">
+            <inheritdoc />
+        </member>
         <member name="M:EliteAPI.EliteDangerousApi.StartAsync">
+            <inheritdoc />
+        </member>
+        <member name="T:EliteAPI.Events.EventParser">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Events.EventParser.Converters">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.EventParser.Use``1">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.EventParser.ToJson``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.EventParser.ToPaths``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.EventParser.FromJson``1(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.EventParser.FromJson(System.Type,System.String)">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Events.Events">
@@ -43,7 +73,7 @@
         <member name="M:EliteAPI.Events.Events.Invoke``1(``0)">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.RegisterConverter``1">
+        <member name="M:EliteAPI.Events.Events.Invoke(System.String)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.Events.Register(System.Reflection.Assembly)">
@@ -56,15 +86,6 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.Events.Register">
-            <inheritdoc />
-        </member>
-        <member name="T:EliteAPI.Events.EventUtilities">
-            <inheritdoc />
-        </member>
-        <member name="M:EliteAPI.Events.EventUtilities.ToJson``1(``0)">
-            <inheritdoc />
-        </member>
-        <member name="M:EliteAPI.Events.EventUtilities.FromJson``1(System.String)">
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Extensions.EliteDangerousApiOptions">

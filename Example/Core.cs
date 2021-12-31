@@ -1,6 +1,10 @@
-﻿using EliteAPI.Abstractions;
+﻿using System.Text.RegularExpressions;
+using EliteAPI.Abstractions;
+using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
+using EliteAPI.Abstractions.Readers;
 using EliteAPI.Events;
+using EliteAPI.Readers;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
@@ -9,36 +13,38 @@ namespace Example;
 public class Core
 {
     private readonly IEliteDangerousApi _api;
-    private readonly IEventUtilities _eventUtilities;
     private readonly ILogger<Core> _log;
 
-    public Core(ILogger<Core> log, IEliteDangerousApi api, IEventUtilities eventUtilities)
+    public Core(ILogger<Core> log, IEliteDangerousApi api)
     {
         _log = log;
         _api = api;
-        _eventUtilities = eventUtilities;
     }
 
     public async Task Run()
     {
-        _api.Events.Register<TestEvent>();
-        _api.Events.RegisterConverter<LocalisedConverter>();
+        await _api.InitialiseAsync();
+        
+        _api.Events.Register<FileheaderEvent>();
+        _api.Events.On<FileheaderEvent>(x =>
+        {
+            _log.LogInformation("Paths: {Path}", _api.Parser.ToPaths(x));
+        });
+        
+        
+        _api.Events.OnAny(x =>
+        {
+            _log.LogInformation("Any: {x}", x);
+        });
+        
+        
+        await _api.StartAsync();
 
-        var e = new TestEvent {Message = new Localised("Hello", "World")};
-
-        _api.Events.OnAny(x => { _log.LogInformation("Any!"); });
-        _api.Events.On<TestEvent>(OnFriendsEvent);
-
-        _api.Events.Invoke(e);
-    }
-
-    private void OnFriendsEvent(TestEvent e)
-    {
-        _log.LogInformation(_eventUtilities.ToJson(e));
+        await Task.Delay(-1);
     }
 }
 
-internal readonly struct TestEvent : IEvent
+internal readonly struct FileheaderEvent : IEvent
 {
     [JsonProperty("timestamp")]
     public DateTime Timestamp { get; init; }

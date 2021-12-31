@@ -1,4 +1,4 @@
-﻿namespace EliteAPI.Events;
+﻿namespace EliteAPI.Abstractions.Events;
 
 public readonly struct Localised
 {

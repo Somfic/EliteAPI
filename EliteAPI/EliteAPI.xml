@@ -40,6 +40,12 @@
         <member name="M:EliteAPI.EliteDangerousApi.StartAsync">
             <inheritdoc />
         </member>
+        <member name="M:EliteAPI.EliteDangerousApi.StopAsync">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousApi.Events">
+            <inheritdoc />
+        </member>
         <member name="T:EliteAPI.Events.EventParser">
             <inheritdoc />
         </member>
@@ -50,6 +56,12 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.EventParser.ToJson``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.EventParser.ToProto``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.EventParser.FromProto``1(System.Byte[])">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.EventParser.ToPaths``1(``0)">
@@ -64,16 +76,31 @@
         <member name="T:EliteAPI.Events.Events">
             <inheritdoc />
         </member>
+        <member name="P:EliteAPI.Events.Events.EventTypes">
+            <inheritdoc />
+        </member>
         <member name="M:EliteAPI.Events.Events.On``1(EliteAPI.Abstractions.Events.EventDelegate{``0})">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.On``1(EliteAPI.Abstractions.Events.JsonDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.On``1(EliteAPI.Abstractions.Events.RawJsonDelegate)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.EventDelegate{EliteAPI.Abstractions.Events.IEvent})">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.Invoke``1(``0)">
+        <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.JsonDelegate)">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.Invoke(System.String)">
+        <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.RawJsonDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.Invoke``1(``0,EliteAPI.Abstractions.Events.EventContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.Invoke(System.String,EliteAPI.Abstractions.Events.EventContext)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.Events.Register(System.Reflection.Assembly)">
@@ -90,6 +117,12 @@
         </member>
         <member name="T:EliteAPI.Extensions.EliteDangerousApiOptions">
             <summary>Options for a <see cref="T:EliteAPI.EliteDangerousApi" />.</summary>
+        </member>
+        <member name="M:EliteAPI.Readers.Reader.Register(EliteAPI.Abstractions.Readers.FileSelector)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Readers.Reader.FindNew">
+            <inheritdoc />
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.EliteDangerousApiServiceCollectionExtensions.AddEliteApi(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>Adds EliteAPI services to the specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>

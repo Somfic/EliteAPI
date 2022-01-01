@@ -13,19 +13,39 @@ public interface IEvents
     /// <param name="handler">The <see cref="EventDelegate{T}" /> delegate handler</param>
     /// <typeparam name="TEvent">The event type</typeparam>
     void On<TEvent>(EventDelegate<TEvent> handler) where TEvent : IEvent;
+    
+    /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
+    /// <param name="handler">The <see cref="RawJsonDelegate" /> delegate handler</param>
+    /// <typeparam name="TEvent">The event type</typeparam>
+    void On<TEvent>(RawJsonDelegate handler) where TEvent : IEvent;
+    
+    /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
+    /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
+    /// <typeparam name="TEvent">The event type</typeparam>
+    void On<TEvent>(JsonDelegate handler) where TEvent : IEvent;
 
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="EventDelegate{T}" /> delegate handler</param>
     void OnAny(EventDelegate<IEvent> handler);
+    
+    /// <summary>Adds an event handler that will be called when any event is raised.</summary>
+    /// <param name="handler">The <see cref="RawJsonDelegate" /> delegate handler</param>
+    void OnAny(RawJsonDelegate handler);
+    
+    /// <summary>Adds an event handler that will be called when any event is raised.</summary>
+    /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
+    void OnAny(JsonDelegate handler);
 
     /// <summary>Invokes the registered event handlers for the specified event.</summary>
     /// <param name="event">The instance of the event</param>
+    /// <param name="context">The context of the event</param>
     /// <typeparam name="TEvent">The event type</typeparam>
-    void Invoke<TEvent>(TEvent @event) where TEvent : IEvent;
+    void Invoke<TEvent>(TEvent @event, EventContext context) where TEvent : IEvent;
 
     /// <summary>Converts the JSON to a registered event type and invokes the registered event handlers.</summary>
     /// <param name="json">The event JSON</param>
-    void Invoke(string? json);
+    /// <param name="context">The context of the event</param>
+    void Invoke(string json, EventContext context);
 
     /// <summary>Discovers and registers all the events in the specified assembly.</summary>
     /// <param name="assembly">The assembly the events are defined in</param>

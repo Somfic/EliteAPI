@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.Abstractions.Events.Converters;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
+using ProtoBuf;
 
 namespace EliteAPI.Events;
 
@@ -33,7 +35,7 @@ public class EventParser : IEventParser
     public void Use<TConverter>() where TConverter : JsonConverter
     {
         _log?.LogDebug("Using converter {Converter}", typeof(TConverter).FullName);
-        
+
         var converter = ActivatorUtilities.CreateInstance<TConverter>(_services);
         _converters.Add(converter);
     }
@@ -52,7 +54,8 @@ public class EventParser : IEventParser
         var root = JObject.Parse(ToJson(@event));
 
         return root.Properties().SelectMany(GetPaths).Where(x => x.Value != null)
-            .Select(x => new KeyValuePair<string, string>(x.Key, JsonConvert.SerializeObject(x.Value))).ToList().AsReadOnly()!;
+            .Select(x => new KeyValuePair<string, string>(x.Key, JsonConvert.SerializeObject(x.Value))).ToList()
+            .AsReadOnly()!;
     }
 
     /// <inheritdoc />
@@ -66,10 +69,42 @@ public class EventParser : IEventParser
     public IEvent? FromJson(Type type, string json)
     {
         return JsonConvert.DeserializeObject(json, type,
-                new JsonSerializerSettings
-                    {ContractResolver = new EventContractResolver(), Converters = _converters}) as
-            IEvent;
+            new JsonSerializerSettings
+                {ContractResolver = new EventContractResolver(), Converters = _converters}) as IEvent;
     }
+
+    /// <inheritdoc />
+    public byte[] ToProto<T>(T data)
+    {
+        try
+        {
+            using var stream = new MemoryStream();
+            Serializer.Serialize(stream, data);
+            return stream.ToArray();
+        }
+        catch (Exception ex)
+        {
+            ex.Data.Add("Data", data);
+            _log?.LogWarning(ex, "Could not serialise data using protobuf");
+            throw;
+        }
+    }
+
+    /// <inheritdoc />
+    public T FromProto<T>(byte[] data)
+    {
+        try
+        {
+            return Serializer.Deserialize<T>(new MemoryStream(data));
+        }
+        catch (Exception ex)
+        {
+            ex.Data.Add("Data", data);
+            _log?.LogWarning(ex, "Could not deserialize data using protobuf");
+            throw;
+        }
+    }
+
 
     private IList<KeyValuePair<string, object?>> GetPaths(JObject jObject)
     {
@@ -96,6 +131,7 @@ public class EventParser : IEventParser
             return Array.Empty<KeyValuePair<string, object?>>();
         }
     }
+
 
     private IList<KeyValuePair<string, object?>> GetPaths(JProperty property)
     {

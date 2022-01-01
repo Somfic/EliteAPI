@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace EliteAPI.Abstractions.Events;
 
 /// <summary>Base interface for all events.</summary>
-public interface IEvent : IReadable
+public interface IEvent
 {
     /// <summary>The timestamp of the event.</summary>
     [JsonProperty("timestamp", Order = -3)]

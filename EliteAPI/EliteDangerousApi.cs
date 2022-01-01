@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Configuration;
@@ -27,7 +28,8 @@ public class EliteDangerousApi : IEliteDangerousApi
 
     private DirectoryInfo _journalsDirectory;
     private DirectoryInfo _optionsDirectory;
-    private IReader _reader;
+    private readonly IReader _reader;
+    private Task _mainTask;
 
     /// <summary>Creates a new instance of the EliteDangerousApi class.</summary>
     public EliteDangerousApi(IServiceProvider services)
@@ -50,7 +52,7 @@ public class EliteDangerousApi : IEliteDangerousApi
 
         // Use the Localised structs while parsing
         Parser.Use<LocalisedConverter>();
-        
+
         // Register all events
         Events.Register();
 
@@ -68,8 +70,6 @@ public class EliteDangerousApi : IEliteDangerousApi
         {
             _log?.LogInformation("Starting EliteAPI v{Version}", typeof(EliteDangerousApi).Assembly.GetName().Version);
 
-            IsRunning = true;
-            
             _journalsDirectory = new DirectoryInfo(Config.JournalsPath);
             _optionsDirectory = new DirectoryInfo(Config.OptionsPath);
 
@@ -85,15 +85,34 @@ public class EliteDangerousApi : IEliteDangerousApi
             }
 
 
-            while (IsRunning)
-            {
-                await foreach (var line in _reader.FindNew())
-                {
-                    Events.Invoke(line);
-                }
+            IsRunning = true;
 
-                await Task.Delay(100);
-            }
+            _log?.LogDebug("Hi");
+
+            _mainTask = Task.Run(async () =>
+            {
+                var isFirstRun = true;
+                
+                while (IsRunning)
+                {
+                    await foreach (var line in _reader.FindNew())
+                    {
+                        if(string.IsNullOrEmpty(line))
+                            continue;
+
+                        var context = new EventContext()
+                        {
+                            IsRaisedDuringCatchup = isFirstRun
+                        };
+                        
+                        Events.Invoke(line, context);
+                    }
+
+                    isFirstRun = false;
+                    
+                    await Task.Delay(100);
+                }
+            });
         }
         catch (Exception ex)
         {
@@ -102,10 +121,13 @@ public class EliteDangerousApi : IEliteDangerousApi
         }
     }
 
+    /// <inheritdoc />
     public async Task StopAsync()
     {
         IsRunning = false;
+        await _mainTask;
     }
 
+    /// <inheritdoc />
     public IEvents Events { get; }
 }

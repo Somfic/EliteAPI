@@ -19,11 +19,13 @@ public class Reader : IReader
         _log = log;
     }
 
+    /// <inheritdoc />
     public void Register(FileSelector selector)
     {
         _files.Add(selector);
     }
-    
+
+    /// <inheritdoc />
     public async IAsyncEnumerable<string?> FindNew()
     {
         foreach (var fileSelector in _files)
@@ -51,7 +53,7 @@ public class Reader : IReader
                 continue;
             }
 
-            if (fileSelector.ContainsMultipleEntries)
+            if (fileSelector.IsMultiLine)
             {
                 var newValues = new List<string>();
 

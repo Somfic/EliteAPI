@@ -5,53 +5,51 @@ using EliteAPI.Abstractions.Events;
 using EliteAPI.Abstractions.Readers;
 using EliteAPI.Events;
 using EliteAPI.Readers;
+using EliteAPI.Server;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Example;
 
 public class Core
 {
     private readonly IEliteDangerousApi _api;
+    private readonly EliteDangerousApiServer _server;
     private readonly ILogger<Core> _log;
 
-    public Core(ILogger<Core> log, IEliteDangerousApi api)
+    public Core(ILogger<Core> log, IEliteDangerousApi api, EliteDangerousApiServer server)
     {
         _log = log;
         _api = api;
+        _server = server;
     }
 
     public async Task Run()
     {
         await _api.InitialiseAsync();
         
-        _api.Events.Register<FileheaderEvent>();
-        _api.Events.On<FileheaderEvent>(x =>
-        {
-            _log.LogInformation("Paths: {Path}", _api.Parser.ToPaths(x));
-        });
-        
-        
-        _api.Events.OnAny(x =>
-        {
-            _log.LogInformation("Any: {x}", x);
-        });
-        
-        
+        _api.Events.OnAny(ImplementedEventHandler);
+        _api.Events.OnAny(NotImplementedEventHandler);
+
         await _api.StartAsync();
+        
+        await _server.StartAsync();
 
         await Task.Delay(-1);
     }
-}
 
-internal readonly struct FileheaderEvent : IEvent
-{
-    [JsonProperty("timestamp")]
-    public DateTime Timestamp { get; init; }
-
-    [JsonProperty("event")]
-    public string Event { get; init; }
-
-    [JsonProperty("message")]
-    public Localised Message { get; init; }
+    private void ImplementedEventHandler(IEvent @event, EventContext context)
+    {
+        if (!context.IsImplemented)
+            return;
+    }
+    
+    private void NotImplementedEventHandler(string json, EventContext context)
+    {
+        if (context.IsImplemented)
+            return;
+        
+        _log.LogDebug(string.Join(", ", _api.Parser.ToPaths(json).Select(x => $"{x.Path}: {x.Value}")));
+    }
 }

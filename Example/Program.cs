@@ -11,12 +11,13 @@ var host = Host.CreateDefaultBuilder()
     .ConfigureServices(services =>
     {
         services.AddEliteApi();
+        services.AddEliteApiServer();
         services.AddWebApi<EdsmApi>();
         services.AddWebApi<SpanshApi>();
     })
     .ConfigureLogging(logging =>
     {
-        logging.SetMinimumLevel(LogLevel.Trace);
+        logging.SetMinimumLevel(LogLevel.Debug);
         logging.ClearProviders();
         logging.AddPrettyConsole();
     })

@@ -20,8 +20,8 @@
         <Authors>Somfic</Authors>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <InformationalVersion>3.0.0-alpha.5060+Branch.dev.Sha.f4a25e6229a31f6cb5a650396a209add1b879f13</InformationalVersion>
-        <TargetFrameworks>net5.0;net6.0;netstandard2.0;netstandard2.1</TargetFrameworks>
         <Nullable>enable</Nullable>
+        <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
         <DocumentationFile>EliteAPI.xml</DocumentationFile>

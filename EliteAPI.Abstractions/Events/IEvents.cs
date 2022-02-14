@@ -13,12 +13,7 @@ public interface IEvents
     /// <param name="handler">The <see cref="EventDelegate{T}" /> delegate handler</param>
     /// <typeparam name="TEvent">The event type</typeparam>
     void On<TEvent>(EventDelegate<TEvent> handler) where TEvent : IEvent;
-    
-    /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
-    /// <param name="handler">The <see cref="RawJsonDelegate" /> delegate handler</param>
-    /// <typeparam name="TEvent">The event type</typeparam>
-    void On<TEvent>(RawJsonDelegate handler) where TEvent : IEvent;
-    
+
     /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
     /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
     /// <typeparam name="TEvent">The event type</typeparam>
@@ -27,11 +22,7 @@ public interface IEvents
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="EventDelegate{T}" /> delegate handler</param>
     void OnAny(EventDelegate<IEvent> handler);
-    
-    /// <summary>Adds an event handler that will be called when any event is raised.</summary>
-    /// <param name="handler">The <see cref="RawJsonDelegate" /> delegate handler</param>
-    void OnAny(RawJsonDelegate handler);
-    
+
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
     void OnAny(JsonDelegate handler);

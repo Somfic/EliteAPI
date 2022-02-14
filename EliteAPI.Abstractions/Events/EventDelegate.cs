@@ -11,9 +11,4 @@ public delegate void EventDelegate<in TEvent>(TEvent @event, EventContext contex
 /// <summary>
 /// Handles a JSON event.
 /// </summary>
-public delegate void RawJsonDelegate(string json, EventContext context);
-
-/// <summary>
-/// Handles a JSON event.
-/// </summary>
-public delegate void JsonDelegate(JObject json, EventContext context);
+public delegate void JsonDelegate(string json, EventContext context);

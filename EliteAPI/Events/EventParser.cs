@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.Abstractions.Events.Converters;
 using Microsoft.Extensions.DependencyInjection;
@@ -48,14 +49,40 @@ public class EventParser : IEventParser
     }
 
     /// <inheritdoc />
-    public ReadOnlyCollection<KeyValuePair<string, string>> ToPaths<T>(T @event) where T : IEvent
+    public IReadOnlyCollection<EventPath> ToPaths<T>(T @event) where T : IEvent
     {
+        var eventName = @event.GetType().Name.Replace("Event", string.Empty);
+        
         // Parse the event into a dictionary of paths and values using JToken.
         var root = JObject.Parse(ToJson(@event));
 
-        return root.Properties().SelectMany(GetPaths).Where(x => x.Value != null)
-            .Select(x => new KeyValuePair<string, string>(x.Key, JsonConvert.SerializeObject(x.Value))).ToList()
-            .AsReadOnly()!;
+        return root.Properties().SelectMany(GetPaths).Select(x => new EventPath($"{eventName}.{x.Path}", x.Value)).ToList().AsReadOnly();
+    }
+    
+    /// <inheritdoc />
+    public IReadOnlyCollection<EventPath> ToPaths(string json)
+    {
+        if (string.IsNullOrEmpty(json))
+            return Array.Empty<EventPath>();
+        
+        var root = JObject.Parse(json);
+        var eventKey = root["event"];
+
+        if (eventKey == null)
+        {
+            var ex = new JsonException("The JSON does not contain an event key.");
+            ex.Data.Add("JSON", json);
+
+            _log?.LogWarning(ex, "Could not parse JSON");
+            throw ex;
+        }
+        
+        var parsed = JsonConvert.DeserializeObject(json, new JsonSerializerSettings {ContractResolver = new EventContractResolver(), Converters = _converters});
+        var parsedJson = JsonConvert.SerializeObject(parsed);
+        root = JObject.Parse(parsedJson);
+
+        var eventName = eventKey.Value<string>();
+        return root.Properties().SelectMany(GetPaths).Select(x => new EventPath($"{eventName}.{x.Path}", x.Value)).ToList().AsReadOnly();
     }
 
     /// <inheritdoc />
@@ -78,14 +105,22 @@ public class EventParser : IEventParser
     {
         try
         {
+            if (data == null)
+                return Array.Empty<byte>();
+            
+            // Check of the data has a protobuf contract attribute.
+            if (data.GetType().GetCustomAttribute(typeof(ProtoContractAttribute), true) == null)
+            {
+                //throw new ArgumentException($"{data.GetType().FullName} must have the ProtoContract attribute in order to convert with protobuf.");
+            }
+            
             using var stream = new MemoryStream();
             Serializer.Serialize(stream, data);
             return stream.ToArray();
         }
         catch (Exception ex)
         {
-            ex.Data.Add("Data", data);
-            _log?.LogWarning(ex, "Could not serialise data using protobuf");
+            _log?.LogWarning(ex, "Could not serialise data with protobuf");
             throw;
         }
     }
@@ -106,7 +141,7 @@ public class EventParser : IEventParser
     }
 
 
-    private IList<KeyValuePair<string, object?>> GetPaths(JObject jObject)
+    private IEnumerable<EventPath> GetPaths(JObject? jObject)
     {
         try
         {
@@ -115,61 +150,74 @@ public class EventParser : IEventParser
         catch (Exception ex)
         {
             _log?.LogWarning(ex, "Could not parse paths for JSON object {Json}", jObject.Path);
-            return Array.Empty<KeyValuePair<string, object?>>();
+            return Array.Empty<EventPath>();
         }
     }
 
-    private IList<KeyValuePair<string, object?>> GetPaths(JArray jArray)
+    private IEnumerable<EventPath> GetPaths(JProperty property) => GetPaths(property.Value);
+
+    private IEnumerable<EventPath> GetPaths(JToken token)
     {
         try
         {
-            return jArray.Values<JObject>().SelectMany(x => x?.Properties().SelectMany(GetPaths)).ToList();
-        }
-        catch (Exception ex)
-        {
-            _log?.LogWarning(ex, "Could not parse paths for JSON array {Json}", jArray.Path);
-            return Array.Empty<KeyValuePair<string, object?>>();
-        }
-    }
-
-
-    private IList<KeyValuePair<string, object?>> GetPaths(JProperty property)
-    {
-        try
-        {
-            switch (property.Value.Type)
+            switch (token.Type)
             {
+                case JTokenType.Null:
+                    return new[] {new EventPath(token.Path, string.Empty)};
+
                 case JTokenType.Object:
-                    return property.Value.Children<JProperty>().SelectMany(GetPaths).ToList();
+                    return token.Children<JProperty>().SelectMany(GetPaths);
 
                 case JTokenType.Array:
-                    return property.Value.Values<JObject>().SelectMany(GetPaths).ToList();
+                    if (!token.Values().Any())
+                        return Array.Empty<EventPath>();
+
+                    var arrayType = token.Values().First().Type;
+
+                    switch (arrayType)
+                    {
+                        case JTokenType.Property:
+                            return token.Values<JObject>().SelectMany(GetPaths);
+
+                        case JTokenType.Integer:
+                        case JTokenType.Boolean:
+                        case JTokenType.Float:  
+                        case JTokenType.String:
+                            return token.Values<JToken>().SelectMany(GetPaths);
+
+                        default:
+                            throw new JsonException("Unsupported array type: " + arrayType);
+                    }
 
                 case JTokenType.Boolean:
-                    return new[] {new KeyValuePair<string, object?>(property.Path, property.Value.Value<bool>())};
+                    return new[] {new EventPath(token.Path, JsonConvert.SerializeObject(token.Value<bool>()))};
 
                 case JTokenType.String:
-                    return new[] {new KeyValuePair<string, object?>(property.Path, property.Value.Value<string>())};
+                    return new[] {new EventPath(token.Path, JsonConvert.SerializeObject(token.Value<string>()))};
 
                 case JTokenType.Date:
-                    return new[] {new KeyValuePair<string, object?>(property.Path, property.Value.Value<DateTime>())};
+                    return new[] {new EventPath(token.Path, JsonConvert.SerializeObject(token.Value<DateTime>()))};
 
                 case JTokenType.Integer:
-                    return new[] {new KeyValuePair<string, object?>(property.Path, property.Value.Value<int>())};
+                    return new[] {new EventPath(token.Path, JsonConvert.SerializeObject(token.Value<long>()))};
 
                 case JTokenType.Float:
-                    return new[] {new KeyValuePair<string, object?>(property.Path, property.Value.Value<float>())};
+                    return new[] {new EventPath(token.Path, JsonConvert.SerializeObject(token.Value<float>()))};
 
                 default:
-                    _log?.LogDebug("Unsupported type {Type} for JSON path {Json}", property.Value.Type.ToString(),
-                        property.Path);
-                    return Array.Empty<KeyValuePair<string, object?>>();
+                    _log?.LogDebug("Unsupported type {Type} for JSON path {Json}", token.Type.ToString(),
+                        token.Path);
+                    return new[] {new EventPath(token.Path, "\"__UNKNOWN__\"")};
             }
         }
         catch (Exception ex)
         {
-            _log?.LogWarning(ex, "Could not parse JSON {Path}", property.Value.Path);
-            return Array.Empty<KeyValuePair<string, object?>>();
+            ex.Data.Add("Path", token.Path);
+            ex.Data.Add("Type", token.Type.ToString());
+            ex.Data.Add("Value", token.ToString());
+
+            _log?.LogWarning(ex, "Could not parse part of JSON {Path}", token.Path);
+            return new[] {new EventPath(token.Path, "\"__UNKNOWN__\"")};
         }
     }
 }

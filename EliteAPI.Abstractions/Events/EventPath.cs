@@ -12,10 +12,10 @@ public readonly struct EventPath
     }
     
    [ProtoMember(1)]
-   public string Path { get; }
+   public string Path { get; init; }
 
    [ProtoMember(2)]
-   public string Value { get; }
+   public string Value { get; init; }
 }
 
 [ProtoContract]

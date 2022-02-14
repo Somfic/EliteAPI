@@ -18,7 +18,7 @@ public interface IEventParser
     /// <summary>
     /// Generates protobuf encoded data for an object.
     /// </summary>
-    /// <param name="data"></param>
+    /// <param name="data">The instance of the object</param>
     /// <typeparam name="T">The type of the object</typeparam>
     byte[] ToProto<T>(T data);
     
@@ -32,6 +32,10 @@ public interface IEventParser
     /// <summary>Generates a collection of paths.</summary>
     /// <param name="event">The event</param>
     IReadOnlyCollection<EventPath> ToPaths<T>(T @event) where T : IEvent;
+    
+    /// <summary>Generates a collection of paths.</summary>
+    /// <param name="json">The object to convert</param>
+    IReadOnlyCollection<EventPath> ToPaths(string json);
 
     /// <summary>Generates the event from the provided JSON string.</summary>
     /// <param name="json">The JSON string</param>

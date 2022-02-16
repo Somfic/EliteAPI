@@ -1,12 +1,9 @@
-﻿using System.Runtime.Serialization;
-using EliteAPI.Abstractions.Events;
+﻿using EliteAPI.Abstractions.Events;
 using EliteAPI.Events.Status.Converters;
-using EliteAPI.Events.Status.Enums;
-using EliteAPI.Events.Status.Flags;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace EliteAPI.Events.Status;
+namespace EliteAPI.Events.Status.Ship;
 
 public struct StatusEvent : IEvent
 {

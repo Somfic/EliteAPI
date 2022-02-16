@@ -1,4 +1,4 @@
-﻿namespace EliteAPI.Events.Status;
+﻿namespace EliteAPI.Events.Status.Ship;
 
 public readonly struct ShipPips
 {

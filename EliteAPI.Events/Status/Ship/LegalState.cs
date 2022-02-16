@@ -1,4 +1,4 @@
-﻿namespace EliteAPI.Events.Status.Enums;
+﻿namespace EliteAPI.Events.Status.Ship;
 
 public enum LegalState
 {

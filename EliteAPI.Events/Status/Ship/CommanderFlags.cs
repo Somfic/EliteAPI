@@ -1,4 +1,4 @@
-﻿namespace EliteAPI.Events.Status.Flags;
+﻿namespace EliteAPI.Events.Status.Ship;
 
 [Flags]
 public enum CommanderFlags

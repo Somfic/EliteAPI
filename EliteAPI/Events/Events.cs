@@ -103,11 +103,8 @@ public class Events : IEvents
 
             var eventType = EventTypes.FirstOrDefault(t => string.Equals(t.Name, typeName, StringComparison.InvariantCultureIgnoreCase));
 
-            context = new EventContext()
-            {
-                IsRaisedDuringCatchup = context.IsRaisedDuringCatchup,
-                IsImplemented = eventType != null
-            };
+            // Update the IsImplemented field on the context
+            context = context with { IsImplemented = eventType != null };
             
             if (eventType == null)
                 _log?.LogWarning("The {Event} event is not registered", eventName);
@@ -160,6 +157,7 @@ public class Events : IEvents
         catch (Exception ex)
         {
             ex.Data.Add("JSON", json);
+            ex.Data.Add("File", context.Source.Name);
             _log?.LogWarning(ex, "Could not invoke event from JSON");
         }
     }

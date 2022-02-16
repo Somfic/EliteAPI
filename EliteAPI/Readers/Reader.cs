@@ -26,7 +26,7 @@ public class Reader : IReader
     }
 
     /// <inheritdoc />
-    public async IAsyncEnumerable<string?> FindNew()
+    public async IAsyncEnumerable<(FileInfo file, string? line)> FindNew()
     {
         foreach (var fileSelector in _files)
         {
@@ -67,7 +67,7 @@ public class Reader : IReader
                 foreach (var value in newValues.Except(_lastValues[file.FullName]))
                 {
                     _log?.LogTrace("{File}: {Json}", file.Name, value);
-                    yield return value;
+                    yield return (file, value);
                 }
                 
                 // Update last values
@@ -84,7 +84,7 @@ public class Reader : IReader
                     _log?.LogTrace("{File}: {Json}", file.Name, newValue);
                     
                     // Yield the new value
-                    yield return newValue;
+                    yield return (file, newValue);
                     
                     // Update last value
                     _lastValues[file.FullName] = newValue.Split(new[] { Environment.NewLine }, StringSplitOptions.None);

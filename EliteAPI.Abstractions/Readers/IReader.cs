@@ -11,5 +11,5 @@ public interface IReader
     /// <summary>
     /// Finds all the new changes in the registered files.
     /// </summary>
-    IAsyncEnumerable<string?> FindNew();
+    IAsyncEnumerable<(FileInfo file, string? line)> FindNew();
 }

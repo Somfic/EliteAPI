@@ -102,14 +102,15 @@ public class EliteDangerousApi : IEliteDangerousApi
                 
                 while (IsRunning)
                 {
-                    await foreach (var line in _reader.FindNew())
+                    await foreach (var (file, line) in _reader.FindNew())
                     {
                         if(string.IsNullOrEmpty(line))
                             continue;
 
                         var context = new EventContext()
                         {
-                            IsRaisedDuringCatchup = isFirstRun
+                            IsRaisedDuringCatchup = isFirstRun,
+                            Source = file
                         };
                         
                         Events.Invoke(line, context);

@@ -1,7 +1,7 @@
 using EliteAPI.Abstractions.Events;
 using Newtonsoft.Json;
 
-namespace EliteAPI.Events;
+namespace EliteAPI.Events.Status.Modules;
 
 public readonly struct ModuleInfoEvent : IEvent
 {
@@ -10,4 +10,7 @@ public readonly struct ModuleInfoEvent : IEvent
 
     [JsonProperty("event")]
     public string Event { get; init; }
+    
+    [JsonProperty("Modules")]
+    public IReadOnlyList<ShipModule> Installed { get; init; }
 }

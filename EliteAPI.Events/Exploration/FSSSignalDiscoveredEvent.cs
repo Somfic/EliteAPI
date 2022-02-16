@@ -15,8 +15,5 @@ public readonly struct FssSignalDiscoveredEvent : IEvent
     public string SystemAddress { get; init; }
 
     [JsonProperty("SignalName")]
-    public Localised SignalName { get; init; }
-
-    [JsonProperty("IsStation")]
-    public bool IsStation { get; init; }
+    public string SignalName { get; init; }
 }

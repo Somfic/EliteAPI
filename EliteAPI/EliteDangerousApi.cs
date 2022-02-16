@@ -60,7 +60,14 @@ public class EliteDangerousApi : IEliteDangerousApi
         _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), Config.JournalPattern, true));
 
         // Register status files
-        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Status.json", true));
+        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Status.json"));
+        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Backpack.json"));
+        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Cargo.json"));
+        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "ModulesInfo.json"));
+        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "NavRoute.json"));
+        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Outfitting.json"));
+        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "ShipLocker.json"));
+        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Shipyard.json"));
     }
 
     /// <inheritdoc />

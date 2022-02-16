@@ -25,16 +25,25 @@ public class LocalisedConverter : JsonConverter
         writer.WriteValue(value.Local);
     }
 
+    /// <inheritdoc />
     public override object? ReadJson(JsonReader reader, Type objectType, object? rawValue, JsonSerializer serializer)
     {
         var symbol = JToken.Load(reader).ToString();
 
         reader.Read();
-        var localised = reader.ReadAsString();
+
+        var localised = string.Empty;
+        
+        try {
+            localised = reader.ReadAsString();
+        } catch(Exception ex) {
+            //
+        }
 
         return new Localised(symbol, localised ?? string.Empty);
     }
 
+    /// <inheritdoc />
     public override bool CanConvert(Type objectType)
     {
         return objectType == typeof(Localised);

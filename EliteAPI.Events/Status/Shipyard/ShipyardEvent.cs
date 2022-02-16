@@ -1,7 +1,7 @@
 using EliteAPI.Abstractions.Events;
 using Newtonsoft.Json;
 
-namespace EliteAPI.Events;
+namespace EliteAPI.Events.Status.Shipyard;
 
 public readonly struct ShipyardEvent : IEvent
 {
@@ -19,4 +19,13 @@ public readonly struct ShipyardEvent : IEvent
 
     [JsonProperty("StarSystem")]
     public string StarSystem { get; init; }
-}
+    
+    [JsonProperty("Horizons")]
+    public bool HasHorizons { get; init; }
+
+    [JsonProperty("AllowCobraMkIV")]
+    public bool AllowsCobraMk4 { get; init; }
+
+    [JsonProperty("PriceList")]
+    public IReadOnlyList<ShipyardDeal> Deals { get; init; }
+}   

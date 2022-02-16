@@ -112,6 +112,18 @@
         <member name="M:EliteAPI.Events.Events.Register">
             <inheritdoc />
         </member>
+        <member name="M:EliteAPI.Events.Events.IsRegistered``1">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.IsRegistered(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.LocalisedConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.LocalisedConverter.CanConvert(System.Type)">
+            <inheritdoc />
+        </member>
         <member name="T:EliteAPI.Extensions.EliteDangerousApiOptions">
             <summary>Options for a <see cref="T:EliteAPI.EliteDangerousApi" />.</summary>
         </member>

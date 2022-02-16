@@ -3,12 +3,8 @@ using Newtonsoft.Json.Converters;
 
 namespace EliteAPI.Events.Status.NavRoute;
 
-public class NavRouteStop
+public readonly struct NavRouteStop
 {
-    internal NavRouteStop()
-    {
-    }
-
     /// <summary>
     /// The name of the star system
     /// </summary>
@@ -32,5 +28,5 @@ public class NavRouteStop
     /// </summary>
     [JsonProperty("StarClass")]
     [JsonConverter(typeof(StringEnumConverter))]
-    public StarClass Class { get; init; } // todo: make enum
+    public StarClass Class { get; init; }
 }

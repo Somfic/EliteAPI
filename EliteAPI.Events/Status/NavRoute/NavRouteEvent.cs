@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Events.Status.NavRoute;
 
-public class NavRouteEvent : IEvent
+public readonly struct NavRouteEvent : IEvent
 {
     [JsonProperty("timestamp")]
     public DateTime Timestamp { get; init; }
@@ -12,5 +12,5 @@ public class NavRouteEvent : IEvent
     public string Event { get; init; }
 
     [JsonProperty("Route")]
-    public IReadOnlyList<NavRouteStop> Stops { get; set; }
+    public IReadOnlyList<NavRouteStop> Stops { get; init; }
 }

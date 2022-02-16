@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using EliteAPI.Events.Status.Ship;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Events.Status.Converters;

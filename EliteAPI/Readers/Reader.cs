@@ -11,8 +11,8 @@ public class Reader : IReader
 {
     private readonly ILogger<Reader>? _log;
 
-    private IList<FileSelector> _files = new List<FileSelector>();
-    private Dictionary<string, string[]> _lastValues = new();
+    private readonly IList<FileSelector> _files = new List<FileSelector>();
+    private readonly Dictionary<string, string[]> _lastValues = new();
 
     public Reader(ILogger<Reader> log)
     {
@@ -41,7 +41,7 @@ public class Reader : IReader
             if(!_lastValues.ContainsKey(file.FullName))
                 _lastValues.Add(file.FullName, Array.Empty<string>());
 
-            StreamReader stream = null;
+            StreamReader? stream;
 
             try
             {
@@ -82,7 +82,12 @@ public class Reader : IReader
                 if (newValue != lastValue)
                 {
                     _log?.LogTrace("{File}: {Json}", file.Name, newValue);
+                    
+                    // Yield the new value
                     yield return newValue;
+                    
+                    // Update last value
+                    _lastValues[file.FullName] = newValue.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
                 }
             }
         }

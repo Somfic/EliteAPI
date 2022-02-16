@@ -49,7 +49,7 @@ public class EventParser : IEventParser
     }
 
     /// <inheritdoc />
-    public IReadOnlyCollection<EventPath> ToPaths<T>(T @event) where T : IEvent
+    public IEnumerable<EventPath> ToPaths<T>(T @event) where T : IEvent
     {
         var eventName = @event.GetType().Name.Replace("Event", string.Empty);
         
@@ -60,7 +60,7 @@ public class EventParser : IEventParser
     }
     
     /// <inheritdoc />
-    public IReadOnlyCollection<EventPath> ToPaths(string json)
+    public IEnumerable<EventPath> ToPaths(string json)
     {
         if (string.IsNullOrEmpty(json))
             return Array.Empty<EventPath>();
@@ -145,6 +145,9 @@ public class EventParser : IEventParser
     {
         try
         {
+            if(jObject == null)
+                return Array.Empty<EventPath>();
+            
             return jObject.Properties().SelectMany(GetPaths).ToList();
         }
         catch (Exception ex)

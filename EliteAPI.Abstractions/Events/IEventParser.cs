@@ -31,11 +31,11 @@ public interface IEventParser
 
     /// <summary>Generates a collection of paths.</summary>
     /// <param name="event">The event</param>
-    IReadOnlyCollection<EventPath> ToPaths<T>(T @event) where T : IEvent;
+    IEnumerable<EventPath> ToPaths<T>(T @event) where T : IEvent;
     
     /// <summary>Generates a collection of paths.</summary>
     /// <param name="json">The object to convert</param>
-    IReadOnlyCollection<EventPath> ToPaths(string json);
+    IEnumerable<EventPath> ToPaths(string json);
 
     /// <summary>Generates the event from the provided JSON string.</summary>
     /// <param name="json">The JSON string</param>

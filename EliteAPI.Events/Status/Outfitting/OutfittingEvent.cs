@@ -1,7 +1,7 @@
 using EliteAPI.Abstractions.Events;
 using Newtonsoft.Json;
 
-namespace EliteAPI.Events;
+namespace EliteAPI.Events.Status.Outfitting;
 
 public readonly struct OutfittingEvent : IEvent
 {
@@ -19,4 +19,10 @@ public readonly struct OutfittingEvent : IEvent
 
     [JsonProperty("StarSystem")]
     public string StarSystem { get; init; }
+    
+    [JsonProperty("Horizons")]
+    public bool HasHorizons { get; init; }
+    
+    [JsonProperty("Items")]
+    public IReadOnlyList<OutfittingItem> Items { get; init; }
 }

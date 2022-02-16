@@ -101,7 +101,7 @@ public class Events : IEvents
             var eventName = eventKey.Value<string>();
             var typeName = $"{eventName}Event";
 
-            var eventType = EventTypes.FirstOrDefault(t => t.Name == typeName);
+            var eventType = EventTypes.FirstOrDefault(t => string.Equals(t.Name, typeName, StringComparison.InvariantCultureIgnoreCase));
 
             context = new EventContext()
             {
@@ -128,24 +128,31 @@ public class Events : IEvents
                 _log?.LogWarning(ex, "Could not parse event {Event}", eventName);
                 return;
             }
-            
-            // Get differences between the JSON and the event
-            var parsedJson = JsonConvert.SerializeObject(parsedEvent);
-            
-            var pathsRaw = _parser.ToPaths(json).ToList();
-            var pathsParsed = _parser.ToPaths(parsedJson).ToList();
-            
-            var missingPaths = pathsRaw.Except(pathsParsed).ToList();
-            var extraPaths = pathsParsed.Except(pathsRaw).ToList();
-            
-            if(missingPaths.Any() || extraPaths.Any())
-            {
-                var ex = new JsonException($"The specified JSON does not match the {eventName} event");
-                //ex.Data.Add("JSON", json);
-                ex.Data.Add("MissingPaths", missingPaths);
-                ex.Data.Add("ExtraPaths", extraPaths);
 
-                //_log?.LogWarning(ex, "Could not parse event {Event}", eventName);
+            try
+            {
+                // Get differences between the JSON and the event
+                var parsedJson = JsonConvert.SerializeObject(parsedEvent);
+
+                var pathsRaw = _parser.ToPaths(json).ToList();
+                var pathsParsed = _parser.ToPaths(parsedJson).ToList();
+
+                var missingPaths = pathsRaw.Except(pathsParsed).ToList();
+                var extraPaths = pathsParsed.Except(pathsRaw).ToList();
+
+                if (missingPaths.Any() || extraPaths.Any())
+                {
+                    var ex = new JsonException($"The specified JSON does not match the {eventName} event");
+                    //ex.Data.Add("JSON", json);
+                    ex.Data.Add("MissingPaths", missingPaths);
+                    ex.Data.Add("ExtraPaths", extraPaths);
+
+                    //_log?.LogWarning(ex, "Could not parse event {Event}", eventName);
+                }
+            }
+            catch (Exception ex)
+            {
+                _log?.LogWarning(ex, "Could not find differences between the JSON and the event {Event}", eventName);
             }
 
             Invoke(parsedEvent, context);
@@ -208,6 +215,19 @@ public class Events : IEvents
         {
             _log?.LogWarning(ex, "Could not register the default events");
         }
+    }
+
+    /// <inheritdoc />
+    public bool IsRegistered<TEvent>() where TEvent : IEvent
+    {
+        var type = typeof(TEvent);
+        return IsRegistered(type);
+    }
+    
+    /// <inheritdoc />
+    public bool IsRegistered(Type? type)
+    {
+        return type != null && _eventHandlers.ContainsKey(type);
     }
 
     private void AddEvent(Type type)

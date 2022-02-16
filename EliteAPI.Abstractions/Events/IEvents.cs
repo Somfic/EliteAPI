@@ -53,4 +53,15 @@ public interface IEvents
 
     /// <summary>Registers the default events.</summary>
     void Register();
+    
+    /// <summary>
+    /// Checks if the specified event is registered.
+    /// </summary>
+    /// <typeparam name="TEvent">The event type</typeparam>
+    bool IsRegistered<TEvent>() where TEvent : IEvent;
+
+    /// <summary>
+    /// Checks if the specified event is registered.
+    /// </summary>
+    bool IsRegistered(Type? type);
 }

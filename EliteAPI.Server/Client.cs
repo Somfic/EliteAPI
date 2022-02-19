@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using EliteAPI.Abstractions.Events;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -21,6 +22,8 @@ public class Client
     /// Whether the client is connected.
     /// </summary>
     public bool IsOpen { get; private set; }
+
+    public bool IsAvailable => _tcp.Connected;
 
     private readonly NetworkStream _stream;
     private readonly ILogger<Client>? _log;
@@ -53,13 +56,14 @@ public class Client
                     break;
 
                 case Opcode.TextFrame:
-                    await WriteAsync(incoming.Payload);
+                    //_log?.LogDebug("Incoming TextFrame: {Payload}", incoming.Payload);
+                    //todo: send set variables to frontend
                     break;
                 
                 case Opcode.ConnectionClose:
                     await CloseAsync();
                     break;
-                
+
                 default:
                     _log?.LogWarning("Unhandled incoming {Type}", incoming.Type);
                     break;
@@ -76,6 +80,7 @@ public class Client
     {
         _log?.LogDebug("Closing client {Id}", Id);
         IsOpen = false;
+        IsAccepted = false;
         _tcp.Close();
     }
         

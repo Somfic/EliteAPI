@@ -18,6 +18,7 @@ public class EliteDangerousApiServer
     private readonly ILogger<EliteDangerousApiServer>? _log;
     private readonly IEliteDangerousApi _api;
     private readonly IConfiguration _config;
+    private readonly IList<IEvent> backlog = new List<IEvent>();
     public bool IsRunning { get; private set; }
 
     public EliteDangerousApiServer(IServiceProvider services)
@@ -34,14 +35,14 @@ public class EliteDangerousApiServer
     {
        Task.Run(async () =>
        {
+           backlog.Add(e);
+           
            var paths = _api.Parser.ToPaths(e);
            var payload = new EventPaths(paths);
 
-           var bytes = _api.Parser.ToProto(payload);
-          
-           foreach (var client in _clients.Where(x => x.IsOpen && x.IsAccepted))
+           foreach (var client in _clients.Where(x => x.IsOpen && x.IsAccepted && x.IsAvailable))
            {
-               await client.WriteAsync(bytes);
+               await client.WriteAsync(JsonConvert.SerializeObject(payload));
            }  
        }).GetAwaiter().GetResult();
     }

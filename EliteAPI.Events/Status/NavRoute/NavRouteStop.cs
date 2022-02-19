@@ -27,6 +27,5 @@ public readonly struct NavRouteStop
     /// The class of the star system's main star
     /// </summary>
     [JsonProperty("StarClass")]
-    [JsonConverter(typeof(StringEnumConverter))]
-    public StarClass Class { get; init; }
+    public string Class { get; init; } //todo enum?
 }

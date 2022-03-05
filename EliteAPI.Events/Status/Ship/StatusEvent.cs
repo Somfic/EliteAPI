@@ -7,6 +7,7 @@ namespace EliteAPI.Events.Status.Ship;
 
 public readonly struct StatusEvent : IEvent
 {
+
     [JsonProperty("timestamp")]
     public DateTime Timestamp { get; init; }
 
@@ -90,7 +91,7 @@ public readonly struct StatusEvent : IEvent
 
     [JsonProperty("LegalState")]
     [JsonConverter(typeof(StringEnumConverter))]
-    public LegalState LegalState { get; init; } = LegalState.Clean;
+    public LegalState LegalState { get; init; }
 
     [JsonProperty("Balance")]
     public long Balance { get; init; }

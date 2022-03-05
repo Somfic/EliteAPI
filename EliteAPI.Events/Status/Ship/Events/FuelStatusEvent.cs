@@ -2,11 +2,11 @@
 
 namespace EliteAPI.Events.Status.Ship.Events;
 
-public readonly struct ShipFuelStatusEvent : IStatusEvent<ShipFuel>
+public readonly struct FuelStatusEvent : IStatusEvent<ShipFuel>
 {
     public DateTime Timestamp => DateTime.Now;
     
-    public string Event => "ShipFuel";
+    public string Event => "Fuel";
     
     public ShipFuel Value { get; init; }
 }

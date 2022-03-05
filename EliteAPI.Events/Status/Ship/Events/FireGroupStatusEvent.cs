@@ -2,11 +2,11 @@
 
 namespace EliteAPI.Events.Status.Ship.Events;
 
-public readonly struct OverheatingStatusEvent : IStatusEvent<bool>
+public readonly struct FireGroupStatusEvent : IStatusEvent<int>
 {
     public DateTime Timestamp => DateTime.Now;
     
-    public string Event => "Overheating";
+    public string Event => "FireGroup";
     
-    public bool Value { get; init; }
+    public int Value { get; init; }
 }

@@ -106,17 +106,19 @@ in the API.
 Subscribing to an event is done through the `On<T>()`, `OnJson<T>()`, `OnAny<T>()`, and `OnAnyJson<T>()` methods in
 the `IEliteDangerousApi.Events` property.
 
-| Method        | Description                                           | Parameter                  | Optional data  |
-|---------------|-------------------------------------------------------|----------------------------|----------------|
-| `On<T>()`     | Subscribes to an event of type `T where T : IEvent`   | The event of type `T`      | `EventContext` |
-| `OnAny()`     | Subscribes to all events                              | The event of type `IEvent` | `EventContext` |
-| `OnJson<T>()` | Subscribes to an event of type `T where T : IEvent`   | The `JSON` of the event    | `EventContext` |
-| `OnAnyJson()` | Subscribes to all events                              | The `JSON` of the event    | `EventContext` |
+| Method        | Description                                           | Parameter                  |
+|---------------|-------------------------------------------------------|----------------------------|
+| `On<T>()`     | Subscribes to an event of type `T where T : IEvent`   | The event of type `T`      |
+| `OnAny()`     | Subscribes to all events                              | The event of type `IEvent` |
+| `OnJson<T>()` | Subscribes to an event of type `T where T : IEvent`   | The `JSON` of the event    |
+| `OnAnyJson()` | Subscribes to all events                              | The `JSON` of the event    |
 
+
+The `EventContext` object contains information about the event such as whether the event was raised during session catchup and the source of the event. 
+The `EventContext` parameter is **optional** and does not need to be implemented.
 
 The delegates passed to the `On<T>()` and `OnJson<T>()` methods are invoked whenever an event of type `T` is detected in-game.
 The delegates are invoked with the event and the `EventContext` object.
-The `EventContext` object contains information about the event such as whether the event was raised during session catchup and the source of the event.
 
 ```cs
 api.Events.On<DockingRequestedEvent>(e => 

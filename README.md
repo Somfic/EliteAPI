@@ -121,14 +121,14 @@ The delegates passed to the `On<T>()` and `OnJson<T>()` methods are invoked when
 The delegates are invoked with the event and the `EventContext` object.
 
 ```cs
-api.Events.On<DockingRequestedEvent>(e => 
+api.Events.On<DockingRequestedEvent>((e, context) => 
     Console.WriteLine($"Requested docking at {e.StationName}"));
 ```
 
 Delegates passed to the `OnAny()` and `OnAnyJson()` methods are invoked whenever *any* event is detected in-game. These delegates are also invoked with the event and the `EventContext` object.
 ```cs
-api.Events.OnAny((e, context) => 
-    Console.WriteLine($"Received event {e.Event} from file {context.Source.FullName}"));
+api.Events.OnAny(e => 
+    Console.WriteLine($"Received event {e.Event}"));
 ```
 
 The delegates can also be implemented through methods, if you prefer.

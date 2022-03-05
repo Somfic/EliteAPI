@@ -118,14 +118,15 @@ The `EventContext` object contains information about the event such as whether t
 The `EventContext` parameter is **optional** and does not need to be implemented.
 
 The delegates passed to the `On<T>()` and `OnJson<T>()` methods are invoked whenever an event of type `T` is detected in-game.
-The delegates are invoked with the event and the `EventContext` object.
+The delegates are invoked with the event and the  optional`EventContext` object.
 
 ```cs
 api.Events.On<DockingRequestedEvent>((e, context) => 
     Console.WriteLine($"Requested docking at {e.StationName}"));
 ```
 
-Delegates passed to the `OnAny()` and `OnAnyJson()` methods are invoked whenever *any* event is detected in-game. These delegates are also invoked with the event and the `EventContext` object.
+Delegates passed to the `OnAny()` and `OnAnyJson()` methods are invoked whenever *any* event is detected in-game. 
+These delegates are also invoked with the event and the optional `EventContext` object.
 ```cs
 api.Events.OnAny(e => 
     Console.WriteLine($"Received event {e.Event}"));

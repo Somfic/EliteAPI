@@ -29,8 +29,8 @@ public struct StatusEvent : IEvent
     public bool CargoScoop => GetShipFlag(9);
     public bool SilentRunning => GetShipFlag(10);
     public bool Scooping => GetShipFlag(11);
-    public bool SrvHandbreak => GetShipFlag(12);
-    public bool SrvTurrent => GetShipFlag(13);
+    public bool SrvHandbrake => GetShipFlag(12);
+    public bool SrvTurret => GetShipFlag(13);
     public bool SrvNearShip => GetShipFlag(14);
     public bool SrvDriveAssist => GetShipFlag(15);
     public bool MassLocked => GetShipFlag(16);
@@ -49,10 +49,10 @@ public struct StatusEvent : IEvent
     public bool AltitudeFromAverageRadius => GetShipFlag(29);
     public bool FsdJump => GetShipFlag(30);
     public bool SrvHighBeam => GetShipFlag(31);
-    public bool OnFoot => GetShipFlag(0);
-    
+
     [JsonProperty("Flags2")]
     public CommanderFlags Flags2 { get; init; }
+    public bool OnFoot => GetCommanderFlag(0);
     public bool InTaxi => GetCommanderFlag(1);
     public bool InMultiCrew => GetCommanderFlag(2);
     public bool OnFootInStation => GetCommanderFlag(3);
@@ -75,20 +75,21 @@ public struct StatusEvent : IEvent
     public ShipPips Pips { get; init; }
 
     [JsonProperty("FireGroup")]
-    public long FireGroup { get; init; }
+    public int FireGroup { get; init; }
 
     [JsonProperty("GuiFocus")]
-    public long GuiFocus { get; init; }
+    [JsonConverter(typeof(StringEnumConverter))]
+    public GuiFocus GuiFocus { get; init; }
 
     [JsonProperty("Fuel")]
     public ShipFuel Fuel { get; init; }
 
     [JsonProperty("Cargo")]
-    public long Cargo { get; init; }
+    public int Cargo { get; init; }
 
     [JsonProperty("LegalState")]
     [JsonConverter(typeof(StringEnumConverter))]
-    public LegalState LegalState { get; init; }
+    public LegalState LegalState { get; init; } = LegalState.Clean;
 
     [JsonProperty("Balance")]
     public long Balance { get; init; }
@@ -138,4 +139,9 @@ public struct StatusEvent : IEvent
     {
         return Flags2.HasFlag((CommanderFlags) (1 << bit));
     }
+}
+
+public enum GuiFocus
+{
+    
 }

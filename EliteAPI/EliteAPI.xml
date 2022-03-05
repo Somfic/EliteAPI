@@ -32,7 +32,15 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.EliteDangerousApi.#ctor(System.IServiceProvider)">
-            <summary>Creates a new instance of the EliteDangerousApi class.</summary>
+            <summary>
+            Creates a new instance of the EliteDangerousApi class using the services defined in the provided IServiceCollection.
+            </summary>
+            <param name="services">The IServiceCollection to use to create the instance.</param>
+        </member>
+        <member name="M:EliteAPI.EliteDangerousApi.Create">
+            <summary>
+            Creates a new instance of the EliteDangerousApi class.
+            </summary>
         </member>
         <member name="M:EliteAPI.EliteDangerousApi.InitialiseAsync">
             <inheritdoc />
@@ -88,10 +96,22 @@
         <member name="M:EliteAPI.Events.Events.On``1(EliteAPI.Abstractions.Events.EventDelegate{``0})">
             <inheritdoc />
         </member>
+        <member name="M:EliteAPI.Events.Events.On``1(EliteAPI.Abstractions.Events.AsyncEventContextDelegate{``0})">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.On``1(EliteAPI.Abstractions.Events.AsyncEventDelegate{``0})">
+            <inheritdoc />
+        </member>
         <member name="M:EliteAPI.Events.Events.OnJson``1(EliteAPI.Abstractions.Events.JsonContextDelegate)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.Events.OnJson``1(EliteAPI.Abstractions.Events.JsonDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.OnJson``1(EliteAPI.Abstractions.Events.AsyncJsonContextDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.OnJson``1(EliteAPI.Abstractions.Events.AsyncJsonDelegate)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.EventContextDelegate{EliteAPI.Abstractions.Events.IEvent})">
@@ -100,10 +120,22 @@
         <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.EventDelegate{EliteAPI.Abstractions.Events.IEvent})">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.JsonContextDelegate)">
+        <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.AsyncEventContextDelegate{EliteAPI.Abstractions.Events.IEvent})">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.JsonDelegate)">
+        <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.AsyncEventDelegate{EliteAPI.Abstractions.Events.IEvent})">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.OnAnyJson(EliteAPI.Abstractions.Events.JsonContextDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.OnAnyJson(EliteAPI.Abstractions.Events.JsonDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.OnAnyJson(EliteAPI.Abstractions.Events.AsyncJsonContextDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.OnAnyJson(EliteAPI.Abstractions.Events.AsyncJsonDelegate)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.Events.Invoke``1(``0,EliteAPI.Abstractions.Events.EventContext)">

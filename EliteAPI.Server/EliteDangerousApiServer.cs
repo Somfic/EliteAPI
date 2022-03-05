@@ -31,21 +31,19 @@ public class EliteDangerousApiServer
         _api.Events.OnAny(OnAny);
     }
 
-    private void OnAny(IEvent e, EventContext context)
+    private async Task OnAny(IEvent e, EventContext context)
     {
-       Task.Run(async () =>
-       {
-           backlog.Add(e);
-           
-           var paths = _api.Parser.ToPaths(e);
-           var payload = new EventPaths(paths);
+        backlog.Add(e);
 
-           foreach (var client in _clients.Where(x => x.IsOpen && x.IsAccepted && x.IsAvailable))
-           {
-               await client.WriteAsync(JsonConvert.SerializeObject(payload));
-           }  
-       }).GetAwaiter().GetResult();
+        var paths = _api.Parser.ToPaths(e);
+        var payload = new EventPaths(paths);
+
+        foreach (var client in _clients.Where(x => x.IsOpen && x.IsAccepted && x.IsAvailable))
+        {
+            await client.WriteAsync(JsonConvert.SerializeObject(payload));
+        }
     }
+
 
     private readonly List<Client> _clients = new();
     private readonly List<Task> _clientTasks = new();

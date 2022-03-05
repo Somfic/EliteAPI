@@ -9,10 +9,12 @@ using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.Abstractions.Readers;
 using EliteAPI.Abstractions.Status;
+using EliteAPI.Configuration;
 using EliteAPI.Events;
 using EliteAPI.Events.Status.Ship;
 using EliteAPI.Events.Status.Ship.Events;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -36,9 +38,12 @@ public class EliteDangerousApi : IEliteDangerousApi
     private DirectoryInfo _optionsDirectory;
     private readonly IReader _reader;
     private Task _mainTask;
-    private bool hasInitialised;
+    private bool _hasInitialised;
 
-    /// <summary>Creates a new instance of the EliteDangerousApi class.</summary>
+    /// <summary>
+    /// Creates a new instance of the EliteDangerousApi class using the services defined in the provided IServiceCollection.
+    /// </summary>
+    /// <param name="services">The IServiceCollection to use to create the instance.</param>
     public EliteDangerousApi(IServiceProvider services)
     {
         _log = services.GetService<ILogger<EliteDangerousApi>>();
@@ -47,6 +52,19 @@ public class EliteDangerousApi : IEliteDangerousApi
         Config = services.GetRequiredService<IEliteDangerousApiConfiguration>();
         Events = services.GetRequiredService<IEvents>();
         _reader = services.GetRequiredService<IReader>();
+    }
+
+    /// <summary>
+    /// Creates a new instance of the EliteDangerousApi class.
+    /// </summary>
+    public static IEliteDangerousApi Create()
+    {
+        var host = Host.CreateDefaultBuilder()
+            .ConfigureLogging(log => log.ClearProviders())
+            .ConfigureServices(services => services.AddEliteApi())
+            .Build();
+
+        return host.Services.GetRequiredService<IEliteDangerousApi>();
     }
 
     /// <inheritdoc />
@@ -78,13 +96,13 @@ public class EliteDangerousApi : IEliteDangerousApi
         _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "ShipLocker.json"));
         _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Shipyard.json"));
 
-        hasInitialised = true;
+        _hasInitialised = true;
     }
 
     /// <inheritdoc />
     public async Task StartAsync()
     {
-        if (!hasInitialised)
+        if (!_hasInitialised)
             await InitialiseAsync();
 
         try

@@ -67,19 +67,19 @@ public interface IEvents
 
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="JsonContextDelegate" /> delegate handler</param>
-    void OnAny(JsonContextDelegate handler);
+    void OnAnyJson(JsonContextDelegate handler);
     
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
-    void OnAny(JsonDelegate handler);
+    void OnAnyJson(JsonDelegate handler);
     
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="JsonContextDelegate" /> delegate handler</param>
-    void OnAny(AsyncJsonContextDelegate handler);
+    void OnAnyJson(AsyncJsonContextDelegate handler);
     
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
-    void OnAny(AsyncJsonDelegate handler);
+    void OnAnyJson(AsyncJsonDelegate handler);
 
     /// <summary>Invokes the registered event handlers for the specified event.</summary>
     /// <param name="event">The instance of the event</param>

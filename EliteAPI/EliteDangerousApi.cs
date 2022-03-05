@@ -1,15 +1,21 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.Abstractions.Readers;
+using EliteAPI.Abstractions.Status;
 using EliteAPI.Events;
+using EliteAPI.Events.Status.Ship;
+using EliteAPI.Events.Status.Ship.Events;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace EliteAPI;
 
@@ -56,6 +62,8 @@ public class EliteDangerousApi : IEliteDangerousApi
         // Register all events
         Events.Register();
 
+        Events.On<StatusEvent>(HandleStatus);
+
         // Register Journal files
         _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), Config.JournalPattern, true));
 
@@ -94,17 +102,15 @@ public class EliteDangerousApi : IEliteDangerousApi
 
             IsRunning = true;
 
-            _log?.LogDebug("Hi");
-
             _mainTask = Task.Run(async () =>
             {
                 var isFirstRun = true;
-                
+
                 while (IsRunning)
                 {
                     await foreach (var (file, line) in _reader.FindNew())
                     {
-                        if(string.IsNullOrEmpty(line))
+                        if (string.IsNullOrEmpty(line))
                             continue;
 
                         var context = new EventContext()
@@ -112,13 +118,11 @@ public class EliteDangerousApi : IEliteDangerousApi
                             IsRaisedDuringCatchup = isFirstRun,
                             Source = file
                         };
-                        
+
                         Events.Invoke(line, context);
                     }
 
                     isFirstRun = false;
-                    
-                    await Task.Delay(100);
                 }
             });
         }
@@ -138,4 +142,55 @@ public class EliteDangerousApi : IEliteDangerousApi
 
     /// <inheritdoc />
     public IEvents Events { get; }
+
+
+    private StatusEvent? _lastStatus = null;
+
+    private void HandleStatus(StatusEvent status, EventContext context)
+    {
+        // Check each property to see if it has changed
+        var properties = typeof(StatusEvent).GetProperties();
+
+        foreach (var property in properties)
+        {
+            if (property.Name is "Timestamp" or "Event" or "Flags" or "Flags2")
+                continue;
+            
+            var oldValue = _lastStatus != null ? property.GetValue(_lastStatus) : null;
+            var newValue = property.GetValue(status);
+
+            if (JsonConvert.SerializeObject(oldValue) == JsonConvert.SerializeObject(newValue))
+                continue;
+
+            var typeName = $"EliteAPI.Events.Status.Ship.Events.{property.Name}StatusEvent";
+            var statusEventType = typeof(GearStatusEvent).Assembly.GetType(typeName);
+            if (statusEventType == null)
+            {
+                _log?.LogWarning("Could not find type {TypeName}", typeName);
+                continue;
+            }
+
+            var emptyStatusEvent = new EmptyStatusEvent()
+            {
+                Timestamp = DateTime.Now,
+                Event = $"{property.Name}Status",
+                Value = newValue
+            };
+
+            var json = JsonConvert.SerializeObject(emptyStatusEvent);
+
+            Events.Invoke(json, context);
+        }
+
+        _lastStatus = status;
+    }
+}
+
+class EmptyStatusEvent : IStatusEvent
+{
+    public DateTime Timestamp { get; init; }
+
+    public string Event { get; init; }
+
+    public object Value { get; init; }
 }

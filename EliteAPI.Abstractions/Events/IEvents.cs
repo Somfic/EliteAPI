@@ -18,6 +18,16 @@ public interface IEvents
     /// <param name="handler">The <see cref="EventDelegate{TEvent}" /> delegate handler</param>
     /// <typeparam name="TEvent">The event type</typeparam>
     void On<TEvent>(EventDelegate<TEvent> handler) where TEvent : IEvent;
+    
+    /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
+    /// <param name="handler">The <see cref="EventContextDelegate{TEvent}" /> delegate handler</param>
+    /// <typeparam name="TEvent">The event type</typeparam>
+    void On<TEvent>(AsyncEventContextDelegate<TEvent> handler) where TEvent : IEvent;
+    
+    /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
+    /// <param name="handler">The <see cref="EventDelegate{TEvent}" /> delegate handler</param>
+    /// <typeparam name="TEvent">The event type</typeparam>
+    void On<TEvent>(AsyncEventDelegate<TEvent> handler) where TEvent : IEvent;
 
     /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
     /// <param name="handler">The <see cref="JsonContextDelegate" /> delegate handler</param>
@@ -28,6 +38,16 @@ public interface IEvents
     /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
     /// <typeparam name="TEvent">The event type</typeparam>
     void OnJson<TEvent>(JsonDelegate handler) where TEvent : IEvent;
+    
+    /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
+    /// <param name="handler">The <see cref="JsonContextDelegate" /> delegate handler</param>
+    /// <typeparam name="TEvent">The event type</typeparam>
+    void OnJson<TEvent>(AsyncJsonContextDelegate handler) where TEvent : IEvent;
+    
+    /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
+    /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
+    /// <typeparam name="TEvent">The event type</typeparam>
+    void OnJson<TEvent>(AsyncJsonDelegate handler) where TEvent : IEvent;
 
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="EventContextDelegate{TEvent}" /> delegate handler</param>
@@ -36,6 +56,14 @@ public interface IEvents
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="EventDelegate{TEvent}" /> delegate handler</param>
     void OnAny(EventDelegate<IEvent> handler);
+    
+    /// <summary>Adds an event handler that will be called when any event is raised.</summary>
+    /// <param name="handler">The <see cref="EventContextDelegate{TEvent}" /> delegate handler</param>
+    void OnAny(AsyncEventContextDelegate<IEvent> handler);
+    
+    /// <summary>Adds an event handler that will be called when any event is raised.</summary>
+    /// <param name="handler">The <see cref="EventDelegate{TEvent}" /> delegate handler</param>
+    void OnAny(AsyncEventDelegate<IEvent> handler);
 
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="JsonContextDelegate" /> delegate handler</param>
@@ -44,6 +72,14 @@ public interface IEvents
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
     void OnAny(JsonDelegate handler);
+    
+    /// <summary>Adds an event handler that will be called when any event is raised.</summary>
+    /// <param name="handler">The <see cref="JsonContextDelegate" /> delegate handler</param>
+    void OnAny(AsyncJsonContextDelegate handler);
+    
+    /// <summary>Adds an event handler that will be called when any event is raised.</summary>
+    /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
+    void OnAny(AsyncJsonDelegate handler);
 
     /// <summary>Invokes the registered event handlers for the specified event.</summary>
     /// <param name="event">The instance of the event</param>

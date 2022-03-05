@@ -35,7 +35,7 @@ public class Reader : IReader
             {
                 _log?.LogWarning("No files found matching {Pattern} in {Directory}", fileSelector.FilePattern, fileSelector.Directory.FullName);
                 _files.Remove(fileSelector);
-                continue;
+                yield break;
             }
             
             if(!_lastValues.ContainsKey(file.FullName))
@@ -52,7 +52,7 @@ public class Reader : IReader
                 _log?.LogWarning(ex, "Could not open file {File}", file.FullName);
                 continue;
             }
-
+            
             if (fileSelector.IsMultiLine)
             {
                 var newValues = new List<string>();

@@ -103,7 +103,7 @@ Alternatively, the `Create()` factory method can be used to create an instance o
 EliteAPI constantly scans the Journal log files for new in-game events. Whenever a new event is detected it is invoked
 in the API.
 
-Subscribing to an event is done through the `On<T>()`, `OnJson<T>()`, `OnAny<T>()`, and `OnAnyJson<T>()` methods in
+Subscribing to an event is done through the `On<T>()`, `OnJson<T>()`, `OnAny()`, and `OnAnyJson()` methods in
 the `IEliteDangerousApi.Events` property.
 
 | Method        | Description                                           | Parameter                  |

@@ -2,7 +2,7 @@
 
 namespace EliteAPI.Events.Status.Converters;
 
-internal class DecToIntConverter : JsonConverter
+internal class DecimalToIntegerConverter : JsonConverter
 {
     /// <inheritdoc />
     public override bool CanRead => false;

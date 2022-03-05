@@ -85,6 +85,7 @@ public struct StatusEvent : IEvent
     public ShipFuel Fuel { get; init; }
 
     [JsonProperty("Cargo")]
+    [JsonConverter(typeof(DecimalToIntegerConverter))]
     public int Cargo { get; init; }
 
     [JsonProperty("LegalState")]

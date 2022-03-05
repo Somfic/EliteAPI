@@ -18,11 +18,11 @@ public class Events : IEvents
     private readonly ILogger<Events>? _log;
     private readonly IServiceProvider _services;
 
-    private Dictionary<Type, IList<Delegate>> _eventHandlers = new();
-    private Dictionary<Type, IList<Delegate>> _jsonHandlers = new();
+    private Dictionary<Type, IList<(Delegate d, bool hasContext)>> _eventHandlers = new();
+    private Dictionary<Type, IList<(Delegate d, bool hasContext)>> _jsonHandlers = new();
 
-    private readonly List<Delegate> _anyEventHandlers = new();
-    private readonly List<Delegate> _anyJsonHandlers = new();
+    private readonly List<(Delegate d, bool hasContext)> _anyEventHandlers = new();
+    private readonly List<(Delegate d, bool hasContext)> _anyJsonHandlers = new();
 
     private readonly IEventParser _parser;
 
@@ -37,13 +37,21 @@ public class Events : IEvents
     public IEnumerable<Type> EventTypes => _eventHandlers.Keys;
 
     /// <inheritdoc />
+    public void On<TEvent>(EventContextDelegate<TEvent> handler) where TEvent : IEvent =>
+        On<TEvent>(handler, ref _eventHandlers, true);
+    
+    /// <inheritdoc />
     public void On<TEvent>(EventDelegate<TEvent> handler) where TEvent : IEvent =>
-        On<TEvent>(handler, ref _eventHandlers);
+        On<TEvent>(handler, ref _eventHandlers, false);
 
     /// <inheritdoc />
-    public void On<TEvent>(JsonDelegate handler) where TEvent : IEvent => On<TEvent>(handler, ref _jsonHandlers);
+    public void OnJson<TEvent>(JsonContextDelegate handler) where TEvent : IEvent => On<TEvent>(handler, ref _jsonHandlers, true);
 
-    private void On<TEvent>(Delegate handler, ref Dictionary<Type, IList<Delegate>> delegates) where TEvent : IEvent
+    /// <inheritdoc />
+    public void OnJson<TEvent>(JsonDelegate handler) where TEvent : IEvent => On<TEvent>(handler, ref _jsonHandlers, false);
+
+    
+    private void On<TEvent>(Delegate handler, ref Dictionary<Type, IList<(Delegate d, bool hasContext)>> delegates, bool hasContext) where TEvent : IEvent
     {
         var eventType = typeof(TEvent);
 
@@ -51,16 +59,22 @@ public class Events : IEvents
             Register<TEvent>();
 
         if (delegates.TryGetValue(eventType, out var handlers))
-            handlers.Add(handler);
+            handlers.Add((handler, hasContext));
         else
-            delegates.Add(eventType, new List<Delegate> {handler});
+            delegates.Add(eventType, new List<(Delegate d, bool hasContext)> {(handler, hasContext)});
     }
 
     /// <inheritdoc />
-    public void OnAny(EventDelegate<IEvent> handler) => _anyEventHandlers.Add(handler);
+    public void OnAny(EventContextDelegate<IEvent> handler) => _anyEventHandlers.Add((handler, true));
+    
+    /// <inheritdoc />
+    public void OnAny(EventDelegate<IEvent> handler) => _anyEventHandlers.Add((handler, false));
 
     /// <inheritdoc />
-    public void OnAny(JsonDelegate handler) => _anyJsonHandlers.Add(handler);
+    public void OnAny(JsonContextDelegate handler) => _anyJsonHandlers.Add((handler, true));
+    
+    /// <inheritdoc />
+    public void OnAny(JsonDelegate handler) => _anyJsonHandlers.Add((handler, false));
 
     /// <inheritdoc />
     public void Invoke<TEvent>(TEvent @event, EventContext context) where TEvent : IEvent
@@ -246,12 +260,12 @@ public class Events : IEvents
                     type.FullName);
 
                 _eventHandlers.Remove(oldEvent);
-                _eventHandlers.Add(type, new List<Delegate>());
+                _eventHandlers.Add(type, new List<(Delegate d, bool hasContext)>());
             }
             else
             {
                 _log?.LogTrace("Assigning {EventName} to {Event}", eventName, type.FullName);
-                _eventHandlers.Add(type, new List<Delegate>());
+                _eventHandlers.Add(type, new List<(Delegate d, bool hasContext)>());
             }
         }
         catch (Exception ex)
@@ -266,44 +280,52 @@ public class Events : IEvents
         var eventName = @event.GetType().Name.Replace("Event", string.Empty);
 
         // Any handlers
-        foreach (var handler in _anyEventHandlers)
+        foreach (var (d, hasContext) in _anyEventHandlers)
         {
             try
             {
                 _log?.LogTrace("Invoking {Type}:{Handler} handler for event {Event}",
-                    handler.Method.DeclaringType?.FullName,
-                    handler.Method.Name,
+                    d.Method.DeclaringType?.FullName,
+                    d.Method.Name,
                     eventName);
-                handler.DynamicInvoke(@event, context);
+                
+                if(hasContext)
+                    d.DynamicInvoke(@event, context);
+                else
+                    d.DynamicInvoke(@event);
             }
             catch (TargetInvocationException ex)
             {
                 _log?.LogWarning(ex.InnerException,
                     "Unhandled exception in {Type}:{Handler} handler for event {Event}",
-                    handler.Method.DeclaringType?.FullName,
-                    handler.Method.Name,
+                    d.Method.DeclaringType?.FullName,
+                    d.Method.Name,
                     eventName);
             }
         }
         
         // Specific handlers
         var eventType = @event.GetType();
-        foreach (var handler in _eventHandlers[eventType])
+        foreach (var (d, hasContext) in _eventHandlers[eventType])
         {
             try
             {
                 _log?.LogTrace("Invoking {Type}:{Handler} handler for event {Event}",
-                    handler.Method.DeclaringType?.FullName,
-                    handler.Method.Name,
+                    d.Method.DeclaringType?.FullName,
+                    d.Method.Name,
                     eventName);
-                handler.DynamicInvoke(@event, context);
+                
+                if(hasContext)
+                    d.DynamicInvoke(@event, context);
+                else
+                    d.DynamicInvoke(@event);
             }
             catch (TargetInvocationException ex)
             {
                 _log?.LogWarning(ex.InnerException,
                     "Unhandled exception in {Type}:{Handler} handler for event {Event}",
-                    handler.Method.DeclaringType?.FullName,
-                    handler.Method.Name,
+                    d.Method.DeclaringType?.FullName,
+                    d.Method.Name,
                     eventName);
             }
         }
@@ -329,22 +351,26 @@ public class Events : IEvents
         var eventName = eventKey.Value<string>();
 
         // Any handlers
-        foreach (var handler in _anyJsonHandlers)
+        foreach (var (d, hasContext) in _anyJsonHandlers)
         {
             try
             {
                 _log?.LogTrace("Invoking {Type}:{Handler} handler for event {Event}",
-                    handler.Method.DeclaringType?.FullName,
-                    handler.Method.Name,
+                    d.Method.DeclaringType?.FullName,
+                    d.Method.Name,
                     eventName);
-                handler.DynamicInvoke(json, context);
+                
+                if(hasContext)
+                    d.DynamicInvoke(json, context);
+                else
+                    d.DynamicInvoke(json);
             }
             catch (TargetInvocationException ex)
             {
                 _log?.LogWarning(ex.InnerException,
                     "Unhandled exception in {Type}:{Handler} handler for event {Event}",
-                    handler.Method.DeclaringType?.FullName,
-                    handler.Method.Name,
+                    d.Method.DeclaringType?.FullName,
+                    d.Method.Name,
                     eventName);
             }
         }
@@ -353,22 +379,26 @@ public class Events : IEvents
         if (type == null)
             return;
         
-        foreach (var handler in _jsonHandlers.Where(x => x.Key == type).SelectMany(x => x.Value))
+        foreach (var (d, hasContext) in _jsonHandlers.Where(x => x.Key == type).SelectMany(x => x.Value))
         {
             try
             {
                 _log?.LogTrace("Invoking {Type}:{Handler} handler for event {Event}",
-                    handler.Method.DeclaringType?.FullName,
-                    handler.Method.Name,
+                    d.Method.DeclaringType?.FullName,
+                    d.Method.Name,
                     eventName);
-                handler.DynamicInvoke(json, context);
+                
+                if(hasContext)
+                    d.DynamicInvoke(json, context);
+                else
+                    d.DynamicInvoke(json);
             }
             catch (TargetInvocationException ex)
             {
                 _log?.LogWarning(ex.InnerException,
                     "Unhandled exception in {Type}:{Handler} handler for event {Event}",
-                    handler.Method.DeclaringType?.FullName,
-                    handler.Method.Name,
+                    d.Method.DeclaringType?.FullName,
+                    d.Method.Name,
                     eventName);
             }
         }

@@ -10,19 +10,37 @@ public interface IEvents
     IEnumerable<Type> EventTypes { get; }
 
     /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
-    /// <param name="handler">The <see cref="EventDelegate{T}" /> delegate handler</param>
+    /// <param name="handler">The <see cref="EventContextDelegate{TEvent}" /> delegate handler</param>
+    /// <typeparam name="TEvent">The event type</typeparam>
+    void On<TEvent>(EventContextDelegate<TEvent> handler) where TEvent : IEvent;
+    
+    /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
+    /// <param name="handler">The <see cref="EventDelegate{TEvent}" /> delegate handler</param>
     /// <typeparam name="TEvent">The event type</typeparam>
     void On<TEvent>(EventDelegate<TEvent> handler) where TEvent : IEvent;
 
     /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
+    /// <param name="handler">The <see cref="JsonContextDelegate" /> delegate handler</param>
+    /// <typeparam name="TEvent">The event type</typeparam>
+    void OnJson<TEvent>(JsonContextDelegate handler) where TEvent : IEvent;
+    
+    /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
     /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
     /// <typeparam name="TEvent">The event type</typeparam>
-    void On<TEvent>(JsonDelegate handler) where TEvent : IEvent;
+    void OnJson<TEvent>(JsonDelegate handler) where TEvent : IEvent;
 
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
-    /// <param name="handler">The <see cref="EventDelegate{T}" /> delegate handler</param>
+    /// <param name="handler">The <see cref="EventContextDelegate{TEvent}" /> delegate handler</param>
+    void OnAny(EventContextDelegate<IEvent> handler);
+    
+    /// <summary>Adds an event handler that will be called when any event is raised.</summary>
+    /// <param name="handler">The <see cref="EventDelegate{TEvent}" /> delegate handler</param>
     void OnAny(EventDelegate<IEvent> handler);
 
+    /// <summary>Adds an event handler that will be called when any event is raised.</summary>
+    /// <param name="handler">The <see cref="JsonContextDelegate" /> delegate handler</param>
+    void OnAny(JsonContextDelegate handler);
+    
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
     void OnAny(JsonDelegate handler);

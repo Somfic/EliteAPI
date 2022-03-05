@@ -82,13 +82,25 @@
         <member name="P:EliteAPI.Events.Events.EventTypes">
             <inheritdoc />
         </member>
+        <member name="M:EliteAPI.Events.Events.On``1(EliteAPI.Abstractions.Events.EventContextDelegate{``0})">
+            <inheritdoc />
+        </member>
         <member name="M:EliteAPI.Events.Events.On``1(EliteAPI.Abstractions.Events.EventDelegate{``0})">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.On``1(EliteAPI.Abstractions.Events.JsonDelegate)">
+        <member name="M:EliteAPI.Events.Events.OnJson``1(EliteAPI.Abstractions.Events.JsonContextDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.OnJson``1(EliteAPI.Abstractions.Events.JsonDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.EventContextDelegate{EliteAPI.Abstractions.Events.IEvent})">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.EventDelegate{EliteAPI.Abstractions.Events.IEvent})">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.JsonContextDelegate)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.Events.OnAny(EliteAPI.Abstractions.Events.JsonDelegate)">

@@ -1,4 +1,4 @@
-﻿namespace EliteAPI.VoiceAttack.Log
+﻿namespace EliteAPI.VoiceAttack.Proxy.Logging
 {
     public enum VoiceAttackColor
     {

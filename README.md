@@ -96,6 +96,10 @@ var api = services.GetService<IEliteDangerousApi>();
 
 Alternatively, the `Create()` factory method can be used to create an instance of the `EliteDangerousApi` class.
 
+```cs
+var api = EliteDangerousApi.Create();
+```
+
 ## Getting started
 
 EliteAPI constantly scans the Journal log files for new in-game events. Whenever a new event is detected it is invoked

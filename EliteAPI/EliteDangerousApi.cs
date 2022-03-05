@@ -36,6 +36,7 @@ public class EliteDangerousApi : IEliteDangerousApi
     private DirectoryInfo _optionsDirectory;
     private readonly IReader _reader;
     private Task _mainTask;
+    private bool hasInitialised;
 
     /// <summary>Creates a new instance of the EliteDangerousApi class.</summary>
     public EliteDangerousApi(IServiceProvider services)
@@ -76,11 +77,16 @@ public class EliteDangerousApi : IEliteDangerousApi
         _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Outfitting.json"));
         _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "ShipLocker.json"));
         _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Shipyard.json"));
+
+        hasInitialised = true;
     }
 
     /// <inheritdoc />
     public async Task StartAsync()
     {
+        if (!hasInitialised)
+            await InitialiseAsync();
+
         try
         {
             _log?.LogInformation("Starting EliteAPI v{Version}", typeof(EliteDangerousApi).Assembly.GetName().Version);

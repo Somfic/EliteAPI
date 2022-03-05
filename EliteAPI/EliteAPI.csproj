@@ -1,52 +1,51 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
-    <FileVersion>3.0.0.0</FileVersion>
-    <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
-    <PackageIconUrl />
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic</PackageTags>
-    <NeutralLanguage>en</NeutralLanguage>
-    <Description>A powerful event based .NET API for Elite: Dangerous</Description>
-    <Copyright>© Somfic 2020</Copyright>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.0.0-alpha5062</Version>
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <PackageIcon>logo_gradient_small.jpg</PackageIcon>
-    <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
-    <LangVersion>9</LangVersion>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Authors>Somfic</Authors>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <InformationalVersion>3.0.0-alpha.5062+Branch.dev.Sha.40280b60e90e27a0d32df74a63376ed4fbdd395e</InformationalVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>EliteAPI.xml</DocumentationFile>
-    <NoWarn />
-    <Optimize>true</Optimize>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="IsExternalInit" Version="1.0.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="protobuf-net.Grpc" Version="1.0.152" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath />
-    </None>
-    <None Include="logo_gradient_small.jpg">
-      <Pack>True</Pack>
-      <PackagePath />
-    </None>
-  </ItemGroup>
+    <PropertyGroup>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <FileVersion>3.0.0.0</FileVersion>
+        <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
+        <PackageIconUrl />
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic</PackageTags>
+        <NeutralLanguage>en</NeutralLanguage>
+        <Description>A powerful event based .NET API for Elite: Dangerous</Description>
+        <Copyright>© Somfic 2020</Copyright>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <Version>3.0.0-alpha5060</Version>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <PackageIcon>logo_gradient_small.jpg</PackageIcon>
+        <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
+        <LangVersion>10</LangVersion>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <Authors>Somfic</Authors>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <InformationalVersion>3.0.0-alpha.5060+Branch.dev.Sha.f4a25e6229a31f6cb5a650396a209add1b879f13</InformationalVersion>
+        <Nullable>enable</Nullable>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DocumentationFile>EliteAPI.xml</DocumentationFile>
+        <NoWarn />
+        <Optimize>true</Optimize>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="IsExternalInit" Version="1.0.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="6.0.0" />
+        <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="protobuf-net" Version="3.0.101" />
+        <PackageReference Include="Valsom.Logging.PrettyConsole" Version="0.1.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\EliteAPI.Abstractions\EliteAPI.Abstractions.csproj" />
+        <ProjectReference Include="..\EliteAPI.Events\EliteAPI.Events.csproj" />
+    </ItemGroup>
 </Project>

@@ -59,8 +59,7 @@ in a few ways.
 The API can be added to your
 application's [host](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/generic-host). A host is used to
 encapsulate the application's resources, such
-as [logging](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging)
-, [configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration),
+as [logging](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging), [configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration),
 and [dependency injection](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection). The API can
 be added using the `AddEliteApi()` method.
 
@@ -79,8 +78,7 @@ var api = host.Services.GetService<IEliteDangerousApi>();
 ### ServiceCollection
 
 You can choose not the use the host and create a `ServiceCollection` directly, and add the API to it. Note that you lose
-the ability to configure resources such as [logging](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging)
-, [configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration),
+the ability to configure resources such as [logging](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging), [configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration),
 and [dependency injection](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection). The library
 contains an extension method `AddEliteApi()` that can be used to directly add all required API services to
 the `IServiceCollection`.

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using EliteAPI.VoiceAttack.Log;
 using EliteAPI.VoiceAttack.Proxy.Audio;
 using EliteAPI.VoiceAttack.Proxy.Commands;
-using EliteAPI.VoiceAttack.Proxy.Log;
 using EliteAPI.VoiceAttack.Proxy.Options;
 using EliteAPI.VoiceAttack.Proxy.Paths;
 using EliteAPI.VoiceAttack.Proxy.Variables;

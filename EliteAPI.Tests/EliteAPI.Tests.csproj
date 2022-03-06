@@ -2,10 +2,10 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <Version>3.0.0-alpha5135</Version>
+    <Version>3.0.0-alpha5137</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.5135+Branch.dev.Sha.8a7d5699e623c26a80dc48fc1171e29e928e1bcb</InformationalVersion>
+    <InformationalVersion>3.0.0-alpha.5137+Branch.dev.Sha.9a7549115f5ff759dc0e5138fb5bb62fb54af365</InformationalVersion>
     <Nullable>enable</Nullable>
     <LangVersion>10</LangVersion>
   </PropertyGroup>

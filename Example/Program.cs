@@ -1,30 +1,16 @@
-﻿using EliteAPI.Web.EDSM;
-using EliteAPI.Web.Spansh;
-using Example;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Valsom.Logging.PrettyConsole;
+﻿using EliteAPI;
+using EliteAPI.Events.Status.Ship.Events;
 
-var host = Host.CreateDefaultBuilder()
-    .ConfigureServices(services =>
-    {
-        services.AddEliteApi();
-        services.AddEliteApiServer();
-        services.AddWebApi<EdsmApi>();
-        services.AddWebApi<SpanshApi>();
-    })
-    .ConfigureLogging(logging =>
-    {
-        logging.SetMinimumLevel(LogLevel.Debug);
-        logging.ClearProviders();
-        logging.AddPrettyConsole();
-    })
-    .ConfigureAppConfiguration(config => { config.AddJsonFile("appsettings.json", true, true); })
-    .Build();
+// Create an instance of the API
+var api = EliteDangerousApi.Create();
 
-var core = ActivatorUtilities.CreateInstance<Core>(host.Services);
-await core.Run();
+// Subscribe to the event
+api.Events.On<LightsStatusEvent>(lights => 
+    Console.WriteLine($"Lights {(lights.Value ? "on" : "off")}"));
 
+// Start the API
+Console.WriteLine("Hello commander o7");
+await api.StartAsync();
+
+// Run indefinitely
 await Task.Delay(-1);

@@ -5,7 +5,7 @@ using Newtonsoft.Json.Converters;
 
 namespace EliteAPI.Events.Status.Ship;
 
-public struct StatusEvent : IEvent
+public readonly struct StatusEvent : IEvent
 {
     [JsonProperty("timestamp")]
     public DateTime Timestamp { get; init; }
@@ -14,7 +14,7 @@ public struct StatusEvent : IEvent
     public string Event { get; init; }
 
     [JsonProperty("Flags")]
-    public ShipFlags Flags { get; set; }
+    public ShipFlags Flags { get; init; }
     
     public bool Available => Flags != ShipFlags.None || Flags2 != CommanderFlags.None;
     public bool Docked => GetShipFlag(0);
@@ -90,7 +90,7 @@ public struct StatusEvent : IEvent
 
     [JsonProperty("LegalState")]
     [JsonConverter(typeof(StringEnumConverter))]
-    public LegalState LegalState { get; init; } = LegalState.Clean;
+    public LegalState LegalState { get; init; }
 
     [JsonProperty("Balance")]
     public long Balance { get; init; }

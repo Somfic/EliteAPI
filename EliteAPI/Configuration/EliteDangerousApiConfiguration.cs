@@ -65,7 +65,7 @@ public class EliteDangerousApiConfiguration : IEliteDangerousApiConfiguration
                     out var path);
 
                 // If we got a path, return it
-                if (result > 0)
+                if (result == 0)
                     return Marshal.PtrToStringUni(path);
             }
 

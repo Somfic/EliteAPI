@@ -12,5 +12,9 @@ api.Events.On<LightsStatusEvent>(lights =>
 Console.WriteLine("Hello commander o7");
 await api.StartAsync();
 
+Console.WriteLine("Waiting for gear");
+var gearEvent = api.Events.Until<GearStatusEvent>();
+Console.WriteLine("Gears are " + (gearEvent.Value ? "down" : "up"));
+
 // Run indefinitely
 await Task.Delay(-1);

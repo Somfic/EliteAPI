@@ -31,6 +31,9 @@
         <member name="P:EliteAPI.EliteDangerousApi.Parser">
             <inheritdoc />
         </member>
+        <member name="P:EliteAPI.EliteDangerousApi.IsRunning">
+            <inheritdoc />
+        </member>
         <member name="M:EliteAPI.EliteDangerousApi.#ctor(System.IServiceProvider)">
             <summary>
             Creates a new instance of the EliteDangerousApi class using the services defined in the provided IServiceCollection.
@@ -90,6 +93,9 @@
         <member name="P:EliteAPI.Events.Events.EventTypes">
             <inheritdoc />
         </member>
+        <member name="P:EliteAPI.Events.Events.PreviousEvents">
+            <inheritdoc />
+        </member>
         <member name="M:EliteAPI.Events.Events.On``1(EliteAPI.Abstractions.Events.EventContextDelegate{``0})">
             <inheritdoc />
         </member>
@@ -136,6 +142,18 @@
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.Events.OnAnyJson(EliteAPI.Abstractions.Events.AsyncJsonDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.Until``1">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.Until``1(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.Until``1(System.TimeSpan)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.Until``1(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.Events.Invoke``1(``0,EliteAPI.Abstractions.Events.EventContext)">

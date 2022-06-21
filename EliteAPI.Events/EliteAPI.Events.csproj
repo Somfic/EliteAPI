@@ -1,22 +1,22 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <LangVersion>10</LangVersion>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
-    <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.5137+Branch.dev.Sha.9a7549115f5ff759dc0e5138fb5bb62fb54af365</InformationalVersion>
-    <Version>3.0.0-alpha5137</Version>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="IsExternalInit" Version="1.0.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EliteAPI.Abstractions\EliteAPI.Abstractions.csproj" />
-  </ItemGroup>
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>10</LangVersion>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="IsExternalInit" Version="1.0.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\EliteAPI.Abstractions\EliteAPI.Abstractions.csproj" />
+    </ItemGroup>
+
 </Project>

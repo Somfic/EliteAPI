@@ -9,6 +9,9 @@ public interface IEvents
     /// <summary>All event types that have been registered.</summary>
     IEnumerable<Type> EventTypes { get; }
 
+    /// <summary>A collection of previous events since the API was started.</summary>
+    IReadOnlyCollection<(IEvent @event, EventContext context)> PreviousEvents { get; }
+
     /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
     /// <param name="handler">The <see cref="EventContextDelegate{TEvent}" /> delegate handler</param>
     /// <typeparam name="TEvent">The event type</typeparam>
@@ -80,6 +83,21 @@ public interface IEvents
     /// <summary>Adds an event handler that will be called when any event is raised.</summary>
     /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
     void OnAnyJson(AsyncJsonDelegate handler);
+
+    /// <summary>Blocks the current thread until the specified event is raised.</summary>
+    TEvent Until<TEvent>() where TEvent : IEvent;
+
+    /// <summary>Blocks the current thread until the specified event is raised or the timeout has been reached.</summary>
+    /// <param name="timeout">The timeout in milliseconds</param>
+    TEvent? Until<TEvent>(int timeout) where TEvent : IEvent;
+
+    /// <summary>Blocks the current thread until the specified event is raised or the timeout has been reached.</summary>
+    /// <param name="timeout">The timeout</param>
+    TEvent? Until<TEvent>(TimeSpan timeout) where TEvent : IEvent;
+
+    /// <summary>Blocks the current thread until the specified event is raised or the wait is cancelled.</summary>
+    /// <param name="cancellationToken">The cancellation token</param>
+    TEvent? Until<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent;
 
     /// <summary>Invokes the registered event handlers for the specified event.</summary>
     /// <param name="event">The instance of the event</param>

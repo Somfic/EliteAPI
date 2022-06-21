@@ -38,6 +38,10 @@ public class Events : IEvents
     public IEnumerable<Type> EventTypes => _eventHandlers.Keys;
 
     /// <inheritdoc />
+    public IReadOnlyCollection<(IEvent @event, EventContext context)> PreviousEvents => _previousEvents.AsReadOnly();
+    private List<(IEvent @event, EventContext context)> _previousEvents = new();
+
+    /// <inheritdoc />
     public void On<TEvent>(EventContextDelegate<TEvent> handler) where TEvent : IEvent =>
         On<TEvent>(handler, ref _eventHandlers, true);
     
@@ -110,6 +114,7 @@ public class Events : IEvents
         try
         {
             InvokeAnyHandlers(@event, context);
+            _previousEvents.Add((@event, context));
         }
         catch (Exception ex)
         {

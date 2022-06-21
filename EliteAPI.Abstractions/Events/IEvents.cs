@@ -9,6 +9,9 @@ public interface IEvents
     /// <summary>All event types that have been registered.</summary>
     IEnumerable<Type> EventTypes { get; }
 
+    /// <summary>A collection of previous events since the API was started.</summary>
+    IReadOnlyCollection<(IEvent @event, EventContext context)> PreviousEvents { get; }
+
     /// <summary>Adds an event handler that will be invoked when the specified event is raised.</summary>
     /// <param name="handler">The <see cref="EventContextDelegate{TEvent}" /> delegate handler</param>
     /// <typeparam name="TEvent">The event type</typeparam>

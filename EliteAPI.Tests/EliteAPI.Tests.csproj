@@ -1,22 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <IsPackable>false</IsPackable>
-        <Version>3.0.0-alpha5060</Version>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
-        <FileVersion>3.0.0.0</FileVersion>
-        <InformationalVersion>3.0.0-alpha.5060+Branch.dev.Sha.f4a25e6229a31f6cb5a650396a209add1b879f13</InformationalVersion>
-        <Nullable>enable</Nullable>
-        <LangVersion>10</LangVersion>
-    </PropertyGroup>
-    <ItemGroup>
-        <PackageReference Include="FluentAssertions" Version="6.7.0" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
-        <PackageReference Include="Moq" Version="4.18.1" />
-        <PackageReference Include="xunit" Version="2.4.1" />
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\EliteAPI.Events\EliteAPI.Events.csproj" />
-        <ProjectReference Include="..\EliteAPI\EliteAPI.csproj" />
-    </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <Version>3.0.0-alpha5155</Version>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <FileVersion>3.0.0.0</FileVersion>
+    <InformationalVersion>3.0.0-alpha.5155+Branch.dev.Sha.6974ed2b8f7c53d500835bcecb9a6dd092fa397d</InformationalVersion>
+    <Nullable>enable</Nullable>
+    <LangVersion>10</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.7.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
+    <PackageReference Include="Moq" Version="4.18.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EliteAPI.Events\EliteAPI.Events.csproj" />
+    <ProjectReference Include="..\EliteAPI\EliteAPI.csproj" />
+  </ItemGroup>
 </Project>

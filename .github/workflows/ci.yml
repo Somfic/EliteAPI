@@ -2,46 +2,16 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  build:
-    name: Build
-    needs: [update-version]
-    runs-on: windows-latest
-    steps:
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
-
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ steps.extract_branch.outputs.branch }}
-
-      - name: Clean
-        run: dotnet clean
-
-      - name: Restore
-        run: dotnet restore
-
-      - name: Build
-        run: dotnet build --configuration Release
-
-      - name: Pack
-        if: ${{ needs.update-version.outputs.applicable == 'true' }}
-        run: dotnet pack --configuration Release
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: build
-          path: "/home/runner/work/EliteAPI/EliteAPI/"
-          if-no-files-found: error
-
   test:
     name: Unit test
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '6.0.x'
+
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -54,6 +24,46 @@ jobs:
       - name: Test
         run: dotnet test --no-restore --no-build --configuration Release
 
+  build:
+    name: Build
+    needs: [update-version]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.extract_branch.outputs.branch }}
+
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Pack
+        if: ${{ needs.update-version.outputs.applicable == 'true' }}
+        run: dotnet pack --configuration Release
+
+      - name: Publish project to NuGet
+        run: dotnet nuget push '**/*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
+
+      - name: Unlist earlier packages of this type
+        uses: darenm/unlist-nuget@v1
+        with:
+          NUGET_PACKAGE: "${{ github.event.repository.name }}"
+          VERSION_REGEX: ".*${{needs.update-version.outputs.label}}.*"
+          NUGET_KEY: ${{secrets.NUGET_KEY}}
+
   update-version:
     needs: [test]
     name: Update version
@@ -65,6 +75,11 @@ jobs:
       nuget: ${{steps.VERSION.outputs.nuget}}
       applicable: ${{steps.VERSION.outputs.applicable}}
     steps:
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '6.0.x'
+
       - name: Extract branch name
         shell: bash
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
@@ -101,24 +116,3 @@ jobs:
           author_name: github-actions[bot]
           author_email: github-actions[bot]@users.noreply.github.com
           message: "Bumped version to ${{env.GitVersion_LegacySemVer}}"
-
-  publish-nuget:
-    needs: [build, update-version, test]
-    name: Publish prerelease package
-    if: ${{ needs.update-version.outputs.applicable == 'true' }}
-    runs-on: windows-latest
-    steps:
-      - name: Download build artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: build
-
-      - name: Publish project to NuGet
-        run: dotnet nuget push '**/*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
-
-      - name: Unlist earlier packages of this type
-        uses: darenm/unlist-nuget@v1
-        with:
-          NUGET_PACKAGE: "${{ github.event.repository.name }}"
-          VERSION_REGEX: ".*${{needs.update-version.outputs.label}}.*"
-          NUGET_KEY: ${{secrets.NUGET_KEY}}

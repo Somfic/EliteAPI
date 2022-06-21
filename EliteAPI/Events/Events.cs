@@ -107,61 +107,61 @@ public class Events : IEvents
         _anyJsonHandlers.Add((handler, false));
 
     /// <inheritdoc />
-    public void Until<TEvent>() where TEvent : IEvent 
+    public TEvent Until<TEvent>() where TEvent : IEvent 
     {
         var type = typeof(TEvent);
-        int count = _previousEvents.Count(x => x.@event.GetType() == type);
+        var count = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
 
         while(true)
         {
-            int newCount = _previousEvents.Count(x => x.@event.GetType() == type);
-            
-            if(newCount > count)
-                break;
+            var newCount = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
+
+            if (newCount > count)
+                return (TEvent) _previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
 
             Thread.Sleep(250);
         }
     }
 
     /// <inheritdoc />
-    public void Until<TEvent>(int timeout) where TEvent : IEvent => Until<TEvent>(TimeSpan.FromMilliseconds(timeout));
+    public TEvent? Until<TEvent>(int timeout) where TEvent : IEvent => Until<TEvent>(TimeSpan.FromMilliseconds(timeout));
 
     /// <inheritdoc />
-    public void Until<TEvent>(TimeSpan timeout) where TEvent : IEvent
+    public TEvent? Until<TEvent>(TimeSpan timeout) where TEvent : IEvent
     {
         var type = typeof(TEvent);
-        int count = _previousEvents.Count(x => x.@event.GetType() == type);
+        var count = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
         var started = DateTime.Now;
 
         while(true)
         {
-            int newCount = _previousEvents.Count(x => x.@event.GetType() == type);
-            
-            if(newCount > count)
-                break;
+            var newCount = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
 
-            if(DateTime.Now - started > timeout)
-                break;
+            if (newCount > count)
+                return (TEvent) _previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
+
+            if (DateTime.Now - started > timeout)
+                return default;
 
             Thread.Sleep(250);
         }
     }
 
     /// <inheritdoc />
-    public void Until<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent 
+    public TEvent? Until<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent 
     {
         var type = typeof(TEvent);
-        int count = _previousEvents.Count(x => x.@event.GetType() == type);
+        var count = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
 
         while(true)
         {
-            int newCount = _previousEvents.Count(x => x.@event.GetType() == type);
-            
-            if(newCount > count)
-                break;
+            var newCount = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
 
-            if(cancellationToken.IsCancellationRequested)
-                break;
+            if (newCount > count)
+                return (TEvent) _previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
+
+            if (cancellationToken.IsCancellationRequested)
+                return default;
 
             Thread.Sleep(250);
         }

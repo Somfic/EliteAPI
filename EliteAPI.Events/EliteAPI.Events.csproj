@@ -6,8 +6,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.5155+Branch.dev.Sha.6974ed2b8f7c53d500835bcecb9a6dd092fa397d</InformationalVersion>
-    <Version>3.0.0-alpha5155</Version>
+    <InformationalVersion>3.0.0-alpha.5157+Branch.dev.Sha.36f32361e349d831a815a1174a4d1e88fec4f5a0</InformationalVersion>
+    <Version>3.0.0-alpha5157</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="IsExternalInit" Version="1.0.2">

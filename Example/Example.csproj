@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.5163+Branch.dev.Sha.5d66d8b6fc43826aaa88a8aa4d7c1df1c2f68e60</InformationalVersion>
-    <Version>3.0.0-alpha5163</Version>
+    <InformationalVersion>3.0.0-alpha.5167+Branch.dev.Sha.b6ebb70660ed9cbe898c55b35661cd2bd92488d9</InformationalVersion>
+    <Version>3.0.0-alpha5167</Version>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>

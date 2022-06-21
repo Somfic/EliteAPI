@@ -7,6 +7,7 @@ namespace EliteAPI.Events.Status.Ship;
 
 public readonly struct StatusEvent : IEvent
 {
+
     [JsonProperty("timestamp")]
     public DateTime Timestamp { get; init; }
 

@@ -51,7 +51,10 @@ public class EventParser : IEventParser
     /// <inheritdoc />
     public IEnumerable<EventPath> ToPaths<T>(T @event) where T : IEvent
     {
-        var eventName = @event.GetType().Name.Replace("Event", string.Empty);
+        var eventName = @event.Event;
+        
+        if(string.IsNullOrWhiteSpace(eventName))
+            eventName = @event.GetType().Name.Replace("Event", string.Empty);
         
         // Parse the event into a dictionary of paths and values using JToken.
         var root = JObject.Parse(ToJson(@event));

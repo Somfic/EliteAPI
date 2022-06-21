@@ -30,6 +30,7 @@ public class EliteDangerousApi : IEliteDangerousApi
     /// <inheritdoc />
     public IEventParser Parser { get; }
 
+    /// <inheritdoc />
     public bool IsRunning { get; private set; }
 
     private readonly ILogger<EliteDangerousApi>? _log;

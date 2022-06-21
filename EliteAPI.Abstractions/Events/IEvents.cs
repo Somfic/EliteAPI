@@ -84,6 +84,21 @@ public interface IEvents
     /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
     void OnAnyJson(AsyncJsonDelegate handler);
 
+    /// <summary>Blocks the current thread until the specified event is raised.</summary>
+    void Until<TEvent>() where TEvent : IEvent;
+
+    /// <summary>Blocks the current thread until the specified event is raised or the timeout has been reached.</summary>
+    /// <param name="timeout">The timeout in milliseconds</param>
+    void Until<TEvent>(int timeout) where TEvent : IEvent;
+
+    /// <summary>Blocks the current thread until the specified event is raised or the timeout has been reached.</summary>
+    /// <param name="timeout">The timeout</param>
+    void Until<TEvent>(TimeSpan timeout) where TEvent : IEvent;
+
+    /// <summary>Blocks the current thread until the specified event is raised or the wait is cancelled.</summary>
+    /// <param name="cancellationToken">The cancellation token</param>
+    void Until<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent;
+
     /// <summary>Invokes the registered event handlers for the specified event.</summary>
     /// <param name="event">The instance of the event</param>
     /// <param name="context">The context of the event</param>

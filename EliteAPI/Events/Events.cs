@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.Abstractions.Events.Converters;
@@ -105,6 +106,66 @@ public class Events : IEvents
     public void OnAnyJson(AsyncJsonDelegate handler) => 
         _anyJsonHandlers.Add((handler, false));
 
+    /// <inheritdoc />
+    public void Until<TEvent>() where TEvent : IEvent 
+    {
+        var type = typeof(TEvent);
+        int count = _previousEvents.Count(x => x.@event.GetType() == type);
+
+        while(true)
+        {
+            int newCount = _previousEvents.Count(x => x.@event.GetType() == type);
+            
+            if(newCount > count)
+                break;
+
+            Thread.Sleep(250);
+        }
+    }
+
+    /// <inheritdoc />
+    public void Until<TEvent>(int timeout) where TEvent : IEvent => Until<TEvent>(TimeSpan.FromMilliseconds(timeout));
+
+    /// <inheritdoc />
+    public void Until<TEvent>(TimeSpan timeout) where TEvent : IEvent
+    {
+        var type = typeof(TEvent);
+        int count = _previousEvents.Count(x => x.@event.GetType() == type);
+        var started = DateTime.Now;
+
+        while(true)
+        {
+            int newCount = _previousEvents.Count(x => x.@event.GetType() == type);
+            
+            if(newCount > count)
+                break;
+
+            if(DateTime.Now - started > timeout)
+                break;
+
+            Thread.Sleep(250);
+        }
+    }
+
+    /// <inheritdoc />
+    public void Until<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent 
+    {
+        var type = typeof(TEvent);
+        int count = _previousEvents.Count(x => x.@event.GetType() == type);
+
+        while(true)
+        {
+            int newCount = _previousEvents.Count(x => x.@event.GetType() == type);
+            
+            if(newCount > count)
+                break;
+
+            if(cancellationToken.IsCancellationRequested)
+                break;
+
+            Thread.Sleep(250);
+        }
+    }
     
     /// <inheritdoc />
     public void Invoke<TEvent>(TEvent @event, EventContext context) where TEvent : IEvent

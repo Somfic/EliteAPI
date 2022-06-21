@@ -131,7 +131,7 @@ public class Events : IEvents
 
             if (eventKey == null)
             {
-                var ex = new JsonException("The JSON does not contain an event key.");
+                var ex = new JsonException("The JSON does not contain an event key");
                 ex.Data.Add("JSON", json);
 
                 _log?.LogWarning(ex, "Could not parse JSON");

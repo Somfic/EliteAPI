@@ -13,15 +13,17 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Version>3.0.0-alpha5155</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <PackageIcon>logo_gradient_small.jpg</PackageIcon>
+    <PackageIcon>icon.png</PackageIcon>
     <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
     <LangVersion>10</LangVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Somfic</Authors>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <InformationalVersion>3.0.0-alpha.5155+Branch.dev.Sha.6974ed2b8f7c53d500835bcecb9a6dd092fa397d</InformationalVersion>
     <Nullable>enable</Nullable>
     <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>EliteAPI.xml</DocumentationFile>
@@ -47,5 +49,8 @@
   <ItemGroup>
     <ProjectReference Include="..\EliteAPI.Abstractions\EliteAPI.Abstractions.csproj" />
     <ProjectReference Include="..\EliteAPI.Events\EliteAPI.Events.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>

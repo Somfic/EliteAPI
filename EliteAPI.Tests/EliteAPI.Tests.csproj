@@ -7,8 +7,8 @@
     <InformationalVersion>3.0.0-alpha.5171+Branch.dev.Sha.dd623dc4faec6dda5b74d51f726a448aeece1e4b</InformationalVersion>
     <Nullable>enable</Nullable>
     <LangVersion>10</LangVersion>
-    <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
     <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.7.0" />

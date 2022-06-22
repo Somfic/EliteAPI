@@ -6,9 +6,21 @@
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.5169+Branch.dev.Sha.9c9cd90dfc44d09d1b7c3e4dc708f275b24cce3f</InformationalVersion>
-    <Version>3.0.0-alpha5169</Version>
-    <IsPackable>false</IsPackable>
+    <InformationalVersion>3.0.0-alpha.5167+Branch.dev.Sha.b6ebb70660ed9cbe898c55b35661cd2bd92488d9</InformationalVersion>
+    <Version>3.0.0-alpha5167</Version>
+    <IsPackable>true</IsPackable>
+    <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
+    <PackageIconUrl />
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Description>Events for EliteAPI</Description>
+    <Copyright>© Somfic 2022</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>3.0.0-alpha5167</Version>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="IsExternalInit" Version="1.0.2">
@@ -19,5 +31,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EliteAPI.Abstractions\EliteAPI.Abstractions.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>

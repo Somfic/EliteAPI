@@ -9,7 +9,7 @@
     <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <Description>A powerful event based .NET API for Elite: Dangerous</Description>
-    <Copyright>© Somfic 2020</Copyright>
+    <Copyright>© Somfic 2022</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Version>3.0.0-alpha5169</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>

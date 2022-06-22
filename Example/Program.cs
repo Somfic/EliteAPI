@@ -1,20 +1,19 @@
 ﻿using EliteAPI;
+using EliteAPI.Abstractions.Status;
+using EliteAPI.Events;
+using EliteAPI.Events.Status.Ship;
 using EliteAPI.Events.Status.Ship.Events;
 
 // Create an instance of the API
 var api = EliteDangerousApi.Create();
 
-// Subscribe to the event
+// Subscribe to the lights event
 api.Events.On<LightsStatusEvent>(lights => 
-    Console.WriteLine($"Lights {(lights.Value ? "on" : "off")}"));
+    Console.WriteLine($"Lights are {(lights.Value ? "on" : "off")}"));
 
 // Start the API
-Console.WriteLine("Hello commander o7");
 await api.StartAsync();
 
-Console.WriteLine("Waiting for gear");
-var gearEvent = api.Events.Until<GearStatusEvent>();
-Console.WriteLine("Gears are " + (gearEvent.Value ? "down" : "up"));
-
-// Run indefinitely
-await Task.Delay(-1);
+// Run until the game stops
+api.Events.WaitFor<ShutdownEvent>();
+await api.StopAsync();

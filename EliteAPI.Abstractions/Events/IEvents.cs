@@ -85,19 +85,38 @@ public interface IEvents
     void OnAnyJson(AsyncJsonDelegate handler);
 
     /// <summary>Blocks the current thread until the specified event is raised.</summary>
-    TEvent Until<TEvent>() where TEvent : IEvent;
+    TEvent Wait<TEvent>() where TEvent : IEvent;
+    
+    /// <summary>Blocks the current thread until the specified event is raised.</summary>
+    /// <param name="predicate">The predicate that will be used to determine if the event has been raised</param>
+    TEvent Wait<TEvent>(Predicate<TEvent> predicate) where TEvent : IEvent;
 
     /// <summary>Blocks the current thread until the specified event is raised or the timeout has been reached.</summary>
     /// <param name="timeout">The timeout in milliseconds</param>
-    TEvent? Until<TEvent>(int timeout) where TEvent : IEvent;
+    TEvent? Wait<TEvent>(int timeout) where TEvent : IEvent;
+    
+    /// <summary>Blocks the current thread until the specified event is raised.</summary>
+    /// <param name="predicate">The predicate that will be used to determine if the event has been raised</param>
+    /// <param name="timeout">The timeout in milliseconds</param>
+    TEvent? Wait<TEvent>(Predicate<TEvent> predicate, int timeout) where TEvent : IEvent;
 
     /// <summary>Blocks the current thread until the specified event is raised or the timeout has been reached.</summary>
     /// <param name="timeout">The timeout</param>
-    TEvent? Until<TEvent>(TimeSpan timeout) where TEvent : IEvent;
+    TEvent? Wait<TEvent>(TimeSpan timeout) where TEvent : IEvent;
+    
+    /// <summary>Blocks the current thread until the specified event is raised or the timeout has been reached.</summary>
+    /// <param name="predicate">The predicate that will be used to determine if the event has been raised</param>
+    /// <param name="timeout">The timeout</param>
+    TEvent? Wait<TEvent>(Predicate<TEvent> predicate, TimeSpan timeout) where TEvent : IEvent;
 
     /// <summary>Blocks the current thread until the specified event is raised or the wait is cancelled.</summary>
     /// <param name="cancellationToken">The cancellation token</param>
-    TEvent? Until<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent;
+    TEvent? Wait<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent;
+    
+    /// <summary>Blocks the current thread until the specified event is raised or the wait is cancelled.</summary>
+    /// <param name="predicate">The predicate that will be used to determine if the event has been raised</param>
+    /// <param name="cancellationToken">The cancellation token</param>
+    TEvent? Wait<TEvent>(Predicate<TEvent> predicate, CancellationToken cancellationToken) where TEvent : IEvent;
 
     /// <summary>Invokes the registered event handlers for the specified event.</summary>
     /// <param name="event">The instance of the event</param>

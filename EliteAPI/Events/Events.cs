@@ -40,22 +40,23 @@ public class Events : IEvents
 
     /// <inheritdoc />
     public IReadOnlyCollection<(IEvent @event, EventContext context)> PreviousEvents => _previousEvents.AsReadOnly();
+
     private List<(IEvent @event, EventContext context)> _previousEvents = new();
 
     /// <inheritdoc />
     public void On<TEvent>(EventContextDelegate<TEvent> handler) where TEvent : IEvent =>
         On<TEvent>(handler, ref _eventHandlers, true);
-    
+
     /// <inheritdoc />
-    public void On<TEvent>(EventDelegate<TEvent> handler) where TEvent : IEvent => 
+    public void On<TEvent>(EventDelegate<TEvent> handler) where TEvent : IEvent =>
         On<TEvent>(handler, ref _eventHandlers, false);
-    
+
     /// <inheritdoc />
     public void On<TEvent>(AsyncEventContextDelegate<TEvent> handler) where TEvent : IEvent =>
         On<TEvent>(handler, ref _eventHandlers, true);
-    
+
     /// <inheritdoc />
-    public void On<TEvent>(AsyncEventDelegate<TEvent> handler) where TEvent : IEvent => 
+    public void On<TEvent>(AsyncEventDelegate<TEvent> handler) where TEvent : IEvent =>
         On<TEvent>(handler, ref _eventHandlers, false);
 
     /// <inheritdoc />
@@ -63,110 +64,151 @@ public class Events : IEvents
         On<TEvent>(handler, ref _jsonHandlers, true);
 
     /// <inheritdoc />
-    public void OnJson<TEvent>(JsonDelegate handler) where TEvent : IEvent => 
+    public void OnJson<TEvent>(JsonDelegate handler) where TEvent : IEvent =>
         On<TEvent>(handler, ref _jsonHandlers, false);
-    
+
     /// <inheritdoc />
     public void OnJson<TEvent>(AsyncJsonContextDelegate handler) where TEvent : IEvent =>
         On<TEvent>(handler, ref _jsonHandlers, true);
 
     /// <inheritdoc />
-    public void OnJson<TEvent>(AsyncJsonDelegate handler) where TEvent : IEvent => 
+    public void OnJson<TEvent>(AsyncJsonDelegate handler) where TEvent : IEvent =>
         On<TEvent>(handler, ref _jsonHandlers, false);
 
     /// <inheritdoc />
-    public void OnAny(EventContextDelegate<IEvent> handler) => 
+    public void OnAny(EventContextDelegate<IEvent> handler) =>
         _anyEventHandlers.Add((handler, true));
-    
+
     /// <inheritdoc />
-    public void OnAny(EventDelegate<IEvent> handler) => 
-        _anyEventHandlers.Add((handler, false));
-    
-    /// <inheritdoc />
-    public void OnAny(AsyncEventContextDelegate<IEvent> handler) => 
-        _anyEventHandlers.Add((handler, true));
-    
-    /// <inheritdoc />
-    public void OnAny(AsyncEventDelegate<IEvent> handler) => 
+    public void OnAny(EventDelegate<IEvent> handler) =>
         _anyEventHandlers.Add((handler, false));
 
     /// <inheritdoc />
-    public void OnAnyJson(JsonContextDelegate handler) => 
+    public void OnAny(AsyncEventContextDelegate<IEvent> handler) =>
+        _anyEventHandlers.Add((handler, true));
+
+    /// <inheritdoc />
+    public void OnAny(AsyncEventDelegate<IEvent> handler) =>
+        _anyEventHandlers.Add((handler, false));
+
+    /// <inheritdoc />
+    public void OnAnyJson(JsonContextDelegate handler) =>
         _anyJsonHandlers.Add((handler, true));
-    
+
     /// <inheritdoc />
-    public void OnAnyJson(JsonDelegate handler) => 
-        _anyJsonHandlers.Add((handler, false));
-    
-    /// <inheritdoc />
-    public void OnAnyJson(AsyncJsonContextDelegate handler) => 
-        _anyJsonHandlers.Add((handler, true));
-    
-    /// <inheritdoc />
-    public void OnAnyJson(AsyncJsonDelegate handler) => 
+    public void OnAnyJson(JsonDelegate handler) =>
         _anyJsonHandlers.Add((handler, false));
 
     /// <inheritdoc />
-    public TEvent Until<TEvent>() where TEvent : IEvent 
+    public void OnAnyJson(AsyncJsonContextDelegate handler) =>
+        _anyJsonHandlers.Add((handler, true));
+
+    /// <inheritdoc />
+    public void OnAnyJson(AsyncJsonDelegate handler) =>
+        _anyJsonHandlers.Add((handler, false));
+
+    private int CountMatchingEvents<TEvent>()
+    {
+        return _previousEvents.Count(x => x.@event.GetType() == typeof(TEvent) && !x.context.IsRaisedDuringCatchup);
+    }
+
+    /// <inheritdoc />
+    public TEvent Wait<TEvent>() where TEvent : IEvent => Wait<TEvent>(_ => true);
+    
+    /// <inheritdoc />
+    public TEvent Wait<TEvent>(Predicate<TEvent> predicate) where TEvent : IEvent
     {
         var type = typeof(TEvent);
-        var count = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
+        var count = CountMatchingEvents<TEvent>();
 
-        while(true)
+        while (true)
         {
-            var newCount = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
+            var newCount = CountMatchingEvents<TEvent>();
 
-            if (newCount > count)
-                return (TEvent) _previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
+            if (newCount <= count)
+            {
+                Thread.Sleep(250);
+                continue;
+            };
 
-            Thread.Sleep(250);
+            var @event = (TEvent)_previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
+
+            if (predicate(@event))
+                return @event;
+
+            count = newCount;
         }
     }
 
     /// <inheritdoc />
-    public TEvent? Until<TEvent>(int timeout) where TEvent : IEvent => Until<TEvent>(TimeSpan.FromMilliseconds(timeout));
+    public TEvent? Wait<TEvent>(int timeout) where TEvent : IEvent => Wait<TEvent>(_ => true, timeout);
+    
+    /// <inheritdoc />
+    public TEvent? Wait<TEvent>(Predicate<TEvent> predicate, int timeout) where TEvent : IEvent => Wait(predicate, TimeSpan.FromMilliseconds(timeout));
 
     /// <inheritdoc />
-    public TEvent? Until<TEvent>(TimeSpan timeout) where TEvent : IEvent
+    public TEvent? Wait<TEvent>(TimeSpan timeout) where TEvent : IEvent => Wait<TEvent>(_ => true, timeout);
+    
+    /// <inheritdoc />
+    public TEvent? Wait<TEvent>(Predicate<TEvent> predicate, TimeSpan timeout) where TEvent : IEvent
     {
         var type = typeof(TEvent);
-        var count = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
+        var count = CountMatchingEvents<TEvent>();
         var started = DateTime.Now;
 
-        while(true)
+        while (true)
         {
-            var newCount = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
-
-            if (newCount > count)
-                return (TEvent) _previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
-
             if (DateTime.Now - started > timeout)
                 return default;
+            
+            var newCount = CountMatchingEvents<TEvent>();
 
-            Thread.Sleep(250);
+            if (newCount <= count)
+            {
+                Thread.Sleep(250);
+                continue;
+            }
+
+            var @event = (TEvent)_previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
+
+            if (predicate(@event))
+                return @event;
+            
+            count = newCount;
         }
     }
-
+    
     /// <inheritdoc />
-    public TEvent? Until<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent 
+    public TEvent? Wait<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent => Wait<TEvent>(_ => true, cancellationToken);
+    
+    /// <inheritdoc />
+    public TEvent? Wait<TEvent>(Predicate<TEvent> predicate, CancellationToken cancellationToken) where TEvent : IEvent
     {
         var type = typeof(TEvent);
         var count = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
 
-        while(true)
+        while (true)
         {
-            var newCount = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
-
-            if (newCount > count)
-                return (TEvent) _previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
-
             if (cancellationToken.IsCancellationRequested)
                 return default;
+            
+            var newCount = CountMatchingEvents<TEvent>();
 
-            Thread.Sleep(250);
+            if (newCount <= count)
+            {
+                Thread.Sleep(250);
+                continue;
+            }
+
+            var @event = (TEvent)_previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
+
+            if (predicate(@event))
+                return @event;
+            
+            count = newCount;
         }
     }
-    
+
     /// <inheritdoc />
     public void Invoke<TEvent>(TEvent @event, EventContext context) where TEvent : IEvent
     {
@@ -207,20 +249,21 @@ public class Events : IEvents
             var eventName = eventKey.Value<string>();
             var typeName = $"{eventName}Event";
 
-            var eventType = EventTypes.FirstOrDefault(t => string.Equals(t.Name, typeName, StringComparison.InvariantCultureIgnoreCase));
+            var eventType = EventTypes.FirstOrDefault(t =>
+                string.Equals(t.Name, typeName, StringComparison.InvariantCultureIgnoreCase));
 
             // Update the IsImplemented field on the context
             context = context with { IsImplemented = eventType != null };
-            
+
             if (eventType == null)
                 _log?.LogWarning("The {Event} event is not registered", eventName);
-            
+
             // Invoke the JSON handlers
             InvokeAnyHandlers(eventType, json, context);
 
             if (eventType == null)
                 return;
-            
+
             var parsedEvent = _parser.FromJson(eventType, json);
 
             if (parsedEvent == null)
@@ -327,14 +370,15 @@ public class Events : IEvents
         var type = typeof(TEvent);
         return IsRegistered(type);
     }
-    
+
     /// <inheritdoc />
     public bool IsRegistered(Type? type)
     {
         return type != null && _eventHandlers.ContainsKey(type);
     }
-    
-    private void On<TEvent>(Delegate handler, ref Dictionary<Type, IList<(Delegate d, bool hasContext)>> delegates, bool hasContext) where TEvent : IEvent
+
+    private void On<TEvent>(Delegate handler, ref Dictionary<Type, IList<(Delegate d, bool hasContext)>> delegates,
+        bool hasContext) where TEvent : IEvent
     {
         var eventType = typeof(TEvent);
 
@@ -344,7 +388,7 @@ public class Events : IEvents
         if (delegates.TryGetValue(eventType, out var handlers))
             handlers.Add((handler, hasContext));
         else
-            delegates.Add(eventType, new List<(Delegate d, bool hasContext)> {(handler, hasContext)});
+            delegates.Add(eventType, new List<(Delegate d, bool hasContext)> { (handler, hasContext) });
     }
 
     private void AddEvent(Type type)
@@ -388,16 +432,13 @@ public class Events : IEvents
         foreach (var (d, hasContext) in _anyEventHandlers)
         {
             Invoke(d, @event, hasContext, context, eventName);
-           
         }
-        
+
         // Specific handlers
         var eventType = @event.GetType();
         foreach (var (d, hasContext) in _eventHandlers[eventType])
         {
-    
-                Invoke(d, @event, hasContext, context, eventName);
-          
+            Invoke(d, @event, hasContext, context, eventName);
         }
     }
 
@@ -423,36 +464,32 @@ public class Events : IEvents
         // Any handlers
         foreach (var (d, hasContext) in _anyJsonHandlers)
         {
-           
-                Invoke(d, json, hasContext, context, eventName);
-          
+            Invoke(d, json, hasContext, context, eventName);
         }
 
         // Specific handlers
         if (type == null)
             return;
-        
+
         foreach (var (d, hasContext) in _jsonHandlers.Where(x => x.Key == type).SelectMany(x => x.Value))
         {
-          
-                Invoke(d, json, hasContext, context, eventName);
-           
+            Invoke(d, json, hasContext, context, eventName);
         }
     }
-    
-    private void Invoke(Delegate d, object param, bool hasContext, EventContext context, string eventName) {
-        
+
+    private void Invoke(Delegate d, object param, bool hasContext, EventContext context, string eventName)
+    {
         _log?.LogTrace("Invoking {Type}:{Handler} handler for event {Event}",
             d.Method.DeclaringType?.FullName,
             d.Method.Name,
             eventName);
-        
+
         var isAsync = d.Method.ReturnType == typeof(Task);
 
         try
         {
             var result = hasContext ? d.DynamicInvoke(param, context) : d.DynamicInvoke(param);
-            
+
             if (isAsync && result != null)
                 (result as Task)!.GetAwaiter().GetResult();
         }
@@ -460,7 +497,7 @@ public class Events : IEvents
         {
             if (ex is TargetInvocationException && ex.InnerException != null)
                 ex = ex.InnerException;
-            
+
             _log?.LogWarning(ex,
                 "Unhandled exception in handler {Type}:{Handler} for event {Event}",
                 d.Method.DeclaringType?.FullName,

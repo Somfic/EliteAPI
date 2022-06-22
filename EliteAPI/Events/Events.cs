@@ -113,10 +113,10 @@ public class Events : IEvents
     }
 
     /// <inheritdoc />
-    public TEvent Wait<TEvent>() where TEvent : IEvent => Wait<TEvent>(_ => true);
+    public TEvent WaitFor<TEvent>() where TEvent : IEvent => WaitFor<TEvent>(_ => true);
     
     /// <inheritdoc />
-    public TEvent Wait<TEvent>(Predicate<TEvent> predicate) where TEvent : IEvent
+    public TEvent WaitFor<TEvent>(Predicate<TEvent> predicate) where TEvent : IEvent
     {
         var type = typeof(TEvent);
         var count = CountMatchingEvents<TEvent>();
@@ -141,16 +141,16 @@ public class Events : IEvents
     }
 
     /// <inheritdoc />
-    public TEvent? Wait<TEvent>(int timeout) where TEvent : IEvent => Wait<TEvent>(_ => true, timeout);
+    public TEvent? WaitFor<TEvent>(int timeout) where TEvent : IEvent => WaitFor<TEvent>(_ => true, timeout);
     
     /// <inheritdoc />
-    public TEvent? Wait<TEvent>(Predicate<TEvent> predicate, int timeout) where TEvent : IEvent => Wait(predicate, TimeSpan.FromMilliseconds(timeout));
+    public TEvent? WaitFor<TEvent>(Predicate<TEvent> predicate, int timeout) where TEvent : IEvent => WaitFor(predicate, TimeSpan.FromMilliseconds(timeout));
 
     /// <inheritdoc />
-    public TEvent? Wait<TEvent>(TimeSpan timeout) where TEvent : IEvent => Wait<TEvent>(_ => true, timeout);
+    public TEvent? WaitFor<TEvent>(TimeSpan timeout) where TEvent : IEvent => WaitFor<TEvent>(_ => true, timeout);
     
     /// <inheritdoc />
-    public TEvent? Wait<TEvent>(Predicate<TEvent> predicate, TimeSpan timeout) where TEvent : IEvent
+    public TEvent? WaitFor<TEvent>(Predicate<TEvent> predicate, TimeSpan timeout) where TEvent : IEvent
     {
         var type = typeof(TEvent);
         var count = CountMatchingEvents<TEvent>();
@@ -179,10 +179,10 @@ public class Events : IEvents
     }
     
     /// <inheritdoc />
-    public TEvent? Wait<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent => Wait<TEvent>(_ => true, cancellationToken);
+    public TEvent? WaitFor<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent => WaitFor<TEvent>(_ => true, cancellationToken);
     
     /// <inheritdoc />
-    public TEvent? Wait<TEvent>(Predicate<TEvent> predicate, CancellationToken cancellationToken) where TEvent : IEvent
+    public TEvent? WaitFor<TEvent>(Predicate<TEvent> predicate, CancellationToken cancellationToken) where TEvent : IEvent
     {
         var type = typeof(TEvent);
         var count = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);

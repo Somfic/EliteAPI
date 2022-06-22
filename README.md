@@ -105,6 +105,7 @@ var api = EliteDangerousApi.Create();
 EliteAPI constantly scans the Journal log files for new in-game events. Whenever a new event is detected it is invoked
 in the API.
 
+### Subscribing to in-game events
 Subscribing to an event is done through the `On<T>()`, `OnJson<T>()`, `OnAny()`, and `OnAnyJson()` methods in
 the `IEliteDangerousApi.Events` property.
 
@@ -153,6 +154,9 @@ These delegates also allow for asynchronous implementations.
 api.Events.On<FssSignalDiscoveredEvent>(async e =>
     await SomeAsyncMethod(e));
 ```
+
+### Waiting for in-game events
+Waiting for an event is done through the `WaitFor<T>()` method in the `IEliteDangerousApi.Events` property.
 
 ## License
 

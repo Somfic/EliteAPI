@@ -1,6 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
     <IsPackable>false</IsPackable>
     <Version>3.0.0-alpha5169</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -8,9 +7,15 @@
     <InformationalVersion>3.0.0-alpha.5169+Branch.dev.Sha.9c9cd90dfc44d09d1b7c3e4dc708f275b24cce3f</InformationalVersion>
     <Nullable>enable</Nullable>
     <LangVersion>10</LangVersion>
+    <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.7.0" />
+    <PackageReference Include="IsExternalInit" Version="1.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
     <PackageReference Include="Moq" Version="4.18.1" />
     <PackageReference Include="xunit" Version="2.4.1" />

@@ -3,7 +3,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>10</LangVersion>
-    <TargetFramework>net6.0</TargetFramework>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
     <InformationalVersion>3.0.0-alpha.5167+Branch.dev.Sha.b6ebb70660ed9cbe898c55b35661cd2bd92488d9</InformationalVersion>
@@ -21,6 +20,7 @@
     <Version>3.0.0-alpha5167</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageIcon>icon.png</PackageIcon>
+    <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="IsExternalInit" Version="1.0.2">

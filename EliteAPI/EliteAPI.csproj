@@ -20,7 +20,7 @@
     <Authors>Somfic</Authors>
     <InformationalVersion>3.0.0-alpha.5169+Branch.dev.Sha.9c9cd90dfc44d09d1b7c3e4dc708f275b24cce3f</InformationalVersion>
     <Nullable>enable</Nullable>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
   </PropertyGroup>
   <PropertyGroup>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

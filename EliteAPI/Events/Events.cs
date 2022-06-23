@@ -107,44 +107,22 @@ public class Events : IEvents
     public void OnAnyJson(AsyncJsonDelegate handler) =>
         _anyJsonHandlers.Add((handler, false));
 
-    private int CountMatchingEvents<TEvent>()
-    {
-        return _previousEvents.Count(x => x.@event.GetType() == typeof(TEvent) && !x.context.IsRaisedDuringCatchup);
-    }
-
     /// <inheritdoc />
-    public TEvent WaitFor<TEvent>() where TEvent : IEvent => WaitFor<TEvent>(_ => true);
+    public TEvent WaitFor<TEvent>() where TEvent : IEvent => 
+        WaitFor<TEvent>(_ => true);
     
     /// <inheritdoc />
-    public TEvent WaitFor<TEvent>(Predicate<TEvent> predicate) where TEvent : IEvent
-    {
-        var type = typeof(TEvent);
-        var count = CountMatchingEvents<TEvent>();
-
-        while (true)
-        {
-            var newCount = CountMatchingEvents<TEvent>();
-
-            if (newCount <= count)
-            {
-                Thread.Sleep(250);
-                continue;
-            };
-
-            var @event = (TEvent)_previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
-
-            if (predicate(@event))
-                return @event;
-
-            count = newCount;
-        }
-    }
+    public TEvent WaitFor<TEvent>(Predicate<TEvent> predicate) where TEvent : IEvent => 
+        WaitFor(predicate, () => false)!;
+    
 
     /// <inheritdoc />
-    public TEvent? WaitFor<TEvent>(int timeout) where TEvent : IEvent => WaitFor<TEvent>(_ => true, timeout);
+    public TEvent? WaitFor<TEvent>(int timeout) where TEvent : IEvent => 
+        WaitFor<TEvent>(_ => true, timeout);
     
     /// <inheritdoc />
-    public TEvent? WaitFor<TEvent>(Predicate<TEvent> predicate, int timeout) where TEvent : IEvent => WaitFor(predicate, TimeSpan.FromMilliseconds(timeout));
+    public TEvent? WaitFor<TEvent>(Predicate<TEvent> predicate, int timeout) where TEvent : IEvent => 
+        WaitFor(predicate, TimeSpan.FromMilliseconds(timeout));
 
     /// <inheritdoc />
     public TEvent? WaitFor<TEvent>(TimeSpan timeout) where TEvent : IEvent => WaitFor<TEvent>(_ => true, timeout);
@@ -152,13 +130,29 @@ public class Events : IEvents
     /// <inheritdoc />
     public TEvent? WaitFor<TEvent>(Predicate<TEvent> predicate, TimeSpan timeout) where TEvent : IEvent
     {
+        var started = DateTime.Now;
+        return WaitFor(predicate, () => DateTime.Now - started > timeout);
+    }
+    
+    /// <inheritdoc />
+    public TEvent? WaitFor<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent => WaitFor<TEvent>(_ => true, cancellationToken);
+    
+    /// <inheritdoc />
+    public TEvent? WaitFor<TEvent>(Predicate<TEvent> predicate, CancellationToken cancellationToken) where TEvent : IEvent =>
+        WaitFor(predicate, () => cancellationToken.IsCancellationRequested);
+
+    /// <inheritdoc />
+    public TEvent? WaitFor<TEvent>(Func<bool> stopCondition) where TEvent : IEvent => WaitFor<TEvent>(_ => true, stopCondition);
+
+    /// <inheritdoc />
+    public TEvent? WaitFor<TEvent>(Predicate<TEvent> predicate, Func<bool> stopCondition) where TEvent : IEvent
+    {
         var type = typeof(TEvent);
         var count = CountMatchingEvents<TEvent>();
-        var started = DateTime.Now;
 
         while (true)
         {
-            if (DateTime.Now - started > timeout)
+            if (stopCondition.Invoke())
                 return default;
             
             var newCount = CountMatchingEvents<TEvent>();
@@ -178,35 +172,9 @@ public class Events : IEvents
         }
     }
     
-    /// <inheritdoc />
-    public TEvent? WaitFor<TEvent>(CancellationToken cancellationToken) where TEvent : IEvent => WaitFor<TEvent>(_ => true, cancellationToken);
-    
-    /// <inheritdoc />
-    public TEvent? WaitFor<TEvent>(Predicate<TEvent> predicate, CancellationToken cancellationToken) where TEvent : IEvent
+    private int CountMatchingEvents<TEvent>()
     {
-        var type = typeof(TEvent);
-        var count = _previousEvents.Count(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup);
-
-        while (true)
-        {
-            if (cancellationToken.IsCancellationRequested)
-                return default;
-            
-            var newCount = CountMatchingEvents<TEvent>();
-
-            if (newCount <= count)
-            {
-                Thread.Sleep(250);
-                continue;
-            }
-
-            var @event = (TEvent)_previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
-
-            if (predicate(@event))
-                return @event;
-            
-            count = newCount;
-        }
+        return _previousEvents.Count(x => x.@event.GetType() == typeof(TEvent) && !x.context.IsRaisedDuringCatchup);
     }
 
     /// <inheritdoc />

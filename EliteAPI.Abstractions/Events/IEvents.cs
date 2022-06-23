@@ -117,6 +117,15 @@ public interface IEvents
     /// <param name="predicate">The predicate that will be used to determine if the event has been raised</param>
     /// <param name="cancellationToken">The cancellation token</param>
     TEvent? WaitFor<TEvent>(Predicate<TEvent> predicate, CancellationToken cancellationToken) where TEvent : IEvent;
+    
+    /// <summary>Blocks the current thread until the specified event is raised or the timeout has been reached.</summary>
+    /// <param name="predicate">The predicate that will be used to determine if the event has been raised</param>
+    /// <param name="stopCondition">The condition that will be used to determine if the wait should be stopped</param>
+    TEvent? WaitFor<TEvent>(Predicate<TEvent> predicate, Func<bool> stopCondition) where TEvent : IEvent;
+    
+    /// <summary>Blocks the current thread until the specified event is raised or the timeout has been reached.</summary>
+    /// <param name="stopCondition">The condition that will be used to determine if the wait should be stopped</param>
+    TEvent? WaitFor<TEvent>(Func<bool> stopCondition) where TEvent : IEvent;
 
     /// <summary>Invokes the registered event handlers for the specified event.</summary>
     /// <param name="event">The instance of the event</param>

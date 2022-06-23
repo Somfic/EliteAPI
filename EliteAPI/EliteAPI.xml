@@ -144,28 +144,28 @@
         <member name="M:EliteAPI.Events.Events.OnAnyJson(EliteAPI.Abstractions.Events.AsyncJsonDelegate)">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.Wait``1">
+        <member name="M:EliteAPI.Events.Events.WaitFor``1">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.Wait``1(System.Predicate{``0})">
+        <member name="M:EliteAPI.Events.Events.WaitFor``1(System.Predicate{``0})">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.Wait``1(System.Int32)">
+        <member name="M:EliteAPI.Events.Events.WaitFor``1(System.Int32)">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.Wait``1(System.Predicate{``0},System.Int32)">
+        <member name="M:EliteAPI.Events.Events.WaitFor``1(System.Predicate{``0},System.Int32)">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.Wait``1(System.TimeSpan)">
+        <member name="M:EliteAPI.Events.Events.WaitFor``1(System.TimeSpan)">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.Wait``1(System.Predicate{``0},System.TimeSpan)">
+        <member name="M:EliteAPI.Events.Events.WaitFor``1(System.Predicate{``0},System.TimeSpan)">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.Wait``1(System.Threading.CancellationToken)">
+        <member name="M:EliteAPI.Events.Events.WaitFor``1(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.Events.Wait``1(System.Predicate{``0},System.Threading.CancellationToken)">
+        <member name="M:EliteAPI.Events.Events.WaitFor``1(System.Predicate{``0},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Events.Events.Invoke``1(``0,EliteAPI.Abstractions.Events.EventContext)">

@@ -1,4 +1,3 @@
-using EliteAPI.Abstractions.Readers;
 using Newtonsoft.Json;
 
 namespace EliteAPI.Abstractions.Events;

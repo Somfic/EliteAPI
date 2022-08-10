@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
-
-namespace EliteAPI.Abstractions.Events;
+﻿namespace EliteAPI.Abstractions.Events;
 
 /// <summary>
 /// Handles an <see cref="IEvent"/> event.

@@ -1,7 +1,5 @@
 ﻿using EliteAPI;
-using EliteAPI.Abstractions.Status;
 using EliteAPI.Events;
-using EliteAPI.Events.Status.Ship;
 using EliteAPI.Events.Status.Ship.Events;
 
 // Create an instance of the API
@@ -13,7 +11,9 @@ api.Events.On<LightsStatusEvent>(lights =>
 
 // Start the API
 await api.StartAsync();
+Console.WriteLine("EliteAPI started");
 
 // Run until the game stops
 api.Events.WaitFor<ShutdownEvent>();
+Console.WriteLine("Game closed, shutting down");
 await api.StopAsync();

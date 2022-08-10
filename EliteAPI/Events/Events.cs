@@ -5,12 +5,9 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using EliteAPI.Abstractions.Events;
-using EliteAPI.Abstractions.Events.Converters;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
 
 namespace EliteAPI.Events;
 

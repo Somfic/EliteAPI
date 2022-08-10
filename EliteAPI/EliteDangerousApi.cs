@@ -1,15 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Threading;
 using System.Threading.Tasks;
 using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.Abstractions.Readers;
 using EliteAPI.Abstractions.Status;
-using EliteAPI.Configuration;
 using EliteAPI.Events;
 using EliteAPI.Events.Status.Ship;
 using EliteAPI.Events.Status.Ship.Events;
@@ -17,7 +14,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 
 namespace EliteAPI;
 

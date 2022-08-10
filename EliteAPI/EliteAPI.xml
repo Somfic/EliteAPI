@@ -168,6 +168,12 @@
         <member name="M:EliteAPI.Events.Events.WaitFor``1(System.Predicate{``0},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
+        <member name="M:EliteAPI.Events.Events.WaitFor``1(System.Func{System.Boolean})">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Events.Events.WaitFor``1(System.Predicate{``0},System.Func{System.Boolean})">
+            <inheritdoc />
+        </member>
         <member name="M:EliteAPI.Events.Events.Invoke``1(``0,EliteAPI.Abstractions.Events.EventContext)">
             <inheritdoc />
         </member>

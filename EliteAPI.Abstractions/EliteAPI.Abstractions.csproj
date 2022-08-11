@@ -5,7 +5,7 @@
     <LangVersion>10</LangVersion>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.5181+Branch.dev.Sha.3f7cdc0f57cb526743998d7848a30ca618e8a92d</InformationalVersion>
+    <InformationalVersion>3.0.0-alpha.5183+Branch.dev.Sha.b5d03829ef4c5fbfa5bfebb8fb62238d02cd11ae</InformationalVersion>
     <Version>3.0.0-alpha5155</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
@@ -18,7 +18,7 @@
     <Description>Abstractions for EliteAPI</Description>
     <Copyright>© Somfic 2022</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.0.0-alpha5181</Version>
+    <Version>3.0.0-alpha5183</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageIcon>icon.png</PackageIcon>
     <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>

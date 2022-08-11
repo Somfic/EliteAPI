@@ -22,6 +22,9 @@ public readonly struct SaaSignalsFoundEvent : IEvent
 
     [JsonProperty("Signals")]
     public IReadOnlyCollection<Signal> Signals { get; init; }
+    
+    [JsonProperty("Genuses")]
+    public IReadOnlyCollection<Genus> Genuses { get; init; }
 }
 
 public readonly struct Signal
@@ -31,4 +34,10 @@ public readonly struct Signal
 
     [JsonProperty("Count")]
     public long Count { get; init; }
+}
+
+public readonly struct Genus
+{
+    [JsonProperty("Genus")]
+    public Localised Name { get; init; }
 }

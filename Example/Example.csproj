@@ -4,8 +4,8 @@
     <Nullable>enable</Nullable>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.5186+Branch.dev.Sha.39c23cff570769f5456b89dc1081a55224c37b91</InformationalVersion>
-    <Version>3.0.0-alpha5186</Version>
+    <InformationalVersion>3.0.0-alpha.5188+Branch.dev.Sha.73c0b96a92d80589f82b853051f9317b92663e81</InformationalVersion>
+    <Version>3.0.0-alpha5188</Version>
     <IsPackable>false</IsPackable>
     <LangVersion>10</LangVersion>
     <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>

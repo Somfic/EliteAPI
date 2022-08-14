@@ -101,47 +101,6 @@ public class EventParser : IEventParser
                 {ContractResolver = new EventContractResolver(), Converters = _converters}) as IEvent;
     }
 
-    /// <inheritdoc />
-    public byte[] ToProto<T>(T data)
-    {
-        try
-        {
-            if (data == null)
-                return Array.Empty<byte>();
-            
-            // Check of the data has a protobuf contract attribute.
-            if (data.GetType().GetCustomAttribute(typeof(ProtoContractAttribute), true) == null)
-            {
-                //throw new ArgumentException($"{data.GetType().FullName} must have the ProtoContract attribute in order to convert with protobuf.");
-            }
-            
-            using var stream = new MemoryStream();
-            Serializer.Serialize(stream, data);
-            return stream.ToArray();
-        }
-        catch (Exception ex)
-        {
-            _log?.LogWarning(ex, "Could not serialise data with protobuf");
-            throw;
-        }
-    }
-
-    /// <inheritdoc />
-    public T FromProto<T>(byte[] data)
-    {
-        try
-        {
-            return Serializer.Deserialize<T>(new MemoryStream(data));
-        }
-        catch (Exception ex)
-        {
-            ex.Data.Add("Data", data);
-            _log?.LogWarning(ex, "Could not deserialize data using protobuf");
-            throw;
-        }
-    }
-
-
     private IEnumerable<EventPath> GetPaths(JObject? jObject)
     {
         try

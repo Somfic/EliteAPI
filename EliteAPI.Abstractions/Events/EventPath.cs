@@ -1,8 +1,5 @@
-﻿using ProtoBuf;
+﻿namespace EliteAPI.Abstractions.Events;
 
-namespace EliteAPI.Abstractions.Events;
-
-[ProtoContract]
 public readonly struct EventPath
 {
     public EventPath(string path, string value)
@@ -11,14 +8,11 @@ public readonly struct EventPath
         Value = value;
     }
     
-   [ProtoMember(1)]
    public string Path { get; init; }
 
-   [ProtoMember(2)]
    public string Value { get; init; }
 }
 
-[ProtoContract]
 public readonly struct EventPaths
 {
     public EventPaths(IEnumerable<EventPath> paths)
@@ -26,6 +20,5 @@ public readonly struct EventPaths
         Paths = paths;
     }
 
-    [ProtoMember(1)]
     public IEnumerable<EventPath> Paths { get; }
 }

@@ -1,15 +1,12 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.Abstractions.Events.Converters;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using ProtoBuf;
 
 namespace EliteAPI.Events;
 

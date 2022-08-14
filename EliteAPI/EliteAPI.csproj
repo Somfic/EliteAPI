@@ -43,8 +43,6 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="protobuf-net" Version="3.1.4" />
-    <PackageReference Include="Valsom.Logging.PrettyConsole" Version="0.1.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EliteAPI.Abstractions\EliteAPI.Abstractions.csproj" />

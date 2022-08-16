@@ -38,8 +38,10 @@ public class EliteDangerousApiConfiguration : IEliteDangerousApiConfiguration
 
         JournalsPath = _config.GetValue("EliteAPI:JournalsPath",
             Path.Combine(GetSavedGamesPath(), "Frontier Developments", "Elite Dangerous"));
+        
         OptionsPath = _config.GetValue("EliteAPI:OptionsPath",
-            Path.Combine(GetSavedGamesPath(), "Frontier Developments", "Elite Dangerous", "Options"));
+            Path.Combine(GetLocalAppDataPath(), "Frontier Developments", "Elite Dangerous", "Options"));
+        
         JournalPattern = _config.GetValue("EliteAPI:JournalPattern", "Journal.*.log");
 
         if (!Directory.Exists(JournalsPath))
@@ -84,6 +86,11 @@ public class EliteDangerousApiConfiguration : IEliteDangerousApiConfiguration
             _log.LogDebug(ex, "Could not get the Saved Games directory");
             throw;
         }
+    }
+
+    private string GetLocalAppDataPath()
+    {
+        return Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
     }
 
     [DllImport("Shell32.dll")]

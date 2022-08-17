@@ -84,14 +84,10 @@ public class EliteDangerousApi : IEliteDangerousApi
         _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), Config.JournalPattern, true));
 
         // Register status files
-        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Status.json"));
-        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Backpack.json"));
-        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Cargo.json"));
-        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "ModulesInfo.json"));
-        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "NavRoute.json"));
-        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Outfitting.json"));
-        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "ShipLocker.json"));
-        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), "Shipyard.json"));
+        foreach (var statusFile in Config.StatusFiles)
+        {
+            _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), statusFile));
+        }
 
         _hasInitialised = true;
     }
@@ -165,7 +161,7 @@ public class EliteDangerousApi : IEliteDangerousApi
     public IEvents Events { get; }
 
 
-    private StatusEvent? _lastStatus = null;
+    private StatusEvent? _lastStatus;
 
     private void HandleStatus(StatusEvent status, EventContext context)
     {

@@ -25,6 +25,8 @@ public class EliteDangerousApiConfiguration : IEliteDangerousApiConfiguration
     /// <inheritdoc />
     public string JournalsPath { get; private set; }
 
+    public string[] StatusFiles { get; private set; }
+
     /// <inheritdoc />
     public string JournalPattern { get; private set; }
 
@@ -42,7 +44,11 @@ public class EliteDangerousApiConfiguration : IEliteDangerousApiConfiguration
         OptionsPath = _config.GetValue("EliteAPI:OptionsPath",
             Path.Combine(GetLocalAppDataPath(), "Frontier Developments", "Elite Dangerous", "Options"));
         
-        JournalPattern = _config.GetValue("EliteAPI:JournalPattern", "Journal.*.log");
+        StatusFiles = _config.GetValue("EliteAPI:StatusFiles", 
+            new[] { "Status.json", "Backpack.json", "Cargo.json", "ModulesInfo.json", "NavRoute.json", "Outfitting.json", "ShipLocker.json", "Shipyard.json" });
+        
+        JournalPattern = _config.GetValue("EliteAPI:JournalPattern", 
+            "Journal.*.log");
 
         if (!Directory.Exists(JournalsPath))
             _log.LogWarning(new DirectoryNotFoundException($"{JournalsPath} does not exist."),

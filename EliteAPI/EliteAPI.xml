@@ -81,12 +81,6 @@
         <member name="M:EliteAPI.Events.EventParser.FromJson(System.Type,System.String)">
             <inheritdoc />
         </member>
-        <member name="M:EliteAPI.Events.EventParser.ToProto``1(``0)">
-            <inheritdoc />
-        </member>
-        <member name="M:EliteAPI.Events.EventParser.FromProto``1(System.Byte[])">
-            <inheritdoc />
-        </member>
         <member name="T:EliteAPI.Events.Events">
             <inheritdoc />
         </member>

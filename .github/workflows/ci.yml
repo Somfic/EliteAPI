@@ -55,6 +55,7 @@ jobs:
         run: dotnet pack --configuration Release
 
       - name: Publish project to NuGet
+        if: ${{ needs.update-version.outputs.applicable == 'true' }}
         run: dotnet nuget push '**/*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
 
       # - name: Unlist earlier packages of this type

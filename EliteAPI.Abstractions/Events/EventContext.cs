@@ -14,7 +14,7 @@ public readonly struct EventContext
     public bool IsImplemented { get; init; }
     
     /// <summary>
-    /// The source of the event.
+    /// The source file of the event.
     /// </summary>
-    public FileInfo Source { get; init; }
+    public string SourceFile { get; init; }
 }

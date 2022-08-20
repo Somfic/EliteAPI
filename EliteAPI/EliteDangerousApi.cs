@@ -133,7 +133,7 @@ public class EliteDangerousApi : IEliteDangerousApi
                         var context = new EventContext()
                         {
                             IsRaisedDuringCatchup = isFirstRun,
-                            Source = file
+                            SourceFile = file.FullName
                         };
 
                         Events.Invoke(line, context);

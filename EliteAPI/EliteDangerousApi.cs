@@ -140,6 +140,7 @@ public class EliteDangerousApi : IEliteDangerousApi
                     }
 
                     isFirstRun = false;
+                    await Task.Delay(500);
                 }
             });
         }

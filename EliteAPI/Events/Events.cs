@@ -156,7 +156,7 @@ public class Events : IEvents
 
             if (newCount <= count)
             {
-                Thread.Sleep(250);
+                Thread.Sleep(500);
                 continue;
             }
 

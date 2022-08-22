@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Events;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -23,13 +24,13 @@ public class Events : IEvents
     private readonly List<(Delegate d, bool hasContext)> _anyEventHandlers = new();
     private readonly List<(Delegate d, bool hasContext)> _anyJsonHandlers = new();
 
-    private readonly IEventParser _parser;
+    private readonly IEventParser _eventParser;
 
-    public Events(ILogger<Events>? log, IServiceProvider services, IEventParser parser)
+    public Events(ILogger<Events>? log, IServiceProvider services, IEventParser eventParser)
     {
         _log = log;
         _services = services;
-        _parser = parser;
+        _eventParser = eventParser;
     }
 
     /// <inheritdoc />
@@ -229,7 +230,7 @@ public class Events : IEvents
             if (eventType == null)
                 return;
 
-            var parsedEvent = _parser.FromJson(eventType, json);
+            var parsedEvent = _eventParser.FromJson(eventType, json);
 
             if (parsedEvent == null)
             {
@@ -245,8 +246,8 @@ public class Events : IEvents
                 // Get differences between the JSON and the event
                 var parsedJson = JsonConvert.SerializeObject(parsedEvent);
 
-                var pathsRaw = _parser.ToPaths(json).ToList();
-                var pathsParsed = _parser.ToPaths(parsedJson).ToList();
+                var pathsRaw = _eventParser.ToPaths(json).ToList();
+                var pathsParsed = _eventParser.ToPaths(parsedJson).ToList();
 
                 var missingPaths = pathsRaw.Except(pathsParsed).ToList();
                 var extraPaths = pathsParsed.Except(pathsRaw).ToList();

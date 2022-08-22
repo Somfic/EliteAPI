@@ -28,7 +28,13 @@
         <member name="P:EliteAPI.EliteDangerousApi.Config">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.EliteDangerousApi.Parser">
+        <member name="P:EliteAPI.EliteDangerousApi.EventParser">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousApi.BindingsParser">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.EliteDangerousApi.Bindings">
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.EliteDangerousApi.IsRunning">
@@ -200,6 +206,9 @@
         </member>
         <member name="T:EliteAPI.Extensions.EliteDangerousApiOptions">
             <summary>Options for a <see cref="T:EliteAPI.EliteDangerousApi" />.</summary>
+        </member>
+        <member name="M:EliteAPI.KeyBindings.BindingsParser.ToBindings(System.String)">
+            <inheritdoc />
         </member>
         <member name="M:EliteAPI.Readers.Reader.Register(EliteAPI.Abstractions.Readers.FileSelector)">
             <inheritdoc />

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.Abstractions.Events.Converters;
 using Microsoft.Extensions.DependencyInjection;

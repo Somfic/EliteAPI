@@ -41,4 +41,7 @@
   <ItemGroup>
     <None Include="icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EliteAPI.KeyBindings\EliteAPI.KeyBindings.csproj" />
+  </ItemGroup>
 </Project>

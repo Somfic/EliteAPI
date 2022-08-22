@@ -1,5 +1,7 @@
 ﻿using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
+using EliteAPI.Abstractions.KeyBindings;
+using EliteAPI.KeyBindings;
 
 namespace EliteAPI.Abstractions;
 
@@ -12,12 +14,20 @@ public interface IEliteDangerousApi
     IEliteDangerousApiConfiguration Config { get; }
     
     /// <summary>
-    /// Parser used for converting the raw data into usable objects.
+    /// Parser used for converting raw JSON into Events.
     /// </summary>
-    IEventParser Parser { get; }
-    
+    IEventParser EventParser { get; }
+
     /// <summary>Holds the state of all the API's events.</summary>
     IEvents Events { get; }
+    
+    /// <summary>
+    /// Parser used for converting raw XML into Bindings.
+    /// </summary>
+    IBindingsParser BindingsParser { get; }
+    
+    /// <summary>User defined in-game bindings.</summary>
+    Bindings Bindings { get; } 
 
     /// <summary>Initialises the API.</summary>
     Task InitialiseAsync();

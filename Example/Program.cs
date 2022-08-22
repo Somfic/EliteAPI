@@ -13,6 +13,8 @@ api.Events.On<LightsStatusEvent>(lights =>
 await api.StartAsync();
 Console.WriteLine("EliteAPI started");
 
+Console.WriteLine(api.Bindings.Hyperspace.Primary.Key);
+
 // Run until the game stops
 api.Events.WaitFor<ShutdownEvent>();
 Console.WriteLine("Game closed, shutting down");

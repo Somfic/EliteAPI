@@ -10,11 +10,11 @@ namespace EliteAPI.Tests.Events
 {
     public class EventParserTests
     {
-        private readonly EventParser _parser;
+        private readonly EventParser _eventParser;
         
         public EventParserTests()
         {
-            _parser = new EventParser(Mock.Of<IServiceProvider>());
+            _eventParser = new EventParser(Mock.Of<IServiceProvider>());
         }
 
         [Fact]
@@ -26,7 +26,7 @@ namespace EliteAPI.Tests.Events
                 Test = "Hello World!"
             };
 
-            var result = _parser.ToJson(testEvent);
+            var result = _eventParser.ToJson(testEvent);
             
             result.Should().NotBeNullOrEmpty();
             result.Should().Contain("\"Event\":\"Test\"");

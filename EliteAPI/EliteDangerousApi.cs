@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
+using EliteAPI.Abstractions.KeyBindings;
 using EliteAPI.Abstractions.Readers;
 using EliteAPI.Abstractions.Status;
 using EliteAPI.Events;
 using EliteAPI.Events.Status.Ship;
 using EliteAPI.Events.Status.Ship.Events;
+using EliteAPI.KeyBindings;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -24,7 +26,13 @@ public class EliteDangerousApi : IEliteDangerousApi
     public IEliteDangerousApiConfiguration Config { get; }
 
     /// <inheritdoc />
-    public IEventParser Parser { get; }
+    public IEventParser EventParser { get; }
+
+    /// <inheritdoc />
+    public IBindingsParser BindingsParser { get; }
+
+    /// <inheritdoc />
+    public Bindings Bindings { get; private set; }
 
     /// <inheritdoc />
     public bool IsRunning { get; private set; }
@@ -45,9 +53,13 @@ public class EliteDangerousApi : IEliteDangerousApi
     {
         _log = services.GetService<ILogger<EliteDangerousApi>>();
 
-        Parser = services.GetRequiredService<IEventParser>();
-        Config = services.GetRequiredService<IEliteDangerousApiConfiguration>();
+        EventParser = services.GetRequiredService<IEventParser>();
         Events = services.GetRequiredService<IEvents>();
+
+        BindingsParser = services.GetRequiredService<IBindingsParser>();
+        Bindings = new Bindings();
+        
+        Config = services.GetRequiredService<IEliteDangerousApiConfiguration>();
         _reader = services.GetRequiredService<IReader>();
     }
 
@@ -57,7 +69,7 @@ public class EliteDangerousApi : IEliteDangerousApi
     public static IEliteDangerousApi Create()
     {
         var host = Host.CreateDefaultBuilder()
-            .ConfigureLogging(log => log.ClearProviders())
+            //.ConfigureLogging(log => log.ClearProviders())
             .ConfigureServices(services => services.AddEliteApi())
             .Build();
 
@@ -73,7 +85,7 @@ public class EliteDangerousApi : IEliteDangerousApi
         Config.Apply();
 
         // Use the Localised structs while parsing
-        Parser.Use<LocalisedConverter>();
+        EventParser.Use<LocalisedConverter>();
 
         // Register all events
         Events.Register();
@@ -81,13 +93,16 @@ public class EliteDangerousApi : IEliteDangerousApi
         Events.On<StatusEvent>(HandleStatus);
 
         // Register Journal files
-        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), Config.JournalPattern, true));
+        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), Config.JournalPattern, FileCategory.Events, true));
 
         // Register status files
         foreach (var statusFile in Config.StatusFiles)
         {
-            _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), statusFile));
+            _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), statusFile, FileCategory.Status));
         }
+        
+        // Register bindings file
+        _reader.Register(new FileSelector(new DirectoryInfo(Path.Combine(Config.OptionsPath, "Bindings")), "Custom.4.0.binds", FileCategory.Bindings));
 
         _hasInitialised = true;
     }
@@ -119,27 +134,13 @@ public class EliteDangerousApi : IEliteDangerousApi
 
             IsRunning = true;
 
+            await DoTick(true);
+
             _mainTask = Task.Run(async () =>
             {
-                var isFirstRun = true;
-
                 while (IsRunning)
                 {
-                    await foreach (var (file, line) in _reader.FindNew())
-                    {
-                        if (string.IsNullOrEmpty(line))
-                            continue;
-
-                        var context = new EventContext()
-                        {
-                            IsRaisedDuringCatchup = isFirstRun,
-                            SourceFile = file.FullName
-                        };
-
-                        Events.Invoke(line, context);
-                    }
-
-                    isFirstRun = false;
+                    await DoTick();
                     await Task.Delay(500);
                 }
             });
@@ -148,6 +149,29 @@ public class EliteDangerousApi : IEliteDangerousApi
         {
             _log?.LogCritical(ex, "Could not start EliteAPI");
             throw;
+        }
+    }
+
+    private async Task DoTick(bool isFirstRun = false)
+    {
+        await foreach (var (info, selector, line) in _reader.FindNew())
+        {
+            if (string.IsNullOrEmpty(line))
+                continue;
+
+            if (selector.Category == FileCategory.Bindings)
+            {
+                Bindings = BindingsParser.ToBindings(line);
+                continue;
+            }
+                        
+            var context = new EventContext()
+            {
+                IsRaisedDuringCatchup = isFirstRun,
+                SourceFile = info.FullName
+            };
+
+            Events.Invoke(line, context);
         }
     }
 
@@ -160,7 +184,6 @@ public class EliteDangerousApi : IEliteDangerousApi
 
     /// <inheritdoc />
     public IEvents Events { get; }
-
 
     private StatusEvent? _lastStatus;
 

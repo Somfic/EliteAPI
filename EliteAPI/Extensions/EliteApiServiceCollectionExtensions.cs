@@ -3,10 +3,12 @@ using EliteAPI;
 using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
+using EliteAPI.Abstractions.KeyBindings;
 using EliteAPI.Abstractions.Readers;
 using EliteAPI.Configuration;
 using EliteAPI.Events;
 using EliteAPI.Extensions;
+using EliteAPI.KeyBindings;
 using EliteAPI.Readers;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -41,6 +43,7 @@ public static class EliteDangerousApiServiceCollectionExtensions
         services.TryAddSingleton<IEvents, Events>();
         services.TryAddSingleton<IEventParser, EventParser>();
         services.TryAddSingleton<IReader, Reader>();
+        services.TryAddSingleton<IBindingsParser, BindingsParser>();
 
         return services;
     }

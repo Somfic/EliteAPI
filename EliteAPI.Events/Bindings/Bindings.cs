@@ -4880,7 +4880,7 @@ public class HumanoidEmoteSlot8
 }
 
 [XmlRoot(ElementName = "Root")]
-public class Root
+public class Bindings
 {
     [XmlElement(ElementName = "KeyboardLayout")]
     public string KeyboardLayout { get; set; }

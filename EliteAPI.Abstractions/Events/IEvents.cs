@@ -5,6 +5,9 @@ namespace EliteAPI.Abstractions.Events;
 /// <summary>Provides the framework for building and registering event handlers.</summary>
 public interface IEvents
 {
+    /// <summary>Backlog of all processed events up till this point.</summary>
+    IReadOnlyCollection<(IEvent @event, EventContext context)> Backlog { get; }
+    
     /// <summary>All event types that have been registered.</summary>
     IEnumerable<Type> EventTypes { get; }
 

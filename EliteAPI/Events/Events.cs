@@ -26,6 +26,10 @@ public class Events : IEvents
 
     private readonly IEventParser _eventParser;
 
+    /// <inheritdoc />
+    public IReadOnlyCollection<(IEvent @event, EventContext context)> Backlog => _backlog.AsReadOnly();
+    private readonly List<(IEvent @event, EventContext context)> _backlog = new();
+
     public Events(ILogger<Events>? log, IServiceProvider services, IEventParser eventParser)
     {
         _log = log;
@@ -178,6 +182,8 @@ public class Events : IEvents
     /// <inheritdoc />
     public void Invoke<TEvent>(TEvent @event, EventContext context) where TEvent : IEvent
     {
+        _backlog.Add((@event, context));
+        
         var eventName = @event.GetType().Name.Replace("Event", string.Empty);
 
         try

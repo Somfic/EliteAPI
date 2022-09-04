@@ -33,8 +33,10 @@ public interface IEliteDangerousApi
     Task InitialiseAsync();
 
     /// <summary>Starts the API.</summary>
-    Task StartAsync();
+    Task<bool> StartAsync();
 
     /// <summary>Stops the API.</summary>
     Task StopAsync();
+
+    event EventHandler<Exception> OnError;
 }

@@ -108,7 +108,7 @@ public class EliteDangerousApi : IEliteDangerousApi
     }
 
     /// <inheritdoc />
-    public async Task StartAsync()
+    public async Task<bool> StartAsync()
     {
         if (!_hasInitialised)
             await InitialiseAsync();
@@ -144,11 +144,14 @@ public class EliteDangerousApi : IEliteDangerousApi
                     await Task.Delay(500);
                 }
             });
+
+            return true;
         }
         catch (Exception ex)
         {
             _log?.LogCritical(ex, "Could not start EliteAPI");
-            throw;
+            OnError?.Invoke(this, ex);
+            return false;
         }
     }
 
@@ -181,6 +184,9 @@ public class EliteDangerousApi : IEliteDangerousApi
         IsRunning = false;
         await _mainTask;
     }
+
+    /// <inheritdoc />
+    public event EventHandler<Exception>? OnError;
 
     /// <inheritdoc />
     public IEvents Events { get; }

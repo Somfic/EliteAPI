@@ -2,25 +2,25 @@
 
 public readonly struct ShipPips
 {
-    private readonly IList<int> _pips = new List<int>(3);
-
-    internal ShipPips(IList<int> pips)
+    internal ShipPips(int system, int engines, int weapons)
     {
-        _pips = pips;
+        System = system;
+        Engines = engines;
+        Weapons = weapons;
     }
 
     /// <summary>
     /// Amount of half pips set to systems
     /// </summary>
-    public int System => _pips.ElementAtOrDefault(0);
+    public int System { get; }
 
     /// <summary>
     /// Amount of half pips set to engines
     /// </summary>
-    public int Engines => _pips.ElementAtOrDefault(1);
+    public int Engines { get; }
 
     /// <summary>
     /// Amount of half pips set to weapons
     /// </summary>
-    public int Weapons => _pips.ElementAtOrDefault(2);
+    public int Weapons { get; }
 }

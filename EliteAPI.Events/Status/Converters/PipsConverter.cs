@@ -23,13 +23,20 @@ internal class PipsConverter : JsonConverter
     public override object? ReadJson(JsonReader reader, Type objectType, object? existingValue,
         JsonSerializer serializer)
     {
-        var systems = reader.ReadAsInt32();
-        var engines = reader.ReadAsInt32();
-        var weapons = reader.ReadAsInt32();
+        try
+        {
+            var systems = reader.ReadAsInt32();
+            var engines = reader.ReadAsInt32();
+            var weapons = reader.ReadAsInt32();
 
-        reader.Read();
+            reader.Read();
 
-        return new ShipPips(new[] {systems ?? 0, engines ?? 0, weapons ?? 0});
+            return new ShipPips(systems ?? 0, engines ?? 0, weapons ?? 0);
+        }
+        catch
+        {
+            return new ShipPips(0, 0, 0);
+        }
     }
 
     public override bool CanConvert(Type objectType)

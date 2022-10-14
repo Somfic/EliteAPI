@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <IsPackable>false</IsPackable>
-    <Version>3.0.0-alpha5229</Version>
+    <Version>3.0.0-alpha5232</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0-alpha.5229+Branch.dev.Sha.137d195439cf30e5de62d3fa8bb01303447a1e17</InformationalVersion>
+    <InformationalVersion>3.0.0-alpha.5232+Branch.dev.Sha.b4b7e1676470b452c5a14d87388c7a8ffdadd5eb</InformationalVersion>
     <Nullable>enable</Nullable>
     <LangVersion>10</LangVersion>
     <OutputType>Library</OutputType>

@@ -88,7 +88,7 @@ public class EventParser : IEventParser
     public T? FromJson<T>(string json) where T : IEvent
     {
         return JsonConvert.DeserializeObject<T>(json,
-            new JsonSerializerSettings {ContractResolver = new EventContractResolver(), Converters = _converters});
+            new JsonSerializerSettings { Converters = _converters});
     }
 
     /// <inheritdoc />
@@ -96,7 +96,7 @@ public class EventParser : IEventParser
     {
         return JsonConvert.DeserializeObject(json, type,
             new JsonSerializerSettings
-                {ContractResolver = new EventContractResolver(), Converters = _converters}) as IEvent;
+                { Converters = _converters}) as IEvent;
     }
 
     private IEnumerable<EventPath> GetPaths(JObject? jObject)

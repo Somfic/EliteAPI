@@ -60,6 +60,9 @@
         <member name="M:EliteAPI.EliteDangerousApi.StopAsync">
             <inheritdoc />
         </member>
+        <member name="E:EliteAPI.EliteDangerousApi.OnError">
+            <inheritdoc />
+        </member>
         <member name="P:EliteAPI.EliteDangerousApi.Events">
             <inheritdoc />
         </member>
@@ -88,6 +91,9 @@
             <inheritdoc />
         </member>
         <member name="T:EliteAPI.Events.Events">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Events.Events.Backlog">
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Events.Events.EventTypes">

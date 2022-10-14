@@ -29,18 +29,7 @@ public class LocalisedConverter : JsonConverter
     public override object? ReadJson(JsonReader reader, Type objectType, object? rawValue, JsonSerializer serializer)
     {
         var symbol = JToken.Load(reader).ToString();
-
-        reader.Read();
-
-        var localised = string.Empty;
-        
-        try {
-            localised = reader.ReadAsString();
-        } catch(Exception ex) {
-            //
-        }
-
-        return new Localised(symbol, localised ?? string.Empty);
+        return new Localised(symbol);
     }
 
     /// <inheritdoc />

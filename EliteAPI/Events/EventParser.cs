@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.Abstractions.Events.Converters;
@@ -87,6 +88,8 @@ public class EventParser : IEventParser
     /// <inheritdoc />
     public T? FromJson<T>(string json) where T : IEvent
     {
+        RegisterLocalisedValues(json);
+        
         return JsonConvert.DeserializeObject<T>(json,
             new JsonSerializerSettings { Converters = _converters});
     }
@@ -94,9 +97,29 @@ public class EventParser : IEventParser
     /// <inheritdoc />
     public IEvent? FromJson(Type type, string json)
     {
+        RegisterLocalisedValues(json);
+        
         return JsonConvert.DeserializeObject(json, type,
             new JsonSerializerSettings
                 { Converters = _converters}) as IEvent;
+    }
+
+    private void RegisterLocalisedValues(string json)
+    {
+        var matches = Regex.Matches(json, "\"([^\"]*?)\":\"([^\"]*?)\",[^\"]?\"([^\"]*?)_Localised\":\"([^\"]*)\"");
+
+        foreach (Match match in matches)
+        {
+            var symbolKey = match.Groups[1].Value;
+            var symbolValue = match.Groups[2].Value;
+            var localisedKey = match.Groups[3].Value;
+            var localisedValue = match.Groups[4].Value;
+            
+            if (symbolKey != localisedKey)
+                continue;
+            
+            Localisation.SetLocalisedString(symbolValue, localisedValue);
+        }
     }
 
     private IEnumerable<EventPath> GetPaths(JObject? jObject)

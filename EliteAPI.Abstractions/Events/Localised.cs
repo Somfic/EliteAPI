@@ -2,10 +2,9 @@
 
 public readonly struct Localised
 {
-    public Localised(string symbol, string localised)
+    public Localised(string symbol)
     {
         Symbol = symbol;
-        Local = localised;
     }
 
     /// <summary>The symbol value of the property.
@@ -15,10 +14,36 @@ public readonly struct Localised
 
     /// <summary>The localised value of the property.</summary>
     /// <remarks>Values can differ based on the game's language.</remarks>
-    public string Local { get; }
+    public string Local => Localisation.GetLocalisedString(Symbol);
 
     public override string ToString()
     {
         return Local;
+    }
+}
+
+public static class Localisation
+{
+    private static readonly Dictionary<string, string> LocalisedStrings = new();
+    
+    public static void SetLocalisedString(string? symbol, string? localised)
+    {
+        if (string.IsNullOrWhiteSpace(symbol))
+            return;
+        
+        LocalisedStrings[symbol] = localised ?? string.Empty;
+    }
+    
+    public static string GetLocalisedString(string? symbol)
+    {
+        if (string.IsNullOrWhiteSpace(symbol))
+            return string.Empty;
+        
+        return LocalisedStrings.TryGetValue(symbol, out var localised) ? localised : symbol;
+    }
+
+    public static IReadOnlyDictionary<string, string> GetLocalisedStrings()
+    {
+        return LocalisedStrings;
     }
 }

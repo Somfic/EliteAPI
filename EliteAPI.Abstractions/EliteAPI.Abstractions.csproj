@@ -41,7 +41,4 @@
   <ItemGroup>
     <None Include="icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EliteAPI.Bindings\EliteAPI.Bindings.csproj" />
-  </ItemGroup>
 </Project>

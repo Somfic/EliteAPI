@@ -1,4 +1,5 @@
 ﻿using EliteAPI;
+using EliteAPI.Abstractions.Bindings.Models;
 using EliteAPI.Bindings;
 using EliteAPI.Events;
 using EliteAPI.Events.Status.Ship.Events;
@@ -12,7 +13,7 @@ api.Events.On<LightsStatusEvent>(lights =>
 
 api.Bindings.OnBindings(_ =>
 {
-    Console.WriteLine(api.Bindings[KeyBinding.ForwardKey].Primary?.Key);
+    Console.WriteLine(api.Bindings[KeyBinding.ShipSpotLightToggle].Primary?.Key);
 });
 
 // Start the API

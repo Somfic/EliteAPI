@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using EliteAPI.Abstractions.Bindings;
+using EliteAPI.Abstractions.Bindings.Models;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 

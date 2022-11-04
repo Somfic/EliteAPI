@@ -1,4 +1,4 @@
-﻿namespace EliteAPI.Bindings;
+﻿namespace EliteAPI.Abstractions.Bindings.Models;
 
 public struct ToggleSubBinding : ISubBinding
 {

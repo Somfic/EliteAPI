@@ -4,7 +4,9 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using EliteAPI.Abstractions.Bindings;
+using EliteAPI.Abstractions.Bindings.Models;
 using EliteAPI.Abstractions.Events;
+using EliteAPI.Events;
 using Microsoft.Extensions.Logging;
 
 namespace EliteAPI.Bindings;

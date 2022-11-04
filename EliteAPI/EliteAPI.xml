@@ -10,7 +10,7 @@
         <member name="P:EliteAPI.Bindings.Bindings.Item(System.String)">
             <inheritdoc />
         </member>
-        <member name="P:EliteAPI.Bindings.Bindings.Item(EliteAPI.Bindings.KeyBinding)">
+        <member name="P:EliteAPI.Bindings.Bindings.Item(EliteAPI.Abstractions.Bindings.Models.KeyBinding)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Bindings.Bindings.OnBindings(EliteAPI.Abstractions.Bindings.BindingsDelegate)">

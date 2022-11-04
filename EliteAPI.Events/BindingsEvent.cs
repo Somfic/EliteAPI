@@ -1,7 +1,7 @@
-﻿using EliteAPI.Abstractions.Events;
-using EliteAPI.Bindings;
+﻿using EliteAPI.Abstractions.Bindings.Models;
+using EliteAPI.Abstractions.Events;
 
-namespace EliteAPI.Abstractions.Bindings;
+namespace EliteAPI.Events;
 
 public readonly struct BindingsEvent : IEvent
 {

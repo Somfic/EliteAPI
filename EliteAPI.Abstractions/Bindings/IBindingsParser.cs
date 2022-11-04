@@ -1,4 +1,4 @@
-﻿using EliteAPI.Bindings;
+﻿using EliteAPI.Abstractions.Bindings.Models;
 
 namespace EliteAPI.Abstractions.Bindings;
 

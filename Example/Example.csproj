@@ -4,7 +4,7 @@
     <Nullable>enable</Nullable>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0+1453.Branch.main.Sha.3c3cc72310fc8c74949bf4365b205ad950cca1cb</InformationalVersion>
+    <InformationalVersion>3.0.0+1456.Branch.main.Sha.2dc6e3b64466fc2e1ad9618e02d6146425d0d57b</InformationalVersion>
     <Version>3.0.0</Version>
     <IsPackable>false</IsPackable>
     <LangVersion>10</LangVersion>

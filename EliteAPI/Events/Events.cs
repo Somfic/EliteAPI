@@ -16,7 +16,6 @@ namespace EliteAPI.Events;
 public class Events : IEvents
 {
     private readonly ILogger<Events>? _log;
-    private readonly IServiceProvider _services;
 
     private Dictionary<Type, IList<(Delegate d, bool hasContext)>> _eventHandlers = new();
     private Dictionary<Type, IList<(Delegate d, bool hasContext)>> _jsonHandlers = new();
@@ -30,10 +29,9 @@ public class Events : IEvents
     public IReadOnlyCollection<(IEvent @event, EventContext context)> Backlog => _backlog.AsReadOnly();
     private readonly List<(IEvent @event, EventContext context)> _backlog = new();
 
-    public Events(ILogger<Events>? log, IServiceProvider services, IEventParser eventParser)
+    public Events(ILogger<Events>? log, IEventParser eventParser)
     {
         _log = log;
-        _services = services;
         _eventParser = eventParser;
     }
 

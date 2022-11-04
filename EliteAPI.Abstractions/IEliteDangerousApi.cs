@@ -1,7 +1,6 @@
-﻿using EliteAPI.Abstractions.Configuration;
+﻿using EliteAPI.Abstractions.Bindings;
+using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
-using EliteAPI.Abstractions.KeyBindings;
-using EliteAPI.KeyBindings;
 
 namespace EliteAPI.Abstractions;
 
@@ -27,7 +26,7 @@ public interface IEliteDangerousApi
     IBindingsParser BindingsParser { get; }
     
     /// <summary>User defined in-game bindings.</summary>
-    Bindings Bindings { get; } 
+    IBindings Bindings { get; } 
 
     /// <summary>Initialises the API.</summary>
     Task InitialiseAsync();

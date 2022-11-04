@@ -4,6 +4,33 @@
         <name>EliteAPI</name>
     </assembly>
     <members>
+        <member name="P:EliteAPI.Bindings.Bindings.Active">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Bindings.Bindings.Item(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Bindings.Bindings.Item(EliteAPI.Bindings.KeyBinding)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Bindings.Bindings.OnBindings(EliteAPI.Abstractions.Bindings.BindingsDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Bindings.Bindings.OnBindings(EliteAPI.Abstractions.Bindings.AsyncBindingsDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Bindings.Bindings.OnBindings(EliteAPI.Abstractions.Bindings.BindingsContextDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Bindings.Bindings.OnBindings(EliteAPI.Abstractions.Bindings.AsyncBindingsContextDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Bindings.Bindings.Invoke(System.String,EliteAPI.Abstractions.Bindings.BindingsContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:EliteAPI.Bindings.BindingsParser.Parse(System.String)">
+            <inheritdoc />
+        </member>
         <member name="T:EliteAPI.Configuration.EliteDangerousApiConfiguration">
             <inheritdoc />
         </member>
@@ -212,9 +239,6 @@
         </member>
         <member name="T:EliteAPI.Extensions.EliteDangerousApiOptions">
             <summary>Options for a <see cref="T:EliteAPI.EliteDangerousApi" />.</summary>
-        </member>
-        <member name="M:EliteAPI.KeyBindings.BindingsParser.ToBindings(System.String)">
-            <inheritdoc />
         </member>
         <member name="M:EliteAPI.Readers.Reader.Register(EliteAPI.Abstractions.Readers.FileSelector)">
             <inheritdoc />

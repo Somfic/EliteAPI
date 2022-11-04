@@ -1,14 +1,14 @@
 ﻿using System;
 using EliteAPI;
 using EliteAPI.Abstractions;
+using EliteAPI.Abstractions.Bindings;
 using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
-using EliteAPI.Abstractions.KeyBindings;
 using EliteAPI.Abstractions.Readers;
+using EliteAPI.Bindings;
 using EliteAPI.Configuration;
 using EliteAPI.Events;
 using EliteAPI.Extensions;
-using EliteAPI.KeyBindings;
 using EliteAPI.Readers;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -39,11 +39,16 @@ public static class EliteDangerousApiServiceCollectionExtensions
         // todo: configure the api   
 
         services.TryAddSingleton<IEliteDangerousApi, EliteDangerousApi>();
+        
         services.TryAddSingleton<IEliteDangerousApiConfiguration, EliteDangerousApiConfiguration>();
+        
         services.TryAddSingleton<IEvents, Events>();
         services.TryAddSingleton<IEventParser, EventParser>();
-        services.TryAddSingleton<IReader, Reader>();
+
+        services.TryAddSingleton<IBindings, Bindings>();
         services.TryAddSingleton<IBindingsParser, BindingsParser>();
+
+        services.TryAddSingleton<IReader, Reader>();
 
         return services;
     }

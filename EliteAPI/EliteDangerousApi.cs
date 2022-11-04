@@ -3,15 +3,13 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using EliteAPI.Abstractions;
+using EliteAPI.Abstractions.Bindings;
 using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
-using EliteAPI.Abstractions.KeyBindings;
 using EliteAPI.Abstractions.Readers;
-using EliteAPI.Abstractions.Status;
 using EliteAPI.Events;
 using EliteAPI.Events.Status.Ship;
 using EliteAPI.Events.Status.Ship.Events;
-using EliteAPI.KeyBindings;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -32,7 +30,7 @@ public class EliteDangerousApi : IEliteDangerousApi
     public IBindingsParser BindingsParser { get; }
 
     /// <inheritdoc />
-    public Bindings Bindings { get; private set; }
+    public IBindings Bindings { get; private set; }
 
     /// <inheritdoc />
     public bool IsRunning { get; private set; }
@@ -57,7 +55,7 @@ public class EliteDangerousApi : IEliteDangerousApi
         Events = services.GetRequiredService<IEvents>();
 
         BindingsParser = services.GetRequiredService<IBindingsParser>();
-        Bindings = new Bindings();
+        Bindings = services.GetRequiredService<IBindings>();
         
         Config = services.GetRequiredService<IEliteDangerousApiConfiguration>();
         _reader = services.GetRequiredService<IReader>();
@@ -162,19 +160,36 @@ public class EliteDangerousApi : IEliteDangerousApi
             if (string.IsNullOrEmpty(line))
                 continue;
 
-            if (selector.Category == FileCategory.Bindings)
+            switch (selector.Category)
             {
-                Bindings = BindingsParser.ToBindings(line);
-                continue;
-            }
-                        
-            var context = new EventContext()
-            {
-                IsRaisedDuringCatchup = isFirstRun,
-                SourceFile = info.FullName
-            };
+                case FileCategory.Events:
+                case FileCategory.Status:
+                {
+                    var context = new EventContext
+                    {
+                        IsRaisedDuringCatchup = isFirstRun,
+                        SourceFile = info.FullName
+                    };
 
-            Events.Invoke(line, context);
+                    Events.Invoke(line!, context);
+                    break;
+                }
+
+                case FileCategory.Bindings:
+                {
+                    var context = new BindingsContext
+                    {
+                        SourceFile = info.FullName,
+                        IsRaisedDuringCatchup = isFirstRun
+                    };
+
+                    Bindings.Invoke(line!, context);
+                    break;
+                }
+
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(selector.Category));
+            }
         }
     }
 
@@ -231,13 +246,4 @@ public class EliteDangerousApi : IEliteDangerousApi
 
         _lastStatus = status;
     }
-}
-
-class EmptyStatusEvent : IStatusEvent
-{
-    public DateTime Timestamp { get; init; }
-
-    public string Event { get; init; }
-
-    public object Value { get; init; }
 }

@@ -1,4 +1,5 @@
 ﻿using EliteAPI;
+using EliteAPI.Bindings;
 using EliteAPI.Events;
 using EliteAPI.Events.Status.Ship.Events;
 
@@ -9,11 +10,14 @@ var api = EliteDangerousApi.Create();
 api.Events.On<LightsStatusEvent>(lights => 
     Console.WriteLine($"Lights are {(lights.Value ? "on" : "off")}"));
 
+api.Bindings.OnBindings(_ =>
+{
+    Console.WriteLine(api.Bindings[KeyBinding.ForwardKey].Primary?.Key);
+});
+
 // Start the API
 await api.StartAsync();
 Console.WriteLine("EliteAPI started");
-
-Console.WriteLine(api.Bindings.Hyperspace.Primary.Key);
 
 // Run until the game stops
 api.Events.WaitFor<ShutdownEvent>();

@@ -5,7 +5,7 @@
     <LangVersion>10</LangVersion>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.0.0+1456.Branch.main.Sha.2dc6e3b64466fc2e1ad9618e02d6146425d0d57b</InformationalVersion>
+    <InformationalVersion>3.0.0+1458.Branch.main.Sha.f685629df930ffca307bd195937ea9b16ab2bdda</InformationalVersion>
     <Version>3.0.0-alpha5167</Version>
     <IsPackable>true</IsPackable>
     <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>

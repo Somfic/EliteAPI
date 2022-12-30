@@ -4,9 +4,9 @@ public struct Binding
 {
     public string Name { get; init; }
 
-    public PrimarySubBinding? Primary { get; init; }
+    public SubBinding? Primary { get; init; }
     
-    public SecondarySubBinding? Secondary { get; init; }
+    public SubBinding? Secondary { get; init; }
     
     public bool? IsToggle { get; init; }
     

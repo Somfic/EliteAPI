@@ -54,21 +54,21 @@ public class BindingsParser : IBindingsParser
         if (bindingNode != null)
         {
             var binding = ParseBinding(bindingNode);
-            subBindings.Add(new SubBinding(binding));
+            subBindings.Add(new PrimarySubBinding(binding));
         }
         
         var primaryNode = GetChild(node, "Primary");
         if (primaryNode != null)
         {
             var binding = ParseBinding(primaryNode);
-            subBindings.Add(new SubBinding(binding));
+            subBindings.Add(new PrimarySubBinding(binding));
         }
 
         var secondaryNode = GetChild(node, "Secondary");
         if (secondaryNode != null)
         {
             var binding = ParseBinding(secondaryNode);
-            subBindings.Add(new SubBinding(binding));
+            subBindings.Add(new PrimarySubBinding(binding));
         }
 
         var invertedNode = GetChild(node, "Inverted");
@@ -144,7 +144,7 @@ public class BindingsParser : IBindingsParser
         return new Binding
         {
             Name = name,
-            Primary = subBindings.OfType<SubBinding>().FirstOrDefault(),
+            Primary = subBindings.OfType<PrimarySubBinding>().FirstOrDefault(),
             Secondary = subBindings.OfType<SecondarySubBinding>().FirstOrDefault(),
             IsToggle = subBindings.OfType<ToggleSubBinding>().Any()
                 ? subBindings.OfType<ToggleSubBinding>().First().Value

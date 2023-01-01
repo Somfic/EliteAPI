@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using EliteAPI.Abstractions.Readers;
+using EliteAPI.Abstractions.Readers.Selectors;
 using Microsoft.Extensions.Logging;
 
 namespace EliteAPI.Readers;

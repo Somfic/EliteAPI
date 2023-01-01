@@ -240,7 +240,7 @@
         <member name="T:EliteAPI.Extensions.EliteDangerousApiOptions">
             <summary>Options for a <see cref="T:EliteAPI.EliteDangerousApi" />.</summary>
         </member>
-        <member name="M:EliteAPI.Readers.Reader.Register(EliteAPI.Abstractions.Readers.IFileSelector)">
+        <member name="M:EliteAPI.Readers.Reader.Register(EliteAPI.Abstractions.Readers.Selectors.IFileSelector)">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Readers.Reader.FindNew">

@@ -1,4 +1,4 @@
-﻿namespace EliteAPI.Abstractions.Readers;
+﻿namespace EliteAPI.Abstractions.Readers.Selectors;
 
 public class JournalFileSelector : IFileSelector
 {

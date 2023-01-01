@@ -68,7 +68,7 @@ public class BindingsParser : IBindingsParser
         if (secondaryNode != null)
         {
             var binding = ParseBinding(secondaryNode);
-            subBindings.Add(new PrimarySubBinding(binding));
+            subBindings.Add(new SecondarySubBinding(binding));
         }
 
         var invertedNode = GetChild(node, "Inverted");

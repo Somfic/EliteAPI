@@ -17,12 +17,19 @@ public class Test
         var parsed = parser.Parse(xml).Where(x => x.Primary?.Device == "Keyboard" || x.Secondary?.Device == "Keyboard");
         
         parsed.Should().NotBeNull();
-        parsed.Count().Should().Be(138);
+        parsed.Count().Should().Be(199);
     }
 
     [Fact]
     public void Finding()
     {
+        var parser = new BindingsParser(Mock.Of<ILogger<BindingsParser>>());
+        // Read embedded file
+        var xml = Helper.GetResource( "Tests.Bindings.Bindings");
+
+        var parsed = parser.Parse(xml).Where(x => x.Primary?.Device == "Keyboard" || x.Secondary?.Device == "Keyboard");
         
+        parsed.Should().NotBeNull();
+        parsed.FirstOrDefault(x => x.Name == "PitchUpButton").Secondary.Should().NotBeNull();
     }
 }

@@ -17,7 +17,7 @@ public class Test
         var parsed = parser.Parse(xml).Where(x => x.Primary?.Device == "Keyboard" || x.Secondary?.Device == "Keyboard");
         
         parsed.Should().NotBeNull();
-        parsed.Count().Should().Be(138);
+        parsed.Count().Should().Be(199);
     }
 
     [Fact]

@@ -22,20 +22,20 @@ namespace EliteAPI.Tests.Events
         {
             var testEvent = new TestEvent()
             {
-                Event = "Test",
+                Event = "Tests",
                 Test = "Hello World!"
             };
 
             var result = _eventParser.ToJson(testEvent);
             
             result.Should().NotBeNullOrEmpty();
-            result.Should().Contain("\"Event\":\"Test\"");
-            result.Should().Contain("\"Test\":\"Hello World!\"");
+            result.Should().Contain("\"Event\":\"Tests\"");
+            result.Should().Contain("\"Tests\":\"Hello World!\"");
 
             var parsed = JsonConvert.DeserializeObject<TestEvent>(result);
             
             parsed.Should().NotBeNull();
-            parsed!.Event.Should().Be("Test");
+            parsed!.Event.Should().Be("Tests");
             parsed.Test.Should().Be("Hello World!");
         }
 

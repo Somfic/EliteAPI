@@ -21,6 +21,8 @@ await api.StartAsync();
 Console.WriteLine("EliteAPI started");
 
 // Run until the game stops
-api.Events.WaitFor<ShutdownEvent>();
+//api.Events.WaitFor<ShutdownEvent>();
+await Task.Delay(-1);
+
 Console.WriteLine("Game closed, shutting down");
 await api.StopAsync();

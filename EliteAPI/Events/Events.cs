@@ -41,8 +41,8 @@ public class Events : IEvents
     /// <inheritdoc />
     public IReadOnlyCollection<(IEvent @event, EventContext context)> PreviousEvents => _previousEvents.AsReadOnly();
 
-    private List<(IEvent @event, EventContext context)> _previousEvents = new();
-
+    private readonly List<(IEvent @event, EventContext context)> _previousEvents = new();
+ 
     /// <inheritdoc />
     public void On<TEvent>(EventContextDelegate<TEvent> handler) where TEvent : IEvent =>
         On<TEvent>(handler, ref _eventHandlers, true);
@@ -163,7 +163,7 @@ public class Events : IEvents
                 continue;
             }
 
-            var @event = (TEvent)_previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
+            var @event = (TEvent)PreviousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
 
             if (predicate(@event))
                 return @event;
@@ -174,7 +174,7 @@ public class Events : IEvents
     
     private int CountMatchingEvents<TEvent>()
     {
-        return _previousEvents.Count(x => x.@event.GetType() == typeof(TEvent) && !x.context.IsRaisedDuringCatchup);
+        return PreviousEvents.Count(x => x.@event.GetType() == typeof(TEvent) && !x.context.IsRaisedDuringCatchup);
     }
 
     /// <inheritdoc />

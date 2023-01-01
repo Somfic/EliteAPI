@@ -11,7 +11,7 @@ public class Reader : IReader
 {
     private readonly ILogger<Reader>? _log;
 
-    private readonly IList<FileSelector> _files = new List<FileSelector>();
+    private readonly IList<IFileSelector> _files = new List<IFileSelector>();
     private readonly Dictionary<string, string[]> _lastValues = new();
 
     public Reader(ILogger<Reader> log)
@@ -20,7 +20,7 @@ public class Reader : IReader
     }
 
     /// <inheritdoc />
-    public void Register(FileSelector selector)
+    public void Register(IFileSelector selector)
     {
         _files.Add(selector);
     }
@@ -30,10 +30,21 @@ public class Reader : IReader
     {
         foreach (var fileSelector in _files)
         {
-            var file = fileSelector.Directory.GetFiles(fileSelector.FilePattern).OrderByDescending(x => x.LastWriteTime).FirstOrDefault();
-            if (file == null)
+            FileInfo file;
+            
+            try
             {
-                _log?.LogWarning("No files found matching {Pattern} in {Directory}", fileSelector.FilePattern, fileSelector.Directory.FullName);
+                file = fileSelector.GetFile();
+              
+            } catch (FileNotFoundException ex)
+            {
+                _log?.LogWarning(ex.Message);
+                _files.Remove(fileSelector);
+                yield break;
+            }
+            catch (Exception ex)
+            {
+                _log?.LogWarning(ex, "Could not query the necessary files for {FileType}", fileSelector.Category.ToString().ToLower());
                 _files.Remove(fileSelector);
                 yield break;
             }

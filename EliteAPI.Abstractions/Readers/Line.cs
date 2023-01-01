@@ -1,3 +1,3 @@
 ﻿namespace EliteAPI.Abstractions.Readers;
 
-public record Line(FileInfo File, FileSelector Selector, string? Value);
+public record Line(FileInfo File, IFileSelector Selector, string? Value);

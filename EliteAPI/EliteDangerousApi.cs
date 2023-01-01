@@ -91,16 +91,16 @@ public class EliteDangerousApi : IEliteDangerousApi
         Events.On<StatusEvent>(HandleStatus);
 
         // Register Journal files
-        _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), Config.JournalPattern, FileCategory.Events, true));
+        _reader.Register(new JournalFileSelector(new DirectoryInfo(Config.JournalsPath), Config.JournalPattern));
 
         // Register status files
         foreach (var statusFile in Config.StatusFiles)
         {
-            _reader.Register(new FileSelector(new DirectoryInfo(Config.JournalsPath), statusFile, FileCategory.Status));
+            _reader.Register(new StatusFileSelector(new DirectoryInfo(Config.JournalsPath), statusFile));
         }
         
         // Register bindings file
-        _reader.Register(new FileSelector(new DirectoryInfo(Path.Combine(Config.OptionsPath, "Bindings")), "Custom.4.0.binds", FileCategory.Bindings));
+        _reader.Register(new BindingsFileSelector(new DirectoryInfo(Path.Combine(Config.OptionsPath, "Bindings"))));
 
         _hasInitialised = true;
     }

@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EliteAPI", "EliteAPI\EliteAPI.csproj", "{0D8FBA32-1B89-4EB3-BB0C-967667A00ED1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI.Tests", "EliteAPI.Tests\EliteAPI.Tests.csproj", "{23607EC2-7CFC-4807-BB90-385D59ADB928}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI.Events", "EliteAPI.Events\EliteAPI.Events.csproj", "{9E3E2DA3-51DF-487A-B85E-CDACE5F1AA29}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{98F4FCB9-F5A2-4159-97F0-3FEEE6620364}"

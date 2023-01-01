@@ -1,4 +1,6 @@
-﻿namespace EliteAPI.Abstractions.Readers;
+﻿using EliteAPI.Abstractions.Readers.Selectors;
+
+namespace EliteAPI.Abstractions.Readers;
 
 public interface IReader
 {

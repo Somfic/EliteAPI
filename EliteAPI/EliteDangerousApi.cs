@@ -7,6 +7,7 @@ using EliteAPI.Abstractions.Bindings;
 using EliteAPI.Abstractions.Configuration;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.Abstractions.Readers;
+using EliteAPI.Abstractions.Readers.Selectors;
 using EliteAPI.Events;
 using EliteAPI.Events.Status.Ship;
 using EliteAPI.Events.Status.Ship.Events;

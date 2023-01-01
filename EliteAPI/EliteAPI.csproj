@@ -11,14 +11,14 @@
     <Description>A powerful event based .NET API for Elite: Dangerous</Description>
     <Copyright>© Somfic 2022</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.1.0-alpha0001</Version>
+    <Version>3.1.0-alpha0012</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageIcon>icon.png</PackageIcon>
     <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
     <LangVersion>10</LangVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Somfic</Authors>
-    <InformationalVersion>3.1.0-alpha.1+Branch.dev.Sha.a47b15fc6315ae8674a85a3479398416d3a78b38</InformationalVersion>
+    <InformationalVersion>3.1.0-alpha.12+Branch.dev.Sha.f5e2f245a06e534fa29b522212f100e192720b87</InformationalVersion>
     <Nullable>enable</Nullable>
     <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
   </PropertyGroup>

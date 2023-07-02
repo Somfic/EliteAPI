@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
+        <LangVersion>10.0</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EliteAPI.Web\EliteAPI.Web.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="IsExternalInit" Version="1.0.3">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+</Project>

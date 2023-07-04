@@ -4,10 +4,7 @@ using Newtonsoft.Json;
 namespace EliteAPI.Events;
 
 
-[Obsolete("Use DockSRVEvent instead", true)]
-public readonly struct DockSrvEvent {};
-
-public readonly struct DockSRVEvent : IEvent
+public readonly struct DockSrvEvent : IEvent
 {
     [JsonProperty("timestamp")]
     public DateTime Timestamp { get; init; }

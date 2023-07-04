@@ -3,8 +3,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Events;
 
-
-public readonly struct DockSrvEvent : IEvent
+public readonly struct CarrierJumpCancelledEvent : IEvent
 {
     [JsonProperty("timestamp")]
     public DateTime Timestamp { get; init; }
@@ -12,6 +11,6 @@ public readonly struct DockSrvEvent : IEvent
     [JsonProperty("event")]
     public string Event { get; init; }
 
-    [JsonProperty("ID")]
-    public string Id { get; init; }
+    [JsonProperty("CarrierID")]
+    public string CarrierId { get; init; }
 }

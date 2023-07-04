@@ -17,7 +17,12 @@ api.Bindings.OnBindings(_ =>
 });
 
 // Start the API
-await api.StartAsync();
+if (!await api.StartAsync())
+{
+    Console.WriteLine("Failed to start EliteAPI");
+    return;
+}
+
 Console.WriteLine("EliteAPI started");
 
 // Run until the game stops

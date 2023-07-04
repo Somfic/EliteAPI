@@ -1,6 +1,6 @@
 ﻿namespace EliteAPI.Abstractions.Bindings.Models;
 
-public struct SecondarySubBinding : ISubBinding
+public struct SecondarySubBinding : IPrimarySecondaryBinding
 {
     public SecondarySubBinding((string key, string device, ModifierBinding[] modifiers) binding)
     {

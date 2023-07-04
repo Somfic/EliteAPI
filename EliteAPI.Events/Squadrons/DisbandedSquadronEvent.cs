@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Events;
 
-public readonly struct SquadronDisbandedEvent : IEvent
+public readonly struct DisbandedSquadronEvent : IEvent
 {
     [JsonProperty("timestamp")]
     public DateTime Timestamp { get; init; }

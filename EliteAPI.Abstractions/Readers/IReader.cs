@@ -1,4 +1,6 @@
-﻿namespace EliteAPI.Abstractions.Readers;
+﻿using EliteAPI.Abstractions.Readers.Selectors;
+
+namespace EliteAPI.Abstractions.Readers;
 
 public interface IReader
 {
@@ -6,7 +8,7 @@ public interface IReader
     /// Registers a file to be watched by the reader.
     /// </summary>
     /// <param name="selector">File selection options</param>
-    void Register(FileSelector selector);
+    void Register(IFileSelector selector);
     
     /// <summary>
     /// Finds all the new changes in the registered files.

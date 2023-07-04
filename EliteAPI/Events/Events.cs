@@ -41,8 +41,8 @@ public class Events : IEvents
     /// <inheritdoc />
     public IReadOnlyCollection<(IEvent @event, EventContext context)> PreviousEvents => _previousEvents.AsReadOnly();
 
-    private List<(IEvent @event, EventContext context)> _previousEvents = new();
-
+    private readonly List<(IEvent @event, EventContext context)> _previousEvents = new();
+ 
     /// <inheritdoc />
     public void On<TEvent>(EventContextDelegate<TEvent> handler) where TEvent : IEvent =>
         On<TEvent>(handler, ref _eventHandlers, true);
@@ -163,7 +163,7 @@ public class Events : IEvents
                 continue;
             }
 
-            var @event = (TEvent)_previousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
+            var @event = (TEvent)PreviousEvents.Last(x => x.@event.GetType() == type && !x.context.IsRaisedDuringCatchup).@event;
 
             if (predicate(@event))
                 return @event;
@@ -174,7 +174,7 @@ public class Events : IEvents
     
     private int CountMatchingEvents<TEvent>()
     {
-        return _previousEvents.Count(x => x.@event.GetType() == typeof(TEvent) && !x.context.IsRaisedDuringCatchup);
+        return PreviousEvents.Count(x => x.@event.GetType() == typeof(TEvent) && !x.context.IsRaisedDuringCatchup);
     }
 
     /// <inheritdoc />
@@ -202,7 +202,7 @@ public class Events : IEvents
         try
         {
             if (string.IsNullOrEmpty(json))
-                return;
+                throw new ArgumentNullException(nameof(json));
 
             var jObject = JObject.Parse(json);
             var eventKey = jObject["event"];
@@ -232,7 +232,7 @@ public class Events : IEvents
             InvokeAnyHandlers(eventType, json, context);
 
             if (eventType == null)
-                return;
+                throw new Exception($"The {eventName} event is not registered"); // todo: better exception type
 
             var parsedEvent = _eventParser.FromJson(eventType, json);
 
@@ -242,7 +242,7 @@ public class Events : IEvents
                 ex.Data.Add("JSON", json);
 
                 _log?.LogWarning(ex, "Could not parse event {Event}", eventName);
-                return;
+                throw ex;
             }
 
             try
@@ -278,6 +278,7 @@ public class Events : IEvents
             ex.Data.Add("JSON", json);
             ex.Data.Add("File", context.SourceFile);
             _log?.LogWarning(ex, "Could not invoke event from JSON");
+            throw;
         }
     }
 

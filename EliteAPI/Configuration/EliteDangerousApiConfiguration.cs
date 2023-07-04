@@ -23,32 +23,32 @@ public class EliteDangerousApiConfiguration : IEliteDangerousApiConfiguration
     }
 
     /// <inheritdoc />
-    public string JournalsPath { get; private set; }
+    public string JournalsPath { get; set; }
 
-    public string[] StatusFiles { get; private set; }
-
-    /// <inheritdoc />
-    public string JournalPattern { get; private set; }
+    public string[]? StatusFiles { get; set; }
 
     /// <inheritdoc />
-    public string OptionsPath { get; private set; }
+    public string JournalPattern { get; set; }
+
+    /// <inheritdoc />
+    public string OptionsPath { get; set; }
 
     /// <inheritdoc />
     public void Apply()
     {
         _log.LogTrace("Applying configuration");
 
-        JournalsPath = _config.GetValue("EliteAPI:JournalsPath",
-            Path.Combine(GetSavedGamesPath(), "Frontier Developments", "Elite Dangerous"));
+        if (string.IsNullOrWhiteSpace(JournalsPath))
+            JournalsPath = _config.GetValue("EliteAPI:JournalsPath", Path.Combine(GetSavedGamesPath(), "Frontier Developments", "Elite Dangerous"));
         
-        OptionsPath = _config.GetValue("EliteAPI:OptionsPath",
-            Path.Combine(GetLocalAppDataPath(), "Frontier Developments", "Elite Dangerous", "Options"));
+        if (string.IsNullOrWhiteSpace(OptionsPath))
+            OptionsPath = _config.GetValue("EliteAPI:OptionsPath", Path.Combine(GetLocalAppDataPath(), "Frontier Developments", "Elite Dangerous", "Options"));
         
-        StatusFiles = _config.GetValue("EliteAPI:StatusFiles", 
-            new[] { "Status.json", "Backpack.json", "Cargo.json", "ModulesInfo.json", "NavRoute.json", "Outfitting.json", "ShipLocker.json", "Shipyard.json" });
+        if (StatusFiles == null) 
+            StatusFiles = _config.GetValue("EliteAPI:StatusFiles", new[] { "Status.json", "Backpack.json", "Cargo.json", "ModulesInfo.json", "NavRoute.json", "Outfitting.json", "ShipLocker.json", "Shipyard.json" });
         
-        JournalPattern = _config.GetValue("EliteAPI:JournalPattern", 
-            "Journal.*.log");
+        if (string.IsNullOrWhiteSpace(JournalPattern))
+            JournalPattern = _config.GetValue("EliteAPI:JournalPattern", "Journal.*.log");
 
         if (!Directory.Exists(JournalsPath))
             _log.LogWarning(new DirectoryNotFoundException($"{JournalsPath} does not exist."),

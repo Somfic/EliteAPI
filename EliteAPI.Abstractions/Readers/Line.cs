@@ -1,3 +1,5 @@
-﻿namespace EliteAPI.Abstractions.Readers;
+﻿using EliteAPI.Abstractions.Readers.Selectors;
 
-public record Line(FileInfo File, FileSelector Selector, string? Value);
+namespace EliteAPI.Abstractions.Readers;
+
+public record Line(FileInfo File, IFileSelector Selector, string? Value);

@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EliteAPI", "EliteAPI\EliteAPI.csproj", "{0D8FBA32-1B89-4EB3-BB0C-967667A00ED1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI.Tests", "EliteAPI.Tests\EliteAPI.Tests.csproj", "{23607EC2-7CFC-4807-BB90-385D59ADB928}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI.Events", "EliteAPI.Events\EliteAPI.Events.csproj", "{9E3E2DA3-51DF-487A-B85E-CDACE5F1AA29}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{98F4FCB9-F5A2-4159-97F0-3FEEE6620364}"
@@ -14,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI.Abstractions", "EliteAPI.Abstractions\EliteAPI.Abstractions.csproj", "{D8D89BC9-D7AA-447E-BBC7-E744F00720B0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{2EF6A15E-9838-41A6-9A02-DB1CF9FC0203}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI.Tests", "EliteAPI.Tests\EliteAPI.Tests.csproj", "{856F6019-7B19-40C7-9E45-A0FC155734E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +63,14 @@ Global
 		{D8D89BC9-D7AA-447E-BBC7-E744F00720B0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D8D89BC9-D7AA-447E-BBC7-E744F00720B0}.Release|x86.ActiveCfg = Release|Any CPU
 		{D8D89BC9-D7AA-447E-BBC7-E744F00720B0}.Release|x86.Build.0 = Release|Any CPU
+		{856F6019-7B19-40C7-9E45-A0FC155734E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856F6019-7B19-40C7-9E45-A0FC155734E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856F6019-7B19-40C7-9E45-A0FC155734E0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{856F6019-7B19-40C7-9E45-A0FC155734E0}.Debug|x86.Build.0 = Debug|Any CPU
+		{856F6019-7B19-40C7-9E45-A0FC155734E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856F6019-7B19-40C7-9E45-A0FC155734E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{856F6019-7B19-40C7-9E45-A0FC155734E0}.Release|x86.ActiveCfg = Release|Any CPU
+		{856F6019-7B19-40C7-9E45-A0FC155734E0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

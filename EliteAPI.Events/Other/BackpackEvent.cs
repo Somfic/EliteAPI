@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Events;
 
-public readonly struct BackPackEvent : IEvent
+public readonly struct BackpackEvent : IEvent
 {
     [JsonProperty("timestamp")]
     public DateTime Timestamp { get; init; }

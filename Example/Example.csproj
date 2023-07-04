@@ -2,10 +2,10 @@
   <PropertyGroup>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>3.1.0.0</AssemblyVersion>
-    <FileVersion>3.1.0.0</FileVersion>
-    <InformationalVersion>3.1.0-alpha.62+Branch.dev.Sha.0ba86d2a46c9e7bdc2b1dcbcf2e61dfdd839b255</InformationalVersion>
-    <Version>3.1.0-alpha0062</Version>
+    <AssemblyVersion>3.0.1.0</AssemblyVersion>
+    <FileVersion>3.0.1.0</FileVersion>
+    <InformationalVersion>3.0.1+64.Branch.main.Sha.e7c7c50fdac7810302057fea883e3ab160b67939</InformationalVersion>
+    <Version>3.0.1</Version>
     <IsPackable>false</IsPackable>
     <LangVersion>10</LangVersion>
     <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>

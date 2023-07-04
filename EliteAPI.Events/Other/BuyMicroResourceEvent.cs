@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Events;
 
-public readonly struct BuyMicroResourcesEvent : IEvent
+public readonly struct BuyMicroResourceEvent : IEvent
 {
     [JsonProperty("timestamp")]
     public DateTime Timestamp { get; init; }

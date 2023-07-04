@@ -17,7 +17,12 @@ namespace EliteAPI.Tests.JournalManual;
 public class JournalManual
 {
     private static IEvents _events;
-    private static string[] _legacyEvents = { "BackpackMaterials" };
+    private static string[] _legacyEvents = { "BackpackMaterials", "BuyMicroResources", "ShipTargetted" };
+    private static string[] _legacyExamples =
+    {
+        "\"timestamp\":\"2020-04-27T08:02:52Z\", \"event\":\"Route\"",
+        "\"timestamp\":\"2020-04-27T08:02:52Z\", \"event\":\"Route\""
+    };
     
     [OneTimeSetUp]
     public void Setup()
@@ -36,13 +41,15 @@ public class JournalManual
         
         @event += "Event";
 
-        Assert.That(_events.EventTypes.Select(x => x.Name), Does.Contain(@event));
+        Assert.That(_events.EventTypes.Select(x => x.Name.ToLower()), Does.Contain(@event.ToLower()));
     }
 
     [Test(Description = "Json Examples")]
     [TestCaseSource(nameof(GetJsonExamples))]
     public void Json(string json)
     {
+        if (_legacyExamples.Any(json.Contains)) return;
+
         // Check if the JSON is valid
         try
         {

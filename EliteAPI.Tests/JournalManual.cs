@@ -14,7 +14,7 @@ using Newtonsoft.Json.Linq;
 namespace EliteAPI.Tests.JournalManual;
 
 [TestFixture]
-public class Tests
+public class JournalManual
 {
     private static IEvents _events;
 

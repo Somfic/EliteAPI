@@ -17,12 +17,15 @@ api.Bindings.OnBindings(_ =>
 });
 
 // Start the API
-await api.StartAsync();
+if (!await api.StartAsync())
+{
+    Console.WriteLine("Failed to start EliteAPI");
+    return;
+}
+
 Console.WriteLine("EliteAPI started");
 
 // Run until the game stops
-//api.Events.WaitFor<ShutdownEvent>();
-await Task.Delay(-1);
-
+api.Events.WaitFor<ShutdownEvent>();
 Console.WriteLine("Game closed, shutting down");
 await api.StopAsync();

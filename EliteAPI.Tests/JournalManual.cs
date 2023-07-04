@@ -17,7 +17,8 @@ namespace EliteAPI.Tests.JournalManual;
 public class JournalManual
 {
     private static IEvents _events;
-
+    private static string[] _legacyEvents = { "BackpackMaterials" };
+    
     [OneTimeSetUp]
     public void Setup()
     {
@@ -31,8 +32,10 @@ public class JournalManual
     [TestCaseSource(nameof(GetEvents))]
     public void Event(string @event)
     {
-        @event += "Event";
+        if (_legacyEvents.Contains(@event)) return;
         
+        @event += "Event";
+
         Assert.That(_events.EventTypes.Select(x => x.Name), Does.Contain(@event));
     }
 

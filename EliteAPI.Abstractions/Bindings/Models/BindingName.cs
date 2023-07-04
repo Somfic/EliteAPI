@@ -485,4 +485,5 @@ public enum KeyBinding
     HumanoidEmoteSlot7,
     HumanoidEmoteSlot8,
     BlockMouseDecay,
+    TriggerFieldNeutraliser
 }

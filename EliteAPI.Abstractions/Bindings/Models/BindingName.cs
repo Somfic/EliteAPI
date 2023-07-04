@@ -483,5 +483,6 @@ public enum KeyBinding
     HumanoidEmoteSlot5,
     HumanoidEmoteSlot6,
     HumanoidEmoteSlot7,
-    HumanoidEmoteSlot8
+    HumanoidEmoteSlot8,
+    BlockMouseDecay,
 }

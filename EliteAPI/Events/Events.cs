@@ -202,7 +202,7 @@ public class Events : IEvents
         try
         {
             if (string.IsNullOrEmpty(json))
-                return;
+                throw new ArgumentNullException(nameof(json));
 
             var jObject = JObject.Parse(json);
             var eventKey = jObject["event"];
@@ -232,7 +232,7 @@ public class Events : IEvents
             InvokeAnyHandlers(eventType, json, context);
 
             if (eventType == null)
-                return;
+                throw new Exception($"The {eventName} event is not registered"); // todo: better exception type
 
             var parsedEvent = _eventParser.FromJson(eventType, json);
 
@@ -242,7 +242,7 @@ public class Events : IEvents
                 ex.Data.Add("JSON", json);
 
                 _log?.LogWarning(ex, "Could not parse event {Event}", eventName);
-                return;
+                throw ex;
             }
 
             try
@@ -278,6 +278,7 @@ public class Events : IEvents
             ex.Data.Add("JSON", json);
             ex.Data.Add("File", context.SourceFile);
             _log?.LogWarning(ex, "Could not invoke event from JSON");
+            throw;
         }
     }
 

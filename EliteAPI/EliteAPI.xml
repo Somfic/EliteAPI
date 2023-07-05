@@ -4,6 +4,16 @@
         <name>EliteAPI</name>
     </assembly>
     <members>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+                Reserved to be used by the compiler for tracking metadata.
+                This class should not be used by developers in source code.
+            </summary>
+            <remarks>
+                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
+                Please see https://github.com/manuelroemer/IsExternalInit for more information.
+            </remarks>
+        </member>
         <member name="P:EliteAPI.Bindings.Bindings.Active">
             <inheritdoc />
         </member>
@@ -256,16 +266,6 @@
             <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to.</param>
             <param name="configure">The <see cref="T:EliteAPI.Extensions.EliteDangerousApiOptions" /> configuration delegate.</param>
             <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> so that additional calls can be chained.</returns>
-        </member>
-        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
-            <summary>
-                Reserved to be used by the compiler for tracking metadata.
-                This class should not be used by developers in source code.
-            </summary>
-            <remarks>
-                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
-                Please see https://github.com/manuelroemer/IsExternalInit for more information.
-            </remarks>
         </member>
     </members>
 </doc>

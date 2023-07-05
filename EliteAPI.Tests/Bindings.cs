@@ -5,7 +5,7 @@ using EliteAPI.Bindings;
 using Microsoft.Extensions.Logging;
 using Moq;
 
-namespace EliteAPI.Tests.JournalManual;
+namespace EliteAPI.Tests;
 
 [TestFixture]
 public class Bindings
@@ -27,9 +27,9 @@ public class Bindings
     
     [Test]
     [TestCaseSource(nameof(GetKeybindingNames))]
-    public void CompleteEnum(string keybindingName)
+    public void Enum(string keybindingName)
     {
-        Assert.That(Enum.TryParse(keybindingName, out KeyBinding keybinding), Is.True);
+        Assert.That(System.Enum.TryParse(keybindingName, out KeyBinding keybinding), Is.True);
     }
 
     public static IEnumerable<string> GetKeybindingNames()

@@ -5,7 +5,7 @@
     <LangVersion>10</LangVersion>
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
     <FileVersion>3.1.0.0</FileVersion>
-    <InformationalVersion>3.1.0-alpha.62+Branch.dev.Sha.0ba86d2a46c9e7bdc2b1dcbcf2e61dfdd839b255</InformationalVersion>
+    <InformationalVersion>3.1.0-alpha.71+Branch.dev.Sha.12fd7a2537a945a708248218d79c5e4560d373ed</InformationalVersion>
     <Version>3.0.0-alpha5167</Version>
     <IsPackable>true</IsPackable>
     <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
@@ -17,7 +17,7 @@
     <Description>Events for EliteAPI</Description>
     <Copyright>© Somfic 2022</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.1.0-alpha0062</Version>
+    <Version>3.1.0-alpha0071</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageIcon>icon.png</PackageIcon>
     <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>

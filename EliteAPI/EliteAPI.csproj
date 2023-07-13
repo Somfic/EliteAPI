@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyVersion>3.0.6.0</AssemblyVersion>
-    <FileVersion>3.0.6.0</FileVersion>
+    <AssemblyVersion>3.0.7.0</AssemblyVersion>
+    <FileVersion>3.0.7.0</FileVersion>
     <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
     <PackageIconUrl />
@@ -11,14 +11,14 @@
     <Description>A powerful event based .NET API for Elite: Dangerous</Description>
     <Copyright>© Somfic 2022</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.0.6</Version>
+    <Version>3.0.7</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageIcon>icon.png</PackageIcon>
     <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
     <LangVersion>10</LangVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Somfic</Authors>
-    <InformationalVersion>3.0.6+2.Branch.main.Sha.bb4ac176ed013772a7d05ac3fe321c058ef1e933</InformationalVersion>
+    <InformationalVersion>3.0.7+2.Branch.main.Sha.4d7274d93977802663a700b0ea766acc44911262</InformationalVersion>
     <Nullable>enable</Nullable>
     <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
   </PropertyGroup>

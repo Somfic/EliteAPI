@@ -4,6 +4,8 @@ namespace EliteAPI.Abstractions.Readers;
 
 public interface IReader
 {
+    IReadOnlyCollection<IFileSelector> Selectors { get; }
+
     /// <summary>
     /// Registers a file to be watched by the reader.
     /// </summary>

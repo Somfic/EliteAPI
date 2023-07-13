@@ -10,7 +10,8 @@ public class JournalFileSelector : IFileSelector
         _directory = directory;
         _pattern = pattern;
     }
-    
+
+    public bool IsApplicable => true;
     public bool IsMultiLine => true;
     
     public FileCategory Category => FileCategory.Events;

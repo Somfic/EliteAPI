@@ -1,7 +1,6 @@
-using System.Diagnostics;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
-using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.Events;
 using iText.Kernel.Pdf;
@@ -9,9 +8,10 @@ using iText.Kernel.Pdf.Canvas.Parser;
 using iText.Kernel.Pdf.Canvas.Parser.Listener;
 using Microsoft.Extensions.Logging;
 using Moq;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace EliteAPI.Tests.JournalManual;
+namespace EliteAPI.Tests;
 
 [TestFixture]
 public class JournalManual
@@ -34,14 +34,18 @@ public class JournalManual
     }
 
     [Test(Description = "Events")]
-    [TestCaseSource(nameof(GetEvents))]
-    public void Event(string @event)
+    [TestCaseSource(nameof(GetChapters))]
+    public void Event((int chapter, int subchapter, string name) chapterInfo)
     {
-        if (_legacyEvents.Contains(@event)) return;
+        if (_legacyEvents.Contains(chapterInfo.name))
+        {
+            Assert.Ignore($"Legacy event: {chapterInfo.name}");
+            return;
+        }
         
-        @event += "Event";
+        chapterInfo.name += "Event";
 
-        Assert.That(_events.EventTypes.Select(x => x.Name.ToLower()), Does.Contain(@event.ToLower()));
+        Assert.That(_events.EventTypes.Select(x => x.Name.ToLower()), Does.Contain(chapterInfo.name.ToLower()));
     }
 
     [Test(Description = "Json Examples")]
@@ -63,6 +67,43 @@ public class JournalManual
         }
 
         _events.Invoke(json, new EventContext());
+    }
+
+    [Test(Description = "Properties")]
+    [TestCaseSource(nameof(GetProperties))]
+    [Ignore("Tests still in progress")]
+    public void Properties((string eventName, Property property) propertyInfo)
+    {
+        var (eventName, expectedProperty) = propertyInfo;
+        
+        var eventType = _events.EventTypes.FirstOrDefault(x => string.Equals(x.Name, eventName, StringComparison.CurrentCultureIgnoreCase));
+
+        if (eventType == null)
+            Assert.Ignore($"Event {eventName} does not exist");
+        
+        var properties = eventType.GetProperties();
+        
+        // Get the property by the JsonProperty attribute
+        var property = properties.FirstOrDefault(x => string.Equals(x.GetCustomAttribute<JsonPropertyAttribute>()?.PropertyName, expectedProperty.Name, StringComparison.CurrentCultureIgnoreCase));
+
+        Warn.If(property, Is.Not.Null, $"Type '{eventType.Name}' does not contain expected property '{expectedProperty.Name}'");
+
+        if (property == null)
+            return;
+        
+        // Check the child properties
+        foreach (var expectedChild in expectedProperty.Children)
+        {
+            var childProperty = property.PropertyType.GetProperties().FirstOrDefault(x => string.Equals(x.GetCustomAttribute<JsonPropertyAttribute>()?.PropertyName, expectedChild.Name, StringComparison.CurrentCultureIgnoreCase));
+            Warn.If(childProperty, Is.Not.Null, $"Type '{property.PropertyType.Name}' does not contain expected child property '{expectedChild.Name}'");
+            
+            // Check the child's children
+            foreach (var expectedGrandChild in expectedChild.Children)
+            {
+                var childChildProperty = childProperty.PropertyType.GetProperties().FirstOrDefault(x => string.Equals(x.GetCustomAttribute<JsonPropertyAttribute>()?.PropertyName, expectedGrandChild.Name, StringComparison.CurrentCultureIgnoreCase));
+                Warn.If(childChildProperty, Is.Not.Null, $"Type '{childProperty.PropertyType.Name}' does not contain expected child property '{expectedGrandChild.Name}'");
+            }
+        }
     }
 
     private static string GetText()
@@ -90,11 +131,13 @@ public class JournalManual
             var currentText = PdfTextExtractor.GetTextFromPage(page, strategy);
             text.Append(currentText);
         }
+        
+        File.WriteAllText("Journal_Manual_v37.txt", text.ToString());
 
         return text.ToString();
     }
     
-    private static IEnumerable<string> GetEvents()
+    private static IEnumerable<(int chapter, int subchapter, string name)> GetChapters()
     {
         var text = GetText();
 
@@ -104,7 +147,7 @@ public class JournalManual
                 !x.Value.StartsWith("2.") &&
                 !x.Value.StartsWith("3.") &&
                 !x.Value.StartsWith("15."))
-            .Select(x => x.Groups[3].Value);
+            .Select(x => (int.Parse(x.Groups[1].Value), int.Parse(x.Groups[2].Value), x.Groups[3].Value));
     }
     
     private static IEnumerable<string> GetJsonExamples()
@@ -120,5 +163,109 @@ public class JournalManual
                 .Replace("’", "'")
                 .Replace("\n", "")
                 .Replace("\r", ""));
+    }
+
+    private static IEnumerable<(string eventName, Property property)> GetProperties()
+    {
+        var chapters = GetChapterText();
+        var properties = new List<(string eventName, Property property)>();
+
+        foreach (var chapter in chapters)
+        {
+            var eventName = Regex.Match(chapter, @"^(\d{1,2})\.(\d{1,2}) ([^ ]*)").Groups[3].Value;
+            
+            if(string.IsNullOrEmpty(eventName))
+                continue;
+
+            eventName += "Event";
+
+            var chapterProperties = GetPropertiesFromChapter(chapter).ToArray();
+            properties.AddRange(chapterProperties.Select(x => (eventName, x)));
+        }
+
+        return properties;
+    }
+
+    private static IEnumerable<string> GetChapterText()
+    {
+        var text = GetText();
+        var headings = GetChapters().ToArray();
+        var lines = text.Split('\n').ToList();
+
+        var currentIndex = 0;
+
+        foreach (var heading in headings)
+        {
+            var chapterText = new StringBuilder();
+
+            // Append all the text until the line is the next heading
+            var nextIndex = lines.FindIndex(x =>
+                x.StartsWith($"{heading.chapter}.{heading.subchapter} {heading.name}"));
+            if (nextIndex == -1) nextIndex = lines.Count - 1;
+
+            var chapterLines = lines.GetRange(Math.Max(0, currentIndex), Math.Max(nextIndex - currentIndex, 0));
+            chapterText.Append(string.Join("\n", chapterLines));
+            chapterText.Append('\n');
+
+            currentIndex = nextIndex;
+
+            yield return chapterText.ToString();
+        }
+    }
+
+    private static IEnumerable<Property> GetPropertiesFromChapter(string text)
+    {
+        var parameters = new List<Property>();
+        var lines = text.Split('\n');
+
+        foreach (var line in lines)
+        {
+            var trimmedLine = line.Trim();
+
+            if (trimmedLine.StartsWith("•"))
+            {
+                var rootParameter = Property.FromLine(trimmedLine, null);
+                if (rootParameter.HasValue)
+                    parameters.Add(rootParameter.Value);
+            }
+            else if (trimmedLine.StartsWith("o") && parameters.Count > 0)
+            {
+                var childParameter = Property.FromLine(trimmedLine, parameters[^1].Name);
+                if (childParameter.HasValue)
+                    parameters[^1].Children.Add(childParameter.Value);
+            }
+            else if (trimmedLine.StartsWith("▪") && parameters.Count > 0 && parameters[^1].Children.Count > 0)
+            {
+                var grandchildParameter = Property.FromLine(trimmedLine, parameters[^1].Children[^1].Name);
+                if (grandchildParameter.HasValue)
+                    parameters[^1].Children[^1].Children.Add(grandchildParameter.Value);  
+            }
+        }
+
+        return parameters;
+    }
+
+    public readonly struct Property
+    {
+        public string Name { get; init; }
+        public string? Parent { get; init; }
+        public IList<Property> Children { get; init; }
+
+        public Property(string name, string? parent)
+        {
+            Name = name;
+            Parent = parent;
+            Children = new List<Property>();
+        }
+        
+        public static Property? FromLine(string line, string? parent)
+        {
+            var parameterName = Regex.Match(line, @"^.{1} ([a-zA-Z]+)").Groups[1].Value.Trim();
+
+            if (string.IsNullOrEmpty(parameterName))
+                return null;
+            
+            return new Property(parameterName, parent);
+        }
     }
 }

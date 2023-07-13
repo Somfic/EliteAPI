@@ -68,7 +68,7 @@ public class EliteDangerousApi : IEliteDangerousApi
     public static IEliteDangerousApi Create()
     {
         var host = Host.CreateDefaultBuilder()
-            //.ConfigureLogging(log => log.ClearProviders())
+            .ConfigureLogging(log => log.SetMinimumLevel(LogLevel.Debug))
             .ConfigureServices(services => services.AddEliteApi())
             .Build();
 

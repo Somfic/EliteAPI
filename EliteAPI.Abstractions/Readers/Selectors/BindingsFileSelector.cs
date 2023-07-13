@@ -1,7 +1,12 @@
-﻿namespace EliteAPI.Abstractions.Readers.Selectors;
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
+
+namespace EliteAPI.Abstractions.Readers.Selectors;
 
 public class BindingsFileSelector : IFileSelector
 {
+    private string _tempPath;
+    
     private readonly DirectoryInfo _directory;
     private bool? _isOdyssey;
     private string[] _categories = { "General", "Ship", "SRV", "On foot" };
@@ -9,6 +14,7 @@ public class BindingsFileSelector : IFileSelector
     public BindingsFileSelector(DirectoryInfo directory)
     {
         _directory = directory;
+        _tempPath = Path.GetTempFileName();
     }
 
     public bool IsApplicable => _isOdyssey.HasValue;
@@ -42,16 +48,35 @@ public class BindingsFileSelector : IFileSelector
         var name = bindingFiles[0];
         
         var bindings = _directory.GetFiles($"*.binds");
-        
-        if(bindings.Length == 0)
-            throw new FileNotFoundException($"Could not find any keybindings in '{_directory.FullName}'. Make sure that you have a custom keybindings preset selected in-game.");
-        
-        // TODO: Add caching so that we don't have to do this every time
-        var bindingFile = bindings.FirstOrDefault(x => File.ReadAllText(x.FullName).Contains($"PresetName=\"{name}\""));
 
-        if (bindingFile == null)
+        FileInfo? bindingsFile;
+        if (bindings.Length != 0)
+            bindingsFile = GenerateDefaultBindingsFile();
+        else     
+            bindingsFile = bindings.FirstOrDefault(x => File.ReadAllText(x.FullName).Contains($"PresetName=\"{name}\""));
+
+        if (bindingsFile == null)
             throw new FileNotFoundException($"Could not find keybindings preset '{name}' in '{_directory.FullName}'. Make sure that you have a non-default keybindings preset selected in-game.");
             
-        return bindingFile;
+        return bindingsFile;
+    }
+
+    private FileInfo? GenerateDefaultBindingsFile()
+    {
+        var assembly = GetType().Assembly;
+        const string resourceName = "EliteAPI.Abstractions.Readers.Selectors.DefaultBindings.binds";
+
+        using var stream = assembly.GetManifestResourceStream(resourceName);
+        if (stream == null)
+            throw new Exception(
+                $"Could not find the default bindings file '{resourceName}' in the assembly '{assembly.GetName().Name}' Resources: {string.Join(", ", assembly.GetManifestResourceNames())}");
+        
+        using var reader = new StreamReader(stream);
+        var content = reader.ReadToEnd();
+     
+        if (!File.Exists(_tempPath) || File.ReadAllText(_tempPath) != content)
+            File.WriteAllText(_tempPath, content);
+        
+        return new FileInfo(_tempPath);
     }
 }

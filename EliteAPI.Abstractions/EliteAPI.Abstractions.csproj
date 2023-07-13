@@ -41,4 +41,12 @@
   <ItemGroup>
     <None Include="icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Readers\Selectors\DefaultBindings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Readers\Selectors\DefaultBindings.binds">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

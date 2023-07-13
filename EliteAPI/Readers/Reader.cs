@@ -34,8 +34,6 @@ public class Reader : IReader
     /// <inheritdoc />
     public async IAsyncEnumerable<Line> FindNew()
     {
-        _log?.LogTrace("Skipped {SkippedFiles}", string.Join(", ", _files.Where(x => !x.IsApplicable).Select(x => x.GetType().FullName)));
-        
         foreach (var fileSelector in _files.Where(x => x.IsApplicable))
         {
             FileInfo file;
@@ -43,7 +41,6 @@ public class Reader : IReader
             try
             {
                 file = fileSelector.GetFile();
-                _log?.LogTrace("Processing {File}", file.FullName);
             }
             catch (Exception ex)
             {

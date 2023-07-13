@@ -57,12 +57,12 @@ public class BindingsFileSelector : IFileSelector
             bindingsFile = bindings.Where(x => File.ReadAllText(x.FullName).Contains($"PresetName=\"{name}\"")).OrderByDescending(x => x.LastWriteTime).FirstOrDefault();
 
         if (bindingsFile == null)
-            throw new FileNotFoundException($"Could not find keybindings preset file '{name}' in '{_directory.FullName}'.");
+            bindingsFile = GenerateDefaultBindingsFile();
             
         return bindingsFile;
     }
 
-    private FileInfo? GenerateDefaultBindingsFile()
+    private FileInfo GenerateDefaultBindingsFile()
     {
         if(File.Exists(_tempPath))
             return new FileInfo(_tempPath);

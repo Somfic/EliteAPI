@@ -94,15 +94,22 @@ public class EliteDangerousApi : IEliteDangerousApi
         // Register Journal files
         _reader.Register(new JournalFileSelector(new DirectoryInfo(Config.JournalsPath), Config.JournalPattern));
 
+        // Register Bindings files
+        _bindingsSelector = new BindingsFileSelector(new DirectoryInfo(Path.Combine(Config.OptionsPath, "Bindings")));
+        _reader.Register(_bindingsSelector);
+        
         // Register status files
         foreach (var statusFile in Config.StatusFiles)
         {
             _reader.Register(new StatusFileSelector(new DirectoryInfo(Config.JournalsPath), statusFile));
         }
-        
-        // Register bindings file
-        _reader.Register(new BindingsFileSelector(new DirectoryInfo(Path.Combine(Config.OptionsPath, "Bindings"))));
 
+        Events.On<FileheaderEvent>(e =>
+        {
+            _log?.LogTrace("Setting Odyssey mode to {IsOdyssey} for bindings", e.IsOdyssey);
+            _bindingsSelector.SetIsOdyssey(e.IsOdyssey);
+        });
+        
         _hasInitialised = true;
     }
 
@@ -208,6 +215,7 @@ public class EliteDangerousApi : IEliteDangerousApi
     public IEvents Events { get; }
 
     private StatusEvent? _lastStatus;
+    private BindingsFileSelector _bindingsSelector;
 
     private void HandleStatus(StatusEvent status, EventContext context)
     {

@@ -10,7 +10,8 @@ public class StatusFileSelector : IFileSelector
         _directory = directory;
         _file = file;
     }
-    
+
+    public bool IsApplicable => true;
     public bool IsMultiLine => false;
     
     public FileCategory Category => FileCategory.Status;

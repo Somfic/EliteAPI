@@ -3,15 +3,24 @@
 public class BindingsFileSelector : IFileSelector
 {
     private readonly DirectoryInfo _directory;
+    private bool? _isOdyssey;
+    private string[] _categories = { "General", "Ship", "SRV", "On foot" };
 
     public BindingsFileSelector(DirectoryInfo directory)
     {
         _directory = directory;
     }
+
+    public bool IsApplicable => _isOdyssey.HasValue;
     
     public bool IsMultiLine => false;
     
     public FileCategory Category => FileCategory.Bindings;
+    
+    public void SetIsOdyssey(bool isOdyssey)
+    {
+        _isOdyssey = isOdyssey;
+    }
     
     public FileInfo GetFile()
     {
@@ -20,30 +29,28 @@ public class BindingsFileSelector : IFileSelector
             _directory.GetFiles("StartPreset*").OrderByDescending(x => x.LastWriteTime).FirstOrDefault();
          
         if (startPresetFile == null)
-            throw new FileNotFoundException($"The bindings StartPreset file could not found at '{_directory.FullName}'");
+            throw new FileNotFoundException($"Selected keybindings could be be found. Make sure that you have a non-default keybindings preset selected in-game and that you have started the game at least once.");
 
-        var bindingFiles = File.ReadAllLines(startPresetFile.FullName);
+        var presetCount = _isOdyssey!.Value ? 4 : 3;
+        var bindingFiles = File.ReadAllLines(startPresetFile.FullName).Take(presetCount).ToArray();
          
         // Check that all are the same
         if (bindingFiles.Distinct().Count() != 1)
-            throw new Exception("Mix of different keybindings presets detected. Please make sure you use the same keybindings preset for the different categories.");
+            throw new Exception($"A mix of different keybindings presets were detected ({string.Join(", ", bindingFiles.Distinct())}). Please make sure that the same keybindings preset is used for all {presetCount} keybindings categories ({string.Join(", ", _categories.Take(presetCount))}).");
          
         // Get the binding file
         var name = bindingFiles[0];
         
-        if(name == "KeyboardMouseOnly")
-            throw new Exception("Default keybindings are not supported. Please use a custom keybinding preset.");
-
         var bindings = _directory.GetFiles($"*.binds");
         
         if(bindings.Length == 0)
-            throw new FileNotFoundException($"No bindings files found at '{_directory.FullName}'");
+            throw new FileNotFoundException($"Could not find any keybindings in '{_directory.FullName}'. Make sure that you have a custom keybindings preset selected in-game.");
         
         // TODO: Add caching so that we don't have to do this every time
         var bindingFile = bindings.FirstOrDefault(x => File.ReadAllText(x.FullName).Contains($"PresetName=\"{name}\""));
 
         if (bindingFile == null)
-            throw new FileNotFoundException($"Could not find keybindings named '{name}' in '{_directory.FullName}'");
+            throw new FileNotFoundException($"Could not find keybindings preset '{name}' in '{_directory.FullName}'. Make sure that you have a non-default keybindings preset selected in-game.");
             
         return bindingFile;
     }

@@ -59,10 +59,11 @@ jobs:
         run: dotnet nuget push '**/*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
         
       - name: Release
-        if: ${{ steps.VERSION.outputs.applicable == 'true' || steps.extract_branch.outputs.branch == 'main' }}
+        if: ${{ steps.VERSION.outputs.applicable == 'true' }}
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ needs.update-version.outputs.semver }}
+          prerelease: ${{ steps.extract_branch.outputs.branch != 'main' }}
 
       # - name: Unlist earlier packages of this type
       #   uses: darenm/unlist-nuget@v1

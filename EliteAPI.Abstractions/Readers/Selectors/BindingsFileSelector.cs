@@ -14,7 +14,9 @@ public class BindingsFileSelector : IFileSelector
     public BindingsFileSelector(DirectoryInfo directory)
     {
         _directory = directory;
-        _tempPath = Path.GetTempFileName();
+        
+        // Generate a temporary path
+        _tempPath = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
     }
 
     public bool IsApplicable => _isOdyssey.HasValue;
@@ -35,34 +37,36 @@ public class BindingsFileSelector : IFileSelector
             _directory.GetFiles("StartPreset*").OrderByDescending(x => x.LastWriteTime).FirstOrDefault();
          
         if (startPresetFile == null)
-            throw new FileNotFoundException($"Selected keybindings could be be found. Make sure that you have a non-default keybindings preset selected in-game and that you have started the game at least once.");
+            throw new FileNotFoundException("Keybindings could be be found. Make sure that you have a keybindings preset selected in-game and that you have ran the game at least once.");
 
         var presetCount = _isOdyssey!.Value ? 4 : 3;
         var bindingFiles = File.ReadAllLines(startPresetFile.FullName).Take(presetCount).ToArray();
          
         // Check that all are the same
         if (bindingFiles.Distinct().Count() != 1)
-            throw new Exception($"A mix of different keybindings presets were detected ({string.Join(", ", bindingFiles.Distinct())}). Please make sure that the same keybindings preset is used for all {presetCount} keybindings categories ({string.Join(", ", _categories.Take(presetCount))}).");
+            throw new Exception($"A mix of different keybindings presets were detected ({string.Join(", ", bindingFiles.Distinct())}). Make sure that the same keybindings preset is used for all {presetCount} keybindings categories ({string.Join(", ", _categories.Take(presetCount))}).");
          
         // Get the binding file
         var name = bindingFiles[0];
-        
-        var bindings = _directory.GetFiles($"*.binds");
+        var bindings = _directory.GetFiles("*.binds");
 
         FileInfo? bindingsFile;
-        if (bindings.Length != 0)
+        if (bindings.Length == 0)
             bindingsFile = GenerateDefaultBindingsFile();
-        else     
-            bindingsFile = bindings.FirstOrDefault(x => File.ReadAllText(x.FullName).Contains($"PresetName=\"{name}\""));
+        else // todo: use caching     
+            bindingsFile = bindings.Where(x => File.ReadAllText(x.FullName).Contains($"PresetName=\"{name}\"")).OrderByDescending(x => x.LastWriteTime).FirstOrDefault();
 
         if (bindingsFile == null)
-            throw new FileNotFoundException($"Could not find keybindings preset '{name}' in '{_directory.FullName}'. Make sure that you have a non-default keybindings preset selected in-game.");
+            throw new FileNotFoundException($"Could not find keybindings preset file '{name}' in '{_directory.FullName}'.");
             
         return bindingsFile;
     }
 
     private FileInfo? GenerateDefaultBindingsFile()
     {
+        if(File.Exists(_tempPath))
+            return new FileInfo(_tempPath);
+        
         var assembly = GetType().Assembly;
         const string resourceName = "EliteAPI.Abstractions.Readers.Selectors.DefaultBindings.binds";
 
@@ -73,9 +77,8 @@ public class BindingsFileSelector : IFileSelector
         
         using var reader = new StreamReader(stream);
         var content = reader.ReadToEnd();
-     
-        if (!File.Exists(_tempPath) || File.ReadAllText(_tempPath) != content)
-            File.WriteAllText(_tempPath, content);
+    
+        File.WriteAllText(_tempPath, content);
         
         return new FileInfo(_tempPath);
     }

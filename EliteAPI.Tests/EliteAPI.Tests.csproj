@@ -7,7 +7,7 @@
     <IsTestProject>true</IsTestProject>
     <AssemblyVersion>3.0.2.0</AssemblyVersion>
     <FileVersion>3.0.2.0</FileVersion>
-    <InformationalVersion>3.0.2+14.Branch.main.Sha.93bd9b919b74388a5e10f94db426d42a6b62a7d9</InformationalVersion>
+    <InformationalVersion>3.0.2+18.Branch.main.Sha.d709e47ef113b283f1f471d2607769d6e82bb3bc</InformationalVersion>
     <Version>3.0.2</Version>
   </PropertyGroup>
   <ItemGroup>

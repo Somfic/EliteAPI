@@ -21,5 +21,5 @@ public readonly struct FsdTargetEvent : IEvent
     public string StarClass { get; init; }
 
     [JsonProperty("RemainingJumpsInRoute")]
-    public int RemainingJumpsInRoute { get; init; }
+    public long RemainingJumpsInRoute { get; init; }
 }

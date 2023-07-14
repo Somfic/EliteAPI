@@ -51,7 +51,7 @@ public readonly struct CommunityGoalEvent : IEvent
         public string TierReached { get; init; }
 
         [JsonProperty("TopRankSize")]
-        public int TopRankSize { get; init; }
+        public long TopRankSize { get; init; }
 
         [JsonProperty("PlayerInTopRank")]
         public bool IsInTopRank { get; init; }

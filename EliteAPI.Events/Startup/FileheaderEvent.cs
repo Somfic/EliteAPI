@@ -12,7 +12,7 @@ public readonly struct FileheaderEvent : IEvent
     public string Event { get; init; }
 
     [JsonProperty("part")]
-    public int Part { get; init; }
+    public long Part { get; init; }
 
     [JsonProperty("language")]
     public string Language { get; init; }

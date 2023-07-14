@@ -18,5 +18,5 @@ public readonly struct NpcCrewRankEvent : IEvent
     public string CrewName { get; init; }
 
     [JsonProperty("RankCombat")]
-    public int RankCombat { get; init; }
+    public long RankCombat { get; init; }
 }

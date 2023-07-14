@@ -21,7 +21,7 @@ public readonly struct CarrierModulePackEvent : IEvent
     public string Theme { get; init; }
 
     [JsonProperty("PackTier")]
-    public int Tier { get; init; }
+    public long Tier { get; init; }
 
     [JsonProperty("Cost")]
     public long Cost { get; init; }

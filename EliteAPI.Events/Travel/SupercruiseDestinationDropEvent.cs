@@ -15,7 +15,7 @@ public readonly struct SupercruiseDestinationDropEvent : IEvent
     public string Type { get; init; }
 
     [JsonProperty("Threat")]
-    public int Threat { get; init; }
+    public long Threat { get; init; }
 
     [JsonProperty("MarketID")]
     public string MarketId { get; init; }

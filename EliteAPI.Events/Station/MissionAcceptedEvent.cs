@@ -54,5 +54,5 @@ public readonly struct MissionAcceptedEvent : IEvent
     public string MissionId { get; init; }
 
     [JsonProperty("KillCount")]
-    public int KillCount { get; init; }
+    public long KillCount { get; init; }
 }

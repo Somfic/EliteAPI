@@ -9,7 +9,7 @@ public readonly struct CargoItem
     public Localised Name { get; init; }
 
     [JsonProperty("Count")]
-    public int Count { get; init; }
+    public long Count { get; init; }
 
     [JsonProperty("Stolen")]
     public bool IsStolen { get; init; }

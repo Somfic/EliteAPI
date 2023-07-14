@@ -27,5 +27,5 @@ public readonly struct ScanOrganicEvent : IEvent
     public string SystemAddress { get; init; }
     
     [JsonProperty("Body")]
-    public int Body { get; init; }
+    public long Body { get; init; }
 }

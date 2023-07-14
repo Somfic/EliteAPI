@@ -30,7 +30,7 @@ public readonly struct EngineerLegacyConvertEvent : IEvent
     public string BlueprintName { get; init; }
 
     [JsonProperty("Level")]
-    public int Level { get; init; }
+    public long Level { get; init; }
 
     [JsonProperty("Quality")]
     public double Quality { get; init; }

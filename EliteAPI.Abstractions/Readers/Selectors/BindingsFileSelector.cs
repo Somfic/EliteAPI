@@ -16,7 +16,7 @@ public class BindingsFileSelector : IFileSelector
         _directory = directory;
         
         // Generate a temporary path
-        _tempPath = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+        _tempPath = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName() + ".binds.temp");
     }
 
     public bool IsApplicable => _isOdyssey.HasValue;

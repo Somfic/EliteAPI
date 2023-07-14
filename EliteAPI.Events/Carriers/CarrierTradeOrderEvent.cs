@@ -21,10 +21,10 @@ public readonly struct CarrierTradeOrderEvent : IEvent
     public Localised Commodity { get; init; }
 
     [JsonProperty("PurchaseOrder")]
-    public int PurchaseOrder { get; init; }
+    public long PurchaseOrder { get; init; }
 
     [JsonProperty("SaleOrder")]
-    public int SaleOrder { get; init; }
+    public long SaleOrder { get; init; }
 
     [JsonProperty("CancelTrade")]
     public bool IsCancelTrade { get; init; }

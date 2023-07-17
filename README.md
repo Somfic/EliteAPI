@@ -9,9 +9,6 @@
      <a href="https://www.discord.gg/jwpFUPZ">
           <img alt="Discord" src="https://img.shields.io/discord/498422961297031168?color=%23f2a529&label=DISCORD&style=for-the-badge">
      </a>
-     <a href="https://app.codacy.com/gh/EliteAPI/EliteAPI?utm_source=github.com&utm_medium=referral&utm_content=EliteAPI/EliteAPI&utm_campaign=Badge_Grade_Dashboard">
-          <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/cd6364ab2d6a46a18627e6c8454f5672?color=%23f2a529&label=CODE%20QUALITY&style=for-the-badge">
-     </a>
      <a href="https://github.com/EliteAPI/EliteAPI/releases">
         <img alt="GitHub release" src="https://img.shields.io/github/v/release/EliteAPI/EliteAPI?color=%23f2a529&label=VERSION&style=for-the-badge">
      </a>

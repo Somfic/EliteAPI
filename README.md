@@ -24,7 +24,7 @@
 EliteAPI is distributed through the NuGet package manager; the recommended way to install the library. Alternatively,
 the source can be compiled to retrieve the `EliteAPI.dll` file.
 
-EliteAPI targets `.NET 6.0`.
+EliteAPI targets `.NET Standard 2.0`.
 
 ### Installation using NuGet
 

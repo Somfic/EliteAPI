@@ -16,6 +16,8 @@ api.Bindings.OnBindings(_ =>
     Console.WriteLine(api.Bindings[KeyBinding.ShipSpotLightToggle].Primary?.Key);
 });
 
+api.Events.On<BalanceStatusEvent>(e => Console.WriteLine(e.Value));
+
 // Start the API
 if (!await api.StartAsync())
 {

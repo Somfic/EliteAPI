@@ -178,7 +178,7 @@ public class Events : IEvents
     }
 
     /// <inheritdoc />
-    public void Invoke<TEvent>(TEvent @event, EventContext context) where TEvent : IEvent
+    public IEvent Invoke<TEvent>(TEvent @event, EventContext context) where TEvent : IEvent
     {
         _backlog.Add((@event, context));
         
@@ -188,6 +188,7 @@ public class Events : IEvents
         {
             InvokeAnyHandlers(@event, context);
             _previousEvents.Add((@event, context));
+            return @event;
         }
         catch (Exception ex)
         {
@@ -197,7 +198,7 @@ public class Events : IEvents
     }
 
     /// <inheritdoc />
-    public void Invoke(string json, EventContext context)
+    public IEvent Invoke(string json, EventContext context)
     {
         try
         {
@@ -271,7 +272,7 @@ public class Events : IEvents
                 _log?.LogTrace(ex, "Could not find differences between the JSON and the event {Event}", eventName);
             }
 
-            Invoke(parsedEvent, context);
+            return Invoke(parsedEvent, context);
         }
         catch (Exception ex)
         {

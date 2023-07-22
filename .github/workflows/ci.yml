@@ -64,6 +64,7 @@ jobs:
         with:
           tag_name: ${{ needs.update-version.outputs.semver }}
           prerelease: ${{ steps.extract_branch.outputs.branch != 'main' }}
+          draft: true
 
       # - name: Unlist earlier packages of this type
       #   uses: darenm/unlist-nuget@v1

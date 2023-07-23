@@ -54,9 +54,9 @@ public class EventParser : IEventParser
             eventName = @event.GetType().Name.Replace("Event", string.Empty);
         
         // Parse the event into a dictionary of paths and values using JToken.
-        var root = JObject.Parse(ToJson(@event));
+        var json = ToJson(@event);
 
-        return root.Properties().SelectMany(GetPaths).Select(x => new EventPath($"{eventName}.{x.Path}", x.Value)).ToList().AsReadOnly();
+        return ToPaths(json);
     }
     
     /// <inheritdoc />
@@ -82,7 +82,12 @@ public class EventParser : IEventParser
         root = JObject.Parse(parsedJson);
 
         var eventName = eventKey.Value<string>();
-        return root.Properties().SelectMany(GetPaths).Select(x => new EventPath($"{eventName}.{x.Path}", x.Value)).ToList().AsReadOnly();
+        var paths = root.Properties().SelectMany(GetPaths).Select(x => new EventPath($"{eventName}.{x.Path}", x.Value));
+        
+        // Add a .length path for arrays.
+        var arrayPaths = root.Properties().Where(x => x.Value.Type == JTokenType.Array).Select(x => new EventPath($"{eventName}.{x.Path}.Length", x.Value.Count().ToString()));
+        
+        return paths.Concat(arrayPaths);
     }
 
     /// <inheritdoc />

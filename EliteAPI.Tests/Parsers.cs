@@ -27,6 +27,7 @@ public class Parsers
             Assert.That(paths.Count(x => x.Path == "Test.TestInt"), Is.EqualTo(1));
             Assert.That(paths.Count(x => x.Path == "Test.TestString"), Is.EqualTo(1));
             Assert.That(paths.Count(x => x.Path == "Test.TestArray.Length"), Is.EqualTo(1));
+            Assert.That(paths.Count(x => x.Path.EndsWith(".Length")), Is.EqualTo(1));
             Assert.That(paths.Count(x => x.Path == "Test.TestArray[0].TestInt"), Is.EqualTo(1));
             Assert.That(paths.Count(x => x.Path == "Test.TestArray[0].TestString"), Is.EqualTo(1));
             Assert.That(paths.Count(x => x.Path == "Test.TestArray[1].TestInt"), Is.EqualTo(1));

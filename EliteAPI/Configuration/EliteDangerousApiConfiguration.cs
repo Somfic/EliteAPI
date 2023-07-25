@@ -44,8 +44,12 @@ public class EliteDangerousApiConfiguration : IEliteDangerousApiConfiguration
         if (string.IsNullOrWhiteSpace(OptionsPath))
             OptionsPath = _config.GetValue("EliteAPI:OptionsPath", Path.Combine(GetLocalAppDataPath(), "Frontier Developments", "Elite Dangerous", "Options"));
         
-        if (StatusFiles == null) 
-            StatusFiles = _config.GetValue("EliteAPI:StatusFiles", new[] { "Status.json", "Backpack.json", "Cargo.json", "ModulesInfo.json", "NavRoute.json", "Outfitting.json", "ShipLocker.json", "Shipyard.json" });
+        StatusFiles ??= _config.GetValue("EliteAPI:StatusFiles",
+            new[]
+            {
+                "Status.json", "Backpack.json", "Cargo.json", "ModulesInfo.json", "NavRoute.json", "Outfitting.json",
+                "ShipLocker.json", "Shipyard.json", "FCMaterials.json"
+            });
         
         if (string.IsNullOrWhiteSpace(JournalPattern))
             JournalPattern = _config.GetValue("EliteAPI:JournalPattern", "Journal.*.log");

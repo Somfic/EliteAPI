@@ -7,7 +7,7 @@ public interface IEliteDangerousApiConfiguration
     public string JournalsPath { get; set; }
     
     /// <summary>The status files that will be processed.</summary>
-    public string[]? StatusFiles { get; set; }
+    public string[] StatusFiles { get; set; }
 
     /// <summary>The file pattern used to find journal files.</summary>
     public string JournalPattern { get; set; }

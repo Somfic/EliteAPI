@@ -143,12 +143,16 @@ public class EventParser : IEventParser
         }
     }
 
-    private IEnumerable<EventPath> GetPaths(JProperty property) => GetPaths(property.Value);
+    private IEnumerable<EventPath> GetPaths(JProperty property) => GetPaths(property.Name, property.Value);
 
-    private IEnumerable<EventPath> GetPaths(JToken token)
+    private IEnumerable<EventPath> GetPaths(string name, JToken token)
     {
         try
         {
+            // If the name ends with "id" or "address" and the token is not an object or array, then overwrite it to a string.
+            if((name.EndsWith("id", StringComparison.InvariantCultureIgnoreCase) || name.EndsWith("address", StringComparison.InvariantCultureIgnoreCase)) && token.Type is not JTokenType.Object or JTokenType.Array)
+                return new[] {new EventPath(token.Path, JsonConvert.SerializeObject(token.Value<string>()))};
+            
             switch (token.Type)
             {
                 case JTokenType.Null:
@@ -166,13 +170,13 @@ public class EventParser : IEventParser
                     switch (arrayType)
                     {
                         case JTokenType.Property:
-                            return token.Values<JObject>().SelectMany(GetPaths);
+                            return token.Values<JObject>().SelectMany(x => GetPaths((token as JProperty)?.Name ?? "", x));
 
                         case JTokenType.Integer:
                         case JTokenType.Boolean:
                         case JTokenType.Float:  
                         case JTokenType.String:
-                            return token.Values<JToken>().SelectMany(GetPaths);
+                            return token.Values<JToken>().SelectMany(x => GetPaths("", x));
 
                         default:
                             throw new JsonException("Unsupported array type: " + arrayType);

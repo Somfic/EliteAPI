@@ -17,6 +17,19 @@ public class Parsers
     }
 
     [Test]
+    public void IdsAreStrings()
+    {
+        var json = JsonConvert.SerializeObject(new TestEvent());
+        var paths = _parser.ToPaths(json).ToArray();
+        
+        Assert.Multiple(() =>
+        {
+            Assert.That(paths.Count(x => x.Path == "Test.TestID"), Is.EqualTo(1));
+            Assert.That(paths.First(x => x.Path == "Test.TestID").Value, Is.EqualTo("\"124\""));
+        });
+    }
+    
+    [Test]
     public void AddLengthToArraysInPaths()
     {
         var json = JsonConvert.SerializeObject(new TestEvent());
@@ -56,6 +69,8 @@ public class Parsers
         public DateTime Timestamp => DateTime.UtcNow;
         
         public int TestInt => 0;
+        
+        public int TestID => 124;
          
         public string TestString => "0";
             

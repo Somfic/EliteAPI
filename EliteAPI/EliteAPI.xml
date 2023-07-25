@@ -50,10 +50,16 @@
         <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.JournalsPath">
             <inheritdoc />
         </member>
+        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.StatusFiles">
+            <inheritdoc />
+        </member>
         <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.JournalPattern">
             <inheritdoc />
         </member>
         <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.OptionsPath">
+            <inheritdoc />
+        </member>
+        <member name="P:EliteAPI.Configuration.EliteDangerousApiConfiguration.UpdateDelay">
             <inheritdoc />
         </member>
         <member name="M:EliteAPI.Configuration.EliteDangerousApiConfiguration.Apply">

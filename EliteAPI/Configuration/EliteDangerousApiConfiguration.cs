@@ -25,6 +25,7 @@ public class EliteDangerousApiConfiguration : IEliteDangerousApiConfiguration
     /// <inheritdoc />
     public string JournalsPath { get; set; }
 
+    /// <inheritdoc />
     public string[]? StatusFiles { get; set; }
 
     /// <inheritdoc />
@@ -34,15 +35,28 @@ public class EliteDangerousApiConfiguration : IEliteDangerousApiConfiguration
     public string OptionsPath { get; set; }
 
     /// <inheritdoc />
+    public int UpdateDelay { get; set; }
+
+    /// <inheritdoc />
     public void Apply()
     {
         _log.LogTrace("Applying configuration");
+        
+        UpdateDelay = _config.GetValue("EliteAPI:UpdateDelay", 500);
+        UpdateDelay = Math.Max(0, UpdateDelay);
+        _log.LogDebug("Update delay set to {UpdateDelay}ms", UpdateDelay);
 
+        if (string.IsNullOrWhiteSpace(JournalPattern))
+            JournalPattern = _config.GetValue("EliteAPI:JournalPattern", "Journal.*.log");
+        _log.LogDebug("Journal pattern set to {JournalPattern}", JournalPattern);
+        
         if (string.IsNullOrWhiteSpace(JournalsPath))
             JournalsPath = _config.GetValue("EliteAPI:JournalsPath", Path.Combine(GetSavedGamesPath(), "Frontier Developments", "Elite Dangerous"));
+        _log.LogDebug("Journals path set to {JournalsPath}", JournalsPath);
         
         if (string.IsNullOrWhiteSpace(OptionsPath))
             OptionsPath = _config.GetValue("EliteAPI:OptionsPath", Path.Combine(GetLocalAppDataPath(), "Frontier Developments", "Elite Dangerous", "Options"));
+        _log.LogDebug("Options path set to {OptionsPath}", OptionsPath);
         
         StatusFiles ??= _config.GetValue("EliteAPI:StatusFiles",
             new[]
@@ -50,9 +64,13 @@ public class EliteDangerousApiConfiguration : IEliteDangerousApiConfiguration
                 "Status.json", "Backpack.json", "Cargo.json", "ModulesInfo.json", "NavRoute.json", "Outfitting.json",
                 "ShipLocker.json", "Shipyard.json", "FCMaterials.json"
             });
+        _log.LogDebug("Status files set to {StatusFiles}", string.Join(", ", StatusFiles));
+
+        if (UpdateDelay <= 50)
+            _log.LogWarning("The update delay is set to {UpdateDelay}ms, this is an arbitrary low value and may cause performance issues", UpdateDelay);
         
-        if (string.IsNullOrWhiteSpace(JournalPattern))
-            JournalPattern = _config.GetValue("EliteAPI:JournalPattern", "Journal.*.log");
+        if (UpdateDelay >= 2500)
+            _log.LogWarning("The update delay is set to {UpdateDelay}ms, this is an arbitrary high value and may make the API feel unresponsive at times", UpdateDelay);
 
         if (!Directory.Exists(JournalsPath))
             _log.LogWarning(new DirectoryNotFoundException($"{JournalsPath} does not exist."),
@@ -61,6 +79,7 @@ public class EliteDangerousApiConfiguration : IEliteDangerousApiConfiguration
         if (!Directory.Exists(OptionsPath))
             _log.LogWarning(new DirectoryNotFoundException($"{OptionsPath} does not exist."),
                 "The specified options directory could not be found");
+
     }
 
     private string GetSavedGamesPath()

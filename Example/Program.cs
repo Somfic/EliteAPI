@@ -2,7 +2,9 @@
 using EliteAPI.Abstractions.Bindings.Models;
 using EliteAPI.Bindings;
 using EliteAPI.Events;
+using EliteAPI.Events.Status.FCMaterials;
 using EliteAPI.Events.Status.Ship.Events;
+using FcMaterialsEvent = EliteAPI.Events.Status.FCMaterials.FcMaterialsEvent;
 
 // Create an instance of the API
 var api = EliteDangerousApi.Create();
@@ -17,6 +19,11 @@ api.Bindings.OnBindings(_ =>
 });
 
 api.Events.On<BalanceStatusEvent>(e => Console.WriteLine(e.Value));
+
+api.Events.On<FcMaterialsEvent>(e =>
+{
+    Console.WriteLine("FC Materials:");
+});
 
 // Start the API
 if (!await api.StartAsync())

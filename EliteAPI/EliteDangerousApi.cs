@@ -147,7 +147,7 @@ public class EliteDangerousApi : IEliteDangerousApi
                 while (IsRunning)
                 {
                     await DoTick();
-                    await Task.Delay(500);
+                    await Task.Delay(Config.UpdateDelay);
                 }
             });
 

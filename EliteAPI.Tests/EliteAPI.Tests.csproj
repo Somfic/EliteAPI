@@ -5,10 +5,10 @@
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <AssemblyVersion>3.0.10.0</AssemblyVersion>
-    <FileVersion>3.0.10.0</FileVersion>
-    <InformationalVersion>3.0.10+5.Branch.main.Sha.c48305ba3dd68e1bbd47244c89b292a81af4adf7</InformationalVersion>
-    <Version>3.0.10</Version>
+    <AssemblyVersion>3.0.11.0</AssemblyVersion>
+    <FileVersion>3.0.11.0</FileVersion>
+    <InformationalVersion>3.0.11+7.Branch.main.Sha.5742a36d98be764935d8bada31e89e59616b2dec</InformationalVersion>
+    <Version>3.0.11</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="itext7" Version="8.0.0" />

@@ -18,7 +18,7 @@
     <LangVersion>10</LangVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Somfic</Authors>
-    <InformationalVersion>3.0.13+2.Branch.main.Sha.b5ea3578808938123b38046b9fc7351a53e48146</InformationalVersion>
+    <InformationalVersion>3.0.13+Branch.main.Sha.13ec0b549f02e79393ce3c28783178b6fb0c7ddc</InformationalVersion>
     <Nullable>enable</Nullable>
     <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
   </PropertyGroup>

@@ -86,6 +86,9 @@ public interface IEvents
     /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
     void OnAnyJson(AsyncJsonDelegate handler);
 
+    /// <summary>Gets the last invoked event of the specified type.</summary>
+    (TEvent @event, EventContext context) Last<TEvent>() where TEvent : struct, IEvent;
+
     /// <summary>Blocks the current thread until the specified event is raised.</summary>
     TEvent WaitFor<TEvent>() where TEvent : IEvent;
     

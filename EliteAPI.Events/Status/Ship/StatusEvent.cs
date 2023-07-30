@@ -145,5 +145,16 @@ public readonly struct StatusEvent : IEvent
 
 public enum GuiFocus
 {
-    
+    NoFocus,
+    InternalPanel,
+    ExternalPanel,
+    CommsPanel,
+    RolePanel,
+    StationServices,
+    GalaxyMap,
+    SystemMap,
+    Orrery,
+    FssMode,
+    SaaMode,
+    Codex,
 }

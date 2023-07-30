@@ -1,4 +1,5 @@
-﻿using EliteAPI.Abstractions.Events;
+﻿using System.Runtime.InteropServices.ComTypes;
+using EliteAPI.Abstractions.Events;
 using EliteAPI.Events;
 using Moq;
 using Newtonsoft.Json;
@@ -58,6 +59,17 @@ public class Parsers
             Assert.That(paths.First(x => x.Path == "Test.TestObject.TestInt").Value, Is.EqualTo("3"));
             Assert.That(paths.First(x => x.Path == "Test.TestObject.TestString").Value, Is.EqualTo("\"3\""));
         });
+    }
+
+    [Test]
+    public void PathsWork()
+    {
+        var jsons = File.ReadAllLines("Journal.txt");
+
+        foreach (var json in jsons)
+        {
+            var paths = _parser.ToPaths(json).ToArray();
+        }
     }
 
     private struct TestEvent

@@ -178,6 +178,14 @@ public class Events : IEvents
     }
 
     /// <inheritdoc />
+    public (TEvent @event, EventContext context) Last<TEvent>() where TEvent : struct, IEvent
+    {
+        var events = _previousEvents.LastOrDefault(x => x.@event.GetType() == typeof(TEvent));
+
+        return (events.@event is TEvent @event ? @event : default, events.context);
+    }
+
+    /// <inheritdoc />
     public IEvent Invoke<TEvent>(TEvent @event, EventContext context) where TEvent : IEvent
     {
         _backlog.Add((@event, context));

@@ -1,40 +1,44 @@
 ﻿using EliteAPI;
 using EliteAPI.Abstractions.Bindings.Models;
-using EliteAPI.Bindings;
 using EliteAPI.Events;
-using EliteAPI.Events.Status.FCMaterials;
 using EliteAPI.Events.Status.Ship.Events;
-using FcMaterialsEvent = EliteAPI.Events.Status.FCMaterials.FcMaterialsEvent;
 
-// Create an instance of the API
+// Create an instance of the Api
 var api = EliteDangerousApi.Create();
 
-// Subscribe to the lights event
-api.Events.On<LightsStatusEvent>(lights => 
-    Console.WriteLine($"Lights are {(lights.Value ? "on" : "off")}"));
-
-api.Bindings.OnBindings(_ =>
+// Subscribe to the DockingRequested event
+api.Events.On<DockingRequestedEvent>((e, context) =>
 {
-    Console.WriteLine(api.Bindings[KeyBinding.ShipSpotLightToggle].Primary?.Key);
+    // Return if the event was raised while catching up with the journal
+    if (context.IsRaisedDuringCatchup)
+        return;
+    
+    Console.WriteLine($"Requested docking at {e.StationName}");
 });
 
-api.Events.On<BalanceStatusEvent>(e => Console.WriteLine(e.Value));
-
-api.Events.On<FcMaterialsEvent>(e =>
+// Subscribe to all events
+api.Events.OnAny(e =>
 {
-    Console.WriteLine("FC Materials:");
+    var eventName = e.Event;
 });
+
+// Handle gear changes in the OnGearChange method
+api.Events.On<GearStatusEvent>(OnGearChange);
 
 // Start the API
-if (!await api.StartAsync())
-{
-    Console.WriteLine("Failed to start EliteAPI");
-    return;
-}
+await api.StartAsync();
 
-Console.WriteLine("EliteAPI started");
+// Get the binding for the ship's lights
+var lightsBinding = api.Bindings[KeyBinding.ShipSpotLightToggle].Primary?.Key ?? "not set";
+Console.WriteLine($"Lights binding: {lightsBinding}");
 
-// Run until the game stops
-api.Events.WaitFor<ShutdownEvent>();
-Console.WriteLine("Game closed, shutting down");
+// Wait for the in-game Shutdown event (this method is blocking and will halt the main thread)
+await Task.Delay(-1);
+
 await api.StopAsync();
+
+// This method will be called when the gear changes
+void OnGearChange(GearStatusEvent gear)
+{
+    Console.WriteLine($"Gear is {(gear.Value ? "down" : "up")}");
+}

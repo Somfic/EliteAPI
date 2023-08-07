@@ -17,11 +17,12 @@ namespace EliteAPI.Tests;
 public class JournalManual
 {
     private static IEvents _events;
-    private static string[] _legacyEvents = { "BackpackMaterials", "BuyMicroResources", "ShipTargetted" };
+    private static string[] _legacyEvents = { "BackpackMaterials", "BuyMicroResources", "ShipTargetted", "CarrierNameChanged" };
     private static string[] _legacyExamples =
     {
         "\"timestamp\":\"2020-04-27T08:02:52Z\", \"event\":\"Route\"",
-        "\"timestamp\":\"2020-04-27T08:02:52Z\", \"event\":\"Route\""
+        "\"timestamp\":\"2020-04-27T08:02:52Z\", \"event\":\"Route\"",
+        "\"timestamp\":\"2020-10-07T14:01:08Z\", \"event\":\"BuyMicroResource\"",
     };
     
     [OneTimeSetUp]
@@ -66,7 +67,17 @@ public class JournalManual
             return;
         }
 
-        _events.Invoke(json, new EventContext());
+        var invokedEvent = _events.Invoke(json, new EventContext());
+        
+        Assert.That(invokedEvent, Is.Not.Null, $"Event is null");
+        
+        // Check if the event is the correct type
+        var eventType = invokedEvent.GetType();
+        var eventName = eventType.Name;
+        if (eventName.EndsWith("Event"))
+            eventName = eventName.Substring(0, eventName.Length - 5);
+        
+        Assert.That(string.Equals(eventName, invokedEvent.Event, StringComparison.CurrentCultureIgnoreCase), $"Event is not of type {eventName} but {invokedEvent.Event}");
     }
 
     [Test(Description = "Properties")]

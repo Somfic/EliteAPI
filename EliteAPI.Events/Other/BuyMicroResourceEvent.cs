@@ -18,10 +18,10 @@ public readonly struct BuyMicroResourceEvent : IEvent
     public string Category { get; init; }
     
     [JsonProperty("Count")]
-    public int Count { get; init; }
+    public long Count { get; init; }
     
     [JsonProperty("TotalCount")]
-    public int TotalCount { get; init; }
+    public long TotalCount { get; init; }
     
     [JsonProperty("Price")]
     public long Price { get; init; }
@@ -41,6 +41,6 @@ public readonly struct BuyMicroResourceEvent : IEvent
         public string Category { get; init; }
     
         [JsonProperty("Count")]
-        public int Count { get; init; }
+        public long Count { get; init; }
     }
 }

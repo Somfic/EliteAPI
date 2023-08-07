@@ -15,6 +15,7 @@ namespace EliteAPI.Tests;
 public class Schemas
 {
     private static IEvents _events;
+    
     private static string[] _legacyEvents = { "BackpackMaterials", "BuyMicroResources", "ShipTargetted" };
     private static string[] _legacyExamples =
     {

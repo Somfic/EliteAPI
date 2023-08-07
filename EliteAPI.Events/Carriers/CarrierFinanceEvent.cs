@@ -15,7 +15,7 @@ public readonly struct CarrierFinanceEvent : IEvent
     public string CarrierId { get; init; }
 
     [JsonProperty("TaxRate")]
-    public int TaxRate { get; init; }
+    public long TaxRate { get; init; }
 
     [JsonProperty("CarrierBalance")]
     public long Balance { get; init; }
@@ -27,5 +27,5 @@ public readonly struct CarrierFinanceEvent : IEvent
     public long AvailableBalance { get; init; }
 
     [JsonProperty("ReservePercent")]
-    public int ReservePercent { get; init; }
+    public long ReservePercent { get; init; }
 }

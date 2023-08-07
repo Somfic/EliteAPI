@@ -15,8 +15,8 @@ public readonly struct CarrierDepositFuelEvent : IEvent
     public string CarrierId { get; init; }
 
     [JsonProperty("Amount")]
-    public int Amount { get; init; }
+    public long Amount { get; init; }
 
     [JsonProperty("Total")]
-    public int Total { get; init; }
+    public long Total { get; init; }
 }

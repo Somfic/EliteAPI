@@ -12,7 +12,7 @@ public readonly struct DockingGrantedEvent : IEvent
     public string Event { get; init; }
 
     [JsonProperty("LandingPad")]
-    public int LandingPad { get; init; }
+    public long LandingPad { get; init; }
 
     [JsonProperty("MarketID")]
     public string MarketId { get; init; }

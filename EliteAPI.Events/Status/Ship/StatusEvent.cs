@@ -76,7 +76,7 @@ public readonly struct StatusEvent : IEvent
     public ShipPips Pips { get; init; }
 
     [JsonProperty("FireGroup")]
-    public int FireGroup { get; init; }
+    public long FireGroup { get; init; }
 
     [JsonProperty("GuiFocus")]
     [JsonConverter(typeof(StringEnumConverter))]
@@ -87,7 +87,7 @@ public readonly struct StatusEvent : IEvent
 
     [JsonProperty("Cargo")]
     [JsonConverter(typeof(DecimalToIntegerConverter))]
-    public int Cargo { get; init; }
+    public long Cargo { get; init; }
 
     [JsonProperty("LegalState")]
     [JsonConverter(typeof(StringEnumConverter))]
@@ -145,5 +145,16 @@ public readonly struct StatusEvent : IEvent
 
 public enum GuiFocus
 {
-    
+    NoFocus,
+    InternalPanel,
+    ExternalPanel,
+    CommsPanel,
+    RolePanel,
+    StationServices,
+    GalaxyMap,
+    SystemMap,
+    Orrery,
+    FssMode,
+    SaaMode,
+    Codex,
 }

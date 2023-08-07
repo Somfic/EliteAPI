@@ -68,7 +68,7 @@ public class EliteDangerousApi : IEliteDangerousApi
     public static IEliteDangerousApi Create()
     {
         var host = Host.CreateDefaultBuilder()
-            //.ConfigureLogging(log => log.ClearProviders())
+            .ConfigureLogging(log => log.SetMinimumLevel(LogLevel.Warning).AddSimpleConsole())
             .ConfigureServices(services => services.AddEliteApi())
             .Build();
 
@@ -104,10 +104,10 @@ public class EliteDangerousApi : IEliteDangerousApi
             _reader.Register(new StatusFileSelector(new DirectoryInfo(Config.JournalsPath), statusFile));
         }
 
-        Events.On<FileheaderEvent>(e =>
+        Events.On<LoadGameEvent>(e =>
         {
-            _log?.LogTrace("Setting Odyssey mode to {IsOdyssey} for bindings", e.IsOdyssey);
-            _bindingsSelector.SetIsOdyssey(e.IsOdyssey);
+            _log?.LogDebug("Setting HasOdyssey to {HasOdyssey} for bindings", e.HasOdyssey);
+            _bindingsSelector.SetIsOdyssey(e.HasOdyssey);
         });
         
         _hasInitialised = true;
@@ -147,7 +147,7 @@ public class EliteDangerousApi : IEliteDangerousApi
                 while (IsRunning)
                 {
                     await DoTick();
-                    await Task.Delay(500);
+                    await Task.Delay(Config.UpdateDelay);
                 }
             });
 

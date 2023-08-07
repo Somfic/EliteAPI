@@ -15,7 +15,7 @@ public readonly struct EngineerApplyEvent : IEvent
     public string Engineer { get; init; }
 
     [JsonProperty("Blueprint")]
-    public string Blueprint { get; init; }
+    public string Blueprlong { get; init; }
 
     [JsonProperty("Level")]
     public long Level { get; init; }

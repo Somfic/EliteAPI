@@ -1,17 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <AssemblyVersion>3.1.0.0</AssemblyVersion>
-    <FileVersion>3.1.0.0</FileVersion>
-    <InformationalVersion>3.1.0-alpha.82+Branch.dev.Sha.8491541ddba5f9f6227558626415cee3e1f8a5b8</InformationalVersion>
-    <Version>3.1.0-alpha0082</Version>
+    <AssemblyVersion>3.0.15.0</AssemblyVersion>
+    <FileVersion>3.0.15.0</FileVersion>
+    <InformationalVersion>3.0.15+5.Branch.main.Sha.fbda11d4f56790b755fb252f79ce458e05932237</InformationalVersion>
+    <Version>3.0.15</Version>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="itext7" Version="8.0.0" />
+    <PackageReference Include="itext7" Version="8.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
     <PackageReference Include="Moq" Version="4.18.4" />
     <PackageReference Include="NUnit" Version="3.13.3" />
@@ -28,6 +28,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Update="Bindings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Journal.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

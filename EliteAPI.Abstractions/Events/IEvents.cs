@@ -86,6 +86,9 @@ public interface IEvents
     /// <param name="handler">The <see cref="JsonDelegate" /> delegate handler</param>
     void OnAnyJson(AsyncJsonDelegate handler);
 
+    /// <summary>Gets the last invoked event of the specified type.</summary>
+    (TEvent @event, EventContext context) Last<TEvent>() where TEvent : struct, IEvent;
+
     /// <summary>Blocks the current thread until the specified event is raised.</summary>
     TEvent WaitFor<TEvent>() where TEvent : IEvent;
     
@@ -133,12 +136,12 @@ public interface IEvents
     /// <param name="event">The instance of the event</param>
     /// <param name="context">The context of the event</param>
     /// <typeparam name="TEvent">The event type</typeparam>
-    void Invoke<TEvent>(TEvent @event, EventContext context) where TEvent : IEvent;
+    IEvent Invoke<TEvent>(TEvent @event, EventContext context) where TEvent : IEvent;
 
     /// <summary>Converts the JSON to a registered event type and invokes the registered event handlers.</summary>
     /// <param name="json">The event JSON</param>
     /// <param name="context">The context of the event</param>
-    void Invoke(string json, EventContext context);
+    IEvent Invoke(string json, EventContext context);
 
     /// <summary>Discovers and registers all the events in the specified assembly.</summary>
     /// <param name="assembly">The assembly the events are defined in</param>

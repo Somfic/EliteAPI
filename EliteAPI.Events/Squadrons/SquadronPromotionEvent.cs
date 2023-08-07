@@ -15,8 +15,8 @@ public readonly struct SquadronPromotionEvent : IEvent
     public string Name { get; init; }
 
     [JsonProperty("OldRank")]
-    public int OldRank { get; init; }
+    public long OldRank { get; init; }
 
     [JsonProperty("NewRank")]
-    public int NewRank { get; init; }
+    public long NewRank { get; init; }
 }

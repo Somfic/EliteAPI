@@ -27,12 +27,12 @@ public readonly struct DockingRequestedEvent : IEvent
     public readonly struct LandingPadsInfo
     {
         [JsonProperty("Small")]
-        public int Small { get; init; }
+        public long Small { get; init; }
 
         [JsonProperty("Medium")]
-        public int Medium { get; init; }
+        public long Medium { get; init; }
 
         [JsonProperty("Large")]
-        public int Large { get; init; }
+        public long Large { get; init; }
     }
 }

@@ -12,5 +12,5 @@ public readonly struct ContinuedEvent : IEvent
     public string Event { get; init; }
     
     [JsonProperty("Part")]
-    public int Part { get; init; }
+    public long Part { get; init; }
 }

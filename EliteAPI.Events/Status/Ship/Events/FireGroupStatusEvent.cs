@@ -2,11 +2,11 @@
 
 namespace EliteAPI.Events.Status.Ship.Events;
 
-public readonly struct FireGroupStatusEvent : IStatusEvent<int>
+public readonly struct FireGroupStatusEvent : IStatusEvent<long>
 {
     public DateTime Timestamp => DateTime.Now;
     
     public string Event => "FireGroup";
     
-    public int Value { get; init; }
+    public long Value { get; init; }
 }

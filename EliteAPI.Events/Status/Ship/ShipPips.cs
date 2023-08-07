@@ -2,7 +2,7 @@
 
 public readonly struct ShipPips
 {
-    internal ShipPips(int system, int engines, int weapons)
+    internal ShipPips(long system, long engines, long weapons)
     {
         System = system;
         Engines = engines;
@@ -12,15 +12,15 @@ public readonly struct ShipPips
     /// <summary>
     /// Amount of half pips set to systems
     /// </summary>
-    public int System { get; }
+    public long System { get; }
 
     /// <summary>
     /// Amount of half pips set to engines
     /// </summary>
-    public int Engines { get; }
+    public long Engines { get; }
 
     /// <summary>
     /// Amount of half pips set to weapons
     /// </summary>
-    public int Weapons { get; }
+    public long Weapons { get; }
 }

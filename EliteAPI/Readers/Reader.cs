@@ -86,8 +86,8 @@ public class Reader : IReader
             else
             {
                 stream.BaseStream.Position = 0;
-                var newValue = await stream.ReadToEndAsync() ?? string.Empty;
-                var lastValue = string.Join(Environment.NewLine, _lastValues[file.FullName]!);
+                var newValue = await stream.ReadToEndAsync();
+                var lastValue = _lastValues[file.FullName].Length == 0 ? string.Empty : _lastValues[file.FullName][0];
 
                 if (newValue != lastValue)
                 {
@@ -97,7 +97,10 @@ public class Reader : IReader
                     yield return new Line(file, fileSelector, newValue);
 
                     // Update last value
-                    _lastValues[file.FullName] = newValue.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                    if(_lastValues[file.FullName].Length == 0)
+                        _lastValues[file.FullName] = new[] { newValue };
+                    else
+                        _lastValues[file.FullName][0] = newValue;
                 }
             }
         }
@@ -110,9 +113,19 @@ public class Reader : IReader
         
         if (_fileErrors[selector] == null || _fileErrors[selector]!.Message != ex.Message || _fileErrors[selector]!.InnerException?.Message != ex.InnerException?.Message)
         {
-            _log?.LogWarning(ex, "Could not query the necessary files for {FileType}",
-                selector.Category.ToString().ToLower());
-                    
+            switch (selector.Category)
+            {
+                case FileCategory.Events:
+                    _log?.LogWarning(ex, "Could not query the Journal File for events");
+                    break;
+                case FileCategory.Status:
+                    _log?.LogDebug(ex, "Could not query a status file");
+                    break;
+                case FileCategory.Bindings:
+                    _log?.LogWarning(ex, "Could not query the Bindings file for keybindings");
+                    break;
+            }
+
             _fileErrors[selector] = ex;
         }
     }

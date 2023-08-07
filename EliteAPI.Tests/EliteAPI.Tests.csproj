@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -7,7 +7,7 @@
     <IsTestProject>true</IsTestProject>
     <AssemblyVersion>3.0.15.0</AssemblyVersion>
     <FileVersion>3.0.15.0</FileVersion>
-    <InformationalVersion>3.0.15+5.Branch.main.Sha.fbda11d4f56790b755fb252f79ce458e05932237</InformationalVersion>
+    <InformationalVersion>3.0.15+11.Branch.main.Sha.615e96c65dd92bfc8d0d72929c462ad9a1f9fda6</InformationalVersion>
     <Version>3.0.15</Version>
   </PropertyGroup>
   <ItemGroup>

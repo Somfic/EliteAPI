@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{2E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI.Tests", "EliteAPI.Tests\EliteAPI.Tests.csproj", "{856F6019-7B19-40C7-9E45-A0FC155734E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{7A37531D-F514-457D-AA45-77F26EFFD0A1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,21 +71,12 @@ Global
 		{856F6019-7B19-40C7-9E45-A0FC155734E0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{856F6019-7B19-40C7-9E45-A0FC155734E0}.Release|x86.ActiveCfg = Release|Any CPU
 		{856F6019-7B19-40C7-9E45-A0FC155734E0}.Release|x86.Build.0 = Release|Any CPU
-		{7A37531D-F514-457D-AA45-77F26EFFD0A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A37531D-F514-457D-AA45-77F26EFFD0A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A37531D-F514-457D-AA45-77F26EFFD0A1}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{7A37531D-F514-457D-AA45-77F26EFFD0A1}.Debug|x86.Build.0 = Debug|Any CPU
-		{7A37531D-F514-457D-AA45-77F26EFFD0A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A37531D-F514-457D-AA45-77F26EFFD0A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A37531D-F514-457D-AA45-77F26EFFD0A1}.Release|x86.ActiveCfg = Release|Any CPU
-		{7A37531D-F514-457D-AA45-77F26EFFD0A1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{98F4FCB9-F5A2-4159-97F0-3FEEE6620364} = {2EF6A15E-9838-41A6-9A02-DB1CF9FC0203}
-		{7A37531D-F514-457D-AA45-77F26EFFD0A1} = {2EF6A15E-9838-41A6-9A02-DB1CF9FC0203}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BCC51F1-912C-4035-9484-7A45F70F1790}

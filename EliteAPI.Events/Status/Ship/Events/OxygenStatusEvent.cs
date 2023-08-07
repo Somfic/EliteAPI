@@ -2,11 +2,11 @@
 
 namespace EliteAPI.Events.Status.Ship.Events;
 
-public readonly struct OxygenStatusEvent : IStatusEvent<float>
+public readonly struct OxygenStatusEvent : IStatusEvent<double>
 {
     public DateTime Timestamp => DateTime.Now;
     
     public string Event => "Oxygen";
     
-    public float Value { get; init; }
+    public double Value { get; init; }
 }

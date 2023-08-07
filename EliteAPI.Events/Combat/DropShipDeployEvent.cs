@@ -24,8 +24,8 @@ public readonly struct DropShipDeployEvent : IEvent
     public string BodyId { get; init; }
     
     [JsonProperty("OnStation")]
-    public bool OnStation { get; init; }
+    public bool IsOnStation { get; init; }
     
     [JsonProperty("OnPlanet")]
-    public bool OnPlanet { get; init; }
+    public bool IsOnPlanet { get; init; }
 }

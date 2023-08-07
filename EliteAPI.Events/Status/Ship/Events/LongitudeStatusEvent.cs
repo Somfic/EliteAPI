@@ -2,11 +2,11 @@
 
 namespace EliteAPI.Events.Status.Ship.Events;
 
-public readonly struct LongitudeStatusEvent : IStatusEvent<float>
+public readonly struct LongitudeStatusEvent : IStatusEvent<double>
 {
     public DateTime Timestamp => DateTime.Now;
     
     public string Event => "Longitude";
     
-    public float Value { get; init; }
+    public double Value { get; init; }
 }

@@ -5,6 +5,12 @@ namespace EliteAPI.Events;
 
 public struct CarrierBankTransferEvent : IEvent
 {
+    [JsonProperty("timestamp")]
+    public DateTime Timestamp { get; init; }
+
+    [JsonProperty("event")]
+    public string Event { get; init; }
+    
     [JsonProperty("CarrierID")]
     public string CarrierId { get; init; }
 
@@ -19,8 +25,4 @@ public struct CarrierBankTransferEvent : IEvent
 
     [JsonProperty("CarrierBalance")]
     public long CarrierBalance { get; init; }
-
-    public DateTime Timestamp { get; }
-
-    public string Event { get; }
 }

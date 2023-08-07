@@ -100,34 +100,34 @@ public readonly struct StatusEvent : IEvent
     public ShipDestination Destination { get; init; }
 
     [JsonProperty("PlanetRadius")]
-    public float BodyRadius { get; init; }
+    public double BodyRadius { get; init; }
 
     [JsonProperty("Oxygen")]
-    public float Oxygen { get; init; }
+    public double Oxygen { get; init; }
 
     [JsonProperty("Health")]
-    public float Health { get; init; }
+    public double Health { get; init; }
 
     [JsonProperty("Temperature")]
-    public float Temperature { get; init; }
+    public double Temperature { get; init; }
 
     [JsonProperty("SelectedWeapon")]
     public Localised SelectedWeapon { get; init; }
 
     [JsonProperty("Gravity")]
-    public float Gravity { get; init; }
+    public double Gravity { get; init; }
     
     [JsonProperty("Latitude")]
-    public float Latitude { get; init; }
+    public double Latitude { get; init; }
     
     [JsonProperty("Longitude")]
-    public float Longitude { get; init; }
+    public double Longitude { get; init; }
     
     [JsonProperty("Heading")]
-    public float Heading { get; init; }
+    public double Heading { get; init; }
     
     [JsonProperty("Altitude")]
-    public long Altitude { get; init; }
+    public double Altitude { get; init; }
     
     [JsonProperty("BodyName")]
     public string Body { get; init; }

@@ -71,7 +71,7 @@ public class JournalManual
 
     [Test(Description = "Properties")]
     [TestCaseSource(nameof(GetProperties))]
-    [Ignore("Tests still in progress")]
+    [Ignore("This test is not finished")]
     public void Properties((string eventName, Property property) propertyInfo)
     {
         var (eventName, expectedProperty) = propertyInfo;
@@ -86,7 +86,7 @@ public class JournalManual
         // Get the property by the JsonProperty attribute
         var property = properties.FirstOrDefault(x => string.Equals(x.GetCustomAttribute<JsonPropertyAttribute>()?.PropertyName, expectedProperty.Name, StringComparison.CurrentCultureIgnoreCase));
 
-        Warn.If(property, Is.Not.Null, $"Type '{eventType.Name}' does not contain expected property '{expectedProperty.Name}'");
+        Assert.That(property, Is.Not.Null, $"Type '{eventType.Name}' does not contain expected property '{expectedProperty.Name}'");
 
         if (property == null)
             return;
@@ -95,13 +95,13 @@ public class JournalManual
         foreach (var expectedChild in expectedProperty.Children)
         {
             var childProperty = property.PropertyType.GetProperties().FirstOrDefault(x => string.Equals(x.GetCustomAttribute<JsonPropertyAttribute>()?.PropertyName, expectedChild.Name, StringComparison.CurrentCultureIgnoreCase));
-            Warn.If(childProperty, Is.Not.Null, $"Type '{property.PropertyType.Name}' does not contain expected child property '{expectedChild.Name}'");
+            Assert.That(childProperty, Is.Not.Null, $"Type '{property.PropertyType.Name}' does not contain expected child property '{expectedChild.Name}'");
             
             // Check the child's children
             foreach (var expectedGrandChild in expectedChild.Children)
             {
                 var childChildProperty = childProperty.PropertyType.GetProperties().FirstOrDefault(x => string.Equals(x.GetCustomAttribute<JsonPropertyAttribute>()?.PropertyName, expectedGrandChild.Name, StringComparison.CurrentCultureIgnoreCase));
-                Warn.If(childChildProperty, Is.Not.Null, $"Type '{childProperty.PropertyType.Name}' does not contain expected child property '{expectedGrandChild.Name}'");
+                Assert.That(childChildProperty, Is.Not.Null, $"Type '{childProperty.PropertyType.Name}' does not contain expected child property '{expectedGrandChild.Name}'");
             }
         }
     }

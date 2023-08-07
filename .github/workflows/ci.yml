@@ -1,110 +1,67 @@
-name: CI
-on: [push, pull_request]
+name: ci
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
 
 jobs:
   test:
-    name: Unit test
+    name: test
     runs-on: ubuntu-latest
-
     steps:
-      - name: Setup .NET 6
-        uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: '6.0.x'
-
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Install dependencies
+      - name: Setup .NET 7
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "7.0.x"
+
+      - name: Restore dependencies
         run: dotnet restore
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build --configuration Release
 
       - name: Test
-        run: dotnet test --no-restore --no-build --configuration Release
+        run: dotnet test --configuration Release --logger trx --results-directory reports --collect:"XPlat Code Coverage"
 
-  build:
-    name: Build
-    needs: [update-version]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Setup .NET 6
-        uses: actions/setup-dotnet@v2
+      - name: Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
         with:
-          dotnet-version: '6.0.x'
-
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
-
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ steps.extract_branch.outputs.branch }}
-
-      - name: Install dependencies
-        run: dotnet restore
-
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
-
-      - name: Pack
-        if: ${{ needs.update-version.outputs.applicable == 'true' || steps.extract_branch.outputs.branch == 'main' }}
-        run: dotnet pack --configuration Release
-
-      - name: Publish project to NuGet
-        if: ${{ needs.update-version.outputs.applicable == 'true' || steps.extract_branch.outputs.branch == 'main' }}
-        run: dotnet nuget push '**/*.nupkg' -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
-        
-      - name: Release
-        if: ${{ needs.update-version.outputs.applicable == 'true' || steps.extract_branch.outputs.branch == 'main' }}
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ needs.update-version.outputs.semver }}
-          prerelease: ${{ steps.extract_branch.outputs.branch != 'main' }}
-
-      # - name: Unlist earlier packages of this type
-      #   uses: darenm/unlist-nuget@v1
-      #   with:
-      #     NUGET_PACKAGE: "${{ github.event.repository.name }}"
-      #     VERSION_REGEX: ".*${{needs.update-version.outputs.label}}.*"
-      #     NUGET_KEY: ${{secrets.NUGET_KEY}}
-
-  update-version:
-    needs: [test]
-    name: Update version
-    if: ${{ github.event_name != 'pull_request' }}
+          name: report
+          path: reports/*.trx
+          reporter: dotnet-trx
+  
+  semver:
+    name: semver
+    needs: test
     runs-on: ubuntu-latest
     outputs:
       label: ${{steps.VERSION.outputs.label}}
       semver: ${{steps.VERSION.outputs.semver}}
       nuget: ${{steps.VERSION.outputs.nuget}}
+      prerelease: ${{steps.VERSION.outputs.prerelease}}
       applicable: ${{steps.VERSION.outputs.applicable}}
+      previous: ${{steps.LAST.outputs.tag}}
     steps:
-      - name: Setup .NET 6
-        uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: '6.0.x'
-
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
-
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup GitVersion
         run: dotnet tool install --global GitVersion.Tool
 
-      - name: Fetch for GitVersion
+      - name: Fetch Git tags
         run: git fetch --tags --unshallow
 
-      - name: Fetch main for GitVersion
+      - name: Fetch main branch
         if: github.ref != 'refs/heads/main'
         run: git branch --create-reflog main origin/main
+
+      - name: Query last tag
+        id: LAST
+        run: echo ::set-output name=tag::$(git describe --tags --abbrev=0)
 
       - name: Update version
         run: dotnet-gitversion /updateprojectfiles /updateassemblyinfo /output buildserver
@@ -115,12 +72,83 @@ jobs:
           echo '::set-output name=label::${{env.GitVersion_PreReleaseLabel}}'
           echo '::set-output name=semver::${{env.GitVersion_LegacySemVer}}'
           echo '::set-output name=nuget::${{env.GitVersion_NuGetPreReleaseTagV2}}'
-          echo '::set-output name=applicable::${{env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta' }}'
+          echo '::set-output name=prerelease::${{env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta' }}'
+          echo '::set-output name=applicable::${{github.ref == 'refs/heads/main' || env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}'
 
-      - name: Apply changes
-        if: ${{ steps.VERSION.outputs.applicable == 'true' || steps.extract_branch.outputs.branch == 'main' }}
-        uses: EndBug/add-and-commit@v6.2.0
+      - name: Push version bump
+        if: ${{env.GitVersion_PreReleaseLabel == '' || env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}
+        uses: EndBug/add-and-commit@v9
         with:
           author_name: github-actions[bot]
           author_email: github-actions[bot]@users.noreply.github.com
           message: "Bumped version to ${{env.GitVersion_LegacySemVer}}"
+  
+  approve:
+    name: approve
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Approve pull request
+        uses: juliangruber/approve-pull-request-action@v2.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          number: ${{ github.event.number }}
+  
+  release:
+    name: release
+    needs: semver
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && needs.semver.outputs.applicable == 'true'
+    env:
+      nuget_key: ${{ secrets.NUGET_KEY }}
+    steps:
+      - name: Setup Ruby v3
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.0"
+
+      - name: Install changelog generator
+        run: gem install github_changelog_generator
+
+      - name: Generate changelog
+        run: github_changelog_generator -u ${{github.repository_owner}} -p ${{github.event.repository.name}} --token ${{secrets.GITHUB_TOKEN}} --since-tag ${{needs.semver.outputs.previous}} --future-release ${{needs.semver.outputs.semver}}
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        with:
+          tag_name: ${{needs.semver.outputs.semver}}
+          name: v${{needs.semver.outputs.semver}}
+          body_path: CHANGELOG.md
+          prerelease: ${{needs.semver.outputs.prerelease}}
+  
+  publish:
+    name: publish
+    needs: release
+    runs-on: ubuntu-latest
+    env:
+      nuget_key: ${{ secrets.NUGET_KEY }}
+    steps:
+      - name: Checkout code
+        if: ${{env.nuget_key != ''}}
+        uses: actions/checkout@v3
+
+      - name: Setup .NET 7
+        if: ${{env.nuget_key != ''}}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "7.0.x"
+
+      - name: Restore dependencies
+        if: ${{env.nuget_key != ''}}
+        run: dotnet restore
+
+      - name: Pack
+        if: ${{env.nuget_key != ''}}
+        run: dotnet pack --configuration Release --output nupkgs --include-symbols --include-source
+
+      - name: Publish project to NuGet
+        if: ${{env.nuget_key != ''}}
+        run: dotnet nuget push '**/*.nupkg' -k ${{env.nuget_key}} -s https://api.nuget.org/v3/index.json --skip-duplicate

@@ -7,8 +7,8 @@
     <IsTestProject>true</IsTestProject>
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
     <FileVersion>3.1.0.0</FileVersion>
-    <InformationalVersion>3.1.0-alpha.154+Branch.dev.Sha.2c3eb58530046fdb6229439958e05f9d7d330faa</InformationalVersion>
-    <Version>3.1.0-alpha0154</Version>
+    <InformationalVersion>3.1.0-alpha.161+Branch.dev.Sha.7c88084cb7d89d3c9c06fd60ca7a29650582fdd6</InformationalVersion>
+    <Version>3.1.0-alpha0161</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="itext7" Version="8.0.1" />

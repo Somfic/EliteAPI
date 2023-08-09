@@ -4,8 +4,8 @@
     <Nullable>enable</Nullable>
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
     <FileVersion>3.1.0.0</FileVersion>
-    <InformationalVersion>3.1.0-alpha.166+Branch.dev.Sha.3b888cb160821f5c6c1062e180428c610d384403</InformationalVersion>
-    <Version>3.1.0-alpha0166</Version>
+    <InformationalVersion>3.1.0-alpha.169+Branch.dev.Sha.8630d1c7d7db92bca3a8cc854f777a4b9cd93435</InformationalVersion>
+    <Version>3.1.0-alpha0169</Version>
     <IsPackable>false</IsPackable>
     <LangVersion>10</LangVersion>
     <OutputType>Exe</OutputType>

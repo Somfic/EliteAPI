@@ -1,4 +1,4 @@
-<img src="https://repository-images.githubusercontent.com/151841516/3352e81e-2507-429c-8785-fa0f0ac393a7"
+<img src="https://repository-images.githubusercontent.com/151841516/4aba5fc8-b4d1-4815-978c-7bb8cfdcbfa7"
      title="EliteAPI by Somfic">
 
 <div text-align="center">

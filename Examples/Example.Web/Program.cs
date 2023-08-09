@@ -20,8 +20,9 @@ var spansh = new HostBuilder()
     .Services
     .GetRequiredService<SpanshApi>();
 
+Console.WriteLine("Getting route ... ");
 var response = await spansh.Routes.Neutron(new NeutronRequest("Sol", "Colonia"));
 
 response.On(
-    ok: r => Console.WriteLine(r.TotalJumps),
+    ok: r => Console.WriteLine(string.Join(" > ", r.SystemJumps.Select(x => x.System))),
     error: e => Console.WriteLine(e.Message));

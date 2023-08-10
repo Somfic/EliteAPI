@@ -73,14 +73,6 @@ jobs:
       - name: Pack
         if: ${{env.nuget_key != ''}}
         run: dotnet pack --configuration Release --output nupkgs --include-symbols --include-source
-        
-      - name: Push version bump
-        if: ${{env.GitVersion_PreReleaseLabel == '' || env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: github-actions[bot]
-          author_email: github-actions[bot]@users.noreply.github.com
-          message: "Bumped version to ${{ env.GitVersion_LegacySemVer }}"
 
       - name: Setup Ruby v3
         uses: ruby/setup-ruby@v1
@@ -89,6 +81,9 @@ jobs:
 
       - name: Set up new Gemfile
         run: bundle init
+        
+      - name: Install changelog generator
+        run: gem install github_changelog_generator
 
       - name: Install changelog generator
         run: gem 'github_changelog_generator', '~> 1.15.1'
@@ -115,6 +110,14 @@ jobs:
       - name: Publish project to NuGet
         if: ${{env.nuget_key != ''}}
         run: dotnet nuget push '**/*.nupkg' -k ${{ env.nuget_key }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+        
+      - name: Push version bump
+        if: ${{env.GitVersion_PreReleaseLabel == '' || env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "Bumped version to ${{ env.GitVersion_LegacySemVer }}"
   
   approve:
     name: approve

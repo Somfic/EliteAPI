@@ -1,6 +1,7 @@
+<img src="https://repository-images.githubusercontent.com/151841516/4aba5fc8-b4d1-4815-978c-7bb8cfdcbfa7"
+     title="EliteAPI by Somfic">
+
 <div text-align="center">
-<img src="https://github.com/EliteAPI/Icons/blob/main/logo_gradient_shine.jpg?raw=true" align="right"
-     title="EliteAPI by Somfic" width="280" height="280">
 <h1 align="center">EliteAPI</h1>
 
 <p align="center"><i>An Elite: Dangerous API library for .NET</i></p>
@@ -18,6 +19,8 @@
 </p>
 <p>When playing Elite: Dangerous, many in-game events are outputted to the Journal log files. EliteAPI makes use of these files to provide live information about in-game events in a .NET environment. 
 </div>
+
+
 
 ## Installation
 

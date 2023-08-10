@@ -5,14 +5,14 @@
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <AssemblyVersion>3.1.0.0</AssemblyVersion>
-    <FileVersion>3.1.0.0</FileVersion>
-    <InformationalVersion>3.1.0-alpha.172+Branch.dev.Sha.da651148e1102b6907dd881063233e959bcfce37</InformationalVersion>
-    <Version>3.1.0-alpha0172</Version>
+    <AssemblyVersion>3.0.15.0</AssemblyVersion>
+    <FileVersion>3.0.15.0</FileVersion>
+    <InformationalVersion>3.0.15+13.Branch.main.Sha.aa3bd21915f470956d90f87a2d089e6d67be09ae</InformationalVersion>
+    <Version>3.0.15</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="itext7" Version="8.0.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.0" />
     <PackageReference Include="Moq" Version="4.18.4" />
     <PackageReference Include="NUnit" Version="3.13.3" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />

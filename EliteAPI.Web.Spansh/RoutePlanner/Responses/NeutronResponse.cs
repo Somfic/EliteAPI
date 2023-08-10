@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Web.Spansh.RoutePlanner.Responses;
 
-public class NeutronResponse : IJobResponse
+public class NeutronResponse
 {
     [JsonProperty("destination_system")]
     public string DestinationSystem { get; init; }

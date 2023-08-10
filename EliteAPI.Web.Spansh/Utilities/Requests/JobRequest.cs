@@ -2,7 +2,7 @@
 
 namespace EliteAPI.Web.Spansh.Utilities.Requests;
 
-public class JobRequest : IJobRequest
+public class JobRequest : IWebApiRequest
 {
     public JobRequest(string job)
     {

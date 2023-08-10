@@ -44,12 +44,12 @@ public class UtilitiesApi : WebApiCategory
         }
     }
     
-    internal async Task<Result<TResponse>> FromJob<TResponse>(WebApiResponse<WebApiResult<JobResponse>> job) where TResponse : class, IJobResponse
+    internal async Task<Result<TResponse>> FromJob<TResponse>(WebApiResponse<WebApiResult<JobResponse>> job) where TResponse : class
     {
         var api = Api as SpanshApi;
         
         var result = await job.MapAsync(
-            ok: x => api.Utilities.Job<NeutronResponse>(new JobRequest(x.Content.Job)),
+            ok: x => api.Utilities.Job<TResponse>(new JobRequest(x.Content.Job)),
             error: x => x
         );
 

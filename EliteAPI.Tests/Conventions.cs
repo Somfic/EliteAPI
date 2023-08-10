@@ -81,7 +81,7 @@ public class Convetions
     static IImmutableList<PropertyInfo> GetProperties()
     {
         var eventParser = new EventParser(Mock.Of<IServiceProvider>());
-        eventParser.Use<LocalisedConverter>();;
+        eventParser.Use<LocalisedConverter>();
         var events = new Events.Events(Mock.Of<ILogger<Events.Events>>(), eventParser);
         events.Register();
         
@@ -102,7 +102,7 @@ public class Convetions
     {
         var eventParser = new EventParser(Mock.Of<IServiceProvider>());
         eventParser.Use<LocalisedConverter>();
-        ;
+        
         var events = new Events.Events(Mock.Of<ILogger<Events.Events>>(), eventParser);
         events.Register();
 

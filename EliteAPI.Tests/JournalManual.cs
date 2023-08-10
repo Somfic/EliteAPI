@@ -29,7 +29,7 @@ public class JournalManual
     public void Setup()
     {
         var eventParser = new EventParser(Mock.Of<IServiceProvider>());
-        eventParser.Use<LocalisedConverter>();;
+        eventParser.Use<LocalisedConverter>();
         _events = new Events.Events(Mock.Of<ILogger<Events.Events>>(), eventParser);
         _events.Register();
     }

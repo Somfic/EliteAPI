@@ -19,15 +19,3 @@ public class SpanshApi : WebApi
 
     internal UtilitiesApi Utilities { get; }
 }
-
-public interface IJobResponse : IWebApiResponse
-{
-    [JsonProperty("job")]
-    public string Job { get; init; }
-}
-
-public interface IJobRequest : IWebApiRequest
-{
-    [JsonProperty("job")]
-    public string Job { get; init; }
-}

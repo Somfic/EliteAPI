@@ -27,5 +27,12 @@ public class RoutePlannerApi : WebApiCategory
         
         return await api.Utilities.FromJob<NeutronResponse>(job);
     }
+
+    public async Task<Result<IReadOnlyCollection<TradeResponse>>> Trade(TradeRequest request)
+    {
+        var api = Api as SpanshApi;
+        var job = await Execute<TradeRequest, JobResponse>(request);
+        return await api.Utilities.FromJob<IReadOnlyCollection<TradeResponse>>(job);
+    }
     
 }

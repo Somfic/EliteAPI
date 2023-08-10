@@ -35,7 +35,7 @@ jobs:
           reporter: dotnet-trx
   
   release:
-    name: semver
+    name: release
     needs: test
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
@@ -49,13 +49,6 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: "7.0.x"
-          
-      - name: Build
-        run: dotnet build --configuration Release
-        
-      - name: Pack
-        if: ${{env.nuget_key != ''}}
-        run: dotnet pack --configuration Release --output nupkgs --include-symbols --include-source
         
       - name: Setup GitVersion
         run: dotnet tool install --global GitVersion.Tool
@@ -73,6 +66,13 @@ jobs:
 
       - name: Update version
         run: dotnet-gitversion /updateprojectfiles /updateassemblyinfo /output buildserver
+        
+      - name: Build
+        run: dotnet build --configuration Release
+
+      - name: Pack
+        if: ${{env.nuget_key != ''}}
+        run: dotnet pack --configuration Release --output nupkgs --include-symbols --include-source
         
       - name: Push version bump
         if: ${{env.GitVersion_PreReleaseLabel == '' || env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}

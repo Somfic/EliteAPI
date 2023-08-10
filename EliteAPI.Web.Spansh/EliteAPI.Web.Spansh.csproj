@@ -6,8 +6,8 @@
     <LangVersion>default</LangVersion>
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
     <FileVersion>3.1.0.0</FileVersion>
-    <InformationalVersion>3.1.0-alpha.172+Branch.dev.Sha.da651148e1102b6907dd881063233e959bcfce37</InformationalVersion>
-    <Version>3.1.0-alpha0172</Version>
+    <InformationalVersion>3.1.0-alpha.182+Branch.dev.Sha.0fd6d5a6f5a17cbe313c176d121f8bf359e348de</InformationalVersion>
+    <Version>3.1.0-alpha0182</Version>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\EliteAPI.Web\EliteAPI.Web.csproj" />

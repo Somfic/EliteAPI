@@ -17,18 +17,19 @@ namespace EliteAPI.Tests;
 public class JournalManual
 {
     private static IEvents _events;
-    private static string[] _legacyEvents = { "BackpackMaterials", "BuyMicroResources", "ShipTargetted" };
+    private static string[] _legacyEvents = { "BackpackMaterials", "BuyMicroResources", "ShipTargetted", "CarrierNameChanged" };
     private static string[] _legacyExamples =
     {
         "\"timestamp\":\"2020-04-27T08:02:52Z\", \"event\":\"Route\"",
-        "\"timestamp\":\"2020-04-27T08:02:52Z\", \"event\":\"Route\""
+        "\"timestamp\":\"2020-04-27T08:02:52Z\", \"event\":\"Route\"",
+        "\"timestamp\":\"2020-10-07T14:01:08Z\", \"event\":\"BuyMicroResource\"",
     };
     
     [OneTimeSetUp]
     public void Setup()
     {
         var eventParser = new EventParser(Mock.Of<IServiceProvider>());
-        eventParser.Use<LocalisedConverter>();;
+        eventParser.Use<LocalisedConverter>();
         _events = new Events.Events(Mock.Of<ILogger<Events.Events>>(), eventParser);
         _events.Register();
     }
@@ -66,12 +67,22 @@ public class JournalManual
             return;
         }
 
-        _events.Invoke(json, new EventContext());
+        var invokedEvent = _events.Invoke(json, new EventContext());
+        
+        Assert.That(invokedEvent, Is.Not.Null, $"Event is null");
+        
+        // Check if the event is the correct type
+        var eventType = invokedEvent.GetType();
+        var eventName = eventType.Name;
+        if (eventName.EndsWith("Event"))
+            eventName = eventName.Substring(0, eventName.Length - 5);
+        
+        Assert.That(string.Equals(eventName, invokedEvent.Event, StringComparison.CurrentCultureIgnoreCase), $"Event is not of type {eventName} but {invokedEvent.Event}");
     }
 
     [Test(Description = "Properties")]
     [TestCaseSource(nameof(GetProperties))]
-    [Ignore("Tests still in progress")]
+    [Ignore("This test is not finished")]
     public void Properties((string eventName, Property property) propertyInfo)
     {
         var (eventName, expectedProperty) = propertyInfo;
@@ -86,7 +97,7 @@ public class JournalManual
         // Get the property by the JsonProperty attribute
         var property = properties.FirstOrDefault(x => string.Equals(x.GetCustomAttribute<JsonPropertyAttribute>()?.PropertyName, expectedProperty.Name, StringComparison.CurrentCultureIgnoreCase));
 
-        Warn.If(property, Is.Not.Null, $"Type '{eventType.Name}' does not contain expected property '{expectedProperty.Name}'");
+        Assert.That(property, Is.Not.Null, $"Type '{eventType.Name}' does not contain expected property '{expectedProperty.Name}'");
 
         if (property == null)
             return;
@@ -95,13 +106,13 @@ public class JournalManual
         foreach (var expectedChild in expectedProperty.Children)
         {
             var childProperty = property.PropertyType.GetProperties().FirstOrDefault(x => string.Equals(x.GetCustomAttribute<JsonPropertyAttribute>()?.PropertyName, expectedChild.Name, StringComparison.CurrentCultureIgnoreCase));
-            Warn.If(childProperty, Is.Not.Null, $"Type '{property.PropertyType.Name}' does not contain expected child property '{expectedChild.Name}'");
+            Assert.That(childProperty, Is.Not.Null, $"Type '{property.PropertyType.Name}' does not contain expected child property '{expectedChild.Name}'");
             
             // Check the child's children
             foreach (var expectedGrandChild in expectedChild.Children)
             {
                 var childChildProperty = childProperty.PropertyType.GetProperties().FirstOrDefault(x => string.Equals(x.GetCustomAttribute<JsonPropertyAttribute>()?.PropertyName, expectedGrandChild.Name, StringComparison.CurrentCultureIgnoreCase));
-                Warn.If(childChildProperty, Is.Not.Null, $"Type '{childProperty.PropertyType.Name}' does not contain expected child property '{expectedGrandChild.Name}'");
+                Assert.That(childChildProperty, Is.Not.Null, $"Type '{childProperty.PropertyType.Name}' does not contain expected child property '{expectedGrandChild.Name}'");
             }
         }
     }

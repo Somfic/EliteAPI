@@ -36,7 +36,7 @@ public class Events : IEvents
     }
 
     /// <inheritdoc />
-    public IEnumerable<Type> EventTypes => _eventHandlers.Keys;
+    public IReadOnlyCollection<Type> EventTypes => _eventHandlers.Keys;
 
     /// <inheritdoc />
     public IReadOnlyCollection<(IEvent @event, EventContext context)> PreviousEvents => _previousEvents.AsReadOnly();

@@ -2,10 +2,10 @@
   <PropertyGroup>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>3.0.15.0</AssemblyVersion>
-    <FileVersion>3.0.15.0</FileVersion>
-    <InformationalVersion>3.0.15+13.Branch.main.Sha.aa3bd21915f470956d90f87a2d089e6d67be09ae</InformationalVersion>
-    <Version>3.0.15</Version>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <FileVersion>3.1.0.0</FileVersion>
+    <InformationalVersion>3.1.0-alpha.182+Branch.dev.Sha.0fd6d5a6f5a17cbe313c176d121f8bf359e348de</InformationalVersion>
+    <Version>3.1.0-alpha0182</Version>
     <IsPackable>false</IsPackable>
     <LangVersion>10</LangVersion>
     <OutputType>Exe</OutputType>
@@ -15,6 +15,8 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\EliteAPI.Events\EliteAPI.Events.csproj" />
+    <ProjectReference Include="..\..\EliteAPI\EliteAPI.csproj" />
     <ProjectReference Include="..\EliteAPI.Events\EliteAPI.Events.csproj" />
     <ProjectReference Include="..\EliteAPI\EliteAPI.csproj" />
   </ItemGroup>

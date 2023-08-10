@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>default</LangVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <FileVersion>3.1.0.0</FileVersion>
+    <InformationalVersion>3.1.0-alpha.182+Branch.dev.Sha.0fd6d5a6f5a17cbe313c176d121f8bf359e348de</InformationalVersion>
+    <Version>3.1.0-alpha0182</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EliteAPI.Web\EliteAPI.Web.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="IsExternalInit" Version="1.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

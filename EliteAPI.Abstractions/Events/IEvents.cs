@@ -9,7 +9,7 @@ public interface IEvents
     IReadOnlyCollection<(IEvent @event, EventContext context)> Backlog { get; }
     
     /// <summary>All event types that have been registered.</summary>
-    IEnumerable<Type> EventTypes { get; }
+    IReadOnlyCollection<Type> EventTypes { get; }
 
     /// <summary>A collection of previous events since the API was started.</summary>
     IReadOnlyCollection<(IEvent @event, EventContext context)> PreviousEvents { get; }

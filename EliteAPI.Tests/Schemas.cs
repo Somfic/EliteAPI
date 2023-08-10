@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Reflection;
 using EliteAPI.Abstractions.Events;
@@ -11,130 +12,208 @@ using Newtonsoft.Json.Linq;
 namespace EliteAPI.Tests;
 
 [TestFixture]
-[Ignore("Tests still in progress")]
 public class Schemas
 {
     private static IEvents _events;
-    
-    private static string[] _legacyEvents = { "BackpackMaterials", "BuyMicroResources", "ShipTargetted" };
-    private static string[] _legacyExamples =
-    {
-        "\"timestamp\":\"2020-04-27T08:02:52Z\", \"event\":\"Route\"",
-        "\"timestamp\":\"2020-04-27T08:02:52Z\", \"event\":\"Route\""
-    };
-    
+
     [OneTimeSetUp]
     public void Setup()
     {
         var eventParser = new EventParser(Mock.Of<IServiceProvider>());
-        eventParser.Use<LocalisedConverter>();;
+        eventParser.Use<LocalisedConverter>();
+        
         _events = new Events.Events(Mock.Of<ILogger<Events.Events>>(), eventParser);
         _events.Register();
     }
-    
+
     [Test(Description = "Properties")]
-    [TestCaseSource(nameof(GetSchemas))]
-    public void Properties((string name, string schema) schemaInfo)
+    [TestCaseSource(nameof(GetProperties))]
+    [Ignore("Tests are being worked on")]
+    public void Properties((string name, string type) schemaInfo)
     {
-        var (name, schema) = schemaInfo;
-        name += "Event";
+        var eventName = schemaInfo.name.Split('.')[0] + "Event";
+        var name = string.Join(".", schemaInfo.name.Split('.').Skip(1));
+        var type = schemaInfo.type;
         
-        var eventType = _events.EventTypes.FirstOrDefault(x => string.Equals(x.Name, name, StringComparison.CurrentCultureIgnoreCase));
-        
-        Assert.That(eventType, Is.Not.Null, $"Event {name} not found");
-        if (eventType == null)
-            return;
-        
-        var properties = eventType.GetProperties();
-        var expectedProperties = JObject.Parse(schema)["properties"]!.ToObject<Dictionary<string, JToken>>();
+        var eventType = _events.EventTypes.FirstOrDefault(x => x.Name == eventName);
+        Assert.That(eventType, Is.Not.Null, $"Event type {eventName} not found");
 
-        foreach (var expectedProperty in expectedProperties!)
+        if (type == "object")
         {
-            if(expectedProperty.Key.EndsWith("_Localised"))
-                continue;
+            // Skip
+            Assert.Pass();
+        }
+        else if (type == "array")
+        {
+            // Skip
+            Assert.Pass();
+        }
+        else
+        {
+            // Skip nested properties
+            if(name.Any(x => x == '.'))
+                Assert.Pass();
             
-            var property = properties.FirstOrDefault(x =>
-                string.Equals(x.GetCustomAttribute<JsonPropertyAttribute>()?.PropertyName, expectedProperty.Key,
-                    StringComparison.CurrentCultureIgnoreCase));
+            var properties = eventType!
+                .GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                .Where(x => x.GetCustomAttributes<JsonPropertyAttribute>().Any());
 
-            var expectedType = expectedProperty.Value["type"]!.ToObject<string>();
-            
-            Assert.That(property, Is.Not.Null, $"Property {name}.{expectedProperty.Key} was not found (type {expectedType})");
-            if (property == null)
-                continue;
+            var jsonProperty =
+                properties.FirstOrDefault(x => string.Equals(x.GetCustomAttribute<JsonPropertyAttribute>()!.PropertyName, name, StringComparison.InvariantCultureIgnoreCase));
+            Assert.That(jsonProperty, Is.Not.Null, $"Property {name} not found on event {eventName}");
 
-            // Make all IDs strings
-            if(expectedProperty.Key.EndsWith("ID") || expectedProperty.Key.EndsWith("Address"))
-                expectedType = "string";
-            
-            var type = ConvertToJTokenType(property.PropertyType);
+            var jsonPropertyType = jsonProperty!.PropertyType;
+            var jsonPropertyTypeName = ConvertToJTokenType(jsonPropertyType);
 
-            Assert.That(string.Equals(type.ToString(), expectedType, StringComparison.CurrentCultureIgnoreCase), Is.True,
-                $"Property {name}.{expectedProperty.Key} is not the expected type '{expectedType}' (is {type})");
+            Assert.That(jsonPropertyTypeName, Is.EqualTo(type),
+                $"Property {name} on event {eventName} is of type {jsonPropertyTypeName} but should be of type {type}");
         }
     }
-    
+
     [Test(Description = "Events")]
     [TestCaseSource(nameof(GetSchemas))]
     public void Event((string name, string schema) schemaInfo)
     {
         var (name, schema) = schemaInfo;
+
         name += "Event";
-        
+
         Assert.That(_events.EventTypes.Select(x => x.Name.ToLower()), Does.Contain(name.ToLower()));
     }
-    
-    private static IEnumerable<(string name, string schema)> GetSchemas()
+
+
+    static IImmutableList<(string name, string type)> GetProperties()
     {
-        Process.Start("git", "clone https://github.com/jixxed/ed-journal-schemas.git schemas-repo").WaitForExit();
-        
+        var result = new List<(string, string)>();
+
+        foreach (var (name, schema) in GetSchemas())
+        {
+            Console.WriteLine($"Processing {name}");
+
+            var schemaObject = JObject.Parse(schema);
+            var properties = schemaObject["properties"]?.Children<JProperty>();
+
+            if (properties == null)
+                continue;
+
+            result.AddRange(ExtractProperties(properties, name));
+        }
+
+        return result.ToImmutableList();
+    }
+
+    static IEnumerable<(string name, string type)> ExtractProperties(IEnumerable<JProperty> properties,
+        string namePrefix = "")
+    {
+        foreach (var property in properties)
+        {
+            var type = property.Value["type"]?.Value<string>();
+            var name = property.Value["title"]?.Value<string>();
+
+            if (type == null || name == null)
+                continue;
+            
+            if(name.EndsWith("_Localised"))
+                continue;
+            
+            if(name.EndsWith("ID") || name.EndsWith("Address") || name.EndsWith("Market"))
+                type = "string";
+
+            var propertyName = (namePrefix + "." + name).TrimStart('.').TrimEnd('.').Replace("..", ".");
+            yield return (propertyName, type);
+            
+            switch (type)
+            {
+                case "array":
+                {
+                    var items = property.Value.Value<JObject>("items")?.Value<JObject>("properties")
+                        ?.Children<JProperty>();
+
+                    if (items == null)
+                        continue;
+
+                    var arrayProperties = ExtractProperties(items, namePrefix + "." + name);
+
+                    foreach (var arrayProperty in arrayProperties)
+                        yield return arrayProperty;
+                    break;
+                }
+                case "object":
+                {
+                    var items = property.Value["properties"]?.Children<JProperty>();
+
+                    if (items == null)
+                        continue;
+
+                    var objectProperties = ExtractProperties(items, namePrefix + "." + name);
+
+                    foreach (var objectProperty in objectProperties)
+                        yield return objectProperty;
+                    break;
+                }
+            }
+        }
+    }
+
+    static IEnumerable<(string name, string schema)> GetSchemas()
+    {
+        Process.Start("git", "clone https://github.com/Somfic/journal-schemas.git schemas-repo").WaitForExit();
+
         var files = Directory.GetFiles("schemas-repo", "*.json", SearchOption.AllDirectories);
         var schemas = new List<(string, string)>();
-        
+
         foreach (var file in files)
         {
             var name = Path.GetFileNameWithoutExtension(file);
+
+            if (name is "_Event" or "ShipLockerBackpack" or "ShipLockerMaterials")
+                continue;
+
             var schema = File.ReadAllText(file);
-            
+
             schemas.Add((name, schema));
         }
-        
+
         return schemas;
     }
-    
+
     private static string ConvertToJTokenType(Type type)
     {
         if (type == typeof(string) || type == typeof(Localised))
         {
             return "string";
         }
-        else if (type == typeof(int) || type == typeof(long) || type == typeof(short) || type == typeof(byte))
+
+        if (type == typeof(int) || type == typeof(long) || type == typeof(short) || type == typeof(byte))
         {
             return "integer";
         }
-        else if (type == typeof(float) || type == typeof(double) || type == typeof(decimal))
+
+        if (type == typeof(float) || type == typeof(double) || type == typeof(decimal))
         {
             return "number";
         }
-        else if (type == typeof(bool))
+
+        if (type == typeof(bool))
         {
             return "boolean";
         }
-        else if (type == typeof(DateTime))
+
+        if (type == typeof(DateTime))
         {
             return "string";
         }
-        else if (type.GetInterfaces().Any(x => x == typeof(IEnumerable)))
+
+        if (type.GetInterfaces().Any(x => x == typeof(IEnumerable)))
         {
             return "array";
         }
-        else if (type.IsValueType)
+
+        if (type.IsValueType)
         {
             return "object";
         }
-        else
-        {
-            return "unknown";
-        }
+
+        return "unknown";
     }
 }

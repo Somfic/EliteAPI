@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace EliteAPI.Events;
 
-public readonly struct CarrierNameChangedEvent : IEvent
+public readonly struct CarrierNameChangeEvent : IEvent
 {
     [JsonProperty("timestamp")]
     public DateTime Timestamp { get; init; }

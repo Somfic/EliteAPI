@@ -21,8 +21,20 @@ var spansh = new HostBuilder()
     .GetRequiredService<SpanshApi>();
 
 Console.WriteLine("Getting route ... ");
-var response = await spansh.Routes.Neutron(new NeutronRequest("Sol", "Colonia"));
+var response = await spansh.Routes.Trade(new TradeRequest("Shinrarta Dezhra", "Jameson Memorial", 50, 720));
 
 response.On(
-    ok: r => Console.WriteLine(string.Join(" > ", r.SystemJumps.Select(x => x.System))),
+    ok: route =>
+    {
+        foreach (var stop in route)
+        {
+            Console.WriteLine(stop.System.Name + " - " + stop.System.Station);
+            foreach (var commodity in stop.Commodities)
+            {
+                Console.WriteLine($"   - {commodity.Name} {commodity.Amount}x (+{commodity.TotalProfit:N0}cr)");
+            }
+
+            Console.WriteLine();
+        }
+    },
     error: e => Console.WriteLine(e.Message));

@@ -107,13 +107,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.0"
-
-      - name: Install changelog generator
-        run: gem install github_changelog_generator
-
-      - name: Generate changelog
-        run: github_changelog_generator -u ${{github.repository_owner}} -p ${{github.event.repository.name}} --token ${{secrets.GITHUB_TOKEN}} --since-tag ${{needs.semver.outputs.previous}} --future-release ${{needs.semver.outputs.semver}}
-
+          
       - name: Create release
         uses: softprops/action-gh-release@v1
         env:
@@ -121,7 +115,6 @@ jobs:
         with:
           tag_name: ${{needs.semver.outputs.semver}}
           name: v${{needs.semver.outputs.semver}}
-          body_path: CHANGELOG.md
           prerelease: ${{needs.semver.outputs.prerelease}}
   
   publish:

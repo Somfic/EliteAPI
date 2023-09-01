@@ -73,30 +73,7 @@ jobs:
       - name: Pack
         if: ${{env.nuget_key != ''}}
         run: dotnet pack --configuration Release --output nupkgs --include-symbols --include-source
-
-      - name: Setup Ruby v3
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.0"
-
-      - name: Set up new Gemfile
-        run: bundle init
-        
-      - name: Install changelog generator
-        run: gem install github_changelog_generator
-
-      - name: Install changelog generator
-        run: gem 'github_changelog_generator', '~> 1.15.1'
-
-      - name: Install dependencies
-        run: bundle install
-
-      - name: Install changelog generator
-        run: gem install github_changelog_generator
-
-      - name: Generate changelog
-        run: bundle exec github_changelog_generator -u ${{github.repository_owner}} -p ${{github.event.repository.name}} --token ${{secrets.GITHUB_TOKEN}} --since-tag ${{ steps.LAST.outputs.previous}} --future-release ${{ env.GitVersion_LegacySemVer }}
-
+          
       - name: Create release
         uses: softprops/action-gh-release@v1
         env:
@@ -104,7 +81,6 @@ jobs:
         with:
           tag_name: ${{ env.GitVersion_LegacySemVer }}
           name: v${{ env.GitVersion_LegacySemVer }}
-          body_path: CHANGELOG.md
           prerelease: ${{ env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta' }}
 
       - name: Publish project to NuGet

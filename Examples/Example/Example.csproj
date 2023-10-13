@@ -17,8 +17,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\EliteAPI.Events\EliteAPI.Events.csproj" />
     <ProjectReference Include="..\..\EliteAPI\EliteAPI.csproj" />
-    <ProjectReference Include="..\EliteAPI.Events\EliteAPI.Events.csproj" />
-    <ProjectReference Include="..\EliteAPI\EliteAPI.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="appsettings.json">

@@ -17,7 +17,7 @@ namespace EliteAPI.Tests;
 public class JournalManual
 {
     private static IEvents _events;
-    private static string[] _legacyEvents = { "BackpackMaterials", "BuyMicroResources", "ShipTargetted", "CarrierNameChanged" };
+    private static string[] _legacyEvents = { "BackpackMaterials", "ShipTargetted", "CarrierNameChanged" };
     private static string[] _legacyExamples =
     {
         "\"timestamp\":\"2020-04-27T08:02:52Z\", \"event\":\"Route\"",

@@ -4,10 +4,10 @@
     <Nullable>enable</Nullable>
     <LangVersion>default</LangVersion>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyVersion>3.1.0.0</AssemblyVersion>
-    <FileVersion>3.1.0.0</FileVersion>
-    <InformationalVersion>3.1.0+5.Branch.main.Sha.a29c70b027785e9b1b8805176284f05ff06f9e6a</InformationalVersion>
-    <Version>3.1.0</Version>
+    <AssemblyVersion>3.1.1.0</AssemblyVersion>
+    <FileVersion>3.1.1.0</FileVersion>
+    <InformationalVersion>3.1.1+3.Branch.main.Sha.e90fb6df7f7e09c2407f1dde5f32d7cc8c8e9e63</InformationalVersion>
+    <Version>3.1.1</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="IsExternalInit" Version="1.0.3">

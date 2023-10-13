@@ -69,7 +69,7 @@ public class JournalManual
 
         var invokedEvent = _events.Invoke(json, new EventContext());
         
-        Assert.That(invokedEvent, Is.Not.Null, $"Event is null");
+        Assert.That(invokedEvent, Is.Not.Null, $"Event is not registered: {json}");
         
         // Check if the event is the correct type
         var eventType = invokedEvent.GetType();

@@ -141,7 +141,7 @@ public interface IEvents
     /// <summary>Converts the JSON to a registered event type and invokes the registered event handlers.</summary>
     /// <param name="json">The event JSON</param>
     /// <param name="context">The context of the event</param>
-    IEvent Invoke(string json, EventContext context);
+    IEvent? Invoke(string json, EventContext context);
 
     /// <summary>Discovers and registers all the events in the specified assembly.</summary>
     /// <param name="assembly">The assembly the events are defined in</param>

@@ -23,6 +23,19 @@ public class Bindings
     {
         var xml = File.ReadAllText("Bindings.xml");
         var bindings = _parser.Parse(xml);
+        Assert.That(bindings, Is.Not.Null);
+        Assert.That(bindings, Is.Not.Empty);
+        Assert.That(bindings, Has.Count.AtLeast(1));
+    }
+    
+    [Test]
+    public void HcsParsing()
+    {
+        var xml = File.ReadAllText("BindingsHCS.xml");
+        var bindings = _parser.Parse(xml);
+        Assert.That(bindings, Is.Not.Null);
+        Assert.That(bindings, Is.Not.Empty);
+        Assert.That(bindings, Has.Count.AtLeast(1));
     }
     
     [Test]

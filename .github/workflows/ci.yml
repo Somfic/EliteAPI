@@ -34,21 +34,22 @@ jobs:
           path: reports/*.trx
           reporter: dotnet-trx
   
-  semver:
-    name: semver
+  release:
+    name: release
     needs: test
     runs-on: ubuntu-latest
-    outputs:
-      label: ${{steps.VERSION.outputs.label}}
-      semver: ${{steps.VERSION.outputs.semver}}
-      nuget: ${{steps.VERSION.outputs.nuget}}
-      prerelease: ${{steps.VERSION.outputs.prerelease}}
-      applicable: ${{steps.VERSION.outputs.applicable}}
-      previous: ${{steps.LAST.outputs.tag}}
+    if: github.event_name == 'push'
+    env:
+      nuget_key: ${{ secrets.NUGET_KEY }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+        
+      - name: Setup .NET 7
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "7.0.x"
+        
       - name: Setup GitVersion
         run: dotnet tool install --global GitVersion.Tool
 
@@ -65,23 +66,34 @@ jobs:
 
       - name: Update version
         run: dotnet-gitversion /updateprojectfiles /updateassemblyinfo /output buildserver
+        
+      - name: Build
+        run: dotnet build --configuration Release
 
-      - name: Set job output
-        id: VERSION
-        run: |
-          echo '::set-output name=label::${{env.GitVersion_PreReleaseLabel}}'
-          echo '::set-output name=semver::${{env.GitVersion_LegacySemVer}}'
-          echo '::set-output name=nuget::${{env.GitVersion_NuGetPreReleaseTagV2}}'
-          echo '::set-output name=prerelease::${{env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta' }}'
-          echo '::set-output name=applicable::${{github.ref == 'refs/heads/main' || env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}'
+      - name: Pack
+        if: ${{env.nuget_key != ''}}
+        run: dotnet pack --configuration Release --output nupkgs --include-symbols --include-source
+          
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        with:
+          tag_name: ${{ env.GitVersion_LegacySemVer }}
+          name: v${{ env.GitVersion_LegacySemVer }}
+          prerelease: ${{ env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta' }}
 
+      - name: Publish project to NuGet
+        if: ${{env.nuget_key != ''}}
+        run: dotnet nuget push '**/*.nupkg' -k ${{ env.nuget_key }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+        
       - name: Push version bump
         if: ${{env.GitVersion_PreReleaseLabel == '' || env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}
         uses: EndBug/add-and-commit@v9
         with:
           author_name: github-actions[bot]
           author_email: github-actions[bot]@users.noreply.github.com
-          message: "Bumped version to ${{env.GitVersion_LegacySemVer}}"
+          message: "Bumped version to ${{ env.GitVersion_LegacySemVer }}"
   
   approve:
     name: approve
@@ -94,62 +106,3 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ github.event.number }}
-  
-  release:
-    name: release
-    needs: semver
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    env:
-      nuget_key: ${{ secrets.NUGET_KEY }}
-    steps:
-      - name: Setup Ruby v3
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.0"
-
-      - name: Install changelog generator
-        run: gem install github_changelog_generator
-
-      - name: Generate changelog
-        run: github_changelog_generator -u ${{github.repository_owner}} -p ${{github.event.repository.name}} --token ${{secrets.GITHUB_TOKEN}} --since-tag ${{needs.semver.outputs.previous}} --future-release ${{needs.semver.outputs.semver}}
-
-      - name: Create release
-        uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        with:
-          tag_name: ${{needs.semver.outputs.semver}}
-          name: v${{needs.semver.outputs.semver}}
-          body_path: CHANGELOG.md
-          prerelease: ${{needs.semver.outputs.prerelease}}
-  
-  publish:
-    name: publish
-    needs: semver
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && needs.semver.outputs.applicable == 'true'
-    env:
-      nuget_key: ${{ secrets.NUGET_KEY }}
-    steps:
-      - name: Checkout code
-        if: ${{env.nuget_key != ''}}
-        uses: actions/checkout@v3
-
-      - name: Setup .NET 7
-        if: ${{env.nuget_key != ''}}
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: "7.0.x"
-
-      - name: Restore dependencies
-        if: ${{env.nuget_key != ''}}
-        run: dotnet restore
-
-      - name: Pack
-        if: ${{env.nuget_key != ''}}
-        run: dotnet pack --configuration Release --output nupkgs --include-symbols --include-source
-
-      - name: Publish project to NuGet
-        if: ${{env.nuget_key != ''}}
-        run: dotnet nuget push '**/*.nupkg' -k ${{env.nuget_key}} -s https://api.nuget.org/v3/index.json --skip-duplicate

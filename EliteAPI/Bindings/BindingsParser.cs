@@ -27,21 +27,30 @@ public class BindingsParser : IBindingsParser
             var document = new XmlDocument();
             document.LoadXml(xml);
             var root = document.DocumentElement;
+            
+            if(root == null)
+                throw new Exception("Could not find root");
 
             var bindings = new List<Binding>();
 
             for (var i = 0; i < root?.ChildNodes.Count; i++)
             {
-                var node = root.ChildNodes.Item(i);
+                var node = root.ChildNodes.Item(i)!;
 
-                bindings.Add(ParseNode(node));
+                try
+                {
+                    bindings.Add(ParseNode(node));
+                } catch (Exception ex)
+                {
+                    _log?.LogWarning(ex, "Failed to parse binding {NodeName}", node.Name);
+                }
             }
 
             return bindings;
         }
         catch (Exception ex)
         {
-            _log?.LogError(ex, "Failed to parse bindings");
+            _log?.LogWarning(ex, "Failed to parse bindings");
             return Array.Empty<Binding>();
         }
     }
@@ -97,8 +106,8 @@ public class BindingsParser : IBindingsParser
         var modifiers = modifierNodes.Any() ? modifierNodes.Select(modifierNode => new ModifierBinding(modifierNode.Attributes?["Key"].Value,modifierNode.Attributes?["Device"].Value)) : Array.Empty<ModifierBinding>();
 
         return (
-            node.Attributes["Key"].Value,
-            node.Attributes["Device"].Value,
+            node.Attributes?["Key"]?.Value ?? "<unknown>",
+            node.Attributes?["Device"]?.Value ?? "<unknown>",
             modifiers.ToArray()
         );
     }

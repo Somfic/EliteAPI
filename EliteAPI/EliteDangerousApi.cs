@@ -121,7 +121,7 @@ public class EliteDangerousApi : IEliteDangerousApi
 
         try
         {
-            _log?.LogInformation("Starting EliteAPI v{Version}", typeof(EliteDangerousApi).Assembly.GetName().Version);
+            _log?.LogDebug("Starting EliteAPI v{Version}", typeof(EliteDangerousApi).Assembly.GetName().Version);
 
             _journalsDirectory = new DirectoryInfo(Config.JournalsPath);
             _optionsDirectory = new DirectoryInfo(Config.OptionsPath);

@@ -17,7 +17,7 @@ namespace EliteAPI.Tests;
 public class JournalManual
 {
     private static IEvents _events;
-    private static string[] _legacyEvents = { "BackpackMaterials", "BuyMicroResources", "ShipTargetted", "CarrierNameChanged" };
+    private static string[] _legacyEvents = { "BackpackMaterials", "ShipTargetted", "CarrierNameChanged" };
     private static string[] _legacyExamples =
     {
         "\"timestamp\":\"2020-04-27T08:02:52Z\", \"event\":\"Route\"",
@@ -69,7 +69,7 @@ public class JournalManual
 
         var invokedEvent = _events.Invoke(json, new EventContext());
         
-        Assert.That(invokedEvent, Is.Not.Null, $"Event is null");
+        Assert.That(invokedEvent, Is.Not.Null, $"Event is not registered: {json}");
         
         // Check if the event is the correct type
         var eventType = invokedEvent.GetType();

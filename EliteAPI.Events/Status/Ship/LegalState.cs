@@ -8,5 +8,6 @@ public enum LegalState
     Wanted,
     Hostile,
     PassengerWanted,
-    Warrant
+    Warrant,
+    Thargoid
 }

@@ -1,11 +1,14 @@
 ﻿using System.Reflection;
+using System.Text;
 using System.Web;
 using EliteAPI.Web.Attributes;
 using EliteAPI.Web.Exceptions;
 using EliteAPI.Web.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Serialization;
 
 namespace EliteAPI.Web;
 
@@ -46,8 +49,14 @@ public abstract class WebApiCategory
             return await Execute<TRequest, TResponse>();
         
         var requestMessage = BuildRequest(this, request);
+
+        _log.LogDebug($"Sending {requestMessage.Method} request to {requestMessage.RequestUri}");
+        _log.LogTrace(await requestMessage.Content.ReadAsStringAsync());
         
         var response = await Http.SendAsync(requestMessage);
+        
+        _log.LogDebug($"Got response {response.StatusCode} from {requestMessage.RequestUri}");
+        _log.LogTrace(await response.Content.ReadAsStringAsync());
 
         if (!response.IsSuccessStatusCode)
         {
@@ -103,9 +112,21 @@ public abstract class WebApiCategory
         var uri = uriBuilder.Uri;
 
         //todo: add headers
-        //todo: add body
+        
+        // Create the body from the JsonPropertyAttribute properties. Don't include the QueryParameterAttribute properties
+        var body = JObject.FromObject(request, new JsonSerializer
+        {
+            ContractResolver = new DefaultContractResolver
+            {
+                NamingStrategy = new SnakeCaseNamingStrategy()
+            },
+            NullValueHandling = NullValueHandling.Ignore
+        }).ToString(Formatting.None);
 
-        return new HttpRequestMessage(request.Method, uri);
+        var r = new HttpRequestMessage(request.Method, uri);
+        r.Content = new StringContent(body, Encoding.UTF8, "application/json");
+
+        return r;
     }
 
     private string GetPropertyValue(PropertyInfo property, object instance)

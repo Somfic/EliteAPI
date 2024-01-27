@@ -4,6 +4,7 @@ using EliteAPI.Web.Spansh.Search.Requests;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Somfic.Common;
 
 var spansh = new HostBuilder()
     .ConfigureServices(s =>
@@ -34,7 +35,7 @@ var response = await spansh.Search.Bodies(new BodiesRequest
 });
 
 response.On(
-    ok: r =>
+    value: r =>
     {
         Console.WriteLine(string.Join(", ", r.Bodies.Select(x => x.SystemName)));
     },

@@ -206,7 +206,7 @@ public class Events : IEvents
     }
 
     /// <inheritdoc />
-    public IEvent Invoke(string json, EventContext context)
+    public IEvent? Invoke(string json, EventContext context)
     {
         try
         {
@@ -241,7 +241,7 @@ public class Events : IEvents
             InvokeAnyHandlers(eventType, json, context);
 
             if (eventType == null)
-                throw new Exception($"The {eventName} event is not registered"); // todo: better exception type
+                return null;
 
             var parsedEvent = _eventParser.FromJson(eventType, json);
 

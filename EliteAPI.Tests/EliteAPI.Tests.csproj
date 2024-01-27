@@ -5,10 +5,10 @@
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <AssemblyVersion>3.0.15.0</AssemblyVersion>
-    <FileVersion>3.0.15.0</FileVersion>
-    <InformationalVersion>3.0.15+54.Branch.main.Sha.70e812132018e1fd6aed105986a0a4e768ac07a8</InformationalVersion>
-    <Version>3.0.15</Version>
+    <AssemblyVersion>3.1.3.0</AssemblyVersion>
+    <FileVersion>3.1.3.0</FileVersion>
+    <InformationalVersion>3.1.3+3.Branch.main.Sha.3f580569f82b353dc898f1e57a776f18dc2a597e</InformationalVersion>
+    <Version>3.1.3</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="itext7" Version="8.0.1" />
@@ -31,6 +31,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Journal.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="BindingsHCS.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -4,10 +4,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>default</LangVersion>
-    <AssemblyVersion>3.1.6.0</AssemblyVersion>
-    <FileVersion>3.1.6.0</FileVersion>
-    <InformationalVersion>3.1.6+Branch.main.Sha.92969d2e6798a5d529a88d8d5e5e488b384ba764</InformationalVersion>
-    <Version>3.1.6</Version>
+    <AssemblyVersion>3.1.8.0</AssemblyVersion>
+    <FileVersion>3.1.8.0</FileVersion>
+    <InformationalVersion>3.1.8+2.Branch.main.Sha.fbcaaa4dc19197b72c7cbdea7816f9b90a8615d3</InformationalVersion>
+    <Version>3.1.8</Version>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\EliteAPI.Web\EliteAPI.Web.csproj" />

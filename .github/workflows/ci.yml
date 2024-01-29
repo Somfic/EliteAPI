@@ -26,13 +26,13 @@ jobs:
       - name: Test
         run: dotnet test --configuration Release --logger trx --results-directory reports --collect:"XPlat Code Coverage"
 
-      - name: Report
-        uses: dorny/test-reporter@v1
-        if: success() || failure()
-        with:
-          name: report
-          path: reports/*.trx
-          reporter: dotnet-trx
+      # - name: Report
+      #   uses: dorny/test-reporter@v1
+      #   if: success() || failure()
+      #   with:
+      #     name: report
+      #     path: reports/*.trx
+      #     reporter: dotnet-trx
   
   release:
     name: release

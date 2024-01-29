@@ -5,10 +5,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
-    <AssemblyVersion>3.1.5.0</AssemblyVersion>
-    <FileVersion>3.1.5.0</FileVersion>
-    <InformationalVersion>3.1.5+6.Branch.main.Sha.4836a36f1e46047b5c7519edafd7d7a022ce0735</InformationalVersion>
-    <Version>3.1.5</Version>
+    <AssemblyVersion>3.1.6.0</AssemblyVersion>
+    <FileVersion>3.1.6.0</FileVersion>
+    <InformationalVersion>3.1.6+Branch.main.Sha.92969d2e6798a5d529a88d8d5e5e488b384ba764</InformationalVersion>
+    <Version>3.1.6</Version>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\EliteAPI.Web.Spansh\EliteAPI.Web.Spansh.csproj" />

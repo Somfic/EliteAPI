@@ -8,6 +8,7 @@
     <FileVersion>3.1.8.0</FileVersion>
     <InformationalVersion>3.1.8+2.Branch.main.Sha.fbcaaa4dc19197b72c7cbdea7816f9b90a8615d3</InformationalVersion>
     <Version>3.1.8</Version>
+    <Copyright>© Somfic 2018-2024</Copyright>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="IsExternalInit" Version="1.0.3">

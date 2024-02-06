@@ -16,7 +16,7 @@
     <PackageTags>EliteDangerous PlayerJournal Elite Dangerous Journal Somfic</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <Description>Abstractions for EliteAPI</Description>
-    <Copyright>© Somfic 2022</Copyright>
+    <Copyright>© Somfic 2018-2024</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Version>3.1.8</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
@@ -26,6 +26,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Somfic</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>EliteAPI abstractions</Title>
   </PropertyGroup>
   <PropertyGroup>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

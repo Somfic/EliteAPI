@@ -46,7 +46,7 @@ public class JournalManual
         
         chapterInfo.name += "Event";
 
-        Assert.That(_events.EventTypes.Select(x => x.Name.ToLower()), Does.Contain(chapterInfo.name.ToLower()));
+        Assert.That(_events.EventTypes.Select(x => x.Name.ToLower()), Does.Contain(chapterInfo.name.ToLower()), $"Event {chapterInfo.name} not found");
     }
 
     [Test(Description = "Json Examples")]

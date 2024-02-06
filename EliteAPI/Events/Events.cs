@@ -337,6 +337,7 @@ public class Events : IEvents
         try
         {
             Register(Assembly.Load("EliteAPI.Events"));
+            Register(Assembly.Load("EliteAPI.Status"));
         }
         catch (Exception ex)
         {

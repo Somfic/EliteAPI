@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Web", "Examples\Exa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Examples\Example\Example.csproj", "{3081E506-FF91-4C57-A687-F5E125AC1EB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI.Status", "EliteAPI.Status\EliteAPI.Status.csproj", "{4069AA43-FF58-4884-9353-9F08767A5DE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +105,14 @@ Global
 		{3081E506-FF91-4C57-A687-F5E125AC1EB3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3081E506-FF91-4C57-A687-F5E125AC1EB3}.Release|x86.ActiveCfg = Release|Any CPU
 		{3081E506-FF91-4C57-A687-F5E125AC1EB3}.Release|x86.Build.0 = Release|Any CPU
+		{4069AA43-FF58-4884-9353-9F08767A5DE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4069AA43-FF58-4884-9353-9F08767A5DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4069AA43-FF58-4884-9353-9F08767A5DE1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4069AA43-FF58-4884-9353-9F08767A5DE1}.Debug|x86.Build.0 = Debug|Any CPU
+		{4069AA43-FF58-4884-9353-9F08767A5DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4069AA43-FF58-4884-9353-9F08767A5DE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4069AA43-FF58-4884-9353-9F08767A5DE1}.Release|x86.ActiveCfg = Release|Any CPU
+		{4069AA43-FF58-4884-9353-9F08767A5DE1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

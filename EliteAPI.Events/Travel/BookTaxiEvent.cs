@@ -19,4 +19,7 @@ public readonly struct BookTaxiEvent : IEvent
 
     [JsonProperty("DestinationLocation")]
     public string DestinationLocation { get; init; }
+    
+    [JsonProperty("Retreat")]
+    public bool IsRetreat { get; init; }
 }

@@ -19,4 +19,7 @@ public readonly struct BuyWeaponEvent : IEvent
 
     [JsonProperty("SuitModuleID")]
     public string SuitModuleId { get; init; }
+    
+    [JsonProperty("Class")]
+    public int Class { get; init; }
 }

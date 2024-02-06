@@ -19,4 +19,7 @@ public readonly struct CapShipBondEvent : IEvent
 
     [JsonProperty("VictimFaction")]
     public string VictimFaction { get; init; }
+    
+    [JsonProperty("AwardingFaction")]
+    public string AwardingFaction { get; init; }
 }

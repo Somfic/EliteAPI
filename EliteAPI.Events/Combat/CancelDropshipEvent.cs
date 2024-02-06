@@ -10,4 +10,7 @@ public readonly struct CancelDropshipEvent : IEvent
 
     [JsonProperty("event")]
     public string Event { get; init; }
+    
+    [JsonProperty("Refund")]
+    public long Refund { get; init; }
 }

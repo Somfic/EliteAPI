@@ -1,5 +1,6 @@
 ﻿using EliteAPI.Abstractions.Events;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace EliteAPI.Events;
 
@@ -19,4 +20,7 @@ public readonly struct BookDropshipEvent : IEvent
 
     [JsonProperty("DestinationLocation")]
     public string DestinationLocation { get; init; }
+    
+    [JsonProperty("Retreat")]
+    public bool IsRetreat { get; init; }
 }

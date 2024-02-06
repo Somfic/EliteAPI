@@ -28,4 +28,7 @@ public readonly struct CarrierBuyEvent : IEvent
 
     [JsonProperty("Callsign")]
     public string CallSign { get; init; }
+    
+    [JsonProperty("SystemAddress")]
+    public string SystemAddress { get; init; }
 }

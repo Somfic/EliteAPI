@@ -26,6 +26,12 @@ public readonly struct BountyEvent : IEvent
     [JsonProperty("SharedWithOthers")]
     public long SharedWithOthers { get; init; }
 
+    [JsonProperty("Faction")]
+    public string Faction { get; init; }
+    
+    
+    [JsonProperty("Reward")]
+    public long Reward { get; init; }
 
     public readonly struct BountyRewardInfo
     {

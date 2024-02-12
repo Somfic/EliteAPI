@@ -7,6 +7,9 @@
 <p align="center"><i>An Elite: Dangerous API library for .NET</i></p>
 
 <p align="center">
+     <a href="https://www.nuget.org/packages/EliteAPI">
+          <img alt="NuGet downloads" src="https://img.shields.io/nuget/dt/EliteAPI.svg?color=%23f2a529&label=INSTALLS&style=for-the-badge">
+     </a>
      <a href="https://www.discord.gg/jwpFUPZ">
           <img alt="Discord" src="https://img.shields.io/discord/498422961297031168?color=%23f2a529&label=DISCORD&style=for-the-badge">
      </a>

@@ -5,10 +5,10 @@
     <LangVersion>10</LangVersion>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
-    <InformationalVersion>3.2.1+5.Branch.main.Sha.74cae37b06d709ca7951505c70231b482ade7cb1</InformationalVersion>
+    <InformationalVersion>3.2.2+3.Branch.main.Sha.3d08a8d3b47a07c0d9b171c6ae6906d550dcfb20</InformationalVersion>
     <Version>3.0.0-alpha5155</Version>
-    <AssemblyVersion>3.2.1.0</AssemblyVersion>
-    <FileVersion>3.2.1.0</FileVersion>
+    <AssemblyVersion>3.2.2.0</AssemblyVersion>
+    <FileVersion>3.2.2.0</FileVersion>
     <PackageProjectUrl>https://github.com/EliteAPI/EliteAPI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EliteAPI/EliteAPI</RepositoryUrl>
     <PackageIconUrl />
@@ -18,7 +18,7 @@
     <Description>Abstractions for EliteAPI</Description>
     <Copyright>© Somfic 2018-2024</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.2.1</Version>
+    <Version>3.2.2</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackageIcon>icon.png</PackageIcon>
     <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>

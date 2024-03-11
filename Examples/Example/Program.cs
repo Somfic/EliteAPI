@@ -23,7 +23,7 @@ api.Events.On<MarketEvent>(e =>
 });
 
 // Handle gear changes in the OnGearChange method
-api.Events.On<GearStatusEvent>(OnGearChange);
+api.Events.On<GearStatusEvent>(OnGearChange); 
 
 // Start the API
 await api.StartAsync();

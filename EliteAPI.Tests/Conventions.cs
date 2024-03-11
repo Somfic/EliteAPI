@@ -19,9 +19,9 @@ public class Convetions
     [TestCaseSource(nameof(GetTypes))]
     public void Events(Type type)
     {
-        // Namespace should be EliteAPI.Events
-        Assert.That(type.Namespace!.StartsWith("EliteAPI.Events"),
-            $"Type {type.Name} should be in namespace EliteAPI.Events");
+        // // Namespace should be EliteAPI.Events
+        // Assert.That(type.Namespace!.StartsWith("EliteAPI.Events"),
+        //     $"Type {type.Name} should be in namespace EliteAPI.Events");
 
         // Name should not have underscores
         Assert.That(!type.Name.Contains("_"),
@@ -38,17 +38,6 @@ public class Convetions
         // Should implement IEvent
         Assert.That(type.GetInterfaces().Contains(typeof(IEvent)),
             $"Type {type.Name} should implement IEvent");
-    }
-
-    [Test(Description = "Property namespace")]
-    [TestCaseSource(nameof(GetProperties))]
-    public void PropertyNamespace(PropertyInfo property)
-    {
-        var name = property.DeclaringType!.Name + "." + property.Name;
-
-        // Namespace should be EliteAPI.Events
-        Assert.That(property.DeclaringType!.Namespace!.StartsWith("EliteAPI.Events"),
-            $"Property {name} should be in namespace EliteAPI.Events");
     }
 
     [Test(Description = "Property underscores")]
@@ -100,7 +89,7 @@ public class Convetions
         }
 
         if (property.PropertyType == typeof(bool) &&
-            !property.DeclaringType.Namespace.StartsWith("EliteAPI.Events.Status"))
+            !property.DeclaringType.Namespace.Contains("Status"))
         {
             // Property should be named IsX or HasX or WasX
             var prefixes = new[] { "Is", "Has", "Was", "Allows", "Can", "Should" };

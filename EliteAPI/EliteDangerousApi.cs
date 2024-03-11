@@ -233,7 +233,7 @@ public class EliteDangerousApi : IEliteDangerousApi
             if (JsonConvert.SerializeObject(oldValue) == JsonConvert.SerializeObject(newValue))
                 continue;
 
-            var typeName = $"EliteAPI.Events.Status.Ship.Events.{property.Name}StatusEvent";
+            var typeName = $"EliteAPI.Events.Status.Ship.Events.{property.Name.Replace("Is", "")}StatusEvent";
             var statusEventType = typeof(GearStatusEvent).Assembly.GetType(typeName);
             if (statusEventType == null)
             {

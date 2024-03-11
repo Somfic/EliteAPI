@@ -1,7 +1,7 @@
 ﻿using EliteAPI;
 using EliteAPI.Abstractions.Bindings.Models;
 using EliteAPI.Events;
-using EliteAPI.Events.Status.Ship.Events;
+using EliteAPI.Status.Ship.Events;
 
 // Create an instance of the Api
 var api = EliteDangerousApi.Create();

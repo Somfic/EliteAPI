@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EliteAPI.Events.Status.NavRoute;
+namespace EliteAPI.Status.NavRoute;
 
 public readonly struct NavRouteStop
 {

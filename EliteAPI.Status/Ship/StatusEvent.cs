@@ -1,9 +1,9 @@
 ﻿using EliteAPI.Abstractions.Events;
-using EliteAPI.Events.Status.Converters;
+using EliteAPI.Status.Converters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace EliteAPI.Events.Status.Ship;
+namespace EliteAPI.Status.Ship;
 
 public readonly struct StatusEvent : IEvent
 {

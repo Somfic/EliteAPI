@@ -1,7 +1,7 @@
 using EliteAPI.Abstractions.Events;
 using Newtonsoft.Json;
 
-namespace EliteAPI.Events.Status.Modules;
+namespace EliteAPI.Status.Modules;
 
 public readonly struct ModuleInfoEvent : IEvent
 {

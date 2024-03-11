@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EliteAPI.Events.Status.Outfitting;
+namespace EliteAPI.Status.Outfitting;
 
 public readonly struct OutfittingItem
 {

@@ -1,7 +1,7 @@
 ﻿using EliteAPI.Abstractions.Events;
 using Newtonsoft.Json;
 
-namespace EliteAPI.Events.Status.NavRoute;
+namespace EliteAPI.Status.NavRoute;
 
 public readonly struct NavRouteEvent : IEvent
 {

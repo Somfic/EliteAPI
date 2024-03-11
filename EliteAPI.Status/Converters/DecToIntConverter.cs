@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EliteAPI.Events.Status.Converters;
+namespace EliteAPI.Status.Converters;
 
 internal class DecimalToIntegerConverter : JsonConverter
 {

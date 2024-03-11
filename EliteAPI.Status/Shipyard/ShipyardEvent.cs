@@ -1,7 +1,7 @@
 using EliteAPI.Abstractions.Events;
 using Newtonsoft.Json;
 
-namespace EliteAPI.Events.Status.Shipyard;
+namespace EliteAPI.Status.Shipyard;
 
 public readonly struct ShipyardEvent : IEvent
 {

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EliteAPI.Events.Status.Ship;
+namespace EliteAPI.Status.Ship;
 
 public readonly struct ShipDestination
 {

@@ -1,7 +1,7 @@
 ﻿using EliteAPI.Abstractions.Events;
 using Newtonsoft.Json;
 
-namespace EliteAPI.Events.Status.Cargo;
+namespace EliteAPI.Status.Cargo;
 
 public readonly struct CargoItem
 {

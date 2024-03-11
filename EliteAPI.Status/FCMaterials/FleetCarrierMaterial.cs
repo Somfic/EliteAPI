@@ -1,7 +1,7 @@
 ﻿using EliteAPI.Abstractions.Events;
 using Newtonsoft.Json;
 
-namespace EliteAPI.Events.Status.FCMaterials;
+namespace EliteAPI.Status.FCMaterials;
 
 public readonly struct FcMaterial
 {

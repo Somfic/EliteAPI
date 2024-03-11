@@ -1,7 +1,7 @@
 using EliteAPI.Abstractions.Events;
 using Newtonsoft.Json;
 
-namespace EliteAPI.Events.Status.Outfitting;
+namespace EliteAPI.Status.Outfitting;
 
 public readonly struct OutfittingEvent : IEvent
 {

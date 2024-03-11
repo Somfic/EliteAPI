@@ -17,9 +17,9 @@ api.Events.On<DockingRequestedEvent>((e, context) =>
 });
 
 // Subscribe to all events
-api.Events.OnAny(e =>
+api.Events.On<MarketEvent>(e =>
 {
-    var eventName = e.Event;
+    Console.WriteLine(e.Commodities.Count);
 });
 
 // Handle gear changes in the OnGearChange method

@@ -5,12 +5,15 @@ namespace EliteAPI.Events;
 
 public readonly struct ChangeCrewRoleEvent : IEvent
 {
-    [JsonProperty("timestamp")]
-    public DateTime Timestamp { get; init; }
-
-    [JsonProperty("event")]
-    public string Event { get; init; }
-
-    [JsonProperty("Role")]
-    public string Role { get; init; }
+	[JsonProperty("timestamp")]
+	public DateTime Timestamp { get; init; }
+	
+	[JsonProperty("event")]
+	public string Event { get; init; }
+	
+	[JsonProperty("Role")]
+	public string Role { get; init; }
+	
+	[JsonProperty("Telepresence")]
+	public bool IsInTelepresence { get; init; }
 }

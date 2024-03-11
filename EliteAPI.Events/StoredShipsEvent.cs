@@ -38,7 +38,7 @@ public readonly struct StoredShipsEvent : IEvent
         public long Value { get; init; }
 
         [JsonProperty("Hot")]
-        public bool Hot { get; init; }
+        public bool IsHot { get; init; }
 
         [JsonProperty("Name")]
         public string Name { get; init; }

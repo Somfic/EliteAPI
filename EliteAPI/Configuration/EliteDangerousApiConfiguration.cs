@@ -62,7 +62,7 @@ public class EliteDangerousApiConfiguration : IEliteDangerousApiConfiguration
             new[]
             {
                 "Status.json", "Backpack.json", "Cargo.json", "ModulesInfo.json", "NavRoute.json", "Outfitting.json",
-                "ShipLocker.json", "Shipyard.json", "FCMaterials.json"
+                "ShipLocker.json", "Shipyard.json", "FCMaterials.json", "Market.json"
             });
         _log.LogDebug("Status files set to {StatusFiles}", string.Join(", ", StatusFiles));
 

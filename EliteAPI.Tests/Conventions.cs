@@ -107,6 +107,13 @@ public class Convetions
             Assert.That(prefixes.Any(x => property.Name.StartsWith(x)),
                 $"Property {name} should start with {string.Join(" or ", prefixes)}");
         }
+        
+        // Collections should be of type IReadOnlyCollection
+        if(property.PropertyType.IsArray)
+        {
+            Assert.That(property.PropertyType == typeof(IReadOnlyCollection<>).MakeGenericType(property.PropertyType.GetGenericArguments()),
+                $"Property {name} should be of type IReadOnlyCollection");
+        }
     }
 
     [Test(Description = "Property id or address")]
@@ -116,8 +123,8 @@ public class Convetions
         var name = property.DeclaringType!.Name + "." + property.Name;
 
         // Properties ending with ID and Address should be of type string and spelled as 'Id' and 'Address'
-        if (property.Name.EndsWith("ID", StringComparison.OrdinalIgnoreCase) ||
-            property.Name.EndsWith("Address", StringComparison.OrdinalIgnoreCase))
+        if ((property.Name.EndsWith("ID", StringComparison.OrdinalIgnoreCase) ||
+            property.Name.EndsWith("Address", StringComparison.OrdinalIgnoreCase)) && !property.Name.EndsWith("Thargoid", StringComparison.OrdinalIgnoreCase))
         {
             if(property.Name.EndsWith("paid", StringComparison.InvariantCultureIgnoreCase))
                 return;

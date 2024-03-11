@@ -12,7 +12,7 @@ public readonly struct FcMaterialsEvent : IEvent
     public string Event { get; init; }
 
     [JsonProperty("MarketID")]
-    public long MarketId { get; init; }
+    public string MarketId { get; init; }
 
     [JsonProperty("CarrierName")]
     public string CarrierName { get; init; }

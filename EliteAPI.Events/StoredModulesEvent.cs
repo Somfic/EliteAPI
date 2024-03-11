@@ -48,7 +48,7 @@ public readonly struct Item
     public long BuyPrice { get; init; }
 
     [JsonProperty("Hot")]
-    public bool Hot { get; init; }
+    public bool IsHot { get; init; }
 
     [JsonProperty("EngineerModifications")]
     public string EngineerModifications { get; init; }

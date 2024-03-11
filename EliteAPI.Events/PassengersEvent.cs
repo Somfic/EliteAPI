@@ -27,7 +27,7 @@ public readonly struct Manifest
     public bool Vip { get; init; }
 
     [JsonProperty("Wanted")]
-    public bool Wanted { get; init; }
+    public bool IsWanted { get; init; }
 
     [JsonProperty("Count")]
     public long Count { get; init; }

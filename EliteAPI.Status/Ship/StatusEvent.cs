@@ -53,22 +53,22 @@ public readonly struct StatusEvent : IEvent
 
     [JsonProperty("Flags2")]
     public CommanderFlags Flags2 { get; init; }
-    public bool IsOnFoot => GetCommanderFlag(0);
+    public bool OnFoot => GetCommanderFlag(0);
     public bool InTaxi => GetCommanderFlag(1);
     public bool InMultiCrew => GetCommanderFlag(2);
-    public bool IsOnFootInStation => GetCommanderFlag(3);
-    public bool IsOnFootOnPlanet => GetCommanderFlag(4);
+    public bool OnFootInStation => GetCommanderFlag(3);
+    public bool OnFootOnPlanet => GetCommanderFlag(4);
     public bool AimDownSight => GetCommanderFlag(5);
     public bool LowOxygen => GetCommanderFlag(6);
     public bool LowHealth => GetCommanderFlag(7);
-    public bool IsCold => GetCommanderFlag(8);
-    public bool IsHot => GetCommanderFlag(9);
+    public bool Cold => GetCommanderFlag(8);
+    public bool Hot => GetCommanderFlag(9);
     public bool VeryCold => GetCommanderFlag(10);
     public bool VeryHot => GetCommanderFlag(11);
     public bool Gliding => GetCommanderFlag(12);
-    public bool IsOnFootInHangar => GetCommanderFlag(13);
-    public bool IsOnFootInSocialSpace => GetCommanderFlag(14);
-    public bool IsOnFootInExterior => GetCommanderFlag(15);
+    public bool OnFootInHangar => GetCommanderFlag(13);
+    public bool OnFootInSocialSpace => GetCommanderFlag(14);
+    public bool OnFootInExterior => GetCommanderFlag(15);
     public bool BreathableAtmosphere => GetCommanderFlag(16);
 
     [JsonProperty("Pips")]

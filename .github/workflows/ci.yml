@@ -81,7 +81,7 @@ jobs:
         with:
           tag_name: ${{ env.GitVersion_LegacySemVer }}
           name: v${{ env.GitVersion_LegacySemVer }}
-          draft: true
+          draft: false
           prerelease: ${{ env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta' }}
 
       - name: Publish project to NuGet

@@ -286,7 +286,7 @@ public class Events : IEvents
         {
             ex.Data.Add("JSON", json);
             ex.Data.Add("File", context.SourceFile);
-            _log?.LogWarning(ex, "Could not invoke event from JSON");
+            _log?.LogDebug(ex, "Could not invoke event from JSON");
             return null;
         }
     }

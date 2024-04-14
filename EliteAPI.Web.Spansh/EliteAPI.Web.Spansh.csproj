@@ -4,10 +4,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>default</LangVersion>
-    <AssemblyVersion>3.3.3.0</AssemblyVersion>
-    <FileVersion>3.3.3.0</FileVersion>
-    <InformationalVersion>3.3.3+4.Branch.main.Sha.3695ad9034fd50c1993b2522ba999bcc654bb0ff</InformationalVersion>
-    <Version>3.3.3</Version>
+    <AssemblyVersion>3.3.4.0</AssemblyVersion>
+    <FileVersion>3.3.4.0</FileVersion>
+    <InformationalVersion>3.3.4+3.Branch.main.Sha.94874c1609961de103ac3c5e4ec8071060bec3fa</InformationalVersion>
+    <Version>3.3.4</Version>
     <Copyright>© Somfic 2018-2024</Copyright>
   </PropertyGroup>
   <ItemGroup>

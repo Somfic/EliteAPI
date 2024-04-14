@@ -39,4 +39,11 @@
       <ProjectReference Include="..\..\EliteAPI.Events\EliteAPI.Events.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="icon.png">
+        <Pack>true</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
+
 </Project>

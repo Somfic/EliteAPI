@@ -212,7 +212,7 @@ public class Events : IEvents
         {
             if (string.IsNullOrEmpty(json))
                 throw new ArgumentNullException(nameof(json));
-
+            
             var jObject = JObject.Parse(json);
             var eventKey = jObject["event"];
 
@@ -286,8 +286,8 @@ public class Events : IEvents
         {
             ex.Data.Add("JSON", json);
             ex.Data.Add("File", context.SourceFile);
-            _log?.LogWarning(ex, "Could not invoke event from JSON");
-            throw;
+            _log?.LogDebug(ex, "Could not invoke event from JSON");
+            return null;
         }
     }
 

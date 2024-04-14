@@ -377,7 +377,7 @@ public class EliteDangerousApiDiscordRichPresence
 		_client.SetPresence(new RichPresence
 		{
 			Details = "Buying at space station",
-			State = $"{_currentBody} in {_currentSystem}",
+			State = $"{@event.TotalCost:n0} CR of {@event.Type.Local}",
 			Assets = new Assets
 			{
 				LargeImageKey = "trading",
@@ -396,7 +396,7 @@ public class EliteDangerousApiDiscordRichPresence
 		_client.SetPresence(new RichPresence
 		{
 			Details = "Selling at space station",
-			State = $"{_currentBody} in {_currentSystem}",
+			State = $"{@event.TotalSale:n0} CR of {@event.Type.Local}",
 			Assets = new Assets
 			{
 				LargeImageKey = "trading",

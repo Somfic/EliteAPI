@@ -50,6 +50,7 @@ public class EliteDangerousApiDiscordRichPresence
 		_api.Events.On<MarketBuyEvent>(OnMarketBuy);
 		_api.Events.On<MarketSellEvent>(OnMarketSell);
 		_api.Events.On<DestinationStatusEvent>(OnDestinationStatus);
+		_api.Events.On<UnderAttackEvent>(OnUnderAttack);
 		_api.Events.On<ShutdownEvent>(OnShutdown);
 
 		_api.Events.On<LocationEvent>(e =>
@@ -425,6 +426,25 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = "loading",
+				SmallImageKey = "ed",
+				SmallImageText = "EliteAPI"
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
+		});
+	}
+	
+	private void OnUnderAttack(UnderAttackEvent @event, EventContext context)
+	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+		
+		_client.SetPresence(new RichPresence
+		{
+			Details = "In active combat",
+			State = $"near {_currentBody}",
+			Assets = new Assets
+			{
+				LargeImageKey = "combat",
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},

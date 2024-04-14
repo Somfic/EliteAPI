@@ -380,7 +380,7 @@ public class EliteDangerousApiDiscordRichPresence
 			State = $"{_currentBody} in {_currentSystem}",
 			Assets = new Assets
 			{
-				LargeImageKey = "trade",
+				LargeImageKey = "trading",
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -399,7 +399,7 @@ public class EliteDangerousApiDiscordRichPresence
 			State = $"{_currentBody} in {_currentSystem}",
 			Assets = new Assets
 			{
-				LargeImageKey = "trade",
+				LargeImageKey = "trading",
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},

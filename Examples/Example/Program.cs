@@ -1,10 +1,25 @@
 ﻿using EliteAPI;
+using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Bindings.Models;
+using EliteAPI.Discord;
 using EliteAPI.Events;
 using EliteAPI.Status.Ship.Events;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 // Create an instance of the Api
-var api = EliteDangerousApi.Create();
+var services = Host.CreateDefaultBuilder()
+    .ConfigureServices(s =>
+    {
+        s.AddEliteApi();
+        s.AddDiscordRichPresence();
+        s.AddEddnBridge();
+    })
+    .Build()
+    .Services;
+
+var api = services.GetRequiredService<IEliteDangerousApi>();
+var discord = services.GetRequiredService<EliteDangerousApiDiscordRichPresence>();
 
 // Subscribe to the DockingRequested event
 api.Events.On<DockingRequestedEvent>((e, context) =>
@@ -26,6 +41,7 @@ api.Events.On<MarketEvent>(e =>
 api.Events.On<GearStatusEvent>(OnGearChange); 
 
 // Start the API
+await discord.StartAsync();
 await api.StartAsync();
 
 // Get the binding for the ship's lights

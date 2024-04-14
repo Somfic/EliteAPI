@@ -1,8 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using DiscordRPC;
 using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Events;
+using EliteAPI.Abstractions.Status;
 using EliteAPI.Events;
+using EliteAPI.Status.Ship.Events;
 using Microsoft.Extensions.Logging;
 using ILogger = DiscordRPC.Logging.ILogger;
 
@@ -13,6 +16,10 @@ public class EliteDangerousApiDiscordRichPresence
 	private readonly ILogger<EliteDangerousApiDiscordRichPresence> _log;
 	private readonly IEliteDangerousApi _api;
 	private readonly DiscordRpcClient _client;
+	
+	private string _currentSystem = "";
+	private string _currentBody = "";
+	private DateTime _playingSince;
 
 	public EliteDangerousApiDiscordRichPresence(ILogger<EliteDangerousApiDiscordRichPresence> log, IEliteDangerousApi api)
 	{
@@ -26,7 +33,8 @@ public class EliteDangerousApiDiscordRichPresence
 	{
 		_log.LogDebug("Starting Discord Rich Presence...");
 		_client.Initialize();
-		
+
+		_api.Events.On<FileheaderEvent>(OnFileheader);
 		_api.Events.On<DockingGrantedEvent>(OnDockingGranted);
 		_api.Events.On<DockedEvent>(OnDocked);
 		_api.Events.On<UndockedEvent>(OnUndocked);
@@ -38,174 +46,398 @@ public class EliteDangerousApiDiscordRichPresence
 		_api.Events.On<LiftoffEvent>(OnLiftoff);
 		_api.Events.On<SupercruiseEntryEvent>(OnSupercruiseEntry);
 		_api.Events.On<SupercruiseExitEvent>(OnSuperCruiseExit);
+		_api.Events.On<ProspectedAsteroidEvent>(OnProspectedAsteroid);
+		_api.Events.On<MarketBuyEvent>(OnMarketBuy);
+		_api.Events.On<MarketSellEvent>(OnMarketSell);
+		_api.Events.On<DestinationStatusEvent>(OnDestinationStatus);
+		_api.Events.On<ShutdownEvent>(OnShutdown);
+
+		_api.Events.On<LocationEvent>(e =>
+		{
+			_currentSystem = e.StarSystem;
+			_currentBody = e.Body;
+		});
+		
+		_api.Events.On<ApproachBodyEvent>(e =>
+		{
+			_currentSystem = e.StarSystem;
+			_currentBody = e.Body;
+		});
+		
+		_api.Events.On<LeaveBodyEvent>(e =>
+		{
+			_currentSystem = e.StarSystem;
+			_currentBody = e.Body;
+		});
+		
+		_api.Events.On<SupercruiseExitEvent>(e =>
+		{
+			_currentSystem = e.StarSystem;
+			_currentBody = e.Body;
+		});
+		
+		_api.Events.On<FsdJumpEvent>(e => _currentSystem = e.StarSystem);
+		
+		_api.Events.On<DockedEvent>(e => _currentBody = e.StationName);
+		
+		_api.Events.On<FileheaderEvent>(e => _playingSince = e.Timestamp);
+	}
+
+	private void OnFileheader(FileheaderEvent @event, EventContext context)
+	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+		
+		_client.SetPresence(new RichPresence
+		{
+			State = "Just started playing",
+			Assets = new Assets
+			{
+				LargeImageKey = "ed",
+				SmallImageKey = "ed",
+				SmallImageText = "EliteAPI"
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
+		});
 	}
 	
 	private void OnDockingGranted(DockingGrantedEvent @event, EventContext context)
 	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+		
+		var stationImage = @event.StationType.ToLower() switch
+		{
+			"coriolis" => "coriolis",
+			"orbis" => "orbis",
+			"outpost" => "outpost",
+			_ => "coriolis"
+		};
+		
 		_client.SetPresence(new RichPresence
 		{
-			State = "Docking at",
-			Details = @event.StationName,
+			Details = "Docking at space station",
+			State = $"{@event.StationName} in {_currentSystem}",
 			Assets = new Assets
 			{
-				LargeImageKey = "coriolis",
+				LargeImageKey = stationImage,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
-			}
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
 		});
 	}
 
 
 	private void OnDocked(DockedEvent @event, EventContext context)
 	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+
+		var stationImage = @event.StationType.ToLower() switch
+		{
+			"coriolis" => "coriolis",
+			"orbis" => "orbis",
+			"outpost" => "outpost",
+			_ => "coriolis"
+		};
+
 		_client.SetPresence(new RichPresence
 		{
-			State = "Docked at",
-			Details = @event.StationName,
+			Details = "Docked at space station",
+			State = $"{@event.StationName} in {_currentSystem}",
 			Assets = new Assets
 			{
-				LargeImageKey = "coriolis",
+				LargeImageKey = stationImage,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
-			}
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
 		});
 	}
 
 	private void OnUndocked(UndockedEvent @event, EventContext context)
 	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+
+		var stationImage = @event.StationType.ToLower() switch
+		{
+			"coriolis" => "coriolis",
+			"orbis" => "orbis",
+			"outpost" => "outpost",
+			_ => "coriolis"
+		};
+		
 		_client.SetPresence(new RichPresence
 		{
-			State = "Leaving",
-			Details = @event.StationName,
+			Details = "Leaving space station",
+			State = $"{@event.StationName} in {_currentSystem}",
 			Assets = new Assets
 			{
-				LargeImageKey = "coriolis",
+				LargeImageKey = stationImage,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
-			}
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
 		});
 	}
 
 	private void OnStartJump(StartJumpEvent @event, EventContext context)
 	{
-		if (@event.JumpType != "FSDJump")
+		if (context.IsRaisedDuringCatchup)
 			return;
 		
-		_client.SetPresence(new RichPresence
+		var type = @event.JumpType switch 
 		{
-			State = "Jumping to",
-			Details = @event.StarSystem,
-			Assets = new Assets
+			"Hyperspace" => "hyperspace",
+			_ => "supercruise"
+		};
+		
+		var details = type == "hyperspace" ? "Travelling in hyperspace" : "Accelerating to supercruise";
+		var state = type == "hyperspace" ? $"to {@event.StarSystem}" : $"in {_currentSystem}";
+		var image = type == "hyperspace" ? "route" : "loading";
+		
+		if (type == "hyperspace")
+		{
+			_client.SetPresence(new RichPresence
 			{
-				LargeImageKey = "ed",
-				LargeImageText = "EliteAPI",
-			}
-		});
+				Details = details,
+				State = state,
+				Assets = new Assets
+				{
+					LargeImageKey = image,
+					SmallImageKey = "ed",
+					SmallImageText = "EliteAPI"
+				},
+				Timestamps = new Timestamps { Start = _playingSince }
+			});
+		}
+		
+		
 	}
 
 	private void OnFsdJump(FsdJumpEvent @event, EventContext context)
 	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+
 		_client.SetPresence(new RichPresence
 		{
-			State = "Arrived in",
-			Details = @event.StarSystem,
+			Details = "Arrived in star system",
+			State = @event.StarSystem,
 			Assets = new Assets
 			{
 				LargeImageKey = "route",
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
-			}
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
 		});
 	}
 
 	private void OnApproachBody(ApproachBodyEvent @event, EventContext context)
 	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+
 		_client.SetPresence(new RichPresence
 		{
-			State = "Approaching",
-			Details = @event.Body,
+			Details = "Approaching celestial body",
+			State = @event.Body,
 			Assets = new Assets
 			{
 				LargeImageKey = "loading",
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
-			}
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
 		});
 	}
 
 	private void OnLeaveBody(LeaveBodyEvent @event, EventContext context)
 	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+
 		_client.SetPresence(new RichPresence
 		{
-			State = "Leaving",
-			Details = @event.Body,
+			Details = "Leaving celestial body",
+			State = @event.Body,
 			Assets = new Assets
 			{
 				LargeImageKey = "loading",
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
-			}
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
 		});
 	}
 
 	private void OnTouchdown(TouchdownEvent @event, EventContext context)
 	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+
 		_client.SetPresence(new RichPresence
 		{
-			State = "Touched down on",
-			Details = @event.Body,
+			Details = "Landed on celestial body",
+			State = @event.Body,
 			Assets = new Assets
 			{
 				LargeImageKey = "exploration",
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
-			}
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
 		});
 	}
 
 	private void OnLiftoff(LiftoffEvent @event, EventContext context)
 	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+
 		_client.SetPresence(new RichPresence
 		{
-			State = "Lifted off from",
-			Details = @event.Body,
+			Details = "Lifting off from celestial body",
+			State = @event.Body,
 			Assets = new Assets
 			{
 				LargeImageKey = "exploration",
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
-			}
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
 		});
 	}
 
 	private void OnSupercruiseEntry(SupercruiseEntryEvent @event, EventContext context)
 	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+
 		_client.SetPresence(new RichPresence
 		{
-			State = "Travelling in supercruise",
-			Details = $"in {@event.StarSystem}",
+			Details = "Travelling in supercruise",
+			State = $"in {@event.StarSystem}",
 			Assets = new Assets
 			{
 				LargeImageKey = "loading",
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
-			}
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
 		});
 	}
 
 	private void OnSuperCruiseExit(SupercruiseExitEvent @event, EventContext context)
 	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+
 		_client.SetPresence(new RichPresence
 		{
-			State = "Travelling in normal space",
-			Details = $"near {@event.BodyType.ToLower().Replace("planetaryring", "ring")} {@event.Body.Replace("Ring", "")}",
+			Details = "Travelling in space",
+			State = $"near {@event.BodyType.ToLower().Replace("planetaryring", "ring")} {@event.Body.Replace("Ring", "")}",
 			Assets = new Assets
 			{
 				LargeImageKey = "exploration",
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
-			}
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
 		});
+	}
+	
+	private void OnProspectedAsteroid(ProspectedAsteroidEvent @event, EventContext context)
+	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+		
+		_client.SetPresence(new RichPresence
+		{
+			Details = "Mining asteroids",
+			State = $"around {_currentBody.Replace("Ring", "")}",
+			Assets = new Assets
+			{
+				LargeImageKey = "exploration",
+				SmallImageKey = "ed",
+				SmallImageText = "EliteAPI"
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
+		});
+	}
+	
+	private void OnMarketBuy(MarketBuyEvent @event, EventContext context)
+	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+		
+		_client.SetPresence(new RichPresence
+		{
+			Details = "Buying commodities at space station",
+			State = $"{_currentBody} in {_currentSystem}",
+			Assets = new Assets
+			{
+				LargeImageKey = "trade",
+				SmallImageKey = "ed",
+				SmallImageText = "EliteAPI"
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
+		});
+	}
+	
+	private void OnMarketSell(MarketSellEvent @event, EventContext context)
+	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+		
+		_client.SetPresence(new RichPresence
+		{
+			Details = "Selling commodities at space station",
+			State = $"{_currentBody} in {_currentSystem}",
+			Assets = new Assets
+			{
+				LargeImageKey = "trade",
+				SmallImageKey = "ed",
+				SmallImageText = "EliteAPI"
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
+		});
+	}
+	
+	private void OnDestinationStatus(DestinationStatusEvent @event, EventContext context)
+	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+		
+		// Plotting a course to another star system
+		if (@event.Value.BodyId == "0")
+			return;
+		
+		var state = string.IsNullOrEmpty(@event.Value.Name) ? $"in {_currentSystem}" : $"to {@event.Value.Name}";
+		
+		_client.SetPresence(new RichPresence
+		{
+			Details = "Travelling in supercruise",
+			State = state,
+			Assets = new Assets
+			{
+				LargeImageKey = "loading",
+				SmallImageKey = "ed",
+				SmallImageText = "EliteAPI"
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
+		});
+	}
+	
+	private void OnShutdown(ShutdownEvent @event, EventContext context)
+	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+		
+		_client.ClearPresence();
 	}
 	
 	private class ExtensionLogger : ILogger

@@ -37,6 +37,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\EliteAPI.Abstractions\EliteAPI.Abstractions.csproj" />
       <ProjectReference Include="..\..\EliteAPI.Events\EliteAPI.Events.csproj" />
+      <ProjectReference Include="..\..\EliteAPI.Status\EliteAPI.Status.csproj" />
     </ItemGroup>
 
     <ItemGroup>

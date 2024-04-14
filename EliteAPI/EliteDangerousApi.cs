@@ -136,8 +136,7 @@ public class EliteDangerousApi : IEliteDangerousApi
                 _log?.LogError(ex, "Could not find necessary directories. Please check your configuration");
                 throw ex;
             }
-
-
+            
             IsRunning = true;
 
             await DoTick(true);

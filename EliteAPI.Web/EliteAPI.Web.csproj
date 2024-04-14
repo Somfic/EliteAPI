@@ -4,10 +4,10 @@
     <Nullable>enable</Nullable>
     <LangVersion>default</LangVersion>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyVersion>3.2.8.0</AssemblyVersion>
-    <FileVersion>3.2.8.0</FileVersion>
-    <InformationalVersion>3.2.8+4.Branch.main.Sha.59f119d1195b23ba28b25e46c08d2c786c5b9994</InformationalVersion>
-    <Version>3.2.8</Version>
+    <AssemblyVersion>3.2.9.0</AssemblyVersion>
+    <FileVersion>3.2.9.0</FileVersion>
+    <InformationalVersion>3.2.9+3.Branch.main.Sha.528b131ddd0ba211df2e8849ac0334bffb1f2f23</InformationalVersion>
+    <Version>3.2.9</Version>
     <Copyright>© Somfic 2018-2024</Copyright>
   </PropertyGroup>
   <ItemGroup>

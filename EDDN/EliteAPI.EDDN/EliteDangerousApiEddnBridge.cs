@@ -1,4 +1,8 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Linq;
 using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.EDDN.Schemas.commodity_v3_0;
@@ -136,7 +140,7 @@ public class EliteDangerousApiEddnBridge
 			return false;
 
 		// Filter out alpha/beta game versions
-		if(_fileHeader.Gameversion.Contains("Beta", StringComparison.InvariantCultureIgnoreCase) || _fileHeader.Gameversion.Contains("Alpha", StringComparison.InvariantCultureIgnoreCase))
+		if(_fileHeader.Gameversion.ToLower().Contains("beta") || _fileHeader.Gameversion.ToLower().Contains("alpha"))
 			return false;
         
 		return true;

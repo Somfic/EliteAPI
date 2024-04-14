@@ -1,4 +1,5 @@
-﻿using EliteAPI.EDDN;
+﻿using System;
+using EliteAPI.EDDN;
 using EliteAPI.EDDN.Extensions;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 

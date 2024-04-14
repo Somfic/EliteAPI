@@ -26,8 +26,9 @@ foreach (var schemaFile in schemas)
 		DateTimeType = "DateTime",
 		DateType = "DateTime",
 	});
+
+	var content = "using System;\n \n" + generator.GenerateFile().Replace("@$", "@");
 	
-	var content = generator.GenerateFile().Replace("@$", "@");
 	var path = Path.GetFullPath(Path.Join("../../../../EliteAPI.EDDN/Models/", Path.GetFileNameWithoutExtension(schemaFile), "Message.cs"));
 	Directory.CreateDirectory(Path.GetDirectoryName(path)!);
 

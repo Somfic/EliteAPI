@@ -476,7 +476,7 @@ public class EliteDangerousApiDiscordRichPresence
 
 		public void Info(string message, params object[] args)
 		{
-			_log.LogInformation(message, args);
+			_log.LogDebug(message, args);
 		}
 
 		public void Warning(string message, params object[] args)

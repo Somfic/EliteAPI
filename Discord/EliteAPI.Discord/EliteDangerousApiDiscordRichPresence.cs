@@ -376,7 +376,7 @@ public class EliteDangerousApiDiscordRichPresence
 		
 		_client.SetPresence(new RichPresence
 		{
-			Details = "Buying commodities at space station",
+			Details = "Buying at space station",
 			State = $"{_currentBody} in {_currentSystem}",
 			Assets = new Assets
 			{
@@ -395,7 +395,7 @@ public class EliteDangerousApiDiscordRichPresence
 		
 		_client.SetPresence(new RichPresence
 		{
-			Details = "Selling commodities at space station",
+			Details = "Selling at space station",
 			State = $"{_currentBody} in {_currentSystem}",
 			Assets = new Assets
 			{

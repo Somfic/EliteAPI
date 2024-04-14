@@ -2,10 +2,10 @@
   <PropertyGroup>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>3.2.7.0</AssemblyVersion>
-    <FileVersion>3.2.7.0</FileVersion>
-    <InformationalVersion>3.2.7+3.Branch.main.Sha.0fa1ed3460dac72a033b0e89402fe90633fc27c9</InformationalVersion>
-    <Version>3.2.7</Version>
+    <AssemblyVersion>3.2.8.0</AssemblyVersion>
+    <FileVersion>3.2.8.0</FileVersion>
+    <InformationalVersion>3.2.8+4.Branch.main.Sha.59f119d1195b23ba28b25e46c08d2c786c5b9994</InformationalVersion>
+    <Version>3.2.8</Version>
     <IsPackable>false</IsPackable>
     <LangVersion>10</LangVersion>
     <OutputType>Exe</OutputType>

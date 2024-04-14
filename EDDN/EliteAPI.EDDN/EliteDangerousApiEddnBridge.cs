@@ -115,12 +115,13 @@ public class EliteDangerousApiEddnBridge
 			_ => response.ReasonPhrase
 		};
 		
+		var responseContent = await response.Content.ReadAsStringAsync();
+
 		if (!response.IsSuccessStatusCode)
-			_log.LogWarning("Failed to send data to EDDN. Status code: {StatusCode} ({Message})", response.StatusCode.ToString(), message);
+			_log.LogWarning("Failed to send data to EDDN. Status code: {StatusCode} ({Message}) ({Response})",
+				response.StatusCode.ToString(), message, responseContent);
 		else
-			_log.LogInformation("Data sent to EDDN successfully!");
-		
-		_log.LogInformation(await response.Content.ReadAsStringAsync());
+			_log.LogDebug("Data sent to EDDN successfully! {Response}", responseContent);
 	}
 
 	private bool IsValidEvent(IEvent e, EventContext c)

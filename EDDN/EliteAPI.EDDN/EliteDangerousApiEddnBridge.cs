@@ -15,32 +15,37 @@ namespace EliteAPI.EDDN;
 public class EliteDangerousApiEddnBridge
 {
 	private readonly ILogger<EliteDangerousApiEddnBridge> _log;
+	private readonly IEliteDangerousApi _api;
 	private readonly HttpClient _http;
 	
 	private CommanderEvent _commander;
 	private FileheaderEvent _fileHeader;
 	private LoadGameEvent _loadGame;
 
-	private string productName;
-	private string productVersion;
+	private string _productName;
+	private string _productVersion;
 
 	public EliteDangerousApiEddnBridge(ILogger<EliteDangerousApiEddnBridge> log, IEliteDangerousApi api, IHttpClientFactory http)
 	{
 		_log = log;
+		_api = api;
 
 		_http = http.CreateClient("EDDN");
-		
-		api.Events.On<CommanderEvent>(e => _commander = e);
-		api.Events.On<FileheaderEvent>(e => _fileHeader = e);
-		api.Events.On<LoadGameEvent>(e => _loadGame = e);
-		api.Events.On<MarketEvent>(OnMarketEvent);
 	}
 
 	
 	public Task StartAsync(string productName, string productVersion)
 	{
-		this.productName = productName;
-		this.productVersion = productVersion;
+		_log.LogDebug("Starting EDDN bridge...");
+		
+		_productName = productName;
+		_productVersion = productVersion;
+		
+		_api.Events.On<CommanderEvent>(e => _commander = e);
+		_api.Events.On<FileheaderEvent>(e => _fileHeader = e);
+		_api.Events.On<LoadGameEvent>(e => _loadGame = e);
+		_api.Events.On<MarketEvent>(OnMarketEvent);
+		
 		return Task.CompletedTask;
 	}
 	
@@ -56,8 +61,8 @@ public class EliteDangerousApiEddnBridge
 		{
 			Gamebuild = _fileHeader.Build,
 			Gameversion = _fileHeader.Gameversion,
-			SoftwareName = productName,
-			SoftwareVersion = productVersion,
+			SoftwareName = _productName,
+			SoftwareVersion = _productVersion,
 			UploaderID = _commander.Name,
 			GatewayTimestamp = DateTime.Now
 		};
@@ -126,10 +131,10 @@ public class EliteDangerousApiEddnBridge
 
 	private bool IsValidEvent(IEvent e, EventContext c)
 	{
-		if (string.IsNullOrWhiteSpace(productName))
+		if (string.IsNullOrWhiteSpace(_productName))
 			return false;
 		
-		if (string.IsNullOrWhiteSpace(productVersion))
+		if (string.IsNullOrWhiteSpace(_productVersion))
 			return false;
 		
 		// Filter out events that are raised during catchup

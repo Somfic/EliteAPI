@@ -15,7 +15,7 @@ public readonly struct ProspectedAsteroidEvent : IEvent
     public IReadOnlyCollection<Material> Materials { get; init; }
 
     [JsonProperty("MotherlodeMaterial")]
-    public string Motherlode { get; init; }
+    public Localised Motherlode { get; init; }
 
     [JsonProperty("Content")]
     public Localised Content { get; init; }

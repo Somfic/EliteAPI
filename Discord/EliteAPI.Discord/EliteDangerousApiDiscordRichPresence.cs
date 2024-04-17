@@ -15,7 +15,7 @@ public class EliteDangerousApiDiscordRichPresence
 {
 	private readonly ILogger<EliteDangerousApiDiscordRichPresence> _log;
 	private readonly IEliteDangerousApi _api;
-	private readonly DiscordRpcClient _client;
+	private DiscordRpcClient _client;
 	
 	private string _currentSystem = "";
 	private string _currentBody = "";
@@ -25,13 +25,15 @@ public class EliteDangerousApiDiscordRichPresence
 	{
 		_log = log;
 		_api = api;
-		_client = new DiscordRpcClient("497862888128512041");
-		_client.Logger = new ExtensionLogger(_log);
 	}
 
 	public async Task StartAsync()
 	{
 		_log.LogDebug("Starting Discord Rich Presence...");
+		
+		_client = new DiscordRpcClient("497862888128512041");
+		_client.Logger = new ExtensionLogger(_log);
+		
 		_client.Initialize();
 
 		_api.Events.On<FileheaderEvent>(OnFileheader);
@@ -481,12 +483,12 @@ public class EliteDangerousApiDiscordRichPresence
 
 		public void Warning(string message, params object[] args)
 		{
-			_log.LogWarning(message, args);
+			_log.LogDebug(message, args);
 		}
 
 		public void Error(string message, params object[] args)
 		{
-			_log.LogError(message, args);
+			_log.LogDebug(message, args);
 		}
 
 		public DiscordRPC.Logging.LogLevel Level { get; set; }

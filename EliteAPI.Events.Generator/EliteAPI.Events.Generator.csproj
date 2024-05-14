@@ -4,10 +4,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>3.3.5.0</AssemblyVersion>
-    <FileVersion>3.3.5.0</FileVersion>
-    <InformationalVersion>3.3.5+2.Branch.main.Sha.2661059128b50704bcea41d37d40bb9ff53cd6d2</InformationalVersion>
-    <Version>3.3.5</Version>
+    <AssemblyVersion>3.3.6.0</AssemblyVersion>
+    <FileVersion>3.3.6.0</FileVersion>
+    <InformationalVersion>3.3.6+3.Branch.main.Sha.2cdd9f2ec34daa7fef39fe24cb6114db535b5355</InformationalVersion>
+    <Version>3.3.6</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />

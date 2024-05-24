@@ -23,8 +23,6 @@
 <p>When playing Elite: Dangerous, many in-game events are outputted to the Journal log files. EliteAPI makes use of these files to provide live information about in-game events in a .NET environment. 
 </div>
 
-
-
 ## Installation
 
 EliteAPI is distributed through the NuGet package manager; the recommended way to install the library. Alternatively,
@@ -54,7 +52,7 @@ The compiled `EliteAPI.dll` file can be found in in the `bin\Release` folder.
 
 ## Creating an API instance
 
-EliteAPI is designed to be used as a *Service* with dependency injection. Acquiring an instance of the API can be done
+EliteAPI is designed to be used as a _Service_ with dependency injection. Acquiring an instance of the API can be done
 in a few ways.
 
 ### Host
@@ -109,39 +107,42 @@ EliteAPI constantly scans the Journal log files for new in-game events. Whenever
 in the API.
 
 ### Subscribing to in-game events
+
 Subscribing to an event is done through the `On<T>()`, `OnJson<T>()`, `OnAny()`, and `OnAnyJson()` methods in
 the `IEliteDangerousApi.Events` property.
 
-| Method        | Description                                           | Parameter                  |
-|---------------|-------------------------------------------------------|----------------------------|
-| `On<T>()`     | Subscribes to an event of type `T where T : IEvent`   | The event of type `T`      |
-| `OnAny()`     | Subscribes to all events                              | The event of type `IEvent` |
-| `OnJson<T>()` | Subscribes to an event of type `T where T : IEvent`   | The `JSON` of the event    |
-| `OnAnyJson()` | Subscribes to all events                              | The `JSON` of the event    |
+| Method        | Description                                         | Parameter                  |
+| ------------- | --------------------------------------------------- | -------------------------- |
+| `On<T>()`     | Subscribes to an event of type `T where T : IEvent` | The event of type `T`      |
+| `OnAny()`     | Subscribes to all events                            | The event of type `IEvent` |
+| `OnJson<T>()` | Subscribes to an event of type `T where T : IEvent` | The `JSON` of the event    |
+| `OnAnyJson()` | Subscribes to all events                            | The `JSON` of the event    |
 
-
-The `EventContext` object contains information about the event such as whether the event was raised during session catchup and the source of the event. 
+The `EventContext` object contains information about the event such as whether the event was raised during session catchup and the source of the event.
 The `EventContext` parameter is **optional** and does not need to be implemented.
 
 The delegates passed to the `On<T>()` and `OnJson<T>()` methods are invoked whenever an event of type `T` is detected in-game.
 The delegates are invoked with the event and the optional `EventContext` object.
 
 ```cs
-api.Events.On<DockingRequestedEvent>((e, context) => 
+api.Events.On<DockingRequestedEvent>((e, context) =>
     Console.WriteLine($"Requested docking at {e.StationName}"));
 ```
 
-Delegates passed to the `OnAny()` and `OnAnyJson()` methods are invoked whenever *any* event is detected in-game. 
+Delegates passed to the `OnAny()` and `OnAnyJson()` methods are invoked whenever _any_ event is detected in-game.
 These delegates are also invoked with the event and the optional `EventContext` object.
+
 ```cs
-api.Events.OnAny(e => 
+api.Events.OnAny(e =>
     Console.WriteLine($"Received event {e.Event}"));
 ```
 
 The delegates can also be implemented through methods, if you prefer.
+
 ```cs
 api.Events.On<GearStatusEvent>(OnGearChange);
 ```
+
 ```cs
 void OnGearChange(GearStatusEvent gear, EventContext context)
 {
@@ -153,13 +154,19 @@ void OnGearChange(GearStatusEvent gear, EventContext context)
 ```
 
 These delegates also allow for asynchronous implementations.
+
 ```cs
 api.Events.On<FssSignalDiscoveredEvent>(async e =>
     await SomeAsyncMethod(e));
 ```
 
 ### Waiting for in-game events
+
 Waiting for an event is done through the `WaitFor<T>()` method in the `IEliteDangerousApi.Events` property.
+
+## Keybindings
+
+EliteAPI exposes the in-game keybindings.
 
 ## License
 

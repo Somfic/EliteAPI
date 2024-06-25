@@ -5,6 +5,7 @@ using EliteAPI.Abstractions;
 using EliteAPI.Abstractions.Events;
 using EliteAPI.Abstractions.Status;
 using EliteAPI.Events;
+using EliteAPI.Status.Ship;
 using EliteAPI.Status.Ship.Events;
 using Microsoft.Extensions.Logging;
 using ILogger = DiscordRPC.Logging.ILogger;
@@ -36,7 +37,7 @@ public class EliteDangerousApiDiscordRichPresence
 		
 		_client.Initialize();
 
-		_api.Events.On<FileheaderEvent>(OnFileheader);
+		_api.Events.On<MusicEvent>(OnMusic);
 		_api.Events.On<DockingGrantedEvent>(OnDockingGranted);
 		_api.Events.On<DockedEvent>(OnDocked);
 		_api.Events.On<UndockedEvent>(OnUndocked);
@@ -49,6 +50,8 @@ public class EliteDangerousApiDiscordRichPresence
 		_api.Events.On<SupercruiseEntryEvent>(OnSupercruiseEntry);
 		_api.Events.On<SupercruiseExitEvent>(OnSuperCruiseExit);
 		_api.Events.On<ProspectedAsteroidEvent>(OnProspectedAsteroid);
+		_api.Events.On<AsteroidCrackedEvent>(OnAsteroidCracked);
+		_api.Events.On<MiningRefinedEvent>(OnMiningRefined);
 		_api.Events.On<MarketBuyEvent>(OnMarketBuy);
 		_api.Events.On<MarketSellEvent>(OnMarketSell);
 		_api.Events.On<DestinationStatusEvent>(OnDestinationStatus);
@@ -85,20 +88,28 @@ public class EliteDangerousApiDiscordRichPresence
 		
 		_api.Events.On<FileheaderEvent>(e => _playingSince = e.Timestamp);
 	}
-
-	private void OnFileheader(FileheaderEvent @event, EventContext context)
+	
+	private void OnMusic(MusicEvent @event, EventContext context)
 	{
 		if (context.IsRaisedDuringCatchup)
 			return;
 		
+		var state = @event.MusicTrack switch
+		{
+			"MainMenu" => "In main menu",
+			_ => "X"
+		};
+
+		if (state == "X")
+			return;
+		
 		_client.SetPresence(new RichPresence
 		{
-			State = "Just started playing",
+			Details = state,
 			Assets = new Assets
 			{
 				LargeImageKey = "ed",
-				SmallImageKey = "ed",
-				SmallImageText = "EliteAPI"
+				LargeImageText = "EliteAPI"
 			},
 			Timestamps = new Timestamps { Start = _playingSince }
 		});
@@ -124,6 +135,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = stationImage,
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -152,6 +164,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = stationImage,
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -179,6 +192,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = stationImage,
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -210,6 +224,7 @@ public class EliteDangerousApiDiscordRichPresence
 				Assets = new Assets
 				{
 					LargeImageKey = image,
+					LargeImageText = _currentSystem,
 					SmallImageKey = "ed",
 					SmallImageText = "EliteAPI"
 				},
@@ -232,6 +247,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = "route",
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -251,6 +267,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = "loading",
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -270,6 +287,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = "loading",
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -289,6 +307,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = "exploration",
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -308,6 +327,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = "exploration",
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -327,6 +347,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = "loading",
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -341,11 +362,12 @@ public class EliteDangerousApiDiscordRichPresence
 
 		_client.SetPresence(new RichPresence
 		{
-			Details = "Travelling in space",
+			Details = "Travelling in deep space",
 			State = $"near {@event.BodyType.ToLower().Replace("planetaryring", "ring")} {@event.Body.Replace("Ring", "")}",
 			Assets = new Assets
 			{
 				LargeImageKey = "exploration",
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -360,11 +382,52 @@ public class EliteDangerousApiDiscordRichPresence
 		
 		_client.SetPresence(new RichPresence
 		{
-			Details = "Mining asteroids",
+			Details = "Prospecting asteroids",
 			State = $"around {_currentBody.Replace("Ring", "")}",
 			Assets = new Assets
 			{
-				LargeImageKey = "exploration",
+				LargeImageKey = "mining",
+				LargeImageText = _currentSystem,
+				SmallImageKey = "ed",
+				SmallImageText = "EliteAPI"
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
+		});
+	}
+	
+	private void OnAsteroidCracked(AsteroidCrackedEvent @event, EventContext context)
+	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+		
+		_client.SetPresence(new RichPresence
+		{
+			Details = "Cracking open an asteroid",
+			State = $"Caround {_currentBody.Replace("Ring", "")}",
+			Assets = new Assets
+			{
+				LargeImageKey = "mining",
+				LargeImageText = _currentSystem,
+				SmallImageKey = "ed",
+				SmallImageText = "EliteAPI"
+			},
+			Timestamps = new Timestamps { Start = _playingSince }
+		});
+	}
+	
+	private void OnMiningRefined(MiningRefinedEvent @event, EventContext context)
+	{
+		if (context.IsRaisedDuringCatchup)
+			return;
+		
+		_client.SetPresence(new RichPresence
+		{
+			Details = $"Mining {@event.Type.Local}",
+			State = $"in {_currentBody.Replace("Ring", "")}",
+			Assets = new Assets
+			{
+				LargeImageKey = "mining",
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -384,6 +447,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = "trading",
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -403,6 +467,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = "trading",
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -428,6 +493,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = "loading",
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},
@@ -447,6 +513,7 @@ public class EliteDangerousApiDiscordRichPresence
 			Assets = new Assets
 			{
 				LargeImageKey = "combat",
+				LargeImageText = _currentSystem,
 				SmallImageKey = "ed",
 				SmallImageText = "EliteAPI"
 			},

@@ -14,17 +14,18 @@
   "license": "MIT",
   "dependencies": {
     "@tauri-apps/api": "^2",
-    "@tauri-apps/plugin-shell": "^2"
+    "@tauri-apps/plugin-shell": "^2",
+    "eliteapi": "file:"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.1",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "@tauri-apps/cli": "^2",
     "svelte": "^4.2.7",
     "svelte-check": "^3.6.0",
-		"tslib": "^2.4.1",
+    "tslib": "^2.4.1",
     "typescript": "^5.0.0",
-    "vite": "^5.0.3",
-    "@tauri-apps/cli": "^2"
+    "vite": "^5.0.3"
   }
 }

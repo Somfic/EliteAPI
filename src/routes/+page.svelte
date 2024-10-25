@@ -1,13 +1,11 @@
 <script lang="ts">
-  import { invoke } from "@tauri-apps/api/core";
-  import { createSvelteQueryHooks } from "@rspc/svelte-query/package.json";
+  import { commands } from "../lib/bindings";
 
   let name = "";
   let greetMsg = "";
 
   async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    greetMsg = await invoke("greet", { name });
+    greetMsg = await commands.helloWorld("Lucas");
   }
 </script>
 

@@ -1,31 +1,33 @@
-use rspc::Router;
-
-fn router() -> Router<()> {
-    <Router>::new()
-        .query("version", |t| t(|ctx, input: ()| env!("CARGO_PKG_VERSION")))
-        .build()
-}
+use serde::{Deserialize, Serialize};
+use specta_typescript::Typescript;
+use tauri_specta::{collect_commands, Builder};
 
 #[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
+#[specta::specta]
+fn hello_world(my_name: String) -> String {
+    format!("Hello, {my_name}! You've been greeted from Rust through specta!")
 }
 
 pub async fn run() {
-    let router = router();
+    let builder = Builder::<tauri::Wry>::new()
+        // Then register them (separated by a comma)
+        .commands(collect_commands![hello_world,]);
+
+    #[cfg(debug_assertions)] // <- Only export on non-release builds
+    builder
+        .export(Typescript::default(), "../src/lib/bindings.ts")
+        .expect("Failed to export typescript bindings");
 
     tauri::Builder::default()
-        .plugin(tauri_plugin_shell::init())
-        .invoke_handler(tauri::generate_handler![greet])
+        // and finally tell Tauri how to invoke them
+        .invoke_handler(builder.invoke_handler())
+        .setup(move |app| {
+            // This is also required if you want to use events
+            builder.mount_events(app);
+
+            Ok(())
+        })
+        // on an actual app, remove the string argument
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
-}
-
-#[cfg(test)]
-mod tests {
-    // Ensure the router doesn't have any issues and exports Typescript types
-    #[test]
-    fn test_rspc_router() {
-        super::router();
-    }
 }

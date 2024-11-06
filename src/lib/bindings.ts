@@ -5,9 +5,7 @@
 
 
 export const commands = {
-async helloWorld(myName: string) : Promise<string> {
-    return await TAURI_INVOKE("hello_world", { myName });
-}
+
 }
 
 /** user-defined events **/

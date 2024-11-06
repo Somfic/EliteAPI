@@ -1,33 +1,49 @@
-use serde::{Deserialize, Serialize};
+use std::sync::Mutex;
+
 use specta_typescript::Typescript;
+use tauri::{Listener, Manager};
 use tauri_specta::{collect_commands, Builder};
 
-#[tauri::command]
-#[specta::specta]
-fn hello_world(my_name: String) -> String {
-    format!("Hello, {my_name}! You've been greeted from Rust through specta!")
+mod greeting;
+mod journal;
+
+type AppState = Mutex<AppData>;
+
+struct AppData {
+    welcome_message: &'static str,
+}
+
+impl Default for AppData {
+    fn default() -> Self {
+        Self {
+            welcome_message: "Hello, World!",
+        }
+    }
 }
 
 pub async fn run() {
-    let builder = Builder::<tauri::Wry>::new()
-        // Then register them (separated by a comma)
-        .commands(collect_commands![hello_world,]);
+    let builder = Builder::<tauri::Wry>::new().commands(collect_commands![
+        // greeting::hello_world,
+        // greeting::run_infinite_loop,
+        // greeting::find_directory
+    ]);
 
-    #[cfg(debug_assertions)] // <- Only export on non-release builds
+    #[cfg(debug_assertions)]
     builder
         .export(Typescript::default(), "../src/lib/bindings.ts")
         .expect("Failed to export typescript bindings");
 
+    let state = Mutex::new(AppData::default());
+
+    // Start background thread
+
     tauri::Builder::default()
-        // and finally tell Tauri how to invoke them
         .invoke_handler(builder.invoke_handler())
         .setup(move |app| {
-            // This is also required if you want to use events
+            app.manage(state);
             builder.mount_events(app);
-
             Ok(())
         })
-        // on an actual app, remove the string argument
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

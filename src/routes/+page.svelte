@@ -1,12 +1,21 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { commands } from "../lib/bindings";
 
   let name = "";
   let greetMsg = "";
 
   async function greet() {
-    greetMsg = await commands.helloWorld("Lucas");
+    greetMsg = await commands.helloWorld(name);
   }
+
+  onMount(async () => {
+    let directory = await commands.findDirectory();
+
+    if (directory.status == "error") {
+      greetMsg = directory.error;
+    }
+  });
 </script>
 
 <main class="container">

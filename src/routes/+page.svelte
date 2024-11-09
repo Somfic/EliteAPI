@@ -10,14 +10,6 @@
   });
 
   let hidden = false;
-
-  onMount(async () => {
-    let directory = await commands.findDirectory();
-
-    if (directory.status == "error") {
-      greetMsg = directory.error;
-    }
-  });
 </script>
 
 <main>

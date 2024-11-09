@@ -49,8 +49,8 @@
     position: absolute;
     width: $size;
     height: $size;
-    left: -$size / 2;
-    top: -$size / 2;
+    left: calc($size / -2);
+    top: calc($size / -2);
     transform-style: preserve-3d;
     animation: move $speed infinite linear;
     animation-fill-mode: forwards;
@@ -58,7 +58,7 @@
 
   .wrap:nth-child(2) {
     animation: move $speed infinite linear;
-    animation-delay: $speed / 2;
+    animation-delay: calc($speed / 2);
   }
 
   .wall {
@@ -71,35 +71,35 @@
   }
 
   .wrap:nth-child(2) .wall {
-    animation-delay: $speed / 2;
+    animation-delay: calc($speed / 2);
   }
 
   .wall-right {
-    transform: rotateY(90deg) translateZ($size / 2);
+    transform: rotateY(90deg) translateZ(calc($size / 2));
   }
 
   .wall-left {
-    transform: rotateY(-90deg) translateZ($size / 2);
+    transform: rotateY(-90deg) translateZ(calc($size / 2));
   }
 
   .wall-top {
-    transform: rotateX(90deg) translateZ($size / 2);
+    transform: rotateX(90deg) translateZ(calc($size / 2));
   }
 
   .wall-bottom {
-    transform: rotateX(-90deg) translateZ($size / 2);
+    transform: rotateX(-90deg) translateZ(calc($size / 2));
   }
 
   .wall-back {
-    transform: rotateX(180deg) translateZ($size / 2);
+    transform: rotateX(180deg) translateZ(calc($size / 2));
   }
 
   @keyframes move {
     0% {
-      transform: translateZ(-$size / 2) rotate(0deg);
+      transform: translateZ(calc($size / -2)) rotate(0deg);
     }
     100% {
-      transform: translateZ($size / 2) rotate(0deg);
+      transform: translateZ(calc($size / 2)) rotate(0deg);
     }
   }
 

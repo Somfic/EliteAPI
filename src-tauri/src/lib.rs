@@ -10,20 +10,20 @@ mod journal;
 type AppState = Mutex<AppData>;
 
 struct AppData {
-    welcome_message: &'static str,
+    has_initialized: bool,
 }
 
 impl Default for AppData {
     fn default() -> Self {
         Self {
-            welcome_message: "Hello, World!",
+            has_initialized: false,
         }
     }
 }
 
 pub async fn run() {
     let builder = Builder::<tauri::Wry>::new().commands(collect_commands![
-        // greeting::hello_world,
+        greeting::try_initialize,
         // greeting::run_infinite_loop,
         // greeting::find_directory
     ]);

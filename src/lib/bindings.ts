@@ -5,7 +5,9 @@
 
 
 export const commands = {
-
+async tryInitialize() : Promise<boolean> {
+    return await TAURI_INVOKE("try_initialize");
+}
 }
 
 /** user-defined events **/

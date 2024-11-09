@@ -11,7 +11,7 @@ import { commands } from "./bindings";
 import { Menu, Submenu } from "@tauri-apps/api/menu";
 
 export default async () => {
-  if (await commands.tryInitialize()) {
+  if (!await commands.tryInitialize()) {
     return;
   }
 

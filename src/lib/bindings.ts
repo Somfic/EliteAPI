@@ -5,8 +5,14 @@
 
 
 export const commands = {
-async helloWorld(myName: string) : Promise<string> {
-    return await TAURI_INVOKE("hello_world", { myName });
+async journalDirectory() : Promise<string> {
+    return await TAURI_INVOKE("journal_directory");
+},
+async tryInitialize() : Promise<boolean> {
+    return await TAURI_INVOKE("try_initialize");
+},
+async close() : Promise<null> {
+    return await TAURI_INVOKE("close");
 }
 }
 

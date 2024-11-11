@@ -43,7 +43,10 @@ pub async fn read_journal(
         match entry {
             Ok(entry) => {
                 println!("{:?}", &entry);
-                JournalEvent::emit(serde_json::from_value( ), handle)
+                JournalEvent::emit(
+                    &JournalEvent(serde_json::to_string(&entry).unwrap()),
+                    &app_handle,
+                );
             }
             Err(e) => {
                 eprintln!("Error: {:?}", e);

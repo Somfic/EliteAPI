@@ -16,7 +16,9 @@
         "width": 320,
         "height": 550,
         "skipTaskbar": true,
-        "decorations": false
+        "decorations": false,
+        "resizable": false,
+        "maximizable": false
       }
     ],
     "security": {

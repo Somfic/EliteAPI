@@ -4,7 +4,8 @@
   import main from "$lib/main";
   import Header from "./sections/Header.svelte";
   import Warp from "./sections/Warp.svelte";
-
+  import Ship from "./sections/Ship.svelte";
+  import { Canvas } from "@threlte/core";
   onMount(async () => {
     await main();
   });
@@ -14,7 +15,11 @@
 
 <main>
   <Header />
-  <Warp hide={hidden} />
+  <div class="canvas">
+    <Canvas>
+      <Ship />
+    </Canvas>
+  </div>
 
   <button on:click={() => (hidden = !hidden)}>hide?</button>
 </main>
@@ -30,5 +35,12 @@
     flex-grow: 1;
     width: 100%;
     height: 100%;
+  }
+
+  .canvas {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>

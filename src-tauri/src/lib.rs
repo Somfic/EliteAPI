@@ -1,11 +1,10 @@
-use std::sync::Mutex;
-
+use greeting::JournalEvent;
 use specta_typescript::Typescript;
 use tauri::{Listener, Manager};
-use tauri_specta::{collect_commands, Builder};
+use tauri_specta::{collect_commands, collect_events, Builder};
+use tokio::sync::Mutex;
 
 mod greeting;
-mod journal;
 
 type AppState = Mutex<AppData>;
 
@@ -22,11 +21,12 @@ impl Default for AppData {
 }
 
 pub async fn run() {
-    let builder = Builder::<tauri::Wry>::new().commands(collect_commands![
-        greeting::try_initialize,
-        // greeting::run_infinite_loop,
-        // greeting::find_directory
-    ]);
+    let builder = Builder::<tauri::Wry>::new()
+        .commands(collect_commands![
+            greeting::try_initialize,
+            greeting::read_journal
+        ])
+        .events(collect_events![JournalEvent]);
 
     #[cfg(debug_assertions)]
     builder

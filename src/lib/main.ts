@@ -18,7 +18,7 @@ export default async () => {
   // Hide the window when it loses focus
   getCurrentWindow().onFocusChanged(async (event) => {
     if (!event.payload) {
-      await hideWindow(getCurrentWindow());
+      // await hideWindow(getCurrentWindow());
     }
   });
 
@@ -32,6 +32,8 @@ export default async () => {
 
           if (!await window.isFocused()) {
             await showWindow(window, monitor, event.position);
+          } else {
+            await hideWindow(window);
           }
         }
       }
@@ -44,8 +46,8 @@ export default async () => {
 };
 
 async function hideWindow(window: Window) {
-  // await window.setAlwaysOnTop(false);
-  // await window.hide();
+  await window.setAlwaysOnTop(false);
+  await window.hide();
 }
 
 async function showWindow(

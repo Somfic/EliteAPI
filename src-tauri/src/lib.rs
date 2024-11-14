@@ -1,4 +1,4 @@
-use anyhow::Context;
+use anyhow::{anyhow, Context};
 use serde::Serialize;
 use specta_typescript::Typescript;
 use tauri::Manager;
@@ -7,70 +7,67 @@ use tokio::sync::Mutex;
 
 type AppState = Mutex<AppData>;
 
-struct AppData {
-    has_initialized: bool,
-}
+struct AppData {}
 
 impl Default for AppData {
     fn default() -> Self {
-        Self {
-            has_initialized: false,
-        }
+        Self {}
     }
 }
 
 #[derive(Serialize, Debug, Clone, tauri_specta::Event, specta::Type)]
 pub struct JournalEvent(pub String);
 
+#[derive(Serialize, Debug, Clone, tauri_specta::Event, specta::Type)]
+pub struct ErrorEvent(pub String);
+
 pub async fn run() {
-    let builder = Builder::<tauri::Wry>::new().events(collect_events![JournalEvent]);
+    let builder = Builder::<tauri::Wry>::new().events(collect_events![JournalEvent, ErrorEvent]);
 
     #[cfg(debug_assertions)]
     builder
         .export(Typescript::default(), "../src/lib/bindings.ts")
         .expect("Failed to export typescript bindings");
 
-    let state = Mutex::new(AppData::default());
-
-    // Start background thread
-
     tauri::Builder::default()
         .invoke_handler(builder.invoke_handler())
         .setup(move |app| {
-            app.manage(state);
             builder.mount_events(app);
 
-            let app_handle = app.handle().clone();
-            tokio::spawn(async move {
-                let mut reader =
-                    match ed_journals::journal::asynchronous::LiveJournalDirReader::open(
-                        ed_journals::journal::auto_detect_journal_path().unwrap(),
-                    )
-                    .context("Failed to open journal directory".to_string())
-                    .map_err(|e| e.to_string())
-                    {
-                        Ok(reader) => reader,
-                        Err(e) => {
-                            eprintln!("Error: {:?}", e);
-                            return;
-                        }
-                    };
+            async fn setup(app_handle: &tauri::AppHandle) -> anyhow::Result<()> {
+                let mut reader = ed_journals::journal::asynchronous::LiveJournalDirReader::open(
+                    ed_journals::journal::auto_detect_journal_path()
+                        .context("Failed to auto-detect journal path")?,
+                )?;
 
                 while let Some(entry) = reader.next().await {
                     match entry {
                         Ok(entry) => {
-                            match JournalEvent::emit(
+                            println!("{:?}", entry);
+                            JournalEvent::emit(
                                 &JournalEvent(serde_json::to_string(&entry).unwrap()),
-                                &app_handle,
-                            ) {
-                                Ok(_) => {}
-                                Err(e) => {
-                                    eprintln!("Error: {:?}", e);
-                                }
-                            }
+                                app_handle,
+                            )
+                            .context("Could not emit journal event")?;
                         }
                         Err(e) => {
-                            eprintln!("Error: {:?}", e);
+                            ErrorEvent::emit(&ErrorEvent(e.to_string()), app_handle)
+                                .context("Could parse journal event")?;
+                        }
+                    }
+                }
+
+                Ok(())
+            }
+
+            tokio::spawn({
+                let app_handle = app.handle().clone();
+                async move {
+                    match setup(&app_handle).await {
+                        Ok(_) => {}
+                        Err(e) => {
+                            println!("Error: {:?}", e);
+                            let _ = ErrorEvent::emit(&ErrorEvent(e.to_string()), &app_handle);
                         }
                     }
                 }

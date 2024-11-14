@@ -29,14 +29,17 @@
   }
 
   .scene {
-    display: flex;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
     flex-grow: 1;
     display: inline-block;
     vertical-align: middle;
-    perspective: 5px;
-    position: relative;
     overflow: hidden;
+    pointer-events: none;
     opacity: 0.8;
+    z-index: 0;
+    animation: warp 60s infinite linear;
 
     &.hide {
       opacity: 0;
@@ -100,6 +103,18 @@
     }
     100% {
       transform: translateZ(calc($size / 2)) rotate(0deg);
+    }
+  }
+
+  @keyframes warp {
+    0% {
+      perspective: 8px;
+    }
+    50% {
+      perspective: 10px;
+    }
+    100% {
+      perspective: 8px;
     }
   }
 

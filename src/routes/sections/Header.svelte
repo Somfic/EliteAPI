@@ -8,9 +8,11 @@
 <style lang="scss">
   .header {
     display: flex;
-    background-color: rgb(15, 14, 24);
-    height: 80px;
+    background-color: rgba(15, 14, 24, 0.8);
+    backdrop-filter: blur(10px) saturate(180%);
+    height: 70px;
     padding: 10px 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   }
 
   .title {

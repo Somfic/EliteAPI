@@ -9,12 +9,70 @@ import {
 } from "@tauri-apps/api/window";
 import { commands, events } from "./bindings";
 import { Menu, Submenu } from "@tauri-apps/api/menu";
+import { get, type Writable, writable } from "svelte/store";
+import { setCatchingUp, setError, setReady } from "./state";
+
+export const currentEvent: Writable<any> = writable(null);
 
 export default async () => {
   await setupTray();
 
+  let earliestTimestamp = new Date();
+
+  events.errorEvent.listen(async ({ payload }) => {
+    let error = payload;
+    console.error(error);
+
+    setError(error);
+  });
+
   events.journalEvent.listen(async ({ payload }) => {
-    console.log("Journal Event", payload);
+    let event = JSON.parse(payload);
+    const isLive = event["is_live"] as boolean;
+    currentEvent.set(event);
+
+    // Switch on event['kind']['JournalEvent'] vs ['kind']['StatusEvent'] vs ['kind']['DockedEvent']
+    switch (Object.keys(event["kind"])[0]) {
+      case "LogEvent":
+        let journalEvent = event["kind"]["LogEvent"] as any;
+
+        if (journalEvent == undefined) {
+          console.warn("Journal Event is undefined", event);
+        }
+
+        console.log("Log Event", journalEvent);
+
+        if (!isLive) {
+          let eventTimeStamp = new Date(journalEvent["timestamp"]);
+          if (eventTimeStamp < earliestTimestamp) {
+            earliestTimestamp = eventTimeStamp;
+          }
+
+          let currentTimestamp = new Date();
+
+          let totalTime = currentTimestamp.getTime() -
+            earliestTimestamp.getTime();
+
+          let eventTime = eventTimeStamp.getTime() -
+            earliestTimestamp.getTime();
+
+          let percentage = Math.round((eventTime / totalTime) * 100);
+
+          setCatchingUp(percentage);
+        }
+        break;
+      case "StatusEvent":
+        console.log("Status Event", event);
+        break;
+      default:
+        console.log("Unknown Event", event);
+
+        break;
+    }
+
+    if (isLive) {
+      setReady();
+    }
   });
 };
 
@@ -29,7 +87,7 @@ async function setupTray() {
     }
   });
 
-  await TrayIcon.new({
+  let tray = await TrayIcon.new({
     id: "eliteapi",
     icon: (await defaultWindowIcon()) ?? "",
     tooltip: "EliteAPI",
@@ -39,9 +97,7 @@ async function setupTray() {
           let monitor = (await currentMonitor())!;
           let window = getCurrentWindow();
 
-          if (!await window.isVisible()) {
-            await showWindow(window, monitor, event.position);
-          }
+          await showWindow(window, monitor, event.position);
         }
       }
     },

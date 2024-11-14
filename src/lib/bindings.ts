@@ -12,8 +12,10 @@ export const commands = {
 
 
 export const events = __makeEvents__<{
+errorEvent: ErrorEvent,
 journalEvent: JournalEvent
 }>({
+errorEvent: "error-event",
 journalEvent: "journal-event"
 })
 
@@ -23,6 +25,7 @@ journalEvent: "journal-event"
 
 /** user-defined types **/
 
+export type ErrorEvent = string
 export type JournalEvent = string
 
 /** tauri-specta globals **/

@@ -7,47 +7,48 @@ import {
   PhysicalPosition,
   Window,
 } from "@tauri-apps/api/window";
-import { commands } from "./bindings";
+import { commands, events } from "./bindings";
 import { Menu, Submenu } from "@tauri-apps/api/menu";
 
 export default async () => {
-  if (!await commands.tryInitialize()) {
-    return;
-  }
+  await setupTray();
 
-  // Hide the window when it loses focus
+  events.journalEvent.listen(async ({ payload }) => {
+    console.log("Journal Event", payload);
+  });
+};
+
+async function setupTray() {
+  await TrayIcon.removeById("eliteapi");
+
   getCurrentWindow().onFocusChanged(async (event) => {
     if (!event.payload) {
-      // await hideWindow(getCurrentWindow());
+      await hideWindow(getCurrentWindow());
     }
   });
 
-  const options: TrayIconOptions = {
+  await TrayIcon.new({
+    id: "eliteapi",
     icon: (await defaultWindowIcon()) ?? "",
+    tooltip: "EliteAPI",
     async action(event) {
       switch (event.type) {
         case "Click": {
           let monitor = (await currentMonitor())!;
           let window = getCurrentWindow();
 
-          if (!await window.isFocused()) {
+          if (!await window.isVisible()) {
             await showWindow(window, monitor, event.position);
-          } else {
-            await hideWindow(window);
           }
         }
       }
     },
-  };
-
-  const tray = await TrayIcon.new(options);
-
-  tray.setTooltip("EliteAPI");
-};
+  });
+}
 
 async function hideWindow(window: Window) {
-  await window.setAlwaysOnTop(false);
-  await window.hide();
+  //await window.setAlwaysOnTop(false);
+  //await window.hide();
 }
 
 async function showWindow(

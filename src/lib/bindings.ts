@@ -5,27 +5,17 @@
 
 
 export const commands = {
-async tryInitialize() : Promise<Result<boolean, string>> {
-    try {
-    return { status: "ok", data: await TAURI_INVOKE("try_initialize") };
-} catch (e) {
-    if(e instanceof Error) throw e;
-    else return { status: "error", error: e  as any };
-}
-},
-async readJournal() : Promise<Result<null, string>> {
-    try {
-    return { status: "ok", data: await TAURI_INVOKE("read_journal") };
-} catch (e) {
-    if(e instanceof Error) throw e;
-    else return { status: "error", error: e  as any };
-}
-}
+
 }
 
 /** user-defined events **/
 
 
+export const events = __makeEvents__<{
+journalEvent: JournalEvent
+}>({
+journalEvent: "journal-event"
+})
 
 /** user-defined constants **/
 
@@ -33,7 +23,7 @@ async readJournal() : Promise<Result<null, string>> {
 
 /** user-defined types **/
 
-
+export type JournalEvent = string
 
 /** tauri-specta globals **/
 

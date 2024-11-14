@@ -1,10 +1,9 @@
-use greeting::JournalEvent;
+use anyhow::Context;
+use serde::Serialize;
 use specta_typescript::Typescript;
-use tauri::{Listener, Manager};
-use tauri_specta::{collect_commands, collect_events, Builder};
+use tauri::Manager;
+use tauri_specta::{collect_events, Builder, Event};
 use tokio::sync::Mutex;
-
-mod greeting;
 
 type AppState = Mutex<AppData>;
 
@@ -20,13 +19,11 @@ impl Default for AppData {
     }
 }
 
+#[derive(Serialize, Debug, Clone, tauri_specta::Event, specta::Type)]
+pub struct JournalEvent(pub String);
+
 pub async fn run() {
-    let builder = Builder::<tauri::Wry>::new()
-        .commands(collect_commands![
-            greeting::try_initialize,
-            greeting::read_journal
-        ])
-        .events(collect_events![JournalEvent]);
+    let builder = Builder::<tauri::Wry>::new().events(collect_events![JournalEvent]);
 
     #[cfg(debug_assertions)]
     builder
@@ -42,6 +39,43 @@ pub async fn run() {
         .setup(move |app| {
             app.manage(state);
             builder.mount_events(app);
+
+            let app_handle = app.handle().clone();
+            tokio::spawn(async move {
+                let mut reader =
+                    match ed_journals::journal::asynchronous::LiveJournalDirReader::open(
+                        ed_journals::journal::auto_detect_journal_path().unwrap(),
+                    )
+                    .context("Failed to open journal directory".to_string())
+                    .map_err(|e| e.to_string())
+                    {
+                        Ok(reader) => reader,
+                        Err(e) => {
+                            eprintln!("Error: {:?}", e);
+                            return;
+                        }
+                    };
+
+                while let Some(entry) = reader.next().await {
+                    match entry {
+                        Ok(entry) => {
+                            match JournalEvent::emit(
+                                &JournalEvent(serde_json::to_string(&entry).unwrap()),
+                                &app_handle,
+                            ) {
+                                Ok(_) => {}
+                                Err(e) => {
+                                    eprintln!("Error: {:?}", e);
+                                }
+                            }
+                        }
+                        Err(e) => {
+                            eprintln!("Error: {:?}", e);
+                        }
+                    }
+                }
+            });
+
             Ok(())
         })
         .run(tauri::generate_context!())

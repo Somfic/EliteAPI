@@ -19,7 +19,9 @@ export default async () => {
 };
 
 async function setupTray() {
-  await TrayIcon.removeById("eliteapi");
+  if (await TrayIcon.getById("eliteapi")) {
+    await TrayIcon.removeById("eliteapi");
+  }
 
   getCurrentWindow().onFocusChanged(async (event) => {
     if (!event.payload) {

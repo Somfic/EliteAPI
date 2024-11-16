@@ -74,6 +74,8 @@ export default async () => {
       setReady();
     }
   });
+
+  await commands.markAsReady();
 };
 
 async function setupTray() {

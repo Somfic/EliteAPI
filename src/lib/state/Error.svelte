@@ -5,5 +5,5 @@
   export let state: ErrorState;
 </script>
 
-<Pill message="error" severity="error" />
-<p>Ready</p>
+<Pill message="error" severity={state.isFatal ? "error" : "warning"} />
+<p>{state.error}</p>

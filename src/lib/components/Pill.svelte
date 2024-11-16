@@ -13,9 +13,8 @@
 </div>
 
 <style lang="scss">
-  $success: rgb(62, 229, 76);
-  $warning: rgb(229, 134, 62);
-  $error: rgb(229, 62, 62);
+  // Import the color variables
+  @import "../../styling/theming.scss";
 
   .pill {
     display: inline-flex;

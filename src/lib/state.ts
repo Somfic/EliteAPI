@@ -1,4 +1,5 @@
 import { writable } from "svelte/store";
+import { type ErrorEvent } from "./bindings";
 
 export interface State {
 }
@@ -15,11 +16,13 @@ export class ReadyState implements State {
 }
 
 export class ErrorState implements State {
-  constructor(error: string) {
-    this.error = error;
+  constructor(error: ErrorEvent) {
+    this.error = error[0];
+    this.isFatal = error[1];
   }
 
   error: string;
+  isFatal: boolean;
 }
 
 export const state = writable<State>(new CatchingUpState());
@@ -45,10 +48,11 @@ export function setReady() {
   });
 }
 
-export function setError(error: string) {
+export function setError(error: ErrorEvent) {
   state.update((s) => {
     if (s instanceof ErrorState) {
-      s.error = error;
+      s.error = error[0];
+      s.isFatal = error[1];
       return s;
     } else {
       return new ErrorState(error);

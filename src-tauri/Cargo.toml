@@ -26,3 +26,5 @@ tokio = { version = "1.41.0", features = ["full"] }
 anyhow = "1.0.92"
 directories = "5.0.1"
 ed-journals = "0.6.1"
+tauri-plugin-store = "2"
+thiserror = "2.0.3"

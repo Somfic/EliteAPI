@@ -5,7 +5,14 @@
 
 
 export const commands = {
-
+async markAsReady() : Promise<Result<null, null>> {
+    try {
+    return { status: "ok", data: await TAURI_INVOKE("mark_as_ready") };
+} catch (e) {
+    if(e instanceof Error) throw e;
+    else return { status: "error", error: e  as any };
+}
+}
 }
 
 /** user-defined events **/
@@ -25,8 +32,9 @@ journalEvent: "journal-event"
 
 /** user-defined types **/
 
-export type ErrorEvent = string
+export type ErrorEvent = [string, boolean]
 export type JournalEvent = string
+export type Preferences = { uwu: boolean }
 
 /** tauri-specta globals **/
 

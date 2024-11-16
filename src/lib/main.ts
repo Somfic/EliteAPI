@@ -87,7 +87,7 @@ async function setupTray() {
     }
   });
 
-  let tray = await TrayIcon.new({
+  await TrayIcon.new({
     id: "eliteapi",
     icon: (await defaultWindowIcon()) ?? "",
     tooltip: "EliteAPI",
@@ -96,7 +96,6 @@ async function setupTray() {
         case "Click": {
           let monitor = (await currentMonitor())!;
           let window = getCurrentWindow();
-
           await showWindow(window, monitor, event.position);
         }
       }

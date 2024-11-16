@@ -29,8 +29,6 @@
     h1 {
       font-size: 2rem;
       font-weight: 700;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
     }
   }
 </style>

@@ -6,7 +6,7 @@
   import Warp from "./sections/Warp.svelte";
   import Ship from "./sections/Ship.svelte";
   import { Canvas } from "@threlte/core";
-  import ProgressBar from "./sections/ProgressBar.svelte";
+  import ProgressBar from "../lib/components/ProgressBar.svelte";
   import { CatchingUpState, ErrorState, ReadyState, state } from "$lib/state";
   import CatchingUp from "$lib/state/CatchingUp.svelte";
   import Ready from "$lib/state/Ready.svelte";
@@ -38,6 +38,8 @@
 <Warp hide={$currentEvent ? $currentEvent["is_live"] : false} />
 
 <style lang="scss">
+  @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
   :global(html, body, main) {
     margin: 0;
     padding: 0;
@@ -48,6 +50,9 @@
     flex-grow: 1;
     width: 100%;
     height: 100%;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
   }
 
   main {

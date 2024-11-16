@@ -4,6 +4,7 @@ use serde::Serialize;
 use specta_typescript::Typescript;
 use state::AppState;
 use tauri::Manager;
+use tauri_plugin_store::StoreExt;
 use tauri_specta::{collect_commands, collect_events, Builder, Event};
 
 pub mod commands;
@@ -32,6 +33,9 @@ pub async fn run() {
         .invoke_handler(builder.invoke_handler())
         .manage(AppState::default())
         .setup(move |app| {
+            let preferences = app.store("preferences")?;
+            preferences.set("uwu", true);
+
             builder.mount_events(app);
 
             async fn setup(app_handle: &tauri::AppHandle) -> Result<(), Error> {

@@ -12,6 +12,7 @@
   import Ready from "$lib/state/Ready.svelte";
   import Error from "$lib/state/Error.svelte";
   import Status from "$lib/components/Status.svelte";
+  import Preferences from "./sections/preferences/Preferences.svelte";
   onMount(async () => {
     await main();
   });
@@ -30,6 +31,7 @@
       <Status icon="voiceattack.svg" status="busy" />
       <Status icon="voiceattack.svg" status="offline" />
     </div>
+    <Preferences />
 
     <div class="modal">
       {#if $state instanceof CatchingUpState}

@@ -2,7 +2,14 @@
 
 public enum LegalState
 {
+    Allied,
     Clean,
+    None,
+    Unknown,
+    Lawless,
+    Enemy,
+    WantedEnemy,
+    Hunter,
     IllegalCargo,
     Speeding,
     Wanted,
@@ -10,5 +17,4 @@ public enum LegalState
     PassengerWanted,
     Warrant,
     Thargoid,
-    Allied
 }

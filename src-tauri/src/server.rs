@@ -6,6 +6,11 @@ use tokio::{
     sync::Mutex,
 };
 
+
+struct Server {
+    clients: Vec<NamedPipeServer>
+}
+
 const PIPE_NAME: &str = r"\\.\pipe\eliteapi";
 
 pub fn create_server() -> Result<Arc<Mutex<NamedPipeServer>>, String> {

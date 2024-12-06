@@ -14,8 +14,7 @@
   @import "../../styling/theming.scss";
 
   .status {
-    width: 100px;
-    height: 100px;
+    aspect-ratio: 1;
     background-color: $glass-background;
     backdrop-filter: $glass-filter;
     border: $glass-border;

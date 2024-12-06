@@ -15,6 +15,14 @@ export class CatchingUpState implements State {
 export class ReadyState implements State {
 }
 
+export class StoppedState implements State {
+  constructor(isWaitingForGameToStart: boolean) {
+    this.isWaitingForGameToStart = isWaitingForGameToStart;
+  }
+
+  isWaitingForGameToStart: boolean;
+}
+
 export class ErrorState implements State {
   constructor(error: ErrorEvent) {
     this.error = error[0];
@@ -56,6 +64,17 @@ export function setError(error: ErrorEvent) {
       return s;
     } else {
       return new ErrorState(error);
+    }
+  });
+}
+
+export function setStopped(isWaitingForGameToStart: boolean) {
+  state.update((s) => {
+    if (s instanceof StoppedState) {
+      s.isWaitingForGameToStart = isWaitingForGameToStart;
+      return s;
+    } else {
+      return new StoppedState(isWaitingForGameToStart);
     }
   });
 }

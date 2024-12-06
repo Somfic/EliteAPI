@@ -46,14 +46,14 @@
       gap: 0.1rem;
 
       h1 {
-        font-size: 2rem;
-        font-weight: 700;
+        font-size: 1.7rem;
+        font-weight: bold;
         margin: 0;
       }
 
       h2 {
-        font-size: 1rem;
-        font-weight: 400;
+        font-size: 0.85rem;
+        font-weight: bold;
         margin: 0;
         color: rgba(255, 255, 255, 0.5);
       }

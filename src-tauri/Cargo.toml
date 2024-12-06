@@ -28,3 +28,4 @@ directories = "5.0.1"
 ed-journals = "0.6.1"
 tauri-plugin-store = "2"
 thiserror = "2.0.3"
+interprocess = { version = "2.2.2", features = ["tokio"] }

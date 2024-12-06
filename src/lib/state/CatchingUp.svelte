@@ -6,7 +6,5 @@
   export let state: CatchingUpState;
 </script>
 
-<Pill message="connecting" icon="loading" severity="warning" />
-<h1>Catching up</h1>
-
+<Pill message="catching up" icon="loading" severity="debug" />
 <ProgressBar percentage={state.percentage} />

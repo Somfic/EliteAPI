@@ -10,7 +10,8 @@ import {
 import { commands, events } from "./bindings";
 import { Menu, Submenu } from "@tauri-apps/api/menu";
 import { get, type Writable, writable } from "svelte/store";
-import { setCatchingUp, setError, setReady } from "./state";
+import { setCatchingUp, setError, setReady, setStopped } from "./state";
+import { commander, system } from "./store";
 
 export const currentEvent: Writable<any> = writable(null);
 
@@ -40,6 +41,18 @@ export default async () => {
           console.warn("Journal Event is undefined", event);
         }
 
+        if (journalEvent["event"] == "Commander") {
+          commander.set(journalEvent["Name"]);
+        }
+
+        if (journalEvent["event"] == "Location") {
+          system.set(journalEvent["StarSystem"]);
+        }
+
+        if (journalEvent["event"] == "FSDJump") {
+          system.set(journalEvent["StarSystem"]);
+        }
+
         console.log("Log Event", journalEvent);
 
         if (!isLive) {
@@ -60,9 +73,17 @@ export default async () => {
 
           setCatchingUp(percentage);
         }
+
+        if (journalEvent["event"] == "Shutdown") {
+          setStopped(!isLive);
+        }
+
         break;
       case "StatusEvent":
         console.log("Status Event", event);
+        const flags = event["kind"]["StatusEvent"]["Flags"] as number;
+        const isSupercruise = (flags & 0b00010000) > 0;
+        console.log("Supercruise", isSupercruise);
         break;
       default:
         console.log("Unknown Event", event);
@@ -76,12 +97,16 @@ export default async () => {
   });
 
   await commands.markAsReady();
+  await commands.getEventBacklog();
 };
 
 async function setupTray() {
-  if (await TrayIcon.getById("eliteapi")) {
+  while (await TrayIcon.getById("eliteapi")) {
+    console.log("Removing existing tray icon");
     await TrayIcon.removeById("eliteapi");
   }
+
+  console
 
   getCurrentWindow().onFocusChanged(async (event) => {
     if (!event.payload) {

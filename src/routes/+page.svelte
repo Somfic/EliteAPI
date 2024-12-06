@@ -7,12 +7,20 @@
   import Ship from "./sections/Ship.svelte";
   import { Canvas } from "@threlte/core";
   import ProgressBar from "../lib/components/ProgressBar.svelte";
-  import { CatchingUpState, ErrorState, ReadyState, state } from "$lib/state";
+  import {
+    CatchingUpState,
+    ErrorState,
+    ReadyState,
+    state,
+    StoppedState,
+  } from "$lib/state";
   import CatchingUp from "$lib/state/CatchingUp.svelte";
   import Ready from "$lib/state/Ready.svelte";
   import Error from "$lib/state/Error.svelte";
   import Status from "$lib/components/Status.svelte";
   import Preferences from "./sections/preferences/Preferences.svelte";
+  import { supercruise } from "$lib/store";
+  import Stopped from "$lib/state/Stopped.svelte";
   onMount(async () => {
     await main();
   });
@@ -26,11 +34,7 @@
       <Ship />
     </Canvas>
   </div> -->
-    <div class="status">
-      <Status icon="voiceattack.svg" status="online" />
-      <Status icon="voiceattack.svg" status="busy" />
-      <Status icon="voiceattack.svg" status="offline" />
-    </div>
+
     <Preferences />
 
     <div class="modal">
@@ -40,12 +44,14 @@
         <Ready state={$state} />
       {:else if $state instanceof ErrorState}
         <Error state={$state} />
+      {:else if $state instanceof StoppedState}
+        <Stopped state={$state} />
       {/if}
     </div>
   </article>
 </main>
 
-<Warp hide={$currentEvent ? $currentEvent["is_live"] : false} />
+<Warp hide={!$supercruise} />
 
 <style lang="scss">
   @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
@@ -54,7 +60,7 @@
   :global(html, body, main) {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: rgb(4, 4, 13);
     color: white;
     display: flex;
     flex-direction: column;
@@ -92,6 +98,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    gap: 20px;
   }
 
   .modal {
@@ -101,5 +108,8 @@
     border: $glass-border;
     border-radius: $glass-border-radius;
     padding: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
   }
 </style>

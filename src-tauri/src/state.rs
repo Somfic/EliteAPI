@@ -2,19 +2,17 @@ use crate::server::Server;
 use crate::JournalEvents;
 use tokio::sync::Mutex;
 
-pub type AppState = Mutex<AppData>;
-
-pub struct AppData {
+pub struct AppState {
     pub server: Server,
-    pub events: JournalEvents,
+    pub events: Mutex<JournalEvents>,
     pub is_ready: bool,
 }
 
-impl AppData {
-    pub async fn new() -> Self {
+impl AppState {
+    pub fn new() -> Self {
         Self {
             server: Server::new(),
-            events: JournalEvents::default(),
+            events: Mutex::new(JournalEvents::default()),
             is_ready: false,
         }
     }

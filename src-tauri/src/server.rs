@@ -1,5 +1,6 @@
 use std::sync::Arc;
 
+use serde::Serialize;
 use tokio::{
     io::{split, AsyncReadExt, AsyncWriteExt},
     net::windows::named_pipe::{NamedPipeServer, PipeMode, ServerOptions},
@@ -25,8 +26,6 @@ impl Server {
         // Spawn the server loop.
         tokio::spawn(async move {
             loop {
-                println!("Waiting for client to connect...");
-
                 let server = match ServerOptions::new()
                     .pipe_mode(PipeMode::Message)
                     //.first_pipe_instance(true)
@@ -59,10 +58,36 @@ impl Server {
         Ok(())
     }
 
-    pub fn broadcast(&self, msg: String) {
-        // TODO: handle errors
-        let _ = self.broadcast.send(msg);
+    pub fn broadcast(&self, commands: &[ServerCommand]) -> Result<(), String> {
+        if self.broadcast.receiver_count() == 0 {
+            return Ok(());
+        }
+
+        let json = serde_json::to_string(commands)
+            .map_err(|e| format!("error serializing commands: {}", e))?;
+
+        println!("broadcasting: {}", json);
+
+        self.broadcast
+            .send(format!("{}\n", json))
+            .map_err(|e| format!("error sending broadcast: {}", e))?;
+
+        Ok(())
     }
+}
+
+#[derive(Debug, Clone, Serialize)]
+pub struct ServerCommand {
+    pub _type: CommandType,
+    pub _args: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize)]
+pub enum CommandType {
+    SetVariable,
+    ClearVariable,
+    ClearVariablesStartingWith,
+    InvokeCommand,
 }
 
 async fn handle_client(
@@ -78,6 +103,7 @@ async fn handle_client(
     let write_clone = Arc::clone(&writer);
     tokio::spawn(async move {
         while let Ok(msg) = broadcast.recv().await {
+            println!("sending broadcast to client: {}", msg);
             let mut write_clone = write_clone.lock().await;
             if let Err(e) = write_clone.write_all(msg.as_bytes()).await {
                 eprintln!("error sending broadcast to client: {}", e);

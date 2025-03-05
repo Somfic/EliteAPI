@@ -1,11 +1,15 @@
 name: ci
+permissions: write-all
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 on:
   push:
   pull_request:
 
 jobs:
-  build-frontend:
-    name: build frontend
+  check-frontend:
+    name: check frontend
     runs-on: ubuntu-latest
 
     steps:
@@ -20,7 +24,9 @@ jobs:
     - name: Cache Bun dependencies
       uses: actions/cache@v4
       with:
-        path: ~/.bun
+        path: |
+          ~/.bun
+          node_modules/
         key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
         restore-keys: |
           ${{ runner.os }}-bun-
@@ -30,3 +36,36 @@ jobs:
 
     - name: Check frontend
       run: bun run check
+
+  check-backend:
+    name: check backend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: nightly
+          override: true
+          components: rustfmt, clippy
+
+      - name: Set up cargo cache
+        uses: actions/cache@v4
+        continue-on-error: false
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/            
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: ${{ runner.os }}-cargo-
+
+      - name: Check backend
+        run: cargo check
+        working-directory: src-tauri

@@ -51,8 +51,8 @@ jobs:
           profile: minimal
           toolchain: nightly
           override: true
-          components: rustfmt, clippy
-
+          components: rustfmt, clippy, llvm-tools-preview
+    
       - name: Set up cargo cache
         uses: actions/cache@v4
         continue-on-error: false
@@ -65,6 +65,18 @@ jobs:
             target/            
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: ${{ runner.os }}-cargo-
+
+      - name: Set up Rust tools
+        uses: taiki-e/install-action@cargo-llvm-cov
+
+      - name: install rust dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.0-dev libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+
+      # - name: install macos intel target
+      #   if: matrix.platform == 'macos-latest' && matrix.args == '--target x86_64-apple-darwin'
+      #   run: rustup target add x86_64-apple-darwin
 
       - name: Check backend
         run: cargo check

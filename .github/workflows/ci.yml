@@ -39,7 +39,7 @@ jobs:
 
   check-backend:
     name: check backend
-    runs-on: ubuntu-latest
+    runs-on: ${ matrix.platform }
     strategy:
       matrix:
         platform: [windows-latest]

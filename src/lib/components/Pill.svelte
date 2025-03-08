@@ -13,7 +13,7 @@
 </div>
 
 <style lang="scss">
-  // Import the color variables
+  @use "sass:color";
   @import "../../styling/theming.scss";
 
   .pill {
@@ -30,28 +30,28 @@
     font-size: 14px;
 
     &.success {
-      background-color: transparentize($success, 0.5);
-      border-color: transparentize($success, 0.5);
+      background-color: color.scale($success, $alpha: 50%);
+      border-color: color.scale($success, $alpha: 50%);
     }
 
     &.warning {
-      background-color: transparentize($warning, 0.5);
-      border-color: transparentize($warning, 0.5);
+      background-color: color.scale($warning, $alpha: 50%);
+      border-color: color.scale($warning, $alpha: 50%);
     }
 
     &.error {
-      background-color: transparentize($error, 0.5);
-      border-color: transparentize($error, 0.5);
+      background-color: color.scale($error, $alpha: 50%);
+      border-color: color.scale($error, $alpha: 50%);
     }
 
     &.info {
-      background-color: transparentize($info, 0.5);
-      border-color: transparentize($info, 0.5);
+      background-color: color.scale($info, $alpha: 50%);
+      border-color: color.scale($info, $alpha: 50%);
     }
 
     &.debug {
-      background-color: transparentize($debug, 0.5);
-      border-color: transparentize($debug, 0.5);
+      background-color: color.scale($debug, $alpha: 50%);
+      border-color: color.scale($debug, $alpha: 50%);
     }
   }
 

@@ -11,6 +11,7 @@
 </div>
 
 <style lang="scss">
+  @use "sass:color";
   @import "../../styling/theming.scss";
 
   .status {
@@ -37,24 +38,24 @@
     }
 
     &.online {
-      background-color: transparentize($success, 0.8);
-      border-color: transparentize($success, 0.8);
+      background-color: color.scale($success, $alpha: 80%);
+      border-color: color.scale($success, $alpha: 80%);
       img {
         filter: brightness(1)
-          drop-shadow(0 0 20px transparentize($success, 0.2));
+          drop-shadow(0 0 20px color.scale($success, $alpha: 20%));
       }
     }
 
     &.busy {
-      background-color: transparentize($warning, 0.5);
-      border-color: transparentize($warning, 0.5);
+      background-color: color.scale($warning, $alpha: 50%);
+      border-color: color.scale($warning, $alpha: 50%);
       img {
         filter: brightness(1)
-          drop-shadow(0 0 20px transparentize($warning, 0.2));
+          drop-shadow(0 0 20px color.scale($warning, $alpha: 20%));
       }
 
       .indicator {
-        border: 3px solid transparentize($warning, 0.4);
+        border: 3px solid color.scale($warning, $alpha: 40%);
         box-sizing: border-box;
         border-top: 3px solid $warning;
         animation: spin 1s linear infinite;
@@ -62,11 +63,11 @@
     }
 
     &.offline {
-      background-color: transparentize(gray, 0.5);
-      border-color: transparentize(gray, 0.5);
+      background-color: color.scale(gray, $alpha: 50%);
+      border-color: color.scale(gray, $alpha: 50%);
       img {
-        filter: brightness(1) drop-shadow(0 0 20px transparentize(gray, 0.2))
-          opacity(0.7);
+        filter: brightness(1)
+          drop-shadow(0 0 20px color.scale(gray, $alpha: 20%)) opacity(0.7);
       }
 
       .indicator {
@@ -75,10 +76,11 @@
     }
 
     &.error {
-      background-color: transparentize($error, 0.5);
-      border-color: transparentize($error, 0.5);
+      background-color: color.scale($error, $alpha: 50%);
+      border-color: color.scale($error, $alpha: 50%);
       img {
-        filter: brightness(1) drop-shadow(0 0 20px transparentize($error, 0.2));
+        filter: brightness(1)
+          drop-shadow(0 0 20px color.scale($error, $alpha: 20%));
       }
 
       .indicator {

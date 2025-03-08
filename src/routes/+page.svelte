@@ -4,7 +4,6 @@
   import main, { currentEvent } from "$lib/main";
   import Header from "./sections/Header.svelte";
   import Warp from "./sections/Warp.svelte";
-  import Ship from "./sections/Ship.svelte";
   import { Canvas } from "@threlte/core";
   import ProgressBar from "../lib/components/ProgressBar.svelte";
   import {

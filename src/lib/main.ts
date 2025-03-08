@@ -96,7 +96,6 @@ export default async () => {
     }
   });
 
-  await commands.markAsReady();
   await commands.getEventBacklog();
 };
 

@@ -2,7 +2,7 @@
   <PropertyGroup>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <LangVersion>10</LangVersion>
+    <LangVersion>default</LangVersion>
     <AssemblyVersion>3.3.9.0</AssemblyVersion>
     <FileVersion>3.3.9.0</FileVersion>
     <InformationalVersion>3.3.9+3.Branch.main.Sha.eb9b5ae555a43f14276038d13c3e68558b8357fc</InformationalVersion>

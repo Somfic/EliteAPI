@@ -40,17 +40,17 @@ public class JournalFileTests
                 Assert.Ignore($"Invalid JSON: {ex.Message}");
                 continue;
             }
-            
+
             var invokedEvent = _events.Invoke(line, new EventContext());
             Assert.That(invokedEvent, Is.Not.Null, $"Event is not registered: {line}");
-            
+
             var eventType = invokedEvent.GetType();
             var eventName = eventType.Name;
             if (eventName.EndsWith("Event"))
                 eventName = eventName.Substring(0, eventName.Length - 5);
-            
+
             Assert.That(string.Equals(eventName, invokedEvent.Event, StringComparison.CurrentCultureIgnoreCase),
                 $"Event is not of type {eventName} but {invokedEvent.Event}");
-        }
+        };
     }
 }

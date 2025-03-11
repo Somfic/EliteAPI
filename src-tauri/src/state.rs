@@ -1,13 +1,11 @@
-pub struct AppState {}
+pub struct AppState {
+    pub reader: crate::Reader,
+}
 
 impl AppState {
     pub fn new() -> Self {
-        AppState::default()
-    }
-}
-
-impl Default for AppState {
-    fn default() -> Self {
-        AppState {}
+        AppState {
+            reader: crate::Reader::new(),
+        }
     }
 }

@@ -1,6 +1,6 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-pub use eliteapi::prelude::*;
+use eliteapi::prelude::*;
 
 #[tokio::main]
 async fn main() {
@@ -31,7 +31,8 @@ async fn main() {
                     match eliteapi::on_start(&app_handle).await {
                         Ok(_) => {}
                         Err(error) => {
-                            panic!("fatal error: {:?}", error);
+                            println!("EliteAPI: Error starting up: {}", error);
+                            app_handle.exit(1);
                         }
                     }
                 }

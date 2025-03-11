@@ -1,0 +1,2 @@
+{ "timestamp":"2021-01-10T18:22:55Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"Fleet Carriers Update - Patch 9", "build":"r251354/r0 " }
+{ "timestamp":"2021-01-10T18:58:19Z", "event":"FSDTarget", "Name":"Zuneae VD-K d8-5095", "SystemAddress":175074602652363, "StarClass":"G", "RemainingJumpsInRoute":446 }

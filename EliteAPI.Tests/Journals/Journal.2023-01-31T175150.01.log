@@ -1,0 +1,4 @@
+{ "timestamp":"2023-01-31T17:51:37Z", "event":"Fileheader", "part":1, "language":"English/UK", "Odyssey":true, "gameversion":"4.0.0.1477", "build":"r291050/r0 " }
+{ "timestamp":"2023-01-31T17:54:36Z", "event":"Friends", "Status":"Online", "Name":"Ozric" }
+{ "timestamp":"2023-01-31T17:54:36Z", "event":"Friends", "Status":"Online", "Name":"Quish Stormbringer" }
+{ "timestamp":"2023-01-31T17:54:51Z", "event":"Shutdown" }

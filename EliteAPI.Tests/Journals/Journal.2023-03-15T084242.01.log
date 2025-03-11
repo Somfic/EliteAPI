@@ -1,0 +1,4 @@
+{ "timestamp":"2023-03-15T08:42:28Z", "event":"Fileheader", "part":1, "language":"English/UK", "Odyssey":true, "gameversion":"4.0.0.1477", "build":"r291050/r0 " }
+{ "timestamp":"2023-03-15T08:45:42Z", "event":"Friends", "Status":"Online", "Name":"philip robinson" }
+{ "timestamp":"2023-03-15T08:46:22Z", "event":"Friends", "Status":"Online", "Name":"philip robinson" }
+{ "timestamp":"2023-03-15T08:46:48Z", "event":"Shutdown" }

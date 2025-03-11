@@ -1,0 +1,4 @@
+{ "timestamp":"2023-01-03T17:00:18Z", "event":"Fileheader", "part":1, "language":"English/UK", "Odyssey":true, "gameversion":"4.0.0.1476", "build":"r289925/r0 " }
+{ "timestamp":"2023-01-03T17:00:59Z", "event":"Friends", "Status":"Online", "Name":"Khaleb Daarke" }
+{ "timestamp":"2023-01-03T17:03:01Z", "event":"Friends", "Status":"Online", "Name":"Khaleb Daarke" }
+{ "timestamp":"2023-01-03T17:05:31Z", "event":"Shutdown" }

@@ -1,0 +1,9 @@
+{ "timestamp":"2023-01-26T10:19:34Z", "event":"Fileheader", "part":1, "language":"English/UK", "Odyssey":true, "gameversion":"4.0.0.1476", "build":"r289925/r0 " }
+{ "timestamp":"2023-01-26T10:20:00Z", "event":"Friends", "Status":"Online", "Name":"Ageingjedi" }
+{ "timestamp":"2023-01-26T10:20:00Z", "event":"Friends", "Status":"Online", "Name":"Eid LeWeise" }
+{ "timestamp":"2023-01-26T10:20:00Z", "event":"Friends", "Status":"Online", "Name":"pobey" }
+{ "timestamp":"2023-01-26T10:22:03Z", "event":"Friends", "Status":"Online", "Name":"Ageingjedi" }
+{ "timestamp":"2023-01-26T10:22:03Z", "event":"Friends", "Status":"Online", "Name":"Eid LeWeise" }
+{ "timestamp":"2023-01-26T10:22:03Z", "event":"Friends", "Status":"Online", "Name":"pobey" }
+{ "timestamp":"2023-01-26T10:22:24Z", "event":"Friends", "Status":"Online", "Name":"GrootZen" }
+{ "timestamp":"2023-01-26T10:23:43Z", "event":"Shutdown" }

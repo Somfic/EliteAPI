@@ -1,0 +1,496 @@
+{"timestamp":"2024-04-05T18:16:11Z","event":"Fileheader","part":1,"language":"English/UK","Odyssey":true,"gameversion":"4.0.0.1801","build":"r300472/r0 "}
+{"timestamp":"2024-04-05T18:18:19Z","event":"Commander","FID":"F123456789","Name":"TEST"}
+{"timestamp":"2024-04-05T18:18:19Z","event":"Materials","Raw":[],"Manufactured":[],"Encoded":[]}
+{"timestamp":"2024-04-05T18:18:19Z","event":"Rank","Combat":0,"Trade":1,"Explore":2,"Soldier":0,"Exobiologist":2,"Empire":0,"Federation":0,"CQC":0}
+{"timestamp":"2024-04-05T18:18:19Z","event":"Progress","Combat":0,"Trade":36,"Explore":36,"Soldier":0,"Exobiologist":9,"Empire":0,"Federation":0,"CQC":0}
+{"timestamp":"2024-04-05T18:18:19Z","event":"Reputation","Empire":0,"Federation":0,"Independent":0,"Alliance":0}
+{"timestamp":"2024-04-05T18:18:19Z","event":"EngineerProgress","Engineers":[{"Engineer":"Felicity Farseer","EngineerID":300100,"Progress":"Invited"},{"Engineer":"Eleanor Bresa","EngineerID":400011,"Progress":"Known"},{"Engineer":"Hero Ferrari","EngineerID":400003,"Progress":"Known"},{"Engineer":"Jude Navarro","EngineerID":400001,"Progress":"Known"},{"Engineer":"Liz Ryder","EngineerID":300080,"Progress":"Known"},{"Engineer":"Rosa Dayette","EngineerID":400012,"Progress":"Known"},{"Engineer":"Baltanos","EngineerID":400010,"Progress":"Known"},{"Engineer":"The Dweller","EngineerID":300180,"Progress":"Known"},{"Engineer":"Elvira Martuuk","EngineerID":300160,"Progress":"Unlocked","RankProgress":0,"Rank":1},{"Engineer":"Tod 'The Blaster' McQuinn","EngineerID":300260,"Progress":"Unlocked","RankProgress":0,"Rank":1},{"Engineer":"Domino Green","EngineerID":400002,"Progress":"Known"}]}
+{"timestamp":"2024-04-05T18:18:19Z","event":"LoadGame","FID":"F123456789","Commander":"TEST","Horizons":true,"Odyssey":true,"Ship":"Asp","Ship_Localised":"Asp Explorer","ShipID":2,"ShipName":"Ida","ShipIdent":"BX-60A","FuelLevel":31.23134,"FuelCapacity":32,"GameMode":"Solo","Credits":48656185,"Loan":0,"language":"English/UK","gameversion":"4.0.0.1801","build":"r300472/r0 "}
+{"timestamp":"2024-04-05T18:18:21Z","event":"Statistics","Bank_Account":{"Current_Wealth":96022006,"Spent_On_Ships":6661154,"Spent_On_Outfitting":40503667,"Spent_On_Repairs":0,"Spent_On_Fuel":755,"Spent_On_Ammo_Consumables":0,"Insurance_Claims":0,"Spent_On_Insurance":0,"Owned_Ship_Count":2,"Spent_On_Suits":150000,"Spent_On_Weapons":0,"Spent_On_Suit_Consumables":0,"Suits_Owned":2,"Weapons_Owned":1,"Spent_On_Premium_Stock":0,"Premium_Stock_Bought":0},"Combat":{"Bounties_Claimed":0,"Bounty_Hunting_Profit":0,"Combat_Bonds":0,"Combat_Bond_Profits":0,"Assassinations":0,"Assassination_Profits":0,"Highest_Single_Reward":0,"Skimmers_Killed":0,"OnFoot_Combat_Bonds":0,"OnFoot_Combat_Bonds_Profits":0,"OnFoot_Vehicles_Destroyed":0,"OnFoot_Ships_Destroyed":0,"Dropships_Taken":0,"Dropships_Booked":0,"Dropships_Cancelled":0,"ConflictZone_High":0,"ConflictZone_Medium":0,"ConflictZone_Low":0,"ConflictZone_Total":0,"ConflictZone_High_Wins":0,"ConflictZone_Medium_Wins":0,"ConflictZone_Low_Wins":0,"ConflictZone_Total_Wins":0,"Settlement_Defended":0,"Settlement_Conquered":0,"OnFoot_Skimmers_Killed":0,"OnFoot_Scavs_Killed":0},"Crime":{"Notoriety":0,"Fines":0,"Total_Fines":0,"Bounties_Received":0,"Total_Bounties":0,"Highest_Bounty":0,"Malware_Uploaded":0,"Settlements_State_Shutdown":0,"Production_Sabotage":0,"Production_Theft":0,"Total_Murders":0,"Citizens_Murdered":0,"Omnipol_Murdered":0,"Guards_Murdered":0,"Data_Stolen":0,"Goods_Stolen":0,"Sample_Stolen":0,"Total_Stolen":0,"Turrets_Destroyed":0,"Turrets_Overloaded":0,"Turrets_Total":0,"Value_Stolen_StateChange":0,"Profiles_Cloned":0},"Smuggling":{"Black_Markets_Traded_With":0,"Black_Markets_Profits":0,"Resources_Smuggled":0,"Average_Profit":0,"Highest_Single_Transaction":0},"Trading":{"Markets_Traded_With":0,"Market_Profits":0,"Resources_Traded":0,"Average_Profit":0,"Highest_Single_Transaction":0,"Data_Sold":0,"Goods_Sold":0,"Assets_Sold":0},"Mining":{"Mining_Profits":0,"Quantity_Mined":0,"Materials_Collected":0},"Exploration":{"Systems_Visited":51,"Exploration_Profits":630442,"Planets_Scanned_To_Level_2":48,"Planets_Scanned_To_Level_3":48,"Efficient_Scans":2,"Highest_Payout":312746,"Total_Hyperspace_Distance":1112,"Total_Hyperspace_Jumps":50,"Greatest_Distance_From_Start":880.42090597605,"Time_Played":14040,"OnFoot_Distance_Travelled":1158,"Shuttle_Journeys":2,"Shuttle_Distance_Travelled":7.0627765432583,"Spent_On_Shuttles":3724,"First_Footfalls":0,"Planet_Footfalls":5,"Settlements_Visited":0},"Passengers":{"Passengers_Missions_Bulk":0,"Passengers_Missions_VIP":0,"Passengers_Missions_Delivered":0,"Passengers_Missions_Ejected":0},"Search_And_Rescue":{"SearchRescue_Traded":0,"SearchRescue_Profit":0,"SearchRescue_Count":0,"Salvage_Legal_POI":0,"Salvage_Legal_Settlements":0,"Salvage_Illegal_POI":0,"Salvage_Illegal_Settlements":0,"Maglocks_Opened":0,"Panels_Opened":0,"Settlements_State_FireOut":0,"Settlements_State_Reboot":0},"Crafting":{"Count_Of_Used_Engineers":0,"Recipes_Generated":0,"Recipes_Generated_Rank_1":0,"Recipes_Generated_Rank_2":0,"Recipes_Generated_Rank_3":0,"Recipes_Generated_Rank_4":0,"Recipes_Generated_Rank_5":0,"Suit_Mods_Applied":0,"Weapon_Mods_Applied":0,"Suits_Upgraded":0,"Weapons_Upgraded":0,"Suits_Upgraded_Full":0,"Weapons_Upgraded_Full":0,"Suit_Mods_Applied_Full":0,"Weapon_Mods_Applied_Full":0},"Crew":{"NpcCrew_TotalWages":0,"NpcCrew_Hired":0,"NpcCrew_Fired":0,"NpcCrew_Died":0},"Multicrew":{"Multicrew_Time_Total":0,"Multicrew_Gunner_Time_Total":0,"Multicrew_Fighter_Time_Total":0,"Multicrew_Credits_Total":0,"Multicrew_Fines_Total":0},"Material_Trader_Stats":{"Trades_Completed":0,"Materials_Traded":0,"Assets_Traded_In":0,"Assets_Traded_Out":0},"Exobiology":{"Organic_Genus_Encountered":1,"Organic_Species_Encountered":1,"Organic_Variant_Encountered":2,"Organic_Data_Profits":95054000,"Organic_Data":5,"First_Logged_Profits":0,"First_Logged":0,"Organic_Systems":5,"Organic_Planets":5,"Organic_Genus":1,"Organic_Species":1}}
+{"timestamp":"2024-04-05T18:18:24Z","event":"ReceiveText","From":"","Message":"$COMMS_entered:#name=Synuefe GT-H b43-1;","Message_Localised":"Entered Channel: Synuefe GT-H b43-1","Channel":"npc"}
+{"timestamp":"2024-04-05T18:18:24Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"EXPLORER'S HEARTH V3K-L3Z","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:18:24Z","event":"Location","Docked":false,"Taxi":false,"Multicrew":false,"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"StarPos":[749,-163.09375,-128.0625],"SystemAllegiance":"Guardian","SystemEconomy":"$economy_None;","SystemEconomy_Localised":"None","SystemSecondEconomy":"$economy_None;","SystemSecondEconomy_Localised":"None","SystemGovernment":"$government_None;","SystemGovernment_Localised":"None","SystemSecurity":"$GAlAXY_MAP_INFO_state_anarchy;","SystemSecurity_Localised":"Anarchy","Population":0,"Body":"Synuefe GT-H b43-1 A","BodyID":1,"BodyType":"Star"}
+{"timestamp":"2024-04-05T18:18:24Z","event":"Music","MusicTrack":"NoTrack"}
+{"timestamp":"2024-04-05T18:18:24Z","event":"ShipLocker","Items":[],"Components":[],"Consumables":[],"Data":[]}
+{"timestamp":"2024-04-05T18:18:24Z","event":"Missions","Active":[],"Failed":[],"Complete":[]}
+{"timestamp":"2024-04-05T18:18:24Z","event":"Loadout","Ship":"asp","ShipID":2,"ShipName":"Ida","ShipIdent":"BX-60A","HullValue":6661154,"ModulesValue":37899395,"HullHealth":1,"UnladenMass":363.399994,"CargoCapacity":8,"MaxJumpRange":33.432678,"FuelCapacity":{"Main":32,"Reserve":0.63},"Rebuy":2228030,"Modules":[{"Slot":"TinyHardpoint1","Item":"hpt_chafflauncher_tiny","On":true,"Priority":0,"AmmoInClip":1,"AmmoInHopper":10,"Health":1,"Value":8500},{"Slot":"TinyHardpoint2","Item":"hpt_heatsinklauncher_turret_tiny","On":true,"Priority":0,"AmmoInClip":1,"AmmoInHopper":2,"Health":1,"Value":3500},{"Slot":"TinyHardpoint3","Item":"hpt_plasmapointdefence_turret_tiny","On":true,"Priority":0,"AmmoInClip":12,"AmmoInHopper":10000,"Health":1,"Value":18546},{"Slot":"TinyHardpoint4","Item":"hpt_cloudscanner_size0_class5","On":true,"Priority":0,"Health":1,"Value":1097095},{"Slot":"Armour","Item":"asp_armour_grade1","On":true,"Priority":1,"Health":1},{"Slot":"PowerPlant","Item":"int_powerplant_size5_class4","On":true,"Priority":1,"Health":1,"Value":1441233},{"Slot":"MainEngines","Item":"int_engine_size4_class4","On":true,"Priority":0,"Health":1,"Value":536693},{"Slot":"FrameShiftDrive","Item":"int_hyperdrive_size5_class5","On":true,"Priority":0,"Health":0.993935,"Value":5103953},{"Slot":"LifeSupport","Item":"int_lifesupport_size4_class2","On":true,"Priority":0,"Health":1,"Value":28373},{"Slot":"PowerDistributor","Item":"int_powerdistributor_size4_class2","On":true,"Priority":0,"Health":1,"Value":28373},{"Slot":"Radar","Item":"int_sensors_size5_class2","On":true,"Priority":0,"Health":1,"Value":79444},{"Slot":"FuelTank","Item":"int_fueltank_size5_class3","On":true,"Priority":1,"Health":1},{"Slot":"Slot01_Size6","Item":"int_fuelscoop_size6_class5","On":true,"Priority":0,"Health":1,"Value":28763610},{"Slot":"Slot03_Size3","Item":"int_shieldgenerator_size3_class5","On":true,"Priority":0,"Health":1,"Value":507912},{"Slot":"Slot04_Size3","Item":"int_cargorack_size3_class1","On":true,"Priority":1,"Health":1,"Value":10563},{"Slot":"Slot07_Size2","Item":"int_buggybay_size2_class2","On":true,"Priority":0,"Health":1,"Value":21600},{"Slot":"Slot08_Size1","Item":"int_detailedsurfacescanner_tiny","On":true,"Priority":0,"Health":1,"Value":250000},{"Slot":"PlanetaryApproachSuite","Item":"int_planetapproachsuite_advanced","On":true,"Priority":1,"Health":1},{"Slot":"VesselVoice","Item":"voicepack_verity","On":true,"Priority":1,"Health":1},{"Slot":"ShipCockpit","Item":"asp_cockpit","On":true,"Priority":1,"Health":1},{"Slot":"CargoHatch","Item":"modularcargobaydoor","On":true,"Priority":2,"Health":1}]}
+{"timestamp":"2024-04-05T18:18:24Z","event":"Music","MusicTrack":"Exploration"}
+{"timestamp":"2024-04-05T18:18:26Z","event":"Cargo","Vessel":"Ship","Count":0,"Inventory":[]}
+{"timestamp":"2024-04-05T18:18:30Z","event":"Music","MusicTrack":"GalaxyMap"}
+{"timestamp":"2024-04-05T18:18:31Z","event":"Music","MusicTrack":"Exploration"}
+{"timestamp":"2024-04-05T18:18:32Z","event":"Music","MusicTrack":"SystemMap"}
+{"timestamp":"2024-04-05T18:19:12Z","event":"Music","MusicTrack":"GalaxyMap"}
+{"timestamp":"2024-04-05T18:19:22Z","event":"Music","MusicTrack":"SystemMap"}
+{"timestamp":"2024-04-05T18:19:36Z","event":"Music","MusicTrack":"Exploration"}
+{"timestamp":"2024-04-05T18:19:46Z","event":"StartJump","JumpType":"Supercruise","Taxi":false}
+{"timestamp":"2024-04-05T18:19:51Z","event":"SupercruiseEntry","Taxi":false,"Multicrew":false,"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529}
+{"timestamp":"2024-04-05T18:19:51Z","event":"ShipLocker","Items":[],"Components":[],"Consumables":[],"Data":[]}
+{"timestamp":"2024-04-05T18:19:51Z","event":"Music","MusicTrack":"Supercruise"}
+{"timestamp":"2024-04-05T18:19:59Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"STFR BATTLESTAR ISHTAR X0J-B1M","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:19:59Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"RAYDERIKS V2F-2QY","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:19:59Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"MOT FAILURE QBG-N1M","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:19:59Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"UNSC PILLAR OF AUTUMN JNG-32J","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:19:59Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"ELPHELTVALENTINE G0Z-08G","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:19:59Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"TICONDEROGA [CDSN] K6F-24V","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:19:59Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"CORSICAN TRAVEL CIE X2H-N5N","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:19:59Z","event":"FSSDiscoveryScan","Progress":0.235717,"BodyCount":30,"NonBodyCount":17,"SystemName":"Synuefe GT-H b43-1","SystemAddress":2879909340529}
+{"timestamp":"2024-04-05T18:19:59Z","event":"ScanBaryCentre","StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"BodyID":2,"SemiMajorAxis":5294329881668.091,"Eccentricity":0.110315,"OrbitalInclination":80.036806,"Periapsis":208.82425,"OrbitalPeriod":16158295869.82727,"AscendingNode":-86.416271,"MeanAnomaly":283.201577}
+{"timestamp":"2024-04-05T18:19:59Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C","BodyID":4,"Parents":[{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27532.650688,"StarType":"T","Subclass":0,"StellarMass":0.085938,"Radius":150654864,"AbsoluteMagnitude":14.649063,"Age_MY":5584,"SurfaceTemperature":1295,"Luminosity":"V","SemiMajorAxis":38953790068.6264,"Eccentricity":0.085229,"OrbitalInclination":-8.275874,"Periapsis":122.950737,"OrbitalPeriod":15773549.675941,"AscendingNode":89.388974,"MeanAnomaly":309.088797,"RotationPeriod":75625.621417,"AxialTilt":0,"Rings":[{"Name":"Synuefe GT-H b43-1 C A Belt","RingClass":"eRingClass_Rocky","MassMT":28322000000000,"InnerRad":229060000,"OuterRad":1064900000}],"WasDiscovered":true,"WasMapped":false}
+{"timestamp":"2024-04-05T18:19:59Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 B","BodyID":3,"Parents":[{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27720.837772,"StarType":"L","Subclass":1,"StellarMass":0.164063,"Radius":206816144,"AbsoluteMagnitude":12.360184,"Age_MY":5584,"SurfaceTemperature":1872,"Luminosity":"V","SemiMajorAxis":20404393076.896667,"Eccentricity":0.085229,"OrbitalInclination":-8.275874,"Periapsis":302.950732,"OrbitalPeriod":15773549.675941,"AscendingNode":89.388974,"MeanAnomaly":309.088797,"RotationPeriod":98290.726812,"AxialTilt":0,"Rings":[{"Name":"Synuefe GT-H b43-1 B A Belt","RingClass":"eRingClass_MetalRich","MassMT":15581000000000,"InnerRad":346410000,"OuterRad":1321000000}],"WasDiscovered":true,"WasMapped":false}
+{"timestamp":"2024-04-05T18:25:47Z","event":"ScanBaryCentre","StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"BodyID":36,"SemiMajorAxis":2801334202.289581,"Eccentricity":0.00265,"OrbitalInclination":-1.094888,"Periapsis":102.793401,"OrbitalPeriod":275825.500488,"AscendingNode":43.93095,"MeanAnomaly":169.283055}
+{"timestamp":"2024-04-05T18:25:47Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C 4","BodyID":37,"Parents":[{"Null":36},{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27530.975397,"TidalLock":false,"TerraformState":"","PlanetClass":"High metal content body","Atmosphere":"","AtmosphereType":"None","Volcanism":"major silicate vapour geysers volcanism","MassEM":0.004522,"Radius":1089867,"SurfaceGravity":1.517367,"SurfaceTemperature":276.452576,"SurfacePressure":0,"Landable":true,"Materials":[{"Name":"iron","Percent":22.478912},{"Name":"nickel","Percent":17.00211},{"Name":"sulphur","Percent":16.193092},{"Name":"carbon","Percent":13.616714},{"Name":"chromium","Percent":10.109514},{"Name":"phosphorus","Percent":8.717654},{"Name":"vanadium","Percent":5.520039},{"Name":"arsenic","Percent":2.131581},{"Name":"niobium","Percent":1.536314},{"Name":"tin","Percent":1.459567},{"Name":"tellurium","Percent":1.234497}],"Composition":{"Ice":0,"Rock":0.676935,"Metal":0.323065},"SemiMajorAxis":1995812.237263,"Eccentricity":0.157913,"OrbitalInclination":8.847938,"Periapsis":101.047618,"OrbitalPeriod":43087.998033,"AscendingNode":170.828157,"MeanAnomaly":104.07796,"RotationPeriod":34670.073036,"AxialTilt":-0.391551,"WasDiscovered":true,"WasMapped":true}
+{"timestamp":"2024-04-05T18:25:47Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C 5","BodyID":38,"Parents":[{"Null":36},{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27530.966585,"TidalLock":true,"TerraformState":"","PlanetClass":"High metal content body","Atmosphere":"","AtmosphereType":"None","Volcanism":"major silicate vapour geysers volcanism","MassEM":0.002844,"Radius":935479.6875,"SurfaceGravity":1.295514,"SurfaceTemperature":276.452576,"SurfacePressure":0,"Landable":true,"Materials":[{"Name":"iron","Percent":22.547636},{"Name":"nickel","Percent":17.054087},{"Name":"sulphur","Percent":16.242596},{"Name":"carbon","Percent":13.658341},{"Name":"manganese","Percent":9.311944},{"Name":"phosphorus","Percent":8.744306},{"Name":"zinc","Percent":6.127604},{"Name":"zirconium","Percent":2.618245},{"Name":"molybdenum","Percent":1.472348},{"Name":"tellurium","Percent":1.238271},{"Name":"mercury","Percent":0.984618}],"Composition":{"Ice":0,"Rock":0.676935,"Metal":0.323065},"SemiMajorAxis":3172830.581665,"Eccentricity":0.157913,"OrbitalInclination":8.847938,"Periapsis":281.047613,"OrbitalPeriod":43087.998033,"AscendingNode":170.828157,"MeanAnomaly":104.07796,"RotationPeriod":54994.745465,"AxialTilt":-0.04463,"WasDiscovered":true,"WasMapped":true}
+{"timestamp":"2024-04-05T18:25:48Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C A Belt Cluster 4","BodyID":30,"Parents":[{"Ring":26},{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27529.804059,"WasDiscovered":true,"WasMapped":false}
+{"timestamp":"2024-04-05T18:25:48Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C A Belt Cluster 6","BodyID":32,"Parents":[{"Ring":26},{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27529.451186,"WasDiscovered":true,"WasMapped":false}
+{"timestamp":"2024-04-05T18:25:48Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C A Belt Cluster 3","BodyID":29,"Parents":[{"Ring":26},{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27531.261033,"WasDiscovered":true,"WasMapped":false}
+{"timestamp":"2024-04-05T18:25:48Z","event":"ScanBaryCentre","StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"BodyID":39,"SemiMajorAxis":4013554930.686951,"Eccentricity":0.000473,"OrbitalInclination":-0.033191,"Periapsis":64.672701,"OrbitalPeriod":473021.495342,"AscendingNode":-8.767869,"MeanAnomaly":85.119629}
+{"timestamp":"2024-04-05T18:25:48Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C 6","BodyID":40,"Parents":[{"Null":39},{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27531.794759,"TidalLock":true,"TerraformState":"","PlanetClass":"High metal content body","Atmosphere":"","AtmosphereType":"None","Volcanism":"major silicate vapour geysers volcanism","MassEM":0.003715,"Radius":1021531.3125,"SurfaceGravity":1.418853,"SurfaceTemperature":245.099045,"SurfacePressure":0,"Landable":true,"Materials":[{"Name":"iron","Percent":21.870565},{"Name":"nickel","Percent":16.541979},{"Name":"sulphur","Percent":15.754858},{"Name":"carbon","Percent":13.248203},{"Name":"manganese","Percent":9.032321},{"Name":"phosphorus","Percent":8.481728},{"Name":"zinc","Percent":5.943601},{"Name":"vanadium","Percent":5.37065},{"Name":"niobium","Percent":1.494737},{"Name":"yttrium","Percent":1.306303},{"Name":"mercury","Percent":0.955052}],"Composition":{"Ice":0,"Rock":0.676935,"Metal":0.323065},"SemiMajorAxis":1995069.086552,"Eccentricity":0.106548,"OrbitalInclination":2.516032,"Periapsis":69.485731,"OrbitalPeriod":37999.606729,"AscendingNode":-8.342294,"MeanAnomaly":135.940863,"RotationPeriod":57565.521456,"AxialTilt":0.255448,"WasDiscovered":true,"WasMapped":true}
+{"timestamp":"2024-04-05T18:25:48Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C 7","BodyID":41,"Parents":[{"Null":39},{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27531.796575,"TidalLock":true,"TerraformState":"","PlanetClass":"High metal content body","Atmosphere":"","AtmosphereType":"None","Volcanism":"major silicate vapour geysers volcanism","MassEM":0.002869,"Radius":938104.1875,"SurfaceGravity":1.299264,"SurfaceTemperature":245.099045,"SurfacePressure":0,"Landable":true,"Materials":[{"Name":"iron","Percent":21.772701},{"Name":"nickel","Percent":16.46796},{"Name":"sulphur","Percent":15.684361},{"Name":"carbon","Percent":13.188923},{"Name":"manganese","Percent":8.991904},{"Name":"phosphorus","Percent":8.443774},{"Name":"zinc","Percent":5.917006},{"Name":"vanadium","Percent":5.346618},{"Name":"cadmium","Percent":1.690749},{"Name":"yttrium","Percent":1.300458},{"Name":"tungsten","Percent":1.19554}],"Composition":{"Ice":0,"Rock":0.676935,"Metal":0.323065},"SemiMajorAxis":2583445.310593,"Eccentricity":0.106548,"OrbitalInclination":2.516032,"Periapsis":249.485726,"OrbitalPeriod":37999.606729,"AscendingNode":-8.342294,"MeanAnomaly":135.940863,"RotationPeriod":50587.336435,"AxialTilt":-0.310009,"WasDiscovered":true,"WasMapped":true}
+{"timestamp":"2024-04-05T18:25:48Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C A Belt Cluster 1","BodyID":27,"Parents":[{"Ring":26},{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27532.671687,"WasDiscovered":true,"WasMapped":false}
+{"timestamp":"2024-04-05T18:25:49Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C A Belt Cluster 5","BodyID":31,"Parents":[{"Ring":26},{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27533.15757,"WasDiscovered":true,"WasMapped":false}
+{"timestamp":"2024-04-05T18:25:49Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C A Belt Cluster 2","BodyID":28,"Parents":[{"Ring":26},{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27535.647866,"WasDiscovered":true,"WasMapped":false}
+{"timestamp":"2024-04-05T18:25:49Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C 1","BodyID":33,"Parents":[{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27536.018512,"TidalLock":true,"TerraformState":"","PlanetClass":"High metal content body","Atmosphere":"","AtmosphereType":"None","Volcanism":"major silicate vapour geysers volcanism","MassEM":0.00954,"Radius":1392722.5,"SurfaceGravity":1.960257,"SurfaceTemperature":387.656677,"SurfacePressure":0,"Landable":true,"Materials":[{"Name":"iron","Percent":21.532362},{"Name":"nickel","Percent":16.286177},{"Name":"sulphur","Percent":15.511237},{"Name":"carbon","Percent":13.043343},{"Name":"chromium","Percent":9.683818},{"Name":"manganese","Percent":8.892647},{"Name":"phosphorus","Percent":8.350573},{"Name":"zirconium","Percent":2.500351},{"Name":"niobium","Percent":1.471622},{"Name":"tin","Percent":1.398107},{"Name":"ruthenium","Percent":1.329761}],"Composition":{"Ice":0,"Rock":0.676936,"Metal":0.323064},"SemiMajorAxis":1116996526.71814,"Eccentricity":0.001204,"OrbitalInclination":0.000599,"Periapsis":21.483749,"OrbitalPeriod":69448.805451,"AscendingNode":-171.017688,"MeanAnomaly":358.605416,"RotationPeriod":69448.8705,"AxialTilt":-0.50213,"WasDiscovered":true,"WasMapped":true}
+{"timestamp":"2024-04-05T18:25:50Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C 2","BodyID":34,"Parents":[{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27536.400692,"TidalLock":true,"TerraformState":"","PlanetClass":"High metal content body","Atmosphere":"","AtmosphereType":"None","Volcanism":"minor metallic magma volcanism","MassEM":0.003518,"Radius":1003390.0625,"SurfaceGravity":1.392785,"SurfaceTemperature":348.30014,"SurfacePressure":0,"Landable":true,"Materials":[{"Name":"iron","Percent":20.935722},{"Name":"nickel","Percent":15.834906},{"Name":"sulphur","Percent":15.081437},{"Name":"carbon","Percent":12.681927},{"Name":"chromium","Percent":9.415492},{"Name":"manganese","Percent":8.646241},{"Name":"phosphorus","Percent":8.119187},{"Name":"zinc","Percent":5.689547},{"Name":"niobium","Percent":1.430845},{"Name":"yttrium","Percent":1.250466},{"Name":"mercury","Percent":0.914229}],"Composition":{"Ice":0,"Rock":0.676936,"Metal":0.323064},"SemiMajorAxis":1477218866.348267,"Eccentricity":0.000042,"OrbitalInclination":-0.050568,"Periapsis":170.508337,"OrbitalPeriod":105621.987581,"AscendingNode":-86.797293,"MeanAnomaly":247.114758,"RotationPeriod":105622.080844,"AxialTilt":0.271123,"WasDiscovered":true,"WasMapped":true}
+{"timestamp":"2024-04-05T18:25:50Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C 3","BodyID":35,"Parents":[{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27539.386406,"TidalLock":true,"TerraformState":"","PlanetClass":"High metal content body","Atmosphere":"","AtmosphereType":"None","Volcanism":"rocky magma volcanism","MassEM":0.004038,"Radius":1049990.5,"SurfaceGravity":1.459817,"SurfaceTemperature":308.382965,"SurfacePressure":0,"Landable":true,"Materials":[{"Name":"iron","Percent":21.742767},{"Name":"nickel","Percent":16.44532},{"Name":"sulphur","Percent":15.662806},{"Name":"carbon","Percent":13.170798},{"Name":"chromium","Percent":9.778446},{"Name":"phosphorus","Percent":8.432172},{"Name":"zinc","Percent":5.908871},{"Name":"germanium","Percent":4.610273},{"Name":"niobium","Percent":1.486002},{"Name":"molybdenum","Percent":1.41979},{"Name":"ruthenium","Percent":1.342755}],"Composition":{"Ice":0,"Rock":0.676936,"Metal":0.323064},"SemiMajorAxis":2054895520.210266,"Eccentricity":0.000161,"OrbitalInclination":-1.247176,"Periapsis":139.741869,"OrbitalPeriod":173289.275169,"AscendingNode":82.619085,"MeanAnomaly":334.677279,"RotationPeriod":173289.430337,"AxialTilt":-0.011229,"WasDiscovered":true,"WasMapped":true}
+{"timestamp":"2024-04-05T18:25:56Z","event":"Scan","ScanType":"AutoScan","BodyName":"Synuefe GT-H b43-1 C 8","BodyID":42,"Parents":[{"Star":4},{"Null":2},{"Null":0}],"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"DistanceFromArrivalLS":27549.835825,"TidalLock":true,"TerraformState":"","PlanetClass":"High metal content body","Atmosphere":"","AtmosphereType":"None","Volcanism":"","MassEM":0.013121,"Radius":1545884.875,"SurfaceGravity":2.188314,"SurfaceTemperature":222.69165,"SurfacePressure":0,"Landable":true,"Materials":[{"Name":"iron","Percent":22.548262},{"Name":"nickel","Percent":17.054562},{"Name":"sulphur","Percent":16.243065},{"Name":"carbon","Percent":13.658733},{"Name":"manganese","Percent":9.312202},{"Name":"phosphorus","Percent":8.744556},{"Name":"vanadium","Percent":5.537069},{"Name":"zirconium","Percent":2.618318},{"Name":"molybdenum","Percent":1.472389},{"Name":"tin","Percent":1.46407},{"Name":"yttrium","Percent":1.346781}],"Composition":{"Ice":0,"Rock":0.676936,"Metal":0.323064},"SemiMajorAxis":5436336994.171143,"Eccentricity":0.001662,"OrbitalInclination":-0.277322,"Periapsis":353.524219,"OrbitalPeriod":745669.907331,"AscendingNode":179.47059,"MeanAnomaly":314.498978,"RotationPeriod":745670.603398,"AxialTilt":-0.282477,"WasDiscovered":true,"WasMapped":true}
+{"timestamp":"2024-04-05T18:26:45Z","event":"ApproachBody","StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"Body":"Synuefe GT-H b43-1 C 4","BodyID":37}
+{"timestamp":"2024-04-05T18:27:18Z","event":"ReservoirReplenished","FuelMain":30.601341,"FuelReservoir":0.63}
+{"timestamp":"2024-04-05T18:27:18Z","event":"ApproachSettlement","Name":"$Ancient_Small_005:#index=1;","Name_Localised":"Guardian Structure","SystemAddress":2879909340529,"BodyID":37,"BodyName":"Synuefe GT-H b43-1 C 4","Latitude":27.952511,"Longitude":-5.201449}
+{"timestamp":"2024-04-05T18:27:21Z","event":"SupercruiseExit","Taxi":false,"Multicrew":false,"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"Body":"Synuefe GT-H b43-1 C 4","BodyID":37,"BodyType":"Planet"}
+{"timestamp":"2024-04-05T18:27:21Z","event":"ShipLocker","Items":[],"Components":[],"Consumables":[],"Data":[]}
+{"timestamp":"2024-04-05T18:27:21Z","event":"Music","MusicTrack":"Exploration"}
+{"timestamp":"2024-04-05T18:27:29Z","event":"ModuleInfo"}
+{"timestamp":"2024-04-05T18:28:07Z","event":"Music","MusicTrack":"GuardianSites"}
+{"timestamp":"2024-04-05T18:28:39Z","event":"Touchdown","PlayerControlled":true,"Taxi":false,"Multicrew":false,"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"Body":"Synuefe GT-H b43-1 C 4","BodyID":37,"OnStation":false,"OnPlanet":true,"Latitude":27.958906,"Longitude":-5.185781,"NearestDestination":"$Ancient_Small_005:#index=1;","NearestDestination_Localised":"Guardian Structure"}
+{"timestamp":"2024-04-05T18:28:41Z","event":"LaunchSRV","SRVType":"testbuggy","SRVType_Localised":"SRV Scarab","Loadout":"starter","ID":3,"PlayerControlled":true}
+{"timestamp":"2024-04-05T18:28:43Z","event":"ShipLocker","Items":[],"Components":[],"Consumables":[],"Data":[]}
+{"timestamp":"2024-04-05T18:28:46Z","event":"Cargo","Vessel":"SRV","Count":0}
+{"timestamp":"2024-04-05T18:29:20Z","event":"MaterialDiscovered","Category":"Raw","Name":"chromium","DiscoveryNumber":1}
+{"timestamp":"2024-04-05T18:29:20Z","event":"MaterialCollected","Category":"Raw","Name":"chromium","Count":3}
+{"timestamp":"2024-04-05T18:29:20Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:30:06Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:06Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:06Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:07Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:07Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:07Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:08Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:08Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:08Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:08Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:08Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:09Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:09Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:09Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:09Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:09Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:09Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:10Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:10Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:30:16Z","event":"MaterialDiscovered","Category":"Manufactured","Name":"guardian_sentinel_weaponparts","Name_Localised":"Guardian Sentinel Weapon Parts","DiscoveryNumber":1}
+{"timestamp":"2024-04-05T18:30:16Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_weaponparts","Name_Localised":"Guardian Sentinel Weapon Parts","Count":3}
+{"timestamp":"2024-04-05T18:30:16Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:30:22Z","event":"MaterialDiscovered","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","DiscoveryNumber":2}
+{"timestamp":"2024-04-05T18:30:22Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T18:30:22Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:30:54Z","event":"MaterialDiscovered","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","DiscoveryNumber":3}
+{"timestamp":"2024-04-05T18:30:54Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":3}
+{"timestamp":"2024-04-05T18:30:54Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:31:12Z","event":"MaterialDiscovered","Category":"Manufactured","Name":"guardian_techcomponent","Name_Localised":"Guardian Technology Component","DiscoveryNumber":4}
+{"timestamp":"2024-04-05T18:31:12Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_techcomponent","Name_Localised":"Guardian Technology Component","Count":3}
+{"timestamp":"2024-04-05T18:31:12Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:31:35Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_techcomponent","Name_Localised":"Guardian Technology Component","Count":3}
+{"timestamp":"2024-04-05T18:31:35Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:31:37Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:31:37Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:31:38Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:31:38Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:31:38Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:31:38Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:31:38Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:31:39Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:31:39Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:31:39Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:31:41Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:31:49Z","event":"MaterialDiscovered","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","DiscoveryNumber":5}
+{"timestamp":"2024-04-05T18:31:49Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:31:50Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:32:04Z","event":"CollectCargo","Type":"AncientRelic","Type_Localised":"Guardian Relic","Stolen":false}
+{"timestamp":"2024-04-05T18:32:06Z","event":"Cargo","Vessel":"SRV","Count":1}
+{"timestamp":"2024-04-05T18:32:27Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:28Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:28Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:28Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:28Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:28Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:29Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:29Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:29Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:29Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:29Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:31Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:31Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:31Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:32:36Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:32:36Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:32:38Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T18:32:39Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:32:44Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:32:44Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:32:49Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":3}
+{"timestamp":"2024-04-05T18:32:49Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:33:00Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":3}
+{"timestamp":"2024-04-05T18:33:00Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:33:36Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:33:36Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:33:53Z","event":"DataScanned","Type":"$Datascan_ANCIENTCODEX;","Type_Localised":"Ancient Codex"}
+{"timestamp":"2024-04-05T18:33:53Z","event":"MaterialDiscovered","Category":"Encoded","Name":"ancientlanguagedata","Name_Localised":"Pattern Delta Obelisk Data","DiscoveryNumber":1}
+{"timestamp":"2024-04-05T18:33:53Z","event":"MaterialCollected","Category":"Encoded","Name":"ancientlanguagedata","Name_Localised":"Pattern Delta Obelisk Data","Count":3}
+{"timestamp":"2024-04-05T18:33:53Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:34:14Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:34:14Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:34:20Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:34:21Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:34:31Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:34:33Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:54Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:54Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:55Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:55Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:55Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:55Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:56Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:56Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:56Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:56Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:57Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:57Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:36:57Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:03Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:03Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:03Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:03Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:04Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:04Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:12Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T18:37:12Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:37:14Z","event":"ShipTargeted","TargetLocked":true,"Ship":"asp","Ship_Localised":"Asp Explorer","ScanStage":0}
+{"timestamp":"2024-04-05T18:37:14Z","event":"ShipTargeted","TargetLocked":true,"Ship":"asp","Ship_Localised":"Asp Explorer","ScanStage":3,"PilotName":"$RolePanel2_unmanned; $cmdr_decorate:#name=BAUXITE13;","PilotName_Localised":"unmanned CMDR BAUXITE13","PilotRank":"Harmless","ShieldHealth":100,"HullHealth":100,"LegalStatus":"Lawless"}
+{"timestamp":"2024-04-05T18:37:15Z","event":"ShipTargeted","TargetLocked":false}
+{"timestamp":"2024-04-05T18:37:36Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:36Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:36Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:36Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:37Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:38Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:38Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:46Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:46Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:37:47Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:38:01Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:38:02Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:38:18Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T18:38:18Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:38:22Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_weaponparts","Name_Localised":"Guardian Sentinel Weapon Parts","Count":3}
+{"timestamp":"2024-04-05T18:38:22Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:38:24Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_weaponparts","Name_Localised":"Guardian Sentinel Weapon Parts","Count":3}
+{"timestamp":"2024-04-05T18:38:24Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:38:34Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":3}
+{"timestamp":"2024-04-05T18:38:34Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:39:04Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:39:04Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:39:20Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":3}
+{"timestamp":"2024-04-05T18:39:20Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:39:23Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_techcomponent","Name_Localised":"Guardian Technology Component","Count":3}
+{"timestamp":"2024-04-05T18:39:23Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:39:29Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:39:30Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:39:38Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":3}
+{"timestamp":"2024-04-05T18:39:38Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:39:59Z","event":"MaterialDiscovered","Category":"Encoded","Name":"ancienthistoricaldata","Name_Localised":"Pattern Gamma Obelisk Data","DiscoveryNumber":2}
+{"timestamp":"2024-04-05T18:39:59Z","event":"MaterialCollected","Category":"Encoded","Name":"ancienthistoricaldata","Name_Localised":"Pattern Gamma Obelisk Data","Count":3}
+{"timestamp":"2024-04-05T18:39:59Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:40:18Z","event":"ModuleInfo"}
+{"timestamp":"2024-04-05T18:40:22Z","event":"EjectCargo","Type":"ancientrelic","Type_Localised":"Guardian Relic","Count":1,"Abandoned":false}
+{"timestamp":"2024-04-05T18:40:24Z","event":"Cargo","Vessel":"SRV","Count":0}
+{"timestamp":"2024-04-05T18:40:46Z","event":"MaterialDiscovered","Category":"Encoded","Name":"guardian_moduleblueprint","Name_Localised":"Guardian Module Blueprint Fragment","DiscoveryNumber":3}
+{"timestamp":"2024-04-05T18:40:46Z","event":"MaterialCollected","Category":"Encoded","Name":"guardian_moduleblueprint","Name_Localised":"Guardian Module Blueprint Fragment","Count":1}
+{"timestamp":"2024-04-05T18:40:46Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:40:51Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:40:51Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:40:51Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:40:51Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:40:52Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:40:52Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:40:52Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:40:52Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:40:53Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:41:21Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:42:00Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T18:42:00Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:42:02Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_weaponparts","Name_Localised":"Guardian Sentinel Weapon Parts","Count":3}
+{"timestamp":"2024-04-05T18:42:02Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:42:07Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:42:07Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:42:16Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:42:16Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:43:29Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_weaponparts","Name_Localised":"Guardian Sentinel Weapon Parts","Count":3}
+{"timestamp":"2024-04-05T18:43:29Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:43:51Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:43:51Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:44:07Z","event":"HullDamage","Health":0.738758,"PlayerPilot":true}
+{"timestamp":"2024-04-05T18:44:44Z","event":"DockSRV","SRVType":"testbuggy","SRVType_Localised":"SRV Scarab","ID":3}
+{"timestamp":"2024-04-05T18:44:44Z","event":"Loadout","Ship":"asp","ShipID":2,"ShipName":"Ida","ShipIdent":"BX-60A","HullValue":6661154,"ModulesValue":37899395,"HullHealth":1,"UnladenMass":363.399994,"CargoCapacity":8,"MaxJumpRange":33.432678,"FuelCapacity":{"Main":32,"Reserve":0.63},"Rebuy":2228030,"Modules":[{"Slot":"TinyHardpoint1","Item":"hpt_chafflauncher_tiny","On":true,"Priority":0,"AmmoInClip":1,"AmmoInHopper":10,"Health":1,"Value":8500},{"Slot":"TinyHardpoint2","Item":"hpt_heatsinklauncher_turret_tiny","On":true,"Priority":0,"AmmoInClip":1,"AmmoInHopper":2,"Health":1,"Value":3500},{"Slot":"TinyHardpoint3","Item":"hpt_plasmapointdefence_turret_tiny","On":true,"Priority":0,"AmmoInClip":8,"AmmoInHopper":9928,"Health":1,"Value":18546},{"Slot":"TinyHardpoint4","Item":"hpt_cloudscanner_size0_class5","On":true,"Priority":0,"Health":1,"Value":1097095},{"Slot":"Armour","Item":"asp_armour_grade1","On":true,"Priority":1,"Health":1},{"Slot":"PowerPlant","Item":"int_powerplant_size5_class4","On":true,"Priority":1,"Health":1,"Value":1441233},{"Slot":"MainEngines","Item":"int_engine_size4_class4","On":false,"Priority":0,"Health":1,"Value":536693},{"Slot":"FrameShiftDrive","Item":"int_hyperdrive_size5_class5","On":true,"Priority":0,"Health":0.993935,"Value":5103953},{"Slot":"LifeSupport","Item":"int_lifesupport_size4_class2","On":true,"Priority":0,"Health":1,"Value":28373},{"Slot":"PowerDistributor","Item":"int_powerdistributor_size4_class2","On":true,"Priority":0,"Health":1,"Value":28373},{"Slot":"Radar","Item":"int_sensors_size5_class2","On":true,"Priority":0,"Health":1,"Value":79444},{"Slot":"FuelTank","Item":"int_fueltank_size5_class3","On":true,"Priority":1,"Health":1},{"Slot":"Slot01_Size6","Item":"int_fuelscoop_size6_class5","On":true,"Priority":0,"Health":1,"Value":28763610},{"Slot":"Slot03_Size3","Item":"int_shieldgenerator_size3_class5","On":true,"Priority":0,"Health":1,"Value":507912},{"Slot":"Slot04_Size3","Item":"int_cargorack_size3_class1","On":true,"Priority":1,"Health":1,"Value":10563},{"Slot":"Slot07_Size2","Item":"int_buggybay_size2_class2","On":true,"Priority":0,"Health":1,"Value":21600},{"Slot":"Slot08_Size1","Item":"int_detailedsurfacescanner_tiny","On":true,"Priority":0,"Health":1,"Value":250000},{"Slot":"PlanetaryApproachSuite","Item":"int_planetapproachsuite_advanced","On":true,"Priority":1,"Health":1},{"Slot":"VesselVoice","Item":"voicepack_verity","On":true,"Priority":1,"Health":1},{"Slot":"ShipCockpit","Item":"asp_cockpit","On":true,"Priority":1,"Health":1},{"Slot":"CargoHatch","Item":"modularcargobaydoor","On":true,"Priority":2,"Health":1}]}
+{"timestamp":"2024-04-05T18:44:45Z","event":"ShipLocker","Items":[],"Components":[],"Consumables":[],"Data":[]}
+{"timestamp":"2024-04-05T18:48:46Z","event":"Music","MusicTrack":"Exploration"}
+{"timestamp":"2024-04-05T18:48:47Z","event":"Music","MusicTrack":"MainMenu"}
+{"timestamp":"2024-04-05T18:48:52Z","event":"Commander","FID":"F123456789","Name":"TEST"}
+{"timestamp":"2024-04-05T18:48:52Z","event":"Materials","Raw":[{"Name":"chromium","Count":3}],"Manufactured":[{"Name":"guardian_sentinel_weaponparts","Name_Localised":"Guardian Sentinel Weapon Parts","Count":15},{"Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":15},{"Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":18},{"Name":"guardian_techcomponent","Name_Localised":"Guardian Technology Component","Count":9},{"Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":24}],"Encoded":[{"Name":"ancientlanguagedata","Name_Localised":"Pattern Delta Obelisk Data","Count":3},{"Name":"ancienthistoricaldata","Name_Localised":"Pattern Gamma Obelisk Data","Count":3},{"Name":"guardian_moduleblueprint","Name_Localised":"Guardian Module Blueprint Fragment","Count":1}]}
+{"timestamp":"2024-04-05T18:48:52Z","event":"Rank","Combat":0,"Trade":1,"Explore":2,"Soldier":0,"Exobiologist":2,"Empire":0,"Federation":0,"CQC":0}
+{"timestamp":"2024-04-05T18:48:52Z","event":"Progress","Combat":48,"Trade":36,"Explore":38,"Soldier":0,"Exobiologist":9,"Empire":0,"Federation":0,"CQC":0}
+{"timestamp":"2024-04-05T18:48:52Z","event":"Reputation","Empire":0,"Federation":0,"Independent":0,"Alliance":0}
+{"timestamp":"2024-04-05T18:48:52Z","event":"EngineerProgress","Engineers":[{"Engineer":"Felicity Farseer","EngineerID":300100,"Progress":"Invited"},{"Engineer":"Eleanor Bresa","EngineerID":400011,"Progress":"Known"},{"Engineer":"Hero Ferrari","EngineerID":400003,"Progress":"Known"},{"Engineer":"Jude Navarro","EngineerID":400001,"Progress":"Known"},{"Engineer":"Liz Ryder","EngineerID":300080,"Progress":"Known"},{"Engineer":"Rosa Dayette","EngineerID":400012,"Progress":"Known"},{"Engineer":"Baltanos","EngineerID":400010,"Progress":"Known"},{"Engineer":"The Dweller","EngineerID":300180,"Progress":"Known"},{"Engineer":"Elvira Martuuk","EngineerID":300160,"Progress":"Unlocked","RankProgress":0,"Rank":1},{"Engineer":"Tod 'The Blaster' McQuinn","EngineerID":300260,"Progress":"Unlocked","RankProgress":0,"Rank":1},{"Engineer":"Domino Green","EngineerID":400002,"Progress":"Known"}]}
+{"timestamp":"2024-04-05T18:48:52Z","event":"LoadGame","FID":"F123456789","Commander":"TEST","Horizons":true,"Odyssey":true,"Ship":"Asp","Ship_Localised":"Asp Explorer","ShipID":2,"ShipName":"Ida","ShipIdent":"BX-60A","FuelLevel":30.601341,"FuelCapacity":32,"StartLanded":true,"GameMode":"Solo","Credits":48656185,"Loan":0,"language":"English/UK","gameversion":"4.0.0.1801","build":"r300472/r0 "}
+{"timestamp":"2024-04-05T18:48:52Z","event":"ApproachSettlement","Name":"$Ancient_Small_005:#index=1;","Name_Localised":"Guardian Structure","SystemAddress":2879909340529,"BodyID":37,"BodyName":"Synuefe GT-H b43-1 C 4","Latitude":27.952511,"Longitude":-5.201449}
+{"timestamp":"2024-04-05T18:48:53Z","event":"Statistics","Bank_Account":{"Current_Wealth":96022006,"Spent_On_Ships":6661154,"Spent_On_Outfitting":40503667,"Spent_On_Repairs":0,"Spent_On_Fuel":755,"Spent_On_Ammo_Consumables":0,"Insurance_Claims":0,"Spent_On_Insurance":0,"Owned_Ship_Count":2,"Spent_On_Suits":150000,"Spent_On_Weapons":0,"Spent_On_Suit_Consumables":0,"Suits_Owned":2,"Weapons_Owned":1,"Spent_On_Premium_Stock":0,"Premium_Stock_Bought":0},"Combat":{"Bounties_Claimed":0,"Bounty_Hunting_Profit":0,"Combat_Bonds":0,"Combat_Bond_Profits":0,"Assassinations":0,"Assassination_Profits":0,"Highest_Single_Reward":0,"Skimmers_Killed":0,"OnFoot_Combat_Bonds":0,"OnFoot_Combat_Bonds_Profits":0,"OnFoot_Vehicles_Destroyed":0,"OnFoot_Ships_Destroyed":0,"Dropships_Taken":0,"Dropships_Booked":0,"Dropships_Cancelled":0,"ConflictZone_High":0,"ConflictZone_Medium":0,"ConflictZone_Low":0,"ConflictZone_Total":0,"ConflictZone_High_Wins":0,"ConflictZone_Medium_Wins":0,"ConflictZone_Low_Wins":0,"ConflictZone_Total_Wins":0,"Settlement_Defended":0,"Settlement_Conquered":0,"OnFoot_Skimmers_Killed":0,"OnFoot_Scavs_Killed":0},"Crime":{"Notoriety":0,"Fines":0,"Total_Fines":0,"Bounties_Received":0,"Total_Bounties":0,"Highest_Bounty":0,"Malware_Uploaded":0,"Settlements_State_Shutdown":0,"Production_Sabotage":0,"Production_Theft":0,"Total_Murders":0,"Citizens_Murdered":0,"Omnipol_Murdered":0,"Guards_Murdered":0,"Data_Stolen":0,"Goods_Stolen":0,"Sample_Stolen":0,"Total_Stolen":0,"Turrets_Destroyed":0,"Turrets_Overloaded":0,"Turrets_Total":0,"Value_Stolen_StateChange":0,"Profiles_Cloned":0},"Smuggling":{"Black_Markets_Traded_With":0,"Black_Markets_Profits":0,"Resources_Smuggled":0,"Average_Profit":0,"Highest_Single_Transaction":0},"Trading":{"Markets_Traded_With":0,"Market_Profits":0,"Resources_Traded":0,"Average_Profit":0,"Highest_Single_Transaction":0,"Data_Sold":0,"Goods_Sold":0,"Assets_Sold":0},"Mining":{"Mining_Profits":0,"Quantity_Mined":0,"Materials_Collected":91},"Exploration":{"Systems_Visited":51,"Exploration_Profits":630442,"Planets_Scanned_To_Level_2":48,"Planets_Scanned_To_Level_3":48,"Efficient_Scans":2,"Highest_Payout":312746,"Total_Hyperspace_Distance":1112,"Total_Hyperspace_Jumps":50,"Greatest_Distance_From_Start":880.42090597605,"Time_Played":14040,"OnFoot_Distance_Travelled":1158,"Shuttle_Journeys":2,"Shuttle_Distance_Travelled":7.0627765432583,"Spent_On_Shuttles":3724,"First_Footfalls":0,"Planet_Footfalls":5,"Settlements_Visited":0},"Passengers":{"Passengers_Missions_Bulk":0,"Passengers_Missions_VIP":0,"Passengers_Missions_Delivered":0,"Passengers_Missions_Ejected":0},"Search_And_Rescue":{"SearchRescue_Traded":0,"SearchRescue_Profit":0,"SearchRescue_Count":0,"Salvage_Legal_POI":0,"Salvage_Legal_Settlements":0,"Salvage_Illegal_POI":0,"Salvage_Illegal_Settlements":0,"Maglocks_Opened":0,"Panels_Opened":0,"Settlements_State_FireOut":0,"Settlements_State_Reboot":0},"Crafting":{"Count_Of_Used_Engineers":0,"Recipes_Generated":0,"Recipes_Generated_Rank_1":0,"Recipes_Generated_Rank_2":0,"Recipes_Generated_Rank_3":0,"Recipes_Generated_Rank_4":0,"Recipes_Generated_Rank_5":0,"Suit_Mods_Applied":0,"Weapon_Mods_Applied":0,"Suits_Upgraded":0,"Weapons_Upgraded":0,"Suits_Upgraded_Full":0,"Weapons_Upgraded_Full":0,"Suit_Mods_Applied_Full":0,"Weapon_Mods_Applied_Full":0},"Crew":{"NpcCrew_TotalWages":0,"NpcCrew_Hired":0,"NpcCrew_Fired":0,"NpcCrew_Died":0},"Multicrew":{"Multicrew_Time_Total":0,"Multicrew_Gunner_Time_Total":0,"Multicrew_Fighter_Time_Total":0,"Multicrew_Credits_Total":0,"Multicrew_Fines_Total":0},"Material_Trader_Stats":{"Trades_Completed":0,"Materials_Traded":0,"Assets_Traded_In":0,"Assets_Traded_Out":0},"Exobiology":{"Organic_Genus_Encountered":1,"Organic_Species_Encountered":1,"Organic_Variant_Encountered":2,"Organic_Data_Profits":95054000,"Organic_Data":5,"First_Logged_Profits":0,"First_Logged":0,"Organic_Systems":5,"Organic_Planets":5,"Organic_Genus":1,"Organic_Species":1}}
+{"timestamp":"2024-04-05T18:48:55Z","event":"ReceiveText","From":"","Message":"$COMMS_entered:#name=Synuefe GT-H b43-1;","Message_Localised":"Entered Channel: Synuefe GT-H b43-1","Channel":"npc"}
+{"timestamp":"2024-04-05T18:48:55Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"RAYDERIKS V2F-2QY","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:48:55Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"TICONDEROGA [CDSN] K6F-24V","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:48:55Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"UNSC PILLAR OF AUTUMN JNG-32J","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:48:55Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"MOT FAILURE QBG-N1M","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:48:55Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"ELPHELTVALENTINE G0Z-08G","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:48:55Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"CORSICAN TRAVEL CIE X2H-N5N","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:48:55Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"STFR BATTLESTAR ISHTAR X0J-B1M","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:48:55Z","event":"FSSSignalDiscovered","SystemAddress":2879909340529,"SignalName":"EXPLORER'S HEARTH V3K-L3Z","SignalType":"FleetCarrier","IsStation":true}
+{"timestamp":"2024-04-05T18:48:55Z","event":"Location","Latitude":27.95891,"Longitude":-5.185781,"DistFromStarLS":27531.26831,"Docked":false,"Taxi":false,"Multicrew":false,"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"StarPos":[749,-163.09375,-128.0625],"SystemAllegiance":"Guardian","SystemEconomy":"$economy_None;","SystemEconomy_Localised":"None","SystemSecondEconomy":"$economy_None;","SystemSecondEconomy_Localised":"None","SystemGovernment":"$government_None;","SystemGovernment_Localised":"None","SystemSecurity":"$GAlAXY_MAP_INFO_state_anarchy;","SystemSecurity_Localised":"Anarchy","Population":0,"Body":"Synuefe GT-H b43-1 C 4","BodyID":37,"BodyType":"Planet"}
+{"timestamp":"2024-04-05T18:48:55Z","event":"Music","MusicTrack":"NoTrack"}
+{"timestamp":"2024-04-05T18:48:55Z","event":"ShipLocker","Items":[],"Components":[],"Consumables":[],"Data":[]}
+{"timestamp":"2024-04-05T18:48:55Z","event":"Missions","Active":[],"Failed":[],"Complete":[]}
+{"timestamp":"2024-04-05T18:48:55Z","event":"Loadout","Ship":"asp","ShipID":2,"ShipName":"Ida","ShipIdent":"BX-60A","HullValue":6661154,"ModulesValue":37899395,"HullHealth":1,"UnladenMass":363.399994,"CargoCapacity":8,"MaxJumpRange":33.432678,"FuelCapacity":{"Main":32,"Reserve":0.63},"Rebuy":2228030,"Modules":[{"Slot":"TinyHardpoint1","Item":"hpt_chafflauncher_tiny","On":true,"Priority":0,"AmmoInClip":1,"AmmoInHopper":10,"Health":1,"Value":8500},{"Slot":"TinyHardpoint2","Item":"hpt_heatsinklauncher_turret_tiny","On":true,"Priority":0,"AmmoInClip":1,"AmmoInHopper":2,"Health":1,"Value":3500},{"Slot":"TinyHardpoint3","Item":"hpt_plasmapointdefence_turret_tiny","On":true,"Priority":0,"AmmoInClip":8,"AmmoInHopper":9928,"Health":1,"Value":18546},{"Slot":"TinyHardpoint4","Item":"hpt_cloudscanner_size0_class5","On":true,"Priority":0,"Health":1,"Value":1097095},{"Slot":"Armour","Item":"asp_armour_grade1","On":true,"Priority":1,"Health":1},{"Slot":"PowerPlant","Item":"int_powerplant_size5_class4","On":true,"Priority":1,"Health":1,"Value":1441233},{"Slot":"MainEngines","Item":"int_engine_size4_class4","On":false,"Priority":0,"Health":1,"Value":536693},{"Slot":"FrameShiftDrive","Item":"int_hyperdrive_size5_class5","On":true,"Priority":0,"Health":0.993935,"Value":5103953},{"Slot":"LifeSupport","Item":"int_lifesupport_size4_class2","On":true,"Priority":0,"Health":1,"Value":28373},{"Slot":"PowerDistributor","Item":"int_powerdistributor_size4_class2","On":true,"Priority":0,"Health":1,"Value":28373},{"Slot":"Radar","Item":"int_sensors_size5_class2","On":true,"Priority":0,"Health":1,"Value":79444},{"Slot":"FuelTank","Item":"int_fueltank_size5_class3","On":true,"Priority":1,"Health":1},{"Slot":"Slot01_Size6","Item":"int_fuelscoop_size6_class5","On":true,"Priority":0,"Health":1,"Value":28763610},{"Slot":"Slot03_Size3","Item":"int_shieldgenerator_size3_class5","On":true,"Priority":0,"Health":1,"Value":507912},{"Slot":"Slot04_Size3","Item":"int_cargorack_size3_class1","On":true,"Priority":1,"Health":1,"Value":10563},{"Slot":"Slot07_Size2","Item":"int_buggybay_size2_class2","On":true,"Priority":0,"Health":1,"Value":21600},{"Slot":"Slot08_Size1","Item":"int_detailedsurfacescanner_tiny","On":true,"Priority":0,"Health":1,"Value":250000},{"Slot":"PlanetaryApproachSuite","Item":"int_planetapproachsuite_advanced","On":true,"Priority":1,"Health":1},{"Slot":"VesselVoice","Item":"voicepack_verity","On":true,"Priority":1,"Health":1},{"Slot":"ShipCockpit","Item":"asp_cockpit","On":true,"Priority":1,"Health":1},{"Slot":"CargoHatch","Item":"modularcargobaydoor","On":true,"Priority":2,"Health":1}]}
+{"timestamp":"2024-04-05T18:48:55Z","event":"Music","MusicTrack":"Exploration"}
+{"timestamp":"2024-04-05T18:48:57Z","event":"Cargo","Vessel":"Ship","Count":0,"Inventory":[]}
+{"timestamp":"2024-04-05T18:49:02Z","event":"LaunchSRV","SRVType":"testbuggy","SRVType_Localised":"SRV Scarab","Loadout":"starter","ID":3,"PlayerControlled":true}
+{"timestamp":"2024-04-05T18:49:03Z","event":"Music","MusicTrack":"GuardianSites"}
+{"timestamp":"2024-04-05T18:49:04Z","event":"ShipLocker","Items":[],"Components":[],"Consumables":[],"Data":[]}
+{"timestamp":"2024-04-05T18:49:27Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:28Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:29Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:29Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:29Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:31Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:31Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:31Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:31Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:31Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:32Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:32Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:49:45Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T18:49:45Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:50:12Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:13Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:13Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:13Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:25Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_weaponparts","Name_Localised":"Guardian Sentinel Weapon Parts","Count":3}
+{"timestamp":"2024-04-05T18:50:25Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:50:30Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T18:50:30Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:50:33Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:50:33Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:50:51Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:52Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:52Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:52Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:52Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:52Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:53Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:53Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:54Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:54Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:54Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:54Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:55Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:50:55Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:51:10Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":3}
+{"timestamp":"2024-04-05T18:51:10Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:51:14Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:51:14Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:51:25Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_weaponparts","Name_Localised":"Guardian Sentinel Weapon Parts","Count":3}
+{"timestamp":"2024-04-05T18:51:25Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:51:26Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:51:26Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:51:39Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":3}
+{"timestamp":"2024-04-05T18:51:39Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:51:59Z","event":"MaterialCollected","Category":"Encoded","Name":"ancientlanguagedata","Name_Localised":"Pattern Delta Obelisk Data","Count":3}
+{"timestamp":"2024-04-05T18:51:59Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:52:13Z","event":"MaterialDiscovered","Category":"Encoded","Name":"ancientculturaldata","Name_Localised":"Pattern Beta Obelisk Data","DiscoveryNumber":4}
+{"timestamp":"2024-04-05T18:52:13Z","event":"MaterialCollected","Category":"Encoded","Name":"ancientculturaldata","Name_Localised":"Pattern Beta Obelisk Data","Count":3}
+{"timestamp":"2024-04-05T18:52:13Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:52:17Z","event":"ShipTargeted","TargetLocked":true,"Ship":"asp","Ship_Localised":"Asp Explorer","ScanStage":0}
+{"timestamp":"2024-04-05T18:52:17Z","event":"ShipTargeted","TargetLocked":true,"Ship":"asp","Ship_Localised":"Asp Explorer","ScanStage":3,"PilotName":"$RolePanel2_unmanned; $cmdr_decorate:#name=BAUXITE13;","PilotName_Localised":"unmanned CMDR BAUXITE13","PilotRank":"Harmless","ShieldHealth":100,"HullHealth":100,"LegalStatus":"Lawless"}
+{"timestamp":"2024-04-05T18:52:18Z","event":"ShipTargeted","TargetLocked":false}
+{"timestamp":"2024-04-05T18:52:41Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_techcomponent","Name_Localised":"Guardian Technology Component","Count":3}
+{"timestamp":"2024-04-05T18:52:41Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:52:49Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":3}
+{"timestamp":"2024-04-05T18:52:49Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:52:58Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_techcomponent","Name_Localised":"Guardian Technology Component","Count":3}
+{"timestamp":"2024-04-05T18:52:58Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:53:17Z","event":"MaterialCollected","Category":"Encoded","Name":"ancientlanguagedata","Name_Localised":"Pattern Delta Obelisk Data","Count":3}
+{"timestamp":"2024-04-05T18:53:17Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:53:44Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:45Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:45Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:45Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:45Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:45Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:45Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:45Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:46Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:46Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:46Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:47Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:48Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:48Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:53:56Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_weaponparts","Name_Localised":"Guardian Sentinel Weapon Parts","Count":3}
+{"timestamp":"2024-04-05T18:53:56Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:53:59Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T18:53:59Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:54:08Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":3}
+{"timestamp":"2024-04-05T18:54:08Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:54:17Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":3}
+{"timestamp":"2024-04-05T18:54:17Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:54:32Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:54:33Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:54:40Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_techcomponent","Name_Localised":"Guardian Technology Component","Count":3}
+{"timestamp":"2024-04-05T18:54:40Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:54:47Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T18:54:47Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:55:01Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powercell","Name_Localised":"Guardian Power Cell","Count":3}
+{"timestamp":"2024-04-05T18:55:01Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:55:25Z","event":"MaterialCollected","Category":"Encoded","Name":"ancientlanguagedata","Name_Localised":"Pattern Delta Obelisk Data","Count":3}
+{"timestamp":"2024-04-05T18:55:25Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:55:47Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:56:05Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T18:56:05Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:56:15Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:56:16Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:56:16Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:56:16Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:56:17Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:56:17Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:56:32Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T18:56:32Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:58:12Z","event":"CollectCargo","Type":"AncientRelic","Type_Localised":"Guardian Relic","Stolen":false}
+{"timestamp":"2024-04-05T18:58:14Z","event":"Cargo","Vessel":"SRV","Count":1}
+{"timestamp":"2024-04-05T18:59:03Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:03Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:03Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:05Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:06Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:15Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:15Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:17Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:17Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:18Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:18Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:18Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:27Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:27Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:28Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:28Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:28Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:28Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:28Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:28Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:29Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:29Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:30Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T18:59:53Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T18:59:53Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T18:59:57Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T18:59:57Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T19:00:00Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T19:00:00Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T19:00:25Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_powerconduit","Name_Localised":"Guardian Power Conduit","Count":3}
+{"timestamp":"2024-04-05T19:00:25Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T19:00:50Z","event":"ModuleInfo"}
+{"timestamp":"2024-04-05T19:00:53Z","event":"EjectCargo","Type":"ancientrelic","Type_Localised":"Guardian Relic","Count":1,"Abandoned":false}
+{"timestamp":"2024-04-05T19:00:55Z","event":"Cargo","Vessel":"SRV","Count":0}
+{"timestamp":"2024-04-05T19:01:18Z","event":"MaterialCollected","Category":"Encoded","Name":"guardian_moduleblueprint","Name_Localised":"Guardian Module Blueprint Fragment","Count":1}
+{"timestamp":"2024-04-05T19:01:18Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T19:01:31Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:01:42Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:01:42Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:08Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_weaponparts","Name_Localised":"Guardian Sentinel Weapon Parts","Count":3}
+{"timestamp":"2024-04-05T19:02:08Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T19:02:12Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_weaponparts","Name_Localised":"Guardian Sentinel Weapon Parts","Count":3}
+{"timestamp":"2024-04-05T19:02:12Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T19:02:13Z","event":"MaterialCollected","Category":"Manufactured","Name":"guardian_sentinel_wreckagecomponents","Name_Localised":"Guardian Wreckage Components","Count":3}
+{"timestamp":"2024-04-05T19:02:13Z","event":"ShipLocker"}
+{"timestamp":"2024-04-05T19:02:31Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:32Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:32Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:32Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:32Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:33Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:33Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:33Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:33Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:33Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:33Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:34Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:34Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:34Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:34Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:34Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:35Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:35Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:02:35Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:03:01Z","event":"DockSRV","SRVType":"testbuggy","SRVType_Localised":"SRV Scarab","ID":3}
+{"timestamp":"2024-04-05T19:03:01Z","event":"Loadout","Ship":"asp","ShipID":2,"ShipName":"Ida","ShipIdent":"BX-60A","HullValue":6661154,"ModulesValue":37899395,"HullHealth":1,"UnladenMass":363.399994,"CargoCapacity":8,"MaxJumpRange":33.432678,"FuelCapacity":{"Main":32,"Reserve":0.63},"Rebuy":2228030,"Modules":[{"Slot":"TinyHardpoint1","Item":"hpt_chafflauncher_tiny","On":true,"Priority":0,"AmmoInClip":1,"AmmoInHopper":10,"Health":1,"Value":8500},{"Slot":"TinyHardpoint2","Item":"hpt_heatsinklauncher_turret_tiny","On":true,"Priority":0,"AmmoInClip":1,"AmmoInHopper":2,"Health":1,"Value":3500},{"Slot":"TinyHardpoint3","Item":"hpt_plasmapointdefence_turret_tiny","On":true,"Priority":0,"AmmoInClip":4,"AmmoInHopper":9880,"Health":1,"Value":18546},{"Slot":"TinyHardpoint4","Item":"hpt_cloudscanner_size0_class5","On":true,"Priority":0,"Health":1,"Value":1097095},{"Slot":"Armour","Item":"asp_armour_grade1","On":true,"Priority":1,"Health":1},{"Slot":"PowerPlant","Item":"int_powerplant_size5_class4","On":true,"Priority":1,"Health":1,"Value":1441233},{"Slot":"MainEngines","Item":"int_engine_size4_class4","On":false,"Priority":0,"Health":1,"Value":536693},{"Slot":"FrameShiftDrive","Item":"int_hyperdrive_size5_class5","On":true,"Priority":0,"Health":0.993935,"Value":5103953},{"Slot":"LifeSupport","Item":"int_lifesupport_size4_class2","On":true,"Priority":0,"Health":1,"Value":28373},{"Slot":"PowerDistributor","Item":"int_powerdistributor_size4_class2","On":true,"Priority":0,"Health":1,"Value":28373},{"Slot":"Radar","Item":"int_sensors_size5_class2","On":true,"Priority":0,"Health":1,"Value":79444},{"Slot":"FuelTank","Item":"int_fueltank_size5_class3","On":true,"Priority":1,"Health":1},{"Slot":"Slot01_Size6","Item":"int_fuelscoop_size6_class5","On":true,"Priority":0,"Health":1,"Value":28763610},{"Slot":"Slot03_Size3","Item":"int_shieldgenerator_size3_class5","On":true,"Priority":0,"Health":1,"Value":507912},{"Slot":"Slot04_Size3","Item":"int_cargorack_size3_class1","On":true,"Priority":1,"Health":1,"Value":10563},{"Slot":"Slot07_Size2","Item":"int_buggybay_size2_class2","On":true,"Priority":0,"Health":1,"Value":21600},{"Slot":"Slot08_Size1","Item":"int_detailedsurfacescanner_tiny","On":true,"Priority":0,"Health":1,"Value":250000},{"Slot":"PlanetaryApproachSuite","Item":"int_planetapproachsuite_advanced","On":true,"Priority":1,"Health":1},{"Slot":"VesselVoice","Item":"voicepack_verity","On":true,"Priority":1,"Health":1},{"Slot":"ShipCockpit","Item":"asp_cockpit","On":true,"Priority":1,"Health":1},{"Slot":"CargoHatch","Item":"modularcargobaydoor","On":true,"Priority":2,"Health":1}]}
+{"timestamp":"2024-04-05T19:03:02Z","event":"ShipLocker","Items":[],"Components":[],"Consumables":[],"Data":[]}
+{"timestamp":"2024-04-05T19:03:11Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:03:11Z","event":"Liftoff","PlayerControlled":true,"Taxi":false,"Multicrew":false,"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"Body":"Synuefe GT-H b43-1 C 4","BodyID":37,"OnStation":false,"OnPlanet":true,"Latitude":27.95891,"Longitude":-5.185781,"NearestDestination":"$Ancient_Small_005:#index=1;","NearestDestination_Localised":"Guardian Structure"}
+{"timestamp":"2024-04-05T19:03:11Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:03:11Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:03:12Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:03:12Z","event":"UnderAttack","Target":"You"}
+{"timestamp":"2024-04-05T19:03:46Z","event":"Music","MusicTrack":"Combat_Dogfight"}
+{"timestamp":"2024-04-05T19:03:47Z","event":"Music","MusicTrack":"GuardianSites"}
+{"timestamp":"2024-04-05T19:04:27Z","event":"Music","MusicTrack":"Exploration"}
+{"timestamp":"2024-04-05T19:05:04Z","event":"Music","MusicTrack":"SystemMap"}
+{"timestamp":"2024-04-05T19:05:33Z","event":"Music","MusicTrack":"Exploration"}
+{"timestamp":"2024-04-05T19:05:41Z","event":"StartJump","JumpType":"Supercruise","Taxi":false}
+{"timestamp":"2024-04-05T19:05:46Z","event":"SupercruiseEntry","Taxi":false,"Multicrew":false,"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529}
+{"timestamp":"2024-04-05T19:05:46Z","event":"ShipLocker","Items":[],"Components":[],"Consumables":[],"Data":[]}
+{"timestamp":"2024-04-05T19:05:46Z","event":"Music","MusicTrack":"Supercruise"}
+{"timestamp":"2024-04-05T19:06:25Z","event":"LeaveBody","StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"Body":"Synuefe GT-H b43-1 C 4","BodyID":37}
+{"timestamp":"2024-04-05T19:06:44Z","event":"SupercruiseDestinationDrop","Type":"TICONDEROGA [CDSN] K6F-24V","Threat":0,"MarketID":3702873600}
+{"timestamp":"2024-04-05T19:06:47Z","event":"SupercruiseExit","Taxi":false,"Multicrew":false,"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"Body":"Synuefe GT-H b43-1 C 4","BodyID":37,"BodyType":"Planet"}
+{"timestamp":"2024-04-05T19:06:47Z","event":"ShipLocker","Items":[],"Components":[],"Consumables":[],"Data":[]}
+{"timestamp":"2024-04-05T19:06:47Z","event":"Music","MusicTrack":"DestinationFromSupercruise"}
+{"timestamp":"2024-04-05T19:06:52Z","event":"Music","MusicTrack":"Exploration"}
+{"timestamp":"2024-04-05T19:06:56Z","event":"ReceiveText","From":"TICONDEROGA [CDSN] K6F-24V","Message":"$STATION_NoFireZone_entered;","Message_Localised":"No fire zone entered.","Channel":"npc"}
+{"timestamp":"2024-04-05T19:06:58Z","event":"DockingRequested","MarketID":3702873600,"StationName":"K6F-24V","StationType":"FleetCarrier","LandingPads":{"Small":4,"Medium":4,"Large":8}}
+{"timestamp":"2024-04-05T19:06:58Z","event":"ReceiveText","From":"TICONDEROGA [CDSN] K6F-24V","Message":"$DockingChatter_Neutral;","Message_Localised":"Ensure to observe starport protocol during your visit, pilot.","Channel":"npc"}
+{"timestamp":"2024-04-05T19:06:58Z","event":"ReceiveText","From":"TICONDEROGA [CDSN] K6F-24V","Message":"$STATION_docking_granted;","Message_Localised":"Docking request granted.","Channel":"npc"}
+{"timestamp":"2024-04-05T19:06:58Z","event":"DockingGranted","LandingPad":11,"MarketID":3702873600,"StationName":"K6F-24V","StationType":"FleetCarrier"}
+{"timestamp":"2024-04-05T19:07:49Z","event":"Docked","StationName":"K6F-24V","StationType":"FleetCarrier","Taxi":false,"Multicrew":false,"StarSystem":"Synuefe GT-H b43-1","SystemAddress":2879909340529,"MarketID":3702873600,"StationFaction":{"Name":"FleetCarrier"},"StationGovernment":"$government_Carrier;","StationGovernment_Localised":"Private Ownership","StationServices":["dock","autodock","blackmarket","commodities","contacts","exploration","outfitting","crewlounge","rearm","refuel","repair","shipyard","engineer","flightcontroller","stationoperations","stationMenu","carriermanagement","carrierfuel","livery","voucherredemption","socialspace","bartender","vistagenomics","pioneersupplies"],"StationEconomy":"$economy_Carrier;","StationEconomy_Localised":"Private Enterprise","StationEconomies":[{"Name":"$economy_Carrier;","Name_Localised":"Private Enterprise","Proportion":1}],"DistFromStarLS":27531.508488,"LandingPads":{"Small":4,"Medium":4,"Large":8}}
+{"timestamp":"2024-04-05T19:07:51Z","event":"RefuelAll","Cost":82,"Amount":1.543205}
+{"timestamp":"2024-04-05T19:07:51Z","event":"RepairAll","Cost":326}
+{"timestamp":"2024-04-05T19:07:52Z","event":"BuyAmmo","Cost":256}
+{"timestamp":"2024-04-05T19:07:57Z","event":"Undocked","StationName":"K6F-24V","StationType":"FleetCarrier","MarketID":3702873600,"Taxi":false,"Multicrew":false}
+{"timestamp":"2024-04-05T19:08:09Z","event":"Music","MusicTrack":"MainMenu"}
+{"timestamp":"2024-04-05T19:08:13Z","event":"Shutdown"}

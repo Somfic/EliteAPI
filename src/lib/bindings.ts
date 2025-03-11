@@ -5,26 +5,12 @@
 
 
 export const commands = {
-async getEventBacklog() : Promise<Result<null, null>> {
-    try {
-    return { status: "ok", data: await TAURI_INVOKE("get_event_backlog") };
-} catch (e) {
-    if(e instanceof Error) throw e;
-    else return { status: "error", error: e  as any };
-}
-}
+
 }
 
 /** user-defined events **/
 
 
-export const events = __makeEvents__<{
-errorEvent: ErrorEvent,
-journalEvent: JournalEvent
-}>({
-errorEvent: "error-event",
-journalEvent: "journal-event"
-})
 
 /** user-defined constants **/
 
@@ -32,9 +18,7 @@ journalEvent: "journal-event"
 
 /** user-defined types **/
 
-export type ErrorEvent = [string, boolean]
-export type JournalEvent = string
-export type Preferences = { uwu: boolean }
+
 
 /** tauri-specta globals **/
 

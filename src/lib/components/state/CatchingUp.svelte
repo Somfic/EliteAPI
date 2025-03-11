@@ -1,7 +1,7 @@
 <script lang="ts">
   import Pill from "$lib/components/Pill.svelte";
   import type { CatchingUpState } from "$lib/state";
-  import ProgressBar from "../components/ProgressBar.svelte";
+  import ProgressBar from "../ProgressBar.svelte";
 
   export let state: CatchingUpState;
 </script>

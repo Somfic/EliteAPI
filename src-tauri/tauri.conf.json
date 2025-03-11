@@ -15,8 +15,8 @@
         "title": "eliteapi",
         "width": 320,
         "height": 550,
-        "skipTaskbar": true,
-        "decorations": false,
+        "skipTaskbar": false,
+        "decorations": true,
         "resizable": false,
         "maximizable": false
       }

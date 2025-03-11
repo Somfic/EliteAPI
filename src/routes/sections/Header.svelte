@@ -38,12 +38,15 @@
       width: 50px;
       height: 50px;
       border-radius: 100%;
+      user-select: none;
+      pointer-events: none;
     }
 
     .title {
       display: flex;
       flex-direction: column;
       gap: 0.1rem;
+      user-select: none;
 
       h1 {
         font-size: 1.7rem;

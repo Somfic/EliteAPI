@@ -1,8 +1,8 @@
 <script lang="ts">
-  export let hide: boolean;
+  export let show: boolean;
 </script>
 
-<div class="scene" class:hide>
+<div class="scene" class:show>
   <div class="wrap">
     <div class="wall wall-right"></div>
     <div class="wall wall-left"></div>
@@ -37,12 +37,12 @@
     vertical-align: middle;
     overflow: hidden;
     pointer-events: none;
-    opacity: 0.8;
+    opacity: 0;
     z-index: 0;
     animation: warp 60s infinite linear;
 
-    &.hide {
-      opacity: 0;
+    &.show {
+      opacity: 0.8;
     }
 
     transition: opacity 1s;

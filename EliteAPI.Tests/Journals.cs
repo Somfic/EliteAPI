@@ -59,12 +59,14 @@ public class Journals
         Assert.That(string.Equals(eventName, invokedEvent.Event, StringComparison.CurrentCultureIgnoreCase), $"Event is not of type {eventName} but {invokedEvent.Event}");
     }
     
-    static IImmutableList<string> GetJournalLines()
+    static IEnumerable<string> GetJournalLines()
     {
-        Console.WriteLine(Directory.GetCurrentDirectory());
-        return Directory
-            .GetFiles("./Journals")
-            .SelectMany(File.ReadAllLines)
-            .ToImmutableList();
+        foreach (var file in Directory.EnumerateFiles("./Journals"))
+        {
+            foreach (var line in File.ReadLines(file))
+            {
+                yield return line;
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ jobs:
   release:
     concurrency:
       group: ${{ github.workflow }}
-    name: ci/cd
+    name: release
     runs-on: ubuntu-latest
     permissions: write-all
     steps:

@@ -113,4 +113,4 @@ jobs:
           appVersion: ${{ env.COMMITTER_TAG }}
           includeUpdaterJson: true
           updaterJsonPreferNsis: true
-          args: --target x86_64-pc-windows-msvc
+          args: --runner cargo-xwin --target x86_64-pc-windows-msvc

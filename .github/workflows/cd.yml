@@ -96,3 +96,5 @@ jobs:
           appVersion: ${{ env.COMMITTER_TAG }}
           includeUpdaterJson: true
           updaterJsonPreferNsis: true
+          args: |
+            ${{ format('--config ''{{ \"version\": \"{0}\" }}''', env.COMMITTER_TAG) }}

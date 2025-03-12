@@ -75,6 +75,11 @@ jobs:
         if: env.COMMITTER_IS_NEW == 'true'
         run: git push --tags origin
 
+      - name: update Cargo.toml version
+        run: |
+          echo "updating Cargo.toml version to $COMMITTER_TAG"
+          sed -i 's/^\s*version = ".*"/version = "'"$COMMITTER_TAG"'"/' src-tauri/Cargo.toml
+
       - name: Create release
         if: env.COMMITTER_IS_NEW == 'true'
         uses: softprops/action-gh-release@v2
@@ -89,11 +94,10 @@ jobs:
         uses: tauri-apps/tauri-action@v0
         if: env.COMMITTER_IS_NEW == 'true'
         env:
-          GITHUB_TOKEN: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tagName: ${{ env.COMMITTER_TAG }}
           releaseDraft: true
           prerelease: false
-          appVersion: ${{ env.COMMITTER_TAG }}
           includeUpdaterJson: true
           updaterJsonPreferNsis: true

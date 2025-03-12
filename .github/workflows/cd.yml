@@ -75,7 +75,8 @@ jobs:
         if: env.COMMITTER_IS_NEW == 'true'
         run: git push --tags origin
 
-      - name: update Cargo.toml version
+      - name: Update Cargo.toml version
+        if: env.COMMITTER_IS_NEW == 'true'
         run: |
           echo "updating Cargo.toml version to $COMMITTER_TAG"
           sed -i 's/^\s*version = ".*"/version = "'"$COMMITTER_TAG"'"/' src-tauri/Cargo.toml

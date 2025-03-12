@@ -14,7 +14,7 @@
 
 <style lang="scss">
   @use "sass:color";
-  @import "../../styling/theming.scss";
+  @import "$lib/theming.scss";
 
   .pill {
     display: inline-flex;

@@ -28,3 +28,5 @@ ed-journals = "0.7.1"
 tauri-plugin-store = "2"
 thiserror = "2.0.3"
 interprocess = { version = "2.2.2", features = ["tokio"] }
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"

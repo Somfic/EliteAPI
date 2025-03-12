@@ -23,7 +23,7 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Appply Bun cache
+      - name: Apply Bun cache
         uses: actions/cache@v4
         with:
           path: |
@@ -60,6 +60,13 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libgtk-3-dev webkit2gtk-4.1 libayatana-appindicator3-dev librsvg2-dev
+          
+      - name: Install windows-compilation dependencies
+        run: |
+          sudo apt install nsis
+          sudo apt install lld llvm
+          rustup target add x86_64-pc-windows-msvc
+          cargo install --locked cargo-xwin
 
       # - name: install macos intel target
       #   if: matrix.platform == 'macos-latest' && matrix.args == '--target x86_64-apple-darwin'
@@ -106,3 +113,4 @@ jobs:
           appVersion: ${{ env.COMMITTER_TAG }}
           includeUpdaterJson: true
           updaterJsonPreferNsis: true
+          args: --target x86_64-pc-windows-msvc

@@ -98,4 +98,4 @@ jobs:
           includeUpdaterJson: true
           updaterJsonPreferNsis: true
           args: |
-           --config {{ \"version\": \"${{ secrets.GITHUB_TOKEN }}\" }}
+            --config {"version": "${{ secrets.GITHUB_TOKEN }}" }

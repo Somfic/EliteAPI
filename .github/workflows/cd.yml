@@ -72,9 +72,11 @@ jobs:
           echo "COMMITTER_TAG=$(cat .env/COMMITTER_TAG)" >> $GITHUB_ENV
 
       - name: Push tag to origin
+        if: env.COMMITTER_IS_NEW == 'true'
         run: git push --tags origin
 
       - name: Create release
+        if: env.COMMITTER_IS_NEW == 'true'
         uses: softprops/action-gh-release@v2
         with:
           files: target/release/*.tar.gz
@@ -84,6 +86,7 @@ jobs:
           draft: true
 
       - uses: tauri-apps/tauri-action@v0
+        if: env.COMMITTER_IS_NEW == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

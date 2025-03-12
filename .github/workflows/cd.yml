@@ -30,6 +30,9 @@ jobs:
             ~/.bun
             node_modules/
           key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb', '**/package.json') }}
+
+      - name: Install dependencies
+        run: bun install
           
       - name: Set up Rust
         uses: actions-rs/toolchain@v1
@@ -100,5 +103,6 @@ jobs:
           tagName: ${{ env.COMMITTER_TAG }}
           releaseDraft: true
           prerelease: false
+          appVersion: ${{ env.COMMITTER_TAG }}
           includeUpdaterJson: true
           updaterJsonPreferNsis: true

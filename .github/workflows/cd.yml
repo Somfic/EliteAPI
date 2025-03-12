@@ -88,7 +88,7 @@ jobs:
       - uses: tauri-apps/tauri-action@v0
         if: env.COMMITTER_IS_NEW == 'true'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: 
         with:
           tagName: ${{ env.COMMITTER_TAG }}
           releaseDraft: true
@@ -97,4 +97,4 @@ jobs:
           includeUpdaterJson: true
           updaterJsonPreferNsis: true
           args: |
-            ${{ format('--config ''{{ \"version\": \"{0}\" }}''', env.COMMITTER_TAG) }}
+           --config {{ \"version\": \"${{ secrets.GITHUB_TOKEN }}\" }}

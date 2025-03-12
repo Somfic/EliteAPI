@@ -85,7 +85,8 @@ jobs:
           body_path: ".env/COMMITTER_CHANGELOG"
           draft: true
 
-      - uses: tauri-apps/tauri-action@v0
+      - name: Build app
+        uses: tauri-apps/tauri-action@v0
         if: env.COMMITTER_IS_NEW == 'true'
         env:
           GITHUB_TOKEN: 

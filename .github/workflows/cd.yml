@@ -81,14 +81,15 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: ${{ env.COMMITTER_TAG }}
           body_path: ".env/COMMITTER_CHANGELOG"
-          draft: false
+          draft: true
 
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: __VERSION__
-          releaseName: 'v__VERSION__'
-          releaseBody: 'See the assets to download this version and install.'
+          tagName: ${{ env.COMMITTER_TAG }}
           releaseDraft: true
           prerelease: false
+          appVersion: ${{ env.COMMITTER_TAG }}
+          includeUpdaterJson: true
+          updaterJsonPreferNsis: true

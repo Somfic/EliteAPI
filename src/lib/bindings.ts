@@ -37,8 +37,8 @@ type __EventObj__<T> = {
 		cb: TAURI_API_EVENT.EventCallback<T>,
 	) => ReturnType<typeof TAURI_API_EVENT.once<T>>;
 	emit: null extends T
-		? (payload?: T) => ReturnType<typeof TAURI_API_EVENT.emit>
-		: (payload: T) => ReturnType<typeof TAURI_API_EVENT.emit>;
+	? (payload?: T) => ReturnType<typeof TAURI_API_EVENT.emit>
+	: (payload: T) => ReturnType<typeof TAURI_API_EVENT.emit>;
 };
 
 export type Result<T, E> =
@@ -58,7 +58,7 @@ function __makeEvents__<T extends Record<string, any>>(
 			get: (_, event) => {
 				const name = mappings[event as keyof T];
 
-				return new Proxy((() => {}) as any, {
+				return new Proxy((() => { }) as any, {
 					apply: (_, __, [window]: [__WebviewWindow__]) => ({
 						listen: (arg: any) => window.listen(name, arg),
 						once: (arg: any) => window.once(name, arg),

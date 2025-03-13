@@ -32,13 +32,24 @@ impl Server {
     }
 
     pub async fn emit(&self, event: ServerEvent) -> Result<()> {
-        self.sender.send(event.clone()).await?;
+        self.sender
+            .send(event.clone())
+            .await
+            .map_err(|e| Error::ChannelSendError(e.to_string()))?;
 
         match event {
-            ServerEvent::Log(log) => self.app_handle.emit("log", log)?,
-            ServerEvent::JournalEvent(journal_event) => {
-                self.app_handle.emit("journal_event", journal_event)?
-            }
+            ServerEvent::Log(log) => self
+                .app_handle
+                .emit("log", log)
+                .map_err(|e| Error::ChannelSendError(e.to_string()))?,
+            ServerEvent::JournalEvent(journal_event) => self
+                .app_handle
+                .emit("journal_event", journal_event)
+                .map_err(|e| Error::ChannelSendError(e.to_string()))?,
+            ServerEvent::Error(error) => self
+                .app_handle
+                .emit("error", error)
+                .map_err(|e| Error::ChannelSendError(e.to_string()))?,
         };
 
         Ok(())
@@ -48,5 +59,6 @@ impl Server {
 #[derive(Debug, Clone, serde::Serialize)]
 pub enum ServerEvent {
     Log(String),
+    Error(crate::Error),
     JournalEvent(ed_journals::journal::JournalEvent),
 }

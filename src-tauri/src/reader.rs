@@ -10,21 +10,15 @@ impl Reader {
     }
 
     pub async fn read(&self, state: &AppState) -> Result<()> {
-        let journal_directory =
-            auto_detect_journal_path().ok_or("Failed to detect journal path")?;
-        let mut reader = LiveJournalDirReader::open(&journal_directory)?;
+        let journal_directory = auto_detect_journal_path().ok_or(Error::JournalPathNotFound)?;
+        let mut reader = LiveJournalDirReader::open(&journal_directory)
+            .map_err(|e| Error::JournalError(e.to_string()))?;
 
         println!("Reading journal events from: {:?}", journal_directory);
 
         while let Some(event) = reader.next().await {
             if let Ok(event) = event {
-                //println!("Journal event: {:?}", event);
-
-                state
-                    .server
-                    .emit(ServerEvent::JournalEvent(event))
-                    .await
-                    .unwrap();
+                state.server.emit(ServerEvent::JournalEvent(event)).await?;
             }
         }
 

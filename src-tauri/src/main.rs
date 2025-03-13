@@ -32,7 +32,7 @@ async fn main() {
                     match eliteapi::on_start(&app_handle).await {
                         Ok(_) => {}
                         Err(error) => {
-                            println!("EliteAPI: Error starting up: {}", error);
+                            println!("EliteAPI: Error starting up: {:?}", error);
                             app_handle.exit(1);
                         }
                     }

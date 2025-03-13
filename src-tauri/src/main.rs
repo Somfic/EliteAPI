@@ -1,6 +1,6 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-use eliteapi::prelude::*;
+use eliteapi::{prelude::*, Server};
 
 #[tokio::main]
 async fn main() {
@@ -21,9 +21,10 @@ async fn main() {
     tauri::Builder::default()
         .plugin(tauri_plugin_store::Builder::new().build())
         .invoke_handler(spec_builder.invoke_handler())
-        .manage(AppState::new())
         .setup(move |app| {
             spec_builder.mount_events(app);
+
+            app.manage(AppState::new(app.handle()));
 
             tauri::async_runtime::spawn({
                 let app_handle = app.handle().clone();

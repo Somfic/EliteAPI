@@ -1,13 +1,17 @@
+use tauri::AppHandle;
+
+use crate::{Reader, Server};
+
 pub struct AppState {
-    pub reader: crate::Reader,
-    pub server: crate::Server,
+    pub server: Server,
+    pub reader: Reader,
 }
 
 impl AppState {
-    pub fn new() -> Self {
+    pub fn new(app_handle: &AppHandle) -> Self {
         AppState {
-            reader: crate::Reader::new(),
-            server: crate::Server::new(),
+            server: Server::new(app_handle),
+            reader: Reader::new(),
         }
     }
 }

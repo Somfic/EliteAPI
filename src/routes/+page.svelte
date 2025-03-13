@@ -5,4 +5,4 @@
 
 <Header />
 
-<SplashScreen shown={true} />
+<SplashScreen />

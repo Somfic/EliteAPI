@@ -14,7 +14,7 @@
     <img src="/eliteapi.png" alt="" />
     <div class="title">
       <h1>EliteAPI</h1>
-      <h2>v{version}</h2>
+      <h2>{version}</h2>
     </div>
   </div>
 </div>

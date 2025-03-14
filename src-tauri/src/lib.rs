@@ -22,7 +22,7 @@ pub async fn on_start(app_handle: &tauri::AppHandle) -> Result<()> {
             let ipc = ipc(app_handle).await;
 
             if let Err(e) = ipc {
-                warn!("IPC error: {:?}", e);
+                warn!("error: {:?}", e);
             }
         }
     });
@@ -37,7 +37,7 @@ pub async fn on_start(app_handle: &tauri::AppHandle) -> Result<()> {
             let reader = reader(app_handle).await;
 
             if let Err(e) = reader {
-                warn!("Reader error: {:?}", e);
+                warn!("error: {:?}", e);
             }
         }
     });

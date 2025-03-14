@@ -1,11 +1,15 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use eliteapi::{prelude::*, Server};
-use tracing::span;
+use tracing::{debug, error, span};
 
 #[tokio::main]
 async fn main() {
-    tracing_subscriber::fmt().init();
+    tracing_subscriber::fmt()
+        .with_max_level(tracing::Level::TRACE)
+        .with_line_number(true)
+        .compact()
+        .init();
 
     let spec_builder = tauri_specta::Builder::<tauri::Wry>::new()
         //.commands(collect_commands![commands::get_event_backlog])
@@ -35,7 +39,8 @@ async fn main() {
                     match eliteapi::on_start(&app_handle).await {
                         Ok(_) => {}
                         Err(error) => {
-                            println!("EliteAPI: Error starting up: {:?}", error);
+                            error!("fatal error: {:?}", error);
+                            debug!("exiting application");
                             app_handle.exit(1);
                         }
                     }

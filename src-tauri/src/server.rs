@@ -1,7 +1,7 @@
 use crate::prelude::*;
 use tauri::{AppHandle, Emitter};
 use tokio::sync::{mpsc, Mutex};
-use tracing::{info, instrument};
+use tracing::{debug, field::debug, info, instrument, trace, warn};
 
 pub struct Server {
     sender: mpsc::Sender<ServerEvent>,
@@ -21,13 +21,13 @@ impl Server {
     }
 
     pub async fn connect(&self) -> Result<()> {
-        println!("server connected");
+        debug!("opening connection");
 
         while let Some(message) = self.receiver.lock().await.recv().await {
-            println!("server received: {:?}", message);
+            trace!("{:?}", message);
         }
 
-        println!("listener disconnected");
+        warn!("connection closed");
 
         Ok(())
     }

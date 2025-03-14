@@ -6,7 +6,7 @@ use tracing::{debug, error, span};
 #[tokio::main]
 async fn main() {
     tracing_subscriber::fmt()
-        .with_max_level(tracing::Level::TRACE)
+        .with_max_level(tracing::Level::DEBUG)
         .with_line_number(true)
         .compact()
         .init();

@@ -1,9 +1,12 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use eliteapi::{prelude::*, Server};
+use tracing::span;
 
 #[tokio::main]
 async fn main() {
+    tracing_subscriber::fmt().init();
+
     let spec_builder = tauri_specta::Builder::<tauri::Wry>::new()
         //.commands(collect_commands![commands::get_event_backlog])
         //.events(collect_events![events::journal_event]),

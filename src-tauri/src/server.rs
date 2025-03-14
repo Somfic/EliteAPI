@@ -1,6 +1,7 @@
 use crate::prelude::*;
 use tauri::{AppHandle, Emitter};
 use tokio::sync::{mpsc, Mutex};
+use tracing::{info, instrument};
 
 pub struct Server {
     sender: mpsc::Sender<ServerEvent>,

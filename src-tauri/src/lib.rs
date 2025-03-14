@@ -8,15 +8,22 @@ pub mod state;
 
 pub use reader::Reader;
 pub use server::Server;
+use tracing::{instrument, span, warn};
 
+#[instrument]
 pub async fn on_start(app_handle: &tauri::AppHandle) -> Result<()> {
     // cross process communication
     async_runtime::spawn({
         let app_handle = app_handle.clone();
 
         async move {
-            let state = &mut app_handle.state::<AppState>();
-            state.server.connect().await.unwrap();
+            let span = span!(tracing::Level::DEBUG, "ipc");
+            let _scope = span.enter();
+            let ipc = ipc(app_handle).await;
+
+            if let Err(e) = ipc {
+                warn!("IPC error: {:?}", e);
+            }
         }
     });
 
@@ -25,10 +32,25 @@ pub async fn on_start(app_handle: &tauri::AppHandle) -> Result<()> {
         let app_handle = app_handle.clone();
 
         async move {
-            let state = app_handle.state::<AppState>();
-            state.reader.read(&state).await.unwrap();
+            let span = span!(tracing::Level::DEBUG, "reader");
+            let _scope = span.enter();
+            let reader = reader(app_handle).await;
+
+            if let Err(e) = reader {
+                warn!("Reader error: {:?}", e);
+            }
         }
     });
 
     Ok(())
+}
+
+async fn ipc(app_handle: tauri::AppHandle) -> Result<()> {
+    let state = app_handle.state::<AppState>();
+    state.server.connect().await
+}
+
+async fn reader(app_handle: tauri::AppHandle) -> Result<()> {
+    let state = app_handle.state::<AppState>();
+    state.reader.read(&state).await
 }

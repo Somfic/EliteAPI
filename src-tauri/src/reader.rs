@@ -1,6 +1,7 @@
 pub use crate::prelude::*;
 use crate::{server::ServerEvent, Server};
 use ed_journals::journal::{asynchronous::LiveJournalDirReader, auto_detect_journal_path};
+use tracing::warn;
 
 pub struct Reader {}
 
@@ -18,7 +19,13 @@ impl Reader {
 
         while let Some(event) = reader.next().await {
             if let Ok(event) = event {
-                state.server.emit(ServerEvent::JournalEvent(event)).await?;
+                match state.server.emit(ServerEvent::JournalEvent(event)).await {
+                    Ok(_) => (),
+                    Err(e) => {
+                        warn!("Failed to emit journal event: {:?}", e);
+                        let _ = state.server.emit(ServerEvent::Error(e)).await;
+                    }
+                }
             }
         }
 

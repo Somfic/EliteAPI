@@ -38,21 +38,21 @@ impl Server {
             .map_err(|e| Error::ChannelSendError(e.to_string()))?;
 
         match event {
-            ServerEvent::Log(log) => self
-                .app_handle
-                .emit("log", log)
-                .map_err(|e| Error::ChannelSendError(e.to_string()))?,
-            ServerEvent::JournalEvent(journal_event) => self
-                .app_handle
-                .emit("journal_event", journal_event)
-                .map_err(|e| Error::ChannelSendError(e.to_string()))?,
-            ServerEvent::Error(error) => self
-                .app_handle
-                .emit("error", error)
-                .map_err(|e| Error::ChannelSendError(e.to_string()))?,
-        };
+            ServerEvent::Log(log) => self.emit_event("log", log),
+            ServerEvent::JournalEvent(journal_event) => {
+                self.emit_event("journal_event", journal_event)
+            }
+            ServerEvent::Error(error) => self.emit_event("error", error),
+        }
+    }
 
-        Ok(())
+    fn emit_event<T>(&self, channel: &'static str, payload: T) -> Result<()>
+    where
+        T: serde::Serialize + Clone,
+    {
+        self.app_handle
+            .emit(channel, payload)
+            .map_err(|e| Error::ChannelSendError(e.to_string()))
     }
 }
 

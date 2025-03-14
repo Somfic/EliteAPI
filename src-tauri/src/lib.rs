@@ -43,23 +43,6 @@ pub async fn on_start(app_handle: &tauri::AppHandle) -> Result<()> {
         }
     });
 
-    // ping every 5 seconds
-    async_runtime::spawn({
-        let app_handle = app_handle.clone();
-
-        async move {
-            let span = span!(tracing::Level::DEBUG, "ping");
-            let _scope = span.enter();
-            loop {
-                tokio::time::sleep(std::time::Duration::from_secs(5)).await;
-                let state = app_handle.state::<AppState>();
-                if let Err(e) = state.server.emit(ServerEvent::Ping).await {
-                    warn!("error: {:?}", e);
-                }
-            }
-        }
-    });
-
     Ok(())
 }
 

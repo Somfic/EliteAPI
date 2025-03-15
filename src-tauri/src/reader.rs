@@ -5,6 +5,7 @@ use ed_journals::journal::{auto_detect_journal_path, JournalEventKind};
 use ed_journals::ship;
 use tracing::warn;
 use tracing::{debug, info, instrument, trace};
+use tracing_subscriber::field::debug;
 
 pub struct Reader {}
 
@@ -23,9 +24,8 @@ impl Reader {
 
         while let Some(event) = reader.next().await {
             if let Ok(event) = event {
-                let json = serde_json::to_string(&event)
-                    .map_err(|e| Error::JournalError(e.to_string()))?;
-                let paths = json_to_paths("journal", json);
+                let json = event.event_json()?;
+                let paths = json_to_paths(event.event_name(), json);
 
                 let variables = VariablesEvent {
                     event: event.event_name(),
@@ -64,14 +64,22 @@ impl Reader {
     }
 }
 
-trait EventName {
+trait Event {
     fn event_name(&self) -> String;
+    fn event_json(&self) -> Result<String>;
 }
 
-impl EventName for ed_journals::journal::JournalEvent {
+impl Event for ed_journals::journal::JournalEvent {
     fn event_name(&self) -> String {
         match &self.kind {
-            JournalEventKind::LogEvent(log_event) => log_event.content.kind().to_string(),
+            JournalEventKind::LogEvent(log_event) => log_event
+                .content
+                .kind()
+                .to_string()
+                .split('.')
+                .last()
+                .unwrap_or_default()
+                .to_string(),
             JournalEventKind::StatusEvent(status) => status.event.to_string(),
             JournalEventKind::OutfittingEvent(outfitting) => outfitting.event.to_string(),
             JournalEventKind::ShipyardEvent(shipyard) => shipyard.event.to_string(),
@@ -83,25 +91,42 @@ impl EventName for ed_journals::journal::JournalEvent {
             JournalEventKind::ShipLocker(ship_locker) => ship_locker.event.to_string(),
         }
     }
+
+    fn event_json(&self) -> Result<String> {
+        let json = match &self.kind {
+            JournalEventKind::LogEvent(log_event) => serde_json::to_string(&log_event.content),
+            JournalEventKind::StatusEvent(status) => serde_json::to_string(status),
+            JournalEventKind::OutfittingEvent(outfitting) => serde_json::to_string(outfitting),
+            JournalEventKind::ShipyardEvent(shipyard) => serde_json::to_string(shipyard),
+            JournalEventKind::MarketEvent(market) => serde_json::to_string(market),
+            JournalEventKind::NavRoute(nav_route) => serde_json::to_string(nav_route),
+            JournalEventKind::ModulesInfo(modules_info) => serde_json::to_string(modules_info),
+            JournalEventKind::Backpack(backpack) => serde_json::to_string(backpack),
+            JournalEventKind::Cargo(cargo) => serde_json::to_string(cargo),
+            JournalEventKind::ShipLocker(ship_locker) => serde_json::to_string(ship_locker),
+        };
+
+        json.map_err(|e| Error::JournalError(e.to_string()))
+    }
 }
 
-fn json_to_paths(event_name: &str, json: impl Into<String>) -> Vec<JsonPath> {
+fn json_to_paths(event_name: impl Into<String>, json: impl Into<String>) -> Vec<JsonPath> {
     let mut paths: Vec<JsonPath> = Vec::new();
 
     let json: serde_json::Value = serde_json::from_str(json.into().as_str()).unwrap();
 
-    fn recurse(json: &serde_json::Value, path: &str, paths: &mut Vec<JsonPath>) {
+    fn recurse(json: &serde_json::Value, path: String, paths: &mut Vec<JsonPath>) {
         match json {
             serde_json::Value::Object(map) => {
                 for (key, value) in map {
                     let new_path = format!("{}.{}", path, key);
-                    recurse(value, &new_path, paths);
+                    recurse(value, new_path, paths);
                 }
             }
             serde_json::Value::Array(array) => {
                 for (i, value) in array.iter().enumerate() {
                     let new_path = format!("{}[{}]", path, i);
-                    recurse(value, &new_path, paths);
+                    recurse(value, new_path, paths);
                 }
             }
             json_value => {
@@ -123,7 +148,7 @@ fn json_to_paths(event_name: &str, json: impl Into<String>) -> Vec<JsonPath> {
         }
     }
 
-    recurse(&json, event_name, &mut paths);
+    recurse(&json, event_name.into(), &mut paths);
 
     paths
 }

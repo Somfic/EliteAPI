@@ -1,8 +1,10 @@
+use crate::events::*;
 pub use crate::prelude::*;
-use crate::{server::ServerEvent, Server};
-use ed_journals::journal::{asynchronous::LiveJournalDirReader, auto_detect_journal_path};
-use tracing::{debug, info, instrument, trace};
+use ed_journals::journal::asynchronous::LiveJournalDirReader;
+use ed_journals::journal::{auto_detect_journal_path, JournalEventKind};
+use ed_journals::ship;
 use tracing::warn;
+use tracing::{debug, info, instrument, trace};
 
 pub struct Reader {}
 
@@ -21,11 +23,36 @@ impl Reader {
 
         while let Some(event) = reader.next().await {
             if let Ok(event) = event {
-                match state.server.emit(ServerEvent::JournalEvent(event)).await {
+                let json = serde_json::to_string(&event)
+                    .map_err(|e| Error::JournalError(e.to_string()))?;
+                let paths = json_to_paths("journal", json);
+
+                let variables = VariablesEvent {
+                    event: event.event_name(),
+                    variables: paths,
+                };
+
+                match state
+                    .server
+                    .emit(ServerEvent::VariablesEvent(variables))
+                    .await
+                {
+                    Ok(_) => (),
+                    Err(e) => {
+                        warn!("Failed to emit variables event: {:?}", e);
+                        let _ = state.server.emit(ServerEvent::Error(ErrorEvent(e))).await;
+                    }
+                }
+
+                match state
+                    .server
+                    .emit(ServerEvent::JournalEvent(JournalEvent(event.event_name())))
+                    .await
+                {
                     Ok(_) => (),
                     Err(e) => {
                         warn!("Failed to emit journal event: {:?}", e);
-                        let _ = state.server.emit(ServerEvent::Error(e)).await;
+                        let _ = state.server.emit(ServerEvent::Error(ErrorEvent(e))).await;
                     }
                 }
             }
@@ -35,4 +62,158 @@ impl Reader {
 
         Ok(())
     }
+}
+
+trait EventName {
+    fn event_name(&self) -> String;
+}
+
+impl EventName for ed_journals::journal::JournalEvent {
+    fn event_name(&self) -> String {
+        match &self.kind {
+            JournalEventKind::LogEvent(log_event) => log_event.content.kind().to_string(),
+            JournalEventKind::StatusEvent(status) => status.event.to_string(),
+            JournalEventKind::OutfittingEvent(outfitting) => outfitting.event.to_string(),
+            JournalEventKind::ShipyardEvent(shipyard) => shipyard.event.to_string(),
+            JournalEventKind::MarketEvent(market) => market.event.to_string(),
+            JournalEventKind::NavRoute(nav_route) => nav_route.event.to_string(),
+            JournalEventKind::ModulesInfo(modules_info) => modules_info.event.to_string(),
+            JournalEventKind::Backpack(backpack) => backpack.event.to_string(),
+            JournalEventKind::Cargo(cargo) => cargo.event.to_string(),
+            JournalEventKind::ShipLocker(ship_locker) => ship_locker.event.to_string(),
+        }
+    }
+}
+
+fn json_to_paths(event_name: &str, json: impl Into<String>) -> Vec<JsonPath> {
+    let mut paths: Vec<JsonPath> = Vec::new();
+
+    let json: serde_json::Value = serde_json::from_str(json.into().as_str()).unwrap();
+
+    fn recurse(json: &serde_json::Value, path: &str, paths: &mut Vec<JsonPath>) {
+        match json {
+            serde_json::Value::Object(map) => {
+                for (key, value) in map {
+                    let new_path = format!("{}.{}", path, key);
+                    recurse(value, &new_path, paths);
+                }
+            }
+            serde_json::Value::Array(array) => {
+                for (i, value) in array.iter().enumerate() {
+                    let new_path = format!("{}[{}]", path, i);
+                    recurse(value, &new_path, paths);
+                }
+            }
+            json_value => {
+                paths.push(JsonPath {
+                    path: path.to_string(),
+                    encoded_value: json.to_string(),
+                    value_type: match json_value {
+                        serde_json::Value::String(_) => ValueType::String,
+                        serde_json::Value::Number(_) => match json_value.as_i64() {
+                            Some(_) => ValueType::Int32,
+                            None => ValueType::Single,
+                        },
+                        serde_json::Value::Bool(_) => ValueType::Boolean,
+                        serde_json::Value::Null => ValueType::String,
+                        _ => ValueType::String,
+                    },
+                });
+            }
+        }
+    }
+
+    recurse(&json, event_name, &mut paths);
+
+    paths
+}
+
+#[test]
+fn test_json_to_paths() {
+    let json = r#"
+    {
+        "a": {
+            "b": {
+                "c": 1,
+                "d": 2.0
+            },
+            "e": true
+        },
+        "f": [
+            1,
+            2,
+            3
+        ]
+    }
+    "#;
+
+    let paths = json_to_paths("test_event", json);
+
+    println!("{:?}", paths);
+
+    let expected_paths = vec![
+        JsonPath::new("test_event.a.b.c", "1", ValueType::Int32),
+        JsonPath::new("test_event.a.b.d", "2.0", ValueType::Single),
+        JsonPath::new("test_event.a.e", "true", ValueType::Boolean),
+        JsonPath::new("test_event.f[0]", "1", ValueType::Int32),
+        JsonPath::new("test_event.f[1]", "2", ValueType::Int32),
+        JsonPath::new("test_event.f[2]", "3", ValueType::Int32),
+    ];
+
+    // Check that the paths exists, order doesn't matter
+    for expected_path in expected_paths {
+        assert!(
+            paths.iter().any(|path| path.path == expected_path.path),
+            "Expected path not found: {:?}",
+            expected_path
+        );
+
+        // Check that the values are equal
+        let found_path = paths
+            .iter()
+            .find(|path| path.path == expected_path.path)
+            .unwrap();
+
+        assert_eq!(
+            found_path.encoded_value, expected_path.encoded_value,
+            "Expected value not found: {:?}",
+            expected_path
+        );
+
+        assert_eq!(
+            found_path.value_type, expected_path.value_type,
+            "Expected value type not found: {:?}",
+            expected_path
+        );
+    }
+}
+
+#[derive(Debug, Clone, serde::Serialize, specta::Type)]
+pub struct JsonPath {
+    path: String,
+    encoded_value: String,
+    value_type: ValueType,
+}
+
+impl JsonPath {
+    fn new(
+        path: impl Into<String>,
+        encoded_value: impl Into<String>,
+        value_type: ValueType,
+    ) -> Self {
+        Self {
+            path: path.into(),
+            encoded_value: encoded_value.into(),
+            value_type,
+        }
+    }
+}
+
+#[derive(Debug, Clone, serde::Serialize, specta::Type, PartialEq, Eq)]
+enum ValueType {
+    String,
+    Int32,
+    Single,
+    Boolean,
+    DateTime,
 }

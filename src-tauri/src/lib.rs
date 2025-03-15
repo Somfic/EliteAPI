@@ -1,7 +1,7 @@
 pub use crate::prelude::*;
-use server::ServerEvent;
 use tauri::async_runtime;
 
+pub mod events;
 pub mod prelude;
 pub mod reader;
 pub mod server;

@@ -11,6 +11,17 @@ export const commands = {
 /** user-defined events **/
 
 
+export const events = __makeEvents__<{
+errorEvent: ErrorEvent,
+journalEvent: JournalEvent,
+logEvent: LogEvent,
+variablesEvent: VariablesEvent
+}>({
+errorEvent: "error-event",
+journalEvent: "journal-event",
+logEvent: "log-event",
+variablesEvent: "variables-event"
+})
 
 /** user-defined constants **/
 
@@ -18,7 +29,13 @@ export const commands = {
 
 /** user-defined types **/
 
-
+export type Error = { JournalError: string } | { Tauri: string } | "JournalPathNotFound" | { ChannelSendError: string }
+export type ErrorEvent = Error
+export type JournalEvent = string
+export type JsonPath = { path: string; encoded_value: string; value_type: ValueType }
+export type LogEvent = string
+export type ValueType = "String" | "Int32" | "Single" | "Boolean" | "DateTime"
+export type VariablesEvent = { event: string; variables: JsonPath[] }
 
 /** tauri-specta globals **/
 

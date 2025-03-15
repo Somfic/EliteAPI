@@ -1,8 +1,9 @@
-use std::sync::Arc;
-
-use crate::prelude::*;
+use crate::events::*;
+use crate::{prelude::*, reader::JsonPath};
 use interprocess::local_socket::tokio::Listener;
+use std::sync::Arc;
 use tauri::{AppHandle, Emitter};
+use tauri_specta::Event;
 use tokio::sync::{mpsc, Mutex};
 use tracing::{debug, field::debug, info, instrument, trace, warn};
 use {
@@ -63,13 +64,16 @@ impl Server {
 
         // send the event to the frontend
         match &event {
-            ServerEvent::Log(log) => self.emit_event("log", log),
+            ServerEvent::Log(log) => LogEvent::emit(log, &self.app_handle),
             ServerEvent::JournalEvent(journal_event) => {
-                self.emit_event("journal_event", journal_event)
+                JournalEvent::emit(journal_event, &self.app_handle)
             }
-            ServerEvent::Error(error) => self.emit_event("error", error),
-            ServerEvent::Ping => self.emit_event("ping", ()),
-        }?;
+            ServerEvent::Error(error) => ErrorEvent::emit(error, &self.app_handle),
+            ServerEvent::VariablesEvent(variables_event) => {
+                VariablesEvent::emit(variables_event, &self.app_handle)
+            }
+        }
+        .map_err(|e| Error::ChannelSendError(e.to_string()))?;
 
         // send th event to the local socket
         self.broadcast_event(&event).await?;
@@ -135,12 +139,4 @@ impl Server {
         }
         Ok(())
     }
-}
-
-#[derive(Debug, Clone, serde::Serialize)]
-pub enum ServerEvent {
-    Ping,
-    Log(String),
-    Error(crate::Error),
-    JournalEvent(ed_journals::journal::JournalEvent),
 }

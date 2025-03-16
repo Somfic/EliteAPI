@@ -9,4 +9,5 @@ pub enum Error {
     Tauri(String),
     JournalPathNotFound,
     ChannelSendError(String),
+    JsonError(String),
 }

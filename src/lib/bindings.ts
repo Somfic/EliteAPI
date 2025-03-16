@@ -29,7 +29,7 @@ variablesEvent: "variables-event"
 
 /** user-defined types **/
 
-export type Error = { JournalError: string } | { Tauri: string } | "JournalPathNotFound" | { ChannelSendError: string }
+export type Error = { JournalError: string } | { Tauri: string } | "JournalPathNotFound" | { ChannelSendError: string } | { JsonError: string }
 export type ErrorEvent = Error
 export type JournalEvent = string
 export type JsonPath = { path: string; encoded_value: string; value_type: ValueType }

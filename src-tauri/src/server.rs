@@ -114,19 +114,8 @@ impl Server {
         });
     }
 
-    fn emit_event<T>(&self, channel: &'static str, payload: T) -> Result<()>
-    where
-        T: serde::Serialize + Clone,
-    {
-        self.app_handle
-            .emit(channel, payload)
-            .map_err(|e| Error::ChannelSendError(e.to_string()))
-    }
-
     async fn broadcast_event(&self, event: &ServerEvent) -> Result<()> {
-        let serialized = serde_json::to_string(event)
-            .map_err(|e| Error::ChannelSendError(e.to_string()))?
-            + "\n";
+        let serialized = event.to_json()? + "\n";
         let mut clients_guard = self.clients.lock().await;
         let mut i = 0;
         while i < clients_guard.len() {

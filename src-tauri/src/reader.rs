@@ -2,10 +2,8 @@ use crate::events::*;
 pub use crate::prelude::*;
 use ed_journals::journal::asynchronous::LiveJournalDirReader;
 use ed_journals::journal::{auto_detect_journal_path, JournalEventKind};
-use ed_journals::ship;
 use tracing::warn;
-use tracing::{debug, info, instrument, trace};
-use tracing_subscriber::field::debug;
+use tracing::{debug, info};
 
 pub struct Reader {}
 
@@ -140,7 +138,6 @@ fn json_to_paths(event_name: impl Into<String>, json: impl Into<String>) -> Vec<
                             None => ValueType::Single,
                         },
                         serde_json::Value::Bool(_) => ValueType::Boolean,
-                        serde_json::Value::Null => ValueType::String,
                         _ => ValueType::String,
                     },
                 });
@@ -148,7 +145,7 @@ fn json_to_paths(event_name: impl Into<String>, json: impl Into<String>) -> Vec<
         }
     }
 
-    recurse(&json, event_name.into(), &mut paths);
+    recurse(&json, format!("EliteAPI.{}", event_name.into()), &mut paths);
 
     paths
 }

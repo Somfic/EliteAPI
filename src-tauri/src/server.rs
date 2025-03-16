@@ -115,7 +115,8 @@ impl Server {
     }
 
     async fn broadcast_event(&self, event: &ServerEvent) -> Result<()> {
-        let serialized = event.to_json()? + "\n";
+        let serialized =
+            serde_json::to_string(event).map_err(|e| Error::JsonError(e.to_string()))? + "\n";
         let mut clients_guard = self.clients.lock().await;
         let mut i = 0;
         while i < clients_guard.len() {

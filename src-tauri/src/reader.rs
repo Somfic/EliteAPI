@@ -2,8 +2,8 @@ use crate::events::*;
 pub use crate::prelude::*;
 use ed_journals::journal::asynchronous::LiveJournalDirReader;
 use ed_journals::journal::{auto_detect_journal_path, JournalEventKind};
-use tracing::warn;
 use tracing::{debug, info};
+use tracing::{event, warn};
 
 pub struct Reader {}
 
@@ -23,12 +23,7 @@ impl Reader {
         while let Some(event) = reader.next().await {
             if let Ok(event) = event {
                 let json = event.event_json()?;
-                let paths = json_to_paths(event.event_name(), json);
-
-                let variables = VariablesEvent {
-                    event: event.event_name(),
-                    variables: paths,
-                };
+                let variables = json_to_variables_event(event.event_name(), json);
 
                 match state
                     .server
@@ -108,27 +103,49 @@ impl Event for ed_journals::journal::JournalEvent {
     }
 }
 
-fn json_to_paths(event_name: impl Into<String>, json: impl Into<String>) -> Vec<JsonPath> {
-    let mut paths: Vec<JsonPath> = Vec::new();
+fn json_to_variables_event(
+    event_name: impl Into<String>,
+    json: impl Into<String>,
+) -> VariablesEvent {
+    let event_name = event_name.into();
+    let mut set_paths: Vec<JsonValuePath> = Vec::new();
+    let mut unset_paths: Vec<JsonPath> = Vec::new();
+    let json = serde_json::from_str(json.into().as_str()).unwrap();
 
-    let json: serde_json::Value = serde_json::from_str(json.into().as_str()).unwrap();
-
-    fn recurse(json: &serde_json::Value, path: String, paths: &mut Vec<JsonPath>) {
+    fn recurse(
+        json: &serde_json::Value,
+        path: String,
+        set_paths: &mut Vec<JsonValuePath>,
+        unset_paths: &mut Vec<JsonPath>,
+    ) {
         match json {
             serde_json::Value::Object(map) => {
                 for (key, value) in map {
                     let new_path = format!("{}.{}", path, key);
-                    recurse(value, new_path, paths);
+                    recurse(value, new_path, set_paths, unset_paths);
                 }
             }
             serde_json::Value::Array(array) => {
+                // Clear all paths that are children of this array
+                unset_paths.push(JsonPath {
+                    path: path.to_string(),
+                });
+
+                // Set the length of the array
+                set_paths.push(JsonValuePath {
+                    path: format!("{}.Length", path),
+                    encoded_value: array.len().to_string(),
+                    value_type: ValueType::Int32,
+                });
+
+                // Set the values of the array
                 for (i, value) in array.iter().enumerate() {
                     let new_path = format!("{}[{}]", path, i);
-                    recurse(value, new_path, paths);
+                    recurse(value, new_path, set_paths, unset_paths);
                 }
             }
             json_value => {
-                paths.push(JsonPath {
+                set_paths.push(JsonValuePath {
                     path: path.to_string(),
                     encoded_value: json.to_string(),
                     value_type: match json_value {
@@ -145,9 +162,18 @@ fn json_to_paths(event_name: impl Into<String>, json: impl Into<String>) -> Vec<
         }
     }
 
-    recurse(&json, format!("EliteAPI.{}", event_name.into()), &mut paths);
+    recurse(
+        &json,
+        format!("EliteAPI.{}", event_name),
+        &mut set_paths,
+        &mut unset_paths,
+    );
 
-    paths
+    VariablesEvent {
+        event: event_name,
+        set_variables: set_paths,
+        unset_variables: unset_paths,
+    }
 }
 
 #[test]
@@ -169,29 +195,35 @@ fn test_json_to_paths() {
     }
     "#;
 
-    let paths = json_to_paths("test_event", json);
+    let paths = json_to_variables_event("test_event", json);
 
     println!("{:?}", paths);
 
     let expected_paths = vec![
-        JsonPath::new("test_event.a.b.c", "1", ValueType::Int32),
-        JsonPath::new("test_event.a.b.d", "2.0", ValueType::Single),
-        JsonPath::new("test_event.a.e", "true", ValueType::Boolean),
-        JsonPath::new("test_event.f[0]", "1", ValueType::Int32),
-        JsonPath::new("test_event.f[1]", "2", ValueType::Int32),
-        JsonPath::new("test_event.f[2]", "3", ValueType::Int32),
+        JsonValuePath::new("EliteAPI.test_event.a.b.c", "1", ValueType::Int32),
+        JsonValuePath::new("EliteAPI.test_event.a.b.d", "2.0", ValueType::Single),
+        JsonValuePath::new("EliteAPI.test_event.a.e", "true", ValueType::Boolean),
+        JsonValuePath::new("EliteAPI.test_event.f[0]", "1", ValueType::Int32),
+        JsonValuePath::new("EliteAPI.test_event.f[1]", "2", ValueType::Int32),
+        JsonValuePath::new("EliteAPI.test_event.f[2]", "3", ValueType::Int32),
     ];
+
+    let expected_unset_paths = vec![JsonPath::new("EliteAPI.test_event.f")];
 
     // Check that the paths exists, order doesn't matter
     for expected_path in expected_paths {
         assert!(
-            paths.iter().any(|path| path.path == expected_path.path),
+            paths
+                .set_variables
+                .iter()
+                .any(|path| path.path == expected_path.path),
             "Expected path not found: {:?}",
             expected_path
         );
 
         // Check that the values are equal
         let found_path = paths
+            .set_variables
             .iter()
             .find(|path| path.path == expected_path.path)
             .unwrap();
@@ -208,16 +240,39 @@ fn test_json_to_paths() {
             expected_path
         );
     }
+
+    // Check that the unset paths exists, order doesn't matter
+    for expected_path in expected_unset_paths {
+        assert!(
+            paths
+                .unset_variables
+                .iter()
+                .any(|path| path.path == expected_path.path),
+            "Expected unset path not found: {:?}",
+            expected_path
+        );
+    }
 }
 
 #[derive(Debug, Clone, serde::Serialize, specta::Type)]
-pub struct JsonPath {
+pub struct JsonValuePath {
     path: String,
     encoded_value: String,
     value_type: ValueType,
 }
 
+#[derive(Debug, Clone, serde::Serialize, specta::Type)]
+pub struct JsonPath {
+    path: String,
+}
+
 impl JsonPath {
+    fn new(path: impl Into<String>) -> Self {
+        Self { path: path.into() }
+    }
+}
+
+impl JsonValuePath {
     fn new(
         path: impl Into<String>,
         encoded_value: impl Into<String>,

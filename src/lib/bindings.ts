@@ -32,10 +32,11 @@ variablesEvent: "variables-event"
 export type Error = { JournalError: string } | { Tauri: string } | "JournalPathNotFound" | { ChannelSendError: string } | { JsonError: string }
 export type ErrorEvent = Error
 export type JournalEvent = string
-export type JsonPath = { path: string; encoded_value: string; value_type: ValueType }
+export type JsonPath = { path: string }
+export type JsonValuePath = { path: string; encoded_value: string; value_type: ValueType }
 export type LogEvent = string
 export type ValueType = "String" | "Int32" | "Single" | "Boolean" | "DateTime"
-export type VariablesEvent = { event: string; variables: JsonPath[] }
+export type VariablesEvent = { event: string; set_variables: JsonValuePath[]; unset_variables: JsonPath[] }
 
 /** tauri-specta globals **/
 

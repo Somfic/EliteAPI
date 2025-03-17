@@ -1,5 +1,5 @@
 use crate::events::*;
-use crate::{prelude::*, reader::JsonPath};
+use crate::{prelude::*, reader::JsonValuePath};
 use interprocess::local_socket::tokio::Listener;
 use std::sync::Arc;
 use tauri::{AppHandle, Emitter};
@@ -115,6 +115,7 @@ impl Server {
     }
 
     async fn broadcast_event(&self, event: &ServerEvent) -> Result<()> {
+        trace!("broadcasting {:?}", event);
         let serialized =
             serde_json::to_string(event).map_err(|e| Error::JsonError(e.to_string()))? + "\n";
         let mut clients_guard = self.clients.lock().await;

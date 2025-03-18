@@ -2,7 +2,7 @@ use crate::events::*;
 pub use crate::prelude::*;
 use ed_journals::journal::asynchronous::LiveJournalDirReader;
 use ed_journals::journal::{auto_detect_journal_path, JournalEvent, JournalEventKind};
-use ed_journals::status::Status;
+use ed_journals::status::{Status, StatusKind};
 use tracing::{debug, info};
 use tracing::{event, warn};
 
@@ -111,230 +111,239 @@ impl Event for ed_journals::journal::JournalEvent {
 fn append_status_variables(variables: &mut VariablesEvent, status: &Status) {
     let status = &status.contents;
 
-    let mut set_variables = vec![];
+    let mut set_bool_variables = vec![];
+    let mut set_int_variables = vec![];
 
-    set_variables.push(("Available", status.is_some()));
+    set_bool_variables.push(("Available", status.is_some()));
 
-    set_variables.push(("Docked", status.as_ref().is_some_and(|s| s.flags.docked())));
-    set_variables.push(("Landed", status.as_ref().is_some_and(|s| s.flags.landed())));
-    set_variables.push((
+    set_bool_variables.push(("Docked", status.as_ref().is_some_and(|s| s.flags.docked())));
+    set_bool_variables.push(("Landed", status.as_ref().is_some_and(|s| s.flags.landed())));
+    set_bool_variables.push((
         "Gear",
         status.as_ref().is_some_and(|s| s.flags.landing_gear_down()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "Shields",
         status.as_ref().is_some_and(|s| s.flags.shields_up()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "Supercruise",
         status.as_ref().is_some_and(|s| s.flags.supercruise()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "FlightAssist",
         !status.as_ref().is_some_and(|s| s.flags.flight_assist_off()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "Hardpoints",
         status
             .as_ref()
             .is_some_and(|s| s.flags.hardpoints_deployed()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "Winging",
         status.as_ref().is_some_and(|s| s.flags.in_wing()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "Lights",
         status.as_ref().is_some_and(|s| s.flags.lights_on()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "CargoScoop",
         status
             .as_ref()
             .is_some_and(|s| s.flags.cargo_scoop_deployed()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "SilentRunning",
         status.as_ref().is_some_and(|s| s.flags.silent_running()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "Scooping",
         status.as_ref().is_some_and(|s| s.flags.scooping_fuel()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "SrvHandbrake",
         status.as_ref().is_some_and(|s| s.flags.srv_handbreak()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "SrvTurret",
         status.as_ref().is_some_and(|s| s.flags.srv_turret_view()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "SrvNearShip",
         status
             .as_ref()
             .is_some_and(|s| s.flags.srv_turret_retracted()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "SrvDriveAssist",
         status.as_ref().is_some_and(|s| s.flags.srv_drive_assist()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "MassLocked",
         status.as_ref().is_some_and(|s| s.flags.fsd_masslocked()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "FsdCharging",
         status.as_ref().is_some_and(|s| s.flags.fsd_charging()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "FsdCooldown",
         status.as_ref().is_some_and(|s| s.flags.fsd_cooldown()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "LowFuel",
         status.as_ref().is_some_and(|s| s.flags.low_fuel()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "Overheating",
         status.as_ref().is_some_and(|s| s.flags.overheating()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "HasLatLong",
         status.as_ref().is_some_and(|s| s.flags.has_lat_long()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "InDanger",
         status.as_ref().is_some_and(|s| s.flags.in_danger()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "InInterdiction",
         status.as_ref().is_some_and(|s| s.flags.being_interdicted()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "InMothership",
         status.as_ref().is_some_and(|s| s.flags.in_main_ship()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "InFighter",
         status.as_ref().is_some_and(|s| s.flags.in_fighter()),
     ));
-    set_variables.push(("InSrv", status.as_ref().is_some_and(|s| s.flags.in_srv())));
-    set_variables.push((
+    set_bool_variables.push(("InSrv", status.as_ref().is_some_and(|s| s.flags.in_srv())));
+    set_bool_variables.push((
         "AnalysisMode",
         status.as_ref().is_some_and(|s| s.flags.analysis_mode()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "NightVision",
         status.as_ref().is_some_and(|s| s.flags.night_vision()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "AltitudeFromAverageRadius",
         status
             .as_ref()
             .is_some_and(|s| s.flags.altitude_from_average_radius()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "FsdJump",
         status.as_ref().is_some_and(|s| s.flags.fsd_jump()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "SrvHighBeam",
         status.as_ref().is_some_and(|s| s.flags.srv_high_beam()),
     ));
 
-    set_variables.push((
+    set_bool_variables.push((
         "OnFoot",
         status.as_ref().is_some_and(|s| s.flags2.on_foot()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "InTaxi",
         status.as_ref().is_some_and(|s| s.flags2.in_taxi()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "InMultiCrew",
         status.as_ref().is_some_and(|s| s.flags2.in_multicrew()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "OnFootInStation",
         status
             .as_ref()
             .is_some_and(|s| s.flags2.on_foot_in_station()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "OnFootOnPlanet",
         status
             .as_ref()
             .is_some_and(|s| s.flags2.on_foot_on_planet()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "AimDownSight",
         status.as_ref().is_some_and(|s| s.flags2.aim_down_sight()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "LowOxygen",
         status.as_ref().is_some_and(|s| s.flags2.low_oxygen()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "LowHealth",
         status.as_ref().is_some_and(|s| s.flags2.low_health()),
     ));
-    set_variables.push(("Cold", status.as_ref().is_some_and(|s| s.flags2.cold())));
-    set_variables.push(("Hot", status.as_ref().is_some_and(|s| s.flags2.hot())));
-    set_variables.push((
+    set_bool_variables.push(("Cold", status.as_ref().is_some_and(|s| s.flags2.cold())));
+    set_bool_variables.push(("Hot", status.as_ref().is_some_and(|s| s.flags2.hot())));
+    set_bool_variables.push((
         "VeryCold",
         status.as_ref().is_some_and(|s| s.flags2.very_cold()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "VeryHot",
         status.as_ref().is_some_and(|s| s.flags2.very_hot()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "Gliding",
         status.as_ref().is_some_and(|s| s.flags2.glide_mode()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "OnFootInHangar",
         status
             .as_ref()
             .is_some_and(|s| s.flags2.on_foot_in_hangar()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "OnFootInSocialSpace",
         status
             .as_ref()
             .is_some_and(|s| s.flags2.on_foot_social_space()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "OnFootInExterior",
         status.as_ref().is_some_and(|s| s.flags2.on_foot_exterior()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "BreathableAtmosphere",
         status
             .as_ref()
             .is_some_and(|s| s.flags2.breathable_atmosphere()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "TelepresenceMulticrew",
         status
             .as_ref()
             .is_some_and(|s| s.flags2.telepresence_multicrew()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "PhysicalMulticrew",
         status
             .as_ref()
             .is_some_and(|s| s.flags2.physical_multicrew()),
     ));
-    set_variables.push((
+    set_bool_variables.push((
         "HyperdriveCharging",
         status
             .as_ref()
             .is_some_and(|s| s.flags2.fsd_hyperdrive_charging()),
     ));
 
-    for (key, value) in set_variables {
+    if let Some(status) = status {
+        if let StatusKind::Ship(ship_status) = &status.kind {
+            set_int_variables.push(("Pips.Weapons", ship_status.weapon_pips()));
+            set_int_variables.push(("Pips.Engines", ship_status.engine_pips()));
+            set_int_variables.push(("Pips.System", ship_status.system_pips()));
+        }
+    }
+
+    for (key, value) in set_bool_variables {
         variables.set_variables.push(JsonValuePath::new(
             format!("EliteAPI.{}", key),
             value.to_string(),
@@ -408,6 +417,15 @@ fn json_to_variables_event(
         &mut set_paths,
         &mut unset_paths,
     );
+
+    // replace 'EliteAPI.Status.' with 'EliteAPI.'
+    for path in set_paths.iter_mut() {
+        path.path = path.path.replace("EliteAPI.Status.", "EliteAPI.");
+    }
+
+    for path in unset_paths.iter_mut() {
+        path.path = path.path.replace("EliteAPI.Status", "EliteAPI");
+    }
 
     VariablesEvent {
         event: event_name,

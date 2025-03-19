@@ -10,102 +10,85 @@ struct Button {
     key: String,
 }
 
-#[derive(Debug)]
-struct Binding {
-    primary: Option<Button>,
-    secondary: Option<Button>,
+#[derive(Debug, Clone)]
+struct ButtonMapping {
+    button: String,
+    primary: Option<(String, String)>, // (device, key)
+    secondary: Option<(String, String)>,
 }
 
-fn parse_button(e: &BytesStart) -> Option<Button> {
-    let mut device = String::new();
-    let mut key = String::new();
-    for attr in e.attributes().flatten() {
-        match attr.key.as_ref() {
-            b"Device" => {
-                device = attr
-                    .unescape_value()
-                    .ok()
-                    .map(|v| String::from_utf8_lossy(v.as_bytes()).into_owned())
-                    .unwrap_or_default()
-            }
-            b"Key" => {
-                key = attr
-                    .unescape_value()
-                    .ok()
-                    .map(|v| String::from_utf8_lossy(v.as_bytes()).into_owned())
-                    .unwrap_or_default()
-            }
-            _ => {}
-        }
-    }
-    if key.is_empty() {
-        None
-    } else {
-        Some(Button { device, key })
-    }
-}
-
-fn parse_keybindings(path: &str) -> HashMap<String, Binding> {
-    let file = BufReader::new(File::open(path).expect("unable to open file"));
-    let mut reader = Reader::from_reader(file);
-
+fn parse_keybindings(contents: &str) -> Vec<ButtonMapping> {
+    let reader = BufReader::new(contents.as_bytes());
+    let mut reader = Reader::from_reader(reader);
     let mut buf = Vec::new();
-    let mut map = HashMap::new();
-    let mut current_binding = String::new();
-    let mut current = Binding {
-        primary: None,
-        secondary: None,
-    };
+    let mut buttons = Vec::new();
+    let mut current_button: Option<ButtonMapping> = None;
 
     loop {
         match reader.read_event_into(&mut buf) {
-            Ok(Event::Start(ref e)) => {
-                let name = e.name().as_ref().to_vec();
-                let tag_bytes = name.as_ref();
-                let tag = std::str::from_utf8(tag_bytes).unwrap();
-                if tag.ends_with("Button") || tag.ends_with("Key") {
-                    current_binding = tag.to_string();
-                    current = Binding {
+            Ok(Event::Start(ref e)) | Ok(Event::Empty(ref e)) => {
+                let tag_name = String::from_utf8_lossy(e.name().as_ref()).to_string();
+                let tag_lower = tag_name.to_lowercase();
+                // if it's a container element and not a primary/secondary child
+                if (tag_lower.ends_with("button") || tag_lower.ends_with("key"))
+                    && tag_lower != "primary"
+                    && tag_lower != "secondary"
+                {
+                    current_button = Some(ButtonMapping {
+                        button: tag_name,
                         primary: None,
                         secondary: None,
-                    };
-                } else if tag == "Primary" || tag == "Secondary" {
-                    if let Some(btn) = parse_button(e) {
-                        if tag == "Primary" {
-                        if tag == "Primary" {
-                            current.primary = Some(btn);
-                        } else {
-                            current.secondary = Some(btn);
+                    });
+                } else if tag_lower == "primary" || tag_lower == "secondary" {
+                    if let Some(ref mut mapping) = current_button {
+                        let mut device = String::new();
+                        let mut key = String::new();
+                        for attr in e.attributes().with_checks(false).flatten() {
+                            let attr_name = String::from_utf8_lossy(attr.key.as_ref()).to_string();
+                            let attr_value = String::from_utf8_lossy(
+                                attr.unescape_value().unwrap_or_default().as_bytes(),
+                            )
+                            .into_owned();
+                            if attr_name.to_lowercase() == "device" {
+                                device = attr_value;
+                            } else if attr_name.to_lowercase() == "key" {
+                                key = attr_value;
+                            }
                         }
-                    }
-                }
-            }
-            Ok(Event::Empty(ref e)) => {
-                let tag = std::str::from_utf8(e.name().as_ref()).unwrap();
-                if tag == "Primary" || tag == "Secondary" {
-                    if let Some(btn) = parse_button(e) {
-                        if tag == "Primary" {
-                            current.primary = Some(btn);
+                        if tag_lower == "primary" {
+                            mapping.primary = if device == "{NoDevice}" {
+                                None
+                            } else {
+                                Some((device, key))
+                            };
                         } else {
-                            current.secondary = Some(btn);
+                            mapping.secondary = if device == "{NoDevice}" {
+                                None
+                            } else {
+                                Some((device, key))
+                            };
                         }
                     }
                 }
             }
             Ok(Event::End(ref e)) => {
-                let tag = std::str::from_utf8(e.name().as_ref()).unwrap();
-                if (tag.ends_with("Button") || tag.ends_with("Key")) && tag == current_binding {
-                    map.insert(current_binding.clone(), current);
-                    current_binding.clear();
+                let tag_name = String::from_utf8_lossy(e.name().as_ref())
+                    .to_string()
+                    .to_lowercase();
+                if tag_name.ends_with("button") || tag_name.ends_with("key") {
+                    if let Some(mapping) = current_button.take() {
+                        buttons.push(mapping);
+                    }
                 }
             }
             Ok(Event::Eof) => break,
+            Err(e) => panic!("error at position {}: {:?}", reader.buffer_position(), e),
             _ => {}
         }
         buf.clear();
     }
-    map
-}
+
+    buttons
 }
 
 #[cfg(test)]
@@ -116,15 +99,20 @@ mod tests {
     fn test_parse_keybindings() {
         let path = include_str!("../test_data/keybindings.binds");
         let bindings = parse_keybindings(path);
-        assert!(!bindings.is_empty());
-        for (key, binding) in &bindings {
-            println!("Key: {}", key);
-            if let Some(primary) = &binding.primary {
-                println!("  Primary: {} - {}", primary.device, primary.key);
-            }
-            if let Some(secondary) = &binding.secondary {
-                println!("  Secondary: {} - {}", secondary.device, secondary.key);
-            }
+
+        for binding in &bindings {
+            println!("{:?}", binding);
         }
+
+        assert!(!bindings.is_empty());
+        assert!(bindings[0].button == "YawLeftButton");
+        assert!(bindings[0].primary.as_ref().is_none());
+        assert!(bindings[0].secondary.as_ref().is_none());
+
+        assert!(bindings[1].button == "YawRightButton");
+        assert!(bindings[1]
+            .primary
+            .as_ref()
+            .is_some_and(|p| { p.0 == "Keyboard" && p.1 == "Key_D" }));
     }
 }

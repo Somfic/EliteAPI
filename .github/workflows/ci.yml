@@ -1,109 +1,82 @@
-name: ci
+name: test
+permissions: write-all
 on:
-  workflow_dispatch:
   push:
+    branches:
+      - dev
   pull_request:
 
 jobs:
-  test:
-    name: test
+  frontend:
+    name: frontend
     runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Bun
+      uses: oven-sh/setup-bun@v2
+      with:
+        bun-version: latest
+
+    - name: Apply Bun cache
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.bun
+          node_modules/
+        key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb', '**/package.json') }}
+
+    - name: Install dependencies
+      run: bun install
+
+    - name: Check frontend
+      run: bun run check
+
+  backend:
+    name: backend
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup .NET 8
-        uses: actions/setup-dotnet@v3
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
         with:
-          dotnet-version: "8.0.x"
-
-      - name: Restore dependencies
-        run: dotnet restore
-
-      - name: Build
-        run: dotnet build --configuration Release
-
-      - name: Test
-        run: dotnet test --configuration Release --logger trx --results-directory reports --collect:"XPlat Code Coverage"
-
-      # - name: Report
-      #   uses: dorny/test-reporter@v1
-      #   if: success() || failure()
-      #   with:
-      #     name: report
-      #     path: reports/*.trx
-      #     reporter: dotnet-trx
-  
-  release:
-    name: release
-    needs: test
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    env:
-      nuget_key: ${{ secrets.NUGET_KEY }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        
-      - name: Setup .NET 8
-        uses: actions/setup-dotnet@v3
+          profile: minimal
+          toolchain: nightly
+          override: true
+          components: rustfmt, clippy, llvm-tools-preview
+    
+      - name: Apply Rust cache
+        uses: actions/cache@v4
         with:
-          dotnet-version: "8.0.x"
-        
-      - name: Setup GitVersion
-        run: dotnet tool install --global GitVersion.Tool
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/            
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock', '**/Cargo.toml') }}
 
-      - name: Fetch Git tags
-        run: git fetch --tags --unshallow
+      - name: Set up Rust tools
+        uses: taiki-e/install-action@cargo-llvm-cov
 
-      - name: Fetch main branch
-        if: github.ref != 'refs/heads/main'
-        run: git branch --create-reflog main origin/main
+      - name: Install Rust dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk-3-dev webkit2gtk-4.1 libayatana-appindicator3-dev librsvg2-dev
 
-      - name: Query last tag
-        id: LAST
-        run: echo ::set-output name=tag::$(git describe --tags --abbrev=0)
+      # - name: install macos intel target
+      #   if: matrix.platform == 'macos-latest' && matrix.args == '--target x86_64-apple-darwin'
+      #   run: rustup target add x86_64-apple-darwin
 
-      - name: Update version
-        run: dotnet-gitversion /updateprojectfiles /updateassemblyinfo /output buildserver
-        
-      - name: Build
-        run: dotnet build --configuration Release
+      - name: Check backend
+        run: cargo check
+        working-directory: src-tauri
 
-      - name: Pack
-        if: ${{env.nuget_key != ''}}
-        run: dotnet pack --configuration Release --output nupkgs --include-symbols --include-source
-          
-      - name: Create release
-        uses: softprops/action-gh-release@v2
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        with:
-          tag_name: ${{ env.GitVersion_LegacySemVer }}
-          name: v${{ env.GitVersion_LegacySemVer }}
-          draft: false
-          prerelease: ${{ env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta' }}
-
-      - name: Publish project to NuGet
-        if: ${{env.nuget_key != ''}}
-        run: dotnet nuget push '**/*.nupkg' -k ${{ env.nuget_key }} -s https://api.nuget.org/v3/index.json --skip-duplicate
-        
-      - name: Push version bump
-        if: ${{env.GitVersion_PreReleaseLabel == '' || env.GitVersion_PreReleaseLabel == 'alpha' || env.GitVersion_PreReleaseLabel == 'beta'}}
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: github-actions[bot]
-          author_email: github-actions[bot]@users.noreply.github.com
-          message: "Bumped version to ${{ env.GitVersion_LegacySemVer }}"
-  
-  approve:
-    name: approve
-    needs: test
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    steps:
-      - name: Approve pull request
-        uses: juliangruber/approve-pull-request-action@v2.0.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          number: ${{ github.event.number }}
+      - name: Test backend
+        run: cargo test
+        working-directory: src-tauri

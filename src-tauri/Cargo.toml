@@ -1,0 +1,34 @@
+[package]
+name = "eliteapi_bin"
+version = "0.0.0"
+description = "EliteAPI"
+authors = ["Somfic"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "eliteapi"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2.0.6", features = ["tray-icon"] }
+tauri-plugin-shell = "2"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1"
+specta = "2.0.0-rc.21"
+specta-typescript = "0.0.9"
+tauri-specta = { version = "2.0.0-rc.21", features = ["derive", "typescript"] }
+tokio = { version = "1.41.0", features = ["full"] }
+directories = "5.0.1"
+ed-journals = "0.8.0"
+tauri-plugin-store = "2"
+thiserror = "2.0.3"
+interprocess = { version = "2.2.2", features = ["tokio"] }
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
+derive_more = { version = "2.0.1", features = ["full"] }
+quick-xml = "0.37.2"

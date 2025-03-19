@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Pulse from "$lib/components/status/Pulse.svelte";
   import { getVersion } from "@tauri-apps/api/app";
   import { onMount } from "svelte";
 
@@ -13,6 +14,7 @@
   <div id="icon">
     <img src="/eliteapi.png" alt="EliteAPI Logo" />
     <h1>EliteAPI</h1>
+    <Pulse />
   </div>
   <h2 id="version">{version}</h2>
 </div>

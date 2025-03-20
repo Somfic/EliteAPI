@@ -23,7 +23,7 @@ specta = "2.0.0-rc.21"
 specta-typescript = "0.0.9"
 tauri-specta = { version = "2.0.0-rc.21", features = ["derive", "typescript"] }
 tokio = { version = "1.41.0", features = ["full"] }
-directories = "5.0.1"
+directories = "6.0.0"
 ed-journals = "0.8.0"
 tauri-plugin-store = "2"
 thiserror = "2.0.3"

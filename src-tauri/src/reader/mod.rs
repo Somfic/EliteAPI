@@ -6,6 +6,8 @@ use ed_journals::status::{Status, StatusKind};
 use tracing::{debug, info};
 use tracing::{event, warn};
 
+pub mod file_watcher;
+
 pub struct Reader {}
 
 impl Reader {

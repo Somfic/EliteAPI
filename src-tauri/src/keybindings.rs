@@ -1,17 +1,15 @@
-use quick_xml::events::{BytesStart, Event};
+use quick_xml::events::Event;
 use quick_xml::Reader;
-use std::collections::HashMap;
-use std::fs::File;
 use std::io::BufReader;
 
-#[derive(Debug)]
-struct Button {
+#[derive(Debug, serde::Serialize, specta::Type)]
+pub struct Button {
     device: String,
     key: String,
 }
 
-#[derive(Debug, Clone)]
-struct ButtonMapping {
+#[derive(Debug, Clone, serde::Serialize, specta::Type)]
+pub struct ButtonMapping {
     button: String,
     primary: Option<(String, String)>, // (device, key)
     secondary: Option<(String, String)>,

@@ -1,4 +1,4 @@
-use crate::prelude::*;
+use crate::keybindings::ButtonMapping;
 use crate::reader::{JsonPath, JsonValuePath};
 
 #[derive(Debug, Clone, serde::Serialize)]
@@ -7,6 +7,7 @@ pub enum ServerEvent {
     Error(ErrorEvent),
     JournalEvent(JournalEvent),
     VariablesEvent(VariablesEvent),
+    KeybindingsEvent(KeybindingsEvent),
 }
 
 #[derive(Debug, Clone, serde::Serialize, tauri_specta::Event, specta::Type)]
@@ -24,3 +25,6 @@ pub struct VariablesEvent {
     pub set_variables: Vec<JsonValuePath>,
     pub unset_variables: Vec<JsonPath>,
 }
+
+#[derive(Debug, Clone, serde::Serialize, tauri_specta::Event, specta::Type)]
+pub struct KeybindingsEvent(pub Vec<ButtonMapping>);

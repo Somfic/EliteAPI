@@ -72,6 +72,9 @@ impl Server {
             ServerEvent::VariablesEvent(variables_event) => {
                 VariablesEvent::emit(variables_event, &self.app_handle)
             }
+            ServerEvent::KeybindingsEvent(keybindings_event) => {
+                KeybindingsEvent::emit(keybindings_event, &self.app_handle)
+            }
         }
         .map_err(|e| Error::ChannelSendError(e.to_string()))?;
 

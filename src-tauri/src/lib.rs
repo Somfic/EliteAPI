@@ -10,7 +10,7 @@ pub mod state;
 
 pub use reader::Reader;
 pub use server::Server;
-use tracing::{instrument, span, warn};
+use tracing::{info, instrument, span, warn};
 
 #[instrument]
 pub async fn on_start(app_handle: &tauri::AppHandle) -> Result<()> {
@@ -40,6 +40,21 @@ pub async fn on_start(app_handle: &tauri::AppHandle) -> Result<()> {
 
             if let Err(e) = reader {
                 warn!("error: {:?}", e);
+            }
+        }
+    });
+
+    // status
+    async_runtime::spawn({
+        let app_handle = app_handle.clone();
+
+        async move {
+            let span = span!(tracing::Level::DEBUG, "status");
+            let _scope = span.enter();
+            loop {
+                tokio::time::sleep(std::time::Duration::from_secs(1)).await;
+                let state = app_handle.state::<AppState>();
+                info!("voiceattack: {:?}", state.server.clients.lock().await.len());
             }
         }
     });

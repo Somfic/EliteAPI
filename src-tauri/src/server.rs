@@ -24,7 +24,7 @@ pub struct Server {
     sender: mpsc::Sender<ServerEvent>,
     receiver: Mutex<mpsc::Receiver<ServerEvent>>,
     app_handle: AppHandle,
-    clients: Arc<Mutex<Vec<LocalSocketStream>>>,
+    pub clients: Arc<Mutex<Vec<LocalSocketStream>>>,
 }
 
 impl Server {

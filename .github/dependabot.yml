@@ -1,11 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: "cargo"
-    directory: "/src-tauri"
-    schedule:
-      interval: "daily"
-
-  - package-ecosystem: "bun"
+  - package-ecosystem: "nuget"
     directory: "/"
     schedule:
       interval: "daily"

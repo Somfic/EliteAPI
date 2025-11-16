@@ -1,0 +1,19 @@
+{
+    "timestamp": "2024-07-10T22:07:01Z",
+    "event": "Status",
+    "Flags": 2097152,
+    "Flags2": 32785,
+    "Oxygen": 1.000000,
+    "Health": 1.000000,
+    "Temperature": 240.971558,
+    "SelectedWeapon": "$humanoid_sampletool_name;",
+    "SelectedWeapon_Localised": "Genetic Sampler",
+    "Gravity": 0.260680,
+    "LegalState": "Clean",
+    "Latitude": 11.392667,
+    "Longitude": 137.175507,
+    "Heading": -36,
+    "BodyName": "Hypiae Aed DS-J c22-0 6",
+    "PlanetRadius": 1782178.000000,
+    "Balance": 3283314227
+}

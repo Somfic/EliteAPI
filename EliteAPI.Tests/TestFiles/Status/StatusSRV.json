@@ -1,0 +1,26 @@
+{
+    "timestamp": "2024-07-10T22:08:45Z",
+    "event": "Status",
+    "Flags": 203423752,
+    "Flags2": 0,
+    "Pips": [
+        4,
+        8,
+        0
+    ],
+    "FireGroup": 0,
+    "GuiFocus": 2,
+    "Fuel": {
+        "FuelMain": 0.000000,
+        "FuelReservoir": 0.498991
+    },
+    "Cargo": 0.000000,
+    "LegalState": "Clean",
+    "Latitude": 11.416910,
+    "Longitude": 137.156357,
+    "Heading": 300,
+    "Altitude": 0,
+    "BodyName": "Hypiae Aed DS-J c22-0 6",
+    "PlanetRadius": 1782178.000000,
+    "Balance": 3283314227
+}

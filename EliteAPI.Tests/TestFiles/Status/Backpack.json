@@ -1,0 +1,60 @@
+{
+  "timestamp": "2024-05-16T16:56:14Z",
+  "event": "Backpack",
+  "Items": [
+    {
+      "Name": "gmeds",
+      "Name_Localised": "G-Meds",
+      "OwnerID": 0,
+      "Count": 1
+    }
+  ],
+  "Components": [
+    {
+      "Name": "circuitswitch",
+      "Name_Localised": "Circuit Switch",
+      "OwnerID": 0,
+      "Count": 1
+    }
+  ],
+  "Consumables": [
+    {
+      "Name": "healthpack",
+      "Name_Localised": "Medkit",
+      "OwnerID": 0,
+      "Count": 1
+    },
+    {
+      "Name": "energycell",
+      "Name_Localised": "Energy Cell",
+      "OwnerID": 0,
+      "Count": 3
+    },
+    {
+      "Name": "amm_grenade_emp",
+      "Name_Localised": "Shield Disruptor",
+      "OwnerID": 0,
+      "Count": 1
+    },
+    {
+      "Name": "amm_grenade_frag",
+      "Name_Localised": "Frag Grenade",
+      "OwnerID": 0,
+      "Count": 1
+    },
+    {
+      "Name": "amm_grenade_shield",
+      "Name_Localised": "Shield Projector",
+      "OwnerID": 0,
+      "Count": 1
+    }
+  ],
+  "Data": [
+    {
+      "Name": "combatantperformance",
+      "Name_Localised": "Combatant Performance",
+      "OwnerID": 0,
+      "Count": 1
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "timestamp": "2024-05-09T16:50:30Z",
+  "event": "NavRoute",
+  "Route": [
+    {
+      "StarSystem": "Shinrarta Dezhra",
+      "SystemAddress": 3932277478106,
+      "StarPos": [
+        55.71875,
+        17.59375,
+        27.15625
+      ],
+      "StarClass": "K"
+    },
+    {
+      "StarSystem": "Morommo",
+      "SystemAddress": 2871319930265,
+      "StarPos": [
+        97.12500,
+        10.90625,
+        -25.96875
+      ],
+      "StarClass": "M"
+    },
+    {
+      "StarSystem": "Deciat",
+      "SystemAddress": 6681123623626,
+      "StarPos": [
+        122.62500,
+        -0.81250,
+        -47.28125
+      ],
+      "StarClass": "K"
+    }
+  ]
+}

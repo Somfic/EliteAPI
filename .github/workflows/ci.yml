@@ -60,4 +60,4 @@ jobs:
         run: dotnet build --no-restore --configuration Release
 
       - name: run tests
-        run: dotnet run --project EliteAPI.Tests --no-build --configuration Release
+        run: dotnet test --no-build --configuration Release

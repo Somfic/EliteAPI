@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "ms-dotnettools.csharp"
+  ],
+  "unwantedRecommendations": [
+    "ms-dotnettools.csdevkit",
+    "ms-dotnettools.vscode-dotnet-runtime"
+  ]
+}

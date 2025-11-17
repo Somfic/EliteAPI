@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI", "EliteAPI\EliteA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI.Tests", "EliteAPI.Tests\EliteAPI.Tests.csproj", "{9788FEEB-6927-4753-BDD2-8121AEA9D798}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteVA", "EliteVA\EliteVA.csproj", "{2CF5B08E-42DA-463D-9623-EA872D40881F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{9788FEEB-6927-4753-BDD2-8121AEA9D798}.Release|x64.Build.0 = Release|Any CPU
 		{9788FEEB-6927-4753-BDD2-8121AEA9D798}.Release|x86.ActiveCfg = Release|Any CPU
 		{9788FEEB-6927-4753-BDD2-8121AEA9D798}.Release|x86.Build.0 = Release|Any CPU
+		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Debug|x64.Build.0 = Debug|Any CPU
+		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Debug|x86.Build.0 = Debug|Any CPU
+		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Release|x64.ActiveCfg = Release|Any CPU
+		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Release|x64.Build.0 = Release|Any CPU
+		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Release|x86.ActiveCfg = Release|Any CPU
+		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

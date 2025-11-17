@@ -1,4 +1,4 @@
-﻿namespace EliteVA.Commands;
+﻿namespace VoiceAttack.Commands;
 
 public class VoiceAttackCommand
 {

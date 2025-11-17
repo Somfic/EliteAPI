@@ -1,7 +1,6 @@
 ﻿using System.Globalization;
-using EliteVA.Logging;
 
-namespace EliteVA.Variables;
+namespace VoiceAttack.Variables;
 
 public class VoiceAttackVariables
 {

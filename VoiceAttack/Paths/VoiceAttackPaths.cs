@@ -1,4 +1,4 @@
-﻿namespace EliteVA.Paths;
+﻿namespace VoiceAttack.Paths;
 
 public class VoiceAttackPaths
 {

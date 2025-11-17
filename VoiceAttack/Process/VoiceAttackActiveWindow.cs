@@ -1,4 +1,4 @@
-﻿namespace EliteVA.Process;
+﻿namespace VoiceAttack.Process;
 
 public class VoiceAttackActiveWindow
 {

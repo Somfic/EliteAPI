@@ -1,6 +1,6 @@
-﻿using EliteVA.Logging;
+﻿using VoiceAttack.Logging;
 
-namespace EliteVA;
+namespace VoiceAttack;
 
 public class VoiceAttackPluginWrapper
 {

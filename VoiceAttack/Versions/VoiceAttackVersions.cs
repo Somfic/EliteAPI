@@ -1,4 +1,4 @@
-﻿namespace EliteVA.Versions;
+﻿namespace VoiceAttack.Versions;
 
 public class VoiceAttackVersions
 {

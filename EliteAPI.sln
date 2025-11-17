@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteAPI.Tests", "EliteAPI.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteVA", "EliteVA\EliteVA.csproj", "{2CF5B08E-42DA-463D-9623-EA872D40881F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoiceAttack", "VoiceAttack\VoiceAttack.csproj", "{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Release|x64.Build.0 = Release|Any CPU
 		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Release|x86.ActiveCfg = Release|Any CPU
 		{2CF5B08E-42DA-463D-9623-EA872D40881F}.Release|x86.Build.0 = Release|Any CPU
+		{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}.Debug|x64.Build.0 = Debug|Any CPU
+		{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}.Debug|x86.Build.0 = Debug|Any CPU
+		{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}.Release|x64.ActiveCfg = Release|Any CPU
+		{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}.Release|x64.Build.0 = Release|Any CPU
+		{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}.Release|x86.ActiveCfg = Release|Any CPU
+		{A30596CE-C88C-412C-9AAE-8FA6927BB9EF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

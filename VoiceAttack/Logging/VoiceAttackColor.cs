@@ -1,4 +1,4 @@
-﻿namespace EliteVA.Logging;
+﻿namespace VoiceAttack.Logging;
 
 public enum VoiceAttackColor
 {

@@ -1,6 +1,6 @@
-﻿using EliteVA.Abstractions;
+﻿using VoiceAttack.Abstractions;
 
-namespace EliteVA;
+namespace VoiceAttack;
 
 public abstract class VoiceAttackService
 {

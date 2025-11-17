@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
-using EliteVA.Logging;
+using VoiceAttack.Logging;
 
-namespace EliteVA;
+namespace VoiceAttack;
 
 public abstract class VoiceAttackPlugin : VoiceAttackService
 {
@@ -15,7 +15,6 @@ public abstract class VoiceAttackPlugin : VoiceAttackService
         Instance ??= this;
     }
     
-
     public void Log(VoiceAttackColor color, string message, Exception? exception = null)
     {
         Proxy.Log.Write(message, color);

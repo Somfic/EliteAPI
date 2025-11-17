@@ -1,4 +1,4 @@
-﻿namespace EliteVA.Audio;
+﻿namespace VoiceAttack.Audio;
 
 public enum AudioType
 {

@@ -13,4 +13,8 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VoiceAttack\VoiceAttack.csproj" />
+  </ItemGroup>
+
 </Project>

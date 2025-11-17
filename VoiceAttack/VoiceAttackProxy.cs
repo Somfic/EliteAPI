@@ -1,13 +1,13 @@
-﻿using EliteVA.Abstractions;
-using EliteVA.Audio;
-using EliteVA.Commands;
-using EliteVA.Logging;
-using EliteVA.Options;
-using EliteVA.Paths;
-using EliteVA.Variables;
-using EliteVA.Versions;
+﻿using VoiceAttack.Abstractions;
+using VoiceAttack.Audio;
+using VoiceAttack.Commands;
+using VoiceAttack.Logging;
+using VoiceAttack.Options;
+using VoiceAttack.Paths;
+using VoiceAttack.Variables;
+using VoiceAttack.Versions;
 
-namespace EliteVA;
+namespace VoiceAttack;
 
 public class VoiceAttackProxy : IVoiceAttackProxy
 {

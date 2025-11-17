@@ -10,12 +10,12 @@ public class Flattening
         var json = "{ \"test\": 1 }";
         var paths = FlattenJson(json);
 
-        paths.Should().NotBeEmpty();
-        paths.Should().HaveCount(1);
+        var expected = new[]
+        {
+            new JsonPath("test", 1, JsonType.Number)
+        };
 
-        paths[0].Path.Should().Be("test");
-        paths[0].Value.Should().Be(1);
-        paths[0].Type.Should().Be(JsonType.Number);
+        paths.Should().BeEquivalentTo(expected);
     }
 
     [Test]
@@ -24,22 +24,50 @@ public class Flattening
         var json = "{ \"test1\": 1, \"test2\": \"value\", \"test3\": true }";
         var paths = FlattenJson(json);
 
-        paths.Should().NotBeEmpty();
-        paths.Should().HaveCount(3);
+        var expected = new[]
+        {
+            new JsonPath("test1", 1, JsonType.Number),
+            new JsonPath("test2", "value", JsonType.String),
+            new JsonPath("test3", true, JsonType.Boolean)
+        };
 
-        paths[0].Path.Should().Be("test1");
-        paths[0].Value.Should().Be(1);
-        paths[0].Type.Should().Be(JsonType.Number);
+        paths.Should().BeEquivalentTo(expected);
+    }
 
-        paths[1].Path.Should().Be("test2");
-        paths[1].Value.Should().Be("value");
-        paths[1].Type.Should().Be(JsonType.String);
+    [Test]
+    public void SimpleArray()
+    {
+        var json = "{ \"items\": [1, 2, 3] }";
+        var paths = FlattenJson(json);
 
-        paths[2].Path.Should().Be("test3");
-        paths[2].Value.Should().Be(true);
-        paths[2].Type.Should().Be(JsonType.Boolean);
+        var expected = new[]
+        {
+            new JsonPath("items[0]", 1, JsonType.Number),
+            new JsonPath("items[1]", 2, JsonType.Number),
+            new JsonPath("items[2]", 3, JsonType.Number),
+            new JsonPath("items.Length", 3, JsonType.Number)
+        };
+
+        paths.Should().BeEquivalentTo(expected);
     }
     
+    [Test]
+    public void ArrayWithObject()
+    {
+        var json = "{ \"items\": [ { \"nested\": 1 }, { \"nested\": \"2\" }, { \"nested\": false } ] }";
+        var paths = FlattenJson(json);
+
+        var expected = new[]
+        {
+            new JsonPath("items[0].nested", 1, JsonType.Number),
+            new JsonPath("items[1].nested", "2", JsonType.String),
+            new JsonPath("items[2].nested", false, JsonType.Boolean),
+            new JsonPath("items.Length", 3, JsonType.Number)
+        };
+
+        paths.Should().BeEquivalentTo(expected);
+    }
+
     private List<JsonPath> FlattenJson(string json)
     {
         // TODO: call flattening function

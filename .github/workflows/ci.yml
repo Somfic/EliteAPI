@@ -8,8 +8,11 @@ jobs:
   build:
     name: build
     runs-on: ubuntu-latest
-    
+
     steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
       - name: setup .net
         uses: actions/setup-dotnet@v5
         with:

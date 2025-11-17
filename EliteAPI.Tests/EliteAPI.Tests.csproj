@@ -8,6 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="TUnit" Version="1.2.0" />
+    <PackageReference Include="FluentAssertions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EliteAPI\EliteAPI.csproj" />
   </ItemGroup>
 
 </Project>

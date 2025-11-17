@@ -1,0 +1,3 @@
+{ "timestamp":"2023-07-08T09:04:10Z", "event":"Fileheader", "part":1, "language":"English/UK", "Odyssey":true, "gameversion":"4.0.0.1502", "build":"r294054/r0 " }
+{ "timestamp":"2023-07-08T09:04:30Z", "event":"Friends", "Status":"Online", "Name":"Scratching Minackers" }
+{ "timestamp":"2023-07-08T09:04:34Z", "event":"Shutdown" }

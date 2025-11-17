@@ -1,0 +1,4 @@
+{ "timestamp":"2023-07-04T12:52:10Z", "event":"Fileheader", "part":1, "language":"English/UK", "Odyssey":true, "gameversion":"4.0.0.1502", "build":"r294054/r0 " }
+{ "timestamp":"2023-07-04T12:52:44Z", "event":"Friends", "Status":"Online", "Name":"helitony" }
+{ "timestamp":"2023-07-04T12:54:43Z", "event":"Friends", "Status":"Online", "Name":"helitony" }
+{ "timestamp":"2023-07-04T13:55:24Z", "event":"Shutdown" }

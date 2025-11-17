@@ -1,0 +1,4 @@
+{"timestamp":"2023-12-31T15:02:10Z","event":"Fileheader","part":1,"language":"English\\UK","Odyssey":false,"gameversion":"3.8.0.1400","build":"r289583/r0 "}
+{"timestamp":"2023-12-31T15:02:10Z","event":"Music","MusicTrack":"NoTrack"}
+{"timestamp":"2023-12-31T15:02:10Z","event":"Music","MusicTrack":"MainMenu"}
+{"timestamp":"2023-12-31T15:03:36Z","event":"Shutdown"}

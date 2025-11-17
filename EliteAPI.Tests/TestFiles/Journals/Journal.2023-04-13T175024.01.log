@@ -1,0 +1,3 @@
+{ "timestamp":"2023-04-13T16:50:12Z", "event":"Fileheader", "part":1, "language":"English/UK", "Odyssey":true, "gameversion":"4.0.0.1477", "build":"r291050/r0 " }
+{ "timestamp":"2023-04-13T16:53:15Z", "event":"Friends", "Status":"Online", "Name":"Millstonebarn" }
+{ "timestamp":"2023-04-13T16:53:44Z", "event":"Shutdown" }

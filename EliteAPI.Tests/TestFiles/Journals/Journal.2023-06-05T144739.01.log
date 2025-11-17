@@ -1,0 +1,3 @@
+{ "timestamp":"2023-06-05T13:47:33Z", "event":"Fileheader", "part":1, "language":"English/UK", "Odyssey":true, "gameversion":"4.0.0.1502", "build":"r294054/r0 " }
+{ "timestamp":"2023-06-05T13:47:52Z", "event":"Friends", "Status":"Online", "Name":"binmalweg" }
+{ "timestamp":"2023-06-05T13:48:09Z", "event":"Shutdown" }

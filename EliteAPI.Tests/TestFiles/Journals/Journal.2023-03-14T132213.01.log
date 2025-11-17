@@ -1,0 +1,5 @@
+{ "timestamp":"2023-03-14T13:21:58Z", "event":"Fileheader", "part":1, "language":"English/UK", "Odyssey":true, "gameversion":"4.0.0.1477", "build":"r291050/r0 " }
+{ "timestamp":"2023-03-14T13:25:46Z", "event":"Music", "MusicTrack":"OnFoot" }
+{ "timestamp":"2023-03-14T13:25:47Z", "event":"Music", "MusicTrack":"NoTrack" }
+{ "timestamp":"2023-03-14T13:25:48Z", "event":"Music", "MusicTrack":"MainMenu" }
+{ "timestamp":"2023-03-14T13:26:00Z", "event":"Shutdown" }

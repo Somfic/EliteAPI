@@ -13,5 +13,6 @@ public enum JsonType
 {
     String,
     Number,
-    Boolean
+    Boolean,
+    Date
 }

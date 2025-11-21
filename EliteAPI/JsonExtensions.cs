@@ -18,7 +18,7 @@ public static class JExtensions
 				yield return result;
 			}
 
-			yield return GetLeafValues(JToken.Parse($"{{length :{jArray.Count}}}")).First();
+			yield return GetLeafValues(JToken.Parse($"{{ 'items': {{ 'Length': {jArray.Count} }} }}")).First();
 
 		}
 		else if (jToken is JProperty jProperty)
@@ -37,9 +37,47 @@ public static class JExtensions
 		}
 	}
 
-	// PRIVATE HELPERS 
 
 	//  JSONToken -> JsonPath
+	public static JsonPath ToCustomJsonPath(this JValue jValue)
+	{
+		switch (jValue.Type)
+		{
+			case JTokenType.Integer:
+			case JTokenType.Float:
+				return new JsonPath
+				{
+					Path = jValue.Path,
+					Value = Convert.ToInt32(jValue.Value),
+					Type = JsonType.Number
+				};
+			case JTokenType.Uri:
+			case JTokenType.Guid:
+			case JTokenType.String:
+				return new JsonPath
+				{
+					Path = jValue.Path,
+					Value = Convert.ToString(jValue.Value),
+					Type = JsonType.String
+				};
+			case JTokenType.Boolean:
+				return new JsonPath
+				{
+					Path = jValue.Path,
+					Value = Convert.ToBoolean(jValue.Value),
+					Type = JsonType.Boolean
+				};
+			default:
+				return new JsonPath
+				{
+					Path = "",
+					Value = "",
+					Type = JsonType.String
+				};
+		}
+	}
+
+	#region Helpers
 
 	static IEnumerable<JValue> GetLeafValuesFromJArray(JArray jArray)
 	{
@@ -71,4 +109,5 @@ public static class JExtensions
 		}
 	}
 
+	#endregion
 }

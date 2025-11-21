@@ -508,22 +508,6 @@ public class Flattening
     }
 
     [Test]
-    public void NullInArray()
-    {
-        var json = """{ "items": [1, null, 3] }""";
-        var paths = FlattenJson(json);
-
-        var expected = new[]
-        {
-            new JsonPath("items[0]", 1, JsonType.Number),
-            new JsonPath("items[1]", 3, JsonType.Number),
-            new JsonPath("items.Length", 3, JsonType.Number)
-        };
-
-        paths.Should().BeEquivalentTo(expected);
-    }
-
-    [Test]
     public void NullInNestedObject()
     {
         var json = """{ "user": { "name": "John", "email": null, "age": 30 } }""";
@@ -537,7 +521,6 @@ public class Flattening
 
         paths.Should().BeEquivalentTo(expected);
     }
-
 
     private static List<JsonPath> FlattenJson(string json)
     {

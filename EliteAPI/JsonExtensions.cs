@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Newtonsoft;
 using Newtonsoft.Json.Linq;
 
@@ -18,7 +19,8 @@ public static class JExtensions
 				yield return result;
 			}
 
-			yield return GetLeafValues(JToken.Parse($"{{ 'items': {{ 'Length': {jArray.Count} }} }}")).First();
+			// yield return GetLeafValues(JToken.Parse($"{{ {jArray.Path.Replace(".", "")}: {{ 'Length': {jArray.Count} }} }}")).First();
+			yield return GetLeafValuesFromJProperty(new JProperty($"{jArray.Path}.Length", jArray.Count)).First();
 
 		}
 		else if (jToken is JProperty jProperty)
@@ -44,28 +46,42 @@ public static class JExtensions
 		switch (jValue.Type)
 		{
 			case JTokenType.Integer:
-			case JTokenType.Float:
 				return new JsonPath
 				{
-					Path = jValue.Path,
+					Path = NormalizePath(jValue.Path),
 					Value = Convert.ToInt32(jValue.Value),
 					Type = JsonType.Number
 				};
+			case JTokenType.Float:
+				return new JsonPath
+				{
+					Path = NormalizePath(jValue.Path),
+					Value = Convert.ToDecimal(jValue.Value),
+					Type = JsonType.Decimal
+				};
+
 			case JTokenType.Uri:
 			case JTokenType.Guid:
 			case JTokenType.String:
 				return new JsonPath
 				{
-					Path = jValue.Path,
+					Path = NormalizePath(jValue.Path),
 					Value = Convert.ToString(jValue.Value),
 					Type = JsonType.String
 				};
 			case JTokenType.Boolean:
 				return new JsonPath
 				{
-					Path = jValue.Path,
+					Path = NormalizePath(jValue.Path),
 					Value = Convert.ToBoolean(jValue.Value),
 					Type = JsonType.Boolean
+				};
+			case JTokenType.Date:
+				return new JsonPath
+				{
+					Path = NormalizePath(jValue.Path),
+					Value = Convert.ToDateTime(jValue.Value),
+					Type = JsonType.DateTime
 				};
 			default:
 				return new JsonPath
@@ -78,6 +94,13 @@ public static class JExtensions
 	}
 
 	#region Helpers
+
+	static string NormalizePath(string rawPath)
+	{
+		if (rawPath.StartsWith("['") && rawPath.EndsWith("']"))
+			return rawPath.Substring(2, rawPath.Length - 4);
+		return rawPath;
+	}
 
 	static IEnumerable<JValue> GetLeafValuesFromJArray(JArray jArray)
 	{

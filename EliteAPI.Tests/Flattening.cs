@@ -550,7 +550,9 @@ public class Flattening
         var jToken = JToken.Parse(json);
         foreach (var jValue in jToken.GetLeafValues())
         {
-            temp.Add(jValue.ToCustomJsonPath());
+            var jpath = jValue.ToCustomJsonPath();
+            // Skips values that are null
+            if (!(string.IsNullOrWhiteSpace(jpath.Path) || string.IsNullOrWhiteSpace(jpath.Path))) temp.Add(jpath);
         }
 
         return temp;

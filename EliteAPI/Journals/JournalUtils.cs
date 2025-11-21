@@ -28,7 +28,7 @@ public static class JournalUtils
         if (!string.IsNullOrWhiteSpace(userProfile))
             return new DirectoryInfo(Path.Combine(userProfile, "Saved Games", "Frontier Developments", "Elite Dangerous"));
 
-        // last resort, hardcoded with C:\ drive, hopefully we'll neve reach this..
+        // last resort, hardcoded with C:\ drive, hopefully we'll never reach this..
         return new DirectoryInfo(Path.Combine($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"));
     }
 

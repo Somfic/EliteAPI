@@ -6,25 +6,12 @@ namespace EliteAPI.Json;
 
 public static class JsonUtils
 {
-    public static string GetEventName(string json)
-    {
-        using var document = JsonDocument.Parse(json);
-        if (document.RootElement.TryGetProperty("event", out var eventProperty))
-        {
-            return eventProperty.GetString() ?? string.Empty;
-        }
-
-        return string.Empty;
-    }
-
     public static List<JsonPath> FlattenJson(string json)
     {
         // TODO: call flattening function
         // arrays need Length 
         // key + localisation
         // controls mapping
-        var eventName = GetEventName(json);
-
         List<JsonPath> paths = [];
         var token = JToken.Parse(json);
 

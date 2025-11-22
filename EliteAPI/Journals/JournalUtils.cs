@@ -1,9 +1,21 @@
 using System.Runtime.InteropServices;
+using System.Text.Json;
 
 namespace EliteAPI.Journals;
 
 public static class JournalUtils
 {
+    public static string GetEventName(string json)
+    {
+        using var document = JsonDocument.Parse(json);
+        if (document.RootElement.TryGetProperty("event", out var eventProperty))
+        {
+            return eventProperty.GetString() ?? string.Empty;
+        }
+
+        return string.Empty;
+    }
+
     public static DirectoryInfo GetJournalsDirectory()
     {
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))

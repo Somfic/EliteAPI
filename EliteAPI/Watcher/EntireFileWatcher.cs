@@ -9,7 +9,7 @@ public class EntireFileWatcher : FileWatcher<string>
     public static (EntireFileWatcher watcher, string initialContent) Create(FileInfo file)
     {
         var watcher = new EntireFileWatcher(file);
-        var initialContent = System.IO.File.ReadAllText(file.FullName);
+        var initialContent = ReadFileContent(file.FullName);
         return (watcher, initialContent);
     }
 
@@ -17,8 +17,15 @@ public class EntireFileWatcher : FileWatcher<string>
     {
         StartWatching(onChange, () =>
         {
-            var content = System.IO.File.ReadAllText(File.FullName);
+            var content = ReadFileContent(File.FullName);
             onChange(content);
         });
+    }
+
+    private static string ReadFileContent(string path)
+    {
+        using var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+        using var reader = new StreamReader(stream);
+        return reader.ReadToEnd();
     }
 }

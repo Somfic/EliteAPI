@@ -1,5 +1,5 @@
+using EliteAPI.Json;
 using FluentAssertions;
-using Newtonsoft.Json.Linq;
 
 namespace EliteAPI.Tests;
 
@@ -9,11 +9,11 @@ public class Flattening
     public void OneField()
     {
         var json = """{ "test": 1 }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
-            new JsonPath("test", 1, JsonType.Number)
+            new JsonPath("test", 1L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -23,11 +23,11 @@ public class Flattening
     public void MultipleFields()
     {
         var json = """{ "test1": 1, "test2": "value", "test3": true }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
-            new JsonPath("test1", 1, JsonType.Number),
+            new JsonPath("test1", 1L, JsonType.Number),
             new JsonPath("test2", "value", JsonType.String),
             new JsonPath("test3", true, JsonType.Boolean)
         };
@@ -39,14 +39,14 @@ public class Flattening
     public void SimpleArray()
     {
         var json = """{ "items": [1, 2, 3] }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
-            new JsonPath("items[0]", 1, JsonType.Number),
-            new JsonPath("items[1]", 2, JsonType.Number),
-            new JsonPath("items[2]", 3, JsonType.Number),
-            new JsonPath("items.Length", 3, JsonType.Number)
+            new JsonPath("items[0]", 1L, JsonType.Number),
+            new JsonPath("items[1]", 2L, JsonType.Number),
+            new JsonPath("items[2]", 3L, JsonType.Number),
+            new JsonPath("items.Length", 3L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -56,14 +56,14 @@ public class Flattening
     public void ArrayWithObject()
     {
         var json = """{ "items": [ { "nested": 1 }, { "nested": "2" }, { "nested": false } ] }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
-            new JsonPath("items[0].nested", 1, JsonType.Number),
+            new JsonPath("items[0].nested", 1L, JsonType.Number),
             new JsonPath("items[1].nested", "2", JsonType.String),
             new JsonPath("items[2].nested", false, JsonType.Boolean),
-            new JsonPath("items.Length", 3, JsonType.Number)
+            new JsonPath("items.Length", 3L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -73,7 +73,7 @@ public class Flattening
     public void DecimalField()
     {
         var json = """{ "price": 19.99 }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -87,7 +87,7 @@ public class Flattening
     public void MultipleDecimalFields()
     {
         var json = """{ "price": 19.99, "tax": 1.50, "total": 21.49 }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -103,7 +103,7 @@ public class Flattening
     public void DateTimeField()
     {
         var json = """{ "timestamp": "2025-11-21T10:30:00Z" }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -117,7 +117,7 @@ public class Flattening
     public void MultipleDateTimeFields()
     {
         var json = """{ "createdAt": "2025-11-21T10:30:00Z", "updatedAt": "2025-11-21T15:45:00Z" }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -132,11 +132,11 @@ public class Flattening
     public void MixedTypesWithDecimalAndDateTime()
     {
         var json = """{ "id": 1, "name": "Product", "price": 29.99, "created": "2025-11-21T10:00:00Z", "active": true }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
-            new JsonPath("id", 1, JsonType.Number),
+            new JsonPath("id", 1L, JsonType.Number),
             new JsonPath("name", "Product", JsonType.String),
             new JsonPath("price", 29.99m, JsonType.Decimal),
             new JsonPath("created", new DateTime(2025, 11, 21, 10, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
@@ -150,12 +150,12 @@ public class Flattening
     public void SimpleNestedObject()
     {
         var json = """{ "user": { "name": "John", "age": 30 } }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
             new JsonPath("user.name", "John", JsonType.String),
-            new JsonPath("user.age", 30, JsonType.Number)
+            new JsonPath("user.age", 30L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -165,7 +165,7 @@ public class Flattening
     public void DeeplyNestedObject()
     {
         var json = """{ "level1": { "level2": { "level3": { "value": "deep" } } } }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -179,11 +179,11 @@ public class Flattening
     public void NestedObjectWithMixedTypes()
     {
         var json = """{ "product": { "id": 1, "name": "Widget", "price": 19.99, "created": "2025-11-21T10:00:00Z", "inStock": true } }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
-            new JsonPath("product.id", 1, JsonType.Number),
+            new JsonPath("product.id", 1L, JsonType.Number),
             new JsonPath("product.name", "Widget", JsonType.String),
             new JsonPath("product.price", 19.99m, JsonType.Decimal),
             new JsonPath("product.created", new DateTime(2025, 11, 21, 10, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
@@ -197,14 +197,14 @@ public class Flattening
     public void MultipleNestedObjects()
     {
         var json = """{ "user": { "name": "John", "age": 30 }, "address": { "city": "NYC", "zip": 10001 } }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
             new JsonPath("user.name", "John", JsonType.String),
-            new JsonPath("user.age", 30, JsonType.Number),
+            new JsonPath("user.age", 30L, JsonType.Number),
             new JsonPath("address.city", "NYC", JsonType.String),
-            new JsonPath("address.zip", 10001, JsonType.Number)
+            new JsonPath("address.zip", 10001L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -214,7 +214,7 @@ public class Flattening
     public void NestedObjectWithDecimalAndDateTime()
     {
         var json = """{ "transaction": { "amount": 99.99, "fee": 2.50, "timestamp": "2025-11-21T14:30:00Z" } }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -230,15 +230,15 @@ public class Flattening
     public void NestedObjectWithArrays()
     {
         var json = """{ "user": { "name": "John", "scores": [95, 87, 92] } }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
             new JsonPath("user.name", "John", JsonType.String),
-            new JsonPath("user.scores[0]", 95, JsonType.Number),
-            new JsonPath("user.scores[1]", 87, JsonType.Number),
-            new JsonPath("user.scores[2]", 92, JsonType.Number),
-            new JsonPath("user.scores.Length", 3, JsonType.Number)
+            new JsonPath("user.scores[0]", 95L, JsonType.Number),
+            new JsonPath("user.scores[1]", 87L, JsonType.Number),
+            new JsonPath("user.scores[2]", 92L, JsonType.Number),
+            new JsonPath("user.scores.Length", 3L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -264,18 +264,18 @@ public class Flattening
             }
         }
         """;
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
-            new JsonPath("order.id", 123, JsonType.Number),
+            new JsonPath("order.id", 123L, JsonType.Number),
             new JsonPath("order.customer.name", "Jane Doe", JsonType.String),
             new JsonPath("order.customer.email", "jane@example.com", JsonType.String),
             new JsonPath("order.items[0].name", "Item1", JsonType.String),
             new JsonPath("order.items[0].price", 10.50m, JsonType.Decimal),
             new JsonPath("order.items[1].name", "Item2", JsonType.String),
             new JsonPath("order.items[1].price", 25.99m, JsonType.Decimal),
-            new JsonPath("order.items.Length", 2, JsonType.Number),
+            new JsonPath("order.items.Length", 2L, JsonType.Number),
             new JsonPath("order.total", 36.49m, JsonType.Decimal),
             new JsonPath("order.orderDate", new DateTime(2025, 11, 21, 9, 0, 0, DateTimeKind.Utc), JsonType.DateTime)
         };
@@ -287,7 +287,7 @@ public class Flattening
     public void EmptyObject()
     {
         var json = """{ "empty": {} }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = Array.Empty<JsonPath>();
 
@@ -298,11 +298,11 @@ public class Flattening
     public void EmptyArray()
     {
         var json = """{ "items": [] }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
-            new JsonPath("items.Length", 0, JsonType.Number)
+            new JsonPath("items.Length", 0L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -312,11 +312,11 @@ public class Flattening
     public void NullValues()
     {
         var json = """{ "name": null, "age": 30 }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
-            new JsonPath("age", 30, JsonType.Number)
+            new JsonPath("age", 30L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -326,12 +326,12 @@ public class Flattening
     public void NegativeNumbers()
     {
         var json = """{ "temperature": -15, "balance": -100 }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
-            new JsonPath("temperature", -15, JsonType.Number),
-            new JsonPath("balance", -100, JsonType.Number)
+            new JsonPath("temperature", -15L, JsonType.Number),
+            new JsonPath("balance", -100L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -341,7 +341,7 @@ public class Flattening
     public void NegativeDecimals()
     {
         var json = """{ "balance": -99.99, "adjustment": -5.50 }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -356,11 +356,11 @@ public class Flattening
     public void ZeroValues()
     {
         var json = """{ "count": 0, "price": 0.0, "active": false }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
-            new JsonPath("count", 0, JsonType.Number),
+            new JsonPath("count", 0L, JsonType.Number),
             new JsonPath("price", 0.0m, JsonType.Decimal),
             new JsonPath("active", false, JsonType.Boolean)
         };
@@ -372,7 +372,7 @@ public class Flattening
     public void EmptyString()
     {
         var json = """{ "name": "", "description": "text" }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -387,14 +387,14 @@ public class Flattening
     public void ArrayOfDecimals()
     {
         var json = """{ "prices": [19.99, 29.99, 39.99] }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
             new JsonPath("prices[0]", 19.99m, JsonType.Decimal),
             new JsonPath("prices[1]", 29.99m, JsonType.Decimal),
             new JsonPath("prices[2]", 39.99m, JsonType.Decimal),
-            new JsonPath("prices.Length", 3, JsonType.Number)
+            new JsonPath("prices.Length", 3L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -404,14 +404,14 @@ public class Flattening
     public void ArrayOfDateTimes()
     {
         var json = """{ "timestamps": ["2025-11-21T10:00:00Z", "2025-11-21T11:00:00Z", "2025-11-21T12:00:00Z"] }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
             new JsonPath("timestamps[0]", new DateTime(2025, 11, 21, 10, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
             new JsonPath("timestamps[1]", new DateTime(2025, 11, 21, 11, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
             new JsonPath("timestamps[2]", new DateTime(2025, 11, 21, 12, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
-            new JsonPath("timestamps.Length", 3, JsonType.Number)
+            new JsonPath("timestamps.Length", 3L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -421,15 +421,15 @@ public class Flattening
     public void MixedTypeArray()
     {
         var json = """{ "mixed": [1, "text", true, 2.5] }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
-            new JsonPath("mixed[0]", 1, JsonType.Number),
+            new JsonPath("mixed[0]", 1L, JsonType.Number),
             new JsonPath("mixed[1]", "text", JsonType.String),
             new JsonPath("mixed[2]", true, JsonType.Boolean),
             new JsonPath("mixed[3]", 2.5m, JsonType.Decimal),
-            new JsonPath("mixed.Length", 4, JsonType.Number)
+            new JsonPath("mixed.Length", 4L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -439,7 +439,7 @@ public class Flattening
     public void VeryLargeDecimal()
     {
         var json = """{ "bigNumber": 999999999.99 }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -453,7 +453,7 @@ public class Flattening
     public void VerySmallDecimal()
     {
         var json = """{ "smallNumber": 0.0001 }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -467,7 +467,7 @@ public class Flattening
     public void StringWithSpecialCharacters()
     {
         var json = """{ "text": "Hello \"World\"\nNew Line\tTab" }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -481,7 +481,7 @@ public class Flattening
     public void StringWithUnicode()
     {
         var json = """{ "greeting": "Hello 🌍 World", "emoji": "😀" }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -497,7 +497,7 @@ public class Flattening
     {
         var longText = new string('a', 10000);
         var json = $$"""{ "longText": "{{longText}}" }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
@@ -511,33 +511,14 @@ public class Flattening
     public void NullInNestedObject()
     {
         var json = """{ "user": { "name": "John", "email": null, "age": 30 } }""";
-        var paths = FlattenJson(json);
+        var paths = JsonUtils.FlattenJson(json);
 
         var expected = new[]
         {
             new JsonPath("user.name", "John", JsonType.String),
-            new JsonPath("user.age", 30, JsonType.Number)
+            new JsonPath("user.age", 30L, JsonType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
-    }
-
-    private static List<JsonPath> FlattenJson(string json)
-    {
-        // TODO: call flattening function
-        // arrays need Length 
-        // key + localisation
-        // controls mapping
-
-        List<JsonPath> temp = [];
-        var jToken = JToken.Parse(json);
-        foreach (var jValue in jToken.GetLeafValues())
-        {
-            var jpath = jValue.ToCustomJsonPath();
-            // Skips values that are null
-            if (!(string.IsNullOrWhiteSpace(jpath.Path) || string.IsNullOrWhiteSpace(jpath.Path))) temp.Add(jpath);
-        }
-
-        return temp;
     }
 }

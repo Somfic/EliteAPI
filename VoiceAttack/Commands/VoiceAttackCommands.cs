@@ -12,7 +12,7 @@ public class VoiceAttackCommands
     }
 
     public event EventHandler? OnCommandInvoked;
-    
+
     /// <summary>
     /// The total amount of commands executed in this session
     /// </summary>
@@ -160,7 +160,7 @@ public class VoiceAttackCommands
     {
         return Task.FromResult(_proxy.Command.CategoryExists(name));
     }
-    
+
     public struct SetCommand
     {
         public SetCommand(DateTime timestamp, string command)
@@ -170,23 +170,23 @@ public class VoiceAttackCommands
         }
 
         public DateTime Timestamp { get; }
-        
+
         public string Command { get; }
     }
 }
 
 public enum CommandSource
 {
-    Spoken, 
-    Keyboard, 
-    Joystick, 
-    Mouse, 
+    Spoken,
+    Keyboard,
+    Joystick,
+    Mouse,
     Profile,
     External,
-    Unrecognized, 
-    ProfileUnloadChange, 
+    Unrecognized,
+    ProfileUnloadChange,
     ProfileUnloadClose,
-    DictationRecognized, 
-    Plugin, 
+    DictationRecognized,
+    Plugin,
     Other
 }

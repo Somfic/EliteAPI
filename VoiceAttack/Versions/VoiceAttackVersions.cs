@@ -17,7 +17,7 @@ public class VoiceAttackVersions
     /// <summary>
     /// The VoiceAttack version
     /// </summary>
-    public Version VoiceAttack =>  _proxy.VAVersion;
+    public Version VoiceAttack => _proxy.VAVersion;
 
     /// <summary>
     /// Whether this is a stable VoiceAttack release

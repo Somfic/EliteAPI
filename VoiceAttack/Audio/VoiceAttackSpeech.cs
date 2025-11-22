@@ -15,7 +15,7 @@ public class VoiceAttackSpeech
     /// <param name="type">Which audio to return</param>
     public Task<MemoryStream> GetCapturedAudio(AudioType type)
     {
-        return Task.FromResult(_proxy.Utility.CapturedAudio((int) type));
+        return Task.FromResult(_proxy.Utility.CapturedAudio((int)type));
     }
 
     /// <summary>

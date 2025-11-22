@@ -11,7 +11,7 @@ public class VoiceAttackVariables
     private List<Variable> _setVariables;
 
     public IReadOnlyList<Variable> SetVariables => _setVariables.ToList();
-    
+
     public event EventHandler? OnVariablesSet;
 
     public VoiceAttackVariables(dynamic vaProxy)
@@ -19,14 +19,14 @@ public class VoiceAttackVariables
         _proxy = vaProxy;
         _setVariables = [];
     }
-    
+
     public void ClearStartingWith(string name)
     {
         var variablesToClear = _setVariables.Where(x => x.Name.StartsWith(name)).ToList();
-        
+
         foreach (var variable in variablesToClear)
             Clear(variable.Name, variable.Type);
-        
+
         _setVariables = _setVariables.Where(x => !x.Name.StartsWith(name)).ToList();
     }
 
@@ -82,7 +82,7 @@ public class VoiceAttackVariables
                 break;
         }
     }
-    
+
     /// <summary>
     /// Get a variable
     /// </summary>
@@ -124,8 +124,8 @@ public class VoiceAttackVariables
         }
         return value;
     }
-    
-    public void Clear( string name, TypeCode code)
+
+    public void Clear(string name, TypeCode code)
     {
         switch (code)
         {
@@ -163,7 +163,7 @@ public class VoiceAttackVariables
                 break;
         }
     }
-    
+
     private short? GetShort(string name)
     {
         return _proxy.GetSmallInt(name);
@@ -199,7 +199,7 @@ public class VoiceAttackVariables
         SetVariable(name, value, TypeCode.Int16);
         _proxy.SetSmallInt(name, value);
     }
-    
+
     private void ClearShort(string name)
     {
         ClearVariable(name);
@@ -211,7 +211,7 @@ public class VoiceAttackVariables
         SetVariable(name, value, TypeCode.Int32);
         _proxy.SetInt(name, value);
     }
-    
+
     private void ClearInt(string name)
     {
         ClearVariable(name);
@@ -223,7 +223,7 @@ public class VoiceAttackVariables
         SetVariable(name, value, TypeCode.String);
         _proxy.SetText(name, value);
     }
-    
+
     private void ClearText(string name)
     {
         ClearVariable(name);
@@ -235,7 +235,7 @@ public class VoiceAttackVariables
         SetVariable(name, value, TypeCode.Decimal);
         _proxy.SetDecimal(name, value);
     }
-    
+
     private void ClearDecimal(string name)
     {
         ClearVariable(name);
@@ -247,7 +247,7 @@ public class VoiceAttackVariables
         SetVariable(name, value, TypeCode.Boolean);
         _proxy.SetBoolean(name, value);
     }
-    
+
     private void ClearBoolean(string name)
     {
         ClearVariable(name);
@@ -259,8 +259,8 @@ public class VoiceAttackVariables
         SetVariable(name, value, TypeCode.DateTime);
         _proxy.SetDate(name, value);
     }
-    
-    private void ClearDate( string name)
+
+    private void ClearDate(string name)
     {
         ClearVariable(name);
         _proxy.SetDate(name, null);
@@ -269,15 +269,15 @@ public class VoiceAttackVariables
     private void SetVariable(string name, dynamic? value, TypeCode type)
     {
         var index = _setVariables.FindIndex(x => x.Name == name);
-        
+
         if (index >= 0)
             _setVariables[index] = new(name, value, type);
         else
             _setVariables.Insert(0, new(name, value, type));
-        
+
         OnVariablesSet?.Invoke(this, EventArgs.Empty);
     }
-    
+
     private void ClearVariable(string name)
     {
         _setVariables.RemoveAll(x => x.Name == name);

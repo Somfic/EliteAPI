@@ -16,7 +16,7 @@ public class VoiceAttackProxy : IVoiceAttackProxy
     public VoiceAttackProxy(dynamic vaProxy)
     {
         _vaProxy = vaProxy;
-            
+
         Variables = new VoiceAttackVariables(vaProxy);
         Versions = new VoiceAttackVersions(vaProxy);
         Log = new VoiceAttackLog(vaProxy);

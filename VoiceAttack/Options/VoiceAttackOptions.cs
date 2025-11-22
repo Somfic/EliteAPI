@@ -13,7 +13,7 @@ public class VoiceAttackOptions
     /// Whether plugins are enabled
     /// </summary>
     public bool PluginsEnabled => _proxy.PluginsEnabled;
-        
+
     /// <summary>
     /// Whether the use of nested tokens is enabled
     /// </summary>

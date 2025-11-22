@@ -16,15 +16,15 @@ public class VoiceAttackPluginWrapper
         var pluginType = typeof(VoiceAttackPluginWrapper).Assembly
             .GetTypes()
             .FirstOrDefault(t => t.IsSubclassOf(typeof(VoiceAttackPlugin)));
-        
-        if(pluginType == null)
-            throw new InvalidOperationException("No class found that inherits VoiceAttackPlugin.");
-        
-        VoiceAttackPlugin.Instance = (VoiceAttackPlugin) Activator.CreateInstance(pluginType)!;
 
-        if(VoiceAttackPlugin.Instance == null) 
+        if (pluginType == null)
+            throw new InvalidOperationException("No class found that inherits VoiceAttackPlugin.");
+
+        VoiceAttackPlugin.Instance = (VoiceAttackPlugin)Activator.CreateInstance(pluginType)!;
+
+        if (VoiceAttackPlugin.Instance == null)
             throw new InvalidOperationException("No VoiceAttackPlugin instance found.");
-        
+
         VoiceAttackPlugin.Proxy = new VoiceAttackProxy(vaProxy);
 
         try
@@ -39,19 +39,19 @@ public class VoiceAttackPluginWrapper
             File.WriteAllText(path, e.ToString());
         }
     }
-    
+
     public static void VA_Invoke1(dynamic vaProxy)
     {
-        if(VoiceAttackPlugin.Instance == null) 
+        if (VoiceAttackPlugin.Instance == null)
             throw new InvalidOperationException("No VoiceAttackPlugin instance found.");
-        
+
         VoiceAttackPlugin.Proxy = new VoiceAttackProxy(vaProxy);
         var context = VoiceAttackPlugin.Proxy.Context;
 
         try
         {
             VoiceAttackPlugin.Instance.OnInvoke(VoiceAttackPlugin.Proxy, context).GetAwaiter().GetResult();
-        } 
+        }
         catch (Exception e)
         {
             VoiceAttackPlugin.Instance.Log(VoiceAttackColor.Red, "Error during plugin invocation", e);
@@ -60,13 +60,13 @@ public class VoiceAttackPluginWrapper
 
     public static void VA_StopCommand()
     {
-        if(VoiceAttackPlugin.Instance == null) 
+        if (VoiceAttackPlugin.Instance == null)
             throw new InvalidOperationException("No VoiceAttackPlugin instance found.");
-        
-        if(VoiceAttackPlugin.Proxy == null)
+
+        if (VoiceAttackPlugin.Proxy == null)
             throw new InvalidOperationException("No VoiceAttackProxy instance found.");
-        
-        try 
+
+        try
         {
             VoiceAttackPlugin.Instance.OnCommandStopped(VoiceAttackPlugin.Proxy).GetAwaiter().GetResult();
         }
@@ -75,14 +75,14 @@ public class VoiceAttackPluginWrapper
             VoiceAttackPlugin.Instance.Log(VoiceAttackColor.Red, "Error during command stop", e);
         }
     }
-    
+
     public static void VA_Exit1(dynamic vaProxy)
     {
-        if(VoiceAttackPlugin.Instance == null) 
+        if (VoiceAttackPlugin.Instance == null)
             throw new InvalidOperationException("No VoiceAttackPlugin instance found.");
-        
+
         VoiceAttackPlugin.Proxy = new VoiceAttackProxy(vaProxy);
-        
+
         try
         {
             VoiceAttackPlugin.Instance.OnStop(VoiceAttackPlugin.Proxy).GetAwaiter().GetResult();

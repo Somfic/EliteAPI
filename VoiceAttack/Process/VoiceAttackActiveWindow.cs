@@ -12,7 +12,7 @@ public class VoiceAttackActiveWindow
     /// <summary>
     /// The title of the window
     /// </summary>
-    public string Title => _proxy.Utility.ActiveWindowTitle( );
+    public string Title => _proxy.Utility.ActiveWindowTitle();
 
     /// <summary>
     /// The name of the process of the window

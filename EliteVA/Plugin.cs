@@ -7,7 +7,7 @@ public class Plugin : VoiceAttackPlugin
 {
     public override async Task OnStart(IVoiceAttackProxy proxy)
     {
-        
+
     }
 }
 

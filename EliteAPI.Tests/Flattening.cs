@@ -107,7 +107,7 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("timestamp", DateTime.Parse("2025-11-21T10:30:00Z"), JsonType.DateTime)
+            new JsonPath("timestamp", new DateTime(2025, 11, 21, 10, 30, 0, DateTimeKind.Utc), JsonType.DateTime)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -121,8 +121,8 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("createdAt", DateTime.Parse("2025-11-21T10:30:00Z"), JsonType.DateTime),
-            new JsonPath("updatedAt", DateTime.Parse("2025-11-21T15:45:00Z"), JsonType.DateTime)
+            new JsonPath("createdAt", new DateTime(2025, 11, 21, 10, 30, 0, DateTimeKind.Utc), JsonType.DateTime),
+            new JsonPath("updatedAt", new DateTime(2025, 11, 21, 15, 45, 0, DateTimeKind.Utc), JsonType.DateTime)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -139,7 +139,7 @@ public class Flattening
             new JsonPath("id", 1, JsonType.Number),
             new JsonPath("name", "Product", JsonType.String),
             new JsonPath("price", 29.99m, JsonType.Decimal),
-            new JsonPath("created", DateTime.Parse("2025-11-21T10:00:00Z"), JsonType.DateTime),
+            new JsonPath("created", new DateTime(2025, 11, 21, 10, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
             new JsonPath("active", true, JsonType.Boolean)
         };
 
@@ -186,7 +186,7 @@ public class Flattening
             new JsonPath("product.id", 1, JsonType.Number),
             new JsonPath("product.name", "Widget", JsonType.String),
             new JsonPath("product.price", 19.99m, JsonType.Decimal),
-            new JsonPath("product.created", DateTime.Parse("2025-11-21T10:00:00Z"), JsonType.DateTime),
+            new JsonPath("product.created", new DateTime(2025, 11, 21, 10, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
             new JsonPath("product.inStock", true, JsonType.Boolean)
         };
 
@@ -220,7 +220,7 @@ public class Flattening
         {
             new JsonPath("transaction.amount", 99.99m, JsonType.Decimal),
             new JsonPath("transaction.fee", 2.50m, JsonType.Decimal),
-            new JsonPath("transaction.timestamp", DateTime.Parse("2025-11-21T14:30:00Z"), JsonType.DateTime)
+            new JsonPath("transaction.timestamp", new DateTime(2025, 11, 21, 14, 30, 0, DateTimeKind.Utc), JsonType.DateTime)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -277,7 +277,7 @@ public class Flattening
             new JsonPath("order.items[1].price", 25.99m, JsonType.Decimal),
             new JsonPath("order.items.Length", 2, JsonType.Number),
             new JsonPath("order.total", 36.49m, JsonType.Decimal),
-            new JsonPath("order.orderDate", DateTime.Parse("2025-11-21T09:00:00Z"), JsonType.DateTime)
+            new JsonPath("order.orderDate", new DateTime(2025, 11, 21, 9, 0, 0, DateTimeKind.Utc), JsonType.DateTime)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -408,9 +408,9 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("timestamps[0]", DateTime.Parse("2025-11-21T10:00:00Z"), JsonType.DateTime),
-            new JsonPath("timestamps[1]", DateTime.Parse("2025-11-21T11:00:00Z"), JsonType.DateTime),
-            new JsonPath("timestamps[2]", DateTime.Parse("2025-11-21T12:00:00Z"), JsonType.DateTime),
+            new JsonPath("timestamps[0]", new DateTime(2025, 11, 21, 10, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
+            new JsonPath("timestamps[1]", new DateTime(2025, 11, 21, 11, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
+            new JsonPath("timestamps[2]", new DateTime(2025, 11, 21, 12, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
             new JsonPath("timestamps.Length", 3, JsonType.Number)
         };
 

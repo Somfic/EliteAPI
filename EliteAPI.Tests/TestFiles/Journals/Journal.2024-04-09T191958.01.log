@@ -303,4 +303,3 @@
 { "timestamp":"2024-04-09T19:32:45Z", "event":"Cargo", "Vessel":"Ship", "Count":159 }
 { "timestamp":"2024-04-09T19:32:56Z", "event":"ProspectedAsteroid", "Materials":[ { "Name":"Tritium", "Proportion":27.275455 }, { "Name":"LiquidOxygen", "Name_Localised":"Liquid oxygen", "Proportion":4.477061 } ], "Content":"$AsteroidMaterialContent_Low;", "Content_Localised":"Material Content: Low", "Remaining":100.000000 }
 { "timestamp":"2024-04-09T19:34:14Z", "event":"Shutdown" }
- 

@@ -49,35 +49,41 @@ public static class JsonUtils
     //  JSONToken -> JsonPath
     private static JsonPath ToJsonPath(this JValue value)
     {
-        return value.Type switch
+        var path = NormalizePath(value.Path);
+        var @type = value.Type;
+
+        if (path.ToLower().EndsWith("Address") || path.EndsWith("Id") || path.EndsWith("ID"))
+            @type = JTokenType.String;
+
+        return @type switch
         {
             JTokenType.Integer => new JsonPath
             {
-                Path = NormalizePath(value.Path),
+                Path = path,
                 Value = Convert.ToInt64(value.Value),
                 Type = JsonType.Number
             },
             JTokenType.Float => new JsonPath
             {
-                Path = NormalizePath(value.Path),
+                Path = path,
                 Value = Convert.ToDecimal(value.Value),
                 Type = JsonType.Decimal
             },
             JTokenType.Uri or JTokenType.Guid or JTokenType.String => new JsonPath
             {
-                Path = NormalizePath(value.Path),
+                Path = path,
                 Value = Convert.ToString(value.Value) ?? string.Empty,
                 Type = JsonType.String
             },
             JTokenType.Boolean => new JsonPath
             {
-                Path = NormalizePath(value.Path),
+                Path = path,
                 Value = Convert.ToBoolean(value.Value),
                 Type = JsonType.Boolean
             },
             JTokenType.Date => new JsonPath
             {
-                Path = NormalizePath(value.Path),
+                Path = path,
                 Value = Convert.ToDateTime(value.Value),
                 Type = JsonType.DateTime
             },

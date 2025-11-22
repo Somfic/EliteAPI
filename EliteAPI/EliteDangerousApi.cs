@@ -15,5 +15,12 @@ public class EliteDangerousApi
         _journalWatcher = LineByLineFileWatcher.Create(journalDirectory, "Journal.*.log").watcher;
     }
 
-    public void OnJournalEvent(Action<string> onEvent) => _journalWatcher.OnChange(onEvent);
+    public void OnJournalEvent(Action<(string eventName, string json)> onEvent)
+    {
+        _journalWatcher.OnChange(json =>
+        {
+            var eventName = JsonUtils.GetEventName(json);
+            onEvent((eventName, json));
+        });
+    }
 }

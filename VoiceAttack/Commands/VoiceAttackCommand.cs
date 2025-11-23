@@ -1,4 +1,6 @@
-﻿namespace VoiceAttack.Commands;
+﻿using System;
+
+namespace VoiceAttack.Commands;
 
 public class VoiceAttackCommand
 {

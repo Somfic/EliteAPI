@@ -1,4 +1,6 @@
-﻿namespace VoiceAttack.Versions;
+﻿using System;
+
+namespace VoiceAttack.Versions;
 
 public class VoiceAttackVersions
 {

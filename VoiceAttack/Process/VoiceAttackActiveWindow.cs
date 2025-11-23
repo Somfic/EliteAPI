@@ -1,4 +1,6 @@
-﻿namespace VoiceAttack.Process;
+﻿using System.IO;
+
+namespace VoiceAttack.Process;
 
 public class VoiceAttackActiveWindow
 {

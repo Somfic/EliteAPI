@@ -1,4 +1,6 @@
-﻿namespace VoiceAttack.Paths;
+﻿using System.IO;
+
+namespace VoiceAttack.Paths;
 
 public class VoiceAttackPaths
 {

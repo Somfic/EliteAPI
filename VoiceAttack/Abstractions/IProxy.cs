@@ -1,4 +1,7 @@
-﻿using VoiceAttack.Audio;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using VoiceAttack.Audio;
 using VoiceAttack.Commands;
 using VoiceAttack.Logging;
 using VoiceAttack.Options;

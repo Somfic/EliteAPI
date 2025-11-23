@@ -1,4 +1,8 @@
-﻿namespace VoiceAttack.Commands;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace VoiceAttack.Commands;
 
 public class VoiceAttackCommands
 {

@@ -1,3 +1,9 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading;
+
 namespace EliteAPI.Watcher;
 
 public class FileWatcher
@@ -68,8 +74,15 @@ public class FileWatcher
 
         _fileWatcher.Changed += (sender, args) =>
         {
-            Thread.Sleep(50);
-            HandleFileChange();
+            try
+            {
+                Thread.Sleep(50);
+                HandleFileChange();
+            }
+            catch
+            {
+                // Silently ignore exceptions to prevent crashes
+            }
         };
 
         _fileWatcher.EnableRaisingEvents = true;
@@ -79,17 +92,33 @@ public class FileWatcher
     {
         if (_onContentChanged == null) return;
 
-        if (_mode == FileWatchMode.LineByLine)
+        try
         {
-            var lines = ReadFileLines(_file.FullName);
-            for (int i = _lastLineCount; i < lines.Length; i++)
-                _onContentChanged(lines[i]);
-            _lastLineCount = lines.Length;
+            if (_mode == FileWatchMode.LineByLine)
+            {
+                var lines = ReadFileLines(_file.FullName);
+                for (int i = _lastLineCount; i < lines.Length; i++)
+                {
+                    try
+                    {
+                        _onContentChanged(lines[i]);
+                    }
+                    catch
+                    {
+                        // Continue processing other lines even if one fails
+                    }
+                }
+                _lastLineCount = lines.Length;
+            }
+            else
+            {
+                var content = ReadFileContent(_file.FullName);
+                _onContentChanged(content);
+            }
         }
-        else
+        catch
         {
-            var content = ReadFileContent(_file.FullName);
-            _onContentChanged(content);
+            // Silently ignore exceptions to prevent crashes
         }
     }
 
@@ -108,17 +137,24 @@ public class FileWatcher
 
     private void OnFileInDirectoryChanged(object sender, FileSystemEventArgs e)
     {
-        Thread.Sleep(100);
-
-        var changedFile = new FileInfo(e.FullPath);
-
-        // Only switch if the changed file matches the pattern, is newer than current, and is not the current file
-        if (_filePattern != null &&
-            MatchesPattern(changedFile.Name, _filePattern) &&
-            changedFile.FullName != _file.FullName &&
-            changedFile.LastWriteTimeUtc > _file.LastWriteTimeUtc)
+        try
         {
-            SwitchToNewFile(changedFile);
+            Thread.Sleep(100);
+
+            var changedFile = new FileInfo(e.FullPath);
+
+            // Only switch if the changed file matches the pattern, is newer than current, and is not the current file
+            if (_filePattern != null &&
+                MatchesPattern(changedFile.Name, _filePattern) &&
+                changedFile.FullName != _file.FullName &&
+                changedFile.LastWriteTimeUtc > _file.LastWriteTimeUtc)
+            {
+                SwitchToNewFile(changedFile);
+            }
+        }
+        catch
+        {
+            // Silently ignore exceptions to prevent crashes
         }
     }
 

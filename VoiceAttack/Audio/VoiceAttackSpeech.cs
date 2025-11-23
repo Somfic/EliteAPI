@@ -1,4 +1,7 @@
-﻿namespace VoiceAttack.Audio;
+﻿using System.IO;
+using System.Threading.Tasks;
+
+namespace VoiceAttack.Audio;
 
 public class VoiceAttackSpeech
 {

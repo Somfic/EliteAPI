@@ -1,5 +1,7 @@
+using System;
+using System.IO;
 using System.Runtime.InteropServices;
-using System.Text.Json;
+using Newtonsoft.Json.Linq;
 
 namespace EliteAPI.Journals;
 
@@ -7,11 +9,9 @@ public static class JournalUtils
 {
     public static string GetEventName(string json)
     {
-        using var document = JsonDocument.Parse(json);
-        if (document.RootElement.TryGetProperty("event", out var eventProperty))
-        {
-            return eventProperty.GetString() ?? string.Empty;
-        }
+        var obj = JObject.Parse(json);
+        if (obj.TryGetValue("event", out var eventNameToken))
+            return eventNameToken.ToString();
 
         return string.Empty;
     }

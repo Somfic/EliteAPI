@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using VoiceAttack.Abstractions;
+using EliteVA.Abstractions;
 
-namespace VoiceAttack;
+namespace EliteVA;
 
 public abstract class VoiceAttackService
 {

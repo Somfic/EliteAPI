@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VoiceAttack.Versions;
+namespace EliteVA.Versions;
 
 public class VoiceAttackVersions
 {

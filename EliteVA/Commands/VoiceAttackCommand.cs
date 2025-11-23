@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VoiceAttack.Commands;
+namespace EliteVA.Commands;
 
 public class VoiceAttackCommand
 {

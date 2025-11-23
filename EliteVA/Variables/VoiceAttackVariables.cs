@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-namespace VoiceAttack.Variables;
+namespace EliteVA.Variables;
 
 public class VoiceAttackVariables
 {

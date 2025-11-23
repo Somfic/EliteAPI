@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using VoiceAttack.Logging;
+using EliteVA.Logging;
 
-namespace VoiceAttack;
+namespace EliteVA;
 
 public class VoiceAttackPluginWrapper
 {

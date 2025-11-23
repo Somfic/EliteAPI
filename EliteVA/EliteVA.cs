@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using EliteApi;
-using VoiceAttack.Abstractions;
-using VoiceAttack.Logging;
+using EliteVA.Abstractions;
+using EliteVA.Logging;
 
-namespace VoiceAttack;
+namespace EliteVA;
 
 public class Plugin : VoiceAttackPlugin
 {

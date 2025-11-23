@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace VoiceAttack.Process;
+namespace EliteVA.Process;
 
 public class VoiceAttackActiveWindow
 {

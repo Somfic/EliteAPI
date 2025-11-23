@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 
-namespace VoiceAttack.Audio;
+namespace EliteVA.Audio;
 
 public class VoiceAttackSpeech
 {

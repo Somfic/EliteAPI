@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace VoiceAttack.Commands;
+namespace EliteVA.Commands;
 
 public class VoiceAttackCommands
 {

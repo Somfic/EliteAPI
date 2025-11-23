@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace VoiceAttack.Paths;
+namespace EliteVA.Paths;
 
 public class VoiceAttackPaths
 {

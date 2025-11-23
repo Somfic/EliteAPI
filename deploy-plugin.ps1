@@ -22,8 +22,8 @@ if (-not $SkipVoiceAttackRestart -and $IsWindowsOS) {
 }
 
 Write-Host "`nBuilding plugin..." -ForegroundColor Cyan
-dotnet clean "VoiceAttack/VoiceAttack.csproj" -c Debug
-dotnet build "VoiceAttack/VoiceAttack.csproj" -c Debug
+dotnet clean "EliteVA/EliteVA.csproj" -c Debug
+dotnet build "EliteVA/EliteVA.csproj" -c Debug
 
 if ($LASTEXITCODE -ne 0) {
     Write-Error "Build failed!"
@@ -37,8 +37,8 @@ if (-not (Test-Path $DestinationPath)) {
     New-Item -ItemType Directory -Path $DestinationPath -Force | Out-Null
 }
 
-Copy-Item "VoiceAttack/bin/Debug/net8.0/VoiceAttack.dll" "$DestinationPath/VoiceAttack.dll" -Force
-Copy-Item "VoiceAttack/bin/Debug/net8.0/EliteAPI.dll" "$DestinationPath/EliteAPI.dll" -Force
+Copy-Item "EliteVA/bin/Debug/net8.0/EliteVA.dll" "$DestinationPath/EliteVA.dll" -Force
+Copy-Item "EliteVA/bin/Debug/net8.0/EliteAPI.dll" "$DestinationPath/EliteAPI.dll" -Force
 Copy-Item "EliteAPI/bin/Debug/net48/Newtonsoft.Json.dll" "$DestinationPath/Newtonsoft.Json.dll" -Force
 
 Write-Host "Plugin deployed successfully." -ForegroundColor Green

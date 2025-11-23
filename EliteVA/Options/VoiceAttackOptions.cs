@@ -1,4 +1,4 @@
-﻿namespace VoiceAttack.Options;
+﻿namespace EliteVA.Options;
 
 public class VoiceAttackOptions
 {

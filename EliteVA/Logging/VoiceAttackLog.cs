@@ -1,4 +1,4 @@
-﻿namespace VoiceAttack.Logging;
+﻿namespace EliteVA.Logging;
 
 public class VoiceAttackLog
 {

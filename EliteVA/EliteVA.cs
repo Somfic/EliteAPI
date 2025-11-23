@@ -1,5 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
 using EliteApi;
+using EliteAPI.Json;
 using EliteVA.Abstractions;
 using EliteVA.Logging;
 
@@ -13,11 +16,42 @@ public class Plugin : VoiceAttackPlugin
     {
         _api = new EliteDangerousApi();
 
-        _api.OnJournalEvent(e =>
+        _api.OnPathsChanged(e =>
         {
-            Log(VoiceAttackColor.Blue, $"Event: {e.eventName}");
+            e.variables.ForEach(v =>
+            {
+                proxy.Variables.Set(v.Path, v.Value, v.Type switch
+                {
+                    JsonType.String => TypeCode.String,
+                    JsonType.Number => TypeCode.Int32,
+                    JsonType.Decimal => TypeCode.Decimal,
+                    JsonType.Boolean => TypeCode.Boolean,
+                    JsonType.DateTime => TypeCode.DateTime,
+                    _ => TypeCode.String
+                });
+
+                var command = $"(({e.command}))";
+                if (proxy.Commands.Exists(command))
+                    proxy.Commands.Invoke(command);
+            });
+
+            Log(VoiceAttackColor.Yellow, $"{e.command}");
         });
 
-        Log(VoiceAttackColor.Green, $"EliteAPI loaded - watching for journal events");
+        _api.Start();
+        Log(VoiceAttackColor.Green, $"EliteAPI started");
+    }
+
+    private TypeCode FromJsonType(JsonType type)
+    {
+        return type switch
+        {
+            JsonType.String => TypeCode.String,
+            JsonType.Number => TypeCode.Int32,
+            JsonType.Decimal => TypeCode.Decimal,
+            JsonType.Boolean => TypeCode.Boolean,
+            JsonType.DateTime => TypeCode.DateTime,
+            _ => TypeCode.String
+        };
     }
 }

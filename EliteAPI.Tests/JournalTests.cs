@@ -1,21 +1,39 @@
-﻿using EliteAPI.Json;
-using FluentAssertions;
+﻿using EliteAPI.Journals;
 
 namespace EliteAPI.Tests;
 
-public class Test
+public class JournalTests
 {
-    public static IEnumerable<FileInfo> GetFiles(string pattern)
+    public static IEnumerable<Func<FileInfo>> GetFiles(string pattern)
     {
         var directory = new DirectoryInfo("../../../TestFiles");
         var files = directory.GetFiles(pattern, SearchOption.AllDirectories);
 
         foreach (var file in files)
-            yield return file;
+        {
+            var capturedFile = file;
+            yield return () => capturedFile;
+        }
     }
 
-    public static IEnumerable<FileInfo> GetJournalFiles() => GetFiles("*.log");
-    public static IEnumerable<FileInfo> GetStatusFiles() => GetFiles("*.json");
+    public static IEnumerable<Func<FileInfo>> GetJournalFiles() => GetFiles("*.log");
+    public static IEnumerable<Func<FileInfo>> GetStatusFiles() => GetFiles("*.json");
+
+    [Test]
+    [MethodDataSource(nameof(GetStatusFiles))]
+    public async Task StatusFile(FileInfo file)
+    {
+        var json = await File.ReadAllTextAsync(file.FullName);
+
+        try
+        {
+            JournalUtils.ToPaths(json);
+        }
+        catch (Exception ex)
+        {
+            Assert.Fail($"{ex.Message}\n{json}");
+        }
+    }
 
     [Test]
     [MethodDataSource(nameof(GetJournalFiles))]
@@ -27,7 +45,7 @@ public class Test
         {
             try
             {
-                JsonUtils.FlattenJson(json);
+                JournalUtils.ToPaths(json);
             }
             catch (Exception ex)
             {

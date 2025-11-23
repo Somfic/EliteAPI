@@ -53,15 +53,19 @@ public static class JsonUtils
         var path = NormalizePath(value.Path);
         var @type = value.Type;
 
-        if (path.ToLower().EndsWith("Address") || path.EndsWith("Id") || path.EndsWith("ID"))
+        if (path.ToLower().EndsWith("Address") || path.EndsWith("Id") || path.EndsWith("ID") || path.EndsWith("System"))
             @type = JTokenType.String;
+
+        // convert numbers > 32bit to decimal
+        if (@type == JTokenType.Integer && Convert.ToInt64(value.Value) > int.MaxValue)
+            @type = JTokenType.Float;
 
         return @type switch
         {
             JTokenType.Integer => new JsonPath
             {
                 Path = path,
-                Value = Convert.ToInt64(value.Value),
+                Value = Convert.ToInt32(value.Value),
                 Type = JsonType.Number
             },
             JTokenType.Float => new JsonPath

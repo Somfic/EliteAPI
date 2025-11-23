@@ -9,7 +9,7 @@ public readonly struct JsonPath(string path, dynamic value, JsonType type)
 
     public JsonType Type { get; init; } = type;
 
-    public JsonPath WithPath(string path) => new(path, Value, Type);
+    public JsonPath WithPath(string path) => new(path.Replace("..", "."), Value, Type);
 }
 
 public enum JsonType

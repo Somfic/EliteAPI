@@ -1,6 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
+using EliteAPI.Json;
 using Newtonsoft.Json.Linq;
 
 namespace EliteAPI.Journals;
@@ -14,6 +17,44 @@ public static class JournalUtils
             return eventNameToken.ToString();
 
         return string.Empty;
+    }
+
+    public static List<JsonPath> ToPaths(string json)
+    {
+        var eventName = GetEventName(json);
+        var paths = JsonUtils.FlattenJson(json);
+
+        if (eventName == "Status")
+        {
+            // status events are at root level
+            eventName = "";
+
+            // remove event and timestamp
+            paths.RemoveAll(p => p.Path == "event" || p.Path == "timestamp");
+
+            // expand flags
+            foreach (var flag in StatusUtils.GetFlags((int)(paths.FirstOrDefault(p => p.Path == "Flags").Value as long? ?? 0)))
+                paths.Add(new JsonPath(flag.Key, flag.Value, JsonType.Boolean));
+
+            // expand flags2
+            foreach (var flag in StatusUtils.GetFlags2((int)(paths.FirstOrDefault(p => p.Path == "Flags2").Value as long? ?? 0)))
+                paths.Add(new JsonPath(flag.Key, flag.Value, JsonType.Boolean));
+
+            // replace pips array with individual pips
+            paths.Add(paths.FirstOrDefault(p => p.Path == "Pips[0]").WithPath("Pips.Systems"));
+            paths.Add(paths.FirstOrDefault(p => p.Path == "Pips[1]").WithPath("Pips.Engines"));
+            paths.Add(paths.FirstOrDefault(p => p.Path == "Pips[2]").WithPath("Pips.Weapons"));
+
+            // replace balance with decimal type
+            var balancePath = paths.FirstOrDefault(p => p.Path == "Balance");
+            if (!balancePath.Equals(default(JsonPath)))
+            {
+                paths.Remove(balancePath);
+                paths.Add(new JsonPath("Balance", Convert.ToDecimal(balancePath.Value), JsonType.Decimal));
+            }
+        }
+
+        return [.. paths.Select(p => p.WithPath($"EliteAPI.{eventName}.{p.Path}"))];
     }
 
     public static DirectoryInfo GetJournalsDirectory()

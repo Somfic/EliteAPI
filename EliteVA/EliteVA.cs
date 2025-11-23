@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using EliteApi;
 using EliteVA.Abstractions;
 using EliteVA.Logging;
@@ -8,7 +7,7 @@ namespace EliteVA;
 
 public class Plugin : VoiceAttackPlugin
 {
-    private EliteDangerousApi _api;
+    private EliteDangerousApi _api = null!;
 
     public override async Task OnStart(IVoiceAttackProxy proxy)
     {

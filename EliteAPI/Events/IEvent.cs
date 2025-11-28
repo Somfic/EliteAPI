@@ -4,6 +4,6 @@ namespace EliteAPI.Events;
 
 public interface IEvent
 {
-    public string Name { get; }
+    public string Event { get; }
     public DateTime Timestamp { get; }
 }

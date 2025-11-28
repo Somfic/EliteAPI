@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using EliteAPI.Events;
 using EliteAPI.Journals;
 using EliteAPI.Json;
+using EliteAPI.Utils;
 using EliteAPI.Watcher;
 using Newtonsoft.Json;
 
@@ -11,37 +13,66 @@ namespace EliteAPI;
 
 public class EliteDangerousApi
 {
-    private readonly List<FileWatcher> _watchers;
+    private readonly FileWatcher _journalWatcher;
+    private readonly List<FileWatcher> _statusWatchers;
 
+    private readonly List<Action<FileInfo>> _journalChangedHandlers = [];
     private readonly List<Action<IEvent>> _typedGlobalEventHandlers = [];
     private readonly List<Action<(string eventName, string json)>> _untypedGlobalEventHandlers = [];
-    private readonly Dictionary<string, List<Action<IEvent>>> _typedEventHandlers = [];
-    private readonly Dictionary<string, List<Action<(string eventName, string json)>>> _untypedEventHandlers = [];
+    private readonly Dictionary<string, List<Action<IEvent>>> _typedEventHandlers = new(StringComparer.OrdinalIgnoreCase);
+    private readonly Dictionary<string, Type> _eventTypes = typeof(IEvent)
+        .Assembly
+        .GetTypes()
+        .Where(t => typeof(IEvent).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract)
+        .ToDictionary(t => t.Name.EndsWith("Event") ? t.Name.Substring(0, t.Name.Length - 5) : t.Name, t => t, StringComparer.OrdinalIgnoreCase);
+    private readonly Dictionary<string, List<Action<(string eventName, string json)>>> _untypedEventHandlers = new(StringComparer.OrdinalIgnoreCase);
 
     public EliteDangerousApi()
     {
         var journalDirectory = JournalUtils.GetJournalsDirectory();
+        string[] statusFiles = [
+            "Cargo.json",
+            "Market.json",
+            "ModulesInfo.json",
+            "NavRoute.json",
+            "Outfitting.json",
+            "ShipLocker.json",
+            "Shipyard.json"
+        ];
 
-        var watchers = new Dictionary<string, FileWatchMode>
-        {
-            { "Journal.*.log", FileWatchMode.LineByLine },
-            { "Cargo.json", FileWatchMode.EntireFile },
-            { "Market.json", FileWatchMode.EntireFile },
-            { "ModulesInfo.json", FileWatchMode.EntireFile },
-            { "NavRoute.json", FileWatchMode.EntireFile },
-            { "Outfitting.json", FileWatchMode.EntireFile },
-            { "ShipLocker.json", FileWatchMode.EntireFile },
-            { "Shipyard.json", FileWatchMode.EntireFile },
-            { "Status.json", FileWatchMode.EntireFile },
-        };
+        _statusWatchers = statusFiles
+            .Select(fileName => FileWatcher.Create(journalDirectory, fileName, FileWatchMode.EntireFile))
+            .ToList();
 
-        _watchers = [.. watchers.Select(w => FileWatcher.Create(journalDirectory, w.Key, w.Value))];
+        _journalWatcher = FileWatcher.Create(journalDirectory, "Journal.*.log", FileWatchMode.LineByLine);
     }
 
     public void Start()
     {
-        _watchers.ForEach(w => w.OnContentChanged(json => Invoke(json)));
-        _watchers.ForEach(w => w.StartWatching());
+        _journalWatcher.OnContentChanged((json) =>
+        {
+            JournalUtils.PrepareLocalisations(json);
+            Invoke(json);
+        });
+
+        _journalWatcher.OnFileChanged(file =>
+        {
+            foreach (var handler in _journalChangedHandlers)
+                SafeInvoke.Invoke(handler, file);
+        });
+        _statusWatchers.ForEach(w => w.OnContentChanged(Invoke));
+
+
+        _statusWatchers.ForEach(w => w.StartWatching());
+        _journalWatcher.StartWatching();
+    }
+
+    /// <summary>
+    /// Listens for when a new journal file is being watched
+    /// </summary>
+    public void OnJournalChanged(Action<FileInfo> handler)
+    {
+        _journalChangedHandlers.Add(handler);
     }
 
     /// <summary>
@@ -50,11 +81,11 @@ public class EliteDangerousApi
     public void On<TEvent>(Action<TEvent> handler)
         where TEvent : IEvent
     {
-        var eventName = typeof(TEvent).GetType().Name;
+        var eventName = typeof(TEvent).Name;
 
         // remove "Event" suffix 
         if (eventName.EndsWith("Event"))
-            eventName = eventName[..^5];
+            eventName = eventName.Substring(0, eventName.Length - 5);
 
         // initialize list if not exists
         if (!_typedEventHandlers.ContainsKey(eventName))
@@ -71,7 +102,7 @@ public class EliteDangerousApi
     {
         // remove "Event" suffix 
         if (eventName.EndsWith("Event"))
-            eventName = eventName[..^5];
+            eventName = eventName.Substring(0, eventName.Length - 5);
 
         // initialize list if not exists
         if (!_untypedEventHandlers.ContainsKey(eventName))
@@ -99,7 +130,7 @@ public class EliteDangerousApi
 
     internal void Invoke(IEvent @event)
     {
-        Invoke(JsonConvert.SerializeObject(@event), @event);
+        Invoke(JsonConvert.SerializeObject(@event, JsonUtils.SerializerSettings), @event);
     }
 
     internal void Invoke(string json) => Invoke(json, null);
@@ -114,88 +145,49 @@ public class EliteDangerousApi
             return;
         }
 
-        if (@event == null && _typedEventHandlers.ContainsKey(eventName))
+        if (@event == null && _eventTypes.TryGetValue(eventName, out var eventType))
         {
-            var eventType = _typedEventHandlers[eventName].First().Method.GetParameters()[0].ParameterType;
-            @event = JsonConvert.DeserializeObject(json, eventType) as IEvent;
+            try
+            {
+                @event = JsonConvert.DeserializeObject(json, eventType, JsonUtils.SerializerSettings) as IEvent;
+            }
+            catch (Exception ex)
+            {
+                // TODO: proper logging
+                Console.WriteLine($@"Error: {ex.Message}");
+            }
 
             if (@event == null)
             {
                 // TODO: proper logging
-                Console.WriteLine($"Failed to deserialize event {eventName} to type {eventType.Name}.");
                 return;
             }
         }
 
         // invoke untyped handlers
-        if (_untypedEventHandlers.ContainsKey(eventName))
+        if (_untypedEventHandlers.TryGetValue(eventName, out var untypedHandlers))
         {
-            foreach (var handler in _untypedEventHandlers[eventName])
-            {
-                try
-                {
-                    handler((eventName, json));
-                }
-                catch (Exception ex)
-                {
-                    // TODO: proper logging
-                    Console.WriteLine($"Error invoking handler for event {eventName}: {ex}");
-                }
-            }
+            foreach (var handler in untypedHandlers)
+                SafeInvoke.Invoke(handler, (eventName, json));
         }
 
         // invoke global untyped handlers
         foreach (var handler in _untypedGlobalEventHandlers)
-        {
-            try
-            {
-                handler((eventName, json));
-            }
-            catch (Exception ex)
-            {
-                // TODO: proper logging
-                Console.WriteLine($"Error invoking global untyped handler: {ex}");
-            }
-        }
+            SafeInvoke.Invoke(handler, (eventName, json));
 
         if (@event != null)
         {
             // invoke typed handlers
-            if (_typedEventHandlers.ContainsKey(eventName))
+            if (_typedEventHandlers.TryGetValue(eventName, out var typedEventHandlers))
             {
-                foreach (var handler in _typedEventHandlers[eventName])
-                {
-                    try
-                    {
-                        handler(@event);
-                    }
-                    catch (Exception ex)
-                    {
-                        // TODO: proper logging
-                        Console.WriteLine($"Error invoking handler for event {eventName}: {ex}");
-                    }
-                }
+                foreach (var handler in typedEventHandlers)
+                    SafeInvoke.Invoke(handler, @event);
             }
 
             // invoke global typed handlers
             foreach (var handler in _typedGlobalEventHandlers)
-            {
-                try
-                {
-                    handler(@event);
-                }
-                catch (Exception ex)
-                {
-                    // TODO: proper logging
-                    Console.WriteLine($"Error invoking global typed handler: {ex}");
-                }
-            }
+                SafeInvoke.Invoke(handler, @event);
         }
-    }
-
-    public void OnJson(Action<object, object> value)
-    {
-        throw new NotImplementedException();
     }
 }
 

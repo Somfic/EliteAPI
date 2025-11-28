@@ -1,13 +1,22 @@
 ﻿using EliteAPI;
-using EliteAPI.Journals;
 
 var api = new EliteDangerousApi();
-api.OnAllJson(e => Console.WriteLine($"{e.eventName}: {e.json}"));
 
-var json = await File.ReadAllTextAsync("./EliteAPI.Tests/TestFiles/Status/StatusCombat.json");
-var paths = JournalUtils.ToPaths(json);
+api.Start();
 
-foreach (var path in paths)
+api.OnAll(e =>
 {
-    Console.WriteLine($"{path.Path}: {path.Value} ({path.Type})");
-}
+    Console.WriteLine($"Event: {e.Event}");
+});
+
+api.OnJournalChanged(e =>
+{
+    Console.WriteLine($"New journal file being watched: {e.FullName}");
+});
+
+// api.OnAllJson(e =>
+// {
+//     Console.WriteLine($"JSON Event: {e.eventName}");
+// });
+
+await Task.Delay(-1);

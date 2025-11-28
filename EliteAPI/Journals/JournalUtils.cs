@@ -10,18 +10,9 @@ namespace EliteAPI.Journals;
 
 public static class JournalUtils
 {
-    public static string GetEventName(string json)
-    {
-        var obj = JObject.Parse(json);
-        if (obj.TryGetValue("event", out var eventNameToken))
-            return eventNameToken.ToString();
-
-        return string.Empty;
-    }
-
     public static List<JsonPath> ToPaths(string json)
     {
-        var eventName = GetEventName(json);
+        var eventName = JsonUtils.GetEventName(json);
         var paths = JsonUtils.FlattenJson(json);
 
         if (eventName == "Status")

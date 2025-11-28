@@ -7,6 +7,23 @@ namespace EliteAPI.Json;
 
 public static class JsonUtils
 {
+    public static string GetEventName(string json)
+    {
+        var obj = JObject.Parse(json);
+
+        {
+            if (obj.TryGetValue("event", out var eventName))
+                return eventName.ToString();
+        }
+
+        {
+            if (obj.TryGetValue("Event", out var eventName))
+                return eventName.ToString();
+        }
+
+        return string.Empty;
+    }
+
     public static List<JsonPath> FlattenJson(string json)
     {
         // TODO: call flattening function

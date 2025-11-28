@@ -1,6 +1,8 @@
-﻿using EliteApi;
+﻿using EliteAPI;
 using EliteAPI.Journals;
-using EliteAPI.Json;
+
+var api = new EliteDangerousApi();
+api.OnAllJson(e => Console.WriteLine($"{e.eventName}: {e.json}"));
 
 var json = await File.ReadAllTextAsync("./EliteAPI.Tests/TestFiles/Status/StatusCombat.json");
 var paths = JournalUtils.ToPaths(json);

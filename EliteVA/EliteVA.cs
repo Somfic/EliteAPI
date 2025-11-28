@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using EliteApi;
+using EliteAPI;
+using EliteAPI.Journals;
 using EliteAPI.Json;
 using EliteVA.Abstractions;
 using EliteVA.Logging;
@@ -16,26 +17,28 @@ public class Plugin : VoiceAttackPlugin
     {
         _api = new EliteDangerousApi();
 
-        _api.OnPathsChanged(e =>
+        _api.OnAllJson((eventName, json) =>
         {
-            e.variables.ForEach(v =>
-            {
-                proxy.Variables.Set(v.Path, v.Value, v.Type switch
-                {
-                    JsonType.String => TypeCode.String,
-                    JsonType.Number => TypeCode.Int32,
-                    JsonType.Decimal => TypeCode.Decimal,
-                    JsonType.Boolean => TypeCode.Boolean,
-                    JsonType.DateTime => TypeCode.DateTime,
-                    _ => TypeCode.String
-                });
+            var paths = JournalUtils.ToPaths(json);
 
-                var command = $"(({e.command}))";
-                if (proxy.Commands.Exists(command))
-                    proxy.Commands.Invoke(command);
-            });
+            // json.variables.ForEach(v =>
+            // {
+            //     proxy.Variables.Set(v.Path, v.Value, v.Type switch
+            //     {
+            //         JsonType.String => TypeCode.String,
+            //         JsonType.Number => TypeCode.Int32,
+            //         JsonType.Decimal => TypeCode.Decimal,
+            //         JsonType.Boolean => TypeCode.Boolean,
+            //         JsonType.DateTime => TypeCode.DateTime,
+            //         _ => TypeCode.String
+            //     });
 
-            Log(VoiceAttackColor.Yellow, $"{e.command}");
+            //     var command = $"(({e.command}))";
+            //     if (proxy.Commands.Exists(command))
+            //         proxy.Commands.Invoke(command);
+            // });
+
+            // Log(VoiceAttackColor.Yellow, $"{e.command}");
         });
 
         _api.Start();

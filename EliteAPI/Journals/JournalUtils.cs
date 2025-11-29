@@ -26,11 +26,15 @@ public static class JournalUtils
             paths.RemoveAll(p => p.Path == "event" || p.Path == "timestamp");
 
             // expand flags
-            foreach (var flag in StatusUtils.GetFlags((int)(paths.FirstOrDefault(p => p.Path == "Flags").Value as long? ?? 0)))
+            var flagsPath = paths.FirstOrDefault(p => p.Path == "Flags");
+            var flagsValue = flagsPath.Equals(default(EventPath)) ? 0 : Convert.ToInt32(flagsPath.Value);
+            foreach (var flag in StatusUtils.GetFlags(flagsValue))
                 paths.Add(new EventPath(flag.Key, flag.Value, ValueType.Boolean));
 
             // expand flags2
-            foreach (var flag in StatusUtils.GetFlags2((int)(paths.FirstOrDefault(p => p.Path == "Flags2").Value as long? ?? 0)))
+            var flags2Path = paths.FirstOrDefault(p => p.Path == "Flags2");
+            var flags2Value = flags2Path.Equals(default(EventPath)) ? 0 : Convert.ToInt32(flags2Path.Value);
+            foreach (var flag in StatusUtils.GetFlags2(flags2Value))
                 paths.Add(new EventPath(flag.Key, flag.Value, ValueType.Boolean));
 
             // replace pips array with individual pips

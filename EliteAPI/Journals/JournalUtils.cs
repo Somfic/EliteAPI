@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using EliteAPI.Events;
 using EliteAPI.Json;
-using ValueType = EliteAPI.Events.ValueType;
+using EventValueType = EliteAPI.Events.EventValueType;
 
 namespace EliteAPI.Journals;
 
@@ -29,13 +29,13 @@ public static class JournalUtils
             var flagsPath = paths.FirstOrDefault(p => p.Path == "Flags");
             var flagsValue = flagsPath.Equals(default(EventPath)) ? 0 : Convert.ToInt32(flagsPath.Value);
             foreach (var flag in StatusUtils.GetFlags(flagsValue))
-                paths.Add(new EventPath(flag.Key, flag.Value, ValueType.Boolean));
+                paths.Add(new EventPath(flag.Key, flag.Value, EventValueType.Boolean));
 
             // expand flags2
             var flags2Path = paths.FirstOrDefault(p => p.Path == "Flags2");
             var flags2Value = flags2Path.Equals(default(EventPath)) ? 0 : Convert.ToInt32(flags2Path.Value);
             foreach (var flag in StatusUtils.GetFlags2(flags2Value))
-                paths.Add(new EventPath(flag.Key, flag.Value, ValueType.Boolean));
+                paths.Add(new EventPath(flag.Key, flag.Value, EventValueType.Boolean));
 
             // replace pips array with individual pips
             paths.Add(paths.FirstOrDefault(p => p.Path == "Pips[0]").WithPath("Pips.Systems"));
@@ -47,7 +47,7 @@ public static class JournalUtils
             if (!balancePath.Equals(default(EventPath)))
             {
                 paths.Remove(balancePath);
-                paths.Add(new EventPath("Balance", Convert.ToDecimal(balancePath.Value), ValueType.Decimal));
+                paths.Add(new EventPath("Balance", Convert.ToDecimal(balancePath.Value), EventValueType.Decimal));
             }
         }
 

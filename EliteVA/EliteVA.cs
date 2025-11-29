@@ -10,7 +10,7 @@ using EliteAPI.Journals;
 using EliteAPI.Utils;
 using EliteVA.Abstractions;
 using EliteVA.Logging;
-using ValueType = EliteAPI.Events.ValueType;
+using EliteAPI.Events;
 
 namespace EliteVA;
 
@@ -70,7 +70,7 @@ public class Plugin : VoiceAttackPlugin
             if (!Directory.Exists(Path.Combine(Dir, "Variables")))
                 Directory.CreateDirectory(Path.Combine(Dir, "Variables"));
 
-            File.WriteAllText(Path.Combine(Dir, "Variables", $"Keybindings.txt"), bindings.Select(b => $"{b.name}: {b.binding.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
+            File.WriteAllText(Path.Combine(Dir, "Variables", $"Keybindings.txt"), bindings.Select(b => $"{{TXT:{b.name}}}: {b.binding.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
 
             proxy.Log.Write($"Applying {bindings.Count} keybindings", VoiceAttackColor.Blue);
         });
@@ -85,11 +85,11 @@ public class Plugin : VoiceAttackPlugin
                 var stringValue = Convert.ToString(v.Value, CultureInfo.InvariantCulture) ?? string.Empty;
                 proxy.Variables.Set(v.Path, stringValue, v.Type switch
                 {
-                    ValueType.String => TypeCode.String,
-                    ValueType.Number => TypeCode.Int32,
-                    ValueType.Decimal => TypeCode.Decimal,
-                    ValueType.Boolean => TypeCode.Boolean,
-                    ValueType.DateTime => TypeCode.DateTime,
+                    EventValueType.String => TypeCode.String,
+                    EventValueType.Number => TypeCode.Int32,
+                    EventValueType.Decimal => TypeCode.Decimal,
+                    EventValueType.Boolean => TypeCode.Boolean,
+                    EventValueType.DateTime => TypeCode.DateTime,
                     _ => TypeCode.String
                 });
             });
@@ -112,7 +112,7 @@ public class Plugin : VoiceAttackPlugin
                 if (!Directory.Exists(Path.Combine(Dir, "Variables")))
                     Directory.CreateDirectory(Path.Combine(Dir, "Variables"));
 
-                File.WriteAllText(Path.Combine(Dir, "Variables", $"{e.eventName}.txt"), paths.Select(p => $"{p.Path}: {p.Value}").Aggregate((a, b) => $"{a}\n{b}"));
+                File.WriteAllText(Path.Combine(Dir, "Variables", $"{e.eventName}.txt"), paths.Select(p => $"{{{p.Type.ToDisplayType()}:{p.Path}}}: {p.Value}").Aggregate((a, b) => $"{a}\n{b}"));
             }
         });
 

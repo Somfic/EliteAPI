@@ -61,8 +61,7 @@ public class EliteDangerousApi
                 SafeInvoke.Invoke(handler, file);
         });
         _statusWatchers.ForEach(w => w.OnContentChanged(Invoke));
-
-
+        
         _statusWatchers.ForEach(w => w.StartWatching());
         _journalWatcher.StartWatching();
     }

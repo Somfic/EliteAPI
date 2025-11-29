@@ -18,7 +18,7 @@ public class FileWatcher
     private Action<FileInfo>? _onFileChanged;
     private int _lastLineCount;
     private Timer? _debounceTimer;
-    private readonly object _debounceLock = new object();
+    private readonly object _debounceLock = new();
     private const int DebounceDelayMs = 200;
 
     public FileInfo CurrentFile { get; private set; }

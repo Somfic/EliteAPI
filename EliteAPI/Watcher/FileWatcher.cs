@@ -59,18 +59,18 @@ public class FileWatcher
 
     public void OnContentChanged(Action<string> onContentChanged)
     {
-        _onContentChanged = content => SafeInvoke.Invoke(onContentChanged, content);
+        _onContentChanged = content => SafeInvoke.Invoke("file content changed handler", onContentChanged, content);
     }
 
     public void OnFileChanged(Action<FileInfo> onFileChanged)
     {
-        _onFileChanged = file => SafeInvoke.Invoke(onFileChanged, file);
+        _onFileChanged = file => SafeInvoke.Invoke("file changed handler", onFileChanged, file);
     }
 
     public string StartWatching()
     {
         SwitchToNewFile(CurrentFile);
-        
+
         if (_onContentChanged == null) return string.Empty;
 
         // Read initial content and set line count (handle non-existent files gracefully)
@@ -133,7 +133,8 @@ public class FileWatcher
 
     private void HandleFileChange()
     {
-        if (_onContentChanged == null) return;
+        if (_onContentChanged == null)
+            return;
 
         try
         {
@@ -142,20 +143,20 @@ public class FileWatcher
                 var lines = ReadFileLines(CurrentFile.FullName);
                 for (int i = _lastLineCount; i < lines.Length; i++)
                 {
-                    try
-                    {
-                        _onContentChanged(lines[i]);
-                    }
-                    catch
-                    {
-                        // Continue processing other lines even if one fails
-                    }
+                    var line = lines[i];
+                    Log.Debug($"[{CurrentFile.Name}] {line.Replace("\r", "").Replace("\n", "")}");
+
+                    if (string.IsNullOrEmpty(line))
+                        continue;
+
+                    SafeInvoke.Invoke("file line changed handler", _onContentChanged!, line);
                 }
                 _lastLineCount = lines.Length;
             }
             else
             {
                 var content = ReadFileContent(CurrentFile.FullName);
+                Log.Debug($"[{CurrentFile.Name}] {content.Replace("\r", "").Replace("\n", "")}");
                 _onContentChanged(content);
             }
         }
@@ -224,6 +225,8 @@ public class FileWatcher
 
     private void SwitchToNewFile(FileInfo newFile)
     {
+        Log.Debug($"[{newFile.Name}] Started watching file");
+
         lock (_debounceLock)
         {
             CurrentFile = newFile;

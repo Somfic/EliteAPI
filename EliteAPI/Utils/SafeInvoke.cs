@@ -4,7 +4,7 @@ namespace EliteAPI.Utils;
 
 public static class SafeInvoke
 {
-    public static void Invoke(Action action)
+    public static void Invoke(string context, Action action)
     {
         try
         {
@@ -12,12 +12,11 @@ public static class SafeInvoke
         }
         catch (Exception ex)
         {
-            // TODO: proper logging
-            Console.WriteLine($"Error in handler: {ex}");
+            Log.Error($"Error while {context}", ex);
         }
     }
 
-    public static void Invoke<T>(Action<T> action, T arg)
+    public static void Invoke<T>(string context, Action<T> action, T arg)
     {
         try
         {
@@ -25,12 +24,11 @@ public static class SafeInvoke
         }
         catch (Exception ex)
         {
-            // TODO: proper logging
-            Console.WriteLine($"Error in handler: {ex}");
+            Log.Error($"Error while {context}", ex);
         }
     }
 
-    public static void Invoke<T1, T2>(Action<T1, T2> action, T1 arg1, T2 arg2)
+    public static void Invoke<T1, T2>(string context, Action<T1, T2> action, T1 arg1, T2 arg2)
     {
         try
         {
@@ -38,8 +36,7 @@ public static class SafeInvoke
         }
         catch (Exception ex)
         {
-            // TODO: proper logging
-            Console.WriteLine($"Error in handler: {ex}");
+            Log.Error($"Error while {context}", ex);
         }
     }
 }

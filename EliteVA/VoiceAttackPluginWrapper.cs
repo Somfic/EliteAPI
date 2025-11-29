@@ -36,7 +36,7 @@ public class VoiceAttackPluginWrapper
         }
         catch (Exception e)
         {
-            VoiceAttackPlugin.Instance.Log(VoiceAttackColor.Red, "Error during plugin initialisation. See logs for further information");
+            VoiceAttackPlugin.Instance.WriteToLog(VoiceAttackColor.Red, "Error during plugin initialisation. See logs for further information");
             var path = Path.Combine(VoiceAttackPlugin.Dir, "Logs", "STARTUP ERROR.log");
             Directory.CreateDirectory(Path.GetDirectoryName(path) ?? VoiceAttackPlugin.Dir);
             File.WriteAllText(path, e.ToString());
@@ -57,7 +57,7 @@ public class VoiceAttackPluginWrapper
         }
         catch (Exception e)
         {
-            VoiceAttackPlugin.Instance.Log(VoiceAttackColor.Red, "Error during plugin invocation", e);
+            VoiceAttackPlugin.Instance.WriteToLog(VoiceAttackColor.Red, "Error during plugin invocation", e);
         }
     }
 
@@ -75,7 +75,7 @@ public class VoiceAttackPluginWrapper
         }
         catch (Exception e)
         {
-            VoiceAttackPlugin.Instance.Log(VoiceAttackColor.Red, "Error during command stop", e);
+            VoiceAttackPlugin.Instance.WriteToLog(VoiceAttackColor.Red, "Error during command stop", e);
         }
     }
 
@@ -92,7 +92,7 @@ public class VoiceAttackPluginWrapper
         }
         catch (Exception e)
         {
-            VoiceAttackPlugin.Instance.Log(VoiceAttackColor.Red, "Error during plugin exit", e);
+            VoiceAttackPlugin.Instance.WriteToLog(VoiceAttackColor.Red, "Error during plugin exit", e);
         }
     }
 }

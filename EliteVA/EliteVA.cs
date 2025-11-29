@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Globalization;
+using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using EliteAPI;
 using EliteAPI.Journals;
+using EliteAPI.Utils;
 using EliteVA.Abstractions;
 using EliteVA.Logging;
 using ValueType = EliteAPI.Events.ValueType;
@@ -14,15 +18,42 @@ public class Plugin : VoiceAttackPlugin
 
     public override async Task OnStart(IVoiceAttackProxy proxy)
     {
+        var path = Path.Combine(Dir, "Logs", $"EliteAPI-{DateTime.Now:yyyy-MM-dd}.log");
+        Log.SetLogFilePath(path);
+
         _api = new EliteDangerousApi();
 
+        // logging
+        Log.AddListener(log =>
+        {
+            if (log.Level < Log.LogLevel.Warning)
+                return;
+
+            VoiceAttackColor color = log.Level switch
+            {
+                Log.LogLevel.Warning => VoiceAttackColor.Yellow,
+                Log.LogLevel.Error => VoiceAttackColor.Red,
+                _ => VoiceAttackColor.Blank
+            };
+
+            proxy.Log.Write($"{log.Message}", color);
+        });
+
+        // journal changed
+        _api.OnJournalChanged(e =>
+        {
+            proxy.Log.Write($"Watching {e.Name}", VoiceAttackColor.Purple);
+        });
+
+        // json event
         _api.OnAllJson(e =>
         {
             var paths = JournalUtils.ToPaths(e.json);
 
             paths.ForEach(v =>
             {
-                proxy.Variables.Set(v.Path, v.Value, v.Type switch
+                var stringValue = Convert.ToString(v.Value, CultureInfo.InvariantCulture) ?? string.Empty;
+                proxy.Variables.Set(v.Path, stringValue, v.Type switch
                 {
                     ValueType.String => TypeCode.String,
                     ValueType.Number => TypeCode.Int32,
@@ -31,16 +62,31 @@ public class Plugin : VoiceAttackPlugin
                     ValueType.DateTime => TypeCode.DateTime,
                     _ => TypeCode.String
                 });
-
-                var command = $"(({e.eventName}))";
-                if (proxy.Commands.Exists(command))
-                    proxy.Commands.Invoke(command);
             });
 
-            Log(VoiceAttackColor.Yellow, $"{e.eventName}");
+            // For Status field change events, use EliteAPI.Status.{Field} format
+            // For regular events, use the event name as-is
+            var commandName = e.eventName.StartsWith("Status.")
+                ? $"EliteAPI.{e.eventName}"
+                : e.eventName;
+
+            var command = $"(({commandName}))";
+            if (proxy.Commands.Exists(command))
+                proxy.Commands.Invoke(command);
+
+            Log.Info($"Invoking {command} with {paths.Count} variables");
+
+            // Only write variable files for non-synthetic events (Status change events don't need variable files)
+            if (!e.eventName.StartsWith("Status.") && paths.Count > 0)
+            {
+                if (!Directory.Exists(Path.Combine(Dir, "Variables")))
+                    Directory.CreateDirectory(Path.Combine(Dir, "Variables"));
+
+                File.WriteAllText(Path.Combine(Dir, "Variables", $"{e.eventName}.txt"), paths.Select(p => $"{p.Path}: {p.Value}").Aggregate((a, b) => $"{a}\n{b}"));
+            }
         });
 
         _api.Start();
-        Log(VoiceAttackColor.Green, $"EliteAPI started");
+        WriteToLog(VoiceAttackColor.Green, $"EliteAPI started");
     }
 }

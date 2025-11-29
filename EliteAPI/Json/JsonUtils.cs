@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using EliteAPI.Events;
 using EliteAPI.Json.SerializationSettings;
 using Newtonsoft.Json;
@@ -79,9 +80,27 @@ public static class JsonUtils
         if (path.ToLower().EndsWith("Address") || path.EndsWith("Id") || path.EndsWith("ID") || path.EndsWith("System"))
             @type = JTokenType.String;
 
-        // convert numbers > 32bit to decimal
-        if (@type == JTokenType.Integer && Convert.ToInt64(value.Value) > int.MaxValue)
-            @type = JTokenType.Float;
+        // convert numbers > 32bit or BigInteger to decimal
+        if (@type == JTokenType.Integer)
+        {
+            if (value.Value is BigInteger)
+            {
+                @type = JTokenType.Float;
+            }
+            else
+            {
+                try
+                {
+                    var longValue = Convert.ToInt64(value.Value);
+                    if (longValue > int.MaxValue || longValue < int.MinValue)
+                        @type = JTokenType.Float;
+                }
+                catch
+                {
+                    @type = JTokenType.Float;
+                }
+            }
+        }
 
         return @type switch
         {
@@ -94,7 +113,7 @@ public static class JsonUtils
             JTokenType.Float => new EventPath
             {
                 Path = path,
-                Value = Convert.ToDecimal(value.Value),
+                Value = value.Value is BigInteger bigInt ? (decimal)bigInt : Convert.ToDecimal(value.Value),
                 Type = ValueType.Decimal
             },
             JTokenType.Uri or JTokenType.Guid or JTokenType.String => new EventPath

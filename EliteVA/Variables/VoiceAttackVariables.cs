@@ -48,7 +48,7 @@ public class VoiceAttackVariables
                 break;
 
             case TypeCode.DateTime:
-                SetDate(name, DateTime.Parse(value.Trim('"')));
+                SetDate(name, DateTime.Parse(value.Trim('"'), CultureInfo.InvariantCulture));
                 break;
 
             case TypeCode.Single:

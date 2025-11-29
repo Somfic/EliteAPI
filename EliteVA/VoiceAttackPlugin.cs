@@ -17,7 +17,7 @@ public abstract class VoiceAttackPlugin : VoiceAttackService
         Instance ??= this;
     }
 
-    public void Log(VoiceAttackColor color, string message, Exception? exception = null)
+    public void WriteToLog(VoiceAttackColor color, string message, Exception? exception = null)
     {
         Proxy.Log.Write(message, color);
 

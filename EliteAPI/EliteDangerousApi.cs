@@ -15,6 +15,7 @@ public class EliteDangerousApi
 {
     private readonly FileWatcher _journalWatcher;
     private readonly List<FileWatcher> _statusWatchers;
+    private readonly StatusTracker _statusTracker = new();
 
     private readonly List<Action<FileInfo>> _journalChangedHandlers = [];
     private readonly List<Action<IEvent>> _typedGlobalEventHandlers = [];
@@ -37,7 +38,8 @@ public class EliteDangerousApi
             "NavRoute.json",
             "Outfitting.json",
             "ShipLocker.json",
-            "Shipyard.json"
+            "Shipyard.json",
+            "Status.json"
         ];
 
         _statusWatchers = statusFiles
@@ -58,10 +60,10 @@ public class EliteDangerousApi
         _journalWatcher.OnFileChanged(file =>
         {
             foreach (var handler in _journalChangedHandlers)
-                SafeInvoke.Invoke(handler, file);
+                SafeInvoke.Invoke("handling journal switch", handler, file);
         });
         _statusWatchers.ForEach(w => w.OnContentChanged(Invoke));
-        
+
         _statusWatchers.ForEach(w => w.StartWatching());
         _journalWatcher.StartWatching();
     }
@@ -127,21 +129,28 @@ public class EliteDangerousApi
         _untypedGlobalEventHandlers.Add(handler);
     }
 
-    internal void Invoke(IEvent @event)
+    public void Invoke(IEvent @event)
     {
         Invoke(JsonConvert.SerializeObject(@event, JsonUtils.SerializerSettings), @event);
     }
 
-    internal void Invoke(string json) => Invoke(json, null);
+    public void Invoke(string json) => Invoke(json, null);
 
     internal void Invoke(string json, IEvent? @event)
     {
         var eventName = JsonUtils.GetEventName(json);
         if (string.IsNullOrEmpty(eventName))
         {
-            // TODO: proper logging system for this
-            Console.WriteLine("Skipping invalid event with no name.");
+            Log.Warning("Skipping invalid event with no name.");
             return;
+        }
+
+        // Handle Status events specially for change detection
+        List<string>? statusChangedFields = null;
+        if (eventName == "Status")
+        {
+            var paths = JournalUtils.ToPaths(json);
+            statusChangedFields = _statusTracker.GetChangedFieldNames(paths);
         }
 
         if (@event == null && _eventTypes.TryGetValue(eventName, out var eventType))
@@ -152,13 +161,12 @@ public class EliteDangerousApi
             }
             catch (Exception ex)
             {
-                // TODO: proper logging
-                Console.WriteLine($@"Error: {ex.Message}");
+                Log.Error($"Failed to deserialize event '{eventName}'", ex);
             }
 
             if (@event == null)
             {
-                // TODO: proper logging
+                Log.Warning($"Event '{eventName}' deserialized to null.");
                 return;
             }
         }
@@ -167,12 +175,12 @@ public class EliteDangerousApi
         if (_untypedEventHandlers.TryGetValue(eventName, out var untypedHandlers))
         {
             foreach (var handler in untypedHandlers)
-                SafeInvoke.Invoke(handler, (eventName, json));
+                SafeInvoke.Invoke($"{eventName} hander", handler, (eventName, json));
         }
 
         // invoke global untyped handlers
         foreach (var handler in _untypedGlobalEventHandlers)
-            SafeInvoke.Invoke(handler, (eventName, json));
+            SafeInvoke.Invoke($"{eventName} hander", handler, (eventName, json));
 
         if (@event != null)
         {
@@ -180,12 +188,39 @@ public class EliteDangerousApi
             if (_typedEventHandlers.TryGetValue(eventName, out var typedEventHandlers))
             {
                 foreach (var handler in typedEventHandlers)
-                    SafeInvoke.Invoke(handler, @event);
+                    SafeInvoke.Invoke($"{eventName} hander", handler, @event);
             }
 
             // invoke global typed handlers
             foreach (var handler in _typedGlobalEventHandlers)
-                SafeInvoke.Invoke(handler, @event);
+                SafeInvoke.Invoke($"{eventName} hander", handler, @event);
+        }
+
+        // After Status event is processed and variables are set, invoke change events
+        if (eventName == "Status" && statusChangedFields != null)
+        {
+            var paths = JournalUtils.ToPaths(json);
+
+            // Invoke a synthetic event for each changed field
+            foreach (var fieldName in statusChangedFields)
+            {
+                var syntheticEventName = $"Status.{fieldName}";
+                var syntheticJson = $"{{\"event\":\"Status.{fieldName}\",\"timestamp\":\"{DateTime.UtcNow:yyyy-MM-ddTHH:mm:ssZ}\"}}";
+
+                // invoke untyped handlers for synthetic event
+                if (_untypedEventHandlers.TryGetValue(syntheticEventName, out var syntheticUntypedHandlers))
+                {
+                    foreach (var handler in syntheticUntypedHandlers)
+                        SafeInvoke.Invoke($"{syntheticEventName} handler", handler, (syntheticEventName, syntheticJson));
+                }
+
+                // invoke global untyped handlers for synthetic event
+                foreach (var handler in _untypedGlobalEventHandlers)
+                    SafeInvoke.Invoke($"{syntheticEventName} handler", handler, (syntheticEventName, syntheticJson));
+            }
+
+            // Always update the tracker state, even if no fields changed
+            _statusTracker.UpdateState(paths);
         }
     }
 }

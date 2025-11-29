@@ -1,18 +1,22 @@
-﻿using EliteApi;
-using EliteAPI.Journals;
-using EliteAPI.Json;
-using EliteAPI.Bindings;
-using System.Xml.Linq;
+﻿using EliteAPI;
 
-// var json = await File.ReadAllTextAsync("./EliteAPI.Tests/TestFiles/Status/StatusCombat.json");
-// var paths = JournalUtils.ToPaths(json);
+var api = new EliteDangerousApi();
 
-// foreach (var path in paths)
+api.OnAll(e =>
+{
+    Console.WriteLine($"Event: {e.Event}");
+});
+
+api.OnJournalChanged(e =>
+{
+    Console.WriteLine($"New journal file being watched: {e.FullName}");
+});
+
+api.Start();
+
+// api.OnAllJson(e =>
 // {
-//     Console.WriteLine($"{path.Path}: {path.Value} ({path.Type})");
-// }
+//     Console.WriteLine($"JSON Event: {e.eventName}");
+// });
 
-
-
-
-BindingParser.Parse(@"C:\Users\thevi\Documents\WORK_SPACE\EliteAPI\EliteAPI.Tests\Custom.4.2.binds");
+await Task.Delay(-1);

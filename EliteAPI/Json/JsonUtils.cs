@@ -1,19 +1,42 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using EliteAPI.Events;
+using EliteAPI.Json.SerializationSettings;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using ValueType = EliteAPI.Events.ValueType;
 
 namespace EliteAPI.Json;
 
 public static class JsonUtils
 {
-    public static List<JsonPath> FlattenJson(string json)
+    public static JsonSerializerSettings SerializerSettings = new() { ContractResolver = new EventContractResolver(), Converters = [new LocalisedConverter()] };
+
+    public static string GetEventName(string json)
+    {
+        var obj = JObject.Parse(json);
+
+        {
+            if (obj.TryGetValue("event", out var eventName))
+                return eventName.ToString();
+        }
+
+        {
+            if (obj.TryGetValue("Event", out var eventName))
+                return eventName.ToString();
+        }
+
+        return string.Empty;
+    }
+
+    public static List<EventPath> FlattenJson(string json)
     {
         // TODO: call flattening function
         // arrays need Length 
         // key + localisation
         // controls mapping
-        List<JsonPath> paths = [];
+        List<EventPath> paths = [];
         var token = JToken.Parse(json);
 
         foreach (var value in token.GetLeafValues().Where(v => !string.IsNullOrWhiteSpace(v.Path)))
@@ -48,7 +71,7 @@ public static class JsonUtils
     }
 
     //  JSONToken -> JsonPath
-    private static JsonPath ToJsonPath(this JValue value)
+    private static EventPath ToJsonPath(this JValue value)
     {
         var path = NormalizePath(value.Path);
         var @type = value.Type;
@@ -62,41 +85,41 @@ public static class JsonUtils
 
         return @type switch
         {
-            JTokenType.Integer => new JsonPath
+            JTokenType.Integer => new EventPath
             {
                 Path = path,
                 Value = Convert.ToInt32(value.Value),
-                Type = JsonType.Number
+                Type = ValueType.Number
             },
-            JTokenType.Float => new JsonPath
+            JTokenType.Float => new EventPath
             {
                 Path = path,
                 Value = Convert.ToDecimal(value.Value),
-                Type = JsonType.Decimal
+                Type = ValueType.Decimal
             },
-            JTokenType.Uri or JTokenType.Guid or JTokenType.String => new JsonPath
+            JTokenType.Uri or JTokenType.Guid or JTokenType.String => new EventPath
             {
                 Path = path,
                 Value = Convert.ToString(value.Value) ?? string.Empty,
-                Type = JsonType.String
+                Type = ValueType.String
             },
-            JTokenType.Boolean => new JsonPath
+            JTokenType.Boolean => new EventPath
             {
                 Path = path,
                 Value = Convert.ToBoolean(value.Value),
-                Type = JsonType.Boolean
+                Type = ValueType.Boolean
             },
-            JTokenType.Date => new JsonPath
+            JTokenType.Date => new EventPath
             {
                 Path = path,
                 Value = Convert.ToDateTime(value.Value),
-                Type = JsonType.DateTime
+                Type = ValueType.DateTime
             },
-            _ => new JsonPath
+            _ => new EventPath
             {
                 Path = "",
                 Value = "",
-                Type = JsonType.String
+                Type = ValueType.String
             },
         };
     }

@@ -3,25 +3,18 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
+using EliteAPI.Events;
 using EliteAPI.Json;
-using Newtonsoft.Json.Linq;
+using ValueType = EliteAPI.Events.ValueType;
 
 namespace EliteAPI.Journals;
 
 public static class JournalUtils
 {
-    public static string GetEventName(string json)
+    public static List<EventPath> ToPaths(string json)
     {
-        var obj = JObject.Parse(json);
-        if (obj.TryGetValue("event", out var eventNameToken))
-            return eventNameToken.ToString();
-
-        return string.Empty;
-    }
-
-    public static List<JsonPath> ToPaths(string json)
-    {
-        var eventName = GetEventName(json);
+        var eventName = JsonUtils.GetEventName(json);
         var paths = JsonUtils.FlattenJson(json);
 
         if (eventName == "Status")
@@ -34,11 +27,11 @@ public static class JournalUtils
 
             // expand flags
             foreach (var flag in StatusUtils.GetFlags((int)(paths.FirstOrDefault(p => p.Path == "Flags").Value as long? ?? 0)))
-                paths.Add(new JsonPath(flag.Key, flag.Value, JsonType.Boolean));
+                paths.Add(new EventPath(flag.Key, flag.Value, ValueType.Boolean));
 
             // expand flags2
             foreach (var flag in StatusUtils.GetFlags2((int)(paths.FirstOrDefault(p => p.Path == "Flags2").Value as long? ?? 0)))
-                paths.Add(new JsonPath(flag.Key, flag.Value, JsonType.Boolean));
+                paths.Add(new EventPath(flag.Key, flag.Value, ValueType.Boolean));
 
             // replace pips array with individual pips
             paths.Add(paths.FirstOrDefault(p => p.Path == "Pips[0]").WithPath("Pips.Systems"));
@@ -47,10 +40,10 @@ public static class JournalUtils
 
             // replace balance with decimal type
             var balancePath = paths.FirstOrDefault(p => p.Path == "Balance");
-            if (!balancePath.Equals(default(JsonPath)))
+            if (!balancePath.Equals(default(EventPath)))
             {
                 paths.Remove(balancePath);
-                paths.Add(new JsonPath("Balance", Convert.ToDecimal(balancePath.Value), JsonType.Decimal));
+                paths.Add(new EventPath("Balance", Convert.ToDecimal(balancePath.Value), ValueType.Decimal));
             }
         }
 
@@ -83,6 +76,24 @@ public static class JournalUtils
 
         // last resort, hardcoded with C:\ drive, hopefully we'll never reach this..
         return new DirectoryInfo(Path.Combine($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"));
+    }
+
+    public static void PrepareLocalisations(string json)
+    {
+        var matches = Regex.Matches(json, "\"([^\"]*?)\":\"([^\"]*?)\",[^\"]?\"([^\"]*?)_Localised\":\"([^\"]*)\"");
+
+        foreach (Match match in matches)
+        {
+            var symbolKey = match.Groups[1].Value;
+            var symbolValue = match.Groups[2].Value;
+            var localisedKey = match.Groups[3].Value;
+            var localisedValue = match.Groups[4].Value;
+
+            if (symbolKey != localisedKey)
+                continue;
+
+            Localisation.SetLocalisedString(symbolValue, localisedValue);
+        }
     }
 
     [DllImport("Shell32.dll")]

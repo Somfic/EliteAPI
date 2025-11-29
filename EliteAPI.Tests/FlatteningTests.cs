@@ -1,5 +1,7 @@
+using EliteAPI.Events;
 using EliteAPI.Json;
 using FluentAssertions;
+using ValueType = EliteAPI.Events.ValueType;
 
 namespace EliteAPI.Tests;
 
@@ -13,7 +15,7 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("test", 1, JsonType.Number)
+            new EventPath("test", 1, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -27,9 +29,9 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("test1", 1, JsonType.Number),
-            new JsonPath("test2", "value", JsonType.String),
-            new JsonPath("test3", true, JsonType.Boolean)
+            new EventPath("test1", 1, ValueType.Number),
+            new EventPath("test2", "value", ValueType.String),
+            new EventPath("test3", true, ValueType.Boolean)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -43,10 +45,10 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("items[0]", 1, JsonType.Number),
-            new JsonPath("items[1]", 2, JsonType.Number),
-            new JsonPath("items[2]", 3, JsonType.Number),
-            new JsonPath("items.Length", 3, JsonType.Number)
+            new EventPath("items[0]", 1, ValueType.Number),
+            new EventPath("items[1]", 2, ValueType.Number),
+            new EventPath("items[2]", 3, ValueType.Number),
+            new EventPath("items.Length", 3, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -60,10 +62,10 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("items[0].nested", 1, JsonType.Number),
-            new JsonPath("items[1].nested", "2", JsonType.String),
-            new JsonPath("items[2].nested", false, JsonType.Boolean),
-            new JsonPath("items.Length", 3, JsonType.Number)
+            new EventPath("items[0].nested", 1, ValueType.Number),
+            new EventPath("items[1].nested", "2", ValueType.String),
+            new EventPath("items[2].nested", false, ValueType.Boolean),
+            new EventPath("items.Length", 3, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -77,7 +79,7 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("price", 19.99m, JsonType.Decimal)
+            new EventPath("price", 19.99m, ValueType.Decimal)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -91,9 +93,9 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("price", 19.99m, JsonType.Decimal),
-            new JsonPath("tax", 1.50m, JsonType.Decimal),
-            new JsonPath("total", 21.49m, JsonType.Decimal)
+            new EventPath("price", 19.99m, ValueType.Decimal),
+            new EventPath("tax", 1.50m, ValueType.Decimal),
+            new EventPath("total", 21.49m, ValueType.Decimal)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -107,7 +109,7 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("timestamp", new DateTime(2025, 11, 21, 10, 30, 0, DateTimeKind.Utc), JsonType.DateTime)
+            new EventPath("timestamp", new DateTime(2025, 11, 21, 10, 30, 0, DateTimeKind.Utc), ValueType.DateTime)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -121,8 +123,8 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("createdAt", new DateTime(2025, 11, 21, 10, 30, 0, DateTimeKind.Utc), JsonType.DateTime),
-            new JsonPath("updatedAt", new DateTime(2025, 11, 21, 15, 45, 0, DateTimeKind.Utc), JsonType.DateTime)
+            new EventPath("createdAt", new DateTime(2025, 11, 21, 10, 30, 0, DateTimeKind.Utc), ValueType.DateTime),
+            new EventPath("updatedAt", new DateTime(2025, 11, 21, 15, 45, 0, DateTimeKind.Utc), ValueType.DateTime)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -136,11 +138,11 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("id", 1, JsonType.Number),
-            new JsonPath("name", "Product", JsonType.String),
-            new JsonPath("price", 29.99m, JsonType.Decimal),
-            new JsonPath("created", new DateTime(2025, 11, 21, 10, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
-            new JsonPath("active", true, JsonType.Boolean)
+            new EventPath("id", 1, ValueType.Number),
+            new EventPath("name", "Product", ValueType.String),
+            new EventPath("price", 29.99m, ValueType.Decimal),
+            new EventPath("created", new DateTime(2025, 11, 21, 10, 0, 0, DateTimeKind.Utc), ValueType.DateTime),
+            new EventPath("active", true, ValueType.Boolean)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -154,8 +156,8 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("user.name", "John", JsonType.String),
-            new JsonPath("user.age", 30, JsonType.Number)
+            new EventPath("user.name", "John", ValueType.String),
+            new EventPath("user.age", 30, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -169,7 +171,7 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("level1.level2.level3.value", "deep", JsonType.String)
+            new EventPath("level1.level2.level3.value", "deep", ValueType.String)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -183,11 +185,11 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("product.id", 1, JsonType.Number),
-            new JsonPath("product.name", "Widget", JsonType.String),
-            new JsonPath("product.price", 19.99m, JsonType.Decimal),
-            new JsonPath("product.created", new DateTime(2025, 11, 21, 10, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
-            new JsonPath("product.inStock", true, JsonType.Boolean)
+            new EventPath("product.id", 1, ValueType.Number),
+            new EventPath("product.name", "Widget", ValueType.String),
+            new EventPath("product.price", 19.99m, ValueType.Decimal),
+            new EventPath("product.created", new DateTime(2025, 11, 21, 10, 0, 0, DateTimeKind.Utc), ValueType.DateTime),
+            new EventPath("product.inStock", true, ValueType.Boolean)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -201,10 +203,10 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("user.name", "John", JsonType.String),
-            new JsonPath("user.age", 30, JsonType.Number),
-            new JsonPath("address.city", "NYC", JsonType.String),
-            new JsonPath("address.zip", 10001, JsonType.Number)
+            new EventPath("user.name", "John", ValueType.String),
+            new EventPath("user.age", 30, ValueType.Number),
+            new EventPath("address.city", "NYC", ValueType.String),
+            new EventPath("address.zip", 10001, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -218,9 +220,9 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("transaction.amount", 99.99m, JsonType.Decimal),
-            new JsonPath("transaction.fee", 2.50m, JsonType.Decimal),
-            new JsonPath("transaction.timestamp", new DateTime(2025, 11, 21, 14, 30, 0, DateTimeKind.Utc), JsonType.DateTime)
+            new EventPath("transaction.amount", 99.99m, ValueType.Decimal),
+            new EventPath("transaction.fee", 2.50m, ValueType.Decimal),
+            new EventPath("transaction.timestamp", new DateTime(2025, 11, 21, 14, 30, 0, DateTimeKind.Utc), ValueType.DateTime)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -234,11 +236,11 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("user.name", "John", JsonType.String),
-            new JsonPath("user.scores[0]", 95, JsonType.Number),
-            new JsonPath("user.scores[1]", 87, JsonType.Number),
-            new JsonPath("user.scores[2]", 92, JsonType.Number),
-            new JsonPath("user.scores.Length", 3, JsonType.Number)
+            new EventPath("user.name", "John", ValueType.String),
+            new EventPath("user.scores[0]", 95, ValueType.Number),
+            new EventPath("user.scores[1]", 87, ValueType.Number),
+            new EventPath("user.scores[2]", 92, ValueType.Number),
+            new EventPath("user.scores.Length", 3, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -268,16 +270,16 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("order.id", 123, JsonType.Number),
-            new JsonPath("order.customer.name", "Jane Doe", JsonType.String),
-            new JsonPath("order.customer.email", "jane@example.com", JsonType.String),
-            new JsonPath("order.items[0].name", "Item1", JsonType.String),
-            new JsonPath("order.items[0].price", 10.50m, JsonType.Decimal),
-            new JsonPath("order.items[1].name", "Item2", JsonType.String),
-            new JsonPath("order.items[1].price", 25.99m, JsonType.Decimal),
-            new JsonPath("order.items.Length", 2, JsonType.Number),
-            new JsonPath("order.total", 36.49m, JsonType.Decimal),
-            new JsonPath("order.orderDate", new DateTime(2025, 11, 21, 9, 0, 0, DateTimeKind.Utc), JsonType.DateTime)
+            new EventPath("order.id", 123, ValueType.Number),
+            new EventPath("order.customer.name", "Jane Doe", ValueType.String),
+            new EventPath("order.customer.email", "jane@example.com", ValueType.String),
+            new EventPath("order.items[0].name", "Item1", ValueType.String),
+            new EventPath("order.items[0].price", 10.50m, ValueType.Decimal),
+            new EventPath("order.items[1].name", "Item2", ValueType.String),
+            new EventPath("order.items[1].price", 25.99m, ValueType.Decimal),
+            new EventPath("order.items.Length", 2, ValueType.Number),
+            new EventPath("order.total", 36.49m, ValueType.Decimal),
+            new EventPath("order.orderDate", new DateTime(2025, 11, 21, 9, 0, 0, DateTimeKind.Utc), ValueType.DateTime)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -289,7 +291,7 @@ public class Flattening
         var json = """{ "empty": {} }""";
         var paths = JsonUtils.FlattenJson(json);
 
-        var expected = Array.Empty<JsonPath>();
+        var expected = Array.Empty<EventPath>();
 
         paths.Should().BeEquivalentTo(expected);
     }
@@ -302,7 +304,7 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("items.Length", 0, JsonType.Number)
+            new EventPath("items.Length", 0, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -316,7 +318,7 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("age", 30, JsonType.Number)
+            new EventPath("age", 30, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -330,8 +332,8 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("temperature", -15, JsonType.Number),
-            new JsonPath("balance", -100, JsonType.Number)
+            new EventPath("temperature", -15, ValueType.Number),
+            new EventPath("balance", -100, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -345,8 +347,8 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("balance", -99.99m, JsonType.Decimal),
-            new JsonPath("adjustment", -5.50m, JsonType.Decimal)
+            new EventPath("balance", -99.99m, ValueType.Decimal),
+            new EventPath("adjustment", -5.50m, ValueType.Decimal)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -360,9 +362,9 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("count", 0, JsonType.Number),
-            new JsonPath("price", 0.0m, JsonType.Decimal),
-            new JsonPath("active", false, JsonType.Boolean)
+            new EventPath("count", 0, ValueType.Number),
+            new EventPath("price", 0.0m, ValueType.Decimal),
+            new EventPath("active", false, ValueType.Boolean)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -376,8 +378,8 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("name", "", JsonType.String),
-            new JsonPath("description", "text", JsonType.String)
+            new EventPath("name", "", ValueType.String),
+            new EventPath("description", "text", ValueType.String)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -391,10 +393,10 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("prices[0]", 19.99m, JsonType.Decimal),
-            new JsonPath("prices[1]", 29.99m, JsonType.Decimal),
-            new JsonPath("prices[2]", 39.99m, JsonType.Decimal),
-            new JsonPath("prices.Length", 3, JsonType.Number)
+            new EventPath("prices[0]", 19.99m, ValueType.Decimal),
+            new EventPath("prices[1]", 29.99m, ValueType.Decimal),
+            new EventPath("prices[2]", 39.99m, ValueType.Decimal),
+            new EventPath("prices.Length", 3, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -408,10 +410,10 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("timestamps[0]", new DateTime(2025, 11, 21, 10, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
-            new JsonPath("timestamps[1]", new DateTime(2025, 11, 21, 11, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
-            new JsonPath("timestamps[2]", new DateTime(2025, 11, 21, 12, 0, 0, DateTimeKind.Utc), JsonType.DateTime),
-            new JsonPath("timestamps.Length", 3, JsonType.Number)
+            new EventPath("timestamps[0]", new DateTime(2025, 11, 21, 10, 0, 0, DateTimeKind.Utc), ValueType.DateTime),
+            new EventPath("timestamps[1]", new DateTime(2025, 11, 21, 11, 0, 0, DateTimeKind.Utc), ValueType.DateTime),
+            new EventPath("timestamps[2]", new DateTime(2025, 11, 21, 12, 0, 0, DateTimeKind.Utc), ValueType.DateTime),
+            new EventPath("timestamps.Length", 3, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -425,11 +427,11 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("mixed[0]", 1, JsonType.Number),
-            new JsonPath("mixed[1]", "text", JsonType.String),
-            new JsonPath("mixed[2]", true, JsonType.Boolean),
-            new JsonPath("mixed[3]", 2.5m, JsonType.Decimal),
-            new JsonPath("mixed.Length", 4, JsonType.Number)
+            new EventPath("mixed[0]", 1, ValueType.Number),
+            new EventPath("mixed[1]", "text", ValueType.String),
+            new EventPath("mixed[2]", true, ValueType.Boolean),
+            new EventPath("mixed[3]", 2.5m, ValueType.Decimal),
+            new EventPath("mixed.Length", 4, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -443,7 +445,7 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("bigNumber", 999999999.99m, JsonType.Decimal)
+            new EventPath("bigNumber", 999999999.99m, ValueType.Decimal)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -457,7 +459,7 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("smallNumber", 0.0001m, JsonType.Decimal)
+            new EventPath("smallNumber", 0.0001m, ValueType.Decimal)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -471,7 +473,7 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("text", "Hello \"World\"\nNew Line\tTab", JsonType.String)
+            new EventPath("text", "Hello \"World\"\nNew Line\tTab", ValueType.String)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -485,8 +487,8 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("greeting", "Hello 🌍 World", JsonType.String),
-            new JsonPath("emoji", "😀", JsonType.String)
+            new EventPath("greeting", "Hello 🌍 World", ValueType.String),
+            new EventPath("emoji", "😀", ValueType.String)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -501,7 +503,7 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("longText", longText, JsonType.String)
+            new EventPath("longText", longText, ValueType.String)
         };
 
         paths.Should().BeEquivalentTo(expected);
@@ -515,8 +517,8 @@ public class Flattening
 
         var expected = new[]
         {
-            new JsonPath("user.name", "John", JsonType.String),
-            new JsonPath("user.age", 30, JsonType.Number)
+            new EventPath("user.name", "John", ValueType.String),
+            new EventPath("user.age", 30, ValueType.Number)
         };
 
         paths.Should().BeEquivalentTo(expected);

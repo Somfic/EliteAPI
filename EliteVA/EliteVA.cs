@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
-using EliteApi;
-using EliteAPI.Json;
+using EliteAPI;
+using EliteAPI.Journals;
 using EliteVA.Abstractions;
 using EliteVA.Logging;
+using ValueType = EliteAPI.Events.ValueType;
 
 namespace EliteVA;
 
@@ -16,42 +16,31 @@ public class Plugin : VoiceAttackPlugin
     {
         _api = new EliteDangerousApi();
 
-        _api.OnPathsChanged(e =>
+        _api.OnAllJson(e =>
         {
-            e.variables.ForEach(v =>
+            var paths = JournalUtils.ToPaths(e.json);
+
+            paths.ForEach(v =>
             {
                 proxy.Variables.Set(v.Path, v.Value, v.Type switch
                 {
-                    JsonType.String => TypeCode.String,
-                    JsonType.Number => TypeCode.Int32,
-                    JsonType.Decimal => TypeCode.Decimal,
-                    JsonType.Boolean => TypeCode.Boolean,
-                    JsonType.DateTime => TypeCode.DateTime,
+                    ValueType.String => TypeCode.String,
+                    ValueType.Number => TypeCode.Int32,
+                    ValueType.Decimal => TypeCode.Decimal,
+                    ValueType.Boolean => TypeCode.Boolean,
+                    ValueType.DateTime => TypeCode.DateTime,
                     _ => TypeCode.String
                 });
 
-                var command = $"(({e.command}))";
+                var command = $"(({e.eventName}))";
                 if (proxy.Commands.Exists(command))
                     proxy.Commands.Invoke(command);
             });
 
-            Log(VoiceAttackColor.Yellow, $"{e.command}");
+            Log(VoiceAttackColor.Yellow, $"{e.eventName}");
         });
 
         _api.Start();
         Log(VoiceAttackColor.Green, $"EliteAPI started");
-    }
-
-    private TypeCode FromJsonType(JsonType type)
-    {
-        return type switch
-        {
-            JsonType.String => TypeCode.String,
-            JsonType.Number => TypeCode.Int32,
-            JsonType.Decimal => TypeCode.Decimal,
-            JsonType.Boolean => TypeCode.Boolean,
-            JsonType.DateTime => TypeCode.DateTime,
-            _ => TypeCode.String
-        };
     }
 }

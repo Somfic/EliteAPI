@@ -1,7 +1,3 @@
-using EliteAPI.Journals;
-using EliteAPI.Json;
-using FluentAssertions;
-
 namespace EliteAPI.Tests;
 
 public class EventTriggeringTests

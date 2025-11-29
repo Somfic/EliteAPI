@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using EliteAPI.Utils;
 
 namespace EliteAPI.Watcher;
 
 public class FileWatcher
 {
-    private FileInfo _file;
     private readonly FileWatchMode _mode;
-    public readonly DirectoryInfo? Directory;
+    private readonly DirectoryInfo? _directory;
     private readonly string? _filePattern;
     private FileSystemWatcher? _fileWatcher;
     private FileSystemWatcher? _directoryWatcher;
@@ -18,20 +18,20 @@ public class FileWatcher
     private Action<FileInfo>? _onFileChanged;
     private int _lastLineCount;
     private Timer? _debounceTimer;
-    private readonly object _debounceLock = new object();
+    private readonly object _debounceLock = new();
     private const int DebounceDelayMs = 200;
 
-    public FileInfo CurrentFile => _file;
+    public FileInfo CurrentFile { get; private set; }
 
     private FileWatcher(FileInfo file, FileWatchMode mode, int initialLineCount = 0, DirectoryInfo? directory = null, string? filePattern = null)
     {
-        _file = file;
+        CurrentFile = file;
         _mode = mode;
         _lastLineCount = initialLineCount;
-        Directory = directory;
+        _directory = directory;
         _filePattern = filePattern;
 
-        if (Directory != null && _filePattern != null)
+        if (_directory != null && _filePattern != null)
             SetupDirectoryWatcher();
     }
 
@@ -59,25 +59,27 @@ public class FileWatcher
 
     public void OnContentChanged(Action<string> onContentChanged)
     {
-        _onContentChanged = onContentChanged;
+        _onContentChanged = content => SafeInvoke.Invoke(onContentChanged, content);
     }
 
     public void OnFileChanged(Action<FileInfo> onFileChanged)
     {
-        _onFileChanged = onFileChanged;
+        _onFileChanged = file => SafeInvoke.Invoke(onFileChanged, file);
     }
 
     public string StartWatching()
     {
+        SwitchToNewFile(CurrentFile);
+        
         if (_onContentChanged == null) return string.Empty;
 
         // Read initial content and set line count (handle non-existent files gracefully)
         var initialContent = string.Empty;
-        _file.Refresh(); // Refresh cached FileInfo properties
-        if (_file.Exists)
+        CurrentFile.Refresh(); // Refresh cached FileInfo properties
+        if (CurrentFile.Exists)
         {
-            initialContent = ReadFileContent(_file.FullName);
-            _lastLineCount = _mode == FileWatchMode.LineByLine ? ReadFileLines(_file.FullName).Length : 0;
+            initialContent = ReadFileContent(CurrentFile.FullName);
+            _lastLineCount = _mode == FileWatchMode.LineByLine ? ReadFileLines(CurrentFile.FullName).Length : 0;
         }
         else
         {
@@ -86,7 +88,7 @@ public class FileWatcher
 
         // If we're in directory watching mode, enable the directory watcher
         // Don't create a separate file watcher to avoid conflicts
-        if (Directory != null && _filePattern != null)
+        if (_directory != null && _filePattern != null)
         {
             if (_directoryWatcher != null)
             {
@@ -96,7 +98,7 @@ public class FileWatcher
         }
 
         // Create file watcher for single-file mode
-        _fileWatcher = new FileSystemWatcher(_file.DirectoryName ?? string.Empty, _file.Name)
+        _fileWatcher = new FileSystemWatcher(CurrentFile.DirectoryName ?? string.Empty, CurrentFile.Name)
         {
             NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.Size,
             InternalBufferSize = 65536 // Increase buffer size to handle rapid changes
@@ -137,7 +139,7 @@ public class FileWatcher
         {
             if (_mode == FileWatchMode.LineByLine)
             {
-                var lines = ReadFileLines(_file.FullName);
+                var lines = ReadFileLines(CurrentFile.FullName);
                 for (int i = _lastLineCount; i < lines.Length; i++)
                 {
                     try
@@ -153,7 +155,7 @@ public class FileWatcher
             }
             else
             {
-                var content = ReadFileContent(_file.FullName);
+                var content = ReadFileContent(CurrentFile.FullName);
                 _onContentChanged(content);
             }
         }
@@ -165,9 +167,9 @@ public class FileWatcher
 
     private void SetupDirectoryWatcher()
     {
-        if (Directory == null || _filePattern == null) return;
+        if (_directory == null || _filePattern == null) return;
 
-        _directoryWatcher = new FileSystemWatcher(Directory.FullName, _filePattern)
+        _directoryWatcher = new FileSystemWatcher(_directory.FullName, _filePattern)
         {
             NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.Size,
             InternalBufferSize = 65536 // Increase buffer size to handle multiple file events
@@ -187,13 +189,13 @@ public class FileWatcher
             // Check if this file matches our pattern
             if (_filePattern != null && MatchesPattern(changedFile.Name, _filePattern))
             {
-                if (changedFile.FullName != _file.FullName)
+                if (changedFile.FullName != CurrentFile.FullName)
                 {
                     // Different file - consider switching to it if it's newer
                     Thread.Sleep(100); // Brief delay for file system to settle
-                    _file.Refresh(); // Refresh cached properties
+                    CurrentFile.Refresh(); // Refresh cached properties
 
-                    if (changedFile.LastWriteTimeUtc >= _file.LastWriteTimeUtc)
+                    if (changedFile.LastWriteTimeUtc >= CurrentFile.LastWriteTimeUtc)
                     {
                         SwitchToNewFile(changedFile);
                     }
@@ -224,7 +226,7 @@ public class FileWatcher
     {
         lock (_debounceLock)
         {
-            _file = newFile;
+            CurrentFile = newFile;
             _lastLineCount = 0;
 
             // Dispose debounce timer to prevent callbacks from old file
@@ -244,7 +246,8 @@ public class FileWatcher
 
         // Start watching the new file
         // In directory mode, this will be a no-op since directory watcher handles everything
-        StartWatching();
+        if (newFile != CurrentFile)
+            StartWatching();
     }
 
     private static string ReadFileContent(string path)

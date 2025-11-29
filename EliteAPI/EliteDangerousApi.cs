@@ -30,7 +30,6 @@ public class EliteDangerousApi
 
     public EliteDangerousApi()
     {
-        var journalDirectory = JournalUtils.GetJournalsDirectory();
         string[] statusFiles = [
             "Cargo.json",
             "Market.json",
@@ -43,10 +42,10 @@ public class EliteDangerousApi
         ];
 
         _statusWatchers = statusFiles
-            .Select(fileName => FileWatcher.Create(journalDirectory, fileName, FileWatchMode.EntireFile))
+            .Select(fileName => FileWatcher.Create(JournalUtils.GetJournalsDirectory(), fileName, FileWatchMode.EntireFile))
             .ToList();
 
-        _journalWatcher = FileWatcher.Create(journalDirectory, "Journal.*.log", FileWatchMode.LineByLine);
+        _journalWatcher = FileWatcher.Create(JournalUtils.GetJournalsDirectory(), "Journal.*.log", FileWatchMode.LineByLine);
     }
 
     public void Start()
@@ -66,6 +65,7 @@ public class EliteDangerousApi
 
         _statusWatchers.ForEach(w => w.StartWatching());
         _journalWatcher.StartWatching();
+
     }
 
     /// <summary>
@@ -224,4 +224,3 @@ public class EliteDangerousApi
         }
     }
 }
-

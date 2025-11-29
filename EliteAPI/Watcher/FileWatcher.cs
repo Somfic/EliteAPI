@@ -91,9 +91,8 @@ public class FileWatcher
         if (_directory != null && _filePattern != null)
         {
             if (_directoryWatcher != null)
-            {
                 _directoryWatcher.EnableRaisingEvents = true;
-            }
+
             return initialContent;
         }
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using EliteAPI.Bindings;
 using EliteAPI.Events;
 using EliteAPI.Journals;
 using EliteAPI.Json;
@@ -15,6 +16,7 @@ public class EliteDangerousApi
 {
     private readonly FileWatcher _journalWatcher;
     private readonly List<FileWatcher> _statusWatchers;
+    private readonly FileWatcher _bindingsPresetsWatcher;
     private readonly StatusTracker _statusTracker = new();
 
     private readonly List<Action<FileInfo>> _journalChangedHandlers = [];
@@ -27,6 +29,7 @@ public class EliteDangerousApi
         .Where(t => typeof(IEvent).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract)
         .ToDictionary(t => t.Name.EndsWith("Event") ? t.Name.Substring(0, t.Name.Length - 5) : t.Name, t => t, StringComparer.OrdinalIgnoreCase);
     private readonly Dictionary<string, List<Action<(string eventName, string json)>>> _untypedEventHandlers = new(StringComparer.OrdinalIgnoreCase);
+    private readonly List<Action<IReadOnlyCollection<Control>>> _bindingsHandlers = [];
 
     public EliteDangerousApi()
     {
@@ -46,6 +49,8 @@ public class EliteDangerousApi
             .ToList();
 
         _journalWatcher = FileWatcher.Create(JournalUtils.GetJournalsDirectory(), "Journal.*.log", FileWatchMode.LineByLine);
+
+        _bindingsPresetsWatcher = FileWatcher.Create(BindingsUtils.GetBindingsDirectory(), "StartPreset*", FileWatchMode.EntireFile);
     }
 
     public void Start()
@@ -55,16 +60,17 @@ public class EliteDangerousApi
             JournalUtils.PrepareLocalisations(json);
             Invoke(json);
         });
-
         _journalWatcher.OnFileChanged(file =>
         {
             foreach (var handler in _journalChangedHandlers)
                 SafeInvoke.Invoke("handling journal switch", handler, file);
         });
         _statusWatchers.ForEach(w => w.OnContentChanged(Invoke));
+        _bindingsPresetsWatcher.OnContentChanged(HandleBindingsPreset);
 
         _statusWatchers.ForEach(w => w.StartWatching());
         _journalWatcher.StartWatching();
+        HandleBindingsPreset(_bindingsPresetsWatcher.StartWatching());
 
     }
 
@@ -74,6 +80,14 @@ public class EliteDangerousApi
     public void OnJournalChanged(Action<FileInfo> handler)
     {
         _journalChangedHandlers.Add(handler);
+    }
+
+    /// <summary>
+    /// Listens for when keybindings have changed
+    /// </summary>
+    public void OnKeybindingsChanged(Action<IReadOnlyCollection<Control>> handler)
+    {
+        _bindingsHandlers.Add(handler);
     }
 
     /// <summary>
@@ -222,5 +236,34 @@ public class EliteDangerousApi
             // Always update the tracker state, even if no fields changed
             _statusTracker.UpdateState(paths);
         }
+    }
+
+    private void HandleBindingsPreset(string presetContent)
+    {
+        var presets = presetContent.Split('\n').Where(line => !string.IsNullOrWhiteSpace(line)).ToList();
+
+        // Make sure all presets use the same format
+        if (presets.Count == 0 || presets.Distinct().Count() > 1)
+        {
+            Log.Warning("Multiple different keybindings preset formats detected, skipping keybindings setup");
+            return;
+        }
+
+        var preset = presets[0];
+
+        var file = BindingsUtils.GetBindingsDirectory().GetFiles().FirstOrDefault(f => f.Name.StartsWith(preset));
+
+        if (file == null)
+        {
+            Log.Warning($"Keybindings preset '{preset}' could not be found, skipping keybindings setup");
+            return;
+        }
+
+        var bindings = BindingParser.Parse(File.ReadAllText(file.FullName));
+
+        Log.Info($"Loaded {bindings.Count} keybindings from preset '{preset}'");
+
+        foreach (var handler in _bindingsHandlers)
+            SafeInvoke.Invoke("handling keybindings change", handler, bindings);
     }
 }

@@ -1,17 +1,18 @@
 ﻿using EliteAPI;
 using EliteAPI.Utils;
+using Newtonsoft.Json;
 
 Log.AddListener(log =>
 {
-    if (log.Level < Log.LogLevel.Info)
-        return;
+
 
     ConsoleColor color = log.Level switch
     {
-        Log.LogLevel.Debug => ConsoleColor.Gray,
+        Log.LogLevel.Debug => ConsoleColor.DarkGray,
         Log.LogLevel.Info => ConsoleColor.Blue,
         Log.LogLevel.Warning => ConsoleColor.Yellow,
-        Log.LogLevel.Error => ConsoleColor.Red
+        Log.LogLevel.Error => ConsoleColor.Red,
+        _ => ConsoleColor.White
     };
 
     var previousColor = Console.ForegroundColor;
@@ -22,14 +23,15 @@ Log.AddListener(log =>
 
 var api = new EliteDangerousApi();
 
-api.OnAll(e =>
+api.OnKeybindingsChanged(bindings =>
 {
-    Console.WriteLine($"Event: {e.Event}");
-});
+    foreach (var binding in bindings)
+    {
+        if (binding.Name != "LandingGearToggle")
+            continue;
 
-api.OnJournalChanged(e =>
-{
-    Console.WriteLine($"New journal file being watched: {e.FullName}");
+        Log.Info(JsonConvert.SerializeObject(binding));
+    }
 });
 
 api.Start();

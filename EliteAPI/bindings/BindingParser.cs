@@ -71,7 +71,7 @@ public static class BindingParser
             {
                 var mDevice = GetAttribute(m, "Device") ?? string.Empty;
                 var mKey = GetAttribute(m, "Key") ?? string.Empty;
-                return (IBinding)new Binding(mDevice, mKey);
+                return new Binding(mDevice, mKey);
             })
             .ToArray();
 

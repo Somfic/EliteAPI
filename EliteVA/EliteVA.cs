@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using EliteAPI;
+using EliteAPI.Bindings;
 using EliteAPI.Journals;
 using EliteAPI.Utils;
 using EliteVA.Abstractions;
@@ -42,7 +44,35 @@ public class Plugin : VoiceAttackPlugin
         // journal changed
         _api.OnJournalChanged(e =>
         {
-            proxy.Log.Write($"Watching {e.Name}", VoiceAttackColor.Purple);
+            proxy.Log.Write($"Watching {e.Name}", VoiceAttackColor.Blue);
+        });
+
+        _api.OnKeybindingsChanged(e =>
+        {
+            List<(string name, Binding binding)> bindings = [];
+
+            foreach (var binding in e)
+            {
+                Binding keyboardBinding;
+
+                if (binding.Primary.HasValue && binding.Primary.Value.Device == "Keyboard")
+                    keyboardBinding = binding.Primary.Value;
+                else if (binding.Secondary.HasValue && binding.Secondary.Value.Device == "Keyboard")
+                    keyboardBinding = binding.Secondary.Value;
+                else
+                    continue;
+
+                bindings.Add((binding.Name, keyboardBinding));
+
+                Proxy.Variables.Set($"EliteAPI.{binding.Name}", binding.Primary.HasValue ? binding.Primary.Value.KeyCode : "", TypeCode.String);
+            }
+
+            if (!Directory.Exists(Path.Combine(Dir, "Variables")))
+                Directory.CreateDirectory(Path.Combine(Dir, "Variables"));
+
+            File.WriteAllText(Path.Combine(Dir, "Variables", $"Keybindings.txt"), bindings.Select(b => $"{b.name}: {b.binding.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
+
+            proxy.Log.Write($"Applying {bindings.Count} keybindings", VoiceAttackColor.Blue);
         });
 
         // json event

@@ -122,9 +122,6 @@ public static class Log
         var timestamp = DateTime.Now;
         var logEntry = $"[{timestamp:yyyy-MM-dd HH:mm:ss.fff}] [{level}] {message}";
 
-        // Write to console for immediate feedback
-        Console.WriteLine(logEntry);
-
         // Write to file in a thread-safe manner
         lock (_fileLock)
         {

@@ -1,18 +1,21 @@
+using System.Linq;
+
 namespace EliteAPI.Bindings;
 
-public readonly struct Binding : IBinding
+public readonly struct Binding
 {
     public string Device { get; init; }
 
     public string Key { get; init; }
 
-    public IBinding[]? Modifiers { get; init; }
+    public string KeyCode => $"{string.Join("", Modifiers.Select(m => m.KeyCode))}{BindingsUtils.GetKeyCode(Key)}";
 
-    public Binding(string device, string key, IBinding[]? modifiers = null)
+    public Binding[] Modifiers { get; init; }
+
+    public Binding(string device, string key, Binding[]? modifiers = null)
     {
         Device = device;
         Key = key;
-        Modifiers = modifiers;
-
+        Modifiers = modifiers ?? [];
     }
 }

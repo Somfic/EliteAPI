@@ -14,7 +14,8 @@ if (-not $SkipVoiceAttackRestart -and $IsWindowsOS) {
     try {
         Stop-Process -Name "VoiceAttack" -Force -ErrorAction SilentlyContinue
         Write-Host "VoiceAttack stopped." -ForegroundColor Green
-    } catch {
+    }
+    catch {
         Write-Host "VoiceAttack was not running." -ForegroundColor Yellow
     }
 
@@ -37,9 +38,11 @@ if (-not (Test-Path $DestinationPath)) {
     New-Item -ItemType Directory -Path $DestinationPath -Force | Out-Null
 }
 
-Copy-Item "EliteVA/bin/Debug/net8.0/EliteVA.dll" "$DestinationPath/EliteVA.dll" -Force
-Copy-Item "EliteVA/bin/Debug/net8.0/EliteAPI.dll" "$DestinationPath/EliteAPI.dll" -Force
-Copy-Item "EliteAPI/bin/Debug/net48/Newtonsoft.Json.dll" "$DestinationPath/Newtonsoft.Json.dll" -Force
+# Copy all items from build output to destination
+$buildOutputPath = "EliteVA/bin/Debug/net8.0/"
+Get-ChildItem -Path $buildOutputPath -Filter *.dll | ForEach-Object {
+    Copy-Item $_.FullName -Destination $DestinationPath -Force
+}
 
 Write-Host "Plugin deployed successfully." -ForegroundColor Green
 
@@ -49,7 +52,8 @@ if (-not $SkipVoiceAttackRestart -and $IsWindowsOS) {
     if (Test-Path $voiceAttackExe) {
         Start-Process $voiceAttackExe
         Write-Host "Done!" -ForegroundColor Green
-    } else {
+    }
+    else {
         Write-Warning "VoiceAttack.exe not found at: $voiceAttackExe"
     }
 }

@@ -1,7 +1,7 @@
 using EliteAPI.Events;
 using EliteAPI.Journals;
 using FluentAssertions;
-using ValueType = EliteAPI.Events.ValueType;
+using EventValueType = EliteAPI.Events.EventValueType;
 
 namespace EliteAPI.Tests;
 
@@ -15,16 +15,16 @@ public class StatusTrackerTests
         // First update: Gear is false
         var initialPaths = new List<EventPath>
         {
-            new("EliteAPI.Gear", false, ValueType.Boolean),
-            new("EliteAPI.Hardpoints", false, ValueType.Boolean)
+            new("EliteAPI.Gear", false, EventValueType.Boolean),
+            new("EliteAPI.Hardpoints", false, EventValueType.Boolean)
         };
         tracker.UpdateState(initialPaths);
 
         // Second update: Gear changes to true
         var updatedPaths = new List<EventPath>
         {
-            new("EliteAPI.Gear", true, ValueType.Boolean),
-            new("EliteAPI.Hardpoints", false, ValueType.Boolean)
+            new("EliteAPI.Gear", true, EventValueType.Boolean),
+            new("EliteAPI.Hardpoints", false, EventValueType.Boolean)
         };
 
         var changedFields = tracker.GetChangedFieldNames(updatedPaths);
@@ -41,16 +41,16 @@ public class StatusTrackerTests
         // First update: GuiFocus is 0
         var initialPaths = new List<EventPath>
         {
-            new("EliteAPI.GuiFocus", 0, ValueType.Number),
-            new("EliteAPI.FireGroup", 1, ValueType.Number)
+            new("EliteAPI.GuiFocus", 0, EventValueType.Number),
+            new("EliteAPI.FireGroup", 1, EventValueType.Number)
         };
         tracker.UpdateState(initialPaths);
 
         // Second update: GuiFocus changes to 3
         var updatedPaths = new List<EventPath>
         {
-            new("EliteAPI.GuiFocus", 3, ValueType.Number),
-            new("EliteAPI.FireGroup", 1, ValueType.Number)
+            new("EliteAPI.GuiFocus", 3, EventValueType.Number),
+            new("EliteAPI.FireGroup", 1, EventValueType.Number)
         };
 
         var changedFields = tracker.GetChangedFieldNames(updatedPaths);
@@ -67,16 +67,16 @@ public class StatusTrackerTests
         // First update: FuelMain is 32.0
         var initialPaths = new List<EventPath>
         {
-            new("EliteAPI.Fuel.FuelMain", 32.0m, ValueType.Decimal),
-            new("EliteAPI.Fuel.FuelReservoir", 0.5m, ValueType.Decimal)
+            new("EliteAPI.Fuel.FuelMain", 32.0m, EventValueType.Decimal),
+            new("EliteAPI.Fuel.FuelReservoir", 0.5m, EventValueType.Decimal)
         };
         tracker.UpdateState(initialPaths);
 
         // Second update: FuelMain changes to 31.5
         var updatedPaths = new List<EventPath>
         {
-            new("EliteAPI.Fuel.FuelMain", 31.5m, ValueType.Decimal),
-            new("EliteAPI.Fuel.FuelReservoir", 0.5m, ValueType.Decimal)
+            new("EliteAPI.Fuel.FuelMain", 31.5m, EventValueType.Decimal),
+            new("EliteAPI.Fuel.FuelReservoir", 0.5m, EventValueType.Decimal)
         };
 
         var changedFields = tracker.GetChangedFieldNames(updatedPaths);
@@ -94,18 +94,18 @@ public class StatusTrackerTests
         // First update
         var initialPaths = new List<EventPath>
         {
-            new("EliteAPI.Gear", false, ValueType.Boolean),
-            new("EliteAPI.Hardpoints", false, ValueType.Boolean),
-            new("EliteAPI.GuiFocus", 0, ValueType.Number)
+            new("EliteAPI.Gear", false, EventValueType.Boolean),
+            new("EliteAPI.Hardpoints", false, EventValueType.Boolean),
+            new("EliteAPI.GuiFocus", 0, EventValueType.Number)
         };
         tracker.UpdateState(initialPaths);
 
         // Second update: Multiple fields change
         var updatedPaths = new List<EventPath>
         {
-            new("EliteAPI.Gear", true, ValueType.Boolean),
-            new("EliteAPI.Hardpoints", true, ValueType.Boolean),
-            new("EliteAPI.GuiFocus", 0, ValueType.Number)
+            new("EliteAPI.Gear", true, EventValueType.Boolean),
+            new("EliteAPI.Hardpoints", true, EventValueType.Boolean),
+            new("EliteAPI.GuiFocus", 0, EventValueType.Number)
         };
 
         var changedFields = tracker.GetChangedFieldNames(updatedPaths);
@@ -123,16 +123,16 @@ public class StatusTrackerTests
         // First update
         var initialPaths = new List<EventPath>
         {
-            new("EliteAPI.Gear", false, ValueType.Boolean),
-            new("EliteAPI.GuiFocus", 0, ValueType.Number)
+            new("EliteAPI.Gear", false, EventValueType.Boolean),
+            new("EliteAPI.GuiFocus", 0, EventValueType.Number)
         };
         tracker.UpdateState(initialPaths);
 
         // Second update: Same values
         var updatedPaths = new List<EventPath>
         {
-            new("EliteAPI.Gear", false, ValueType.Boolean),
-            new("EliteAPI.GuiFocus", 0, ValueType.Number)
+            new("EliteAPI.Gear", false, EventValueType.Boolean),
+            new("EliteAPI.GuiFocus", 0, EventValueType.Number)
         };
 
         var changedFields = tracker.GetChangedFieldNames(updatedPaths);
@@ -148,9 +148,9 @@ public class StatusTrackerTests
         // First update (no previous state)
         var paths = new List<EventPath>
         {
-            new("EliteAPI.Gear", false, ValueType.Boolean),
-            new("EliteAPI.Hardpoints", false, ValueType.Boolean),
-            new("EliteAPI.GuiFocus", 0, ValueType.Number)
+            new("EliteAPI.Gear", false, EventValueType.Boolean),
+            new("EliteAPI.Hardpoints", false, EventValueType.Boolean),
+            new("EliteAPI.GuiFocus", 0, EventValueType.Number)
         };
 
         var changedFields = tracker.GetChangedFieldNames(paths);
@@ -167,18 +167,18 @@ public class StatusTrackerTests
         // First update
         var initialPaths = new List<EventPath>
         {
-            new("EliteAPI.Fuel.FuelMain", 32.0m, ValueType.Decimal),
-            new("EliteAPI.Fuel.FuelReservoir", 0.5m, ValueType.Decimal),
-            new("EliteAPI.Destination.System", 123456789L, ValueType.Number)
+            new("EliteAPI.Fuel.FuelMain", 32.0m, EventValueType.Decimal),
+            new("EliteAPI.Fuel.FuelReservoir", 0.5m, EventValueType.Decimal),
+            new("EliteAPI.Destination.System", 123456789L, EventValueType.Number)
         };
         tracker.UpdateState(initialPaths);
 
         // Second update: Change nested field
         var updatedPaths = new List<EventPath>
         {
-            new("EliteAPI.Fuel.FuelMain", 31.0m, ValueType.Decimal),
-            new("EliteAPI.Fuel.FuelReservoir", 0.4m, ValueType.Decimal),
-            new("EliteAPI.Destination.System", 987654321L, ValueType.Number)
+            new("EliteAPI.Fuel.FuelMain", 31.0m, EventValueType.Decimal),
+            new("EliteAPI.Fuel.FuelReservoir", 0.4m, EventValueType.Decimal),
+            new("EliteAPI.Destination.System", 987654321L, EventValueType.Number)
         };
 
         var changedFields = tracker.GetChangedFieldNames(updatedPaths);
@@ -197,16 +197,16 @@ public class StatusTrackerTests
         // First update
         var initialPaths = new List<EventPath>
         {
-            new("EliteAPI.Fuel.FuelMain", 32.0m, ValueType.Decimal),
-            new("EliteAPI.Fuel.FuelReservoir", 0.5m, ValueType.Decimal)
+            new("EliteAPI.Fuel.FuelMain", 32.0m, EventValueType.Decimal),
+            new("EliteAPI.Fuel.FuelReservoir", 0.5m, EventValueType.Decimal)
         };
         tracker.UpdateState(initialPaths);
 
         // Second update: Both Fuel subfields change
         var updatedPaths = new List<EventPath>
         {
-            new("EliteAPI.Fuel.FuelMain", 31.0m, ValueType.Decimal),
-            new("EliteAPI.Fuel.FuelReservoir", 0.4m, ValueType.Decimal)
+            new("EliteAPI.Fuel.FuelMain", 31.0m, EventValueType.Decimal),
+            new("EliteAPI.Fuel.FuelReservoir", 0.4m, EventValueType.Decimal)
         };
 
         var changedFields = tracker.GetChangedFieldNames(updatedPaths);
@@ -224,14 +224,14 @@ public class StatusTrackerTests
         // First update
         var initialPaths = new List<EventPath>
         {
-            new("EliteAPI.LegalState", "Clean", ValueType.String)
+            new("EliteAPI.LegalState", "Clean", EventValueType.String)
         };
         tracker.UpdateState(initialPaths);
 
         // Second update: LegalState changes
         var updatedPaths = new List<EventPath>
         {
-            new("EliteAPI.LegalState", "Wanted", ValueType.String)
+            new("EliteAPI.LegalState", "Wanted", EventValueType.String)
         };
 
         var changedFields = tracker.GetChangedFieldNames(updatedPaths);
@@ -248,18 +248,18 @@ public class StatusTrackerTests
         // First update
         var initialPaths = new List<EventPath>
         {
-            new("EliteAPI.Pips.Systems", 2, ValueType.Number),
-            new("EliteAPI.Pips.Engines", 8, ValueType.Number),
-            new("EliteAPI.Pips.Weapons", 2, ValueType.Number)
+            new("EliteAPI.Pips.Systems", 2, EventValueType.Number),
+            new("EliteAPI.Pips.Engines", 8, EventValueType.Number),
+            new("EliteAPI.Pips.Weapons", 2, EventValueType.Number)
         };
         tracker.UpdateState(initialPaths);
 
         // Second update: Pips change
         var updatedPaths = new List<EventPath>
         {
-            new("EliteAPI.Pips.Systems", 4, ValueType.Number),
-            new("EliteAPI.Pips.Engines", 4, ValueType.Number),
-            new("EliteAPI.Pips.Weapons", 4, ValueType.Number)
+            new("EliteAPI.Pips.Systems", 4, EventValueType.Number),
+            new("EliteAPI.Pips.Engines", 4, EventValueType.Number),
+            new("EliteAPI.Pips.Weapons", 4, EventValueType.Number)
         };
 
         var changedFields = tracker.GetChangedFieldNames(updatedPaths);
@@ -277,7 +277,7 @@ public class StatusTrackerTests
         // Initialize
         var initialPaths = new List<EventPath>
         {
-            new("EliteAPI.Gear", false, ValueType.Boolean)
+            new("EliteAPI.Gear", false, EventValueType.Boolean)
         };
         tracker.UpdateState(initialPaths);
 
@@ -290,7 +290,7 @@ public class StatusTrackerTests
             {
                 var paths = new List<EventPath>
                 {
-                    new("EliteAPI.Gear", value, ValueType.Boolean)
+                    new("EliteAPI.Gear", value, EventValueType.Boolean)
                 };
                 tracker.GetChangedFieldNames(paths);
                 tracker.UpdateState(paths);

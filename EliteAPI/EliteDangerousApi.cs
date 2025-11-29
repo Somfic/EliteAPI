@@ -240,6 +240,8 @@ public class EliteDangerousApi
 
     private void HandleBindingsPreset(string presetContent)
     {
+        // look at the preset that occurs the most 
+
         var presets = presetContent.Split('\n').Where(line => !string.IsNullOrWhiteSpace(line)).ToList();
 
         // Make sure all presets use the same format

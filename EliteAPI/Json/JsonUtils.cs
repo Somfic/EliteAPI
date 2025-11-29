@@ -6,7 +6,7 @@ using EliteAPI.Events;
 using EliteAPI.Json.SerializationSettings;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using ValueType = EliteAPI.Events.ValueType;
+using EventValueType = EliteAPI.Events.EventValueType;
 
 namespace EliteAPI.Json;
 
@@ -108,37 +108,37 @@ public static class JsonUtils
             {
                 Path = path,
                 Value = Convert.ToInt32(value.Value),
-                Type = ValueType.Number
+                Type = EventValueType.Number
             },
             JTokenType.Float => new EventPath
             {
                 Path = path,
                 Value = value.Value is BigInteger bigInt ? (decimal)bigInt : Convert.ToDecimal(value.Value),
-                Type = ValueType.Decimal
+                Type = EventValueType.Decimal
             },
             JTokenType.Uri or JTokenType.Guid or JTokenType.String => new EventPath
             {
                 Path = path,
                 Value = Convert.ToString(value.Value) ?? string.Empty,
-                Type = ValueType.String
+                Type = EventValueType.String
             },
             JTokenType.Boolean => new EventPath
             {
                 Path = path,
                 Value = Convert.ToBoolean(value.Value),
-                Type = ValueType.Boolean
+                Type = EventValueType.Boolean
             },
             JTokenType.Date => new EventPath
             {
                 Path = path,
                 Value = Convert.ToDateTime(value.Value),
-                Type = ValueType.DateTime
+                Type = EventValueType.DateTime
             },
             _ => new EventPath
             {
                 Path = "",
                 Value = "",
-                Type = ValueType.String
+                Type = EventValueType.String
             },
         };
     }

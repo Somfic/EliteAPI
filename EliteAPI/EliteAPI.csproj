@@ -4,7 +4,25 @@
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <TargetFramework>netstandard2.0</TargetFramework>
+
+    <!-- NuGet Package Metadata -->
+    <PackageId>EliteAPI</PackageId>
+    <Version>5.0.0</Version>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
+    <Authors>Somfic</Authors>
+    <Description>A .NET library for interacting with Elite Dangerous game data</Description>
+    <PackageProjectUrl>https://github.com/Somfic/EliteAPI</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Somfic/EliteAPI</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>elite;dangerous;api;game;space</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="IsExternalInit" Version="1.0.3">

@@ -1,0 +1,234 @@
+name: release
+
+on:
+  push:
+    branches: [dev]
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+
+      - name: setup .net
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: cache nuget packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
+      - name: restore dependencies
+        run: dotnet restore
+
+      - name: build
+        run: dotnet build --no-restore --configuration Release
+
+  test:
+    name: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+
+      - name: setup .net
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: cache nuget packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
+      - name: restore dependencies
+        run: dotnet restore
+
+      - name: build
+        run: dotnet build --no-restore --configuration Release
+
+      - name: run tests
+        run: dotnet test --no-build --configuration Release
+
+  release:
+    name: release
+    needs: [build, test]
+    runs-on: windows-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: setup .net
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: calculate version and generate changelog
+        id: version
+        shell: bash
+        run: |
+          # Get the latest 5.x.x tag, or default to 5.0.0
+          LAST_TAG=$(git tag -l '5.*.*' --sort=-v:refname | head -n1)
+          if [ -z "$LAST_TAG" ]; then
+            LAST_TAG="5.0.0"
+            COMPARE_REF="$(git rev-list --max-parents=0 HEAD)"
+          else
+            COMPARE_REF="$LAST_TAG"
+          fi
+
+          echo "Last tag: $LAST_TAG"
+          echo "Comparing from: $COMPARE_REF"
+
+          # Parse version components
+          MAJOR=$(echo "$LAST_TAG" | cut -d. -f1)
+          MINOR=$(echo "$LAST_TAG" | cut -d. -f2)
+          PATCH=$(echo "$LAST_TAG" | cut -d. -f3)
+
+          # Track the highest semver change and collect commits by type
+          HIGHEST_CHANGE="none"
+          MAJOR_COMMITS=""
+          MINOR_COMMITS=""
+          PATCH_COMMITS=""
+
+          # Get commits since last tag
+          while IFS= read -r line; do
+            if [ -z "$line" ]; then
+              continue
+            fi
+
+            COMMIT_HASH=$(echo "$line" | cut -d' ' -f1)
+            COMMIT_MSG=$(echo "$line" | cut -d' ' -f2-)
+            COMMIT_SHORT="${COMMIT_HASH:0:7}"
+
+            # Get commit body and look for semver tag
+            COMMIT_BODY=$(git log -1 --format="%b" "$COMMIT_HASH")
+            SEMVER_TAG=$(echo "$COMMIT_BODY" | grep -E 'semver:\s*\w+' | sed -E 's/.*semver:\s*(\w+).*/\1/' | head -n1 || true)
+
+            case "$SEMVER_TAG" in
+              major)
+                if [ "$HIGHEST_CHANGE" != "major" ]; then
+                  HIGHEST_CHANGE="major"
+                fi
+                MAJOR_COMMITS="${MAJOR_COMMITS}- ${COMMIT_MSG} (\`${COMMIT_SHORT}\`)\n"
+                ;;
+              minor)
+                if [ "$HIGHEST_CHANGE" != "major" ]; then
+                  HIGHEST_CHANGE="minor"
+                fi
+                MINOR_COMMITS="${MINOR_COMMITS}- ${COMMIT_MSG} (\`${COMMIT_SHORT}\`)\n"
+                ;;
+              patch)
+                if [ "$HIGHEST_CHANGE" = "none" ]; then
+                  HIGHEST_CHANGE="patch"
+                fi
+                PATCH_COMMITS="${PATCH_COMMITS}- ${COMMIT_MSG} (\`${COMMIT_SHORT}\`)\n"
+                ;;
+            esac
+          done < <(git log "${COMPARE_REF}..HEAD" --format="%H %s" --reverse)
+
+          # If no releasable changes, skip
+          if [ "$HIGHEST_CHANGE" = "none" ]; then
+            echo "No releasable changes found (no semver: major/minor/patch tags)"
+            echo "should_release=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Calculate new version
+          case "$HIGHEST_CHANGE" in
+            major)
+              MINOR=$((MINOR + 1))
+              PATCH=0
+              ;;
+            minor|patch)
+              PATCH=$((PATCH + 1))
+              ;;
+          esac
+
+          NEW_VERSION="${MAJOR}.${MINOR}.${PATCH}"
+          echo "New version: $NEW_VERSION"
+          echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "should_release=true" >> $GITHUB_OUTPUT
+
+          # Generate changelog
+          CHANGELOG="## What's Changed in ${NEW_VERSION}\n\n"
+
+          if [ -n "$MAJOR_COMMITS" ]; then
+            CHANGELOG="${CHANGELOG}### Breaking Changes\n${MAJOR_COMMITS}\n"
+          fi
+
+          if [ -n "$MINOR_COMMITS" ]; then
+            CHANGELOG="${CHANGELOG}### Features\n${MINOR_COMMITS}\n"
+          fi
+
+          if [ -n "$PATCH_COMMITS" ]; then
+            CHANGELOG="${CHANGELOG}### Bug Fixes\n${PATCH_COMMITS}\n"
+          fi
+
+          # Write changelog to file for later use
+          echo -e "$CHANGELOG" > changelog.md
+
+          # Also output for GitHub Actions
+          {
+            echo 'changelog<<EOF'
+            echo -e "$CHANGELOG"
+            echo 'EOF'
+          } >> $GITHUB_OUTPUT
+
+      - name: build release
+        if: steps.version.outputs.should_release == 'true'
+        run: |
+          dotnet restore
+          dotnet build --no-restore --configuration Release /p:Version=${{ steps.version.outputs.version }}
+
+      - name: pack nuget
+        if: steps.version.outputs.should_release == 'true'
+        run: |
+          dotnet pack EliteAPI/EliteAPI.csproj --no-build --configuration Release /p:Version=${{ steps.version.outputs.version }} --output ./nupkg
+
+      - name: zip net48 release
+        if: steps.version.outputs.should_release == 'true'
+        shell: pwsh
+        run: |
+          Compress-Archive -Path "EliteVA/bin/Release/net48/*" -DestinationPath "EliteVA-${{ steps.version.outputs.version }}.zip"
+
+      - name: create git tag
+        if: steps.version.outputs.should_release == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a "${{ steps.version.outputs.version }}" -m "Release ${{ steps.version.outputs.version }}"
+          git push origin "${{ steps.version.outputs.version }}"
+
+      - name: create github release
+        if: steps.version.outputs.should_release == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.version }}
+          name: v${{ steps.version.outputs.version }}
+          body_path: changelog.md
+          draft: false
+          prerelease: false
+          files: |
+            EliteVA-${{ steps.version.outputs.version }}.zip
+
+      - name: publish to nuget
+        if: steps.version.outputs.should_release == 'true'
+        run: |
+          dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate

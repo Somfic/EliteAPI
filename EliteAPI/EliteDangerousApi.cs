@@ -20,8 +20,8 @@ public class EliteDangerousApi
     private readonly StatusTracker _statusTracker = new();
 
     private readonly List<Action<FileInfo>> _journalChangedHandlers = [];
-    private readonly List<Action<IEvent>> _typedGlobalEventHandlers = [];
-    private readonly List<Action<(string eventName, string json)>> _untypedGlobalEventHandlers = [];
+    private readonly List<Action<(IEvent, EventContext)>> _typedGlobalEventHandlers = [];
+    private readonly List<Action<(string eventName, string json, EventContext)>> _untypedGlobalEventHandlers = [];
     private readonly Dictionary<string, List<Action<IEvent>>> _typedEventHandlers = new(StringComparer.OrdinalIgnoreCase);
     private readonly Dictionary<string, Type> _eventTypes = typeof(IEvent)
         .Assembly
@@ -58,14 +58,14 @@ public class EliteDangerousApi
         _journalWatcher.OnContentChanged((json) =>
         {
             JournalUtils.PrepareLocalisations(json);
-            Invoke(json);
+            Invoke(json, new EventContext { SourceFile = _journalWatcher.CurrentFile.Name });
         });
         _journalWatcher.OnFileChanged(file =>
         {
             foreach (var handler in _journalChangedHandlers)
                 SafeInvoke.Invoke("handling journal switch", handler, file);
         });
-        _statusWatchers.ForEach(w => w.OnContentChanged(Invoke));
+        _statusWatchers.ForEach(w => w.OnContentChanged(content => Invoke(content, new EventContext { SourceFile = w.CurrentFile.Name })));
         _bindingsPresetsWatcher.OnContentChanged(HandleBindingsPreset);
 
         _statusWatchers.ForEach(w => w.StartWatching());
@@ -130,7 +130,7 @@ public class EliteDangerousApi
     /// <summary>
     /// Listens for all events which are typed.
     /// </summary>
-    public void OnAll(Action<IEvent> handler)
+    public void OnAll(Action<(IEvent, EventContext)> handler)
     {
         _typedGlobalEventHandlers.Add(handler);
     }
@@ -138,19 +138,19 @@ public class EliteDangerousApi
     /// <summary>
     /// Listens for all events with raw JSON
     /// </summary>
-    public void OnAllJson(Action<(string eventName, string json)> handler)
+    public void OnAllJson(Action<(string eventName, string json, EventContext eventContext)> handler)
     {
         _untypedGlobalEventHandlers.Add(handler);
     }
 
-    public void Invoke(IEvent @event)
+    public void Invoke(IEvent @event, EventContext eventContext)
     {
-        Invoke(JsonConvert.SerializeObject(@event, JsonUtils.SerializerSettings), @event);
+        Invoke(JsonConvert.SerializeObject(@event, JsonUtils.SerializerSettings), @event, eventContext);
     }
 
-    public void Invoke(string json) => Invoke(json, null);
+    public void Invoke(string json, EventContext eventContext) => Invoke(json, null, eventContext);
 
-    internal void Invoke(string json, IEvent? @event)
+    internal void Invoke(string json, IEvent? @event, EventContext eventContext)
     {
         var eventName = JsonUtils.GetEventName(json);
         if (string.IsNullOrEmpty(eventName))
@@ -194,7 +194,7 @@ public class EliteDangerousApi
 
         // invoke global untyped handlers
         foreach (var handler in _untypedGlobalEventHandlers)
-            SafeInvoke.Invoke($"{eventName} hander", handler, (eventName, json));
+            SafeInvoke.Invoke($"{eventName} hander", handler, (eventName, json, eventContext));
 
         if (@event != null)
         {
@@ -207,7 +207,7 @@ public class EliteDangerousApi
 
             // invoke global typed handlers
             foreach (var handler in _typedGlobalEventHandlers)
-                SafeInvoke.Invoke($"{eventName} hander", handler, @event);
+                SafeInvoke.Invoke($"{eventName} hander", handler, (@event, eventContext));
         }
 
         // After Status event is processed and variables are set, invoke change events
@@ -230,7 +230,7 @@ public class EliteDangerousApi
 
                 // invoke global untyped handlers for synthetic event
                 foreach (var handler in _untypedGlobalEventHandlers)
-                    SafeInvoke.Invoke($"{syntheticEventName} handler", handler, (syntheticEventName, syntheticJson));
+                    SafeInvoke.Invoke($"{syntheticEventName} handler", handler, (syntheticEventName, syntheticJson, eventContext));
             }
 
             // Always update the tracker state, even if no fields changed

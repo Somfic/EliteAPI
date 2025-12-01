@@ -5,21 +5,21 @@ namespace EliteAPI.Events.Game;
 
 public readonly struct LaunchSrvEvent : IEvent
 {
-	[JsonProperty("timestamp")]
-	public DateTime Timestamp { get; init; }
+    [JsonProperty("timestamp")]
+    public DateTime Timestamp { get; init; }
 
-	[JsonProperty("event")]
-	public string Event { get; init; }
+    [JsonProperty("event")]
+    public string Event { get; init; }
 
-	[JsonProperty("Loadout")]
-	public string Loadout { get; init; }
+    [JsonProperty("Loadout")]
+    public string Loadout { get; init; }
 
-	[JsonProperty("ID")]
-	public string Id { get; init; }
+    [JsonProperty("ID")]
+    public string Id { get; init; }
 
-	[JsonProperty("PlayerControlled")]
-	public bool IsPlayerControlled { get; init; }
+    [JsonProperty("PlayerControlled")]
+    public bool IsPlayerControlled { get; init; }
 
-	[JsonProperty("SRVType")]
-	public string SRVType { get; init; }
+    [JsonProperty("SRVType")]
+    public string SRVType { get; init; }
 }

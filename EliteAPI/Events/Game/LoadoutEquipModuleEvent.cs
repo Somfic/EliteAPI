@@ -5,33 +5,33 @@ namespace EliteAPI.Events.Game;
 
 public readonly struct LoadoutEquipModuleEvent : IEvent
 {
-	[JsonProperty("timestamp")]
-	public DateTime Timestamp { get; init; }
+    [JsonProperty("timestamp")]
+    public DateTime Timestamp { get; init; }
 
-	[JsonProperty("event")]
-	public string Event { get; init; }
+    [JsonProperty("event")]
+    public string Event { get; init; }
 
-	[JsonProperty("LoadoutName")]
-	public string LoadoutName { get; init; }
+    [JsonProperty("LoadoutName")]
+    public string LoadoutName { get; init; }
 
-	[JsonProperty("SuitID")]
-	public string SuitId { get; init; }
+    [JsonProperty("SuitID")]
+    public string SuitId { get; init; }
 
-	[JsonProperty("SuitName")]
-	public LocalisedField SuitName { get; init; }
+    [JsonProperty("SuitName")]
+    public LocalisedField SuitName { get; init; }
 
-	[JsonProperty("LoadoutID")]
-	public string LoadoutId { get; init; }
+    [JsonProperty("LoadoutID")]
+    public string LoadoutId { get; init; }
 
-	[JsonProperty("SlotName")]
-	public string SlotName { get; init; }
+    [JsonProperty("SlotName")]
+    public string SlotName { get; init; }
 
-	[JsonProperty("ModuleName")]
-	public LocalisedField ModuleName { get; init; }
+    [JsonProperty("ModuleName")]
+    public LocalisedField ModuleName { get; init; }
 
-	[JsonProperty("SuitModuleID")]
-	public string SuitModuleId { get; init; }
+    [JsonProperty("SuitModuleID")]
+    public string SuitModuleId { get; init; }
 
-	[JsonProperty("Class")]
-	public int Class { get; init; }
+    [JsonProperty("Class")]
+    public int Class { get; init; }
 }

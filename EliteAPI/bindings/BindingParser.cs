@@ -16,12 +16,13 @@ public static class BindingParser
             var root = doc.Root;
 
             var controls = root.Elements()
+                .Where(HasBindingElements)
                 .Select(ParseElement)
                 .ToArray();
 
             return controls;
         }
-        catch (Exception e)
+        catch
         {
             return [];
         }
@@ -34,7 +35,9 @@ public static class BindingParser
 
         var deadzoneRaw = GetAttribute(GetChildElement(element, "Deadzone"), "Value");
         var invertedRaw = GetAttribute(GetChildElement(element, "Inverted"), "Value");
-        var toggleRaw = GetAttribute(GetChildElement(element, "ToggleOn"), "Value");
+
+        var toggleElement = GetChildElement(element, "ToggleOn");
+        var toggleRaw = GetAttribute(toggleElement, "Value");
 
         return new Control
         {
@@ -42,7 +45,7 @@ public static class BindingParser
             Primary = ParseBinding(primaryElement),
             Secondary = ParseBinding(secondaryElement),
             Deadzone = ParseFloat(deadzoneRaw),
-            IsToggle = ParseBool(toggleRaw),
+            IsToggle = ParseToggle(toggleElement, toggleRaw),
             IsInverted = ParseBool(invertedRaw)
         };
     }
@@ -110,6 +113,33 @@ public static class BindingParser
         null => null,
         _ => null
     };
+
+    /// <summary>
+    /// Parse ToggleOn element. If element exists with no Value attribute, treat as true (HCS pattern).
+    /// </summary>
+    private static bool? ParseToggle(XElement? element, string? value)
+    {
+        if (element is null)
+            return null;
+
+        // Element exists with no Value attribute - treat as true (HCS pattern)
+        if (value is null)
+            return true;
+
+        return ParseBool(value);
+    }
+
+    /// <summary>
+    /// Check if element has binding-related children (Primary, Secondary, or Binding).
+    /// Elements with only value children should be filtered out.
+    /// </summary>
+    private static bool HasBindingElements(XElement element)
+    {
+        return element.Elements()
+            .Any(e => string.Equals(e.Name.LocalName, "Primary", StringComparison.OrdinalIgnoreCase)
+                   || string.Equals(e.Name.LocalName, "Secondary", StringComparison.OrdinalIgnoreCase)
+                   || string.Equals(e.Name.LocalName, "Binding", StringComparison.OrdinalIgnoreCase));
+    }
 
     private static XElement? GetChildElement(XElement parent, string name) =>
         parent.Elements()

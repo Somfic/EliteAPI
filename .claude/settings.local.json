@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet build:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Read(//c/Users/Lucas/EDAPGui/**)",
+      "Bash(del \"C:\\Users\\Lucas\\eliteapi\\EliteAI\\UI\\Navball.cs\")",
+      "Read(//c/Users/Lucas/**)",
+      "Bash(cat:*)",
+      "Bash(dotnet restore)",
+      "Bash(dotnet test)",
+      "Bash(findstr:*)",
+      "Bash(dotnet test:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

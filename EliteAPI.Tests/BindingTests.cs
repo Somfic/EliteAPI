@@ -9,7 +9,7 @@ public class BindingParserTests
     [Test]
     public void Parse_Sample_File()
     {
-        string xml = File.ReadAllText(@"EliteAPI.Tests\test.binds");
+        string xml = File.ReadAllText("test.binds");
 
         var content = BindingParser.Parse(xml);
 

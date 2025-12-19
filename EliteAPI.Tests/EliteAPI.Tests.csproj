@@ -15,4 +15,10 @@
     <ProjectReference Include="..\EliteAPI\EliteAPI.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="test.binds">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

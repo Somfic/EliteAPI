@@ -8,7 +8,7 @@ public class StatusChangeEventTests
     [Test]
     public void FiresStatusEvent_WhenStatusJsonProcessed()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var statusEventFired = false;
 
         api.OnJson("Status", e => statusEventFired = true);
@@ -22,7 +22,7 @@ public class StatusChangeEventTests
     [Test]
     public void FiresChangeEvent_WhenFieldChanges()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var gearChangeEventFired = false;
 
         api.OnJson("Status.Gear", e => gearChangeEventFired = true);
@@ -43,7 +43,7 @@ public class StatusChangeEventTests
     [Test]
     public void DoesNotFireChangeEvent_WhenFieldStaysSame()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var gearChangeEventFired = false;
 
         api.OnJson("Status.Gear", e => gearChangeEventFired = true);
@@ -62,7 +62,7 @@ public class StatusChangeEventTests
     [Test]
     public void FiresMultipleChangeEvents_WhenMultipleFieldsChange()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var gearChangeEventFired = false;
         var hardpointsChangeEventFired = false;
 
@@ -84,7 +84,7 @@ public class StatusChangeEventTests
     [Test]
     public void FiresChangeEvent_ForNumericFieldChanges()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var guiFocusChangeEventFired = false;
 
         api.OnJson("Status.GuiFocus", e => guiFocusChangeEventFired = true);
@@ -103,7 +103,7 @@ public class StatusChangeEventTests
     [Test]
     public void FiresChangeEvent_ForNestedFieldChanges()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var fuelChangeEventFired = false;
 
         api.OnJson("Status.Fuel", e => fuelChangeEventFired = true);
@@ -122,7 +122,7 @@ public class StatusChangeEventTests
     [Test]
     public void FiresChangeEvent_ForPipsChanges()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var pipsChangeEventFired = false;
 
         api.OnJson("Status.Pips", e => pipsChangeEventFired = true);
@@ -141,7 +141,7 @@ public class StatusChangeEventTests
     [Test]
     public void FiresEventsInCorrectOrder_StatusThenChanges()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var eventOrder = new List<string>();
 
         api.OnAllJson(e =>
@@ -168,7 +168,7 @@ public class StatusChangeEventTests
     [Test]
     public void OnlyFiresChangeEvent_ForRootField_NotSubfields()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var eventsFired = new List<string>();
 
         api.OnAllJson(e =>
@@ -195,7 +195,7 @@ public class StatusChangeEventTests
     [Test]
     public void DoesNotFireChangeEvents_ForNonStatusEvents()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var changeEventsFired = 0;
 
         api.OnAllJson(e =>
@@ -214,7 +214,7 @@ public class StatusChangeEventTests
     [Test]
     public void AllowsMultipleHandlers_ForSameChangeEvent()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var handler1Fired = false;
         var handler2Fired = false;
 
@@ -236,7 +236,7 @@ public class StatusChangeEventTests
     [Test]
     public void FiresChangeEvent_ForBalance_WhenItChanges()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var balanceChangeEventFired = false;
 
         api.OnJson("Status.Balance", e => balanceChangeEventFired = true);

@@ -93,14 +93,8 @@ public class Plugin : VoiceAttackPlugin
                     _ => TypeCode.String
                 });
             });
-
-            // For Status field change events, use EliteAPI.Status.{Field} format
-            // For regular events, use the event name as-is
-            var commandName = e.eventName.StartsWith("Status.")
-                ? $"EliteAPI.{e.eventName}"
-                : e.eventName;
-
-            var command = $"(({commandName}))";
+            
+            var command = $"((EliteAPI.{e.eventName}))";
             if (proxy.Commands.Exists(command))
                 proxy.Commands.Invoke(command);
 

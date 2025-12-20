@@ -31,6 +31,8 @@ public class EliteDangerousApi
     private readonly Dictionary<string, List<Action<(string eventName, string json)>>> _untypedEventHandlers = new(StringComparer.OrdinalIgnoreCase);
     private readonly List<Action<IReadOnlyCollection<Control>>> _bindingsHandlers = [];
 
+    public Version Version => typeof(EliteDangerousApi).Assembly.GetName().Version!;
+    
     public EliteDangerousApi() : this(JournalUtils.GetJournalsDirectory(), BindingsUtils.GetBindingsDirectory())
     {
     }

@@ -228,7 +228,7 @@ jobs:
           files: |
             EliteVA-${{ steps.version.outputs.version }}.zip
 
-      - name: publish to nuget
-        if: steps.version.outputs.should_release == 'true'
-        run: |
-          dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+#      - name: publish to nuget
+#        if: steps.version.outputs.should_release == 'true'
+#        run: |
+#          dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate

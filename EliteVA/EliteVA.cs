@@ -116,6 +116,7 @@ public class Plugin : VoiceAttackPlugin
             }
         });
 
+        proxy.Variables.Set("EliteAPI.Version", _api.Version.ToString(), TypeCode.String);
         _api.Start();
         WriteToLog(VoiceAttackColor.Green, $"EliteAPI started");
     }

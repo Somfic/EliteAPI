@@ -126,19 +126,19 @@ jobs:
                 if [ "$HIGHEST_CHANGE" != "major" ]; then
                   HIGHEST_CHANGE="major"
                 fi
-                MAJOR_COMMITS="${MAJOR_COMMITS}- ${COMMIT_MSG} (\`${COMMIT_SHORT}\`)\n"
+                MAJOR_COMMITS="${MAJOR_COMMITS}- ${COMMIT_MSG}\n"
                 ;;
               minor)
                 if [ "$HIGHEST_CHANGE" != "major" ]; then
                   HIGHEST_CHANGE="minor"
                 fi
-                MINOR_COMMITS="${MINOR_COMMITS}- ${COMMIT_MSG} (\`${COMMIT_SHORT}\`)\n"
+                MINOR_COMMITS="${MINOR_COMMITS}- ${COMMIT_MSG}\n"
                 ;;
               patch)
                 if [ "$HIGHEST_CHANGE" = "none" ]; then
                   HIGHEST_CHANGE="patch"
                 fi
-                PATCH_COMMITS="${PATCH_COMMITS}- ${COMMIT_MSG} (\`${COMMIT_SHORT}\`)\n"
+                PATCH_COMMITS="${PATCH_COMMITS}- ${COMMIT_MSG}\n"
                 ;;
             esac
           done < <(git log "${COMPARE_REF}..HEAD" --format="%H %s" --reverse)
@@ -167,18 +167,18 @@ jobs:
           echo "should_release=true" >> $GITHUB_OUTPUT
 
           # Generate changelog
-          CHANGELOG="## What's Changed in ${NEW_VERSION}\n\n"
+          CHANGELOG="## What's new in ${NEW_VERSION}\n\n"
 
           if [ -n "$MAJOR_COMMITS" ]; then
-            CHANGELOG="${CHANGELOG}### Breaking Changes\n${MAJOR_COMMITS}\n"
+            CHANGELOG="${CHANGELOG}### Breaking changes\n${MAJOR_COMMITS}\n"
           fi
 
           if [ -n "$MINOR_COMMITS" ]; then
-            CHANGELOG="${CHANGELOG}### Features\n${MINOR_COMMITS}\n"
+            CHANGELOG="${CHANGELOG}### New features\n${MINOR_COMMITS}\n"
           fi
 
           if [ -n "$PATCH_COMMITS" ]; then
-            CHANGELOG="${CHANGELOG}### Bug Fixes\n${PATCH_COMMITS}\n"
+            CHANGELOG="${CHANGELOG}### Fixes\n${PATCH_COMMITS}\n"
           fi
 
           # Write changelog to file for later use

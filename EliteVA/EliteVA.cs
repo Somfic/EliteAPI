@@ -47,32 +47,17 @@ public class Plugin : VoiceAttackPlugin
             proxy.Log.Write($"Watching {e.Name}", VoiceAttackColor.Blue);
         });
 
-        _api.OnKeybindingsChanged(e =>
+        _api.OnKeybindingsChanged(bindings =>
         {
-            List<(string name, Binding binding)> bindings = [];
-
-            foreach (var binding in e)
-            {
-                Binding keyboardBinding;
-
-                if (binding.Primary.HasValue && binding.Primary.Value.Device == "Keyboard")
-                    keyboardBinding = binding.Primary.Value;
-                else if (binding.Secondary.HasValue && binding.Secondary.Value.Device == "Keyboard")
-                    keyboardBinding = binding.Secondary.Value;
-                else
-                    continue;
-
-                bindings.Add((binding.Name, keyboardBinding));
-
-                Proxy.Variables.Set($"EliteAPI.{binding.Name}", binding.Primary.HasValue ? binding.Primary.Value.KeyCode : "", TypeCode.String);
-            }
+            foreach (var binding in bindings)
+                Proxy.Variables.Set($"EliteAPI.{binding.Name}", binding.KeyCode, TypeCode.String);
 
             if (!Directory.Exists(Path.Combine(Dir, "Variables")))
                 Directory.CreateDirectory(Path.Combine(Dir, "Variables"));
 
-            File.WriteAllText(Path.Combine(Dir, "Variables", $"Keybindings.txt"), bindings.Select(b => $"{{TXT:EliteAPI.{b.name}}}: {b.binding.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
+            File.WriteAllText(Path.Combine(Dir, "Variables", "Keybindings.txt"), bindings.Select(b => $"{{TXT:EliteAPI.{b.Name}}}: {b.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
 
-            proxy.Log.Write($"Applying {bindings.Count} keybindings", VoiceAttackColor.Blue);
+            proxy.Log.Write($"Applying {bindings.Count(b => !string.IsNullOrEmpty(b.KeyCode))} keybindings", VoiceAttackColor.Blue);
         });
 
         // json event

@@ -70,7 +70,7 @@ public class Plugin : VoiceAttackPlugin
             if (!Directory.Exists(Path.Combine(Dir, "Variables")))
                 Directory.CreateDirectory(Path.Combine(Dir, "Variables"));
 
-            File.WriteAllText(Path.Combine(Dir, "Variables", $"Keybindings.txt"), bindings.Select(b => $"{{TXT:{b.name}}}: {b.binding.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
+            File.WriteAllText(Path.Combine(Dir, "Variables", $"Keybindings.txt"), bindings.Select(b => $"{{TXT:EliteAPI.{b.name}}}: {b.binding.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
 
             proxy.Log.Write($"Applying {bindings.Count} keybindings", VoiceAttackColor.Blue);
         });

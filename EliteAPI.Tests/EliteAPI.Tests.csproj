@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="TUnit" Version="1.6.27" />
+    <PackageReference Include="TUnit" Version="1.6.28" />
     <PackageReference Include="FluentAssertions" Version="8.8.0" />
   </ItemGroup>
 

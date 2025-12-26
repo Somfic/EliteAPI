@@ -600,3 +600,4 @@ vite.config.ts.timestamp-*
 .direnv/
 result
 result-*
+/.claude

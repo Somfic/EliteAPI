@@ -523,4 +523,40 @@ public class Flattening
 
         paths.Should().BeEquivalentTo(expected);
     }
+
+    [Test]
+    public void GetEventName_WithEmptyString_ReturnsEmptyString()
+    {
+        var json = "";
+        var eventName = JsonUtils.GetEventName(json);
+
+        eventName.Should().BeEmpty();
+    }
+
+    [Test]
+    public void GetEventName_WithWhitespace_ReturnsEmptyString()
+    {
+        var json = "   ";
+        var eventName = JsonUtils.GetEventName(json);
+
+        eventName.Should().BeEmpty();
+    }
+
+    [Test]
+    public void GetEventName_WithValidEvent_ReturnsEventName()
+    {
+        var json = """{ "event": "TestEvent", "timestamp": "2025-01-01T00:00:00Z" }""";
+        var eventName = JsonUtils.GetEventName(json);
+
+        eventName.Should().Be("TestEvent");
+    }
+
+    [Test]
+    public void GetEventName_WithNoEventField_ReturnsEmptyString()
+    {
+        var json = """{ "timestamp": "2025-01-01T00:00:00Z" }""";
+        var eventName = JsonUtils.GetEventName(json);
+
+        eventName.Should().BeEmpty();
+    }
 }

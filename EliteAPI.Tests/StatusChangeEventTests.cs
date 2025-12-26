@@ -251,4 +251,34 @@ public class StatusChangeEventTests
 
         balanceChangeEventFired.Should().BeTrue();
     }
+
+    [Test]
+    public void DoesNotThrow_WhenJsonIsEmpty()
+    {
+        var api = new EliteDangerousApi(null, null);
+        var anyEventFired = false;
+
+        api.OnAllJson(e => anyEventFired = true);
+
+        var emptyJson = "";
+        var invokeAction = () => api.Invoke(emptyJson);
+
+        invokeAction.Should().NotThrow("empty JSON should be handled gracefully");
+        anyEventFired.Should().BeFalse("no events should fire for empty JSON");
+    }
+
+    [Test]
+    public void DoesNotThrow_WhenJsonIsWhitespace()
+    {
+        var api = new EliteDangerousApi(null, null);
+        var anyEventFired = false;
+
+        api.OnAllJson(e => anyEventFired = true);
+
+        var whitespaceJson = "   ";
+        var invokeAction = () => api.Invoke(whitespaceJson);
+
+        invokeAction.Should().NotThrow("whitespace JSON should be handled gracefully");
+        anyEventFired.Should().BeFalse("no events should fire for whitespace JSON");
+    }
 }

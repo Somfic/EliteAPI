@@ -32,7 +32,7 @@ public class EliteDangerousApi
     private readonly List<Action<IReadOnlyCollection<Control>>> _bindingsHandlers = [];
 
     public Version Version => typeof(EliteDangerousApi).Assembly.GetName().Version!;
-    
+
     public EliteDangerousApi() : this(JournalUtils.GetJournalsDirectory(), BindingsUtils.GetBindingsDirectory())
     {
     }
@@ -53,7 +53,7 @@ public class EliteDangerousApi
                 "Outfitting.json",
                 "ShipLocker.json",
                 "Shipyard.json",
-                "Status.json"
+                "Status.json",
             ];
 
             _statusWatchers = statusFiles
@@ -186,6 +186,12 @@ public class EliteDangerousApi
 
     internal void Invoke(string json, IEvent? @event)
     {
+        if (string.IsNullOrWhiteSpace(json))
+        {
+            Log.Debug("Skipping empty event");
+            return;
+        }
+
         var eventName = JsonUtils.GetEventName(json);
         if (string.IsNullOrEmpty(eventName))
         {

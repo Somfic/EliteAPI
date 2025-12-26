@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using EliteAPI.Utils;
 using EliteVA.Logging;
 
 namespace EliteVA;
@@ -39,7 +40,7 @@ public class VoiceAttackPluginWrapper
             VoiceAttackPlugin.Instance.WriteToLog(VoiceAttackColor.Red, "Error during plugin initialisation. See logs for further information");
             var path = Path.Combine(VoiceAttackPlugin.Dir, "Logs", "STARTUP ERROR.log");
             Directory.CreateDirectory(Path.GetDirectoryName(path) ?? VoiceAttackPlugin.Dir);
-            File.WriteAllText(path, e.ToString());
+            FileUtils.WriteWithRetry(path, e.ToString());
         }
     }
 

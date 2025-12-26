@@ -6,7 +6,7 @@ namespace EliteAPI.Utils;
 
 public static class Log
 {
-    private static readonly object _fileLock = new();
+    private static readonly object _pathLock = new();
     private static readonly object _listenerLock = new();
     private static string? _logFilePath;
     private static readonly List<Action<LogMessage>> _listeners = [];
@@ -35,7 +35,7 @@ public static class Log
         if (!File.Exists(path))
             File.Create(path).Dispose();
 
-        lock (_fileLock)
+        lock (_pathLock)
         {
             _logFilePath = path;
         }
@@ -122,25 +122,22 @@ public static class Log
         var timestamp = DateTime.Now;
         var logEntry = $"[{timestamp:yyyy-MM-dd HH:mm:ss.fff}] [{level}] {message}";
 
-        // Write to file in a thread-safe manner
-        lock (_fileLock)
+        // Write to file with retry logic for handling temporary locks
+        try
         {
-            try
+            var logPath = GetLogFilePath();
+            var directory = Path.GetDirectoryName(logPath);
+            if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
             {
-                var logPath = GetLogFilePath();
-                var directory = Path.GetDirectoryName(logPath);
-                if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
-                {
-                    Directory.CreateDirectory(directory);
-                }
+                Directory.CreateDirectory(directory);
+            }
 
-                File.AppendAllText(logPath, logEntry + Environment.NewLine);
-            }
-            catch (Exception ex)
-            {
-                // If we can't write to the log file, at least write to console
-                Console.WriteLine($"Failed to write to log file: {ex.Message}");
-            }
+            FileUtils.AppendWithRetry(logPath, logEntry + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+            // If we can't write to the log file, at least write to console
+            Console.WriteLine($"Failed to write to log file: {ex.Message}");
         }
 
         // Notify listeners in a thread-safe manner

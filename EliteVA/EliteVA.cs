@@ -55,7 +55,7 @@ public class Plugin : VoiceAttackPlugin
             if (!Directory.Exists(Path.Combine(Dir, "Variables")))
                 Directory.CreateDirectory(Path.Combine(Dir, "Variables"));
 
-            File.WriteAllText(Path.Combine(Dir, "Variables", "Keybindings.txt"), bindings.Select(b => $"{{TXT:EliteAPI.{b.Name}}}: {b.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
+            FileUtils.WriteWithRetry(Path.Combine(Dir, "Variables", "Keybindings.txt"), bindings.Select(b => $"{{TXT:EliteAPI.{b.Name}}}: {b.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
 
             proxy.Log.Write($"Applying {bindings.Count(b => !string.IsNullOrEmpty(b.KeyCode))} keybindings", VoiceAttackColor.Blue);
         });
@@ -91,7 +91,7 @@ public class Plugin : VoiceAttackPlugin
                 if (!Directory.Exists(Path.Combine(Dir, "Variables")))
                     Directory.CreateDirectory(Path.Combine(Dir, "Variables"));
 
-                File.WriteAllText(Path.Combine(Dir, "Variables", $"{e.eventName}.txt"), paths.Select(p => $"{{{p.Type.ToDisplayType()}:{p.Path}}}: {p.Value}").Aggregate((a, b) => $"{a}\n{b}"));
+                FileUtils.WriteWithRetry(Path.Combine(Dir, "Variables", $"{e.eventName}.txt"), paths.Select(p => $"{{{p.Type.ToDisplayType()}:{p.Path}}}: {p.Value}").Aggregate((a, b) => $"{a}\n{b}"));
             }
         });
 

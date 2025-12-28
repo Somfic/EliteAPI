@@ -4,7 +4,7 @@ namespace EliteAPI.Journals
 {
     public static class StatusUtils
     {
-        public static Dictionary<string, bool> GetFlags(int flags) => new()
+        public static Dictionary<string, bool> GetFlags(uint flags) => new()
         {
             { "Available", flags != 0 },
             { "Docked", (flags & 1) != 0 },
@@ -38,7 +38,7 @@ namespace EliteAPI.Journals
             { "NightVision", (flags & (1 << 28)) != 0 }
         };
 
-        public static Dictionary<string, bool> GetFlags2(int flags2) => new()
+        public static Dictionary<string, bool> GetFlags2(uint flags2) => new()
         {
             { "OnFoot", (flags2 & 1) != 0 },
             { "InTaxi", (flags2 & (1 << 1)) != 0 },

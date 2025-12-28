@@ -27,13 +27,13 @@ public static class JournalUtils
 
             // expand flags
             var flagsPath = paths.FirstOrDefault(p => p.Path == "Flags");
-            var flagsValue = flagsPath.Equals(default(EventPath)) ? 0 : Convert.ToInt32(flagsPath.Value);
+            var flagsValue = flagsPath.Equals(default(EventPath)) ? 0u : Convert.ToUInt32(flagsPath.Value);
             foreach (var flag in StatusUtils.GetFlags(flagsValue))
                 paths.Add(new EventPath(flag.Key, flag.Value, EventValueType.Boolean));
 
             // expand flags2
             var flags2Path = paths.FirstOrDefault(p => p.Path == "Flags2");
-            var flags2Value = flags2Path.Equals(default(EventPath)) ? 0 : Convert.ToInt32(flags2Path.Value);
+            var flags2Value = flags2Path.Equals(default(EventPath)) ? 0u : Convert.ToUInt32(flags2Path.Value);
             foreach (var flag in StatusUtils.GetFlags2(flags2Value))
                 paths.Add(new EventPath(flag.Key, flag.Value, EventValueType.Boolean));
 

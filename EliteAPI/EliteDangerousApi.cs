@@ -54,6 +54,7 @@ public class EliteDangerousApi
                 "ShipLocker.json",
                 "Shipyard.json",
                 "Status.json",
+                "Backpack.json"
             ];
 
             _statusWatchers = statusFiles

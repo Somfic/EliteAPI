@@ -18,6 +18,7 @@ public static class BindingParser
             var controls = root.Elements()
                 .Where(HasBindingElements)
                 .Select(ParseElement)
+                .Where(x => x.Primary.HasValue || x.Secondary.HasValue)
                 .ToArray();
 
             return controls;

@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace EliteAPI.Bindings;
 
 public readonly struct Control
@@ -25,4 +27,10 @@ public readonly struct Control
         
         return string.Empty;
     }}
+
+    public string ToDebugString()
+    {
+        var bindings = ((Binding?[])[ Primary, Secondary]).Where(b => b.HasValue).Select(x => x!.Value.ToDebugString()).ToArray();
+        return string.Join(", ", bindings);
+    }
 }

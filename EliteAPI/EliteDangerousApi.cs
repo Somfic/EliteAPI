@@ -305,6 +305,10 @@ public class EliteDangerousApi
         var bindings = BindingParser.Parse(File.ReadAllText(file.FullName));
 
         Log.Info($"Loaded {bindings.Count} keybindings from preset '{preset}'");
+        foreach (var binding in bindings.Where(x => x.IsValid))
+            Log.Debug($"     OK: {binding.Name}: {binding.KeyCode} ({binding.ToDebugString()})");
+        foreach (var binding in bindings.Where(x => !x.IsValid))
+            Log.Debug($" NOT OK: {binding.Name}: {binding.ToDebugString()}");
 
         foreach (var handler in _bindingsHandlers)
             SafeInvoke.Invoke("handling keybindings change", handler, bindings);

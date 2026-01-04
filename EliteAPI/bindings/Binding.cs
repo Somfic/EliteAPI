@@ -18,4 +18,12 @@ public readonly struct Binding
         Key = key;
         Modifiers = modifiers;
     }
+
+    public string ToDebugString()
+    {
+        var modifiers = Modifiers is null || Modifiers.Length == 0
+            ? string.Empty
+            : $"{string.Join("+", Modifiers.Select(m => m.Key))}+";
+        return $"{modifiers}{Key}";
+    }
 }

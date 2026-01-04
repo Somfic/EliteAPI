@@ -13,6 +13,8 @@ public readonly struct Control
     public bool? IsInverted { get; init; }
 
     public float? Deadzone { get; init; }
+
+    public bool IsValid => !string.IsNullOrEmpty(KeyCode);
     
     public string KeyCode { get {
         if (Primary is { Device: "Keyboard" })

@@ -7,7 +7,7 @@ namespace EliteAPI.Tests;
 
 public class StatusTrackerTests
 {
-    [Test]
+    [Fact]
     public void DetectsFieldChange_WhenBooleanValueChanges()
     {
         var tracker = new StatusTracker();
@@ -33,7 +33,7 @@ public class StatusTrackerTests
         changedFields.Should().Contain("Gear");
     }
 
-    [Test]
+    [Fact]
     public void DetectsFieldChange_WhenNumericValueChanges()
     {
         var tracker = new StatusTracker();
@@ -59,7 +59,7 @@ public class StatusTrackerTests
         changedFields.Should().Contain("GuiFocus");
     }
 
-    [Test]
+    [Fact]
     public void DetectsFieldChange_WhenDecimalValueChanges()
     {
         var tracker = new StatusTracker();
@@ -86,7 +86,7 @@ public class StatusTrackerTests
         changedFields.Should().Contain("Fuel");
     }
 
-    [Test]
+    [Fact]
     public void DetectsMultipleFieldChanges()
     {
         var tracker = new StatusTracker();
@@ -115,7 +115,7 @@ public class StatusTrackerTests
         changedFields.Should().Contain("Hardpoints");
     }
 
-    [Test]
+    [Fact]
     public void ReturnsEmptyList_WhenNoFieldsChange()
     {
         var tracker = new StatusTracker();
@@ -140,7 +140,7 @@ public class StatusTrackerTests
         changedFields.Should().BeEmpty();
     }
 
-    [Test]
+    [Fact]
     public void ReturnsEmptyList_OnFirstUpdate()
     {
         var tracker = new StatusTracker();
@@ -159,7 +159,7 @@ public class StatusTrackerTests
         changedFields.Should().BeEmpty();
     }
 
-    [Test]
+    [Fact]
     public void ExtractsRootFieldName_FromNestedPath()
     {
         var tracker = new StatusTracker();
@@ -189,7 +189,7 @@ public class StatusTrackerTests
         changedFields.Should().Contain("Destination");
     }
 
-    [Test]
+    [Fact]
     public void OnlyReportsRootFieldOnce_WhenMultipleSubfieldsChange()
     {
         var tracker = new StatusTracker();
@@ -216,7 +216,7 @@ public class StatusTrackerTests
         changedFields.Should().Contain("Fuel");
     }
 
-    [Test]
+    [Fact]
     public void HandlesStringValueChanges()
     {
         var tracker = new StatusTracker();
@@ -240,7 +240,7 @@ public class StatusTrackerTests
         changedFields.Should().Contain("LegalState");
     }
 
-    [Test]
+    [Fact]
     public void HandlesPipsArrayChanges()
     {
         var tracker = new StatusTracker();
@@ -269,7 +269,7 @@ public class StatusTrackerTests
         changedFields.Should().Contain("Pips");
     }
 
-    [Test]
+    [Fact]
     public void IsThreadSafe_WhenAccessedConcurrently()
     {
         var tracker = new StatusTracker();

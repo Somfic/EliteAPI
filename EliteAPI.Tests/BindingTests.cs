@@ -6,17 +6,17 @@ namespace EliteAPI.Tests.Bindings;
 public class BindingParserTests
 {
 
-    [Test]
+    [Fact]
     public void Parse_Sample_File()
     {
-        string xml = File.ReadAllText("test.binds");
+        string xml = File.ReadAllText("Bindings/test.binds");
 
         var content = BindingParser.Parse(xml);
 
         content.Should().NotBeNull();
     }
 
-    [Test]
+    [Fact]
     public void Parse_Should_Read_Simple_Primary_Keyboard_Bindings()
     {
         const string xml = @"<?xml version=""1.0"" encoding=""UTF-8""?>
@@ -53,7 +53,7 @@ public class BindingParserTests
         yawRight.Secondary.HasValue.Should().BeFalse();
     }
 
-    [Test]
+    [Fact]
     public void Parse_Should_Treat_NoDevice_EmptyKey_As_Unbound()
     {
         const string xml = @"<?xml version=""1.0"" encoding=""UTF-8""?>
@@ -85,7 +85,7 @@ public class BindingParserTests
         }
     }
 
-    [Test]
+    [Fact]
     public void Parse_Should_Map_Binding_Element_To_Primary_And_Read_Inverted_And_Deadzone()
     {
         const string xml = @"<?xml version=""1.0"" encoding=""UTF-8""?>
@@ -114,7 +114,7 @@ public class BindingParserTests
         control.Deadzone.Should().Be(0.25f);
     }
 
-    [Test]
+    [Fact]
     public void Parse_Should_Handle_All_ToggleOn_Variants()
     {
         const string xml = @"<?xml version=""1.0"" encoding=""UTF-8""?>
@@ -161,7 +161,7 @@ public class BindingParserTests
         controls["MouseReset"].IsToggle.Should().BeNull();
     }
 
-    [Test]
+    [Fact]
     public void Parse_Should_Read_Modifiers_On_Primary_And_Secondary()
     {
         const string xml = @"<?xml version=""1.0"" encoding=""UTF-8""?>
@@ -227,7 +227,7 @@ public class BindingParserTests
         secondReverseMod.Key.Should().Be("Key_RightShift");
     }
 
-    [Test]
+    [Fact]
     public void Parse_Should_Ignore_Hold_Child_And_Still_Parse_Binding_And_Toggle()
     {
         const string xml = @"<?xml version=""1.0"" encoding=""UTF-8""?>
@@ -257,7 +257,7 @@ public class BindingParserTests
         control.IsToggle.Should().BeFalse(); // Value=""0""
     }
 
-    [Test]
+    [Fact]
     public void Parse_Should_Treat_Key_Attribute_Case_Insensitive()
     {
         // Based on ToggleVanityCamera in HCS, but with a meaningful secondary key
@@ -282,7 +282,7 @@ public class BindingParserTests
         control.Secondary!.Value.Key.Should().Be("Key_F12");
     }
 
-    [Test]
+    [Fact]
     public void Parse_Should_Handle_Float_Deadzone_Formats()
     {
         const string xml = @"<?xml version=""1.0"" encoding=""UTF-8""?>
@@ -312,7 +312,7 @@ public class BindingParserTests
         controls["VerticalThrustRaw"].Deadzone.Should().Be(7.0f);
     }
 
-    [Test]
+    [Fact]
     public void Parse_Should_Ignore_Value_Only_Elements_And_Only_Return_Controls_With_Bindings()
     {
         const string xml = @"<?xml version=""1.0"" encoding=""UTF-8""?>
@@ -334,5 +334,18 @@ public class BindingParserTests
         controls.Select(c => c.Name).Should().NotContain("MouseXMode");
         controls.Select(c => c.Name).Should().NotContain("MouseSensitivity");
         controls.Select(c => c.Name).Should().NotContain("MouseGUI");
+    }
+    
+    [Fact]
+    public void Parse_HCS_Bindings()
+    {
+	    string xml = File.ReadAllText("TestFiles/Bindings/HCS Custom.4.2.binds");
+
+	    var content = BindingParser.Parse(xml);
+
+	    content.Should().NotBeNull();
+	    content.Should().Contain(c => c.Name == "CycleFireGroupPrevious");
+	    var control = content.Single(c => c.Name == "CycleFireGroupPrevious");
+	    control.KeyCode.Should().Be("[160][72]"); // LeftShift + H
     }
 }

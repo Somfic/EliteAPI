@@ -7,25 +7,23 @@ using FluentAssertions;
 
 namespace EliteAPI.Tests;
 
-public class FileUtilsTests
+public class FileUtilsTests : IDisposable
 {
     private string _testDir = null!;
 
-    [Before(Test)]
-    public void Setup()
+    public FileUtilsTests()
     {
         _testDir = Path.Combine(Path.GetTempPath(), $"EliteAPI.Tests.{Guid.NewGuid()}");
         Directory.CreateDirectory(_testDir);
     }
 
-    [After(Test)]
-    public void Cleanup()
+    public void Dispose()
     {
         if (Directory.Exists(_testDir))
             Directory.Delete(_testDir, true);
     }
 
-    [Test]
+    [Fact]
     public void WriteWithRetry_WritesContentToFile()
     {
         var path = Path.Combine(_testDir, "test.txt");
@@ -37,7 +35,7 @@ public class FileUtilsTests
         File.ReadAllText(path).Should().Be(content);
     }
 
-    [Test]
+    [Fact]
     public void WriteWithRetry_OverwritesExistingFile()
     {
         var path = Path.Combine(_testDir, "test.txt");
@@ -48,7 +46,7 @@ public class FileUtilsTests
         File.ReadAllText(path).Should().Be("New content");
     }
 
-    [Test]
+    [Fact]
     public void WriteWithRetry_AllowsConcurrentReads()
     {
         var path = Path.Combine(_testDir, "test.txt");
@@ -63,7 +61,7 @@ public class FileUtilsTests
         writeAction.Should().NotThrow();
     }
 
-    [Test]
+    [Fact]
     public async Task WriteWithRetry_RetriesOnTemporaryLock()
     {
         var path = Path.Combine(_testDir, "test.txt");
@@ -96,7 +94,7 @@ public class FileUtilsTests
         File.ReadAllText(path).Should().Be("After retry");
     }
 
-    [Test]
+    [Fact]
     public void WriteWithRetry_ThrowsAfterMaxRetries()
     {
         var path = Path.Combine(_testDir, "test.txt");
@@ -110,7 +108,7 @@ public class FileUtilsTests
         writeAction.Should().Throw<IOException>();
     }
 
-    [Test]
+    [Fact]
     public async Task WriteWithRetry_HandlesMultipleConcurrentWriters()
     {
         var path = Path.Combine(_testDir, "test.txt");
@@ -131,7 +129,7 @@ public class FileUtilsTests
         File.ReadAllText(path).Should().StartWith("Content ");
     }
 
-    [Test]
+    [Fact]
     public void AppendWithRetry_AppendsContentToFile()
     {
         var path = Path.Combine(_testDir, "test.txt");
@@ -142,7 +140,7 @@ public class FileUtilsTests
         File.ReadAllText(path).Should().Be("Line 1\nLine 2\n");
     }
 
-    [Test]
+    [Fact]
     public void AppendWithRetry_CreatesFileIfNotExists()
     {
         var path = Path.Combine(_testDir, "new.txt");
@@ -153,7 +151,7 @@ public class FileUtilsTests
         File.ReadAllText(path).Should().Be("First line");
     }
 
-    [Test]
+    [Fact]
     public async Task AppendWithRetry_HandlesMultipleConcurrentAppends()
     {
         var path = Path.Combine(_testDir, "test.txt");

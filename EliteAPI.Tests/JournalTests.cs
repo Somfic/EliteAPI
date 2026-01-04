@@ -4,23 +4,22 @@ namespace EliteAPI.Tests;
 
 public class JournalTests
 {
-    public static IEnumerable<Func<FileInfo>> GetFiles(string pattern)
+    public static IEnumerable<object[]> GetFiles(string pattern)
     {
         var directory = new DirectoryInfo("../../../TestFiles");
         var files = directory.GetFiles(pattern, SearchOption.AllDirectories);
 
         foreach (var file in files)
         {
-            var capturedFile = file;
-            yield return () => capturedFile;
+            yield return new object[] { file };
         }
     }
 
-    public static IEnumerable<Func<FileInfo>> GetJournalFiles() => GetFiles("*.log");
-    public static IEnumerable<Func<FileInfo>> GetStatusFiles() => GetFiles("*.json");
+    public static IEnumerable<object[]> GetJournalFiles() => GetFiles("*.log");
+    public static IEnumerable<object[]> GetStatusFiles() => GetFiles("*.json");
 
-    [Test]
-    [MethodDataSource(nameof(GetStatusFiles))]
+    [Theory]
+    [MemberData(nameof(GetStatusFiles))]
     public async Task StatusFile(FileInfo file)
     {
         var json = await File.ReadAllTextAsync(file.FullName);
@@ -35,8 +34,8 @@ public class JournalTests
         }
     }
 
-    [Test]
-    [MethodDataSource(nameof(GetJournalFiles))]
+    [Theory]
+    [MemberData(nameof(GetJournalFiles))]
     public async Task JournalFile(FileInfo file)
     {
         var jsons = await File.ReadAllLinesAsync(file.FullName);
@@ -49,7 +48,7 @@ public class JournalTests
             }
             catch (Exception ex)
             {
-                Assert.Fail($"{ex.Message}\n{json}");
+                Xunit.Assert.Fail($"{ex.Message}\n{json}");
             }
         }
     }

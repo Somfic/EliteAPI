@@ -23,8 +23,8 @@ if (-not $SkipVoiceAttackRestart -and $IsWindowsOS) {
 }
 
 Write-Host "`nBuilding plugin..." -ForegroundColor Cyan
-dotnet clean "EliteVA/EliteVA.csproj" -c Debug
-dotnet build "EliteVA/EliteVA.csproj" -c Debug
+dotnet restore
+dotnet build --no-restore --configuration Release
 
 if ($LASTEXITCODE -ne 0) {
     Write-Error "Build failed!"
@@ -39,10 +39,8 @@ if (-not (Test-Path $DestinationPath)) {
 }
 
 # Copy all items from build output to destination
-$buildOutputPath = "EliteVA/bin/Debug/net8.0/"
-Get-ChildItem -Path $buildOutputPath -Filter *.dll | ForEach-Object {
-    Copy-Item $_.FullName -Destination $DestinationPath -Force
-}
+$buildOutputPath = "EliteVA/bin/Release/net48/"
+Copy-Item -Path "$buildOutputPath*" -Destination $DestinationPath -Force
 
 Write-Host "Plugin deployed successfully." -ForegroundColor Green
 

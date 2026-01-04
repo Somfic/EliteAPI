@@ -49,15 +49,24 @@ public class Plugin : VoiceAttackPlugin
 
         _api.OnKeybindingsChanged(bindings =>
         {
-            foreach (var binding in bindings)
+            var validBindings = bindings.Where(x => x.IsValid).ToList();
+            var invalidBindings = bindings.Where(x => !x.IsValid && (x.Primary.HasValue || x.Secondary.HasValue)).ToList();
+            
+            foreach (var binding in validBindings)
                 Proxy.Variables.Set($"EliteAPI.{binding.Name}", binding.KeyCode, TypeCode.String);
 
-            if (!Directory.Exists(Path.Combine(Dir, "Variables")))
-                Directory.CreateDirectory(Path.Combine(Dir, "Variables"));
+            var directory = Path.Combine(Dir, "Variables", "Keybindings");
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
 
-            FileUtils.WriteWithRetry(Path.Combine(Dir, "Variables", "Keybindings.txt"), bindings.Select(b => $"{{TXT:EliteAPI.{b.Name}}}: {b.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
-
-            proxy.Log.Write($"Applying {bindings.Count(b => !string.IsNullOrEmpty(b.KeyCode))} keybindings", VoiceAttackColor.Blue);
+            FileUtils.WriteWithRetry(Path.Combine(directory, "Keybindings.txt"), validBindings.Select(b => $"{{TXT:EliteAPI.{b.Name}}}: {b.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
+            FileUtils.WriteWithRetry(Path.Combine(directory, "Invalid keybindings.txt"), validBindings.Select(b => $"{{TXT:EliteAPI.{b.Name}}}: ?").Aggregate((a, b) => $"{a}\n{b}"));
+            
+            proxy.Log.Write($"Applied {validBindings.Count(b => !string.IsNullOrEmpty(b.KeyCode))} keybindings", VoiceAttackColor.Blue);
+            if (invalidBindings.Count > 0)
+                proxy.Log.Write(
+                    $"Could not apply {invalidBindings.Count} keybindings. EliteAPI can only apply keyboard-only keybindings",
+                    VoiceAttackColor.Yellow);
         });
 
         // json event
@@ -88,10 +97,11 @@ public class Plugin : VoiceAttackPlugin
             // Only write variable files for non-synthetic events (Status change events don't need variable files)
             if (!e.eventName.StartsWith("Status.") && paths.Count > 0)
             {
-                if (!Directory.Exists(Path.Combine(Dir, "Variables")))
-                    Directory.CreateDirectory(Path.Combine(Dir, "Variables"));
+                var directory = Path.Combine(Dir, "Variables", "Journals");
+                if (!Directory.Exists(directory))
+                    Directory.CreateDirectory(directory);
 
-                FileUtils.WriteWithRetry(Path.Combine(Dir, "Variables", $"{e.eventName}.txt"), paths.Select(p => $"{{{p.Type.ToDisplayType()}:{p.Path}}}: {p.Value}").Aggregate((a, b) => $"{a}\n{b}"));
+                FileUtils.WriteWithRetry(Path.Combine(directory, $"{e.eventName}.txt"), paths.Select(p => $"{{{p.Type.ToDisplayType()}:{p.Path}}}: {p.Value}").Aggregate((a, b) => $"{a}\n{b}"));
             }
         });
 

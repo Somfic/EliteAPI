@@ -2,7 +2,7 @@ name: release
 
 on:
   push:
-    branches: [dev]
+    branches: [main]
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: cache nuget packages
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.nuget/packages
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
@@ -46,7 +46,7 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: cache nuget packages
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.nuget/packages
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
@@ -126,19 +126,19 @@ jobs:
                 if [ "$HIGHEST_CHANGE" != "major" ]; then
                   HIGHEST_CHANGE="major"
                 fi
-                MAJOR_COMMITS="${MAJOR_COMMITS}- ${COMMIT_MSG} (\`${COMMIT_SHORT}\`)\n"
+                MAJOR_COMMITS="${MAJOR_COMMITS}- ${COMMIT_MSG}\n"
                 ;;
               minor)
                 if [ "$HIGHEST_CHANGE" != "major" ]; then
                   HIGHEST_CHANGE="minor"
                 fi
-                MINOR_COMMITS="${MINOR_COMMITS}- ${COMMIT_MSG} (\`${COMMIT_SHORT}\`)\n"
+                MINOR_COMMITS="${MINOR_COMMITS}- ${COMMIT_MSG}\n"
                 ;;
               patch)
                 if [ "$HIGHEST_CHANGE" = "none" ]; then
                   HIGHEST_CHANGE="patch"
                 fi
-                PATCH_COMMITS="${PATCH_COMMITS}- ${COMMIT_MSG} (\`${COMMIT_SHORT}\`)\n"
+                PATCH_COMMITS="${PATCH_COMMITS}- ${COMMIT_MSG}\n"
                 ;;
             esac
           done < <(git log "${COMPARE_REF}..HEAD" --format="%H %s" --reverse)
@@ -167,18 +167,18 @@ jobs:
           echo "should_release=true" >> $GITHUB_OUTPUT
 
           # Generate changelog
-          CHANGELOG="## What's Changed in ${NEW_VERSION}\n\n"
+          CHANGELOG="## What's new in ${NEW_VERSION}\n\n"
 
           if [ -n "$MAJOR_COMMITS" ]; then
-            CHANGELOG="${CHANGELOG}### Breaking Changes\n${MAJOR_COMMITS}\n"
+            CHANGELOG="${CHANGELOG}### Breaking changes\n${MAJOR_COMMITS}\n"
           fi
 
           if [ -n "$MINOR_COMMITS" ]; then
-            CHANGELOG="${CHANGELOG}### Features\n${MINOR_COMMITS}\n"
+            CHANGELOG="${CHANGELOG}### New features\n${MINOR_COMMITS}\n"
           fi
 
           if [ -n "$PATCH_COMMITS" ]; then
-            CHANGELOG="${CHANGELOG}### Bug Fixes\n${PATCH_COMMITS}\n"
+            CHANGELOG="${CHANGELOG}### Fixes\n${PATCH_COMMITS}\n"
           fi
 
           # Write changelog to file for later use
@@ -228,7 +228,7 @@ jobs:
           files: |
             EliteVA-${{ steps.version.outputs.version }}.zip
 
-      - name: publish to nuget
-        if: steps.version.outputs.should_release == 'true'
-        run: |
-          dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+#      - name: publish to nuget
+#        if: steps.version.outputs.should_release == 'true'
+#        run: |
+#          dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate

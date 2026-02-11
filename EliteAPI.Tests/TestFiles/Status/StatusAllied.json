@@ -1,0 +1,26 @@
+{
+    "timestamp": "2025-12-22T21:29:37Z",
+    "event": "Status",
+    "Flags": 2350956814,
+    "Flags2": 0,
+    "Pips": [
+        4,
+        7,
+        1
+    ],
+    "FireGroup": 0,
+    "GuiFocus": 0,
+    "Fuel": {
+        "FuelMain": 0.000000,
+        "FuelReservoir": 0.499512
+    },
+    "Cargo": 0.000000,
+    "LegalState": "Allied",
+    "Latitude": -45.529053,
+    "Longitude": -26.269121,
+    "Heading": 64,
+    "Altitude": 0,
+    "BodyName": "Nokomishi A 1",
+    "PlanetRadius": 1483876.125000,
+    "Balance": 2168298530
+}

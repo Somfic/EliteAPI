@@ -16,7 +16,7 @@ public class VoiceAttackLog
     /// <param name="color">The log color</param>
     public void Write(string content, VoiceAttackColor color)
     {
-        _proxy.WriteToLog(content, color.ToString());
+        _proxy.WriteToLog($"EliteAPI: {content}", color.ToString());
     }
 
     /// <summary>

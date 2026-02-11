@@ -7,7 +7,7 @@ namespace EliteAPI.Tests;
 
 public class Flattening
 {
-    [Test]
+    [Fact]
     public void OneField()
     {
         var json = """{ "test": 1 }""";
@@ -21,7 +21,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void MultipleFields()
     {
         var json = """{ "test1": 1, "test2": "value", "test3": true }""";
@@ -37,7 +37,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void SimpleArray()
     {
         var json = """{ "items": [1, 2, 3] }""";
@@ -54,7 +54,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void ArrayWithObject()
     {
         var json = """{ "items": [ { "nested": 1 }, { "nested": "2" }, { "nested": false } ] }""";
@@ -71,7 +71,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void DecimalField()
     {
         var json = """{ "price": 19.99 }""";
@@ -85,7 +85,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void MultipleDecimalFields()
     {
         var json = """{ "price": 19.99, "tax": 1.50, "total": 21.49 }""";
@@ -101,7 +101,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void DateTimeField()
     {
         var json = """{ "timestamp": "2025-11-21T10:30:00Z" }""";
@@ -115,7 +115,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void MultipleDateTimeFields()
     {
         var json = """{ "createdAt": "2025-11-21T10:30:00Z", "updatedAt": "2025-11-21T15:45:00Z" }""";
@@ -130,7 +130,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void MixedTypesWithDecimalAndDateTime()
     {
         var json = """{ "id": 1, "name": "Product", "price": 29.99, "created": "2025-11-21T10:00:00Z", "active": true }""";
@@ -148,7 +148,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void SimpleNestedObject()
     {
         var json = """{ "user": { "name": "John", "age": 30 } }""";
@@ -163,7 +163,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void DeeplyNestedObject()
     {
         var json = """{ "level1": { "level2": { "level3": { "value": "deep" } } } }""";
@@ -177,7 +177,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void NestedObjectWithMixedTypes()
     {
         var json = """{ "product": { "id": 1, "name": "Widget", "price": 19.99, "created": "2025-11-21T10:00:00Z", "inStock": true } }""";
@@ -195,7 +195,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void MultipleNestedObjects()
     {
         var json = """{ "user": { "name": "John", "age": 30 }, "address": { "city": "NYC", "zip": 10001 } }""";
@@ -212,7 +212,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void NestedObjectWithDecimalAndDateTime()
     {
         var json = """{ "transaction": { "amount": 99.99, "fee": 2.50, "timestamp": "2025-11-21T14:30:00Z" } }""";
@@ -228,7 +228,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void NestedObjectWithArrays()
     {
         var json = """{ "user": { "name": "John", "scores": [95, 87, 92] } }""";
@@ -246,7 +246,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void ComplexNestedStructure()
     {
         var json = """
@@ -285,7 +285,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void EmptyObject()
     {
         var json = """{ "empty": {} }""";
@@ -296,7 +296,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void EmptyArray()
     {
         var json = """{ "items": [] }""";
@@ -310,7 +310,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void NullValues()
     {
         var json = """{ "name": null, "age": 30 }""";
@@ -324,7 +324,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void NegativeNumbers()
     {
         var json = """{ "temperature": -15, "balance": -100 }""";
@@ -339,7 +339,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void NegativeDecimals()
     {
         var json = """{ "balance": -99.99, "adjustment": -5.50 }""";
@@ -354,7 +354,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void ZeroValues()
     {
         var json = """{ "count": 0, "price": 0.0, "active": false }""";
@@ -370,7 +370,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void EmptyString()
     {
         var json = """{ "name": "", "description": "text" }""";
@@ -385,7 +385,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void ArrayOfDecimals()
     {
         var json = """{ "prices": [19.99, 29.99, 39.99] }""";
@@ -402,7 +402,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void ArrayOfDateTimes()
     {
         var json = """{ "timestamps": ["2025-11-21T10:00:00Z", "2025-11-21T11:00:00Z", "2025-11-21T12:00:00Z"] }""";
@@ -419,7 +419,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void MixedTypeArray()
     {
         var json = """{ "mixed": [1, "text", true, 2.5] }""";
@@ -437,7 +437,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void VeryLargeDecimal()
     {
         var json = """{ "bigNumber": 999999999.99 }""";
@@ -451,7 +451,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void VerySmallDecimal()
     {
         var json = """{ "smallNumber": 0.0001 }""";
@@ -465,7 +465,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void StringWithSpecialCharacters()
     {
         var json = """{ "text": "Hello \"World\"\nNew Line\tTab" }""";
@@ -479,7 +479,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void StringWithUnicode()
     {
         var json = """{ "greeting": "Hello 🌍 World", "emoji": "😀" }""";
@@ -494,7 +494,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void VeryLongString()
     {
         var longText = new string('a', 10000);
@@ -509,7 +509,7 @@ public class Flattening
         paths.Should().BeEquivalentTo(expected);
     }
 
-    [Test]
+    [Fact]
     public void NullInNestedObject()
     {
         var json = """{ "user": { "name": "John", "email": null, "age": 30 } }""";
@@ -522,5 +522,41 @@ public class Flattening
         };
 
         paths.Should().BeEquivalentTo(expected);
+    }
+
+    [Fact]
+    public void GetEventName_WithEmptyString_ReturnsEmptyString()
+    {
+        var json = "";
+        var eventName = JsonUtils.GetEventName(json);
+
+        eventName.Should().BeEmpty();
+    }
+
+    [Fact]
+    public void GetEventName_WithWhitespace_ReturnsEmptyString()
+    {
+        var json = "   ";
+        var eventName = JsonUtils.GetEventName(json);
+
+        eventName.Should().BeEmpty();
+    }
+
+    [Fact]
+    public void GetEventName_WithValidEvent_ReturnsEventName()
+    {
+        var json = """{ "event": "TestEvent", "timestamp": "2025-01-01T00:00:00Z" }""";
+        var eventName = JsonUtils.GetEventName(json);
+
+        eventName.Should().Be("TestEvent");
+    }
+
+    [Fact]
+    public void GetEventName_WithNoEventField_ReturnsEmptyString()
+    {
+        var json = """{ "timestamp": "2025-01-01T00:00:00Z" }""";
+        var eventName = JsonUtils.GetEventName(json);
+
+        eventName.Should().BeEmpty();
     }
 }

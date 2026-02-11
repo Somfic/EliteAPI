@@ -16,6 +16,9 @@ public static class JsonUtils
 
     public static string GetEventName(string json)
     {
+        if (string.IsNullOrWhiteSpace(json))
+            return string.Empty;
+
         var obj = JObject.Parse(json);
 
         {
@@ -33,6 +36,9 @@ public static class JsonUtils
 
     public static List<EventPath> FlattenJson(string json)
     {
+        if (string.IsNullOrWhiteSpace(json))
+            return [];
+
         // TODO: call flattening function
         // arrays need Length 
         // key + localisation

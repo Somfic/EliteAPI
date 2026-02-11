@@ -5,10 +5,10 @@ namespace EliteAPI.Tests;
 
 public class StatusChangeEventTests
 {
-    [Test]
+    [Fact]
     public void FiresStatusEvent_WhenStatusJsonProcessed()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var statusEventFired = false;
 
         api.OnJson("Status", e => statusEventFired = true);
@@ -19,10 +19,10 @@ public class StatusChangeEventTests
         statusEventFired.Should().BeTrue();
     }
 
-    [Test]
+    [Fact]
     public void FiresChangeEvent_WhenFieldChanges()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var gearChangeEventFired = false;
 
         api.OnJson("Status.Gear", e => gearChangeEventFired = true);
@@ -40,10 +40,10 @@ public class StatusChangeEventTests
         gearChangeEventFired.Should().BeTrue("gear changed from false to true");
     }
 
-    [Test]
+    [Fact]
     public void DoesNotFireChangeEvent_WhenFieldStaysSame()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var gearChangeEventFired = false;
 
         api.OnJson("Status.Gear", e => gearChangeEventFired = true);
@@ -59,10 +59,10 @@ public class StatusChangeEventTests
         gearChangeEventFired.Should().BeFalse("gear did not change");
     }
 
-    [Test]
+    [Fact]
     public void FiresMultipleChangeEvents_WhenMultipleFieldsChange()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var gearChangeEventFired = false;
         var hardpointsChangeEventFired = false;
 
@@ -81,10 +81,10 @@ public class StatusChangeEventTests
         hardpointsChangeEventFired.Should().BeTrue();
     }
 
-    [Test]
+    [Fact]
     public void FiresChangeEvent_ForNumericFieldChanges()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var guiFocusChangeEventFired = false;
 
         api.OnJson("Status.GuiFocus", e => guiFocusChangeEventFired = true);
@@ -100,10 +100,10 @@ public class StatusChangeEventTests
         guiFocusChangeEventFired.Should().BeTrue();
     }
 
-    [Test]
+    [Fact]
     public void FiresChangeEvent_ForNestedFieldChanges()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var fuelChangeEventFired = false;
 
         api.OnJson("Status.Fuel", e => fuelChangeEventFired = true);
@@ -119,10 +119,10 @@ public class StatusChangeEventTests
         fuelChangeEventFired.Should().BeTrue();
     }
 
-    [Test]
+    [Fact]
     public void FiresChangeEvent_ForPipsChanges()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var pipsChangeEventFired = false;
 
         api.OnJson("Status.Pips", e => pipsChangeEventFired = true);
@@ -138,10 +138,10 @@ public class StatusChangeEventTests
         pipsChangeEventFired.Should().BeTrue();
     }
 
-    [Test]
+    [Fact]
     public void FiresEventsInCorrectOrder_StatusThenChanges()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var eventOrder = new List<string>();
 
         api.OnAllJson(e =>
@@ -165,10 +165,10 @@ public class StatusChangeEventTests
         eventOrder[1].Should().Be("Status.Gear");
     }
 
-    [Test]
+    [Fact]
     public void OnlyFiresChangeEvent_ForRootField_NotSubfields()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var eventsFired = new List<string>();
 
         api.OnAllJson(e =>
@@ -192,10 +192,10 @@ public class StatusChangeEventTests
         eventsFired.Should().Contain("Status.Fuel");
     }
 
-    [Test]
+    [Fact]
     public void DoesNotFireChangeEvents_ForNonStatusEvents()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var changeEventsFired = 0;
 
         api.OnAllJson(e =>
@@ -211,10 +211,10 @@ public class StatusChangeEventTests
         changeEventsFired.Should().Be(0, "non-Status events should not trigger change events");
     }
 
-    [Test]
+    [Fact]
     public void AllowsMultipleHandlers_ForSameChangeEvent()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var handler1Fired = false;
         var handler2Fired = false;
 
@@ -233,10 +233,10 @@ public class StatusChangeEventTests
         handler2Fired.Should().BeTrue();
     }
 
-    [Test]
+    [Fact]
     public void FiresChangeEvent_ForBalance_WhenItChanges()
     {
-        var api = new EliteDangerousApi();
+        var api = new EliteDangerousApi(null, null);
         var balanceChangeEventFired = false;
 
         api.OnJson("Status.Balance", e => balanceChangeEventFired = true);
@@ -250,5 +250,35 @@ public class StatusChangeEventTests
         api.Invoke(statusJson2);
 
         balanceChangeEventFired.Should().BeTrue();
+    }
+
+    [Fact]
+    public void DoesNotThrow_WhenJsonIsEmpty()
+    {
+        var api = new EliteDangerousApi(null, null);
+        var anyEventFired = false;
+
+        api.OnAllJson(e => anyEventFired = true);
+
+        var emptyJson = "";
+        var invokeAction = () => api.Invoke(emptyJson);
+
+        invokeAction.Should().NotThrow("empty JSON should be handled gracefully");
+        anyEventFired.Should().BeFalse("no events should fire for empty JSON");
+    }
+
+    [Fact]
+    public void DoesNotThrow_WhenJsonIsWhitespace()
+    {
+        var api = new EliteDangerousApi(null, null);
+        var anyEventFired = false;
+
+        api.OnAllJson(e => anyEventFired = true);
+
+        var whitespaceJson = "   ";
+        var invokeAction = () => api.Invoke(whitespaceJson);
+
+        invokeAction.Should().NotThrow("whitespace JSON should be handled gracefully");
+        anyEventFired.Should().BeFalse("no events should fire for whitespace JSON");
     }
 }

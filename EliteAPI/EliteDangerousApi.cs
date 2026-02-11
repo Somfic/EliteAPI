@@ -31,47 +31,82 @@ public class EliteDangerousApi
     private readonly Dictionary<string, List<Action<(string eventName, string json)>>> _untypedEventHandlers = new(StringComparer.OrdinalIgnoreCase);
     private readonly List<Action<IReadOnlyCollection<Control>>> _bindingsHandlers = [];
 
-    public EliteDangerousApi()
+    public Version Version => typeof(EliteDangerousApi).Assembly.GetName().Version!;
+
+    public EliteDangerousApi() : this(JournalUtils.GetJournalsDirectory(), BindingsUtils.GetBindingsDirectory())
     {
-        string[] statusFiles = [
-            "Cargo.json",
-            "Market.json",
-            "ModulesInfo.json",
-            "NavRoute.json",
-            "Outfitting.json",
-            "ShipLocker.json",
-            "Shipyard.json",
-            "Status.json"
-        ];
+    }
 
-        _statusWatchers = statusFiles
-            .Select(fileName => FileWatcher.Create(JournalUtils.GetJournalsDirectory(), fileName, FileWatchMode.EntireFile))
-            .ToList();
+    /// <summary>
+    /// Creates a new instance of the API with custom directories.
+    /// Pass null for directories to skip file watcher initialization (useful for testing).
+    /// </summary>
+    public EliteDangerousApi(DirectoryInfo? journalDirectory, DirectoryInfo? bindingsDirectory)
+    {
+        if (journalDirectory != null)
+        {
+            string[] statusFiles = [
+                "Cargo.json",
+                "Market.json",
+                "ModulesInfo.json",
+                "NavRoute.json",
+                "Outfitting.json",
+                "ShipLocker.json",
+                "Shipyard.json",
+                "Status.json",
+                "Backpack.json"
+            ];
 
-        _journalWatcher = FileWatcher.Create(JournalUtils.GetJournalsDirectory(), "Journal.*.log", FileWatchMode.LineByLine);
+            _statusWatchers = statusFiles
+                .Select(fileName => FileWatcher.Create(journalDirectory, fileName, FileWatchMode.EntireFile))
+                .ToList();
 
-        _bindingsPresetsWatcher = FileWatcher.Create(BindingsUtils.GetBindingsDirectory(), "StartPreset*", FileWatchMode.EntireFile);
+            _journalWatcher = FileWatcher.Create(journalDirectory, "Journal.*.log", FileWatchMode.LineByLine);
+        }
+        else
+        {
+            _statusWatchers = [];
+            _journalWatcher = null!;
+        }
+
+        if (bindingsDirectory != null)
+        {
+            _bindingsPresetsWatcher = FileWatcher.Create(bindingsDirectory, "StartPreset*", FileWatchMode.EntireFile);
+        }
+        else
+        {
+            _bindingsPresetsWatcher = null!;
+        }
     }
 
     public void Start()
     {
-        _journalWatcher.OnContentChanged((json) =>
+        if (_journalWatcher != null)
         {
-            JournalUtils.PrepareLocalisations(json);
-            Invoke(json);
-        });
-        _journalWatcher.OnFileChanged(file =>
+            _journalWatcher.OnContentChanged((json) =>
+            {
+                JournalUtils.PrepareLocalisations(json);
+                Invoke(json);
+            });
+            _journalWatcher.OnFileChanged(file =>
+            {
+                foreach (var handler in _journalChangedHandlers)
+                    SafeInvoke.Invoke("handling journal switch", handler, file);
+            });
+            _journalWatcher.StartWatching();
+        }
+
+        if (_statusWatchers != null && _statusWatchers.Count > 0)
         {
-            foreach (var handler in _journalChangedHandlers)
-                SafeInvoke.Invoke("handling journal switch", handler, file);
-        });
-        _statusWatchers.ForEach(w => w.OnContentChanged(Invoke));
-        _bindingsPresetsWatcher.OnContentChanged(HandleBindingsPreset);
+            _statusWatchers.ForEach(w => w.OnContentChanged(Invoke));
+            _statusWatchers.ForEach(w => w.StartWatching());
+        }
 
-        _statusWatchers.ForEach(w => w.StartWatching());
-        _journalWatcher.StartWatching();
-        HandleBindingsPreset(_bindingsPresetsWatcher.StartWatching());
-
+        if (_bindingsPresetsWatcher != null)
+        {
+            _bindingsPresetsWatcher.OnContentChanged(HandleBindingsPreset);
+            HandleBindingsPreset(_bindingsPresetsWatcher.StartWatching());
+        }
     }
 
     /// <summary>
@@ -152,6 +187,12 @@ public class EliteDangerousApi
 
     internal void Invoke(string json, IEvent? @event)
     {
+        if (string.IsNullOrWhiteSpace(json))
+        {
+            Log.Debug("Skipping empty event");
+            return;
+        }
+
         var eventName = JsonUtils.GetEventName(json);
         if (string.IsNullOrEmpty(eventName))
         {
@@ -264,6 +305,10 @@ public class EliteDangerousApi
         var bindings = BindingParser.Parse(File.ReadAllText(file.FullName));
 
         Log.Info($"Loaded {bindings.Count} keybindings from preset '{preset}'");
+        foreach (var binding in bindings.Where(x => x.IsValid))
+            Log.Debug($"     OK: {binding.Name}: {binding.KeyCode} ({binding.ToDebugString()})");
+        foreach (var binding in bindings.Where(x => !x.IsValid))
+            Log.Debug($" NOT OK: {binding.Name}: {binding.ToDebugString()}");
 
         foreach (var handler in _bindingsHandlers)
             SafeInvoke.Invoke("handling keybindings change", handler, bindings);

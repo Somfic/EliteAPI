@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
 
-public class BindingsUtils
+namespace EliteAPI.Bindings;
+
+public static class BindingsUtils
 {
     private static readonly Dictionary<string, string> KeyCodeMap = new(StringComparer.OrdinalIgnoreCase)
     {
@@ -207,7 +209,6 @@ public class BindingsUtils
     var localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
     return new DirectoryInfo(Path.Combine(localAppData, "Frontier Developments", "Elite Dangerous", "Options"));
 }
-
 
     internal static string GetKeyCode(string key)
     {

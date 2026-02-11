@@ -47,32 +47,26 @@ public class Plugin : VoiceAttackPlugin
             proxy.Log.Write($"Watching {e.Name}", VoiceAttackColor.Blue);
         });
 
-        _api.OnKeybindingsChanged(e =>
+        _api.OnKeybindingsChanged(bindings =>
         {
-            List<(string name, Binding binding)> bindings = [];
+            var validBindings = bindings.Where(x => x.IsValid).ToList();
+            var invalidBindings = bindings.Where(x => !x.IsValid && (x.Primary.HasValue || x.Secondary.HasValue)).ToList();
+            
+            foreach (var binding in validBindings)
+                Proxy.Variables.Set($"EliteAPI.{binding.Name}", binding.KeyCode, TypeCode.String);
 
-            foreach (var binding in e)
-            {
-                Binding keyboardBinding;
+            var directory = Path.Combine(Dir, "Variables", "Keybindings");
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
 
-                if (binding.Primary.HasValue && binding.Primary.Value.Device == "Keyboard")
-                    keyboardBinding = binding.Primary.Value;
-                else if (binding.Secondary.HasValue && binding.Secondary.Value.Device == "Keyboard")
-                    keyboardBinding = binding.Secondary.Value;
-                else
-                    continue;
-
-                bindings.Add((binding.Name, keyboardBinding));
-
-                Proxy.Variables.Set($"EliteAPI.{binding.Name}", binding.Primary.HasValue ? binding.Primary.Value.KeyCode : "", TypeCode.String);
-            }
-
-            if (!Directory.Exists(Path.Combine(Dir, "Variables")))
-                Directory.CreateDirectory(Path.Combine(Dir, "Variables"));
-
-            File.WriteAllText(Path.Combine(Dir, "Variables", $"Keybindings.txt"), bindings.Select(b => $"{{TXT:{b.name}}}: {b.binding.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
-
-            proxy.Log.Write($"Applying {bindings.Count} keybindings", VoiceAttackColor.Blue);
+            FileUtils.WriteWithRetry(Path.Combine(directory, "Keybindings.txt"), validBindings.Select(b => $"{{TXT:EliteAPI.{b.Name}}}: {b.KeyCode}").Aggregate((a, b) => $"{a}\n{b}"));
+            FileUtils.WriteWithRetry(Path.Combine(directory, "Invalid keybindings.txt"), validBindings.Select(b => $"{{TXT:EliteAPI.{b.Name}}}: ?").Aggregate((a, b) => $"{a}\n{b}"));
+            
+            proxy.Log.Write($"Applied {validBindings.Count(b => !string.IsNullOrEmpty(b.KeyCode))} keybindings", VoiceAttackColor.Blue);
+            if (invalidBindings.Count > 0)
+                proxy.Log.Write(
+                    $"Could not apply {invalidBindings.Count} keybindings. EliteAPI can only apply keyboard-only keybindings",
+                    VoiceAttackColor.Yellow);
         });
 
         // json event
@@ -93,14 +87,8 @@ public class Plugin : VoiceAttackPlugin
                     _ => TypeCode.String
                 });
             });
-
-            // For Status field change events, use EliteAPI.Status.{Field} format
-            // For regular events, use the event name as-is
-            var commandName = e.eventName.StartsWith("Status.")
-                ? $"EliteAPI.{e.eventName}"
-                : e.eventName;
-
-            var command = $"(({commandName}))";
+            
+            var command = $"((EliteAPI.{e.eventName}))";
             if (proxy.Commands.Exists(command))
                 proxy.Commands.Invoke(command);
 
@@ -109,13 +97,17 @@ public class Plugin : VoiceAttackPlugin
             // Only write variable files for non-synthetic events (Status change events don't need variable files)
             if (!e.eventName.StartsWith("Status.") && paths.Count > 0)
             {
-                if (!Directory.Exists(Path.Combine(Dir, "Variables")))
-                    Directory.CreateDirectory(Path.Combine(Dir, "Variables"));
+                var directory = Path.Combine(Dir, "Variables", "Journals");
+                if (!Directory.Exists(directory))
+                    Directory.CreateDirectory(directory);
 
-                File.WriteAllText(Path.Combine(Dir, "Variables", $"{e.eventName}.txt"), paths.Select(p => $"{{{p.Type.ToDisplayType()}:{p.Path}}}: {p.Value}").Aggregate((a, b) => $"{a}\n{b}"));
+                FileUtils.WriteWithRetry(Path.Combine(directory, $"{e.eventName}.txt"), paths.Select(p => $"{{{p.Type.ToDisplayType()}:{p.Path}}}: {p.Value}").Aggregate((a, b) => $"{a}\n{b}"));
             }
         });
 
+        // set version variable
+        proxy.Variables.Set("EliteAPI.Version", _api.Version.ToString(), TypeCode.String);
+        
         _api.Start();
         WriteToLog(VoiceAttackColor.Green, $"EliteAPI started");
     }

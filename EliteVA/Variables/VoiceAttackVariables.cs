@@ -5,23 +5,15 @@ using System.Linq;
 
 namespace EliteVA.Variables;
 
-public class VoiceAttackVariables
+public class VoiceAttackVariables(dynamic vaProxy)
 {
-    private readonly dynamic _proxy;
-
     public record Variable(string Name, dynamic Value, TypeCode Type);
 
-    private List<Variable> _setVariables;
+    private List<Variable> _setVariables = [];
 
     public IReadOnlyList<Variable> SetVariables => _setVariables.ToList();
 
     public event EventHandler? OnVariablesSet;
-
-    public VoiceAttackVariables(dynamic vaProxy)
-    {
-        _proxy = vaProxy;
-        _setVariables = [];
-    }
 
     public void ClearStartingWith(string name)
     {
@@ -169,104 +161,104 @@ public class VoiceAttackVariables
 
     private short? GetShort(string name)
     {
-        return _proxy.GetSmallInt(name);
+        return vaProxy.GetSmallInt(name);
     }
 
     private int? GetInt(string name)
     {
-        return _proxy.GetInt(name);
+        return vaProxy.GetInt(name);
     }
 
     private string GetText(string name)
     {
-        return _proxy.GetText(name);
+        return vaProxy.GetText(name);
     }
 
     private decimal? GetDecimal(string name)
     {
-        return _proxy.GetDecimal(name);
+        return vaProxy.GetDecimal(name);
     }
 
     private bool? GetBoolean(string name)
     {
-        return _proxy.GetBoolean(name);
+        return vaProxy.GetBoolean(name);
     }
 
     private DateTime? GetDate(string name)
     {
-        return _proxy.GetDate(name);
+        return vaProxy.GetDate(name);
     }
 
     private void SetShort(string name, short? value)
     {
         SetVariable(name, value, TypeCode.Int16);
-        _proxy.SetSmallInt(name, value);
+        vaProxy.SetSmallInt(name, value);
     }
 
     private void ClearShort(string name)
     {
         ClearVariable(name);
-        _proxy.SetSmallInt(name, null);
+        vaProxy.SetSmallInt(name, null);
     }
 
     private void SetInt(string name, int? value)
     {
         SetVariable(name, value, TypeCode.Int32);
-        _proxy.SetInt(name, value);
+        vaProxy.SetInt(name, value);
     }
 
     private void ClearInt(string name)
     {
         ClearVariable(name);
-        _proxy.SetInt(name, null);
+        vaProxy.SetInt(name, null);
     }
 
     private void SetText(string name, string value)
     {
         SetVariable(name, value, TypeCode.String);
-        _proxy.SetText(name, value);
+        vaProxy.SetText(name, value);
     }
 
     private void ClearText(string name)
     {
         ClearVariable(name);
-        _proxy.SetText(name, null);
+        vaProxy.SetText(name, null);
     }
 
     private void SetDecimal(string name, decimal? value)
     {
         SetVariable(name, value, TypeCode.Decimal);
-        _proxy.SetDecimal(name, value);
+        vaProxy.SetDecimal(name, value);
     }
 
     private void ClearDecimal(string name)
     {
         ClearVariable(name);
-        _proxy.SetDecimal(name, null);
+        vaProxy.SetDecimal(name, null);
     }
 
     private void SetBoolean(string name, bool? value)
     {
         SetVariable(name, value, TypeCode.Boolean);
-        _proxy.SetBoolean(name, value);
+        vaProxy.SetBoolean(name, value);
     }
 
     private void ClearBoolean(string name)
     {
         ClearVariable(name);
-        _proxy.SetBoolean(name, null);
+        vaProxy.SetBoolean(name, null);
     }
 
     private void SetDate(string name, DateTime? value)
     {
         SetVariable(name, value, TypeCode.DateTime);
-        _proxy.SetDate(name, value);
+        vaProxy.SetDate(name, value);
     }
 
     private void ClearDate(string name)
     {
         ClearVariable(name);
-        _proxy.SetDate(name, null);
+        vaProxy.SetDate(name, null);
     }
 
     private void SetVariable(string name, dynamic? value, TypeCode type)

@@ -2,7 +2,7 @@ namespace EliteAPI.Tests;
 
 public class EventTriggeringTests
 {
-    [Test]
+    [Fact]
     public async Task StatusInCombat()
     {
         // var json = await File.ReadAllTextAsync("../../../TestFiles/Status/StatusCombat.json");

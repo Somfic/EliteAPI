@@ -56,30 +56,65 @@ public static class JournalUtils
 
     public static DirectoryInfo GetJournalsDirectory()
     {
+        // 1) Explicit override – easiest way to point EliteAPI anywhere you want
+        var envOverride = Environment.GetEnvironmentVariable("ELITE_JOURNAL_DIR");
+        if (!string.IsNullOrWhiteSpace(envOverride) && Directory.Exists(envOverride))
+            return new DirectoryInfo(envOverride);
+
+        // 2) Linux / macOS – handle Proton path first
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ||
+            RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+        {
+            var home = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+
+            // Proton install path for Elite:
+            var protonDir = Path.Combine(
+                home,
+                ".local", "share", "Steam", "steamapps", "compatdata", "359320",
+                "pfx", "drive_c", "users", "steamuser",
+                "Saved Games", "Frontier Developments", "Elite Dangerous");
+
+            if (Directory.Exists(protonDir))
+                return new DirectoryInfo(protonDir);
+
+            // Fallback: try native Saved Games layout under $HOME
+            var savedGames = Path.Combine(
+                home, "Saved Games", "Frontier Developments", "Elite Dangerous");
+
+            if (Directory.Exists(savedGames))
+                return new DirectoryInfo(savedGames);
+        }
+
+        // 3) Windows – original behavior (simplified but equivalent)
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
-            // on windows, use registry
             var result = SHGetKnownFolderPath(
                 new Guid("4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4"),
                 0,
-                new IntPtr(0),
+                IntPtr.Zero,
                 out var path);
 
             if (result == 0 && path != IntPtr.Zero)
             {
                 var folderPath = Marshal.PtrToStringUni(path);
                 if (!string.IsNullOrWhiteSpace(folderPath))
-                    return new DirectoryInfo(Path.Combine(folderPath, "Frontier Developments", "Elite Dangerous"));
+                    return new DirectoryInfo(
+                        Path.Combine(folderPath, "Frontier Developments", "Elite Dangerous"));
             }
+
+            var userProfile = Environment.GetEnvironmentVariable("USERPROFILE");
+            if (!string.IsNullOrWhiteSpace(userProfile))
+                return new DirectoryInfo(
+                    Path.Combine(userProfile, "Saved Games", "Frontier Developments", "Elite Dangerous"));
+
+            return new DirectoryInfo(
+                Path.Combine($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"));
         }
 
-        // get through userprofile
-        var userProfile = Environment.GetEnvironmentVariable("USERPROFILE");
-        if (!string.IsNullOrWhiteSpace(userProfile))
-            return new DirectoryInfo(Path.Combine(userProfile, "Saved Games", "Frontier Developments", "Elite Dangerous"));
-
-        // last resort, hardcoded with C:\ drive, hopefully we'll never reach this..
-        return new DirectoryInfo(Path.Combine($@"C:\Users\{Environment.UserName}\Saved Games\Frontier Developments\Elite Dangerous"));
+        // 4) Unknown OS – last resort
+        var genericHome = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+        return new DirectoryInfo(
+            Path.Combine(genericHome, "Saved Games", "Frontier Developments", "Elite Dangerous"));
     }
 
     public static void PrepareLocalisations(string json)

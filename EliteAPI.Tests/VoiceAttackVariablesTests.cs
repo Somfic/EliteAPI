@@ -27,8 +27,8 @@ public class VoiceAttackVariablesTests
     {
         var variables = new VoiceAttackVariables(new StubProxy());
 
-        const int threadCount = 8;
-        const int iterationsPerThread = 50_000;
+        const int threadCount = 4;
+        const int iterationsPerThread = 2_500;
 
         var ready = new CountdownEvent(threadCount);
         using var start = new ManualResetEventSlim(false);

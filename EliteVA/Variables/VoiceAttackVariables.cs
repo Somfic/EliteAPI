@@ -9,20 +9,31 @@ public class VoiceAttackVariables(dynamic vaProxy)
 {
     public record Variable(string Name, dynamic Value, TypeCode Type);
 
+    private readonly object _lock = new();
     private List<Variable> _setVariables = [];
 
-    public IReadOnlyList<Variable> SetVariables => _setVariables.ToList();
+    public IReadOnlyList<Variable> SetVariables
+    {
+        get
+        {
+            lock (_lock)
+                return _setVariables.ToList();
+        }
+    }
 
     public event EventHandler? OnVariablesSet;
 
     public void ClearStartingWith(string name)
     {
-        var variablesToClear = _setVariables.Where(x => x.Name.StartsWith(name)).ToList();
+        List<Variable> variablesToClear;
+        lock (_lock)
+        {
+            variablesToClear = _setVariables.Where(x => x.Name.StartsWith(name)).ToList();
+            _setVariables = _setVariables.Where(x => !x.Name.StartsWith(name)).ToList();
+        }
 
         foreach (var variable in variablesToClear)
             Clear(variable.Name, variable.Type);
-
-        _setVariables = _setVariables.Where(x => !x.Name.StartsWith(name)).ToList();
     }
 
     /// <summary>
@@ -263,19 +274,24 @@ public class VoiceAttackVariables(dynamic vaProxy)
 
     private void SetVariable(string name, dynamic? value, TypeCode type)
     {
-        var index = _setVariables.FindIndex(x => x.Name == name);
+        lock (_lock)
+        {
+            var index = _setVariables.FindIndex(x => x.Name == name);
 
-        if (index >= 0)
-            _setVariables[index] = new(name, value, type);
-        else
-            _setVariables.Insert(0, new(name, value, type));
+            if (index >= 0)
+                _setVariables[index] = new(name, value, type);
+            else
+                _setVariables.Insert(0, new(name, value, type));
+        }
 
         OnVariablesSet?.Invoke(this, EventArgs.Empty);
     }
 
     private void ClearVariable(string name)
     {
-        _setVariables.RemoveAll(x => x.Name == name);
+        lock (_lock)
+            _setVariables.RemoveAll(x => x.Name == name);
+
         OnVariablesSet?.Invoke(this, EventArgs.Empty);
     }
 }

@@ -1,11 +1,9 @@
-﻿using EliteAPI;
+using ConsoleHost;
 using EliteAPI.Utils;
-using Newtonsoft.Json;
+using EliteVA;
 
 Log.AddListener(log =>
 {
-
-
     ConsoleColor color = log.Level switch
     {
         Log.LogLevel.Debug => ConsoleColor.DarkGray,
@@ -21,24 +19,15 @@ Log.AddListener(log =>
     Console.ForegroundColor = previousColor;
 });
 
-var api = new EliteDangerousApi();
+var proxy = new MockVoiceAttackProxy();
 
-api.OnKeybindingsChanged(bindings =>
+Console.CancelKeyPress += (_, e) =>
 {
-    foreach (var binding in bindings)
-    {
-        if (binding.Name != "LandingGearToggle")
-            continue;
+    e.Cancel = true;
+    VoiceAttackPluginWrapper.VA_Exit1(proxy);
+    Environment.Exit(0);
+};
 
-        Log.Info(JsonConvert.SerializeObject(binding));
-    }
-});
-
-api.Start();
-
-// api.OnAllJson(e =>
-// {
-//     Console.WriteLine($"JSON Event: {e.eventName}");
-// });
+VoiceAttackPluginWrapper.VA_Init1(proxy);
 
 await Task.Delay(-1);

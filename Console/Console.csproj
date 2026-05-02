@@ -9,5 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EliteAPI\EliteAPI.csproj" />
+    <ProjectReference Include="..\EliteVA\EliteVA.csproj" />
   </ItemGroup>
 </Project>

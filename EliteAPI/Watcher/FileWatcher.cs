@@ -43,6 +43,12 @@ public class FileWatcher
 
     public static FileWatcher Create(DirectoryInfo directory, string filePattern, FileWatchMode mode = FileWatchMode.EntireFile)
     {
+        if (!directory.Exists)
+        {
+            directory.Create();
+            directory.Refresh();
+        }
+
         var file = directory.GetFiles(filePattern)
             .OrderByDescending(f => f.LastWriteTimeUtc)
             .FirstOrDefault();

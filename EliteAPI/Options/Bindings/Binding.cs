@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace EliteAPI.Bindings;
+namespace EliteAPI.Options.Bindings;
 
 public readonly struct Binding
 {

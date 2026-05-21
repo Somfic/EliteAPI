@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace EliteAPI.Bindings;
+namespace EliteAPI.Options.Bindings;
 
 public static class BindingParser
 {

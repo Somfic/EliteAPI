@@ -29,6 +29,9 @@
     <None Update="TestFiles\Bindings\test.binds">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="TestFiles\Audio\Custom.4.3.audio">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

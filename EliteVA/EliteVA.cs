@@ -5,8 +5,9 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using EliteAPI;
-using EliteAPI.Bindings;
 using EliteAPI.Journals;
+using EliteAPI.Options.Audio;
+using EliteAPI.Options.Bindings;
 using EliteAPI.Utils;
 using EliteVA.Abstractions;
 using EliteVA.Logging;
@@ -67,6 +68,37 @@ public class Plugin : VoiceAttackPlugin
                 proxy.Log.Write(
                     $"Could not apply {invalidBindings.Count} keybindings. EliteAPI can only apply keyboard-only keybindings",
                     VoiceAttackColor.Yellow);
+        });
+
+        _api.OnAudioSettingsChanged(settings =>
+        {
+            foreach (var setting in settings)
+            {
+                if (setting.IsVolume)
+                {
+                    Proxy.Variables.Set($"EliteAPI.Audio.{setting.Name}", setting.Value!.Value.ToString(CultureInfo.InvariantCulture), TypeCode.Decimal);
+                    if (setting.IsMuted.HasValue)
+                        Proxy.Variables.Set($"EliteAPI.Audio.{setting.Name}.Muted", setting.IsMuted.Value.ToString(), TypeCode.Boolean);
+                }
+                else if (setting.IsToggle)
+                {
+                    Proxy.Variables.Set($"EliteAPI.Audio.{setting.Name}", setting.IsEnabled!.Value.ToString(), TypeCode.Boolean);
+                }
+            }
+
+            var directory = Path.Combine(Dir, "Variables", "Audio");
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+
+            if (settings.Count > 0)
+            {
+                var lines = settings.Select(s => s.IsVolume
+                    ? $"{{DEC:EliteAPI.Audio.{s.Name}}}: {s.Value:0.##}{(s.IsMuted == true ? " (muted)" : string.Empty)}"
+                    : $"{{BOOL:EliteAPI.Audio.{s.Name}}}: {(s.IsEnabled == true ? "on" : "off")}");
+                FileUtils.WriteWithRetry(Path.Combine(directory, "Audio.txt"), lines.Aggregate((a, b) => $"{a}\n{b}"));
+            }
+
+            proxy.Log.Write($"Applied {settings.Count} audio settings", VoiceAttackColor.Blue);
         });
 
         // json event

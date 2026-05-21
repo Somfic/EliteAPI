@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using EliteAPI.Bindings;
 using EliteAPI.Events;
+using EliteAPI.Options.Audio;
+using EliteAPI.Options.Bindings;
 using EliteAPI.Journals;
 using EliteAPI.Json;
 using EliteAPI.Utils;
@@ -17,6 +18,7 @@ public class EliteDangerousApi
     private readonly FileWatcher _journalWatcher;
     private readonly List<FileWatcher> _statusWatchers;
     private readonly FileWatcher _bindingsPresetsWatcher;
+    private readonly FileWatcher _audioPresetsWatcher;
     private readonly StatusTracker _statusTracker = new();
 
     private readonly List<Action<FileInfo>> _journalChangedHandlers = [];
@@ -30,10 +32,11 @@ public class EliteDangerousApi
         .ToDictionary(t => t.Name.EndsWith("Event") ? t.Name.Substring(0, t.Name.Length - 5) : t.Name, t => t, StringComparer.OrdinalIgnoreCase);
     private readonly Dictionary<string, List<Action<(string eventName, string json)>>> _untypedEventHandlers = new(StringComparer.OrdinalIgnoreCase);
     private readonly List<Action<IReadOnlyCollection<Control>>> _bindingsHandlers = [];
+    private readonly List<Action<IReadOnlyCollection<AudioSetting>>> _audioHandlers = [];
 
     public Version Version => typeof(EliteDangerousApi).Assembly.GetName().Version!;
 
-    public EliteDangerousApi() : this(JournalUtils.GetJournalsDirectory(), BindingsUtils.GetBindingsDirectory())
+    public EliteDangerousApi() : this(JournalUtils.GetJournalsDirectory(), BindingsUtils.GetBindingsDirectory(), AudioUtils.GetAudioDirectory())
     {
     }
 
@@ -41,7 +44,7 @@ public class EliteDangerousApi
     /// Creates a new instance of the API with custom directories.
     /// Pass null for directories to skip file watcher initialization (useful for testing).
     /// </summary>
-    public EliteDangerousApi(DirectoryInfo? journalDirectory, DirectoryInfo? bindingsDirectory)
+    public EliteDangerousApi(DirectoryInfo? journalDirectory, DirectoryInfo? bindingsDirectory, DirectoryInfo? audioDirectory = null)
     {
         if (journalDirectory != null)
         {
@@ -77,6 +80,15 @@ public class EliteDangerousApi
         {
             _bindingsPresetsWatcher = null!;
         }
+
+        if (audioDirectory != null)
+        {
+            _audioPresetsWatcher = FileWatcher.Create(audioDirectory, "*.audio", FileWatchMode.EntireFile);
+        }
+        else
+        {
+            _audioPresetsWatcher = null!;
+        }
     }
 
     public void Start()
@@ -107,6 +119,12 @@ public class EliteDangerousApi
             _bindingsPresetsWatcher.OnContentChanged(HandleBindingsPreset);
             HandleBindingsPreset(_bindingsPresetsWatcher.StartWatching());
         }
+
+        if (_audioPresetsWatcher != null)
+        {
+            _audioPresetsWatcher.OnContentChanged(HandleAudioContent);
+            HandleAudioContent(_audioPresetsWatcher.StartWatching());
+        }
     }
 
     /// <summary>
@@ -123,6 +141,14 @@ public class EliteDangerousApi
     public void OnKeybindingsChanged(Action<IReadOnlyCollection<Control>> handler)
     {
         _bindingsHandlers.Add(handler);
+    }
+
+    /// <summary>
+    /// Listens for when audio settings have changed
+    /// </summary>
+    public void OnAudioSettingsChanged(Action<IReadOnlyCollection<AudioSetting>> handler)
+    {
+        _audioHandlers.Add(handler);
     }
 
     /// <summary>
@@ -312,5 +338,20 @@ public class EliteDangerousApi
 
         foreach (var handler in _bindingsHandlers)
             SafeInvoke.Invoke("handling keybindings change", handler, bindings);
+    }
+
+    private void HandleAudioContent(string xml)
+    {
+        if (string.IsNullOrWhiteSpace(xml))
+            return;
+
+        var settings = AudioParser.Parse(xml);
+
+        Log.Info($"Loaded {settings.Count} audio settings");
+        foreach (var setting in settings)
+            Log.Debug($"     {setting.ToDebugString()}");
+
+        foreach (var handler in _audioHandlers)
+            SafeInvoke.Invoke("handling audio settings change", handler, settings);
     }
 }

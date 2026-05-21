@@ -1,4 +1,4 @@
-using EliteAPI.Bindings;
+using EliteAPI.Options.Bindings;
 using FluentAssertions;
 
 namespace EliteAPI.Tests.Bindings;

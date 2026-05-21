@@ -68,6 +68,10 @@ public class Plugin : VoiceAttackPlugin
                 proxy.Log.Write(
                     $"Could not apply {invalidBindings.Count} keybindings. EliteAPI can only apply keyboard-only keybindings",
                     VoiceAttackColor.Yellow);
+
+            var command = "((EliteAPI.KeybindingsChanged))";
+            if (proxy.Commands.Exists(command))
+                proxy.Commands.Invoke(command);
         });
 
         _api.OnAudioSettingsChanged(settings =>

@@ -103,6 +103,10 @@ public class Plugin : VoiceAttackPlugin
             }
 
             proxy.Log.Write($"Applied {settings.Count} audio settings", VoiceAttackColor.Blue);
+
+            var command = "((EliteAPI.AudioChanged))";
+            if (proxy.Commands.Exists(command))
+                proxy.Commands.Invoke(command);
         });
 
         // json event

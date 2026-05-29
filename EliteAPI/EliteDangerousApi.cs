@@ -5,6 +5,7 @@ using System.Linq;
 using EliteAPI.Events;
 using EliteAPI.Options.Audio;
 using EliteAPI.Options.Bindings;
+using EliteAPI.Options.Player;
 using EliteAPI.Journals;
 using EliteAPI.Json;
 using EliteAPI.Utils;
@@ -19,6 +20,7 @@ public class EliteDangerousApi
     private readonly List<FileWatcher> _statusWatchers;
     private readonly FileWatcher _bindingsPresetsWatcher;
     private readonly FileWatcher _audioPresetsWatcher;
+    private readonly FileWatcher _playerPresetsWatcher;
     private readonly StatusTracker _statusTracker = new();
 
     private readonly List<Action<FileInfo>> _journalChangedHandlers = [];
@@ -33,10 +35,11 @@ public class EliteDangerousApi
     private readonly Dictionary<string, List<Action<(string eventName, string json)>>> _untypedEventHandlers = new(StringComparer.OrdinalIgnoreCase);
     private readonly List<Action<IReadOnlyCollection<Control>>> _bindingsHandlers = [];
     private readonly List<Action<IReadOnlyCollection<AudioSetting>>> _audioHandlers = [];
+    private readonly List<Action<IReadOnlyCollection<PlayerSetting>>> _playerHandlers = [];
 
     public Version Version => typeof(EliteDangerousApi).Assembly.GetName().Version!;
 
-    public EliteDangerousApi() : this(JournalUtils.GetJournalsDirectory(), BindingsUtils.GetBindingsDirectory(), AudioUtils.GetAudioDirectory())
+    public EliteDangerousApi() : this(JournalUtils.GetJournalsDirectory(), BindingsUtils.GetBindingsDirectory(), AudioUtils.GetAudioDirectory(), PlayerUtils.GetPlayerDirectory())
     {
     }
 
@@ -44,7 +47,7 @@ public class EliteDangerousApi
     /// Creates a new instance of the API with custom directories.
     /// Pass null for directories to skip file watcher initialization (useful for testing).
     /// </summary>
-    public EliteDangerousApi(DirectoryInfo? journalDirectory, DirectoryInfo? bindingsDirectory, DirectoryInfo? audioDirectory = null)
+    public EliteDangerousApi(DirectoryInfo? journalDirectory, DirectoryInfo? bindingsDirectory, DirectoryInfo? audioDirectory = null, DirectoryInfo? playerDirectory = null)
     {
         if (journalDirectory != null)
         {
@@ -89,6 +92,15 @@ public class EliteDangerousApi
         {
             _audioPresetsWatcher = null!;
         }
+
+        if (playerDirectory != null)
+        {
+            _playerPresetsWatcher = FileWatcher.Create(playerDirectory, "*.misc", FileWatchMode.EntireFile);
+        }
+        else
+        {
+            _playerPresetsWatcher = null!;
+        }
     }
 
     public void Start()
@@ -125,6 +137,12 @@ public class EliteDangerousApi
             _audioPresetsWatcher.OnContentChanged(HandleAudioContent);
             HandleAudioContent(_audioPresetsWatcher.StartWatching());
         }
+
+        if (_playerPresetsWatcher != null)
+        {
+            _playerPresetsWatcher.OnContentChanged(HandlePlayerContent);
+            HandlePlayerContent(_playerPresetsWatcher.StartWatching());
+        }
     }
 
     /// <summary>
@@ -149,6 +167,14 @@ public class EliteDangerousApi
     public void OnAudioSettingsChanged(Action<IReadOnlyCollection<AudioSetting>> handler)
     {
         _audioHandlers.Add(handler);
+    }
+
+    /// <summary>
+    /// Listens for when player settings have changed
+    /// </summary>
+    public void OnPlayerSettingsChanged(Action<IReadOnlyCollection<PlayerSetting>> handler)
+    {
+        _playerHandlers.Add(handler);
     }
 
     /// <summary>
@@ -353,5 +379,20 @@ public class EliteDangerousApi
 
         foreach (var handler in _audioHandlers)
             SafeInvoke.Invoke("handling audio settings change", handler, settings);
+    }
+
+    private void HandlePlayerContent(string xml)
+    {
+        if (string.IsNullOrWhiteSpace(xml))
+            return;
+
+        var settings = PlayerParser.Parse(xml);
+
+        Log.Info($"Loaded {settings.Count} player settings");
+        foreach (var setting in settings)
+            Log.Debug($"     {setting.ToDebugString()}");
+
+        foreach (var handler in _playerHandlers)
+            SafeInvoke.Invoke("handling player settings change", handler, settings);
     }
 }

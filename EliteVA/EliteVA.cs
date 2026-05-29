@@ -8,6 +8,7 @@ using EliteAPI;
 using EliteAPI.Journals;
 using EliteAPI.Options.Audio;
 using EliteAPI.Options.Bindings;
+using EliteAPI.Options.Player;
 using EliteAPI.Utils;
 using EliteVA.Abstractions;
 using EliteVA.Logging;
@@ -105,6 +106,44 @@ public class Plugin : VoiceAttackPlugin
             proxy.Log.Write($"Applied {settings.Count} audio settings", VoiceAttackColor.Blue);
 
             var command = "((EliteAPI.AudioChanged))";
+            if (proxy.Commands.Exists(command))
+                proxy.Commands.Invoke(command);
+        });
+
+        _api.OnPlayerSettingsChanged(settings =>
+        {
+            static (string value, TypeCode type, string prefix) Infer(string raw)
+            {
+                if (raw.Contains('.') && decimal.TryParse(raw, NumberStyles.Float, CultureInfo.InvariantCulture, out var dec))
+                    return (dec.ToString(CultureInfo.InvariantCulture), TypeCode.Decimal, "DEC");
+                if (int.TryParse(raw, NumberStyles.Integer, CultureInfo.InvariantCulture, out var i))
+                    return (i.ToString(CultureInfo.InvariantCulture), TypeCode.Int32, "INT");
+                return (raw, TypeCode.String, "TXT");
+            }
+
+            foreach (var setting in settings)
+            {
+                var (value, type, _) = Infer(setting.Value);
+                Proxy.Variables.Set($"EliteAPI.Player.{setting.Name}", value, type);
+            }
+
+            var directory = Path.Combine(Dir, "Variables", "Player");
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+
+            if (settings.Count > 0)
+            {
+                var lines = settings.Select(s =>
+                {
+                    var (value, _, prefix) = Infer(s.Value);
+                    return $"{{{prefix}:EliteAPI.Player.{s.Name}}}: {value}";
+                });
+                FileUtils.WriteWithRetry(Path.Combine(directory, "Player.txt"), lines.Aggregate((a, b) => $"{a}\n{b}"));
+            }
+
+            proxy.Log.Write($"Applied {settings.Count} player settings", VoiceAttackColor.Blue);
+
+            var command = "((EliteAPI.PlayerChanged))";
             if (proxy.Commands.Exists(command))
                 proxy.Commands.Invoke(command);
         });

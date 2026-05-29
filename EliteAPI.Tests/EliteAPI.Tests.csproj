@@ -32,6 +32,9 @@
     <None Update="TestFiles\Audio\Custom.4.3.audio">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="TestFiles\Player\Custom.4.3.misc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

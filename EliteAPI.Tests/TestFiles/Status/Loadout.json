@@ -1,0 +1,436 @@
+{
+	"timestamp": "2026-06-11T15:18:03Z",
+	"event": "Loadout",
+	"Ship": "mandalay",
+	"ShipID": 22,
+	"ShipName": "Mandalay Exp",
+	"ShipIdent": "PMV-l1",
+	"HullValue": 14874478,
+	"ModulesValue": 9316664,
+	"HullHealth": 1.000000,
+	"UnladenMass": 277.799988,
+	"CargoCapacity": 16,
+	"MaxJumpRange": 95.183525,
+	"FuelCapacity": {
+		"Main": 96.000000,
+		"Reserve": 0.500000
+	},
+	"Rebuy": 907171,
+	"Modules": [
+		{
+			"Slot": "Armour",
+			"Item": "mandalay_armour_grade1",
+			"On": true,
+			"Priority": 1,
+			"Health": 1.000000
+		},
+		{
+			"Slot": "PowerPlant",
+			"Item": "int_powerplant_size3_class2",
+			"On": true,
+			"Priority": 1,
+			"Health": 1.000000,
+			"Value": 16014,
+			"Engineering": {
+				"Engineer": "Hera Tani",
+				"EngineerID": 300090,
+				"BlueprintID": 128673768,
+				"BlueprintName": "PowerPlant_Boosted",
+				"Level": 4,
+				"Quality": 1.000000,
+				"ExperimentalEffect": "special_powerplant_cooled",
+				"ExperimentalEffect_Localised": "Thermal Spread",
+				"Modifiers": [
+					{
+						"Label": "Integrity",
+						"Value": 40.799999,
+						"OriginalValue": 51.000000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "PowerCapacity",
+						"Value": 11.970000,
+						"OriginalValue": 9.000000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "HeatEfficiency",
+						"Value": 0.810000,
+						"OriginalValue": 0.750000,
+						"LessIsGood": 1
+					}
+				]
+			}
+		},
+		{
+			"Slot": "MainEngines",
+			"Item": "int_engine_size4_class2",
+			"On": true,
+			"Priority": 0,
+			"Health": 1.000000,
+			"Value": 53670,
+			"Engineering": {
+				"Engineer": "Chloe Sedesi",
+				"EngineerID": 300300,
+				"BlueprintID": 128673659,
+				"BlueprintName": "Engine_Dirty",
+				"Level": 5,
+				"Quality": 1.000000,
+				"ExperimentalEffect": "special_engine_overloaded",
+				"ExperimentalEffect_Localised": "Drag Drives",
+				"Modifiers": [
+					{
+						"Label": "Integrity",
+						"Value": 54.400002,
+						"OriginalValue": 64.000000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "PowerDraw",
+						"Value": 4.132800,
+						"OriginalValue": 3.690000,
+						"LessIsGood": 1
+					},
+					{
+						"Label": "EngineOptimalMass",
+						"Value": 275.625000,
+						"OriginalValue": 315.000000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "EngineOptPerformance",
+						"Value": 145.599991,
+						"OriginalValue": 100.000000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "EngineHeatRate",
+						"Value": 2.288000,
+						"OriginalValue": 1.300000,
+						"LessIsGood": 1
+					}
+				]
+			}
+		},
+		{
+			"Slot": "FrameShiftDrive",
+			"Item": "int_hyperdrive_overcharge_size5_class5",
+			"On": true,
+			"Priority": 1,
+			"Health": 1.000000,
+			"Engineering": {
+				"EngineerID": 399999,
+				"BlueprintID": 128998592,
+				"BlueprintName": "FSD_LongRange",
+				"Level": 5,
+				"Quality": 1.000000,
+				"ExperimentalEffect": "special_fsd_heavy",
+				"ExperimentalEffect_Localised": "Mass Manager",
+				"Modifiers": [
+					{
+						"Label": "Mass",
+						"Value": 26.000000,
+						"OriginalValue": 20.000000,
+						"LessIsGood": 1
+					},
+					{
+						"Label": "Integrity",
+						"Value": 77.279999,
+						"OriginalValue": 120.000000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "PowerDraw",
+						"Value": 0.690000,
+						"OriginalValue": 0.600000,
+						"LessIsGood": 1
+					},
+					{
+						"Label": "BootTime",
+						"Value": 2.000000,
+						"OriginalValue": 10.000000,
+						"LessIsGood": 1
+					},
+					{
+						"Label": "FSDOptimalMass",
+						"Value": 2077.399902,
+						"OriginalValue": 1175.000000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "FSDHeatRate",
+						"Value": 32.400002,
+						"OriginalValue": 27.000000,
+						"LessIsGood": 1
+					}
+				]
+			}
+		},
+		{
+			"Slot": "LifeSupport",
+			"Item": "int_lifesupport_size4_class2",
+			"On": true,
+			"Priority": 0,
+			"Health": 1.000000,
+			"Value": 25536,
+			"Engineering": {
+				"Engineer": "Bill Turner",
+				"EngineerID": 300010,
+				"BlueprintID": 128731493,
+				"BlueprintName": "Misc_LightWeight",
+				"Level": 3,
+				"Quality": 1.000000,
+				"Modifiers": [
+					{
+						"Label": "Mass",
+						"Value": 1.400000,
+						"OriginalValue": 4.000000,
+						"LessIsGood": 1
+					},
+					{
+						"Label": "Integrity",
+						"Value": 50.399998,
+						"OriginalValue": 72.000000,
+						"LessIsGood": 0
+					}
+				]
+			}
+		},
+		{
+			"Slot": "PowerDistributor",
+			"Item": "int_powerdistributor_size2_class2",
+			"On": true,
+			"Priority": 0,
+			"Health": 1.000000,
+			"Value": 3258,
+			"Engineering": {
+				"Engineer": "Marco Qwent",
+				"EngineerID": 300200,
+				"BlueprintID": 128673742,
+				"BlueprintName": "PowerDistributor_PriorityEngines",
+				"Level": 3,
+				"Quality": 1.000000,
+				"Modifiers": [
+					{
+						"Label": "WeaponsCapacity",
+						"Value": 12.740000,
+						"OriginalValue": 14.000000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "WeaponsRecharge",
+						"Value": 1.552000,
+						"OriginalValue": 1.600000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "EnginesCapacity",
+						"Value": 15.400000,
+						"OriginalValue": 11.000000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "EnginesRecharge",
+						"Value": 0.780000,
+						"OriginalValue": 0.600000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "SystemsCapacity",
+						"Value": 10.009999,
+						"OriginalValue": 11.000000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "SystemsRecharge",
+						"Value": 0.546000,
+						"OriginalValue": 0.600000,
+						"LessIsGood": 0
+					}
+				]
+			}
+		},
+		{
+			"Slot": "Radar",
+			"Item": "int_sensors_size5_class2",
+			"On": true,
+			"Priority": 0,
+			"Health": 1.000000,
+			"Value": 71500,
+			"Engineering": {
+				"Engineer": "Bill Turner",
+				"EngineerID": 300010,
+				"BlueprintID": 128740673,
+				"BlueprintName": "Sensor_LightWeight",
+				"Level": 5,
+				"Quality": 1.000000,
+				"Modifiers": [
+					{
+						"Label": "Mass",
+						"Value": 1.600000,
+						"OriginalValue": 8.000000,
+						"LessIsGood": 1
+					},
+					{
+						"Label": "Integrity",
+						"Value": 38.500000,
+						"OriginalValue": 77.000000,
+						"LessIsGood": 0
+					},
+					{
+						"Label": "SensorTargetScanAngle",
+						"Value": 22.500000,
+						"OriginalValue": 30.000000,
+						"LessIsGood": 0
+					}
+				]
+			}
+		},
+		{
+			"Slot": "FuelTank",
+			"Item": "int_fueltank_size5_class3",
+			"On": true,
+			"Priority": 1,
+			"Health": 1.000000,
+			"Value": 97754
+		},
+		{
+			"Slot": "Slot01_Size6",
+			"Item": "int_fueltank_size6_class3",
+			"On": true,
+			"Priority": 1,
+			"Health": 1.000000,
+			"Value": 307420
+		},
+		{
+			"Slot": "Slot02_Size5",
+			"Item": "int_guardianfsdbooster_size5",
+			"On": true,
+			"Priority": 2,
+			"Health": 1.000000,
+			"Value": 5834790
+		},
+		{
+			"Slot": "Slot03_Size4",
+			"Item": "int_shieldgenerator_size4_class2",
+			"On": true,
+			"Priority": 1,
+			"Health": 1.000000,
+			"Value": 53670
+		},
+		{
+			"Slot": "Slot04_Size4",
+			"Item": "int_fuelscoop_size4_class5",
+			"On": true,
+			"Priority": 0,
+			"Health": 1.000000,
+			"Value": 2576128
+		},
+		{
+			"Slot": "Slot05_Size3",
+			"Item": "int_cargorack_size3_class1",
+			"On": true,
+			"Priority": 1,
+			"Health": 1.000000,
+			"Value": 10563
+		},
+		{
+			"Slot": "Slot06_Size3",
+			"Item": "int_cargorack_size3_class1",
+			"On": true,
+			"Priority": 1,
+			"Health": 1.000000,
+			"Value": 10563
+		},
+		{
+			"Slot": "Slot07_Size2",
+			"Item": "int_buggybay_size2_class2",
+			"On": true,
+			"Priority": 0,
+			"Health": 1.000000,
+			"Value": 21060
+		},
+		{
+			"Slot": "Slot08_Size1",
+			"Item": "int_dronecontrol_repair_size1_class2",
+			"On": true,
+			"Priority": 3,
+			"Health": 1.000000,
+			"Value": 1080
+		},
+		{
+			"Slot": "Slot09_Size1",
+			"Item": "int_detailedsurfacescanner_tiny",
+			"On": true,
+			"Priority": 0,
+			"Health": 1.000000,
+			"Value": 225000,
+			"Engineering": {
+				"Engineer": "Hera Tani",
+				"EngineerID": 300090,
+				"BlueprintID": 128740151,
+				"BlueprintName": "Sensor_Expanded",
+				"Level": 5,
+				"Quality": 1.000000,
+				"Modifiers": [
+					{
+						"Label": "PowerDraw",
+						"Value": 0.000000,
+						"OriginalValue": 0.000000,
+						"LessIsGood": 1
+					},
+					{
+						"Label": "DSS_PatchRadius",
+						"Value": 30.000000,
+						"OriginalValue": 20.000000,
+						"LessIsGood": 0
+					}
+				]
+			}
+		},
+		{
+			"Slot": "Slot10_Size1",
+			"Item": "int_supercruiseassist",
+			"On": true,
+			"Priority": 4,
+			"Health": 1.000000,
+			"Value": 8208
+		},
+		{
+			"Slot": "Bobble01",
+			"Item": "bobble_ship_thargoid",
+			"On": true,
+			"Priority": 1,
+			"Health": 1.000000
+		},
+		{
+			"Slot": "PlanetaryApproachSuite",
+			"Item": "int_planetapproachsuite_advanced",
+			"On": true,
+			"Priority": 1,
+			"Health": 1.000000,
+			"Value": 450
+		},
+		{
+			"Slot": "VesselVoice",
+			"Item": "voicepack_leo",
+			"On": true,
+			"Priority": 1,
+			"Health": 1.000000
+		},
+		{
+			"Slot": "ShipCockpit",
+			"Item": "mandalay_cockpit",
+			"On": true,
+			"Priority": 1,
+			"Health": 1.000000
+		},
+		{
+			"Slot": "CargoHatch",
+			"Item": "modularcargobaydoorfdl",
+			"On": true,
+			"Priority": 4,
+			"Health": 1.000000
+		}
+	]
+}

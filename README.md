@@ -21,7 +21,15 @@
      </a>
 </p>
 <p>When playing Elite: Dangerous, many in-game events are outputted to the Journal log files. EliteAPI makes use of these files to provide live information about in-game events in a .NET environment. 
-</div>
+</div> For players, EliteAPI extends VoiceAttack with Elite Dangerous events, allowing you to trigger commands when something happens in-game. For example, when exiting hyperspace or when your ship is no longer mass locked.
+
+## Quickstart for players
+
+If you simply would like to use EliteAPI with Voiceattack all you need to do is:
+- download the zip file in the release section
+- create a sub folder in your VoiceAttack Apps folder, e.g. c:\Program Files (x86)\VoiceAttack\Apps\EliteAPI
+- extract the content of the zip file into that new folder (make sure plugin support is enabled in VoiceAttack options -> general)
+- get a VoiceAttack profile from the previous  <a href="https://github.com/Somfic/EliteVA/releases/tag/0.7.7">project </a>
 
 ## Installation
 
